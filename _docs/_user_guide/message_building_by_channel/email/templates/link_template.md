@@ -1,7 +1,7 @@
 ---
 nav_title: Link Templates
 article_title: Link Templates
-page_order: 5
+page_order: 4
 description: "This article covers how to create different types of link templates in your emails."
 tool:
   - Templates
@@ -12,9 +12,7 @@ channel:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/creating-link-templates){: style="float:right;width:120px;border:0;" class="noimgborder"}Link templates
 
-> This article covers how to create link templates to use for email messaging.
-
-Link templates allow you to append parameters or prepend URLs to all links in an email message. This is most often used for the following use cases:
+> Link templates allow you to append parameters or prepend URLs to all links in an email message. This is most often used for the following use cases:
 
 1. Appending Google Analytics query parameters to all links in a given email message
 2. Prepending a URL to all links in a given email message
@@ -71,9 +69,9 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 Archiving templates is not currently available for [link templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
 {% endalert %}
 
-## FAQs
+## Frequently asked questions
 
-For answers to frequently asked questions about link templates, check out our [Templates FAQs][10] page.
+For answers to frequently asked questions about link templates, check out our [Templates FAQ][10] page.
 
 [1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
 [2]:{% image_buster /assets/img_archive/link_template_postappend.png %}

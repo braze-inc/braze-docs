@@ -1,9 +1,9 @@
 ---
-nav_title: Meilleures pratiques
+nav_title: Bonnes pratiques
 article_title: Bonnes pratiques relatives aux campagnes
 page_order: 0
 description: "Cet article fournit les bonnes pratiques relatives à la création et à la personnalisation de vos campagnes."
-tool: Campagnes
+tool: Campaign
 
 ---
 
@@ -34,7 +34,7 @@ Il est également important de comprendre vos [utilisateurs actifs]({{site.baseu
 
 ### Connaissance des fonctionnalités
 
-Si votre objectif est d’attirer vos utilisateurs vers une nouvelle fonctionnalité ou une nouvelle version de l’application, utilisez une stratégie multicanale en vous concentrant sur les canaux in-app. Les [messages in-app][5] et [cartes de contenu][7] perturbent moins si l’utilisateur ne souhaite pas mettre à jour immédiatement. Assurez-vous d’inclure des [liens profonds]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) vers l’App Store approprié.
+Si votre objectif est d’attirer vos utilisateurs vers une nouvelle fonctionnalité ou une nouvelle version de l’application, utilisez une stratégie multicanale en vous concentrant sur les canaux in-app. Les [messages in-app][5] et les [cartes de contenu][7] perturbent moins si l’utilisateur ne souhaite pas mettre à jour immédiatement. Assurez-vous d’inclure des [liens profonds]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) vers l’App Store approprié.
 
 Il peut être difficile de persuader les utilisateurs de mettre à jour leur application ou modifier l’utilisation qu’ils en font. Faites-leur donc comprendre les avantages de la nouvelle version ou fonctionnalité et en quoi elle améliorera leur expérience avec votre application. 
 

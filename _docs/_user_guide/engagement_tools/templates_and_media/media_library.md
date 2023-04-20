@@ -3,7 +3,7 @@ nav_title: Media Library
 article_title: Media Library
 page_order: 0
 page_type: reference
-description: "This reference article covers the Media Library. Here you can learn how to manage your assets in a single, centralized location, generate image using AI, access media in your message composer."
+description: "This reference article covers the Media Library. Here, you can learn how to manage your assets in a single, centralized location, generate image using AI, access media in your message composer."
 tool: Media
 
 ---
@@ -26,7 +26,7 @@ You can use the **Media Library** to:
 
 ![Media Library page that includes an "Upload To Library" section to drag and drop or upload files. There is also a list of uploaded content in the Media Library.][1]
 
-{% alert tip %} For more help with the Media Library, check out our [Templates & Media FAQs]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
+{% alert tip %} For more help with the Media Library, check out our [Templates & Media FAQ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
 
 ## Image details
 

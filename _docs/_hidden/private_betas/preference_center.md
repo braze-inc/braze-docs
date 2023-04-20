@@ -3,6 +3,7 @@ nav_title: Drag & Drop Email Preference Center
 article_title: Drag & Drop Email Preference Center
 permalink: "/dnd_preference_center/"
 description: "This reference page covers how to create an email preference center with the drag & drop editor."
+layout: dev_guide
 ---
 
 # Create an email preference center with Drag & Drop

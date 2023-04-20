@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "This article outlines details about the user delete Braze endpoint."
+description: "This article outlines details about the Delete user Braze endpoint."
 
 ---
 {% api %}
@@ -14,13 +14,15 @@ description: "This article outlines details about the user delete Braze endpoint
 /users/delete
 {% endapimethod %}
 
-Use this endpoint to delete any user profile by specifying a known user identifier. Up to 50 `external_ids`, `user_aliases`, or `braze_ids` can be included in a single request. Only one of `external_ids`, `user_aliases`, or `braze_ids` can be included in a single request.
+> Use this endpoint to delete any user profile by specifying a known user identifier.
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
+Up to 50 `external_ids`, `user_aliases`, or `braze_ids` can be included in a single request. Only one of `external_ids`, `user_aliases`, or `braze_ids` can be included in a single request.
 
 {% alert warning %}
 Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Learn more about what happens when you [delete a user profile via API]({{site.baseurl}}/help/help_articles/api/delete_user/) in our Help documentation.
 {% endalert %}
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
 
 ## Rate limit
 

@@ -8,7 +8,7 @@ alias: "/shopify_data/"
 page_order: 4
 ---
 
-# Utilisation des données Shopify dans Braze
+# Données Shopify dans Braze
 
 ## Personnalisation
 
@@ -309,8 +309,8 @@ Vous pouvez filtrer les événements de Shopify avec tous les [filtres personnal
 ![Page de détails du segment pour un segment Shopify_Test avec le filtre pour l’événement personnalisé « shopify_checkouts_abandon » mis en évidence.][12]{: style="max-width:80%;"}
 
 En outre, vous pouvez également utiliser le filtre d’étendue des achats de Braze pour créer des segments d’utilisateurs basés sur :
-- Premier/last achat
-- Premier/last achat pour une application spécifique
+- Premier/dernier achat
+- Premier/dernier achat pour une application spécifique
 - Produits déjà achetés au cours des 30 derniers jours
 - Nombre d’achats qu’ils ont effectués
 

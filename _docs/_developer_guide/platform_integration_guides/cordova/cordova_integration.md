@@ -7,11 +7,13 @@ platform:
   - Android
 page_order: 1
 page_type: reference
-description: "This article covers initial SDK setup steps for Android and FireOS apps running on Cordova."
+description: "This article covers initial SDK setup steps for iOS, Android, and FireOS apps running on Cordova."
 
 ---
  
 # Cordova integration
+
+> This article covers initial SDK setup steps for apps running on Cordova.
 
 ## Setting a custom API endpoint
 
@@ -87,6 +89,6 @@ If you would like to log purchases at the order level instead of the product lev
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/#news-feed) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/news_feed/) integration instructions for information on how to integrate the News Feed into your Cordova app. Alternatively, our Cordova plugin provides a method, `launchNewsFeed`, that will launch a modal News Feed without further integration. 
+See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/news_feed/) integration instructions for information on how to integrate the News Feed into your Cordova app. Alternatively, our Cordova plugin provides a method, `launchNewsFeed`, that will launch a modal News Feed without further integration. 
 
 The Braze Cordova SDK has several methods to get the number of read or unread News Feed cards for different categories. Check out a [sample project implementation](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) for an example.

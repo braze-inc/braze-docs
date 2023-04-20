@@ -10,9 +10,7 @@ channel: email
 
 # Authentification par e-mail
 
-> L’authentification par e-mail est un ensemble de techniques visant à équiper votre e-mail d’informations vérifiables sur son origine.
-
-Une authentification correcte est primordiale pour que les fournisseurs de services Internet (ISP) reconnaissent votre qualité d’expéditeurs d’e-mails utiles et les livre immédiatement. Sans authentification, votre communication est présumée frauduleuse. 
+> L’authentification par e-mail est un ensemble de techniques visant à équiper votre e-mail d’informations vérifiables sur son origine.<br><br>Une authentification correcte est primordiale pour que les fournisseurs de services Internet (ISP) reconnaissent votre qualité d’expéditeurs d’e-mails utiles et les livre immédiatement. Sans authentification, votre communication est présumée frauduleuse. 
 
 ## Méthodes d’authentification
 

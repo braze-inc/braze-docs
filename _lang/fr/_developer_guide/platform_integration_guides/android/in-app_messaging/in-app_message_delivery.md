@@ -13,6 +13,8 @@ channel:
 
 # Livraison de messages in-app
 
+> Cet article de référence couvre la livraison de messages in-app Android et FireOS, répertoriant différents types de déclencheurs, de sémantiques de livraison et d’étapes de déclenchement d’événements.
+
 ## Types de déclencheurs
 
 Notre produit de messages in-app vous permet de déclencher un affichage de messages in-app suite à plusieurs types d’événements différents : `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event` et `Push Click`. En outre, les déclencheurs `Specific Purchase` et `Custom Event` peuvent contenir des filtres de propriétés robustes.

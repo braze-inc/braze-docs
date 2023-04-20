@@ -6,13 +6,15 @@ page_order: 3
 page_type: reference
 description: "Cet article de référence explique comment exporter les données de haut niveau sur l’utilisation des applications."
 tool: 
-  - Rapports
+  - Reports
 
 ---
 
 # Exportation des données d’aperçu
 
-La page **Overview** du tableau de bord contient des données de haut niveau sur l’utilisation de l’application, ainsi que des statistiques détaillées sur différents indicateurs clés de performance par date. Pour obtenir des CSV avec les informations de cette page, définissez d’abord le période que vous souhaitez afficher, puis accédez au graphique en bas de la page et choisissez les données à inclure dans votre exportation.
+> La page **Overview** du tableau de bord contient des données de haut niveau sur l’utilisation de l’application, ainsi que des statistiques détaillées sur différents indicateurs clés de performance par date. 
+
+Pour obtenir des CSV avec les informations de cette page, définissez d’abord le période que vous souhaitez afficher, puis accédez au graphique en bas de la page et choisissez les données à inclure dans votre exportation.
 
 ![Graphique d’utilisation de l’application][27]
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Common Push Error Messages
 article_title: Common Push Error Messages
-page_order: 0
+page_order: 2
 
 page_type: solution
 description: "This help article covers common push-related error messages for iOS and Android, and walks you through potential solutions."

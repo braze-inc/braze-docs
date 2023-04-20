@@ -10,6 +10,8 @@ description: "Cet article de référence couvre les méthodes d’identification
 
 # Définir des ID utilisateur
 
+> Cet article de référence couvre les méthodes d’identification et de paramétrage des ID utilisateurs pour Roku, ainsi que les meilleures pratiques et les considérations importantes.
+
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 Vous devez effectuer l’appel suivant dès que l’utilisateur est identifié (généralement après s’être connecté) afin de définir l’ID utilisateur :

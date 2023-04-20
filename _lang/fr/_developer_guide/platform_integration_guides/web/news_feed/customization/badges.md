@@ -4,12 +4,14 @@ article_title: Badges de fil d’actualité pour le Web
 platform: Web
 page_order: 3
 page_type: reference
-description: "Cet article traite de la manière de demander le nombre de cartes de fil d’actualité non lues et utiliser ces informations pour alimenter des badges pour votre application Web."
+description: "Cet article traite de la manière de demander le nombre de cartes de fil d’actualité non lues et d’utiliser ces informations pour alimenter des badges pour votre application Web."
 channel: fil d’actualité
 
 ---
 
 # Badges
+
+> Cet article traite de la manière de demander le nombre de cartes de fil d’actualité non lues et d’utiliser ces informations pour alimenter des badges pour votre application Web.
 
 {% alert note %}
 Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.

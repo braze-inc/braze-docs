@@ -42,7 +42,7 @@ guide_featured_list:
 guide_menu_title: "Journaux de modifications sur Github"
 guide_menu_list:
   - name: SDK Android
-    link: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md
+    link: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
     image: /assets/img/android.png
   - name: SDK iOS (Swift)
     link: https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md

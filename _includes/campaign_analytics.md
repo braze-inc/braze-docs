@@ -176,12 +176,15 @@ Here are some key in-app message metrics you may see in your analytics. To see t
 
 | Term | Definition |
 | --- | --- |
-| Body clicks | Occurs when a user clicks on the message itself, and not one of the buttons.
+| Body clicks* | Occurs when a user clicks on the message itself, and not one of the buttons. Only applies to messages created with the traditional editor.
 | Button 1 and Button 2 clicks | The percentage of recipients that pressed that specific button. 
-| Unique impressions | The total number of people who actually received and viewed the in-app message. If a user receives the message twice, they are only counted as one user.
+| Unique impressions | The total number of people who actually received and viewed the in-app message. If a user receives the message twice, they are only counted as one user. Unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. |
 | Impressions | The number of users whose devices reported that the message has been delivered. If a user receives the message twice, they are counted twice.
-
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% alert note %}
+*Body clicks are not automatically collected for in-app messages created with the Drag & Drop Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
+{% endalert %}
 
 {% elsif include.channel == "push" %}
 

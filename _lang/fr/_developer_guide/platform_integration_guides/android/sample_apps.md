@@ -11,7 +11,9 @@ description: "Cet article de référence explique comment utiliser les exemples 
 
 # Exemples d’applications
 
-Les SDK de Braze sont tous livrés avec un exemple d’application situé dans le référentiel pour plus de commodité. Chacune de ces applications est entièrement modulable afin que vous puissiez tester les fonctionnalités de Braze et les implémenter dans vos propres applications. Tester le comportement dans votre propre application par rapport au comportement attendu et aux chemins de code des exemples d’applications est un excellent moyen de déboguer les problèmes que vous pourriez rencontrer.
+> Les SDK de Braze sont tous livrés avec un exemple d’application situé dans le référentiel pour plus de commodité. Chacune de ces applications est entièrement modulable afin que vous puissiez tester les fonctionnalités de Braze et les implémenter dans vos propres applications. 
+
+Tester le comportement dans votre propre application par rapport au comportement attendu et aux chemins de code des exemples d’applications est un excellent moyen de déboguer les problèmes que vous pourriez rencontrer.
 
 ## Créer l’application de test Droidboy
 L’application de test de Braze dans le [référentiel GitHub du SDK pour Android][3] s’appelle Droidboy. Suivez ces instructions pour créer une copie entièrement fonctionnelle de celle-ci parallèlement à votre projet.
@@ -36,7 +38,7 @@ Si votre variable `ANDROID_HOME` n’est pas correctement définie ou n’a pas 
 Pour plus d’informations sur le système de développement SDK pour Android, consultez le [référentiel GitHub README][26].
 
 [25]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#app-group-configuration
-[26]: https://github.com/Appboy/appboy-android-sdk/blob/master/README.md
+[26]: https://github.com/braze-inc/braze-android-sdk/blob/master/README.md
 [27]: https://github.com/JakeWharton/sdk-manager-plugin
-[3]: https://github.com/appboy/appboy-android-sdk "Appboy Android GitHub Repository"
+[3]: https://github.com/braze-inc/braze-android-sdk "Appboy Android GitHub Repository"
 [34]: {% image_buster /assets/img_archive/hello_appboy.png %}

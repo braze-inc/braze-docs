@@ -11,10 +11,10 @@ channel: fil d’actualité
 # Créer un élément de Fil d’actualité
 
 {% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
-Les éléments du Fil d’actualité vous permettent d’insérer du contenu permanent directement dans votre application depuis notre tableau de bord Web. Mieux encore, le Fil d’actualité peut également cibler des segments individuels comme tous nos autres types de messages. Cela signifie que ce que vous voyez dans le fil peut être complètement différent de ce que verrait une autre personne. Les possibilités offertes par le Fil d’actualité sont quasiment illimitées.
+> Les éléments du Fil d’actualité vous permettent d’insérer du contenu permanent directement dans votre application depuis notre tableau de bord Web. Mieux encore, le Fil d’actualité peut également cibler des segments individuels comme tous nos autres types de messages. Cela signifie que ce que vous voyez dans le fil peut être complètement différent de ce que verrait une autre personne. Les possibilités offertes par le Fil d’actualité sont quasiment illimitées.
 
 Consultez nos [études de cas][13], [cas d’utilisation][15], et [meilleures pratiques][16] pour découvrir des exemples et des conseils utiles pour votre Fil d’actualité.
 
@@ -39,7 +39,7 @@ Les cartes de fil d’actualité standard comprennent :
 
 #### Des cartes d’images avec légende
 
-<br>![Aperçu d’une carte d’image avec légende sur laquelle figure une tarte aux pommes entourée de pommes. Sous l’image, un en-tête indique « Les soldes des vacances sont arrivées ! Économisez près de 50 dollars ! » avec le texte suivant : « Quatre délicieuses tartes aux pommes pour le prix de 3. Offre disponible pour une durée limitée. Dépêchez-vous ! Cette offre ne durera pas longtemps. Cliquez ici pour échanger votre coupon : www.example.com ».][3]{: style="max-width:40%;"}
+<br>![Aperçu d’une carte d’image avec légende sur laquelle figure une tarte aux pommes entourée de pommes. Sous l’image, un en-tête indique « Les soldes des vacances sont arrivées ! Économisez près de 50 dollars ! » avec le texte suivant : « Quatre délicieuses tartes aux pommes pour le prix de 3. Offre disponible pour une durée limitée. Dépêchez-vous ! Cette offre ne durera pas longtemps. Cliquez ici pour les échanger. www.example.com ».][3]{: style="max-width:40%;"}
 
 Les cartes d’images avec légende comprennent :
 
@@ -76,7 +76,7 @@ Il est temps de composer votre carte de fil d’actualité ! Créez un titre et
 
 ![Éditeur d’éléments de fil d’actualité qui affiche le nom de la carte, un aperçu de la carte et les détails de personnalisation pour la langue.][6]
 
-## Étape 3 : Définir un calendrier
+## Étape 3 : Définir une planification
 
 Sous l’éditeur de cartes de fil d’actualité, vous trouverez des options pour choisir quand publier cet élément. Vous pouvez choisir de le publier immédiatement après sa création ou de définir une heure pour le publier ultérieurement. Vous pouvez également choisir d’envoyer la carte de fil d’actualité à un moment précis à l’heure locale de vos utilisateurs en cochant la case **Envoyer dans le fuseau horaire des utilisateurs**.
 
@@ -84,7 +84,7 @@ Sous l’éditeur de cartes de fil d’actualité, vous trouverez des options po
 
 ## Étape 4 : Sélectionner un segment
 
-Vous pouvez configurer votre carte de fil d’actualité pour cibler n’importe quel [segment][10] que vous avez créé dans le tableau de bord selon le calendrier de votre choix. Sélectionnez votre segment cible en cliquant sur le menu déroulant. Ici, vous pouvez voir des statistiques avancées, y compris la disponibilité des e-mails et la valeur à vie par utilisateur.
+Vous pouvez configurer votre carte de fil d’actualité pour cibler n’importe quel [segment][10] que vous avez créé dans le tableau de bord selon la planification de votre choix. Sélectionnez votre segment cible en cliquant sur le menu déroulant. Ici, vous pouvez voir des statistiques avancées, y compris la disponibilité des e-mails et la valeur à vie par utilisateur.
 
 ![][11]
 
@@ -100,7 +100,7 @@ Et voilà ! Vous avez terminé ! Vous venez de publier votre première carte d
 
 Les campagnes multicanaux génèrent souvent de meilleurs taux de conversion et d’engagement, c’est pourquoi Braze vous permet de créer facilement un lien entre un message in-app et une carte de fil d’actualité spécifique. 
 
-Après avoir lancé une carte de fil d’actualité, un bouton apparaîtra sur la page des statistiques du fil d’actualité pour vous permettre de créer un message in-app associé au fil. Cliquez sur ce bouton pour accéder à l’éditeur de campagne et créer une nouvelle campagne de messages in-app. Pendant que vous saisissez le texte et concevez la mise en page du message in-app, Braze copie automatiquement les règles de livraison et de ciblage de la carte de fil d’actualité associé à votre message afin que les campagnes soient lancées ensemble.
+Après avoir lancé une carte de fil d’actualité, un bouton apparaîtra sur la page des statistiques du fil d’actualité pour vous permettre de créer un message in-app associé au fil. Cliquez sur ce bouton pour accéder à l’éditeur de campagne et créer une nouvelle campagne de communication dans l’application. Pendant que vous saisissez le texte et concevez la mise en page du message in-app, Braze copie automatiquement les règles de livraison et de ciblage de la carte de fil d’actualité associé à votre message afin que les campagnes soient lancées ensemble.
 
 ## Organiser votre fil d’actualité
 

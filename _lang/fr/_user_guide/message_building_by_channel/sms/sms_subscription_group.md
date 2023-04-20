@@ -2,7 +2,7 @@
 nav_title: "Groupes d’abonnement SMS"
 article_title: Groupes d’abonnement SMS
 page_order: 2
-description: "Les groupes d’abonnement sont la base pour envoyer des SMS et MMS au moyen de Braze. Un groupe d’abonnement est une collection de numéros de téléphone émetteurs (c.-à-d. codes courts, codes longs et/ou identifiants alphanumériques d’émetteurs) qui sont utilisés pour envoyer un type spécifique de message."
+description: "Cet article de référence présente les groupes d’abonnement SMS, les statuts d’abonnement et le processus de configuration des groupes d’abonnements."
 page_type: reference
 channel:
   - SMS
@@ -26,7 +26,7 @@ Il existe deux états d’abonnement pour les utilisateurs de SMS : `subscribed
 ### Comment les groupes d’abonnement SMS d’utilisateurs sont mis en place 
 
 - **API Rest :** Des profils d’utilisateur peuvent être définis en programmation par l’endpoint [/subscription/status/set][4] en utilisant l’API REST de Braze.
-- **SDK Web :** Les utilisateurs peuvent être ajoutés à un groupe d’abonnement e-mail ou SMS à l’aide la méthode `addToSubscriptionGroup` pour [Android](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287), ou [Web][11].
+- **Intégration SDK** Les utilisateurs peuvent être ajoutés à un groupe d’abonnement e-mail ou SMS à l’aide la méthode `addToSubscriptionGroup` pour [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) ou [Web][11].
 - **Automatiquement géré lors de l’abonnement/désabonnement de l’utilisateur :** Lorsque les utilisateurs envoient un [mot-clé][7] d’abonnement ou de désabonnement par défaut, Braze configure et met à jour automatiquement l’état d’abonnement des utilisateurs.
 - **User Import** : Les utilisateurs peuvent être ajoutés dans des groupes d’abonnement e-mail ou SMS via l’importation d’utilisateurs. Si vous mettez à jour le statut du groupe d’abonnement, vous devez avoir les deux colonnes suivantes dans votre CSV : `subscription_group_id` et `subscription_state`. Pour plus d’informations, consultez [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status).
 
@@ -37,7 +37,7 @@ Il existe deux états d’abonnement pour les utilisateurs de SMS : `subscribed
 
 ## Envoi avec un groupe d’abonnement
 
-Pour lancer une campagne SMS via Braze, un groupe d’abonnement doit être sélectionné dans la liste déroulante, comme illustré dans l’image suivante. Après la sélection, un filtre d’audience sera ajouté à votre campagne ou Canvas automatiquement, ce qui assure que seuls les utilisateurs `subscribed` au groupe d’abonnement sélectionné font partie du public cible. Pour se conformer aux [lignes directrices internationales de conformité pour les télécommunications][3], Braze n’enverra jamais de SMS aux utilisateurs qui n’ont pas souscrit au groupe d’abonnement sélectionné.  
+Pour lancer une campagne SMS via Braze, un groupe d’abonnement doit être sélectionné dans la liste déroulante, comme illustré dans l’image suivante. Après la sélection, un filtre d’audience sera ajouté à votre campagne ou Canvas automatiquement, ce qui assure que seuls les utilisateurs `subscribed` au groupe d’abonnement sélectionné font partie de l’audience cible. Pour se conformer aux [lignes directrices internationales de conformité pour les télécommunications][3], Braze n’enverra jamais de SMS aux utilisateurs qui n’ont pas souscrit au groupe d’abonnement sélectionné.  
 
 ![L’éditeur de messages SMS apparaît avec le menu déroulant Groupe d’abonnement ouvert et « Service de messagerie A pour SMS » mis en surbrillance par l’utilisateur.][6]
 

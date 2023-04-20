@@ -4,21 +4,23 @@ article_title: Notifications push Android pour Unity
 platform: 
   - Unity
   - Android
-channel: Notification push
+channel: push
 page_order: 1
 description: "Cet article de référence couvre l’intégration de notifications push Android pour la plateforme Unity."
 
 ---
 
-# Notifications push
+# Intégration de notifications Push pour Android
+
+> Cet article de référence couvre l’intégration de notifications push Android pour la plateforme Unity.
 
 Ces instructions sont destinées à intégrer les notifications push à [Firebase Cloud Messaging (FCM)][9].
 
-Voir notre documentation [ADM Unity ][64] pour les instructions d’intégration ADM.
+Voir notre documentation [ADM Unity][64] pour les instructions d’intégration ADM.
 
 ## Étape 1 : Activer Firebase
 
-Pour commencer, suivez la [Documentation de configuration de Firebase Unity.][11].
+Pour commencer, suivez la [Documentation de configuration de Firebase Unity][11].
 
 {% alert note %}
 L’intégration du SDK Firebase Unity peut entraîner le remplacement de votre `AndroidManifest.xml`. Si cela se produit, assurez-vous de revenir à l’original.
@@ -26,7 +28,7 @@ L’intégration du SDK Firebase Unity peut entraîner le remplacement de votre 
 
 ## Étape 2 : Définir vos informations d’identification Firebase
 
-Vous devez saisir votre clé de serveur Firebase et votre ID d’expéditeur dans le tableau de bord de Braze : Pour ce faire, connectez-vous à la [Console Firebase Developers ][58] et sélectionnez votre projet Firebase. Ensuite, sélectionnez **Cloud Messaging** dans **Paramètres** et copiez la clé serveur et l’ID de l’expéditeur :<br>![][59]
+Vous devez saisir votre clé de serveur Firebase et votre ID d’expéditeur dans le tableau de bord de Braze : Pour ce faire, connectez-vous à la [Console Firebase Developers][58] et sélectionnez votre projet Firebase. Ensuite, sélectionnez **Cloud Messaging** dans **Paramètres** et copiez la clé serveur et l’ID de l’expéditeur :<br>![][59]
 
 Dans Braze, sélectionnez votre application Android sur la page **Configuration de l’application** dans **Gérer les paramètres**. Saisissez ensuite votre clé de serveur Firebase dans le champ **Clé du serveur de messagerie cloud Firebase** et ID d’expéditeur Firebase dans le champ ID **Expéditeur de messagerie cloud Firebase**.
 
@@ -36,7 +38,7 @@ Dans Braze, sélectionnez votre application Android sur la page **Configuration 
 
 Le SDK Braze peut gérer automatiquement l’enregistrement des notifications push avec les serveurs Firebase Cloud Messaging pour que les périphériques reçoivent des notifications push.
 
-![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, « Automatiser l’intégration d’Android Unity », « Notification Push Firebase Push », « Configuration Push gère les liens profonds Push automatiquement », « Configuration Push Rendu HTML des notification push activé » et « Définir les auditeurs Push Supprimé/Ouvert/Reçu » sont définis. Les champs « ID expéditeur Firebase », « Possibilité de retrait de petite/grande icône », « Couleur de la notification par défaut » sont également fournis.][62]
+![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, « Automatiser l’intégration d’Android Unity », « Notification Push Firebase Push », « Configuration Push gère les liens profonds Push automatiquement », « Configuration Push Rendu HTML des notification push activé » et « Définir les auditeurs Push Supprimé/Ouvert/Reçu » sont définis. Les champs « Firebase Sender ID » (ID expéditeur Firebase), « Small/Grand Icon » (Possibilité de retrait de petite/grande icône), « Default Notification Accent Color » (Couleur de la notification par défaut) sont également fournis.][62]
 
 - **Enregistrement automatique de Firebase Cloud Messaging activé**<br> Donne l’ordre au SDK Braze de récupérer et d’envoyer automatiquement un jeton de notification push FCM pour un appareil. 
 - **ID de l’expéditeur de Firebase Cloud Messaging**<br> L’identifiant de l’expéditeur provenant de votre console Firebase.
@@ -103,7 +105,7 @@ public class MainMenu : MonoBehaviour {
 
 ### Exemple d’implémentation
 
-Le projet d’échantillon dans le [Référentiel de développement du SDK Braze Unity ][13] contient une application parfaitement fonctionnelle incluant FCM.
+Le projet d’échantillon dans le [Référentiel de développement du SDK Braze Unity][13] contient une application parfaitement fonctionnelle incluant FCM.
 
 ## Ressources liens profonds vers in-app
 

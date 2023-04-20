@@ -3,12 +3,15 @@ nav_title: Fonction de rappel événement de notification push
 article_title: Fonction de rappel événement de notification push pour Android
 platform: Android
 page_order: 50
-description: "Cet article de référence aborde l’utilisation d’une fonction de rappel pour les événements de notification push sur Android"
+description: "Cet article de référence aborde l’utilisation d’une fonction de rappel pour les événements de notification push sur Android."
 channel:
   - Notification push
 
 ---
-# Gestion personnalisée des reçus, ouvertures, rejets et paires clé-valeur de notification push via fonction de rappel {#android-push-listener-callback}
+
+# Fonction de rappel d’événement de notification push {#android-push-listener-callback}
+
+> Cet article de référence aborde l’utilisation d’une fonction de rappel pour les événements de notification push sur Android
 
 Braze propose une fonction de rappel [`subscribeToPushNotificationEvents()`][1] pour la réception, l’ouverture ou le rejet des notifications push. Nous vous recommandons de placer cette fonction de rappel dans votre `Application.onCreate()` pour ne manquer aucun événement survenant lorsque votre application n’est pas en fonctionnement.
 
@@ -83,4 +86,4 @@ Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
 Avec les boutons d’action de notification, les intentions `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` se déclenchent lorsque les boutons avec les actions `opens app` ou `deep link` sont cliqués. La gestion des liens profonds et des compléments reste la même. Les boutons avec des actions `close` ne déclenchent pas les intentions `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` et rejettent automatiquement la notification.
 {% endalert %}
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html

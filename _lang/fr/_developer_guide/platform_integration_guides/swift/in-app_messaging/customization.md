@@ -2,7 +2,7 @@
 page_order: 2
 nav_title: Personnalisation
 article_title: Personnalisation des messages in-app iOS
-layout: featured
+layout: dev_guide
 hidden: true
 platform: iOS
 

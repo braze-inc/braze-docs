@@ -10,7 +10,7 @@ channel: email
 
 # Consentement et collecte d’adresses
 
-Avant d’envoyer vos e-mails initiaux, il est important d’obtenir d’abord l’autorisation de vos clients. C’est une courtoisie commune et fait des merveilles pour vos tarifs ouverts !
+> Avant d’envoyer vos e-mails initiaux, il est important d’obtenir d’abord l’autorisation de vos clients. C’est une courtoisie commune et fait des merveilles pour vos tarifs ouverts !
 
 ## États des abonnés
 

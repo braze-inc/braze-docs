@@ -1,33 +1,33 @@
 ---
-nav_title: FAQ Intelligence
+nav_title: FAQ
 article_title: FAQ Intelligence
-page_order: 19
+page_order: 191
 description: "Le présent article fournit des réponses aux questions fréquemment posées sur le canal intelligent, la sélection intelligente et le timing intelligent."
 ---
 
-# FAQ Intelligence
+# Foire aux questions
 
 > Le présent article fournit des réponses aux questions fréquemment posées concernant l’Intelligence Suite.
 
 ## Sélection intelligente
 
-### Pourquoi la rééligibilité n’est-elle pas disponible lorsqu’elle est associée à une sélection intelligente ?
+### Pourquoi la rééligibilité dans moins de 24 heures n’est-elle pas disponible lorsqu’elle est associée à une sélection intelligente ?
 
-Nous ne permettons pas aux campagnes de sélection intelligente d’activer la rééligibilité, car cela affecterait l’intégrité de la variante de contrôle.
+Nous ne permettons pas aux campagnes de sélection intelligente d’activer la rééligibilité au cours d’une fenêtre trop courte car cela affecterait l’intégrité de la variante de contrôle. En créant un intervalle de 24 heures, nous aidons à garantir que l’algorithme disposera d’un ensemble de données valide statistiquement à partir duquel travailler.
 
-Normalement, les campagnes avec rééligibilité amèneront les utilisateurs à saisir de nouveau la même variante qu’auparavant. Avec une sélection intelligente, Braze ne peut pas garantir qu’un utilisateur recevra la même Campaign Variant parce que la distribution de la variante aurait changé en raison de l’aspect d’allocation optimal pour cette fonctionnalité.
+Normalement, les campagnes avec rééligibilité amèneront les utilisateurs à saisir de nouveau la même variante qu’auparavant. Avec une sélection intelligente, Braze ne peut pas garantir qu’un utilisateur recevra la même Campaign Variant parce que la distribution de la variante aurait changé en raison de l’aspect d’allocation optimal pour cette fonctionnalité. Si l’utilisateur était autorisé à rentrer à nouveau avant que la sélection intelligente ne réexamine la performance de la variante, les données pourraient être biaisées en raison des utilisateurs étant entrés à nouveau.
 
 Par exemple, si une campagne utilise ces variantes :
 
 - Variante A : 20 %
 - Variante B : 20 %
-- Control: 60 %
+- Contrôle : 60 %
 
 La distribution de la variante pourrait alors être la suivante au deuxième tour :
 
 - Variante A : 15 %
 - Variante B : 25 %
-- Control: 60 %
+- Contrôle : 60 %
 
 ### Pourquoi mes variantes de sélection intelligente affichent-elles des envois égaux pendant les premières étapes de ma campagne ?
 
@@ -43,6 +43,7 @@ La sélection intelligente ne sera pas disponible si :
 
 - Vous n’avez pas ajouté d’événements de conversion à votre campagne ou Canvas
 - Vous créez une campagne à envoi unique
+- Vous avez activé la rééligibilité avec une fenêtre de moins de 24 heures
 - Votre Canvas est composé d’une seule variante sans ajout de variantes supplémentaires ou de groupes de contrôle
 - Votre Canvas est composé d’un seul groupe de contrôle sans ajout de variantes
 
@@ -58,7 +59,7 @@ Le moment le plus populaire pour l’application est déterminé par l’heure d
 
 ### Combien de temps à l’avance dois-je lancer une campagne de timing intelligent pour la livrer avec succès à tous les utilisateurs de tous les fuseaux horaires ?
 
-Braze calcule le moment optimal à minuit, heure des Samoa, le premier fuseau horaire du monde. Un seul jour couvre environ 48 heures. Par exemple, une personne dont le temps optimal est 12 h 01 qui vit en Australie a déjà dépassé cette heure optimale et il est donc « trop tard » pour leur envoyer la campagne. Pour ces raisons, vous devez planifier 48 heures à l’avance pour vous assurer que toutes les personnes qui utilisent votre application dans le monde seront livrées avec succès.
+Braze calcule le moment optimal à minuit, heure des Samoa, un des premiers fuseaux horaires du monde. Un seul jour couvre environ 48 heures. Par exemple, une personne dont le temps optimal est 12 h 01 qui vit en Australie a déjà dépassé cette heure optimale et il est donc « trop tard » pour leur envoyer la campagne. Pour ces raisons, vous devez planifier 48 heures à l’avance pour vous assurer que toutes les personnes qui utilisent votre application dans le monde seront livrées avec succès.
 
 ### Pourquoi ma campagne de timing intelligent affiche-t-elle aucun ou peu d’envois ?
 

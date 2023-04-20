@@ -10,7 +10,9 @@ description: "This article describes initial SDK setup steps for iOS apps runnin
 search_rank: 2
 ---
 
-# Initial SDK Setup
+# Initial SDK iOS Setup
+
+> This reference article covers how to install the Braze iOS SDK for Cordova. 
 
 Download the SDK from [Github][1] and run the following from the root your project:
 
@@ -59,7 +61,7 @@ To enable the automatic collection of the [iOS IDFA][3], set the following confi
 
 ### Location collection and geofences
 
-To enable location collection and Braze Geofences, use the [`geofence-branch`][3] instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
+To enable location collection and Braze Geofences, use the `geofence-branch` instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
 
 ```xml
 <platform name="ios">

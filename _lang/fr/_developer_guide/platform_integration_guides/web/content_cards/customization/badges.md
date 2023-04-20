@@ -11,6 +11,8 @@ description: "Cet article de référence décrit comment demander le nombre de c
 
 # Badges
 
+> Cet article de référence décrit comment demander le nombre de cartes de contenu non lues pour votre application Web.
+
 ## Demander le décompte des cartes de contenu non lues
 
 Vous pouvez à tout moment demander le nombre de cartes non lues en appelant :

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "This article outlines details about the external IDs remove endpoint."
+description: "This article outlines details about the Remove external IDs endpoint."
 
 ---
 {% api %}
@@ -14,17 +14,15 @@ description: "This article outlines details about the external IDs remove endpoi
 /users/external_ids/remove
 {% endapimethod %}
 
-Use this endpoint to remove your users' old deprecated external IDs. This endpoint completely removes the deprecated ID and cannot be undone.
+> Use this endpoint to remove your users' old deprecated external IDs. 
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
+You can send up to 50 external IDs per request. You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
 
 {% alert warning %}
 This endpoint completely removes the deprecated ID and cannot be undone. Using this endpoint to remove deprecated `external_ids` that are still associated with users in your system can permanently prevent you from finding those users' data.
 {% endalert %}
 
-You can send up to 50 external IDs per request.
-
-You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
 ## Rate limit
 
@@ -72,8 +70,8 @@ The response will confirm all successful removals, as well as unsuccessful remov
 ```
 {
   "message" : (string) status message,
-  "external_ids" : (array) successful rename operations,
-  "rename_errors": (array) <minor error message>
+  "removed_ids" : (array of strings) successful remove operations,
+  "removal_errors": (array of arrays) <minor error message>
 }
 ```
 
@@ -81,6 +79,6 @@ The `message` field will return `success` for any valid request. More specific e
 - Invalid API key
 - Empty `external_ids` array
 - `external_ids` array with more than 50 items
-- Rate limit hit (>1,000 requests/minute)
+- Rate limit hit (more than 1,000 requests/minute)
 
 {% endapi %}

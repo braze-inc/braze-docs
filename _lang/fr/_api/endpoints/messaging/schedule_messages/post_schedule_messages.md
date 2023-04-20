@@ -1,11 +1,11 @@
 ---
-nav_title: "POST : planifier les messages"
-article_title: "POST : planifier les messages"
+nav_title: "POST : Créer des messages planifiés"
+article_title: "POST : Créer des messages planifiés"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Planifier les messages."
+description: "Cet article présente en détail l’endpoint Braze Créer des messages planifiés."
 
 ---
 {% api %}
@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Planifier les 
 /messages/schedule/create
 {% endapimethod %}
 
-Utilisez cet endpoint pour planifier une campagne, un Canvas ou un autre message à envoyer à un moment donné (jusqu’à 90 jours à l’avance) et obtenir un identifiant permettant de référencer ce message pour les mises à jour. Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la [console du développeur (Developer Console)](https://dashboard.braze.com/app_settings/developer_console/activitylog/) après l’envoi de tous les messages planifiés.
+> Utilisez cet endpoint pour planifier une campagne, un Canvas ou un autre message à envoyer à un moment donné (jusqu’à 90 jours à l’avance) et obtenir un identifiant permettant de référencer ce message pour les mises à jour. 
+
+Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la [console du développeur (Developer Console)](https://dashboard.braze.com/app_settings/developer_console/activitylog/) après l’envoi de tous les messages planifiés.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
@@ -160,6 +162,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 ```
 
 ## Réponse
+
+### Exemple de réponse réussie
 
 ```json
 {

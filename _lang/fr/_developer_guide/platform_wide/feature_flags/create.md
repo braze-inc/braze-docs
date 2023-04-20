@@ -1,8 +1,9 @@
 ---
 nav_title: Création d’indicateurs de fonctionnalité
 article_title: Création d’indicateurs de fonctionnalité
-page_order: 2
+page_order: 20
 description: "Cet article de référence explique comment créer des indicateurs de fonctionnalité pour coordonner les déploiements de nouvelles fonctionnalités."
+tool: Feature Flags
 platform:
   - iOS
   - Android
@@ -12,9 +13,9 @@ platform:
 
 # Création d’indicateurs de fonctionnalité
 
-> Cet article décrit comment créer et mettre en œuvre des indicateurs de fonctionnalité. Si vous désirez en apprendre plus concernant les indicateurs de fonctionnalité et leur utilisation dans Braze, consultez la section [About feature flags (À propos des indicateurs de fonctionnalité)][5] avant de continuer.
+> Les indicateurs de fonctionnalité vous permettent d’activer ou de désactiver à distance la fonctionnalité d’une sélection d’utilisateurs. Créez un indicateur de fonctionnalité dans le tableau de bord de Braze. Donnez un nom et un `ID`, un public cible et un pourcentage d’utilisateurs pour lesquels vous pouvez activer cette fonction. Ensuite, en utilisant `ID` dans votre application ou le code du site Internet, vous pouvez exécuter certaines parties de votre logique commerciale.
 
-Les indicateurs de fonctionnalité vous permettent d’activer ou de désactiver à distance la fonctionnalité d’une sélection d’utilisateurs. Créez un indicateur de fonctionnalité dans le tableau de bord de Braze. Donnez un nom et un `ID`, un public cible et un pourcentage d’utilisateurs pour lesquels vous pouvez activer cette fonction. Ensuite, en utilisant `ID` dans votre application ou le code du site Internet, vous pouvez exécuter certaines parties de votre logique commerciale.
+Vous souhaitez en savoir plus sur ce que sont les indicateurs de fonctionnalité et comment les utiliser dans Braze ? Consultez [À propos des indicateurs de fonctionnalité][5] avant de continuer.
 
 {% alert important %} 
 Les indicateurs de fonctionnalité sont actuellement en version bêta. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé. 
@@ -52,7 +53,7 @@ Pour éviter le comportement de l’application de production de rupture, l’in
 Les indicateurs de fonctionnalité sont partagés entre les applications au sein d’un groupe d’apps afin que différentes plateformes (iOS/Android/Web) puissent partager des références avec la même fonctionnalité.
 {% endalert %}
 
-#### Propriétés
+#### Propriétés {#properties}
 Les propriétés personnalisées peuvent être définies comme faisant partie de votre indicateur de fonctionnalité. Ces propriétés seront accessibles par votre application via le SDK Braze lorsque la fonctionnalité est activée. Définir des propriétés est une étape facultative.
 
 Les variables peuvent être des **chaînes de caractères**, des valeurs **booléennes** ou des **chiffres**. Définissez la clé variable et la valeur par défaut pour chaque propriété.
@@ -137,6 +138,16 @@ if (featureFlag.enabled) {
 }
 ```
 {% endtab %}
+{% tab React Native %}
+```javascript
+const featureFlag = await Braze.getFeatureFlag("expanded_user_profile");
+if (featureFlag.enabled) {
+  console.log(`expanded_user_profile is enabled`);
+} else {
+  console.log(`expanded_user_profile is not enabled`);
+}
+```
+{% endtab %}
 {% endtabs %}
 
 ### Accès aux propriétés {#accessing-properties}
@@ -194,6 +205,16 @@ val booleanProperty = featureFlag.getBooleanProperty("expanded")
 val numberProperty = featureFlag.getNumberProperty("height")
 ```
 {% endtab %}
+{% tab React Native %}
+```javascript
+// string properties
+const stringProperty = await Braze.getFeatureFlagStringProperty("my_flag", "color");
+// boolean properties
+const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag", "expanded");
+// number properties
+const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag", "height");
+```
+{% endtab %}
 {% endtabs %}
 
 Vous pouvez également obtenir une liste de tous les indicateurs de fonctionnalité activés :
@@ -228,6 +249,14 @@ for (FeatureFlag feature: features) {
 val featureFlags = braze.getAllFeatureFlags()
 featureFlags.forEach { feature ->
   Log.i(TAG, "Feature: ${feature.id} ${feature.enabled}")
+}
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+const features = await Braze.getAllFeatureFlags();
+for(const feature of features) {
+  console.log(`Feature: ${feature.id}`, feature.enabled);
 }
 ```
 {% endtab %}
@@ -270,6 +299,11 @@ braze.refreshFeatureFlags();
 {% tab Kotlin %}
 ```kotlin
 braze.refreshFeatureFlags()
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+Braze.refreshFeatureFlags();
 ```
 {% endtab %}
 {% endtabs %}
@@ -322,8 +356,46 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 }
 ```
 {% endtab %}
+{% tab React Native %}
+```javascript
+// register an event listener
+Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
+  console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
+});
+```
+{% endtab %}
 {% endtabs %}
 
+## Bonnes pratiques
+
+### Conventions de nommage
+
+- Envisagez de suivre un modèle tel que `{product}.{feature}.{action}`. 
+  - Par exemple, dans une application de covoiturage, votre ID de fonctionnalité peut être `driver.profile.show_animation_v3`
+- Cela aide également lors de la recherche d’un domaine de produit spécifique ou des indicateurs de fonctionnalité de l’équipe.
+- Assurez-vous que l’état par défaut d’un indicateur de fonctionnalité est désactivé dans votre application.
+  - Par exemple, il s'agit d'un anti-modèle si vous disposez d’un indicateur nommé `disable_feature_xyz`. Il peut y avoir des exceptions, mais essayez d’éviter de confondre le statut « activé » d’une fonctionnalité avec le comportement réel d’activation (désactivation de la fonctionnalité xyz).
+
+### Planifier à l’avance
+
+Jouez toujours la carte de la sécurité. Lorsque vous envisagez de nouvelles fonctionnalités qui peuvent nécessiter un bouton d'arrêt d'urgence, il est préférable de publier un nouveau code avec un indicateur de fonctionnalité et de ne pas en avoir besoin, plutôt que de réaliser qu’une nouvelle mise à jour de l’application est nécessaire.
+
+### Soyez descriptif
+
+Ajoutez une description à votre indicateur de fonctionnalité. Bien qu’il s’agisse d’un champ facultatif dans Braze, il peut aider à répondre aux questions que d’autres peuvent avoir lors de la navigation entre les indicateurs de fonctionnalité disponibles.
+
+- Coordonnées de la personne responsable de l’activation et du comportement de cet indicateur
+- Quand cet indicateur doit être désactivé
+- Liens vers la documentation ou les notes sur la nouvelle fonctionnalité contrôlée par cet indicateur
+- Dépendances ou remarques sur l’utilisation de la fonctionnalité
+
+### Nettoyer les anciens indicateurs de fonctionnalité
+
+Nous sommes tous coupables de laisser les fonctionnalités activées à 100 % plus longtemps que nécessaire.
+
+Pour vous aider à garder votre code (et le tableau de bord de Braze) propre, supprimez les indicateurs de fonctionnalité permanents de votre base de code une fois que tous les utilisateurs ont mis à niveau et que vous n’avez plus besoin d’une option pour désactiver la fonctionnalité.
+
+Cela permet de réduire la complexité de votre environnement de développement, mais aussi de garder votre liste d’indicateurs de fonctionnalités bien ordonnée.
 
 [1]: {% image_buster /assets/img/feature_flags/feature-flags-list.png %} 
 [2]: {% image_buster /assets/img/feature_flags/feature-flags-create.png %}

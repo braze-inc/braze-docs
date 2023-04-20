@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : planifier des messages Canvas déclenchés par API"
-article_title: "POST : planifier des messages Canvas déclenchés par API"
+nav_title: "POST : Planifier des Canvas déclenchés par API"
+article_title: "POST : Planifier des Canvas déclenchés par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
-Utilisez cet endpoint pour planifier des messages de Canvas (jusqu’à 90 jours à l’avance) via une livraison déclenchée par API, ce qui vous permet de décider quelle action doit déclencher le message à envoyer. Vous pouvez indiquer les `canvas_entry_properties` qui seront modélisées dans les messages envoyés dès les premières étapes du Canvas.
+> Utilisez cet endpoint pour planifier des messages de Canvas (jusqu’à 90 jours à l’avance) via une livraison déclenchée par API, ce qui vous permet de décider quelle action doit déclencher le message à envoyer. 
+
+Vous pouvez indiquer les `canvas_entry_properties` qui seront modélisées dans les messages envoyés dès les premières étapes du Canvas.
 
 Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un ID Canvas créé lorsque vous élaborez un [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 

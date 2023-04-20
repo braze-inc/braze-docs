@@ -11,6 +11,8 @@ description: "Cet article de référence couvre les options de personnalisation 
 
 # Personnalisation des polices
 
+> Cet article de référence couvre les options de personnalisation des polices telles que la définition d’une famille de polices et la façon de les référencer dans l’ensemble de votre application Android ou FireOS.
+
 Les polices du SDK Braze peuvent être définies via XML à l’aide des bibliothèques AndroidX selon la [Police en XML][1]. Pour utiliser votre police personnalisée avec le SDK Braze, vous devez d’abord créer une famille de polices.
 
 ## Créer une famille de polices
@@ -22,9 +24,9 @@ Voici un exemple de définition de famille de polices personnalisée à l’aide
 <font-family xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <!--Remarque : vous devez déclarer les deux ensembles d'attributs pour garantir que vos polices
-       de caractères se chargent sur des appareils utilisant Android 8.0 (niveau d'API 26) ou antérieur.
-      Consultez https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
+  <!--Note: You must declare both sets of attributes
+      to ensure your fonts load on devices running Android 8.0 (API level 26) or lower.
+      See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
 
   <font android:fontStyle="normal"
         android:fontWeight="400"
@@ -42,7 +44,7 @@ Après avoir stocké la définition de la famille de polices dans `/res/font/bun
 
 Maintenant que la famille de polices est créée, vous pouvez substituer le style Braze par défaut dans votre `styles.xml` pour inclure des références à la famille de polices.
 
-Par exemple, la substitution de styles suivante utiliserait la famille de polices `bungee` pour tous les messages in-app Braze et une famille de polices différente pour toutes les cartes de fil d'actualité Braze.
+Par exemple, la substitution de styles suivante utiliserait la famille de polices `bungee` pour tous les messages in-app Braze.
 
 ```
 <style name="Braze.InAppMessage">

@@ -9,9 +9,7 @@ description: "Cet article vous expliquera comment configurer Braze pour utiliser
 
 # OneLogin
 
-> Cet article vous expliquera comment configurer Braze pour utiliser OneLogin pour une authentification unique.
-
-[OneLogin](https://www.onelogin.com/) est une plateforme d’identité du cloud qui fournit une solution complète pour gérer les identités des utilisateurs. OneLogin s’intègre aux applications cloud et sur site utilisant SAML 2.0, pour l’authentification unique (SSO), provisionnement utilisateur, authentification multifacteurs, etc.
+> [OneLogin](https://www.onelogin.com/) est une plateforme d’identité du cloud qui fournit une solution complète pour gérer les identités des utilisateurs. OneLogin s’intègre aux applications cloud et sur site utilisant SAML 2.0, pour l’authentification unique (SSO), provisionnement utilisateur, authentification multifacteurs, etc.
 
 ## Conditions
 

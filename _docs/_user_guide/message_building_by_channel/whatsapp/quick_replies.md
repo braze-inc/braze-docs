@@ -5,14 +5,15 @@ description: "This reference article covers how to implement two-way messaging i
 page_type: partner
 search_tag: Partner
 page_order: 6
-
+channel:
+  - WhatsApp
 ---
 
-# Two-way messaging in Canvas using Quick Replies
+# Quick Replies
 
 ![Phone screen showing a call to action button will reply the text of the button clicked.][1]{: style="float:right;max-width:25%;margin-left:15px;border: 0;"}
 
-WhatsApp's Quick Reply calls-to-action (CTAs) are a great way to encourage user engagement with your WhatsApp messaging. Braze can process these messages and configure actions based on user selection. Additionally, these CTAs can reduce back-and-forth errors by providing an easily clickable button, eliminating the need for your users to type out responses.
+> WhatsApp's Quick Reply calls-to-action (CTAs) are a great way to encourage user engagement with your WhatsApp messaging. Braze can process these messages and configure actions based on user selection. Additionally, these CTAs can reduce back-and-forth errors by providing an easily clickable button, eliminating the need for your users to type out responses.
 
 Quick Reply CTA buttons come in as inbound messages to the Braze system, meaning you'll use the "Inbound WhatsApp message" action step when creating and filtering responses from your users. 
 

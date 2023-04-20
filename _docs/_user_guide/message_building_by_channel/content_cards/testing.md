@@ -10,7 +10,7 @@ channel:
 
 # Testing Content Cards
 
-It is extremely important to always test your Content Cards before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your Content Cards. You can preview your message to help you visualize as you compose it, as well as send a test message to yourself or a specific user's device. We recommend you take advantage of both.
+> It is extremely important to always test your Content Cards before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your Content Cards. You can preview your message to help you visualize as you compose it, as well as send a test message to yourself or a specific user's device. We recommend you take advantage of both.
 
 ## Preview
 

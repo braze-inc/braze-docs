@@ -13,9 +13,9 @@ search_rank: 1
 
 # Global Control Group
 
-> This article covers how to set up and properly use the Global Control Group. It also covers how to view reports and metrics brought on by the use of these groups.
+> Use the Global Control Group to specify a percentage of all users that shouldn't receive any campaigns or Canvases, allowing you to analyze the overall impact of your messaging efforts over time. 
 
-Use the Global Control Group to specify a percentage of all users that shouldn't receive any campaigns or Canvases, allowing you to analyze the overall impact of your messaging efforts over time. By comparing the behaviors of users that receive messaging to those that don't, you can further understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events.
+By comparing the behaviors of users that receive messaging to those that don't, you can further understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events.
 
 ## How the Global Control Group works
 
@@ -119,7 +119,7 @@ Users in your Global Control Group are withheld from receiving any messages othe
 
 You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the **Developer Console**. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
 
-Only one of these segments is active and can be queried using the [Users by Global Control Group]({{site.baseurl}}api/endpoints/export/user_data/post_users_global_control_group/) API endpoint, or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
+Only one of these segments is active and can be queried using the [Users by Global Control Group]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/) API endpoint, or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
 
 ## Testing best practices
 

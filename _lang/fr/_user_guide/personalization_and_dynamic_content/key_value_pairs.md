@@ -2,7 +2,7 @@
 nav_title: Paires clé-valeur
 article_title: Paires clé-valeur
 page_order: 4
-description: "Braze vous permet d’envoyer des charges utiles de données supplémentaires aux appareils utilisateur via des paires clé-valeur. Cette fonctionnalité est disponible sur les canaux de communication de notification push, in-app et Carte de contenu."
+description: "Cet article de référence présente les paires clé-valeur et comment les utiliser pour envoyer des charges utiles de données supplémentaires sur les appareils des utilisateurs."
 channel:
   - Notification push
   - messages In-App
@@ -12,7 +12,9 @@ channel:
 
 # Paires clé-valeur
 
-Braze vous permet d’envoyer des charges utiles de données supplémentaires aux appareils utilisateur via des paires clé-valeur. Cette fonctionnalité est disponible sur les canaux de communication de notification push, in-app et Carte de contenu. Les charges utiles de données supplémentaires peuvent vous aider à mettre à jour les indicateurs internes et le contenu des applications et de personnaliser les propriétés des notifications push, telles que la priorisation des alertes, la localisation et les sons.
+> Braze vous permet d’envoyer des charges utiles de données supplémentaires aux appareils utilisateur via des paires clé-valeur. Cette fonctionnalité est disponible sur les canaux de communication de notification push, in-app et Carte de contenu. 
+
+Les charges utiles de données supplémentaires peuvent vous aider à mettre à jour les indicateurs internes et le contenu des applications et de personnaliser les propriétés des notifications push, telles que la priorisation des alertes, la localisation et les sons.
 
 ## Notifications push
 
@@ -152,10 +154,10 @@ Braze vous permet d’envoyer une chaîne de caractères personnalisée de paire
 
 ## E-mails
 
-Pour les clients Braze qui utilisent SendGrid, les paires clé-valeur sont envoyées comme [arguments uniques][11]. SendGrid vous permet de joindre un nombre illimité de paires clé-valeur jusqu’à 10 000 octets de données. Ces paires clé-valeur peuvent s’afficher dans des publications du [Webhook][12] de SendGrid. 
+SparkPost et SendGrid prennent en charge les paires clé-valeur dans les e-mails. Si vous utilisez SendGrid, les paires clé-valeur sont envoyées comme [arguments uniques][11]. SendGrid vous permet de joindre un nombre illimité de paires clé-valeur jusqu’à 10 000 octets de données. Ces paires clé-valeur peuvent s’afficher dans des publications du [Webhook][12] de SendGrid.
 
 {% alert note %}
-Notez que les e-mails renvoyés ne fournissent pas de paires clé-valeur à SendGrid.
+Les e-mails ayant rebondi ne fournissent pas de paires clé-valeur à SparkPost ou SendGrid.
 {% endalert %}
 
 ![Onglet Envoi d’Info du rédacteur de courriers électronique de Braze.][22]
@@ -174,7 +176,7 @@ Pour ajouter une paire clé-valeur à une carte de contenu, allez à l’onglet 
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#notification-priority
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/advanced_settings/#sounds
-[11]: https://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html
+[11]: https://docs.sendgrid.com/for-developers/sending-email/unique-arguments
 [12]: https://sendgrid.com/docs/for-developers/tracking-events/event/
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
 [14]: {{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id

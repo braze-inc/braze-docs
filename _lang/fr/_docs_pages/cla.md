@@ -1,5 +1,5 @@
 ---
-title: "Braze : Accord de licence contributeur"
+title: "Braze - Contribution License Agreement"
 permalink: cla/
 layout: documents
 
@@ -45,7 +45,7 @@ Sélectionnez une des options ci-dessous et signez comme indiqué. En signant, v
 <div id="cla_form_div">
 <form id="cla_form" >
 <input type="radio" name="type" value="personnel" id="type_personal" checked="checked" /> <label for="type_personal">Je suis le seul propriétaire des droits de propriété intellectuelle sur mes Soumissions et je ne fais pas de Soumissions dans le cadre de mon travail pour mon employeur. </label><br />
-<input type="radio" name="type" value="employeur" id="type_employer" /> <label for="type_employer" >Je fais des Soumissions dans le cadre de mon travail pour mon employeur ou mon employeur a des droits de propriété intellectuelle sur mes soumissions en vertu d'un contrat ou de la législation applicable). J'ai la permission de mon employeur de faire des Soumissions et de conclure cet Accord au nom de mon employeur. En signant ci-dessous, j’accepte que le terme défini « Vous » s’applique à moi-même et à mon employeur. </label><br />
+<input type="radio" name="type" value="employeur" id="type_employer" /> <label for="type_employer" >Je fais des Soumissions dans le cadre de mon travail pour mon employeur (ou mon employeur a des droits de propriété intellectuelle sur mes soumissions en vertu d'un contrat ou de la législation applicable). J'ai la permission de mon employeur de faire des Soumissions et de conclure cet Accord au nom de mon employeur. En signant ci-dessous, j’accepte que le terme défini « Vous » s’applique à moi-même et à mon employeur. </label><br />
 <br /><br />
 <label for="input_name"> Nom (« Vous ») :</label> <input type="text" value="" name="name" id="input_name" class="form-control"  /> <br />
 <label for="input_signature"> Signature :</label> <input type="text" value="" name="signature" id="input_signature" class="form-control" /> <br />
@@ -56,7 +56,7 @@ Sélectionnez une des options ci-dessous et signez comme indiqué. En signant, v
 <span id="company_span">
 <label for="input_company_name"> Nom de l’entreprise :</label> <input type="text" value="" name="company_name" id="input_company_name" class="form-control" /> <br />
 <label for="input_by"> Par :</label> <input type="text" value="" name="by" id="input_by" class="form-control"  /> <br />
-<label for="input_title">Poste :</label> <input type="text" value="" name="title" id="input_title" class="form-control"  /> <br />
+<label for="input_title">Titre :</label> <input type="text" value="" name="title" id="input_title" class="form-control"  /> <br />
 </span>
 <button type="submit" name="Agree" value="J’accepte" class="btn btn-black" id="cla_agree" role="button">J’accepte</button>
 </form>

@@ -15,11 +15,13 @@ description: "Cet article présente en détail l’endpoint Braze Lister les dé
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Utilisez cet endpoint pour renvoyer un produit de catalogue et son contenu.
+> Utilisez cet endpoint pour renvoyer un produit de catalogue et son contenu.
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#52c6631c-7366-48e5-9e0e-16de7b6285cc {% endapiref %}
 
 ## Limite de débit
 
-Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Paramètres de chemin
 

@@ -1,22 +1,22 @@
 ---
-nav_title: "POST : exportation de profils utilisateur par segment"
-article_title: "POST : exportation de profils utilisateur par segment"
+nav_title: "POST : Exporter le profil utilisateur par segment"
+article_title: "POST : Exporter le profil utilisateur par segment"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Utilisateurs par segment."
+description: "Cet article présente en détail l’endpoint Braze Exporter les utilisateurs par segment."
 
 ---
 {% api %}
-# Endpoint Utilisateurs par segment
+# Exporter le profil utilisateur par segment
 {% apimethod post %}
 /users/export/segment
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter tous les utilisateurs d’un segment. Les données utilisateur sont exportées sous forme de fichiers multiples d’objets utilisateur JSON séparés par sauts de ligne (c.-à-d. un objet JSON par ligne). 
+> Utilisez cet endpoint pour exporter tous les utilisateurs d’un segment. 
 
-Les données sont exportées vers une URL générée automatiquement ou vers un compartiment S3 si cette intégration est déjà configurée.
+Les données utilisateur sont exportées sous forme de fichiers multiples d’objets utilisateur JSON séparés par sauts de ligne (c.-à-d. un objet JSON par ligne). Les données sont exportées vers une URL générée automatiquement ou vers un compartiment S3 si cette intégration est déjà configurée.
 
 Cet endpoint n’est actuellement pas pris en charge par Google Cloud Storage.
 
@@ -81,7 +81,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-Les attributs personnalisés individuels ne peuvent pas être exportés. Cependant, tous les attributs personnalisés peuvent être exportés en incluant `custom_attributes` dans le tableau `fields_to_export` (p. ex., [« first_name », « e-mail », « custom_attributes »]).
+Les attributs personnalisés individuels ne peuvent pas être exportés. Cependant, tous les attributs personnalisés peuvent être exportés en incluant `custom_attributes` dans le tableau `fields_to_export` (p. ex., ['first_name', 'e-mail', 'custom_attributes']).
 {% endalert %}
 
 ## Paramètres de demande

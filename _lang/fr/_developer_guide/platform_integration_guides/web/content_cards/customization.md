@@ -2,7 +2,7 @@
 page_order: 1
 nav_title: Personnalisation
 article_title: Personnalisation de la carte de contenu Web
-layout: featured
+layout: dev_guide
 
 platform: Web
 

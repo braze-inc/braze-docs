@@ -2,7 +2,7 @@
 nav_title: Lien profond au contenu d’application
 article_title: Lien profond au contenu d’application
 page_order: 3
-description: "Cet article de référence explique comment ajouter un lien profond dans le contenu de vos messages in-app."
+description: "Un lien profond est un moyen de lancer une application native et de fournir des informations supplémentaires qui lui permettent de réaliser des actions spécifiques ou d’afficher des contenus spécifiques. Le présent article de référence couvre la façon d’établir un lien profond dans le contenu de votre message dans l’application."
 
 ---
 

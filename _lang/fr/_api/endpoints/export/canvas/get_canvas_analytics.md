@@ -1,20 +1,20 @@
 ---
-nav_title: "GET : Analyse des séries de données de Canvas"
-article_title: "GET : Analyse des séries de données de Canvas"
+nav_title: "GET : Exporter l’analyse des séries de données de Canvas"
+article_title: "GET : Exporter l’analyse des séries de données de Canvas"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Analyse des séries de données de Canvas."
+description: "Cet article présente en détail l’endpoint Braze Exporter l’analyse des séries de données de Canvas."
 
 ---
 {% api %}
-# Endpoint Analyse des séries de données de Canvas
+# Exporter l’analyse des séries de données de Canvas
 {% apimethod get %}
 /canvas/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter des données de série temporelles pour un Canvas.
+> Utilisez cet endpoint pour exporter des données de série temporelles pour un Canvas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0fd61e93-7edf-4d87-a8dc-052420aefb73 {% endapiref %}
 
@@ -30,12 +30,13 @@ Utilisez cet endpoint pour exporter des données de série temporelles pour un C
 | `ending_at` | Requis | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation de données doit se terminer. Par défaut, l’heure de la demande. |
 | `starting_at` | Facultatif* | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation de données doit commencer. <br><br>* `length` ou `starting_at` est nécessaire. |
 | `length` | Facultatif* | String | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 14 (inclus). <br><br>* `length` ou `starting_at` est nécessaire. |
-| `include_variant_breakdown` | Facultatif | Booléen | S’il faut inclure ou non des statistiques de variante (par défaut sur Faux).  |
-| `include_step_breakdown`    | Facultatif | Booléen | S’il faut inclure ou non des statistiques d’étape (par défaut sur Faux). |
-| `include_deleted_step_data` | Facultatif | Booléen | S’il faut inclure ou non des statistiques d’étape pour les étapes supprimées (par défaut sur Faux). |
+| `include_variant_breakdown` | Facultatif | Booléen | S’il faut inclure ou non des statistiques de variante (par défaut sur `false`).  |
+| `include_step_breakdown` | Facultatif | Booléen | S’il faut inclure ou non des statistiques d’étape (par défaut sur `false`). |
+| `include_deleted_step_data` | Facultatif | Booléen | S’il faut inclure ou non des statistiques d’étape pour les étapes supprimées (par défaut sur `false`). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
+
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_series?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \

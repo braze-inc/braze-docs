@@ -1,10 +1,10 @@
 ---
-nav_title: "POST: Update Scheduled API-Triggered Campaign Messages"
-article_title: "POST: Update Scheduled API-Triggered Campaign Messages"
+nav_title: "POST: Update Scheduled API-Triggered Campaigns"
+article_title: "POST: Update Scheduled API-Triggered Campaigns"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-description: "This article outlines details about the update scheduled API-triggered campaigns Braze endpoint."
+description: "This article outlines details about the Update scheduled API-triggered campaigns Braze endpoint."
 
 ---
 {% api %}
@@ -13,13 +13,15 @@ description: "This article outlines details about the update scheduled API-trigg
 /campaigns/trigger/schedule/update
 {% endapimethod %}
 
-Use this endpoint to update scheduled API-triggered campaigns created in the dashboard, allowing you to decide what action should trigger the message to be sent. You can pass in `trigger_properties` that will be templated into the message itself.
+> Use this endpoint to update scheduled API-triggered campaigns created in the dashboard, allowing you to decide what action should trigger the message to be sent.
+
+You can pass in `trigger_properties` that will be templated into the message itself.
 
 Note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API-Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
-
 Any schedule will completely overwrite the one that you provided in the create schedule request or in previous update schedule requests. For example, if you originally provide `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` and then in your update you provide `"schedule" : {"time" : "2015-02-20T14:14:47"}`, your message will now be sent at the provided time in UTC, not in the user's local time. Scheduled triggers that are updated very close to or during the time they were supposed to be sent will be updated with best efforts, so last-second changes could be applied to all, some, or none of your targeted users.
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
 
 ## Rate limit
 

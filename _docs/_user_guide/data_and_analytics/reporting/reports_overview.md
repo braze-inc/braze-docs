@@ -10,7 +10,7 @@ search_rank: 1
 
 # Reports overview
 
-Not sure where to start with analyzing your campaigns? You're in the right place. This page provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
+> Not sure where to start with analyzing your campaigns? You're in the right place. This page provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
 
 ## Which variant won?
 

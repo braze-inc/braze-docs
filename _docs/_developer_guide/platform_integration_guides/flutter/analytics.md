@@ -7,9 +7,9 @@ description: "This article covers how to set up and track basic analytics in the
 
 ---
  
-# Analytics
+# Flutter analytics
 
-This article covers how to set up and track basic analytics in your Flutter app.
+> This article covers how to set up and track basic analytics in your Flutter app.
 
 Before you start, read our [Analytics Overview][0] article to learn more about Braze analytics and what is already tracked by default. We also recommend familiarizing yourself with our [event naming conventions][1].
 

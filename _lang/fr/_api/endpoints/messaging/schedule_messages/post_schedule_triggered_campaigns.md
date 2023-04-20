@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : planifier des messages de campagne déclenchés par API"
-article_title: "POST : planifier des messages de campagne déclenchés par API"
+nav_title: "POST : Planifier des campagnes déclenchées par API"
+article_title: "POST : Planifier des campagnes déclenchées par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -14,9 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
-Utilisez cet endpoint pour envoyer des messages de campagne créés sur le tableau de bord (jusqu’à 90 jours à l’avance) via une livraison déclenchée par API, ce qui vous permet de décider quelle action doit déclencher le message à envoyer. Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
+> Utilisez cet endpoint pour envoyer des messages de campagne créés sur le tableau de bord (jusqu’à 90 jours à l’avance) via une livraison déclenchée par API, ce qui vous permet de décider quelle action doit déclencher le message à envoyer. 
 
-Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un ID de campagne créé lorsque vous élaborez une [campagne déclenchée par API]({{site.baseurl}}/api/api_campaigns/).
+Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
+
+Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un [ID de campagne]({{site.baseurl}}/api/identifier_types/) créé lorsque vous élaborez une [campagne déclenchée par API]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
@@ -137,6 +139,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ```
 
 ## Réponse
+
+### Exemple de réponse réussie
 
 ```json
 Content-Type: application/json

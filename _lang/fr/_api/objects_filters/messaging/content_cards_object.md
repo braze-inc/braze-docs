@@ -8,11 +8,9 @@ description: "Cet article de référence explique les différents composants de 
 
 ---
 
-# Spécification de l’objet Carte de contenu
+# Objet Carte de contenu
 
-Le `content_card` vous permet de modifier ou de créer des cartes de contenu via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
-
-## Corps
+> Le `content_card` vous permet de modifier ou de créer des cartes de contenu via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
 ```json
 {

@@ -9,9 +9,9 @@ channel: messages In-App
 
 ---
 
-# Messages in-app
+# Intégration de message in-app
 
-Les messages in-app natifs s’affichent automatiquement sur Android et iOS lors de l’utilisation de React Native. Cet article couvre la personnalisation et la journalisation des analytiques pour vos messages in-app pour les applications utilisant React Native.
+> Les messages in-app natifs s’affichent automatiquement sur Android et iOS lors de l’utilisation de React Native. Cet article couvre la personnalisation et la journalisation des analytiques pour vos messages in-app pour les applications utilisant React Native.
 
 ## Accès aux données de message in-app
 
@@ -126,7 +126,7 @@ Suivez ces étapes pour tester un exemple de message in-app.
 
 1. Définissez un utilisateur actif dans l’application React en appelant la méthode `Braze.changeUserId('your-user-id')`.
 2. Dirigez-vous vers **Campaigns (Campagnes)** et suivez [ce guide][5] pour créer une nouvelle campagne de messages in-app.
-3. Composez votre campagne de messages in-app et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Envoyer le test**. Vous devriez être très prochainement en mesure de lancer un message in-app sur votre périphérique.
+3. Composez votre campagne de messages in-app et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Send Test (Envoyer le test)**. Vous devriez être très prochainement en mesure de lancer un message in-app sur votre périphérique.
 
 ![Une campagne de messages in-app Braze montrant que vous pouvez ajouter votre propre ID utilisateur en tant que destinataire de test pour essayer votre message in-app.][6]
 
@@ -137,5 +137,5 @@ Un exemple d’implémentation est disponible dans BrazeProject, dans le [SDK Re
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [6]: {% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test"
 [7]: https://github.com/braze-inc/braze-react-native-sdk
-[8]: https://github.com/Appboy/appboy-android-sdk
+[8]: https://github.com/braze-inc/braze-android-sdk
 [9]: https://github.com/braze-inc/braze-swift-sdk

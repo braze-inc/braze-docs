@@ -1,5 +1,5 @@
 ---
-nav_title: Présentation du SDK
+nav_title: Présentation du SDK pour les marketeurs
 article_title: Présentation du SDK pour les marketeurs
 page_order: 3
 page_type: reference
@@ -9,7 +9,7 @@ description: "Cet article de référence sur l’onboarding décrit les bases du
 
 # Présentation du SDK pour les marketeurs
 
-Le SDK Braze facilite la collecte des données de session, l’identification des utilisateurs et l’enregistrement des achats et des événements personnalisés sur votre site web ou votre application. Vous pouvez également utiliser le SDK pour interagir avec vos utilisateurs en envoyant des messages in-app et des notifications push directement depuis le tableau de bord de Braze.
+> Le SDK Braze facilite la collecte des données de session, l’identification des utilisateurs et l’enregistrement des achats et des événements personnalisés sur votre site web ou votre application. Vous pouvez également utiliser le SDK pour interagir avec vos utilisateurs en envoyant des messages in-app et des notifications push directement depuis le tableau de bord de Braze.
 
 Êtes-vous un développeur à la recherche d’un aperçu technique du SDK ? Consultez plutôt notre [présentation pour les développeurs][1].
 
@@ -23,7 +23,7 @@ Un kit de développement logiciel (SDK) est un ensemble d’outils préfabriqué
 
 Étant donné que cette fonctionnalité provient par défaut de Braze, vos développeurs sont libres de se concentrer sur votre activité principale. Sans SDK, chaque client Braze devrait créer depuis le départ toute l’infrastructure et tous les outils nécessaires au traitement des données, à la logique de segmentation, aux options de livraison, à la gestion des utilisateurs anonymes, aux analytiques des campagnes et bien plus encore. Cela prendrait beaucoup plus de temps et serait bien plus pénible que l’heure, environ, nécessaire pour intégrer notre SDK.
 
-## Implémentation
+## Mise en œuvre
 
 Pour intégrer un SDK dans votre application ou votre site, quelqu’un devra ajouter le code du SDK à la base de code globale qui alimente cette application. Votre équipe d’ingénierie sera donc impliquée pour, en somme, relier nos applications ensemble afin que les informations et les actions circulent entre elles. Mais bien que vos développeurs soient impliqués, le SDK est conçu pour être léger et facile à intégrer. 
 

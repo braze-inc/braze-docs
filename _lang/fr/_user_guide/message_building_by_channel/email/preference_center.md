@@ -2,9 +2,9 @@
 nav_title: Centre de préférences
 article_title: Centre de préférences
 page_order: 5
-layout: featured
+layout: dev_guide
 guide_top_header: "Centre de préférences"
-guide_top_text: "Le centre de préférences e-mail est un moyen facile de gérer les utilisateurs qui reçoivent certains groupes de lettres d’information. Lisez ces articles pour savoir comment créer et gérer votre centre de préférences au moyen du tableau de bord ou via l’API."
+guide_top_text: "Le centre de préférences e-mail est un moyen facile de gérer les utilisateurs qui reçoivent certains groupes de newsletters. Lisez ces articles pour savoir comment créer et gérer votre centre de préférences au moyen du tableau de bord ou via l’API."
 description: "Cette page de destination comprend des articles sur le centre de préférences de courrier électronique Braze et la manière d’utiliser l’API du centre de préférences."
 channel:
   - e-mail

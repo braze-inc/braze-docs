@@ -2,13 +2,13 @@
 nav_title: "Modèles et médias"
 article_title: Modèles et médias
 page_order: 5
-layout: featured
+layout: dev_guide
 guide_top_header: "Modèles et médias"
 guide_top_text: "La fonctionnalité Templates and Media (Modèles et médias) de Braze vous permet de gérer des modèles et de télécharger des images pour vos messages dans un seul emplacement centralisé. Vous pouvez également utiliser cette fonction pour consolider et organiser vos modèles sur votre tableau de bord afin qu’ils soient visuellement cohérents."
 search_rank: 2
 page_type: landing
 tool: 
-- Modèles
+- Templates
 - Médias
 description: "Cette page d’accueil regroupe plusieurs articles sur les modèles et médias. Vous trouverez ici des ressources sur la bibliothèque multimédia et vous aider à gérer vos modèles, à télécharger des images, à créer des blocs de contenu, etc."
 

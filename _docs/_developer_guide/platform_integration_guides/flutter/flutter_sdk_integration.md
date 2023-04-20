@@ -9,7 +9,9 @@ search_rank: 1
 
 # Initial SDK setup
 
-Follow these instructions to install the [Braze Flutter SDK][1] that contains a package to allows integrators to use Braze APIs in [Flutter apps][2] written in Dart. This plugin provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with a single codebase.
+> This reference article covers how to install the Braze SDK for Flutter. Follow these instructions to install the [Braze Flutter SDK][1] that contains a package to allows integrators to use Braze APIs in [Flutter apps][2] written in Dart.
+
+This plugin provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with a single codebase.
 
 {% alert note %}
 You will need to complete installation steps on both platforms separately.
@@ -17,7 +19,7 @@ You will need to complete installation steps on both platforms separately.
 
 ## Prerequisites
 
-To complete the installation, you will need the [app identifier API key][3] as well as the [SDK endpoint][4]. Both are located under **Manage Settings** in the dashboard.
+To complete the installation, you will need the [app identifier API key]({{site.baseurl}}/api/identifier_types/) as well as the [SDK endpoint][4]. Both are located under **Manage Settings** in the dashboard.
 
 Before following these steps, install and set up the [Flutter SDK][5].
 

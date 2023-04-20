@@ -3,7 +3,7 @@ nav_title: "POST : mettre à jour le statut du groupe d’abonnement de l’uti
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
-description: "Cet article présente des informations concernant l’endpoint Mettre à jour le statut du groupe d’abonnement Braze V2 de l’utilisateur."
+description: "Cet article présente en détail l’endpoint Braze V2 Mettre à jour le statut du groupe d’abonnement de l’utilisateur."
 
 platform: API
 channel:
@@ -11,12 +11,14 @@ channel:
 ---
 
 {% api %}
-# Mettre à jour le statut du groupe d’abonnement de l’utilisateur V2
+# Mettre à jour le statut du groupe d’abonnement de l’utilisateur (V2)
 {% apimethod post %}
 /v2/subscription/status/set
 {% endapimethod %}
 
-Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. Vous pouvez accéder au groupe d’abonnement `subscription_group_id` en vous rendant sur la page **Subscription Groups**.
+> Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. 
+
+Vous pouvez accéder au groupe d’abonnement `subscription_group_id` en vous rendant sur la page **Subscription Groups**.
 
 Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d’abonnement aux e-mails** :
 
@@ -53,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 \* Notez que vous ne pouvez pas inclure à la fois les paramètres `emails` et `phones`. De plus, `emails`, `phones` et `external_ids` peuvent tous être envoyés individuellement.
 
 {% alert tip %}
-Lorsque vous créez de nouveaux utilisateurs au moyen de l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d’abonnement dans l’objet attributs d’utilisateur, ce qui vous permet de créer un utilisateur et de définir l’état du groupe d’abonnement dans un seul appel API.
+Lorsque vous créez de nouveaux utilisateurs au moyen de l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l’objet attributs d’utilisateur, ce qui vous permet de créer un utilisateur et de définir l’état du groupe d’abonnement dans un seul appel API.
 {% endalert %}
 
 ## Paramètres de demande
@@ -71,7 +73,7 @@ Lorsque vous créez de nouveaux utilisateurs au moyen de l’endpoint [/users/tr
 Notez que vous ne pouvez pas inclure à la fois les paramètres `emails` et `phones`. De plus, `emails`, `phones` et `external_ids` peuvent tous être envoyés individuellement.
 {% endalert %}
 
-## Exemple de demande d’e-mail et de SMS
+### Exemple de requêtes
 
 L’exemple suivant utilise `external_id` pour effectuer un appel API pour les e-mails et SMS.
 
@@ -95,7 +97,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 }
 ```
 
-## Exemple de demande d’e-mail
+## E-mail
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \
@@ -113,7 +115,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 '
 ```
 
-## Exemple de demande de SMS
+## SMS
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \

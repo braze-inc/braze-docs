@@ -8,6 +8,7 @@ alias: "/audience_sync_snapchat/"
 Outil :
   - Canvas
 hidden: true
+layout: dev_guide
 ---
 
 # Synchronisation de l’audience avec Snapchat

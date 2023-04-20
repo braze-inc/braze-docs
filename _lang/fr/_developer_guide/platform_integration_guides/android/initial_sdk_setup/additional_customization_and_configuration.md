@@ -9,7 +9,9 @@ description: "Cet article de référence couvre des options de personnalisation 
 
 ---
 
-# Personnalisation et configuration supplémentaires
+# Autres personnalisations du SDK
+
+> Cet article de référence couvre des options de personnalisation et de configuration supplémentaires, telles que la journalisation verbeuse, la suppression de la journalisation et l’implémentation de plusieurs clés API.
 
 ## Utiliser R8 ou ProGuard avec Braze
 La configuration de [réduction du code][50] est automatiquement comprise dans votre intégration Braze.
@@ -106,4 +108,4 @@ Consultez la documentation de [configuration de temps d’exécution][69] pour d
 [50]: https://developer.android.com/studio/build/shrink-code
 [54]: https://developer.android.com/reference/android/util/Log.html
 [69]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/
-[70]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.support/-braze-logger/log-level.html
+[70]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.support/-braze-logger/log-level.html

@@ -1,20 +1,20 @@
 ---
-nav_title: "GET : Indicateurs clé de performance pour les désinstallations quotidiennes d’application par date"
-article_title: "GET : Indicateurs clé de performance pour les désinstallations quotidiennes d’application par date"
+nav_title: "GET : Exporter les indicateurs clé de performance pour les désinstallations quotidiennes d’application par date"
+article_title: "GET : Exporter les indicateurs clé de performance pour les désinstallations quotidiennes d’application par date"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Obtenir les désinstallations quotidiennes d’application."
+description: "Cet article présente en détail l’endpoint Braze Exporter les désinstallations quotidiennes d’application par date."
 
 ---
 {% api %}
-# Endpoint Désinstallations quotidiennes d’application par date
+# Exporter les KPI pour les désinstallations quotidiennes d’application par date
 {% apimethod get %}
 /kpi/uninstalls/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer quotidiennement une série du nombre total de désinstallations à chaque date.
+> Utilisez cet endpoint pour récupérer quotidiennement une série du nombre total de désinstallations à chaque date.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#59c4d592-3e77-42f8-8ff1-d5d250acbeae {% endapiref %}
 

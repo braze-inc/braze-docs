@@ -8,7 +8,7 @@ description: "Cet article d’aide explique comment trouver un texte exact dans 
 tool: Segments
 ---
 
-# Rechercher le texte exact dans les champs de recherche
+# Rechercher le texte exact
 
 Vous pouvez constater que la recherche d’un élément spécifique peut parfois renvoyer trop de résultats, car Braze renverra tous les résultats contenant votre terme de recherche.
 

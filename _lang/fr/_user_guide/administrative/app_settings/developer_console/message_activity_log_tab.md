@@ -7,13 +7,17 @@ description: "Cet article de référence décrit le journal des activités de me
 
 ---
 
-# Onglet Message Activity Log (Journal des activités de message) {#dev-console-troubleshooting}
+# Journal des activités de message {#dev-console-troubleshooting}
 
-> Cet article de référence décrit le journal des activités de message dans la Developer Console, qui affiche les messages associés à vos campagnes et à vos envois. En plus de cet article, nous vous recommandons également de consulter notre cours d’apprentissage Braze [Outils d’assurance qualité et de débogage](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), qui explique comment utiliser le Journal des activités de message pour effectuer votre propre débogage et résoudre vous-même les problèmes.
+> Le **Journal des activités de message** dans la Developer Console vous permet de voir les messages (en particulier les messages d’erreur) associés à vos campagnes et à vos envois. 
 
-Le **Journal des activités de message** dans la Developer Console vous permet de voir les messages (en particulier les messages d’erreur) associés à vos campagnes et à vos envois. Vous pouvez voir les transactions de campagne API, résoudre les problèmes sur les messages défaillants et recueillir des informations sur la manière d’améliorer la livraison des notifications ou de résoudre les problèmes techniques existants.
+Vous pouvez voir les transactions de campagne API, résoudre les problèmes sur les messages défaillants et recueillir des informations sur la manière d’améliorer la livraison des notifications ou de résoudre les problèmes techniques existants.
 
 ![Journal des activités de message][2]
+
+{% alert tip %}
+En plus de cet article, nous vous recommandons également de consulter notre cours d’apprentissage Braze [Outils d’assurance qualité et de débogage](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), qui explique comment utiliser le Journal des activités de message pour effectuer votre propre débogage et résoudre vous-même les problèmes.
+{% endalert %}
 
 Vous pouvez filtrer par le contenu suivant connecté dans le **Journal des activités de message** :
 

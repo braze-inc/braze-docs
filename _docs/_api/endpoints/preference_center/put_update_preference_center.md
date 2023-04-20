@@ -5,20 +5,28 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "This article outlines details about the update a preference center Braze endpoint."
+description: "This article outlines details about the Update a preference center Braze endpoint."
 
 ---
 {% api %}
-# Update a preference center
+# Update preference center
 {% apimethod put %}
-/preference_center/v1/{preferenceCenterExternalId}
+/preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-Use this endpoint to update a preference center.
+> Use this endpoint to update a preference center.
 
 ## Rate limit
 
 This endpoint has a rate limit of 10 requests per minute, per app group.
+
+## Path parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 
 ## Request body
 
@@ -50,7 +58,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`options` | Optional | Object | Attributes: `meta-viewport-content`. When present, a `viewport` meta tag will be added to the page with `content= <value of attribute>`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request example
+## Example request
+
 {% raw %}
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/v1/{preferenceCenterExternalId}' \
@@ -67,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
 ```
 {% endraw %}
 
-## Response example
+## Example response
 {% raw %}
 ```
 {

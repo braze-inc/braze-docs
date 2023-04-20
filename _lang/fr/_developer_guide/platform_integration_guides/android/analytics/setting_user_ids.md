@@ -9,8 +9,10 @@ description: "Cet article de référence montre comment définir des ID utilisat
 
 ---
  
-# Définir des ID utilisateur pour Android et FireOS
+# Définir des ID utilisateur
  
+> Cet article de référence montre comment définir des ID utilisateur dans votre application Android ou FireOS, des conventions de dénominations d’ID utilisateur suggérées, ainsi que certaines bonnes pratiques.
+
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 ## Convention de dénomination des ID utilisateurs suggérée
@@ -56,4 +58,4 @@ Reportez-vous à la documentation [`changeUser`][4] pour plus d’informations.
 
 [1]: {{site.baseurl}}/api/endpoints/user_data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html

@@ -7,9 +7,9 @@ description: "Cet article de référence explique comment implémenter le suivi 
 
 ---
 
-# Aperçu du Suivi du pixel d’ouverture et des clics dans les e-mails
+# Suivi du pixel d’ouverture et des clics dans les e-mails
 
-Le [Suivi du pixel d’ouverture et des clics][open_tracking] dans les e-mails peut être désactivé par profil utilisateur. Cette flexibilité vous aide à respecter les règlements sur la protection de la vie privée, où un profil d’utilisateur individuel peut indiquer qu’il ne veut plus être suivi.
+> Le [Suivi du pixel d’ouverture et des clics][open_tracking] dans les e-mails peut être désactivé par profil utilisateur. Cette flexibilité vous aide à respecter les règlements sur la protection de la vie privée, où un profil d’utilisateur individuel peut indiquer qu’il ne veut plus être suivi.
 
 ## Mise en œuvre
 

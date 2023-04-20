@@ -2,16 +2,18 @@
 nav_title: AMP for Email
 article_title: AMP for Email
 alias: /amphtml/
-page_order: 9.2
+page_order: 9
 description: "This reference article provides an overview of AMP for Email and common use cases."
 channel:
   - email
 
 ---
 
-# AMP for Email
+# AMP for email
 
-With [AMP for Email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers, delivering a full experience directly to your user's inbox. AMP makes this possible through its use of various components that can be used to help build exciting in email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more! Tools like these offer significant opportunities to increase engagement and retention. 
+> With [AMP for Email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers, delivering a full experience directly to your user's inbox. 
+
+AMP makes this possible through its use of various components that can be used to help build exciting in email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more! Tools like these offer significant opportunities to increase engagement and retention. 
 
 {% alert important %}
 AMP for Email is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.

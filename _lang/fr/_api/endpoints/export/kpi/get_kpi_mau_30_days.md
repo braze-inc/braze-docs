@@ -1,20 +1,20 @@
 ---
-nav_title: "GET : Utilisateurs actifs mensuels des 30 derniers jours"
-article_title: "GET : Utilisateurs actifs mensuels des 30 derniers jours"
+nav_title: "GET : Exporter les utilisateurs actifs mensuels des 30 derniers jours"
+article_title: "GET : Exporter les utilisateurs actifs mensuels des 30 derniers jours"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Obtenir les utilisateurs actifs mensuels."
+description: "Cet article présente en détail l’endpoint Braze Exporter les utilisateurs actifs mensuels."
 
 ---
 {% api %}
-# Endpoint Utilisateurs actifs mensuels
+# Exporter les utilisateurs actifs mensuels des 30 derniers jours
 {% apimethod get %}
 /kpi/mau/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer quotidiennement une série du nombre total d’utilisateurs actifs uniques sur une période de 30 jours glissants.
+> Utilisez cet endpoint pour récupérer quotidiennement une série du nombre total d’utilisateurs actifs uniques sur une période de 30 jours glissants.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#68f45461-3bf1-425c-b918-f0bbf3f87149 {% endapiref %}
 

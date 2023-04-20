@@ -8,9 +8,7 @@ description: "This article provides an overview of Intelligent Timing (previousl
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Timing
 
-> This article provides an overview of Intelligent Timing (previously Intelligent Delivery) and how you can leverage this feature in your campaigns and Canvases.
-
-Use Intelligent Timing to deliver your message to each user when Braze determines that user is most likely to engage (open or click), referred to as their optimal send time. This makes it easier for you to ensure that you're messaging your users at their preferred time, which can lead to higher engagement.
+> Use Intelligent Timing to deliver your message to each user when Braze determines that user is most likely to engage (open or click), referred to as their optimal send time. This makes it easier for you to ensure that you're messaging your users at their preferred time, which can lead to higher engagement.
 
 ## Use cases
 
@@ -45,7 +43,7 @@ To use Intelligent Timing in your campaigns:
 
 #### Sending messages within specific hours {#sending-within-specific-hours}
 
-If desired, you can choose to limit the optimal time to within a specific window of time. This is useful if your campaign pertains to a specific event, sale, or promotion.
+If desired, you can choose to limit the optimal time to within a specific window of time. This is useful if your campaign pertains to a specific event, sale, or promotion, but is generally not recommended otherwise. Sending within specific hours functions similarly to Quiet Hours, which is not recommended with Intelligent Timing, as it is counterproductive. See the section in this article on [limitations](#limitations) for more.
 
 1. When configuring Intelligent Timing, select **Only send messages within specific hours**.
 2. Enter the start and end time of the delivery window.

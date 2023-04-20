@@ -11,9 +11,7 @@ channel:
 
 # Push Stories
 
-> Le présent article de référence couvre les Push Stories, comment en créer une, ainsi que quelques questions fréquemment posées.
-
-Les « Push Stories » sont un nouveau type de notification push introduit par Braze. Cette fonctionnalité utilise celle de carrousel photo popularisée sur Instagram et Facebook et permet aux marketeurs de créer un carrousel de pages dans une notification push qui raconte une histoire riche et cohésive. Ces pages se composent d’une image, d’une action de clic, d’un titre et d’une description. Vos utilisateurs peuvent parcourir ces pages et afficher l’histoire telle que vous l’avez racontée.
+> Les « Push Stories » sont un nouveau type de notification push introduit par Braze. Cette fonctionnalité utilise celle de carrousel photo popularisée sur Instagram et Facebook et permet aux marketeurs de créer un carrousel de pages dans une notification push qui raconte une histoire riche et cohésive. Ces pages se composent d’une image, d’une action de clic, d’un titre et d’une description. Vos utilisateurs peuvent parcourir ces pages et afficher l’histoire telle que vous l’avez racontée.
 
 | Exemple Android (étendu) | Exemple iOS (étendu) |
 | :-----: | :----------: |
@@ -82,7 +80,7 @@ Dans certaines situations où toutes les pages ne sont pas chargées, par exempl
 
 #### La Push Story ne disparaît pas après avoir cliqué sur l’image. 
 
-Sur Android, les Push Stories ne sont pas enlevées par défaut après qu’un utilisateur ait cliqué sur l’image. Si vous souhaitez rejeter la notification, appelez le [`cancelNotification`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721).)  
+Sur Android, les Push Stories ne sont pas enlevées par défaut après qu’un utilisateur ait cliqué sur l’image. Si vous souhaitez rejeter la notification, appelez [`cancelNotification`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721).  
 
 [1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %}
 [2]: {% image_buster /assets/img_archive/pushstories_ios_preview.png %}

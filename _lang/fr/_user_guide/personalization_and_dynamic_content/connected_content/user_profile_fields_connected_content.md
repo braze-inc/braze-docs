@@ -6,13 +6,11 @@ description: "Le présent article explique comment extraire les profils d’util
 
 ---
 
-# Extraction des données de profil utilisateur dans les appels de contenu connecté
+# Extraire des données de profil utilisateur
 
-Si une réponse de Contenu connecté contient des champs de profil utilisateur (dans une balise de personnalisation Liquid), ces valeurs doivent être définies plus tôt dans le message par le biais de Liquid, avant l’appel Contenu connecté afin d’interpréter correctement le retour Liquid. De même, l’indicateur `:rerender` doit être inclus dans la requête. 
+> Si une réponse de Contenu connecté contient des champs de profil utilisateur (dans une balise de personnalisation Liquid), ces valeurs doivent être définies plus tôt dans le message par le biais de Liquid, avant l’appel Contenu connecté afin d’interpréter correctement le retour Liquid. 
 
-{% alert note %}
-L’indicateur `:rerender` a une profondeur d’un seul niveau, ce qui signifie qu’il ne s’applique pas aux balises de contenu connecté imbriquées.
-{% endalert %}
+De même, l’indicateur `:rerender` doit être inclus dans la requête. Prenez en compte le fait que l’indicateur `:rerender` a une profondeur d’un seul niveau, ce qui signifie qu’il ne s’applique pas aux balises de contenu connecté imbriquées.
 
 Pour la personnalisation, Braze extrait les champs de profil utilisateur avant de transmettre ce champ au Liquid. Donc si la réponse du contenu connecté comporte des champs de profil utilisateur, il doit être défini au préalable. 
 

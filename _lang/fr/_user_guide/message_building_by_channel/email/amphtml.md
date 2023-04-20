@@ -11,7 +11,9 @@ channel:
 
 # AMP pour e-mail
 
-Avec [AMP pour les e-mails](https://amp.dev/about/email), vous pouvez ajouter des éléments interactifs à vos e-mails et améliorer vos communications avec vos clients à un tout autre niveau, en livrant une expérience complète directement dans la boîte de réception de votre utilisateur. AMP le rend possible en utilisant plusieurs composants qui peuvent vous aider à créer des communications par e-mail passionnantes comme des sondages, questionnaires de commentaires, campagnes de vote, critiques, centres d’abonnement et plus encore ! Ces outils vous proposent des opportunités importantes pour augmenter l’engagement et la rétention. 
+> Avec [AMP pour les e-mails](https://amp.dev/about/email), vous pouvez ajouter des éléments interactifs à vos e-mails et améliorer vos communications avec vos clients à un tout autre niveau, en livrant une expérience complète directement dans la boîte de réception de votre utilisateur. 
+
+AMP le rend possible en utilisant plusieurs composants qui peuvent vous aider à créer des communications par e-mail passionnantes comme des sondages, questionnaires de commentaires, campagnes de vote, critiques, centres d’abonnement et plus encore ! Ces outils vous proposent des opportunités importantes pour augmenter l’engagement et la rétention. 
 
 {% alert important %}
 AMP pour e-mail est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
@@ -35,25 +37,24 @@ Avant de pouvoir envoyer des e-mails AMP à vos utilisateurs, vous devez vous en
 
 | Client | Lien d’enregistrement |
 | ------ | -------- |
-| Gmail pour iOS | [Google](https://developers.google.com/gmail/ampemail/register) |
-| Gmail pour Android | [Google](https://developers.google.com/gmail/ampemail/register) |
-| Gmail Desktop | [Google](https://developers.google.com/gmail/ampemail/register) |
-| Outlook sur le Web | [Outlook](https://docs.microsoft.com/en-us/outlook/amphtml/register-outlook)
-| Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/?lang=en) |
+| Gmail | [Google](https://developers.google.com/gmail/ampemail/register) |
+| FairEmail | [FairEmail](https://email.faircode.eu/) |
+| Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
+| Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
-Pour obtenir la liste complète des plateformes prises en charge, veuillez cliquer [ici](https://developers.google.com/gmail/ampemail/supported-platforms). 
+Pour obtenir la liste complète des plateformes prises en charge, consultez la [documentation AMP](https://amp.dev/support/faq/email-support). 
 
 ### Activation d’un compte Gmail
 
-Rendez-vous dans vos paramètres Gmail et, dans Général, cochez la case `Activer la messagerie dynamique`.
+Rendez-vous dans vos paramètres Gmail et, dans Général, cochez la case `Enable Dynamic Email`.
 
 ![Contenu dynamique][1]
 
 ## Utilisation de l’API
 
-Vous pouvez utiliser AMP for Email à l’aide de notre API. Lorsque vous utilisez un [nos endpoints d’envoi de messages]({{site.baseurl}}/api/endpoints/messaging/) pour envoyer un e-mail, ajoutez `amp_body` comme spécification d’objet, comme indiqué ci-dessous.
+Vous pouvez utiliser AMP pour les e-mails à l’aide de notre API. Lorsque vous utilisez un [nos endpoints d’envoi de messages]({{site.baseurl}}/api/endpoints/messaging/) pour envoyer un e-mail, ajoutez `amp_body` comme spécification d’objet, comme indiqué ci-dessous.
 
-### Spécifier l’objet d’un e-mail
+### Spécification de l’objet E-mail
 
 ```json
 {
@@ -84,7 +85,7 @@ Vous pouvez aussi consulter :
 - [La bibliothèque de composants pour les e-mails complets AMP](https://amp.dev/documentation/components/?format=email/)
 
 <br>
-En plus de l’AMPHTML, nous __require__ une version du `body` en HTML ordinaire et suggérons une version `plaintext_body` de votre e-mail AMP. Tous les e-mails AMP sont envoyés en plusieurs parties ce qi signifie que Braze envoie un e-mail qui prend en charge l’HTML, le texte brut et l’AMPHTML. Cela peut s’avérer utile si votre e-mail est envoyé à l’aide d’un fournisseur qui ne prend pas encore en charge AMP pour les e-mails, basculant automatiquement par défaut sur la version appropriée selon l’utilisateur et son appareil.
+En plus de l’AMPHTML, nous __requérons__ une version standard du `body` en HTML et suggérons une version `plaintext_body` de votre e-mail AMP. Tous les e-mails AMP sont envoyés en plusieurs parties ce qi signifie que Braze envoie un e-mail qui prend en charge l’HTML, le texte brut et l’AMPHTML. Cela peut s’avérer utile si votre e-mail est envoyé à l’aide d’un fournisseur qui ne prend pas encore en charge AMP pour les e-mails, basculant automatiquement par défaut sur la version appropriée selon l’utilisateur et son appareil.
 
 ### Composants
 
@@ -149,12 +150,12 @@ Tout composant nécessitant une authentification doit utiliser les [jetons d’a
 
 Consultez la [documentation AMP](https://amp.dev/documentation/components/?format=email) pour obtenir une liste complète des composants AMP.  
 
-### Exemples de cas d’utilisation
+### Exemple de cas d’utilisation
 Vous trouverez ci-dessous quelques exemples de cas d’utilisation pour les divers composants abordés ci-dessus.
 
 {% tabs local %}
 {% tab Interactive Surveys %}
-__Interactif Surveys__
+__Sondages interactifs__
 
 Idée : En utilisant le composant `<amp-form>`, vous pouvez créer des sondages interactifs qui peuvent être remplis sans quitter la boîte de réception de l’e-mail. Vous pouvez le réaliser en utilisant `<amp-form>` pour envoyer la réponse au sondage et pour que votre back-end fournisse alors ces données agrégées. 
 
@@ -167,21 +168,21 @@ En utilisant ce composant, les utilisateurs peuvent soumettre ou effacer les val
 
 {% endtab %}
 {% tab Collapsable Content %}
-__Pouvant être réduit Content__
+__Contenu pouvant être réduit__
 
 Idée : Étendez vos sections de contenu en utilisant le composant `<amp-accordion>`. Ce composant vous permet d’afficher les sections de contenu pouvant être réduites ou étendues, ce qui permet aux utilisateurs de visualiser rapidement les contours du contenu et de se rendre dans n’importe quelle section. 
 
 Si vous avez tendance à envoyer de longs articles éducatifs ou des recommandations personnalisées, il fournit à vos utilisateurs un moyen de visualiser rapidement les contours du contenu pour passer directement à une section donnée ou à un produit spécifique recommandé pour obtenir plus de détails. Il est également utile pour les appareils mobiles pour lesquels quelques phrases seulement dans une section nécessitent un défilement. Son utilisation efficace réduit le défilement nécessaire sur les appareils mobiles.
 {% endtab %}
 {% tab Image Heavy Emails %}
-__Image lourde Emails__
+__E-mails ayant beaucoup d’images__
 
 Idée : Si vous avez tendance à envoyer des e-mails possédant un grand nombre de photos professionnelles, telles que des ventes de marques, vous pouvez utiliser le composant `<amp-image-lightbox>` pour permettre aux utilisateurs d’interagir avec une image qui leur plait. Lorsqu’un utilisateur clique sur l’image, ce composant affiche l’image au centre du message, créant un effet de boîte lumineuse. 
 
 De plus, le composant `<amp-image-lightbox>` permet à l’utilisateur de zoomer, effectuer un panoramique ou afficher une description plus détaillée de l’image. Vous pouvez utiliser le même composant pour plusieurs images. Par exemple, si plusieurs images sont comprises dans votre e-mail, lorsque l’utilisateur clique sur n’importe laquelle d’entre elles, l’image s’affiche dans la boîte lumineuse.
 {% endtab %}
 {% tab Font Driven Emails %}
-__Basé sur la police Emails__
+__E-mails basés sur les polices de caractères__
 
 Idée : Pour les e-mails qui reposent principalement sur du texte, le composant `<amp-fit-text>` vous permet de gérer la taille et l’ajustement du texte dans une zone donnée.
 
@@ -207,7 +208,6 @@ En configurant votre contenu autour de la balise Raw (brute), le moteur de trait
 | Ouvertures AMP | Nombre total d’ouvertures pour l’e-mail HTML AMP, nombre cumulé de versions HTML, texte brut et AMPHTML de l’e-mail. |
 | Clics AMP | Nombre total de clics pour l’e-mail HTML AMP, nombre cumulé de versions HTML, texte brut et AMPHTML de l’e-mail. |
 {: .reset-td-br-1 .reset-td-br-2}  
-
 
 ## Tests et résolution des problèmes
 

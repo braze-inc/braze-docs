@@ -87,7 +87,7 @@ Follow these instructions to complete both:
 4. Enter an alphanumeric collection name. Collections are conceptually similar to database tables. Each should represent a particular data type, such as customers or invoices. Collection names must be alphanumeric and will become part of your Personalization API endpoint.<br><br>
 5. Next, specify which column from your model should serve as the primary index for record lookups. This field must uniquely identify each record in the collection and is often the same as your model's primary key. The personalization API supports lookups on multiple indices. For example, you might want to retrieve customer profiles using `user_id`, `anonymous_id`, or `email_address`. To enable multiple indices, contact [Hightouch support](mailto:friends@hightouch.com).<br><br>
 6. Use the field mapper to specify which columns from your model should be included in the API response payload. You can rename these fields and use the advanced mapper to apply transformations using the Liquid template language.<br><br>
-7. Select the appropriate [delete behavior](www.hightouch.com/docs/destinations/personalization-api#delete-behavior) for your use case.<br><br>
+7. Select the appropriate [delete behavior](https://www.hightouch.com/docs/destinations/personalization-api#delete-behavior) for your use case.<br><br>
 8. Lastly, click **Continue** and then select a [sync schedule](https://hightouch.com/docs/syncs/schedule-sync-ui).
 
 Hightouch will now sync the data in your warehouse to a managed database and expose it via the Personalization API.

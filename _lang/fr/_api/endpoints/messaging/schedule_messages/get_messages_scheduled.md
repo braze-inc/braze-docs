@@ -5,16 +5,18 @@ search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Obtenir les messages planifiés."
+description: "Cet article présente en détail l’endpoint Braze Répertorier les campagnes et Canvas planifiés à venir."
 
 ---
 {% api %}
-# Obtenir les campagnes et les Canvas planifiés à venir
+# Répertorier les campagnes et Canvas planifiés à venir
 {% apimethod get %}
 /messages/scheduled_broadcasts
 {% endapimethod %}
 
-Utilisez cet endpoint pour renvoyer une liste JSON des informations sur les campagnes planifiées et les Canvas saisis entre maintenant et un `end_time` spécifié dans la demande. Les messages quotidiens et récurrents n’apparaîtront qu’une seule fois lors de leur occurrence suivante. Les résultats renvoyés dans cet endpoint ne concernent que les campagnes et Canvas créés et planifiés dans Braze.
+> Utilisez cet endpoint pour renvoyer une liste JSON des informations sur les campagnes planifiées et les Canvas saisis entre maintenant et un `end_time` spécifié dans la demande.
+
+Les messages quotidiens et récurrents n’apparaîtront qu’une seule fois lors de leur occurrence suivante. Les résultats renvoyés dans cet endpoint ne concernent que les campagnes et Canvas créés et planifiés dans Braze.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5 {% endapiref %}
 

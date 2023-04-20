@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer des 
 /canvas/trigger/schedule/delete
 {% endapimethod %}
 
-L’endpoint de suppression de la planification vous permet d’annuler un message que vous avez déjà planifié dans des Canvas déclenchés par API avant qu’il ne soit envoyé.
+> L’endpoint de suppression de la planification vous permet d’annuler un message que vous avez déjà planifié dans des Canvas déclenchés par API avant qu’il ne soit envoyé.
+
+Les messages ou déclencheurs planifiés qui sont supprimés peu de temps avant ou pendant l’heure où ils sont censés être envoyés seront mis à jour dans les meilleurs délais, de sorte que les suppressions de dernière minute pourraient être appliquées à tous, certains ou aucun de vos utilisateurs ciblés.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 
@@ -23,8 +25,6 @@ L’endpoint de suppression de la planification vous permet d’annuler un messa
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
-
-Les messages ou déclencheurs planifiés qui sont supprimés peu de temps avant ou pendant l’heure où ils sont censés être envoyés seront mis à jour dans les meilleurs délais, de sorte que les suppressions de dernière minute pourraient être appliquées à tous, certains ou aucun de vos utilisateurs ciblés.
 
 ```
 Content-Type: application/json

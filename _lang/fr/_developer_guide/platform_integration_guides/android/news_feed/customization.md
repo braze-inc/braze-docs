@@ -2,7 +2,7 @@
 page_order: 2
 nav_title: Personnalisation
 article_title: Personnalisation des fils d’actualité pour Android et FireOS
-layout: featured
+layout: dev_guide
 
 platform:
   - Android

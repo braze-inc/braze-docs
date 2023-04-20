@@ -9,11 +9,15 @@ page_order: 7
 description: "Cet article de référence couvre les cas d’utilisation avancés de SDK pour la plateforme Unity."
 ---
 
-# Personnaliser le package Unity
+# Cas d’utilisation avancés
+
+> Cet article de référence couvre les cas d’utilisation avancés de SDK pour la plateforme Unity.
+
+## Personnaliser le package Unity
 
 Vous pouvez choisir de personnaliser et d’exporter le package Unity de Braze en utilisant les scripts fournis.
 
-1. Cloner le [Projet Braze Unity SDK GitHub][1]:
+1. Cloner le [Projet Braze Unity SDK GitHub][1] :
 
 	```bash
 	git clone git@github.com:Appboy/appboy-unity-sdk.git
@@ -32,7 +36,7 @@ Pour utiliser le plug-in Unity de Braze avec les plug-ins Prime31, modifiez le `
 
 ## Notification push Amazon ADM
 
-Braze prend en charge l’intégration des [notifications push Amazon ADM ][10] dans les applications Unity. Si vous souhaitez intégrer les notifications push Amazon ADM, créez un fichier appelé `api_key.txt` contenant votre clé ADM API et placez-le dans le dossier `Plugins/Android/assets/`.  Pour plus d’informations sur l’intégration d’Amazon ADM avec Braze, consultez nos [Instructions d’intégration des notifications push ADM.][11].
+Braze prend en charge l’intégration des [notifications push Amazon ADM][10] dans les applications Unity. Si vous souhaitez intégrer les notifications push Amazon ADM, créez un fichier appelé `api_key.txt` contenant votre clé ADM API et placez-le dans le dossier `Plugins/Android/assets/`.  Pour plus d’informations sur l’intégration d’Amazon ADM avec Braze, consultez nos [Instructions d’intégration des notifications push ADM][11].
 
 [1]: https://github.com/appboy/appboy-unity-sdk
 [10]: https://developer.amazon.com/public/apis/engage/device-messaging

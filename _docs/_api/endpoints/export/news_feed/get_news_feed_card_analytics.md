@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the News Feed card analytics Braze endpoint."
+description: "This article outlines details about the Export News Feed card analytics Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines details about the News Feed card analytics B
 /feed/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a daily series of engagement stats for a card over time.
+> Use this endpoint to retrieve a daily series of engagement stats for a card over time.
 
 {% alert note %}
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.

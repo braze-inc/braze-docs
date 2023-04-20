@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /messages/schedule/update
 {% endapimethod %}
 
-Utilisez cet endpoint pour mettre à jour les messages planifiés. Cet endpoint accepte les mises à jour du paramètre `schedule` ou du paramètre `messages` ou des deux. Votre demande doit contenir au moins une des deux clés.
+> Utilisez cet endpoint pour mettre à jour les messages planifiés. 
+
+Cet endpoint accepte les mises à jour du paramètre `schedule` ou du paramètre `messages` ou des deux. Votre demande doit contenir au moins une des deux clés.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f61edf74-4467-4551-b9c4-a4b8d188cd7a {% endapiref %}
 

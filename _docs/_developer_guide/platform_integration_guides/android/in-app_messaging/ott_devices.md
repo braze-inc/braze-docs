@@ -11,11 +11,11 @@ channel:
 
 ---
 
-# Overview
+# OTT and TV display
 
-The Braze Android SDK natively supports displaying in-app messages on OTT devices like Android TV or Fire Stick.
+> The Braze Android SDK natively supports displaying in-app messages on OTT devices like Android TV or Fire Stick.
 
-#### Key differences
+## Key differences
 
 Some key differences exist in the display of standard in-app messages between native and OTT devices.
 

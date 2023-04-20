@@ -2,7 +2,7 @@
 page_order: 1
 nav_title: Personnalisation
 article_title: Personnalisation des cartes de contenu Android et FireOS
-layout: featured
+layout: dev_guide
 
 platform:
   - Android

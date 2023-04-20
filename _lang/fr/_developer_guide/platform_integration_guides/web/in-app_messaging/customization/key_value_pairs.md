@@ -11,6 +11,8 @@ description: "Cet article indique comment tirer parti des paires clé-valeur de 
 
 # Paires clé-valeur
 
+> Cet article indique comment tirer parti des paires clé-valeur de l’envoi de messages in-app pour afficher les informations dans votre application Web.
+
 Les objets de message in-app peuvent porter des paires clé-valeur en tant que leur propriété `extras`. Elles sont spécifiées sur le tableau de bord sous **Paramètres** lors de la création d’une campagne de communication in-app. Elles peuvent être utilisées pour envoyer des données avec un message in-app pour un traitement ultérieur par votre site. Par exemple :
 
 ```javascript

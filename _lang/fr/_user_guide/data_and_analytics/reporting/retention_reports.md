@@ -2,16 +2,14 @@
 nav_title: Rapports de rétention
 article_title: Rapports de rétention pour les campagnes et les Canvas
 page_order: 5
-tool: Rapports
+tool: Reports
 page_type: reference
 description: "Cet article de référence explique comment mesurer la rétention des utilisateurs pour les utilisateurs qui ont effectué un événement de rétention donné dans une campagne ou un Canvas spécifique."
 ---
 
-# Rapports de rétention pour les campagnes et les Canvas
+# Rapports de rétention
 
-> Cet article de référence explique comment mesurer la rétention des utilisateurs pour les utilisateurs ayant effectué un événement de rétention donné dans une campagne ou un Canvas spécifique. En sachant comment vos utilisateurs sont intéressés après avoir reçu un message, vous pouvez mesurer l’efficacité de vos parcours de communication.
-
-La rétention d’utilisateur est l’une des métriques les plus importantes pour un marketeur. Gagner la confiance des utilisateurs pour les fidéliser est un indicateur de la croissance de l’entreprise. Braze vous permet désormais de mesurer la rétention client directement sur la page **Analytics** de votre campagne ou votre Canvas.
+> La rétention d’utilisateur est l’un des indicateurs les plus importants pour un marketeur. Gagner la confiance des utilisateurs pour les fidéliser est un indicateur de la croissance de l’entreprise. Braze vous permet désormais de mesurer la rétention client directement sur la page **Analytics** de votre campagne ou votre Canvas.
 
 {% alert important %}
 Les rapports de rétention ne sont pas disponibles pour les campagnes déclenchées via API.

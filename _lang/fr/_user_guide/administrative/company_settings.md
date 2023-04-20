@@ -2,7 +2,7 @@
 nav_title: Paramètres de l’entreprise
 article_title: Paramètres de l’entreprise
 page_order: 1
-layout: featured
+layout: dev_guide
 guide_top_header: "Paramètres de l’entreprise"
 guide_top_text: "La plupart des fonctionnalités dans les Paramètres de l’entreprise sont uniquement disponibles pour les administrateurs de comptes Braze. Si vous n’avez pas d’accès, mais considérez que vous devriez, contactez l’administrateur du compte Braze de votre entreprise."
 

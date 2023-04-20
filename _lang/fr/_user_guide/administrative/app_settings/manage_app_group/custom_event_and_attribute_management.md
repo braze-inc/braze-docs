@@ -3,11 +3,13 @@ nav_title: Gestion des événements et attributs personnalisés
 article_title: Gestion des événements et attributs personnalisés
 page_order: 1
 page_type: reference
-description: "Cet article de référence couvre la gestion des événements et attributs personnalisés, ainsi que la compréhension des comparaisons de type de données."
+description: "Cet article de référence couvre la gestion des propriétés, des événements et des attributs personnalisés, ainsi qu’une présentation des comparaisons de type de données."
 
 ---
 
 # Gestion des événements et attributs personnalisés
+
+> Cet article de référence couvre la gestion des propriétés, des événements et des attributs personnalisés, ainsi qu’une présentation des comparaisons de type de données.
 
 ## Ajouter des attributs personnalisés, des événements personnalisés et des produits
 
@@ -17,11 +19,11 @@ Vous pouvez gérer les attributs personnalisés, les événements personnalisés
 - Événements personnalisés
 - Produits
 
-Pour ajouter un attribut personnalisé, un événement ou un produit personnalisé, accédez à l’onglet correspondant et cliquez sur **+ Ajouter**. Donnez-lui un nom (et pour des attributs personnalisés, un type de données) et cliquez sur **Save (Enregistrer)**. Cela permettra de le suivre.
+Pour ajouter un attribut personnalisé, un événement ou un produit personnalisé, accédez à l’onglet correspondant et cliquez sur **+ Add (+ Ajouter)**. Donnez-lui un nom (et pour des attributs personnalisés, un type de données) et cliquez sur **Save (Enregistrer)**. Cela permettra de le suivre.
 
 ### Gestion des propriétés
 
-Une fois que vous avez créé un **Événement personnalisé** ou un **Produit**, vous pouvez cliquer sur **Gérer les propriétés** pour cet événement ou ce produit pour ajouter de nouvelles propriétés, bloquer les propriétés existantes et voir quelles campagnes ou Canvas utilisent cette propriété dans un [événement déclencheur]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-1-select-a-trigger-event).
+Une fois que vous avez créé un **Événement personnalisé** ou un **Produit**, vous pouvez cliquer sur **Manage Properties (Gérer les propriétés)** pour cet événement ou ce produit pour ajouter de nouvelles propriétés, bloquer les propriétés existantes et voir quelles campagnes ou Canvas utilisent cette propriété dans un [événement déclencheur]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-1-select-a-trigger-event).
 
 ![Propriétés personnalisées pour un événement personnalisé][73]{: style="max-width:70%"}
 
@@ -33,7 +35,7 @@ Toutes les données de profil utilisateur (événements personnalisés, attribut
 
 ## Bloquer des attributs personnalisés, des événements personnalisés et des produits
 
-Si vous souhaitez arrêter d’effectuer un suivi d’un attribut, d’un événement ou d’un produit personnalisé spécifique (p. ex., création accidentelle pendant le test, devenue utile), recherchez-le dans l’onglet **Événements personnalisés** puis cliquez sur **Liste de blocage**.
+Si vous souhaitez arrêter d’effectuer un suivi d’un attribut, d’un événement ou d’un produit personnalisé spécifique (p. ex., création accidentelle pendant le test, devenue utile), recherchez-le dans l’onglet **Custom Events (Événements personnalisés)** puis cliquez sur **Blocklist (Liste de blocage)**.
 
 Pour éviter de recueillir certains attributs d’appareil, consultez notre [Guide SDK][88].
 
@@ -51,7 +53,7 @@ Les modifications apportées à la liste de blocage peuvent prendre quelques min
 
 ## Forcer les comparaisons de type de données
 
-Braze reconnaît automatiquement les types de données pour les données d’attribut qui nous sont envoyées. Cependant, dans l’éventualité où plusieurs types de données sont appliqués à un seul attribut, vous pouvez forcer le type de données de n’importe quel attribut pour nous faire savoir ce qu’il est réellement. Cliquez sur la liste déroulante dans la colonne Type de données à choisir.
+Braze reconnaît automatiquement les types de données pour les données d’attribut qui nous sont envoyées. Cependant, dans l’éventualité où plusieurs types de données sont appliqués à un seul attribut, vous pouvez forcer le type de données de n’importe quel attribut pour nous faire savoir ce qu’il est réellement. Cliquez sur la liste déroulante dans la colonne Type de données pour choisir.
 
 {% alert note %} Forcer les types de données ne s’applique pas aux propriétés de l’événement ou aux propriétés d’achat. {% endalert %}
 
@@ -65,12 +67,12 @@ Si vous choisissez de forcer le type de données d’un attribut, toute donnée 
 
 | Type de données forcées | Description |
 |------------------|-------------|
-| Boolean | Les entrées de `1`, `true`, `t` (non sensibles à la casse) seront conservées comme `true` |
-| Boolean | Les entrées de `0`, `false`, `f` (non sensibles à la casse) seront conservées comme `false` |
+| Booléen | Les entrées de `1`, `true`, `t` (non sensibles à la casse) seront conservées comme `true` |
+| Booléen | Les entrées de `0`, `false`, `f` (non sensibles à la casse) seront conservées comme `false` |
 | Nombre | Les nombres entiers ou floats (c.-à-d. `1`, `1.5`) seront stockés sous forme de nombres |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Pour plus d’informations sur les options de filtrage spécifiques exposées par différentes comparaisons de type de données, consultez [Configuration des rapports][43]. Pour plus d’informations sur les différents types de données disponibles, reportez-vous à [Types de données d’attributs personnalisés][44].
+Pour plus d’informations sur les options de filtrage spécifiques exposées par différentes comparaisons de type de données, consultez la [Configuration des rapports][43]. Pour plus d’informations sur les différents types de données disponibles, reportez-vous à [Types de données d’attributs personnalisés][44].
 
 {% alert note %}
 Les données envoyées à Braze sont immuables et ne peuvent être supprimées ou modifiées une fois que nous les avons reçues. Cependant, vous pouvez recourir à l’une des méthodes énumérées dans les sections précédentes pour exercer un contrôle sur ce que vous suivez dans votre tableau de bord.

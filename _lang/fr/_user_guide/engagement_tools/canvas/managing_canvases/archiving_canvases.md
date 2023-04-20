@@ -9,9 +9,9 @@ tool: Canvas
 
 # Archivage de Canvas
 
-> Cet article de référence explique comment archiver un Canvas préexistant et l’impact de l’archivage d’un Canvas.
+> Pour arrêter l’envoi d’un Canvas ou le retirer de votre tableau de bord, vous pouvez l’archiver. 
 
-Pour arrêter l’envoi d’un Canvas ou le retirer de votre tableau de bord, vous pouvez l’archiver. Accédez à la page**Canvas**, cliquez sur <i class="fas fa-gear"></i> l’icône d’engrenage en regard du Canvas sélectionné et cliquez sur **Archive (Archiver)**.
+Accédez à la page**Canvas**, cliquez sur <i class="fas fa-gear"></i> l’icône d’engrenage en regard du Canvas sélectionné et cliquez sur **Archive (Archiver)**.
 
 Il existe également des actions en gros que vous pouvez utiliser, par exemple l’archivage de plusieurs Canvas, en cochant les cases en regard du Canvas et en sélectionnant le bouton pertinent. 
 

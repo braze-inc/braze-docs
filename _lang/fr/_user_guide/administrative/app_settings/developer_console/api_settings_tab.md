@@ -7,9 +7,9 @@ description: "Cet article de référence couvre la page API Settings (Paramètre
 
 ---
 
-# Onglet API Settings (Paramètres API)
+# Paramètres API
 
-Les **API Settings** (Paramètres API) affichent les identifications API pour votre groupe d’apps. La première section sur **Services** répertorie les articles pertinents pour différentes utilisations de l’API Braze ([Données utilisateur][3],[Messaging][4] (Messagerie), [Synchronisation par e-mail][5] ou [Exporter][6]).
+> Les **API Settings** (Paramètres API) affichent les identifications API pour votre groupe d’apps. La première section sur **Services** répertorie les articles pertinents pour différentes utilisations de l’API Braze ([User Data (Données utilisateur)][3],[Messaging (Envoi de messages)][4], [Email Sync][5] (Synchronisation par e-mail) ou [Export][6] (Exporter)).
 
 La page **API Settings** (Paramètres API) comporte les sections suivantes :
 
@@ -25,12 +25,12 @@ Cette section fournit les clés API REST du groupe d’apps, les identifiants un
 
 Pour renforcer la sécurité, vous pouvez spécifier une liste d’adresses IP et de sous-réseaux autorisés à faire des requêtes API REST pour une clé API REST spécifique. C’est ce que l’on appelle une « liste autorisée » ou « liste blanche ». Pour autoriser des adresses IP ou des sous-réseaux spécifiques, ajoutez-les dans la section **Liste blanche d’adresses IP** lors de la création d’une clé API REST : 
 
-![Mise en liste blanche des adresses IP API de création d’une nouvelle clé API][26]
+![Section API IP Whitelisting (Whiteliste des adresses IP API) de création d’une nouvelle clé API][26]
 
 Si vous n’en spécifiez aucune, les requêtes pourront être envoyées depuis n’importe quelle adresse IP.
 
 {% alert tip %}
-Vous créez un Webhook Braze à Braze en utilisant une liste blanche ? Consultez notre liste d’[adresses IP à autoriser]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
+Vous créez un Webhook Braze à Braze en utilisant une liste blanche ? Consultez notre liste [d’adresses IP à autoriser]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
 {% endalert %}
 
 ### Identification

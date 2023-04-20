@@ -3,7 +3,7 @@ nav_title: Shopify
 article_title: Shopify
 alias: /shopify/
 alias: /partners/shopify/
-layout: featured
+layout: dev_guide
 noindex: true
 guide_top_header: "Shopify"
 guide_top_text: "Shopify est une société leader dans le commerce mondial ; elle fournit des outils fiables pour démarrer, développer, commercialiser et gérer une entreprise de vente en détail de toute taille. Shopify améliore le commerce pour tous les utilisateurs avec une plateforme et des services conçus pour assurer la fiabilité tout en offrant une meilleure expérience d’achat pour les consommateurs où qu’ils soient."
@@ -26,6 +26,9 @@ guide_featured_list:
 - name: Données Shopify dans Braze
   link: /docs/shopify_data/
   fa_icon: fas fa-cogs
+- name: Remplissage Shopify
+  link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopfiy/shopify_backfill/
+  fa_icon: fa-solid fa-database
 - name: Cas d’utilisation
   link: /docs/shopify_use_cases/
   fa_icon: fa fa-users

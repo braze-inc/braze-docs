@@ -5,7 +5,7 @@ page_order: 6
 
 page_type: reference
 description: "Le présent article de référence donne un aperçu des alertes de campagne, de leurs avantages, ainsi que de la manière de les configurer pour vous fournir une tranquillité d’esprit."
-tool: Campagnes
+tool: Campaigns
 channel:
 - e-mail
 - Webhooks
@@ -14,11 +14,7 @@ channel:
 
 # Alertes de campagne
 
-> Le présent article de référence donne un aperçu des alertes de campagne, de leurs avantages, ainsi que de la manière de les configurer pour vous fournir une tranquillité d’esprit.
-
-## Aperçu
-
-Nous voulons vous alerter lorsque quelque chose ne semble pas se passer comme prévu et vous tranquilliser sur le fait que tout va bien. Le seuil d’alertes de campagne fournit une tranquillité d’esprit. Soyez le premier à savoir si une campagne importante envoie plus ou moins de messages que ce à quoi vous vous attendiez.
+> Nous voulons vous alerter lorsque quelque chose ne semble pas se passer comme prévu et vous tranquilliser sur le fait que tout va bien. Le seuil d’alertes de campagne fournit une tranquillité d’esprit. Soyez le premier à savoir si une campagne importante envoie plus ou moins de messages que ce à quoi vous vous attendiez.
 
 Les alertes de campagne sont disponibles pour les campagnes suivantes :
 

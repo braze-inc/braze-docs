@@ -11,9 +11,9 @@ channel:
 
 # Gestion des numéros de téléphone inconnus - nouveaux utilisateurs
 
-Vous pouvez constater qu’une fois que vous avez mis en place SMS avec Braze, vous recevez des messages d’utilisateurs inconnus. L’article suivant donne les étapes par lesquelles un utilisateur et un numéro non identifiés sont traités.
+> Vous pouvez constater qu’après avoir activé les SMS dans Braze, vous recevez des messages d’utilisateurs inconnus. L’article suivant donne les étapes par lesquelles un utilisateur et un numéro non identifiés sont traités.
 
-Braze peut créer automatiquement un utilisateur lorsqu’un utilisateur avec un nouveau numéro de téléphone répond par `START` ou `STOP` (ou une autre variante de ces mots-clés).  Lors de la création de l’utilisateur, Braze définit son champ téléphone avec le numéro [E.164][e.164] fourni par notre fournisseur SMS.  En outre, l’[alias utilisateur][ualink] (« téléphone ») sera défini avec la même valeur.<br><br>Les clients peuvent utiliser l’[objet attributs d’utilisateur][uaolink] en tandem avec l’[endpoint de suivi utilisateur][telink] pour trouver des utilisateurs en fonction de leur alias et définir un `external_id`.
+Braze peut créer automatiquement un utilisateur lorsqu’un utilisateur avec un nouveau numéro de téléphone répond par `START` ou `STOP` (ou une autre variante de ces mots-clés).  Lors de la création de l’utilisateur, Braze définit son champ téléphone avec le numéro [E.164][e.164] fourni par notre fournisseur SMS.  En outre, l’[alias utilisateur][ualink] (« téléphone ») sera défini avec la même valeur.<br><br>Les clients peuvent utiliser l’ [objet attributs d’utilisateur][uaolink] en tandem avec l’[endpoint de suivi utilisateur][telink] pour trouver des utilisateurs en fonction de leur alias et définir une `external_id`.
 
 ## Abonnement/désabonnement et workflow de mot-clé personnalisé pour les numéros inconnus
 

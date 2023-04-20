@@ -14,7 +14,7 @@ channel: news feed
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-News Feed items allow you to insert permanent content directly into your app from our web dashboard. Better yet, the News Feed also is targetable to individual segments just like all of our other message types. This means what you see in the feed might be completely different from another individual. The possibilities for the news-feed are nearly limitless.
+> News Feed items allow you to insert permanent content directly into your app from our web dashboard. Better yet, the News Feed also is targetable to individual segments just like all of our other message types. This means what you see in the feed might be completely different from another individual. The possibilities for the news-feed are nearly limitless.
 
 Check out our [case studies][13], [use cases][15], and [best practices][16] to see examples and helpful tips for News Feeds.
 
@@ -84,7 +84,7 @@ Under the News Feed Card editor, you will find options for when to publish this 
 
 ## Step 4: Select a segment
 
-You can configure your News Feed Card to target any [segment][10] you've defined within the dashboard at any schedule you desire. Select your target segment by clicking on the dropdown menu. Here you can see high-level statistics, including email availability and lifetime value per user.
+You can configure your News Feed Card to target any [segment][10] you've defined within the dashboard at any schedule you desire. Select your target segment by clicking on the dropdown menu. Here, you can see high-level statistics, including email availability and lifetime value per user.
 
 ![][11]
 

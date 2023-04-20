@@ -1,5 +1,5 @@
 ---
-nav_title: Aperçu SSL
+nav_title: SSL chez Braze
 article_title: Aperçu SSL
 page_order: 5
 page_type: reference

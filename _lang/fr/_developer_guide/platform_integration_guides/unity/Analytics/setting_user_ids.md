@@ -12,6 +12,8 @@ description: "Cet article de référence explique comment définir des identifia
 
 # Définir des ID utilisateur
 
+> Cet article de référence explique comment définir des identifiants utilisateur sur la plateforme Unity, y compris les conventions de dénomination suggérées et les meilleures pratiques.
+
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 Vous devez effectuer l’appel suivant dès que l’utilisateur est identifié (généralement après s’être connecté) afin de définir l’ID utilisateur :

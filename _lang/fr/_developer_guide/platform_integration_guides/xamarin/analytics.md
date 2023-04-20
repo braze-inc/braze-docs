@@ -12,6 +12,8 @@ description: "Cet article couvre l’analytique iOS, Android et FireOS pour la p
  
 # Analytique Xamarin
 
+> Cet article explique comment gérer l’analytique pour Xamarin.
+
 ## Définir des ID utilisateur
 
 {% tabs %}

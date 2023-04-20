@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: WhatsApp FAQs
+nav_title: FAQ
+article_title: WhatsApp FAQ
 page_order: 80
 description: "This article addresses some of the most frequently asked questions that arise when setting up WhatsApp campaigns."
 page_type: FAQ
@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# WhatsApp FAQs
+# Frequently asked questions
 
 > On this page, we'll attempt to answer your most stringent questions about WhatsApp!<br><br>This FAQ is not intended to provide, nor may it be relied upon as providing legal advice. The use of the WhatsApp channel is subject to specific Meta Platforms, Inc. requirements. To ensure that you are using the WhatsApp channel in compliance with all applicable requirements and any laws to which you may specifically be subject, you should seek the advice of your legal counsel.
 
@@ -48,7 +48,7 @@ If you’d like to migrate an existing phone number, notify your Braze contact a
 Your new WABA will be set up immediately after completing the embedded sign-up flow, which should only take a few minutes. 
 
 #### Can I connect multiple WABAs to Braze? 
-No, you can only connect one WABA per app group to Braze simultaneously.
+Yes, you can connect one WABAs per workspace. Therefore you can have multiple WABAs connected to multiple of your Braze workspaces. For example, if you have different workspaces for different brands, or different workspaces for different countries, each can have it's own WABA connected.
 
 ### WhatsApp business account phone numbers 
 

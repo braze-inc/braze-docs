@@ -11,7 +11,7 @@ description: "Cet article de référence indique comment utiliser et personnalis
 
 # Indicateurs de messages non lus et lus
 
-Braze fournit des indicateurs sur les cartes de contenu comme indiqué dans les captures d’écran suivantes :
+> Braze fournit des indicateurs sur les cartes de contenu comme indiqué dans les captures d’écran suivantes. Cet article de référence indique comment utiliser et personnaliser les indicateurs de messages non lus et lus de carte de contenu dans votre application Web.
 
 |Indicateur|Exemple |
 |---|---|

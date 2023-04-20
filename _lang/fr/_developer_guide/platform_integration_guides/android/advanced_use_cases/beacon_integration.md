@@ -11,7 +11,7 @@ description: "Cet article de référence explique comment enregistrer des évén
 
 # Intégration de balise
 
-Cet article vous expliquera comment intégrer des types spécifiques de balises avec Braze pour permettre la segmentation et la messagerie.
+> Cet article vous expliquera comment intégrer des types spécifiques de balises avec Braze pour permettre la segmentation et la messagerie.
 
 ## Balises Gimbal
 

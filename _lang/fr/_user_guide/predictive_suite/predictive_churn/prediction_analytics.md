@@ -8,7 +8,9 @@ page_order: 2
 
 # Analyses prédictives
 
-Une fois que votre prédiction a été construite et entraînée, vous aurez accès à la page Analyse prédictive. Cette page vous aide à décider des utilisateurs que vous devez cibler en fonction de leur score de risque ou catégorie de Churn. Dès que l’entraînement de la prédiction est terminé et que cette page est renseignée, vous pouvez passer directement à l’utilisation de [filtres]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Mais, si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux. 
+> Une fois que votre prédiction a été construite et entraînée, vous aurez accès à la page Prediction Analytics (Analyse prédictive). Cette page vous aide à décider des utilisateurs que vous devez cibler en fonction de leur score de risque ou catégorie de Churn. 
+
+Dès que l’entraînement de la prédiction est terminé et que cette page est renseignée, vous pouvez passer directement à l’utilisation de [filtres]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Mais, si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux. 
 
 **Composants analytiques**<br>
 &#45; [Score et catégorie de Churn](#churn_score)<br>
@@ -24,7 +26,7 @@ La distribution des scores pour l’audience de prédiction toute entière s’a
 
 Au fur et à mesure que vous déplacez le curseur, la barre située à gauche du volet inférieur vous indiquera combien d’utilisateurs de l’audience de prédiction entière seraient ciblés.
 
-## Score et catégorie de Churn {#churn_score}
+## Score et catégorie d’attrition {#churn_score}
 
 Les utilisateurs de l’audience de prédiction recevront un score de Churn compris entre 0 et 100. Plus le score est élevé, plus la probabilité d’attrition est grande. 
 - Les utilisateurs avec des scores de Churn compris entre 0 et 50 seront étiquetés dans la catégorie « Risque faible de Churn ». 
@@ -36,11 +38,11 @@ Les scores et les catégories correspondantes seront mis à jour conformément �
 
 ### Qualité de prédiction {#prediction_quality}
 
-Pour mesurer la précision de votre modèle, la métrique de **Qualité de prédiction** vous montrera l’efficacité de ce modèle de machine learning particulier lorsqu’il est testé sur des données historiques. Consultez ce document pour en savoir plus sur ce qui joue sur la [Qualité de prédiction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
+Pour mesurer la précision de votre modèle, l’indicateur de **Qualité de prédiction** vous montrera l’efficacité de ce modèle de machine learning particulier lorsqu’il est testé sur des données historiques. Consultez ce document pour en savoir plus sur ce qui joue sur la [Qualité de prédiction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
 Voici ce que nous recommandons pour diverses plages de qualité de prédiction :
 
-| Plage de qualité de prédiction (%) | Recommandation |
+| Plage de qualité de prédiction ( %) | Recommandation |
 | ---------------------- | -------------- |
 | 60 à 100 | Excellent. Précision supérieure. La modification des définitions d’audience est peu susceptible de fournir un avantage supplémentaire. |
 | 40 à 60 | Bon. Ce modèle produira des prédictions précises, mais essayer différents paramètres d’audience peut obtenir de meilleurs résultats. |
@@ -48,7 +50,7 @@ Voici ce que nous recommandons pour diverses plages de qualité de prédiction 
 | 0 à 20 | Faible. Nous vous recommandons de modifier les définitions de votre audience et de réessayer. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-La prédiction sera entraînée à nouveau toutes les deux semaines et mise à jour en même temps que la métrique de qualité de prédiction afin de maintenir vos prédictions actualisées sur les schémas les plus récents de comportement des utilisateurs. La date du dernier entraînement sera affichée sur la page de liste des prédictions ainsi que sur votre page d’analyses prédictives.
+La prédiction sera entraînée à nouveau toutes les deux semaines et mise à jour en même temps que l’indicateur de qualité de prédiction afin de maintenir vos prédictions actualisées sur les schémas les plus récents de comportement des utilisateurs. La date du dernier entraînement sera affichée sur la page de liste des prédictions ainsi que sur votre page d’analyses prédictives.
 
 ## Résultats estimés {#estimated_results}
 
@@ -62,7 +64,7 @@ Dans la partie droite du volet en dessous du graphique, nous montrons les estima
 
 À l’aide de ces informations, nous vous encourageons à décider du nombre de personnes souhaitant abandonner que vous souhaitez capturer et du coût des faux positifs pour votre entreprise. Si vous envoyez une promotion de valeur, vous voudrez peut-être garder un minimum de ceux qui n’abandonneront pas dans votre ciblage tout en conservant le maximum d’abandons envisagés proposés par le modèle. Ou, si vous êtes moins sensible aux faux positifs et aux utilisateurs recevant des messages supplémentaires, vous pouvez envoyer un message à une audience plus importante afin de capturer plus d’abandons envisagés et ignorer les erreurs probables.
 
-## Tableau de corrélation de Churn {#correlation_table}
+## Tableau de corrélation d’attrition {#correlation_table}
 
 Cette analyse affiche tous les attributs ou comportements d’utilisateur qui sont corrélés avec l’attrition de l’utilisateur dans l’audience de prédiction historique. Les tableaux sont divisés avec une partie gauche et droite correspondant respectivement à « plus » et « moins » susceptibles d’abandonner. Pour chaque ligne, le rapport indiquant si les utilisateurs ayant cet attribut de comportement dans la colonne de gauche sont plus ou moins susceptibles d’abandonner s’affiche dans la colonne de droite. Ce nombre est le rapport entre la probabilité d’attrition des utilisateurs ayant ce comportement ou l’attribut divisé par la probabilité d’attrition au sein de l’ensemble de l’audience de prédiction.
 

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Créer de nouveaux alias utilisateur."
+description: "Cet article présente en détail l’endpoint Braze Créer un nouvel alias utilisateur."
 
 ---
 {% api %}
@@ -14,11 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Créer de nouv
 /users/alias/new
 {% endapimethod %}
 
-Utilisez cet endpoint pour ajouter de nouveaux alias utilisateur pour les utilisateurs identifiés existants, ou pour créer de nouveaux utilisateurs non identifiés.
+> Utilisez cet endpoint pour ajouter de nouveaux alias utilisateur pour les utilisateurs identifiés existants, ou pour créer de nouveaux utilisateurs non identifiés.
 
-{% alert note %}
-Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande.
-{% endalert %}
+Vous pouvez spécifier jusqu’à 50 alias de l’utilisateur par requête.
 
 **Ajouter un alias utilisateur pour un utilisateur existant** nécessite un `external_id` à inclure dans le nouvel objet Alias d’utilisateur. Si un `external_id` indiqué dans l’objet qu’aucun utilisateur ne possède cet `external_id`, l’alias ne sera ajouté à aucun utilisateur. Faute d’un `external_id`, un utilisateur sera créé quand même, mais il devra être identifié ultérieurement. Vous pouvez le faire en utilisant l’« identification des utilisateurs » et l’endpoint `users/identify`.
 

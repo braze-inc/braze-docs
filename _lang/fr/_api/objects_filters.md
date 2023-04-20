@@ -6,7 +6,7 @@ description: "Cette page d’accueil répertorie les objets et filtres d’API B
 
 ---
 
-# Spécifications des objets et des filtres
+# Objets et filtres
 
 > Cette page répertorie les objets et filtres d’API Braze utilisés dans vos appels d’API Braze.
 
@@ -23,7 +23,7 @@ description: "Cette page d’accueil répertorie les objets et filtres d’API B
 - [Objet Attribut utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object)
 - [Objet Planification]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
-### Objets de messagerie
+### Objets Messagerie
   - [Objet Android]({{site.baseurl}}/api/objects_filters/messaging/android_object/)
   - [Objet Apple]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)
   - [Objet Carte de contenu]({{site.baseurl}}/api/objects_filters/messaging/content_cards_object)
@@ -32,5 +32,4 @@ description: "Cette page d’accueil répertorie les objets et filtres d’API B
   - [Objet SMS]({{site.baseurl}}/api/objects_filters/messaging/sms_object)
   - [Objet Web]({{site.baseurl}}/api/objects_filters/messaging/web_objects/)
   - [Objet Webhook]({{site.baseurl}}/api/objects_filters/messaging/webhook_object)
-  - [Objet Windows]({{site.baseurl}}/api/objects_filters/messaging/windows_objects/)
-
+  - [Objet WhatsApp]({{site.baseurl}}/api/objects_filters/messaging/whats_app_object)

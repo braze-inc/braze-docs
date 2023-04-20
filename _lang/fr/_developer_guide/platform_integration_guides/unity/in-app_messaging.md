@@ -11,7 +11,9 @@ description: "Cet article de référence couvre les directives de configuration 
 
 ---
 
-# Envoi de messages in-app
+# Intégration de messages in-app
+
+> Cet article de référence couvre les directives de configuration de l’envoi de messages in-app pour la plateforme Unity.
 
 ## Configuration du comportement par défaut des messages in-app
 

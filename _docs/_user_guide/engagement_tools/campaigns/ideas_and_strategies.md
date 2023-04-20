@@ -8,7 +8,7 @@ page_order: 5
 
 tool: Campaigns
 page_type: landing
-description: "This landing page is home to campaign ideas and strategies. Here you can find articles on topics like localization, retargeting, best practices, and more."
+description: "This landing page is home to campaign ideas and strategies. Here, you can find articles on topics like localization, retargeting, best practices, and more."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:

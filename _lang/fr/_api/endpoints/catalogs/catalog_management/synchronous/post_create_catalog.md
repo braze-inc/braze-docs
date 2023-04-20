@@ -15,11 +15,13 @@ description: "Cet article présente en détail l’endpoint Braze Créer un cata
 /catalogs
 {% endapimethod %}
 
-Utilisez cet endpoint pour créer un catalogue.
+> Utilisez cet endpoint pour créer un catalogue.
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#af9f3e2d-b7e7-49e7-aa64-f4652892be6e {% endapiref %}
 
 ## Limite de débit
 
-Cet endpoint a une limitation du débit partagée de 5 requêtes par minute entre tous les endpoints synchronisés du catalogue.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
 ## Paramètres de demande
 

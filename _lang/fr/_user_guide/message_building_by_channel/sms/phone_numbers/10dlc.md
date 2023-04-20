@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# Codes longs à 10 chiffres application à personne (A2P 10DLC)
+# Codes longs à 10 chiffres application à personne
 
 > A2P 10DLC fait référence à un système aux États-Unis qui permet aux entreprises d’envoyer des communications de type Application à personne (A2P) via un numéro de téléphone standard à 10 chiffres en code long (10DLC). Ces codes longs enregistrés bénéficient d’un débit plus élevé, d’une meilleure délivrabilité et d’une conformité meilleure que celle du code long standard.
 

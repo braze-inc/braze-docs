@@ -9,7 +9,9 @@ description: "This article covers components of creating a custom UI for your we
 
 ---
 
-# Create a custom UI
+# Custom UI
+
+> This article covers components of creating a custom UI for your web application.
 
 ## Refreshing the feed
 

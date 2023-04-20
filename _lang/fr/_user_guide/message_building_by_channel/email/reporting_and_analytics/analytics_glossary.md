@@ -24,7 +24,7 @@ glossaries:
     description: Destinataires uniques quotidiens. Nombre d’utilisateurs qui ont reçu un message spécifique dans une journée. Ce chiffre est envoyé par Braze.
     calculation: Total
   - name: "Envoi ou messages envoyés"
-    description: Le nombre total de messages envoyés dans une campagne par e-mail. Ce chiffre est envoyé par Braze.
+    description: Le nombre total de messages envoyés dans une campagne par e-mail. Ce chiffre est envoyé par Braze. Notez qu’au lancement d’une campagne planifiée, cet indicateur inclura tous les messages envoyés, qu’ils aient été envoyés ou non en raison d’une limitation du taux.
     calculation: Total
   - name: "Livraisons"
     description: Le nombre total de messages (envois) envoyés avec succès et reçus par des parties emailable.
@@ -32,7 +32,7 @@ glossaries:
   - name: "% de livraisons"
     description: Le nombre total de messages (envois) envoyés avec succès et reçus par des parties emailable.
     calculation: (Envoi - Bounces) / (Envois)
-  - name: "Bounces"
+  - name: "Rebonds"
     description: Nombre total de messages qui n’ont pas été envoyés ou désignés comme « retournés » ou « non reçus » des services d’envoi utilisés ou non reçus par les utilisateurs emailable visés. Cela peut se produire parce qu’il n’y a pas de jeton de notification push valide, que les adresses e-mail étaient incorrectes ou désactivées, ou que l’utilisateur s’est désabonné une fois la campagne lancée. <br><br> <b>Hard Bounces</b>&#58; Un hard bounce est un e-mail renvoyé à l’expéditeur, car l’adresse du destinataire n’était pas valide. Un hard bounce peut se produire parce que le nom de domaine n’existe pas ou parce que le destinataire est inconnu. Si un e-mail reçoit un hard bounce, nous arrêterons toute demande future à cette adresse e-mail. <br><br><b>Soft Bounces</b>&#58; Un soft bounce est un e-mail qui atteint le serveur de messagerie du destinataire, mais est renvoyé non livré avant qu’il ne soit transmis au destinataire. Un soft bounce peut se produire parce que la boîte de réception du destinataire est pleine, que le serveur était en panne ou que le message était trop volumineux pour la boîte de réception du destinataire. Si un e-mail reçoit un soft bounce, nous réessaierons généralement après une période de 72 heures, mais le nombre de tentatives varie d’un destinataire à l’autre. <br><br> Vous pouvez également suivre les hard bounces et les soft bounces dans le <a href='/docs/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/#message-activity-log-tab'>Journal d’activité de message</a>.  <br><br><i> Pour les clients utilisant SendGrid, les rebonds d’e-mail regroupent les hard bounces, les courriers indésirables et les e-mails envoyés à des adresses non valides. </i>
     calculation: Total
   - name: "% de rebonds ou taux de rebonds"

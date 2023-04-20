@@ -10,7 +10,9 @@ tool: Canvas
 
 # Exit criteria
 
-In the **Target Audience** step of the Canvas Flow builder, you can set up exit criteria to identify which users you want to exit your Canvas. To add exit criteria, click the dropdown to select your exception event then click **Add Trigger**.
+> In the **Target Audience** step of the Canvas Flow builder, you can set up exit criteria to identify which users you want to exit your Canvas. 
+
+To add exit criteria, click the dropdown to select your exception event then click **Add Trigger**.
 
 By adding [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events) directly to your Canvas entry rules, you can exit users as soon as the event happens at the end of the step. These users won't receive any further messaging, which leads to a more targeted approach to Canvas messaging with your audience.
 
@@ -30,5 +32,7 @@ Additional exception events include:
 * Entering a location
 * Triggering a geofence
 * Sending an SMS inbound message
+* Segment membership
+* Adding filters
 
 [1]: {% image_buster /assets/img_archive/exit_criteria_example.png %} 

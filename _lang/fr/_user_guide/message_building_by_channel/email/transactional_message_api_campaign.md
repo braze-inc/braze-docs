@@ -1,13 +1,13 @@
 ---
-nav_title: E-mails transactionnels
+nav_title: Campagnes d’e-mails transactionnels
 article_title: Campagnes d’e-mails transactionnels
 page_order: 7
 
 description: "Le présent article de référence explique comment créer et configurer une nouvelle campagne Braze d’e-mails transactionnels."
 page_type: reference
 tool:
-  - Campagnes
-channel: E-mail
+  - Campaigns
+channel: email
 alias: "/api/api_campaigns/transactional_campaigns"
 
 ---
@@ -33,7 +33,7 @@ En bref, vous pouvez utiliser les e-mails transactionnels pour envoyer des notif
 Les e-mails transactionnels diffèrent des campagnes transactionnelles, qui peuvent être utilisées pour cibler vos utilisateurs sans frais supplémentaires. Les campagnes transactionnelles, par exemple, peuvent inclure des messages envoyés après qu’un utilisateur ajoute un élément à son panier. Consultez les [options de ciblage du public]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) pour plus d’informations. 
 {% endalert %}
 
-## Créer une campagne
+## Créer une nouvelle campagne
 
 Pour créer une nouvelle campagne d’e-mails transactionnels, accédez à la page **Campagne**, cliquez sur **Créer une campagne**, et sélectionnez **E-mail transactionnel** dans la liste déroulante.
 
@@ -51,11 +51,11 @@ Par conséquent, vous remarquerez que plusieurs paramètres que vous connaissez 
 - L’étape de **ciblage des utilisateurs** a été supprimée. Étant donné que les e-mails transactionnels enregistrent l’intégralité de votre base d’utilisateurs comme étant admissible (y compris les utilisateurs non abonnés), il n’est pas nécessaire de spécifier des filtres ou des segments. Par conséquent, si vous avez une logique à appliquer à qui doit recevoir ce message, nous vous recommandons de l’appliquer avant de déterminer si la demande d’API doit être envoyée à Braze pour déclencher le message à un utilisateur spécifique.
 - L’étape des **conversions** a été supprimé. Les e-mails transactionnels ne prennent pas en charge le suivi des événements de conversion pour le moment.
 
-![Composer, livrer et confirmer le flux de travail pour créer une campagne d’e-mails transactionnels.][2]
+![Composer, livrer et confirmer le flux de travail pour créer une campagne d'e-mails transactionnels.][2]
 
 Pour configurer votre campagne d'e-mails transactionnels, suivez les étapes générales suivantes :
 
-1. Ajoutez un nom descriptif pour pouvoir trouver les résultats sur vos **Campagnes** après avoir envoyé vos messages.
+1. Ajoutez un nom descriptif pour pouvoir trouver les résultats sur vos **Campaigns** après avoir envoyé vos messages.
 2. Composez votre e-mail ou sélectionnez un modèle.
 3. Notez votre `campaign_id`. Après avoir enregistré votre campagne API, vous devez inclure les champs `campaign_id` générés avec votre demande d’API, lorsque cela est indiqué dans l’article [endpoint d’e-mail transactionnel]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 4. Cliquez sur **Enregistrer la campagne** et vous êtes prêt à commencer votre campagne API !

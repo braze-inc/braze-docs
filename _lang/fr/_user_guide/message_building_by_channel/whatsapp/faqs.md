@@ -6,27 +6,23 @@ description: "Cet article aborde certaines des questions les plus fréquemment p
 page_type: FAQ
 channel:
   - WhatsApp
-hidden: true    
+
 ---
 
-# FAQ WhatsApp
+# Foire aux questions
 
 > Sur cette page, nous allons essayer de répondre à vos questions les plus exigeantes concernant WhatsApp !<br><br>Le présent article n’est pas destiné à fournir, et ne peut être considéré comme fournissant des conseils juridiques. L’utilisation du canal WhatsApp est soumise à des exigences spécifiques de Meta Platforms, Inc. Pour vous assurer que vous utilisez le canal WhatsApp conformément à toutes les exigences applicables et à toutes les lois auxquelles vous pouvez spécifiquement être soumis, vous devez demander conseil à votre conseiller juridique.
 
-{% alert important %}
-La prise en charge du canal WhatsApp est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
-## Questions FAQ
-- [Comptes commerciaux WhatsApp](#whatsapp-business-accounts)
-- [Numéro de téléphone du compte professionnel WhatsApp](#whatsapp-business-account-phone-numbers)
+## Rubriques de la FAQ
+- [Comptes WhatsApp Business](#whatsapp-business-accounts)
+- [Numéros de téléphone du compte WhatsApp Business](#whatsapp-business-account-phone-numbers)
 - [Abonnements et gestion des abonnements](#opt-in-and-subscription-management) 
 - [Limites d’envoi de messages](#messaging-limits) 
 - [Modèles WhatsApp](#whatsapp-templates)
 - [Délivrabilité](#deliverability) 
 - [Divers](#miscellaneous)
 
-### Compte WhatsApp Business 
+### Comptes WhatsApp Business 
 
 #### Comment créer un compte professionnel WhatsApp ? 
 Nous vous recommandons de créer votre compte professionnel WhatsApp (WABA) via le flux d’inscription intégré dans le tableau de bord de Braze. 
@@ -41,19 +37,18 @@ Après avoir terminé le flux d’inscription intégré, vous pouvez accéder à
 Vous pouvez migrer votre WABA existant en fonction du type de WABA que vous possédez actuellement (voir les détails ci-dessous). Notez que les comptes professionnels WhatsApp peuvent uniquement être connectés à **un** fournisseur de solutions commerciales simultanément.
 
 **Si votre compte a été configuré sur le modèle On-Behalf-Of (OBO) :**
--Votre WABA est la propriété du fournisseur de services commerciaux qui configure le compte et envoie des messages en votre nom. Pour les clients ayant des comptes OBO existants, Braze recommande de créer un nouveau compte professionnel WhatsApp avec un nouveau numéro de téléphone via le flux d’inscription intégré. Notez que les modèles, la vérification de l’activité (le cas échéant) et la limite d’envoi de messages actuelle seront perdus lorsque vous le faites, ce qui signifie que vous devrez soumettre à nouveau des modèles pour approbation et augmenter de nouveau votre limite d’envoi de messages. Braze recommande de copier sur vos modèles ou de les enregistrer avant d’arrêter votre compte OBO existant afin que vous puissiez plus facilement reconstruire les modèles.<br>
+- Votre WABA est la propriété du fournisseur de services commerciaux qui configure le compte et envoie des messages en votre nom. Pour les clients ayant des comptes OBO existants, Braze recommande de créer un nouveau compte professionnel WhatsApp avec un nouveau numéro de téléphone via le flux d’inscription intégré. Notez que les modèles, la vérification de l’activité (le cas échéant) et la limite d’envoi de messages actuelle seront perdus lorsque vous le faites, ce qui signifie que vous devrez soumettre à nouveau des modèles pour approbation et augmenter de nouveau votre limite d’envoi de messages. Braze recommande de copier sur vos modèles ou de les enregistrer avant d’arrêter votre compte OBO existant afin que vous puissiez plus facilement reconstruire les modèles.<br>
 
 **Si votre compte a été configuré sur le modèle de partage de compte professionnel WhatsApp (via un flux d’inscription intégré avec un autre fournisseur de services commerciaux) :**
--Vous possédez votre WABA. Pour partager des comptes, Braze recommande de créer un nouveau compte professionnel WhatsApp, [migrez votre numéro de téléphone existant](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/). Cela garantira que vos modèles, vérification de l’activité (le cas échéant) et la limite d’envoi de messages actuelle resteront en tant que « port » et « port » sur Braze.
+- Vous possédez votre WABA. Pour partager des comptes, Braze recommande de créer un nouveau compte professionnel WhatsApp, [migrez votre numéro de téléphone existant](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/). Cela garantira que vos modèles, vérification de l’activité (le cas échéant) et la limite d’envoi de messages actuelle resteront en tant que « port » et « port » sur Braze.
+
+Si vous souhaitez migrer un numéro de téléphone existant, informez votre contact Braze qui pourra vous aider dans le processus.
 
 #### Si j’ai un numéro de téléphone existant que je migre, combien de temps faudra-t-il pour que mon nouveau WABA soit configuré ? 
 Votre nouveau WABA sera configuré immédiatement après avoir terminé le flux d’inscription intégré, ce qui ne devrait prendre que quelques minutes. 
 
-#### Si je crée un nouveau WABA et en utilisant un nouveau numéro de téléphone, combien de temps faudra-t-il pour que mon nouveau WABA soit configuré ? 
-La création d’un nouveau WABA via le flux d’inscription intégré peut prendre moins de 10 minutes. 
-
 #### Puis-je connecter plusieurs WABAs à Braze ? 
-Non, vous ne pouvez connecter qu’un seul WABA par groupe d’apps à Braze simultanément. Cependant, vous pouvez avoir plusieurs numéros de téléphone connectés à un WABA. 
+Non, vous ne pouvez connecter qu’un seul WABA par groupe d’apps à Braze simultanément.
 
 ### Numéros de téléphone du compte professionnel WhatsApp 
 
@@ -82,7 +77,7 @@ Si vous choisissez de communiquer de manière proactive les utilisateurs finaux,
  
 #### Dois-je recueillir le numéro de téléphone de l’utilisateur final lorsque je récupère un abonnement ? 
 Vous devez avoir le numéro de téléphone des utilisateurs finaux sur le profil Braze pour les envoyer. 
-- Si vous avez déjà leur numéro, vous n’avez pas besoin de le récupérer pendant votre participation. 
+- Si vous avez déjà leur numéro, vous n’avez pas besoin de le récupérer lors de leur abonnement. 
 - Si vous n’avez pas le numéro d’utilisateur final, votre méthode d’abonnement doit inclure la capture du numéro de téléphone. 
 
 #### Comment mettre à jour le statut de souscription des utilisateurs finaux qui s’abonnent ? 
@@ -105,7 +100,7 @@ Les utilisateurs finaux peuvent choisir de deux manières :
 ### Limites d’envoi de messages 
 
 #### Quelles sont les limites d’envoi de messages ? 
-Les limites d’envoi de messages sont un concept de limitation tarifaire WhatsApp. Ils déterminent le nombre maximum de conversations initiées par les entreprises, chaque numéro de téléphone pouvant commencer par une période de 24 heures. Il existe quatre niveaux de limite d’envoi de messages : 1 k, 10 k, 100 k et illimité. Tous les clients de Braze commenceront à 100 k. 
+Les limites d’envois de messages sont un concept de renforcement de l’intégrité WhatsApp. Ils déterminent le nombre maximum de conversations initiées par les entreprises, chaque numéro de téléphone pouvant commencer par une période de 24 heures. Il existe quatre niveaux de limite d’envoi de messages : 1 k, 10 k, 100 k et illimité.
 
 #### Comment puis-je augmenter ma limite d’envoi de messages ? 
 WhatsApp augmentera votre limite d’envoi de messages si vous remplissez les conditions suivantes :
@@ -116,7 +111,7 @@ WhatsApp augmentera votre limite d’envoi de messages si vous remplissez les co
 Donc, pour passer de 100 000 à illimité, vous devez envoyer au moins 50 000 conversations initiées par l’entreprise sur une période de 7 jours. 
 
 #### Combien de temps faut-il pour augmenter mes limites d’envoi de messages ? 
-Si toutes les conditions précédentes sont remplies, vous pouvez augmenter votre limite d’envoi de messages de 100 000 à illimité en 2 jours. 
+Si toutes les conditions précédentes sont remplies, vous pouvez augmenter votre limite d’envoi de messages de 1 000 à illimité en 4 jours. 
 
 #### Où puis-je voir ma limite d’envoi de messages actuelle ? 
 Vous pouvez vérifier vos limites d’envoi de messages actuelles dans l’onglet **WhatsApp Manager > Overview Dashboard > Insights (WhatsApp Manager > Aperçu Tableau de bord > Insights)**. 
@@ -124,11 +119,8 @@ Vous pouvez vérifier vos limites d’envoi de messages actuelles dans l’ongle
 #### Que se passe-t-il si je tente d’envoyer des messages lorsque j’ai déjà atteint ma limite d’envoi de messages ?
 Si vous essayez d’envoyer une campagne ou un Canvas à des utilisateurs plus uniques que votre limite actuelle, les messages ne seront pas envoyés. Braze continuera à tenter de renvoyer les messages si/lorsque votre limite d’envoi de messages augmente pendant un jour maximum. 
 
-#### Ma limite d’envoi de messages peut-elle être inférieure à 100 k ?
+#### Ma limite d’envoi de messages peut-elle diminuer ?
 Oui, si votre note de qualité de numéro de téléphone chute trop bas, vous risquez de réduire votre limite d’envoi de messages. Braze vous recommande d’être abonné et d’être informé des mises à jour de qualité de WhatsApp, y compris des mises à jour de votre numéro de téléphone et de votre niveau de limite d’envoi de messages. Vous pouvez vous abonner aux notifications directement dans le tableau de bord WhatsApp Manager. 
-
-#### Comment fonctionnent les 1 000 conversations gratuites ? 
-Chaque WABA recevra 1 000 conversations gratuites par mois. Ces conversations peuvent être effectuées par l’utilisateur ou par l’entreprise. Même si un WABA comporte plusieurs numéros, le seuil de niveau gratuit est plafonné à 1 000, car le niveau gratuit est fourni au niveau WABA. 
 
 ### Modèles WhatsApp 
 
@@ -142,7 +134,7 @@ Vous allez créer, modifier, gérer et soumettre des modèles pour approbation d
 Le processus d’approbation peut prendre jusqu’à 24 heures, mais les modèles sont souvent traités en quelques heures ou minutes. 
 
 #### Combien de modèles puis-je avoir à un moment donné ? 
-WhatsApp permet aux entreprises d’avoir jusqu’à 250 modèles. 
+La limite de votre modèle de message dépend du statut de vérification de votre entreprise. Vous pouvez vérifier votre limite sur la page **WhatsApp Manager > Message Templates (Gestionnaire WhatsApp > Modèles de messages)**. 
 
 #### Comment personnaliser la copie du modèle de Braze et les médias riches ? 
 WhatsApp permet d’insérer des paramètres variables dans des modèles de messages. Les messages ne peuvent pas démarrer ou terminer avec un paramètre variable. Les paramètres variables peuvent être remplis avec une logique liquide sur la plate-forme Braze. Consulter [composer un message WhatsApp à Braze](https://www.braze.com/docs/user_guide/message_building_by_channel/whatsapp/create/#step-2-compose-your-whatsapp-message) pour en savoir plus sur les paramètres variables. 
@@ -184,7 +176,7 @@ Vous pouvez ajouter des images, des appels à l’action (URL ou numéro de tél
 Oui. Vous pouvez [importer des numéros de téléphone utilisateur](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers). 
 
 #### Qu’est-ce que la vérification commerciale ? 
-La vérification commerciale est un concept WhatsApp utilisé pour garantir que la marque est une entreprise légitime. Il peut être rempli dans WhatsApp Manager. La vérification commerciale garantit que le nom d’affichage de la marque apparaît dans l’IU WhatsApp (au lieu d’afficher le numéro de téléphone associé à ce WABA). La vérification des activités est également nécessaire pour faire évoluer les envois de messages. Sans vérification commerciale, les clients ne peuvent envoyer que 250 utilisateurs finaux uniques dans une période de 24 heures. 
+La vérification commerciale est un concept WhatsApp utilisé pour garantir que la marque est une entreprise légitime. Il peut être rempli dans WhatsApp Manager. La vérification des activités est également nécessaire pour faire évoluer les envois de messages. Sans vérification commerciale, les clients ne peuvent envoyer que 250 utilisateurs finaux uniques dans une période de 24 heures. 
 
 #### Qu’est-ce qu’un compte professionnel officiel ? 
 OBA vous donne la coche verte à côté de votre nom d’affichage et est facultatif. Vous pouvez demander un compte professionnel officiel après la vérification de l’entreprise. Notez que la vérification commerciale et un compte professionnel officiel sont différents des concepts WhatsApp. 
@@ -195,8 +187,8 @@ Vous pouvez voir des destinataires uniques, des envois, des livraisons, des lect
 #### Qu’est-ce qu’une conversation WhatsApp ? 
 WhatsApp est un canal axé sur l’envoi de messages bidirectionnel et donc sur les conversations (au lieu du nombre de messages individuels). Une conversation est un fil de 24 heures entre une entreprise et un utilisateur final.
 
-- **Conversation initiée par l’entreprise**: Une conversation dans laquelle commence l’entreprise en envoyant un message modèle approuvé à l’utilisateur final. Dès que l’entreprise envoie un message, elle commence la fenêtre de 24 heures.
-- **Conversation initiée par l’utilisateur**: Une conversation où l’utilisateur final envoie un message à l’entreprise. Lorsque l’entreprise envoie un message en réponse, cela commence par la fenêtre de 24 heures.
+- **Conversation initiée par l’entreprise** : Une conversation dans laquelle commence l’entreprise en envoyant un message modèle approuvé à l’utilisateur final. Dès que l’entreprise envoie un message, elle commence la fenêtre de 24 heures.
+- **Conversation initiée par l’utilisateur** : Une conversation où l’utilisateur final envoie un message à l’entreprise. Lorsque l’entreprise envoie un message en réponse, la fenêtre de 24 heures commence.
 
 #### Quels facteurs affectent la qualité du numéro de téléphone et que se passe-t-il lorsque ma note de qualité baisse trop bas ? 
 Les facteurs qui affectent la qualité de la qualité du numéro de téléphone comprennent un utilisateur final bloquant une entreprise (et les raisons qu’ils fournissent lorsqu’ils bloquent une entreprise) et un utilisateur final signalant une entreprise. 

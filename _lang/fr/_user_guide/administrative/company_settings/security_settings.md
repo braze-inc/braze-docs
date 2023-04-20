@@ -9,7 +9,7 @@ description: "Cet article de référence couvre les paramètres génériques de 
 
 # Paramètres de sécurité
 
-En tant qu’administrateur, la sécurité est une priorité absolue sur votre liste de préoccupations. Cette page peut vous aider à gérer les paramètres de sécurité génériques et interentreprises, y compris les règles d’authentification, whitelister l’adresse IP et l’authentification à deux facteurs.
+> En tant qu’administrateur, la sécurité est une priorité absolue sur votre liste de préoccupations. Cette page peut vous aider à gérer les paramètres de sécurité génériques et interentreprises, y compris les règles d’authentification, whitelister l’adresse IP et l’authentification à deux facteurs.
 
 ## Règles d’authentification
 
@@ -31,9 +31,9 @@ Utilisez ce champ pour définir quand vous souhaitez que les utilisateurs de vot
 
 ### Règles de durée de session
 
-Utilisez ce champ pour définir la durée pendant laquelle Braze gardera votre session active. Une fois que Braze considère que votre session est inactive (aucune activité pour le nombre défini de minutes), l’utilisateur sera déconnecté. Le nombre maximum de minutes que vous pouvez saisir est de 1 440 (égale à 24 heures).
+Utilisez ce champ pour définir la durée pendant laquelle Braze gardera votre session active. Une fois que Braze considère que votre session est inactive (aucune activité pour le nombre défini de minutes), l’utilisateur sera déconnecté. Le nombre maximum de minutes que vous pouvez saisir est de 10 080 (soit 1 semaine) si l'authentification à deux facteurs est appliquée pour votre entreprise, sinon la durée maximale de la session sera de 1 440 minutes (soit 24 heures).
 
-### Restriction de l’authentification unique SSO
+### Authentification par authentification unique (SSO)
 
 Vous pouvez restreindre vos utilisateurs à la connexion à l’aide d’un mot de passe ou d’une Authentification unique (SSO).
 
@@ -45,17 +45,16 @@ Utilisez le champ affiché pour répertorier les adresses IP et sous-réseaux sp
 
 ## Authentification à deux facteurs
 
-L’authentification à deux facteurs ajoute un deuxième niveau de vérification d’identité à un journal de compte, ce qui le rend plus sûr qu’un nom d’utilisateur et un mot de passe. Basculer ce bouton sur **On (Activé)** réalisera une authentification à deux facteurs obligatoire pour tous les utilisateurs de compte Braze dans votre entreprise.
+L’authentification à deux facteurs ajoute un deuxième niveau de vérification d’identité à un journal de compte, ce qui le rend plus sûr qu’un nom d’utilisateur et un mot de passe. Cette fonctionnalité est activée par défaut pour tous les comptes Braze.  
 
-Lorsque l’authentification à deux facteurs est activée, en plus de saisir un mot de passe, les utilisateurs devront saisir un code de vérification envoyé à leur appareil mobile lors de la connexion à leur compte Braze.
+Lorsque l’authentification à deux facteurs est activée, en plus de saisir un mot de passe, les utilisateurs devront saisir un code de vérification lors de la connexion à leur compte Braze. Le code peut être envoyé via l’application Authy, par e-mail ou par SMS.
 
-{% alert tip %} Braze recommande de configurer une authentification à deux facteurs via l’application Authy plutôt que par SMS, au cas où vous rencontreriez des problèmes de réception de SMS à l’avenir. {% endalert %}
-
-L’authentification à deux facteurs est facultative par défaut. Cependant, lorsqu’elle est activée, les utilisateurs qui ne configurent pas leur authentification à deux facteurs seront bloqués dans leur compte Braze. Les utilisateurs du compte Braze peuvent également configurer une authentification à deux facteurs par eux-mêmes dans **Account Settings (Paramètres du compte)**, même si cela n’est pas exigé par l’administrateur.
+L’authentification à deux facteurs peut être facultative pour les administrateurs et activée par défaut pour les utilisateurs n’étant pas administrateurs. Cependant, lorsqu’elle est activée, les utilisateurs qui ne configurent pas leur authentification à deux facteurs seront bloqués dans leur compte Braze. Les utilisateurs du compte Braze peuvent également configurer une authentification à deux facteurs par eux-mêmes dans Account Settings (Paramètres du compte), même si cela n’est pas exigé par l’administrateur.
 
 ### Se souvenir de moi
 
 ![Case à cocher Remember this account for 30 days (Se souvenir de ce compte pendant 30 jours)][04]{: style="float:right;max-width:35%;margin-left:15px;"}
+
 Lors de l’activation de l’authentification à deux facteurs pour votre entreprise, la case à cocher **Remember Me (Se souvenir de moi)** devient accessible aux utilisateurs. Cette fonctionnalité stocke un cookie sur votre appareil, ce qui vous oblige uniquement à vous connecter avec l’authentification à deux facteurs **une fois** au cours de 30 jours.
 
 Les clients ayant plusieurs comptes sous un tableau de bord de l’entreprise peuvent rencontrer des problèmes en utilisant cette fonctionnalité en raison du cookie lié à un appareil spécifique. Si les utilisateurs utilisent le même appareil pour se connecter à plusieurs comptes, le cookie sera remplacé pour les comptes précédemment autorisés sur cet appareil. Braze prévoit qu’un seul appareil soit associé à un compte, et non pas un seul appareil pour plusieurs comptes.
@@ -64,10 +63,9 @@ Assurez-vous d’enregistrer vos modifications avant de quitter la page !
 
 ### Réinitialisation de l’authentification utilisateur
 
-Les utilisateurs qui rencontrent des problèmes se connectant via une authentification à deux facteurs peuvent contacter les administrateurs de leur entreprise pour réinitialiser leur authentification à deux facteurs. Pour ce faire, demandez à un administrateur de naviguer vers **Manage Users (Gérer les utilisateurs)**, sélectionnez l’utilisateur dans la liste fournie, puis sélectionnez **Reset (Réinitialiser)** sous **Two-Factor Authentication (Authentification à deux facteurs)**. Une réinitialisation peut résoudre des problèmes d’authentification courants, tels que des problèmes avec Authy, une défaillance de connexion en raison d’interruptions de SMS ou d’erreurs de l’utilisateur, etc.
+Les utilisateurs qui rencontrent des problèmes se connectant via une authentification à deux facteurs peuvent contacter les administrateurs de leur entreprise pour réinitialiser leur authentification à deux facteurs. Pour ce faire, demandez à un administrateur de naviguer vers **Manage Users (Gérer les utilisateurs)**, sélectionnez l’utilisateur dans la liste fournie, puis sélectionnez **Reset (Réinitialiser)** sous **Two-Factor Authentication (Authentification à deux facteurs)**. Une réinitialisation peut résoudre des problèmes d’authentification courants, tels que des problèmes avec Authy, la vérification par e-mail n’étant pas envoyée, une défaillance de connexion en raison d’interruptions de SMS ou d’erreurs de l’utilisateur, etc.
 
 Application de l’authentification à deux facteurs :
-
 - Si l’authentification à deux facteurs n’est pas appliquée au niveau de l’entreprise, une fois réinitialisée, l’utilisateur se connectera normalement et devra aller à **Account Settings (Paramètres du compte)** pour activer et configurer une authentification à deux facteurs.
 - Si l’authentification à deux facteurs est appliquée au niveau de l’entreprise, la prochaine fois que l’utilisateur se connecte, il lui sera demandé de configurer son authentification à deux facteurs.
 

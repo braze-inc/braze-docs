@@ -11,9 +11,6 @@ search_rank: 1
 
 # Entonnoirs de segments
 
-> Cet article de référence explique comment utiliser les entonnoirs de segments de Braze et présente les meilleures pratiques à suivre ainsi que des cas d’utilisation. 
-> <br>
-> <br>
 > Les entonnoirs de segments sont parfaits pour limiter la taille de votre audience pour un cas d’utilisation de campagne spécifique, apprendre de cette audience et de ses interactions, et utiliser ces connaissances afin d’élaborer des stratégies et de concevoir des campagnes efficaces.
 
 Les entonnoirs de segments vous permettent de voir comment chaque filtre que vous ajoutez affecte les statistiques de votre segment. Lorsque vous créez un segment, une ligne de données apparaîtra sous chaque filtre. Ces données fourniront les informations suivantes sur les utilisateurs ciblés par tous les filtres à ce moment-là :
@@ -27,7 +24,7 @@ Les entonnoirs de segments vous permettent de voir comment chaque filtre que vou
 
 ![][1]
 
-## Meilleures pratiques
+## Bonnes pratiques
 
 - Ajouter des filtres qui documentent votre flux utilisateur vous permet de voir à quel endroit vous perdez des utilisateurs. Par exemple, si vous avez une application de réseau social et que vous voulez voir à quelle étape vous risquez de perdre des utilisateurs pendant votre processus d’onboarding, vous pouvez ajouter des filtres de données personnalisés pour s’inscrire, ajouter des amis et envoyer un premier message. Si vous découvrez que 85 % des utilisateurs s’inscrivent et ajoutent des amis, mais que seulement 45 % ont envoyé un premier message, alors vous saurez qu’il vous faut encourager les utilisateurs à envoyer plus de messages pendant vos campagnes d’onboarding et de marketing.
 
@@ -46,13 +43,13 @@ En analysant l’impact d’une certaine action effectuée par un utilisateur (c
 
 Supposons par exemple que vous ayez un groupe dans lequel tous les utilisateurs qui ont ajouté des articles à une liste d’envies ont également effectué un achat. Étant donné que seul un petit pourcentage d’utilisateurs ont ajouté des articles à une liste d’envies, l’application peut souhaiter encourager ce comportement à travers des campagnes marketing.
 
-![Exemple d’entonnoir de segments avec les filtres suivants : « A utilisé ces applications pour la dernière fois il y a moins de 30 jours », « Dernier article ajouté à liste d’envies il y a moins de 30 jours », et « Dernier achat effectué il y a moins de 30 jours » pour atteindre un total de 4 302 utilisateurs.][3]
+![Exemple d’entonnoir de segments avec les filtres suivants : « Last used these apps less than 30 days ago (A utilisé ces applications pour la dernière fois il y a moins de 30 jours) », « Last Added Item to Waitlist less than 30 days ago (Dernier article ajouté à liste d’envies il y a moins de 30 jours) », et « Last Made Purchase less than 30 days ago (Dernier achat effectué il y a moins de 30 jours) » pour atteindre un total de 4 302 utilisateurs.][3]
 
 ### Comparer les canaux de messagerie
 
 Créez un segment d’utilisateurs actifs (ou d’utilisateurs ayant les traits souhaités) et comparez leurs interactions avec différents canaux d’engagement, comme les e-mails et les notifications push. Par exemple, si les utilisateurs les plus loyaux sont abonnés aux notifications push, vous pourriez passer plus de temps à envoyer des campagnes par notification push aux utilisateurs actifs. Cependant, si vous constatez que la valeur à vie est plus élevée pour les personnes qui sont abonnées aux communications par e-mail, vous pourriez inviter plus d’utilisateurs actifs à s’abonner aux e-mails.
 
-![Entonnoir de segments pour une campagne par e-mail avec les filtres suivants : « Dernier achat effectué il y a moins de 30 jours », « A utilisé ces applications pour la dernière fois il y a moins de 30 jours », « Notifications push activées » et « Statut d’abonnement aux e-mails : abonné » pour atteindre un total de 2 799 utilisateurs.][5]
+![Entonnoir de segments pour une campagne par e-mail avec les filtres suivants : « Last Made Purchase less than 30 days ago (Dernier achat effectué il y a moins de 30 jours) », « Last used these apps less than 30 days ago (A utilisé ces applications pour la dernière fois il y a moins de 30 jours) », « Push Enabled is true (Notifications push activées) », et « Email Subscription Status is Opted In (Statut d’abonnement aux e-mails : abonné) » pour atteindre un total de 2 799 utilisateurs.][5]
 
 ### Abonnements aux notification push Android ou iOS
 

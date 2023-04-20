@@ -11,7 +11,7 @@ page_order: 1
 
 # Exportation de l’audience Facebook
 
-L’intégration Braze et Facebook vous permet d’exporter manuellement vos segments utilisateurs de Braze vers Facebook pour créer des audiences personnalisées dans Facebook. Il s’agit d’une exportation d’audience statique unique qui ne créera que de nouvelles audiences personnalisées dans Facebook.
+> L’intégration Braze et Facebook vous permet d’exporter manuellement vos segments utilisateurs de Braze vers Facebook pour créer des audiences personnalisées dans Facebook. Il s’agit d’une exportation d’audience statique unique qui ne créera que de nouvelles audiences personnalisées dans Facebook.
 
 Les cas d’utilisation courants pour synchroniser les audiences personnalisées dans Facebook comprennent :
 - Recibler les utilisateurs à des points spécifiques de leur cycle de vie
@@ -118,3 +118,5 @@ Une fois que vous avez réussi à exporter un segment en tant qu’audience Face
 [10]: {% image_buster /assets/img/fb/afb_5.png %}
 [11]: {% image_buster /assets/img/fb/afb_6.png %}
 [13]: https://www.facebook.com/ads/manager/audiences/manage/
+[15]: {% image_buster /assets/img/tiktok/tiktok13.png %}
+[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}

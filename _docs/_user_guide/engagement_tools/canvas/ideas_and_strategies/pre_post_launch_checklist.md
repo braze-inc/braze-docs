@@ -9,6 +9,8 @@ tool: Canvas
 
 # Pre and post-launch checklist
 
+> This article provides a guideline for things to check before and after you launch a Canvas.
+
 ## Things to consider before launch
 
 Before you launch a Canvas, there are several details you can check to ensure that your messaging and send times align with your audience's preferences. Things to consider include any variations in time zones, entry settings, and more. Using this checklist as a guide, finetune these areas based on your use case to help contribute to the success of your Canvas. 
@@ -95,7 +97,7 @@ Next, it's important to identify these settings that can affect when and if mess
 - Quiet Hours
 - Delivery validations
 
-In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQs]({{site.baseurl}}/user_guide/intelligence/faqs/).
+In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/).
 
 ### Suspicious send volumes between paths
 

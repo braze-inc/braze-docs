@@ -10,7 +10,9 @@ channel: push
 
 ---
 
-# Integration
+# Amazon Device Messaging
+
+> This reference article covers the Amazon Android push notification integration for the Unity platform.
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
 

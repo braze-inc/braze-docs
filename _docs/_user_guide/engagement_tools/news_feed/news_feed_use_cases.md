@@ -14,7 +14,7 @@ channel: news feed
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-At Braze, we value the customization that News Feed brings to the table. Here are some of our favorite use cases to help you get ideas on how to get the most out of Braze.
+> At Braze, we value the customization that News Feed brings to the table. Here are some of our favorite use cases to help you get ideas on how to get the most out of Braze.
 
 - Advertising app updates
 - Drip marketing welcome campaigns that send messages to customers over time.

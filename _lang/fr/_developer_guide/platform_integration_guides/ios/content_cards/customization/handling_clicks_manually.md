@@ -17,15 +17,15 @@ Vous pouvez gérer manuellement les clics de carte de contenu en implémentant l
 ```objc
 contentCardsTableViewController.delegate = delegate;
 
-// Méthodes d’implémentation dans la délégation
+// Methods to implement in delegate
 - (BOOL)contentCardTableViewController:(ABKContentCardsTableViewController *)viewController
                  shouldHandleCardClick:(NSURL *)url {
   if ([[url.host lowercaseString] isEqualToString:@"my-domain.com"]) {
-    // Lien de gestion personnalisée ici
+    // Custom handle link here
     NSLog(@"Manually handling Content Card click with URL %@", url.absoluteString);
     return NO;
   }
-  // Laisser Braze SDK gérer l’action de clic
+  // Let the Braze SDK handle the click action
   return YES;
 }
 
@@ -39,21 +39,21 @@ contentCardsTableViewController.delegate = delegate;
 ```swift
 contentCardsTableViewController.delegate = delegate
 
-// Méthodes d’implémentation dans la délégation
+// Methods to implement in delegate
 func contentCardTableViewController(_ viewController: ABKContentCardsTableViewController!,
                                     shouldHandleCardClick url: URL!) -> Bool {
   if (url.host?.lowercased() == "my-domain.com") {
-    // Lien de gestion personnalisée ici
+    // Custom handle link here
     NSLog("Manually handling Content Card click with URL %@", url.absoluteString)
     return false
   }
-  // Laisser Braze SDK gérer l’action de clic
+  // Let the Braze SDK handle the click action
   return true
 }
 
 func contentCardTableViewController(_ viewController: ABKContentCardsTableViewController!,
                                     didHandleCardClick url: URL!) {
-  NSLog("Le SDK Braze a traité le clic de carte de contenu avec l'URL %@", url.absoluteString)
+  NSLog("Braze SDK handled Content Card click with URL %@", url.absoluteString)
 }
 ```
 {% endtab %}

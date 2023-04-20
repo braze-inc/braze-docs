@@ -5,16 +5,16 @@ search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Supprimer les adresses e-mail avec rebond élevé et son utilisation."
+description: "Cet article présente en détail l’endpoint Braze Supprimer les adresses e-mail avec rebond élevé."
 
 ---
 {% api %}
-# Supprimer les rebonds élevés
+# Supprimer les e-mails ayant subi un hard bounce
 {% apimethod post %}
 /email/bounce/remove
 {% endapimethod %}
 
-Utilisez cet endpoint pour supprimer les adresses e-mail de votre liste de rebonds de Braze. Nous les supprimerons également de la liste de diffusion conservée par votre fournisseur de messagerie.
+> Utilisez cet endpoint pour supprimer les adresses e-mail de votre liste de rebonds de Braze et de la liste de rebonds mise à jour par votre fournisseur d’e-mails.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7b87a884-fa20-4085-b9f1-18363103575f {% endapiref %}
 

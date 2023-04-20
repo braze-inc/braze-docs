@@ -3,7 +3,7 @@ nav_title: Ouvertures influencées
 article_title: Ouvertures influencées
 page_order: 7
 page_type: reference
-description: "Cet article de référence explique ce que sont les Ouvertures Influencées et comment vous pouvez les suivre pour fournir des informations plus précises dans campagnes de notifications push."
+description: "Cet article de référence explique ce que sont les Ouvertures Influencées et comment vous pouvez les suivre pour obtenir des informations plus précises sur les effets de vos campagnes de notifications push."
 channel: push
 
 ---

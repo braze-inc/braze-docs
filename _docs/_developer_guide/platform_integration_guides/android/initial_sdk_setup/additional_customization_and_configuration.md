@@ -9,7 +9,9 @@ description: "This reference article covers additional customization and configu
 
 ---
 
-# Additional customization and configuration
+# Other SDK customizations
+
+> This reference article covers additional customization and configuration options such as verbose logging, suppressing logging, and how to implement multiple API keys.
 
 ## Using R8/ProGuard with Braze
 [Code shrinking][50] configuration is automatically included with your Braze integration.
@@ -38,7 +40,7 @@ BrazeLogger.setLogLevel(Log.VERBOSE);
 {% tab KOTLIN %}
 
 ```kotlin
-BrazeLogger.setLogLevel(Log.VERBOSE)
+BrazeLogger.logLevel = Log.VERBOSE
 ```
 
 {% endtab %}

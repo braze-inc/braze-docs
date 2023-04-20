@@ -9,9 +9,9 @@ channel:
  
 ---
 
-# WhatsApp subscription groups
+# Subscription groups
 
-WhatsApp subscription groups are created upon integrating WhatsApp with your app through the **Technology Partner Portal**.
+> WhatsApp subscription groups are created upon integrating WhatsApp with your app through the **Technology Partner Portal**.
 
 ## WhatsApp subscription states
 

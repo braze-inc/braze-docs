@@ -3,7 +3,7 @@ nav_title: Résolution des problèmes
 article_title: Résolution des problèmes de notification push pour iOS
 platform: iOS
 page_order: 30
-description: "Cet article de référence couvre les sujets concernant la résolution des problèmes potentiels pour votre implémentation de notifications push iOS."
+description: "Cet article couvre les sujets concernant la résolution des problèmes potentiels pour votre implémentation de notifications push iOS."
 channel:
   - Notification push
 

@@ -8,9 +8,7 @@ description: "Cet article propose un aperçu du Timing Intelligent (appelé aupa
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Timing Intelligent
 
-> Cet article propose un aperçu du Timing Intelligent (appelé auparavant Livraison intelligente) et comment vous pouvez tirer parti de cette fonctionnalité dans vos campagnes et vos Canvas.
-
-Utilisez le Timing Intelligent pour livrer vos messages à chaque utilisateur lorsque Braze détermine que cet utilisateur a plus de chance de s’engager (ouvrir ou cliquer), ce qui est appelé l’heure d’envoi optimale. Vous pourrez vous assurer ainsi plus facilement que vous envoyez des messages à vos utilisateurs à l’heure qu’ils préfèrent ce qui peut entraîner un engagement plus important.
+> Utilisez le Timing Intelligent pour livrer vos messages à chaque utilisateur lorsque Braze détermine que cet utilisateur a plus de chance de s’engager (ouvrir ou cliquer), ce qui est appelé l’heure d’envoi optimale. Vous pourrez vous assurer ainsi plus facilement que vous envoyez des messages à vos utilisateurs à l’heure qu’ils préfèrent ce qui peut entraîner un engagement plus important.
 
 ## Cas d’utilisation
 
@@ -74,7 +72,7 @@ Voici certaines des nuances que vous devriez connaître lorsque vous planifiez d
 
 ##### Lancer la campagne
 
-Lancez votre campagne au moins 48 heures avant la date d’envoi planifiée. La variation entre les fuseaux horaires en est la raison. Braze calcule le moment optimal à minuit, heure des Samoa (UTC+13), le premier fuseau horaire du monde. Un jour complet couvre environ 48 heures autour de la planète, ce qui signifie que si vous lancez une campagne pendant ce tampon de 48 heures, il est possible que le moment optimal soit déjà passé dans le fuseau horaire d’un utilisateur et que le message ne s’envoie pas.
+Lancez votre campagne au moins 48 heures avant la date d’envoi planifiée. La variation entre les fuseaux horaires en est la raison. Braze calcule le moment optimal à minuit, heure des Samoa (UTC+13), un des premiers fuseaux horaires du monde. Un jour complet couvre environ 48 heures autour de la planète, ce qui signifie que si vous lancez une campagne pendant ce tampon de 48 heures, il est possible que le moment optimal soit déjà passé dans le fuseau horaire d’un utilisateur et que le message ne s’envoie pas.
 
 {% alert important %}
 Si une campagne est lancée et que le moment optimal pour un utilisateur était il y a moins d’une heure, le message sera envoyé immédiatement. Si le moment optimal était il y a plus d’une heure, le message n’est pas envoyé du tout.
@@ -82,7 +80,7 @@ Si une campagne est lancée et que le moment optimal pour un utilisateur était 
 
 ##### Choisir des segments
 
-Si vous ciblez une audience qui a effectué une action au cours d’une certaine période, autorisez une fenêtre d’au moins 3 jours dans vos filtres de segment. Par exemple, au lieu d’utiliser `A utilisé pour la première fois ces apps il y a plus d’un jour` et `A utilisé pour la première fois ces apps il y a moins de 3 jours`, utilisez 1 jour et 4 jours.
+Si vous ciblez une audience qui a effectué une action au cours d’une certaine période, autorisez une fenêtre d’au moins 3 jours dans vos filtres de segment. Par exemple, au lieu de `First used these apps more than 1 day ago` et `First used these apps less than 3 days ago`, utilisez 1 jour et 4 jours.
 
 ![Filtres pour une audience cible pour lesquels la campagne cible les utilisateurs qui ont utilisé pour la première fois cette application entre 1 et 4 jours auparavant.][3]
 

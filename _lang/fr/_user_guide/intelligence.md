@@ -5,10 +5,10 @@ page_order: 6.5
 layout: dev_guide
 search_rank: 12
 guide_top_header: "Intelligence Suite"
-guide_top_text: "Intelligence Suite de Braze vous permet d’automatiser la prise de décision avec des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et multicanal, afin d’optimiser l’ensemble. <br> <br> Intelligence Suite est composée de trois fonctionnalités principales : Timing Intelligent, canal intelligent et sélection intelligente."
-description: "Intelligence Suite de Braze vous permet d’automatiser la prise de décision avec des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et multicanaux, afin d’optimiser l’ensemble."
+guide_top_text: "Intelligence Suite de Braze vous permet d’automatiser la prise de décision avec des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et cross-canal, afin d’optimiser l’ensemble. <br> <br> Intelligence Suite est composée de trois fonctionnalités principales : Timing Intelligent, Canal intelligent et Sélection intelligente."
+description: "Intelligence Suite de Braze vous permet d’automatiser la prise de décision avec des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et cross-canal, afin d’optimiser l’ensemble."
 
-Tool:
+Outil :
   - Tableau de bord
 
 guide_featured_title: "Outils et fonctionnalités"
@@ -23,7 +23,7 @@ guide_featured_list:
   link: /docs/user_guide/intelligence/intelligent_selection/
   fa_icon: fas fa-chart-bar
 
-guide_menu_title: "Ressources complémentaires"
+guide_menu_title: "Ressources supplémentaires"
 guide_menu_list:
 - name: FAQ Intelligence
   link: /docs/user_guide/intelligence/faqs/
@@ -31,7 +31,7 @@ guide_menu_list:
 - name: Test A/B et multivarié
   link: /docs/user_guide/intelligence/multivariate_testing/
   fa_icon: fas fa-vial
-- name: Assistant rédaction IA
+- name: Assistant de rédaction IA
   link: /docs/user_guide/intelligence/ai_copywriting/
   fa_icon: fas fa-edit
 - name: Générateur d’images IA

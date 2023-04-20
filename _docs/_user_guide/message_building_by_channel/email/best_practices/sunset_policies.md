@@ -8,9 +8,9 @@ channel: email
 
 ---
 
-# Sunset policies for email
+# Sunset policies
 
-While you may be tempted to send campaigns to as many users as you can, there are situations when it's actually advantageous to stop messages to disengaged users. 
+> While you may be tempted to send campaigns to as many users as you can, there are situations when it's actually advantageous to stop messages to disengaged users. 
 
 For emails, your sending IP has a reputation score that factors in engagement, spam reporting, blocklisting, and more. You can use tools like [Sender Score](https://www.senderscore.org/ "Sender Score") or [Outlook's Smart Network Data Service](https://postmaster.live.com/snds/ "Outlook's Smart Network Data Service") to monitor your reputation score. If your reputation score is consistently low, ISP and mailbox filters might automatically sort your emails into a spam or low priority folder for all recipients, even engaged ones. Creating a sunset policy helps ensure your emails aren't delivered to inactive recipients. 
 

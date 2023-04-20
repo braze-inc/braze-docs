@@ -15,9 +15,7 @@ platform:
 
 # Intégrations TV et OTT
 
-Alors que la technologie évolue vers de nouvelles plateformes et de nouveaux appareils, Braze vous ouvre la voie d’une communication facile !
-
-Braze offre différents canaux d’engagement pour plusieurs systèmes d’exploitation TV et des décodeurs « OTT ».
+> Alors que la technologie évolue vers de nouvelles plateformes et de nouveaux appareils, Braze vous ouvre la voie d’une communication facile !<br><br>Braze offre différents canaux d’engagement pour plusieurs systèmes d’exploitation TV et des décodeurs « OTT ».
 
 ## Plateformes et fonctionnalités
 
@@ -109,7 +107,7 @@ Les fonctionnalités et canaux de messagerie suivants sont pris en charge aujour
 
 {% alert note %}
 Les éléments suivants ne sont pas pris en charge sur OTT à l’heure actuelle :
-- Messages in-app coulissant ut-of-the-box 
+- Messages in-app slideup prêts à l’emploi 
 - HTML personnalisé
 {% endalert %}
 
@@ -214,7 +212,7 @@ Les fonctionnalités comprennent :
   - Consultez notre [exemple d’application][9] pour en savoir plus sur l’utilisation d’une interface utilisateur Headless pour l’envoi de messages personnalisés sur tvOS.
 - Notification push silencieuses et mise à jour des badges
 
-**Remarque :** Pour éviter d’afficher des messages in-app mobiles à vos utilisateurs de TV, assurez-vous de configurer soit [App Targeting](#app-targeting) (Ciblage application) ou d’utiliser les paires clé-valeur pour filtrer les messages. Par exemple, afficher uniquement les messages tvOS s’ils contiennent une  paire clé-valeur spéciale `tv = true`.
+**Remarque :** Pour éviter d’afficher des messages in-app mobiles à vos utilisateurs de TV, assurez-vous de configurer soit [App Targeting](#app-targeting) (Ciblage application) ou d’utiliser les paires clé-valeur pour filtrer les messages. Par exemple, afficher uniquement les messages tvOS s’ils contiennent une `tv = true` paire clé-valeur spéciale.
 
 ## Ciblage des applications {#app-targeting}
 
@@ -252,5 +250,5 @@ En savoir plus sur la gestion personnalisée de l’envoi de messages :
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android_tv_push/
 [7]: https://developer.amazon.com/docs/fire-tv/notifications.html#headsup
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/
-[android-tv-html]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2310
+[android-tv-html]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310
 [9]: https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui

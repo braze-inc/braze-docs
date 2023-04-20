@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "Cet article décrit l’utilisation et les paramètres pour ajouter à la liste noire des adresses e-mail d’utilisateur à l’aide de l’endpoint Braze Post Ajouter des e-mails à la liste de blocage."
+description: "Cet article présente en détail l’endpoint Braze Mettre des e-mails en liste de blocage."
 
 ---
 {% api %}
@@ -14,7 +14,11 @@ description: "Cet article décrit l’utilisation et les paramètres pour ajoute
 /email/blocklist
 {% endapimethod %}
 
-Utilisez cet endpoint pour désinscrire un utilisateur des e-mails et le marquer comme rejeté définitivement. Notez qu’au moment de créer une clé API qui sera utilisée avec cet endpoint, vous devez définir des autorisations `email.blacklist`.
+> Utilisez cet endpoint pour désinscrire un utilisateur des e-mails et le marquer comme rejeté définitivement.
+
+{% alert note %}
+Lorsque vous créez une clé API qui sera utilisée avec cet endpoint, vous devez définir des autorisations `email.blacklist`.
+{% endalert %}
  
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 

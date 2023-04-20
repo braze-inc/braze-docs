@@ -11,9 +11,9 @@ channel:
 
 # Envoi de message SMS
 
-## Principes de base d’envoi de SMS
+> L’envoi de message peut être compliqué, mais il n’a pas à être. Les sections suivantes répertorient les principes fondamentaux de l’envoi de message SMS envoyé chez Braze, notamment l’importance des groupes d’abonnement, les exigences pour les segments SMS et les corps de message, ainsi que des options de personnalisation avancées disponibles.
 
-L’envoi de message peut être compliqué, mais il n’a pas à être. Les sections suivantes répertorient les principes fondamentaux de l’envoi de message SMS envoyé chez Braze, notamment l’importance des groupes d’abonnement, les exigences pour les segments SMS et les corps de message, ainsi que des options de personnalisation avancées disponibles.
+## Principes de base d’envoi de SMS
 
 1. **Sélectionnez votre groupe d’abonnement**<br>
 Les SMS doivent être envoyés à partir d’un [groupe d’abonnement]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). Un groupe d’abonnement est une collection de numéros de téléphone émetteurs (c.-à-d. codes courts, codes longs et/ou identifiants alphanumériques d’émetteurs) qui sont utilisés pour envoyer un type spécifique de message. Vous devez désigner un groupe d’abonnement pour vous assurer que seuls les utilisateurs abonnés sont ciblés. Certains clients peuvent envisager d’avoir plusieurs groupes d’abonnement pour différents cas d’utilisation, tels que la messagerie SMS transactionnelle et la messagerie SMS promotionnelle.<br><br>

@@ -1,20 +1,20 @@
 ---
-nav_title: "GET : Analyses des segments"
-article_title: "GET : Analyses des segments"
+nav_title: "GET : Exporter l'analyse de segment"
+article_title: "GET : Exporter l'analyse de segment"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Obtenir les analyses de segment et son utilisation."
+description: "Cet article présente en détail l’endpoint Braze Exporter l'analyse de segment."
 
 ---
 {% api %}
-# Endpoint Analyses des segments
+# Exporter l'analyse de segment
 {% apimethod get %}
 /segments/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer quotidiennement une série de la taille estimée d’un segment au fil du temps.
+> Utilisez cet endpoint pour récupérer quotidiennement une série de la taille estimée d’un segment au fil du temps.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e {% endapiref %}
 

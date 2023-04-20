@@ -5,13 +5,13 @@ page_order: 4
 page_type: reference
 description: "Cet article de référence couvre la manière d’exporter les données et les statistiques sur les revenus."
 tool: 
-  - Rapports
+  - Reports
 
 ---
 
-# Données sur les revenus
+# Exporter les données sur les revenus et les revenus totaux
 
-Sur la page **Revenue (Revenus)** du tableau de bord, vous pouvez afficher les données sur les revenus pour des périodes spécifiques, pour un produit spécifique, ou voir le chiffre d’affaires total pour votre application.
+> Sur la page **Revenue (Revenus)** du tableau de bord, vous pouvez afficher les données sur les revenus pour des périodes spécifiques, pour un produit spécifique, ou voir le chiffre d’affaires total pour votre application.
 
 {% alert tip %}
 Vous cherchez plus de moyens d’obtenir des données sur les revenus ? Essayez d’ajouter un comportement d’achat (en même temps que l’achat du produit) en tant qu’[événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) de vos campagnes ou Canvas.

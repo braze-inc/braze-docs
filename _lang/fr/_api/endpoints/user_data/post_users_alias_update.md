@@ -13,17 +13,17 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /users/alias/update
 {% endapimethod %}
 
-Utilisez cet endpoint pour mettre à jour les alias utilisateur existants.
+> Utilisez cet endpoint pour mettre à jour les alias utilisateur existants.
 
-{% alert note %}
-Vous pouvez mettre à jour jusqu’à 50 alias d’utilisateurs par demande.
-{% endalert %}
+Vous pouvez spécifier jusqu’à 50 alias de l’utilisateur par requête.
 
 Mettre à jour d’un alias d’utilisateur nécessite que `alias_label`, `old_alias_name` et `new_alias_name` soient compris dans l’objet de mise à jour d’alias d’utilisateur. Si aucun alias d’utilisateur n’est associé au `alias_label` ni au `old_alias_name`, aucun alias ne sera mis à jour. Si le `alias_label` et le `old_alias_name` sont trouvés, le `old_alias_name` sera mis à jour vers le `new_alias_name`.
 
 {% alert note %}
 Cet endpoint ne garantit pas que la séquence des objets `alias_updates` soit mise à jour.
 {% endalert %}
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#a084b843-b3cd-43f0-bfb1-ef7bada839c5 {% endapiref %}
 
 ## Limite de débit
 

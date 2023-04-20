@@ -8,7 +8,9 @@ description: "Cet article de référence explique comment gérer les tentatives 
 
 # Tentatives de contenu connecté
 
-Étant donné que le Contenu connecté repose sur la réception des données des API, il est possible qu’une API soit momentanément indisponible tandis que Braze effectue l’appel. Dans ce cas, Braze prend en charge la logique de nouvelle tentative pour tenter de nouveau la demande à l’aide d’un délai exponentiel. Pour activer les tentatives, ajouter `:retry` dans l’appel Contenu connecté, comme indiqué dans l’extrait de code suivant :
+> Étant donné que le Contenu connecté repose sur la réception des données des API, il est possible qu’une API soit momentanément indisponible tandis que Braze effectue l’appel. Dans ce cas, Braze prend en charge la logique de nouvelle tentative pour tenter de nouveau la demande à l’aide d’un délai exponentiel. 
+
+Pour activer les tentatives, ajouter `:retry` dans l’appel Contenu connecté, comme indiqué dans l’extrait de code suivant :
 {% raw %}
 ```
 {% connected_content https://yourwebsite.com/api/endpoint :retry %}

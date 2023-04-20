@@ -11,6 +11,8 @@ description: "Cet article décrit la livraison de messages in-app via le SDK Bra
 
 # Livraison de messages in-app
 
+> Cet article décrit la livraison de messages in-app via le SDK Braze, comme l’affichage manuel de messages in-app ou l’envoi de messages locaux et à intention de sortie.
+
 ## Types de déclencheurs
 
 Notre produit de messages in-app vous permet de déclencher un affichage de messages in-app suite à plusieurs types d’événements différents : `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event` et `Push Click`. En outre, les déclencheurs `Specific Purchase` et `Custom Event` contiennent des filtres de propriétés robustes.

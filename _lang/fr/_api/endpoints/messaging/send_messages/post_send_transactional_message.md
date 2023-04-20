@@ -10,12 +10,14 @@ description: "Cet article présente en détail l’endpoint Braze Envoyer des e-
 ---
 
 {% api %}
-# Envoi d’e-mails transactionnels via une livraison déclenchée par API
+# Envoyer des e-mails transactionnels via une livraison déclenchée par API
 {% apimethod post %}
-/transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
+/transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}
 
-Utilisez cet endpoint pour envoyer des messages transactionnels instantanés et ad hoc aux utilisateurs désignés. Cet endpoint est utilisé conjointement à la création d’une [campagne par e-mail transactionnel]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) et l’ID de campagne correspondant.
+> Utilisez cet endpoint pour envoyer des messages transactionnels instantanés et ad hoc aux utilisateurs désignés. 
+
+Cet endpoint est utilisé conjointement à la création d’une [campagne par e-mail transactionnel]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) et l’ID de campagne correspondant.
 
 {% alert important %}
 L’e-mail transactionnel est actuellement disponible dans certains forfaits Braze. Contactez votre gestionnaire du succès des clients Braze pour plus d’informations.
@@ -28,6 +30,13 @@ Comme pour l’[endpoint Envoyer des campagnes déclenchées]({{site.baseurl}}/a
 ## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='transactional email' %}
+
+## Paramètres de chemin
+
+| Paramètre | Requis | Type de données | Description |
+|---|---|---|---|
+| `campaign_id` | Requis | String | ID de la campagne |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Corps de la demande
 
@@ -77,7 +86,7 @@ curl -X POST \
           }
         ]
       }' \
-  https://rest.iad-01.braze.com/transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
+  https://rest.iad-01.braze.com/transactional/v1/campaigns/{campaign_id}/send
 ```
 
 ## Réponse 
@@ -94,23 +103,26 @@ L’endpoint d’envoi d’e-mails transactionnels répond avec le `dispatch_id`
 }
 ```
 
+## Résolution des problèmes
+
 L’endpoint peut renvoyer également, dans certains cas, un code d’erreur et un message lisible par un être humain, qui sont souvent des erreurs de validation. Voici quelques-unes des erreurs fréquentes pouvant être obtenues lorsque vous réalisez des requêtes invalides.
 
-| Code d’erreur | Exemple de message d’erreur | Raison |
-| ---------- | ----------------------| ----- |
-| 400 | La campagne n’est pas une campagne transactionnelle. Cet endpoint ne peut être utilisé que par les campagnes transactionnelles | L’ID de campagne fourni n’est pas pour une campagne transactionnelle. |
-| 400 | La référence externe a été mise en attente.  Veuillez réessayer pour obtenir le send_id. | L’external_send_id a été créé récemment, essayez un nouvel external_send_id si vous essayez d’envoyer un nouveau message. |
-| 400 | La campagne n’existe pas | L’ID fourni pour la campagne ne correspond pas à une campagne existante. |
-| 400 | La campagne est archivée. Sortez la campagne des archives pour vous assurer que les requêtes déclenchées prennent effet. | L’ID de campagne fourni correspond à une campagne archivée. |
-| 400 | La campagne est en pause. Relancez la campagne pour vous assurer que les requêtes déclenchées prennent effet. | L’ID de campagne fourni correspond à une campagne en pause. |
-| 400 | campaign_id doit être une chaîne de caractères de l’identifiant API de la campagne | L’ID fourni pour la campagne n’est pas dans un format valide. |
-| 401 | Erreur d’authentification des identifiants | La clé API fournie est invalide | 
-| 403 | Adresses IP en liste blanche invalides | L’adresse IP qui envoie la requête n’est pas dans la liste blanche des IP (si elle est utilisée) | 
-| 403 | Vous n’avez pas la permission d’accéder à cette ressource | La clé API n’a pas la permission d’effectuer cette action |
+| Erreur | Résolution des problèmes |
+| ----- | --------------- |
+| `The campaign is not a transactional campaign. Only transactional campaigns may use this endpoint` | L’ID de campagne fourni n’est pas pour une campagne transactionnelle. |
+| `The external reference has been queued.  Please retry to obtain send_id.` | L’external_send_id a été créé récemment, essayez un nouvel external_send_id si vous essayez d’envoyer un nouveau message. |
+| `Campaign does not exist` | L’ID fourni pour la campagne ne correspond pas à une campagne existante. |
+| `The campaign is archived. Unarchive the campaign to ensure trigger requests will take effect.` | L’ID de campagne fourni correspond à une campagne archivée. |
+| `The campaign is paused. Resume the campaign to ensure trigger requests will take effect.` | L’ID de campagne fourni correspond à une campagne en pause. |
+| `campaign_id must be a string of the campaign api identifier` | L’ID fourni pour la campagne n’est pas dans un format valide. |
+| `Error authenticating credentials` | La clé API fournie est invalide | 
+| `Invalid whitelisted IPs `| L’adresse IP qui envoie la requête n’est pas dans la liste blanche des IP (si elle est utilisée) | 
+| `You do not have permission to access this resource` | La clé API n’a pas la permission d’effectuer cette action |
+{: .reset-td-br-1 .reset-td-br-2}
 
 La plupart des endpoints Braze ont une implémentation de limites de débit qui renverra un code de réponse 429 si vous avez effectué trop de requêtes. L’endpoint d’envoi transactionnel fonctionne différemment. Si vous dépassez la limitation du débit allouée, notre système continuera à ingérer les appels API, retourner des codes de réussite et envoyer les messages. Cependant, ces messages peuvent ne pas être soumis au SLA contractuel pour cette fonctionnalité. Veuillez nous contacter si vous désirez plus d’informations concernant cette fonctionnalité.
 
-### Postback de l’événement HTTP transactionnel
+## Postback de l’événement HTTP transactionnel
 
 Tous les e-mails transactionnels sont complétés par des postbacks de statut d’événement envoyés en tant que requête HTTP à l’URL spécifiée. Cela vous permet d’évaluer le statut du message en temps réel et de prendre des mesures pour atteindre l’utilisateur sur un autre canal si le message n’est pas livré ou revenir sur un système interne si Braze connaît une certaine latence.
 
@@ -119,7 +131,6 @@ Pour associer les événements entrants à une instance d’envoi particulière,
 Pour commencer à utiliser le postback de l’événement HTTP transactionnel, accédez à **Manage Settings (Gérer les paramètres)** > **Email Settings (Paramètres des e-mails)** > **Transactional Webpush URL (URL Webpush transactionnelle)** dans votre tableau de bord de Braze et saisissez l’URL sur laquelle vous souhaitez recevoir les postbacks.
 
 ![]({% image_buster /assets/img/transactional_webhook_url.png %})
-
 
 ### Corps de postback
 

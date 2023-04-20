@@ -1,5 +1,5 @@
 ---
-nav_title: Redshift
+nav_title: CDI pour Redshift
 article_title: Ingestion de données cloud dans Braze pour Redshift
 description: "Cet article de référence couvre l’Ingestion de Données Cloud dans Braze et comment synchroniser les données utilisateur pertinentes avec votre intégration Redshift."
 page_order: 2
@@ -16,9 +16,10 @@ L’ingestion de données cloud Braze pour Redshift est actuellement en accès a
 ## Paramétrage du produit
 
 Les nouvelles intégrations d’ingestion de données cloud nécessitent une configuration sur Braze ainsi que dans votre instance Redshift. Suivez ces étapes pour configurer votre intégration :
-1. Dans votre instance Redshift, paramétrez la ou les tables ou vues que vous voulez synchroniser avec Braze
-2. Créer une nouvelle intégration dans le tableau de bord de Braze
-3. Testez l’intégration et démarrez la synchronisation
+1. Assurez-vous que Braze est autorisé à accéder aux tables Redshift que vous souhaitez synchroniser. Braze se connectera à Redshift sur Internet.
+2. Dans votre instance Redshift, paramétrez la ou les tables ou vues que vous voulez synchroniser avec Braze
+3. Créer une nouvelle intégration dans le tableau de bord de Braze
+4. Testez l’intégration et démarrez la synchronisation
 
 ### Paramétrez les tables et les vues
 
@@ -33,7 +34,13 @@ Créer un tableau (ou vue) à utiliser pour votre intégration CDI
 ```json
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
    updated_at timestamptz default sysdate,
+   --at least one of external_id, alias_name and alias_label, or braze_id is required
    external_id varchar,
+   --if using user alias, both alias_name and alias_label are required
+   alias_label varchar,
+   alias_name varchar,
+   --braze_id can only be used to update existing users created through the Braze SDK
+   braze_id varchar,
    payload varchar(max)
 )
 ```
@@ -41,14 +48,18 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
 Vous pouvez donner le nom que vous désirez à la base de données, au schéma et au tableau, mais les noms de colonnes doivent correspondre aux définitions ci-dessus.
 
 - `UPDATED_AT` : L’heure à laquelle la rangée a été mise à jour ou ajoutée au tableau. Nous ne synchroniserons que les rangées qui ont été ajoutées ou mises à jour depuis la dernière synchronisation.
-- `EXTERNAL_ID` : Ceci identifie l’utilisateur que vous désirez mettre à jour. Vous pouvez utiliser un des éléments parmi les suivants : external_id, user_alias ou braze_id.
+- Colonnes d’identifiant utilisateur. Votre tableau peut contenir une ou plusieurs colonnes d’identifiants utilisateur. Chaque ligne ne doit contenir qu’un seul identifiant (soit un `external_id`, la combinaison d’un `alias_name` et d’un `alias_label`, soit un `braze_id`. Une table source peut contenir des colonnes pour un, deux ou les trois types d’identifiants. 
+    - `EXTERNAL_ID` : Ceci identifie l’utilisateur que vous désirez mettre à jour.  Cela doit correspondre à la valeur `external_id` utilisée dans Braze. 
+    - `ALIAS_NAME` et `ALIAS_LABEL` : Ces deux colonnes créent un objet d'alias d'utilisateur. `alias_name` doit être un identifiant unique et `alias_label` spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec différentes étiquettes, mais seulement un `alias_name` par `alias_label`.
+    - `BRAZE_ID` : L’identifiant d’utilisateur Braze. Il est généré par le SDK Braze et les nouveaux utilisateurs ne peuvent pas être créés à l’aide d’un ID Braze via l’ingestion de données cloud. Pour créer de nouveaux utilisateurs, spécifiez un ID utilisateur externe ou un alias utilisateur. 
 - `PAYLOAD` : Il s’agit d’une chaîne de caractères JSON des champs que vous désirez synchroniser à l’utilisateur dans Braze.
  
 #### Étape 2 : Créer un utilisateur et attribuer des autorisations 
 
 ```json
 CREATE USER braze_user PASSWORD '{password}';
-GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user
+GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
+GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 ```
 
 Un nombre minimum d’autorisations est requis pour cet utilisateur. Si vous créez plusieurs intégrations CDI, vous devriez donner des autorisations pour un schéma ou les gérer en utilisant un groupe. 

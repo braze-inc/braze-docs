@@ -8,7 +8,7 @@ guide_top_text: "L’analyse des campagnes vous permet de voir en temps réel le
 
 page_type: landing
 description: "Cette page d’accueil couvre les rapports de campagne pour chaque canal de communication, ainsi que les rapports de rétention et d’entonnoir."
-tool: Rapports
+tool: Reports
 
 guide_featured_title: "Canaux de communication"
 guide_featured_list:

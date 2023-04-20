@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Afficher les informations sur les blocs de contenu disponibles."
+description: "Cet article présente en détail l’endpoint Braze Afficher les informations sur les blocs de contenu."
 ---
 
 {% api %}
@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Afficher les i
 /content_blocks/info
 {% endapimethod %}
 
-Utilisez cet endpoint pour appeler les informations de vos [blocs de contenu d’e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) existants.
+> Utilisez cet endpoint pour appeler les informations de vos [blocs de contenu d’e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) existants.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee {% endapiref %}
 
@@ -58,16 +58,16 @@ Authorization: Bearer YOUR-API-KEY-HERE
 }
 ```
 
-### Erreurs possibles
+## Résolution des problèmes
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
 | Erreur | Résolution des problèmes |
 | --- | --- |
-| L’ID du bloc de contenu ne peut pas être vide | Assurez-vous qu’un bloc de contenu est répertorié dans votre demande et compris entre des guillemets (`""`). |
-| L’ID du bloc de contenu n’est pas valide pour ce groupe d’apps | Ce bloc de contenu n’existe pas ou est dans un compte de société ou un groupe d’apps différent. |
-| Le bloc de contenu a été supprimé : contenu non disponible | Ce bloc de contenu, bien qu’il ait pu exister, a été supprimé. |
-| Inclure les données d’inclusion : erreur | Ce paramètre accepte uniquement les valeurs booléennes true ou false). Assurez-vous que la valeur de `include_inclusion_data` n’est pas comprise entre des guillemets (`""`), sinon la valeur est envoyée comme chaîne de caractères. Voir les [paramètres de demande](#request-parameters) pour plus d’informations. |
+| `Content Block ID cannot be blank` | Assurez-vous qu’un bloc de contenu est répertorié dans votre demande et compris entre des guillemets (`""`). |
+| `Content Block ID is invalid for this App Group` | Ce bloc de contenu n’existe pas ou est dans un compte de société ou un groupe d’apps différent. |
+| `Content Block has been deleted—content not available` | Ce bloc de contenu, bien qu’il ait pu exister, a été supprimé. |
+| `Include Inclusion Data—error` | Ce paramètre accepte uniquement les valeurs booléennes true ou false). Assurez-vous que la valeur de `include_inclusion_data` n’est pas comprise entre des guillemets (`""`), sinon la valeur est envoyée comme chaîne de caractères. Voir les [paramètres de demande](#request-parameters) pour plus d’informations. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 

@@ -6,9 +6,11 @@ description: "This reference article covers some message aborting best practices
 
 ---
 
-# Aborting messages {#aborting-connected-content}
+# Aborting Connected Content {#aborting-connected-content}
 
-Using Liquid templating, you have the option to abort messages with conditional logic. For example:
+> Using Liquid templating, you have the option to abort messages with conditional logic. 
+
+In the following example, the conditionals `connected.recommendations.size < 5` and `connected.foo.bar == nil` specify situations that would cause the message to be aborted.
 
 {% raw %}
 ```
@@ -17,8 +19,6 @@ Using Liquid templating, you have the option to abort messages with conditional 
      {% abort_message() %}
    {% endif %}
 ```
-
-In this example, the conditionals `connected.recommendations.size < 5` and `connected.foo.bar == nil` specify situations that would cause the message to be aborted.
 
 You can also specify an abort reason, which will be saved to the **Message Activity Log** in your **Developer Console**. This abort reason must be a string and cannot contain Liquid.
 

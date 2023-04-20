@@ -10,9 +10,7 @@ search_rank: 4
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} À propos des cartes de contenu
 
-> Le présent article de référence présente le canal Carte de contenu de Braze avec des cas d’utilisation courants.
-
-Les cartes de contenu sont un canal qui est intégré directement à l’interface de votre application ou de votre site Web afin que vous puissiez engager les utilisateurs d’une manière ressemblant à une expérience native et harmonieuse. Vous pouvez réaliser beaucoup de choses avec les cartes de contenu, mais les implémentations les plus courantes sont une boîte de réception de message, un carrousel ou une bannière.
+> Les cartes de contenu sont un canal qui est intégré directement à l’interface de votre application ou de votre site Web afin que vous puissiez engager les utilisateurs d’une manière ressemblant à une expérience native et harmonieuse. Vous pouvez réaliser beaucoup de choses avec les cartes de contenu, mais les implémentations les plus courantes sont une boîte de réception de message, un carrousel ou une bannière.
 
 Les cartes de contenu sont idéales pour étendre la portée d’autres canaux, comme les notifications par e-mail ou push, et elles vous donnent plus de contrôle sur l’expérience offerte par l’application ou le site Web.
 
@@ -96,7 +94,7 @@ Tirez parti des cartes de contenu pour mettre en avant les messages promotionnel
 
 ### Autres cas d’utilisation
 
-En dehors de ces principaux cas d’utilisation, nos clients utilisent les cartes de contenu de nombreuses façons différentes. La puissance des cartes de contenu réside dans leur flexibilité. Si le cas d’utilisation que vous souhaitez ne s’affiche pas ici, vous pouvez configurer des [paires clé-valeur]({{site.baseurl}}/docs/user_guide/personalization_and_dynamic_content/key_value_pairs/) et faire envoyer les charges utiles à votre application ou à votre site.
+En dehors de ces principaux cas d’utilisation, nos clients utilisent les cartes de contenu de nombreuses façons différentes. La puissance des cartes de contenu réside dans leur flexibilité. Si le cas d’utilisation que vous souhaitez ne s’affiche pas ici, vous pouvez configurer des [paires clé-valeur]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) et faire envoyer les charges utiles à votre application ou à votre site.
 
 ## Placements des cartes de contenu
 
@@ -143,7 +141,7 @@ Les carrousels affichent plusieurs éléments de contenu dans un seul emplacemen
 
 #### Comportement
 
-Lorsqu’un utilisateur est éligible à une carte, elle apparaîtra dans un carrousel sur la page de votre application à laquelle le carrousel est ajouté. Les utilisateurs peuvent faire le faire glisser horizontalement pour afficher des cartes supplémentaires.
+Lorsqu’un utilisateur est éligible à une carte, elle apparaîtra dans un carrousel sur la page de votre application à laquelle le carrousel est ajouté. Les utilisateurs peuvent faire le faire glisser horizontalement pour afficher des cartes mises en vedette supplémentaires.
 
 Étant donné qu’il s’agit d’une implémentation personnalisée, vous devrez travailler avec vos développeurs pour créer vos propres vues afin d’afficher les cartes de contenu. Les cartes classiques, bannières et d’images avec légende par défaut ne sont pas prises en charge avec cette implémentation.
 
@@ -174,7 +172,7 @@ Maintenant, passons à la technique. En coulisses, une carte de contenu comporte
 - **Affichage :** À quoi ressemble la carte
 - **Contrôleur :** Comment l’utilisateur interagit avec la carte
 
-Pour une implémentation out-of-the-box, vous ajoutez le contenu de la carte, le modèle, soit à partir du tableau de bord, soit via des API. La vue et le contrôleur sont gérés par ce que l’on appelle un contrôleur de vue.
+Pour une implémentation d’origine, vous ajoutez le contenu de la carte, le modèle, soit à partir du tableau de bord, soit via des API. La vue et le contrôleur sont gérés par ce que l’on appelle un contrôleur de vue.
 
 ### Contrôleur de vue
 

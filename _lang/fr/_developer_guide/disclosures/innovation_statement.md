@@ -1,6 +1,6 @@
 ---
 nav_title: Déclaration d’innovation
-article_title: Déclaration d’innovation Braze
+article_title: Déclaration d’innovation
 description: "Cet article de référence contient la déclaration d’innovation de Braze."
 noindex: true
 page_order: 9
@@ -11,7 +11,7 @@ alias: /innovation_statement/
 Warning! Don't make any changes to this document without approval from the legal department.
 -->
 
-# Déclaration d’innovation Braze
+# Déclaration d’innovation
 
 {% tabs %}
 {% tab English %}

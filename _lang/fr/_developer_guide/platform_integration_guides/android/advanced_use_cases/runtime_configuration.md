@@ -11,11 +11,13 @@ description: "Cet article de référence explique comment configurer le temps d�
 
 # Configuration du temps d’exécution
 
-La [configuration du temps d’exécution][1] est un moyen facultatif de configurer votre application à la place d’un `braze.xml`. L’utilisation de la configuration du temps d’exécution et de la configuration `braze.xml` en même temps est toujours possible. Les valeurs configurées du temps d’exécution ont toujours préséance sur la même valeur dans le `braze.xml`. Si le SDK Braze peut trouver toutes les valeurs dans la configuration du temps d’exécution, alors `braze.xml` n’est plus nécessaire et peut être retiré. 
+>La [configuration du temps d’exécution][1] est un moyen facultatif de configurer votre application à la place d’un `braze.xml`. Cet article de référence explique comment configurer l’exécution.
+
+L’utilisation de la configuration du temps d’exécution et de la configuration `braze.xml` en même temps est toujours possible. Les valeurs configurées du temps d’exécution ont toujours préséance sur la même valeur dans le `braze.xml`. Si le SDK Braze peut trouver toutes les valeurs dans la configuration du temps d’exécution, alors `braze.xml` n’est plus nécessaire et peut être retiré. 
 
 ## Exemple d’utilisation
 
-La configuration utilise un [objet de segmentation][2] qui est ensuite construit et transmis à [`Braze.configure()`][1]. L’exemple suivant utilise un sous-ensemble des options de configuration du temps d’exécution disponibles. Consultez notre [KDoc][1] pour une liste complète des options.
+La configuration utilise un [objet monteur][2] qui est ensuite construit et transmis à [`Braze.configure()`][1]. L’exemple suivant utilise un sous-ensemble des options de configuration du temps d’exécution disponibles. Consultez [KDoc][1] pour une liste complète des options.
 
 {% tabs %}
 {% tab JAVA %}
@@ -50,6 +52,6 @@ Braze.configure(this, brazeConfig)
 
 Un autre exemple est disponible dans notre [exemple d’application Hello Braze][3].
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html
-[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html
-[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html
+[2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html
+[3]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java

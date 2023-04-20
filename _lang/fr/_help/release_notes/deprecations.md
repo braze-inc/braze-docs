@@ -2,7 +2,7 @@
 nav_title: Obsolescences
 article_title: Obsolescences
 page_order: 9
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Obsolescences"
 guide_top_text: "La technologie évolue constamment, chez Braze et en dehors ! Et nous faisons de notre mieux pour tenir la cadence. Ici, vous en apprendrez plus sur les origines de Braze et sa technologie - ce que nous faisions « avant », avant maintenant... <br> <br> Vous êtes peut-être arrivé ici en faisant une recherche sur une intégration ou fonctionnalité qui n’existe plus. C’est notre manière de vous tenir informé de nos progrès et des mouvements au sein de l’industrie technologique. <br> <br> Vous pouvez trouver une liste de fonctions désactivées et non prises en charge et lire les articles associés en visitant les liens suivants."
@@ -41,7 +41,7 @@ guide_featured_list:
 
 La prise en charge de Grouparo a été arrêtée en avril 2022.
 
-L’utilisation d’un `BroadcastReceiver` personnalisé pour les notifications push est obsolète. À la place, utilisez [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/).
+L’utilisation d’un `BroadcastReceiver` personnalisé pour les notifications push est obsolète. Utilisez [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) à la place.
 
 ## Partenariat avec Grouparoo
 
@@ -110,7 +110,7 @@ Le SDK Braze fournissait un widget de commentaires qui pouvait être ajouté à 
 **Fin du support** : Fin de prise en charge par Braze : Juillet 2018, fin de prise en charge par Google : 29 mai 2019<br>
 **Remplacé par** : [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)
 
-Google a [cessé de prendre GCM en charge](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) depuis le 29 mai 2019. Braze a cessé le support GCM pour les SDK Android en juillet 2018, ce qui a été noté dans notre [Journal de modifications du SDK Android](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md). Cela signifie que les jetons GCM existants continueront de fonctionner, et vous pourrez envoyer des messages à vos utilisateurs existants. Mais vous ne pourrez pas envoyer de messages à des nouveaux utilisateurs.
+Google a [cessé de prendre GCM en charge](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) depuis le 29 mai 2019. Braze a cessé le support GCM pour les SDK Android en juillet 2018, ce qui a été noté dans notre [Journal de modifications du SDK Android](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md). Cela signifie que les jetons GCM existants continueront de fonctionner, et vous pourrez envoyer des messages à vos utilisateurs existants. Mais vous ne pourrez pas envoyer de messages à des nouveaux utilisateurs.
 
 Les clients qui n’ont pas encore migré vers [Messagerie cloud Firebase (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase) peuvent être affecté par ce changement.
 

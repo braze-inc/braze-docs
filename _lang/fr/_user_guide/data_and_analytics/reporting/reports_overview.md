@@ -4,13 +4,13 @@ article_title: Présentation des rapports
 page_order: 0
 page_type: reference
 description: "Cet article fournit des conseils sur les rapports et analyses que vous pouvez utiliser pour répondre à vos questions de stratégie marketing."
-tool: Rapports
+tool: Reports
 search_rank: 1
 ---
 
 # Présentation des rapports
 
-Vous ne savez pas où commencer avec l’analyse de vos campagnes ? Vous êtes au bon endroit. Cette page fournit des conseils sur les rapports et analyses que vous pouvez utiliser pour répondre à vos questions de stratégie marketing.
+> Vous ne savez pas où commencer avec l’analyse de vos campagnes ? Vous êtes au bon endroit. Cette page fournit des conseils sur les rapports et analyses que vous pouvez utiliser pour répondre à vos questions de stratégie marketing.
 
 ## Quelle variante a gagné ?
 

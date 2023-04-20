@@ -7,7 +7,7 @@ description: "Cet article couvre quelques questions fréquemment posées sur les
 
 ---
 
-# FAQ sur les Exportations
+# Foire aux questions
 
 > Cette page fournit des réponses à certaines questions fréquemment posées sur les exportations API et CSV.
 

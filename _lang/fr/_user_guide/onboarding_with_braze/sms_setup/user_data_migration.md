@@ -12,7 +12,7 @@ noindex: true
 
 # Migration des données utilisateur
 
-Passons en revue toutes les considérations que vous devez garder à l’esprit lorsque vous migrez vos données utilisateur vers Braze.
+> Le présent article détaille toutes les considérations que vous devez garder à l’esprit lorsque vous migrez vos données utilisateur vers Braze.
 
 {% alert important %}
 Êtes-vous actuellement un client SMS non natif (n’avez-vous pas ou ne passerez-vous pas à la capacité de traitement des mots clés natifs de Braze) ? Si oui, consultez notre collection d'[articles sur les SMS non natifs ](/docs/user_guide/message_building_by_channel/sms/non_native/)pour obtenir votre document de migration des données utilisateur correspondant.

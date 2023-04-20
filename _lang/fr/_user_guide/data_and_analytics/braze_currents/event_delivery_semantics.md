@@ -12,7 +12,7 @@ tool: Currents
 
 > Cet article décrit la manière dont Currents gère les données d’événements de fichiers plats que nous envoyons aux partenaires d’entrepôts de données.
 
-Currents for Data Storage permet un flux continu de données de notre plateforme vers un compartiment de stockage de l’un de nos [partenaires d’entrepôt de données ]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
+Currents for Data Storage permet un flux continu de données de notre plateforme vers un compartiment de stockage de l’un de nos partenaires d’entrepôt de données []({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
 Currents écrit les fichiers Avro dans votre compartiment de stockage à des seuils réguliers, ce qui vous permet de traiter et d’analyser les données d’événements en utilisant vos propres outils d’aide à la décision.
 
@@ -57,7 +57,7 @@ Vous ne voyez pas le code à cause de la barre de défilement ? Découvrez comm
 | `<integration-id>` | L’ID unique pour cette intégration Currents. |
 | `<event-type>` | Le type de l’événement dans le fichier. |
 | `<date>` | L’heure pendant laquelle les événements sont mis en file d’attente dans notre système pour le traitement dans le fuseau horaire UTC. Au format AAAA-MM-JJ-HH |
-| `<schema-id>` | Utilisé pour versionner les `.avro` schémas pour la rétrocompatibilité et les évolutions de schéma. Entier (Integer) |
+| `<schema-id>` | Utilisé pour versionner les `.avro` schémas pour la rétrocompatibilité et les évolutions de schéma. Entier. |
 | `<zone>` | Pour usage interne par Braze. |
 | `<partition>` | Pour usage interne par Braze. Entier. |
 | `<offset>`| Pour usage interne par Braze. Entier. Prenez en compte le fait que les différents fichiers envoyés à la même heure auront un paramètre `<offset>` différent. |
@@ -79,7 +79,7 @@ Currents ne génére jamais de fichiers vides.
 
 De temps à autre, Braze peut apporter des modifications au schéma Avro lorsque des champs sont ajoutés, modifiés ou supprimés. Pour ce qui nous concerne ici, il existe deux types de modifications :celles qui « cassent » le schéma et celles qui ne le cassent pas. Dans tous les cas, le `<schema-id>` sera avancé pour indiquer que le schéma a été mis à jour.
 
-#### Modifications qui ne cassent pas le schéma
+#### Changements non cassants
 
 Lorsqu’un champ est ajouté au schéma Avro, nous considérons qu’il s’agit d’un changement « qui ne casse pas le schéma ». Les champs ajoutés seront toujours des champs Avro « facultatifs » (c.-à-d., avec une valeur par défaut de `null`), pour qu’ils « correspondent » aux schémas plus anciens conformément aux [Spécifications de schémas Avro](http://avro.apache.org/docs/current/spec.html#schema+resolution). Ces ajouts ne doivent pas affecter les processus ETL existants car le champ sera ignoré jusqu’à ce qu’il soit ajouté à votre processus ETL. 
 
@@ -89,7 +89,7 @@ Nous recommandons que votre configuration ETL soit explicite sur les champs trai
 
 Même si nous faisons tout notre possible pour vous informer à l’avance de tous les changements, nous pouvons à tout moment introduire des modifications qui ne cassent pas le schéma.
 
-#### Modifications qui cassent le schéma
+#### Changements cassants
 
 Lorsqu’un champ est retiré ou modifié dans le schéma Avro, nous considérons qu’il s’agit d’un changement qui « casse le schéma ». Ce type de changement peuvent nécessiter de modifier les processus ETL existants, car les champs utilisés ne peuvent plus être enregistrés comme prévu.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Redshift
+nav_title: CDI for Redshift
 article_title: Braze Cloud Data Ingestion for Redshift
 description: "This reference article covers Braze Cloud Data Ingestion and how to sync relevant user data to your Reshift integration."
 page_order: 2
@@ -64,9 +64,11 @@ GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 
 This is the minimum required permissions for this user; if creating multiple CDI integrations, you may want to grant permissions to a schema, or manage permissions using a group. 
 
-#### Step 3: Allow access to Braze IPs (optional) 
+#### Step 3: Allow access to Braze IPs    
 
 If you have a firewall or other network policies in place, you will need to give Braze network access to to your Redshift instance. Allow access from the below IPs that correspond to the region of your Braze dashboard. 
+
+You may also need to make changes to your security groups to allow Braze to access your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below, as well as on the port used to query your Redshift cluster (default is 5439). You should explicitly allow TCP connectivity on this port even if the inbound rules are set to "allow all". 
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | For Instances `EU-01` and `EU-02` |
 |---|---|

@@ -2,12 +2,12 @@
 nav_title: Company Settings
 article_title: Company Settings
 page_order: 1
-layout: featured
+layout: dev_guide
 guide_top_header: "Company Settings"
 guide_top_text: "Most features within Company Settings are only available to Braze account administrators. If you don't have access but feel that you should, reach out to your company's Braze account administrator."
 
 page_type: landing
-description: "This landing page lists articles on company settings. Here you can find help on configuring contact information, notification preferences, and security settings."
+description: "This landing page lists articles on company settings. Here, you can find help on configuring contact information, notification preferences, and security settings."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

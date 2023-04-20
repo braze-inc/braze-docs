@@ -5,18 +5,18 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the users by segment Braze endpoint."
+description: "This article outlines details about the Export users by segment Braze endpoint."
 
 ---
 {% api %}
-# Export users by segment
+# Export user profile by segment
 {% apimethod post %}
 /users/export/segment
 {% endapimethod %}
 
-Use this endpoint to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line). 
+> Use this endpoint to export all the users within a segment. 
 
-Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
+User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line). Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
 
 This endpoint is currently not supported by Google Cloud Storage.
 
@@ -115,9 +115,9 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 |---|---|---|
 | `apps` | Array | Apps this user has logged sessions for, which includes the fields:<br><br>- `name`: app name<br>- `platform`: app platform, such as iOS, Android, or Web<br>- `version`: app version number or name <br>- `sessions`: total number of sessions for this app<br>- `first_used`: date of first session<br>- `last_used`: date of last session<br><br>All fields are strings. |
 | `attributed_campaign` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for a particular ad campaign. |
-| `attributed_source` | String | Data from [attribution integrations]({{site.baseurl}}<br>/partners/message_orchestration/attribution<br>), if set up. Identifier for the platform the ad was on. |
-| `attributed_adgroup` | String | Data from [attribution integrations]({{site.baseurl}}<br>/partners/message_orchestration/attribution<br>), if set up. Identifier for an optional sub-grouping below campaign. |
-| `attributed_ad` | String | Data from [attribution integrations]({{site.baseurl}}<br>/partners/message_orchestration/attribution<br>), if set up. Identifier for an optional sub-grouping below campaign and adgroup. |
+| `attributed_source` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for the platform the ad was on. |
+| `attributed_adgroup` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign. |
+| `attributed_ad` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign and adgroup. |
 | `braze_id` | String | Device-specific unique user identifier set by Braze for this user. |
 | `country` | String | User's country using [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard. |
 | `created_at` | String | Date and time for when the user profile was created, in ISO 8601 format. |

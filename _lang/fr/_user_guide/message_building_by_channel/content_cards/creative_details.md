@@ -2,7 +2,7 @@
 nav_title: Détails créatifs
 article_title: Détails créatifs
 page_order: 1
-layout: featured
+layout: dev_guide
 guide_top_header: "Détails créatifs"
 guide_top_text: "Donnez libre cours à votre créativité avec les cartes de contenu ! Mais vous devez en premier lieu connaître certaines des recommandations ! Après tout, il faut connaître les règles pour les enfreindre ! Consultez les spécifications créatives ou les détails créatifs globaux suivants pour chaque type de message individuel."
 description: "Cet article d’accueil couvre les détails créatifs tels que les recommandations de taille d’image et le comportement de fermeture pour les trois types de carte de contenu."
@@ -21,7 +21,7 @@ guide_featured_list:
 
 channel:
   - cartes de contenu
-tool: Médias
+tool: Media
 
 ---
 
@@ -73,7 +73,7 @@ Les cartes de contenu sont dotées dès le départ d’excellentes fonctionnalit
 
 ### Comportement de fermeture
 
-Pour refuser une carte, l’utilisateur peut faire un swipe (balayage) sur son mobile ou utiliser une fonction `fermer X` comme illustré dans la capture d’écran suivante. Le `x` apparaîtra sur le curseur avec le SDK Web uniquement.
+Pour refuser une carte, l’utilisateur peut faire un swipe (balayage) sur son mobile ou utiliser une fonction `close X` comme illustré dans la capture d’écran suivante. Le `x` apparaîtra sur le curseur avec le SDK Web uniquement.
 
 ![Image montrant le swipe ou la fermeture d’une carte pour la refuser][5]{: height="70%" width="70%"}
 

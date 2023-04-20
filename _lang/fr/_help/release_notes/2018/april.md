@@ -17,11 +17,11 @@ Braze a mis à jour le filtre CSV X pour inclure les 100 CSV les plus récents,
 
 ## Suivi des désinstallations activé par défaut pour les applications Android
 
-La fonction [Uninstall Tracking][94] (Suivi des désinstallations) sera activée par défaut pour toutes les nouvelles applications Android. Toutes les applications Android existantes avec suivi des désinstallations désactivé auront désormais ce paramètre sur « Activé ». Le suivi des désinstallations sur Android n’envoie plus de push vers l’appareil, et aucune autre mise à jour ou action n’est requise de votre part.
+La fonction [Suivi des désinstallations][94] sera activée par défaut pour toutes les nouvelles applications Android. Toutes les applications Android existantes avec suivi des désinstallations désactivé auront désormais ce paramètre sur « Activé ». Le suivi des désinstallations sur Android n’envoie plus de push vers l’appareil, et aucune autre mise à jour ou action n’est requise de votre part.
 
 ## Fonctions de recherche modifiées et améliorées
 
-Nous avons amélioré les balises et la fonctionnalité de recherche dans la plateforme Braze pour améliorer votre expérience de gestion de déploiements à grande échelle, quand vous recherchez des [attributs ou événements personnalisés][92], des modèles, etc.
+Nous avons amélioré les tags et la fonctionnalité de recherche dans la plateforme Braze pour améliorer votre expérience lors des déploiements à grande échelle, quand vous recherchez des [attributs ou événements personnalisés][92], des modèles etc.
 
 ## Push Stories
 
@@ -32,7 +32,7 @@ Notez que vous devez avoir la dernière version d’Android (version 2.2.0+) ou 
 
 ## Inbox vision
 
-Vous pouvez maintenant [prévisualiser vos e-mails][96] en fonction de la plateforme de votre client, soit via une page d’aperçus de miniatures, soit par une vue en liste qui inclut une grande capture d’écran et une analyse spécifique de tout problème pouvant exister avec le rendu HTML pour chaque client. Contactez votre gestionnaire du succès des clients  ou votre gestionnaire de compte pour plus d’informations.
+Vous pouvez maintenant [prévisualiser vos e-mails][96] en fonction de la plateforme de votre client, soit via une page de miniatures, soit par une vue en liste qui inclut une grande capture d’écran et une analyse spécifique de tout problème pouvant exister avec le rendu HTML pour chaque client. Contactez votre gestionnaire du succès des clients  ou votre gestionnaire de compte pour plus d’informations.
 
 
 [92]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#custom-event-and-attribute-management

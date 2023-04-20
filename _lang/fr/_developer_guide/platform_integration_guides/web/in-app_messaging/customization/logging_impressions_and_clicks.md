@@ -11,15 +11,21 @@ description: "Cet article concerne la journalisation des impressions des message
 
 # Enregistrement des impressions et des clics
 
-La journalisation des [impressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessageimpression) et des [clics](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessagebuttonclick) s’effectue automatiquement lorsque vous utilisez `automaticallyDisplayInAppMessages` ou `showInAppMessage`.
+> Cet article explique comment enregistrer des impressions des messages in-app et des clicks pour votre application web.
 
-Si vous n’utilisez pas ces méthodes et affichez manuellement le message à l’aide de votre propre code d’interface utilisateur, utilisez les méthodes suivantes pour enregistrer les analyses :
+La journalisation des [impressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessageimpression) et des [clics](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessagebuttonclick) de message in-app s’effectue automatiquement lorsque vous utilisez la méthode `showInAppMessage` ou `automaticallyShowInAppMessage`.
+
+Si vous n’utilisez pas ces méthodes et choisissez d’afficher manuellement le message à l’aide de votre propre code d’interface utilisateur, utilisez les méthodes suivantes pour enregistrer les analyses :
 
 ```javascript
-// Enregistre qu’un utilisateur a visualisé un message in-app avec le serveur Braze.
-braze.logInAppMessageImpression(message);
-// Enregistre qu’un utilisateur a cliqué sur un message in-app avec le serveur Braze.
-braze.logInAppMessageButtonClick(button, message);
+// Registers that a user has viewed an in-app message with the Braze server.
+braze.logInAppMessageImpression(inAppMessage);
+// Registers that a user has clicked on the specified in-app message with the Braze server.
+braze.logInAppMessageClick(inAppMessage);
+// Registers that a user has clicked a specified in-app message button with the Braze server.
+braze.logInAppMessageButtonClick(button, inAppMessage);
+// Registers that a user has clicked on a link in an HTML in-app message with the Braze server.
+braze.logInAppMessageHtmlClick(inAppMessage, buttonId?, url?)
 ```
 
 

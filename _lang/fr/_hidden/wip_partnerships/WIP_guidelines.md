@@ -1,9 +1,10 @@
 ---
 alias: /partners/partner_walkthrough/
-title: Documentation du partenaire
+title: Partner Documentation
 nav_title: Documents partenaire
 hidden: true
 page_type: reference
+layout: dev_guide
 ---
 
 # Documentation de partenariat
@@ -27,11 +28,11 @@ Ce guide de partenariat est destiné aux NOUVEAUX partenaires de Braze qui **n'o
 Pour contribuer aux documents de Braze, vous devez avoir un compte GitHub pour valider les changements et les modifications. 
 
 Nous recommandons d’abord de [dupliquer](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) notre référentiel GitHub, puis de créer un clone local de votre duplication :
-1. Naviguez jusqu’au principal [dépôt de documents de Braze](https://github.com/Appboy/braze-docs), et cliquez sur **Fork (Dupliquer)**. .<br><br>
+1. Naviguez jusqu’au principal [référentiel de documents de Braze](https://github.com/Appboy/braze-docs), et cliquez sur **Dupliquer**. <br><br>
 2. Ensuite, dans ce nouveau référentiel, cliquez sur le bouton **Cloner ou télécharger**. Dans la fenêtre de dialogue visible à l’écran, cliquez sur **Utiliser SSH**, et **Enregistrer le lien de référentiel fourni** pour l’étape 3. <br><br>
-3. Enfin, suivez notre Guide GitHub Wiki pour configurer votre [environnement local](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo)[`Retrait en magasin`]**en ignorant l’étape 3 du guide**, et plutôt, **à l’aide du lien de référentiel enregistré,** pour cloner votre dépôt.
+3. Enfin, suivez notre Guide Wiki GitHub pour configurer votre [environnement local](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) **en ne suivant pas l’étape 3 du guide**, mais plutôt, **à l’aide du lien de référentiel enregistré,** pour cloner votre dépôt forké.
 
-Après avoir configuré votre environnement local, assurez-vous de signer notre [CLC](https://www.braze.com/docs/cla) (contrat de licence de contribution),  _cette étape étant obligatoire_.
+Après avoir configuré votre environnement local, assurez-vous de signer notre [CLC](https://www.braze.com/docs/cla) (contrat de licence de contribution), _cette étape étant obligatoire_.
 
 ## Étape 2 : Créez et ajoutez du contenu à votre page {#create_page}
 
@@ -55,19 +56,19 @@ Votre [modèle de partenariat]({{site.baseurl}}/partners/your_partner_name/) est
 Ces informations aident notre recherche Braze à trouver, étiqueter et catégoriser correctement votre page de documents. 
 ```
 ---
-nav_title: Votre page partenaire
-article_title: Votre page partenaire
+nav_title: Your Partner Page
+article_title: Your Partner Page
 page_order: 1
-description: "Il s'agit de la description qui apparaîtra dans le moteur de recherche et de référencement de Google. Essayez de la rendre informative et concise, mais brève."
+description: "This is the Google Search and SEO description that will appear; try to make this informative and concise, yet brief."
 alias: /partners/your_partner_name/
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 hidden: true
 ---
 ```
 
 {% alert note %}
-Notez qu’il vous est demandé de remplir tous les champs de métadonnées, **sauf**[`Retrait en magasin`]`page_order`, `page_type`, et `hidden`.
+Notez qu’il vous est demandé de remplir tous les champs de métadonnées, **sauf** `page_order`, `page_type`, et `hidden`.
 {% endalert %}
 
 {% endtab %}
@@ -77,24 +78,24 @@ Ces informations constituent l’essentiel du document. Ici, vous pouvez gérer 
 Pour plus d’informations sur les contenus, consultez notre [modèle de partenariat]({{site.baseurl}}/partners/your_partner_name/) qui liste ce qui doit être inclus.
 
 ```
-# [Nom du partenaire]
-> Bienvenue dans le modèle de partenaire Braze ! Ici, vous trouverez tout ce dont vous avez besoin pour créer votre page partenaire. Dans cette première section, écrivez une brève description de votre entreprise. Incluez également un lien vers votre site principal. 
-Dans ce second paragraphe, expliquez la relation entre votre entreprise et Braze. Ce paragraphe doit expliquer comment Braze et votre entreprise collaborent pour reserrer le lien entre l’utilisateur Braze et son client. Expliquez ce qui se produit lorsqu'un utilisateur de Braze s'intègre ou tire parti de votre partenariat et des services que vous offrez.
-## Conditions préalables
-Cette section doit indiquer ce dont vous avez besoin pour terminer cette intégration de partenariat. La meilleure façon de fournir ces informations est de rédiger un paragraphe d'instructions rapides qui décrit tous les détails non techniques importants ou les informations à connaître, comme le fait de savoir si votre intégration sera soumise ou non à des contrôles de sécurité ou à des habilitations supplémentaires. Utilisez ensuite un graphique pour décrire les exigences techniques de l’intégration.
+# [Partner Name]
+> Welcome to the Braze partner template! Here, you'll find everything you need to create your partner page. In this first section, include a brief description of your company. Also, include a link to your main site. 
+In this second paragraph, explore the relationship between your company and Braze. This paragraph should explain how Braze and your company partner together to tighten the bond between the Braze user and their customer. Explain the "elevation" that occurs when a Braze user integrates with or leverages your partnership and the services you offer.
+## Prerequisites
+This section should list what you need to complete this partnership integration. The best way to deliver this information is with a quick instructional paragraph that describes any non-technically important details or "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, use a chart to describe the technical requirements of the integration.
 {% alert important %}
-Les exigences suivantes sont des exigences générales dont vous pourriez avoir besoin pour Braze. Nous vous recommandons d'utiliser le titrage et le phrasé attribués figurant dans le tableau suivant. Assurez-vous d’ajuster les descriptions et de les adapter à votre intégration de partenariat. 
+The following requirements are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the following chart. Be sure to adjust the descriptions and tailor them to your partnership integration. 
 {% endalert %}
-| Configuration requise | Description |
+| Requirement | Description |
 | ----------- | ----------- |
-| Compte partenaire | Un compte partenaire est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
-| Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
+| Partner account | A partner account is required to take advantage of this partnership. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST endpoint | [Your REST Endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
-## Cas d’utilisation
-Les cas d’utilisation peuvent constituer un élément essentiel de votre documentation. Bien que ce ne soit pas obligatoire, vous pouvez définir à cet endroit les cas d’utilisation typiques ou nouveaux pour l’intégration. Cela peut être utilisé comme un moyen de vendre ou de proposer une montée en gamme. Fournit du contexte, des idées et, surtout, un moyen de visualiser les capacités de l'intégration.
-## Intégration
-C’est là que vous divisez l’intégration en étapes. N’écrivez pas des paragraphes sans fin : il s’agit de documents techniques qui seront utilisés par les marketeurs et les développeurs à des fins d’intégration et d’exécution. Votre principal objectif est d’écrire une documentation descriptive qui aide l’utilisateur Braze à faire son travail.
+## Use cases
+Use cases can be a critical part of your documentation. Although optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
+## Integration
+This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done.
 ```
 
 {% endtab %}
@@ -141,7 +142,7 @@ Et à la fin de votre document, cliquez sur votre image.
 Pour ajouter des liens à votre document, vous devez suivre ce format :
 {% raw %}
 ```
-Pour plus d’informations, consultez [cette page Web ou la page][1].
+For more information, check out [this website or page][1].
 ```
 {% endraw %}
 
@@ -154,7 +155,7 @@ Et à la fin de votre document, ajoutez votre lien.
 
 ### Liquid
 
-Les intégrations partenaires tirent souvent parti de nos capacités Liquid dans le tableau de bord. Si vous prévoyez d’utiliser des extraits de code Liquid, positionnez-les entre les balises {&#37; raw &#37;} et {&#37; endraw &#37;} ou un avertissement Liquid sera généré dans Liquid.
+Les intégrations partenaires tirent souvent parti de nos capacités Liquid dans le tableau de bord. Si vous prévoyez d’utiliser des extraits de code Liquid, positionnez-les entre les balises {&#37; raw &#37;} et {&#37; endraw &#37;} ou un avertissement Liquid sera généré dans la démarque.
 
 {% raw %}
 
@@ -174,7 +175,7 @@ Ensuite, vous pouvez vérifier votre [localhost](http://localhost:4000/docs/).
 
 Ici, vous pouvez consulter la page que vous avez créée à l’aide de l’alias attribué au préalable dans les métadonnées de l’article. Une fois le localhost ouvert, ajoutez l’alias pour accéder à votre page.
 
-Example: `http://localhost:4000/docs/` + `/partners/your_partner_name/`
+Exemple : `http://localhost:4000/docs/` + `/partners/your_partner_name/`
 
 Votre page sera visible à l’adresse `http://localhost:4000/docs/partners/your_partner_name/`
 
@@ -189,9 +190,9 @@ Dans le référentiel de documents GitHub de Braze, trouvez votre branche. Si vo
 ![Fusionner les branches][2]
 
 1. Configurez votre branche à fusionner de la même manière que celle illustrée dans l’image précédente.<br><br>
-2. Nommez votre demande de tirage de la façon suivante : « Nom du partenariat - Documents partenaires"<br><br>
+2. Nommez votre demande de tirage de la façon suivante : « Nom du partenariat -Documents partenaires »<br><br>
 3. Fournissez toute information pertinente qui peut aider l’équipe de documentation de Braze à confirmer vos changements, et indiquez votre **chef de produit Braze** pour le contacter. Si nécessaire, nous vous recontacterons par la suite.<br><br>
-4. Une fois que vous avez fait des changements, citez @KellieHawks et @Timothy-Kim dans un commentaire dans la demande de tirage, et notre équipe prendra le relais.<br><br>
+4. Une fois que vous avez fait des changements, mentionnez @KellieHawks et @josh-mccrowell-braze dans un commentaire dans la requête d’extraction, et notre équipe prendra le relais.<br><br>
 
 ## Processus de vérification {#review}
 

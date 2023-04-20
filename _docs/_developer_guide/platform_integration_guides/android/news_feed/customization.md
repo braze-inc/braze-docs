@@ -2,7 +2,7 @@
 page_order: 2
 nav_title: Customization
 article_title: Android and FireOS News Feed Customization
-layout: featured
+layout: dev_guide
 
 platform:
   - Android

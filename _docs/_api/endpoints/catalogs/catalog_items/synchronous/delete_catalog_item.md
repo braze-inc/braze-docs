@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the delete catalog item Braze endpoint."
+description: "This article outlines details about the Delete catalog item Braze endpoint."
 
 ---
 {% api %}
@@ -15,7 +15,7 @@ description: "This article outlines details about the delete catalog item Braze 
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Use this endpoint to delete an item in your catalog. 
+> Use this endpoint to delete an item in your catalog. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0dcce797-1346-472f-9384-082f14541689 {% endapiref %}
 

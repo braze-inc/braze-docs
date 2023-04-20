@@ -14,7 +14,7 @@ channel: news feed
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-News Feed categories make it possible to integrate multiple instances of the News Feed into your application. It's possible to integrate feeds within different windows that only display News Feed cards of a certain category.
+> News Feed categories make it possible to integrate multiple instances of the News Feed into your application. It's possible to integrate feeds within different windows that only display News Feed cards of a certain category.
 
 ![The News Feed panel with a Captioned Image Card Preview for a News Feed item titled "Sweet Teeth - Buy candy in bulk!" with the message "Satisfy your sweet tooth and stop by our store! Mention this ad and get 50% off your first bag of candy." There are four News Feed categories checkboxes: News, Announcements, Advertising, and Social. None of the categories are selected.][1]
 

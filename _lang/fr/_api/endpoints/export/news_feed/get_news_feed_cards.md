@@ -1,20 +1,22 @@
 ---
-nav_title: "GET : Liste des cartes de fil d’actualité"
-article_title: "GET : Liste des cartes de fil d’actualité"
+nav_title: "GET : Exporter la liste des cartes de fil d’actualités"
+article_title: "GET : Exporter la liste des cartes de fil d’actualités"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Liste des cartes de fil d’actualité."
+description: "Cet article présente en détail l’endpoint Braze Exporter la liste des cartes de fil d’actualités."
 
 ---
 {% api %}
-# Endpoint Liste des cartes de fil d’actualité
+# Exporter la liste des cartes de fil d’actualités
 {% apimethod get %}
 /feed/list
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter une liste de cartes de fil d’actualité, chacune incluant son nom et son identifiant API de carte. Les cartes sont renvoyées par groupes de 100 triées par date de création (des plus anciennes aux plus récentes par défaut).
+> Utilisez cet endpoint pour exporter une liste de cartes de fil d’actualité, chacune incluant son nom et son identifiant API de carte. 
+
+Les cartes sont renvoyées par groupes de 100 triées par date de création (des plus anciennes aux plus récentes par défaut).
 
 {% alert note %}
 Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.

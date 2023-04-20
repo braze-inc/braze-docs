@@ -3,6 +3,7 @@ nav_title: À propos des indicateurs de fonctionnalité
 article_title: À propos des indicateurs de fonctionnalité
 page_order: 1
 description: "Cet article de référence couvre un aperçu des indicateurs de fonctionnalité, y compris les prérequis et les cas d’utilisation."
+tool: Feature Flags
 platform:
   - iOS
   - Android
@@ -12,9 +13,9 @@ platform:
 
 # À propos des indicateurs de fonctionnalité
 
-> Cet article de référence couvre les bases des indicateurs de fonctionnalité et la raison pour laquelle vous les utiliseriez dans Braze. Vous cherchez les étapes permettant de créer un indicateur de fonctionnalité dans Braze ? Consulter [Créer des indicateurs de fonctionnalité][3].
+> Les indicateurs de fonctionnalité vous permettent d’activer ou de désactiver à distance la fonctionnalité d’une sélection d’utilisateurs spécifique ou aléatoire. Il est important de noter qu’ils vous permettent d’activer et de désactiver la production sans déploiement supplémentaire de codes ou mises à jour d’applications. Cela vous permet de déployer de nouvelles fonctionnalités en toute sécurité et en toute confiance. 
 
-Les indicateurs de fonctionnalité vous permettent d’activer ou de désactiver à distance la fonctionnalité d’une sélection d’utilisateurs spécifique ou aléatoire. Il est important de noter qu’ils vous permettent d’activer et de désactiver la production sans déploiement supplémentaire de codes ou mises à jour d’applications. Cela vous permet de déployer de nouvelles fonctionnalités en toute sécurité et en toute confiance. 
+Vous cherchez les étapes permettant de créer un indicateur de fonctionnalité dans Braze ? Consulter [Créer des indicateurs de fonctionnalité][3].
 
 {% alert important %} 
 Les indicateurs de fonctionnalité sont actuellement en version bêta. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé. 

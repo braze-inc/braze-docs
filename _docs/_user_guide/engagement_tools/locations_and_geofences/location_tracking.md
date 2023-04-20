@@ -7,9 +7,10 @@ description: "This reference article explains how to use location tracking and l
 tool: Location
 search_rank: 2
 ---
+
 # Location tracking
 
-Location collection captures a user's most recent location when the app was opened using GPS location data. You can use this information to segment data based on users who were in a defined location. 
+> Location collection captures a user's most recent location when the app was opened using GPS location data. You can use this information to segment data based on users who were in a defined location. 
 
 ## Enabling location tracking
 
@@ -56,7 +57,7 @@ You can also leverage location tracking with some of our partners:
 
 ## Frequently asked questions
 
-Check out our [Locations FAQs][11] for answers to frequently asked questions about locations.
+Check out our [Locations FAQ][11] for answers to frequently asked questions about locations.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/

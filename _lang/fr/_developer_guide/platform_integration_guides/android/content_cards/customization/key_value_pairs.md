@@ -13,6 +13,8 @@ channel:
 
 # Paires clé-valeur
 
+> Cet article explique comment ajouter des paires clé-valeur à vos cartes de contenu dans votre application Android ou FireOS.
+
 Les objets `Card` peuvent éventuellement porter des paires clé-valeur comme `extras`. Elles peuvent être utilisées pour envoyer des données avec une `Card` pour une manipulation ultérieure par l’application.
 
 Consultez notre [KDoc][36] pour plus d’informations.
@@ -22,4 +24,4 @@ Les cartes de contenu ont une limite de taille maximale de 2 kb pour le contenu
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches
-[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721
+[36]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721

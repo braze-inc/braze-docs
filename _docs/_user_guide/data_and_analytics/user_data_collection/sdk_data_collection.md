@@ -7,7 +7,7 @@ description: "This reference article addresses the data that is collected by the
 
 ---
 
-# SDK data collection options
+# SDK data collection
 
 Braze is designed to allow for flexible data collection via our SDKs and APIs. The Braze SDK can be integrated in three ways:
 - **Personalized Integration**; integrators have the flexibility to collect data in addition to Automatically Collected Data.
@@ -66,4 +66,4 @@ If you are interested in the Minimum Integration only, and you integrate with mP
 
 {% endalert %} 
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.appboy.enums/-device-key/index.html "Android device-level fields"
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html "Android device-level fields"

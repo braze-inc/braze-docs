@@ -9,12 +9,14 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 
 ---
 {% api %}
-# Obtenir le statut du groupe d’abonnement des utilisateurs
+# Répertorier le statut du groupe d’abonnement de l’utilisateur
 {% apimethod get %}
 /subscription/status/get
 {% endapimethod %}
 
-Utilisez cet endpoint pour obtenir le statut d’abonnement d’un utilisateur dans un groupe d’abonnement. Ces groupes seront disponibles sur la page **Groupe d’abonnement**. La réponse de cet endpoint inclura l’ID externe et le statut abonné, désabonné, ou inconnu pour le groupe d’abonnement spécifique demandé dans l’appel d’API. Cette option permet de mettre à jour le statut du groupe d’abonnement dans les appels d’API ultérieurs ou de l’afficher sur une page Web hébergée.
+> Utilisez cet endpoint pour obtenir le statut d’abonnement d’un utilisateur dans un groupe d’abonnement.
+
+Ces groupes seront disponibles sur la page **Groupe d’abonnement**. La réponse de cet endpoint inclura l’ID externe et le statut abonné, désabonné, ou inconnu pour le groupe d’abonnement spécifique demandé dans l’appel d’API. Cette option permet de mettre à jour le statut du groupe d’abonnement dans les appels d’API ultérieurs ou de l’afficher sur une page Web hébergée.
 
 Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d’abonnement aux e-mails** :
 

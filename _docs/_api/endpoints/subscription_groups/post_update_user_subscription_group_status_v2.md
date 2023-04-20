@@ -3,7 +3,7 @@ nav_title: "POST: Update User's Subscription Group Status V2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
-description: "This article outlines details about the update user's subscription group status Braze V2 endpoint."
+description: "This article outlines details about the Update user's subscription group status Braze V2 endpoint."
 
 platform: API
 channel:
@@ -11,16 +11,18 @@ channel:
 ---
 
 {% api %}
-# Update user's subscription group status V2
+# Update user's subscription group status (V2)
 {% apimethod post %}
 /v2/subscription/status/set
 {% endapimethod %}
 
-Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription group's `subscription_group_id` by navigating to the **Subscriptions Group** page.
+> Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard. 
+
+You can access a subscription group's `subscription_group_id` by navigating to the **Subscriptions Group** page.
 
 If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
-{% apiref postman %}hhttps://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662 {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662 {% endapiref %}
 
 If you want to see examples or test this endpoint for **SMS Subscription Groups**:
 
@@ -71,7 +73,7 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 Note that you cannot include both `emails` and `phones` parameters. Also, `emails`, `phones`, and `external_ids` can all be sent individually.
 {% endalert %}
 
-## Example request for email and SMS
+### Example requests
 
 The following example uses `external_id` to make one API call for email and SMS.
 
@@ -95,7 +97,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 }
 ```
 
-## Example request email
+## Email
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \
@@ -113,7 +115,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 '
 ```
 
-## Example request SMS
+## SMS
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \

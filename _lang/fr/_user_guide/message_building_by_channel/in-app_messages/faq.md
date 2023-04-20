@@ -1,13 +1,13 @@
 ---
 nav_title: FAQ
-article_title: FAQ sur les messages In-App
+article_title: FAQ sur les messages in-app
 page_order: 19
 description: "Le présent article fournit des réponses aux questions fréquemment posées sur les messages In-App."
 tool: in-app messages
 
 ---
 
-# FAQ sur les messages In-App
+# Foire aux questions
 
 > Le présent article fournit des réponses à des questions fréquemment posées sur les messages In-App.
 
@@ -32,9 +32,9 @@ En tant que solution de contournement pour envoyer des messages In-App à une he
 ```liquid
 {% assign time = 'now' | time_zone: ${time_zone} %}{% assign hour = time | date: '%H' | plus: 0 %}
 {% if hour > 19 or hour < 8 %}
-{% abort_message("En dehors de la période autorisée") %}
+{% abort_message("Outside allowed time window") %}
 {% endif %}
-MESSAGE ICI
+MESSAGE HERE
 ```
 {% endraw %}
 

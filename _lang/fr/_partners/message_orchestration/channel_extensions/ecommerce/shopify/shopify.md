@@ -8,7 +8,7 @@ alias: "/shopify_overview/"
 page_order: 0
 ---
 
-# Shopify
+# Aperçu de Shopify
 
 > [Shopify](https://www.shopify.com/) est une société leader dans le commerce mondial. Elle fournit des outils fiables pour démarrer, développer, commercialiser et gérer une entreprise de vente en détail, quelle que soit sa taille. Shopify améliore le commerce pour tous les utilisateurs avec une plateforme et des services conçus pour assurer la fiabilité tout en offrant une meilleure expérience d’achat pour les consommateurs où qu’ils soient. 
 

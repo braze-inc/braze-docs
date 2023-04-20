@@ -1,8 +1,9 @@
 ---
 nav_title: Exemples de cas d’utilisation
 article_title: Exemples de cas d’utilisation
-page_order: 3
+page_order: 30
 description: "Cet article de référence couvre des exemples de cas d’utilisation d’indicateurs de fonctionnalité, y compris les déploiements progressifs, la configuration à distance, la coordination des messages et l’expérimentation."
+tool: Feature Flags
 platform:
   - iOS
   - Android
@@ -10,7 +11,7 @@ platform:
 
 ---
 
-# Exemples de cas d’utilisation
+# Exemple de cas d’utilisation
 
 > Cet article décrit des exemples précis d’utilisation des indicateurs de fonctionnalité pour améliorer votre expérience utilisateur. Vous cherchez les étapes permettant de créer un indicateur de fonctionnalité dans Braze ? Consulter [Créer des indicateurs de fonctionnalité][8].
 

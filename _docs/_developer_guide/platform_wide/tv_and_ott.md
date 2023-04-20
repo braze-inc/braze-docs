@@ -15,9 +15,7 @@ platform:
 
 # TV and OTT integrations
 
-As technology evolves to new platforms and devices, so can your messaging with Braze!
-
-Braze offers different engagement channels for a number of different TV Operating Systems and "OTT" Set Top Boxes.
+> As technology evolves to new platforms and devices, so can your messaging with Braze!<br><br>Braze offers different engagement channels for a number of different TV Operating Systems and "OTT" Set Top Boxes.
 
 ## Platforms and features
 
@@ -249,7 +247,7 @@ Read more about custom handling messaging:
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/
 [4]: https://github.com/braze-inc/braze-swift-sdk
 [5]: https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android_tv_push/
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/android_tv_push/
 [7]: https://developer.amazon.com/docs/fire-tv/notifications.html#headsup
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/
 [android-tv-html]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310

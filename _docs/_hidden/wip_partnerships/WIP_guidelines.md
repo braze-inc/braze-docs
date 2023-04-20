@@ -4,6 +4,7 @@ title: Partner Documentation
 nav_title: Partner Docs
 hidden: true
 page_type: reference
+layout: dev_guide
 ---
 
 # Partnership documentation
@@ -191,7 +192,7 @@ Within the Braze docs GitHub repository, find your branch. If your document is c
 1. Set up your branch to be merged in a similar fashion as shown in the preceding image.<br><br>
 2. Name your Pull Request as "Partnership Name - Partner Docs"<br><br>
 3. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your **Braze product manager** so we can reach out to them to get in contact with you about your changes if needed.<br><br>
-4. After you are done making changes, tag @KellieHawks and @Timothy-Kim in a comment within the pull request, and our team will take a look.<br><br>
+4. After you are done making changes, tag @KellieHawks and @josh-mccrowell-braze in a comment within the pull request, and our team will take a look.<br><br>
 
 ## Review process {#review}
 

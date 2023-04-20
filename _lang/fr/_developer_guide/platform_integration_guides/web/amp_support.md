@@ -14,7 +14,7 @@ description: "Cet article de référence décrit le support AM pour le Web et co
 Cette section n’est pas nécessaire à l’intégration, sauf si vous essayez d’intégrer Braze sur une page AMP.
 {% endalert %}
 
-Les pages mobiles accélérées (AMP) sont un projet soutenu par Google conçu pour améliorer le temps de chargement des pages sur les appareils mobiles en appliquant certaines normes, notamment en limitant l’utilisation de JavaScript. 
+> Cet article de référence décrit le support AM pour le Web et comment intégrer Braze sur une page AMP. Les pages mobiles accélérées (AMP) sont un projet soutenu par Google conçu pour améliorer le temps de chargement des pages sur les appareils mobiles en appliquant certaines normes, notamment en limitant l’utilisation de JavaScript.
 
 Par conséquent, le SDK Braze ne peut pas être chargé sur une page AMP. Cependant, le projet AMP fournit un composant prenant en charge les notifications push pour le Web. Les [instructions suivantes](https://www.ampproject.org/docs/reference/components/amp-web-push) expliquent comment configurer ce composant et faire référence à la documentation sur le composant `amp-web-push`.
 

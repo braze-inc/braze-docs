@@ -9,17 +9,18 @@ search_rank: 1
 
 # Configuration initiale du SDK
 
-Installer le SDK React Native Braze offre une fonctionnalité d’analytique de base et vous permet d’intégrer des messages in-app et des cartes de contenu pour iOS et Android à l’aide d’une seule codebase.
+> Cet article de référence explique comment installer le SDK Braze pour React Native. Installer le SDK React Native Braze offre une fonctionnalité d’analytique de base et vous permet d’intégrer des messages in-app et des cartes de contenu pour iOS et Android à l’aide d’une seule codebase.
 
 Vous devrez effectuer les étapes d’installation séparément sur les deux plates-formes.
 
 Pour terminer l’installation, vous aurez besoin de la [clé API d’identification de l’application]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) ainsi que de l’[endpoint SDK]({{site.baseurl}}/api/basics/#endpoints). Les deux sont situés dans **Manage Settings (Gérer les paramètres)** dans le tableau de bord.
 
-## Étape 1 : Intégrez la bibliothèque Braze
+## Prérequis et compatibilité 
+SDK React Native de Braze v1.38.0 et ultérieures :
+* Prend en charge React Native v0.64 et ultérieures
+* N’est pas compatible avec les applications qui sont abonnées à la nouvelle architecture React Native expérimentale.
 
-{% alert warning %}
-Braze React Native SDK v1.38.0 et supérieures exigent au minimum React Native v0.64 et supérieures. Le SDK React Native de Braze n’est pas encore compatible avec la nouvelle architecture React Native (v0.69.0 ou supérieure).
-{% endalert %}
+## Étape 1 : Intégrez la bibliothèque Braze
 
 {% tabs local %}
 {% tab bash %}
@@ -47,7 +48,7 @@ Assurez-vous que votre version du SDK React Native de Braze correspond au minimu
 expo install @braze/expo-plugin
 ```
 
-#### Étape 2.2 : Ajouter le plugin à votre app.json
+#### Étape 2.2 : Ajoutez le plug-in à votre app.json
 
 Dans votre `app.json`, ajoutez le Plugin Braze Expo. Vous pouvez fournir les options de configuration suivantes :
 
@@ -129,7 +130,7 @@ buildscript {
 
 allprojects {
     repositories {
-        maven { url "https://appboy.github.io/appboy-android-sdk/sdk" }
+        maven { url "https://braze-inc.github.io/braze-android-sdk/sdk" }
     }
 }
 ```
@@ -240,14 +241,15 @@ func application(
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
     // Setup Braze bridge
-    let moduleInitializer = BrazeReactBridge()
-    let bridge = RCTBridge(
-        delegate: moduleInitializer,
-        launchOptions: launchOptions)
+    let jsCodeLocation : URL = RCTBundleURLProvider.sharedSettings().jsBundleURL(
+      forBundleRoot: "index"
+    )
     let rootView = RCTRootView(
-        bridge: bridge,
-        moduleName: "<YOUR_PROJECT_NAME>",
-        initialProperties: nil)
+      bundleURL: jsCodeLocation,
+      moduleName: "<YOUR_PROJECT_NAME>",
+      initialProperties: nil,
+      launchOptions: launchOptions
+    )
     self.bridge = rootView.bridge
 
     // Configure views in the application
@@ -269,6 +271,8 @@ func application(
     ).takeUnretainedValue() as! Braze
 
     AppDelegate.braze = braze
+
+    /* Other configuration */
 
     return true
 }
@@ -293,12 +297,12 @@ Dans la méthode `application:didFinishLaunchingWithOptions:`, remplacez la clé
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Setup Braze bridge
-  id<RCTBridgeDelegate> moduleInitializer = [[BrazeReactBridge alloc] init];
-  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:moduleInitializer
-                                            launchOptions:launchOptions];
-  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"<YOUR_PROJECT_NAME>"
-                                            initialProperties:nil];
+  NSURL *jsCodeLocation =
+      [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                      moduleName:@"<YOUR_PROJECT_NAME>"
+                                               initialProperties:nil
+                                                   launchOptions:launchOptions];
   self.bridge = rootView.bridge;
 
   // Configure views in the application
@@ -315,6 +319,8 @@ Dans la méthode `application:didFinishLaunchingWithOptions:`, remplacez la clé
   configuration.logger.level = BRZLoggerLevelInfo;
   Braze *braze = [BrazeReactBridge initBraze:configuration];
   AppDelegate.braze = braze;
+
+  /* Other configuration */
 
   return YES;
 }

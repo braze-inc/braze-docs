@@ -5,15 +5,15 @@ page_order: 5
 description: "Cet article de référence explique comment les utilisateurs peuvent recibler leurs messages via les interactions par SMS."
 page_type: reference
 tool:
-  - Campagnes
+  - Campaigns
 channel:
   - SMS
 
 ---
 
-# Reciblage SMS
+# Reciblage utilisateur
 
-Outre le changement de l’état d’abonnement de l’utilisateur et l’envoi de réponses automatiques selon les mots-clés entrants, Braze enregistre les interactions dans le profil utilisateur pour filtrer et déclencher des messages. Ces filtres et déclencheurs vous permettent de filtrer les utilisateurs ayant reçu des SMS et de déclencher des messages lorsque les utilisateurs reçoivent des SMS d’une campagne par SMS spécifique. 
+> Outre le changement de l’état d’abonnement de l’utilisateur et l’envoi de réponses automatiques selon les mots-clés entrants, Braze enregistre les interactions dans le profil utilisateur pour filtrer et déclencher des messages.<br><br>Ces filtres et déclencheurs vous permettent de filtrer les utilisateurs ayant reçu des SMS et de déclencher des messages lorsque les utilisateurs reçoivent des SMS d’une campagne par SMS spécifique. 
 
 {% alert tip %}
 Pour en savoir plus sur les mots-clés personnalisés et comment configurer des messages bidirectionnels afin de profiter de ces options de reciblage, consultez notre article sur les [mots-clés personnalisés]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/).
@@ -37,6 +37,25 @@ Filtre les utilisateurs qui ont reçu un message d’une campagne par SMS spéci
 Pour déclencher des messages lorsque les utilisateurs reçoivent des SMS d’une campagne spécifique, sélectionnez **Interagir avec la campagne** comme action de déclenchement pour une campagne par événement. Ensuite, sélectionnez **Recevoir un SMS** et la campagne par SMS que vous souhaitez utiliser.
 
 ![][3]
+
+### Filtrer par liens de suivi avancé
+
+Reciblez les utilisateurs qui ont cliqué sur les campagnes ayant des [liens de suivi avancé]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/).
+Seules les campagnes où le suivi avancé est activé apparaîtront dans les listes déroulantes suivantes :
+
+**Recibler les utilisateurs qui ont cliqué sur une campagne SMS spécifique**
+1. Créez un segment à l’aide du filtre **campagne cliquée/ouverte**.
+2. Sélectionnez **clicked sms (sms cliqué)**.
+3. Choisissez la campagne souhaitée.
+
+![][15]
+
+**Recibler les utilisateurs qui ont cliqué sur un Canvas Step spécifique**
+1. Créez un segment à l’aide du filtre **Step cliqué/ouvert**.
+2. Sélectionnez **clicked sms (sms cliqué)**.
+3. Choisissez le Canvas ou le Canvas Step souhaité.
+
+![][16]
 
 ## Reciblage spécifique à la catégorie de mots-clés
 
@@ -73,7 +92,7 @@ Si un Canvas par événement est déclenché par un SMS entrant, vous pouvez ré
 ![Campagne SMS par événement avec le filtre de segmentation Envoyer le mot-clé « Abonnement » au groupe d’abonnement « SMS marketing ».][7]{: style="margin-top:10px;"}
 
 **Déclencher par mots-clés arbitraires**<br>
-Remarque : lorsque vous déclenchez un message à une réponse de mot-clé « Autre », vous pouvez évaluer la correspondance exacte du texte du corps du mot-clé. Cette correspondance obéit aux mêmes règles indiquées : Seul le **message avec exactement un mot** est traité (_non sensible_ à la casse). Un mot-clé envoyé `Bonjour Braze !` ne correspond pas aux critères montrés dans l’exemple suivant. 
+Remarque : lorsque vous déclenchez un message à une réponse de mot-clé « Autre », vous pouvez évaluer la correspondance exacte du texte du corps du mot-clé. Cette correspondance obéit aux mêmes règles indiquées : Seul le **message avec exactement un mot** est traité (_non sensible_ à la casse). Un mot-clé envoyé `Hello Braze!` ne correspond pas aux critères montrés dans l’exemple suivant. 
 ![Campagne SMS par événement avec la catégorie de mots-clés « Autre », où le corps du message est exactement « Bonjour » ou « Salut ».][8]{: style="margin-top:10px;"}
 
 **Mots-clés de modèle**<br>
@@ -108,3 +127,5 @@ Want to receive a specific deal? Just text us the category you're interested in.
 [11]: {% image_buster /assets/img/sms/clicked_opened_step.png %}
 [12]: {% image_buster /assets/img/sms/clicked_opened_campaign.png %}
 [13]: {% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %} 
+[15]: {% image_buster /assets/img/sms/retargeting5.png %} 
+[16]: {% image_buster /assets/img/sms/retargeting4.png %}

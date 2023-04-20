@@ -6,9 +6,9 @@ page_order: 6
 description: "Cet article de référence couvre les paramètres avancés de campagne de notifications push pour iOS tels que les options d’alerte, les indicateurs, les sons, l’expiration, etc."
 platform: iOS
 channel:
-  - notification push
+  - Notification push
 tool:
-  - Campagnes
+  - Campaigns
 
 ---
 

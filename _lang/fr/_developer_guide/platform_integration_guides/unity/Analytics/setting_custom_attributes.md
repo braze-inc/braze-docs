@@ -12,7 +12,7 @@ description: "Cet article de référence explique comment activer et désactiver
 
 # Définition des attributs personnalisés
 
-Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
+> Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 
 Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques][1].
 
@@ -31,7 +31,7 @@ Pour attribuer des attributs utilisateur, vous devez appeler la méthode appropr
 
 >  Il est toujours utile de définir des adresses e-mail même si vous n’envoyez pas d’e-mails via Braze. Le courrier électronique facilite la recherche de profils d’utilisateurs individuels et la résolution des problèmes au fur et à mesure qu’ils surviennent.
 
-### Genre
+### Sexe
 `AppboyBinding.SetUserGender(Appboy.Models.Gender);`
 
 ### Date de naissance

@@ -6,17 +6,15 @@ page_order: 6
 description: "Cet article de référence explique ce que sont les expressions régulières et comment les utiliser, tout en proposant des solutions pour valider et tester des expressions régulières."
 page_type: reference
 tool:
-  - Outils de test
+  - Testing Tools
   
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Les expressions régulières avec Braze
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Expressions régulières
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
->  Cet article de référence explique ce que sont les expressions régulières et comment les utiliser. Il inclut également un débogueur conçu pour valider et tester des expressions régulières.
-
-Une expression régulière, connue sous le nom de « regex » en anglais, est une séquence de caractères qui définit un modèle de recherche. Les expressions régulières vous permettent de valider des groupements de texte et d’effectuer des recherches et des remplacements. Chez Braze, nous exploitons des expressions régulières pour vous proposer une solution de correspondance de chaîne de caractères plus flexible afin de vous aider à filtrer vos segments et campagnes pour votre audience cible.
+> Une expression régulière, connue sous le nom de « regex » en anglais, est une séquence de caractères qui définit un modèle de recherche. Les expressions régulières vous permettent de valider des groupements de texte et d’effectuer des recherches et des remplacements. Chez Braze, nous exploitons des expressions régulières pour vous proposer une solution de correspondance de chaîne de caractères plus flexible afin de vous aider à filtrer vos segments et campagnes pour votre audience cible.
 
 Le cours d’apprentissage de Braze sur les expressions régulières vous explique comment les expressions régulières peuvent être utilisées et testées sur [Regex101][regex]. Nous proposons également un [testeur d’expression régulière interne](#regex-debugger), un page de références utile, des données d’échantillon référencées dans la vidéo d’apprentissage de Braze sur les expressions régulières, ainsi que des réponses à certaines questions fréquemment posées.
 
@@ -142,7 +140,7 @@ $( document ).ready(function() {
 #### Comment filtrer des adresses e-mail spécifiques à une boîte de réception lorsque je segmente mes utilisateurs ?
 
 {% raw %}
-Utilisez le filtre d’adresse e-mail en le définissant sur `matches regex (Correspond à l’expression régulière)`. Ensuite, reportez-vous à l’expression régulière pour les adresses e-mail :
+Vous pouvez utiliser le filtre d’adresse e-mail en le définissant sur `matches regex`. Ensuite, reportez-vous à l’expression régulière pour les adresses e-mail :
 
 ```
 [a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z.-]+
@@ -158,7 +156,7 @@ Cette expression régulière peut être divisée en trois parties :
 
 #### Comment filtrer les adresses e-mail associées à un domaine spécifique ?
 
-Supposons que vous souhaitiez filtrer les e-mails se terminant par « @braze.com ». Pour cela, vous pouvez utiliser le filtre d’adresse e-mail en le définissant sur `matches regex` (Correspond à l’expression régulière), puis en saisissant « @braze.com » dans le champ d’expression régulière. Il en va de même pour tout autre domaine e-mail.
+Supposons que vous souhaitiez filtrer les e-mails se terminant par « @braze.com ». Pour cela, vous pouvez utiliser le filtre d’adresse e-mail en le définissant sur `matches regex`, puis en saisissant « @braze.com » dans le champ d’expression régulière. Il en va de même pour tout autre domaine e-mail.
 
 ![]({% image_buster /assets/img/regex/regeximg1.png %})
 
@@ -196,7 +194,7 @@ En supposant que vous recherchez des numéros de téléphone aux États-Unis, ut
 
 De même, le format des numéros de téléphone britanniques est `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Pour tout autre pays, utilisez l’indicatif national suivi du nombre de répétitions de `\d` nécessaire pour chaque chiffre restant. Ainsi, dans le cas de la Lituanie, dont l’indicatif national est « 3 », l’expression régulière serait `^\+3\d\d\d\d\d\d\d\d\d\d`.
 
-Supposons par exemple que vous souhaitiez filtrer les utilisateurs par numéro de téléphone avec l’indicatif régional « 718 ». Utilisez le filtre de numéro de téléphone, définissez-le sur `matches regex` (Correspond à l’expression régulière) et entrez l’expression régulière ci-dessous :
+Supposons par exemple que vous souhaitiez filtrer les utilisateurs par numéro de téléphone avec l’indicatif régional « 718 ». Utilisez le filtre de numéro de téléphone, définissez-le sur `matches regex` et entrez l’expression régulière ci-dessous :
 
 ```
 ^1?718\d\d\d\d\d\d\d

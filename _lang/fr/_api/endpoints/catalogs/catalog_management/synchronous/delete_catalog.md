@@ -15,11 +15,13 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer un c
 /catalogs/{catalog_name}
 {% endapimethod %}
 
-Utilisez cet endpoint pour supprimer un catalogue.
+> Utilisez cet endpoint pour supprimer un catalogue.
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c0915a86-797a-4486-8217-24cd1c689d0f {% endapiref %}
 
 ## Limite de débit
 
-Cet endpoint a une limitation du débit partagée de 5 requêtes par minute entre tous les endpoints synchronisés du catalogue.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
 ## Paramètres de chemin
 
@@ -27,10 +29,6 @@ Cet endpoint a une limitation du débit partagée de 5 requêtes par minute ent
 |---|---|---|---|
 | `catalog_name` | Requis | String | Nom du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-## Paramètres de demande
-
-Cet endpoint n’a pas de corps de demande.
 
 ## Exemple de demande
 
@@ -46,7 +44,7 @@ Deux réponses de code de statut existent pour cet endpoint : `200` et `404`.
 
 ### Exemple de réponse réussie
 
-Le code de statut `200` pourrait renvoyer le corps de réponse suivant.
+Le code de statut `200` pourrait renvoyer le corps de réponse suivant :
 
 ```json
 {

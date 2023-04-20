@@ -9,9 +9,9 @@ description: "Cet article de référence couvre les groupes d’apps dans votre 
 
 # Gestion des groupes d’apps
 
-Vous pouvez gérer, segmenter et communiquer avec plusieurs applications simultanément depuis la page **Manage Settings (Gérer les paramètres)** dans le tableau de bord de Braze.
+> Les groupes d’apps sont conçus pour héberger les versions de la même application sur plusieurs plateformes. De nombreux clients de Braze utilisent également des groupes d’apps pour avoir des versions gratuites et premium de leur application sur la même plateforme.
 
-Les groupes d’apps sont conçus pour héberger les versions de la même application sur plusieurs plateformes. De nombreux clients de Braze utilisent également des groupes d’apps pour avoir des versions gratuites et premium de leur application sur la même plateforme.
+Vous pouvez gérer, segmenter et communiquer avec plusieurs applications simultanément depuis la page **Manage Settings (Gérer les paramètres)** dans le tableau de bord de Braze.
 
 {% alert note %}
 Vous cherchez à savoir comment créer un nouveau groupe d’apps ? Consultez [Configuration du groupe d’apps]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/).

@@ -5,14 +5,16 @@ page_order: 3
 page_type: reference
 description: "Le présent article de référence donne un aperçu de ce que signifie permettre aux utilisateurs de devenir rééligibles pour recevoir ou rentrer à nouveau au sein d’une campagne ou d’un Canvas."
 tool:
-  - Campagnes
+  - Campaigns
   - Canvas
 
 ---
 
 # Rééligibilité pour la campagne et le Canvas
 
-Chaque fois que vous planifiez une campagne ou un Canvas récurrent ou déclenché, vous avez la possibilité de permettre aux utilisateurs de devenir de nouveau éligibles. Par défaut, Braze envoie un message à un utilisateur une seule fois, même s’il est rééligible. Si vous activez la rééligibilité, vous remplacez ce comportement par défaut et permettez aux membres qualifiés de recevoir à nouveau des messages une fois qu’ils ont reçu la première instance de la campagne ou du Canvas. Vous pouvez indiquer la chronologie selon laquelle les utilisateurs peuvent devenir rééligibles.
+> Chaque fois que vous planifiez une campagne ou un Canvas récurrent ou déclenché, vous avez la possibilité de permettre aux utilisateurs de devenir de nouveau éligibles. Par défaut, Braze envoie un message à un utilisateur une seule fois, même s’il est rééligible. 
+
+Si vous activez la rééligibilité, vous remplacez ce comportement par défaut et permettez aux membres qualifiés de recevoir à nouveau des messages une fois qu’ils ont reçu la première instance de la campagne ou du Canvas. Vous pouvez indiquer la chronologie selon laquelle les utilisateurs peuvent devenir rééligibles.
 
 ## Canvas
 

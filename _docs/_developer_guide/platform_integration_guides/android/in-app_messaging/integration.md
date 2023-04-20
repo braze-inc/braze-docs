@@ -13,6 +13,8 @@ search_rank: 2
 
 # In-app message integration
 
+> This reference article covers how to integrate in-app messaging in your Android or FireOS application.
+
 [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your users without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With various layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
 To see examples of in-app messages, check out our [case studies][83].
@@ -167,11 +169,11 @@ public override fun onPause() {
 {% endtab %}
 {% endtabs %}
 
-### Step 2: In-app message manager blacklist (optional)
+### Step 2: In-app message manager blocklist (optional)
 
 In your integration, you may require that certain activities in your app should not show in-app messages. The [activity lifecycle callback integration][59] provides an easy way to accomplish this.
 
-The following sample code adds two activities to the in-app message registration blacklist, `SplashActivity` and `SettingsActivity`:
+The following sample code adds two activities to the in-app message registration blocklist, `SplashActivity` and `SettingsActivity`:
 
 {% tabs %}
 {% tab JAVA %}
@@ -181,10 +183,10 @@ public class MyApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    Set<Class> inAppMessageBlacklist = new HashSet<>();
-    inAppMessageBlacklist.add(SplashActivity.class);
-    inAppMessageBlacklist.add(SettingsActivity.class);
-    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener(inAppMessageBlacklist));
+    Set<Class> inAppMessageBlocklist = new HashSet<>();
+    inAppMessageBlocklist.add(SplashActivity.class);
+    inAppMessageBlocklist.add(SettingsActivity.class);
+    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener(inAppMessageBlocklist));
   }
 }
 ```
@@ -196,10 +198,10 @@ public class MyApplication extends Application {
 class MyApplication : Application() {
   override fun onCreate() {
     super.onCreate()
-    val inAppMessageBlacklist = HashSet<Class<*>>()
-    inAppMessageBlacklist.add(SplashActivity::class.java)
-    inAppMessageBlacklist.add(SettingsActivity::class.java)
-    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener(inAppMessageBlacklist))
+    val inAppMessageBlocklist = HashSet<Class<*>>()
+    inAppMessageBlocklist.add(SplashActivity::class.java)
+    inAppMessageBlocklist.add(SettingsActivity::class.java)
+    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener(inAppMessageBlocklist))
   }
 }
 ```

@@ -5,7 +5,7 @@ page_order: 2
 layout: dev_guide
 guide_top_header: "Campagnes"
 guide_top_text: "Si vous souhaitez interagir avec vos utilisateurs à l’aide d’une unique étape de message, vous pouvez leur envoyer une campagne en utilisant tout <a href='/docs/user_guide/message_building_by_channel/'>canal de communication</a> qui est pris en charge. Il est mieux de créer la plupart des parcours utilisateurs en plusieurs étapes à l’aide de <a href='/docs/user_guide/engagement_tools/canvas/'>Canvas</a>.<br> <br>Sélectionnez l’un des sujets suivants pour consulter les articles qui peuvent vous intéresser."
-tool: Campagnes
+tool: Campaigns
 page_type: landing
 description: "Cette page d’accueil contient les campagnes du tableau de bord de Braze. Vous trouverez ici des ressources sur la création, la gestion et le test de vos campagnes, ainsi que des idées et des stratégies utiles."
 search_rank: 3

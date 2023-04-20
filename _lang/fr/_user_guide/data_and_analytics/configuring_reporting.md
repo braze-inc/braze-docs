@@ -10,7 +10,9 @@ tool: Reporting
 
 # Configuration de reporting
 
-Braze génère automatiquement un rapport hebdomadaire sur les e-mails pour vous aider à comprendre les performances de vos applications et de vos campagnes de communication. Vous pouvez vous abonner à ce rapport sur votre page de **Paramètres du compte** en cliquant sur la case **Regenerate Schema (S’abonner au Rapport Analytique)**.
+> Braze génère automatiquement un rapport hebdomadaire sur les e-mails pour vous aider à comprendre les performances de vos applications et de vos campagnes de communication. 
+
+Vous pouvez vous abonner à ce rapport sur votre page de **Paramètres du compte** en cliquant sur la case **Regenerate Schema (S’abonner au Rapport Analytique)**.
 
 ![][1]
 

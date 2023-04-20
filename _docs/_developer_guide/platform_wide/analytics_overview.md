@@ -8,9 +8,11 @@ description: "This reference article covers user data collection including what 
 
 # Analytics overview
 
-Before completing your Braze implementation, your marketing team and your development team should discuss your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
+> This guide will help you understand what data Braze collects, the difference between a custom event and a custom attribute in Braze, and best practices for managing these analytics.
 
-This guide will help you understand what data Braze collects, the difference between a custom event and a custom attribute in Braze, and best practices for managing these analytics.
+Before completing your Braze implementation, your marketing team and your development team should discuss your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. 
+
+Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
 ## Automatically collected data
 
@@ -383,7 +385,7 @@ If only a single generic name field exists for a user (e.g., 'JohnDoe'), you can
 
 [4]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[9]: {{site.baseurl}}/api/endpoints/user_data/
 [10]: {{site.baseurl}}/api/endpoints/messaging/
 [11]: http://www.regextester.com/pregsyntax.html
 [12]: #integers

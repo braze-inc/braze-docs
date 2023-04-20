@@ -7,7 +7,7 @@ guide_top_text: "Avant d’envoyer vos campagnes, vous devez toujours tester vos
 page_order: 4
 
 tool: 
-  - Campagnes
+  - Campaigns
   - Rapports
 page_type: landing
 description: "Cette page d’accueil présente des tests et des conseils pour les campagnes. Vous trouverez ici des ressources pour tester les campagnes, telles que l’envoi de messages de test, l’exécution de tests A/B, etc."

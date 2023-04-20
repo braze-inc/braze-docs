@@ -8,7 +8,7 @@ description: "Cet article de référence décrit comment rechercher un utilisate
 
 # Recherche d’utilisateur
 
-Lorsque vous configurez votre audience pour une campagne ou un Canvas, vous pouvez rechercher un utilisateur spécifique directement à partir du compositeur pour tester si vos filtres et vos segments sont configurés correctement. Cela peut également être utile lors de la résolution des problèmes d’une campagne ou d’un Canvas qui n’envoie pas comme prévu : par exemple, si les utilisateurs ne reçoivent pas de message alors qu’ils le devraient.
+> Lorsque vous configurez votre audience pour une campagne ou un Canvas, vous pouvez rechercher un utilisateur spécifique directement à partir du compositeur pour tester si vos filtres et vos segments sont configurés correctement. Cela peut également être utile lors de la résolution des problèmes d’une campagne ou d’un Canvas qui n’envoie pas comme prévu : par exemple, si les utilisateurs ne reçoivent pas de message alors qu’ils le devraient.
 
 La recherche d’utilisateur est disponible lors de :
 

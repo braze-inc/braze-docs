@@ -10,7 +10,9 @@ tool: Reporting
 
 # Configuring reporting
 
-Braze automatically generates a weekly email report to help you understand the performance of your apps and messaging campaigns. You can subscribe to this report on your **Account Settings** page by clicking the **Subscribe to Analytics Report** checkbox.
+> Braze automatically generates a weekly email report to help you understand the performance of your apps and messaging campaigns. 
+
+You can subscribe to this report on your **Account Settings** page by clicking the **Subscribe to Analytics Report** checkbox.
 
 ![][1]
 

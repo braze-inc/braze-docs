@@ -9,7 +9,9 @@ channel:
 search_rank: 3
 ---
 
-# Intégration
+# Intégration de notification push Android standard
+
+> Cet article explique comment intégrer des notifications push dans votre application Android.
 
 ![Exemple de notifications push d’image insérée pour Android]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
 
@@ -17,11 +19,11 @@ Une notification push est une alerte hors application qui apparaît sur l’écr
 
 Braze envoie des notifications push aux appareils Android en utilisant [Firebase Cloud Messaging (FCM)][45].
 
-Découvrez notre [documentation d’aide][8] pour les meilleures pratiques de notification push.
+Découvrez notre [documentation d’aide][8] pour les bonnes pratiques de notification push.
 
 ## S’enregistrer pour la notification push 
 
-Utilisez [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) pour vous enregistrer pour les notifications push. Pour un exemple complet d’utilisation de Firebase avec le SDK Braze pour Android, consultez notre [exemple d’application de notification push Firebase](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
+Utilisez [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) pour vous enregistrer pour les notifications push. Pour un exemple complet d’utilisation de Firebase avec le SDK Braze pour Android, consultez notre [exemple d’application de notification push Firebase](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
 
 ### Étape 1 : Activer Firebase
 
@@ -36,12 +38,12 @@ implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING
 
 ### Étape 2 : Configurer l’enregistrement du jeton
 
-Les notifications push de Braze ne fonctionnent pas tant qu’un jeton Firebase Cloud Messaging (jeton d’enregistrement FCM) n’est pas enregistré. Les jetons d’enregistrement FCM peuvent être enregistrés par le SDK Braze **automatiquement** (recommandé) ou **manuellement**. Les jetons peuvent être enregistrés manuellement à l’aide de la méthode [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html).
+Les notifications push de Braze ne fonctionnent pas tant qu’un jeton Firebase Cloud Messaging (jeton d’enregistrement FCM) n’est pas enregistré. Les jetons d’enregistrement FCM peuvent être enregistrés par le SDK Braze **automatiquement** (recommandé) ou **manuellement**. Les jetons peuvent être enregistrés manuellement à l’aide de la méthode [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html).
 
 Assurez-vous d’utiliser votre ID d’expéditeur Firebase. Il s’agit d’une valeur numérique unique créée lorsque vous créez votre projet Firebase, disponible dans l’onglet **Cloud Messaging (Messagerie cloud)** de la console Firebase, dans le panneau **Settings (Paramètres)**. L’ID d’expéditeur sert à identifier chaque expéditeur qui peut envoyer des messages à l’application client.
 
 {% tabs local %}
-{% tab Enregistrement automatique (recommandé)) %}
+{% tab Automatic registration (recommended) %}
 
 Pour enregistrer automatiquement les jetons d’enregistrement FCM, activez l’enregistrement automatique Firebase et définissez un ID d’expéditeur Firebase Cloud Messaging.
 
@@ -80,9 +82,9 @@ Braze.configure(this, brazeConfig)
 {% endsubtabs %}
 
 {% endtab %}
-{% tab Enregistrement manuel %}
+{% tab Manual registration %}
 
-Pour enregistrer manuellement vos jetons, nous vous recommandons d’appeler [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) depuis la méthode [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate) de votre application pour garantir que les jetons de notification push sont livrés de manière fiable à Braze.
+Pour enregistrer manuellement vos jetons, nous vous recommandons d’appeler [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) depuis la méthode [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) de votre application pour garantir que les jetons de notification push sont livrés de manière fiable à Braze.
 
 {% subtabs local %}
 {% subtab JAVA %}
@@ -139,7 +141,11 @@ Si vous migrez de l’utilisation de GCM à celle de Firebase avec Braze, consul
 
 ### Étape 4 : Définir vos informations d’identification Firebase
 
-Tout d’abord, vous devez localiser votre clé de serveur Firebase et l’ID d’expéditeur dans la [Developer Console de Firebase][58]. Sélectionnez votre projet Firebase et allez à **Settings > Cloud Messaging (Paramètres > Messagerie cloud)** et copiez la clé serveur et l’ID de l’expéditeur :
+{% alert warning %}
+La clé de serveur API Cloud Messaging **Legacy** est requise pour configurer les notifications push Android dans Braze. L’utilisation des identifiants de l’API Firebase Cloud Messaging (V1) ne vous permettra pas d’envoyer des notifications push.
+{% endalert %}
+
+Tout d’abord, vous devez localiser votre clé de serveur Cloud Messaging et l’ID d’expéditeur dans la [Developer Console de Firebase][58]. Sélectionnez votre projet Firebase et allez à **Settings > Cloud Messaging (Paramètres > Messagerie cloud)** et copiez la **clé serveur de l’API Cloud Messaging (Legacy)** et l’**ID de l’expéditeur** :
 
 ![La plateforme Firebase sous « Settings » (Paramètres), puis « Cloud Messaging » (Messagerie cloud) affiche votre ID de serveur et votre clé de serveur.][80]
 
@@ -148,11 +154,11 @@ Si l’API Cloud Messaging est désactivée, cliquez sur les trois points pour a
 {% endalert %}
 ![L’API Cloud Messaging peut être activée en cliquant sur les trois points à droite.][79]
 
-Vous devez saisir votre clé de serveur Firebase et votre ID d’expéditeur dans le tableau de bord de Braze :
+Saisissez votre clé serveur de l’API Cloud Messaging (Legacy) et votre ID d’expéditeur dans le tableau de bord de Braze :
 
 1. Sur la page **Settings (Paramètres)** (où se trouvent vos clés API), sélectionnez votre application Android.
-2. Saisissez votre clé de serveur Firebase dans le champ **Firebase Cloud Messaging Server Key (Clé du serveur Firebase Cloud Messaging)**, dans la section des paramètres de notification push.
-3. Saisissez votre clé d’expéditeur Firebase dans le champ **Firebase Cloud Messaging Sender ID (ID d’expéditeur Firebase Cloud Messaging)**, dans la section des paramètres de notification push.
+2. Saisissez votre clé de serveur de l’API Cloud Messaging (Legacy) dans le champ **Firebase Cloud Messaging Server Key (Clé du serveur Firebase Cloud Messaging)**, dans la section des paramètres de notification push.
+3. Saisissez votre ID d’expéditeur de l’API Cloud Messaging (Legacy) dans le champ **Firebase Cloud Messaging Sender ID (ID d’expéditeur Firebase Cloud Messaging)**, dans la section des paramètres de notification push.
 
 ![][16]
 
@@ -412,15 +418,15 @@ Pour les problèmes liés à l’analytique des notifications push, consultez no
 
 #### Tester depuis la ligne de commande
 
-Si vous souhaitez tester des notifications push et in-app à l’aide de la ligne de commande, vous pouvez envoyer une seule notification par le terminal via cURL et l’[API de messagerie][22]. Vous devrez remplacer les champs suivants par les valeurs correctes pour votre cas de test :
+Si vous souhaitez tester des notifications push et in-app à l’aide de la ligne de commande, vous pouvez envoyer une seule notification par le terminal via cURL et l’[API d’envoi de messages][22]. Vous devrez remplacer les champs suivants par les valeurs correctes pour votre cas de test :
 
 - `YOUR_API_KEY` : disponible sur la **Developer Console**
 - `YOUR_EXTERNAL_USER_ID` : disponible sur la page **User Profile Search (Recherche de profil utilisateur)**
-- `YOUR_KEY1` (optional)
-- `YOUR_VALUE1` (optional)
+- `YOUR_KEY1` (facultatif)
+- `YOUR_VALUE1` (facultatif)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
   "messages": {
     "android_push": {
@@ -483,7 +489,7 @@ override fun createNotification(brazeNotificationPayload: BrazeNotificationPaylo
 Vous pouvez renvoyer `null` de votre méthode `createNotification()` personnalisée pour ne pas afficher la notification du tout, utiliser `BrazeNotificationFactory.getInstance().createNotification()` pour obtenir la valeur par défaut de l’objet `notification` de Braze pour ces données et le modifier avant affichage ou générer un objet `notification` complètement séparé à afficher.
 
 {% alert note %}
-Pour consulter la documentation sur les clés de données de la notification push Braze, reportez-vous au [SDK Android](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html).
+Pour consulter la documentation sur les clés de données de la notification push Braze, reportez-vous au [SDK Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html).
 {% endalert %}
 
 #### Étape 2 : Définir votre fabrique de notification personnalisée
@@ -508,7 +514,7 @@ setCustomBrazeNotificationFactory(brazeNotificationFactory: IBrazeNotificationFa
 {% endtab %}
 {% endtabs %}
 
-L’endroit recommandé pour définir votre `IBrazeNotificationFactory` personnalisée est dans la méthode de cycle de vie de l’application  `Application.onCreate()` (pas activité). Cela permettra à la fabrique de notification d’être correctement définie chaque fois que le processus de votre application est actif.
+L’endroit recommandé pour définir votre `IBrazeNotificationFactory` personnalisée est dans la méthode de cycle de vie de l’application `Application.onCreate()` (pas activité). Cela permettra à la fabrique de notification d’être correctement définie chaque fois que le processus de votre application est actif.
 
 {% alert important %}
 Créer votre propre notification à partir de zéro est un cas d’usage avancé et ne doit être fait qu’après des tests minutieux et avec une compréhension approfondie des fonctionnalités de notification push Braze. Par exemple, vous devez vous assurer que votre notification enregistre correctement les ouvertures de notifications push.
@@ -534,7 +540,7 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html
+[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
 [22]: {{site.baseurl}}/api/endpoints/messaging/
@@ -561,13 +567,13 @@ setCustomBrazeNotificationFactory(null)
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
-[70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
-[72]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html
-[73]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-description.html
-[74]: hhttps://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/handle-braze-remote-message.html
+[70]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
+[72]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html
+[73]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-description.html
+[74]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/handle-braze-remote-message.html
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
 [76]: https://developer.android.com/reference/android/app/Application
-[77]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/index.html
-[78]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html
+[77]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/index.html
+[78]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html
 [79]: {% image_buster /assets/img_archive/cloud_messaging_legacy_disabled.png %} "Firebase Legacy Disabled"
 [80]: {% image_buster /assets/img_archive/cloud_messaging_legacy_enabled.png %} "Firebase Server Key"

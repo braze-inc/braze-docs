@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the see email template Braze endpoint."
+description: "This article outlines details about the See email template Braze endpoint."
 
 ---
 {% api %}
@@ -14,10 +14,10 @@ description: "This article outlines details about the see email template Braze e
 /templates/email/info
 {% endapimethod %}
 
-Use this endpoint to get information on your email templates.
+> Use this endpoint to get information on your email templates.
 
 {% alert important %}
-Templates built using the Drag & Drop Editor are not accepted
+Templates built using the Drag & Drop Editor are not accepted.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}

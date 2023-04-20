@@ -2,6 +2,7 @@
 nav_title: Navigation
 permalink: /navigation/
 hidden: true
+layout: dev_guide
 ---
 
 # Navigation dans Braze
@@ -35,7 +36,7 @@ Si vous utilisez notre navigation mise à jour, ce changement apparaîtra sur l�
 ### En-tête global
 
 {% tabs %}
-{% tab Nouvelle navigation %}
+{% tab New navigation %}
 
 ![]({% image_buster /assets/img/navigation/global_header_new.png %}){: style="border:0"}
 
@@ -49,7 +50,7 @@ Si vous utilisez notre navigation mise à jour, ce changement apparaîtra sur l�
 8. **Icône Administrateur** - Apparaît à côté de votre profil si vous êtes administrateur pour votre entreprise.
 
 {% endtab %}
-{% tab Ancienne navigation %}
+{% tab Old navigation %}
 
 ![]({% image_buster /assets/img/navigation/global_header_old.png %}){: style="border:0"}
 
@@ -63,20 +64,20 @@ Si vous utilisez notre navigation mise à jour, ce changement apparaîtra sur l�
 7. **Icône Administrateur** - Apparaît à côté de votre profil si vous êtes administrateur pour votre entreprise.
 
 {% endtab %}
-{% tab Changements %}
+{% tab Changes %}
 
 ![]({% image_buster /assets/img/navigation/global_header_compare.png %}){: style="border:0"}
 
 - Communauté
-   -**Resources (Ressources)** est désormais **Community (Communauté)**
-- Assistance
-   -**Get Help (Obtenir de l’aide)** est maintenant **Support (Assistance)** 
-   -**Braze Learning** et **Documentation** sont maintenant disponibles ici
-   -**Braze Support (Assistance Braze)** est maintenant **Get Help (Obtenir de l’aide)** 
+   - **Resources (Ressources)** est désormais **Community (Communauté)**
+- Support
+   - **Get Help (Obtenir de l’aide)** est maintenant **Support (Assistance)** 
+   - **Braze Learning** et **Documentation** sont maintenant disponibles ici
+   - **Braze Support (Assistance Braze)** est maintenant **Get Help (Obtenir de l’aide)** 
 - Votre profil
    - **Account Settings (Paramètres du compte)** est maintenant **Manage Your Profile (Gérer votre profil)**
-   -**Subscriptions and Usage (Abonnements et utilisation)** est maintenant **Billing (Facturation)**
-   -**Manage Users (Gérer les utilisateurs)** est désormais **Company Users (Utilisateurs de l’entreprise)**
+   - **Subscriptions and Usage (Abonnements et utilisation)** est maintenant **Billing (Facturation)**
+   - **Manage Users (Gérer les utilisateurs)** est désormais **Company Users (Utilisateurs de l’entreprise)**
 
 {% endtab %}
 {% endtabs %}
@@ -92,7 +93,7 @@ Si vous utilisez notre navigation mise à jour, ce changement apparaîtra sur l�
 </style>
 
 {% tabs %}
-{% tab Nouvelle navigation %}
+{% tab New navigation %}
 
 <table id="navigation">
 <tbody>
@@ -104,7 +105,7 @@ Si vous utilisez notre navigation mise à jour, ce changement apparaîtra sur l�
 </table>
 
 {% endtab %}
-{% tab Ancienne navigation %}
+{% tab Old navigation %}
 
 <table id="navigation">
 <tbody>
@@ -116,7 +117,7 @@ Si vous utilisez notre navigation mise à jour, ce changement apparaîtra sur l�
 </table>
 
 {% endtab %}
-{% tab Changements %}
+{% tab Changes %}
 
 Les catégories de niveau supérieur sont maintenant réduites par défaut afin que vous puissiez obtenir une meilleure vue de chaque section en un coup d’œil.
 
@@ -139,11 +140,10 @@ Le tableau suivant indique où se trouve chaque page dans la nouvelle navigation
 | Événements personnalisés                 | **Data Settings** > **Custom User Events** (Paramètres de données > Événements utilisateur personnalisés)                            |
 | Data Feeds                    | **Data Settings** > **Data Feeds** (Paramètres de données > Data Feeds)                                    |
 | Developer Console             | **Settings** > **Workspace Setup and Testing** (Paramètres > Configuration d’espace de travail et Tests)                        |
-| Appareils et Opérateurs            | **Analytics** > **Reports** > **Devices and Carriers** (Analyses > Rapports > Appareils et opérateurs)                |
 | Performances e-mail             | **Analytics** > **Analytics Dashboards** > **Email Performance** (Analyses > Tableaux de bord analytiques > Performances e-mail)      |
 | Paramètres d’e-mail                | **Settings** > **Workspace Settings** > **Email Preferences** (Paramètres > Paramètres d’espace de travail > Préférences e-mail)         |
 | Modèles d’e-mail               | **Templates** > **Email Templates** (Modèles > Modèles d’e-mail)                                   |
-| Engagement Reports            | **Analytics** > **Reports** > **Engagement** (Analytises > Rapports > Engagement)                          |
+| Engagement Reports (Rapports d’engagement)            | **Analytics** > **Reports** > **Engagement** (Analytises > Rapports > Engagement)                          |
 | Journal d’événements utilisateurs                | **Settings** > **Workspace Setup and Testing** > **Event User Log** (Paramètres > Configuration d’espace de travail et Tests > Journal d'événements utilisateurs)   |
 | Indicateurs de fonctionnalité                 | **Audience** > **Feature Flags** (Audience > Indicateurs de fonctionnalité)                                      |
 | Global Control (rapport)       | **Analytics** > **Reports** > **Global Control** (Analyses > Rapports > Global Control)                      |
@@ -151,9 +151,9 @@ Le tableau suivant indique où se trouve chaque page dans la nouvelle navigation
 | Modèles de message In-App      | **Templates** > **In-App Message Templates** (Modèles > Modèles de messages in-app)                            |
 | Groupes internes               | **Settings** > **Workspace Setup and Testing** > **Internal Groups** (Paramètres > Configuration d’espace de travail et Tests > Groupes internes)  |
 | Modèles de liens                | **Templates** > **Email Link Templates** (Modèles > Modèles de lien d’e-mail)                              |
-| Locations                     | **Audience** > **Locations**                                          |
+| Emplacements                     | **Audience** > **Locations**                                          |
 | Gérer les paramètres               | **Settings** > **Workspace Settings** (Paramètres > Paramètres d’espace de travail)                                 |
-| Gérer les Teams                  | **Settings** > **Workspace Settings** > **Internal Teams** (Paramètres > Paramètres d’espace de travail > Équipes internes)            |
+| Gérer les équipes                  | **Settings** > **Workspace Settings** > **Internal Teams** (Paramètres > Paramètres d’espace de travail > Équipes internes)            |
 | Bibliothèque multimédia                 | **Templates** > **Media Library** (Modèles > Bibliothèque multimédia)                                     |
 | Journal des activités de message          | **Settings** > **Workspace Setup and Testing** > **Message Activity** (Paramètres > Configuration d’espace de travail et Tests > Activité de message) |
 | Fil d’actualité                     | **Messaging** > **News Feed** (Envoi de messages > Fil d'actualité)                                         |
@@ -162,7 +162,7 @@ Le tableau suivant indique où se trouve chaque page dans la nouvelle navigation
 | Produits                      | **Data Settings** > **Products** (Paramètres de données > Produits)                                      |
 | Promotion Codes               | **Data Settings** > **Promotion Codes** (Paramètres de données > Codes  de promotion)                               |
 | Paramètres TTL (Durée de vie) de notification push             | **Settings** > **Workspace Settings** > **Push Time-To-Live (TTL)** (Paramètres > Paramètres d’espace de travail > TTL (Durée de vie) notification push)   |
-| Créateur de rapports                | **Analytics** > **Reports** > **Report Builder** (Analyses > Rapports > Créateur de rapports)                      |
+| Report Builder (Créateur de rapports)                | **Analytics** > **Reports** > **Report Builder** (Analyses > Rapports > Créateur de rapports)                      |
 | Revenue                       | **Analytics** > **Reports** > **Revenue** (Analyses > Rapports > Chiffre d'affaires)                             |
 | Segments                      | **Audience** > **Segments** (Audience > Segments)                                           |
 | Segment Extensions            | **Audience** > **Segment Extensions**                                 |
@@ -172,7 +172,7 @@ Le tableau suivant indique où se trouve chaque page dans la nouvelle navigation
 | Gestion de groupe d’abonnement | **Audience** > **Subscription** > **Subscription Groups** (Audience > Abonnement > Groupes d'abonnement)             |
 | Groupes d’abonnement           | **Audience** > **Subscription** > **Subscription Groups** (Audience > Abonnement > Groupes d'abonnement)             |
 | Balises                          | **Settings** > **Workspace Settings** > **Tag Management** (Paramètres > Paramètres d’espace de travail > Gestion des balises)            |
-| Technology Partners           | **Partner Integrations** > **Technology Partner Integrations** (Intégrations de partenaires > Intégrations de partenaires technologiques)        |
+| Technology Partners (Partenaires technologiques)           | **Partner Integrations** > **Technology Partner Integrations** (Intégrations de partenaires > Intégrations de partenaires technologiques)        |
 | User Import                   | **Audience** > **Import Users** (Audience > Importer des utilisateurs)                                       |
 | User Search                   | **Audience** > **Search Users** (Audience > Rechercher des utilisateurs)                                       |
 | Modèles de webhook             | **Templates** > **Webhook Templates** (Modèles > Modèles de webhook)                                 |

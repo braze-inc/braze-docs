@@ -10,7 +10,9 @@ tool: Canvas
 
 # Experiment Paths 
 
-> Experiment Paths allow you to test multiple Canvas paths against each other and a control group at any point in the user journey. These components will enable you to track path performance to make informed decisions about your Canvas journey.
+> Experiment Paths allow you to test multiple Canvas paths against each other and a control group at any point in the user journey. 
+
+These components will enable you to track path performance to make informed decisions about your Canvas journey.
 
 When you include a Experiment Paths component, it will randomly assign users to different paths (or an optional control group) you create. Portions of the audience will be assigned to different paths according to percentages you select, allowing you to test different messages or paths against each other and determine which is most effective.
 

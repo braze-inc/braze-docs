@@ -12,11 +12,11 @@ local_redirect: #soft-push-prompts
 search_rank: 3
 ---
 
-# Intégration de notifications push
+# Intégration de notifications Push
 
-Une notification push est une alerte qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Vous pouvez recevoir des notifications push même lorsque votre page Web n’est pas actuellement ouverte dans le navigateur de l’utilisateur. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les ré-engager avec votre site.
+> Une notification push est une alerte qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Vous pouvez recevoir des notifications push même lorsque votre page Web n’est pas actuellement ouverte dans le navigateur de l’utilisateur. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les ré-engager avec votre site. Cet article de référence présente comment intégrer les notifications push Braze pour le Web avec le SDK Braze.
 
-Consultez nos [meilleures pratiques concernant les notifications push][8] pour plus de ressources.
+Consultez nos [bonnes pratiques concernant les notifications push][8] pour plus de ressources.
 
 ![][27]
 
@@ -38,7 +38,7 @@ Pour plus d’informations sur les normes de protocole de notification push et l
 Si le nom du fichier de votre service de traitement n’est pas `service-worker.js`, vous devez utiliser l’`serviceWorkerLocation`option d’initialisation [ ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions).
 
 {% alert important %}
-Votre serveur Web doit renvoyer un `Type de contenu : application/javascript` lorsqu’il notifie votre fichier de service de traitement. 
+Votre serveur Web doit renvoyer un `Content-Type: application/javascript` lorsqu’il notifie votre fichier de service de traitement. 
 {% endalert %}
 
 #### Que se passe-t-il si je ne peux pas enregistrer un service de traitement dans le répertoire racine ?
@@ -63,17 +63,23 @@ Si vous souhaitez désinscrire un utilisateur, vous pouvez le faire en appelant 
 Les versions récentes de Safari et de Firefox exigent que vous appeliez cette méthode depuis un gestionnaire d’événements à courte durée d’action (par exemple, à partir d’un gestionnaire de bouton d’action ou d’une demande de notification push douce). Ceci est cohérent avec [les meilleures pratiques de Chrome en matière d’expérience utilisateur](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) pour l’enregistrement de notifications push.
 {% endalert %}
 
-### Étape 3 : Configurer la notification push Safari {#safari}
+### Étape 3 : Configurer les notifications push Safari (facultatif) {#safari}
 
-{% alert info %}
-Safari 16 sur macOS 13 ou supérieur utilise des normes de notification push modernes et cette étape n’est plus nécessaire. Pour utiliser des versions de Safari macOS plus anciennes, cette étape est nécessaire.
+{% alert important %}
+Cette étape n’est plus requise depuis Safari 16 sur macOS 13. N’effectuez cette étape que si vous désirez prendre en charge des versions de Safari macOS plus anciennes.
 {% endalert %}
 
 Si vous souhaitez prendre en charge les notifications push pour Safari sur macOS X, suivez les instructions supplémentaires suivantes :
 
 - Générez un certificat de notification push Safari en suivant les instructions [S’enregistrer auprès d’Apple][3].
-- Dans le tableau de bord de Braze, sur la page **Settings (Paramètres)** (où se trouvent vos clés API), sélectionnez votre application Web. Cliquez sur **Configure Safari Push (Configurer la notification push Safari)** et suivez les instructions en téléchargeant le certificat de notification push que vous venez de générer.
+- Dans le tableau de bord de Braze, sur la page **Paramètres** (où se trouvent vos clés API), sélectionnez votre application Web. Cliquez sur **Configure Safari Push (Configurer la notification push Safari)** et suivez les instructions en téléchargeant le certificat de notification push que vous venez de générer.
 - Lorsque vous appelez `braze.initialize`, fournissez l’option de configuration facultative `safariWebsitePushId` avec l’ID de notification push du site Internet que vous avez utilisé lors de la génération de votre certificat de notification push Safari. Par exemple, `braze.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})`
+
+## Notification push Safari Mobile {#safari-mobile}
+
+Safari 16.4+ sur iOS et iPadOS prend en charge les notifications push Web pour les applications qui ont été [ajoutées à l’écran d’accueil][add-to-homescreen] et qui disposent d’un fichier de [manifeste d’application Web][manifest-file]. Une fois que vous avez terminé les étapes d’intégration des notifications push Web, vous pouvez également prendre en charge les notifications push mobiles pour Safari. 
+
+Pour prendre en charge les notifications push Web mobiles pour Safari, suivez notre [guide ici][safari-mobile-push-guide].
 
 ## Invite de notification push douce
 
@@ -98,7 +104,7 @@ Un site est considéré comme sécurisé s’il correspond à l’un des modèle
 - (file, *, —)
 - (chrome-extension, *, —)
 
-Cette exigence de sécurité dans la spécification des normes ouvertes sur laquelle la notification push Braze pour le Web est construite empêche les attaques man-in-the-middle.
+Cette exigence de sécurité dans la spécification des normes ouvertes sur laquelle la notification push Braze pour le Web est construite empêche les attaques de l'homme du milieu.
 
 ### Que se passe-t-il si un site sécurisé n’est pas disponible ?
 
@@ -127,3 +133,6 @@ Le fichier du service de traitement de Braze appellera automatiquement `skipWait
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png
 [28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain
 [push-primer]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/
+[add-to-homescreen]: https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc
+[manifest-file]: https://developer.mozilla.org/en-US/docs/Web/Manifest
+[safari-mobile-push-guide]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/

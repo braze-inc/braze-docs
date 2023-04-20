@@ -2,7 +2,7 @@
 page_order: 1
 nav_title: Customization
 article_title: Web In-App Message Customization
-layout: featured
+layout: dev_guide
 
 platform: Web
 

@@ -5,7 +5,7 @@ page_order: 1
 page_type: reference
 description: "Cet article de référence présente les geofences et explique comment créer et configurer les événements de geofence."
 tool: 
-  - Position
+  - Location
 search_rank: 1
 ---
 # Geofences
@@ -95,7 +95,7 @@ Une fois les geofences configurées, vous pouvez les utiliser pour améliorer et
 
 ### Déclencheurs
 
-Pour utiliser les données de geofence avec des déclencheurs de campagne ou de Canvas, choisissez **Livraison par événement** comme méthode de livraison. Ensuite, ajoutez une action de déclenchement de type `Déclencher une geofence`. Pour finir, choisissez l’ensemble de geofences et les types d’événements de transition de geofence pour votre message. Vous pouvez également faire progresser les utilisateurs dans un Canvas à l’aide des événements de geofence.
+Pour utiliser les données de geofence avec des déclencheurs de campagne ou de Canvas, choisissez **Livraison par événement** comme méthode de livraison. Ensuite, ajoutez une action de déclenchement `Trigger a Geofence`. Pour finir, choisissez l’ensemble de geofences et les types d’événements de transition de geofence pour votre message. Vous pouvez également faire progresser les utilisateurs dans un Canvas à l’aide des événements de geofence.
 
 ![][2]
 
@@ -110,7 +110,7 @@ Pour personnaliser votre message à l’aide des données de geofence, vous pouv
 
 ## Foire aux questions
 
-Consultez nos [FAQ sur les geofences][3] pour obtenir des réponses aux questions fréquemment posées sur les geofences.
+Consultez notre [FAQ sur les geofences][3] pour obtenir des réponses aux questions fréquemment posées sur les geofences.
 
 
 [1]: {% image_buster /assets/img_archive/locations_main_screen.png %}

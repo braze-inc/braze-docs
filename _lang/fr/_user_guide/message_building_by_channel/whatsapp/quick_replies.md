@@ -5,20 +5,17 @@ description: "Cet article de référence explique comment implémenter des commu
 page_type: partner
 search_tag: Partenaire
 page_order: 6
-hidden: true  
+channel:
+  - WhatsApp
 ---
 
-# Communication bidirectionnelle dans Canvas à l’aide des réponses rapides
+# Réponses rapides
 
 ![L’écran du téléphone affichant un bouton d’appel à l’action qui renverra le texte du bouton cliqué.][1]{: style="float:right;max-width:25%;margin-left:15px;border: 0;"}
 
-Les appels à l’action (CTA) des réponses rapides de WhatsApp sont un excellent moyen d’encourager l’engagement des utilisateurs avec vos communications WhatsApp. Braze peut traiter ces messages et configurer des actions en fonction de la sélection de l’utilisateur. De plus, ces CTA peuvent réduire les erreurs de va-et-vient en fournissant un bouton facilement cliquable, éliminant ainsi la nécessité pour vos utilisateurs de saisir des réponses.
+> Les appels à l’action (CTA) des réponses rapides de WhatsApp sont un excellent moyen d’encourager l’engagement des utilisateurs avec vos communications WhatsApp. Braze peut traiter ces messages et configurer des actions en fonction de la sélection de l’utilisateur. De plus, ces CTA peuvent réduire les erreurs de va-et-vient en fournissant un bouton facilement cliquable, éliminant ainsi la nécessité pour vos utilisateurs de saisir des réponses.
 
 Les boutons CTA des réponses rapides arrivent sous forme de messages entrants vers le système Braze, ce qui signifie que vous utiliserez l’étape d’action « Message WhatsApp entrant » lors de la création et du filtrage des réponses de vos utilisateurs. 
-
-{% alert important %}
-La prise en charge du canal WhatsApp est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
 
 ## Qu’est-ce qu’une réponse rapide ?
 
@@ -60,7 +57,7 @@ Depuis ce point, continuez à construire le Canvas comme vous le feriez habituel
 
 ## Réponses
 
-Vous désirerez probablement un message de réponse pour chaque réponse. Nous vous recommandons d’avoir une option « fourre-tout » pour les réponses qui ne sont pas dans les limites des réponses rapides (c.-à-d. pour les clients qui répondent par un message général plutôt qu’une invite prédéterminée). Par exemple, « Nous sommes désolés, nous n’avons pas reconnu votre réponse. Pour les problèmes d’assistance, veuillez envoyer un message à <URL of Support WhatsApp thread> »."
+Vous désirerez probablement un message de réponse pour chaque réponse. Nous vous recommandons d’avoir une option « fourre-tout » pour les réponses qui ne sont pas dans les limites des réponses rapides (c.-à-d. pour les clients qui répondent par un message général plutôt qu’une invite prédéterminée). Par exemple, « Nous sommes désolés, nous n’avons pas reconnu votre réponse. Pour les problèmes d’assistance, veuillez envoyer un message à <support channel> ».
 
 ![Un Canvas créé montrant les réponses pour chaque bouton d’appel à l’action.][8]
 

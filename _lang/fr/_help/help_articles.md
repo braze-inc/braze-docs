@@ -7,7 +7,7 @@ guide_top_header: "Articles d’aide"
 guide_top_text: "Nous avons de nombreux articles qui peuvent vous aider à résoudre les problèmes et à révéler les dépendances dans vos campagnes. Si vous avez une suggestion pour un nouvel article d’assistance, laissez un commentaire au bas de cette page ou sur un autre article.  Vous pouvez également écrire un article vous-même en allant sur le <a href='https://github.com/braze-inc/braze-docs/wiki'>Référentiel des documents Braze</a> sur GitHub. <br> <br>  Choisissez parmi les sujets populaires suivants ou consultez d’autres articles répertoriés dans le panneau de navigation sur votre gauche."
 
 page_type: landing
-description: "Cette page d’accueil contient des articles qui peuvent vous aider à résoudre les problèmes et à révéler les dépendances lorsque vous utilisez Braze."
+description: "Cette section contient des articles qui peuvent vous aider à résoudre les problèmes et à révéler les dépendances lorsque vous utilisez Braze."
 
 guide_featured_title: "Sujets"
 guide_featured_list:

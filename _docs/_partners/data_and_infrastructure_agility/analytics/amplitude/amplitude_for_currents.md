@@ -32,7 +32,7 @@ Braze will only send event data for users who have their `external_user_id` set 
 amplitude.setDeviceId(Apppboy.getInstance(context).getDeviceId();)
 ```
 
-You can export two types of events to Amplitude: [Message Engagement Events](#message-engagement-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#customer-berhavior-events), including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all custom events are prefixed with `[Appboy] [Custom Event]`. Custom event and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
+You can export two types of events to Amplitude: [Message Engagement Events](#supported-currents-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#supported-currents-events), including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all custom events are prefixed with `[Appboy] [Custom Event]`. Custom event and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
 All cohorts named and imported into Braze will be prefixed with `[Amplitude]` and suffixed with their `cohort_id`. This means that a cohort named "TEST_COHORT" with the `cohort_id` "abcd1234" will be titled `[Amplitude] TEST_COHORT: abcd1234` in Braze filters.
 
@@ -85,12 +85,12 @@ Braze supports exporting the following data listed in the Currents [user behavio
 - Subscription Group (state change): `users.behaviors.subscriptiongroup.StateChange`
   
 ### Campaigns
-<!--- Abort// not live yet-->
+- Abort: `users_campaigns_abort`
 - Conversion: `users.campaigns.Conversion`
 - EnrollinControl: `users.campaigns.EnrollInControl`
   
 ### Canvas
-<!--- Abort// not live yet-->
+- Abort: `users_canvas_abort`
 - Conversion: `users.canvas.Conversion`
 - Entry: `users.canvas.Entry`
 - Exit (matched audience, performed event)

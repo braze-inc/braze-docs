@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : mettre à jour les messages de campagnes planifiés déclenchés par API"
-article_title: "POST : mettre à jour les messages de campagnes planifiés déclenchés par API"
+nav_title: "POST : Mettre à jour des campagnes planifiées déclenchées par API"
+article_title: "POST : Mettre à jour des campagnes planifiées déclenchées par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -13,7 +13,9 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /campaigns/trigger/schedule/update
 {% endapimethod %}
 
-Utilisez cet endpoint pour mettre à jour des campagnes planifiées déclenchées par API et créées dans le tableau de bord, ce qui vous permet de décider quelle action doit déclencher le message à envoyer. Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
+> Utilisez cet endpoint pour mettre à jour des campagnes planifiées déclenchées par API et créées dans le tableau de bord, ce qui vous permet de décider quelle action doit déclencher le message à envoyer.
+
+Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
 
 Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un ID de campagne créé lorsque vous élaborez une [campagne déclenchée par API]({{site.baseurl}}/api/api_campaigns/).
 

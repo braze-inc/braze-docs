@@ -14,18 +14,18 @@ description: "Cet article de référence décrit les propriétés capturées par
 
 Cet article décrit les différentes propriétés capturées lors de l’utilisation du SDK Braze pour iOS au niveau du périphérique.
 
-## Propriétés du périphérique
+## Propriétés de l’appareil
 
 Par défaut, Braze collecte les [propriétés suivantes au niveau du périphérique](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181) pour permettre la personnalisation des messages en fonction du périphérique, de la langue et du fuseau horaire :
 
-* Résolution du périphérique
-* Opérateur du périphérique
-* Emplacement du périphérique
-* Modèle du périphérique
-* Version du système d’exploitation
-* IDFV
+* Résolution de l’appareil
+* Opérateur mobile
+* Emplacement de l’appareil
+* Modèle de l’appareil
+* Version du système d’exploitation de l’appareil
+* IDFV (facultatif avec le [SDK iOS v5.7.0 et ultérieur](https://github.com/braze-inc/braze-swift-sdk))
 * Notifications push activées
-* Fuseau horaire du périphérique
+* Fuseau horaire de l’appareil
 * Statut d’autorisation des notifications push
 * Suivi des campagnes publicitaires activé
 

@@ -19,13 +19,15 @@ description: "Cet article présente en détail l’endpoint Mettre à jour l’a
 Les activités en direct sont actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer. 
 {% endalert %}
 
-Utilisez cet endpoint pour mettre à jour et mettre fin aux [Activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) affichées par votre application iOS.
+Utilisez cet endpoint pour mettre à jour et mettre fin aux [Activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) affichées par votre application iOS. Cet endpoint nécessite une configuration supplémentaire.
 
-Avant d’utiliser cet endpoint, vous devez enregistrer une activité avec le SDK Braze Swift en utilisant la méthode [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)). Les paramètres de requêtes nécessaires seront définis au cours de cette étape. Reportez-vous à [Activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) pour plus d’informations sur l’inscription.
+Avant d’utiliser cet endpoint, vous devez enregistrer une activité avec le SDK Swift de Braze en utilisant la méthode [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)). Les paramètres de requêtes nécessaires seront définis au cours de cette étape. Reportez-vous à [Activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) pour plus d’informations sur l’inscription.
+
+Une fois que vous avez enregistré votre activité, transmettez une charge utile JSON avec des mises à jour du service de notifications push Apple (APN) via cet endpoint. Consultez la documentation d’Apple sur la [mise à jour de votre activité en direct avec des charges utiles de notification push](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) pour plus d’informations.
 
 ## Limite de débit
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 
@@ -51,7 +53,7 @@ Avant d’utiliser cet endpoint, vous devez enregistrer une activité avec le SD
 | `end_activity` | Facultatif | Booléen | Si `true`, cette requête met fin à l’activité en direct. |
 | `dismissal_date` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre définit le moment de suppression de l’activité en direct de l’interface utilisateur. Si ce moment est dépassé, l’activité en direct sera immédiatement supprimée. |
 | `stale_date` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre indique au système quand le contenu de l’activité en direct devient obsolète dans l’interface utilisateur. |
-| `notification` | Facultatif | Objet | Inclure un objet [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) pour définir une notification push. Le comportement de cette notification push dépend du fait que l’utilisateur soit actif ou utilise un appareil proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> est inclus et que l’utilisateur est actif sur son iPhone lorsque la mise à jour est livrée, l’interface utilisateur de l’activité en direct mise à jour glissera vers le bas et s’affichera comme une notification push.</li><li>Si un <code>notification</code> est inclus et que l’utilisateur n’est pas actif sur son iPhone, son écran s’allume pour afficher l’interface utilisateur de l’activité en direct mise à jour sur son écran de verrouillage.</li><li>Le <code>notification alert</code> ne s’affichera pas comme une notification push standard. De plus, si un utilisateur dispose d’un appareil proxy, comme une Apple Watch, le <code>alert</code> s’affichera ici.</li></ul>{:/} |
+| `notification` | Facultatif | Objet | Inclure un objet [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) pour définir une notification push. Le comportement de cette notification push dépend du fait que l’utilisateur soit actif ou utilise un appareil proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> est inclus et que l’utilisateur est actif sur son iPhone lorsque la mise à jour est livrée, l’interface utilisateur de l’activité en direct mise à jour glissera vers le bas et s’affichera comme une notification push.</li><li>Si un <code>notification</code> est inclus et que l’utilisateur n’est pas actif sur son iPhone, son écran s’allume pour afficher l’interface utilisateur de l’activité en direct mise à jour sur son écran de verrouillage.</li><li>Le paramètre <code>notification alert</code> ne s’affichera pas comme une notification push standard. De plus, si un utilisateur dispose d’un appareil proxy, comme une Apple Watch, le <code>alert</code> s’affichera ici.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande

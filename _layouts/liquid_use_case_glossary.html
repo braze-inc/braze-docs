@@ -237,8 +237,12 @@ $(document).ready(function() {
 
     <div id="api-main">
     <div id="content_start"></div>
+    {%- unless hide_breadcrumb -%}
+    <div id="breadcrumb">
+    </div>
+    {%- endunless -%}
 
-    <h1> Liquid Use Case Library </h1>
+    <h1> Liquid use case library </h1>
     <p class="api_text">Looking for inspiration to craft the perfect personalization using Liquid? Take a look through our collection of Liquid use cases, outlined by category below. <br><br>Use the search bar or the checkboxes below to find the use cases that fit your need. </p>
 
     <div id="api_filter">

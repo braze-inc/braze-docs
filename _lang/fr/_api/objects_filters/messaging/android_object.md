@@ -8,15 +8,13 @@ platform: Android
 description: "Cet article de référence répertorie et explique les différents objets Android utilisés chez Braze."
 
 ---
-# Spécification d’objet Android
+# Objet Android
 
-L’objet `android_push` vous permet de définir ou de demander des informations relatives au contenu de notification push Android et d’alerte push Android pour les alertes via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L’objet `android_push` vous permet de définir ou de demander des informations relatives au contenu de notification push Android et d’alerte push Android pour les alertes via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
 ##  Objet Notification push Android
 
 Vous devez inclure un objet Notification push Android dans `messages` si vous voulez que les utilisateurs ciblés reçoivent une notification push sur leurs appareils Android. Le nombre total d’octets dans votre chaîne de caractères `alert` et objet `extra` ne doit pas dépasser 4 000. L’API de messagerie renvoie une erreur si vous dépassez la taille de message autorisée par Google.
-
-### Corps
 
 ```json
 {

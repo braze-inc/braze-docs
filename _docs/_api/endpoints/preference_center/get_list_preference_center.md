@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "This article outlines details about the list preference centers Braze endpoint."
+description: "This article outlines details about the List preference centers Braze endpoint."
 
 ---
 {% api %}
@@ -14,11 +14,15 @@ description: "This article outlines details about the list preference centers Br
 /preference_center/v1/list
 {% endapimethod %}
 
-Use this endpoint to list your available preference centers.
+> Use this endpoint to list your available preference centers.
 
 ## Rate limit
 
 This endpoint has a rate limit of 1,000 requests per minute, per app group.
+
+## Path and request parameters
+
+There are no path or request parameters for this endpoint.
 
 ## Example request
 
@@ -28,6 +32,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 ```
 
 ## Response
+
 ```json
 {
   "preference_centers": [

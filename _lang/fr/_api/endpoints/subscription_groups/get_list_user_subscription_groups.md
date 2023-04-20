@@ -9,12 +9,12 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 
 ---
 {% api %}
-# Obtenir les groupes d’abonnement des utilisateurs
+# Répertorier les groupes d’abonnement de l’utilisateur
 {% apimethod get %}
 /subscription/user/status
 {% endapimethod %}
 
-Utilisez cet endpoint pour répertorier et obtenir les groupes d’abonnement d’un utilisateur donné.
+> Utilisez cet endpoint pour répertorier et obtenir les groupes d’abonnement d’un utilisateur donné.
 
 Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d’abonnement aux e-mails** :
 

@@ -4,13 +4,13 @@ article_title: Services E-mail
 page_order: 9
 page_type: reference
 description: "Le présent article couvre les types de support proposés par Braze pour vos campagnes d’e-mail."
-channel: E-mail
+channel: email
 
 ---
 
 # Services E-mail {#email-services}
 
-Si vous avez besoin d’une assistance supplémentaire pour votre programme de communication E-mail, Braze propose des services ponctuels ou récurrents moyennant un supplément.  Contactez votre gestionnaire de compte Braze pour plus d’informations.
+> Si vous avez besoin d’une assistance supplémentaire pour votre programme de communication E-mail, Braze propose des services ponctuels ou récurrents moyennant un supplément.  Contactez votre gestionnaire de compte Braze pour plus d’informations.
 
 ## Services de délivrabilité Premium {#premium-deliverability-services}
 

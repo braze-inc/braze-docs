@@ -5,20 +5,25 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "Cet article précise des détails concernant l’endpoint Braze Mettre à jour un centre de préférences."
+description: "Cet article précise des détails concernant l’endpoint de Braze Mettre à jour un centre de préférences."
 
 ---
 {% api %}
 # Mettre à jour un centre de préférences
 {% apimethod put %}
-/preference_center/v1/{preferenceCenterExternalId}
+/preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-Utilisez cet endpoint pour mettre à jour un centre de préférences.
+> Utilisez cet endpoint pour mettre à jour un centre de préférences.
 
 ## Limite de débit
 
 Cet endpoint a une limitation du débit de 10 demandes par minute, par groupe d’apps.
+
+## Paramètres de chemin
+| Paramètre | Requis | Type de données | Description |
+| --------- | ---------| --------- | ----------- |
+|`preferenceCenterExternalID`| Requis | String | L’ID de votre centre de préférences. |
 
 ## Corps de la demande
 
@@ -51,6 +56,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
+
 {% raw %}
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/v1/{preferenceCenterExternalId}' \

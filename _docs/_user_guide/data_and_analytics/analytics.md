@@ -15,11 +15,14 @@ guide_featured_list:
   - name: Overview Data
     link: /docs/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
     fa_icon: fas fa-mobile
-  - name: Email Performance Dashboard
+  - name: Channel Performance Dashboard
     link: /docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/
     fa_icon: fas fa-chart-line
   - name: Conversions Dashboard
     link: /docs/user_guide/data_and_analytics/analytics/conversions_dashboard/
     fa_icon: fas fa-chart-simple
+  - name: Deliverability Center
+    link: /docs/user_guide/data_and_analytics/analytics/deliverability_center/
+    fa_icon: fas fa-location-arrow
 ---
 <br><br>

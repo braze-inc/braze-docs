@@ -8,7 +8,7 @@ description: "Cet article de référence décrit la façon et les bonnes pratiqu
 ---
 # User Import
 
-Braze propose différentes manières d’importer les données des utilisateurs dans la plate-forme : SDK, API, ingestion de données Cloud, intégrations avec des partenaires technologiques et fichiers CSV.
+> Braze propose différentes manières d’importer les données des utilisateurs dans la plate-forme : SDK, API, ingestion de données Cloud, intégrations avec des partenaires technologiques et fichiers CSV.
 
 {% alert important %}
 Braze ne « nettoie » pas les données HTML pendant l’ingestion. Cela signifie que les balises de script doivent être supprimées pour toutes les données d’importation destinées à la personnalisation Web. Allez sur la section [Suppression de données HTML](#html-data-stripping) pour en savoir plus.
@@ -112,7 +112,7 @@ Définir `language` ou `country` sur un utilisateur via une importation CSV ou u
 | `last_name` | String | Le nom de famille de vos utilisateurs comme ils l’ont indiqué (par ex., `Doe`). | Non |
 | `email` | String | L’adresse e-mail de vos utilisateurs comme ils l’ont indiqué (par ex., `jane.doe@braze.com`). | Non |
 | `country` | String | Les codes pays doivent être transmis à Braze selon la norme ISO-3166-1 alpha-2 (par ex., `GB`). | Non |
-| `dob` | String | Doit être transmis au format « AAAA-MM-JJ » (par ex., `1980-12-21`). Cela importe la date de naissance de vos utilisateurs et vous permet de cibler les utilisateurs dont l’anniversaire est « aujourd’hui ». | Non |
+| `dob` | String | Doit être transmis au format « YYYY-MM-DD » (par ex., `1980-12-21`). Cela importe la date de naissance de vos utilisateurs et vous permet de cibler les utilisateurs dont l’anniversaire est « aujourd’hui ». | Non |
 | `gender` | String | « H », « F », « A » (autre), « S » (sans objet), « P » (préfère ne pas dire) ou nul (inconnu). | Non |
 | `home_city` | String | La ville de vos utilisateurs telle qu’ils l’ont indiqué (par ex., `London`). | Non |
 | `language` | String | La langue doit être transmise à Braze selon la norme ISO-639-1 (par ex., `en`). <br>Consultez notre [liste des langues acceptées][1]. | Non |
@@ -149,7 +149,7 @@ Les types de données suivants sont acceptés dans User Import :
 Les tableaux, les jetons de notification push et les types de données d’événements personnalisés ne sont pas pris en charge dans User Import (Importation d’utilisateurs).
 En particulier pour les tableaux, les virgules dans votre fichier CSV seront interprétées comme un séparateur de colonnes, de sorte que les virgules dans les valeurs entraîneront des erreurs d’analyse du fichier.
 
-Pour télécharger ces types de valeurs, utilisez l’[endpoint Suivi Utilisateur]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint).
+Pour charger ces types de valeurs, utilisez l’[endpoint Suivi Utilisateur]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint) ou l’[ingestion de données cloud][14].
 {% endalert %}
 
 ### Mise à jour du statut du groupe d’abonnement

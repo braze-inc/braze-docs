@@ -4,7 +4,7 @@ article_title: Parcours d’actions
 alias: /action_paths/
 page_order: 0.1
 page_type: reference
-description: "Cet article de référence aborde les parcours d’action et la façon de les utiliser dans votre Canvas."
+description: "Cet article de référence explique comment utiliser les parcours d’action, un composant qui vous permet de trier les utilisateurs en fonction de leurs actions."
 tool: Canvas
 ---
 
@@ -12,14 +12,15 @@ tool: Canvas
 
 ![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Les parcours d’action dans Canvas vous permettent de trier vos utilisateurs en fonction de leurs actions. Les parcours d’action vous permettent d’effectuer les tâches suivantes : 
- 
-* Personnaliser des parcours utilisateur en fonction d’une action spécifique, dont des événements d’engagement d’utilisateur et des événements personnalisés.
-* Conserver des utilisateurs pendant une certaine durée pour prioriser leur parcours suivant en fonction de leurs actions au cours de cette période d’évaluation.
+> Les parcours d’action dans Canvas vous permettent de trier vos utilisateurs en fonction de leurs actions. 
+
+Les parcours d’action vous permettent d’effectuer les tâches suivantes : 
+* Personnaliser des chemins d’utilisateur en fonction d’une action spécifique, dont des événements d’engagement d’utilisateur et des événements personnalisés
+* Conserver des utilisateurs pendant une certaine durée pour prioriser leur parcours suivant en fonction de leurs actions au cours de cette période d’évaluation
 
 ## Créer des parcours d’action
 
-Pour créer un parcours d’actions, ajoutez un composant à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant depuis la barre latérale ou cliquez sur le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Action Paths (Parcours d’actions)**. Pour l’éditeur Canvas d’origine, utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail et sélectionnez **Action Paths (Parcours d’actions)**.
+Pour créer un parcours d’actions, ajoutez un composant à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant depuis la barre latérale ou cliquez sur le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Action Paths (Parcours d’actions)**. 
 
 ### Paramètres d’action
 
@@ -29,9 +30,13 @@ Dans les **Paramètres d’action**, vous pouvez également activer l’ordre de
 
 ![][4]
 
-Par défaut, le **Classement** est désactivé. Lorsqu’un utilisateur accède au parcours d’action et effectue l’événement déclencheur annexe à tout groupe d’actions, il passe automatiquement au groupe d’actions pertinent. Si un utilisateur n’effectue pas d’élément déclencheur, il passe au groupe **Tout le monde** à la fin de la période d’évaluation.
+Par défaut, le **Classement** est désactivé. Lorsqu’un utilisateur accède au parcours d’action et effectue l’événement déclencheur annexe à tout groupe d’actions, il passe automatiquement au groupe d’actions pertinent. Si un utilisateur n’effectue pas d’élément déclencheur, il passe au groupe **Tous les autres** à la fin de la période d’évaluation.
 
-Lorsque l’option **Utilisateurs avancés en fonction de l’ordre de classement** est activée, cela signifie que le **Classement** est activé. Tous les utilisateurs seront donc conservés jusqu’à la fin de la fenêtre d’évaluation. À la fin de la période d’évaluation, les utilisateurs passeront au groupe d’actions de priorité absolue auquel ils sont éligibles à la fin de la fenêtre d’évaluation. Les utilisateurs qui n’effectuent aucune des actions pendant la fenêtre d’évaluation passeront au groupe par défaut **Tout le monde**.
+Lorsque l’option **Utilisateurs avancés en fonction de l’ordre de classement** est activée, cela signifie que le **Classement** est activé. Tous les utilisateurs seront donc conservés jusqu’à la fin de la fenêtre d’évaluation. À la fin de la période d’évaluation, les utilisateurs passeront au groupe d’actions de priorité absolue auquel ils sont éligibles à la fin de la fenêtre d’évaluation. Les utilisateurs qui n’effectuent aucune des actions pendant la fenêtre d’évaluation passeront au groupe par défaut **Tous les autres**.
+
+#### Messages in-app
+
+Notez que lorsque le déclencheur du groupe d’actions est le démarrage d’une session et que l’étape suivante est un message in-app, l’utilisateur devra effectuer deux démarrages de session pour recevoir le message in-app. La première session affecte l’utilisateur au groupe d’actions dans le parcours d’action, et la deuxième session déclenche le message in-app.
 
 #### Exemple de statut de classement
 
@@ -55,7 +60,8 @@ Si des utilisateurs accèdent plusieurs fois à un parcours d’action et dispos
 
 | Statut de classement | Comportement de parcours d’action |
 |---|--------------|
-| **Désactivé** | Lorsqu’une action pertinente est effectuée, Braze va dupliquer les entrées et faire avancer immédiatement l’entrée la plus ancienne vers le groupe d’action pertinent. <br><br/> Lorsqu’une action pertinente n’est pas effectuée, toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
+| **Désactivé** | Lorsqu’une action pertinente est effectuée, Braze va dupliquer les entrées et faire avancer immédiatement l’entrée la plus ancienne vers le groupe d’action pertinent. <br><br/>
+ Lorsqu’une action pertinente n’est pas effectuée, toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
 | **Activé** | Toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
 {: .reset-td-br-1 .reset-td-br-2}
 

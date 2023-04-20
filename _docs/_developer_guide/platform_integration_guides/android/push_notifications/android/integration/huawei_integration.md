@@ -9,11 +9,9 @@ channel:
 
 ---
 
-# Huawei integration
+# Huawei push integration
 
-Newer phones manufactured by [Huawei][1] come equipped with Huawei Mobile Services (HMS) - a service used to deliver push instead of Google's Firebase Cloud Messaging (FCM).
-
-This guide will show you how to set up your Huawei Android integration to send push through Braze and take advantage of all existing Braze features, including segmentation, analytics, Canvas, and more!
+> Newer phones manufactured by [Huawei][1] come equipped with Huawei Mobile Services (HMS) - a service used to deliver push instead of Google's Firebase Cloud Messaging (FCM).<br><br>This guide will show you how to set up your Huawei Android integration to send push through Braze and take advantage of all existing Braze features, including segmentation, analytics, Canvas, and more!
 
 ## Step 1: Register for a Huawei developer account
 

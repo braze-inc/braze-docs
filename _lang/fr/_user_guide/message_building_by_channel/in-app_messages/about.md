@@ -11,9 +11,7 @@ search_rank: 4.9
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des messages In-App
 
-> Le présent article fournit une overview des messages In-App, dont les types de messages disponibles et certains cas d’utilisation potentiels.
-
-Les messages In-App sont utiles pour beaucoup de choses. De contenu riche, ils supposent d’une urgence moindre : l’utilisateur ne les reçoit pas hors de l’application de l’utilisateur et ils n’apparaissent pas sur son écran d’accueil. Les messages In-App se trouvent dans votre application (d’où leur nom), incluent un contexte et ne sont presque jamais indésirables ! Ils sont toujours livrés lorsque l’utilisateur est actif dans votre application.
+> Les messages In-App sont utiles pour beaucoup de choses. De contenu riche, ils supposent d’une urgence moindre : l’utilisateur ne les reçoit pas hors de l’application de l’utilisateur et ils n’apparaissent pas sur son écran d’accueil. Les messages In-App se trouvent dans votre application (d’où leur nom), incluent un contexte et ne sont presque jamais indésirables ! Ils sont toujours livrés lorsque l’utilisateur est actif dans votre application.
 
 Pour voir des exemples de messages In-App, consultez nos [études de cas][1].
 
@@ -60,9 +58,9 @@ Les modaux apparaissent au centre de l’écran de l’appareil avec une incrust
 <br>
 
 {% endtab %}
-{% tab Full-Screen %}
+{% tab Fullscreen %}
 
-Comme leur nom l’indique, les messages plein écran occupent tout l’écran de l’appareil. Ce type de message est idéal lorsque vous avez vraiment besoin de toute l’attention de votre utilisateur, dans le cas par exemple de mises à jour obligatoires de l’application.
+Comme leur nom l’indique, les messages plein écran occupent tout l’écran de l’appareil Ce type de message est idéal lorsque vous avez vraiment besoin de toute l’attention de votre utilisateur, dans le cas par exemple de mises à jour obligatoires de l’application.
 
 ![Message In-App plein écran sur un écran d’application. Le message plein écran comprend une grande image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 

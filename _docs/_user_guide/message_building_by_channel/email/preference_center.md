@@ -2,7 +2,7 @@
 nav_title: Preference Center
 article_title: Preference Center
 page_order: 5
-layout: featured
+layout: dev_guide
 guide_top_header: "Preference Center"
 guide_top_text: "The email preference center is an easy way to manage which users receive certain groups of newsletters. Check out these articles to learn about how to create and manage your prefence center using the dashboard or through the API."
 description: "This landing page includes articles on the BRaze email preference center and how to use the preference center API."

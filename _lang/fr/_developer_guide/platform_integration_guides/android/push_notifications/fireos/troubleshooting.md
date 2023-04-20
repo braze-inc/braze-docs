@@ -8,7 +8,10 @@ description: "Cet article de référence fournit des scénarios de résolution d
 channel: push
 
 ---
+
 # Résolution des problèmes
+
+> Cet article fournit plusieurs scénarios de résolution des problèmes concernant FireOS.
 
 ## Utiliser les journaux d’erreur de notification push
 

@@ -2,7 +2,7 @@
 nav_title: Groupes d’abonnement
 article_title: Endpoint des groupes d’abonnement
 page_order: 7
-layout: featured
+layout: dev_guide
 
 #Required
 description: "Cette page d’accueil explique et répertorie les endpoints des groupes d’abonnement Braze pour les e-mails et les SMS."

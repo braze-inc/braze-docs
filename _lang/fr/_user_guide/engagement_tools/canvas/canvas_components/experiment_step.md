@@ -10,7 +10,9 @@ tool: Canvas
 
 # Chemins d’expérience 
 
-> Les chemins d’expérience vous permettent de tester plusieurs chemins Canvas les uns par rapport aux autres et un groupe de contrôle, à tout moment dans le parcours de l’utilisateur. Ces composants vous permettront de suivre la performance du chemin pour prendre des décisions éclairées concernant votre parcours Canvas.
+> Les chemins d’expérience vous permettent de tester plusieurs chemins Canvas les uns par rapport aux autres et un groupe de contrôle, à tout moment dans le parcours de l’utilisateur. 
+
+Ces composants vous permettront de suivre la performance du chemin pour prendre des décisions éclairées concernant votre parcours Canvas.
 
 Lorsque vous ajoutez un composant de chemin, il affectera au hasard des utilisateurs à différents chemins (ou un groupe de contrôle facultatif) que vous créez. Des parties de cette audience seront affectées à différents chemins selon les pourcentages que vous sélectionnez, vous permettant de tester différents messages ou chemins les uns par rapport aux autres et de déterminer le plus efficace.
 

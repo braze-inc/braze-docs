@@ -11,7 +11,9 @@ tool: Canvas
 
 # Parcours d’audience 
 
-> Les parcours d’audience Canvas vous permettent de filtrer et de segmenter les utilisateurs de manière intuitive à une grande échelle avec des regroupements d’utilisateurs en fonction de la priorité. Ce composant de Canvas supplante la nécessité de créer des étapes complètes superflues basées sur l’audience, ce qui vous permet de regrouper 8 composants complets en un seul ! Ce nouveau composant de parcours d’audience vous permettra de simplifier le ciblage de l’utilisateur en supprimant de vos Canvas encombrement et complexité inutiles. 
+> Les parcours d’audience Canvas vous permettent de filtrer et de segmenter les utilisateurs de manière intuitive à une grande échelle avec des regroupements d’utilisateurs en fonction de la priorité. 
+
+Ce composant de Canvas supplante la nécessité de créer des étapes complètes superflues basées sur l’audience, ce qui vous permet de regrouper 8 composants complets en un seul ! Ce nouveau composant de parcours d’audience vous permettra de simplifier le ciblage de l’utilisateur en supprimant de vos Canvas encombrement et complexité inutiles. 
 
 ![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 

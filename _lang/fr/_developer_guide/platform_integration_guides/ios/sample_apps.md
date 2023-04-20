@@ -3,7 +3,7 @@ nav_title: Exemples d’applications
 article_title: Exemples d’applications pour iOS
 platform: iOS
 page_order: 9
-description: "Cet article de référence couvre les exemples d’applications iOS."
+description: "Cet article couvre les exemples d’applications iOS."
 
 ---
 

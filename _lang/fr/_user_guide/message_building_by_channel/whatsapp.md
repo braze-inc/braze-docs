@@ -6,10 +6,9 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "La messagerie WhatsApp est une plateforme de messagerie pair-à-pair populaire utilisée dans le monde entier et qui propose une messagerie basée sur les conversations pour les entreprises. Le canal de communication WhatsApp propose un moyen direct d’atteindre vos utilisateurs et vos clients sur la plateforme WhatsApp."
-description: "La messagerie WhatsApp est une plateforme de messagerie pair-à-pair populaire utilisée dans le monde entier et qui propose une messagerie basée sur les conversations pour les entreprises. Le canal de communication WhatsApp propose un moyen direct d’atteindre vos utilisateurs et vos clients sur la plateforme WhatsApp."
+guide_top_text: "La messagerie WhatsApp est une plateforme de messagerie pair-à-pair populaire utilisée dans le monde entier et qui propose une messagerie basée sur les conversations pour les entreprises. Le canal de communication WhatsApp propose un moyen direct d’atteindre vos utilisateurs et vos clients sur la plateforme WhatsApp. <br><br>**L’accès WhatsApp n’est disponible que dans certains packages Braze. Pour démarrer, contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients.**"
+description: "Cette page de destination contient tout ce qui concerne WhatsApp, y compris comment créer une campagne WhatsApp, les inscriptions et les désinscriptions, les réponses rapides, la création de rapports, etc."
 
-hidden: true
 alias: /whatsapp/
 
 guide_featured_title: "WhatsApp"
@@ -20,6 +19,9 @@ guide_featured_list:
 - name: "Groupe d’abonnement WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
   fa_icon: fas fa-table
+- name: "Numéro de téléphone de l’utilisateur"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/p
+  fa_icon: fa-solid fa-phone
 - name: "Créer une campagne WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/create/
   fa_icon: fas fa-mobile-alt
@@ -37,8 +39,4 @@ guide_featured_list:
   fa_icon: fas fa-question
 
 ---
-
-{% alert important %}
-La prise en charge du canal WhatsApp est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
+<br><br>

@@ -18,7 +18,7 @@ The following identifiers can be used to access your template, Canvas, campaign,
 
 ## The app identifier
 
-The App Identifier or `app_id` is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your Android app, and an `app_id` for your web integration. At Braze, you might find that you have multiple apps for the same platform across the various platform types that Braze supports.
+The app identifier or `app_id` is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your Android app, and an `app_id` for your web integration. At Braze, you might find that you have multiple apps for the same platform across the various platform types that Braze supports.
 
 #### Where can I find it?
 
@@ -63,7 +63,7 @@ Templates are great for if your company contracts out your HTML designs for camp
 You can find your template ID one of two ways:
 
 1. In the dashboard, open up **Templates & Media** under **Engagement** and select a pre-existing template. If the template you want does not exist yet, create one and save it. At the bottom of the individual template page, you will be able to find your template identifier.<br><br>
-2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
+2. Braze offers an **Additional API Identifiers** search, Here, you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
 
 #### What can it be used for?
 
@@ -104,7 +104,7 @@ Note that if you have a campaign that has variants, there is both an overall cam
 You can find your campaign ID one of two ways:
 
 1. In the dashboard, open up **Campaigns** under **Engagement** and select a pre-existing campaign. If the campaign you want does not exist yet, create one and save it. At the bottom of the individual campaign page, you will be able to find your **Campaign API Identifier**.<br><br>
-2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. You can find this at the bottom of the **API Settings** tab in the **Developer Console**.
+2. Braze offers an **Additional API Identifiers** search, Here, you can quickly look up specific identifiers. You can find this at the bottom of the **API Settings** tab in the **Developer Console**.
 
 #### What can it be used for?
 - Track analytics on a specific message
@@ -126,7 +126,7 @@ A [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) identifier o
 You can find your segment ID one of two ways:
 
 1. In the dashboard, open up **Segments** under **Engagement** and select a pre-existing segment. If the segment you want does not exist yet, create one and save it. At the bottom of the individual segment page, you will be able to find your segment identifier. <br><br>
-2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
+2. Braze offers an **Additional API Identifiers** search, Here, you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
 
 #### What can it be used for?
 - Get details on a specific segment
@@ -149,7 +149,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 You can find your card ID one of two ways:
 
 1. In the dashboard, open up **News Feed** under **Engagement** and select a pre-existing News Feed. If the News Feed you want does not exist yet, create one and save it. At the bottom of the individual News Feed page, you will be able to find your unique card identifier. <br><br>
-2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
+2. Braze offers an **Additional API Identifiers** search, Here, you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
 
 #### What can it be used for?
 - Retrieve relevant information on a card

@@ -11,9 +11,7 @@ channel:
 
 # Push Stories
 
-> This reference article covers what Push Stories are, how to create one, as well as some frequently asked questions.
-
-Push Stories are a new type of push notification introduced by Braze. This feature takes the photo carousel functionality popularized in Instagram and Facebook and allows marketers to create a carousel of pages within a push that tells a rich, cohesive story. These pages consist of an image, click action, title, and description. Your users can swipe through these pages and view the story—as told by you.
+> Push Stories are a new type of push notification introduced by Braze. This feature takes the photo carousel functionality popularized in Instagram and Facebook and allows marketers to create a carousel of pages within a push that tells a rich, cohesive story. These pages consist of an image, click action, title, and description. Your users can swipe through these pages and view the story—as told by you.
 
 | Android Example (Expanded) | IOS Example (Expanded) |
 | :-----: | :----------: |
@@ -53,6 +51,31 @@ The previews will be reflected and are interactive.
 {% alert important %}
 If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), ensure that your image URL begins with `https://`. Using `http://` will crash your app.
 {% endalert %}
+
+### Image and text specifications
+
+The following image and text specifications apply to the photo carousel portion of Push Stories. For information on the basic push that users interact with to activate the Push Story, refer to the [text guidelines for push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#native-mobile-push-notifications).
+
+{% tabs %}
+{% tab Images %}
+
+- **Image ratio:** 2:1 (required)
+- **Recommended image size:** 500 KB
+- **Max image size:** 5 MB
+- **File types:** PNG, JPG
+
+{% endtab %}
+{% tab Text %}
+
+- **Title:** 30 characters (recommended)
+- **Description:** 30 characters (recommended)
+
+{% alert note %}
+While there may be some variance in character length from device to device, the title and description for Push Stories are limited to one line each. The remainder of your message will be truncated. Always test your message on a real device.
+{% endalert %}
+
+{% endtab %}
+{% endtabs %}
 
 ### Push Story segmentation
 

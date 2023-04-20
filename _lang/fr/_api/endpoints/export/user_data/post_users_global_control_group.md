@@ -1,20 +1,22 @@
 ---
-nav_title: "POST : exportation de profils utilisateur par groupe de contrôle global"
-article_title: "POST : exportation de profils utilisateur par groupe de contrôle global"
+nav_title: "POST : Exporter le profil utilisateur par groupe de contrôle global"
+article_title: "POST : Exporter le profil utilisateur par groupe de contrôle global"
 search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Utilisateurs des groupes de contrôle global."
+description: "Cet article présente en détail l’endpoint Braze Exporter les utilisateurs dans les groupes de contrôle globaux."
 
 ---
 {% api %}
-# Utilisateurs par groupe de contrôle global
+# Exporter le profil utilisateur par groupe de contrôle global
 {% apimethod post %}
 /users/export/global_control_group
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter tous les utilisateurs d’un groupe de contrôle global. Les données utilisateur sont exportées sous forme de fichiers multiples d’objets utilisateur JSON séparés par sauts de ligne (c.-à-d. un objet JSON par ligne).
+> Utilisez cet endpoint pour exporter tous les utilisateurs d’un groupe de contrôle global. 
+
+Les données utilisateur sont exportées sous forme de fichiers multiples d’objets utilisateur JSON séparés par sauts de ligne (c.-à-d. un objet JSON par ligne).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
@@ -70,7 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-Les attributs personnalisés individuels ne peuvent pas être exportés. Cependant, tous les attributs personnalisés peuvent être exportés en incluant custom_attributes dans le tableau fields_to_export (p. ex., [« first_name », « e-mail », « custom_attributes »]).
+Les attributs personnalisés individuels ne peuvent pas être exportés. Cependant, tous les attributs personnalisés peuvent être exportés en incluant custom_attributes dans le tableau fields_to_export (p. ex., ['first_name', 'e-mail', 'custom_attributes']).
 {% endalert %}
 
 ## Paramètres de demande

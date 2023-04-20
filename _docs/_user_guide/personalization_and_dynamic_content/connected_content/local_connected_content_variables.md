@@ -8,9 +8,9 @@ search_rank: 1
 
 # Local Connected Content variables
 
-Braze makes a standard GET request at send time to the endpoint specified within the `connected_content` tag. If the endpoint returns JSON, it's automatically parsed and stored in a variable called `connected`.  If the endpoint returns text, it will be directly inserted into the message in place of the `connected_content` tag.
+Braze makes a standard GET request at send time to the endpoint specified within the `connected_content` tag. If the endpoint returns JSON, it's automatically parsed and stored in a variable called `connected`. If the endpoint returns text, it will be directly inserted into the message in place of the `connected_content` tag.
 
->  If you want to save your response to a variable, it's recommended to return JSON objects. And if you want the response of Connected Content to replace the tag with the text, make sure the response is not valid JSON (as defined by [json.org][46])
+If you want to save your response to a variable, it's recommended to return JSON objects. And if you want the response of Connected Content to replace the tag with the text, make sure the response is not valid JSON (as defined by [json.org][46])
 
 You can also specify `:save your_variable_name` after the URL in order to save the data as something else. For example, the following `connected_content` tag will store the response to a local variable called `localweather` (you can save multiple `connected_content` JSON variables):
 
@@ -20,7 +20,7 @@ You can also specify `:save your_variable_name` after the URL in order to save t
 ```
 {% endraw %}
 
-[Metaweather](https://www.metaweather.com/api/) is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing and learning purposes only.
+Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing and learning purposes only.
 
 >  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache by default and will make a second request to the destination server. If you wish to add caching to POST calls, refer to the [`cache_max_age`](#configurable-caching) option.
 

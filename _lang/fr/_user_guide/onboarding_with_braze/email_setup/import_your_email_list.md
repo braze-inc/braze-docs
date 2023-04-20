@@ -1,5 +1,5 @@
 ---
-nav_title: Importer votre liste d’e-mails
+nav_title: Importation de votre liste d’e-mails
 article_title: Importer votre liste d’e-mails dans Braze
 page_order: 4
 page_type: reference
@@ -10,7 +10,7 @@ channel: email
 
 # Importer votre liste d’e-mails dans Braze {#importing-email-lists}
 
-Une étape importante pour vous définir comme un expéditeur de courrier électronique à succès est de vous assurer que vous avez une liste de courriels de haute qualité. Une gestion appropriée de la liste des courriels peut améliorer votre capacité de délivrabilité et vous donner des résultats de campagne plus précis et plus propres.
+> Une étape importante pour vous définir comme un expéditeur de courrier électronique à succès est de vous assurer que vous avez une liste de courriels de haute qualité. Une gestion appropriée de la liste des courriels peut améliorer votre capacité de délivrabilité et vous donner des résultats de campagne plus précis et plus propres.
 
 ## Considérations à prendre en compte avant l’importation
 

@@ -7,7 +7,7 @@ page_order: 3
 page_type: reference
 description: "Cet article de référence explique l’analyse de corrélation de conversion sur la page Analyse de campagnes."
 tool: 
-  - Rapports
+  - Reports
   
 ---
 
@@ -15,13 +15,13 @@ tool:
 
 > L’analyse de corrélation de conversion sur la page **Analyse de campagnes** vous donne des informations sur les attributs et les comportements d’utilisateur qui contribuent ou nuisent aux résultats que vous fixez pour les campagnes. 
 
-## Overview
+## Aperçu
 
 Braze vérifie la liste des attributs et des comportements utilisateur pour chaque campagne et calcule si les utilisateurs sont associés de manière significative sur le plan statistique à des augmentations ou à des diminutions pour chacun des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) que vous avez choisis pour la campagne. Nous calculons également la probabilité de conversion des utilisateurs qui possédaient un attribut ou un comportement donné, et si la probabilité est importante, nous les affichons sur le côté correspondant du tableau. Les utilisateurs possédant chaque attribut ou comportement d’intérêt sont comparés aux taux de l’audience de la campagne dans son ensemble. Les comportements et les attributs qui n’ont pas de corrélation significative avec le taux de conversion ne sont pas affichés dans le tableau.
 
 Pour effectuer une analyse de corrélation de conversion, sélectionnez l’événement de conversion qui vous intéresse dans le menu déroulant.
 
-![Le panneau Corrélation de conversion qui montre un exemple où l’option « Sélectionner un événement de conversion » est définie sur « Événement de conversion primaire - A » et le paramètre d’événement est défini sur « Achat effectué dans les 12 heures (tout produit) ».][1]
+![Le panneau Conversion Correlation (Corrélation de conversion) qui montre un exemple où l’option « Select a conversion event (Sélectionner un événement de conversion) » est définie sur « Primary Conversion Event - A (Événement de conversion primaire - A) » et le paramètre d’événement est défini sur « Made Purchase within 12 hours (Any product) (Achat effectué dans les 12 heures [tout produit]) ».][1]
 
 ## Quels éléments Braze vérifie-t-il ?
 

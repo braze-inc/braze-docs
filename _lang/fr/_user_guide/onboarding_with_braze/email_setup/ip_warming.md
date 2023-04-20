@@ -10,9 +10,7 @@ channel: email
 
 # Réchauffement d’adresses IP
 
-## Qu’est-ce que le réchauffement d’adresses IP ?
-
-Le réchauffement d’adresses IP est la pratique consistant à obtenir des fournisseurs de boîte de réceptions e-mail de recevoir des communications à partir de vos adresses IP dédiées. Il s’agit d’une partie extrêmement importante de l’envoi par e-mail avec tout fournisseur de services de courrier électronique et de pratique courante de Braze pour s’assurer que vos messages atteignent les boîtes de réception à un taux toujours élevé.
+> Le réchauffement d’adresses IP est la pratique consistant à obtenir des fournisseurs de boîte de réceptions e-mail de recevoir des communications à partir de vos adresses IP dédiées. Il s’agit d’une partie extrêmement importante de l’envoi par e-mail avec tout fournisseur de services de courrier électronique et de pratique courante de Braze pour s’assurer que vos messages atteignent les boîtes de réception à un taux toujours élevé.
 
 Le réchauffement d’adresses IP est conçu pour vous aider à établir une réputation positive auprès des fournisseurs de services Internet (ISP). Chaque fois qu’une nouvelle adresse IP est utilisée pour envoyer un e-mail, les ISP surveillent les e-mails de manière programmatique afin de vérifier qu’ils ne sont pas utilisés pour envoyer des courriers indésirables aux utilisateurs.
 
@@ -48,7 +46,7 @@ Jour | Nombre d’e-mails à envoyer
 14 | 600 000
 15 | 1 000 000
 16 | 2 000 000
-17 | 4 000 000
+17 | 44 000 000
 18+ | Deux fois par jour jusqu’à ce que le volume souhaité soit atteint
 
 Une fois le réchauffement terminé et que vous avez atteint le volume quotidien souhaité, vous devez viser à maintenir ce volume tous les jours. Une certaine fluctuation est possible, mais atteindre le volume souhaité, puis ne faire qu’un envoi de masse une fois par semaine, peut affecter négativement votre délivrabilité et votre réputation d’expéditeur. 
@@ -83,7 +81,7 @@ Augmentez la quantité que vous envoyez chaque jour aussi progressivement que po
 
 ### Ayez un contenu d’introduction attrayant
 
-Assurez-vous que votre premier contenu est très intéressant et optimise la probabilité que les utilisateurs cliquent, ouvrent et s’engagent vis à vis de votre e-mail. Privilégiez toujours les e-mails bien ciblés pour éviter des lancements en masse sans discrimination lors du réchauffement des adresses IP.
+Assurez-vous que votre premier contenu est très intéressant et optimise la probabilité que les utilisateurs cliquent, s’ouvrent et s’engagent dans votre e-mail. Privilégiez toujours les e-mails bien ciblés pour éviter des lancements en masse sans discrimination lors du réchauffement des adresses IP.
 
 ### Définissez une cadence d’envoi cohérente
 

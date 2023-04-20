@@ -2,7 +2,7 @@
 page_order: 20
 nav_title: Bonnes pratiques
 article_title: Bonnes pratiques de notification push
-layout: featured
+layout: dev_guide
 guide_top_header: "Bonnes pratiques de notification push"
 guide_top_text: "Avant l’envoi de vos messages de notification push, reportez-vous aux articles suivants pour découvrir ce que vous devez savoir et vérifier."
 page_type: landing
@@ -14,8 +14,8 @@ guide_featured_list:
 - name: Préférences de notification push détaillées
   link: /docs/user_guide/message_building_by_channel/push/best_practices/detailed_push_preferences/
   fa_icon: fas fa-tasks
-- name: Création de demandes d'inscription personnalisées
-  link: /docs/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
+- name: Amorces de notifications push
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   fa_icon: far fa-dot-circle
 - name: Politiques de temporisation 
   link: /docs/user_guide/message_building_by_channel/push/best_practices/sunset_policies/

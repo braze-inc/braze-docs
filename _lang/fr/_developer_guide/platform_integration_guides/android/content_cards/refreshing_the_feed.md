@@ -11,7 +11,9 @@ channel:
 
 ---
 
-# Rafraîchir les cartes de contenu
+# Rafraîchir le flux
+
+> Cet article de référence explique comment implémenter le rafraîchissement de la carte de contenu dans votre application Android ou FireOS.
 
 Vous pouvez mettre en fil d’attente un rafraîchissement manuel des cartes de contenu Braze à tout moment en appelant :
 
@@ -32,6 +34,6 @@ Braze.getInstance(context).requestContentCardsRefresh(false)
 {% endtab %}
 {% endtabs %}
 
-Consultez notre [KDoc][1]correspondant pour plus d’informations sur cette méthode.
+Consultez notre [KDoc correspondant][1] pour plus d’informations sur cette méthode.
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html

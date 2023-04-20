@@ -1,5 +1,5 @@
 ---
-nav_title: Disabling Android SDK Tracking
+nav_title: Disabling SDK Tracking
 article_title: Disabling Data Collection for Android and FireOS
 platform: 
   - Android
@@ -9,7 +9,9 @@ description: "This article shows how to disable data collection for your Android
 
 ---
 
-# Disabling data collection for Android and FireOS
+# Disabling SDK Tracking
+
+> This article shows how to disable data collection for your Android or FireOS application.
 
 In order to comply with data privacy regulations, data tracking activity on the Android SDK can be stopped entirely using the method [`disableSDK()`][1]. This method will cause all network connections to be canceled, and the Braze SDK will not pass any data to Braze's servers. If you wish to resume data collection at a later point in time, you can use the [`enableSDK()`][2] method in the future to resume data collection.
 

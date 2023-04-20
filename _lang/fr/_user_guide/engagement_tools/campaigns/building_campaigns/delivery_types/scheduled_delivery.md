@@ -4,13 +4,13 @@ article_title: Livraison planifiée
 page_order: 0
 page_type: reference
 description: "Le présent article de référence décrit les différences entre les options de planification temporelle pour la livraison de campagnes."
-tool: Campagnes
+tool: Campaigns
 
 ---
 
 # Livraison planifiée
 
-Les campagnes envoyées à l’aide d’une livraison planifiée temporellement sont livrées à des jours spécifiés.
+> Les campagnes envoyées à l’aide d’une livraison planifiée temporellement sont livrées à des jours spécifiés.
 
 ![][3]
 
@@ -36,13 +36,13 @@ Si vous sélectionnez **Livraison planifiée** et ne choisissez pas d’envoyer 
 
 Vous pouvez envoyer le message dans les fuseaux horaires locaux des utilisateurs afin que les membres de votre audience internationale ne reçoivent pas de notification à des moments inopportuns. Les campagnes dans le fuseau horaire local doivent être planifiées 24 heures à l’avance pour garantir que les utilisateurs éligibles de tous les fuseaux horaires puissent les recevoir. Consultez les [FAQ de campagne][25] pour comprendre comment fonctionnent les campagnes dans le fuseau horaire local ainsi que les règles de livraison associées.
 
-Les segments ciblés par des campagnes dans le fuseau horaire local doivent comprendre une fenêtre de 2 jours au minimum pour incorporer les utilisateurs de tous les fuseaux. Par exemple, si votre campagne est planifiée pour être envoyée le soir mais qu’elle a une fenêtre de seulement 1 jour, certains utilisateurs peuvent avoir quitté le segment lorsque leur fuseau horaire est atteint. Des exemples de filtres qui créent une fenêtre de 2 jours sont « dernière utilisation il y a plus d’un jour » et « dernière utilisation il y a moins de 3 jours » ou « premier achat il y a plus de 7 jours » et « premier achat il y a moins de 9 jours »."
+Les segments ciblés par des campagnes dans le fuseau horaire local doivent comprendre une fenêtre de 2 jours au minimum pour incorporer les utilisateurs de tous les fuseaux. Par exemple, si votre campagne est planifiée pour être envoyée le soir mais qu’elle a une fenêtre de seulement 1 jour, certains utilisateurs peuvent avoir quitté le segment lorsque leur fuseau horaire est atteint. Des exemples de filtres qui créent une fenêtre de 2 jours sont « dernière utilisation il y a plus d’un jour » et « dernière utilisation il y a moins de 3 jours » ou « premier achat il y a plus de 7 jours » et « premier achat il y a moins de 9 jours ».
 
 ### Cas d’utilisation
 
 Les planifications temporelles spécifiées conviennent mieux aux messages planifiés à l’avance et aux campagnes récurrentes, telles que l’onboarding et la rétention, qui s’exécutent régulièrement pour tous les utilisateurs qualifiés.
 
-## Option 3 : Timing Intelligent
+## Option 3 : Timing Intelligent
 
 Le [Timing intelligent][8] vous permet de proposer une campagne à chaque utilisateur à un moment différent. Braze calcule le temps pour chaque individu en fonction du moment où l’utilisateur s’engage généralement avec votre application et ses notifications. Vous pouvez éventuellement spécifier que les campagnes au timing intelligent ne soient envoyées qu’à un certain moment de la journée. Par exemple, si vous informez les utilisateurs qu’une promotion se termine à minuit, vous pouvez souhaiter que vos messages soient envoyés à 22 h au plus tard.
 

@@ -9,7 +9,9 @@ description: "Cet article couvre les composants de création d’une IU personna
 
 ---
 
-# Créer une IU personnalisée
+# IU personnalisée
+
+> Cet article couvre les composants de création d’une IU personnalisée pour votre application Web.
 
 ## Rafraîchir le flux
 

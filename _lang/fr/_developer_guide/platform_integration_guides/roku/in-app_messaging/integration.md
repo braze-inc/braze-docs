@@ -8,9 +8,9 @@ channel:
   - messages In-App
 ---
 
-# Guide d’implémentation de la messagerie in-app
+# Intégration de message in-app
 
-Ce guide d’implémentation couvre les considérations relatives au code de messages in-app et les extraits de code qui l’accompagnent. Bien que nous fournissions un exemple de code d’intégration, vous devrez ajouter une logique pour gérer et afficher les messages déclenchés dans l’interface utilisateur souhaitée. 
+> Ce guide d’implémentation couvre les considérations relatives au code de messages in-app et les extraits de code qui l’accompagnent. Bien que nous fournissions un exemple de code d’intégration, vous devrez ajouter une logique pour gérer et afficher les messages déclenchés dans l’interface utilisateur souhaitée. 
 
 Étant donné que votre code sera unique à votre application, vous n’avez pas besoin de gérer toutes les situations répertoriées si elles ne sont pas pertinentes pour votre cas d’utilisation. Par exemple, si vous n’utilisez pas l’affichage différé des messages in-app, vous n’aurez pas besoin d’implémenter cette logique et ces cas extrêmes.
 

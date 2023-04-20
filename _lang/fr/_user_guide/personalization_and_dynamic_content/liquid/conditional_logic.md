@@ -6,15 +6,13 @@ description: "Le présent article de référence couvre la manière dont les bal
 
 ---
 
-# Logique de messagerie conditionnelle (balises)
+# Logique de messagerie conditionnelle
 
-Les [balises][7] vous permettent d’inclure la logique de programmation dans vos campagnes de messagerie.
+> Les [balises][7] vous permettent d’inclure la logique de programmation dans vos campagnes de messagerie. Les balises peuvent être utilisées pour exécuter des relevés conditionnels ainsi que pour des cas d’utilisation avancés, comme l’attribution de variables ou l’itération par un bloc de code.
 
 {% raw %}
 Une balise doit être enveloppée dans `{% %}`.
 {% endraw %}
-
-Les balises peuvent être utilisées pour exécuter des relevés conditionnels ainsi que pour des cas d’utilisation avancés, comme l’attribution de variables ou l’itération par un bloc de code.
 
 {% alert tip %}
 Pour faciliter votre vie, Braze a inclus un formatage de couleurs qui s’activera en vert et violet si vous avez correctement formaté votre syntaxe Liquid. Le formatage vert peut aider à identifier les balises, tandis que le formatage violet met en évidence les zones qui contiennent une personnalisation.
@@ -185,7 +183,7 @@ Pour les chaînes de caractères, vous pouvez utiliser « == » ou « contient 
 
 #### Array
 
-Un [array][12] est une liste d’informations sur votre utilisateur. Par exemple, un utilisateur peut avoir comme `last_viewed_shows : Stranger Things, Planet Earth, Westworld` Les valeurs de baie doivent être entourées d’apostrophes.
+Un [array][12] est une liste d’informations sur votre utilisateur. Par exemple, un utilisateur peut avoir `last_viewed_shows: stranger things, planet earth, westworld`. Les valeurs de baie doivent être entourées d’apostrophes.
 
 {% raw %}
 

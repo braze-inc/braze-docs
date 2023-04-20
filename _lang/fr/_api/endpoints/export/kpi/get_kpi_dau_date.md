@@ -1,20 +1,20 @@
 ---
-nav_title: "GET : Utilisateurs actifs quotidiens par date"
-article_title: "GET : Utilisateurs actifs quotidiens par date"
+nav_title: "GET : Exporter les utilisateurs actifs quotidiens par date"
+article_title: "GET : Exporter les utilisateurs actifs quotidiens par date"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Obtenir les utilisateurs actifs quotidiens."
+description: "Cet article présente en détail l’endpoint Braze Exporter les utilisateurs actifs quotidiens."
 
 ---
 {% api %}
-# Endpoint Utilisateurs actifs quotidien par date
+# Exporter les utilisateurs actifs quotidiens par date
 {% apimethod get %}
 /kpi/dau/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer quotidiennement une série du nombre total d’utilisateurs actifs uniques à chaque date.
+> Utilisez cet endpoint pour récupérer quotidiennement une série du nombre total d’utilisateurs actifs uniques à chaque date.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#90a64560-65aa-4f71-a8ef-1edf49321986 {% endapiref %}
 

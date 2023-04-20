@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 /content_blocks/list
 {% endapimethod %}
 
-Utilisez cet endpoint pour répertorier les informations existantes de vos [blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+> Utilisez cet endpoint pour répertorier les informations existantes de vos [blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
@@ -60,19 +60,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Erreurs possibles
+## Résolution des problèmes
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
 | Erreur | Résolution des problèmes |
 | --- | --- |
-| Modifié après que l’heure ne soit plus valide | La date fournie n’est pas une date valide ou analysable. Reformater cette valeur en tant que chaîne de caractères au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
-| Modifié avant que l’heure ne soit plus valide | La date fournie n’est pas une date valide ou analysable. Reformater cette valeur en tant que chaîne de caractères au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
-| La modification après l’heure doit être antérieure ou identique à la modification avant l’heure. | Modifier la valeur `modified_after` à une heure antérieure à l’heure `modified_before`. |
-| La limite du nombre de blocs de contenu n’est pas valide | Le paramètre `limit` doit être un entier (nombre positif) supérieur à 0. |
-| La limite du nombre de blocs de contenu doit être supérieure à 0 | Modifier le paramètre `limit` à un entier supérieur à 0. |
-| La limite du nombre de blocs de contenu dépasse le maximum de 1 000 | Modifier le paramètre `limit` à un entier inférieur à 1 000. |
-| Décalage non valide | Le paramètre `offset` doit être un entier supérieur à 0. |
+| `Modified after time is invalid` | La date fournie n’est pas une date valide ou analysable. Reformater cette valeur en tant que chaîne de caractères au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
+| `Modified before time is invalid` | La date fournie n’est pas une date valide ou analysable. Reformater cette valeur en tant que chaîne de caractères au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
+| `Modified after time must be earlier than or the same as modified before time.` | Modifier la valeur `modified_after` à une heure antérieure à l’heure `modified_before`. |
+| `Content Block number limit is invalid` | Le paramètre `limit` doit être un entier (nombre positif) supérieur à 0. |
+| `Content Block number limit must be greater than 0` | Modifier le paramètre `limit` à un entier supérieur à 0. |
+| `Content Block number limit exceeds maximum of 1000` | Modifier le paramètre `limit` à un entier inférieur à 1 000. |
+| `Offset is invalid` | Le paramètre `offset` doit être un entier supérieur à 0. |
 | Le décalage doit être supérieur à 0 | Modifier le paramètre `offset` à un entier supérieur à 0. |
 {: .reset-td-br-1 .reset-td-br-2}
 

@@ -12,7 +12,7 @@ channel:
 
 # Processus de double abonnement
 
-Il se peut que certains utilisateurs qui envoient un texte à votre code court ou code long ne soient pas encore connectés à votre groupe d’abonnement SMS. Les réglementations exigent que vous obteniez le consentement explicite d’un utilisateur avant de lui envoyer des messages promotionnels ou informatifs. Nous recommandons fortement de mettre en œuvre un double abonnement pour assurer la conformité. 
+> Il se peut que certains utilisateurs qui envoient un texte à votre code court ou code long ne soient pas encore connectés à votre groupe d’abonnement SMS. Les réglementations exigent que vous obteniez le consentement explicite d’un utilisateur avant de lui envoyer des messages promotionnels ou informatifs. Nous recommandons fortement de mettre en œuvre un double abonnement pour assurer la conformité. 
 
 ![][IMAGE1]{: style="float:right;max-width:30%;margin-left:15px;"}
 Nous suggérons de définir une entrée déclenchée dans Canvas chaque fois qu’il y a un événement entrant`sms_response_subscriptionGroupName_custom`. Consulter [Gestion de messagerie par mots-clés personnalisés][1] pour plus d’informations.

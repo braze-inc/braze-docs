@@ -6,6 +6,7 @@ description: "Cet article de référence couvre la façon d’utiliser la synchr
 Outil :
   - Canvas
 hidden: true
+layout: dev_guide
 ---
 
 # Synchronisation de l’audience avec TikTok

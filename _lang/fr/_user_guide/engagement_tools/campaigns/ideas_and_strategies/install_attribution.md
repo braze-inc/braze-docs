@@ -1,23 +1,23 @@
 ---
-nav_title: Campagne d’attribution d’installation
+nav_title: Comprendre les installations utilisateur
 article_title: Comprendre les installations utilisateur 
 page_order: 7
 page_type: reference
 description: "Le présent article de référence décrit les installations utilisateur (suivi d’attribution d’installation) et différentes manières d’appliquer ces informations au sein de votre campagne."
 tool:
-  - Campagnes
+  - Campaigns
   - Segments
 ---
 
 # Comprendre les installations utilisateur
 
-> Le présent article de référence explore le concept des installations utilisateur (suivi d’attribution d’installation) et différentes manières d’appliquer ces informations au sein de votre campagne.
+> Le suivi d’attribution d'installation est un excellent moyen d’améliorer votre relation initiale avec votre utilisateur. Savoir comment, où et, encore plus important, pourquoi un utilisateur installe votre application vous permet de mieux comprendre qui est votre utilisateur et comment vous devez lui présenter votre application. 
 
-Le suivi d’attribution d'installation est un excellent moyen d’améliorer votre relation initiale avec votre utilisateur. Savoir comment, où et, encore plus important, pourquoi un utilisateur installe votre application vous permet de mieux comprendre qui est votre utilisateur et comment vous devez lui présenter votre application. Bien que Braze ne fournisse pas de suivi d’attribution d'installation, nous pouvons intégrer des services tels que Fiksu et Tune pour vous fournir des données d’installation sans problème.
+Bien que Braze ne fournisse pas de suivi d’attribution d'installation, nous pouvons intégrer des [services]({{site.baseurl}}/partners/message_orchestration/attribution) tels que Branch et Appsflyer pour vous fournir de manière harmonieuse des données d’installation.
 
 ## Segmenter vos utilisateurs
 
-Une fois que l’utilisateur installe votre application, vous pouvez commencer à les segmenter sur la base des [filtres d’attribution d’installation][2] suivants. Par exemple, une application de voyage pourrait ajouter des utilisateurs provenant d’une publicité liée aux offres de vacances sur la plage dans un segment « Aiment la plage ». De même, une application musicale peut segmenter les utilisateurs en fonction du genre de musique affiché dans la publicité qui a entraîné l’installation.
+Une fois que l’utilisateur installe votre application, vous pouvez commencer à les segmenter sur la base des [filtres d’attribution d'installation][2] suivants. Par exemple, une application de voyage pourrait ajouter des utilisateurs provenant d’une publicité liée aux offres de vacances sur la plage dans un segment « Aiment la plage ». De même, une application musicale peut segmenter les utilisateurs en fonction du genre de musique affiché dans la publicité qui a entraîné l’installation.
 
 ## Bonnes pratiques
 

@@ -1,11 +1,11 @@
 ---
-nav_title: "POST: Send Campaign Messages via API-Triggered Delivery"
-article_title: "POST: Send Campaign Messages via API-Triggered Delivery"
+nav_title: "POST: Send Campaigns via API-Triggered Delivery"
+article_title: "POST: Send Campaigns via API-Triggered Delivery"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the send campaign messages via API-triggered delivery Braze endpoint."
+description: "This article outlines details about the Send campaigns via API-triggered delivery Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,9 @@ description: "This article outlines details about the send campaign messages via
 /campaigns/trigger/send
 {% endapimethod %}
 
-Use this endpoint to send immediate, ad-hoc messages to designated users via API-triggered delivery. API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
+> Use this endpoint to send immediate, ad-hoc messages to designated users via API-triggered delivery. 
+
+API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
 
 If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Note that to send messages with this endpoint, you must have a [Campaign ID](https://www.braze.com/docs/api/identifier_types/) created when you build an [API-triggered campaign]({{site.baseurl}}/api/api_campaigns/).
 
@@ -69,7 +71,9 @@ The recipients array may contain up to 50 objects, with each object containing a
 
 When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with the `id` and attributes before sending the message.
 
-Additionally, a user's subscription group status can be updated via the inclusion of a `subscription_groups` parameter within the `attributes` object. Further details can be found in the [User Attributes Object specification]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+{% alert important %}
+A user's subscription group status can be updated via the inclusion of a `subscription_groups` parameter within the `attributes` object. This is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access. More details can be found in the [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+{% endalert %}
 
 ## Example request
 ```

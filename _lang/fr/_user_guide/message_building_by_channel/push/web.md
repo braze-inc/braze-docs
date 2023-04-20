@@ -1,5 +1,5 @@
 ---
-nav_title: "Web Push"
+nav_title: "Notification push Web"
 article_title: Notifications push Web
 page_order: 8.5
 page_type: reference
@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Notifications push Web
+# Push Web
 
 > Les notifications push pour Web sont un autre excellent moyen d’interagir avec les utilisateurs de votre application Web. Les clients qui visitent votre site Internet via Chrome, Safari, Firefox et Opera peuvent choisir de recevoir des notifications push pour Web à partir de votre application Web, que la page Web soit chargée ou non. Cette fonctionnalité est également prise en charge sur Android Chrome et Firefox Mobile sur Android, ce qui permet des notifications Web mobiles. 
 
@@ -20,7 +20,7 @@ Les notifications push pour Web fonctionnent de la même façon que les notifica
 
 Les utilisateurs de votre application Web doivent autoriser la réception des notifications push pour Web. 
 
-![Exemple d’abonnement aux notifications push pour Web pour Safari avec deux boutons : Bloquer et Autoriser.][13]
+![Exemple d’abonnement aux notifications push pour Web pour Safari avec deux boutons : Don't Allow (Bloquer) et Allow (Autoriser).][13]
 
 Pour plus d’informations sur les normes de protocole de notifications push et la prise en charge du navigateur, vous pouvez consulter les ressources de votre navigateur :
 - [Apple][3]
@@ -28,7 +28,7 @@ Pour plus d’informations sur les normes de protocole de notifications push et 
 - [Microsoft][2]
 
 {% alert important %}
-Les fenêtres de navigation privées ne prennent pas en charge les notifications push pour Web.
+Les fenêtres de navigation privées ne prennent pas en charge la notification push Web.
 {% endalert %}
 
 [1]: https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility

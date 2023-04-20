@@ -9,7 +9,9 @@ description: "Cet article couvre les options de style personnalisé pour vos car
 
 ---
 
-# Personnalisation de la carte de contenu
+# Style personnalisé
+
+> Cet article couvre les options de style personnalisé pour vos cartes de contenu dans votre application Web.
 
 ## Personnalisation de l’IU par défaut
 

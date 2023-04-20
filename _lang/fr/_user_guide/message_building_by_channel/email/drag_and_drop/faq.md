@@ -2,16 +2,16 @@
 nav_title: FAQ
 article_title: FAQ de l’éditeur Drag & Drop
 alias: "/dnd/faq/"
-channel: E-mail
+channel: email
 page_order: 5
 description: "Le présent article répond à plusieurs FAQ sur l’éditeur Drag & Drop."
 tool: 
-  - Campagnes
+  - Campaigns
   - Canvas
   
 ---
 
-# FAQ de l’éditeur Drag & Drop
+# Foire aux questions
 
 > Cette page fournit des réponses à certaines questions fréquemment posées sur l’éditeur Drag & Drop.
 

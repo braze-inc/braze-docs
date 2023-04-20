@@ -1,20 +1,22 @@
 ---
-nav_title: "GET : Informations relatives à la campagne"
-article_title: "GET : Informations relatives à la campagne"
+nav_title: "GET : Exporter les informations relatives à la campagne"
+article_title: "GET : Exporter les informations relatives à la campagne"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Obtenir les informations relatives à la campagne."
+description: "Cet article présente en détail l’endpoint Braze Exporter les informations relatives à la campagne."
 
 ---
 {% api %}
-# Endpoint Informations relatives à la campagne
+# Exporter les informations relatives à la campagne
 {% apimethod get %}
 /campaigns/details
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer des informations pertinentes sur une campagne spécifique, qui peuvent être identifiées par le `campaign_id`. Si vous souhaitez récupérer les données de Canvas, reportez-vous à l’endpoint [Informations relatives au Canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+> Utilisez cet endpoint pour récupérer des informations pertinentes sur une campagne spécifique, qui peuvent être identifiées par le `campaign_id`. 
+
+Si vous souhaitez récupérer les données de Canvas, reportez-vous à l’endpoint [Exporter les informations relatives au Canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
@@ -24,9 +26,9 @@ Utilisez cet endpoint pour récupérer des informations pertinentes sur une camp
 
 ## Paramètres de demande
 
-| Paramètre     | Requis | Type de données | Description             |
-| ------------- | -------- | --------- | ----------------------- |
-| `campaign_id` | Requis      | String    | Voir [Identifiant API de campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Le `campaign_id` pour les campagnes API se trouvent sur la page **Developer Console (Console du développeur)** et la page **Campaign Details (Informations relatives à la campagne)** dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Liste de campagnes](#campaign-list-endpoint).   |
+| Paramètre | Requis | Type de données | Description |
+| --------- | -------- | --------- | ----------- |
+| `campaign_id` | Requis | String | Voir [identifiant API de campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Le `campaign_id` pour les campagnes API se trouvent sur la page **Developer Console (Console du développeur)** et la page **Campaign Details (Informations relatives à la campagne)** dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Exporter la liste des campagnes](#campaign-list-endpoint). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande 
@@ -38,8 +40,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 {% endraw %}
 
 ## Réponses
-
-### Réponse API de l’endpoint Informations relatives à la campagne
 
 ```json
 Content-Type: application/json
@@ -68,11 +68,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Messages
+### Messages par canal
 
 La réponse `messages` contiendra des informations sur chaque message. Voici des exemples de réponses de message pour chaque canal :
 
-#### Canaux de notification push
+#### Notification push
 
 ```json
 {
@@ -82,7 +82,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-#### Canal d’e-mail
+#### E-mail
 
 ```json
 {
@@ -96,7 +96,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-#### Canal de message in-app
+#### Messages in-app
 
 ```json
 {
@@ -124,7 +124,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-#### Canal de carte de contenu
+#### Cartes de contenu
 
 ```json
 {
@@ -134,7 +134,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-#### Canal de webhook
+#### Webhook
 
 ```json
 {
@@ -147,7 +147,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-#### Canal SMS
+#### SMS
 
 ```json
 {

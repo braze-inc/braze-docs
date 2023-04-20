@@ -13,7 +13,7 @@ channel:
 
 > Les cartes de visite (parfois appelées vCard ou Virtual Contact Files (VCF)) sont un format de fichier normalisé pour l’envoi d’informations professionnelles et de contact qui peuvent être facilement importées dans des carnets d’adresses ou de contacts. 
 
-Les cartes de visite peuvent être créées [par programmation](https://www.twilio.com/blog/send-vcard-twilio-sms) et chargées dans la [médiathèque]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) de Braze, ou créées via notre générateur intégré de cartes de visite. Vous pouvez attribuer des propriétés communes à ces cartes, telles que le nom de votre entreprise, le numéro de téléphone, l’adresse, l’e-mail et une petite photo.
+Les cartes de visite peuvent être créées [par programmation](https://www.twilio.com/blog/send-vcard-twilio-sms) et chargées dans la [médiathèque]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) de Braze, ou créées via notre générateur intégré de cartes de visite. Ces cartes peuvent recevoir des propriétés communes, telles que le nom de votre entreprise, le numéro de téléphone, l’adresse, l’e-mail et une petite photo. Pour commencer à créer des cartes de contact, assurez-vous d’abord d’avoir paramétré l’utilisation de MMS dans Braze.
 
 ## Générateur de cartes de visite
 

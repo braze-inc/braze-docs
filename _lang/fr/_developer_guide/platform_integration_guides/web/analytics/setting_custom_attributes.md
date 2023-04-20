@@ -7,9 +7,9 @@ description: "Cet article de référence explique comment assigner et définir d
 
 ---
 
-# Définir des attributs personnalisés pour le Web
+# Définition des attributs personnalisés
 
-Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
+> Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 
 Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques][7].
 
@@ -25,7 +25,7 @@ Braze fournit des méthodes prédéfinies pour définir les attributs utilisateu
 - Pays
 - Date de naissance
 - E-mail
-- Genre
+- Sexe
 - Ville d’origine
 - Numéro de téléphone
 

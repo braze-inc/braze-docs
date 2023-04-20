@@ -1,20 +1,22 @@
 ---
-nav_title: "GET : Analyse de campagne"
-article_title: "GET : Analyse de campagne"
+nav_title: "GET : Exporter les analyses de campagne"
+article_title: "GET : Exporter les analyses de campagne"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Obtenir les analyses de campagne."
+description: "Cet article présente en détail l’endpoint Braze Exporter les analyses de campagne."
 
 ---
 {% api %}
-# Endpoint Analyse de campagne
+# Exporter les analyses de campagne
 {% apimethod get %}
 /campaigns/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer quotidiennement une série de diverses statistiques pour une campagne sur la durée. Les données renvoyées comprennent le nombre de messages envoyés, ouverts, cliqués ou convertis par canal de communication.
+> Utilisez cet endpoint pour récupérer quotidiennement une série de diverses statistiques pour une campagne sur la durée. 
+
+Les données renvoyées comprennent le nombre de messages envoyés, ouverts, cliqués ou convertis par canal de communication.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
@@ -26,12 +28,13 @@ Utilisez cet endpoint pour récupérer quotidiennement une série de diverses st
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | Requis | String | Voir [Identifiant API de campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Le `campaign_id` pour les campagnes API se trouvent sur la page **Developer Console (Console du développeur)** et la page **Campaign Details (Informations relatives à la campagne)** dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Liste de campagnes](#campaign-list-endpoint). |
+| `campaign_id` | Requis | String | Voir [identifiant API de campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Le `campaign_id` pour les campagnes API se trouve sur la page **Developer Console (Console du développeur)** et la page **Campaign Details (Informations relatives à la campagne)** dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Lister les campagnes](#campaign-list-endpoint). |
 | `length` | Requis | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
 | `ending_at` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande 
+
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_series?campaign_id={{campaign_identifier}}&length=7&ending_at=2020-06-28T23:59:59-5:00' \
@@ -230,7 +233,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Les types de messages possibles sont `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push`, et `web_push`. Tous les types de messages des notifications push auront les mêmes statistiques que celles d’`android_push`.
+Les types de messages possibles sont `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push` et `web_push`. Tous les types de messages des notifications push auront les mêmes statistiques que celles d’`android_push`.
 
 {% alert tip %}
 Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).

@@ -7,7 +7,7 @@ alias: "/create_dnd_iam/"
 
 # Creating an in-app message with Drag & Drop
 
-With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience.
+> With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience.
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the Drag & Drop Editor.
 
@@ -24,6 +24,7 @@ If a user hasn't updated their application (that is, they're on an older SDK ver
 **Additional prerequisites**<br>
 - For the web SDK, the initialization option [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) must be set to `true`. The `enableHtmlInAppMessages` option will also allow these messages to function, but is deprecated and should be updated to `allowUserSuppliedJavascript`.
 - If you are using Google Tag Manager, you must enable "Allow HTML In-App Messages" in the GTM configuration.
+- Users will need to be on newer SDK versions to use “Request Push Permission” as an [on-click behavior option]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages#button-actions) for buttons.
 
 ## Step 1: Create an in-app message
 
@@ -31,14 +32,19 @@ Create a new in-app message or Canvas step, then select **Drag & Drop Editor** a
 
 ## Step 2: Select your template
 
-![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:40%"}
+![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:55%"}
 
 After selecting the Drag & Drop Editor as your editing experience, you can choose to:
 
 - Use a Braze basic modal template
+- Use a Braze background image template
 - Start with a blank modal template
 
 Click **Build message** to begin designing your in-app message in the Drag & Drop Editor!
+
+{% alert note %}
+You can switch between modal and fullscreen display types in the **Message styles** panel of the editor.
+{% endalert %}
 
 ## Step 3: Build and design your in-app message
 
@@ -107,6 +113,12 @@ As you build your in-app message, you can select a mobile, tablet, or desktop vi
 
 ### Creative details
 
+#### Fullscreen on larger screens {#fullscreen}
+
+On a tablet or desktop browser, a fullscreen in-app message will sit in the center of the app screen. Any edits to the max width of the fullscreen message will only apply to tablet and desktop devices.
+
+![]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
+
 #### Customize background image
 
 You can add an image to the background of your message from the **Message styles** tab. The scrollable section of your message must be selected to add a background for the entire message.
@@ -153,7 +165,7 @@ You can also use keyboard shortcuts to copy and paste styles:
 
 ## Step 4: Test your in-app message
 
-The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to your device. Here you can ensure that the details are aligned across all your platforms for your drag & drop in-app message campaign. It's extremely important to always test your in-app messages before sending your campaigns to help you visualize what your final message will look like from your user's perspective.
+The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to your device. Here, you can ensure that the details are aligned across all your platforms for your drag & drop in-app message campaign. It's extremely important to always test your in-app messages before sending your campaigns to help you visualize what your final message will look like from your user's perspective.
 
 ### Preview message as a user
 
@@ -175,13 +187,24 @@ You can preview messages from the **Preview & Test** tab, as though you were a u
 - Is your copy clear, concise, and correct?
 - Do your buttons direct the user where they should go?
 
-## FAQs
+## Frequently asked questions
 
-**Can I customize my in-app message using custom HTML or Javascript or transfer existing HTML messages into the editor?**<br>
+#### Why are body clicks not appearing on my analytics page?
+
+Body clicks are not automatically collected for in-app messages created with the Drag & Drop Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
+
+#### Can I segment based on button clicks?
+
+Yes, you can segment based on button clicks for up to two buttons in your message. To do so, set the **Identifier for Reporting** for your buttons to "0" and "1", which will correspond to the segmentation filters "Clicked in-app message button 1" and "Clicked in-app message button 2" respectively.
+
+#### Can I customize my in-app message using custom HTML or Javascript or transfer existing HTML messages into the editor?
+
 No.
 
-**Can I save my in-app message as a template after I build it within my campaign or Canvas?**<br>
+#### Can I save my in-app message as a template after I build it within my campaign or Canvas?**
+
 No, you have to recreate the in-app message in the Drag & Drop Editor or duplicate an existing message in order to save.
 
-**How can I create a fullscreen or slideup in-app message?**<br>
-Currently the editor is limited to modal messages only.
+#### How can I create a slideup in-app message?
+
+Currently the editor is limited to modal and fullscreen messages only. You can switch between display types in the **Message container** section of the **Message styles** panel.

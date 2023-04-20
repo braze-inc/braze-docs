@@ -1,5 +1,5 @@
 ---
-nav_title: Meilleures pratiques
+nav_title: Bonnes pratiques
 article_title: Bonnes pratiques relatives à Canvas
 page_order: 1
 description: "Cet article présente une partie des bonnes pratiques pour la création et la personnalisation des parcours utilisateurs avec Canvas et Canvas Flow."
@@ -8,6 +8,8 @@ tool: Canvas
 ---
 
 # Bonnes pratiques relatives à Canvas
+
+> Cet article présente une partie des bonnes pratiques pour la création et la personnalisation des parcours utilisateurs avec Canvas et Canvas Flow.
 
 ## Identifiez votre but
 

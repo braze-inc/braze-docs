@@ -11,7 +11,7 @@ description: "Cet article de référence explique comment implémenter des fonct
 
 # Accessibilité
 
-Le SDK Braze pour Android suit les [directives d’accessibilité pour Android][1].
+> Cet article de référence explique comment implémenter des fonctionnalités d’accessibilité spécifiques au SDK Android, telles que le TalkBack du message in-app dans votre application Android ou FireOS. Le SDK Braze pour Android suit les [directives d’accessibilité pour Android][1].
 
 ## TalkBack du message in-app
 

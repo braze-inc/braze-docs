@@ -8,10 +8,10 @@ hidden: true
 
 Outil :
   - Canvas
-
+layout: dev_guide
 ---
 
-## Synchronisation de l’audience avec Pinterest
+# Synchronisation de l’audience avec Pinterest
 
 En utilisant la synchronisation de l’audience Braze vers Pinterest, les marques peuvent choisir d’ajouter les données utilisateurs à partir de leur intégration Braze aux audiences Pinterest afin de proposer des publicités basées sur des déclencheurs comportementaux, des segmentations, etc. Les critères que vous utilisez généralement pour déclencher un message (notification push, e-mail, SMS, webhook, etc.) dans un Canvas Braze en fonction de vos données utilisateur peuvent maintenant être utilisés pour déclencher une publicité pour cet utilisateur dans vos audiences TikTok.
 

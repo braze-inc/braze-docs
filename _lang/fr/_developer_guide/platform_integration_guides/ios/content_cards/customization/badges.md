@@ -11,7 +11,7 @@ channel:
 
 # Badges
 
-## Demande du nombre de cartes de contenu non lues
+## Demander le décompte des cartes de contenu non lues
 
 Si vous souhaitez afficher le nombre de cartes de contenu non lues de votre utilisateur, nous vous suggérons de demander un décompte de cartes et de le représenter par un badge. Les badges constituent un excellent moyen d’attirer l’attention sur le nouveau contenu en attente de vos utilisateurs dans les cartes de contenu. Si vous souhaitez ajouter un badge à vos cartes de contenu, le SDK de Braze fournit des méthodes permettant d’interroger les éléments suivants :
 
@@ -23,15 +23,15 @@ Les déclarations de méthodes suivantes dans [`ABKContentCardsController`](http
 ```objc
 - (NSInteger)unviewedContentCardCount;
 /*
-La méthode renvoie le nombre de Cartes de contenu actuellement active qui n’ont pas été visualisées.
-Une « vue » survient lorsqu’une carte devient visible dans la vue Cartes de contenu. Ceci permet de faire la différence entre les cartes qui sont hors écran dans la vue de défilement et celles qui sont à l’écran, lorsqu’une carte défile sur l’écran, elle est comptabilisée comme visualisée.
-Les cartes sont comptabilisées comme visualisées une seule fois – si une carte défile hors de l’écran et y revient, elle n’est pas re-comptabilisée.
-Les cartes ne sont comptabilisées qu’une seule fois, même si elles s’affichent dans plusieurs vues de Cartes de contenu ou sur plusieurs appareils.
+This method returns the number of currently active Content Cards that have not been viewed.
+A "view" happens when a card becomes visible in the Content Cards view. This differentiates between cards that are off-screen in the scrolling view and those which are on-screen; when a card scrolls onto the screen, it's counted as viewed.
+Cards are counted as viewed only once -- if a card scrolls off the screen and back on, it's not re-counted.
+Cards are counted only once, even if they appear in multiple Content Cards views or across multiple devices.
 */
 
 - (NSInteger)contentCardCount;
 /* 
-La méthode renvoie le nombre total de Cartes de contenu actuellement actives. Les cartes ne sont comptabilisées qu’une seule fois, même si elles s’affichent dans plusieurs vues de Cartes de contenu.
+This method returns the total number of currently active Content Cards. Cards are counted only once even if they appear in multiple Content Cards views.
  */
 ```
 
