@@ -32,3 +32,9 @@ Appboy.sharedInstance()?.requestContentCardsRefresh()
 {% endtabs %}
 
 For more information, see the `Appboy.h` [header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h).
+
+{% alert important %}
+Usage of `requestContentCardsRefresh` may be rate limited under certain conditions. For more details around this, contact your Customer Success Manager or Account Team.
+
+Please try to limit these calls to 3 calls per 10 minutes. These limits will be imposed on the SDK-side in the future.
+{% endalert %}

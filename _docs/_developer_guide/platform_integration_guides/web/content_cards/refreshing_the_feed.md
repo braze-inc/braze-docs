@@ -18,3 +18,9 @@ You can queue a manual refresh of the Braze Content Cards at any time by calling
 You can also call [`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards) to get all currently available cards from the last Content Cards refresh. 
 
 The feed will refresh automatically on new session or when the feed is opened and more than 60 seconds have elapsed since the last refresh.
+
+{% alert important %}
+Usage of `requestContentCardsRefresh` may be rate limited under certain conditions. For more details around this, contact your Customer Success Manager or Account Team.
+
+Please try to limit these calls to 3 calls per 10 minutes. These limits will be imposed on the SDK-side in the future.
+{% endalert %}

@@ -36,4 +36,10 @@ Braze.getInstance(context).requestContentCardsRefresh(false)
 
 Refer to our [corresponding KDoc][1] for more information on this method.
 
+{% alert important %}
+Usage of `requestContentCardsRefresh` may be rate limited under certain conditions. For more details around this, contact your Customer Success Manager or Account Team.
+
+Please try to limit these calls to 3 calls per 10 minutes. These limits will be imposed on the SDK-side in the future.
+{% endalert %}
+
 [1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html
