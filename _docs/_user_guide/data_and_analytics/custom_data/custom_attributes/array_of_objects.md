@@ -13,7 +13,7 @@ Use an array of objects to group related attributes. For example, you may have a
 
 ## Limitations
 
-- Arrays of objects are intended for custom attributes sent via the API. They are not supported for use with Braze SDKs or CSV upload. Commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file. 
+- Arrays of objects are intended for custom attributes sent via the API. CSV uploads are not supported. Commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file. 
 - Partners do not support arrays of objects. We recommend against using this feature with app groups that have partner integrations enabled.
 - Arrays of objects have no limit on the number of items but do have a maximum size of 50KB.
 
