@@ -13,7 +13,7 @@ Braze's SDKs each come with sample applications within the repository for your c
 
 ## Navigating Braze's examples
 
-Several test applications are available within the `Examples` folder of the [Swift SDK GitHub repository][1]. The [README][2] describes all of the different permutations of sample integrations, such as:
+Several test applications are available within the `Examples` folder of the [Swift SDK GitHub repository][1]. The README describes all of the different permutations of sample integrations, such as:
 
 1. Integration types (Swift Package Manager, Cococapods, Manual)
 2. Coding languages (Swift and Objective-C)
@@ -25,10 +25,9 @@ Several test applications are available within the `Examples` folder of the [Swi
 
 Follow these instructions to build and run our test applications.
 
-1. Create a new [app group][3] and note the app identifier API key and endpoint.
+1. Create a new [app group][2] and note the app identifier API key and endpoint.
 2. Based on your integration method (Swift Package Manager, Cocoapods, Manual), select the appropriate `xcodeproj` file to open.
 3. Place your API key and your endpoint within the appropriate field in the `Credentials` file.
 
 [1]: https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples
-[2]: https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/README.md
-[3]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps
+[2]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps
