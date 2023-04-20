@@ -19,7 +19,7 @@ The Content Cards data model is available in the `BrazeKit` module of the iOS Sw
 
 To access the Content Cards data model, call `contentCards.cards` on your `braze` instance.
 
-{% tabs %}
+{% tabs local %}
 {% tab swift %}
 ```swift
 let cards: [Braze.ContentCard] = AppDelegate.braze?.contentCards.cards
@@ -88,7 +88,7 @@ For more details, refer to the [`Context` class documentation](https://braze-inc
 ## Refreshing Content Cards
 
 You can manually request Braze to refresh the user's Content Cards using the `requestRefresh` method on the `Braze` instance:
-{% tabs %}
+{% tabs local %}
 {% tab Swift %}
 
 In Swift, Content Cards can be refreshed either with an optional completion handler or with an asynchronous return using the native Swift concurrency APIs.
