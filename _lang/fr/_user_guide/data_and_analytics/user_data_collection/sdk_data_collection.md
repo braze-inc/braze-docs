@@ -7,7 +7,7 @@ description: "Cet article de référence traite des données qui sont collectée
 
 ---
 
-# Options de collecte de données du SDK
+# Collecte de données SDK
 
 Braze est conçu pour permettre une collecte de données flexible via nos SDK et API. Le SDK de Braze peut être intégré de trois façons :
 - **Intégration personnalisée** ; les intégrateurs ont la possibilité de collecter des données en plus des données collectées automatiquement.
@@ -31,7 +31,7 @@ La liste suivante énumère les données automatiquement capturées, générées
 | Résolution | Android, iOS, Web | Résolution de l’appareil/navigateur. | Utilisé en option pour le ciblage des messages en fonction de l’appareil. |
 | Langue | Android, iOS, Web | Langue de l’appareil/navigateur. | Utilisé pour traduire les messages dans la langue préférée de l’utilisateur. |
 | Agent de l’utilisateur | Web | [Agent utilisateur](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent). | Utilisé pour s’assurer que les messages ne sont envoyés qu’aux appareils compatibles. Peut également être utilisé dans le cadre de la segmentation. |
-| Emplacement de l’appareil | Android, iOS | Emplacement par défaut de l’appareil. | Utilisé pour traduire les messages dans la langue préférée de l’utilisateur. |
+| Paramètres régionaux de l’appareil | Android, iOS | Les paramètres régionaux par défaut de l’appareil. | Utilisé pour traduire les messages dans la langue préférée de l’utilisateur. |
 | Modèle de l’appareil | Android, iOS | Le matériel spécifique de l’appareil. | Utilisé pour s’assurer que les messages ne sont envoyés qu’aux appareils compatibles. Peut également être utilisé dans le cadre de la segmentation. |
 | Transporteur sans fil de l’appareil | Android, iOS | L’opérateur mobile. | Utilisé de manière facultative pour le ciblage des messages. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
