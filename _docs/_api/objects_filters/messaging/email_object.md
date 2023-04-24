@@ -71,7 +71,7 @@ An `email_template_id` can be retrieved from the bottom of any email template cr
 Authentication for email file attachments in this endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
-1. Navigate to **Manage Settings > Connected Content tab > Basic Authentication Credentials** to add your authentication credentials. 
+1. Navigate to **Manage Settings > Connected Content > Basic Authentication Credentials** to add your authentication credentials. 
 2. Enter a name, and add a username and password.
 3. In email object of the `/messages/send` endpoint, include a `basic_auth_credential` property specifying the credential name in the attachment details. Refer to the following example with the credential name `company_basic_auth_credential_name`:
 
