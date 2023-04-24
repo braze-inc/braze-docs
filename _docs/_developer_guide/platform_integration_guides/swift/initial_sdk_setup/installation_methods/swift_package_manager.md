@@ -19,7 +19,7 @@ Open your project and navigate to your project's settings. Select the **Swift Pa
 
 ![][3]
 
-Enter the URL of our iOS Swift SDK repository (`https://github.com/braze-inc/braze-swift-sdk`) in the text field. Under the `Dependency Rule` section, select the SDK version. Finally, click **Add Package**. 
+Enter the URL of our iOS Swift SDK repository "https://github.com/braze-inc/braze-swift-sdk" in the text field. Under the **Dependency Rule** section, select the SDK version. Finally, click **Add Package**. 
 
 ![][4]
 

@@ -92,7 +92,7 @@ AppDelegate.braze = braze;
 Users are eligible to receive an in-app message in the following situations:
 
 - An in-app message trigger event is fired
-- Session start event
+- A session is started
 - The app is opened from a push notification
 
 When an in-app message's trigger event is fired, it is placed on a "stack." If multiple in-app messages are in the stack and waiting to be displayed, Braze will display the most recently received in-app message first (last in, first out).
@@ -113,7 +113,7 @@ A triggered in-app message will be discarded in the following situations:
 
 - The `inAppMessage(_:displayChoiceForMessage:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) returned `.discard`.
 - The asset (image or ZIP file) of the in-app message failed to download.
-- The in-app message is ready to be displayed but past the timeout duration.
+- The in-app message is ready to be displayed but passed the timeout duration.
 - The device orientation doesn't match the triggered in-app message's orientation.
 
 ## Real-time in-app message creation and display

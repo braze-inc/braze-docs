@@ -19,8 +19,6 @@ The default log level for the Braze Swift SDK is `.error` in the following chart
 
 See the following list of available log levels:
 
-### Log levels
-
 | Swift       | Objective-C              | Description                                                       |
 |-------------|--------------------------|-------------------------------------------------------------------|
 | `.debug`    | `BRZLoggerLevelDebug`    | Log debugging information + `.info` + `.error`                    |
@@ -31,7 +29,7 @@ See the following list of available log levels:
 
 ### Setting log level
 
-Log level can be assigned either at runtime on your Braze.Configuration object:
+The log level can be assigned at runtime on your `Braze.Configuration` object:
 
 {% tabs %}
 {% tab swift %}

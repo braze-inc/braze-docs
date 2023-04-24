@@ -14,13 +14,16 @@ channel:
 [Push Stories][5] allow marketers to use photo carousel functionality to create a sequence of pages within a push notification. These pages consist of an image, click action, title, and description. Setting up Push Stories for your iOS app requires additional steps beyond integrating standard push notifications, which are outlined in this article.
 
 ## Prerequisites
-{% sdk_min_versions swift:5.0.0 %}
+
+The following SDK versions is required to receive Push Stories:
+
+{% sdk_min_versions swift:5.0.0%}
 
 Ensure that you have followed the [push notification integration tutorial][1] to enable push in your app. As part of this task, you should have implemented the `UNNotification` framework, which is required for this feature.
 
 ## Step 1: Adding the Notification Content Extension target {#notification-content-extension}
 
-In your app project, go to menu **File > New > Target...** and add a new `Notification Content Extension` target and activate it.
+In your app project, go to menu **File > New > Target** and add a new `Notification Content Extension` target and activate it.
 
 ![][2]
 
@@ -68,7 +71,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 {% endtab %}
 {% tab Manual %}
 
-Download the latest `BrazePushStory.zip` from the [GitHub release page](https://github.com/braze-inc/braze-swift-sdk/releases), unzip it, and add the `BrazePushStory.xcframework` to your project's `Notification Content Extension`:
+Download the latest `BrazePushStory.zip` from the [GitHub release page](https://github.com/braze-inc/braze-swift-sdk/releases), extract it, and add the `BrazePushStory.xcframework` to your project's `Notification Content Extension`:
 
 ![]({% image_buster /assets/img/swift/push_story/manual1.png %})
 
@@ -87,7 +90,7 @@ In `NotificationViewController.swift`, add the following line to import the head
 import BrazePushStory
 ```
 
-Next, replace the default implementation by simply inheriting `BrazePushStory.NotificationViewController`:
+Next, replace the default implementation by inheriting `BrazePushStory.NotificationViewController`:
 
 ```swift
 class NotificationViewController: BrazePushStory.NotificationViewController {}

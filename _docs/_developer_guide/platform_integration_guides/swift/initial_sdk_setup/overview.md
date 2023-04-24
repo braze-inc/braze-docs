@@ -25,6 +25,6 @@ guide_featured_list:
 
 <br>
 
-After you have integrated using one of the listed options, followed the steps for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/), and enabled optional SDK customizations, move on to integrating, enabling, and customizing additional channels and features to fit the needs of your future campaigns.  
+After you have integrated using one of the listed options, followed the steps for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/), and enabled other SDK customizations (optional), you can integrate, enable, and customize additional channels and features to fit the needs of your future campaigns.  
 
 <br>

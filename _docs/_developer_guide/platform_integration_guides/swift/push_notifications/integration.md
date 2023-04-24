@@ -40,12 +40,12 @@ Before you can send an iOS push notification using Braze, you must provide your 
 {% tab .p8 File (Recommended) %}
 **Using a .p8 file (authentication token)**
 
-1. In your developer account, go to [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate).
-2. Under **Keys**, select **All** and click the **Add button** (+) in the upper-right corner.
+1. In your Apple developer account, go to [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate).
+2. Under **Keys**, select **All** and click the add button (+) in the upper-right corner.
 3. Under **Key Description**, enter a unique name for the signing key.
-4. Under **Key Services**, select the **Apple Push Notification service (APNs) checkbox**, then click **Continue**. Click **Confirm**.
+4. Under **Key Services**, select the **Apple Push Notification service (APNs)** checkbox, then click **Continue**. Click **Confirm**.
 5. Note the key ID. Click **Download** to generate and download the key. Make sure to save the downloaded file in a secure place, as you cannot download this more than once.
-6. Navigate to **Manage Settings > Settings** in the dashboard and upload the .p8 file under **Apple Push Certificate**.
+6. Navigate to **Manage Settings > Settings** in the dashboard and upload the `.p8` file under **Apple Push Certificate**.
 7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/documentation/foundation/nsbundle/1418023-bundleidentifier), [key ID](https://developer.apple.com/help/account/manage-keys/get-a-key-identifier/), and [team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id). Click **Save**.<br><br>
 
 {% endtab %}
@@ -295,7 +295,7 @@ The preceding example is for customers on the `US-01` instance. If you are not o
 
 ## Push primers {#push-primers}
 
-Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our new [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/).
+Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/).
 
 [1]:  {{site.baseurl}}/user_guide/message_building_by_channel/push/about/
 [2]:  {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/

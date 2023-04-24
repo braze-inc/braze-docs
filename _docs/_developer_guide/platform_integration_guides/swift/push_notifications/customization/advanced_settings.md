@@ -21,7 +21,7 @@ Braze allows you to send custom-defined string key-value pairs, known as `extras
 
 ## Alert options
 
-Check the **Alert Options** checkbox to see a dropdown of key-values available to adjust how the notification appears on devices.
+Select the **Alert Options** checkbox to see a dropdown of key-values available to adjust how the notification appears on devices.
 
 ## Adding content-available flag
 
@@ -33,11 +33,11 @@ Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver cust
 
 ## Update app badge count
 
-Enter the number that you want to update your badge count to or use Liquid syntax to set custom conditions. You can also update a message badge count programmatically: refer to our dedicated badge count [article]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/badges/).
+Enter the number that you want to update your badge count to or use Liquid syntax to set custom conditions. You can also update a message badge count programmatically: refer to our dedicated [badge count]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/badges/) article.
 
 ## Sounds
 
-If you want your push notification to be accompanied by a custom sound when it is received, use the **Sound** field to specify the protocol URL of your sound file. For more on customization, refer to our custom sounds [article]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds/) article.
+If you want your push notification to be accompanied by a custom sound when it is received, use the **Sound** field to specify the protocol URL of your sound file. For more on customization, refer to our [custom sounds]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds/) article.
 
 ## Collapse ID
 

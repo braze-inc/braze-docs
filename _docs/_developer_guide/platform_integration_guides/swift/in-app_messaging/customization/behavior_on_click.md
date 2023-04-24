@@ -1,5 +1,5 @@
 ---
-nav_title: Custom On Click Behavior
+nav_title: Custom On-Click Behavior
 article_title: Customizing In-App Message Click Behavior for iOS
 platform: Swift
 page_order: 5
@@ -41,7 +41,7 @@ The `clickAction` property on your `Braze.InAppMessage` defaults to `.none` but 
 | `ClickAction` | On-Click Behavior |
 | -------------------------- | -------- |
 | `.url(URL, useWebView: Bool)` | Opens the given URL in an external browser. If `useWebView` is set to `true`, it will open in a web view. |
-| `.newsFeed` | The News Feed will be displayed when the message is clicked, and the message will be dismissed.<br><br>**Note:** The News Feed is being deprecated. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more details. |
+| `.newsFeed` | News Feed will be displayed when the message is clicked, and the message will be dismissed.<br><br>**Note:** The News Feed is being deprecated. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more details. |
 | `.none` | The message will be dismissed when clicked. |
 {: .reset-td-br-1 .reset-td-br-2}
 

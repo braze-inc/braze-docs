@@ -7,11 +7,11 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ---
 
-# CocoaPods Integration
+# CocoaPods integration
 
 ## Step 1: Install CocoaPods
 
-Installing the Swift SDK via [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. To install CocoaPods, refer to the CocoaPods [Getting Started guide][cocoapods_getting_started].
+Installing the iOS SDK via [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. To install CocoaPods, refer to the CocoaPods [Getting Started guide][cocoapods_getting_started].
 
 Run the following command to get started:
 
@@ -37,7 +37,7 @@ end
 
 We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like `pod 'BrazeKit' ~> Major.Minor.Build`. If you want to automatically integrate the latest Braze SDK version, even with major changes, you can use `pod 'BrazeKit'` in your Podfile.
 
-#### Additional Libraries
+#### Additional libraries
 
 The Braze Swift SDK separates features into standalone libraries to provide developers with more control over which features to import into their projects. In addition to `BrazeKit`, you may add the following libraries to your Podfile:
 
