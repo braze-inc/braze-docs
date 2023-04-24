@@ -80,7 +80,6 @@ Add another item to the array using the `$add` operator. The following example s
             "name": "Mary"
           }
         ]
-        ]
       }
     }
   ]
@@ -290,8 +289,8 @@ braze.getUser().setCustomUserAttribute("pets", [{
   "breed", "beagle",
   "name", "Gus"
 }, {
- "id": 2,
- "type": "cat",
+  "id": 2,
+  "type": "cat",
   "breed": "calico",
   "name": "Gerald"
 }]);
