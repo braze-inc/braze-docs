@@ -719,3 +719,5 @@ validurls['/docs/user_guide/message_building_by_channel/email/gmail_promotions_t
 validurls['/docs/user_guide/message_building_by_channel/email/email_private_relay_apple_sso/'] = '/docs/user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_sso/';
 validurls['/docs/user_guide/message_building_by_channel/email/mpp/'] = '/docs/user_guide/message_building_by_channel/email/apple_mail/mpp/';
 
+validurls['/docs/user_guide/data_and_analytics/query_builder/custom_sql/'] = '/docs/user_guide/data_and_analytics/query_builder/#custom-sql';
+
