@@ -85,7 +85,9 @@ Authentication for email file attachments in this endpoint is currently in early
       "from": "mail <mail@e.company.com>",
       "body": "my attachment test",
       "attachments":[
-        { "file_name":"checkout_receipt.pdf", "url":"https://fileserver.company.com/user123-checkout_receipt.pdf", "basic_auth_credential": "company_basic_auth_credential_name" }
+        { "file_name":"checkout_receipt.pdf",
+        "url":"https://fileserver.company.com/user123-checkout_receipt.pdf",
+        "basic_auth_credential": "company_basic_auth_credential_name" }
       ]
     }
   }
