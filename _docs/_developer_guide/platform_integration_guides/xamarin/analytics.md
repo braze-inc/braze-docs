@@ -31,7 +31,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 Appboy.SharedInstance().ChangeUser("YOUR_USER_ID");
 ```
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
 {% endtab %}
 {% endtabs %}
 
@@ -52,7 +52,7 @@ Appboy.SharedInstance ().LogCustomEvent ("YOUR_EVENT_NAME");
 
 **Implementation Example** - `logCustomEvent` is utilized within the `AppboySampleViewController.cs` within the [TestApp.XamariniOS](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS) sample application.
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
 {% endtab %}
 {% endtabs %}
 
@@ -73,7 +73,7 @@ Appboy.SharedInstance ().LogPurchase ("product_id", "USD", new NSDecimalNumber("
 
 **Implementation Example** - You can see user properties being set in the sample application's `EventsAndPurchasesButtonHandler` method inside `AppboySampleViewController.cs`.
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
 {% endtab %}
 {% endtabs %}
 
@@ -98,7 +98,7 @@ Appboy.SharedInstance ().User.FirstName = "YOUR_NAME";
 
 **Implementation Example** - You can see user properties being set in the sample application's `UserPropertyButtonHandler` method inside `AppboySampleViewController.cs`.
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
 {% endtab %}
 {% endtabs %}
 

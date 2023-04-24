@@ -382,17 +382,17 @@ var ticket_lookuptable = {
                 'Setting external IDs' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS: setting user IDs','Android: setting user IDs','User ID FAQs'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation']
                 },
                 'Custom events and event properties' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS: tracking custom events','Android: tracking custom events'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/#tracking-custom-events','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events']
                 },
                 'Custom attributes' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS: tracking custom attributes','Android: tracking custom attributes'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-custom-attributes','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#setting-custom-attributes','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes']
                 }
               }
             },

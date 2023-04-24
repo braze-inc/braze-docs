@@ -36,5 +36,5 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer YOUR-
 }' https://{REST_API_ENDPOINT_URL}/messages/send 
 ```
 [29]: {{site.baseurl}}/api/endpoints/messaging/
-[32]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#assigning-a-user-id
+[32]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

@@ -305,7 +305,7 @@ Cette bibliothèque cliente est actuellement en version bêta. Voulez-vous nous 
 
 [1]: https://en.wikipedia.org/wiki/UTF-8
 [7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
 [2]: {{site.baseurl}}/api/identifier_types/

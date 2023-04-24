@@ -1,10 +1,9 @@
 ---
-hidden: true
 nav_title: Sample Apps
 article_title: Sample Apps for iOS
-platform: iOS
+platform: Swift
 page_order: 9
-description: "This article covers iOS sample apps."
+description: "This article covers iOS Swift SDK sample apps."
 
 ---
 
@@ -12,14 +11,23 @@ description: "This article covers iOS sample apps."
 
 Braze's SDKs each come with sample applications within the repository for your convenience. Each of these apps is fully buildable, so you can test Braze features alongside implementing them within your own applications. Testing behavior within your own application versus expected behavior and codepaths within the sample applications is an excellent way to debug any problems you may run into.
 
+## Navigating Braze's examples
+
+Several test applications are available within the `Examples` folder of the [Swift SDK GitHub repository][1]. The README describes all of the different permutations of sample integrations, such as:
+
+1. Integration types (Swift Package Manager, Cococapods, Manual)
+2. Coding languages (Swift and Objective-C)
+3. Platforms (iOS, tvOS, Mac Catalyst, etc.)
+4. Features (In-App Messages, Content Cards, Location, Rich Push, Push Stories, etc.)
+5. Customization types (default UI, fully custom UI)
+
 ## Building test applications
-Several test applications are available within the [iOS SDK GitHub repository][1]. Follow these instructions to build and run our test applications.
 
-1. Create a new [app group][25] and note the app identifier API key.
-2. Place your API key within the appropriate field in the `AppDelegate.m` file.
+Follow these instructions to build and run our test applications.
 
-Push notifications for the iOS test application require additional configuration. Refer to our [iOS Push integration][7] for details.
+1. Create a new [app group][2] and note the app identifier API key and endpoint.
+2. Based on your integration method (Swift Package Manager, Cocoapods, Manual), select the appropriate `xcodeproj` file to open.
+3. Place your API key and your endpoint within the appropriate field in the `Credentials` file.
 
-[1]: https://github.com/appboy/appboy-ios-sdk "Appboy iOS GitHub Repository"
-[25]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[1]: https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples
+[2]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps

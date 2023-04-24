@@ -181,7 +181,7 @@ For example, this can be useful if you want to target users who have neither opt
 ![Email Subscription Status used as a segment filter.][18]
 
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}
-[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-up-user-subscriptions
+[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [16]: {% image_buster /assets/img_archive/user-profile-subscription-ui.png %}
 [17]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}

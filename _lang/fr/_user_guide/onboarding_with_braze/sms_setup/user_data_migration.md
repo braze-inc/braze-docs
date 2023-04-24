@@ -50,7 +50,7 @@ Une fois que vous avez configuré les groupes d’abonnement SMS dans votre tabl
 [userphone]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
 [1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [2]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#aliasing-users
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
 [6]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/

@@ -1,8 +1,7 @@
 ---
-hidden: true
 nav_title: Tracking Custom Events
 article_title: Tracking Custom Events for iOS
-platform: iOS
+platform: Swift
 page_order: 2
 description: "This reference article covers how to add and track custom events for your iOS application."
 
@@ -17,17 +16,17 @@ Before implementation, be sure to review examples of the segmentation options af
 ## Adding a custom event
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance] logCustomEvent:@"YOUR_EVENT_NAME"];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME")
+AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze logCustomEvent:@"YOUR_EVENT_NAME"];
 ```
 
 {% endtab %}
@@ -35,32 +34,15 @@ Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME")
 
 ### Adding properties
 
-You can add metadata about custom events by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
+You can add metadata about custom events by passing a `Dictionary` populated with `Int`, `Double`, `String`, `Bool`, or `Date` values.
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance] logCustomEvent:@"YOUR-EVENT-NAME"
-                         withProperties:@{
-  @"you": @"can",
-  @"pass": @(NO),
-  @"orNumbers": @42,
-  @"orDates": [NSDate date],
-  @"or": @[@"any", @"array", @"here"],
-  @"andEven": @{
-    @"deeply": @[@"nested", @"json"]
-  }
-}];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.logCustomEvent(
-  "YOUR-EVENT-NAME",
-  withProperties: [
+AppDelegate.braze?.logCustomEvent(
+  name: "YOUR-EVENT-NAME",
+  properties: [
     "you": "can",
     "pass": false,
     "orNumbers": 42,
@@ -74,9 +56,24 @@ Appboy.sharedInstance()?.logCustomEvent(
 ```
 
 {% endtab %}
-{% endtabs %}
+{% tab OBJECTIVE-C %}
 
-Refer to our [class documentation][4] for more information.
+```objc
+[AppDelegate.braze logCustomEvent:@"YOUR-EVENT-NAME"
+                       properties:@{
+  @"you": @"can",
+  @"pass": @(NO),
+  @"orNumbers": @42,
+  @"orDates": [NSDate date],
+  @"or": @[@"any", @"array", @"here"],
+  @"andEven": @{
+    @"deeply": @[@"nested", @"json"]
+  }
+}];
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Reserved keys {#event-reserved-keys}
 
@@ -87,10 +84,7 @@ The following keys are reserved and cannot be used as custom event properties:
 
 ## Additional resources
 
-- See the method declaration within the `Appboy.h` [file][2]. 
-- Refer to the [`logCustomEvent`][3] documentation for more information.
+- Refer to the [`logCustomEvent`][1] documentation for more information.
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[3]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad80c39e8c96482a77562a5b1a1d387aa "logcustomevent documentation"
-[4]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79 "logcustomevent:withproperties documentation"
+[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logcustomevent(name:properties:fileid:line:) "logcustomevent documentation"
