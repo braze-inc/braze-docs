@@ -189,13 +189,34 @@ Lorem ipsum ipsum lorem
 {% tab Web SDK %}
 
 **Create**
-Lorem ipsum ipsum lorem
+```javascript
+import * as braze from "@braze/web-sdk";
+braze.getUser().setCustomUserAttribute("most_played_song", {
+  "song_name": "Solea"
+  "artist_name": "Miles Davis",
+  "album_name": "Sketches of Spain",
+  "genre": "Jazz",
+  "play_analytics": {
+    "count": 1000
+    "top_10_listeners": true
+  }
+});
+```
 
 **Update**
-Lorem ipsum ipsum lorem
+```javascript
+import * as braze from "@braze/web-sdk";
+braze.getUser().setCustomUserAttribute("most_played_song", {
+  "year_released": 1960
+}, true);
+
+```
 
 **Delete**
-Lorem ipsum ipsum lorem
+```javascript
+import * as braze from "@braze/web-sdk";
+braze.getUser().unsetCustomUserAttribute("most_played_song");
+```
 
 {% endtab %}
 {% endtabs %}
