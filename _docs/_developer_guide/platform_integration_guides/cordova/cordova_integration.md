@@ -36,11 +36,11 @@ A custom API endpoint can be configured via the `config.xml`. For example, to us
 
 ## Push notifications
 
-If you use the Cordova SDK default setup you won't have to make any new changes client-side. For modified integrations, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/) or [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) integration instructions.
+If you use the Cordova SDK default setup you won't have to make any new changes client-side. For modified integrations, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/) or [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) integration instructions.
 
 ## In-app messaging
 
-By default the Cordova SDK supports in-app messages with no changes. See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/) integration examples for information on customizing in-app messages. Furthermore, you can look at the [sample Cordova application](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) or the sample [Android](https://github.com/braze-inc/braze-android-sdk) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/) application for implementation samples.
+By default the Cordova SDK supports in-app messages with no changes. See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/) integration examples for information on customizing in-app messages. Furthermore, you can look at the [sample Cordova application](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) or the sample [Android](https://github.com/braze-inc/braze-android-sdk) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/) application for implementation samples.
 
 ## Analytics
 
@@ -72,7 +72,7 @@ AppboyPlugin.setFirstName("firstName");
 
 ### Logging purchases
 
-See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/) integration instructions for in-depth discussion of revenue tracking best practices and interfaces.
+See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/) integration instructions for in-depth discussion of revenue tracking best practices and interfaces.
 
 ```javascript
 var properties = {};

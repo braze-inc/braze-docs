@@ -11,7 +11,7 @@ channel:
 
 <br>
 {% alert important %}
-Vous recherchez le guide d’intégration de base du développeur de notifications push ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
+Vous recherchez le guide d’intégration de base du développeur de notifications push ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).
 {% endalert %}
 
 # Guide d’implémentation des notifications push
@@ -30,7 +30,7 @@ Ces vues personnalisées offrent des moyens astucieux d’engager les clients en
 
 #### Conditions
 ![][15]{: style="float:right;max-width:50%;margin-left:10px; border:0;margin-top:10px"}
-- [Notifications push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) intégrées avec succès dans votre application
+- [Notifications push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) intégrées avec succès dans votre application
 - iOS 10 ou supérieur
 - Les fichiers suivants générés par Xcode en fonction de votre langue de codage :
 
@@ -150,7 +150,7 @@ Notez que les informations demandées ici peuvent être très variables, comme l
 
 #### Configuration du tableau de bord
 
-Pour configurer une notification push de capture d’information dans le tableau de bord, vous devez enregistrer et définir votre catégorie personnalisée et fournir les paires clé-valeur nécessaires. Comme illustré par l’exemple, vous pouvez également inclure une image dans votre notification push. Pour ce faire, vous devez intégrer les [notifications enrichies]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/), définissez le style de notification dans votre campagne à Rich Notification, et incluez une image de notification push riche.
+Pour configurer une notification push de capture d’information dans le tableau de bord, vous devez enregistrer et définir votre catégorie personnalisée et fournir les paires clé-valeur nécessaires. Comme illustré par l’exemple, vous pouvez également inclure une image dans votre notification push. Pour ce faire, vous devez intégrer les [notifications enrichies]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/), définissez le style de notification dans votre campagne à Rich Notification, et incluez une image de notification push riche.
 
 ![Un message de notification push avec trois ensembles de paires clé-valeur. 1. "Braze_id" défini comme un appel Liquid pour récupérer l’ID Braze. 2. "cert_title" défini comme « Certification du marketeur Braze ». 3. "Cert_description" défini comme « Les marketeurs certifiés Braze conduisent… ».][9]
 

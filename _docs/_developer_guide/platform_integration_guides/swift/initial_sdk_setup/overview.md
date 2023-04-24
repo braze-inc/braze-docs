@@ -1,5 +1,5 @@
 ---
-nav_title: Overview
+nav_title: Integration Overview
 article_title: Integration Overview for the Swift SDK
 platform: Swift
 page_order: 0

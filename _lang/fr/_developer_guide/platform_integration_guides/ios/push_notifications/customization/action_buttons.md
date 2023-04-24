@@ -125,8 +125,8 @@ Ces catégories peuvent ensuite être affectées aux notifications push via notr
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
 [14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "Categories Docs"
 [17]: {% image_buster /assets/img_archive/push_example_category.png %}
-[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
-[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/#push-category-customization
-[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
+[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze
+[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/#push-category-customization
+[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling
 [31]: https://developer.apple.com/reference/uikit/uiusernotificationcategory
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/

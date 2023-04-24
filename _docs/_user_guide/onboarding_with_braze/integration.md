@@ -25,7 +25,7 @@ The Braze SDK (Software Development Kit) is how we send and get information to a
 
 * Your [API keys]({{site.baseurl}}/api/api_key/)
 * Your [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Braze no longer gives out custom endpoints so use the predefined SDK endpoints. If you have been given a pre-existing custom endpoint, Here, you can find the set up steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
+  * Braze no longer gives out custom endpoints so use the predefined SDK endpoints. If you have been given a pre-existing custom endpoint, Here, you can find the set up steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
 
 You can either give this information to them directly, or you can give them access to Braze by creating an account for them. 
 
@@ -72,7 +72,7 @@ If you want things like API-triggered launching and Connected Content, discuss t
 
 ### Step 5: You both QA your implementation
 
-Work together with your engineer to make sure everything is working. Send [test messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), use our [test apps for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sample_apps/) and [test apps for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/sample_apps/), check every box before you start sending!
+Work together with your engineer to make sure everything is working. Send [test messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), use our [test apps for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sample_apps/) and [test apps for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sample_apps/), check every box before you start sending!
 
 We even have specific instructions for [testing your Android or FireOS integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) and testing [push for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/testing/).
 

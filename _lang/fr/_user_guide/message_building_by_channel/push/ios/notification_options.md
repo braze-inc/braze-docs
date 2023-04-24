@@ -98,10 +98,10 @@ Si vous utilisez des invites de notification push supplémentaires ou des [amorc
 
 #### Configurer des notifications push provisoires
 
-Braze vous permet de vous inscrire à l’authentification provisoire en mettant à jour votre code dans votre extrait de code d’enregistrement de jeton au sein de votre implémentation SDK iOS Braze en utilisant les extraits de code suivants à titre d’exemple (envoyez-les à vos développeurs ou assurez-vous qu’ils [mettent en œuvre l’authentification de notification push provisoire au cours du processus d’intégration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
+Braze vous permet de vous inscrire à l’authentification provisoire en mettant à jour votre code dans votre extrait de code d’enregistrement de jeton au sein de votre implémentation SDK iOS Braze en utilisant les extraits de code suivants à titre d’exemple (envoyez-les à vos développeurs ou assurez-vous qu’ils [mettent en œuvre l’authentification de notification push provisoire au cours du processus d’intégration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#using-usernotification-framework-ios-10)).
 
 {% alert warning %}
-La mise en œuvre de l’authentification de notification push provisoire prend uniquement en charge iOS 12+ et renvoie une erreur si la cible du déploiement est antérieure. Vous pouvez en savoir plus [dans notre documentation sur la mise en œuvre ici]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10).
+La mise en œuvre de l’authentification de notification push provisoire prend uniquement en charge iOS 12+ et renvoie une erreur si la cible du déploiement est antérieure. Vous pouvez en savoir plus [dans notre documentation sur la mise en œuvre ici]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#using-usernotification-framework-ios-10).
 {% endalert %}
 
 {% tabs local %}

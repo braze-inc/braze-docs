@@ -23,7 +23,7 @@ It is required to [migrate push tokens via API]({{site.baseurl}}/help/help_artic
 
 1. Import the tokens via the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. For large batch imports, we have resources available to help expedite the process. Reach out to your COM or SA for more details!
 2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.
-3. QA the push integration. Ensure that the steps to [configure push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) have been completed.
+3. QA the push integration. Ensure that the steps to [configure push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) have been completed.
 
 If your user profiles and push tokens happen to be stored in separate locations, we recommend importing push tokens anonymously and then a subsequent migration of your existing user profiles. It is not necessary to map them together since the Braze iOS SDK will handle the token resolution upon successful integration.
 
@@ -54,7 +54,7 @@ Braze is able to send push notifications to users who do not update their applic
 For the case of lifecycle-specific campaigns that would need to continue during your migration process to the Braze SDK, users may be eligible to receive notifications from both Braze and Airship, given that Braze has received a valid push token.
 
 #### Message center
-To replace Airship's message center campaign functionality, we recommend creating a multichannel campaign that consists of a push notification and a [Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/). To read more about how to use Content Cards in a message center format, check out our [iOS Content Card implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/#content-cards-in-a-message-center).
+To replace Airship's message center campaign functionality, we recommend creating a multichannel campaign that consists of a push notification and a [Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/). To read more about how to use Content Cards in a message center format, check out our [iOS Content Card implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/implementation_guide/#content-cards-in-a-message-center).
 
 ### Segmentation
 Braze offers multiple [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/) filters to provide a rich user experience for your customers.

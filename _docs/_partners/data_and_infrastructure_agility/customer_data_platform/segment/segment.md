@@ -418,7 +418,7 @@ When passing user attribute data, check that you only pass values for attributes
 [26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [27]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
 [28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
-[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
+[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [36]: https://segment.com/docs/sources/#server
 [38]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/

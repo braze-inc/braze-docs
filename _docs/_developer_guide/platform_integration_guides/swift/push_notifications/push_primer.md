@@ -129,7 +129,7 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
 
 Place this following code snippet outside of the `(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method from [step 1](#step-1-add-snippet-in-appdelegatem-file).
 
-Refer to [link handling customization]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization) for more information on deep linking.
+Refer to [link handling customization]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization) for more information on deep linking.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

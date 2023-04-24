@@ -353,7 +353,7 @@ var ticket_lookuptable = {
             'Push' : {
               'SelectDefault': 'Sélectionner une plateforme…',
               'LinksTitle': ['iOS : intégration de notifications push','Android : intégration de notifications push'],
-              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/'],
+              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/'],
               'Label': 'Plateforme',
               'SelectOption' : {
                 'Android' : {
@@ -364,7 +364,7 @@ var ticket_lookuptable = {
                 'iOS' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS : intégration de notifications push','iOS : résolution des problèmes des notifications push','iOS 10 : notifications enrichies','iOS : Notifications push silencieuses'],
-                  'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/']
+                  'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications','{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/']
                 },
                 'Other' : {
                   'ShowSubmit': true,

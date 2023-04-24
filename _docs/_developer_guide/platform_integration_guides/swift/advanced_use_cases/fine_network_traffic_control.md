@@ -7,7 +7,9 @@ description: "This article covers implementing fine network traffic control for 
 
 ---
 # Fine network traffic control for iOS
+
 ## Request processing policies
+
 Braze allows the user the option to control network traffic using the following protocols:
 
 ### Automatic request processing

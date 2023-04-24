@@ -380,5 +380,5 @@ You can then search for the user with `some-user-id` in the dashboard under [Use
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK Install"
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/ "iOS SDK Install"
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/ "iOS SDK Install"
 [user-search]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search

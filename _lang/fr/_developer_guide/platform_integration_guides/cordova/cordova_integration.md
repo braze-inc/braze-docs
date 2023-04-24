@@ -36,7 +36,7 @@ Un endpoint API personnalisé peut être configuré via `config.xml`. Par exempl
 
 ## Notifications push
 
-Si vous utilisez la configuration par défaut du SDK Cordova, vous n’aurez pas à effectuer de nouveaux changements côté client. Pour les intégrations modifiées, voir les instructions d’intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/) ou [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
+Si vous utilisez la configuration par défaut du SDK Cordova, vous n’aurez pas à effectuer de nouveaux changements côté client. Pour les intégrations modifiées, voir les instructions d’intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/) ou [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).
 
 ## Envoi de messages in-app
 

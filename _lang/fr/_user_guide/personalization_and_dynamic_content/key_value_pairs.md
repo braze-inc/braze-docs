@@ -139,7 +139,7 @@ Les marketeurs doivent tester que les notifications push silencieuses déclenche
 Lors du lancement de la campagne, vous devez vérifier que vous n’avez reçu aucune notification push visible sur votre appareil de test.
 
 {% alert note %}
-Le système d’exploitation iOS peut bloquer [les notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations) pour certaines fonctionnalités (désinstallation, suivi, geofences et Push Stories). Notez que si vous rencontrez des difficultés avec ces fonctionnalités, le blocage des notifications silencieuses d’iOS peut en être la cause.
+Le système d’exploitation iOS peut bloquer [les notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations) pour certaines fonctionnalités (désinstallation, suivi, geofences et Push Stories). Notez que si vous rencontrez des difficultés avec ces fonctionnalités, le blocage des notifications silencieuses d’iOS peut en être la cause.
 {% endalert %}
 
 ## Messages in-app
@@ -169,8 +169,8 @@ Pour ajouter une paire clé-valeur à une carte de contenu, allez à l’onglet 
 ![Ajouter une paire clé-valeur à la carte de contenu][24]{: style="max-width:70%;"}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#notification-priority
