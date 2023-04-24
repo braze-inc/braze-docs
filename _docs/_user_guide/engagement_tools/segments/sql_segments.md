@@ -13,10 +13,6 @@ tool: Segments
 
 > You can generate a Segment Extension using Snowflake SQL queries of [Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
 
-{% alert important %}
-The SQL editor is in early access. If you're interested in participating in the early access, reach out to your customer success manager.
-{% endalert %}
-
 ## Creating Segment Extensions using SQL
 
 To create a Segment Extension using SQL:
@@ -36,7 +32,11 @@ When the extension finishes processing, you can [create a segment]({{site.baseur
 
 ### Writing SQL
 
-Your SQL query should be written using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference.html). Consult the [table reference]({{site.baseurl}}/sql_segments_tables/) for a full list of tables and columns available to be queried.
+Your SQL query should be written using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference.html). Consult the [table reference]({{site.baseurl}}/sql_segments_tables/) for a full list of tables and columns available to be queried. 
+
+{% alert important %}
+Note that the tables available to query contain only event data. If you wish to query for user attributes, you should combine your SQL segment with custom attribute filters from Braze's classic segmenter.
+{% endalert %} 
 
 Your SQL must additionally adhere to the following rules:
 
@@ -46,10 +46,12 @@ Your SQL must additionally adhere to the following rules:
 ```sql
 SELECT DISTINCT user_id FROM "INSERT TABLE NAME"
 ```
+- It is not possible to query for users with zero events, which means any query for users that have done an event less than X times would need to follow this workaround: first, write a query to select users who have the event MORE than X times, and then, when referencing your Segment Extension in your segment, select "doesn't include" to INVERT the result. 
 
 ### Previewing results
 
 Before saving, you can run a preview of your query. Query previews are automatically limited to 100 rows and will timeout after 60 seconds. The `user_id` column requirement does not apply when running a preview.
+
 
 ## Managing SQL Segment Extensions
 
