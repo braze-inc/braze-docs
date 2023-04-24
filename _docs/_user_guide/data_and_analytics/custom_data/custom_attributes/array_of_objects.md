@@ -282,16 +282,87 @@ Lorem ipsum ipsum lorem
 {% tab Web SDK %}
 
 **Create**
-Lorem ipsum ipsum lorem
+```javascript
+import * as braze from "@braze/web-sdk";
+braze.getUser().setCustomUserAttribute("pets", [{
+  "id": 1,
+  "type": "dog",
+  "breed", "beagle",
+  "name", "Gus"
+}, {
+ "id": 2,
+ "type": "cat",
+  "breed": "calico",
+  "name": "Gerald"
+}]);
+```
 
 **Add**
-Lorem ipsum ipsum lorem
+```javascript
+import * as braze from "@braze/web-sdk";
+braze.getUser().setCustomerUserAttribute("pets", {
+  "$add": [{
+    "id":  3,
+    "type":  "dog",
+    "breed":  "corgi",
+    "name":  "Doug",
+  }, {
+    "id":  4,
+    "type":  "fish",
+    "breed":  "salmon",
+    "name":  "Larry",
+  }, {
+    "id":  5,
+    "type":  "bird",
+    "breed":  "parakeet",
+    "name":  "Mary",
+  }]
+}, true);
+```
 
 **Update**
-Lorem ipsum ipsum lorem
+```javascript
+import * as braze from "@braze/web-sdk";
+braze.getUser().setCustomUserAttribute("pets", {
+  "$update": [
+    {
+      "$identifier_key": "id",
+      "$identifier_value": 4,
+      "$new_object": {
+        "breed", "goldfish"
+      }
+    },
+    {
+      "$identifier_key": "id",
+      "$identifier_value": 5,
+      "$new_object": {
+        "name": "Annette"
+      }
+    }
+  ]
+}, true);
+```
 
 **Delete**
-Lorem ipsum ipsum lorem
+```javascript
+import * as braze from "@braze/web-sdk";
+braze.getUser().setCustomUserAttribute("pets", {
+  "$remove": [
+    {
+      "$identifier_key": "id",
+      "$identifier_value": 1,
+    },
+    {
+      "$identifier_key": "id",
+      "$identifier_value": 2,
+    },
+    {
+      "$identifier_key": "type",
+      "$identifier_value", "dog",
+    }
+  ]
+}, true);
+```
 
 {% endtab %}
 {% endtabs %}
