@@ -17,7 +17,7 @@ By default, Braze disables location tracking. We enable location tracking after 
 
 Go over [Requesting Authorization for Location Services](https://developer.apple.com/documentation/corelocation/requesting_authorization_to_use_location_services) and make sure to configure your application purpose strings. When using Braze location features, your application is responsible for requesting authorization for using location services. 
 
-In the General tab of your Application configuration page, under Frameworks and Libraries, add the `BrazeLocation` module.
+To enable location tracking, add the `BrazeLocation` module in the **General** tab of your application configuration page.
 
 {% tabs %}
 {% tab swift %}

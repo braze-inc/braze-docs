@@ -9,15 +9,39 @@ channel:
 
 ---
 
-# In-app message delivery
+# In-app message delivery for iOS
+
+> This reference article provides an overview of iOS in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps.
 
 ## Trigger types
 
-You can trigger an in-app message off of the following event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, the `Specific Purchase` and `Custom Event` triggers contain robust property filters.
+In-app messages are triggered by events logged by the SDK. You can trigger an in-app message off of the following event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, the `Specific Purchase` and `Custom Event` triggers contain robust property filters.
 
 {% alert note %}
 Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). If you're working with iOS, visit our [tracking custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) article to learn more. 
 {% endalert %}
+
+## Enabling in-app messages
+
+To allow Braze to display in-app messages, create an implementation of the `BrazeInAppMessagePresenter` protocol and assign it to the optional `inAppMessagePresenter` on your Braze instance. You can also use the default Braze UI presenter by instantiating a `BrazeInAppMessageUI` object.
+
+Note that you will need to import the `BrazeUI` library to access the `BrazeInAppMessageUI` class.
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+AppDelegate.braze?.inAppMessagePresenter = BrazeInAppMessageUI()
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+AppDelegate.braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
+```
+{% endtab %}
+{% endtabs %}
 
 ## Delivery semantics
 
@@ -61,29 +85,7 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
-## Local in-app message delivery
-
-### Showing in-app messages
-
-To allow Braze to display in-app messages, create an implementation of the `BrazeInAppMessagePresenter` protocol and assign it to the optional `inAppMessagePresenter` on your Braze instance. You can also use the default Braze UI presenter by instantiating a `BrazeInAppMessageUI` object.
-
-Note that you will need to import the `BrazeUI` library to access the `BrazeInAppMessageUI` class.
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-AppDelegate.braze?.inAppMessagePresenter = BrazeInAppMessageUI()
-```
-
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-AppDelegate.braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
-```
-{% endtab %}
-{% endtabs %}
+## The in-app message stack
 
 ### Adding in-app messages to the stack
 

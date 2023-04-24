@@ -21,7 +21,7 @@ As of iOS 14, geofences do not work reliably for users who choose to give their 
 
 ## Step 1: Enable background push
 
-To fully utilize our geofence syncing strategy, you must have [background push][6] enabled in addition to completing the standard push integration.
+To fully utilize our geofence syncing strategy, you must have [silent push notifications][6] enabled in addition to completing the standard push integration.
 
 ## Step 2: Enable Braze location services
 Braze location services [must be enabled][1] through the SDK. They are not enabled by default.
@@ -187,6 +187,6 @@ AppDelegate.braze?.requestGeofences(latitude: latitude, longitude: longitude)
 
 [1]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/
 [2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class
-[6]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
 [support]: {{site.baseurl}}/braze_support/

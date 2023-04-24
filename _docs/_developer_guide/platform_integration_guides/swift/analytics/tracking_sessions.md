@@ -1,6 +1,6 @@
 ---
-nav_title: Tracking Sessions
-article_title: Tracking Sessions for iOS
+nav_title: Session Tracking
+article_title: Session Tracking for iOS
 platform: Swift
 page_order: 0
 description: "This reference article shows how to subscribe to session updates for your iOS application."
@@ -13,7 +13,7 @@ The Braze SDK reports session data used by the Braze dashboard to calculate user
 
 ## Session lifecycle
 
-A session is started when you call `Braze.init(configuration:)`. By default, this occurs when the `UIApplicationWillEnterForegroundNotification` notification is fired (i.e., the app enters the foreground). Session end occurs when the app leaves the foreground (i.e., when the `UIApplicationDidEnterBackgroundNotification` notification is fired or when the app dies).
+A session is started when you call `Braze.init(configuration:)`. By default, this occurs when the `UIApplicationWillEnterForegroundNotification` notification is fired (when the app enters the foreground). Session end occurs when the app leaves the foreground (such as when the `UIApplicationDidEnterBackgroundNotification` notification is fired or when the app dies).
 
 {% alert note %}
 If you need to force a new session, you can do so by changing users.

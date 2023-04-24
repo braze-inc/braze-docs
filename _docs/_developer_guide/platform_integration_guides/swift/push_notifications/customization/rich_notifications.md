@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Rich notifications
+# Rich push notifications for iOS
 
 Rich notifications are push notifications with images, GIFs, and video. To enable this functionality, you must create a notification service extension&mdash;a type of extension that enables modification of a push payload before it is displayed. Refer to Apple's [`UNNotificationAttachment`][28] for a list of supported file types and sizes.
 

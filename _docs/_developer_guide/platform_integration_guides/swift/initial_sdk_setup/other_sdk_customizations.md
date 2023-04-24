@@ -7,7 +7,7 @@ page_order: 3
 
 ---
 
-# Other SDK customizations
+# Other SDK customizations for iOS
 
 The Braze Swift SDK can be configured by modifying the member properties of the `Braze.Configuration` object attached to your Braze instance. Note that configuration can only be done prior to initializing the Braze instance with `Braze(configuration:)`.
 

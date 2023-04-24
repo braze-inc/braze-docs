@@ -75,8 +75,6 @@ AppDelegate.braze?.logCustomEvent(
 {% endtab %}
 {% endtabs %}
 
-Refer to our [class documentation][4] for more information.
-
 ### Reserved keys {#event-reserved-keys}
 
 The following keys are reserved and cannot be used as custom event properties:
@@ -86,8 +84,7 @@ The following keys are reserved and cannot be used as custom event properties:
 
 ## Additional resources
 
-- Refer to the [`logCustomEvent`][3] documentation for more information.
+- Refer to the [`logCustomEvent`][1] documentation for more information.
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logcustomevent(name:properties:fileid:line:) "logcustomevent documentation"
-[4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logcustomevent(name:properties:fileid:line:) "logcustomevent:withproperties documentation"
+[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logcustomevent(name:properties:fileid:line:) "logcustomevent documentation"

@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# In-App Message UI Delegate for iOS
+# In-app message UI delegate for iOS
 
 Use the optional [`BrazeInAppMessageUIDelegate`][34] to customize the presentation of in-app messages and react to various lifecycle events. This delegate protocol can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
 

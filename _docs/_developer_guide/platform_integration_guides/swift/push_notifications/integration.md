@@ -26,7 +26,7 @@ local_redirect:
 
 # Push integration for iOS
 
-Push notifications allow you to notify your app when important events occur. You might send a push notification when you have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. Push notifications can also be [silent][1], being used only to update your app's interface or trigger background work. 
+[Push notifications][1] allow you to send out notifications from your app when important events occur. You might send a push notification when you have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. Push notifications can also be [silent][2], being used only to update your app's interface or trigger background work. 
 
 Push notifications are great for sporadic but immediately important content, where the delay between background fetches might not be acceptable. Push notifications can also be much more efficient than background fetch, as your application only launches when necessary. 
 
@@ -37,7 +37,7 @@ Push notifications are rate-limited, so don't be afraid of sending as many as yo
 Before you can send an iOS push notification using Braze, you must provide your push notification file or certificate from Apple. You may present either a `.p8` file (recommended) or a `.p12` certificate.
 
 {% tabs local %}
-  {% tab .p8 File (Recommended) %}
+{% tab .p8 File (Recommended) %}
 **Using a .p8 file (authentication token)**
 
 1. In your developer account, go to [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate).
@@ -54,7 +54,7 @@ Before you can send an iOS push notification using Braze, you must provide your 
 
 You may choose to use Apple's older authentication scheme (.p12 SSL certificates). Unlike the .p8 solution, these certificates automatically expire every year and will require you to regenerate and re-upload them. Braze will send you email reminders as the certificate approaches expiration to help your notifications continue uninterrupted, but because this is a manual process, we recommend utilizing the .p8 authentication scheme instead. However, if you still wish to, you may configure and upload .p12 certificates as described in the following section:
 
-**Generate Certificate Signing Request**
+**Generate certificate signing request**
 
 1. Navigate to the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action).
 2. Select **Identifiers** in the sidebar.
@@ -64,7 +64,7 @@ You may choose to use Apple's older authentication scheme (.p12 SSL certificates
 6. Follow the instructions from the SSL certificate assistant. You should now see an "Enabled" status to indicate that push is enabled.
 7. You must update your provisioning profile for the app after you create your SSL certificates. A simple refresh in the organizer will accomplish this.
 
-**Export Certificate**
+**Export certificate**
 
 1. Download the production push certificate you just created and open it with the Keychain Access application.
 2. In Keychain Access, click on **My Certificates** and locate your push certificate.
@@ -84,18 +84,14 @@ In Xcode, add the Push Notifications capability using the **Signing & Capabiliti
 
 ## Step 3: Register for push notifications with APNs
 
-The appropriate code sample must be included within your app's [`application:didFinishLaunchingWithOptions:` delegate method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) for your users' device to register with APNs. Ensure that you call all push integration code in your application's main thread.
+Include the appropriate code sample within your app's [`application:didFinishLaunchingWithOptions:` delegate method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) so that your users' devices can register with APNs. Ensure that you call all push integration code in your application's main thread.
 
 Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons][35] for additional integration steps.
 
-Add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate.
+Add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate. 
 
-{% alert important %}
+{% alert note %}
 The following code sample includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) to learn more about push provisional authentication.
-{% endalert %}
-
-{% alert important %}
-If you've implemented a custom push prompt, as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/), make sure that you're calling the following code every time the app runs after push permissions are granted. Apps need to re-register with APNs as device tokens can change arbitrarily.
 {% endalert %}
 
 {% tabs %}
@@ -202,7 +198,7 @@ if let braze = AppDelegate.braze, braze.notifications.handleUserNotification(
 completionHandler()
 ```
 
-**Foreground Push Handling**
+**Foreground push handling**
 
 To display a push notification while the app is in the foreground, implement `userNotificationCenter(_:willPresent:withCompletionHandler:)`:
 
@@ -247,7 +243,7 @@ if (processedByBraze) {
 completionHandler();
 ```
 
-**Foreground Push Handling**
+**Foreground push handling**
 
 To display a push notification while the app is in the foreground, implement `userNotificationCenter:willPresentNotification:withCompletionHandler:`:
 
@@ -297,15 +293,16 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 ```
 The preceding example is for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
-## Push Primers {#push-primers}
+## Push primers {#push-primers}
 
 Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our new [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/).
 
-[1]:  {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
+[1]:  {{site.baseurl}}/user_guide/message_building_by_channel/push/about/
+[2]:  {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
-[29]: {{site.baseurl}}/api/endpoints/messaging/
+[29]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [32]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/
-[66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
+[66]: {{site.baseurl}}/api/basics/

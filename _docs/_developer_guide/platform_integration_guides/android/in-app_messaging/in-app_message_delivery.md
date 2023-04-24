@@ -45,7 +45,7 @@ By default, in-app messages are triggered by custom events logged by the SDK. If
 
 To enable this feature, a silent push is sent to the device, which allows a custom push callback to log an SDK-based event. This SDK event will subsequently trigger the user-facing in-app message.
 
-### Step 1: Create a Push Callback to Receive the Silent Push
+### Step 1: Create a push callback to receive the silent push
 
 Register your custom push callback to listen for a specific silent push notification. For more information, take a look at [Braze's push documentation][78].
 

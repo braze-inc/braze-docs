@@ -1,11 +1,11 @@
 ---
 nav_title: Overview
-article_title: Integration Overview for iOS
+article_title: Integration Overview for the Swift SDK
 platform: Swift
 page_order: 0
 layout: featured
 
-guide_top_header: "Integration Overview"
+guide_top_header: "Integration Overview for the Swift SDK"
 guide_top_text: "Installing the Braze Swift SDK will provide you with basic analytics functionality (session handling) and basic in-app messages. You must further customize your integration for additional channels and features. <br> <br> The Braze Swift SDK can be installed or updated using Swift Package Manager or CocoaPods."
 description: "This landing page covers Braze SDK integration guides for Swift Package Manager, CocoaPods, and more."
 
@@ -25,6 +25,6 @@ guide_featured_list:
 
 <br>
 
-After you have integrated using one of the listed options, followed the steps for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/), and enabled other SDK customizations (optional), move on to integrating, enabling, and customizing additional channels and features to fit the needs of your future campaigns.  
+After you have integrated using one of the listed options, followed the steps for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/), and enabled optional SDK customizations, move on to integrating, enabling, and customizing additional channels and features to fit the needs of your future campaigns.  
 
 <br>

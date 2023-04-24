@@ -15,7 +15,7 @@ The Braze Swift SDK provides URL handling support for push action buttons. There
 
 ![A GIF of a push message being pulled down to display two customizable action buttons.][13]
 
-To enable these push action buttons, first [register for Braze's default push categories](#step-1-adding-braze-default-push-categories-registering). Then, use the [`didReceive(_:completionHandler:)`](#step-2-enable-interactive-push-handling-enable-push-handling) delegate method to enable push action buttons.
+To enable these push action buttons, first register for Braze's default push categories. Then, use the `didReceive(_:completionHandler:)` delegate method to enable push action buttons.
 
 If you want to create your own custom notification categories, see [action button customization](#push-category-customization).
 

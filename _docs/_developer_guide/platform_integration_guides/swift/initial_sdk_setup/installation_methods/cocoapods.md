@@ -11,7 +11,7 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ## Step 1: Install CocoaPods
 
-Installing the iOS SDK via [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. To install CocoaPods, refer to the CocoaPods [Getting Started guide][cocoapods_getting_started].
+Installing the Swift SDK via [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. To install CocoaPods, refer to the CocoaPods [Getting Started guide][cocoapods_getting_started].
 
 Run the following command to get started:
 

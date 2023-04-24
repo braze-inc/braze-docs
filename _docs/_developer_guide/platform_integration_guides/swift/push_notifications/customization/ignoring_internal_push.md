@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Ignoring Braze's internal push notifications
+# Ignoring Braze's internal push notifications for iOS
 
 Braze uses [silent push notifications][2] for the internal implementation of certain advanced features. For most integrations, this requires no changes on your app's behalf. However, if you integrate a Braze feature that relies on internal push notifications (such as uninstall tracking or geofences), you may want to update your app to ignore Braze's internal pushes.
 

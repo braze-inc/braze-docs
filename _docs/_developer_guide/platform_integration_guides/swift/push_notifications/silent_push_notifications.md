@@ -11,9 +11,9 @@ channel:
 
 # Silent push notifications
 
-Push notifications allow you to notify your app when important events occur. You might send a push notification when you have an important alert for a user. Push notifications can also be silent, containing no alert message or sound, being used only to update your app's interface or trigger background work. Silent push notifications can wake your app from a "Suspended" or "Not Running" state to update content or run certain tasks without notifying your users.
+Push notifications allow you to send out notifications from your app when important events occur. You might send a push notification when you have an important alert for a user. Push notifications can also be silent, containing no alert message or sound, being used only to update your app's interface or trigger background work. Silent push notifications can wake your app from a "Suspended" or "Not Running" state to update content or run certain tasks without notifying your users.
 
-Braze has several features which rely on iOS silent push notifications:
+Braze has several features which rely on silent push notifications:
 
 |Feature|User Experience|
 |---|---|
