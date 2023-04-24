@@ -119,5 +119,5 @@ Your credits will reset to 2,000 on the first of each month at 12 am UTC. You ca
 
 ![Query builder showing the amount of credits used in the current month.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%"}
 
-When you reach the credit cap, you will not be able run queries, but you will be able to create, edit and save SQL reports. If you want to purchase more Query Builder credits, please reach out to your account manager.
+When you reach the credit cap, you will not be able to run queries, but you will be able to create, edit, and save SQL reports. If you want to purchase more Query Builder credits, please reach out to your account manager.
  
