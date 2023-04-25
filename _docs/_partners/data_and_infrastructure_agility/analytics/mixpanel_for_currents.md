@@ -122,6 +122,15 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.contentcard.Impression`
   - `users.messages.contentcard.Send`
 - Email (abort, bounce, click, delivery, markasspam, open, send, softbounce, unsubscribe)
+  - `users.messages.email.Abort`
+  - `users.messages.email.Bounce`
+  - `users.messages.email.Click`
+  - `users.messages.email.Delivery`
+  - `users.messages.email.MarkAsSpam`
+  - `users.messages.email.Open`
+  - `users.messages.email.Send`
+  - `users.messages.email.SoftBounce`
+  - `users.messages.email.Unsubscribe`
 - In-app message (abort, click, impression)
   - `users.messages.inappmessage.Abort`
   - `users.messages.inappmessage.Click`
