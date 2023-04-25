@@ -300,7 +300,7 @@ To request an upgrade for catalogs storage, contact your Braze account manager.
 
 #### Free version
 
-The storage limit for the free version of catalogs is 100MB. You can have unlimited items as long as it's under 100MB. Selections will also be unlimited, but will contribute to this size limit. The more complex a selection is, the more storage it will take up.
+The storage limit for the free version of catalogs is 100MB. You can have unlimited items as long as it's under 100MB. Selections will contribute to this size limit. The more complex a selection is, the more storage it will take up.
 
 #### Catalogs Pro
 
