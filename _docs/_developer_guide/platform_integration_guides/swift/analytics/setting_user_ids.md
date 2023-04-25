@@ -7,7 +7,7 @@ description: "This article shows how to set user IDs in your iOS app, suggested 
  
 ---
 
-# Setting user IDs for iOS
+# Setting user IDs
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 

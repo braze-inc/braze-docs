@@ -3,13 +3,13 @@ nav_title: Custom Sounds
 article_title: Custom Push Notification Sounds for iOS
 platform: Swift
 page_order: 3
-description: "This article covers implementing custom sounds in your iOS push notifications."
+description: "This article covers implementing iOS custom sounds in the Swift SDK."
 channel:
   - push
 
 ---
 
-# Custom push notification sounds for iOS
+# Custom sounds
 
 ## Step 1: Hosting the sound in the app
 

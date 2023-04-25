@@ -3,13 +3,13 @@ nav_title: Setting Custom Attributes
 article_title: Setting Custom Attributes for iOS
 platform: Swift
 page_order: 3
-description: "This reference article shows how to set custom attributes in your iOS application."
+description: "This reference article shows how to set custom attributes for the Swift SDK."
 
 ---
 
-# Setting custom attributes for iOS
+# Setting custom attributes
 
-Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
+> Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices][1], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 

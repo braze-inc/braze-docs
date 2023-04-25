@@ -3,13 +3,15 @@ nav_title: Integration
 article_title: Push Integration for iOS
 platform: Swift
 page_order: 0
-description: "This article covers how to integrate push notifications in your iOS application."
+description: "This reference article covers how to set up iOS push notifications for the Braze Swift SDK."
 channel:
   - push
   
 ---
 
-# Push integration for iOS
+# Push notifications integration
+
+> This reference article covers how to set up iOS push notifications for the Braze Swift SDK.
 
 [Push notifications][1] allow you to send out notifications from your app when important events occur. You might send a push notification when you have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. Push notifications can also be [silent][2], being used only to update your app's interface or trigger background work. 
 

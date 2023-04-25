@@ -3,16 +3,16 @@ nav_title: Carousel View
 article_title: Content Card Carousel View for iOS
 platform: Swift
 page_order: 6
-description: "This article covers how to implement a Content Card carousel view use case for iOS applications."
+description: "This article covers how to implement a iOS Content Card carousel view use case with the Swift SDK."
 channel:
   - content cards
 ---
 
-# Use case: Carousel view for iOS
+# Use case: Carousel view
 
 ![Sample news app showing carousel of Content Cards in an article.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
+> This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
 
 With this approach, you will not use Braze’s views and default logic but instead, display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
 

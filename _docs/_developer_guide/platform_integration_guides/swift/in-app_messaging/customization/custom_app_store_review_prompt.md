@@ -3,7 +3,7 @@ nav_title: Example - App Store Review Prompt
 article_title: Example - App Store Review Prompt
 platform: Swift
 page_order: 8
-description: "This reference article provides an example of a custom in-app message to prompt users to provide review for your app."
+description: "This reference article provides an iOS example of a custom in-app message to prompt users to provide review for your app."
 channel:
   - in-app messages
 
@@ -15,7 +15,7 @@ channel:
 Because this example prompt overrides Braze's default behavior, Braze cannot automatically track impressions if it is implemented. You must log your own [analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/handling_in_app_display/#logging-impressions-and-clicks).
 {% endalert %}
 
-Creating a campaign to ask users for an App Store review is a popular usage of in-app messages. This example walks you through creating a custom in-app message that prompts users to review your app.
+> Creating a campaign to ask users for an App Store review is a popular usage of in-app messages. This example walks you through creating a custom in-app message that prompts users to review your app.
 
 ## Step 1: Set the in-app message delegate
 First, set the [`BrazeInAppMessageUIDelegate`][1] in your app. 

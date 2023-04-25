@@ -3,15 +3,15 @@ nav_title: Badges
 article_title: Content Card Badges for iOS
 platform: Swift
 page_order: 5
-description: "This article covers adding badges to your Content Cards in your iOS application."
+description: "This article covers adding badges to your iOS Content Cards for the Swift SDK."
 channel:
   - content cards
 
 ---
 
-# Content card badges for iOS
+# Badges
 
-Badges are small icons that are ideal for getting a user's attention. Using badges to alert the user about new Content Card content can attract users back to your app and increase sessions.
+> Badges are small icons that are ideal for getting a user's attention. Using badges to alert the user about new Content Card content can attract users back to your app and increase sessions.
 
 ![An iPhone home screen showing a Braze sample app named Swifty with a red badge displaying the number 7]({% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 

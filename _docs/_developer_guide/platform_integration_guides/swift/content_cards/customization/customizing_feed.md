@@ -1,16 +1,16 @@
 ---
-nav_title: Customizing Feed
+nav_title: Custom Feed
 article_title: Customizing the Content Card Feed for iOS
 platform: Swift
 page_order: 2
-description: "This article covers Content Card feed customization options in your iOS application."
+description: "This article covers iOS Content Card feed customization options for the Swift SDK."
 channel:
   - content cards
 ---
 
-# Customizing the Content Cards feed for iOS
+# Custom feed
 
-The UI components of Content Cards are available in the `BrazeUI` library of the Swift SDK, allowing you to customize their appearance and behavior. 
+> The UI components of Content Cards are available in the `BrazeUI` library of the Swift SDK, allowing you to customize their appearance and behavior. 
 
 At Braze, we break down customization into different approaches based on the associated effort and level of flexibility provided. Configuring Content Cards using `Attributes` is the simplest option, allowing you to launch your Content Cards UI with minimal setup. Alternatively, you can create a custom view controller component that [subscribes to data updates and logs analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/). The latter provides more control over the card behavior, such as displaying in a carousel or adding interactive elements, but requires you to ensure that impressions, dismissal events, and clicks are properly logged.
 

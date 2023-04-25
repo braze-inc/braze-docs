@@ -3,13 +3,15 @@ nav_title: Session Tracking
 article_title: Session Tracking for iOS
 platform: Swift
 page_order: 0
-description: "This reference article shows how to subscribe to session updates for your iOS application."
+description: "This reference article shows how to subscribe to session updates for the Swift SDK."
 
 ---
 
-# Session tracking for iOS
+# Session tracking
 
-The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Our SDK generates "start session" and "close session" data points that account for session length and session count viewable within the Braze dashboard based on the following session semantics.
+> The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. 
+
+Our SDK generates "start session" and "close session" data points that account for session length and session count viewable within the Braze dashboard based on the following session semantics.
 
 ## Session lifecycle
 

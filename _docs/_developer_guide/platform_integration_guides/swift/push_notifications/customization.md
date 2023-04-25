@@ -9,7 +9,7 @@ channel:
 
 guide_top_header: "Swift Push Customization"
 guide_top_text: ""
-description: "This landing page covers the Braze Swift SDK push customization options."
+description: "This landing page is home to all things related to Swift push customization."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

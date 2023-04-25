@@ -7,7 +7,7 @@ description: "This reference article describes how to collect the optional IDFV 
 
 ---
 
-# Collecting the Identifier for Vendor with the Swift SDK
+# Collecting the Identifier for Vendor
 
 ## Background
 

@@ -3,14 +3,14 @@ nav_title: Custom Triggering
 article_title: Customizing In-App Message Triggering for iOS
 platform: Swift
 page_order: 6
-description: "This reference article covers custom in-app messaging triggering for your iOS application."
+description: "This reference article covers custom iOS in-app messaging triggering for the Swift SDK."
 channel:
   - in-app messages
 ---
 
-# Custom in-app message triggering for iOS
+# Custom triggering
 
-By default, in-app messages are triggered by events logged by the SDK. Alternatively, you can trigger in-app messages by server-sent events.
+> By default, in-app messages are triggered by events logged by the SDK. Alternatively, you can trigger in-app messages by server-sent events.
 
 To trigger in-app messages using server-side events, send a silent push to the device to allow the device to log an SDK-based event. This SDK event can subsequently trigger the user-facing in-app message.
 

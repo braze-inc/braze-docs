@@ -9,7 +9,7 @@ description: "This reference article describes the device-level properties captu
 
 # Storage
 
-This article describes the different device-level properties captured when using the Braze iOS Swift SDK.
+> This article describes the different device-level properties captured when using the Braze iOS Swift SDK.
 
 ## Device properties
 

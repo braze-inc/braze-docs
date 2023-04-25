@@ -3,14 +3,16 @@ nav_title: Modal Dismissal
 article_title: In-App Message Modal Dismissal for iOS
 platform: Swift
 page_order: 7
-description: "This reference article covers in-app messaging modal dismissal for your iOS application."
+description: "This reference article covers in-app messaging modal dismissal for the Swift SDK."
 channel:
   - in-app messages
 ---
 
-# In-app message modal dismissal for iOS
+# Modal dismissal
 
-To enable outside tap dismissals, you can modify the `dismissOnBackgroundTap` property on the `Attributes` struct of the in-app message type you wish to customize. For example, if you wish to enable this feature for modal image in-app messages, you can configure the following:
+> To enable outside tap dismissals, you can modify the `dismissOnBackgroundTap` property on the `Attributes` struct of the in-app message type you wish to customize. 
+
+For example, if you wish to enable this feature for modal image in-app messages, you can configure the following:
 
 {% tabs %}
 {% tab swift %}

@@ -3,14 +3,16 @@ nav_title: Handling Clicks Manually
 article_title: Handling Content Card Clicks Manually for iOS
 platform: Swift
 page_order: 3
-description: "This article covers how to handle Content Cards clicks manually in your iOS application."
+description: "This article covers how to handle iOS Content Cards clicks manually for the Swift SDK."
 channel:
   - content cards
 ---
 
-# Handling Content Card clicks manually for iOS
+# Handling clicks manually
 
-In cases where you are building your own Content Cards UI, you can manually handle Content Card clicks. To do this, implement the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol and set your delegate object as the `delegate` property of your `BrazeContentCardUI.ViewController`. Refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example. 
+> In cases where you are building your own Content Cards UI, you can manually handle Content Card clicks. 
+
+To do this, implement the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol and set your delegate object as the `delegate` property of your `BrazeContentCardUI.ViewController`. Refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example. 
 
 {% tabs %}
 {% tab Swift %}

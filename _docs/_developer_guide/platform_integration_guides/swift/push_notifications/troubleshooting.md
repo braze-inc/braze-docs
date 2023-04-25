@@ -3,13 +3,15 @@ nav_title: Troubleshooting
 article_title: Push Notification Troubleshooting for iOS
 platform: Swift
 page_order: 28
-description: "This article covers potential troubleshooting topics for your iOS push implementation."
+description: "This article provides several iOS push troubleshooting scenarios for the Swift SDK."
 channel:
   - push
 
 ---
 
 # Troubleshooting {#push-troubleshooting}
+
+> This article provides several iOS push troubleshooting scenarios for the Swift SDK.
 
 ## Understanding the Braze/APNs workflow
 

@@ -3,17 +3,17 @@ nav_title: Locations and Geofences
 article_title: Location and Geofences for iOS
 platform: Swift
 page_order: 4
-description: "This reference article covers how to implement locations and geofences in your iOS application."
+description: "This reference article covers how to implement locations and geofences in your for the Swift SDK."
 Tool:
   - Location
 
 ---
 
-# Locations and geofences for iOS
+# Locations and geofences
+
+> This article covers setting up geofences for your iOS SDK integration. Geofences are only available in select Braze packages. Reach out to your Braze customer success manager to get started.
 
 At the core of Braze’s real-time location offering is the concept of a [geofence]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences). A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position.
-
-This article covers setting up geofences for your iOS SDK integration. Geofences are only available in select Braze packages. Reach out to your Braze customer success manager to get started.
 
 {% alert important %}
 As of iOS 14, geofences do not work reliably for users who choose to give their approximate location permission.

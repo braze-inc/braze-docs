@@ -3,15 +3,15 @@ nav_title: Rich Notifications
 article_title: Rich Push Notifications for iOS
 platform: Swift
 page_order: 5
-description: "This article covers implementing rich push notifications in your iOS application."
+description: "This article covers implementing rich iOS push notifications for the Swift SDK."
 channel:
   - push
 
 ---
 
-# Rich push notifications for iOS
+# Rich notifications
 
-Rich notifications are push notifications with images, GIFs, and video. To enable this functionality, you must create a notification service extension&mdash;a type of extension that enables modification of a push payload before it is displayed. Refer to Apple's [`UNNotificationAttachment`][28] for a list of supported file types and sizes.
+> Rich notifications are push notifications with images, GIFs, and video. To enable this functionality, you must create a notification service extension&mdash;a type of extension that enables modification of a push payload before it is displayed. Refer to Apple's [`UNNotificationAttachment`][28] for a list of supported file types and sizes.
 
 ## Creating a service extension
 

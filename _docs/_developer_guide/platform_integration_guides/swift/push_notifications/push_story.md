@@ -3,15 +3,17 @@ nav_title: Push Stories
 article_title: Integrating Push Stories for iOS
 platform: Swift
 page_order: 27
-description: "This article shows how to set up Push Stories for your iOS application."
+description: "This article shows how to set up iOS Push Stories for the Swift SDK."
 channel:
   - push
 
 ---
 
-# Integrating Push Stories for iOS
+# Push Stories
 
-[Push Stories][5] allow marketers to use photo carousel functionality to create a sequence of pages within a push notification. These pages consist of an image, click action, title, and description. Setting up Push Stories for your iOS app requires additional steps beyond integrating standard push notifications, which are outlined in this article.
+> [Push Stories][5] allow marketers to use photo carousel functionality to create a sequence of pages within a push notification. These pages consist of an image, click action, title, and description. 
+
+Setting up Push Stories for your iOS app requires additional steps beyond integrating standard push notifications, which are outlined in this article.
 
 ## Prerequisites
 

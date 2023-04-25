@@ -3,13 +3,13 @@ nav_title: Swift Package Manager
 article_title: Swift Package Manager Integration for iOS
 platform: Swift
 page_order: 1
-description: "This tutorial covers installing the Braze SDK using Swift Package Manager for iOS."
+description: "This tutorial covers installing the Braze Swift SDK using Swift Package Manager for iOS."
 
 ---
 
-# Swift Package Manager integration for iOS
+# Swift Package Manager integration
 
-Installing the Swift SDK via [Swift Package Manager][1] (SPM) automates the majority of the installation process for you. Before beginning this process, check the [version information][2] to ensure that your environment is supported by Braze.
+> Installing the Swift SDK via [Swift Package Manager][1] (SPM) automates the majority of the installation process for you. Before beginning this process, check the [version information][2] to ensure that your environment is supported by Braze.
 
 ## Adding the dependency to your project
 

@@ -3,15 +3,15 @@ nav_title: In-App Message UI Delegate
 article_title: In-App Message UI Delegate for iOS
 platform: Swift
 page_order: 2
-description: "This reference article covers setting an in-app messaging delegate for your iOS application."
+description: "This reference article covers setting an iOS in-app messaging delegate for the Swift SDK."
 channel:
   - in-app messages
 
 ---
 
-# In-app message UI delegate for iOS
+# In-app message UI delegate
 
-Use the optional [`BrazeInAppMessageUIDelegate`][34] to customize the presentation of in-app messages and react to various lifecycle events. This delegate protocol can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
+> Use the optional [`BrazeInAppMessageUIDelegate`][34] to customize the presentation of in-app messages and react to various lifecycle events. This delegate protocol can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
 
 ## Prerequisites
 

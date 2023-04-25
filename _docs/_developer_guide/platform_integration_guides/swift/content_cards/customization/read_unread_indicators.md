@@ -3,15 +3,15 @@ nav_title: Read & Unread Indicators
 article_title: Content Card Read & Unread Indicators for iOS
 platform: Swift
 page_order: 4
-description: "This reference article covers iOS read and unread indicators and how to implement them in your Content Cards."
+description: "This reference article covers iOS read and unread indicators and how to implement them in the Swift SDK."
 channel:
   - content cards
 
 ---
 
-# Content Card read and unread indicators for iOS
+# Read and unread indicators
 
-Content Cards contain a blue line at the bottom of the card which indicates whether or not the card has been viewed. This article provides examples of modifying this behavior. For more information on customizing Content Cards UI attributes, refer to [Customizing Feed]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/).
+> Content Cards contain a blue line at the bottom of the card which indicates whether or not the card has been viewed. This article provides examples of modifying this behavior. For more information on customizing Content Cards UI attributes, refer to [Customizing Feed]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/).
 
 ![Two Content Cards displayed side by side. The card on the left has a blue line at the bottom, indicating it has not been seen. The card on the right does not have a blue line, indicating it has already been seen.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
 

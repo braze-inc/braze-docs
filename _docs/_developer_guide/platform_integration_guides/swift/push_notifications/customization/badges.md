@@ -3,15 +3,15 @@ nav_title: Badges
 article_title: Push Notification Badge Counts for iOS
 platform: Swift
 page_order: 2
-description: "This article covers how to implement badge counts in your iOS push notifications."
+description: "This article covers how to implement iOS badge counts for the Swift SDK."
 channel:
   - push
 
 ---
 
-# Push notification badge counts for iOS
+# Badges
 
-Badges are small icons that are ideal for getting a user's attention. You can specify a badge count in the [**Settings**][1] tab when you compose a push notification using Braze's dashboard. You may also update your badge count manually through your application's [`applicationIconBadgeNumber`][20] property or the [remote notification payload][21]. 
+> Badges are small icons that are ideal for getting a user's attention. You can specify a badge count in the [**Settings**][1] tab when you compose a push notification using Braze's dashboard. You may also update your badge count manually through your application's [`applicationIconBadgeNumber`][20] property or the [remote notification payload][21]. 
 
 Braze will automatically clear the badge count when a Braze notification is received while the app is in the foreground. Manually setting the badge number to 0 will also clear notifications in the notification center. 
 

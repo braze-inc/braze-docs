@@ -3,10 +3,11 @@ nav_title: Fine Network Traffic Control
 article_title: Fine Network Traffic Control for iOS
 platform: Swift
 page_order: 2
-description: "This article covers implementing fine network traffic control for your iOS application."
+description: "This article covers implementing fine network traffic control for the Swift SDK."
 
 ---
-# Fine network traffic control for iOS
+
+# Fine network traffic control
 
 ## Request processing policies
 

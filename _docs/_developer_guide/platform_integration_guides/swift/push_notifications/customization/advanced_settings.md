@@ -3,15 +3,15 @@ nav_title: Push Settings
 article_title: Push Settings for iOS
 platform: Swift
 page_order: 7
-description: "This reference article covers advanced iOS push notification settings such as alert options, sounds, expiry, and more."
+description: "This reference article covers advanced iOS push notification settings such as alert options, sounds, expiry, and more, for the Swift SDK."
 channel:
   - push
 
 ---
 
-# Push settings for iOS
+# Push settings
 
-When creating a push campaign through the dashboard, click the **Settings** tab on the **Compose** step to view the advanced settings available.
+> When creating a push campaign through the dashboard, click the **Settings** tab on the **Compose** step to view the advanced settings available.
 
 ![][1]
 

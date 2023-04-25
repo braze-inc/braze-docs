@@ -3,14 +3,16 @@ nav_title: Custom On-Click Behavior
 article_title: Customizing In-App Message Click Behavior for iOS
 platform: Swift
 page_order: 5
-description: "This reference article covers custom in-app messaging on-click behavior for your iOS application."
+description: "This reference article covers custom iOS in-app messaging on-click behavior for the Swift SDK."
 channel:
   - in-app messages
 ---
 
-# Customizing in-app message click behavior for iOS
+# Custom on-click behavior
 
-Each `Braze.InAppMessage` object contains a corresponding [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/clickaction), which defines the behavior upon clicking. To customize this behavior, you may modify the `clickAction` property by referring to the following sample:
+> Each `Braze.InAppMessage` object contains a corresponding [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/clickaction), which defines the behavior upon clicking. 
+
+To customize this behavior, you may modify the `clickAction` property by referring to the following sample:
 
 {% tabs %}
 {% tab swift %}

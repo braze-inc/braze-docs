@@ -14,7 +14,7 @@ description: "This landing page covers the Braze iOS SDK in-app message customiz
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: In-App Message UI Delegate for iOS
+  - name: In-App Message UI Delegate
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates/
     fa_icon: fa fa-cogs
   - name: Overriding In-App Message Logic

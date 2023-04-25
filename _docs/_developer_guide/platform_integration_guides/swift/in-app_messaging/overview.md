@@ -1,17 +1,17 @@
 ---
-nav_title: Overview
+nav_title: Integration
 article_title: In-App Message Overview for iOS
 platform: Swift
 page_order: 0
-description: "This article covers iOS in-app messaging types, expected behaviors, and several use cases."
+description: "This article covers iOS in-app messaging types, expected behaviors, and several use cases for the Swift SDK."
 channel:
   - in-app messages
 
 ---
 
-# In-app messages
+# In-app message integration
 
-[In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
+> [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
 Check out our [case studies][31] to see examples of in-app messages.
 

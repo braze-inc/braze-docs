@@ -3,11 +3,11 @@ nav_title: Logging Purchases
 article_title: Logging Purchases for iOS
 platform: Swift
 page_order: 4
-description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your iOS application."
+description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties for the Swift SDK."
 
 ---
 
-# Logging purchases for iOS
+# Logging purchases
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources and segment your users by their lifetime value.
 

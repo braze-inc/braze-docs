@@ -2,13 +2,15 @@
 nav_title: FAQ
 article_title: Live Activities FAQ
 page_order: 20
-description: "This page provides answers to frequently asked questions about live activities."
+description: "This page provides answers to frequently asked questions about live activities for the Swift SDK."
 tool: Live Activities
 platform:
   - iOS
 ---
 
 # Frequently asked questions
+
+> This article provides answers to some frequently asked questions about Live Activities.
 
 ## Functionality and support
 

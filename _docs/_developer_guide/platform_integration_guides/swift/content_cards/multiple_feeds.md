@@ -3,17 +3,15 @@ nav_title: Multiple Feeds
 article_title: Using Multiple Content Card Feeds for iOS
 platform: Swift
 page_order: 6
-description: "This reference article covers implementing multiple Content Card feeds in your iOS application."
+description: "This reference article covers implementing multiple iOS Content Card feeds in the Swift SDK."
 channel:
   - content cards
 
 ---
 
-# Using multiple Content Card feeds for iOS
+# Multiple feeds
 
-Content Cards can be filtered on your app so that only specific cards are displayed, enabling you to have multiple Content Card feeds for different use cases. For example, you can maintain both a transactional feed and a marketing feed.
-
-This article shows an example implementation that you can change to fit your specific integration.
+> Content Cards can be filtered on your app so that only specific cards are displayed, enabling you to have multiple Content Card feeds for different use cases. For example, you can maintain both a transactional feed and a marketing feed.<br><br>This article shows an example implementation that you can change to fit your specific integration.
 
 ## Step 1: Setting key-value pairs on cards
 

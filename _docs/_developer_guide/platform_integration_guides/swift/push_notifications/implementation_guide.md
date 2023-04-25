@@ -3,7 +3,7 @@ nav_title: Advanced Implementation (Optional)
 article_title: Advanced Push Notification Implementation for iOS (Optional)
 platform: Swift
 page_order: 30
-description: "This advanced implementation guide covers how to leverage iOS push notification content app extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics."
+description: "This advanced implementation guide covers how to leverage iOS push notification content app extensions to get the most out of your push messages with the Swift SDK."
 channel:
   - push
 ---
@@ -13,9 +13,11 @@ channel:
 Looking for the basic push notification developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).
 {% endalert %}
 
-# Advanced push notification implementation for iOS (Optional)
+# Advanced implementation guide
 
-This optional, advanced implementation guide covers ways to leverage notification content app extensions to get the most out of your push messages. It provides three example implementations of  notification content app extensions, each with a concept walkthrough, potential use cases, and a look into how push notification variables may look and be used in the Braze dashboard:
+> This optional, advanced implementation guide covers ways to leverage notification content app extensions to get the most out of your push messages. 
+
+This guide provides three example implementations of notification content app extensions, each with a concept walkthrough, potential use cases, and a look into how push notification variables may look and be used in the Braze dashboard:
 - [Interactive push notification](#interactive-push-notification)
 - [Personalized push notifications](#personalized-push-notifications)
 - [Information capture push notifications](#information-capture-push-notification)

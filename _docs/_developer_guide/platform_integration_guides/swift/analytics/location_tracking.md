@@ -3,15 +3,15 @@ nav_title: Location Tracking
 article_title: Location Tracking for iOS
 platform: Swift
 page_order: 6
-description: "This article shows how to configure location tracking for your iOS application."
+description: "This article shows how to configure location tracking for the Swift SDK."
 Tool:
   - Location
 
 ---
 
-# Location tracking for iOS
+# Location tracking
 
-By default, Braze disables location tracking. We enable location tracking after the host application has opted into location tracking and gained permission from the user. Provided users have opted into location tracking, Braze will log a single location for each user on session start.
+> By default, Braze disables location tracking. We enable location tracking after the host application has opted into location tracking and gained permission from the user. Provided users have opted into location tracking, Braze will log a single location for each user on session start.
 
 ## Enabling automatic location tracking
 

@@ -2,14 +2,14 @@
 nav_title: Completing the Integration
 article_title: Completing the Swift SDK Integration
 platform: Swift
-description: "This reference article shows how to finish integrating the Braze SDK after installing it via one of the integration options."
+description: "This reference article shows how to finish integrating the Braze Swift SDK after installing it via one of the integration options."
 page_order: 2
 
 ---
 
-# Completing the Swift SDK integration
+# Completing the integration
 
-Before following these steps, make sure you have integrated the Swift SDK for iOS using either [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) or [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/).
+> Before following these steps, make sure you have integrated the Swift SDK for iOS using either [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) or [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/).
 
 ## Update your app delegate
 

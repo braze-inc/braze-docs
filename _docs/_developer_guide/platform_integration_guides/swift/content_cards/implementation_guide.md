@@ -9,9 +9,11 @@ channel:
 
 ---
 
-# Content Card advanced implementation for iOS (Optional)
+# Advanced implementation
 
-This article provides three examples of more advanced use cases for Content Cards. Each use case offers a explanation and a look into how Content Card variables may look and be used in the Braze dashboard:
+> This article provides three examples of more advanced use cases for Content Cards. 
+
+Each use case offers a explanation and a look into how Content Card variables may look and be used in the Braze dashboard:
 - [Content Cards as supplemental content](#content-cards-as-supplemental-content)
 - [Content Cards in a message center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
