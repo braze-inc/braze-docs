@@ -304,7 +304,7 @@ The storage limit for the free version of catalogs is 100MB. You can have unlimi
 
 #### Catalogs Pro
 
-At a company level, the storage limit for Catalogs Pro will be based on the size of catalog data. The  5GB, 10GB, or 15GB.
+At a company level, the storage limit for Catalogs Pro will be based on the size of catalog data: 5GB, 10GB, or 15GB.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
