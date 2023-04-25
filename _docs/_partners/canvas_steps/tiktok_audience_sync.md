@@ -5,8 +5,8 @@ alias: /tiktok_audience_sync/
 description: "This reference article will cover how to use Braze Audience Sync to TikTok to deliver advertisements based upon behavioral triggers, segmentation, and more."
 Tool:
   - Canvas
-hidden: true
-layout: dev_guide
+page_order: 5
+
 ---
 
 # Audience Sync to TikTok
@@ -68,15 +68,17 @@ If you are collecting ‘opt-ins’,  ‘opt-outs’, ‘Do Not Sell Or Share’
 
 ### Step 3: Add a TikTok Audience component in Canvas Flow
 
-Add a component in your Canvas and select **Audience Sync**. Click on the **Custom Audience** button to open the component editor.
+Add a component in your Canvas and select **Audience Sync**. 
 
-![][14]{: style="max-width:45%;"} ![][15]{: style="max-width:50%;"}
+![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
 
 ### Step 4: Sync setup
 
+Click on the **Custom Audience** button to open the component editor.
+
 Select **TikTok** as the desired Audience Sync partner.
 
-![][12]{: style="max-width:50%;"}
+![][19]{: style="max-width:80%;"}
 
 Then select the desired TikTok ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
 
@@ -180,3 +182,7 @@ The audience size will update within 24-48 hours on the Audiences page in TikTok
 [15]: {% image_buster /assets/img/tiktok/tiktok15.png %}
 [16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
 [17]: {% image_buster /assets/img/tiktok/tiktok17.png %}
+
+[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
+[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
+[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}

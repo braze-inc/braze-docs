@@ -2,13 +2,12 @@
 nav_title: Audience Sync to Pinterest
 article_title: Canvas Audience Sync to Pinterest
 description: "This reference article will cover how to use Braze Audience Sync to Pinterest, to deliver advertisements based upon behavioral triggers, segmentation, and more."
-page_order: 4
+page_order: 3
 alias: "/audience_sync_pinterest/"
-hidden: true
 
 Tool:
   - Canvas
-layout: dev_guide
+
 ---
 
 # Audience Sync to Pinterest
@@ -73,13 +72,15 @@ If you are collecting ‘opt-ins’,  ‘opt-outs’, ‘Do Not Sell Or Share’
 
 Add a component in your Canvas and select **Audience Sync**.
 
-![Workflow of the previous steps to add a Pinterest Audience component in Canvas Flow.][4]{: style="max-width:50%;"}
-
-![Workflow of the previous steps to add a Pinterest Audience component in Canvas Flow.][5]{: style="max-width:50%;"}
+![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
 
 ### Step 4: Sync setup
 
-Click on the **Custom Audience** button to open the component editor. Select Pinterest as the desired Audience Sync partner. 
+Click on the **Custom Audience** button to open the component editor.
+
+Select **Pinterest** as the desired Audience Sync partner.
+
+![][19]{: style="max-width:80%;"}
 
 Then select your desired Pinterest ad account. Under the **Choose a New or Existing Audience dropdown**, type in the name of a new or existing audience.
 
@@ -170,3 +171,6 @@ The audience size will update within 24-48 hours on the Audiences page in Pinter
 [9]: {% image_buster /assets/img/pinterest/pinterest9.png %}
 [10]: {% image_buster /assets/img/pinterest/pinterest10.png %}
 [11]: {% image_buster /assets/img/pinterest/pinterest11.png %}
+[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
+[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
+[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}
