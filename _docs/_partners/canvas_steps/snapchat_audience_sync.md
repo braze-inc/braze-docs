@@ -7,8 +7,7 @@ alias: "/audience_sync_snapchat/"
 
 Tool:
   - Canvas
-hidden: true
-layout: dev_guide
+
 ---
 
 # Audience Sync to Snapchat
@@ -73,13 +72,15 @@ If you are collecting ‘opt-ins’,  ‘opt-outs’, ‘Do Not Sell Or Share’
 
 Add a component in your Canvas and select **Audience Sync**.
 
-![Workflow of the previous steps to add a Snapchat Audience component in Canvas Flow.][4]{: style="max-width:60%;"}
-
-![Workflow of the previous steps to add a Snapchat Audience component in Canvas Flow.][5]{: style="max-width:60%;"}
+![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
 
 ### Step 4: Sync setup
 
-Click on the **Custom Audience** button to open the component editor. Select Snapchat as the desired Audience Sync partner. 
+Click on the **Custom Audience** button to open the component editor.
+
+Select **TikTok** as the desired Audience Sync partner.
+
+![][19]{: style="max-width:80%;"}
 
 Then select your desired Snapchat ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
 
@@ -171,3 +172,6 @@ You will need to go into your Snapchat ads account and remove audiences you are 
 [5]: {% image_buster /assets/img/pinterest/pinterest5.png %}
 [13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
 [16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
+[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
+[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
+[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}

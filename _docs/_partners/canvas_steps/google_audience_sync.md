@@ -5,6 +5,8 @@ alias: /google_audience_sync/
 description: "This reference article will cover how to use Braze Audience Sync to Google, to deliver advertisements based upon behavioral triggers, segmentation, and more."
 Tool:
   - Canvas
+page_order: 2
+
 ---
 
 # Audience Sync to Google 
@@ -64,19 +66,36 @@ If you are collecting ‘opt-ins’,  ‘opt-outs’, ‘Do Not Sell Or Share’
 
 ### Step 3: Add a Google Audience step in Canvas Flow
 
-Add a component in your Canvas and select **Google Audience**.
+Add a component in your Canvas and select **Audience Sync**.
 
-![Workflow of the previous steps to add a Google audience in Canvas.][6]
+![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
 
 ### Step 4: Sync setup
 
 Click on the **Custom Audience** button to open the component editor.
+
+Select **Google** as the desired Audience Sync partner.
+
+![][19]{: style="max-width:80%;"}
 
 Select the desired Google ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience. 
 
 {% tabs %}
 {% tab Create a New Audience %}
 **Create a New Audience**<br>
+Enter a name for the new custom audience, select **Add Users to Audience** and select which fields you would like to sync with Facebook. You can select the following fields to match to sync with Facebook:
+- Email 
+- Phone
+- First/Last name
+- City
+- Country
+- Date of birth
+- Gender
+- Mobile Ad IDs
+  - You must opt into either [IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection) or [GAID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection#google-advertising-id-android-only) collection through the Braze SDKs.
+
+
+
 Enter a name for the new custom audience, select **Add Users to Audience** and select the first-party user field data to send to with your audience. You can choose either: 
 - **Customer Contact Info** which will contain your users' email and/or phone numbers if they exist in Braze
 - **Mobile Advertiser ID** which you will then need to select either iOS IDFA or Android GAID   
@@ -157,3 +176,6 @@ Check that your audiences contain at least **5,000** users to ensure that ads st
 [8]: {% image_buster /assets/img/google_sync/google_sync8.png %}
 [13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
 [16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
+[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
+[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
+[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}
