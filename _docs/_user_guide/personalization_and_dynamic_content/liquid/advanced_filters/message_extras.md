@@ -24,7 +24,7 @@ To send dynamic or extra data back to your Currents send event, insert the prope
 ```
 {% endraw %}
 
-You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values should not exceed 1&nbsp;KB . In Currents, you'll see a new event field called `message_extras` for your send events. This will generate a JSON serialized string in one field. 
+You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values should not exceed 1&nbsp;KB. In Currents, you'll see a new event field called `message_extras` for your send events. This will generate a JSON serialized string in one field. 
 
 ## How to use
 

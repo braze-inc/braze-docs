@@ -101,7 +101,7 @@ Property values can be any of the following data types:
 | Objects | Objects will be ingested as strings. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Event property objects that contain array or object values can have an event property payload of up to 50&nbsp;KB .
+Event property objects that contain array or object values can have an event property payload of up to 50&nbsp;KB.
 
 ### Purchase properties
 
