@@ -20,7 +20,7 @@ description: "This reference article covers the message and design requirements 
 
 Modal in-app messages are designed to fit the device at the best and most filling ratios possible, while staying true to the size and ratios of your chosen image or copy for your message.
 
-- All images must be less than 5MB.
+- All images must be less than 5&nbsp;MB.
 - We only accept PNG, JPG, and GIF file types.
 - We recommend that your images be 500&nbsp;KB .
 
@@ -28,8 +28,8 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 
 | Layout | Asset Size | Notes |
 |--- | --- | ------ |
-| Image + Text | 29:10 aspect ratio<br>High-resolution 1450 x 500 px<br> Min. 725 x 250 px | Tall or narrow images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
-| Image Only | Nearly any aspect ratio<br>High-resolution up to 1200 x 2000 px<br> Min. 600 x 600 px | The message will resize to fit images of most aspect ratios. |
+| Image + Text | 29:10 aspect ratio<br>High-res 1450 x 500&nbsp;px<br> Minimum 725 x 250&nbsp;px | Tall or narrow images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
+| Image Only | Nearly any aspect ratio<br>High-res up to 1200 x 2000&nbsp;px<br> Minimum 600 x 600&nbsp;px | The message will resize to fit images of most aspect ratios. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 You should always [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.

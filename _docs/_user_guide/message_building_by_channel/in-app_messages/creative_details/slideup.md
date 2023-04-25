@@ -28,7 +28,7 @@ Slideup messages can contain up to three lines of copy before truncation with el
 
 | Layout | Asset Size | Notes |
 |--- | --- | --- |
-| Image + Text | 1:1 aspect ratio<br>High-resolution 150 x 150 px<br> Min. 50 x 50 px | Images of various aspect ratios will fit into a square image container, without cropping. |
+| Image + Text | 1:1 aspect ratio<br>High-res 150 x 150&nbsp;px<br> Minimum 50 x 50&nbsp;px | Images of various aspect ratios will fit into a square image container, without cropping. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 You should always [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.

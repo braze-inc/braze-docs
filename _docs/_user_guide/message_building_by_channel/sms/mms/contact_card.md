@@ -38,7 +38,7 @@ Note that alphanumeric codes are not compatible with two-way messaging and are n
 ![]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 **Contact Card Contact Photo**<br>
-You can upload an optional thumbnail contact photo for your Contact Card. We recommend a 240x240 JPEG or PNG image. Any high-resolution images uploaded will be resized to 240x240 to ensure the deliverability of your message, as MMS messages larger than 5&nbsp;MB may fail.
+You can upload an optional thumbnail contact photo for your Contact Card. We recommend a 240 x 240&nbsp;px JPEG or PNG image. Any high-resolution images uploaded will be resized to 240 x 240&nbsp;px to ensure the deliverability of your message, as MMS messages larger than 5&nbsp;MB may fail.
 
 **Other Information**<br>
 Other fields allow you to insert your name, subheader, address, and other contact information that your user may want to have handy. 

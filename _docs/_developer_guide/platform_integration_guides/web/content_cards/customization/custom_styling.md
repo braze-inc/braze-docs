@@ -19,7 +19,7 @@ Braze UI elements come with a default look and feel that matches the composers w
 
 By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more. 
 
-For instance, the following is an example override that will cause Content Cards to appear 800 px wide:
+For instance, the following is an example override that will cause Content Cards to appear 800&nbsp;px wide:
 
 ``` css
 body .ab-feed {

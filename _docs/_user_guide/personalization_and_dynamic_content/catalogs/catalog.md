@@ -27,7 +27,7 @@ Note these guidelines when creating your CSV file. The first column of the CSV f
 - Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)
 - Maximum field (column) name of 250 characters
-- Maximum CSV file size of 100MB
+- Maximum CSV file size of 100&nbsp;MB
 - Maximum field value (cell) of 5,000 characters
 - Maximum field value (cell) size of 0.5&nbsp;KB 
 - Only letters, numbers, hyphens, and underscores for `id` and header values
