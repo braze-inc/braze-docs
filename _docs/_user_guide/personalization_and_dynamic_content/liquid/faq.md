@@ -41,7 +41,7 @@ In Braze, this could be used for checking items in an array custom attribute, or
 For example, if you wanted to search a catalog with 100 rows and include all images for a shoe company named Get Going, you could use this Liquid snippet:
 
 {% raw %}
-```
+```liquid
 {% for item in catalog %}
 {% if {{item.brand}} = "GetGoing %}
 {{item.image}}
