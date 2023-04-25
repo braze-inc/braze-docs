@@ -219,7 +219,7 @@ For your AMP email to be delivered to any Gmail account, the email must meet the
 - The AMP for Email security requirements must be met (see table above).
 - The AMP MIME part must contain a valid AMP document.
 - The email should include the AMP MIME part before the HTML MIME part.
-- The AMP MIME part must be smaller than 100KB.
+- The AMP MIME part must be smaller than 100&nbsp;KB .
 
 If none of these conditions are causing the error, reach out to [support][support].
 

@@ -86,7 +86,7 @@ There are several data types in Braze. When importing or updating user profiles 
 When importing customer data, the column headers you use must exactly match the spelling and capitalization of default user attributes. Otherwise, Braze will automatically create a custom attribute on that user's profile.
 {% endalert %}
 
-Braze accepts user data in the standard CSV format from files up to 500MB in size. Refer to the preceding sections on importing for downloadable CSV templates.
+Braze accepts user data in the standard CSV format from files up to 500&nbsp;MB in size. Refer to the preceding sections on importing for downloadable CSV templates.
 
 #### Data point considerations
 

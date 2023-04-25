@@ -84,7 +84,7 @@ Write anything you want. There are no limits, but the faster you can get your me
 
 #### Image
 
-To add an image to your Content Card, click **Add Image** or provide an image URL. Clicking **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements—be sure to check what those are before commissioning or making an image from scratch! Content Card message fields are limited to 2KB in total size.
+To add an image to your Content Card, click **Add Image** or provide an image URL. Clicking **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements—be sure to check what those are before commissioning or making an image from scratch! Content Card message fields are limited to 2&nbsp;KB  in total size.
 
 #### Pin to top
 
@@ -111,7 +111,7 @@ The following actions are available to take for Content Card links:
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
 {% alert warning %}
-Content Card message fields are limited to 2KB in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the Image URL.
+Content Card message fields are limited to 2&nbsp;KB  in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the Image URL.
 {% endalert %}
 
 {% alert note %}

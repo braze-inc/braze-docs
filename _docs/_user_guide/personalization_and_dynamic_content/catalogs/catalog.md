@@ -29,7 +29,7 @@ Note these guidelines when creating your CSV file. The first column of the CSV f
 - Maximum field (column) name of 250 characters
 - Maximum CSV file size of 100MB
 - Maximum field value (cell) of 5,000 characters
-- Maximum field value (cell) size of 0.5KB
+- Maximum field value (cell) size of 0.5&nbsp;KB 
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
 Ensure that you are encoding your CSV file using the UTF-8 format in order to successfully upload your CSV file in the next step. We also recommend that you format all text in your CSV files as lowercase.
@@ -292,7 +292,7 @@ Refer to the following table for the default limits that apply at a company leve
 |---|---|---|
 | Number of catalogs | Up to 5 catalogs | Up to 10 catalogs |
 | Number of all catalogs items | Up to 5,000 items | Up to 100,000 items |
-| Catalog storage | Up to 100MB of catalog data | Up to 2GB of catalog data |
+| Catalog storage | Up to 100&nbsp;MB of catalog data | Up to 2&nbsp;GB  of catalog data |
 | Selections | Up to 1 selection per catalog | Up to 10 selections per catalog |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -300,7 +300,7 @@ The following table describes the limitations that apply at a catalog level:
 
 | Limitation Area | Free version | Catalogs Pro |
 |---|---|---|
-| CSV file size | Up to 100MB for a single CSV file | Up to 2GB for a single CSV file |
+| CSV file size | Up to 100&nbsp;MB for a single CSV file | Up to 2&nbsp;GB  for a single CSV file |
 | Number of items | Up to 5,000 items in a single catalog | Up to 100,000 items in a single catalog |
 | Number of fields | Up to 30 fields (columns) | Up to 30 fields (columns) |
 | Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |

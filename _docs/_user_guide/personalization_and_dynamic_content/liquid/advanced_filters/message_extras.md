@@ -24,7 +24,7 @@ To send dynamic or extra data back to your Currents send event, insert the prope
 ```
 {% endraw %}
 
-You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values should not exceed 1KB. In Currents, you'll see a new event field called `message_extras` for your send events. This will generate a JSON serialized string in one field. 
+You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values should not exceed 1&nbsp;KB . In Currents, you'll see a new event field called `message_extras` for your send events. This will generate a JSON serialized string in one field. 
 
 ## How to use
 
@@ -44,7 +44,7 @@ Any other input that doesn't match the aforementioned tag standard may fail to p
 
 ## Considerations
 
-- If your key-values exceed 1KB, they'll truncate. 
+- If your key-values exceed 1&nbsp;KB , they'll truncate. 
 - Whitespace will count towards the character count. Note that Braze omits the leading and trailing whitespaces.
 - The resulting JSON will output only string values.
 - Liquid variables can be included as a key or value, but Liquid tags are not supported directly. 
