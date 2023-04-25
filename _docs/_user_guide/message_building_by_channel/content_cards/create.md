@@ -108,7 +108,7 @@ The following actions are available to take for Content Card links:
 
 **Note**: The __Log Custom Event__ and __Log Custom Attribute__ options require the following SDK Version compatibility:
 
-{% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
+{% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
 {% alert warning %}
 Content Card message fields are limited to 2KB in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the Image URL.

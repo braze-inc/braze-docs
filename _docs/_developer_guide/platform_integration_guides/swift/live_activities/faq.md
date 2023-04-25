@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: Live Activities FAQ
-page_order: 2
+page_order: 20
 description: "This page provides answers to frequently asked questions about live activities."
 tool: Live Activities
 platform:
@@ -31,8 +31,6 @@ No, this is not currently supported.
 ![A phone screen with a Bulls vs Bears sports game live activity towards the middle of the screen and push notification lorem ipsum text at the bottom of the screen.][4]{: style="max-width:30%;float:right;margin-left:15px;"}
 
 Live Activities and push notifications occupy different screen real estate and won't conflict on a user's screen.
-
-
 
 ### If Live Activities leverage push message functionality, do push notifications need to be enabled to receive Live Activities?
 

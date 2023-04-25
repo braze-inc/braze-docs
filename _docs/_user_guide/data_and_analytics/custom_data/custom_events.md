@@ -195,7 +195,7 @@ You can use nested objects—objects that are inside of another object—to send
 - Event property objects that contain array or object values can have an event property payload of up to 50 KB.
 - The following SDK versions support nested objects:
 
-{% sdk_min_versions web:3.3.0 ios:4.3.1 android:1.0.0 %}
+{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
 
 #### Schema generation
 

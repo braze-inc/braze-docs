@@ -62,7 +62,7 @@ guide_menu_list:
 guide_menu_title2: "Legacy Integrations"
 guide_menu_list2:
 - name: iOS (legacy)
-  link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
+  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
   fa_icon: fab fa-apple
   nav_link: ios
 - name: MacOS (legacy)

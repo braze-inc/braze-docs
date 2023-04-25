@@ -23,7 +23,7 @@ The permissions object is a field found in some of the requests and responses wh
 }
 ```
 
-A valid permissions object is a JSON object with the following key value pairs:
+A valid permissions object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Desciption |
 | --- | --- | --- | --- |
@@ -33,7 +33,7 @@ A valid permissions object is a JSON object with the following key value pairs:
 
 ### App group permssions object
 
-A valid app group permission object is a JSON object with the following key value pairs:
+A valid app group permission object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ A valid app group permission object is a JSON object with the following key valu
 
 ### Team permissions object
 
-A valid team permission object is a JSON object with the following key value pairs:
+A valid team permission object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |

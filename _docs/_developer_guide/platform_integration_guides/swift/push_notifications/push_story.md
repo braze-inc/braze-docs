@@ -17,7 +17,7 @@ channel:
 
 The following SDK versions is required to receive Push Stories:
 
-{% sdk_min_versions swift:5.0.0%}
+{% sdk_min_versions swift:5.0.0 %}
 
 Ensure that you have followed the [push notification integration tutorial][1] to enable push in your app. As part of this task, you should have implemented the `UNNotification` framework, which is required for this feature.
 

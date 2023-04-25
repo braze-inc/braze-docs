@@ -17,7 +17,7 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 
 Messages created using the Drag & Drop Editor can only be sent to users on the following minimum SDK versions:
 
-{% sdk_min_versions ios:3.23.0 android:8.0.0 web:2.5.0 %}
+{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
 If a user hasn't updated their application (that is, they're on an older SDK version), they will not receive the in-app message.
 
