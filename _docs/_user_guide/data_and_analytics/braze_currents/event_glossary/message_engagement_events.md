@@ -51,7 +51,7 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 Abort, Content Cards
 {% endapitags %}
 
-This event occurs if a Content Card message was aborted based on quiet hours, rate limiting, frequency capping, Liquid aborts, quiet hours, etc.
+This event occurs if a Content Card message was aborted based on Liquid aborts, quiet hours, etc.
 
 ```json
 // Content Card Abort: users.messages.contentcard.Abort
