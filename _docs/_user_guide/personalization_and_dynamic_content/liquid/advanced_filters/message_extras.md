@@ -44,7 +44,7 @@ Any other input that doesn't match the aforementioned tag standard may fail to p
 
 ## Considerations
 
-- If your key-values exceed 1&nbsp;KB , they'll truncate. 
+- If your key-values exceed 1&nbsp;KB, they'll truncate. 
 - Whitespace will count towards the character count. Note that Braze omits the leading and trailing whitespaces.
 - The resulting JSON will output only string values.
 - Liquid variables can be included as a key or value, but Liquid tags are not supported directly. 
