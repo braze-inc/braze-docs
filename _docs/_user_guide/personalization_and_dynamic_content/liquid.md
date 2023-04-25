@@ -37,7 +37,7 @@ guide_featured_list:
 - name: Liquid Use Cases
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
   fa_icon: fas fa-list-ul
-- name: FAQ
+- name: Frequently Asked Questions
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
   fa_icon: fas fa-question
   

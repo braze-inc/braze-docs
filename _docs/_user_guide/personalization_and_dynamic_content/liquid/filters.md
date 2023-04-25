@@ -165,7 +165,7 @@ If you're updating a user on their purchase, an account balance, or anything reg
 | :---------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------- |
 | [money][5.1]                        | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.                                                     | ✅  Yes   |
 | [money_with_currency][5.2]          | Formats numbers with the currency symbol.                                                                                                                                  | ⛔  No    |
-| [money_without_trailing_zeros][5.3] | Formats numbers to exclude the decimal separator (either `.` or `,`) and trailing zeros. If there are no trailing zeros, then this filter behaves like the `money` filter. | ✅  Yes   |
+| [money_without_trailing_zeros][5.3] | Formats numbers to exclude the decimal separator (either `.` or `,`) and trailing zeros. If there are no trailing zeros, this filter behaves like the `money` filter. | ✅  Yes   |
 | [money_without_currency][5.4]       | Formats numbers without the currency symbol.                                                                                                                               | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
