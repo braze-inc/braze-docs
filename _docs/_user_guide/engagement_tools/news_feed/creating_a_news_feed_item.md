@@ -61,9 +61,9 @@ Banner cards consist of:
 
 |          Card type         |          Aspect Ratio         | Recommended Image Size | Maximum Image Size |   File Types  |
 |:-----------------------------:|:----------------------:|:------------------:|:-------------:|
-|          Classic         | 1:1 (110 pixels wide minimum) |          500&nbsp;KB          |         1&nbsp;MB        | PNG, JPG, GIF |
-|          Captioned image         | 4:3 (600 pixels wide minimum) |          500&nbsp;KB          |         1&nbsp;MB        | PNG, JPG, GIF |
-|          Banner         | 6:1 (600 pixels wide minimum) |          500&nbsp;KB          |         1&nbsp;MB        | PNG, JPG, GIF |
+|          Classic         | 1:1 (110 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPG, GIF |
+|          Captioned image         | 4:3 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPG, GIF |
+|          Banner         | 6:1 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPG, GIF |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 - PNG files are recommended.

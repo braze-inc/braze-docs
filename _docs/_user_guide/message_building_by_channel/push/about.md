@@ -73,9 +73,9 @@ For best results, refer to the following image size and message length guideline
 
 **Image Type** | **Recommended Image Size** | **Max Image Size** | **File Types**
 --- | --- | --- | ---
-(iOS) 2:1 *Recommended* | 500&nbsp;KB  | 5&nbsp;MB | PNG, JPG, GIF
-(Android) Push icon | 500&nbsp;KB  | 5&nbsp;MB | PNG, JPG
-(Android) Expanded notification | 500&nbsp;KB  | 5&nbsp;MB | PNG, JPG
+(iOS) 2:1 *Recommended* | 500&nbsp;KB | 5&nbsp;MB | PNG, JPG, GIF
+(Android) Push icon | 500&nbsp;KB | 5&nbsp;MB | PNG, JPG
+(Android) Expanded notification | 500&nbsp;KB | 5&nbsp;MB | PNG, JPG
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}

@@ -37,7 +37,7 @@ channel: push
 
 |    Aspect Ratio   | Recommended Image Size | Maximum Image Size |   File Types  |
 |:-----------------:|:----------------------:|:------------------:|:-------------:|
-| 2:1 (recommended) |          500&nbsp;KB          |         5&nbsp;MB        | PNG, JPG, GIF |
+| 2:1 (recommended) |          500&nbsp;KB         |         5&nbsp;MB        | PNG, JPG, GIF |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% endtab %}
@@ -74,14 +74,14 @@ channel: push
 
 |         Aspect Ratio         | Recommended Image Size |                         Maximum Image Size                         | File Types |
 |:----------------------------:|:----------------------:|:------------------------------------------------------------------:|:----------:|
-| 1:1 (400x400 pixels minimum) |          500&nbsp;KB          | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
+| 1:1 (400x400 pixels minimum) |          500&nbsp;KB         | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 #### Expanded notification image
 
 |         Aspect Ratio         | Recommended Image Size |                         Maximum Image Size                         | File Types |
 |:----------------------------:|:----------------------:|:------------------------------------------------------------------:|:----------:|
-| 2:1 (600x300 pixels minimum) |          500&nbsp;KB          | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
+| 2:1 (600x300 pixels minimum) |          500&nbsp;KB         | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}

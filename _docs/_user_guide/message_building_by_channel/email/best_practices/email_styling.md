@@ -79,11 +79,11 @@ Here are some best practices to keep in mind when writing your preheaders:
 
 ## Email size
 
-Make sure to limit your email size. Email bodies larger than 102&nbsp;KB  are not only extremely taxing on Braze and SendGrid's servers, but they are also clipped by Gmail and other email clients. Try to keep the size of your email under 25&nbsp;KB  for just text or 60&nbsp;KB  with images. We highly encourage you to use Braze's image uploader to host images and to reference these images by the `href`.
+Make sure to limit your email size. Email bodies larger than 102&nbsp;KB are not only extremely taxing on Braze and SendGrid's servers, but they are also clipped by Gmail and other email clients. Try to keep the size of your email under 25&nbsp;KB for just text or 60&nbsp;KB with images. We highly encourage you to use Braze's image uploader to host images and to reference these images by the `href`.
 
 |   Text Only   | Text With Images |     Email Width    |
 |:-------------:|:----------------:|:------------------:|
-| 25&nbsp;KB  maximum |   60&nbsp;KB  maximum   | 600 pixels maximum |
+| 25&nbsp;KB maximum |   60&nbsp;KB maximum   | 600 pixels maximum |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Text length

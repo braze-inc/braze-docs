@@ -66,7 +66,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 ## Content Cards
 
 #### Things to check
-- **Content Card size**: Content Card message fields are limited to 2&nbsp;KB  in pre-compression size, calculated by adding the byte-size length of the following fields: title, message, image URL, link text, link URLs, and key-value pairs. Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the image URL.
+- **Content Card size**: Content Card message fields are limited to 2&nbsp;KB in pre-compression size, calculated by adding the byte-size length of the following fields: title, message, image URL, link text, link URLs, and key-value pairs. Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the image URL.
 - **Updating copy post-send**: Once a card is sent, you will be unable to update the copy. Instead, you will need to remove the original card and send down a new card with any updates.
 
 #### Things to know
