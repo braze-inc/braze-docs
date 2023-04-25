@@ -76,7 +76,7 @@ _Last updated on January 21, 2021_
 [7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#in-campaign-control-group-filter
 [8]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/#exporting-to-csv
 [9]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting
 [12]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier
 [13]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment

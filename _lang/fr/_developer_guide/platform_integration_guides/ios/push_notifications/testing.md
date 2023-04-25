@@ -34,5 +34,5 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
 L’exemple précédent concerne les clients sur l’instance `US-01`. Si vous n’êtes pas dans cette instance, consultez notre [Documentation API][66] pour voir quel endpoint doit effectuer les requêtes.
 
 [29]: {{site.baseurl}}/api/endpoints/messaging/
-[32]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#assigning-a-user-id
+[32]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

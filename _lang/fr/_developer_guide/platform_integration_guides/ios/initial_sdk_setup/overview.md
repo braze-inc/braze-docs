@@ -24,7 +24,7 @@ guide_featured_list:
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/
   fa_icon: fas fa-toolbox
 - name: "Terminer l’intégration"
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/
+  link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/
   fa_icon: fas fa-flag-checkered
 - name: "Autres personnalisations SDK facultatives"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/
@@ -40,6 +40,6 @@ guide_featured_list:
 Le SDK iOS ajoutera 1 Mo à 2 Mo au fichier IPA App, en plus d’un fichier APP et 30 Mo pour l’infrastructure.
 {% endalert %}
 
-Après avoir effectué l’intégration en utilisant l’une des options répertoriées, suivez les étapes pour [compléter l’intégration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/) et activez d’autres personnalisations SDK (en option), passez à l’intégration, en activant la personnalisation d’autres canaux et fonctionnalités pour répondre aux besoins de vos futures campagnes.  
+Après avoir effectué l’intégration en utilisant l’une des options répertoriées, suivez les étapes pour [compléter l’intégration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/) et activez d’autres personnalisations SDK (en option), passez à l’intégration, en activant la personnalisation d’autres canaux et fonctionnalités pour répondre aux besoins de vos futures campagnes.  
 
 <br>

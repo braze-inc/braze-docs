@@ -22,4 +22,4 @@ Les notifications push pour l’application de test iOS nécessitent une configu
 
 [1]: https://github.com/appboy/appboy-ios-sdk "Appboy iOS GitHub Repository"
 [25]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/

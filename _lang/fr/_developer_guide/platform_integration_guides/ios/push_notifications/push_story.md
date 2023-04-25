@@ -233,9 +233,9 @@ Sinon, pour configurer le groupe d’applications Push Story de votre fichier `I
 
 ## Étapes suivantes
 
-Reportez-vous ensuite aux étapes d’intégration des [Action Buttons]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/) (boutons d’action), nécessaires pour que les boutons s’affichent sur un message Push Story.
+Reportez-vous ensuite aux étapes d’intégration des [Action Buttons]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/) (boutons d’action), nécessaires pour que les boutons s’affichent sur un message Push Story.
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
 [2]: {% image_buster /assets/img/ios/push_story/add_content_extension.png %}
 [3]: {% image_buster /assets/img/ios/push_story/enable_background_mode.png %}
 [4]: {% image_buster /assets/img/ios/push_story/add_app_groups.png %}

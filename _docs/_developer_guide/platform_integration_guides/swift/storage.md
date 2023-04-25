@@ -1,43 +1,66 @@
 ---
-hidden: true
 nav_title: Storage
 article_title: Storage for iOS
-platform: iOS
+platform: Swift
 page_order: 8.9
 page_type: reference
-description: "This reference article describes the device-level properties captured by the Braze iOS SDK."
+description: "This reference article describes the device-level properties captured by the Braze iOS Swift SDK."
 ---
 
 # Storage
 
-This article describes the different device-level properties captured when using the Braze iOS SDK.
+> This article describes the different device-level properties captured when using the Braze iOS Swift SDK.
 
 ## Device properties
 
-By default, Braze will collect the following [device-level properties](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181) to allow device, language, and time zone-based message personalization:
+By default, Braze will collect the following [device-level properties][1] to allow device, language, and time zone-based message personalization:
 
-* Device Resolution
-* Device Carrier
+* Device Carrier (see note on the [`CTCarrier` deprecation][2])
 * Device Locale
 * Device Model
 * Device OS Version
-* IDFV
+* Push Authorization Status
+* Push Display Options
 * Push Enabled
+* Device Resolution
 * Device Time Zone
-* Push Auth Status
-* Ad Tracking Enabled
 
 {% alert note %}
-The Braze SDK does not collect IDFA automatically. Apps may optionally pass IDFA to Braze by implementing Braze's `ABKIDFADelegate` protocol. Apps must obtain explicit end user opt-in to tracking through the app tracking transparency framework before passing IDFA to Braze.
+The Braze SDK does not collect IDFA automatically. Apps may optionally pass IDFA to Braze by implementing the methods directly below. Apps must obtain explicit opt-in to tracking by the end user through the App Tracking Transparency framework before passing IDFA to Braze.
+
+1. To set the advertising tracking state, use [`set(adTrackingEnabled:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:)/).
+2. To set the identifier for advertiser (IDFA), use [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/).
 {% endalert %}
 
-Configurable device fields are defined in the [`ABKDeviceOptions`](https://github.com/Appboy/appboy-ios-sdk/blob/4390e9eac8401bccdb81b053fa54eb87b1f6fcaa/Appboy-tvOS-SDK/AppboyTVOSKit.framework/Headers/Appboy.h#L179) enum. To disable or specify the device field you'd like to allowlist, assign the bitwise `OR` of desired fields to [`ABKDeviceAllowlistKey`](https://github.com/Appboy/appboy-ios-sdk/blob/fed071000722673754da288cace15c1ff8aca432/AppboyKit/include/Appboy.h#L148) in the `appboyOptions` of `startWithApiKey:inApplication:withAppboyOptions:`.
+Configurable device fields are defined in the [`Braze.Configuration.DeviceProperty`][1] enum. To disable or specify the device field you'd like to allowlist, add the fields to the [`devicePropertyAllowList`][3] property of the `configuration` object.
 
 For example, to specify time zone and locale collection to be allowlisted, set:
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+configuration.devicePropertyAllowList = [.timeZone, .locale]
 ```
-appboyOptions[ABKDeviceAllowlistKey] = @(ABKDeviceOptionTimezone | ABKDeviceOptionLocale);
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+configuration.devicePropertyAllowList = @[
+    BRZDeviceProperty.timeZone,
+    BRZDeviceProperty.locale
+];
 ```
+
+{% endtab %}
+{% endtabs %}
 
 By default, all fields are enabled. Note that without some properties, not all features will function properly. For instance, local time zone delivery will not function without the time zone.
 
-To read more about the automatically collected device properties, visit our [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). 
+To read more about the automatically collected device properties, visit our [SDK data collection][4].
+
+[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty
+[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier
+[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist
+[4]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/

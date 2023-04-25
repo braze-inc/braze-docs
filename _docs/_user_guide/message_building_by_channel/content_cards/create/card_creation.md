@@ -21,7 +21,7 @@ Control over card creation is unavailable for use in Canvas steps.
 
 To take advantage of this feature, you must upgrade to the following minimum SDK versions:
 
-{% sdk_min_versions web:4.2.0 android:23.0.0 ios:4.5.0 %}
+{% sdk_min_versions swift:5.2.0 android:23.0.0 web:4.2.0 %}
 
 After upgrading the SDK, your mobile users must upgrade their app. You can filter your campaign audience to only [target users on these minimum app versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
 

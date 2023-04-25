@@ -23,7 +23,7 @@ Refer to the following articles for setting custom attributes based on your plat
 - [Android][5]
 - [REST API][10]
 
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes
 [10]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
 [46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %}

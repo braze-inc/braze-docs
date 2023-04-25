@@ -97,7 +97,7 @@ Si vous avez un endpoint personnalisé préexistant :
 
 ## Intégration SDK terminée
 
-Braze devrait maintenant collecter des données depuis votre application et votre intégration de base devrait être terminée. Consultez les articles suivants pour activer le [suivi des événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/), l’[envoi de messages de notification push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) et la suite complète de fonctionnalités Braze.
+Braze devrait maintenant collecter des données depuis votre application et votre intégration de base devrait être terminée. Consultez les articles suivants pour activer le [suivi des événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/), l’[envoi de messages de notification push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) et la suite complète de fonctionnalités Braze.
 
 ## Personnaliser Braze au démarrage
 

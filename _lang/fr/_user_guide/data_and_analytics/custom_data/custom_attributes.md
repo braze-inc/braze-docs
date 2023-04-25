@@ -26,7 +26,7 @@ La liste suivante énumère les méthodes utilisées pour définir des attributs
 {% details Développer la documentation par plateforme %}
 
 - [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
@@ -221,7 +221,7 @@ L’utilisation de nos méthodes d’achat pour enregistrer les achats dans l’
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
-Si vous souhaitez segmenter sur le nombre de fois où un achat spécifique s’est produit, vous devez également enregistrer l’achat individuel en tant [ qu’attribut personnalisé incrémental.]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
+Si vous souhaitez segmenter sur le nombre de fois où un achat spécifique s’est produit, vous devez également enregistrer l’achat individuel en tant [ qu’attribut personnalisé incrémental.]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
 {% endalert %}
 
 Vous pouvez modifier le type de données de votre attribut personnalisé, mais vous devez être conscient des impacts de la [modification des types de données]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/).

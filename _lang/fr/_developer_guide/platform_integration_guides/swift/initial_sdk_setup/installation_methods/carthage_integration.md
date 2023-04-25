@@ -56,5 +56,5 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 [1]: https://github.com/Carthage/Carthage#quick-start
 [2]: https://github.com/Carthage/Carthage#migrating-a-project-from-framework-bundles-to-xcframeworks
 [4]: https://github.com/Appboy/appboy-ios-sdk/releases
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/
 [6]: https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile

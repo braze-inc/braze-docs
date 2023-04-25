@@ -80,4 +80,4 @@ Dans les **Build Settings (Paramètres de création)** de votre projet, ajoutez 
 
 ## Étapes suivantes
 
-Suivez les instructions pour [compléter l’intégration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/).
+Suivez les instructions pour [compléter l’intégration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/).

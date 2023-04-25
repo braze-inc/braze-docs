@@ -232,7 +232,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 Sinon, pour configurer le groupe d’applications Push Story de votre fichier `Info.plist`, ajoutez un dictionnaire nommé `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez une sous-entrée de type chaîne de caractères `PushStoryAppGroup` et définissez la valeur sur votre identifiant de groupe d’apps. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
 [2]: {% image_buster /assets/img/ios/push_story/add_content_extension.png %}
 [3]: {% image_buster /assets/img/ios/push_story/enable_background_mode.png %}
 [4]: {% image_buster /assets/img/ios/push_story/add_app_groups.png %}
