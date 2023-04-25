@@ -79,7 +79,7 @@ En appelant `changeUser()` après avoir touché le endpoint `/users/identify` Br
 
 ## Ressources complémentaires
 - Consultez notre article sur le [cycle de vie du profil de l'utilisateur ]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/)Braze pour un contexte supplémentaire.<br>
-- Documentation sur la définition des ID utilisateur et l’appel de la méthode `changeUser()` pour [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#suggested-user-id-naming-convention), et [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
+- Documentation sur la définition des ID utilisateur et l’appel de la méthode `changeUser()` pour [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention), et [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
 
 [1]: {% image_buster /assets/img/user_profile_process.png %}
 [2]: {% image_buster /assets/img/user_profile_process2.png %}

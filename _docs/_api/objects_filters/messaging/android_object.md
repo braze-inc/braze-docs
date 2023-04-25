@@ -30,7 +30,7 @@ You must include an Android Push Object in `messages` if you want users you have
    "sound": (optional, string) the location of a custom notification sound within the app,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
    "summary_text": (optional, string),
-   "time_to_live": (optional, integer (seconds)),
+   "time_to_live": (optional, integer (maximum of 2,419,200 seconds)),
    "notification_id": (optional, integer),
    "push_icon_image_url": (optional, string) an image URL for the large icon,
    "accent_color": (optional, integer) accent color to be applied by the standard Style templates when presenting this notification, an RGB integer value,

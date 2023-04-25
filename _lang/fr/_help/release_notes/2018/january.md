@@ -37,7 +37,7 @@ Des statistiques supplémentaires, telles que **le taux d’ouverture des notifi
 Vous pouvez désormais utiliser un [fichier p8][80] lors du chargement d’un certificat Apple Push, vous assurant que vos identifiants de notification push iOS n’expireront jamais.
 
 
-[80]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#recommended-option-using-a-p8-file-authentication-tokens
+[80]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#recommended-option-using-a-p8-file-authentication-tokens
 [81]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports
 [82]: {{site.baseurl}}/developer_guide/rest_api/export/#users-by-identifier-endpoint
 [84]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/#css-inlining

@@ -145,7 +145,7 @@ When a user is eligible for a card, it will appear in a carousel on whichever pa
 
 Because this is a custom implementation, you’ll need to work with your developers to build your own views to display the Content Cards. The default classic, banner, and captioned image cards are not supported with this implementation.
 
-For steps on how to implement, refer to [carousel view]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/use_cases/carousel_view/).
+For steps on how to implement, refer to [carousel view]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/carousel_view/).
 
 ### Banner
 
@@ -184,7 +184,7 @@ Braze Content Cards have their own view controller provided, meaning you can int
 
 Your developers will integrate Content Cards when they integrate the Braze SDK. For more details on how to integrate with Content Cards, refer to the developer guide articles for your platform:
 
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/ "iOS Content Card Integration Guide")
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/ "iOS Content Card Integration Guide")
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Android Content Card Integration Guide")
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Web Content Card Integration Guide")
 

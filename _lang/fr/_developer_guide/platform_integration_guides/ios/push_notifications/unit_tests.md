@@ -74,7 +74,7 @@ Ajouter le contenu de l’application d’échantillon HelloSwift [`AppboyPushUn
 
 Exécutez les tests d’unité de votre application. Il peut s’agir d’une étape de vérification unique, ou vous pouvez l’inclure indéfiniment dans votre suite de tests pour vous aider à détecter toute régression.
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
 [3]: https://ocmock.org/
 [4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftTests/AppboyPushUnitTests.m

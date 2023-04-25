@@ -100,7 +100,7 @@ class BrazeManager: NSObject {
 {% tab Step 1: Initialize SDK from BrazeManager.swift %}
 
 ##### Initialiser le SDK à partir de BrazeManager.swift
-Ensuite, vous devez initialiser le SDK. Ce guide suppose que vous avez déjà [ajouté le SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) à votre projet Xcode. Vous devez également avoir votre [endpoint SDK groupe d’applications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) et [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) défini dans votre fichier `Info.plist` ou dans `appboyOptions`.
+Ensuite, vous devez initialiser le SDK. Ce guide suppose que vous avez déjà [ajouté le SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) à votre projet Xcode. Vous devez également avoir votre [endpoint SDK groupe d’applications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) et [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) défini dans votre fichier `Info.plist` ou dans `appboyOptions`.
 
 Ajouter la méthode `didFinishLaunchingWithOptions` à partir du fichier `AppDelegate.swift` sans type de retour dans votre fichier `BrazeManager.swift`. En créant une méthode similaire dans le fichier `BrazeManager.swift`, il n’y aura pas de déclaration `import AppboyUI` dans votre fichier `AppDelegate.swift`. 
 
@@ -188,7 +188,7 @@ Ne manquez pas le point de contrôle dédié à la fin de cette étape !
 
 ##### Inscrivez-vous aux notifications push
 
-Ensuite, inscrivez-vous aux notifications push. Ce guide suppose que vous avez [configuré correctement vos informations d’identification de notification push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) dans votre portail développeur Apple et votre projet Xcode. 
+Ensuite, inscrivez-vous aux notifications push. Ce guide suppose que vous avez [configuré correctement vos informations d’identification de notification push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) dans votre portail développeur Apple et votre projet Xcode. 
 
 Le code d’enregistrement des notifications push sera ajouté dans la méthode `didFinishLaunching...` dans le fichier `BrazeManager.swift`. Votre code d’initialisation devrait ressembler à ceci :
 

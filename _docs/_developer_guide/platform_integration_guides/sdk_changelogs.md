@@ -12,7 +12,7 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/android/changelog/
     image: /assets/img/android.png
   - name: iOS SDK (Swift)
-    link: /docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/
+    link: /docs/developer_guide/platform_integration_guides/swift/changelog/
     fa_icon: fab fa-apple
   - name: iOS SDK (Objective-C)
     link: /docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/

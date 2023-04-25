@@ -65,7 +65,7 @@ Si [le dénombrement des badges est activé][2], Braze affiche un badge lorsqu�
 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 ```
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
 [2]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#badge-count-with-braze
 [3]: https://developer.xamarin.com/guides/cross-platform/application_fundamentals/notifications/ios/local_notifications_in_ios/#Handling_Notifications
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/

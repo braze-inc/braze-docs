@@ -145,7 +145,7 @@ Lorsqu’un utilisateur reçoit la notification push, il peut appuyer longtemps 
 
 ![Un utilisateur reçoit une notification push et appuie longtemps sur le message pour afficher l’image étendue qui dit « Hello ».][8]{: style="max-width:50%;" }
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications
 [2]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [4]: {% image_buster /assets/img_archive/rich_notification_add_image.png %}

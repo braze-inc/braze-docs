@@ -72,7 +72,7 @@ Dans l’exemple suivant, le message in-app spécifique à déclencher a été c
 
 En raison d’un message push utilisé pour enregistrer un événement personnalisé, Braze devra stocker un jeton de notification push pour chaque utilisateur afin de permettre cette solution. Pour les utilisateurs d’iOS, Braze ne stocke un jeton qu’à partir du point où un utilisateur a été invité à l’invite de notification push de l’iOS. Avant cela, l’utilisateur ne sera pas joignable par notification push, et la solution précédente ne sera pas possible.
 
-[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
+[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
 [40]: {% image_buster /assets/img_archive/iosServerSentPush.png %}
 [41]: {% image_buster /assets/img_archive/iOSServerPush.png %}
 [42]: {% image_buster /assets/img_archive/iosIAMeventTrigger.png %}

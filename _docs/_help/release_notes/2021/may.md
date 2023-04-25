@@ -9,7 +9,7 @@ description: "This article contains release notes for May 2021."
 
 ## iOS push advanced implementation guide
 
-This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress-based push), accompanying code snippets, and guidance on logging analytics. Check out the [iOS push advanced implementation guide](/docs/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/) to learn more.
+This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress-based push), accompanying code snippets, and guidance on logging analytics. Check out the [iOS push advanced implementation guide](/docs/developer_guide/platform_integration_guides/swift/push_notifications/implementation_guide/) to learn more.
 
 ## VFC support for multimedia message service (MMS)
 

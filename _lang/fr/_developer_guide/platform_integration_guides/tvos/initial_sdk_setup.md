@@ -193,7 +193,7 @@ Vous pouvez également intégrer notre SDK tvOS manuellement -il suffit de saisi
 Voir notre [Documentation iOS][3] pour plus d’informations sur la définition des identifiants utilisateur, la journalisation des événements personnalisés et la définition des attributs utilisateur. Nous vous recommandons également de vous familiariser avec nos [conventions de dénomination des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 [1]: https://github.com/appboy/appboy-ios-sdk
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
 [support]: {{site.baseurl}}/braze_support/
 [apple_initial_setup_1]: http://cocoapods.org/
 [apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/

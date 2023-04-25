@@ -193,7 +193,7 @@ You can also integrate our tvOS SDK manually - simply grab the Framework from ou
 See our [iOS documentation][3] for information about setting user ids, logging custom events, setting user attributes. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 [1]: https://github.com/appboy/appboy-ios-sdk
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
 [support]: {{site.baseurl}}/braze_support/
 [apple_initial_setup_1]: http://cocoapods.org/
 [apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/

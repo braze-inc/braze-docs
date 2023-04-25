@@ -150,7 +150,7 @@ Dans quelques rares situations, les messages test ne sont pas dotés d’une par
 - Pour les messages dans l’appli et les cartes de contenu, l’utilisateur cible doit avoir un jeton de notification push pour l’appareil cible
 
 [1]: {% image_buster /assets/img_archive/testmessages1.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#setting-user-ids
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids
 [3]: {% image_buster /assets/img_archive/testmessages2.png %}
 [4]: {% image_buster /assets/img_archive/testmessages3.png %}
 [5]: {% image_buster /assets/img_archive/testmessages45.png %}

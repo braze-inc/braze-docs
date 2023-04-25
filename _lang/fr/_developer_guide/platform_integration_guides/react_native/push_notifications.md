@@ -22,7 +22,7 @@ Configurer les invites `enableBrazeIosPush` et `enableFirebaseCloudMessaging` af
 ### Configuration de l’iOS
 
 #### Générer une nouvelle clé de notification push
-Si vous n’avez pas de clé de notification push ou de certificat d’Apple existant ou souhaitez en générer un nouveau, suivez [Étape 1 des instructions d’intégration d’iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-1-configure-push-notifications) pour générer une nouvelle clé de notification push et la télécharger sur le tableau de bord de Braze.
+Si vous n’avez pas de clé de notification push ou de certificat d’Apple existant ou souhaitez en générer un nouveau, suivez [Étape 1 des instructions d’intégration d’iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-configure-push-notifications) pour générer une nouvelle clé de notification push et la télécharger sur le tableau de bord de Braze.
 
 #### Migration d’une clé de notification push à partir des notifications d’exposition
 Si vous utilisiez auparavant `expo-notifications` pour gérer votre clé de notification push, exécutez `expo fetch:ios:certs` dans le dossier racine de votre application. Cela téléchargera votre clé de notification push (un fichier .p8), qui peut ensuite être téléchargée sur le tableau de bord de Braze.

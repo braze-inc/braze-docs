@@ -83,7 +83,7 @@ These properties are collected by the iOS SDK upon proper integration.
 | Device Locale <br> `ABKDeviceOptionLocale`| The default locale of the device. |
 | Device Model <br> `ABKDeviceOptionModel`| The specific hardware of the device.
 | Device OS Version <br> `ABKDeviceOptionOSVersion` | The version of the iOS OS installed on the device. |
-| Device IDFV <br> `ABKDeviceOptionIDFV`| Device identifier for vendors. IDFV collection is now optional on our [iOS SDK v5.7.0+](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/)|
+| Device IDFV <br> `ABKDeviceOptionIDFV`| Device identifier for vendors. IDFV collection is now optional on our [iOS SDK v5.7.0+](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/other_sdk_customizations/swift_idfv/)|
 | Device IDFA <br> `ABKDeviceOptionIDFA`| (if supplied) Device identifier for advertisers. |
 | Device Push Enabled <br> `ABKDeviceOptionPushEnabled`| Whether this app has push notifications enabled.
 | Device Timezone <br> `ABKDeviceOptionTimezone`| The reported time zone of the device.

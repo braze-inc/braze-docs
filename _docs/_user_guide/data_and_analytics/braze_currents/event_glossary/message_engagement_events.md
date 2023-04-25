@@ -45,88 +45,20 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 
 {% api %}
 
-## Campaign abort message events
-
-{% apitags %}
-Campaign, Abort
-{% endapitags %}
-
-This event occurs if a campaign message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
-
-```json
-// Campaign Message Abort: users.campaigns.abort
-{
-  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
-  "campaign_id": (required, string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (optional, string) name of the campaign,
-  "canvas_id": (required, string) id of the Canvas if from a Canvas,
-  "device_id": (optional, string) id of the device on which the event occurred,
-  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
-  "external_user_id": (optional, string) External user ID of the user,
-  "id": (required, string) globally unique ID of this event,
-  "message_variation_id": (required, string) message variation ID of the variation this user received,
-  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
-  "send_id": (optional, string) message send ID this message belongs to,
-  "time": (required, int) unix timestamp at which the event happened,
-  "timezone": (optional, string) timezone of the user,
-  "user_id": (required, string) BSON id of the user that performed this event
-}
-```
-
-{% endapi %}
-
-{% api %}
-
-## Canvas abort message events
-
-{% apitags %}
-Canvas, Abort
-{% endapitags %}
-
-This event occurs if a Canvas message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
-
-```json
-// Canvas Message Abort: users.canvas.abort
-{
-  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
-  "canvas_id": (required, string) id of the Canvas if from a Canvas,
-  "canvas_name": (optional, string) name of the Canvas,
-  "canvas_step_id": (required, string) id of the canvas step this event belongs to,
-  "canvas_step_message_variation_id": (required, string) id of the canvas step message variation this user received,
-  "canvas_step_name": (optional, string)name of the canvas step this event belongs to,
-  "canvas_variation_id": (required, string) Canvas variation ID of the variation this event belongs to,
-  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
-  "device_id": (optional, string) id of the device on which the event occurred,
-  "external_user_id": (optional, string) External user ID of the user,
-  "id": (required, string) globally unique ID of this event,
-  "time": (required, int) unix timestamp at which the event happened,
-  "timezone": (optional, string) timezone of the user,
-  "user_id": (required, string) BSON id of the user that performed this event
-}
-```
-
-{% endapi %}
-
-{% api %}
-
 ## Content Card abort message events
 
 {% apitags %}
 Abort, Content Cards
 {% endapitags %}
 
-This event occurs if a Content Card message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+This event occurs if a Content Card message was aborted based on Liquid aborts, quiet hours, etc.
 
 ```json
 // Content Card Abort: users.messages.contentcard.Abort
 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "app_group_id": (required, string) BSON id of the app group this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
@@ -159,14 +91,14 @@ This event occurs if a Content Card message was aborted based on quiet hours, ra
 Abort, Email
 {% endapitags %}
 
-This event occurs if an email message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+This event occurs if an email message was aborted based on Liquid aborts, quiet hours, etc.
 
 ```json
 // Email Abort: users.messages.email.Abort
 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "app_group_id": (required, string) BSON id of the app group this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
@@ -195,109 +127,20 @@ This event occurs if an email message was aborted based on quiet hours, rate lim
 
 {% api %}
 
-## In-app message abort message events
-
-{% apitags %}
-Abort, In-App Messages
-{% endapitags %}
-
-This event occurs if an in-app message message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
-
-```json
-// In-App Message Abort: users.messages.inappmessage.Abort
-
-{
-  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "ad_id": (optional, string) advertising identifier,
-  "ad_id_type": (optional, string) one of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (optional, string) Whether advertising tracking is enabled for the device,
-  "app_group_id": (optional, string) BSON id of the app group this user belongs to,
-  "browser": (optional, string) browser of the device,
-  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (optional, string) name of the campaign,
-  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
-  "canvas_name": (optional, string) name of the Canvas,
-  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (optional, string) id of the canvas step message variation this user received
-  "canvas_step_name": (optional, string) API id of the canvas step this event belongs to,
-  "canvas_variation_id": (optional, string) id of the canvas variation this event belongs to,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "card_id": (optional, string) BSON id of the card this in app message comes from,
-  "carrier:": (optional, string) carrier of the device,
-  "device_id": (optional, string) id of the device on which the event occurred,
-  "device_model": (optional, string) model of the device,
-  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
-  "external_user_id": (optional, string) External user ID of the user,
-  "message_variation_id": (optional, string) ID of the message variation this user received,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "os_version": (optional, string) version of the operating system of the device,
-  "platform": (optional, string) platform of the device,
-  "resolution": (optional, string) resolution of the device,
-  "send_id": (optional, string) message send ID this message belongs to,
-  "time": (required, int) unix timestamp at which the event happened,
-  "timezone": (optional, string) IANA time zone of the user at the time of the event,
-  "user_id": (required, string) BSON id of the user that performed this event,
-  "version": (required, string) which version of in app message, legacy or triggered
-}
-```
-{% endapi %}
-
-{% api %}
-
-## News Feed card abort events
-
-{% apitags %}
-Abort, News Feed
-{% endapitags %}
-
-This event occurs if a News Feed card was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
-
-```json
-// News Feed Card Abort: users.messages.newsfeedcard.Abort
-
-{
-  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
-  "browser": (optional, string) browser of the device,
-  "campaign_name": (optional, string) name of the campaign,
-  "canvas_name": (optional, string) name of the Canvas,
-  "canvas_step_name": (optional, string) API id of the canvas step this event belongs to,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "card_id": (required, string) BSON id of the card this in app message comes from,
-  "carrier:": (optional, string) carrier of the device,
-  "device_id": (optional, string) id of the device on which the event occurred,
-  "device_model": (optional, string) model of the device,
-  "external_user_id": (optional, string) External user ID of the user,
-  "id": (required, string) globally unique ID of this event,
-  "message_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "os_version": (optional, string) version of the operating system of the device,
-  "platform": (optional, string) platform of the device,
-  "resolution": (optional, string) resolution of the device,
-  "time": (required, int) unix timestamp at which the event happened,
-  "timezone": (optional, string) IANA time zone of the user at the time of the event,
-  "user_id": (required, string) BSON id of the user that performed this event
-}
-```
-{% endapi %}
-
-{% api %}
-
 ## Push notification abort events
 
 {% apitags %}
 Abort, Push
 {% endapitags %}
 
-This event occurs if a push notification message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+This event occurs if a push notification message was aborted based on Liquid aborts, quiet hours, etc.
 
 ```json
 // Push Notification Abort: users.messages.pushnotification.Abort
 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "app_group_id": (required, string) BSON id of the app group this user belongs to,
   "app_id": (required, string) BSON id of the app this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
@@ -330,14 +173,14 @@ This event occurs if a push notification message was aborted based on quiet hour
 Abort, SMS
 {% endapitags %}
 
-This event occurs if an SMS message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+This event occurs if an SMS message was aborted based on Liquid aborts, quiet hours, etc.
 
 ```json
 // SMS Abort: users.messages.sms.Abort
 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "app_group_id": (required, string) BSON id of the app group this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
@@ -356,7 +199,6 @@ This event occurs if an SMS message was aborted based on quiet hours, rate limit
   "time": (required, int) unix timestamp at which the event happened,
   "user_id": (required, string) BSON id of the user that performed this event
 }
-}
 ```
 {% endapi %}
 
@@ -368,14 +210,14 @@ This event occurs if an SMS message was aborted based on quiet hours, rate limit
 Abort,  Webhooks
 {% endapitags %}
 
-This event occurs if a webhook message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+This event occurs if a webhook message was aborted based on Liquid aborts, quiet hours, etc.
 
 ```json
 // Webhook Abort: users.messages.webhook.Abort
 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "app_group_id": (required, string) BSON id of the app group this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
@@ -564,7 +406,7 @@ This event occurs when Braze processes a push message for a user, communicating 
 ```
 
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 - `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 {% endapi %}
@@ -614,7 +456,7 @@ This event occurs when a user directly clicks on the Push notification to open t
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 {% api %}
@@ -658,7 +500,7 @@ This event is now deprecated using our [Obj-C SDK](https://github.com/Appboy/app
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 {% api %}
@@ -1085,7 +927,7 @@ This event occurs when a user views an in-app message.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -1131,7 +973,7 @@ This event occurs when a user clicks on an in-app message.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -1253,7 +1095,7 @@ This event occurs when a user views a Content Card.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -1297,7 +1139,7 @@ This event occurs when a user clicks a Content Card.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -1342,7 +1184,7 @@ This event occurs when a user dismisses a Content Card.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 

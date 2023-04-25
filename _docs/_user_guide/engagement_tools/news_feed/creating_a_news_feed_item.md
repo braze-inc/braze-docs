@@ -115,7 +115,7 @@ You can re-order your cards within Braze's News Feed page.
 [3]: {% image_buster /assets/img_archive/captionedimage.png %}
 [4]: {% image_buster /assets/img_archive/newsfeedbanner.png %}
 [6]: {% image_buster /assets/img_archive/news-feed-title-summary_new.png %}
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-linking-to-app-settings
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
 [8]: {% image_buster /assets/img_archive/newsfeed2_new.png %}
 [10]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [11]: {% image_buster /assets/img_archive/targetsegment_new.png %}
