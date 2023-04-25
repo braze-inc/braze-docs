@@ -14,7 +14,7 @@ description: "This article provides answers to frequently asked questions about 
 
 ### How do I use Liquid snippets in Braze?
 
-In many cases, you can incorporate Liquid snippets to [personalize the messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) in your campaigns and Canvases. 
+In many cases, you can incorporate Liquid snippets by navigating to your campaigns or Canvases, and inserting Liquid in the personalization modal in areas such as the email message body or in your segments. 
 
 #### Where can I learn more?
 
@@ -81,5 +81,7 @@ For example, if you wanted to search a catalog with 100 rows and include all ima
 ```
 
 Once the set conditions are met, your message can proceed. Using this logic is a helpful way to save time, instead of repeating Liquid blocks for different conditions.
+
+For more information on the supported Liquid operators, check out [Operators]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/operators/)
 
 {% endraw %}
