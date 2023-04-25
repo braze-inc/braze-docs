@@ -42,7 +42,7 @@ Our guidelines for images are more structured than those for text, as we want to
 In general, Braze recommends using images that fit into a 16:10 screen.
 
 - **All images must be less than 5MB.**
-- We only accept `PNG`, `JPG`, and `GIF` file types.
+- We only accept PNG, JPG, and GIF file types.
 - We recommend hosting images in the [Braze Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
 - For fullscreen messages, follow our guidelines for [image safe zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
 
@@ -54,8 +54,8 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 
 | Layout | Asset Size | Notes |
 |--- | --- | --- |
-| Image + Text | 6:5 aspect ratio<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
-| Image Only | 3:5 aspect ratio<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping can occur on the left and right edges on taller devices |
+| Image + Text | 6:5 aspect ratio<br>High-resolution 1200 x 1000 px<br> Min. 600 x 500 px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
+| Image Only | 3:5 aspect ratio<br>High-resolution 1200 x 2000 px<br> Min. 600 x 1000 px | Cropping can occur on the left and right edges on taller devices |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 [Further details for fullscreens]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
@@ -68,8 +68,8 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 
 | Layout | Asset Size | Notes |
 |--- | --- | ------ |
-| Image + Text | 29:10 aspect ratio<br>Hi-Res 1450 x 500px<br> Min. 600 x 205px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
-| Image Only | Nearly any aspect ratio<br>Hi-Res up to 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most aspect ratios. |
+| Image + Text | 29:10 aspect ratio<br>High-resolution 1450 x 500 px<br> Min. 600 x 205 px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
+| Image Only | Nearly any aspect ratio<br>High-resolution up to 1200 x 2000 px<br> Min. 600 x 600 px | The message will resize to fit images of most aspect ratios. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 [Further details for modals]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
@@ -81,7 +81,7 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 
 | Layout | Asset Size | Notes |
 |--- | --- | --- |
-| Image + Text | 1:1 aspect ratio<br>Hi-Res 150 x 150px<br> Min. 50 x 50px | Images of various aspect ratios will fit into a square image container, without cropping. |
+| Image + Text | 1:1 aspect ratio<br>High-resolution 150 x 150 px<br> Min. 50 x 50 px | Images of various aspect ratios will fit into a square image container, without cropping. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 [Further details for slideups]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup)

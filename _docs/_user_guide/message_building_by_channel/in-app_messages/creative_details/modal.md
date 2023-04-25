@@ -28,8 +28,8 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 
 | Layout | Asset Size | Notes |
 |--- | --- | ------ |
-| Image + Text | 29:10 aspect ratio<br>Hi-Res 1450 x 500px<br> Min. 725 x 250px | Tall or narrow images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
-| Image Only | Nearly any aspect ratio<br>Hi-Res up to 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most aspect ratios. |
+| Image + Text | 29:10 aspect ratio<br>High-resolution 1450 x 500 px<br> Min. 725 x 250 px | Tall or narrow images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
+| Image Only | Nearly any aspect ratio<br>High-resolution up to 1200 x 2000 px<br> Min. 600 x 600 px | The message will resize to fit images of most aspect ratios. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 You should always [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.

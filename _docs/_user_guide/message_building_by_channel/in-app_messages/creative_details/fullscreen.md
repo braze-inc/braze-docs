@@ -42,16 +42,16 @@ Fullscreen in-app messages will fill the entire height of a device and crop hori
 
 | layout | asset size | notes |
 |--- | --- | --- |
-| Image and text | 6:5 aspect ratio<br> Hi-Res 1200 x 1000px<br> Min. 600 x 500px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
-| Image only | 3:5 aspect ratio<br> Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping can occur on the left and right edges on taller devices |
+| Image and text | 6:5 aspect ratio<br> High-resolution 1200 x 1000 px<br> Min. 600 x 500 px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
+| Image only | 3:5 aspect ratio<br> High-resolution 1200 x 2000 px<br> Min. 600 x 1000 px | Cropping can occur on the left and right edges on taller devices |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Landscape
 
 | layout | asset size | notes |
 |--- | --- | --- |
-| Image and text | 10:3 aspect ratio<br> Hi-Res 2000 x 600px<br> Min. 1000 x 300px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
-| Image only | 5:3 aspect ratio<br> Hi-Res 2000 x 1200px<br> Min. 1000 x 600px | Cropping can occur on the left and right edges on taller devices |
+| Image and text | 10:3 aspect ratio<br> High-resolution 2000 x 600px<br> Min. 1000 x 300 px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
+| Image only | 5:3 aspect ratio<br> High-resolution 2000 x 1200px<br> Min. 1000 x 600 px | Cropping can occur on the left and right edges on taller devices |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Image safe zone

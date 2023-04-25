@@ -40,9 +40,9 @@ All images uploaded to the Media Library must be less than 5MB. Supported file t
 
 | Card type | Aspect ratio     | Image quality       |
 | --------- | ---------------- | ------------------- |
-| Classic   | 1:1 aspect ratio | 60px by 60px        |
-| Captioned | 4:3 aspect ratio | 600px minimum width |
-| Banner    | Any aspect ratio | 600px minimum width |
+| Classic   | 1:1 aspect ratio | 60 x 60 px        |
+| Captioned | 4:3 aspect ratio | 600 px minimum width |
+| Banner    | Any aspect ratio | 600 px minimum width |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 For more information, refer to [Content Card creative details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/).
@@ -51,8 +51,8 @@ For more information, refer to [Content Card creative details]({{site.baseurl}}/
 
 | Image type   | Aspect ratio     | Image quality       |
 | ------------ | ---------------- | ------------------- |
-| Header image | Any aspect ratio | 600px maximum width |
-| Body image   | Any aspect ratio | 480px maximum width |
+| Header image | Any aspect ratio | 600 px maximum width |
+| Body image   | Any aspect ratio | 480 px maximum width |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Smaller, high quality images will load faster, so we recommend that you use the smallest asset possible to achieve your desired output.
@@ -64,8 +64,8 @@ Smaller, high quality images will load faster, so we recommend that you use the 
 
 | Layout | Aspect ratio | Image quality | Notes |
 | ----- | ----- | ----- | ----- |
-| Image and text | 6:5 aspect ratio | High resolution 1200px by 1000px<br><br>Minimum resolution 600px by 500px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport. |
-| Image only | 3:5 aspect ratio | High resolution 1200px by 2000px<br><br>Minimum resolution 600px by 1000px | Cropping can occur on the left and right edges on taller devices. |
+| Image and text | 6:5 aspect ratio | High resolution 1200 x 1000 px<br><br>Minimum resolution 600 x 500 px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport. |
+| Image only | 3:5 aspect ratio | High resolution 1200 x 2000 px<br><br>Minimum resolution 600 x 1000 px | Cropping can occur on the left and right edges on taller devices. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% endtab %}
@@ -73,8 +73,8 @@ Smaller, high quality images will load faster, so we recommend that you use the 
 
 | Layout | Aspect ratio | Image quality | Notes |
 | ----- | ----- | ----- | ----- |
-| Image and text | 29:10 aspect ratio | High resolution 1450px by 500px<br><br>Minimum resolution 600px by 205px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
-| Image only | Nearly any aspect ratio | High resolution 1200px by 2000px<br><br>Minimum resolution 600px by 600px | The message will resize to fit images of most aspect ratios.|
+| Image and text | 29:10 aspect ratio | High resolution 1450 x 500 px<br><br>Minimum resolution 600 x 205 px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
+| Image only | Nearly any aspect ratio | High resolution 1200 x 2000 px<br><br>Minimum resolution 600 x 600 px | The message will resize to fit images of most aspect ratios.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% endtab %}
@@ -82,7 +82,7 @@ Smaller, high quality images will load faster, so we recommend that you use the 
 
 | Layout | Aspect ratio | Image quality | Notes |
 | ----- | ----- | ----- | ----- |
-| Image and text | 1:1 aspect ratio | High resolution 150px by 150px<br><br>Minimum resolution 50px by 50px | Images of various aspect ratios will fit into a square image container, without cropping.|
+| Image and text | 1:1 aspect ratio | High resolution 150 x 150 px<br><br>Minimum resolution 50 x 50 px | Images of various aspect ratios will fit into a square image container, without cropping.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% endtab %}
@@ -97,7 +97,7 @@ For more information, refer to [In-app message creative details]({{site.baseurl}
 
 | Aspect ratio | Image quality | Notes |
 | ---- | ---- | ---- |
-| 2:1 aspect ratio (recommended) | 1038px by 1038px maximum | As of January 2020, iOS rich push notifications can handle images 1038px by 1038px as long as they are under 10MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.|
+| 2:1 aspect ratio (recommended) | 1038 x 1038 px maximum | As of January 2020, iOS rich push notifications can handle images 1038 x 1038 px as long as they are under 10MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ##### More resources
@@ -113,7 +113,7 @@ Android rich notifications do not support GIFs.
 | Image type | Aspect ratio | Image quality |
 | ---- | ----- | ---- |
 | Push icon | 1:1 aspect ratio | N/A |
-| Expanded notification | 2:1 aspect ratio | Small: 512px by 256px<br>Medium: 1024px by 512px<br>Large: 2048px by 1024px |
+| Expanded notification | 2:1 aspect ratio | Small: 512 x 256 px<br>Medium: 1024 x 512 px<br>Large: 2048 x 1024 px |
 | Inline image | 3:2 aspect ratio | N/A |
 
 ##### More resources
