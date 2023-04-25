@@ -289,6 +289,7 @@ The following table describes the limitations that apply at a catalog level:
 | CSV file size | Up to 100MB for a single CSV file | Up to 2GB for a single CSV file |
 | Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
 | Characters limit for item column name | Up to 250 characters | Up to 250 characters |
+| Selections | Up to 10 selections per catalog | Up to 10 selections per catalog |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Storage limits
