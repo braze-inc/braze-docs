@@ -104,7 +104,8 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 | `last_coordinates` | Array of floats | User's most recent device location, formatted as `[longitude, latitude]`. |
 | `last_name` | String | User's last name. |
 | `phone` | String | User's telephone number in E.164 format. |
-| `purchase`s | Array | Purchases this user has made in the last 90 days. |
+| `purchases` | Array | Purchases this user has made in the last 90 days. |
+| `push_tokens` | Array | Unique anonymous identifier that specifies where to send an app's notifications. |
 | `random_bucket` | Integer | User's [random bucket number]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event), used to create uniformly distributed segments of random users. |
 | `time_zone` | String | User's time zone in the same format as the IANA Time Zone Database. |
 | `total_revenue` | Float | Total revenue attributed to this user. Total revenue is calculated based on purchases the user made during conversion windows for the campaigns and Canvases they received. |
