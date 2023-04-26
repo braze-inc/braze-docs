@@ -4,7 +4,7 @@ article_title: Braze Cloud Data Ingestion
 alias: /cloud_ingestion/
 description: "This reference article covers Braze Cloud Data Ingestion using Snowflake or Redshift and data setup recommendations."
 layout: dev_guide
-page_order: 4.1
+page_order: 0.1
 page_type: landing
 
 guide_top_header: "Braze Cloud Data Ingestion"
