@@ -1645,6 +1645,8 @@ Default copy
 ```
 {% endraw %}
 
-{% alert note %} You can replace the line "default copy" with {% raw %}`{% abort_message() %}`{% endraw %} to prevent the message from sending if the day of the week is unknown. {% endalert %}
+{% alert note %} 
+You can replace the line "default copy" with {% raw %}`{% abort_message() %}`{% endraw %} to prevent the message from sending if the day of the week is unknown.
+{% endalert %}
 
 {% endapi %}
