@@ -7,6 +7,7 @@ layout: dev_guide
 search_rank: 6
 guide_top_header: "Integration Overview"
 guide_top_text: "Installing the Braze iOS SDK will provide you with basic analytics functionality (session handling) and basic in-app messages. You must further customize your integration for additional channels and features. <br> <br> The Braze iOS SDK can be installed or updated using CocoaPods, Carthage, Swift Package Manager, or a Manual integration. <br> <br> Additionally, the Braze iOS SDK fully supports RubyMotion apps."
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 description: "This landing page covers Braze SDK integration guides for CocoaPods, Swift Package Manager, Carthage, and more."
 
 guide_featured_title: "Basic Integration Options"
@@ -31,8 +32,6 @@ guide_featured_list:
   fa_icon: fas fa-id-card-alt
 
 ---
-
-{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 <br>
 
