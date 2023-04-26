@@ -41,7 +41,7 @@ To create a full refresh SQL Segment Extension:
 {% endtab %}
 {% tab Incremental SQL Editor %}
 
-The incremental SQL editor allows user query aggregations to happen on a per date basis for an event within a given time frame. To create an incremental refresh SQL Segment Extension:
+The Incremental SQL Editor allows user query aggregations to happen on a per date basis for an event within a given time frame. To create an incremental refresh SQL Segment Extension:
 
 1. Go to **Segments** > **Segment Extensions**.
 2. Click **Create New Extension** and select **Incremental SQL Editor**.<br><br>
