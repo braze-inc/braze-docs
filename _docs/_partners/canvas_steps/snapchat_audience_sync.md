@@ -24,7 +24,8 @@ Using the Braze Audience Sync to Snapchat, brands can elect to add user data fro
 This feature allows users to control what specific first-party data is shared with Snapchat. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
 {% alert important %}
-Audience Sync to Snapchat is currently in beta. Contact your Braze account manager if you're interested in participating in the beta.
+**Audience Sync Pro disclaimer**<br>
+Reach out to your Braze Customer Success Manager for more details on this integration.
 {% endalert %}
 
 ## Prerequisites 
@@ -57,24 +58,13 @@ Once successfully connected, you will be taken back to the partner page, where y
 
 Your Snapchat connection will be applied at the Braze app group level. If your Snapchat admin removes you from your Snapchat Business Manager or access to the connected Snapchat ad accounts, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
 
-### Step 2: Configure your Canvas entry criteria
-
-When building audiences for Ad Tracking, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the [CCPA](https://oag.ca.gov/privacy/ccpa). Marketers should implement the relevant filters for users’ eligibility within their Canvas entry criteria. Below we list some options. 
-
-If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewother_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
-![][16]{: style="max-width:75%;"}
-
-If you are collecting ‘opt-ins’,  ‘opt-outs’, ‘Do Not Sell Or Share’ or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
-
-![A Canvas with an entry audience of "opted_in_marketing" equals "true".][13]{: style="max-width:75%;"}
-
-### Step 3: Add an Audience Sync Step with Snapchat
+### Step 2: Add an Audience Sync Step with Snapchat
 
 Add a component in your Canvas and select **Audience Sync**.
 
 ![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
 
-### Step 4: Sync setup
+### Step 3: Sync setup
 
 Click on the **Custom Audience** button to open the component editor.
 
@@ -90,11 +80,11 @@ Then select your desired Snapchat ad account. Under the **Choose a New or Existi
 **Create a New Audience**<br>
 Enter a name for the new audience, select **Add Users to Audience**, and select which fields you would like to sync with Snapchat. Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
-![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected, and a new audience is created.]({% image_buster /assets/img/snapchat/snapchat4.png %})
+![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected, and a new audience is created.]({% image_buster /assets/img/audience_sync/snapchat3.png %})
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
-![An alert that appears once a new audience is created in the Canvas component.]({% image_buster /assets/img/snapchat/snapchat5.png %})
+![An alert that appears once a new audience is created in the Canvas component.]({% image_buster /assets/img/audience_sync/snapchat2.png %})
 
 When you launch a Canvas with a new audience, Braze syncs users in near real-time as they enter the Audience Sync component.
 
@@ -103,12 +93,12 @@ When you launch a Canvas with a new audience, Braze syncs users in near real-tim
 **Sync with an Existing Audience**<br>
 Braze also offers the ability to either add users to existing Snapchat audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then either add users in near real-time as they enter the Audience Sync component.
 
-![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account and existing audience are selected.]({% image_buster /assets/img/snapchat/snapchat6.png %})
+![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account and existing audience are selected.]({% image_buster /assets/img/audience_sync/snapchat.png %})
 
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Launch Canvas
+### Step 4: Launch Canvas
 
 Once you have configured your Audience Sync to Snapchat, simply launch the Canvas! A new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on Snapchat. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
 

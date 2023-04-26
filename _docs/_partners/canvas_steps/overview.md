@@ -31,7 +31,7 @@ If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/deve
 
 If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share` or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
 
-![][1]
+![A Canvas with an entry audience of "opted_in_marketing" equals "true".][1]
 
 To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
 
