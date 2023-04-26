@@ -104,7 +104,7 @@ To run the function, drop a user attribute CSV file in the newly created S3 buck
 To make sure the function runs successfully, you can read the function's execution logs. Open the Braze User CSV Import function (by selecting it from the list of Lambdas in the console) and navigate to **Monitor**. Here, you can see the execution history of the function. To read the output, click on **View logs in CloudWatch**. Select the lambda execution event you want to check.
 
 ## Estimated Execution Times
-_2048MB Lambda Function_
+_2048&nbsp;MB Lambda Function_
 
 | Number of rows | Execution Time |
 | --------- | ---------- |

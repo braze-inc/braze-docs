@@ -196,7 +196,7 @@ Refer to the following table for details on the `Video` editor block.
 |`Title`| Auto-generated from the video meta data or can be customized.  Note that only Youtube and Vimeo are supported. |
 |`Play Icon Style`| Includes different options for the play button located at the top of a video image. |
 |`Play Icon Color`| Option to select either **Light** or **Dark** for the play button. |
-|`Play Icon Size`| Choose the pixel size for the play button. Pre-fixed range from 50 px to 80 px (incremented by 5 px). |
+|`Play Icon Size`| Choose the pixel size for the play button. Pre-fixed range from 50&nbsp;px to 80&nbsp;px (incremented by 5&nbsp;px). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}

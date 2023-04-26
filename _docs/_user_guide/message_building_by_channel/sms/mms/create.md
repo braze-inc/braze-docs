@@ -42,7 +42,7 @@ Creating an MMS message requires your Subscription Group to be configured for MM
 
 **Image Specifications** | **Recommended Properties**
 --- | ---
-Size | 5MB maximum
+Size | 5&nbsp;MB maximum
 File Types | PNG, JPG, GIF
 {: .reset-td-br-1 .reset-td-br-2}
 

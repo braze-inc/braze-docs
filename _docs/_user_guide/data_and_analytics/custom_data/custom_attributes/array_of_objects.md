@@ -15,7 +15,7 @@ description: "This reference article covers using an array of objects as a data 
 
 - Arrays of objects are intended for custom attributes sent via the API. CSV uploads are not supported. This is because commas in the CSV file will be interpreted as a column separator, and commas in values will cause parsing errors. 
 - Partners do not support arrays of objects. We recommend against using this feature with app groups that have partner integrations enabled.
-- Arrays of objects have no limit on the number of items but do have a maximum size of 50KB.
+- Arrays of objects have no limit on the number of items but do have a maximum size of 50&nbsp;KB.
 
 Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
 
