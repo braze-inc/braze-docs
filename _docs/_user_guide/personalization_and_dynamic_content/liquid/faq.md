@@ -40,15 +40,17 @@ No.
 
 ### How can I use Liquid to send a personalized greeting?
 
-Some examples are pulling in the user profile attributes like ```{{${first_name}}}``` or using a liquid ```{% if X %}``` statement to do conditional rendering based on anything, such as the day of the week or custom attributes.
+For a personalized greeting using a user's first name, you can pull the standard user profile attributes such as `{{${first_name}}}`, `{{${last_name}}}`.
+
+You can also use a Liquid `{% if X %}` statement to do conditional rendering based on anything, such as the day of the week or custom attributes. For more information on the supported Liquid operators that can be used in conditional statements, check out [Operators]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/operators/).
 
 ### How can I personalize a message based on a customer’s location?
 
-There is a default attribute for the user’s location: ```{{${most_recent_location}}}```.
+There is a default attribute for the user’s location: `{{${most_recent_location}}}`.
 
 ### What's the difference between {{campaign.${name}}} and {{campaign.${message_name}}}?
 
-Both ```{{campaign.${name}}}``` and ```{{campaign.${message_name}}}``` are supported Liquid personalization tags. Both tags reference campaign attributes. ```{{campaign.${name}}}``` denotes the name of your campaign, and ```{{campaign.${message_name}}}``` is the name of your message variant.
+Both `{{campaign.${name}}}` and `{{campaign.${message_name}}}` are supported Liquid personalization tags. Both tags reference campaign attributes. `{{campaign.${name}}}` denotes the name of your campaign, and `{{campaign.${message_name}}}` is the name of your message variant.
 
 ### How do I use Liquid with nested objects?
 
@@ -58,7 +60,7 @@ For more information, check out [Multi-criteria segmentation]({{site.baseurl}}/u
 
 ### How do I use event attributes to personalize a message that an event is triggering?
 
-You can access properties of API triggered events with the `api_triggered_property` tag: ```{{api_trigger_properties.${attribute_key}}}```.  
+You can access properties of API triggered events with the `api_triggered_property` tag: `{{api_trigger_properties.${attribute_key}}}`.  
 
 ### What is abort logic, and how can I use it?
 
@@ -81,7 +83,5 @@ For example, if you wanted to search a catalog with 100 rows and include all ima
 ```
 
 Once the set conditions are met, your message can proceed. Using this logic is a helpful way to save time, instead of repeating Liquid blocks for different conditions.
-
-For more information on the supported Liquid operators, check out [Operators]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/operators/)
 
 {% endraw %}
