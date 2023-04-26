@@ -17,14 +17,13 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 
 Messages created using the Drag & Drop Editor can only be sent to users on the following minimum SDK versions:
 
-{% sdk_min_versions ios:3.23.0 android:8.0.0 web:2.5.0 %}
+{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
 If a user hasn't updated their application (that is, they're on an older SDK version), they will not receive the in-app message.
 
 **Additional prerequisites**<br>
 - For the web SDK, the initialization option [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) must be set to `true`. The `enableHtmlInAppMessages` option will also allow these messages to function, but is deprecated and should be updated to `allowUserSuppliedJavascript`.
 - If you are using Google Tag Manager, you must enable "Allow HTML In-App Messages" in the GTM configuration.
-- Users will need to be on newer SDK versions to use “Request Push Permission” as an [on-click behavior option]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages#button-actions) for buttons.
 
 ## Step 1: Create an in-app message
 
@@ -201,7 +200,7 @@ Yes, you can segment based on button clicks for up to two buttons in your messag
 
 No.
 
-#### Can I save my in-app message as a template after I build it within my campaign or Canvas?**
+#### Can I save my in-app message as a template after I build it within my campaign or Canvas?
 
 No, you have to recreate the in-app message in the Drag & Drop Editor or duplicate an existing message in order to save.
 

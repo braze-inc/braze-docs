@@ -94,12 +94,12 @@ Tous les identifiants utilisateur peuvent être utilisés pour trouver et identi
 Braze interdit ou bloque les utilisateurs avec plus de 5 millions de sessions (« utilisateurs factices ») et cesse d’ingérer leurs événements SDK, car ces utilisateurs sont généralement le résultat d’une mauvaise intégration. Si vous constatez que cela s’est produit pour un utilisateur légitime, contactez votre gestionnaire de compte Braze.
 {% endalert %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#aliasing-users
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
 
-[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#assigning-a-user-id
-[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
+[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
 [25]: {{site.baseurl}}/developer_guide/home/
 [26]: {% image_buster /assets/img_archive/Braze_User_flowchart.png %}
 [27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint

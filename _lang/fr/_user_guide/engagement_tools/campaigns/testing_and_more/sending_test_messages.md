@@ -102,7 +102,7 @@ Allez à la page **Segments** et créez un nouveau segment. Dans le menu déroul
 
 ![Filtres de test]({% image_buster /assets/img_archive/testmessages1.png %})
 
-Utilisez ces filtres de test pour sélectionner des utilisateurs avec des adresses e-mail spécifiques ou des [ID utilisateur]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/) externes.
+Utilisez ces filtres de test pour sélectionner des utilisateurs avec des adresses e-mail spécifiques ou des [ID utilisateur]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) externes.
 
 ![Options de filtre de test]({% image_buster /assets/img_archive/testmessages2.png %})
 

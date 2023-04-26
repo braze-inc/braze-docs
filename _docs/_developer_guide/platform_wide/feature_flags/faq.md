@@ -24,7 +24,7 @@ Braze feature flags are currently in an open beta. Please ask your Braze account
 
 Braze supports Feature Flags on iOS, Android, and Web platforms with the following SDK version requirements:
 
-{% sdk_min_versions android:24.2.0 web:4.6.0 swift:5.9.0 %}
+{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 %}
 
 Do you need support on other platforms? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 

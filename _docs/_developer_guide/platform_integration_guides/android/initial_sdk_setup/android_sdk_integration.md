@@ -25,25 +25,6 @@ The Braze Android SDK can optionally be integrated without UI components. Howeve
 
 To access Braze's messaging features, you must integrate the UI library. See the following Android Studio directions to integrate the UI library depending on your IDE:
 
-#### Add our repository
-
-In your top-level project `build.gradle`, add the following as repositories under **allprojects > repositories**. For example:
-
-```gradle
-allprojects {
-  repositories {
-    google()
-    maven { url "https://braze-inc.github.io/braze-android-sdk/sdk" }
-  }
-}
-```
-
-{% alert note %}
-The Braze Android SDK uses AndroidX Jetpack dependencies as of SDK version 10.0.0.
-{% endalert %}
-
-Alternatively, you can directly find the artifact AAR files on our [maven repository][71].
-
 #### Add Braze dependency
 
 Add the `android-sdk-ui` dependency to your app's `build.gradle`. 
@@ -168,4 +149,3 @@ Visit the following articles in order to enable [custom event tracking]({{site.b
 [63]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
 [64]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html
 [support]: {{site.baseurl}}/braze_support/
-[71]: https://braze-inc.github.io/braze-android-sdk/sdk/com/braze

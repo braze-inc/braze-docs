@@ -40,76 +40,8 @@ Certain events return a `platform` value that specifies the platform of the user
 {% enddetails %}
 
 {% alert important %}
-These schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB.
+These schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB.
 {% endalert %}
-
-{% api %}
-
-## Campaign abort message events
-
-{% apitags %}
-Campaign, Abort
-{% endapitags %}
-
-This event occurs if a campaign message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
-
-```json
-// Campaign Message Abort: users.campaigns.abort
-{
-  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
-  "campaign_id": (required, string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (optional, string) name of the campaign,
-  "canvas_id": (required, string) id of the Canvas if from a Canvas,
-  "device_id": (optional, string) id of the device on which the event occurred,
-  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
-  "external_user_id": (optional, string) External user ID of the user,
-  "id": (required, string) globally unique ID of this event,
-  "message_variation_id": (required, string) message variation ID of the variation this user received,
-  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
-  "send_id": (optional, string) message send ID this message belongs to,
-  "time": (required, int) unix timestamp at which the event happened,
-  "timezone": (optional, string) timezone of the user,
-  "user_id": (required, string) BSON id of the user that performed this event
-}
-```
-
-{% endapi %}
-
-{% api %}
-
-## Canvas abort message events
-
-{% apitags %}
-Canvas, Abort
-{% endapitags %}
-
-This event occurs if a Canvas message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
-
-```json
-// Canvas Message Abort: users.canvas.abort
-{
-  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
-  "canvas_id": (required, string) id of the Canvas if from a Canvas,
-  "canvas_name": (optional, string) name of the Canvas,
-  "canvas_step_id": (required, string) id of the canvas step this event belongs to,
-  "canvas_step_message_variation_id": (required, string) id of the canvas step message variation this user received,
-  "canvas_step_name": (optional, string)name of the canvas step this event belongs to,
-  "canvas_variation_id": (required, string) Canvas variation ID of the variation this event belongs to,
-  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
-  "device_id": (optional, string) id of the device on which the event occurred,
-  "external_user_id": (optional, string) External user ID of the user,
-  "id": (required, string) globally unique ID of this event,
-  "time": (required, int) unix timestamp at which the event happened,
-  "timezone": (optional, string) timezone of the user,
-  "user_id": (required, string) BSON id of the user that performed this event
-}
-```
-
-{% endapi %}
 
 {% api %}
 
@@ -119,14 +51,14 @@ This event occurs if a Canvas message was aborted based on quiet hours, rate lim
 Abort, Content Cards
 {% endapitags %}
 
-This event occurs if a Content Card message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+This event occurs if a Content Card message was aborted based on Liquid aborts, quiet hours, etc.
 
 ```json
 // Content Card Abort: users.messages.contentcard.Abort
 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "app_group_id": (required, string) BSON id of the app group this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
@@ -145,7 +77,7 @@ This event occurs if a Content Card message was aborted based on quiet hours, ra
   "message_variation_name": (optional, string) name of the message variation this user received,
   "send_id": (optional, string) message send ID this message belongs to,
   "time": (required, int) unix timestamp at which the event happened,
-  "timezone": (string) timezone of the user,
+  "timezone": (optional, string) timezone of the user,
   "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
@@ -159,14 +91,14 @@ This event occurs if a Content Card message was aborted based on quiet hours, ra
 Abort, Email
 {% endapitags %}
 
-This event occurs if an email message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+This event occurs if an email message was aborted based on Liquid aborts, quiet hours, etc.
 
 ```json
 // Email Abort: users.messages.email.Abort
 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "app_group_id": (required, string) BSON id of the app group this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
@@ -195,109 +127,20 @@ This event occurs if an email message was aborted based on quiet hours, rate lim
 
 {% api %}
 
-## In-app message abort message events
-
-{% apitags %}
-Abort, In-App Messages
-{% endapitags %}
-
-This event occurs if an in-app message message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
-
-```json
-// In-App Message Abort: users.messages.inappmessage.Abort
-
-{
-  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "ad_id": (optional, string) advertising identifier,
-  "ad_id_type": (optional, string) one of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (optional, string) Whether advertising tracking is enabled for the device,
-  "app_group_id": (optional, string) BSON id of the app group this user belongs to,
-  "browser": (string) browser of the device,
-  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (optional, string) name of the campaign,
-  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
-  "canvas_name": (optional, string) name of the Canvas,
-  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (optional, string) id of the canvas step message variation this user received
-  "canvas_step_name": (optional, string) API id of the canvas step this event belongs to,
-  "canvas_variation_id": (optional, string) id of the canvas variation this event belongs to,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "card_id": (optional, string) BSON id of the card this in app message comes from,
-  "carrier:": (optional, string) carrier of the device,
-  "device_id": (optional, string) id of the device on which the event occurred,
-  "device_model": (optional, string) model of the device,
-  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
-  "external_user_id": (optional, string) External user ID of the user,
-  "message_variation_id": (optional, string) ID of the message variation this user received,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "os_version": (optional, string) version of the operating system of the device,
-  "platform": (optional, string) platform of the device,
-  "resolution": (optional, string) resolution of the device,
-  "send_id": (optional, string) message send ID this message belongs to,
-  "time": (required, int) unix timestamp at which the event happened,
-  "timezone": (optional, string) IANA time zone of the user at the time of the event,
-  "user_id": (required, string) BSON id of the user that performed this event,
-  "version": (required, string) which version of in app message, legacy or triggered
-}
-```
-{% endapi %}
-
-{% api %}
-
-## News Feed card abort events
-
-{% apitags %}
-Abort, News Feed
-{% endapitags %}
-
-This event occurs if a News Feed card was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
-
-```json
-// News Feed Card Abort: users.messages.newsfeedcard.Abort
-
-{
-  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
-  "browser": (optional, string) browser of the device,
-  "campaign_name": (optional, string) name of the campaign,
-  "canvas_name": (optional, string) name of the Canvas,
-  "canvas_step_name": (optional, string) API id of the canvas step this event belongs to,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "card_id": (required, string) BSON id of the card this in app message comes from,
-  "carrier:": (optional, string) carrier of the device,
-  "device_id": (optional, string) id of the device on which the event occurred,
-  "device_model": (optional, string) model of the device,
-  "external_user_id": (optional, string) External user ID of the user,
-  "id": (required, string) globally unique ID of this event,
-  "message_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "os_version": (optional, string) version of the operating system of the device,
-  "platform": (optional, string) platform of the device,
-  "resolution": (optional, string) resolution of the device,
-  "time": (required, int) unix timestamp at which the event happened,
-  "timezone": (optional, string) IANA time zone of the user at the time of the event,
-  "user_id": (required, string) BSON id of the user that performed this event
-}
-```
-{% endapi %}
-
-{% api %}
-
 ## Push notification abort events
 
 {% apitags %}
 Abort, Push
 {% endapitags %}
 
-This event occurs if a push notification message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+This event occurs if a push notification message was aborted based on Liquid aborts, quiet hours, etc.
 
 ```json
 // Push Notification Abort: users.messages.pushnotification.Abort
 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "app_group_id": (required, string) BSON id of the app group this user belongs to,
   "app_id": (required, string) BSON id of the app this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
@@ -330,14 +173,14 @@ This event occurs if a push notification message was aborted based on quiet hour
 Abort, SMS
 {% endapitags %}
 
-This event occurs if an SMS message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+This event occurs if an SMS message was aborted based on Liquid aborts, quiet hours, etc.
 
 ```json
 // SMS Abort: users.messages.sms.Abort
 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "app_group_id": (required, string) BSON id of the app group this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
@@ -356,7 +199,6 @@ This event occurs if an SMS message was aborted based on quiet hours, rate limit
   "time": (required, int) unix timestamp at which the event happened,
   "user_id": (required, string) BSON id of the user that performed this event
 }
-}
 ```
 {% endapi %}
 
@@ -368,14 +210,14 @@ This event occurs if an SMS message was aborted based on quiet hours, rate limit
 Abort,  Webhooks
 {% endapitags %}
 
-This event occurs if a webhook message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+This event occurs if a webhook message was aborted based on Liquid aborts, quiet hours, etc.
 
 ```json
 // Webhook Abort: users.messages.webhook.Abort
 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "app_group_id": (required, string) BSON id of the app group this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
@@ -564,7 +406,7 @@ This event occurs when Braze processes a push message for a user, communicating 
 ```
 
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 - `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 {% endapi %}
@@ -581,40 +423,40 @@ This event occurs when a user directly clicks on the Push notification to open t
 ```json
 // Push Notification Open: users.messages.pushnotification.Open
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "app_id": (string) id for the app on which the user action occurred,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (string) API id of the Canvas step message variation this user received,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "device_id": (string) id of the device that we made a delivery attempt to,
-  "button_action_type": (string) Action type of the push notification,
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_message_variation_id": (optional, string) API id of the Canvas step message variation this user received,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "device_id": (optional, string) id of the device that we made a delivery attempt to,
+  "button_action_type": (optional, string) Action type of the push notification,
   button. One of [URI, DEEP_LINK, NONE, CLOSE, SHARE]. null if not
   from a button click,
-  "button_string": (string) identifier (button_string) of the push notification button clicked. null if not from a button click,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "button_string": (optional, string) identifier (button_string) of the push notification button clicked. null if not from a button click,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 {% api %}
@@ -632,33 +474,33 @@ This event is now deprecated using our [Obj-C SDK](https://github.com/Appboy/app
 ```json
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "app_id": (string) id for the app on which the user action occurred,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "device_id": (string) id of the device that we made a delivery attempt to,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "device_id": (optional, string) id of the device that we made a delivery attempt to,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 {% api %}
@@ -674,29 +516,29 @@ This event occurs when an error is received from either Apple Push Notification 
 ```json
 // Push Notification Bounce: users.messages.pushnotification.Bounce
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "app_id": (string) id for the app on which the bounce occurred,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "device_id": (string) id of the device that we made a delivery attempt to,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (requried, string) id for the app on which the bounce occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "device_id": (optional, string) id of the device that we made a delivery attempt to,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
@@ -715,26 +557,26 @@ This event occurs when an email send request was successfully communicated betwe
 ```json
 // Email Send: users.messages.email.Send
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "email_address": (string) email address for this event,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "ip_pool": (string) IP pool used for message sending, 
-  "message_extras": (object) key-value pairs sent with this event
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "email_address": (required, string) email address for this event,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "ip_pool": (optional, string) IP pool used for message sending, 
+  "message_extras": (optional, object) key-value pairs sent with this event
 }
 ```
 #### Property details
@@ -756,28 +598,28 @@ This event occurs when an email sent made it successfully to the end-users inbox
 ```json
 // Email Delivery: users.messages.email.Delivery
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "email_address": (string) email address for this event,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,  
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
-  "ip_pool": (string) IP pool used for message sending,
-  "esp": (string) ESP related to the event (SparkPost or SendGrid),
-  "from_domain": (string) sending domain for the email
+  "id": (requried, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "email_address": (required, string) email address for this event,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,  
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "sending_ip": (optional, string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
+  "ip_pool": (optional, string) IP pool used for message sending,
+  "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
+  "from_domain": (optional, string) sending domain for the email
 }
 ```
 #### Property details
@@ -798,30 +640,30 @@ This event occurs when a user opens an email. Multiple events may be generated f
 ```json
 // Email Open: users.messages.email.Open
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "email_address": (string) email address for this event,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),  
-  "user_agent": (string) description of the user's system and browser for the event,
-  "ip_pool": (string) IP pool used for message sending,
-  "machine_open": (string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future.,
-  "esp": (string) ESP related to the event (SparkPost or SendGrid),
-  "from_domain": (string) sending domain for the email,
-  "is_amp": (boolean) indicates that this is an AMP event
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "email_address": (requied, string) email address for this event,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),  
+  "user_agent": (optional, string) description of the user's system and browser for the event,
+  "ip_pool": (optional, string) IP pool used for message sending,
+  "machine_open": (optional, string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future.,
+  "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
+  "from_domain": (optional, string) sending domain for the email,
+  "is_amp": (optional, boolean) indicates that this is an AMP event
 }
 ```
 #### Property details
@@ -841,32 +683,32 @@ This event occurs when a user clicks an email. Multiple events may be generated 
 ```json
 // Email Click: users.messages.email.Click
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Only included when campaign_id is present. Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "email_address": (string) email address for this event,
-  "url": (string) the URL that was clicked,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "user_agent": (string) description of the user's system and browser for the event,
-  "ip_pool": (string) IP pool used for message sending,
-  "link_id": (string) unique value generated by Braze for the URL - null unless link aliasing is enabled,
-  "link_alias": (string) alias name set when the message was sent - null unless link aliasing is enabled,
-  "esp": (string) ESP related to the event (SparkPost or SendGrid),
-  "from_domain": (string) sending domain for the email,
-  "is_amp": (boolean) indicates that this is an AMP event
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Only included when campaign_id is present. Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "email_address": (required, string) email address for this event,
+  "url": (optional, string) the URL that was clicked,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "user_agent": (optional, string) description of the user's system and browser for the event,
+  "ip_pool": (optional, string) IP pool used for message sending,
+  "link_id": (optional, string) unique value generated by Braze for the URL - null unless link aliasing is enabled,
+  "link_alias": (optional, string) alias name set when the message was sent - null unless link aliasing is enabled,
+  "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
+  "from_domain": (optional, string) sending domain for the email,
+  "is_amp": (optional, boolean) indicates that this is an AMP event
 }
 ```
 #### Property details
@@ -886,30 +728,30 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
 ```json
 // Email Bounce: users.messages.email.Bounce
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "email_address": (string) email address for this event,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
-  "ip_pool": (string) IP pool used for message sending (for certain bounce cases, IP pool will not be provided) ,
-  "bounce_reason": (string) reason for bounce provided by server,
-  "esp": (string) ESP related to the event (SparkPost or SendGrid),
-  "from_domain": (string) sending domain for the email,
-  "is_drop": (boolean) indicates that this event counts as a drop event
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "email_address": (required, string) email address for this event,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "sending_ip": (optional, string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
+  "ip_pool": (optional, string) IP pool used for message sending (for certain bounce cases, IP pool will not be provided) ,
+  "bounce_reason": (optional, string) reason for bounce provided by server,
+  "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
+  "from_domain": (optional, string) sending domain for the email,
+  "is_drop": (optional, boolean) indicates that this event counts as a drop event
 }
 ```
 #### Property details
@@ -929,29 +771,29 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
 ```json
 // Email Soft Bounce: users.messages.email.SoftBounce
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "email_address": (string) email address for this event,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
-  "ip_pool": (string) IP pool used for message sending(for certain bounce cases, IP pool will not be provided),
-  "bounce_reason": (string) reason for bounce provided by server,
-  "esp": (string) ESP related to the event (SparkPost or SendGrid),
-  "from_domain": (string) sending domain for the email
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "email_address": (required, string) email address for this event,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "sending_ip": (optional, string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
+  "ip_pool": (optional, string) IP pool used for message sending(for certain bounce cases, IP pool will not be provided),
+  "bounce_reason": (optional, string) reason for bounce provided by server,
+  "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
+  "from_domain": (optional, string) sending domain for the email
 }
 ```
 #### Property details
@@ -971,28 +813,28 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
 ```json
 // Email Mark As Spam: users.messages.email.MarkAsSpam
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "email_address": (string) email address for this event,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "user_agent": (string) This field is no longer used in any destination for this event and will always be empty,
-  "ip_pool": (string) IP pool used for message sending,
-  "esp": (string) ESP related to the event (SparkPost or SendGrid),
-  "from_domain": (string) sending domain for the email
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "email_address": (required, string) email address for this event,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "user_agent": (optional, string) This field is no longer used in any destination for this event and will always be empty,
+  "ip_pool": (optional, string) IP pool used for message sending,
+  "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
+  "from_domain": (optional, string) sending domain for the email
 }
 ```
 #### Property details
@@ -1018,25 +860,25 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 ```json
 // Email Unsubscribe: users.messages.email.Unsubscribe
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "email_address": (string) email address for this event,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "ip_pool": (string) IP pool used for message sending
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "email_address": (required, string) email address for this event,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "ip_pool": (optional, string) IP pool used for message sending
 }
 ```
 #### Property details
@@ -1057,35 +899,35 @@ This event occurs when a user views an in-app message.
 ```json
 // In-App Message Impression: users.messages.inappmessage.Impression
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "app_id": (string) id for the app on which the user action occurred,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "card_id": (string) id of the card that was viewed,  
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "device_id": (string) id of the device on which the event occurred,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "card_id": (optional, string) id of the card that was viewed,  
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -1102,36 +944,36 @@ This event occurs when a user clicks on an in-app message.
 ```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "app_id": (string) id for the app on which the user action occurred,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "card_id": (string) id of the card that was viewed,  
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "button_id": (string) index of the button clicked if it was a button that was clicked, tracking ID of the click if the event came from an appboyBridge.logClick invocation, or choice_id if the in app-message type is a simple survey,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "device_id": (string) id of the device on which the event occurred,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "card_id": (optional, string) id of the card that was viewed,  
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "button_id": (optional, string) index of the button clicked if it was a button that was clicked, tracking ID of the click if the event came from an appboyBridge.logClick invocation, or choice_id if the in app-message type is a simple survey,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -1149,23 +991,23 @@ This event occurs when a webhook was processed and sent to the third party speci
 ```json
 // Webhook Send: users.messages.webhook.Send
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
-  "message_extras": (object) key-value pairs sent with this event
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+  "message_extras": (optional, object) key-value pairs sent with this event
 }
 ```
 #### Property details
@@ -1186,25 +1028,25 @@ This event occurs when a Content Card gets sent to a user.
 ```json
 // Content Card Send: users.messages.contentcard.Send
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "content_card_id": (string) id of the content card that was sent,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "device_id": (string) id of the device on which the event occurred,
-  "message_extras": (object) key-value pairs sent with this event
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "content_card_id": (required, string) id of the content card that was sent,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "message_extras": (optional, object) key-value pairs sent with this event
 }
 ```
 #### Property details
@@ -1224,36 +1066,36 @@ This event occurs when a user views a Content Card.
 ```json
 // Content Card Impression: users.messages.contentcard.Impression
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "content_card_id": (string) id of the content card that was viewed/clicked/dismissed,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_id": (string) id for the app on which the user action occurred,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "canvas_name"
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "device_id": (string) id of the device on which the event occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "content_card_id": (required, string) id of the content card that was viewed/clicked/dismissed,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -1269,35 +1111,35 @@ This event occurs when a user clicks a Content Card.
 ```json
 // Content Card Click: users.messages.contentcard.Click
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "content_card_id": (string) id of the content card that was viewed/clicked/dismissed,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_id": (string) id for the app on which the user action occurred,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "device_id": (string) id of the device on which the event occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "content_card_id": (required, string) id of the content card that was viewed/clicked/dismissed,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -1314,35 +1156,35 @@ This event occurs when a user dismisses a Content Card.
 ```json
 // Content Card Dismiss: users.messages.contentcard.Dismiss
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "content_card_id": (string) id of the content card that was viewed/clicked/dismissed,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_id": (string) id for the app on which the user action occurred,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,  
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "device_id": (string) id of the device on which the event occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "content_card_id": (required, string) id of the content card that was viewed/clicked/dismissed,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,  
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -1367,17 +1209,17 @@ The [News Feed Impression]({{site.baseurl}}/user_guide/data_and_analytics/braze_
 ```json
 // News Feed Card Impression: users.messages.newsfeedcard.Impression
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "app_id": (string) id for the app on which the user action occurred,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "card_id": (string) id of the card that was viewed,  
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "card_id": (required, string) id of the card that was viewed,  
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the event occurred
 }
 ```
 {% endapi %}
@@ -1400,17 +1242,17 @@ The [News Feed Impression]({{site.baseurl}}/user_guide/data_and_analytics/braze_
 ```json
 // News Feed Card Click: users.messages.newsfeedcard.Click
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "app_id": (string) id for the app on which the user action occurred,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,  
-  "timezone": (string) IANA time zone of the user at the time of the event,  
-  "card_id": (string) id of the card that was clicked,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,  
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,  
+  "card_id": (optional, string) id of the card that was clicked,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the event occurred
 }
 ```
 {% endapi %}
@@ -1428,24 +1270,24 @@ This event occurs when a user clicks an SMS short link.
 ```json
 // SMS Send: users.messages.sms.ShortLinkClick
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user ID of the user targeted by short_url,
-  "external_user_id": (string) External ID of the user, null if short_url,
-  "app_group_id": (string) API ID of the app group associated with the inbound phone number,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA timezone of the user at the time of the event, null if short_url did not use user click tracking,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign if from a campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas if from a Canvas,
-  "canvas_variation_id": (string) ID of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation a user is in if from a Canvas,
-  "url": (string) original URL contained in message that was shortened for click tracking,
-  "short_url": (string) shortened URL that is sent to user for click tracking,
-  "user_agent": (string) User-Agent header of the device performing the click event,
-  "user_phone_number": (string) Phone number of the user that short_url was sent to
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user ID of the user targeted by short_url,
+  "external_user_id": (optional, string) External ID of the user, null if short_url,
+  "app_group_id": (required, string) API ID of the app group associated with the inbound phone number,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA timezone of the user at the time of the event, null if short_url did not use user click tracking,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign if from a campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas if from a Canvas,
+  "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation a user is in if from a Canvas,
+  "url": (required, string) original URL contained in message that was shortened for click tracking,
+  "short_url": (required, string) shortened URL that is sent to user for click tracking,
+  "user_agent": (optional, string) User-Agent header of the device performing the click event,
+  "user_phone_number": (optional, string) Phone number of the user that short_url was sent to
 }
 ```
 {% endapi %}
@@ -1461,23 +1303,23 @@ This event occurs when a user sends an SMS.
 ```json
 // SMS Send: users.messages.sms.Send
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "to_phone_number": (string) the number the message was sent to,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) message send ID this message belongs to,
-  "category": (string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help)
-  "message_extras": (object) key-value pairs sent with this event
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "to_phone_number": (optional, string) the number the message was sent to,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) message send ID this message belongs to,
+  "category": (optional, string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help)
+  "message_extras": (optional, object) key-value pairs sent with this event
 }
 ```
 #### Property details
@@ -1498,26 +1340,26 @@ This event occurs when an SMS is sent to the carrier.
 ```json
 // SMS Delivery: users.messages.sms.CarrierSend
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "to_phone_number": (string) the number the message was sent to,
-  "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
-  "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) message send ID this message belongs to
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "to_phone_number": (optional, string) the number the message was sent to,
+  "subscription_group_id": (optional, string) id of the subscription group targeted for this SMS message,
+  "from_phone_number": (optional, string) the from phone number of the message (Delivered and Undelivered only),
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) message send ID this message belongs to
 }
 ```
 {% endapi %}
@@ -1535,26 +1377,26 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
 ```json
 // SMS Delivery: users.messages.sms.Delivery
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "to_phone_number": (string) the number the message was sent to,
-  "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
-  "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) message send ID this message belongs to
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "to_phone_number": (optional, string) the number the message was sent to,
+  "subscription_group_id": (optional, string) id of the subscription group targeted for this SMS message,
+  "from_phone_number": (optional, string) the from phone number of the message (Delivered and Undelivered only),
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) message send ID this message belongs to
 }
 ```
 {% endapi %}
@@ -1572,28 +1414,28 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
 ```json
 // SMS Rejection: users.messages.sms.Rejection
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "to_phone_number": (string) the number the message was sent to,
-  "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
-  "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
-  "error": (string) the Braze provided error (Rejection and Delivery Failure events only),
-  "provider_error_code": (string) the provider's reason code as to why the message was not sent (Rejection and Delivery Failure events only),
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "to_phone_number": (optional, string) the number the message was sent to,
+  "subscription_group_id": (optional, string) id of the subscription group targeted for this SMS message,
+  "from_phone_number": (optional, string) the from phone number of the message (Delivered and Undelivered only),
+  "error": (optional, string) the Braze provided error (Rejection and Delivery Failure events only),
+  "provider_error_code": (optional, string) the provider's reason code as to why the message was not sent (Rejection and Delivery Failure events only),
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
 }
 ```
 {% endapi %}
@@ -1612,27 +1454,27 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 ```json
 // SMS Delivery Failure: users.messages.sms.DeliveryFailure
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,  
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "to_phone_number": (string) the number the message was sent to,
-  "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
-  "error": (string) the Braze provided error (Rejection and Delivery Failure events only),
-  "provider_error_code": (string) the provider's reason code as to why the message was not sent (Rejection and Delivery Failure events only),
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) message send ID this message belongs to
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,  
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "to_phone_number": (optional, string) the number the message was sent to,
+  "subscription_group_id": (optional, string) id of the subscription group targeted for this SMS message,
+  "error": (optional, string) the Braze provided error (Rejection and Delivery Failure events only),
+  "provider_error_code": (optional, string) the provider's reason code as to why the message was not sent (Rejection and Delivery Failure events only),
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) message send ID this message belongs to
 }
 ```
 {% endapi %}
@@ -1653,28 +1495,28 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
 ```json
 // SMS Inbound Received: users.messages.sms.InboundReceive
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "app_group_id": (string) API ID of the app group associated with the inbound phone number,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "user_phone_number": (string) the phone number of the user who sent the message to your Braze number,
-  "subscription_group_id": (string) id of the subscription group which the phone number the user messaged belongs to,
-  "inbound_phone_number": (string) the phone number the message was sent to,
-  "inbound_media_urls": (string) the URLs of inbound media attachments if received, 
-  "action": (string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),
-  "message_body": (string) the body of the message sent by the user,
-  "message_urls": (array of string) the message URLs sent by the user,
-  "campaign_id": (string) id of the campaign if Braze identifies this inbound message is a reply to a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if Braze identifies this inbound message is a reply to a campaign,
-  "message_variation_name": (string) the name of the message variation if Braze identifies this inbound message is a reply to a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_group_id": (required, string) API ID of the app group associated with the inbound phone number,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "user_phone_number": (required, string) the phone number of the user who sent the message to your Braze number,
+  "subscription_group_id": (optional, string) id of the subscription group which the phone number the user messaged belongs to,
+  "inbound_phone_number": (required, string) the phone number the message was sent to,
+  "inbound_media_urls": (optional, string) the URLs of inbound media attachments if received, 
+  "action": (required, string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),
+  "message_body": (required, string) the body of the message sent by the user,
+  "message_urls": (optional, array of string) the message URLs sent by the user,
+  "campaign_id": (optional, string) id of the campaign if Braze identifies this inbound message is a reply to a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if Braze identifies this inbound message is a reply to a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if Braze identifies this inbound message is a reply to a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas
 }
 ```
 {% endapi %}
@@ -1697,19 +1539,19 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 ```json
 // Campaign Conversion Event: users.campaigns.Conversion
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "app_id": (string) id for the app on which the user action occurred,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation,
-  "message_variation_name": (string) the name of the message variation,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
-  "conversion_behavior_index": (int) index of the conversion behavior,
-  "conversion_behavior": (string) JSON-encoded string describing the conversion behavior
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (optional, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (required, string) id of the campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (required, string) id of the message variation,
+  "message_variation_name": (optional, string) the name of the message variation,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+  "conversion_behavior_index": (optional, int) index of the conversion behavior,
+  "conversion_behavior": (optional, string) JSON-encoded string describing the conversion behavior
 }
 ```
 {% endapi %}
@@ -1732,20 +1574,20 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 ```json
 // Canvas Conversion Event: users.canvas.Conversion
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "app_id": (string) id for the app on which the user action occurred,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "canvas_id": (string) id of the Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the last step the user was sent before the conversion
-  "canvas_step_name": (string) name of the step for this message if from a Canvas
-  "conversion_behavior_index": (int) index of the conversion behavior,
-  "conversion_behavior": (string) JSON-encoded string describing the conversion behavior
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (optional, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "canvas_id": (required, string) id of the Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (required, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (required, string) id of the last step the user was sent before the conversion
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas
+  "conversion_behavior_index": (optional, int) index of the conversion behavior,
+  "conversion_behavior": (optional, string) JSON-encoded string describing the conversion behavior
 }
 ```
 {% endapi %}
@@ -1764,18 +1606,18 @@ This event occurs when a user enters into the Canvas. This event tells you which
 ```json
 // Canvas Entry Event: users.canvas.Entry
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "canvas_id": (string) id of the Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step the user entered into,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "in_control_group": (boolean) whether the user was enrolled in the control group for a Canvas
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "canvas_id": (required, string) id of the Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (required, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step the user entered into,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "in_control_group": (required, boolean) whether the user was enrolled in the control group for a Canvas
 }
 ```
 
@@ -1793,17 +1635,17 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 ```json
 // Campaign Control Group Enrollment: users.campaigns.EnrollInControl
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "app_id": (string) id for the app on which the user action occurred,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "campaign_id": (string) id of the campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation,
-  "message_variation_name": (string) the name of the message variation,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (optional, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) id of the campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation,
+  "message_variation_name": (optional, string) the name of the message variation,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
 }
 ```
 
@@ -1835,7 +1677,7 @@ Subscription groups are only available for email and SMS channels at this time.
   "campaign_id": (optional, string) id of the campaign if from a campaign,
   "campaign_name": (optional, string) name of the campaign,
   "message_variation_id": (optional, string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
   "canvas_id": (optional, string) id of the Canvas if from a canvas,
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
@@ -1890,8 +1732,8 @@ This event occurs when the global subscription state of the user changes.
 {
   "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze BSON id of the user with this global subscription state change,
-  "external_user_id": (string) External ID of the user,
-  "email_address": (string) User email address,
+  "external_user_id": (optional, string) External ID of the user,
+  "email_address": (optional, string) User email address,
   "state_change_source": (optional, string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
   "subscription_status": (required, string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
   "channel": (optional, string) Channel: only email for now,

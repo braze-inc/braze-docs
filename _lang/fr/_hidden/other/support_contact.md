@@ -353,7 +353,7 @@ var ticket_lookuptable = {
             'Push' : {
               'SelectDefault': 'Sélectionner une plateforme…',
               'LinksTitle': ['iOS : intégration de notifications push','Android : intégration de notifications push'],
-              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/'],
+              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/'],
               'Label': 'Plateforme',
               'SelectOption' : {
                 'Android' : {
@@ -364,7 +364,7 @@ var ticket_lookuptable = {
                 'iOS' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS : intégration de notifications push','iOS : résolution des problèmes des notifications push','iOS 10 : notifications enrichies','iOS : Notifications push silencieuses'],
-                  'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/']
+                  'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications','{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/']
                 },
                 'Other' : {
                   'ShowSubmit': true,
@@ -382,17 +382,17 @@ var ticket_lookuptable = {
                 'Setting external IDs' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS : définir des ID Utilisateur','Android : définir des ID Utilisateur','FAQ sur l’ID utilisateur'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation']
                 },
                 'Custom events and event properties' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS : suivre les événements personnalisés','Android : suivre les événements personnalisés'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/#tracking-custom-events','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events']
                 },
                 'Custom attributes' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS : suivi des attributs personnalisés','Android : suivi des attributs personnalisés'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-custom-attributes','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#setting-custom-attributes','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes']
                 }
               }
             },

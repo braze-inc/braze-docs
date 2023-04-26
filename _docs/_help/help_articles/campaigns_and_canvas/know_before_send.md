@@ -30,7 +30,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 ## Email
 
 #### Things to check
-- **Customer consent**: Before sending out your initial emails, it's important to get permission from your customers first. Refer to [Consent and address collection]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/) and our [Braze Acceptable Use Policy]({{site.baseurl}}/company/legal/aup) for more information.
+- **Customer consent**: Before sending out your initial emails, it's important to get permission from your customers first. Refer to [Consent and address collection]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/) and our [Braze Acceptable Use Policy](https://www.braze.com/company/legal/aup) for more information.
 - **Anticipated volume**: 2 million emails per day for a single IP is the general recommendation as long as that volume has been [properly warmed]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming#ip-warming). 
   - If you plan on consistently sending a higher volume than this, to avoid providers throttling receipt of emails resulting in a high amount of soft bounces, lowered deliverability rate, and a decreased IP reputation, consider using multiple IP addresses bundled into an IP pool. 
   - If you are looking to send in a shorter time frame only, we recommend looking into how quickly different providers accept mail to gauge the appropriate number of IPs to send from. 
@@ -66,7 +66,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 ## Content Cards
 
 #### Things to check
-- **Content Card size**: Content Card message fields are limited to 2KB in pre-compression size, calculated by adding the byte-size length of the following fields: title, message, image URL, link text, link URLs, and key-value pairs. Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the image URL.
+- **Content Card size**: Content Card message fields are limited to 2&nbsp;KB in pre-compression size, calculated by adding the byte-size length of the following fields: title, message, image URL, link text, link URLs, and key-value pairs. Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the image URL.
 - **Updating copy post-send**: Once a card is sent, you will be unable to update the copy. Instead, you will need to remove the original card and send down a new card with any updates.
 
 #### Things to know
@@ -82,5 +82,5 @@ While we provide an extensive list of resources for customers to reference pre-s
 #### Things to know
 - **In-app message triggering**: At the session start, the SDK requests that all eligible in-app messages be sent to the device along with its triggers, so if they perform the event during the session, they can receive the in-app message quickly and reliably. Due to this, in-app messages cannot be triggered by custom events in Canvas.
 - **Sent vs. impressions**: For in-app messages, the concept of "sent" differs from the other available channels. To see an in-app message, a user has to start a session, be in the eligible audience, and perform the trigger. Because of this, we track "impressions" as it is more clear.
-- **Triggering**: By default, in-app messages are triggered by events logged by the SDK. If you would like to trigger in-app messages by server-sent events, you can also achieve this through these guides for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#custom-in-app-message-triggering) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization).
+- **Triggering**: By default, in-app messages are triggered by events logged by the SDK. If you would like to trigger in-app messages by server-sent events, you can also achieve this through these guides for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization).
 - [**Canvas in-app messages**]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): These messages appear the first time that your user opens the app (triggered by the start session) after the scheduled message in the Canvas component has been sent to them.

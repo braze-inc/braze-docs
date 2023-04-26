@@ -37,7 +37,7 @@ For more information on re-engaging lapsed users, see our [Quick Wins][23] page 
 
 Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website or app. For detailed steps, refer to our integration guides for each platform:
 
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/)
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/)
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)
 
@@ -73,9 +73,9 @@ For best results, refer to the following image size and message length guideline
 
 **Image Type** | **Recommended Image Size** | **Max Image Size** | **File Types**
 --- | --- | --- | ---
-(iOS) 2:1 *Recommended* | 500KB | 5MB | PNG, JPG, GIF
-(Android) Push icon | 500KB | 5MB | PNG, JPG
-(Android) Expanded notification | 500KB | 5MB | PNG, JPG
+(iOS) 2:1 *Recommended* | 500&nbsp;KB | 5&nbsp;MB | PNG, JPG, GIF
+(Android) Push icon | 500&nbsp;KB | 5&nbsp;MB | PNG, JPG
+(Android) Expanded notification | 500&nbsp;KB | 5&nbsp;MB | PNG, JPG
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}

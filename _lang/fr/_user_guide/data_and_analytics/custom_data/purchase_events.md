@@ -20,7 +20,7 @@ Vous pouvez consigner les achats en envoyant un [Objet Achat]({{site.baseurl}}/a
 La liste suivante énumère les méthodes utilisées pour enregistrer les achats sur les différentes plateformes. Sur ces pages, vous pourrez également trouver des documents sur la façon d’ajouter des propriétés et des quantités à votre événement d’achat.
 
 - [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)

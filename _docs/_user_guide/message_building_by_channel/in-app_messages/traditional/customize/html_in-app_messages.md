@@ -146,7 +146,7 @@ Any `appboyBridge` JavaScript methods you use in your HTML won't update user pro
 
 To use the HTML preview for in-app messages, you must upgrade to the following minimum Braze SDK versions:
 
-{% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
+{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
 {% alert warning %}
 Because this message type can only be received by certain later SDK versions, users that are on unsupported SDK versions will not receive the message. Consider adopting this message type after a significant portion of your user base is reachable, or target only those users whose app version is later than the requirements. Learn more about [filtering by most recent app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).

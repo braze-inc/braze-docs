@@ -34,7 +34,7 @@ The following lists the methods across various platforms that are used to log cu
 {% details Expand for documentation by platform %}
 
 - [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
@@ -104,7 +104,7 @@ Property values can be any of the following data types:
 | Nested objects | Objects that are inside of other objects. For more, see the section in this article on [Nested objects](#nested-objects).
 {: .reset-td-br-1 .reset-td-br-2}
 
-Event property objects that contain array or object values can have an event property payload of up to 50KB.
+Event property objects that contain array or object values can have an event property payload of up to 50&nbsp;KB.
 
 You can change the data type of your custom event property, but be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
 
@@ -195,7 +195,7 @@ You can use nested objects—objects that are inside of another object—to send
 - Event property objects that contain array or object values can have an event property payload of up to 50 KB.
 - The following SDK versions support nested objects:
 
-{% sdk_min_versions web:3.3.0 ios:4.3.1 android:1.0.0 %}
+{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
 
 #### Schema generation
 

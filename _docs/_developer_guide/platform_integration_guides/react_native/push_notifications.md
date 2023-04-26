@@ -22,7 +22,7 @@ Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` props to enable 
 ### iOS setup
 
 #### Generating a new push key
-If you do not have an existing push key or certificate from Apple or want to generate a new one, follow [Step 1 of the iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-1-configure-push-notifications) to generate a new push key and upload it to the Braze dashboard.
+If you do not have an existing push key or certificate from Apple or want to generate a new one, follow [Step 1 of the iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-configure-push-notifications) to generate a new push key and upload it to the Braze dashboard.
 
 #### Migrating a push key from expo-notifications
 If you were previously using `expo-notifications` to manage your push key, run `expo fetch:ios:certs` from your application's root folder. This will download your push key (a .p8 file), which can then be uploaded to the Braze dashboard.

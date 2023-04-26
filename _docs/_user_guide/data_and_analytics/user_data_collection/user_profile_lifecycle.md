@@ -94,12 +94,12 @@ All user IDs can be used to find and identify users within your dashboard for te
 Braze will ban or block users with over 5 million sessions ("dummy users") and no longer ingest their SDK events, as these users are generally the result of misintegration. If you find that this has happened to a legitimate user, reach out to your Braze account manager.
 {% endalert %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#aliasing-users
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
 
-[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#assigning-a-user-id
-[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
+[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
 [25]: {{site.baseurl}}/developer_guide/home/
 [26]: {% image_buster /assets/img_archive/Braze_User_flowchart.png %}
 [27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint

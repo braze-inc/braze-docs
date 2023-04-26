@@ -23,9 +23,9 @@ Note these guidelines when creating your CSV file. The first column of the CSV f
 - Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)
 - Maximum field (column) name of 250 characters
-- Maximum CSV file size of 100MB
+- Maximum CSV file size of 100&nbsp;MB
 - Maximum field value (cell) of 5,000 characters
-- Maximum field value (cell) size of 0.5KB
+- Maximum field value (cell) size of 0.5&nbsp;KB 
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
 Ensure that you are encoding your CSV file using the UTF-8 format in order to successfully upload your CSV file in the next step. We also recommend that you format all text in your CSV files as lowercase.
@@ -286,7 +286,7 @@ The following table describes the limitations that apply at a catalog level:
 
 | Limitation Area | Free version | Catalogs Pro |
 |---|---|---|
-| CSV file size | Up to 100MB for a single CSV file | Up to 2GB for a single CSV file |
+| CSV file size | Up to 100&nbsp;MB for a single CSV file | Up to 2&nbsp;GB for a single CSV file |
 | Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
 | Characters limit for item column name | Up to 250 characters | Up to 250 characters |
 | Selections | Up to 10 selections per catalog | Up to 10 selections per catalog |
@@ -300,11 +300,11 @@ To request an upgrade for catalogs storage, contact your Braze account manager.
 
 #### Free version
 
-The storage limit for the free version of catalogs is 100MB. You can have unlimited items as long as it's under 100MB. Selections will contribute to this size limit. The more complex a selection is, the more storage it will take up.
+The storage limit for the free version of catalogs is 100&nbsp;MB. You can have unlimited items as long as it's under 100&nbsp;MB. Selections will contribute to this size limit. The more complex a selection is, the more storage it will take up.
 
 #### Catalogs Pro
 
-At a company level, the storage limit for Catalogs Pro will be based on the size of catalog data: 5GB, 10GB, or 15GB.
+At a company level, the storage limit for Catalogs Pro will be based on the size of catalog data: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}

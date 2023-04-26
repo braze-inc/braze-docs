@@ -38,7 +38,7 @@ The following lists the automatically captured data generated and received by Br
 
 All these fields can be disabled to allow for a Minimum Integration: 
 - Android: [device-level fields][1], [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation")
-- iOS: [device-level fields](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181 "iOS device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/storage/ "iOS allowlist documentation")
+- iOS: [device-level fields](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181 "iOS device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation")
 - Web: [device-level fields](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.deviceproperties.html "Web device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation")
 
 ## Minimum integration
@@ -48,7 +48,7 @@ The following lists the strictly necessary data generated and received by Braze 
 | Attribute | Platform | Description | Why it's Collected |
 | --------- | -------- | ----------- | ------------------ |
 | OS and OS Version | Android, iOS, Web | Currently reported device/browser and device/browser version. | Used to ensure messages are only sent to compatible devices. It can also be used within segmentation to target users to upgrade app versions. |
-| IDFV | iOS | Device identifier. IDFV collection is now optional on our [Swift SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/) | Used to differentiate users' devices, and ensure messages are sent to the correct intended device. |
+| IDFV | iOS | Device identifier. IDFV collection is now optional on our [Swift SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) | Used to differentiate users' devices, and ensure messages are sent to the correct intended device. |
 | Device ID | Android, iOS, Web | Device identifier, a randomly generated string. | Used to differentiate users' devices, and ensure messages are sent to the correct intended device. |
 | Session ID & Session Timestamp | Android, iOS, Web | Session identifier, a randomly generated string and session timestamp. | Used to determine whether the user is starting a new or existing session and to determine re-eligibility of messages intended for this user.<br><br>Certain messaging channels such as in-app messages and Content Cards are synchronized to the device upon session start. Our backend will then use data related to when it last contacted Braze's servers (which the device stores and sends back) to know if the user is eligible for any new messages.|
 | SDK Version | Android, iOS, Web | Current SDK version. | Used to ensure messages are only sent to compatible devices and to ensure no disruption of the service. |

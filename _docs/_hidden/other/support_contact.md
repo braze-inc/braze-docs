@@ -348,12 +348,12 @@ var ticket_lookuptable = {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['iOS Initial SDK Setup','Android Initial SDK Setup','Web Initial SDK Setup'],
-          'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/'],
+          'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/'],
           'SelectOption' : {
             'Push' : {
               'SelectDefault': 'Select a platform...',
               'LinksTitle': ['iOS: push integration','Android: push integration'],
-              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/'],
+              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/'],
               'Label': '* Platform',
               'SelectOption' : {
                 'Android' : {
@@ -364,7 +364,7 @@ var ticket_lookuptable = {
                 'iOS' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS: push integration','iOS: push troubleshooting','iOS 10: rich notifications','iOS: silent push notifications'],
-                  'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/']
+                  'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting//','{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications','{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/']
                 },
                 'Other' : {
                   'ShowSubmit': true,
@@ -382,17 +382,17 @@ var ticket_lookuptable = {
                 'Setting external IDs' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS: setting user IDs','Android: setting user IDs','User ID FAQs'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation']
                 },
                 'Custom events and event properties' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS: tracking custom events','Android: tracking custom events'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/#tracking-custom-events','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events']
                 },
                 'Custom attributes' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS: tracking custom attributes','Android: tracking custom attributes'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-custom-attributes','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#setting-custom-attributes','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes']
                 }
               }
             },
@@ -534,7 +534,7 @@ var ticket_lookuptable = {
             'I\'m running into an issue during SDK integration.' :{
               'ShowSubmit': true,
               'LinksTitle': ['iOS: push troubleshooting','Android: push troubleshooting','Web: error logging'],
-              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#troubleshooting','{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#error-logging']
+              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting//','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#troubleshooting','{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#error-logging']
             },
             'I\'m seeing a bug.' : {
               'ShowSubmit': true,
