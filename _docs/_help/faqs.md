@@ -54,6 +54,9 @@ guide_featured_list:
   - name: "Live Activities FAQ"
     link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
     fa_icon: fa-brands fa-swift
+  - name: "Liquid FAQ"
+    link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
+    fa_icon: fas fa-flask
 
 
 guide_menu_title: "Best Practices"

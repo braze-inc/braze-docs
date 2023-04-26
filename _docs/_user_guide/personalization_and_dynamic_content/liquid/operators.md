@@ -52,7 +52,6 @@ If a customer's "Total Spend" custom attribute does not exist or is equal to `0`
 Buy now! Would 5% off convince you?
 ```
 
-
 ### Choose message via string custom attribute
 
 {% raw %}
