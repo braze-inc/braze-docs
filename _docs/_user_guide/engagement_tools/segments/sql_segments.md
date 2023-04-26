@@ -69,6 +69,23 @@ To refresh the segment membership of any Segment Extension created using SQL, op
 If you created a segment where you expect users to enter and exit regularly, manually refresh the Segment Extension it uses before targeting that segment in a campaign or Canvas.
 {% endalert %}
 
+## Monitoring your SQL Segments usage
+
+Each Braze app group has 1,000 SQL Segment credits available per month. Credits are used whenever you refresh, or save and refresh, a SQL Segment’s membership. Credits are not used when you run previews within a SQL Segment or save or refresh a classic Segment Extension.
+
+Your credits will reset to 1,000 on the first of each month at 12 am UTC. You can monitor your credits usage throughout the month within the SQL credits usage panel. From the **Segment Extensions** page, click <i class="fa-solid fa-chart-column"></i> **View SQL Credit Usage**.
+
+![SQL Credit Usage panel in the SQL Segment Extensions page][4]{: style="max-width:60%"}
+
+The following will happen when your credits reach zero:
+
+- Any SQL Segment Extensions set up to automatically refresh stop refreshing, impacting the membership of these segments and any campaigns or Canvases that target these segments.
+- You can only save new SQL Segment Extensions as drafts for the remainder of the month.
+
+All company users who created a SQL Segment and your company admins will receive a notification email when you have used up 50%, 80%, and 100% of your credits. After your credits reset at the start of the next month, you can create more SQL Segments, and automatic refreshes will resume.
+
+If you want to purchase more SQL Segment credits or additional Segment Extensions, please reach out to your account manager.
+
 ## Troubleshooting
 
 Your query may fail for any of the following reasons:
@@ -80,3 +97,4 @@ Your query may fail for any of the following reasons:
 [1]: {% image_buster /assets/img_archive/sql_segments_create.png %}
 [2]: {% image_buster /assets/img_archive/sql_segments_editor.png %}
 [3]: {% image_buster /assets/img_archive/sql_segments_usage.png %}
+[4]: {% image_buster /assets/img_archive/sql_segments_credits.png %}
