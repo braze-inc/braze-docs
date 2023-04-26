@@ -15,18 +15,14 @@ tool: Segments
 
 ## Types of SQL Segment Extensions
 
-There are two types of SQL Segment Extensions you can create: those with incremental refresh, and those with full refresh.
+There are two types of SQL editors to choose from when creating your SQL Segment Extension: the SQL Editor, and the Incremental SQL Editor.
 
-- **Full refresh:** This is the behavior in regular SQL Segment Extensions, where you must click refresh to manually refresh the extension. This refresh option is costlier and uses up more SQL Segment credits. Full refresh extension can't automatically regenerate membership, and can't be refreshed using incremental refresh.
-- **Incremental refresh:** This calculates only the last 2 days worth of data, which is more cost-efficient and uses up fewer SQL Segment credits each time. When you create an incremental refresh SQL segment, you can set it to automatically regenerate membership daily.
+- **Creating extensions with SQL Editor (full refresh):** This is the behavior in regular SQL Segment Extensions, where you must click refresh to manually refresh the extension. This refresh option is costlier and uses up more SQL Segment credits. Full refresh extension can't automatically regenerate membership, and can't be refreshed using incremental refresh.
+- **Creating extensions with Incremental SQL Editor (incremental refresh):** This calculates only the last 2 days worth of data, which is more cost-efficient and uses up fewer SQL Segment credits each time. When you create an incremental refresh SQL segment, you can set it to automatically regenerate membership daily. <br><br>The main benefit of extensions with incremental refresh is that you can set your segment to automatically refresh membership daily. Segments created with our regular SQL editor can only have their membership refreshed manually. This helps reduce the cost of a daily data refresh for SQL Segment Extensions.
 
 {% alert tip %}
 You can do a manual full refresh on all SQL Segments created in either SQL editor.
 {% endalert %}
-
-### Benefits of incremental refresh
-
-The main benefit of extensions with incremental refresh is that you can set your segment to automatically refresh membership daily. Segments created with our regular SQL editor can only have their membership refreshed manually. This helps reduce the cost of a daily data refresh for SQL Segment Extensions.
 
 ## Creating SQL Segment Extensions
 
@@ -79,7 +75,7 @@ Note that the tables available to query contain only event data. If you wish to 
 
 Your SQL must additionally adhere to the following rules:
 
-- Write a single SQL statement. Do not include any semicolons.
+- Write a single SQL statement (that is, only one operator condition can be used). Do not include any semicolons.
 - Your SQL must select only one column: the `user_id` column. This means your SQL must contain:
 
 ```sql
@@ -96,7 +92,7 @@ SELECT DISTINCT user_id FROM "INSERT TABLE NAME"
 All incremental refresh queries consist of two parts: a query, and schema details.
 
 1. In the editor, write a query that selects `user_id`s from your desired table.
-2. In the schema details section, select an **Operator**, **Number of times**, and **Time period**. The query will check if the sum of the aggregate column meets a certain condition specified by the {% raw %}`{{operator}}` and `{{number of times}}`{% endraw %} placeholders. This functions similarly to the workflow for creating classic Segment Extensions.<br><br>
+2. Add schema details by selecting an **Operator**, **Number of times**, and **Time period** from the fields above the editor. The query will check if the sum of the aggregate column meets a certain condition specified by the {% raw %}`{{operator}}` and `{{number of times}}`{% endraw %} placeholders. This functions similarly to the workflow for creating classic Segment Extensions.<br><br>
    - **Operator:** Indicate if the event has happened more than, less than, or equal to a number of occurrences.<br>
    ![Operator field with "More than" selected.]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
    - **Number of times:** How many times you would like to evaluate the event in relation to the operator.<br>
@@ -114,7 +110,7 @@ In the following example, the resulting segment would contain users that perform
 
 Your incremental refresh query must additionally adhere to the following rules:
 
-- Write a single SQL statement (that is, only one operator condition can be used). Do not include any semicolons. To create a query with multiple statements, use the classic SQL editor instead.
+- Write a single SQL statement (that is, only one operator condition can be used). Do not include any semicolons.
 - Your SQL must have the following columns: `user_id`, `$start_date`, and an aggregation function (such as `COUNT`). Any SQL saved without these three fields will result in an error.
 
 {% alert tip %}
