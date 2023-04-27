@@ -95,7 +95,7 @@ Braze recommends not changing how cards are created after a campaign has launche
 
 ### Potential processing time
 
-We recommend that campaigns with large audiences select the option to create cards at first impression, as cards will be available much more quickly after the campaign is launched. Campaigns which are triggered on session start may also want to consider moving to create card at first impression to realize performance improvements.
+We recommend that campaigns with large audiences select the option to create cards at first impression, as cards will be available much more quickly after the campaign is launched. Campaigns which are triggered on session start may also want to consider moving to create card at first impression (available through scheduled delivery) to realize performance improvements.
 
 When cards are created at first impression, it may take 1–2 seconds for the cards to process. The length of this processing time depends on various factors, such as the card size and the complexity of the message templating options. For example, the processing time for cards using Connected Content will be at least as long as the Connected Content response time.
 

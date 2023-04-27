@@ -19,7 +19,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 Braze UI elements come with a default look and feel that matches the composers within the Braze dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more.
 
-For instance, the following is an example override that will cause the News Feed to appear 800px wide:
+For instance, the following is an example override that will cause the News Feed to appear 800&nbsp;px wide:
 
 ``` css
 body .ab-feed {

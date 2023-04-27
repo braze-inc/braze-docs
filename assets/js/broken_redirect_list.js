@@ -80,7 +80,7 @@ validurls['/docs/rest_apis/user_data'] = '/docs/developer_guide/rest_api/user_da
 validurls['/docs/rest_api/messaging'] = '/docs/developer_guide/rest_api/messaging/';
 validurls['/docs/rest_apis/messaging'] = '/docs/developer_guide/rest_api/messaging/';
 validurls['/docs/rest_api/#endpoints'] = '/docs/developer_guide/rest_api/basics/#endpoints';
-validurls['/docs/rest_apis/endpoints'] = '/docs/developer_guide/rest_api/basics/#endpoints';
+validurls['/docs/docs/user_guide/administrative/access_braze/braze_instances'] = '/docs/user_guide/administrative/access_braze/sdk_endpoints/';
 validurls['/docs/rest_api/#user-track-endpoint'] = '/docs/developer_guide/rest_api/user_data/#user-track-endpoint';
 validurls['/docs/rest_api/#users-by-segment-endpoint'] = '/docs/developer_guide/rest_api/export/#users-by-segment-endpoint';
 validurls['/docs/api/objects_filters/android_objects/'] = '/docs/api/objects_filters/messaging/android_object/';
@@ -722,4 +722,7 @@ validurls['/docs/user_guide/message_building_by_channel/email/mpp/'] = '/docs/us
 validurls['/docs/user_guide/data_and_analytics/query_builder/custom_sql/'] = '/docs/user_guide/data_and_analytics/query_builder/#custom-sql';
 
 validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping';
-
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/';
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/redshift/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/redshift/';
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/snowflake/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/snowflake/';
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/overview/';

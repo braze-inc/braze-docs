@@ -88,9 +88,9 @@ To set up Braze as a device-mode destination for your Android source, choose **C
 
 ![]({% image_buster /assets/img/segment/android.png %})
 
-To complete the side-by-side integration, refer to Segment.io's detailed instructions for adding the Braze destination dependency to your [Android](https://segment.com/docs/connections/destinations/catalog/braze/#android) app.
+To complete the side-by-side integration, refer to Segment.io's detailed instructions for adding the Braze destination dependency to your [Android](https://segment.com/docs/connections/sources/catalog/libraries/mobile/kotlin-android/destination-plugins/braze-kotlin-android/) app.
 
-The source code for the [Braze Web Mode (Actions) destination](https://github.com/segmentio/action-destinations/tree/main/packages/browser-destinations/src/destinations/braze) is maintained by Segment.io. 
+The source code for the Android device mode integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
 {% endtab %}
 {% tab iOS %}
@@ -112,7 +112,7 @@ To set up Braze as a device-mode destination for your iOS source, choose **Class
 
 ![]({% image_buster /assets/img/segment/ios.png %})
 
-To complete the side-by-side integration, refer to Segment.io's detailed instructions for adding the Braze Segment.io pod to your [iOS](https://segment.com/docs/connections/destinations/catalog/braze/#ios) app.
+To complete the side-by-side integration, refer to Segment.io's detailed instructions for adding the Braze Segment.io pod to your [iOS](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/) app.
 
 The source code for the [iOS device mode](https://github.com/Appboy/appboy-segment-ios) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 

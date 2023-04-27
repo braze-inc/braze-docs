@@ -1,7 +1,7 @@
 ---
 nav_title: Cloning Canvases
 article_title: Cloning Canvases
-page_order: 0
+page_order: 2
 alias: "/cloning_canvases/"
 description: "This reference article describes how to clone a Canvas from the original Canvas editor into the Canvas Flow workflow."
 tool: Canvas

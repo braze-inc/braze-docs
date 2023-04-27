@@ -59,12 +59,12 @@ The `external_source` and `external_source_id` field values must be unique to Pu
 1. New Punchh users<br>
 Create new users in Punchh with a Punchh sign-up endpoint using the `external_source` and `external_source_id` fields. Punchh allows external identifiers to be sent with a user profile via one of the following sign-up endpoints:
 - [Mobile Signup API](https://developers.punchh.com/docs/dev-portal-mobile/2e67abf6f8e12-sign-up-register)
-- [SSO Signup API](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-signup)<br><br>
+- [SSO Signup API](https://developers.punchh.com/docs/dev-portal-online-ordering/58f18dfdd2a3d-signup-with-email-and-password)<br><br>
 2. Existing Punchh users <br>
 Update `external_source_id` for existing Punchh users. Punchh allows external identifiers to be added to a profile via a user API update endpoint: 
-- [Mobile User Update](https://developers.punchh.com/mobile-apis/users/mobile-update-user-profile)
-- [SSO User Update](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-update-user-information)
-- [Dashboard User Update](https://developers.punchh.com/platform-functions-apis/users/dashboard-users-update)
+- [Mobile User Update](https://developers.punchh.com/docs/dev-portal-mobile/c9b928e35a6f3-update-user-profile)
+- [SSO User Update](https://developers.punchh.com/docs/dev-portal-online-ordering/eef4eef6c97a0-update-user-information)
+- [Dashboard User Update](https://developers.punchh.com/docs/dev-portal-platform-functions/6351feaf591aa-update-a-user)
 <br><br>
 {% tabs local %}
 {% tab User sign-up API example %}
