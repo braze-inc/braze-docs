@@ -47,7 +47,7 @@ Specific scenarios in which multivariate and A/B testing could come in handy inc
 - **When trying out a messaging type for the first time:** Worried about getting in-app messaging right the first time? Multivariate testing allows you to experiment and learn what resonates with your users.
 - **When creating onboarding campaigns and other campaigns that are constantly sent out:** Since most of your users will encounter this campaign, why not ensure that it's as effective as possible?
 - **When you have multiple ideas for messages to send:** If you're unsure of which to choose, run a test and then make a data-driven decision.
-- **When investigating whether your users respond to "tried and true" marketing techniques:**  Marketers often stick to conventional tactics to engage with users, but every product's user base is different. Sometimes, repeating your call-to-action and using social proof won't get you the results you desired. Multivariate and A/B testing lets you step outside the box and discover unconventional tactics that work for your specific audience.
+- **When investigating whether your users respond to "tried and true" marketing techniques:** Marketers often stick to conventional tactics to engage with users, but every product's user base is different. Sometimes, repeating your call-to-action and using social proof won't get you the results you desired. Multivariate and A/B testing lets you step outside the box and discover unconventional tactics that work for your specific audience.
 
 ## Five rules for multivariate and A/B testing {#five-rules-for}
 
