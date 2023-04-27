@@ -54,4 +54,15 @@ There's so much more you can do with event data, accessed by Currents. Trust usâ
 
 A Currents connector is already included in many of our pro and enterprise-level packages. If you're interested using Currents, reach out to your account manager. Your account manager and our data specialists can assist in your [Currents setup and integration]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/).
 
+### Test Currents connectors
+
+Test Currents connectors are free versions of our existing connectors that can be used for testing and trying out different destinations, connecting you to the same destinations and sending the same data:
+
+- No limit to the number of Test Currents connectors you may build.
+- A aggregate max of 10,000 events per 30-day rolling period. This event total is updated hourly on the dashboard.
+
+After your Test Currents connectors reach the sending limit, your connector will not send events until the next 30 day period.
+
+**Upgrade your connector**<br>To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade**.
+
 <br><br>
