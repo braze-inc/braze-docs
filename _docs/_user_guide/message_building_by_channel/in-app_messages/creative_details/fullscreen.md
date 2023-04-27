@@ -32,9 +32,9 @@ tool:
 
 Fullscreen in-app messages will fill the entire height of a device and crop horizontally (left and right sides) as needed. Image and text fullscreen messages will fill 50% of the height of a device. All fullscreen in-app messages will fill the status bar on "notched" devices.
 
-- All images must be less than 5MB.
+- All images must be less than 5&nbsp;MB.
 - We only accept PNG, JPG, and GIF file types.
-- We recommend that your images be 500KB.
+- We recommend that your images be 500&nbsp;KB.
 
 {% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
@@ -42,16 +42,16 @@ Fullscreen in-app messages will fill the entire height of a device and crop hori
 
 | layout | asset size | notes |
 |--- | --- | --- |
-| Image and text | 6:5 aspect ratio<br> Hi-Res 1200 x 1000px<br> Min. 600 x 500px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
-| Image only | 3:5 aspect ratio<br> Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping can occur on the left and right edges on taller devices |
+| Image and text | 6:5 aspect ratio<br> High-res 1200 x 1000&nbsp;px<br> Minimum 600 x 500&nbsp;px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
+| Image only | 3:5 aspect ratio<br> High-res 1200 x 2000&nbsp;px<br> Minimum 600 x 1000&nbsp;px | Cropping can occur on the left and right edges on taller devices |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Landscape
 
 | layout | asset size | notes |
 |--- | --- | --- |
-| Image and text | 10:3 aspect ratio<br> Hi-Res 2000 x 600px<br> Min. 1000 x 300px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
-| Image only | 5:3 aspect ratio<br> Hi-Res 2000 x 1200px<br> Min. 1000 x 600px | Cropping can occur on the left and right edges on taller devices |
+| Image and text | 10:3 aspect ratio<br> High-res 2000 x 600px<br> Minimum 1000 x 300&nbsp;px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
+| Image only | 5:3 aspect ratio<br> High-res 2000 x 1200px<br> Minimum 1000 x 600&nbsp;px | Cropping can occur on the left and right edges on taller devices |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Image safe zone

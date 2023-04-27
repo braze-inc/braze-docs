@@ -15,6 +15,10 @@ Selections are currently in early access. Contact your Braze account manager if 
 
 To create a selection, select your catalog and click **Create Selection**. Select the catalog column from the **Filter Field** dropdown. Next, select the operator, and enter the attribute. Continue to add any additional filters as needed for filter settings.
 
+{% alert note %}
+You can create up to 10 selections per catalog.
+{% endalert %}
+
 In the **Sort type** section, you can specify the order in which results are returned. This includes an option to randomize the sort order. Next, enter the maximum number of results, up to 10, for the **Limit number** under the **Results limit** section.
 
 After setting up the selection, click **Create Selection**, and the selection will display above the catalog data. Now, you can reference this selection in your messaging.

@@ -175,7 +175,7 @@ This key will only be automatically added to the Connected Content object if the
 ## Configurable caching {#configurable-caching}
 
 ### Cache size limit
-The Connected Content response body must not exceed 1MB, or it will not cache.
+The Connected Content response body must not exceed 1&nbsp;MB, or it will not cache.
 
 ### Cache time
 Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes. If a cache time is not specified, the default cache time is 5 minutes. 

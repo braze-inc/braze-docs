@@ -127,8 +127,8 @@ This will review previous information around our in-app message creative specifi
 
 For all of the in-app message types listed in the following table, the following additional guidelines apply:
 
-- **Recommended image size:** 500KB
-- **Max image size:** 5MB
+- **Recommended image size:** 500&nbsp;KB 
+- **Max image size:** 5&nbsp;MB
 - **Supported file types:** PNG, JPG, GIF
 
 | Type                               | Aspect Ratio | Max Character Count |
@@ -147,7 +147,7 @@ For all of the in-app message types listed in the following table, the following
 Braze recommends you keep your images, and HTML assets zips as small as possible for several reasons:
 
 - Smaller HTML and image message payloads will download faster, and display more quickly and reliably for your customers.
-- Smaller HTML and image message payloads will keep your customer's data costs down as well. Braze in-app messages are downloaded in the background on session start so they can be triggered in real-time based upon whatever criteria you select. As a result, if you have 10 HTML in-app messages of 1MB each, your customers would all incur 10MB of data charges even if they never triggered all of those messages. This can add up quickly over time, even though the in-app messages are cached and not re-downloaded session to session.
+- Smaller HTML and image message payloads will keep your customer's data costs down as well. Braze in-app messages are downloaded in the background on session start so they can be triggered in real-time based upon whatever criteria you select. As a result, if you have 10 HTML in-app messages of 1&nbsp;MB each, your customers would all incur 10&nbsp;MB of data charges even if they never triggered all of those messages. This can add up quickly over time, even though the in-app messages are cached and not re-downloaded session to session.
 
 The following strategies are helpful for keeping file sizes down:
 

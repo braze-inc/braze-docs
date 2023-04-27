@@ -23,7 +23,7 @@ channel: push
   - iOS Banner Alert: 62 Characters
   - iOS Pop Up Alert: 235 Characters
 - **Payload Size:**
-  - iOS: 2KB
+  - iOS: 2&nbsp;KB 
 - **Number of Lines:**
   - iOS Lock Screen: 4 Lines
   - iOS Notification Center: 4 Lines
@@ -37,7 +37,7 @@ channel: push
 
 |    Aspect Ratio   | Recommended Image Size | Maximum Image Size |   File Types  |
 |:-----------------:|:----------------------:|:------------------:|:-------------:|
-| 2:1 (recommended) |          500KB         |         5MB        | PNG, JPG, GIF |
+| 2:1 (recommended) |          500&nbsp;KB         |         5&nbsp;MB        | PNG, JPG, GIF |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% endtab %}
@@ -63,7 +63,7 @@ channel: push
   - Lock Screen: 1 line (estimated 49 characters max)
   - Notification Drawer: 1 line, up to 8 lines when expanded (estimated 597 characters max)
 - **Payload Size:**
-  - FCM: 4KB
+  - FCM: 4&nbsp;KB 
 - **Customizable UI:** Yes
 - **Deep Link Capable:** Yes
 
@@ -74,14 +74,14 @@ channel: push
 
 |         Aspect Ratio         | Recommended Image Size |                         Maximum Image Size                         | File Types |
 |:----------------------------:|:----------------------:|:------------------------------------------------------------------:|:----------:|
-| 1:1 (400x400 pixels minimum) |          500KB         | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
+| 1:1 (400x400 pixels minimum) |          500&nbsp;KB         | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 #### Expanded notification image
 
 |         Aspect Ratio         | Recommended Image Size |                         Maximum Image Size                         | File Types |
 |:----------------------------:|:----------------------:|:------------------------------------------------------------------:|:----------:|
-| 2:1 (600x300 pixels minimum) |          500KB         | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
+| 2:1 (600x300 pixels minimum) |          500&nbsp;KB         | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}

@@ -42,7 +42,7 @@ Buy now! Would 5% off convince you?
 
 ## Conditional logic
 
-You can include many types of [intelligent logic within messages][1] — one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
+You can include many types of [intelligent logic within messages][1]—one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
 {% raw %}
 
 ```liquid
