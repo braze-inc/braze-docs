@@ -23,6 +23,12 @@ To turn on the approval workflow for Canvas, go to **Manage Settings > Approval 
 Only admins and users with permission to manage approval settings will see this page. Be sure to check that you have the proper [user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/) to approve Canvases.
 {% endalert %}
 
+### Setting user permissions
+
+After the approval workflow for Canvas has been turned on, you can begin settiing up permissions for your users to determine who can approve and deny Canvases.
+
+![An example of an unselected checkbox for the Approve and Deny Canvases permission, meaning this user does not have permission to approve or deny Canvases.][3]{: style="max-width:70%" }
+
 ## Using approvals
 
 When the approval workflow is enabled, you'll have access to the **Summary** step of the Canvas builder. This page provides a summary of the key Canvas details with the option to approve or deny these details, including conversion events, entry schedule, and the type and amount of components in your Canvas. Note the default state for Canvas approval is **Pending Approval**.
@@ -35,3 +41,4 @@ Once each section is approved, the **Launch** button will be available, and you 
 
 [1]: {% image_buster /assets/img_archive/canvas_approval.png %}
 [2]: {% image_buster /assets/img_archive/canvas_approval_summary.png %}
+[3]: {% image_buster /assets/img_archive/canvas_approval_user_permissions.png %}
