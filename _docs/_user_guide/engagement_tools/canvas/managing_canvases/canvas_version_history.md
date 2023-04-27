@@ -10,7 +10,9 @@ tool: Canvas
 
 # Canvas version history
 
-Version history allows you to view and access Canvas analytics and the user journeys for any previous version of your Canvas. This can be especially helpful to maintain a record of the evolution of a Canvas. For example, if you make a largescale change, you can reference previous Canvas versions to better understand how your workflows have progressed.
+> Version history allows you to view and access Canvas analytics and the user journeys for any previous version of your Canvas. 
+
+Referencing your Canvas version history can be especially helpful to maintain a record of the evolution of a Canvas. For example, if you make a largescale change, you can reference previous Canvas versions to better understand how your workflows have progressed.
 
 ## Managing versions
 
