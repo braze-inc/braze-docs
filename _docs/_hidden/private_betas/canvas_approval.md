@@ -25,7 +25,7 @@ Only admins and users with permission to manage approval settings will see this 
 
 ### Setting user permissions
 
-After the approval workflow for Canvas has been turned on, you can begin settiing up permissions for your users to determine who can approve and deny Canvases.
+After the approval workflow for Canvas has been turned on, you can begin setting permissions for your users to determine who can approve and deny Canvases.
 
 ![An example of an unselected checkbox for the Approve and Deny Canvases permission, meaning this user does not have permission to approve or deny Canvases.][3]{: style="max-width:70%" }
 
