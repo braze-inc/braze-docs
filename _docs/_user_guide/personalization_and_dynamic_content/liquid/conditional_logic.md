@@ -94,7 +94,7 @@ The `{% endif %}`  tag signals that you've finished your conditional logic. You 
 
 ## Accounting for null attribute values
 
-Conditional logic is a useful way to account for null attribute values. A null, or blank, value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name in Braze's database.
+Conditional logic is a useful way to account for null attribute values. A null value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name in Braze's database.
 
 In some circumstances, you may wish to send a completely different message to users who have a first name set and users who do not have a first name set.
 
@@ -102,7 +102,7 @@ The following tag allows you to specify a message for users with a null "first n
 
 {% raw %}
 ```liquid
-{% if ${first_name} == blank %}
+{% if ${first_name} == null %}
   ....
 {% endif %}
 
@@ -113,12 +113,15 @@ The following tag allows you to specify a message for users with a null "first n
 
 {% raw %}
 ```liquid
-{% if ${first_name} == blank %}
+{% if ${first_name} == null %}
 We're having a sale! Hurry up and get 10% off all items today only!
 {% else %}
 Hey {{${first_name | default: 'there'}}, we're having a sale! Hurry up and get 10% off all items today only!
 {% endif %}
 ```
+
+Note that a null attribute value isn't strictly associated with a value type (e.g., a "null" string is the same as a "null" array), so in the example above, the null attribute value is referencing an unset first name, which would be a string.
+
 {% endraw %}
 
 ## Referencing custom attributes
