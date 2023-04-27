@@ -26,7 +26,7 @@ The following table describes how users can use each editor block type.
 | name | description |
 |---|---|
 |`Title`| Adds text with H1, H2, and H3 tags for email. | 
-|`Text`| Enters text into their message. A toolbar helps with font and text editing functionality. | 
+|`Paragraph`| Enters text into their message. A toolbar helps with font and text editing functionality. | 
 |`Image`| Inserts an image from the Media Library. | 
 |`Button`| Adds a standard button. Properties for this block allow for editing and setting links easily. | 
 |`Divider`| Inserts a solid, dotted, or dashed line to help with spacing.|
