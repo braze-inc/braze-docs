@@ -214,8 +214,8 @@ Consider the following campaigns and frequency capping by tag rule:
 
 **Campaigns**:
 
-- **Campaign A** is a push campaign tagged as `promotional`. It is slated to send at 9:00 AM on Monday.
-- **Campaign B** is a push campaign tagged as `promotional`. It is slated to send at 9:00 AM on Wednesday.
+- **Campaign A** is a push campaign tagged as `promotional`. It is slated to send at 9 am on Monday.
+- **Campaign B** is a push campaign tagged as `promotional`. It is slated to send at 9 am on Wednesday.
 
 **Frequency Capping by Tag Rule:**
 
