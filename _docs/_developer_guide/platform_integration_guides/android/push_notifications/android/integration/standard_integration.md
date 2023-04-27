@@ -282,9 +282,9 @@ Setting a small notification icon is required. **If you do not set one, Braze wi
 
 Setting a large notification icon is optional but recommended.
 
-#### Specifying icon background color
+#### Specifying icon accent color
 
-The notification icon background color can be overridden in your `braze.xml`. If the color is not specified, the default background color is the same gray Lollipop uses for system notifications.
+The notification icon accent color can be overridden in your `braze.xml`. If the color is not specified, the default color is the same gray Lollipop uses for system notifications.
 
 ```xml
 <integer name="com_braze_default_notification_accent_color">0xFFf33e3e</integer>
