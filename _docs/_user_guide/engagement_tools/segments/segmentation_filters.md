@@ -414,7 +414,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Push Enabled
-    description: Segments your users who have explicitly activated push notifications for any of the apps in your app group. This count includes only foreground push, and does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
+    description: Segments your users who have provisional push authorization or are enabled for foreground push. Specifically, this count includes:<br>1. iOS users who are provisionally authorized for push. <br>2. Users who explicitly activated push notifications for any of the apps in your app group. For these users, this count includes only foreground push.<br><br>Push Enabled does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
     tags:
       - User Attributes
   - name: Push Enabled For App
