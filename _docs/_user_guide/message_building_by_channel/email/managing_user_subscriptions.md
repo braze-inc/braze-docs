@@ -29,16 +29,16 @@ Braze does not count subscription state changes against your data points, global
 
 There are three ways a user's email subscription state can be updated:
 
-1. **SDK integration**<br>Use the Braze SDK to update a user's subscription state.<br><br>
+1. **SDK integration**<br>Use the Braze SDK to update a user's email subscription state.<br><br>
 2. **REST API**<br>Use the [`/users/track` endpoint][users-track] to update the [`email_subscribe`][user_attributes_object] attribute for a given user.<br><br>
 3. **User Profile**<br>To manually change the subscription status, first find the user through **User Search**. Next, under the **Engagement** tab, click the **Unsubscribed**, **Subscribed**, or **Opted In** buttons to change that user's subscription status. If available, the user profile also displays a timestamp for when the user's subscription was last changed.<br><br>
 4. **Preference center**<br>[Preference center](#email-preference-center) Liquid can be included at the bottom of your emails, allowing users to opt-in or opt-out of emails. Braze manages the subscription state updates from the preference center.
 
 ### Checking email subscription state
 
-![User profile for John Doe with their push subscription state set to Subscribed.][3]{: style="float:right;max-width:35%;margin-left:15px;"}
+![User profile for John Doe with their email subscription state set to Subscribed.][3]{: style="float:right;max-width:35%;margin-left:15px;"}
 
-There are two ways you can check a user's push subscription state with Braze:
+There are two ways you can check a user's email subscription state with Braze:
 
 1. **User Profile**: You can access individual user profiles through the Braze dashboard on the **[User Search][5]** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state. 
 <br><br>
