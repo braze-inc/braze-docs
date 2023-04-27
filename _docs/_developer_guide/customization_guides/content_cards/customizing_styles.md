@@ -2,7 +2,7 @@
 nav_title: Customizing Card Styles
 article_title: Customizing Content Card Styles
 page_order: 1
-description: ""
+description: "This article covers custom styling options for your Content Cards."
 channel:
   - content cards
 ---

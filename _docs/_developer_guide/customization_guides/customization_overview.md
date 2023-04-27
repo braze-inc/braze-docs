@@ -124,9 +124,9 @@ Marketers still maintain control of the audience, content, on-click behavior, ex
 
 ![Sample finance app showing custom Content Cards with email capture]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-With the Run approach, developers take the lead with full control of the user experience. Custom code dictates what the messages will look like, how they behave, and how they interact with other messaging channels (e.g., triggering a Content Card based on a push notification). 
+With the Run approach, developers take the lead with full control of the user experience. Custom code dictates what the messages will look like, how they behave, and how they interact with other messaging channels (e.g., triggering a Content Card based on a push notification).
 
-When you create completely new custom content, such as new types of Content Cards or in-app messages with bespoke UI, the Braze SDK won't automatically track analytics. You must be programmatically handle analytics so marketers continue to have access to metrics like impressions, clicks, and dismissals in the Braze dashboard. Call the Braze SDK's analytics methods to have the SDK pass this data back to Braze. Each messaging channel has an analytics article to help facilitate this.
+When you create completely new custom content, such as new types of Content Cards or in-app messages with bespoke UI, the Braze SDK won’t automatically [track analytics]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/). You must be programmatically handle analytics so marketers continue to have access to metrics like impressions, clicks, and dismissals in the Braze dashboard. Call the Braze SDK’s analytics methods to have the SDK pass this data back to Braze. Each messaging channel has an analytics article to help facilitate this.
 
 <table>
 <thead>
@@ -162,35 +162,6 @@ When you create completely new custom content, such as new types of Content Card
   </tr>
 </tbody>
 </table>
-
-### Use cases
-
-- Multiple Content Card feeds, such as adding a newsfeed, notification center, or promotions tab.
-- Display Content Cards in an existing feed.
-- Display Content Cards in a carousel view.
-- Use a Content Card to capture user information.
-- Trigger Content Cards based on other messaging channels.
-
-{% alert tip %}
-Check out the sample use cases for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/implementation_guide/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/#sample-use-cases) outlined in our Advanced Content Card implementation guides to get an idea of what you can do with this approach.
-{% endalert %}
-
-{% endtab %}
-{% endtabs %}
-
-
-You can change the language that appears automatically in empty Content Card feeds by [redefining the localizable content card strings](https://github.com/Appboy/appboy-ios-sdk/blob/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources/en.lproj/AppboyContentCardsLocalizable.strings) in your app's localizable strings file: 
-```
-"Appboy.content-cards.no-card.text" = "No Cards!!!!";
-"Appboy.content-cards.done-button.title" = "Done";
-"Appboy.content-cards.no-card.text" = "We have no updates.\nCheck again later.";
-"Appboy.content-cards.no-connection.title" = "Connection Error";
-"Appboy.content-cards.no-connection.message" = "Cannot establish network connection.\nPlease try again later.";
-```
-{% alert note %}
-If you want to update it for different languages, find the corresponding language in the [Resources folder structure](https://github.com/Appboy/appboy-ios-sdk/tree/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources) with the same string `Appboy.content-cards.no-card.text`.
-{% endalert %}
-
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/
