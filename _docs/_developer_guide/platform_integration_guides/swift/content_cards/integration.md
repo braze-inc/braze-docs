@@ -120,11 +120,6 @@ let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
 {% endtab %}
 {% endtabs %}
 
-
-{% alert important %}
-Usage of `requestRefresh` may be rate limited under certain conditions. For more details around this, contact your Customer Success Manager or Account Team. To reduce the risk of rate-limiting, limit your usage of `requestRefresh` to 3 calls per 10 minutes.
-{% endalert %}
-
 ## Content Cards UI integration
 
 Content Cards UI can be integrated from the `BrazeUI` library of the Swift SDK. This library provides two view controller contexts: navigation or modal. For more information about iOS navigation options, refer to the [Apple developer documentation](https://developer.apple.com/documentation/uikit/view_controllers/showing_and_hiding_view_controllers).
