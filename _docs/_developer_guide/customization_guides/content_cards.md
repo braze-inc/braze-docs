@@ -1,7 +1,7 @@
 ---
 nav_title: Content Cards
 article_title: Content Card Customization
-layout: dev_guide
+layout: featured
 page_order: 2
 channel:
   - content cards
@@ -12,7 +12,7 @@ platform:
   - Web
 
 guide_top_header: "Content Card Customization"
-guide_top_text: "Customizing Content Cards and the feed in which they are located can be done during onboarding or as you continue to grow using Braze. Before customizing, Engineering and Marketing teams should work together to determine what customization approach works best for your brand needs."
+guide_top_text: "Customizing Content Cards and the in which they are located feed can be done during onboarding or as you continue to grow using Braze. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs."
 description: "This landing page links to various ways to customize Braze SDK Content Cards for multiple platforms."
 
 guide_featured_title: "Section Articles"
@@ -23,7 +23,7 @@ guide_featured_list:
   - name: Customizing Content Card Behavior
     link: /docs/developer_guide/customization_guides/content_cards/customizing_behavior/
     fa_icon: fa fa-cog
-  - name: Customizing the default Content Card Feed
+  - name: Customizing the default Content Card feed
     link: /docs/developer_guide/customization_guides/content_cards/customizing_feed/
     fa_icon: fa fa-book
   - name: Logging Analytics
