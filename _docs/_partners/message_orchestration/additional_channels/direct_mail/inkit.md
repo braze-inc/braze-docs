@@ -10,26 +10,25 @@ search_tag: Partner
 
 # Inkit
 
-> [Inkit][1] enables you to reach and communicate with your customers by delivering automated and personalized direct mail campaigns, rendering paperless documents at scale, and validating customer mailing addresses. 
+> [Inkit][1] and Braze empower organizations to securely generate and distribute documents - both digitally as well as via direct mail.
 
-The Braze and Inkit integration allows you to send Inkit mail to Braze users through Braze webhooks. 
+The Braze and Inkit integration allows you to generate documents and mail them directly to Braze users with Braze webhooks.
 
 ## Prerequisites
 
 |Requirement| Description|
 | ---| ---|
 |Inkit account | An [Inkit account](https://www.inkit.com/) is required to take advantage of this partnership. |
-| Inkit API key<br><br>`<INKIT_API_TOKEN>` | This key is found on your [Inkit Dashboard](https://app.inkit.io/#/account/integrations) will enable you to connect your Braze and Inkit accounts.|
-| Inkit template ID<br><br>`<INKIT_TEMPLATE_ID>` | This key is found within the URL for each template, enabling you to send your template to Braze. <br><br>For example, within the URL `https://app.inkit.io/#/templates/design/bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`, the Template ID is `bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`. |
-| HTTP header  | Found on your Inkit account, you will combine this with your Inkit API Key to authorize the connection as a key-value pair within your Braze template. |
+| Inkit API key<br><br>`<INKIT_API_TOKEN>` | This key is found on your [Inkit Dashboard](https://app.inkit.io/#/account/integrations) under the **Development** tab and will enable you to connect your Braze and Inkit accounts.|
+| Inkit template ID<br><br>`<INKIT_TEMPLATE_ID>` | After creating a template, you can copy the template ID from the **Templates** tab to use in your template in Braze.<br><br>For example, you might create a template called `invoice_template` in the Inkit environment with the Template ID: `tmpl_3bDScFl9cwr3OAVR1RSdEC`.
+| HTTP header | The HTTP header is part of the API request that you send from Braze to Inkit. In it, you will include your Inkit API key to autheticate and authorize calls to the Inkit API. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
 
 ### Step 1: Create an Inkit template
 
-On the Inkit platform, create a template to be used in your Braze campaign. 
-Check out [Inkit documentation](https://help.inkit.com/hc/en-us/articles/360036546873-Braze-Inkit-Integration) on this partnership to learn more.
+On the Inkit platform, create a template to be used in your Braze campaign in HMTL, Word, PowerPoint, Excel or PDF. Check out [Inkit documentation](https://docs.inkit.com/docs/create-a-template) to learn more.
 
 ### Step 2: Create your Braze webhook template
 
@@ -38,14 +37,16 @@ To create an Inkit webhook template to use in future campaigns or Canvases, navi
 ![A selection of available predesigned webhook templates in the Webhook Templates tab of the Templates & Media section.][7]
 
 Once you have selected the Inkit webhook template, you should see the following:
-- **Webhook URL**: `https://internal.inkit.io/integrations/webhook`
+- **Webhook URL**: Blank
 - **Request Body**: Raw Text
+
+In the Webhook URL field, you will need to [create](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) and input a Inkit webhook URL.
 
 ![Request body code and webhook URL shown in the Braze webhook builder compose tab.][5]
 
 #### Request headers and method
 
-Inkit requires an `HTTP Header` for authorization that includes your Inkit API key encoded in base 64. The following will already be included within the template as a key-value pair, but in the **Settings** tab, you must replace the `<INKIT_API_TOKEN>` with your Inkit API key.
+Inkit requires an `HTTP Header` for authorization, including your Inkit API key encoded in base 64. The following will already be included within the template as a key-value pair, but in the **Settings** tab, you must replace the `<INKIT_API_TOKEN>` with your Inkit API key.
 
 {% raw %}
 - **HTTP Method**: POST
