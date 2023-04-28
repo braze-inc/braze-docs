@@ -56,9 +56,7 @@ A Currents connector is already included in many of our pro and enterprise-level
 
 ### Test Currents connectors
 
-Test Currents connectors are free versions of our existing connectors that can be used for testing and trying out different destinations. 
-
-Test Currents have:
+Test Currents connectors are free versions of our existing connectors that can be used for testing and trying out different destinations. Test Currents have:
 - No limit to the number of Test Currents connectors you may build.
 - A aggregate max of 10,000 events per 30-day rolling period. This event total is updated hourly on the dashboard.
 
