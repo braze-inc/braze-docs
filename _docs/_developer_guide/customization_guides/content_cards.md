@@ -1,7 +1,7 @@
 ---
 nav_title: Content Cards
 article_title: Content Card Customization
-layout: featured
+layout: dev_guide
 page_order: 2
 channel:
   - content cards
