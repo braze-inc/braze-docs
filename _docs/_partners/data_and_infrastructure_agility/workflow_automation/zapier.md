@@ -18,7 +18,7 @@ The Braze and Zapier partnership leverages the Braze API and Braze [webhooks][3]
 | Requirements | Description |
 |---|---|
 | Zapier account | A Zapier account is required to take advantage of this partnership. |
-| Braze REST Endpoint | Your REST Endpoint URL. Your endpoint will depend on the [Braze URL for your instance][0]. |
+| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][0]. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration

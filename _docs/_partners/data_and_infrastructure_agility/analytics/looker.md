@@ -110,7 +110,7 @@ Note the following limitations:
 
 ##### Sample outgoing API
 
-The following is a sample of an outgoing API call, which will be sent to the [/users/track/][10] endpoint.
+The following is a sample of an outgoing API call, which will be sent to the [`/users/track/` endpoint][10].
 
 ###### Header
 ```
