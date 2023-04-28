@@ -56,7 +56,8 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
   "canvas_id": CanvasApiKey, // may not be available
   "canvas_step_id": CanvasStepID, // may not be available
   "canvas_variation_id" : CanvasVariationId, // may not be available
-  "message_variation_id": MessagVariationId, // may not be available
+  "message_variation_id": MessageVariationId, // may not be available,
+  "attachments": Array of JSON Objects containing 'bytes' and 'file_name', // may not be available
 }
 ```
 
