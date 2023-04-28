@@ -15,7 +15,7 @@ partner_top_header: "eCommerce"
 
 valid_partner_list:
 - name: Shopify
-  url: /docs/partners/message_orchestration/channel_extensions/eCommerce/shopify/
+  url: /docs/partners/additional_channels_and_extensions/ecommerce/shopify/
 - name: Yotpo
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
+  url: /docs/partners/additional_channels_and_extensions/ecommerce/yotpo/
 ---

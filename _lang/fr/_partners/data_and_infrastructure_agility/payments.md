@@ -15,6 +15,6 @@ partner_top_header: "Infrastructure de paiement"
 
 valid_partner_list:
 - name: RevenueCat
-  url: /docs/partners/data_and_infrastructure_agility/payments/revenuecat/
+  url: /docs/partners/additional_channels_and_extensions/pos/revenuecat/
 
 ---

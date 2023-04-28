@@ -10,7 +10,7 @@ description: "Cet article contient les notes de version de novembre 2020."
 
 ## Notre partenariat avec Tealium est opérationnel.
 
-[Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) est un hub de données qui facilite la connexion de données mobiles, Web et alternatives provenant de sources tierces. Connecté à Braze, Tealium permet de configurer un flux de données d’événements personnalisés pour les attributs et achats de l’utilisateur, pour que vous puissiez agir en temps réel en fonction de vos données.
+[Tealium]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/#about-tealium) est un hub de données qui facilite la connexion de données mobiles, Web et alternatives provenant de sources tierces. Connecté à Braze, Tealium permet de configurer un flux de données d’événements personnalisés pour les attributs et achats de l’utilisateur, pour que vous puissiez agir en temps réel en fonction de vos données.
 
 ## Portail du produit Braze
 

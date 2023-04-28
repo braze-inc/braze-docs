@@ -450,12 +450,12 @@ var ticket_lookuptable = {
             'mParticle' : {
               'ShowSubmit': true,
               'LinksTitle': ['Instructions d’intégration de mParticle'],
-              'Links': ['{{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/']
+              'Links': ['{{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mparticle/']
             },
             'Segment' : {
               'ShowSubmit': true,
               'LinksTitle': ['Instructions d’intégration de Segment'],
-              'Links' : ['{{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/']
+              'Links' : ['{{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/']
             },
             'Install attribution' : {
               'ShowSubmit': true,

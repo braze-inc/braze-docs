@@ -15,21 +15,21 @@ partner_top_header: "Message Orchestration"
 
 valid_partner_list:
 - name: Jampp
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/jampp/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/jampp/
 - name: Remerge
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/remerge/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/remerge/
 - name: Facebook
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/facebook/
 - name: Passkit
-  url: /docs/partners/message_orchestration/additional_channels/mobile_wallet/passkit/
+  url: /docs/partners/additional_channels_and_extensions/mobile_wallet/passkit/
 - name: Inkit
-  url: /docs/partners/message_orchestration/additional_channels/direct_mail/inkit/
+  url: /docs/partners/additional_channels_and_extensions/direct_mail/inkit/
 - name: Lob
-  url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
+  url: /additional_channels_and_extensions/direct_mail/lob/
 - name: Messenger
-  url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
+  url: /docs/partners/additional_channels_and_extensions/messaging/messenger/
 - name: Rokt Calendar
-  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
+  url: /docs/partners/message_personalization/calendar/rokt_calendar/
 - name: Adjust
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
@@ -61,19 +61,19 @@ valid_partner_list:
 - name: Iterate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
 - name: EduMe
-  url: /docs/partners/message_orchestration/learning/edume/
+  url: /docs/partners/message_orchestration/lms/edume/
 - name: optilyz
-  url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
+  url: /docs/partners/additional_channels_and_extensions/direct_mail/optilyz/
 - name: Digioh
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
 - name: Punchh
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
 - name: LINE
-  url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+  url: /docs/partners/additional_channels_and_extensions/messaging/line/  
 - name: Shopify
-  url: /docs/partners/message_orchestration/channel_extensions/eCommerce/shopify/
+  url: /docs/partners/additional_channels_and_extensions/ecommerce/shopify/
 - name: Yotpo
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
+  url: /docs/partners/additional_channels_and_extensions/ecommerce/yotpo/
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: Extole
@@ -83,7 +83,7 @@ valid_partner_list:
 - name: Survicate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Quikly
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/quikly/
 - name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Ada

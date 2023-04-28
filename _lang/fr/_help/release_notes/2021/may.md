@@ -30,12 +30,12 @@ L’[intégration entre Braze et Airbridge]({{site.baseurl}}/partners/message_or
 
 ### Census - Plateforme de données client
 
-[Census]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/census/) vous permet de garder vos équipes de réussite, de ventes et de marketing sur la même longueur d’onde, en gardant vos données client à jour, sans l’aide continue de votre service technique.
+[Census]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/census/) vous permet de garder vos équipes de réussite, de ventes et de marketing sur la même longueur d’onde, en gardant vos données client à jour, sans l’aide continue de votre service technique.
 
 ### Treasure Data - Plateforme de données client
 
-[Treasure Data]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/) améliore les expériences client en harmonisant les données, les informations et l’engagement pour les faire travailler en parfait accord. Avec ces indicateurs exploitables, les équipes d’expérience client (CX), notamment le marketing, les ventes et le service client, peuvent optimiser leurs dépenses et personnaliser les interactions omnicanal sur l’ensemble du parcours client. 
+[Treasure Data]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/treasure_data/) améliore les expériences client en harmonisant les données, les informations et l’engagement pour les faire travailler en parfait accord. Avec ces indicateurs exploitables, les équipes d’expérience client (CX), notamment le marketing, les ventes et le service client, peuvent optimiser leurs dépenses et personnaliser les interactions omnicanal sur l’ensemble du parcours client. 
 
 ## Phrasee - Test A/B
 
-L’engagement des clients Braze développe des relations grâce au marketing multicanal. Combiné avec [Phrasee]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/), Braze peut déployer le langage de la marque, à grande échelle, sur des canaux personnalisés pour correspondre à la voix de votre marque. Le moteur de deep learning de Phrasee gère les tests, suit les résultats et génère du nouveau langage en fonction de ce qu’il apprend. 
+L’engagement des clients Braze développe des relations grâce au marketing multicanal. Combiné avec [Phrasee]({{site.baseurl}}/partners/message_orchestration/ab_testing/phrasee/), Braze peut déployer le langage de la marque, à grande échelle, sur des canaux personnalisés pour correspondre à la voix de votre marque. Le moteur de deep learning de Phrasee gère les tests, suit les résultats et génère du nouveau langage en fonction de ce qu’il apprend. 

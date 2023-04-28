@@ -29,10 +29,10 @@ Un nouvel endpoint [GET : `/purchases/product_list`]({{site.baseurl}}/api/endpo
 ## Nouveaux partenariats Braze
 
 ### Adobe - Plateforme de données client
-L’intégration entre Braze et [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/#adobe) permet aux marques de connecter et de mapper leurs données Adobe (segments et attributs personnalisés) vers Braze en temps réel. Les marques peuvent ensuite se servir de ces données pour offrir des expériences personnalisées et ciblées à ces utilisateurs. 
+L’intégration entre Braze et [Adobe]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/adobe/#adobe) permet aux marques de connecter et de mapper leurs données Adobe (segments et attributs personnalisés) vers Braze en temps réel. Les marques peuvent ensuite se servir de ces données pour offrir des expériences personnalisées et ciblées à ces utilisateurs. 
 
 ### BlueConic - Plateforme de données client
-Avec [Blueconic]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/#blueconic), les utilisateurs de Braze peuvent unifier les données en profils individuels persistants, puis les synchroniser sur les points de contact et systèmes des clients pour soutenir une large gamme d’initiatives axées sur la croissance, notamment l’orchestration du cycle de vie des clients, la modélisation et l’analyse, les produits numériques et les expériences, la monétisation basée sur le public, etc.
+Avec [Blueconic]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/blueconic/#blueconic), les utilisateurs de Braze peuvent unifier les données en profils individuels persistants, puis les synchroniser sur les points de contact et systèmes des clients pour soutenir une large gamme d’initiatives axées sur la croissance, notamment l’orchestration du cycle de vie des clients, la modélisation et l’analyse, les produits numériques et les expériences, la monétisation basée sur le public, etc.
 
 ### Worthy - Contenu dynamique
 L’intégration entre [Worthy]({{site.baseurl}}/partners/message_personalization/dynamic_content/worthy/#worthy) et Braze vous permet de créer facilement des expériences in-app riches et personnalisées avec l’éditeur de contenu dynamique de Worthy, et de les diffuser ensuite via Braze.
@@ -41,7 +41,7 @@ L’intégration entre [Worthy]({{site.baseurl}}/partners/message_personalizatio
 L’intégration entre [Judo]({{site.baseurl}}/partners/message_personalization/dynamic_content/judo/#judo) et Braze vous permet d’écraser les composantes de votre campagne et de les remplacer par des expériences Judo. Les données Braze peuvent également fournir du contenu personnalisé dans une expérience Judo. Les événements et les données des utilisateurs de l’expérience peuvent faire l’objet d’un retour dans Braze pour l’attribution et le ciblage.
 
 ### Line - Envoi de messages
-L’intégration entre [Line]({{site.baseurl}}/partners/message_orchestration/additional_channels/messaging/line/#line) et Braze vous permet d’exploiter les webhooks, la segmentation avancée, la personnalisation et les fonctionnalités de déclenchement de Braze pour envoyer des messages à vos utilisateurs dans Line via l’[API d’envoi de messages de Line](https://developers.line.biz/en/docs/messaging-api/overview/).
+L’intégration entre [Line]({{site.baseurl}}/partners/additional_channels_and_extensions/messaging/line/#line) et Braze vous permet d’exploiter les webhooks, la segmentation avancée, la personnalisation et les fonctionnalités de déclenchement de Braze pour envoyer des messages à vos utilisateurs dans Line via l’[API d’envoi de messages de Line](https://developers.line.biz/en/docs/messaging-api/overview/).
 
 ### RevenueCat - Paiements
 L’intégration entre [RevenueCat]({{site.baseurl}}/partners/data_and_infrastructure_agility/payments/revenuecat/#revenuecat) et Braze permet de synchroniser automatiquement les événements d’achat et d’abonnement de vos clients sur plusieurs plateformes. Cela vous permet de créer des campagnes qui réagissent en fonction de l’étape du cycle de vie d’abonnement de vos clients, par exemple pour communiquer avec des clients qui se sont désinscrits pendant leur essai gratuit ou envoyer des rappels aux clients en défaut de paiement.

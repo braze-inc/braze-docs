@@ -1,8 +1,7 @@
 ---
 nav_title: Localization
 article_title: Localization Partners
-page_order: 6
-
+page_order: 5
 page_type: landing
 description: "This landing lists Braze partners (Alloys) who allow you to use localization data in your messaging campaigns."
 layout: partner_page

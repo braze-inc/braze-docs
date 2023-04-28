@@ -33,8 +33,8 @@ With Dyspatch, use the intuitive drag and drop email builder to create beautiful
 
 ## RudderStack partnership
 
-RudderStack is an open-source Customer Data Infrastructure for collecting and routing customer event data to your preferred data warehouse and dozens of other analytics providers, such as Braze. It is enterprise-ready and offers a robust transformation framework to process your event data on the fly. For more information, check out our [RudderStack]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/#rudderstack) documentation.
+RudderStack is an open-source Customer Data Infrastructure for collecting and routing customer event data to your preferred data warehouse and dozens of other analytics providers, such as Braze. It is enterprise-ready and offers a robust transformation framework to process your event data on the fly. For more information, check out our [RudderStack]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/rudderstack/#rudderstack) documentation.
 
 ## Jebbit partnership
 
-Jebbit is a PaaS to which you can build engaging experiences for users to capture first-party data. Jebbit has partnered with Braze so that you can pass user emails and attributes from your Jebbit campaigns as user data to Braze in real-time. This data can then be utilized to drive marketing initiatives like personalized email campaigns and triggers. For more information, check out our [Jebbit]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/#jebbit) documentation.
+Jebbit is a PaaS to which you can build engaging experiences for users to capture first-party data. Jebbit has partnered with Braze so that you can pass user emails and attributes from your Jebbit campaigns as user data to Braze in real-time. This data can then be utilized to drive marketing initiatives like personalized email campaigns and triggers. For more information, check out our [Jebbit]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/jebbit/#jebbit) documentation.

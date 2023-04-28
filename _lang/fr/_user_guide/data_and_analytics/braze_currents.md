@@ -46,7 +46,7 @@ guide_featured_list:
 Currents vous permet de…
 * Diffuser les données d’événements de Braze dans un entrepôt de données ou vers l’un de nos [partenaires analytiques]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) pour une analyse détaillée.
 * Diffuser les données d’événements de Braze en continu pour alimenter l’aide à la décision, des algorithmes de machine learning, etc.
-* Acheminer les données d’événements Braze vers de nombreux autres systèmes, en utilisant [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/), [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/) ou [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/).
+* Acheminer les données d’événements Braze vers de nombreux autres systèmes, en utilisant [Tealium]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium/), [Segment]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/) ou [mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mParticle/mparticle_for_currents/).
 
 Il y a tant de choses que vous pouvez faire avec les données d’événements, accessibles via Currents. Faites-nous confiance :[Braze aussi utilise Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/) !
 

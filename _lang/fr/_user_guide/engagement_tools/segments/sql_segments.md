@@ -11,7 +11,7 @@ tool: Segments
 
 # Segment Extensions SQL
 
-> Vous pouvez générer un Segment Extension à l’aide des requêtes SQL Snowflake des données [Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/). Le SQL peut vous aider à déverrouiller de nouveaux cas d’utilisation de segments parce qu’il offre la flexibilité nécessaire pour décrire les relations entre les données de manières qui ne sont pas réalisables par d’autres fonctionnalités de segmentation.
+> Vous pouvez générer un Segment Extension à l’aide des requêtes SQL Snowflake des données [Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/). Le SQL peut vous aider à déverrouiller de nouveaux cas d’utilisation de segments parce qu’il offre la flexibilité nécessaire pour décrire les relations entre les données de manières qui ne sont pas réalisables par d’autres fonctionnalités de segmentation.
 
 {% alert important %}
 L’éditeur SQL est en accès anticipé. Si vous souhaitez participer à l’accès anticipé, contactez votre gestionnaire du succès des clients.

@@ -10,10 +10,10 @@ alias: /partners/phrasee/
 
 guide_featured_list:
 - name: Phrasee
-  link: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee/
+  link: /docs/partners/message_orchestration/ab_testing/phrasee/phrasee/
   fa_icon: fas fa-user-circle
 - name: Phrasee React
-  link: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee_react/
+  link: /docs/partners/message_orchestration/ab_testing/phrasee/phrasee_react/
   fa_icon: fas fa-users
 ---
 <br>

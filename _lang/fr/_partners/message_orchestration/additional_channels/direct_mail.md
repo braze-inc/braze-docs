@@ -15,11 +15,11 @@ partner_top_header: "Publipostage"
 
 valid_partner_list:
 - name: Inkit
-  url: /docs/partners/message_orchestration/additional_channels/direct_mail/inkit/
+  url: /docs/partners/additional_channels_and_extensions/direct_mail/inkit/
 - name: Lob
-  url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
+  url: /additional_channels_and_extensions/direct_mail/lob/
 - name: optilyz
-  url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
+  url: /docs/partners/additional_channels_and_extensions/direct_mail/optilyz/
 
 
 

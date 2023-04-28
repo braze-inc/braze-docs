@@ -29,7 +29,7 @@ L'intégration de Braze et de Tellius permet aux utilisateurs d'exploiter les do
 
 Braze stocke les données granulaires des clients dans Snowflake. Vous pouvez exploiter vos données Braze pour générer des insights grâce au programme de partage de données Snowflake de Braze ou en obtenant un compte de lecteur Snowflake. 
 
-Suivez [l'intégration de Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) pour le paramétrage. 
+Suivez [l'intégration de Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) pour le paramétrage. 
 
 ### Étape 2 : Connecter Tellius aux données de Braze dans Snowflake
 

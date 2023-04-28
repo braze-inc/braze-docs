@@ -15,7 +15,7 @@ partner_top_header: "Assistance"
 
 valid_partner_list:
 - name: Zendesk
-  url: /docs/partners/data_and_infrastructure_agility/support/zendesk/
+  url: /docs/partners/additional_channels_and_extensions/support/zendesk/
 - name: Pypestream
-  url: /docs/partners/data_and_infrastructure_agility/support/pypestream/
+  url: /docs/partners/additional_channels_and_extensions/support/pypestream/
 ---

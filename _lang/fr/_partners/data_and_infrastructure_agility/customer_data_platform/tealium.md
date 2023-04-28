@@ -9,13 +9,13 @@ description: "Cette page d’accueil contient tout ce qui concerne Tealium, y co
 
 guide_featured_list:
 - name: Tealium
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/
+  link: /docs/partners/data_and_analytics/customer_data_platform/tealium/tealium/
   fa_icon: fas fa-user-circle
 - name: Tealium AudienceStream
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/
+  link: /docs/partners/data_and_analytics/customer_data_platform/tealium/tealium_audience_stream/
   fa_icon: fas fa-users
 - name: Tealium pour Currents
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents/
+  link: /docs/partners/data_and_analytics/customer_data_platform/tealium/tealium_for_currents/
   fa_icon: fas fa-warehouse
 ---
 <br>

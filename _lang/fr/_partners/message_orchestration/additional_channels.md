@@ -15,26 +15,26 @@ partner_top_header: "Canaux supplémentaires"
 
 valid_partner_list:
 - name: Jampp
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/jampp/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/jampp/
 - name: Remerge
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/remerge/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/remerge/
 - name: Facebook
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/facebook/
 - name: Passkit
-  url: /docs/partners/message_orchestration/additional_channels/mobile_wallet/passkit/
+  url: /docs/partners/additional_channels_and_extensions/mobile_wallet/passkit/
 - name: Inkit
-  url: /docs/partners/message_orchestration/additional_channels/direct_mail/inkit/
+  url: /docs/partners/additional_channels_and_extensions/direct_mail/inkit/
 - name: Lob
-  url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
+  url: /additional_channels_and_extensions/direct_mail/lob/
 - name: Messenger
-  url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
+  url: /docs/partners/additional_channels_and_extensions/messaging/messenger/
 - name: Rokt Calendar
-  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
+  url: /docs/partners/message_personalization/calendar/rokt_calendar/
 - name: optilyz
-  url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
+  url: /docs/partners/additional_channels_and_extensions/direct_mail/optilyz/
 - name: LINE
-  url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+  url: /docs/partners/additional_channels_and_extensions/messaging/line/  
 - name: Quikly
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/quikly/
     
 ---

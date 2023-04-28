@@ -15,6 +15,6 @@ partner_top_header: "Test A/B"
 
 valid_partner_list:
 - name: Phrasee
-  url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
+  url: /docs/partners/message_orchestration/ab_testing/phrasee/
 
 ---

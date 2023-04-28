@@ -124,6 +124,6 @@ Nos données de référence sont également disponibles directement dans [Snowfl
 
 > Consultez nos [exemples de requêtes][SQ] et nos exemples de [configuration du pipeline d’événements ETL][ETL] pour vous aider à configurer Snowflake.
 
-[SQ]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/
-[ETL]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/
+[SQ]: {{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/sample_queries/
+[ETL]: {{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/etl_pipline_setup/
 [schemas]: {% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %}

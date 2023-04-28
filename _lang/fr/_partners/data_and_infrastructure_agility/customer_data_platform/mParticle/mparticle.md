@@ -18,7 +18,7 @@ search_tag: Partenaire
 L’intégration de Braze et de mParticle permet de contrôler de manière harmonieuse le flux d’informations entre les deux systèmes :
 - [Synchroniser les audiences mParticle avec Braze](#cohort-import) pour la segmentation des campagnes et Canvas Braze.
 - [Partager des données sur les deux plateformes](#data-import). Cela peut être effectué via l’intégration du kit mParticle et l’intégration serveur à serveur.
-- [Envoyer des interactions d’utilisateur Braze à mParticle via Currents]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/), ce qui le rend utilisable sur tout le jeu d'outils de croissance. 
+- [Envoyer des interactions d’utilisateur Braze à mParticle via Currents]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mParticle/mparticle_for_currents/), ce qui le rend utilisable sur tout le jeu d'outils de croissance. 
 
 ## Conditions préalables
 

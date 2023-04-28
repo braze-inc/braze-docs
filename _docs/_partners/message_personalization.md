@@ -31,15 +31,15 @@ valid_partner_list:
 - name: Crowdin
   url: /docs/partners/message_personalization/localization/crowdin/
 - name: Accuweather
-  url: /docs/partners/message_personalization/location/accuweather/
+  url: /docs/partners/message_personalization/contextual_location/accuweather/
 - name: Foursquare
-  url: /docs/partners/message_personalization/location/foursquare/
+  url: /docs/partners/message_personalization/contextual_location/foursquare/
 - name: Gimbal
-  url: /docs/partners/message_personalization/location/gimbal/
+  url: /docs/partners/message_personalization/contextual_location/gimbal/
 - name: Radar
-  url: /docs/partners/message_personalization/location/radar/
+  url: /docs/partners/message_personalization/contextual_location/radar/
 - name: Bluedot
-  url: /docs/partners/message_personalization/location/bluedot/
+  url: /docs/partners/message_personalization/contextual_location/bluedot/
 - name: Judo
   url: /docs/partners/message_personalization/dynamic_content/judo/
 - name: Wyng
@@ -55,7 +55,7 @@ valid_partner_list:
 - name: Sheetlabs
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
 - name: loplat
-  url: /docs/partners/message_personalization/location/loplat/
+  url: /docs/partners/message_personalization/contextual_location/loplat/
 - name: Komo
   url: /docs/partners/message_personalization/dynamic_content/komo/
 - name: Phrase

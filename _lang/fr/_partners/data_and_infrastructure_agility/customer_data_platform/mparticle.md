@@ -9,10 +9,10 @@ description: "Cette page d’accueil contient tout ce qui concerne mParticle, y 
 
 guide_featured_list:
 - name: mParticle
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle
+  link: /docs/partners/data_and_analytics/customer_data_platform/mparticle/mparticle
   fa_icon: fas fa-user-circle
 - name: mParticle pour Currents
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents/
+  link: /docs/partners/data_and_analytics/customer_data_platform/mparticle/mparticle_for_currents/
   fa_icon: fas fa-warehouse
 ---
 

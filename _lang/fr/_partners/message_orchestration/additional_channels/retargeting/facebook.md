@@ -58,7 +58,7 @@ Votre connexion à Facebook sera appliquée au niveau du groupe d’apps dans Br
 {% alert important %}
 Pour les clients qui ont déjà passé le processus d’examen de l’application Facebook pour [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) et [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), votre jeton d’utilisateur système sera toujours valable pour l’étape de l’audience Facebook. Vous ne pourrez pas modifier ou révoquer le jeton d’utilisateur du système Facebook via la page partenaire Facebook. Au lieu de cela, vous pouvez connecter votre compte Facebook pour remplacer votre jeton d’utilisateur du système Facebook dans votre groupe d’apps de Braze. 
 
-<br><br>La nouvelle configuration de Facebook oAuth s’appliquera également aux [exportations de Facebook via les segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
+<br><br>La nouvelle configuration de Facebook oAuth s’appliquera également aux [exportations de Facebook via les segments]({{site.baseurl}}/partners/additional_channels_and_extensions/retargeting/facebook/#prerequisites). 
 {% endalert %}
 
 ### Exportation de vos utilisateurs dans Facebook

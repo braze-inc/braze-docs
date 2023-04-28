@@ -13,7 +13,7 @@ search_tag: Partenaire
 
 > [Kubit](https://kubit.ai/) est une plateforme d’analyses en libre-service, sans code, qui fournit des informations instantanées sur les produits. 
 
-L’intégration de Braze et Kubit vous permet d’importer des cohortes d’utilisateurs Kubit et de les cibler dans les envois de messages de Braze. En outre, grâce au [partage sécurisé des données Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/), vous pouvez également intégrer les données brutes de campagnes et d’impression de Braze avec les analyses de produits de Kubit pour mesurer l’impact de ces campagnes en temps réel. Cette approche fournit des informations sur le cycle de vie complet de vos utilisateurs sans aucun travail technique de votre part.
+L’intégration de Braze et Kubit vous permet d’importer des cohortes d’utilisateurs Kubit et de les cibler dans les envois de messages de Braze. En outre, grâce au [partage sécurisé des données Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/), vous pouvez également intégrer les données brutes de campagnes et d’impression de Braze avec les analyses de produits de Kubit pour mesurer l’impact de ces campagnes en temps réel. Cette approche fournit des informations sur le cycle de vie complet de vos utilisateurs sans aucun travail technique de votre part.
 
 ## Conditions préalables
 
@@ -58,6 +58,6 @@ Après avoir importé des cohortes dans Braze, vous pouvez les utiliser comme fi
 ![Dans le générateur de segments de Braze, l’attribut utilisateur « Kubit cohorts » (cohortes Kubit) est défini sur « includes_value » et affiche une liste des cohortes disponibles.]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
 
 ## Analyser les données de Braze dans Kubit (facultatif)
-Utilisez le [partage sécurisé de données Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) pour partager vos données brutes de campagne et d’impression de Braze avec Kubit et les intégrer aux analyses en libre-service de Kubit afin d’obtenir un aperçu complète du cycle de vie de vos utilisateurs.
+Utilisez le [partage sécurisé de données Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) pour partager vos données brutes de campagne et d’impression de Braze avec Kubit et les intégrer aux analyses en libre-service de Kubit afin d’obtenir un aperçu complète du cycle de vie de vos utilisateurs.
 
 À titre informatif, voici tous les [champs Braze]({{site.baseurl}}/assets/download_file/data-sharing-raw-table-schemas.txt?ed79384e6ac6a97fe3b3d9f76852b7c2) qui peuvent être intégrés aux analyses de Kubit. Les détails de cette étape dépendent fortement de chaque client et nécessitent des configurations spéciales. Contactez votre gestionnaire de compte Kubit ou envoyez un e-mail à l’adresse [support@kubit.ai](support@kubit.ai) pour en savoir plus.

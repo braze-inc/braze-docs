@@ -85,7 +85,7 @@ Two new events were added to the Currents glossary: [Canvas abort message events
 Use the [Update catalog item]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/) and [Update catalog items]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/) endpoints to update an item or multiple items in your catalog.
 
 ### Shopify Historical Backfill
-[Shopify Historical Backfill](https://www.braze.com/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/) allows Braze to import all customers, orders, and purchase events from the last 90 days prior to your Shopify integration connection.
+[Shopify Historical Backfill](https://www.braze.com/docs/partners/additional_channels_and_extensions/ecommerce/shopify/shopify_backfill/) allows Braze to import all customers, orders, and purchase events from the last 90 days prior to your Shopify integration connection.
 
 ### WhatsApp
 WhatsApp is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses. The [WhatsApp messaging channel]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp) offers a direct way to engage users on the WhatsApp platform through campaigns, opt-ins and opt-outs, quick replies, and more.
@@ -171,7 +171,7 @@ You may occasionally identify custom attributes, custom events, or purchase even
 
 #### Sisu Data - Business intelligence
 
-The [Sisu Data]({{site.baseurl}}/partners/data_and_infrastructure_agility/business_intelligence/sisu_data/) and Braze integration allows you to understand across all campaigns or at a campaign level why metrics (e.g., open rate, click-through rate, conversion rate, etc.) are changing and what drives the most optimal outcomes. Once these segments are identified, Braze users can materialize the outputs in their data warehouse or send them directly from Sisu to Braze to retarget and reengage users.
+The [Sisu Data]({{site.baseurl}}/partners/data_and_analytics/business_intelligence/sisu_data/) and Braze integration allows you to understand across all campaigns or at a campaign level why metrics (e.g., open rate, click-through rate, conversion rate, etc.) are changing and what drives the most optimal outcomes. Once these segments are identified, Braze users can materialize the outputs in their data warehouse or send them directly from Sisu to Braze to retarget and reengage users.
 
 #### Loplat - Contextual location
 
@@ -179,7 +179,7 @@ The Braze and [loplat]({{site.baseurl}}/partners/message_personalization/locatio
 
 #### ActionIQ - Customer data platform
 
-The Braze and [ActionIQ]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/) integration allows brands to sync and map their ActionIQ data directly to Braze, empowering the delivery of extraordinary customer experiences based on the entire breadth of their customer data. The integration enables the users to:
+The Braze and [ActionIQ]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/actioniq/) integration allows brands to sync and map their ActionIQ data directly to Braze, empowering the delivery of extraordinary customer experiences based on the entire breadth of their customer data. The integration enables the users to:
 
 - Map audience segments or custom attributes to Braze directly from ActionIQ
 - Forward the events tracked by ActionIQ to Braze in real time to trigger personalized and targeted campaigns
@@ -399,7 +399,7 @@ Snowflake Reader Accounts offer users access to the same data and functionality 
 To learn more, reach out to your customer success manager.
 
 ### Updated Shopify integration
-The [Shopify integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) now allows you to collect email and SMS opt-ins from your Shopify store and assign them to a subscription group in Braze.
+The [Shopify integration]({{site.baseurl}}/partners/additional_channels_and_extensions/ecommerce/shopify/shopify/) now allows you to collect email and SMS opt-ins from your Shopify store and assign them to a subscription group in Braze.
 
 
 
@@ -423,7 +423,7 @@ The [Dynamic Yield]({{site.baseurl}}/partners/message_personalization/dynamic_co
 The [Octolis]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/contentsquare/) and Braze integration acts as middleware between your raw data sources and Braze, enabling you to retrieve and unify data from various sources, both online and offline.
 
 #### Phrasee - AB testing
-[Phrasee React]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee_react/), powered by Phrasee X, leverages Braze Currents and Connected Content to collect click tracking information from your subscribers via webhooks. Phrasee then ties those events back to your language variants for real-time language optimization.
+[Phrasee React]({{site.baseurl}}/partners/message_orchestration/ab_testing/phrasee/phrasee_react/), powered by Phrasee X, leverages Braze Currents and Connected Content to collect click tracking information from your subscribers via webhooks. Phrasee then ties those events back to your language variants for real-time language optimization.
 
 #### Sheetlabs - Dynamic content
 The [Sheetlabs]({{site.baseurl}}/partners/message_personalization/dynamic_content/sheetlabs/) and Braze integration allows you to leverage [Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) to include Sheetlabs APIs inside your Braze marketing campaigns. This is commonly used to provide a bridge between a Google Spreadsheet (which is updated directly by the marketing team) and Braze's templates. This allows you to achieve more with Braze templates, such as translations or larger sets of custom attributes.
@@ -566,7 +566,7 @@ For existing Braze users, Liquid 5 is generally available. Learn more about [wha
 ### New Braze partnerships
 
 #### Shopify
-The Braze and [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) allows you to update existing user profiles or create new ones in Braze for leads, sign-ups, and account registrations being captured in your Shopify store.
+The Braze and [Shopify]({{site.baseurl}}/partners/additional_channels_and_extensions/ecommerce/shopify/shopify/) allows you to update existing user profiles or create new ones in Braze for leads, sign-ups, and account registrations being captured in your Shopify store.
 
 ### SDK updates
 

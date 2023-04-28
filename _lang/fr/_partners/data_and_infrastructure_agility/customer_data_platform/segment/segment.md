@@ -16,9 +16,9 @@ search_tag: Partenaire
 > [Segment.io][5] est une plateforme de données client qui vous aide à collecter, nettoyer et activer vos données client. 
 
 L’intégration de Braze et de Segment.io vous permet de suivre vos utilisateurs et de transmettre des données à divers fournisseurs d’analyse des utilisateurs. Segment.io vous permet de :
-- Synchroniser des [Segment.io Engage]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/) dans Braze pour l’utiliser dans des campagnes Braze et des segmentations de Canvas.
+- Synchroniser des [Segment.io Engage]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment_engage/) dans Braze pour l’utiliser dans des campagnes Braze et des segmentations de Canvas.
 - [Importer des données sur les deux plateformes](#integration-options). Nous proposons une intégration SDK côte à côte pour vos applications Android, iOS et Web et une intégration serveur à serveur pour synchroniser vos données avec les API REST de Braze
-- [Connecter les données sur Segment.io via Currents]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). 
+- [Connecter les données sur Segment.io via Currents]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment_for_currents/). 
 
 ## Conditions préalables
 

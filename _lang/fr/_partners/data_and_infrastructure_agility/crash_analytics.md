@@ -16,6 +16,6 @@ partner_top_header: "Analyse des incidents"
 
 valid_partner_list:
 - name: Apteligent
-  url: /docs/partners/data_and_infrastructure_agility/crash_analytics/apteligent/
+  url: /docs/partners/data_and_analytics/crash_reporting/apteligent/
 
 ---

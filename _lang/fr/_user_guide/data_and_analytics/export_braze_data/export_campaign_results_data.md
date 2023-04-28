@@ -96,5 +96,5 @@ Pour obtenir de l’aide sur les exportations de CSV et l’API, consultez notre
 {% endalert %}
 
 [6]: {% image_buster /assets/img/campaign_export_example.png %}
-[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/
+[26]: {{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/
 [40]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data

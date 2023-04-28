@@ -212,7 +212,7 @@ Si votre site utilise RequireJS ou un autre chargeur de module AMD, mais que vou
 ### Tealium iQ
 Tealium iQ propose une intégration de base de Braze. Pour configurer l’intégration, recherchez Braze dans l’interface Tealium Tag Management et fournissez la clé API du SDK pour le Web à partir de votre tableau de bord.
 
-Pour plus de détails ou pour obtenir de l’aide sur la configuration de Tealium, consultez notre [document d’intégration]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) ou contactez votre gestionnaire de compte Tealium.
+Pour plus de détails ou pour obtenir de l’aide sur la configuration de Tealium, consultez notre [document d’intégration]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/#about-tealium) ou contactez votre gestionnaire de compte Tealium.
 
 ### Autres gestionnaires de balises
 Braze peut également être compatible avec d’autres solutions de gestion des balises en suivant nos instructions d’intégration au sein d’une balise HTML personnalisée. Contactez un conseiller Braze si vous avez besoin d’aide pour évaluer ces solutions.

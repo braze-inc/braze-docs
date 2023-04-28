@@ -4,7 +4,7 @@ article_title: Segment.io Engage
 page_order: 1.3
 alias: /partners/segment_personas/
 alias: /partners/segment_engage/
-alias: /partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/
+alias: /partners/data_and_analytics/customer_data_platform/segment/segment_personas/
 
 description: "Cet article de référence présente le partenariat entre Braze et Segment.io, une plateforme de données client qui recueille et transfère des informations entre les différentes sources de votre pile marketing."
 page_type: partner
@@ -23,7 +23,7 @@ L’intégration de Braze et de Segment.io vous permet d’utiliser [Engage](htt
 | Condition | Description |
 | ----------- | ----------- |
 | Compte Segment.io | Un [compte Segment.io](https://app.segment.com/login) est requis pour profiter de ce partenariat. |
-| Utiliser Braze en tant que destination | Vous devez avoir déjà [configuré Braze en tant que destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) dans votre intégration Segment.io.<br><br>Vous devez également avoir fourni le bon centre de données Braze et la bonne clé API REST dans vos [paramètres de connexion]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
+| Utiliser Braze en tant que destination | Vous devez avoir déjà [configuré Braze en tant que destination]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/#connection-settings/) dans votre intégration Segment.io.<br><br>Vous devez également avoir fourni le bon centre de données Braze et la bonne clé API REST dans vos [paramètres de connexion]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/#connection-settings). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration

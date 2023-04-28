@@ -15,12 +15,12 @@ partner_top_header: "Reciblage"
 
 valid_partner_list:
 - name: Jampp
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/jampp/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/jampp/
 - name: Remerge
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/remerge/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/remerge/
 - name: Facebook
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/facebook/
 - name: Quikly
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
+  url: /docs/partners/additional_channels_and_extensions/retargeting/quikly/
     
 ---

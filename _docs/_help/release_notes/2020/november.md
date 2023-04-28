@@ -10,7 +10,7 @@ description: "This article contains release notes for November 2020."
 
 ## Tealium partnership is live
 
-[Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) is a data hub that makes it easy to connect mobile, web, and alternative data from third-party sources. When connected with Braze, Tealium enables a data flow of custom events, user attributes, and purchases for real-time data action.
+[Tealium]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/#about-tealium) is a data hub that makes it easy to connect mobile, web, and alternative data from third-party sources. When connected with Braze, Tealium enables a data flow of custom events, user attributes, and purchases for real-time data action.
 
 ## Braze Product Portal
 

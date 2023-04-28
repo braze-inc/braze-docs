@@ -19,7 +19,7 @@ L’intégration de Braze et RudderStack vous permet de tirer parti de Currents 
 | Condition | Description |
 | --- | --- |
 | Compte RudderStack | Un [compte Rudderstack](https://app.rudderstack.com/login) est requis pour profiter de ce partenariat. |
-| Utiliser Braze en tant que destination | Nous vous suggérons d’avoir [installé Braze comme destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack/#integration) à RudderStack. |
+| Utiliser Braze en tant que destination | Nous vous suggérons d’avoir [installé Braze comme destination]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/rudderstack/rudderstack/#integration) à RudderStack. |
 | Currents | Pour réexporter des données dans mParticle, vous devez avoir configuré [Currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
 {: .reset-td-br-1 .reset-td-br-2}
 

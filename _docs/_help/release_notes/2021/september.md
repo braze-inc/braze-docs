@@ -62,4 +62,4 @@ The Braze and [Transcend]({{site.baseurl}}/partners/data_and_infrastructure_agil
 
 ### optilyz - Direct Mail
 
-[optilyz]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/optilyz/) is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. optilyz is used by hundreds of companies across Europe and empowers you to integrate letters, postcards, and self-mailers into your cross-channel marketing and automate and better personalize campaigns. Use the optilyz and Braze webhook integration to send direct mail to your customers.
+[optilyz]({{site.baseurl}}/partners/additional_channels_and_extensions/direct_mail/optilyz/) is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. optilyz is used by hundreds of companies across Europe and empowers you to integrate letters, postcards, and self-mailers into your cross-channel marketing and automate and better personalize campaigns. Use the optilyz and Braze webhook integration to send direct mail to your customers.

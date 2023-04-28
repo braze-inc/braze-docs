@@ -12,10 +12,10 @@ description: "Cette page d’accueil contient tout ce qui concerne Zeotap, y com
 
 guide_featured_list:
 - name: Zeotap
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/zeotap/
+  link: /docs/partners/data_and_analytics/customer_data_platform/zeotap/zeotap/
   fa_icon: fas fa-user-circle
 - name: Zeotap Symphony
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/symphony/
+  link: /docs/partners/data_and_analytics/customer_data_platform/zeotap/symphony/
   fa_icon: fas fa-warehouse
 ---
 

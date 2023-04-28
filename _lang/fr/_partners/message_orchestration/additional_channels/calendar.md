@@ -15,5 +15,5 @@ partner_top_header: "Calendrier"
 
 valid_partner_list:
 - name: Rokt Calendar
-  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
+  url: /docs/partners/message_personalization/calendar/rokt_calendar/
 ---

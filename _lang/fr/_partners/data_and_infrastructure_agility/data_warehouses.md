@@ -15,6 +15,6 @@ partner_top_header: "Entrepôts de données"
 
 valid_partner_list:
 - name: Snowflake
-  url: /docs/partners/data_and_infrastructure_agility/data_warehouses/snowflake/
+  url: /docs/partners/data_and_analytics/data_warehouses/snowflake/
 
 ---

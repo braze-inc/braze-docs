@@ -14,7 +14,7 @@ search_tag: Partenaire
 
 Le partenariat entre Braze et Phrasee vous permet d’améliorer vos expériences client en optimisant la langue utilisée sur l’ensemble du parcours client. Le moteur de deep learning de Phrasee gère les tests, le suivi et la génération d’une nouvelle copie en fonction de ce qu’il apprend. 
 
-Pour inclure les informations de suivi des clics de vos utilisateurs abonnés, utiliser currents Braze et du Contenu connecté, consultez l’intégration [Phrasee React]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee_react/) supplémentaire de Phrasee.
+Pour inclure les informations de suivi des clics de vos utilisateurs abonnés, utiliser currents Braze et du Contenu connecté, consultez l’intégration [Phrasee React]({{site.baseurl}}/partners/message_orchestration/ab_testing/phrasee/phrasee_react/) supplémentaire de Phrasee.
 
 ## Conditions préalables
 

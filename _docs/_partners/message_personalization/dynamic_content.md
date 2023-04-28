@@ -1,8 +1,7 @@
 ---
 nav_title: Dynamic Content
 article_title: Dynamic Content Partners
-page_order: 2
-
+page_order: 3
 page_type: landing
 description: "This landing page lists Braze partners (Alloys) who allow you to include dynamic content in your messaging."
 layout: partner_page

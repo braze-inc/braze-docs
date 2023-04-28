@@ -13,10 +13,10 @@ description: "Cette page d’accueil contient tout ce qui concerne RudderStack, 
 
 guide_featured_list:
 - name: RudderStack
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack
+  link: /docs/partners/data_and_analytics/customer_data_platform/rudderstack/rudderstack
   fa_icon: fas fa-user-circle
 - name: RudderStack pour Currents
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack_for_currents/
+  link: /docs/partners/data_and_analytics/customer_data_platform/rudderstack/rudderstack_for_currents/
   fa_icon: fas fa-warehouse
 ---
 

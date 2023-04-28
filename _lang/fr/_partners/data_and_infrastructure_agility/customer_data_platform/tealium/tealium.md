@@ -16,7 +16,7 @@ search_tag: Partenaire
 ![Un graphique de présentation de Tealium montrant comment la plateforme Braze et les différents produits Tealium s’associent pour vous permettre de lancer des campagnes cross-canal en temps réel.][22]{: style="border:0;"}
 
 L’intégration de Braze et de Tealium vous permet de suivre vos utilisateurs et de transmettre des données à de nombreux fournisseurs d’analyse des utilisateurs. Tealium vous permet de :
-- Synchroniser les audiences Tealium avec [AudienceStream]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/) sur Braze pour personnaliser des campagnes et des Canvas Braze ou créer des segments.
+- Synchroniser les audiences Tealium avec [AudienceStream]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium_audience_stream/) sur Braze pour personnaliser des campagnes et des Canvas Braze ou créer des segments.
 - [Importer des données sur plusieurs plateformes](#choose-your-integration-type). Braze offre à la fois une intégration SDK [côte à côte](#side-by-side-sdk-integration) pour vos applications Android, iOS et Web, et une intégration [serveur à serveur](#server-to-server-integration) qui peuvent être utilisées avec toutes les plateformes pouvant fournir des données d’événements.<br><br>
 
 {% tabs %}
@@ -31,7 +31,7 @@ Tealium EventStream est un hub de collecte de données et d’API qui se situe a
 {% endtab %}
 {% tab AudienceStream %}
 
-Tealium AudienceStream est un moteur de segmentation client omnicanal et d’action en temps réel. AudienceStream extrait les données qui affluent dans EventStream et crée des profils de visiteurs qui représentent les attributs les plus importants concernant l’engagement de vos clients envers votre marque. Consultez notre article sur [AudienceStream]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/) pour découvrir les étapes de configuration.
+Tealium AudienceStream est un moteur de segmentation client omnicanal et d’action en temps réel. AudienceStream extrait les données qui affluent dans EventStream et crée des profils de visiteurs qui représentent les attributs les plus importants concernant l’engagement de vos clients envers votre marque. Consultez notre article sur [AudienceStream]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium_audience_stream/) pour découvrir les étapes de configuration.
 
 {% endtab %}
 {% tab iQ Tag Management %}
@@ -137,7 +137,7 @@ Cette intégration transfère les données de Tealium à l’API REST de Braze.
 
 L’intégration serveur à serveur ne prend pas en charge les fonctionnalités d’interface utilisateur de Braze, telles que les messages in-app, les cartes de contenu ou les notifications push. Il existe également des données collectées automatiquement (telles que les champs d’appareil), qui ne sont pas disponibles avec cette méthode.
 
-Optez pour notre intégration SDK [côte à côte]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/#side-by-side-sdk-integration) si vous souhaitez utiliser ces données et fonctionnalités.
+Optez pour notre intégration SDK [côte à côte]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium/#side-by-side-sdk-integration) si vous souhaitez utiliser ces données et fonctionnalités.
 
 ### Étape 1 : Configurer une source
 

@@ -457,8 +457,8 @@ page_order: 3
 {% tab Shopify Custom Attributes %}
 | Nom de l’attribut | Description |
 | --- | --- |
-| `shopify_accepts_marketing` | Cet attribut personnalisé correspond à l’état d’abonnement au marketing par e-mail qui est capturé sur la page de paiement.<br><br>Ce champ est désormais obsolète pour les nouveaux clients Shopify en faveur de notre fonctionnalité d’[états d’abonnement et de groupe]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify#step-5-collect-email-or-sms-subscribers). |
-| `shopify_sms_consent` | Cet attribut personnalisé correspond à l’état d’abonnement au marketing par SMS qui est capturé sur la page de paiement.<br><br>Ce champ est désormais obsolète pour les nouveaux clients Shopify en faveur de notre fonctionnalité d’[états d’abonnement et de groupe]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify#step-5-collect-email-or-sms-subscribers). |
+| `shopify_accepts_marketing` | Cet attribut personnalisé correspond à l’état d’abonnement au marketing par e-mail qui est capturé sur la page de paiement.<br><br>Ce champ est désormais obsolète pour les nouveaux clients Shopify en faveur de notre fonctionnalité d’[états d’abonnement et de groupe]({{site.baseurl}}/partners/additional_channels_and_extensions/ecommerce/shopify/setting_up_shopify#step-5-collect-email-or-sms-subscribers). |
+| `shopify_sms_consent` | Cet attribut personnalisé correspond à l’état d’abonnement au marketing par SMS qui est capturé sur la page de paiement.<br><br>Ce champ est désormais obsolète pour les nouveaux clients Shopify en faveur de notre fonctionnalité d’[états d’abonnement et de groupe]({{site.baseurl}}/partners/additional_channels_and_extensions/ecommerce/shopify/setting_up_shopify#step-5-collect-email-or-sms-subscribers). |
 | `shopify_tags`  | Cet attribut correspond aux [balises client](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) définies par les administrateurs Shopify. |
 {: .reset-td-br-1 .reset-td-br-2}
 

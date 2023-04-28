@@ -15,6 +15,6 @@ partner_top_header: "Apprentissage"
 
 valid_partner_list:
 - name: EduMe
-  url: /docs/partners/message_orchestration/learning/edume/
+  url: /docs/partners/message_orchestration/lms/edume/
 
 ---
