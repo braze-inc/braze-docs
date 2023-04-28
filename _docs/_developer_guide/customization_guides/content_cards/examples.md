@@ -1,7 +1,7 @@
 ---
 nav_title: Examples
 article_title: Content Card Implementation Examples
-layout: featured
+layout: dev_guide
 page_order: 5
 channel:
   - content cards
