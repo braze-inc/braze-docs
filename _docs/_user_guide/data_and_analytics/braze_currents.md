@@ -64,6 +64,6 @@ Test Currents have:
 
 After your Test Currents connectors reach the sending limit, your connector will not send events until the next 30 day period.
 
-**Upgrade your connector**<br>To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade**.
+To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade**.
 
 <br><br>
