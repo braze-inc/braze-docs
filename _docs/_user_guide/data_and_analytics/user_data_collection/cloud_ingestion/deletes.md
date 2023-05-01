@@ -13,7 +13,7 @@ description: "This reference article provides an overview of the process for del
 
 User delete syncs are supported for all available Cloud Data Ingestion data sources. Follow the normal setup steps for the data warehouse you want to connect to, including creating a role that can access the delete table. 
 
-Source tables for user deletes shoudl inclulde one or more user identifier types, and an UPDATED_AT timestamp. Payload columns are not supported for user delete data.
+Source tables for user deletes should inclulde one or more user identifier types, and an UPDATED_AT timestamp. Payload columns are not supported for user delete data.
 
 - `UPDATED_AT` - The time this row was updated in or added to the table. We will only sync rows that have been added or updated since the last sync.
 - User identifier columns. Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, or `braze_id`. A source table may columns for one, two, or all three identifier types. 
