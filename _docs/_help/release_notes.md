@@ -51,6 +51,11 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## May 2, 2023 release
+
+###
+
+
 ## April 4, 2023 release
 
 ### Documentation breadcrumbs 
