@@ -266,16 +266,199 @@ braze.getCurrentUser { user ->
 {% tab Swift SDK %}
 
 **Create**
-Lorem ipsum ipsum lorem
+```swift
+val json = JSONArray()
+    .put(JSONObject()
+        .put("id", 1)
+        .put("type", "dog")
+        .put("breed", "beagle")
+        .put("name", "Gus"))
+    .put(JSONObject()
+        .put("id", 2)
+        .put("type", "cat")
+        .put("breed", "calico")
+        .put("name", "Gerald")
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json)
+}
+
+/********/
+
+
+let json: [[String: Any?]] = [
+  [
+    "id": 1,
+    "type": "dog",
+    "breed": "beagle",
+    "name": "Gus"
+  ],
+  [
+    "id": 2,
+    "type": "cat",
+    "breed": "calico",
+    "name": "Gerald"
+  ]
+]
+
+braze.user.setCustomAttribute(key: "pets", dictionary: json)
+```
 
 **Add**
-Lorem ipsum ipsum lorem
+```swift
+val json = JSONObject()
+    .put("\$add", JSONArray()
+        .put(JSONObject()
+            .put("id", 3)
+            .put("type", "dog")
+            .put("breed", "corgi")
+            .put("name", "Doug"))
+        .put(JSONObject()
+            .put("id", 4)
+            .put("type", "fish")
+            .put("breed", "salmon")
+            .put("name", "Larry"))
+        .put(JSONObject()
+            .put("id", 5)
+            .put("type", "bird")
+            .put("breed", "parakeet")
+            .put("name", "Mary")
+        )
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json, true)
+}
+
+/********/
+
+let petsArray: [[String: Any?]] = [
+  [
+    "id": 3,
+    "type": "dog",
+    "breed": "corgi",
+    "name": "Doug"
+  ],
+  [
+    "id": 4,
+    "type": "fish",
+    "breed": "salmon",
+    "name": "Larry"
+  ],
+  [
+    "id": 5,
+    "type": "bird",
+    "breed": "parakeet",
+    "name": "Mary"
+  ]
+]
+let json: [String: Any?] = [
+  "$add": petsArray
+]
+
+braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
+```
 
 **Update**
-Lorem ipsum ipsum lorem
+```swift
+val json = JSONObject()
+    .put("\$update", JSONArray()
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 4)
+            .put("\$new_object", JSONObject()
+                .put("breed", "goldfish")
+            )
+        )
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 5)
+            .put("\$new_object", JSONObject()
+                .put("name", "Annette")
+            )
+        )
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json, true)
+}
+
+/********/
+
+let petsArray: [[String: Any?]] = [
+  [
+    "identifier_key": "id",
+    "identifier_value": 4,
+    "new_object": [
+      "breed": "goldfish"
+    ]
+  ],
+  [
+    "identifier_key": "id",
+    "identifier_value": 5,
+    "new_object": [
+      "name": "Annette"
+    ]
+  ]
+]
+let json: [String: Any?] = [
+  "$update": petsArray
+]
+
+braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
+```
 
 **Delete**
-Lorem ipsum ipsum lorem
+```swift
+val json = JSONObject()
+    .put("\$remove", JSONArray()
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 1)
+        )
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 2)
+        )
+        .put(JSONObject()
+            .put("\$identifier_key", "type")
+            .put("\$identifier_value", "dog")
+        )
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json, true)
+}
+
+/********/
+
+let petsArray: [[String: Any?]] = [
+  [
+    "identifier_key": "id",
+    "identifier_value": 1,
+  ],
+  [
+    "identifier_key": "id",
+    "identifier_value": 2,
+  ],
+  [
+    "identifier_key": "type",
+    "identifier_value": "dog",
+  ]
+]
+let json: [String: Any?] = [
+  "$remove": petsArray
+]
+
+braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
+
+```
+
+
+{% alert important %}
+Nested custom attributes are not supported for AppboyKit.
+{% endalert %}
 
 {% endtab %}
 {% tab Web SDK %}
