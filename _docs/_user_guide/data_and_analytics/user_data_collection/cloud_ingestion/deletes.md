@@ -23,6 +23,39 @@ Source tables for user deletes shoudl inclulde one or more user identifier types
 - DO NOT include a `PAYLOAD`column - to prevent accidental, permanent, deletes of users, a sync will fail if a payload column is provided in the source table. Any other columns are allowed but will be ignored by Braze.
 
 
+{% tabs %}
+{% tab Snowflake %}
+```json
+CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
+     UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
+     --at least one of external_id, alias_name and alias_label, or braze_id is required  
+     EXTERNAL_ID VARCHAR(16777216),
+     --if using user alias, both alias_name and alias_label are required
+     ALIAS_LABEL VARCHAR(16777216),
+     ALIAS_NAME VARCHAR(16777216),
+     --braze_id can only be used to update existing users created through the Braze SDK
+     BRAZE_ID VARCHAR(16777216)
+);
+```{% endtab %}
+{% tab Redshift %}
+```json
+CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
+   updated_at timestamptz default sysdate,
+   --at least one of external_id, alias_name and alias_label, or braze_id is required
+   external_id varchar,
+   --if using user alias, both alias_name and alias_label are required
+   alias_label varchar,
+   alias_name varchar,
+   --braze_id can only be used to update existing users created through the Braze SDK
+   braze_id varchar
+);
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+
 ### How it works
 
 With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
