@@ -26,9 +26,9 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 |Method | Description |
 |---|---|
-|`BrazePlugin.requestContentCardsRefresh()`|Requests the latest Content Cards from the Braze SDK server.|
-|`BrazePlugin.getContentCardsFromServer(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server.|
-|`BrazePlugin.getContentCardsFromCache(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the cache.|
+|`BrazePlugin.requestContentCardsRefresh()`|Sends a background request for the latest Content Cards from the Braze SDK server.|
+|`BrazePlugin.getContentCardsFromServer(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will request the latest Content Cards from the server and return the list of cards upon completion.|
+|`BrazePlugin.getContentCardsFromCache(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the local cache, which was updated at the last refresh.|
 |`BrazePlugin.logContentCardClicked(cardId)`|Logs a click for the given Content Card ID.|
 |`BrazePlugin.logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
 |`BrazePlugin.logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
