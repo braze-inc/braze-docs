@@ -131,19 +131,15 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 **Create**
 ```kotlin
 val json = JSONObject()
+    .put("song_name", "Solea")
+    .put("artist_name", "Miles Davis")
+    .put("album_name", "Sketches of Spain")
+    .put("genre", "Jazz")
     .put(
-        "most_played_song",
+        "play_analytics",
         JSONObject()
-            .put("song_name", "Solea")
-            .put("artist_name", "Miles Davis")
-            .put("album_name", "Sketches of Spain")
-            .put("genre", "Jazz")
-            .put(
-                "play_analytics",
-                JSONObject()
-                    .put("count", 1000)
-                    .put("top_10_listeners", true)
-            )
+            .put("count", 1000)
+            .put("top_10_listeners", true)
     )
 
 braze.getCurrentUser { user ->
@@ -154,11 +150,7 @@ braze.getCurrentUser { user ->
 **Update**
 ```kotlin
 val json = JSONObject()
-    .put(
-        "most_played_song",
-        JSONObject()
-            .put("year_released", 1960)
-    )
+    .put("year_released", 1960)
 
 braze.getCurrentUser { user ->
     user.setCustomUserAttribute("most_played_song", json, true)
