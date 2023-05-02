@@ -216,7 +216,7 @@ It may take a few minutes for your schema to generate depending on how much data
 
 After the schema has been generated, a new <i class="fas fa-plus"></i> plus button appears in place of the **Generate Schema** button. You can click on it to see what Braze knows about this nested custom attribute. 
 
-During schema generation, Braze looks at previous data sent and builds an ideal representation of your data for this attribute. Braze also analyzes and adds a data type for your nested values.
+During schema generation, Braze looks at previous data sent and builds an ideal representation of your data for this attribute. Braze also analyzes and adds a data type for your nested values. This is done by sampling the previous data sent to Braze for the given nested attribute.
 
 For our `accounts` object array, you can see that within the object array, there's an object that contains the following:
 

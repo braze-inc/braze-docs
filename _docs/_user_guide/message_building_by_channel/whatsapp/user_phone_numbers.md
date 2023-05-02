@@ -17,7 +17,7 @@ Phone numbers are shown in the user profile in local formats, but will not be in
 
 ## Importing phone numbers
 
-You can import phone numbers by uploading a [CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) or via [API]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to create a user.
+You can import phone numbers by [uploading a CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) or [via API]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to create a user.
 
 ### Formatting
 

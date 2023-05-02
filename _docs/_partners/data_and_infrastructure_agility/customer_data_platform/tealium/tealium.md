@@ -216,7 +216,7 @@ This action allows you to delete users from the Braze dashboard.
 
 | Parameters | Description |
 | ---------- | ----------- |
-| User ID | Use this field to map the Tealium User ID field to it's Braze equivalent. <br><br>- Map one or more user ID attributes. When multiple IDs are specified, the first non-blank value is picked based on the following priority order: External ID, Braze ID, Alias Name, and Alias Label.<br>- When specifying a user alias, Alias Name and Alias Label should both be set.<br><br>For more information, see the Braze [/users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). |
+| User ID | Use this field to map the Tealium User ID field to it's Braze equivalent. <br><br>- Map one or more user ID attributes. When multiple IDs are specified, the first non-blank value is picked based on the following priority order: External ID, Braze ID, Alias Name, and Alias Label.<br>- When specifying a user alias, Alias Name and Alias Label should both be set.<br><br>For more information, see the Braze [`/users/delete` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![]({% image_buster /assets/img/tealium/track_user_delete.png %})

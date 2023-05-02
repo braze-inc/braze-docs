@@ -71,7 +71,7 @@ Next, you will need to define a map of the Komo fields you want to transfer into
 
 ![][6]{: style="max-width:65%;"}
 
-Finally, add your API key and REST endpoint URL and hit **Save** to enable the integration.
+Finally, add your API key and REST endpoint URL and click **Save** to enable the integration.
 
 ## Using the integration
 
