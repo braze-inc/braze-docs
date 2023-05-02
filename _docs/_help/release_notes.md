@@ -53,7 +53,54 @@ guide_featured_list:
 
 ## May 2, 2023 release
 
-###
+### Query builder
+
+With the [query builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder), you can generate reports using Braze data in Snowflake. The query builder comes with pre-built SQL query templates to get you started, or you can write your own custom SQL queries to unlock even more insights.
+
+### Canvas version history
+
+[Version history]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_version_history/) allows you to view and access Canvas analytics and the user journeys for any previous version of your Canvas. Referencing your Canvas version history can be especially helpful to maintain a record of the evolution of a Canvas.
+
+### Incremental refresh for SQL Segments
+
+You can now create [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) that use incremental refresh, which only refreshes the last 2 days worth of data. This is more cost-efficient and uses up fewer SQL Segment credits each time the segment membership refreshes. Unlike full refresh extensions, you can set incremental refresh extensions to automatically regenerate membership daily.
+
+### Deliverability Center for email
+
+The [Deliverability Center]({{site.baseurl}}/user_guide/data_and_analytics/analytics/deliverability_center#deliverability-center) provides more insight into your email performance by supporting the use of Gmail Postmaster Tools to track data on emails sent and gather data about your sending domain.
+
+{% alert important %}
+The Deliverability Center is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
+{% endalert %}
+
+### Update for catalog limitations
+
+As of May 1, 2023, there have been updates for catalogs storage limits. For details on these updates, read [Limitations]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits). To request an upgrade for catalogs storage, contact your Braze account manager.
+
+### New API and SDK endpoints article
+
+Braze manages a number of different instances for our dashboard, SDK, and REST endpoints, which we call "clusters." Check out [API and SDK endpoints]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) for a list of dashboard URLs, API endpoints, and SDK endpoints for available Braze instances.
+
+### Liquid FAQ
+
+We’ve answered some [frequently asked questions for Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/faq/). 
+
+### iOS SDK deprecation - Swift
+
+Braze's legacy iOS SDK is being deprecated in favor of the new Swift SDK. This brings improved performance, new features, and many improvements—including [new documentation](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview)!
+
+Looking to upgrade? Check out our [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/) for details.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [React Native SDK v4.1.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
+- [Android SDK 25.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
+- [Swift SDK 5.14.0-6.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#600)
+- [Flutter SDK 5.0.0](https://pub.dev/packages/braze_plugin/changelog)
+- [Unity 4.0.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md)
+- [Segment Kotlin 1.3.0](https://github.com/braze-inc/braze-segment-kotlin/blob/main/CHANGELOG.md)
 
 
 ## April 4, 2023 release
@@ -554,40 +601,6 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Segment iOS 4.6.0](https://github.com/Appboy/appboy-segment-ios/blob/master/CHANGELOG.md#460)
   - Updated to Braze [iOS SDK 4.5.1+](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451).
 
-## September 20, 2022 release
-
-### API guide
-Check out the [Braze API Guide]({{site.baseurl}}/docs/api/home) to search for endpoints based on endpoint types, helping you narrow down the glossary.
-
-### Personalized variants
-Use [personalized variants]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) to send each user in your target segment the variant they're most likely to engage with.
-
-### Testing Canvases
-After creating your Canvas, there are several checks you may want to perform before launching, depending on details such as your audience size or number of segmentation filters. Check out [Sending test Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) for tips.
-
-### Liquid 5
-For existing Braze users, Liquid 5 is generally available. Learn more about [what's new with Liquid 5]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid#whats-new-with-liquid-5).
-
-### New Braze partnerships
-
-#### Shopify
-The Braze and [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) allows you to update existing user profiles or create new ones in Braze for leads, sign-ups, and account registrations being captured in your Shopify store.
-
-### SDK updates
-
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
-
-- [Android SDK 23.1.0–23.12](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
-- [React Native SDK v1.38.0–v1.38.1](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
-  - Updated the native Android bridge to Braze Android SDK 23.0.1.
-  - Updated the native iOS bridge to Braze iOS SDK 4.5.0.
-  - The Braze React Native Android SDK now requires Kotlin directly for compilation.
-- [Braze Expo Plugin 0.4.0](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
-  - Renamed the prop `fcmSenderID` to `firebaseCloudMessagingSenderId`.
-- [Unity 3.9.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md)
-  - Updated the Android plugin to use Braze Android SDK 23.1.0.
-  - Added the ability to request push notification permissions on Android 13+ devices via `Appboy.AppboyBinding.PromptUserForPushPermissions(false)`.
-- [Swift SDK 5.3.0–5.4.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#540)
 
 [support]: {{site.baseurl}}/support_contact/
 
