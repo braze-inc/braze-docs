@@ -75,7 +75,7 @@ The Deliverability Center is currently in early access. Contact your Braze custo
 
 ### Update for catalog limitations
 
-As of May 1, 2023, there have been updates for catalogs storage limits. For details on these updates, read [Limitations]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits). To request an upgrade for catalogs storage, contact your Braze account manager.
+As of May 1, 2023, there have been updates for [catalogs storage limits]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits). To request an upgrade for catalogs storage, contact your Braze account manager.
 
 ### New API and SDK endpoints article
 
