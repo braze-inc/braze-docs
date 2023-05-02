@@ -35,7 +35,7 @@ You will need to ensure that you have the following items created and/or complet
 | Requirement | Origin | Description |
 | --- | --- | --- |
 | Criteo ad account | [Criteo](https://marketing.criteo.com/) | An active Criteo ad account tied to your brand.<br><br>Ensure that your Criteo admin has granted you the appropriate permissions to access Audiences. |
-| Criteo advertising guidelines | Criteo |  |
+| [Criteo Advertising Guidelines](https://www.criteo.com/advertising-guidelines/)<br>and<br>[Criteo Brand Safety Guidelines](https://www.criteo.com/wp-content/uploads/2017/11/Criteo-Brand-Safety-Guidelines-UK-March-2016.pdf) | Criteo | As an active Criteo customer, you must ensure that you can comply with Criteo’s Advertising and Brand Safety Guidelines prior to launching any Criteo campaigns. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration 
@@ -58,13 +58,27 @@ Once you have successfully connected, you will be taken back to the partner page
 
 Your Criteo connection will be applied at the Braze app group level. If your Criteo admin removes you from your Criteo ad account, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
 
-### Step 2: Add an Audience Sync Step with Criteo
+### Step 2: Configure your Canvas entry criteria
+
+When building audiences for Ad Tracking, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the [CCPA](https://oag.ca.gov/privacy/ccpa). Marketers should implement the relevant filters for users’ eligibility within their Canvas entry criteria. Below we list some options.
+
+If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the Ads Tracking Enabled filter. Select the value as true to only send users into Audience Sync destinations where they have opted in.
+
+![][11]
+
+If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share` or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
+
+![][12]
+
+To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
+
+### Step 3: Add an Audience Sync Step with Criteo
 
 Add a component in your Canvas and select **Audience Sync**.
 
 ![Workflow of the previous steps to add a Criteo Audience component in Canvas Flow.][9]{: style="max-width:35%;"} ![Workflow of the previous steps to add a Criteo Audience component in Canvas Flow.][10]{: style="max-width:28%;"}
 
-### Step 3: Sync setup
+### Step 4: Sync setup
 
 Click on the **Custom Audience** button to open the component editor.
 
@@ -96,7 +110,7 @@ Braze also offers the ability to either add users to existing Snapchat audiences
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Launch Canvas
+### Step 5: Launch Canvas
 
 Once you have configured your Audience Sync to Criteo, simply launch the Canvas! The new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on Snapchat. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
 
@@ -164,3 +178,5 @@ You will need to go into your Criteo ads account and remove audiences that you a
 [8]: {% image_buster /assets/img/criteo/criteo8.png %}
 [9]: {% image_buster /assets/img/criteo/criteo9.png %}
 [10]: {% image_buster /assets/img/criteo/criteo10.png %}
+[11]: {% image_buster /assets/img/criteo/criteo11.png %}
+[12]: {% image_buster /assets/img/criteo/criteo12.png %}
