@@ -281,13 +281,12 @@ let json: [[String: Any?]] = [
     "name": "Gerald"
   ]
 ]
-
-braze.user.setCustomAttribute(key: "pets", dictionary: json)
+braze.user.setCustomAttribute(key: "pets", array: json)
 ```
 
 **Add**
 ```swift
-let petsArray: [[String: Any?]] = [
+let addArray: [[String: Any?]] = [
   [
     "id": 3,
     "type": "dog",
@@ -308,7 +307,7 @@ let petsArray: [[String: Any?]] = [
   ]
 ]
 let json: [String: Any?] = [
-  "$add": petsArray
+  "$add": addArray
 ]
 
 braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
@@ -316,7 +315,7 @@ braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
 
 **Update**
 ```swift
-let petsArray: [[String: Any?]] = [
+let updateArray: [[String: Any?]] = [
   [
     "$identifier_key": "id",
     "$identifier_value": 4,
@@ -333,7 +332,7 @@ let petsArray: [[String: Any?]] = [
   ]
 ]
 let json: [String: Any?] = [
-  "$update": petsArray
+  "$update": updateArray
 ]
 
 braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
@@ -341,7 +340,7 @@ braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
 
 **Delete**
 ```swift
-let petsArray: [[String: Any?]] = [
+let removeArray: [[String: Any?]] = [
   [
     "$identifier_key": "id",
     "$identifier_value": 1,
@@ -356,7 +355,7 @@ let petsArray: [[String: Any?]] = [
   ]
 ]
 let json: [String: Any?] = [
-  "$remove": petsArray
+  "$remove": removeArray
 ]
 
 braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
