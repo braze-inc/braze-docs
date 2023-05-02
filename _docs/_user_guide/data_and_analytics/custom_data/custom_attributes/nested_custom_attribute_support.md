@@ -179,15 +179,13 @@ braze.getCurrentUser { user ->
 **Create**
 ```swift
 let json = [
-  "most_played_song": [
-    "song_name": "Solea"
-    "artist_name": "Miles Davis",
-    "album_name": "Sketches of Spain",
-    "genre": "Jazz",
-    "play_analytics": [
-      "count": 1000
-      "top_10_listeners": true
-    ]
+  "song_name": "Solea"
+  "artist_name": "Miles Davis",
+  "album_name": "Sketches of Spain",
+  "genre": "Jazz",
+  "play_analytics": [
+    "count": 1000
+    "top_10_listeners": true
   ]
 ]
 
@@ -197,9 +195,7 @@ braze.user.setCustomAttribute(key: "most_played_song", dictionary: json)
 **Update**
 ```swift
 let json = [
-  "most_played_song": [
-    "year_released": 1960
-  ]
+  "year_released": 1960
 ]
 
 braze.user.setCustomAttribute(key: "most_played_song", dictionary: json, merge: true)
