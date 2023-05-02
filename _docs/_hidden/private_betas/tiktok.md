@@ -141,8 +141,7 @@ Remember that there will be a delay in reporting for users synced and users erro
 
 ## Troubleshooting
 
-{% details What should I do next if I receive an invalid token error?
- %}
+{% details What should I do next if I receive an invalid token error? %}
 You can disconnect and reconnect your TikTok account on the TikTok partner page. Ensure with your TikTok Business Center admin that you have the appropriate permissions to the ad account you wish to sync.
 {% enddetails %}
 
