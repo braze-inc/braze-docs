@@ -21,6 +21,9 @@ guide_featured_list:
   - name: Redshift Integration
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/redshift/
     fa_icon: fa-solid fa-gears
+  - name: BigQuery Integration
+    link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/bigquery/
+    fa_icon: fa-solid fa-gears
 
 ---
 
