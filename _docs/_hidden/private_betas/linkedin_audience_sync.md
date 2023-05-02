@@ -1,95 +1,134 @@
-Audience Sync to LinkedIn
-Using the Braze Audience Sync to LinkedIn, brands can elect to add user data from their own Braze integration to LinkedIn customer lists to deliver advertisements based upon behavioral triggers, segmentation and more. Any criteria you’d normally use to trigger a message (Push, Email, SMS, Webhook, etc) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in your LinkedIn customer lists.
+---
+nav_title: Audience Sync to LinkedIn
+article_title: Canvas Audience Sync to LinkedIn
+alias: /linkedin_audience_sync/
+description: "This reference article will cover how to use Braze Audience Sync to LinkedIn to deliver advertisements based upon behavioral triggers, segmentation, and more."
+Tool:
+  - Canvas
+hidden: true
+layout: dev_guide
+---
 
-Common use cases for audience syncing include:
+# Audience Sync to LinkedIn
 
-Targeting high value users via multiple channels to drive purchases or engagement
-Retargeting users who are less responsive to other marketing channels
-Creating suppression audiences to prevent users from receiving advertisements when they’re already loyal consumers of your brand
+Using the Braze Audience Sync to LinkedIn, brands can elect to add user data from their own Braze integration to LinkedIn customer lists to deliver advertisements based upon behavioral triggers, segmentation and more. Any criteria you’d normally use to trigger a message (push, email, SMS, webhook, etc) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in your LinkedIn customer lists.
 
-This feature gives brands the option to control what specific first-party data is shared with LinkedIn. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our privacy policy.
+**Common use cases for Audience Syncing include**:
 
-Important:
-Audience Sync to LinkedIn is currently in beta. Contact your Braze account manager if you’re interested in participating in the beta
-Integration requirements 
+- Targeting high value users via multiple channels to drive purchases or engagement
+- Retargeting users who are less responsive to other marketing channels
+- Creating suppression audiences to prevent users from receiving advertisements when they’re already loyal consumers of your brand
+
+This feature gives brands the option to control what specific first-party data is shared with LinkedIn. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
+
+{% alert important %}
+Audience Sync to LinkedIn is currently in beta. Contact your Braze account manager if you're interested in participating in the beta.
+{% endalert %}
+
+## Prerequisites
+
 You will need to ensure that you have the following items created and/or completed prior to setting up your Audience Sync to LinkedIn.
 
-Requirement
-Origin
-Description
-LinkedIn ad account
-LinkedIn
-An active LinkedIn ad account tied to your brand.
+| Requirement | Origin | Description |
+| --- | --- | --- |
+| LinkedIn ad account | [LinkedIn](https://www.linkedin.com/campaignmanager) | An active LinkedIn ad account tied to your brand.<br><br>Ensure that you have accepted any relevant LinkedIn terms and conditions to access and use that account and that your LinkedIn admin has granted you the appropriate permissions to manage Audiences. |
+| TOS | LinkedIn | |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Please ensure that you have accepted any relevant LinkedIn terms and conditions to access and use that account and that your LinkedIn admin has granted you the appropriate permissions to manage Audiences.
-TOS 
-LinkedIn
+## Integration
 
+### Step 1: Connect to LinkedIn
 
+In the Braze dashboard, go to **Technology Partners** and select **LinkedIn**. In the LinkedIn Audience Export module, click **Connect LinkedIn**.
 
-Integration 
-Step 1: Connect to LinkedIn
-In the Braze dashboard, go to Technology Partners and select LinkedIn. In the LinkedIn Audience Export module, click Connect LinkedIn.
+![LinkedIn technology page in Braze includes an Overview module and LinkedIn Audience Export module with the Connected LinkedIn button.][3]{: style="max-width:75%;"}
 
+You’ll then be redirected to the LinkedIn OAuth page to authorize Braze for the permissions related to your Audience Sync integration. Once you have selected **Confirm**, you’ll then be redirected back into Braze to select which LinkedIn ad accounts you wish to sync to. 
 
-You’ll then be redirected to the LinkedIn OAuth page to authorize Braze for the permissions related to your Audience Sync integration.
-
-Once you have selected confirm, you’ll then be redirected back into Braze to select which LinkedIn ad accounts you wish to sync to. 
-
+![][7]{: style="max-width:75%;"}
 
 Once you have successfully connected, you will be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-
+![][6]{: style="max-width:75%;"}
 
 Your LinkedIn connection will be applied at the Braze app group level. If your LinkedIn admin removes you from your LinkedIn ad account, Braze will detect an invalid token. As a result, your active Canvases using LinkedIn will show errors, and Braze will not be able to sync users.
 
-Step 2: Configure your Canvas entry criteria
-When building audiences for Ad Tracking, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the CCPA . Marketers should implement the relevant filters for users’ eligibility within their Canvas entry criteria. Below we list some options.
-If you have collected the iOS IDFA through the Braze SDK, you will be able to use the Ads Tracking Enabled filter. Select the value as true to only send users into Audience Sync destinations where they have opted in.
+### Step 2: Configure your Canvas entry criteria
 
-If you are collecting ‘opt-ins’, ‘opt-outs’, ‘Do Not Sell Or Share’ or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
+When building audiences for Ad Tracking, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the [CCPA](https://oag.ca.gov/privacy/ccpa). Marketers should implement the relevant filters for users’ eligibility within their Canvas entry criteria. Below we list some options. 
 
-To learn more on how to comply with these Data Protection laws within the Braze platform, please see Data Protection Technical Assistance.
-Step 3: Add an Audience Sync Step with LinkedIn
-Add a component in your Canvas and select Audience Sync.
+If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewother_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
 
-Step 4: Sync setup
-Click on the Custom Audience button to open the component editor.
+![][5]{: style="max-width:75%;"}
 
-Select LinkedIn as the desired Audience Sync partner. 
+If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share` or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
 
+![A Canvas with an entry audience of "opted_in_marketing" equals "true".][4]{: style="max-width:75%;"}
 
+To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
 
-Then select your desired LinkedIn ad account. Under the Choose a New or Existing Audience dropdown, type in the name of a new or existing audience.
+### Step 3: Add an Audience Sync step with LinkedIn
 
-Create a New Audience
-Enter a name for the new audience, select Add Users to Audience and select which fields you would like to sync with LinkedIn. For this integration we currently support: 
-Email
-First and Last name
-Android GAID
+Add a component in your Canvas and select Audience Sync. Click on the **Custom Audience** button to open the component editor.
 
-Next, save your audience by clicking the Create Audience button at the bottom of the step editor.
+![][2]{: style="max-width:35%;"} ![][1]{: style="max-width:29%;"}
 
+### Step 4: Sync setup
+
+Select **LinkedIn** as the desired Audience Sync partner.
+
+![][9]{: style="max-width:70%;"}
+
+Then select the desired LinkedIn ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
+
+![][11]
+
+{% tabs %}
+{% tab Create a New Audience %}
+
+**Create a New Audience**<br>
+Enter a name for the new audience, select **Add Users to Audience** and select which fields you would like to sync with LinkedIn. For this integration we currently support: 
+- Email
+- First and Last name
+- Android GAID
+
+Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
+
+![]({% image_buster /assets/img/tiktok/tiktok10.png %})
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
+![]({% image_buster /assets/img/tiktok/tiktok9.png %})
 
 When you launch a Canvas with a new audience, Braze sync users in near real-time as they enter the Audience Sync component.
-Sync with an Existing Audience
-Braze also offers the ability to either add users to existing LinkedIn audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and Add to the Audience. Braze will then either add users in near real-time as they enter the Audience Sync component.
 
+{% endtab %}
+{% tab Sync with an Existing Audience %}
 
-Step 5: Launch Canvas
+**Sync with an Existing Audience**<br>
+Braze also offers the ability to either add users to existing LinkedIn audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then either add users in near real-time as they enter the Audience Sync component.
+
+![Expanded view of the Custom Audience Canvas step. Here, the desired ad account and existing audience are selected.]({% image_buster /assets/img/tiktok/tiktok17.png %})
+
+{% endtab %}
+{% endtabs %}
+
+### Step 5: Launch Canvas
+
 Once you have configured your Audience Sync to LinkedIn, simply launch the Canvas! The new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on LinkedIn. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
 
-You can view the audience in LinkedIn by going into your ad account and then selecting Audiences under the Assets section of the navigation. From the Audiences page, you can see the size of each audience after it reaches more than 300 members.
+You can view the audience in LinkedIn by going into your ad account and then selecting **Audiences** under the **Assets** section of the navigation. From the **Audiences** page, you can see the size of each audience after it reaches more than 300 members.
 
+![LinkedIn page listing the following metrics for the given audience.][8]
 
-User syncing and rate limit considerations
+## User syncing and rate limit considerations
+
 As users reach the Audience Sync Step, Braze will sync these users in near real-time while also respecting LinkedIn’s API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to LinkedIn.
 
 LinkedIn’s API rate limit states no more than 10 queries per second and 100k users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
-Understanding analytics
+
+## Understanding analytics
+
 The following table includes metrics and descriptions to help you better understand analytics from your Audience Sync component.
 
 | METRIC | DESCRIPTION |
@@ -137,6 +176,16 @@ At this time, there is no limit on the number of audiences in your LinkedIn ad a
 {% details Why is a segment stuck in BUILDING status and not updated? %}
 A segment is considered unused and set to ARCHIVED after it is not continuously used for 30 days in a draft or active campaign. Because of this, a segment may appear "stuck" in BUILDING when updates are streamed to an ARCHIVED segment, thus pushing it into the BUILDING state, and right before it is archived again, new updates are streamed to the unused segment.
 {% enddetails %}
+
+[1]: {% image_buster /assets/img/linkedin/linkedin1.png %}
+[2]: {% image_buster /assets/img/linkedin/linkedin2.png %}
+[3]: {% image_buster /assets/img/linkedin/linkedin3.png %}
+[4]: {% image_buster /assets/img/linkedin/linkedin4.png %}
+[5]: {% image_buster /assets/img/linkedin/linkedin5.png %}
+[6]: {% image_buster /assets/img/linkedin/linkedin6.png %}
+[7]: {% image_buster /assets/img/linkedin/linkedin7.png %}
+[8]: {% image_buster /assets/img/linkedin/linkedin8.png %}
+[9]: {% image_buster /assets/img/linkedin/linkedin.png %}
 
 
 
