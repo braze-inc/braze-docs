@@ -14,7 +14,7 @@ description: "This article covers how to create a Braze to Braze webhook for key
 
 ## Prerequisites
 
-To create a Braze to Braze webhook, you'll need an [API key][3] with permissions for the endpoint you want to reach. For example, if you're using the User track endpoint, you'll need an API key with `users.track` permissions.
+To create a Braze to Braze webhook, you'll need an [API key][3] with permissions for the endpoint you want to reach. For example, if you're using the `/users/track` endpoint, you'll need an API key with `users.track` permissions.
 
 ## Use cases
 

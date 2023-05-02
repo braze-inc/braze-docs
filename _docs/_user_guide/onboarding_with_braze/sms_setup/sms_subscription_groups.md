@@ -40,13 +40,13 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 
 ### How users' SMS subscription groups get set
 
-- **Rest API Set**: User profiles can be programmatically set by the [/subscription/status/set][4] endpoint by using Braze's REST API.
+- **Rest API Set**: User profiles can be programmatically set by the [`/subscription/status/set` endpoint][4] by using Braze's REST API.
 - **Automatically Handled Upon User Opt-In/Opt-Out**: By users texting a default [opt-in or opt-out keyword][7], Braze automatically sets and updates users' subscription state.
 
 ### How to check a user's SMS subscription group
 
 - **User Profile**: Individual user profiles can be accessed through the Braze dashboard by selecting **User Search** from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the **Engagement** tab, you can view a user's SMS subscription groups. 
-- **Rest API Get**: Individual user profiles subscription group can be viewed by the [/subscription/user/status][9] or [/subscription/status/get][8] endpoint by using Braze's REST API. 
+- **Rest API Get**: Individual user profiles subscription group can be viewed by the [`/subscription/user/status` endpoint][9] or [`/subscription/status/get` endpoint][8] by using Braze's REST API. 
 
 ## Sending with a Subscription Group
 

@@ -58,7 +58,7 @@ To find your dashboard's dummy users, perform the following steps:
 2. Select the filter `Session Count` and set it to `more than 5,000,000`.
 3. Export the segment via CSV.
 
-If necessary, you can delete the users via the [Users Delete]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) API endpoint.
+If necessary, you can delete the users via the [`/users/delete` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/).
 
 [1]: {{site.baseurl}}/dp-technical-assistance/#the-right-to-erasure
 [2]: {% image_buster /assets/img_archive/user_archival_policy1.png %}

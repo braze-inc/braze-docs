@@ -41,7 +41,7 @@ To manage the lifecycle of a Live Activity, follow these four steps.
 
 2. [Register the Live Activity](#registering) Register a Live Activity with the Braze SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method with the Live Activity object and unique activity tag.<br><br>
 
-3. [Update the Live Activity](#updating) Publish updates to the Live Activity using the Braze [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) API endpoint.<br><br>
+3. [Update the Live Activity](#updating) Publish updates to the Live Activity using the Braze's API [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update).<br><br>
 
 4. [End the Live Activity](#ending) End a Live Activity for all recipients by publishing an update to [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) with the parameter `"end_activity": true`.
 
@@ -180,7 +180,7 @@ The [`/messages/live_activity/update`][1] endpoint allows you to update a Live A
 
 As you update your `ContentState`, your Live Activity widget will display the new information. Here's what the Superb Owl show might look like at the end of the first half.
 
-See the [`/messages/live_activity/update`][1] endpoint documentation for full details.
+See our [`/messages/live_activity/update` endpoint][1] article for full details.
 
 ## Step 4: Ending a Live Activity {#ending}
 
@@ -191,7 +191,7 @@ When a Live Activity is active, it is shown on both a user's lock screen and Dyn
 * **Dismissal date**: You can provide a datetime for a Live Activity to be removed from a user's UI prior to time out. This is defined either in the Activity's `ActivityUIDismissalPolicy` or using the `dismissal_date` parameter in requests to the `/messages/live_activity/update` endpoint.
 * **End activity**: You can set `end_activity` to `true` in a request to the `/messages/live_activity/update` endpoint to immediately end a Live Activity.
 
-See the [`/messages/live_activity/update`][1] endpoint documentation for full details.
+See our [`/messages/live_activity/update` endpoint][1] article for full details.
 
 [1]: {{site.baseurl}}/api/endpoints/messaging/live_activity/update
 [2]: https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities#Understand-constraints

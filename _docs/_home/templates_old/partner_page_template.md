@@ -54,8 +54,8 @@ The following requirements are typical requirements you might need from Braze. W
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
-|Braze App Group REST API Key | Braze platform | Manage Settings > Settings Page | This description should tell you what to do with the App Group REST API Key. |
-|Braze API Endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a [support ticket]({{site.baseurl}}/braze_support/). | Description pending. |
+|Braze App Group REST API key | Braze platform | **Manage Settings > Settings** page | This description should tell you what to do with the App Group REST API key. |
+|Braze API endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a [support ticket]({{site.baseurl}}/braze_support/). | Description pending. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## [Type of Integration] Integration

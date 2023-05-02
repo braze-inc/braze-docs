@@ -23,7 +23,7 @@ Braze will continue to support the `api_key` being passed through the request bo
 {% details API Key Explanation %}
 {% tabs %}
 {% tab GET Request %}
-This example uses the /email/hard_bounces endpoint.
+This example uses the `/email/hard_bounces` endpoint.
 
 **Before: API Key in Request Body**
 ```
@@ -36,7 +36,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?
 ```
 {% endtab %}
 {% tab POST Request %}
-This example uses the /user/track endpoint.
+This example uses the `/user/track` endpoint.
 
 **Before: API Key in Request Body**
 ```
