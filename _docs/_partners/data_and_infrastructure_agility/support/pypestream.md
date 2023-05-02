@@ -41,7 +41,7 @@ Visit this [Pypestream article](https://pypestream.atlassian.net/servicedesk/cus
 
 ### Step 1: Set endpoint configurations
 
-The primary configuration values, such as the **Braze REST Endpoint URL** and the **Braze API Keys**, should be set in the `app.py` file of the solution: 
+The primary configuration values, such as the Braze REST endpoint URL and the Braze API keys, should be set in the `app.py` file of the solution: 
 
 ```
 import os
@@ -162,14 +162,14 @@ Visit this [Pypestream article](https://pypestream.atlassian.net/servicedesk/cus
 
 ## Example integration
 
-Once the prerequisites are met, and an action node structure has been created, the developer has a blank Canvas to work from when interacting with the Braze API endpoints. This example shows the steps required to integrate an action node into the Braze [user track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) - specifically to create a user profile to track a specific user entering a Pypestream conversational flow.
+Once the prerequisites are met, and an action node structure has been created, the developer has a blank Canvas to work from when interacting with the Braze API endpoints. This example shows the steps required to integrate an action node into the Braze [`/user/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)-specifically to create a user profile to track a specific user entering a Pypestream conversational flow.
 
 ### Step 1: Collect data from the user in conversation
 
 When a user enters into a Pypestream session, the specifics of the data collected are entirely dependent on the use case at hand. To be able to create a user profile within Braze, the conversation must collect necessary fields 
 required by the desired endpoint.
 
-For example, if the solution collected the following information from the user during the conversation for the [user track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/): 
+For example, if the solution collected the following information from the user during the conversation for the Braze `/user/track` endpoint: 
 
 * First name
 * Last name
@@ -182,7 +182,7 @@ This data can now be sent to the Braze platform to track this user's engagement 
 
 ### Step 2: Populate data in the action node structure
 
-Leveraging the same structure for developing action nodes, the data collected from the user can be populated in the action node to be sent to Braze via the [user track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
+Leveraging the same structure for developing action nodes, the data collected from the user can be populated in the action node to be sent to Braze via our `/user/track` endpoint.
 
 ```
 # -*- coding: utf-8 -*-
