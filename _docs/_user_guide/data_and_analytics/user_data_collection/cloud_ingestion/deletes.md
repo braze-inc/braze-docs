@@ -1,19 +1,19 @@
 ---
 nav_title: Delete Users with CDI 
 article_title: Delete Users with Cloud Data Ingestion
-page_order: 0
+page_order: 30
 page_type: reference
 description: "This reference article provides an overview of the process for deleting users with Cloud Data Ingestion ."
 
 ---
 
-# Delete Users with Cloud Data Ingestion
+# Delete users with Cloud Data Ingestion
 
 ## Source data configuration 
 
 User delete syncs are supported for all available Cloud Data Ingestion data sources. Follow the normal setup steps for the data warehouse you want to connect to, including creating a role that can access the delete table. 
 
-Source tables for user deletes should inclulde one or more user identifier types, and an UPDATED_AT timestamp. Payload columns are not supported for user delete data.
+Source tables for user deletes should include one or more user identifier types and an `UPDATED_AT` timestamp. Payload columns are not supported for user delete data.
 
 - `UPDATED_AT` - The time this row was updated in or added to the table. We will only sync rows that have been added or updated since the last sync.
 - User identifier columns. Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, or `braze_id`. A source table may columns for one, two, or all three identifier types. 
@@ -36,7 +36,6 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
      --braze_id can only be used to update existing users created through the Braze SDK
      BRAZE_ID VARCHAR(16777216)
 );
-```{% endtab %}
 {% tab Redshift %}
 ```json
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
@@ -58,7 +57,7 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 
 ### How it works
 
-With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
+With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
 
 When a sync runs, Braze will directly connect to your data warehouse instance, retrieve all new data from the specified table, and delete the corresponding user profiles on your Braze dashboard. 
 
