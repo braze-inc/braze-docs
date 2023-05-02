@@ -155,7 +155,6 @@ val json = JSONObject()
 braze.getCurrentUser { user ->
     user.setCustomUserAttribute("most_played_song", json, true)
 }
-
 ```
 
 **Delete**
@@ -197,7 +196,6 @@ braze.user.setCustomAttribute(key: "most_played_song", dictionary: json, merge: 
 ```swift
 braze.user.unsetCustomAttribute(key: "most_played_song")
 ```
-
 
 {% endtab %}
 {% tab Web SDK %}

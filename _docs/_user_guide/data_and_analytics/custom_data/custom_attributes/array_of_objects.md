@@ -281,6 +281,7 @@ let json: [[String: Any?]] = [
     "name": "Gerald"
   ]
 ]
+
 braze.user.setCustomAttribute(key: "pets", array: json)
 ```
 
