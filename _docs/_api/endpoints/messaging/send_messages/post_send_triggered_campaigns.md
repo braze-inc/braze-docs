@@ -151,13 +151,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 
 ## Response details
 
-Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch, a unique ID for each transmission sent from the Braze platform. When using this endpoint, you receive a single `dispatch_id` for an entire batched set of users. For more information on `dispatch_id` check out our documentation on [Dispatch ID Behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch, a unique ID for each transmission sent from the Braze platform. When using this endpoint, you receive a single `dispatch_id` for an entire batched set of users. For more information on `dispatch_id` check out our documentation on [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 ## Create send endpoint
 
 **Using the Attributes Object in Campaigns**
 
-Braze has a Messaging Object called `Attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
+Braze has a Messaging Object called `attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
 
 {% alert important %}
 Looking for the Canvas version of this endpoint? Check out [Sending Canvas messages via API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).

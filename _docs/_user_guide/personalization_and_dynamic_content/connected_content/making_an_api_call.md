@@ -107,7 +107,7 @@ When using Braze's Connected Content, you may find that certain APIs require a t
 
 ### Using Open Authentication (OAuth)
 
-Some API configurations require retrieval of an access token that can then be used to authenticate the API Endpoint that you want to access.
+Some API configurations require retrieval of an access token that can then be used to authenticate the API endpoint that you want to access.
 
 #### Retrieve the access token
 

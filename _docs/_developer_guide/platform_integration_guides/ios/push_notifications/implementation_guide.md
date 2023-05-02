@@ -206,7 +206,7 @@ Visit the [following section](#logging-analytics) to get a better understanding 
 
 ### Logging with the Braze API (recommended)
 
-Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the following screenshot) to identify which user profile to update.
+Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the following screenshot) to identify which user profile to update.
 
 ![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certification". 3. "Cert_description" set as "Certified Braze marketers drive...".][18]{: style="max-width:80%;"}
 

@@ -50,7 +50,7 @@ Analytics are always available for campaigns. In addition, analytics are availab
 }
 ```
 
-The provided send id can be used as a parameter for the send/data_series endpoint to pull back send specific analytics.
+The provided send id can be used as a parameter for the `/send/data_series` endpoint to pull back send specific analytics.
 
 ## Errors
 
