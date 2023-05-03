@@ -14,7 +14,35 @@ description: "This reference article covers the essential concepts of customizin
 The Braze SDK is a powerful toolkit, but at a high level it provides two important pieces of functionality: it helps collect and sync user data across platforms to a consolidated user profile, and also handles messaging channels like in-app messages, push notifications, and Content Cards. The articles in the Customization Guide assume you've already gone through the [SDK implementation process]({{site.baseurl}}/developer_guide/home).
 {% endalert %}
 
-At Braze, we break down customization into three different approaches based on the associated effort and level of flexibility provided. These approaches are referred to as "crawl", "walk", or "run."
+All `BrazeUI` components are crafted with the following principles in mind:
+
+<!--- Question: Is `BrazeUI` a concept that all platform SDKs share, or is the term here inappropriate when used outside of the Swift SDK? --->
+
+**Accessible**
+
+* Follow accessibility guidelines and are compatible with VoiceOver
+
+* Support Dynamic Type
+
+**Adaptive**
+
+* Light and dark mode compatible
+
+* Support multiple device sizes and orientations, including multitasking UIs
+
+* Support Safe Area and Layout Margins
+
+* Support right-to-left layouts
+
+* Support on-screen keyboard
+
+**Customizable**
+
+* Padding, margin, spacing, font, image size, and more
+
+* Sensible defaults
+
+For these reasons, we recommend starting with the default `BrazeUI` components and customizing them to suit your brand needs and use case. At Braze, we break down customization into three different approaches based on the associated effort and level of flexibility provided. These approaches are referred to as "crawl", "walk", or "run."
 
 - **Crawl:** Take advantage of Braze's basic styling options for a quick, low-effort implementation.
 - **Walk:** Add some custom styling to the default templates to better match your brand experience.
