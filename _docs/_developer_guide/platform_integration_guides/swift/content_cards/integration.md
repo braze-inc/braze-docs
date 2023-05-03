@@ -122,13 +122,17 @@ let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
 
 ## Content Cards UI integration
 
-Content Cards UI can be integrated from the `BrazeUI` library of the Swift SDK. This library provides two view controller contexts: navigation or modal. For more information about iOS navigation options, refer to the [Apple developer documentation](https://developer.apple.com/documentation/uikit/view_controllers/showing_and_hiding_view_controllers).
+The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
 
-If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
+{% alert note %}
+A view controller is the "glue" between the overall application and the screen. It controls the views that it owns according to the logic of your application. For more information about iOS view controller options, refer to the [Apple developer documentation](https://developer.apple.com/documentation/uikit/view_controllers/showing_and_hiding_view_controllers).
+{% endalert %}
+
+The `BrazeUI` library of the Swift SDK provides two default view controller contexts: navigation or modal. This means you can integrate Content Cards in these contexts by adding a few lines of code to your app or site. You can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options. 
 
 ### Navigation context
 
-Example of pushing a `BrazeContentCardUI.ViewController` instance into a navigation controller:
+A navigation controller is a view controller that manages one or more child view controllers in a navigation interface. Here is an example of pushing a `BrazeContentCardUI.ViewController` instance into a navigation controller:
 
 {% tabs %}
 {% tab swift %}
@@ -160,7 +164,7 @@ func pushViewController() {
 
 ### Modal context
 
-This modal is used to present the view controller in a modal view, with a navigation bar on top and a **Done** button on the side of the bar.
+Use modal presentations to create temporary interruptions in your app’s workflow, such as prompting the user for important information. This model view has a navigation bar on top and a **Done** button on the side of the bar. Here is an example of pushing a `BrazeContentCard.ViewController` instance into a modal controller:
 
 {% tabs %}
 {% tab swift %}
@@ -190,4 +194,4 @@ func presentModalViewController() {
 {% endtab %}
 {% endtabs %}
 
-For example usage of BrazeUI view controllers, check out the corresponding Content Cards UI samples in our [Examples app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
+For example usage of `BrazeUI` view controllers, check out the corresponding Content Cards UI samples in our [Examples app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
