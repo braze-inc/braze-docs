@@ -14,6 +14,50 @@ channel:
 ## Key-value pairs
 Key-value pairs can control the layout, text, font, colors, position, and general info.
 
+
+
+{% tabs %}
+{% tab Android %}
+
+Android content
+
+{% subtabs %}
+{% subtab Java %}
+
+Java content
+
+{% endsubtab %}
+{% subtab Kotlin %}
+
+Kotlin content
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab iOS %}
+
+iOS content
+
+{% subtabs %}
+{% subtab Swift %}
+
+Swift content
+
+{% endsubtab %}
+{% subtab Objective-C %}
+
+Objective-C content
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Web %}
+
+Web content
+
+{% endtab %}
+{% endtabs %}
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
 
 {% alert note %}
