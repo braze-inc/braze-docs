@@ -183,7 +183,7 @@ Lorem ipsum ipsum lorem
 **Create**
 ```javascript
 import * as braze from "@braze/web-sdk";
-braze.getUser().setCustomUserAttribute("most_played_song", {
+const json = {
   "song_name": "Solea"
   "artist_name": "Miles Davis",
   "album_name": "Sketches of Spain",
@@ -192,15 +192,17 @@ braze.getUser().setCustomUserAttribute("most_played_song", {
     "count": 1000
     "top_10_listeners": true
   }
-});
+};
+braze.getUser().setCustomUserAttribute("most_played_song", json);
 ```
 
 **Update**
 ```javascript
 import * as braze from "@braze/web-sdk";
-braze.getUser().setCustomUserAttribute("most_played_song", {
+const json = {
   "year_released": 1960
-}, true);
+};
+braze.getUser().setCustomUserAttribute("most_played_song", updatedJson, true);
 
 ```
 

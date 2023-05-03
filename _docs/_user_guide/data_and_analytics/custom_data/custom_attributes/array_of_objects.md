@@ -283,7 +283,7 @@ Lorem ipsum ipsum lorem
 **Create**
 ```javascript
 import * as braze from "@braze/web-sdk";
-braze.getUser().setCustomUserAttribute("pets", [{
+const json = [{
   "id": 1,
   "type": "dog",
   "breed", "beagle",
@@ -293,13 +293,14 @@ braze.getUser().setCustomUserAttribute("pets", [{
   "type": "cat",
   "breed": "calico",
   "name": "Gerald"
-}]);
+}];
+braze.getUser().setCustomUserAttribute("pets", json);
 ```
 
 **Add**
 ```javascript
 import * as braze from "@braze/web-sdk";
-braze.getUser().setCustomerUserAttribute("pets", {
+const json = {
   "$add": [{
     "id":  3,
     "type":  "dog",
@@ -316,13 +317,14 @@ braze.getUser().setCustomerUserAttribute("pets", {
     "breed":  "parakeet",
     "name":  "Mary",
   }]
-}, true);
+};
+braze.getUser().setCustomerUserAttribute("pets", json, true);
 ```
 
 **Update**
 ```javascript
 import * as braze from "@braze/web-sdk";
-braze.getUser().setCustomUserAttribute("pets", {
+const json = {
   "$update": [
     {
       "$identifier_key": "id",
@@ -339,13 +341,14 @@ braze.getUser().setCustomUserAttribute("pets", {
       }
     }
   ]
-}, true);
+};
+braze.getUser().setCustomUserAttribute("pets", json, true);
 ```
 
 **Delete**
 ```javascript
 import * as braze from "@braze/web-sdk";
-braze.getUser().setCustomUserAttribute("pets", {
+const json = {
   "$remove": [
     {
       "$identifier_key": "id",
@@ -360,7 +363,8 @@ braze.getUser().setCustomUserAttribute("pets", {
       "$identifier_value", "dog",
     }
   ]
-}, true);
+};
+braze.getUser().setCustomUserAttribute("pets", json, true);
 ```
 
 {% endtab %}
