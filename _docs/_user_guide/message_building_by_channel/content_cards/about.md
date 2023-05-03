@@ -174,12 +174,6 @@ Now let’s get a little technical. Behind the scenes, there are three main part
 
 For an out-of-the-box implementation, you add the card content—the model—either from the dashboard or via APIs, and the view and controller are handled by what is called a view controller.
 
-### View controller
-
-A view controller is the “glue” between the overall application and the screen. It controls the views that it owns according to the logic of your application. Every app has one, some have more than one.
-
-Braze Content Cards have their own view controller provided, meaning you can integrate Content Cards by adding a few lines of code to your app or site. Your developers can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options.
-
 ## Integrating Content Cards
 
 Your developers will integrate Content Cards when they integrate the Braze SDK. For more details on how to integrate with Content Cards, refer to the developer guide articles for your platform:
