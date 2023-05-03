@@ -9,7 +9,7 @@ description: "This landing page explains and lists the Braze email lists and add
 page_type: landing
 
 guide_top_header: "Email Lists & Addresses Endpoints"
-guide_top_text: "Users' email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database."
+guide_top_text: "Using this set of endpoints, you can update a user's email subscription status, and use the Braze API to set up bi-directional sync between Braze and other email systems or your own database."
 
 guide_featured_title: ""
 guide_featured_list:

@@ -11,7 +11,7 @@ description: "This landing page explains and lists the Braze export endpoints."
 page_type: landing
 
 guide_top_header: "Export Endpoints"
-guide_top_text: "With this collection of endpoints, you will be able to access and export various levels of details on your KPIs, News Feed Cards, App Sessions, users, segments, Campaigns, and Canvases. <br> <br> Make sure you know your <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Braze instance</a>, <a href='/docs/api/api_key/' target='_blank'>API key</a>, and <a href='/docs/api/identifier_types/' target='_blank'>API identifier</a> when building out your parameters and request bodies."
+guide_top_text: "With this collection of endpoints, you can access and export various levels of details on your KPIs, News Feed cards, app sessions, users, segments, campaigns, and Canvases. <br> <br> Make sure you know your <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Braze instance</a>, <a href='/docs/api/api_key/' target='_blank'>API key</a>, and <a href='/docs/api/identifier_types/' target='_blank'>API identifier</a> when building out your parameters and request bodies."
 
 guide_featured_title: "Export Campaign Endpoints"
 guide_featured_list:
