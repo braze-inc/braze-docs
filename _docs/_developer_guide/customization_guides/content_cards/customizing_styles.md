@@ -111,7 +111,6 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 ```
 
 **Customizing cells by subclassing**
-
 Alternatively, you can create custom interfaces by registering custom classes for each desired card type. To use your subclass instead of the default cell, modify the [`cells`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cells) property in the `Attributes` struct. For example:
 
 ```swift
@@ -305,6 +304,8 @@ attributes.cellAttributes.unviewedIndicatorColor = .red
 
 let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
 ```
+
+Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift) for a complete example.
 
 {% endsubtab %}
 {% subtab Objective-C %}
