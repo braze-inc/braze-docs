@@ -266,16 +266,102 @@ braze.getCurrentUser { user ->
 {% tab Swift SDK %}
 
 **Create**
-Lorem ipsum ipsum lorem
+```swift
+let json: [[String: Any?]] = [
+  [
+    "id": 1,
+    "type": "dog",
+    "breed": "beagle",
+    "name": "Gus"
+  ],
+  [
+    "id": 2,
+    "type": "cat",
+    "breed": "calico",
+    "name": "Gerald"
+  ]
+]
+
+braze.user.setCustomAttribute(key: "pets", array: json)
+```
 
 **Add**
-Lorem ipsum ipsum lorem
+```swift
+let json: [String: Any?] = [
+  "$add": [
+    [
+      "id": 3,
+      "type": "dog",
+      "breed": "corgi",
+      "name": "Doug"
+    ],
+    [
+      "id": 4,
+      "type": "fish",
+      "breed": "salmon",
+      "name": "Larry"
+    ],
+    [
+      "id": 5,
+      "type": "bird",
+      "breed": "parakeet",
+      "name": "Mary"
+    ]
+  ]
+]
+
+braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
+```
 
 **Update**
-Lorem ipsum ipsum lorem
+```swift
+let json: [String: Any?] = [
+  "$update": [
+    [
+      "$identifier_key": "id",
+      "$identifier_value": 4,
+      "$new_object": [
+        "breed": "goldfish"
+      ]
+    ],
+    [
+      "$identifier_key": "id",
+      "$identifier_value": 5,
+      "$new_object": [
+        "name": "Annette"
+      ]
+    ]
+  ]
+]
+
+braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
+```
 
 **Delete**
-Lorem ipsum ipsum lorem
+```swift
+let json: [String: Any?] = [
+  "$remove": [
+    [
+      "$identifier_key": "id",
+      "$identifier_value": 1,
+    ],
+    [
+      "$identifier_key": "id",
+      "$identifier_value": 2,
+    ],
+    [
+      "$identifier_key": "type",
+      "$identifier_value": "dog",
+    ]
+  ]
+]
+
+braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
+```
+
+{% alert important %}
+Nested custom attributes are not supported for AppboyKit.
+{% endalert %}
 
 {% endtab %}
 {% tab Web SDK %}
