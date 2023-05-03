@@ -23,7 +23,4 @@ guide_featured_list:
 - name: Teams
   link: /docs/user_guide/administrative/manage_your_braze_users/teams/
   fa_icon: fas fa-users
-- name: Company Settings
-  link: /docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/
-  fa_icon: fas fa-cogs
 ---

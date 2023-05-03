@@ -59,12 +59,12 @@ Open [tracking pixels]({{site.baseurl}}/user_guide/administrative/app_settings/m
 
 ### How can I update user's email subscription groups?
 
-- **Rest API:** User profiles can be programmatically set by the [/subscription/status/set]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) endpoint by using Braze's REST API.
+- **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) by using Braze's REST API.
 
 ### How can I check a user's email subscription group?
 
-- **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's email subscription groups. 
-- **Rest API:** Individual user profiles subscription group can be viewed by the [Get Subscription Group][9] endpoint or [Subscription Group Status][8] endpoint by using Braze's REST API. 
+- **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting **User Search** from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's email subscription groups. 
+- **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint][9] or [List user’s subscription group status endpoint][8] by using Braze's REST API. 
 
 ### What happens when an email campaign or Canvas is stopped?
 

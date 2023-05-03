@@ -19,7 +19,7 @@ We suggest setting a triggered entry in Canvas whenever there's an incoming even
 
 ## Step 1: Create a webhook
 
-We first suggest creating a webhook campaign that makes a request to the [subscription/status/set endpoint][SSSendpoint] to subscribe the user to that SMS subscription group.
+We first suggest creating a webhook campaign that makes a request to the [`/subscription/status/set` endpoint][SSSendpoint] to subscribe the user to that SMS subscription group.
 
 ## Step 2: Send an SMS campaign
 

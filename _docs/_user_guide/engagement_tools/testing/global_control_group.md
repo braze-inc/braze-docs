@@ -73,7 +73,7 @@ After disabling your Control Group, you can save a new one. Once you enter a per
 
 If you'd like to see which users are in your Global Control Group, you can export your Group's members via CSV or API. 
 
-To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export via API, use the [Users by Global Control Group]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/) API endpoint.
+To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export via API, use the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
 
 {% alert important %}
 Historical control groups are not preserved, so you can only export the members of your current group. Make sure to export any necessary information before disabling a control group.
@@ -119,7 +119,7 @@ Users in your Global Control Group are withheld from receiving any messages othe
 
 You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the **Developer Console**. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
 
-Only one of these segments is active and can be queried using the [Users by Global Control Group]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/) API endpoint, or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
+Only one of these segments is active and can be queried using the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/), or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
 
 ## Testing best practices
 

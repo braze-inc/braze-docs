@@ -23,8 +23,8 @@ Warning! Don't make any changes to this document without approval from the legal
 Braze enables its customers to delete entire User Profiles and Attribute data themselves from their app group.
 
 This means you can: 
-- Delete user profiles using the Braze [User Delete API Endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
-- Delete (null) or amend attributes on user profiles using the Braze [User Track API Endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
+- Delete user profiles using the Braze [Delete user API endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
+- Delete (null) or amend attributes on user profiles using the Braze [Track user API endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 
 Behavioral events cannot be deleted from a User Profile (custom events, sessions, campaigns, purchases). To remove those events, you must delete the entire User Profile.
 
