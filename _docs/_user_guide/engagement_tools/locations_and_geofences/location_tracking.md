@@ -32,7 +32,7 @@ Refer to [Location targeting][1] for more information on creating a location seg
 
 ## Hard setting the default location attribute
 
-You can also use the [`users/track`][8] endpoint in our API to update the [`current_location`][9] standard attribute. An example is: 
+You can also use the [`users/track` endpoint][8] in our API to update the [`current_location`][9] standard attribute. An example is: 
 ```
 https://[your_braze_rest_endpoint]/users/track
 Content-Type: application/json

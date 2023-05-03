@@ -47,7 +47,13 @@ Specific scenarios in which multivariate and A/B testing could come in handy inc
 - **When trying out a messaging type for the first time:** Worried about getting in-app messaging right the first time? Multivariate testing allows you to experiment and learn what resonates with your users.
 - **When creating onboarding campaigns and other campaigns that are constantly sent out:** Since most of your users will encounter this campaign, why not ensure that it's as effective as possible?
 - **When you have multiple ideas for messages to send:** If you're unsure of which to choose, run a test and then make a data-driven decision.
-- **When investigating whether your users respond to "tried and true" marketing techniques:**  Marketers often stick to conventional tactics to engage with users, but every product's user base is different. Sometimes, repeating your call-to-action and using social proof won't get you the results you desired. Multivariate and A/B testing lets you step outside the box and discover unconventional tactics that work for your specific audience.
+- **When investigating whether your users respond to "tried and true" marketing techniques:** Marketers often stick to conventional tactics to engage with users, but every product's user base is different. Sometimes, repeating your call-to-action and using social proof won't get you the results you desired. Multivariate and A/B testing lets you step outside the box and discover unconventional tactics that work for your specific audience.
+
+### Variant distribution
+
+The distribution between variants is not always even. Variant distribution works by independently selecting a random option each time it sends a message-it doesn't plan out sending so that it exactly matches the percentages you have set.
+
+If you have multiple variants that you want to split evenly, you also need to make sure the number of variants are a multiple of 100%. Otherwise, some variants will have a higher percentage of users distributed to that variant compared to others. For example, if your campaign has 7 variants, there can't be an even variant distribution since 7 does not equally divide by 100 as a whole number. In this case, you would have 2 variants of 15% and 5 variants of 14%. 
 
 ## Five rules for multivariate and A/B testing {#five-rules-for}
 

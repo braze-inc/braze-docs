@@ -137,10 +137,10 @@ When building a campaign in the dashboard, Content Blocks can be referenced usin
 
 Content Blocks can also be utilized as a translation management process where content that requires translation is housed within a Content Block, fetched, translated, and then updated:
 1. Manually create a Content Block in the dashboard with the tag "Needs Translation".
-2. Your service performs a nightly fetch of all Content Blocks using the [`/content_blocks/list`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/) endpoint.
-3. Your service fetches details on each Content Block through the [`/content_blocks/info`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information/) endpoint to see which blocks are tagged for translation.
+2. Your service performs a nightly fetch of all Content Blocks using the [`/content_blocks/list` endpoint]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/).
+3. Your service fetches details on each Content Block through the [`/content_blocks/info` endpoint]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information/) to see which blocks are tagged for translation.
 4. Your translation service translates the body of all "Needs Translation" Content Blocks.
-5. Your service hits the [`/content_block/update`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) endpoint to update translated content and update the tag to "Translation Complete".
+5. Your service hits the [`/content_block/update` endpoint]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) to update translated content and update the tag to "Translation Complete".
 
 ### Option 3: Catalogs
 

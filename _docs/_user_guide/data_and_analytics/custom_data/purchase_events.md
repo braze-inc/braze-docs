@@ -15,7 +15,7 @@ After you have set up and begun logging purchase events, you can view this purch
 
 ## Logging purchase events
 
-You can log purchases by passing a [Purchase Object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint.
+You can log purchases by passing a [Purchase Object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
 The following lists methods across various platforms that are used to log purchases. Within these pages, you will also be able to find documentation on how to add properties and quantities to your purchase event.
 

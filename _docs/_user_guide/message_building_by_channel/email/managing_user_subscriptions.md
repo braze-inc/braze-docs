@@ -36,9 +36,9 @@ There are three ways a user's email subscription state can be updated:
 
 ### Checking email subscription state
 
-![User profile for John Doe with their push subscription state set to Subscribed.][3]{: style="float:right;max-width:35%;margin-left:15px;"}
+![User profile for John Doe with their email subscription state set to Subscribed.][3]{: style="float:right;max-width:35%;margin-left:15px;"}
 
-There are two ways you can check a user's push subscription state with Braze:
+There are two ways you can check a user's email subscription state with Braze:
 
 1. **User Profile**: You can access individual user profiles through the Braze dashboard on the **[User Search][5]** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state. 
 <br><br>

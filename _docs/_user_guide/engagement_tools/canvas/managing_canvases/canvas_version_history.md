@@ -1,17 +1,18 @@
 ---
 nav_title: Canvas Version History
-permalink: "/canvas_version_history/"
-hidden: true
-layout: dev_guide
+article_title: Canvas Version History
+alias: "/canvas_version_history/"
+page_order: 1
+description: "This reference article covers how to manage your Canvas version history."
+page_type: reference
+tool: Canvas
 ---
 
 # Canvas version history
 
-Version history allows you to view and access Canvas analytics and the user journeys for any previous version of your Canvas. This can be especially helpful to maintain a record of the evolution of a Canvas. For example, if you make a largescale change, you can reference previous Canvas versions to better understand how your workflows have progressed.
+> Version history allows you to view and access Canvas analytics and the user journeys for any previous version of your Canvas. 
 
-{% alert important %}
-Version history for Canvas Flow is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
-{% endalert %}
+Referencing your Canvas version history can be especially helpful to maintain a record of the evolution of a Canvas. For example, if you make a largescale change, you can reference previous Canvas versions to better understand how your workflows have progressed.
 
 ## Managing versions
 

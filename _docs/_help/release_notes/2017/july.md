@@ -18,7 +18,7 @@ You can now lock emails to a specific set of from-addresses, ensuring that you d
 
 ## Updates to campaign details API
 
-The /campaign/details endpoint now gives information about its messages, allowing you to pull subject, HTML body, from-address, and reply-to fields using the API. Learn more about [Braze APIs][56].
+The `/campaign/details` endpoint now gives information about its messages, allowing you to pull subject, HTML body, from-address, and reply-to fields using the API. Learn more about [Braze APIs][56].
 
 ## Updates to Liquid templating
 

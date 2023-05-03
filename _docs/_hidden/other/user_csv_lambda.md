@@ -1,14 +1,14 @@
 ---
 nav_title: User Attribute CSV Lambda Process
 permalink: /user_csv_lambda/
-description: "The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Braze User Track endpoint."
+description: "The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Track users Braze endpoint."
 hidden: true
 layout: dev_guide
 ---
 
 # User attribute CSV to Braze import
 
-> The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Braze [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint. This application integration was tested with our Amperity partner and can be found on [GitHub](https://github.com/braze-inc/growth-shares-lambda-user-csv-import).
+> The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the [Track users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). This application integration was tested with our Amperity partner and can be found on [GitHub](https://github.com/braze-inc/growth-shares-lambda-user-csv-import).
 
 This process launches immediately upon uploading a CSV file to a configured AWS S3 bucket. It can handle large files and uploads, but due to Lambda's time limits, the function will stop execution after 10 minutes. This process will then launch another Lambda instance to finish processing the remaining part of the file. For more details about function timing, check out the [estimated execution times](#estimated-execution-times).
 
@@ -16,7 +16,7 @@ This process launches immediately upon uploading a CSV file to a configured AWS 
 This application is built out and maintained by the Braze Growth department. If you would like to reach out to the creators of this application, create a [GitHub issue](https://github.com/braze-inc/growth-shares-lambda-user-csv-import/issues) for any feedback or issues that may arise. 
 {% endalert %}
 
-#### CSV User Attributes
+#### CSV user attributes
 
 User attributes to be updated are expected in the following `.csv` format:
 
@@ -27,7 +27,7 @@ userID,value_1,...,value_n
 
 The first column must specify the external ID of the user to be updated and the following columns must specify attribute names and values. The number of attributes you specify can vary. If the CSV file to be processed does not follow this format, the function will fail.  
 
-CSV file example:
+**CSV file example:**
 
 ```
 external_id,Loyalty Points,Last Brand Purchased
@@ -35,7 +35,7 @@ abc123,1982,Solomon
 def456,578,Hunter-Hayes
 ```
 
-#### CSV Processing
+#### CSV processing
 
 Any values in an array (ex. `"['Value1', 'Value2']"`) will be automatically destructured and sent to the API in an array rather than a string representation of an array.
 
@@ -53,21 +53,21 @@ To successfully run this Lambda function, you will need:
 You can find your API URL, or REST endpoint, in the Braze API documentation and through the dashboard.
 
 - **API Documentation**<br>Per the [API documentation]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances), simply match your Braze instance URL to the REST endpoint URL. For example, if your dashboard shows `dashboard-01.braze.com/` URL, your REST endpoint would be `https://rest.iad-01.braze.com`. <br><br>
-- **Dashboard**<br>From the left navigation panel, scroll down and select **Manage Settings**. There, you can find your `SDK Endpoint`. Replace `sdk` with `rest` to get your REST Endpoint. For example, if you see `sdk.iad-01.braze.com`, your API URL would be `rest.iad-01.braze.com`
+- **Dashboard**<br>Go to the **Manage Settings** page to locate your SDK endpoint. Replace `sdk` with `rest` to get your REST endpoint. For example, if you see `sdk.iad-01.braze.com`, your API URL would be `rest.iad-01.braze.com`
 
 {% endtab %}
 {% tab API Key %}
 
 To connect with the Braze servers, you will need an API key. This unique identifier allows Braze to verify your identity and upload your data. 
 
-To get your API key, open the dashboard and scroll down the left navigation section. Select **Developer Console** under _Settings_. You will need an API key that has permission to post to `users.track` API endpoint. If you know one of your API keys supports that endpoint, you can use that key. 
+To get your API key, go to the **Developer Console** page. You will need an API key that has permission to post to `/users/track` endpoint. If you know one of your API keys supports that endpoint, you can use that key. 
 
-To create a new one, click `Create New API Key`. Next, name your API Key and select `users.track` under the _User Data_ endpoints group. Scroll down and click on **Save API Key**.
+To create a new one, click **Create New API Key**. Next, name your API key and select **users.track** under the **User Data** endpoints group, then click **Save API Key**.
 
 {% endtab %}
 {% endtabs %}
 
-## Usage Instructions
+## Usage instructions
 
 ##### Overview
 1. Deploy Braze's publicly available CSV processing Lambda from the AWS Serverless Application Repository
@@ -76,7 +76,7 @@ To create a new one, click `Create New API Key`. Next, name your API Key and sel
 
 #### Deploy
 
-To start processing your User Attribute CSV files, we need to deploy the Serverless Application that will handle the processing for you. This application will create the following resources automatically to successfully deploy:
+To start processing your user attribute CSV files, we need to deploy the serverless application that will handle the processing for you. This application will create the following resources automatically to successfully deploy:
 
 - Lambda function
 - S3 Bucket for your CSV Files that the Lambda process can read from (_Note: this Lambda function will only receive notifications for `.csv` extension files_)
@@ -99,11 +99,11 @@ The following resources were created:
 
 To run the function, drop a user attribute CSV file in the newly created S3 bucket.
 
-## Monitoring and Logging
+## Monitoring and logging
 
 To make sure the function runs successfully, you can read the function's execution logs. Open the Braze User CSV Import function (by selecting it from the list of Lambdas in the console) and navigate to **Monitor**. Here, you can see the execution history of the function. To read the output, click on **View logs in CloudWatch**. Select the lambda execution event you want to check.
 
-## Estimated Execution Times
+## Estimated execution times
 _2048&nbsp;MB Lambda Function_
 
 | Number of rows | Execution Time |
@@ -113,11 +113,11 @@ _2048&nbsp;MB Lambda Function_
 | 1M        | 5 min      |
 | 5M        | 30 min     |
 
-## Updating an Existing Function
+## Updating an existing function
 
 If you have already deployed the application and a new version is available in the repository, you can update by re-deploying the function as if you were doing it for the first time. That means you have to pass it the Braze API Key and Braze API URL again. The update will only overwrite the function code. It will not modify or delete other existing resources like the S3 bucket.
 
-## Fatal Error
+## Fatal error
 
 In case of an unexpected error that prevents the further processing of the file, an event is logged (accessible through CloudWatch described in [Monitoring and Logging](#monitoring-and-logging)) that can be used to restart the Lambda from the point where the program stopped processing the file. It's important not to re-import the same data to save Data Points. You can find instructions to do this in our [GitHub repository](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#fatal-error).
 

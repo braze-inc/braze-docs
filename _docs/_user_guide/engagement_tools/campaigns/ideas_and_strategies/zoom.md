@@ -24,7 +24,7 @@ This can be accomplished by using the [Zoom APIs](https://marketplace.zoom.us/do
 
 POST: `/meetings/{meetingId}/registrants`
 
-For more information, refer to the Zoom [Add meeting registrant](https://marketplace.zoom.us/docs/api-reference/zoom-api/methods/#operation/meetingRegistrantCreate) endpoint.<br><br>
+For more information, refer to the Zoom [Add meeting registrant endpoint](https://marketplace.zoom.us/docs/api-reference/zoom-api/methods/#operation/meetingRegistrantCreate).<br><br>
 
 {% tabs %}
 {% tab Email %}

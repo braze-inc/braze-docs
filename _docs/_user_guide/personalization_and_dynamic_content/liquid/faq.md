@@ -18,7 +18,7 @@ In many cases, you can incorporate Liquid snippets by navigating to your campaig
 
 #### Where can I learn more?
 
-For more on Liquid, check out our guided [Dynamic Personalization with Liquid](https://learning.braze.com/dynamic-personalization-with-liquid) Braze Learning course! You can also reference the [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases) for inspiration and a range of personalization examples using Liquid.
+For more on Liquid, check out our guided [Dynamic Personalization with Liquid](https://learning.braze.com/path/dynamic-personalization-with-liquid) Braze Learning path! You can also reference the [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases) for inspiration and a range of personalization examples using Liquid.
 
 ### What’s the difference between using Liquid and Connected Content for personalization?
 
