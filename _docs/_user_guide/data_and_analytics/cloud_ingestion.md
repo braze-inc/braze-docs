@@ -15,11 +15,8 @@ guide_featured_list:
   - name: Overview and Best Practices
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/overview/
     fa_icon: fa-solid fa-users-between-lines
-  - name: Snowflake Integration
-    link: /docs/user_guide/data_and_analytics/cloud_ingestion/snowflake/
-    fa_icon: fa-solid fa-snowflake
-  - name: Redshift Integration
-    link: /docs/user_guide/data_and_analytics/cloud_ingestion/redshift/
+  - name: Available Integrations
+    link: /docs/user_guide/data_and_analytics/cloud_ingestion/integration/
     fa_icon: fa-solid fa-gears
   - name: Delete Users with CDI
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/delete_users/
