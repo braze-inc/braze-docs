@@ -17,7 +17,7 @@ To place a link to the preference center in your emails, use the following Liqui
 
 {% raw %}
 ```
-{{${preference_center_url}}}
+{{${preference_center.${my_custom_name}}}
 ```
 {% endraw %}
 
