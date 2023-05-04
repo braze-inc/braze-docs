@@ -130,7 +130,7 @@ The default rate limit for calling `requestRefresh` is 3 calls per 10 minutes pe
 
 ## Content Cards UI integration
 
-The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
+The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Create the Content Cards view controller using the `braze` instance. If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
 
 {% alert note %}
 A view controller is the "glue" between the overall application and the screen. It controls the views that it owns according to the logic of your application. For more information about iOS view controller options, refer to the [Apple developer documentation](https://developer.apple.com/documentation/uikit/view_controllers/showing_and_hiding_view_controllers).
