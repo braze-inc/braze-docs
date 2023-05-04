@@ -16,36 +16,23 @@ The Braze SDK is a powerful toolkit, but at a high level it provides two importa
 
 All Braze components are crafted with the following principles in mind:
 
-| **Accessible** | **Adaptive** | **Customizable** | 
-| Follow accessibility guidelines and are compatible with VoiceOver | Light and dark mode compatible | Padding, margin, spacing, font, image size, and more | 
-| Support Dynamic Type | Support multiple device sizes and orientations, including multitasking UIs | Sensible defaults | 
-|  | Support Safe Area and Layout Margins |  | 
-|  | Support right-to-left layouts |  | 
-|  | Support on-screen keyboard |  | 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| **Accessible** | {::nomarkdown} <ul><li>Follow accessibility guidelines and are compatible with VoiceOver</li><li>Support Dynamic Type </li></ul> {:/}|
+| **Adaptive** | {::nomarkdown} <ul><li>Light and dark mode compatible</li><li>Support multiple device sizes and orientations, including multitasking UIs</li><li>Support Safe Area and Layout Margins</li><li>Support right-to-left layouts</li><li>Support on-screen keyboard</li></ul> {:/}|
+| **Customizable** | {::nomarkdown} <ul><li>Padding, margin, spacing, font, image size, and more Sensible defaults</li><li>{:/} |
 
-**Accessible**: 
-
+**Accessible**
 * Follow accessibility guidelines and are compatible with VoiceOver
-
 * Support Dynamic Type
 
 **Adaptive**
-
 * Light and dark mode compatible
-
 * Support multiple device sizes and orientations, including multitasking UIs
-
 * Support Safe Area and Layout Margins
-
 * Support right-to-left layouts
-
 * Support on-screen keyboard
 
 **Customizable**
-
 * Padding, margin, spacing, font, image size, and more
-
 * Sensible defaults
 
 For these reasons, we recommend starting with the default `BrazeUI` components and customizing them to suit your brand needs and use case. At Braze, we break down customization into three different approaches based on the associated effort and level of flexibility provided. These approaches are referred to as "crawl", "walk", or "run."
