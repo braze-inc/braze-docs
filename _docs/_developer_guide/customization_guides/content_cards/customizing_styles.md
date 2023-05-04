@@ -12,14 +12,16 @@ channel:
 > Braze Content Cards come with a default look and feel. This article covers custom styling options for your Content Cards.
 
 ## Customizing styling
-Braze provides five Content Card default templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Then, depending on which platform you're working in, you can tweak certain parts of the card's styling. 
 
-![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1] {: style="max-width:65%;float:right;margin-left:15px;border:none;"}
+Braze provides five Content Card templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Then, you can tweak certain parts of the card's styling. 
+
+<!--- Question: Is `BrazeUI` a concept that all platform SDKs share, or is the term here inappropriate when used outside of the Swift SDK? --->
+
+![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]
 
 {% alert important %}
 Content card properties such as title, description, image, etc. are directly available on the Braze/ContentCard data type. Configuring these [content cards properties]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details) through the Braze dashboard is the preferred way to customize these properties.
 {% endalert %}
-
 
 
 {% tabs %}
@@ -94,7 +96,7 @@ BrazeContentCardUI.ViewController.Attributes.defaults.cellAttributes.classicImag
 
 **Initializing the view controller with Attributes**
 
-If you wish to modify only a specific instance of the Braze Content Card UI view controller, use the [init(braze:attributes:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/init(braze:attributes:) initializer to pass a custom `Attributes` struct to the view controller.
+If you wish to modify only a specific instance of the Braze Content Card UI view controller, use the [init(braze:attributes:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/init(braze:attributes:)/) initializer to pass a custom `Attributes` struct to the view controller.
 
 For example, you can change the image size and corner radius for a specific instance of the view controller:
 
