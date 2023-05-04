@@ -122,7 +122,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
 
 {% api %}
 
-## WhatsApp failure event
+## WhatsApp failure events
 
 {% apitags %}
 WhatsApp, Failure
