@@ -45,6 +45,241 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 
 {% api %}
 
+## WhatsApp read events
+
+{% apitags %}
+WhatsApp, Read
+{% endapitags %}
+
+This event occurs when an WhatsApp message is read by the end user.
+
+```json
+// WhatsApp Read: users.messages.whatsapp.Read
+
+{
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) ID of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) ID of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "company_id": (optional, string) ID of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "from_phone_number": (optional, string) phone number used to send,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
+  "to_phone_number": (optional, string) phone number of User receiving the message,
+  "user_id": (required, string) BSON id of the user that performed this event
+}
+```
+
+{% endapi %}
+{% api %}
+
+## WhatsApp delivery events
+
+{% apitags %}
+WhatsApp, Delivery
+{% endapitags %}
+
+This event occurs when an WhatsApp message sent made it successfully to the end-users device.
+
+```json
+// WhatsApp Delivery: users.messages.whatsapp.Delivery
+
+{
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) ID of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) ID of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "company_id": (optional, string) ID of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "from_phone_number": (optional, string) phone number used to send,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
+  "to_phone_number": (optional, string) phone number of User receiving the message,
+  "user_id": (required, string) BSON id of the user that performed this event
+}
+```
+
+{% endapi %}
+
+{% api %}
+
+## WhatsApp failure events
+
+{% apitags %}
+WhatsApp, Failure
+{% endapitags %}
+
+This event occurs when an Internet Service Provider returns a hard bounce. A hard bounce signifies a permanent deliverability failure.
+
+```json
+// WhatsApp Delivery Failure: users.messages.whatsapp.Failure
+
+{
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) ID of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) ID of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "company_id": (optional, string) ID of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "from_phone_number": (optional, string) phone number used to send,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "provider_error_code": (optional, string) Error Code from WhatsApp,
+  "provider_error_title": (optional, string) Description of failure from WhatsApp,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
+  "to_phone_number": (optional, string) phone number of User receiving the message,
+  "user_id": (required, string) BSON id of the user that performed this event
+}
+```
+{% endapi %}
+{% api %}
+
+## WhatsApp send events
+
+{% apitags %}
+WhatsApp, Sends
+{% endapitags %}
+
+This event occurs when an email send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the end user.
+
+```json
+// WhatsApp Send: users.messages.whatsapp.Send
+
+{
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) ID of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) ID of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "company_id": (optional, string) ID of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "from_phone_number": (optional, string) phone number used to send,
+  "message_extras": (optional, string) liquid tags related fields,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
+  "to_phone_number": (optional, string) phone number of User receiving the message,
+  "user_id": (required, string) BSON id of the user that performed this event
+}
+```
+{% endapi %}
+
+{% api %}
+
+## WhatsApp abort message events
+
+{% apitags %}
+WhatsApp, Abort
+{% endapitags %}
+
+This event occurs if a WhatsApp message was aborted based on Liquid aborts, quiet hours, etc.
+
+```json
+// WhatsApp Abort: users.messages.whatsapp.Abort
+
+{
+  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
+  "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
+  "action": (optional, string) action taken in response to this message (e.g. Subscribed, Unsubscribed, or None),
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) id of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) id of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "company_id": (optional, string) id of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "send_id": (optional, string) message send ID this message belongs to,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
+  "user_id": (required, string) BSON id of the user that performed this event
+```
+{% endapi %}
+{% api %}
+
+## WhatsApp inbound received events
+
+{% apitags %}
+WhatsApp, InboundReceived
+{% endapitags %}
+
+This event occurs when one of your users sends a WhatsApp message to a phone number in one of your Braze WhatsApp subscription groups. 
+
+```json
+// WhatsApp Inbound Received: users.messages.whatsapp.InboundReceive
+
+{
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) ID of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) ID of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "company_id": (optional, string) ID of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "in_reply_to": (optional, string) WhatsApp message ID for the sent message for an inbound reply,
+  "inbound_phone_number": (optional, string)the inbound number that the message was sent to,
+  "medial_urls": (optional, string[]) media urls from the user, 
+  "message_body": (optional, string) typed response from the user,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "quick_reply_text": (optional, string) test of button pressed by the user,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
+  "user_phone_number": (optional, string) the user’s phone number from which the message was received,
+  "user_id": (required, string) BSON id of the user that performed this event
+}
+```
+{% endapi %}
+
+{% api %}
+
 ## Content Card abort message events
 
 {% apitags %}
