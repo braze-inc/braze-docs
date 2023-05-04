@@ -122,6 +122,9 @@ If you try to send a campaign or Canvas to more unique users than your current l
 #### Can my messaging limit decrease?
 Yes, if your phone number quality rating drops too low, you are at risk of WhatsApp decreasing your messaging limit. Braze recommends you subscribe and be notified of quality-related updates from WhatsApp, including updates to your phone number status and messaging limit level. You can subscribe to notifications directly in the WhatsApp Manager dashboard. 
 
+#### What is the Meta throughput limit?
+It is important to note that Meta has their own throughput limit seperate from the WABA messaging limit. The default limit the cloud API supports is 80 messages per second. If you think your campaigns will exceed this limit, you can [request](https://developers.facebook.com/docs/whatsapp/cloud-api/overview/#throughput) for your limit be increased. Note that it is recommended to submit this request at least three days in advance of campaign sends.
+
 ### WhatsApp templates 
 
 #### What is a WhatsApp Template? 
