@@ -12,12 +12,9 @@ channel:
 > Braze Content Cards come with a default look and feel. This article covers custom styling options for your Content Cards.
 
 ## Customizing styling
+Braze provides five Content Card default templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Then, depending on which platform you're working in, you can tweak certain parts of the card's styling. 
 
-Braze provides five Content Card templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Then, you can tweak certain parts of the card's styling. 
-
-<!--- Question: Is `BrazeUI` a concept that all platform SDKs share, or is the term here inappropriate when used outside of the Swift SDK? --->
-
-![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]
+![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]{: style="max-width:65%;float:right;margin-left:15px;border:none;"}
 
 {% alert important %}
 Content Card properties such as title, description, image, etc. are directly available on the Braze/ContentCard data type. Configuring these [content cards properties]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details) through the Braze dashboard is the preferred way to customize these properties.
@@ -45,8 +42,6 @@ By default, Android and FireOS SDK Content Cards match the standard Android UI g
 ```
 
 To customize your Content Card stylings, override this default style. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The entire style must be copied over to your local `styles.xml` file for all attributes to be correctly set.
-
-<!--- To do: Is there a repo with customization examples we can link to here? --->
 
 {% subtabs local %}
 {% subtab Correct style override %}
@@ -78,7 +73,9 @@ To customize your Content Card stylings, override this default style. To overrid
 {% endtab %}
 {% tab iOS %}
 
-The Content Cards view controller allows you to customize the appearance and behavior of all cells via the [`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct) struct. Configuring Content Cards using `Attributes` is an easy option, allowing you to launch your Content Cards UI with minimal setup. 
+You will configure and use `BrazeUI/BrazeContentCardsUI` to display Content Cards to your users. Create the Content Cards [view controller]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration#content-cards-ui-integration) using the `braze` instance. 
+
+Depending on the type of Content Card, the `BrazeUI` module displays one of the different cell types by default. The Content Cards view controller allows you to customize the appearance and behavior of all cells via the [`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct) struct. Configuring Content Cards using `Attributes` is the simplest option, allowing you to launch your Content Cards UI with minimal setup. 
 
 > Customization via `Attributes` is only available in Swift.
 
@@ -162,8 +159,6 @@ body .ab-feed {
   width: 800px;
 }
 ```
-
-<!--- To do: Is there a repo with customization examples we can link to here? --->
 
 {% endtab %}
 {% endtabs %}
