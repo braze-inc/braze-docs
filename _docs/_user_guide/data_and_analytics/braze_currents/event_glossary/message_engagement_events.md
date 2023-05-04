@@ -55,28 +55,28 @@ This event occurs when an WhatsApp message is read by the end user.
 
 ```json
 // WhatsApp Read: users.messages.whatsapp.Read
+
 {
-  "subscription_group_id": (optional, string) BSON ID of the sending Subscription Group,
-  "id": (required, string) unique id of this event,
-  "external_user_id": (optional, string) External ID of the user,
-  "company_id": (optional, string) id of the sending company,
-  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
-  "from_phone_number": (optional, string) Phone number used to send,
-  "user_id": (string) BSON user ID of the user receiving the message,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_group_id": (required, string) ID of the sending App Group,
-  "campaign_id": (optional, string) id of the campaign if from a campaign,
-  "subscription_group_id": (optional, string) BSON ID of the sending Subscription Group,
-  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
-  "message_variation_id": (optional, string) id of the message variation if from a campaign,
-  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
-  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
-  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_id": (optional, string) ID of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) ID of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "company_id": (optional, string) ID of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "from_phone_number": (optional, string) phone number used to send,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
+  "to_phone_number": (optional, string) phone number of User receiving the message,
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
 
@@ -93,28 +93,28 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
 
 ```json
 // WhatsApp Delivery: users.messages.whatsapp.Delivery
+
 {
-  "subscription_group_id": (optional, string) BSON ID of the sending Subscription Group,
-  "id": (required, string) unique id of this event,
-  "external_user_id": (optional, string) External ID of the user,
-  "company_id": (optional, string) id of the sending company,
-  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
-  "from_phone_number": (optional, string) Phone number used to send,
-  "user_id": (string) BSON user ID of the user receiving the message,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_group_id": (required, string) ID of the sending App Group,
-  "campaign_id": (optional, string) id of the campaign if from a campaign,
-  "subscription_group_id": (optional, string) BSON ID of the sending Subscription Group,
-  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
-  "message_variation_id": (optional, string) id of the message variation if from a campaign,
-  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
-  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
-  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_id": (optional, string) ID of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) ID of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "company_id": (optional, string) ID of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "from_phone_number": (optional, string) phone number used to send,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
+  "to_phone_number": (optional, string) phone number of User receiving the message,
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
 
@@ -132,30 +132,30 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
 
 ```json
 // WhatsApp Delivery Failure: users.messages.whatsapp.Failure
+
 {
-  "provider_error_code": (optional,string) the provider's reason code as to why the message was not sent (Rejection and Delivery Failure events only),
-  "provider_error_title": (optional, string) Description of failure from WhatsApp,
-  "subscription_group_id": (optional, string) BSON ID of the sending Subscription Group,
-  "id": (required, string) unique id of this event,
-  "external_user_id": (optional, string) External ID of the user,
-  "company_id": (optional, string) id of the sending company,
-  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
-  "from_phone_number": (optional, string) Phone number used to send,
-  "user_id": (string) BSON user ID of the user receiving the message,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_group_id": (required, string) ID of the sending App Group,
-  "campaign_id": (optional, string) id of the campaign if from a campaign,
-  "subscription_group_id": (optional, string) BSON ID of the sending Subscription Group,
-  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
-  "message_variation_id": (optional, string) id of the message variation if from a campaign,
-  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
-  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
-  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_id": (optional, string) ID of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) ID of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "company_id": (optional, string) ID of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "from_phone_number": (optional, string) phone number used to send,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "provider_error_code": (optional, string) Error Code from WhatsApp,
+  "provider_error_title": (optional, string) Description of failure from WhatsApp,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
+  "to_phone_number": (optional, string) phone number of User receiving the message,
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
 {% endapi %}
@@ -171,28 +171,29 @@ This event occurs when an email send request was successfully communicated betwe
 
 ```json
 // WhatsApp Send: users.messages.whatsapp.Send
+
 {
-  "id": (required, string) unique id of this event,
-  "external_user_id": (optional, string) External ID of the user,
-  "company_id": (optional, string) id of the sending company,
-  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
-  "from_phone_number": (optional, string) Phone number used to send,
-  "user_id": (string) BSON user ID of the user receiving the message,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_group_id": (required, string) ID of the sending App Group,
-  "campaign_id": (optional, string) id of the campaign if from a campaign,
-  "subscription_group_id": (optional, string) BSON ID of the sending Subscription Group,
-  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
-  "message_variation_id": (optional, string) id of the message variation if from a campaign,
-  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
-  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
-  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
-  "message_extras": (optional, object) key-value pairs sent with this event
+  "canvas_step_id": (optional, string) ID of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) ID of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "company_id": (optional, string) ID of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "from_phone_number": (optional, string) phone number used to send,
+  "message_extras": (optional, string) liquid tags related fields,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
+  "to_phone_number": (optional, string) phone number of User receiving the message,
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
 {% endapi %}
@@ -213,27 +214,26 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, quie
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (required, string) ID of the sending App Group,
-  "campaign_id": (optional, string) id of the campaign if from a campaign,
-  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
-  "company_id": (optional, string) id of the sending company,
-  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
-  "subscription_group_id": (optional, string) BSON ID of the sending Subscription Group,
+  "action": (optional, string) action taken in response to this message (e.g. Subscribed, Unsubscribed, or None),
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_step_id": (optional, string) id of the canvas step this event belongs to,
   "canvas_step_message_variation_id": (optional, string) id of the canvas step message variation this user received,
   "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
   "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
   "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
-  "device_id": (optional, string) id of the device on which the event occurred,
-  "external_user_id": (optional, string) External ID of the user,
-  "id": (required, string) globally unique ID of this event,
+  "company_id": (optional, string) id of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
-  "time": (required, int) unix timestamp at which the event happened,
+  "send_id": (optional, string) message send ID this message belongs to,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "user_id": (required, string) BSON id of the user that performed this event
-}
 ```
 {% endapi %}
 {% api %}
@@ -248,32 +248,32 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
 
 ```json
 // WhatsApp Inbound Received: users.messages.whatsapp.InboundReceive
+
 {
-  "id": (required, string) unique id of this event,
-  "user_id": (required, string) Braze user id of the user,
-  "external_user_id": (optional, string) External ID of the user,
-  "company_id": (optional, string) id of the sending company,
-  "app_group_id": (required, string) ID of the sending App Group,
-  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
-  "user_phone_number": (required, string) the phone number of the user who sent the message to your Braze number,
-  "subscription_group_id": (optional, string) BSON ID of the sending Subscription Group,
-  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
-  "quick_reply_text": (string) text of button pressed by the user,
-  "action": (required, string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),
-  "in_reply_to": (string) WhatsApp message ID for the sent message for an inbound reply,
-  "inbound_phone_number": (required, string) the phone number the message was sent to,
-  "media_urls": (optional, array of string) the media URLs sent by the user,
-  "message_body": (required, string) the body of the message sent by the user,
-  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
-  "message_variation_id": (optional, string) id of the message variation if Braze identifies this inbound message is a reply to a campaign,
-  "message_variation_name": (optional, string) the name of the message variation if Braze identifies this inbound message is a reply to a campaign,
-  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
-  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas
+  "canvas_step_id": (optional, string) ID of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) ID of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "company_id": (optional, string) ID of the sending Company,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "in_reply_to": (optional, string) WhatsApp message ID for the sent message for an inbound reply,
+  "inbound_phone_number": (optional, string)the inbound number that the message was sent to,
+  "medial_urls": (optional, string[]) media urls from the user, 
+  "message_body": (optional, string) typed response from the user,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "quick_reply_text": (optional, string) test of button pressed by the user,
+  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
+  "user_phone_number": (optional, string) the user’s phone number from which the message was received,
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
 {% endapi %}
