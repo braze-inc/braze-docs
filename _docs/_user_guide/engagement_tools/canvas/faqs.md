@@ -32,6 +32,8 @@ When you stop a Canvas, the following applies:
 - No further messages will be sent out, despite where a user is in the flow.
 - **Exception:** Canvases with emails will not immediately stop. Once the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
 
+For Canvases that include in-app messages, because in-app messages send upon the next session start, if the user has entered the Canvas step before the Canvas was stopped, they will still receive the in-app message upon the next session start if the in-app message hasn't expired yet.
+
 {% alert note %}
 Stopping a Canvas won't cause users who are waiting to receive messages to exit the user journey. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
 {% endalert %}
