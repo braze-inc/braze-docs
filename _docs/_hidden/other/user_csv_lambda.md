@@ -53,7 +53,7 @@ To successfully run this Lambda function, you will need:
 You can find your API URL, or REST endpoint, in the Braze API documentation and through the dashboard.
 
 - **API Documentation**<br>Per the [API documentation]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances), simply match your Braze instance URL to the REST endpoint URL. For example, if your dashboard shows `dashboard-01.braze.com/` URL, your REST endpoint would be `https://rest.iad-01.braze.com`. <br><br>
-- **Dashboard**<br>Go to the **Manage Settings** page to locate your SDK endpoint. Replace `sdk` with `rest` to get your REST Endpoint. For example, if you see `sdk.iad-01.braze.com`, your API URL would be `rest.iad-01.braze.com`
+- **Dashboard**<br>Go to the **Manage Settings** page to locate your SDK endpoint. Replace `sdk` with `rest` to get your REST endpoint. For example, if you see `sdk.iad-01.braze.com`, your API URL would be `rest.iad-01.braze.com`
 
 {% endtab %}
 {% tab API Key %}

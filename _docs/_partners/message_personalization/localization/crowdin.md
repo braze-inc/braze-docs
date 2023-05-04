@@ -37,7 +37,7 @@ To set up the Braze app in Crowdin, follow these steps:
 3. Open the project you created for your Braze content localization.
 4. Go to **Settings > Integrations** tab.
 5. In the **Applications** section, click on the Braze app.
-6. In the dialog, provide your Braze credentials (Braze REST API Key and Braze SDK Endpoint).
+6. In the dialog, provide your Braze credentials (Braze REST API key and Braze SDK endpoint).
 7. Click **Log in with Braze Connector**. 
 
 #### Crowdin Enterprise
@@ -48,7 +48,7 @@ To set up the Braze app in Crowdin Enterprise, follow these steps:
 3. Open the project you created for your Braze content localization.
 4. Go to **Applications > Custom**.
 5. Click on the Braze app.
-6. In the dialog, provide your Braze credentials (Braze REST API Key and Braze SDK Endpoint).
+6. In the dialog, provide your Braze credentials (Braze REST API key and Braze SDK endpoint).
 7. Click **Log in with Braze Connector**.
 
 ### Step 2: Add your content to Crowdin/Crowdin Enterprise

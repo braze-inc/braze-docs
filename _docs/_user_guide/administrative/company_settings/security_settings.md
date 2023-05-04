@@ -45,17 +45,17 @@ Use the field shown to whitelist specific IP addresses and subnets from which us
 
 ## Two-factor authentication
 
-Two-factor authentication adds a second level of identity verification to an account log, making it more secure than just a username and password. This feature is default enabled for all Braze accounts.  
+Two-factor authentication adds a second level of identity verification to an account log, making it more secure than just a username and password. This feature is turned on by default for all Braze accounts.
 
-When two-factor authentication is enabled, in addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent via the Authy app, email, or SMS.
+When two-factor authentication is turned on, in addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent via an authenticator app, email, or SMS.
 
-Two-factor authentication can be optional for Admins, and enabled for non-Admin users by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in Account Settings, even if not required by the administrator.
+Two-factor authentication can be optional for Admins, and enabled for non-Admin users by default. However, when turned on, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
 
 ### Remember me
 
-![Remember this account for 30 days checkbox][04]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Remember this account for 30 days checkbox][04]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Upon toggling on two-factor authentication for your company, the **Remember Me** checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication **once** over the course of 30 days.
+Upon toggling on two-factor authentication for your company, the **Remember Me** checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication once over the course of 30 days.
 
 Customers with multiple accounts under a dashboard Company may experience issues using this feature due to the cookie being tied to a specific device. If users use the same device to log in to multiple accounts, the cookie will be replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account, not one device for multiple accounts.
 
@@ -63,10 +63,17 @@ Be sure to save your changes before leaving the page!
 
 ### User authentication reset
 
-Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin navigate to **Manage Users**, select the user from the provided list, and select **Reset** under **Two-Factor Authentication**. A reset can solve common authentication issues such as trouble with Authy, email verification not being sent, login failure due to SMS outages or user error, and more.
+Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin perform the following steps:
+
+1. Navigate to **Manage Users**.
+2. Select the user from the provided list
+3. Select **Reset** under **Two-Factor Authentication**.
+
+A reset can solve common authentication issues such as trouble with authenticator apps, email verification not being sent, login failure due to SMS outages or user error, and more.
 
 Two-factor authentication enforcement:
-- If two-factor authentication is not enforced at the company level, once reset, the user will log in normally and need to go to **Account Settings** to enable and set up two-factor authentication.
+
+- If two-factor authentication is not enforced at the company level, once reset, the user will log in normally and need to go to **Account Settings** to turn on and set up two-factor authentication.
 - If two-factor authentication is enforced at the company level, the next time the user logs in, they’ll be asked to set up their two-factor authentication.
 
 ## Security event download

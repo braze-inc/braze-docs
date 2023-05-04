@@ -44,7 +44,7 @@ Visit the [following section](#logging-analytics) to better understand how the f
 
 ### Logging with the Braze API (recommended)
 
-Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the following screenshot) to identify which user profile to update.
+Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the following screenshot) to identify which user profile to update.
 
 ![Personalized Push dashboard Example][3]{: style="max-width:80%;"}
 

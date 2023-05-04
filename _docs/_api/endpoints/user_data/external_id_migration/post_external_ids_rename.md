@@ -20,7 +20,7 @@ You can send up to 50 rename objects per request. You will need to create a new 
 
 This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. Having multiple external IDs allows for a migration period so that older versions of your apps that use the previous external ID naming schema don't break. 
 
-After your old naming schema is no longer in use, we highly recommend removing deprecated external IDs using the [`/users/external_ids/remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) endpoint.
+After your old naming schema is no longer in use, we highly recommend removing deprecated external IDs using the [`/users/external_ids/remove` endpoint]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove).
 
 {% alert warning %}
 Make sure to remove deprecated external IDs with the `/users/external_ids/remove` endpoint instead of `/users/delete`. Sending a request to `/users/delete` with the deprecated external ID deletes the user profile entirely and cannot be undone.

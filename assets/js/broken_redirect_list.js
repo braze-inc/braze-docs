@@ -34,7 +34,7 @@ validurls['/docs/quick_wins/personalized_messaging#conditionals'] = '/docs/user_
 validurls['/docs/quick_wins/personalized_messaging'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/';
 
 validurls['/docs/getting_started/'] = '/docs/user_guide/onboarding_with_braze/';
-validurls['/docs/getting_started#list-unsubscribe-settings'] = '/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#list-unsubscribe-settings';
+validurls['/docs/getting_started#list-unsubscribe-settings'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header';
 validurls['/docs/quick_wins/optimal_send_time'] = '/docs/user_guide/intelligence/intelligent_timing/';
 validurls['/docs/scheduling_and_organizing_campaigns/#intelligent-delivery'] = '/docs/user_guide/intelligence/intelligent_timing/';
 validurls['/docs/troubleshooting_guide/'] = '/docs/help/home/';
@@ -726,3 +726,7 @@ validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingest
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/redshift/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/redshift/';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/snowflake/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/snowflake/';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/overview/';
+
+validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/snowflake/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/';
+validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/redshift/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/'] = '/docs/user_guide/administrative/company_settings/';
