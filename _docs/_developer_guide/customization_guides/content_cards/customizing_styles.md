@@ -12,28 +12,62 @@ channel:
 > Braze Content Cards come with a default look and feel. This article covers custom styling options for your Content Cards.
 
 ## Customizing styling
-The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. 
+Braze provides five Content Card default templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Then, depending on which platform you're working in, you can tweak certain parts of the card's styling. 
 
-Braze provides five Content Card default templates: banner, captioned image, classic, classic image, and control. 
+![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]{: style="max-width:65%;float:right;margin-left:15px;border:none;"}
 
 {% alert important %}
 Content card properties such as title, description, image, etc. are directly available on the Braze/ContentCard data type. Configuring these [content cards properties through the Braze dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details) is the preferred way to customize these properties.
 {% endalert %}
 
+
+
 {% tabs %}
 {% tab Android %}
 
-Android content
+By default, Android and FireOS SDK Content Cards match the standard Android UI guidelines to provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml) file in the Braze SDK distribution:
 
-{% subtabs %}
-{% subtab Java %}
+```xml
+  <!-- Content Cards Example -->
+  <style name="Braze.ContentCards.CaptionedImage.Description">
+    <item name="android:textColor">@color/com_braze_description</item>
+    <item name="android:textSize">15.0sp</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:paddingBottom">8.0dp</item>
+    <item name="android:layout_marginLeft">10.0dp</item>
+    <item name="android:layout_marginRight">10.0dp</item>
+    <item name="android:layout_marginTop">8.0dp</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_below">@id/com_braze_content_cards_captioned_image_card_title_container</item>
+  </style>
+```
 
-Java content
+To customize your Content Card stylings, override this default style. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The entire style must be copied over to your local `styles.xml` file for all attributes to be correctly set.
+
+{% subtabs local %}
+{% subtab Correct style override %}
+
+```xml
+<style name="Braze.ContentCardsDisplay">
+  <item name="android:background">@color/mint</item>
+  <item name="android:cacheColorHint">@color/mint</item>
+  <item name="android:divider">@android:color/transparent</item>
+  <item name="android:dividerHeight">16.0dp</item>
+  <item name="android:paddingLeft">12.5dp</item>
+  <item name="android:paddingRight">5.0dp</item>
+  <item name="android:scrollbarStyle">outsideInset</item>
+</style>
+```
 
 {% endsubtab %}
-{% subtab Kotlin %}
+{% subtab Incorrect style override %}
 
-Kotlin content
+```xml
+<style name="Braze.ContentCardsDisplay">
+  <item name="android:background">@color/mint</item>
+  <item name="android:cacheColorHint">@color/mint</item>
+</style>
+```
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -42,19 +76,7 @@ Kotlin content
 
 You will configure and use `BrazeUI/BrazeContentCardsUI` to display Content Cards to your users. Create the Content Cards [view controller]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration#content-cards-ui-integration) using the `braze` instance. 
 
-Depending on the type of Content Card, the `BrazeUI` module defaults to one of the cells below for display:
-
-* `ClassicCell`
-
-* `ClassicImageCell`
-
-* `BannerCell`
-
-* `CaptionedImageCell`
-
-* `Control`
-
-The Content Cards view controller allows you to customize the appearance and behavior of all cells via the [`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct) struct. Configuring Content Cards using `Attributes` is the simplest option, allowing you to launch your Content Cards UI with minimal setup. 
+Depending on the type of Content Card, the `BrazeUI` module displays one of the different cell types by default. The Content Cards view controller allows you to customize the appearance and behavior of all cells via the [`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct) struct. Configuring Content Cards using `Attributes` is the simplest option, allowing you to launch your Content Cards UI with minimal setup. 
 
 > Customization via `Attributes` is only available in Swift.
 
@@ -126,19 +148,24 @@ Customizing Content Cards through `Attributes` is not supported with Objective-C
 
 {% endsubtab %}
 {% endsubtabs %}
-
-
 {% endtab %}
 {% tab Web %}
 
-Web content
+Braze’s default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause Content Cards to appear 800 px wide:
+
+``` css
+body .ab-feed {
+  width: 800px;
+}
+```
 
 {% endtab %}
 {% endtabs %}
 
+## Customization recipes 
 
+### Custom font
 
-## Custom font
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
 
 {% tabs %}
@@ -183,10 +210,10 @@ Web content
 {% endtab %}
 {% endtabs %}
 
-## Custom pinned icons
+### Custom pinned icons
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
 
-
+NOTE TO JOSH: Should these be called "badges" or "pinned icons" or what?
 
 {% tabs %}
 {% tab Android %}
@@ -230,7 +257,7 @@ Web content
 {% endtab %}
 {% endtabs %}
 
-## Custom card rendering
+### Customizing the read and unread indicators
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
 
 {% tabs %}
@@ -275,47 +302,4 @@ Web content
 {% endtab %}
 {% endtabs %}
 
-## Dark theme customization 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
-
-{% tabs %}
-{% tab Android %}
-
-Android content
-
-{% subtabs %}
-{% subtab Java %}
-
-Java content
-
-{% endsubtab %}
-{% subtab Kotlin %}
-
-Kotlin content
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab iOS %}
-
-iOS content
-
-{% subtabs %}
-{% subtab Swift %}
-
-Swift content
-
-{% endsubtab %}
-{% subtab Objective-C %}
-
-Objective-C content
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Web %}
-
-Web content
-
-{% endtab %}
-{% endtabs %}
+[1]: {% image_buster/assets/img/content_cards/content-card-customization-attributes.png %}
