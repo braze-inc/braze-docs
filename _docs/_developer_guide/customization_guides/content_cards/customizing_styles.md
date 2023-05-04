@@ -174,7 +174,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit 
 {% tabs %}
 {% tab Android %}
 
-Braze allows setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
+To change the default font programmatically, set a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
 For example, to update the font on all titles for captioned image cards, override the `Braze.ContentCards.CaptionedImage.Title` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
 
@@ -189,18 +189,7 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
   </style>
 ```
 
-{% subtabs %}
-{% subtab Java %}
-
-Java content
-
-{% endsubtab %}
-{% subtab Kotlin %}
-
-Kotlin content
-
-{% endsubtab %}
-{% endsubtabs %}
+For more information about font customization in the Android SDK, see the [font family guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization).
 {% endtab %}
 {% tab iOS %}
 

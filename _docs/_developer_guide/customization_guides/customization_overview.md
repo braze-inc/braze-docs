@@ -16,12 +16,11 @@ The Braze SDK is a powerful toolkit, but at a high level it provides two importa
 
 All Braze components are crafted with the following principles in mind:
 
-|  |  |  |
-| --- | --- | --- |
+
 | **Accessible** | {::nomarkdown} <ul><li>Follow accessibility guidelines and are compatible with VoiceOver</li><li>Support Dynamic Type </li></ul> {:/}|
 | **Adaptive** | {::nomarkdown} <ul><li>Light and dark mode compatible</li><li>Support multiple device sizes and orientations, including multitasking UIs</li><li>Support Safe Area and Layout Margins</li><li>Support right-to-left layouts</li><li>Support on-screen keyboard</li></ul> {:/}|
 | **Customizable** | {::nomarkdown} <ul><li>Padding, margin, spacing, font, image size, and more</li><li>Sensible defaults</li><li>{:/} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 border: none;}
 
 **Accessible**
 * Follow accessibility guidelines and are compatible with VoiceOver
