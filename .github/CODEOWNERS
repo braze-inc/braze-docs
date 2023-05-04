@@ -1,1 +1,13 @@
-# Changes need to be approved by the Braze Growth Team
+# Changes need to be approved by the Braze docs team
+
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+
+# Use the Code Owners to define who has expertise for specific parts of the docs repository. 
+# Define the owners of files and directories in a repository to require owners to approve changes.
+
+# More details are here: https://help.github.com/articles/about-codeowners/
+
+# Support page: Because this article serves as access to the Support team for some customers, it is important that it functions appropriately at all times.
+
+/_docs/_hidden/other/support_contact.md @josh-mccrowell-braze
