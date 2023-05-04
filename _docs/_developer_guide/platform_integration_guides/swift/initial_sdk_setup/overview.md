@@ -25,6 +25,8 @@ guide_featured_list:
 
 <br>
 
+> Are you looking to upgrade to the Swift iOS SDK from our older Objective-C SDK? It's easy. Check out our [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/) for details.
+
 After you have integrated using one of the listed options, followed the steps for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/), and enabled other SDK customizations (optional), you can integrate, enable, and customize additional channels and features to fit the needs of your future campaigns.  
 
 <br>

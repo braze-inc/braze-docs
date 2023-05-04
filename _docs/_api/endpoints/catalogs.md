@@ -9,7 +9,7 @@ description: "This landing page lists the Braze catalogs endpoints."
 page_type: landing
 
 guide_top_header: "Catalogs Endpoints"
-guide_top_text: "Use the Braze Catalogs Endpoints to add, edit, and manage your catalogs and catalog item details. You can use the asynchronous catalog endpoints to make bulk changes to your catalog. <br><br> Looking for guidance on creating a catalog? Check out our article for <a href='/docs/user_guide/personalization_and_dynamic_content/catalog/'>creating and using catalogs</a>."
+guide_top_text: "Use the Braze Catalogs Endpoints to add, edit, and manage your catalogs and catalog item details. For bulk changes to your catalog, use the asynchronous catalog endpoints. <br><br> Looking for guidance on creating a catalog? Check out our article for <a href='/docs/user_guide/personalization_and_dynamic_content/catalog/'>creating and using catalogs</a>."
 
 guide_featured_title: "Catalog Management Endpoints<br><br>"
 guide_featured_list:
