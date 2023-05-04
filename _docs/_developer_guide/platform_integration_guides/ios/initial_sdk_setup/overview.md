@@ -33,7 +33,7 @@ guide_featured_list:
 
 <br>
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+> This page references our older Objective-C SDK. Looking to upgrade to the Swift iOS SDK? It's easy. Check out our [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/) for details.
 
 Installing the Braze iOS SDK will provide you with basic analytics functionality (session handling) and basic in-app messages. You must further customize your integration for additional channels and features. <br> <br> The Braze iOS SDK can be installed or updated using CocoaPods, Carthage, Swift Package Manager, or a Manual integration. <br> <br> Additionally, the Braze iOS SDK fully supports RubyMotion apps.
 
