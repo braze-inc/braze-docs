@@ -20,7 +20,7 @@ Braze provides five Content Card templates: banner, captioned image, classic, cl
 ![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]
 
 {% alert important %}
-Content card properties such as title, description, image, etc. are directly available on the Braze/ContentCard data type. Configuring these [content cards properties]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details) through the Braze dashboard is the preferred way to customize these properties.
+Content Card properties such as title, description, image, etc. are directly available on the Braze/ContentCard data type. Configuring these [content cards properties]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details) through the Braze dashboard is the preferred way to customize these properties.
 {% endalert %}
 
 
@@ -45,6 +45,8 @@ By default, Android and FireOS SDK Content Cards match the standard Android UI g
 ```
 
 To customize your Content Card stylings, override this default style. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The entire style must be copied over to your local `styles.xml` file for all attributes to be correctly set.
+
+<!--- To do: Is there a repo with customization examples we can link to here? --->
 
 {% subtabs local %}
 {% subtab Correct style override %}
@@ -162,12 +164,14 @@ body .ab-feed {
 }
 ```
 
+<!--- To do: Is there a repo with customization examples we can link to here? --->
+
 {% endtab %}
 {% endtabs %}
 
 ## Customization recipes 
 
-Here are multiple recipes for common customization use cases.
+Here are some recipes for common customization use cases.
 
 ### Custom font
 
@@ -230,6 +234,8 @@ When creating a Content Card, marketers have the option of pinning the card. A p
 
 To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
 
+<!--- To do: Can we add a code sample of what this looks like with some dummy src element? --->
+
 {% endtab %}
 {% tab iOS %}
 
@@ -261,7 +267,7 @@ Web content
 
 Content Cards contain a blue line at the bottom of the card which indicates whether or not the card has been viewed. 
 
-![Two Content Cards displayed side by side. The first card has a blue line at the bottom, indicating it has not been seen. The second card does not have a blue line, indicating it has already been seen.][3]{: style="max-width:80%"}
+![Two Content Cards displayed side by side. The first card has a blue line at the bottom, indicating it has not been seen. The second card does not have a blue line, indicating it has already been seen.][3]
 
 {% tabs %}
 {% tab Android %}
@@ -282,7 +288,7 @@ Change the color of the unread indicator bar by altering the value in `com_braze
 {% subtabs %}
 {% subtab Swift %}
 
-The color of the unviewed indicator can be set by assigning a value to the tint color of your `BrazeContentCardUI.ViewController` instance:
+Change the color of the unread indicator bar by assigning a value to the tint color of your `BrazeContentCardUI.ViewController` instance:
 
 ```swift
 let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
@@ -303,7 +309,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 {% endsubtab %}
 {% subtab Objective-C %}
 
-The color of the unviewed indicator can be set by assigning a value to the tint color of your `BRZContentCardUIViewController`:
+Change the color of the unread indicator bar by assigning a value to the tint color of your `BRZContentCardUIViewController`:
 
 ```objc
 BRZContentCardUIViewController *viewController = [[BRZContentCardUIViewController alloc] initWithBraze:AppDelegate.braze];
@@ -317,7 +323,7 @@ Customization of only the unviewed indicator via `Attributes` is not supported i
 {% endtab %}
 {% tab Web %}
 
-To change the color of the unread indicator of a card, add custom CSS to your webpage. For example, changing it to green with the following CSS:
+To change the color of the unread indicator of a card, add custom CSS to your webpage. For example, to set the color of the unviewed indicator to green:
 
 ```css
 .ab-unread-indicator { background-color: green !important; }
