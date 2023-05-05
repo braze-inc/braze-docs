@@ -167,9 +167,11 @@ body .ab-feed {
 
 ## Customization recipes 
 
+Here are multiple recipes for common customization use cases.
+
 ### Custom font
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
+Customizing the font used in your Content Cards allows you to maintain your brand identity and create a visually appealing experience for your users. Use these recipes to set the font for all Content Cards programmatically. 
 
 {% tabs %}
 {% tab Android %}
@@ -193,7 +195,7 @@ For more information about font customization in the Android SDK, see the [font 
 {% endtab %}
 {% tab iOS %}
 
-iOS content
+<!--- To do: Add recipe for customizing font on iOS --->
 
 {% subtabs %}
 {% subtab Swift %}
@@ -209,6 +211,8 @@ Objective-C content
 {% endsubtabs %}
 {% endtab %}
 {% tab Web %}
+
+<!--- To do: Add recipe for customizing font through CSS --->
 
 Web content
 
@@ -216,31 +220,20 @@ Web content
 {% endtabs %}
 
 ### Custom pinned icons
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
 
-NOTE TO JOSH: Should these be called "badges" or "pinned icons" or what?
+When creating a Content Card, marketers have the option of pinning the card. A pinned card will display at the top of a user's feed and can't be dismissed by the user. As you customize your card styles, you have the ability to change what the pinned icon looks like.
+
+![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.][2]{:style="border:none"}
 
 {% tabs %}
 {% tab Android %}
 
-Android content
+To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
 
-{% subtabs %}
-{% subtab Java %}
-
-Java content
-
-{% endsubtab %}
-{% subtab Kotlin %}
-
-Kotlin content
-
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 {% tab iOS %}
 
-iOS content
+<!--- To do: Add recipe for customizing the pinned icon on iOS --->
 
 {% subtabs %}
 {% subtab Swift %}
@@ -256,55 +249,128 @@ Objective-C content
 {% endsubtabs %}
 {% endtab %}
 {% tab Web %}
+
+<!--- To do: Add recipe for customizing font through CSS --->
 
 Web content
 
 {% endtab %}
 {% endtabs %}
 
-### Customizing the read and unread indicators
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
+### Changing the unread indicator color
+
+Content Cards contain a blue line at the bottom of the card which indicates whether or not the card has been viewed. 
+
+![Two Content Cards displayed side by side. The first card has a blue line at the bottom, indicating it has not been seen. The second card does not have a blue line, indicating it has already been seen.][3]{: style="max-width:80%"}
 
 {% tabs %}
 {% tab Android %}
 
-Android content
+Change the color of the unread indicator bar by altering the value in `com_braze_content_cards_unread_bar_color` in your `colors.xml` file:
 
-{% subtabs %}
-{% subtab Java %}
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- The color used to highlight unread Content Cards at their bottom edge -->
+  <color name="com_braze_content_cards_unread_bar_color">#1676d0</color>
+</resources>
+```
 
-Java content
-
-{% endsubtab %}
-{% subtab Kotlin %}
-
-Kotlin content
-
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 {% tab iOS %}
-
-iOS content
 
 {% subtabs %}
 {% subtab Swift %}
 
-Swift content
+The color of the unviewed indicator can be set by assigning a value to the tint color of your `BrazeContentCardUI.ViewController` instance:
+
+```swift
+let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
+viewController.view.tintColor = .systemGreen
+```
+
+However, if you wish to modify only the unviewed indicator, you can access the `unviewedIndicatorColor` property of your `BrazeContentCardUI.ViewController.Attributes` struct. If you utilize Braze's `UITableViewCell` implementations, you should access the property before the cell is drawn.
+
+For example, to set the color of the unviewed indicator to red:
+
+```swift
+var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
+attributes.cellAttributes.unviewedIndicatorColor = .red
+
+let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
+```
 
 {% endsubtab %}
 {% subtab Objective-C %}
 
-Objective-C content
+The color of the unviewed indicator can be set by assigning a value to the tint color of your `BRZContentCardUIViewController`:
+
+```objc
+BRZContentCardUIViewController *viewController = [[BRZContentCardUIViewController alloc] initWithBraze:AppDelegate.braze];
+[viewController.view setTintColor:[UIColor systemGreenColor]];
+```
+
+Customization of only the unviewed indicator via `Attributes` is not supported in Objective-C.
 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% tab Web %}
 
-Web content
+To change the color of the unread indicator of a card, add custom CSS to your webpage. For example, changing it to green with the following CSS:
+
+```css
+.ab-unread-indicator { background-color: green !important; }
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Disabling unread indicator
+
+To disable the unread indicator, hide the indicator bar by setting its color to clear or none.
+
+{% tabs %}
+{% tab Android %}
+
+Hide the unread indicator bar by altering the value in `com_braze_content_cards_unread_bar_color` in your `colors.xml` file:
+
+  <!-- TO DO: What color should be used here? -->
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- The color used to highlight unread Content Cards at their bottom edge -->
+  <color name="com_braze_content_cards_unread_bar_color">#1676d0</color>
+</resources>
+```
+
+{% endtab %}
+{% tab iOS %}
+{% subtabs %}
+{% subtab Swift %}
+
+Hide the unread indicator bar by setting the `attributes.cellAttributes.unviewedIndicatorColor` property in your `Attributes` struct to `.clear`. 
+
+{% endsubtab %}
+{% subtab Objective-C %}
+
+Customization of only the unviewed indicator via `Attributes` is not supported in Objective-C.
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Web %}
+
+Hide the unread indicator bar by adding the following style to your `css`:
+
+```css
+.ab-unread-indicator { display: none; }
+```
 
 {% endtab %}
 {% endtabs %}
 
 [1]: {% image_buster/assets/img/content_cards/content-card-customization-attributes.png %}
+[2]: {% image_buster /assets/img/cc_pin_to_top.png %}
+[3]: {% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}
