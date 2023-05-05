@@ -9,7 +9,7 @@ channel:
 
 # Preference center overview
 
-> The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. 
+> The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the Braze dashboard under **Subscription Groups**. 
 
 Each subscription group you create is added to the preference center list. Click on the name of the preference center to see an interactive preview.
 
@@ -31,7 +31,13 @@ The preference center is intended to be used within the email channel. The prefe
 
 ## Customize your preference center
 
-With the [Preference Center endpoints]({{site.baseurl}}/api/endpoints/preference_center/), you can use HTML to update a preference center, which is hosted by Braze. You can create multiple preference centers. Braze manages the subscription state updates from the preference center, which keeps the preference center in sync. However, you can also create and host your own preference center using the [subscription groups APIs]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) with the following options.
+Built using the Braze [Preference Center endpoints]({{site.baseurl}}/api/endpoints/preference_center/), a preference center is a Braze-hosted website that can display your user's subscription state and subscription group statuses. 
+
+Using HTML and CSS, your developer team can build the preference center using HTML and CSS so that the styling of the page matches your brand guidelines.
+
+You can create multiple preference centers. Using Liquid enables you to retrieve the names of your subscription groups, and each user's status. This way, Braze stores and retrieves this data when the page is loaded.
+
+As an alternative, you can also create and host your own preference center using the [subscription groups APIs]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) with the following options.
 
 **Option 1: Link with string query parameters**
 

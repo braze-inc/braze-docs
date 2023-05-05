@@ -11,6 +11,12 @@ channel:
 
 > Setting up a preference center provides a one-stop shop for your users to edit their notification preferences with your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/). By using the [Preference Center Braze endpoints]({{site.baseurl}}/api/endpoints/preference_center), you can directly edit the HTML of your preference center to align with your branding and to understand your users' preferences.
 
+By using the [Preference Center Braze endpoints]({{site.baseurl}}/api/endpoints/preference_center), you can create a preference center, a website hosted by Braze, that can display your user's subscription state and subscription group statuses. Using HTML and CSS, your developer team can build the preference center using HTML and CSS so that the styling of the page matches your brand guidelines.
+
+Using Liquid enables you to retrieve the names of your subscription groups, and each user's status. This way, Braze stores and retrieves this data when the page is loaded. You can create multiple preference centers. 
+
+As an alternative, you can also create and host your own preference center using the [subscription groups APIs]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) with the following options.
+
 ## Prerequisites
 
 | Requirement | Description |
