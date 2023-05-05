@@ -2,7 +2,7 @@
 nav_title: Preference Center via API
 article_title: Preference Center via API
 page_order: 5
-description: "This article describes how to create and edit a preference center using the Preference Center Braze endpoints."
+description: "This article describes how to create and edit a preference center using the Preference Center Braze endpoints. "
 channel:
   - email
 ---
