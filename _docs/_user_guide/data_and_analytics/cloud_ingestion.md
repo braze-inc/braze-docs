@@ -16,7 +16,7 @@ guide_featured_list:
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/overview/
     fa_icon: fa-solid fa-users-between-lines
   - name: Available Integrations
-    link: /docs/user_guide/data_and_analytics/cloud_ingestion/integration/
+    link: /docs/user_guide/data_and_analytics/cloud_ingestion/integrations/
     fa_icon: fa-solid fa-gears
   - name: Delete Users with CDI
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/delete_users/
