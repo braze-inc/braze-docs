@@ -8,6 +8,7 @@ search_tag: Partner
 page_order: 0
 channel:
   - WhatsApp
+search_rank: 2
 ---
 
 # WhatsApp Overview
