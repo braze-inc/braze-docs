@@ -15,6 +15,10 @@ search_rank: 5
 
 To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select **Subscriptions and Usage** from the dropdown menu.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Subscriptions and Usage** is now **Billing** and is located under **Settings** > **Company Settings** > **Billing**.
+{% endalert %}
+
 ## Page contents
 
 ### Usage graphs
