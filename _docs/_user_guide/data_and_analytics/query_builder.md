@@ -23,6 +23,10 @@ To run a report:
 6. Save your query.
 7. To download a CSV of your report, click **Export**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Query Builder** under **Analytics** > **Reports** > **Query Builder**.
+{% endalert %}
+
 ![Query builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".]({% image_buster /assets/img_archive/query_builder.png %})
 
 Results from each report can be generated once a day. If you run the same report more than once in one calendar day, you'll see the same results in both reports.
