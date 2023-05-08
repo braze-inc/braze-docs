@@ -731,5 +731,5 @@ validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/snowflake/'] = '/
 validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/redshift/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/';
 validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/'] = '/docs/user_guide/administrative/company_settings/';
 
-validurls['/docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/preference_center/#create-a-preference-center-via-api';
+validurls['/docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/overview/#create-a-preference-center-via-api';
 validurls['/docs/user_guide/message_building_by_channel/email/preference_center/preference_center/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/overview/';
