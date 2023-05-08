@@ -47,15 +47,15 @@ Exactly two years ago today we met for the first time!
 Exactly three years ago today we met for the first time!
 
 {% else %}
-{% abort_message(not same year) %}
+{% abort_message("Not same year") %}
 {% endif %}
 
 {% else %} 
-{% abort_message(not same day) %} 
+{% abort_message("Not same day") %} 
 {% endif %}
 
 {% else %}
-{% abort_message(not same month) %}
+{% abort_message("Not same month") %}
 {% endif %}
 ```
 {% endraw %}
@@ -303,7 +303,7 @@ There are {{difference_e_days}} days left to order with express shipping so your
 {% elsif today >= express_shipping_end and today < overnight_shipping_end %}
 This is the last day for overnight shipping so your order gets here on time for Christmas Eve!
 {% else %}
-{% abort_message() %}
+{% abort_message("Unable to order and ship in time") %}
 {% endif %}
 ```
 {% endraw %}
@@ -513,7 +513,7 @@ Hi, the offer is only valid today.
 {% endif %}
 
 {% else %}
-{% abort_message('calculation failed') %}
+{% abort_message("Calculation failed") %}
 {% endif %}
 ```
 {% endraw %}
@@ -640,9 +640,9 @@ This use case checks if a user has performed a custom event three times, and if 
 ```liquid
 {% assign cadence = custom_attribute.${example} | minus: 1 | modulo: 3 %}
 {% if custom_attribute.${example} == blank %}
-{% abort_message('error calculating cadence') %}
+{% abort_message("Error calculating cadence") %}
 {% elsif cadence != 0 %}
-{% abort_message('skip message') %}
+{% abort_message("Skip message") %}
 {% endif %}
 Did you forget something in your shopping cart?
 ```
@@ -853,7 +853,7 @@ To use this Liquid, first save the list of blocked emails within a Content Block
 {% assign blocked_emails = {{content_blocks.${BlockedEmailList}}} | split: ',' %}
 {% for email in blocked_emails %}
     {% if {{${email_address}}} == email %}
-    {% abort_message('Email is blocked') %}
+    {% abort_message("Email is blocked") %}
     {% break %}
     {% endif %}
 {% endfor %} 
@@ -1339,7 +1339,7 @@ Message for time zone xx.
 {% elsif {{$time_zone}}} == 'yy' %}
 Message for timezone yy.
 {% else %}
-{% abort_message() %}
+{% abort_message("Invalid time zone") %}
 {% endif %}
 ```
 {% endraw %}
@@ -1571,16 +1571,14 @@ For example, you may want to send a survey to your users on the last Wednesday o
 
 {% comment %}Check that today's date is within a week of the last day of the month. If not, abort the message. If so, check that today is Wednesday. If not, abort the message.{% endcomment %}
 
-{% assign diff_in_days = last_day_of_month | minus: current_day | plus: 1%}
-{% if diff_in_days <= 7 %}
-{% unless current_day_name == "Wed" %}
-{% abort_message() %}
-{% endunless %}
-{% else %}
-{% abort_message() %}
+{% assign diff_in_days = last_day_of_month | minus: current_day | plus: 1%} 
+{% if diff_in_days <= 7 %} 
+{% unless current_day_name == "Wed" %} 
+{% abort_message("Wrong day of the week") %} 
+{% endunless %} 
+{% else %} 
+{% abort_message("Not the last week of the month") %} 
 {% endif %}
-
-
 ```
 {% endraw %}
 
