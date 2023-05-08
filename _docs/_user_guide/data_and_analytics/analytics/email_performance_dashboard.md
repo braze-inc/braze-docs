@@ -19,6 +19,10 @@ tool:
 
 To use your email performance dashboard, go to **Overview** > **Email Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Email Performance** under **Analytics** > **Analytics Dashboards**.
+{% endalert %}
+
 ### Metrics calculations
 
 ![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
@@ -41,7 +45,11 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 
 ## SMS performance dashboard
 
-To use your SMS performance dashboard, go to **Overview** > **SMS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past. 
+To use your SMS performance dashboard, go to **Overview** > **SMS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **SMS Performance** under **Analytics** > **Analytics Dashboards**.
+{% endalert %}
 
 ### Metrics calculations
 
