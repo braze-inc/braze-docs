@@ -28,7 +28,7 @@ This feature is in early access and is under active development. If you're inter
 ## Setting up your report
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Conversions** under **Analytics** > **Analytics Dashboards**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Conversions** under **Analytics** > **Analytics Dashboards** > **Conversions**.
 {% endalert %}
 
 1. Navigate to the **Conversions** page, under **Data**.
