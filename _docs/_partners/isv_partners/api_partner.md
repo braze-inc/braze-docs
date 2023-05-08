@@ -2,6 +2,7 @@
 nav_title: API Partner Integration
 alias: /api_partner_integration/
 hidden: true
+layout: dev_guide
 ---
 
 # API partner integration
