@@ -10,6 +10,12 @@ channel:
 
 # Email subscriptions
 
+> Learn about the different user subscription states, how to create and manage subscription groups, and how to segment users based on their subscriptions.
+
+{% alert note %}
+Several references in this page refer to **User Search** and **Subscription Groups**. If you’re using our updated navigation, the following has changed:<br>- **User Search** is now **Search Users** and is located under **Audience** <br>- **Subscription Groups** is now **Subscriptions** and is located under **Audience**
+{% endalert %}
+
 ## Subscription states {#subscription-states}
 
 Braze has three global subscription states for email users (listed in the following table), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the global subscription state of `subscribed` or `opted-in`.

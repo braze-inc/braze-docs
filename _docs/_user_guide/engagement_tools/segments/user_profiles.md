@@ -22,6 +22,10 @@ To access a user's profile, go to the **User Search** page and search for a user
 - Phone number
 - Push token
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **User Search** is now **Search Users** and can be found under **Audience**.
+{% endalert %}
+
 If a match is found, you can view the information that you've recorded for this user with the Braze SDK.
 
 Most searches return one user profile. However, if you search for an email that belongs to more than one user, all user profiles that match that email will be returned. If you do enter a non-unique email, click **Next** to view the other profiles that are associated with that email.
