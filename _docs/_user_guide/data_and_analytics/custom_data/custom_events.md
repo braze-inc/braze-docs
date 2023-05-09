@@ -67,7 +67,13 @@ The following table shows the filters available for segmenting users by custom e
 
 ## Custom event analytics
 
-Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the **Custom Events** reporting page in the dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
+Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. You can view these analytics on the **Custom Events** page under **Data**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Events Report** under **Analytics** > **Reports** > **Custom Events Report**.
+{% endalert %}
+
+On the **Custom Events** reporting page in the dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
 
 ![Custom event counts graph on the Custom Events page in the dashboard showing trends for two different custom events][8]
 
