@@ -148,7 +148,11 @@ After adding segments and filters to your target audience, you can test if your 
 
 Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. 
 
-By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To manage your frequency capping rules, go  to your **Global Message Settings** page in your Braze account.
+By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To manage your frequency capping rules, go to your **Global Message Settings** page in your Braze account.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Global Message Settings** is now **Frequency Capping Rules** and is located at **Settings** > **Workspace Settings** > **Frequency Capping Rules**.
+{% endalert %}
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 

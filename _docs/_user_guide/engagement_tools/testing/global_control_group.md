@@ -37,6 +37,10 @@ Braze measures the behaviors of users in your control group and users in your tr
 
 From the dashboard, go to **Global Message Settings** under **Engagement**, and select the **Global Control Group Settings** tab.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Global Control Group Settings** is now **Global Control Group** and is located under **Audience**.
+{% endalert %}
+
 ### Step 2: Assign a percentage of all users to this control group
 
 Input a percentage for your control group and click **Save**. Once entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be. 

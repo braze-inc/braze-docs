@@ -125,6 +125,10 @@ Abort events are currently not available for in-app messages and Content Cards.
 
 A frequency cap event occurs when a user is qualified to receive a message, but did not actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. You can customize frequency capping settings on the **Global Message Settings** page of your dashboard.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Global Message Settings** is now **Frequency Capping Rules** and is located at **Settings** > **Workspace Settings** > **Frequency Capping Rules**.
+{% endalert %}
+
 #### Note on email open event {#note-on-email-open-event}
 
 Email open tracking is error prone in any tool, including Braze. With a variety of privacy protection features offered by different email clients that either block the automatic loading of images or load them proactively on the server, email open events are susceptible to both false positives and false negatives.
