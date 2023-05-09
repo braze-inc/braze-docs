@@ -79,7 +79,7 @@ bash "$BUILT_PRODUCTS_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Contents/Resources/App
 
 ## Étapes suivantes
 
-Suivez les instructions pour [compléter l’intégration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/).
+Suivez les instructions pour [compléter l’intégration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/).
 
 [1]: https://swift.org/package-manager/
 [2]: {% image_buster /assets/img/ios/spm/swiftpackages.png %}

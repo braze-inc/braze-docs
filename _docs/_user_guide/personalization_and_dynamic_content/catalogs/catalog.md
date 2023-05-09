@@ -10,11 +10,7 @@ description: "This reference article covers how to create and use catalogs to re
 
 > With catalogs, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
 
-{% alert note %}
-You can create up to five catalogs across your company.
-{% endalert %}
-
-Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to  then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider. 
+Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider. 
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
@@ -27,9 +23,9 @@ Note these guidelines when creating your CSV file. The first column of the CSV f
 - Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)
 - Maximum field (column) name of 250 characters
-- Maximum CSV file size of 100MB
+- Maximum CSV file size of 100&nbsp;MB
 - Maximum field value (cell) of 5,000 characters
-- Maximum field value (cell) size of 0.5KB
+- Maximum field value (cell) size of 0.5&nbsp;KB 
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
 Ensure that you are encoding your CSV file using the UTF-8 format in order to successfully upload your CSV file in the next step. We also recommend that you format all text in your CSV files as lowercase.
@@ -72,10 +68,6 @@ Your CSV file can be rejected if you go above [company limitations](#limits).
 You also have the option of updating the CSV file after selecting to create a catalog in the browser. Click **Update Catalog > Upload CSV**, then select whether to update, add, or delete items in your catalog.
 
 ### Method 2: Create in browser
-
-{% alert important %}
-Creating a catalog in-browser is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
-{% endalert %}
 
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
@@ -174,19 +166,19 @@ This renders as the following:
 
 ## Catalogs via API
 
-You can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information.
+You can leverage our [Catalogs endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information.
 
 ### Managing catalogs
 
-You can create a catalog using the [Create Catalogs]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/) endpoint.
+You can create a catalog using the [Create catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/).
 
-As you build more catalogs, you can also use the [List Catalogs]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) endpoint to return a list of the catalogs in an app group.
+As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in an app group.
 
 ### Managing catalog items
 
 In addition to managing your catalogs, you can also use asynchronous and synchronous endpoints to manage the catalog items. This includes the ability to edit and delete catalog items, and to list catalog item details. 
 
-For example, if you want to edit an individual catalog item, you can use the [`/catalogs/catalog_name/items/item_id`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/) endpoint.
+For example, if you want to edit an individual catalog item, you can use the [`/catalogs/catalog_name/items/item_id` endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/).
 
 ## Additional use cases
 
@@ -286,28 +278,29 @@ As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.ba
 
 ## Limitations {#limits}
 
-Refer to the following table for the default limits that apply at a company level:
-
-| Limitation Area | Free version | Catalogs Pro |
-|---|---|---|
-| Number of catalogs | Up to 5 catalogs | Up to 10 catalogs |
-| Number of all catalogs items | Up to 5,000 items | Up to 100,000 items |
-| Catalog storage | Up to 100MB of catalog data | Up to 2GB of catalog data |
-| Selections | Up to 1 selection per catalog | Up to 10 selections per catalog |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
 The following table describes the limitations that apply at a catalog level:
 
 | Limitation Area | Free version | Catalogs Pro |
 |---|---|---|
-| CSV file size | Up to 100MB for a single CSV file | Up to 2GB for a single CSV file |
-| Number of items | Up to 5,000 items in a single catalog | Up to 100,000 items in a single catalog |
-| Number of fields | Up to 30 fields (columns) | Up to 30 fields (columns) |
+| CSV file size | Up to 100&nbsp;MB for a single CSV file | Up to 2&nbsp;GB for a single CSV file |
 | Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
 | Characters limit for item column name | Up to 250 characters | Up to 250 characters |
+| Selections | Up to 10 selections per catalog | Up to 10 selections per catalog |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Interested in upgrading past these default limits? Contact your account manager to get started.
+### Storage limits
+
+{% alert important %}
+To request an upgrade for catalogs storage, contact your Braze account manager.
+{% endalert %}
+
+#### Free version
+
+The storage limit for the free version of catalogs is 100&nbsp;MB. You can have unlimited items as long as it's under 100&nbsp;MB. Selections will contribute to this size limit. The more complex a selection is, the more storage it will take up.
+
+#### Catalogs Pro
+
+At a company level, the storage limit for Catalogs Pro will be based on the size of catalog data: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}

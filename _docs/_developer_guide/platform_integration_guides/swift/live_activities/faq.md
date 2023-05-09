@@ -1,14 +1,16 @@
 ---
 nav_title: FAQ
 article_title: Live Activities FAQ
-page_order: 2
-description: "This page provides answers to frequently asked questions about live activities."
+page_order: 20
+description: "This page provides answers to frequently asked questions about live activities for the Swift SDK."
 tool: Live Activities
 platform:
   - iOS
 ---
 
 # Frequently asked questions
+
+> This article provides answers to some frequently asked questions about Live Activities.
 
 ## Functionality and support
 
@@ -32,8 +34,6 @@ No, this is not currently supported.
 
 Live Activities and push notifications occupy different screen real estate and won't conflict on a user's screen.
 
-
-
 ### If Live Activities leverage push message functionality, do push notifications need to be enabled to receive Live Activities?
 
 While Live Activities rely on push notifications for updates, they are controlled by different user settings. A user can opt into Live Activities but out of push notifications, and vice versa. 
@@ -45,6 +45,10 @@ Apple requires that the user initiates the Live Activity through some action in 
 [Push primers][1] are a best practice to prompt your users to opt in to push notifications from your app. However, there is no system prompt to opt into Live Activities. Users are, by default, opted into Live Activities when they upgrade to iOS 16.1+.
 
 ## Technical topics and troubleshooting
+
+### How do I know if Live Activites has errors?
+
+Any Live Activity errors will be logged in the Braze dashboard under **Developer Console** > **Message Activity Log**, where you can filter by "LiveActivity Errors".
 
 ### I am receiving an Access Denied response when I try to use the `live_activity/update` endpoint. Why?
 

@@ -37,20 +37,20 @@ Before you begin composing SMS campaigns through Braze, you'll need to update yo
 **Here's a quick summary of the user data you'll need to update in Braze:**
 
 1. **Import users' phone numbers in the correct format** ([E.164][0]) formatting requires a plus sign '+' and a country code, e.g., +12408884782. For more information on how to import user phone numbers, check out [User phone numbers][userphone].
-    * Use the [users/track][1] REST API endpoint to assign the `phone` value.<br><br>
+    * Use the [`/users/track` endpoint][1] to assign the `phone` value.<br><br>
 
 2. **Assign your user's SMS [subscription state][subscriptionstate]** (i.e., subscribed or unsubscribed) if you have this information.
-    * Use the [subscription/status/set][6] REST API endpoint to set users as subscribed or unsubscribed from your SMS subscription groups.
+    * Use the [`/subscription/status/set` endpoint][6] to set users as subscribed or unsubscribed from your SMS Subscription Groups.
 
 {% alert note %}
-After you have configured the SMS subscription groups in your dashboard, you'll be able to grab the associated `subscription_group_id`, which you'll need for your API request.
+After you have configured the SMS Subscription Groups in your dashboard, you'll be able to grab the associated `subscription_group_id`, which you'll need for your API request.
 {% endalert %}
 
 [0]: https://en.wikipedia.org/wiki/E.164
 [userphone]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
 [1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [2]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#aliasing-users
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
 [6]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/

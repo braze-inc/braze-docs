@@ -83,6 +83,6 @@ Consultez les [Geofences iOS][4] pour plus de détails.
 Une fois la configuration initiale terminée, vous pouvez accéder à l’interface JavaScript `AppboyPlugin` dans votre application.
 
 [1]: https://github.com/Appboy/appboy-cordova-sdk
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/locations_and_geofences/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/

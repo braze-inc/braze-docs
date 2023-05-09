@@ -22,7 +22,7 @@ For example, ask users how they'd like to use your app, learn more about their p
 
 This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/flexbox), and must have at least the following [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions). 
 
-{% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
+{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
 {% alert note %}
 To enable HTML in-app messages through the Web SDK, you must supply the `allowUserSuppliedJavascript` initialization option to Braze.

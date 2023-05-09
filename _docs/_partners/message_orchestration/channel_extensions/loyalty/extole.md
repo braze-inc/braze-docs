@@ -92,7 +92,7 @@ If you only provide one Braze REST API key to Extole, only production events wil
 
 ### Creating a new user alias
 
-For certain use cases, such as a new email or SMS subscription where Extole does not have an external ID (user ID) for the user, Extole can check for the user's identifier using Braze's [export user by identifier endpoint][2]. If the user exists within Braze, Extole will add and update any profile attributes. If the request does not return a user profile, Extole will instead use the [user track endpoint][3] to create a user alias with the user's email address as the alias name.
+For certain use cases, such as a new email or SMS subscription where Extole does not have an external ID (user ID) for the user, Extole can check for the user's identifier using Braze's [Export user by identifier endpoint][2]. If the user exists within Braze, Extole will add and update any profile attributes. If the request does not return a user profile, Extole will instead use the [`/user/track` endpoint][3] to create a user alias with the user's email address as the alias name.
 
 ## Using this integration
 

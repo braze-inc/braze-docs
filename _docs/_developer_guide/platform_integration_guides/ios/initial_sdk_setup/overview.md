@@ -6,7 +6,6 @@ page_order: 0
 layout: dev_guide
 search_rank: 6
 guide_top_header: "Integration Overview"
-guide_top_text: "Installing the Braze iOS SDK will provide you with basic analytics functionality (session handling) and basic in-app messages. You must further customize your integration for additional channels and features. <br> <br> The Braze iOS SDK can be installed or updated using CocoaPods, Carthage, Swift Package Manager, or a Manual integration. <br> <br> Additionally, the Braze iOS SDK fully supports RubyMotion apps."
 description: "This landing page covers Braze SDK integration guides for CocoaPods, Swift Package Manager, Carthage, and more."
 
 guide_featured_title: "Basic Integration Options"
@@ -32,12 +31,14 @@ guide_featured_list:
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
-
 <br>
 
+> This page references our older Objective-C SDK. Looking to upgrade to the Swift iOS SDK? It's easy. Check out our [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/) for details.
+
+Installing the Braze iOS SDK will provide you with basic analytics functionality (session handling) and basic in-app messages. You must further customize your integration for additional channels and features. <br> <br> The Braze iOS SDK can be installed or updated using CocoaPods, Carthage, Swift Package Manager, or a Manual integration. <br> <br> Additionally, the Braze iOS SDK fully supports RubyMotion apps.
+
 {% alert important %}
-The iOS SDK will add 1MB to 2MB to the app IPA file, in addition to an APP File, and 30MB for the framework.
+The iOS SDK will add 1&nbsp;MB to 2&nbsp;MB to the app IPA file, in addition to an APP File, and 30&nbsp;MB for the framework.
 {% endalert %}
 
 After you have integrated using one of the listed options, followed the steps for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/), and enabled other SDK customizations (optional), move on to integrating, enabling, and customizing additional channels and features to fit the needs of your future campaigns.  

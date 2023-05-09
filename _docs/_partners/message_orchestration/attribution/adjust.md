@@ -57,7 +57,7 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 {% endtab %}
 {% tab Swift %}
 
-If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from Adjust to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from Adjust to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
 
 {% endtab %}
 {% endtabs %}
@@ -68,7 +68,7 @@ If you are planning to send post-install events from Adjust into Braze, you will
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Adjust**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Adjust's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Adjust technology page. In this box, you are shown the data import key and the REST endpoint.][1]{: style="max-width:90%;"}
+In Braze, navigate to **Technology Partners** and select **Adjust**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Adjust's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Adjust technology page. In this box, you are shown the data import key and the REST endpoint.][1]{: style="max-width:90%;"}
 
 ### Step 3: Configure Braze in Adjust
 

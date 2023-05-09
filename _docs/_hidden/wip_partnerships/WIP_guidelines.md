@@ -90,7 +90,7 @@ The following requirements are typical requirements you might need from Braze. W
 | ----------- | ----------- |
 | Partner account | A partner account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze REST endpoint | [Your REST Endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 ## Use cases
 Use cases can be a critical part of your documentation. Although optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
@@ -192,7 +192,7 @@ Within the Braze docs GitHub repository, find your branch. If your document is c
 1. Set up your branch to be merged in a similar fashion as shown in the preceding image.<br><br>
 2. Name your Pull Request as "Partnership Name - Partner Docs"<br><br>
 3. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your **Braze product manager** so we can reach out to them to get in contact with you about your changes if needed.<br><br>
-4. After you are done making changes, tag @KellieHawks and @josh-mccrowell-braze in a comment within the pull request, and our team will take a look.<br><br>
+4. After you are done making changes, tag @KellieHawks and @alex-braze in a comment within the pull request, and our team will take a look.<br><br>
 
 ## Review process {#review}
 

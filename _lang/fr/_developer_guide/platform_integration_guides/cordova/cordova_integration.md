@@ -36,7 +36,7 @@ Un endpoint API personnalisé peut être configuré via `config.xml`. Par exempl
 
 ## Notifications push
 
-Si vous utilisez la configuration par défaut du SDK Cordova, vous n’aurez pas à effectuer de nouveaux changements côté client. Pour les intégrations modifiées, voir les instructions d’intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/) ou [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
+Si vous utilisez la configuration par défaut du SDK Cordova, vous n’aurez pas à effectuer de nouveaux changements côté client. Pour les intégrations modifiées, voir les instructions d’intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/) ou [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).
 
 ## Envoi de messages in-app
 
@@ -46,7 +46,7 @@ Le SDK Cordova prend en charge par défaut les messages in-app sans modification
 
 ### Définir des ID utilisateur
 
-Consultez les instructions d’intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) et [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/) pour une explication approfondie sur le moment auquel définir et modifier un ID utilisateur.
+Consultez les instructions d’intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) et [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) pour une explication approfondie sur le moment auquel définir et modifier un ID utilisateur.
 
 ```javascript
 AppboyPlugin.changeUser("YOUR_USER_ID");
@@ -54,7 +54,7 @@ AppboyPlugin.changeUser("YOUR_USER_ID");
 
 ### Journalisation des événements personnalisés
 
-Consultez les instructions d’intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events) et [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) pour une explication approfondie des meilleures pratiques de suivi des événements et des interfaces.
+Consultez les instructions d’intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events) et [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) pour une explication approfondie des meilleures pratiques de suivi des événements et des interfaces.
 
 ```javascript
 var properties = {};
@@ -64,7 +64,7 @@ AppboyPlugin.logCustomEvent("cordovaCustomEventWithProperties", properties);
 
 ### Définition des attributs personnalisés
 
-Consultez les instructions d’intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) et [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/) pour une explication approfondie des meilleures pratiques de suivi des attributs et des interfaces.
+Consultez les instructions d’intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) et [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/) pour une explication approfondie des meilleures pratiques de suivi des attributs et des interfaces.
 
 ```javascript
 AppboyPlugin.setFirstName("firstName");

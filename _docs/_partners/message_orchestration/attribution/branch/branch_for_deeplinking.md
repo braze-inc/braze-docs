@@ -40,7 +40,7 @@ Depending on your ESP, additional customization may be required to support click
 [1]: https://branch.io/
 [2]: {{site.baseurl}}/partners/branch_for_attribution/
 [3]: https://docs.branch.io/pages/deep-linking/universal-links/#search
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-customization
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization
 [5]: https://help.branch.io/using-branch/page/braze-sendgrid
 [6]: https://help.branch.io/using-branch/page/braze-mailjet
 [7]: https://help.branch.io/using-branch/page/braze-sparkpost

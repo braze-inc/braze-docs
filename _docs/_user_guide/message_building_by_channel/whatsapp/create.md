@@ -8,7 +8,7 @@ tool:
   - Campaigns
 channel:
   - WhatsApp
-
+search_rank: 1
 ---
 
 # Creating a WhatsApp message

@@ -40,8 +40,8 @@ Use Braze user profile field names (listed as follows or any listed in the secti
 }
 ```
 
-- [External User ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
-- [User Aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
+- [External user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
+- [User aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 
 To remove a profile attribute, set it to `null`. Some fields, such as `external_id` and `user_alias` cannot be removed once added to a user profile.
 
@@ -50,7 +50,7 @@ To remove a profile attribute, set it to `null`. Some fields, such as `external_
 If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the `external_id` does not already exist.
 
 {% alert note %}
-If you are creating an alias-only user profile via the users/track endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
+If you are creating an alias-only user profile via the `/users/track` endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
 {% endalert %}
 
 #### Push token import

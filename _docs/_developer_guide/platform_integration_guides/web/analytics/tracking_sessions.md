@@ -36,7 +36,7 @@ To detect sessions via your user, find your user on the dashboard and navigate t
 
 ![A user profile component showing how many sessions have occurred, when the app was first used, and when it was last used.][session_tracking_7]
 
-[session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#customizing-braze-on-startup
+[session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/#customizing-braze-on-startup
 [session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
 [session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
 [session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx

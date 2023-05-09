@@ -3,13 +3,13 @@ nav_title: Collecte de données SDK
 article_title: Collecte de données SDK
 page_order: 1
 page_type: reference
-description: "Cet article de référence traite des données qui sont collectées par le SDK par le biais d’une intégration personnalisée, d’une intégration collectée automatiquement et d’une intégration minimale. "
+description: "Cet article de référence traite des données qui sont collectées par le SDK à travers une intégration personnalisée, d’une intégration collectée automatiquement et d’une intégration minimale."
 
 ---
 
-# Options de collecte de données du SDK
+# Collecte de données SDK
 
-Braze est conçu pour permettre une collecte de données flexible via nos SDK et API. Le SDK de Braze peut être intégré de trois façons :
+Braze est conçu pour permettre une collecte de données flexible via nos SDK et API. Le SDK de Braze peut être intégré de trois façons :
 - **Intégration personnalisée** ; les intégrateurs ont la possibilité de collecter des données en plus des données collectées automatiquement.
 - **Intégration collectée automatiquement** ; les intégrateurs peuvent bénéficier des données collectées automatiquement (ce qui inclut toutes les données d’intégration minimale) sans avoir à intégrer des données supplémentaires.
 - **Intégration minimale** ; les intégrateurs peuvent désactiver les données collectées automatiquement pour ne recevoir que les données strictement nécessaires pour permettre la communication avec les services Braze. 
@@ -31,15 +31,15 @@ La liste suivante énumère les données automatiquement capturées, générées
 | Résolution | Android, iOS, Web | Résolution de l’appareil/navigateur. | Utilisé en option pour le ciblage des messages en fonction de l’appareil. |
 | Langue | Android, iOS, Web | Langue de l’appareil/navigateur. | Utilisé pour traduire les messages dans la langue préférée de l’utilisateur. |
 | Agent de l’utilisateur | Web | [Agent utilisateur](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent). | Utilisé pour s’assurer que les messages ne sont envoyés qu’aux appareils compatibles. Peut également être utilisé dans le cadre de la segmentation. |
-| Emplacement de l’appareil | Android, iOS | Emplacement par défaut de l’appareil. | Utilisé pour traduire les messages dans la langue préférée de l’utilisateur. |
+| Paramètres régionaux de l’appareil | Android, iOS | Les paramètres régionaux par défaut de l’appareil. | Utilisé pour traduire les messages dans la langue préférée de l’utilisateur. |
 | Modèle de l’appareil | Android, iOS | Le matériel spécifique de l’appareil. | Utilisé pour s’assurer que les messages ne sont envoyés qu’aux appareils compatibles. Peut également être utilisé dans le cadre de la segmentation. |
 | Transporteur sans fil de l’appareil | Android, iOS | L’opérateur mobile. | Utilisé de manière facultative pour le ciblage des messages. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 Tous ces champs peuvent être désactivés pour permettre une intégration minimale : 
 - Android : [champs au niveau de l’appareil][1], [documentation de la liste des autorisations]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation")
-- iOS : [champs au niveau de l’appareil](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181 "iOS device-level fields"), [documentation de la liste des autorisations]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/storage/ "iOS allowlist documentation")
-- Web : [champs au niveau de l’appareil](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.deviceproperties.html "Web device-level fields"), [documentation de la liste des autorisations]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation")
+- iOS : [champs au niveau de l’appareil](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181 « champs au niveau de l’appareil iOS »), [documentation de la liste des autorisations]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/storage/ "iOS allowlist documentation")
+- Web : [champs au niveau de l’appareil](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.deviceproperties.html « champs au niveau de l’appareil Web»), [documentation de la liste des autorisations]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation")
 
 ## Intégration minimale
 
@@ -66,4 +66,4 @@ Si vous êtes intéressé par l’intégration minimale uniquement et que vous i
 
 {% endalert %} 
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.enums/-device-key/index.html "Android device-level fields"
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.appboy.enums/-device-key/index.html "Android device-level fields"

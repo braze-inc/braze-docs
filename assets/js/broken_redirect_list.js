@@ -34,7 +34,7 @@ validurls['/docs/quick_wins/personalized_messaging#conditionals'] = '/docs/user_
 validurls['/docs/quick_wins/personalized_messaging'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/';
 
 validurls['/docs/getting_started/'] = '/docs/user_guide/onboarding_with_braze/';
-validurls['/docs/getting_started#list-unsubscribe-settings'] = '/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#list-unsubscribe-settings';
+validurls['/docs/getting_started#list-unsubscribe-settings'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header';
 validurls['/docs/quick_wins/optimal_send_time'] = '/docs/user_guide/intelligence/intelligent_timing/';
 validurls['/docs/scheduling_and_organizing_campaigns/#intelligent-delivery'] = '/docs/user_guide/intelligence/intelligent_timing/';
 validurls['/docs/troubleshooting_guide/'] = '/docs/help/home/';
@@ -48,9 +48,9 @@ validurls['/docs/android/#step-4-set-your-firebase-credentials'] = '/docs/develo
 validurls['/docs/android/#uninstall-tracking'] = '/docs/developer_guide/platform_integration_guides/android/analytics/uninstall_tracking/#uninstall-tracking';
 validurls['/docs/auto_advance'] = '/docs/auto_advance/';
 validurls['/docs/enabling_message_channels/push_notifications/baidu'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/';
-validurls['/docs/enabling_message_channels/push_notifications/ios'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/integration/';
+validurls['/docs/enabling_message_channels/push_notifications/ios'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/';
 
-validurls['/docs/ios/#push-notifications'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/integration/';
+validurls['/docs/ios/#push-notifications'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/';
 validurls['/docs/partner_integrations/#adjust'] = '/docs/partners/adjust/';
 validurls['/docs/frequently_asked_questions#local-timezone-delivery'] = '/docs/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer';
 validurls['/docs/frequently_asked_questions'] = '/docs/help/faqs/';
@@ -80,7 +80,7 @@ validurls['/docs/rest_apis/user_data'] = '/docs/developer_guide/rest_api/user_da
 validurls['/docs/rest_api/messaging'] = '/docs/developer_guide/rest_api/messaging/';
 validurls['/docs/rest_apis/messaging'] = '/docs/developer_guide/rest_api/messaging/';
 validurls['/docs/rest_api/#endpoints'] = '/docs/developer_guide/rest_api/basics/#endpoints';
-validurls['/docs/rest_apis/endpoints'] = '/docs/developer_guide/rest_api/basics/#endpoints';
+validurls['/docs/docs/user_guide/administrative/access_braze/braze_instances'] = '/docs/user_guide/administrative/access_braze/sdk_endpoints/';
 validurls['/docs/rest_api/#user-track-endpoint'] = '/docs/developer_guide/rest_api/user_data/#user-track-endpoint';
 validurls['/docs/rest_api/#users-by-segment-endpoint'] = '/docs/developer_guide/rest_api/export/#users-by-segment-endpoint';
 validurls['/docs/api/objects_filters/android_objects/'] = '/docs/api/objects_filters/messaging/android_object/';
@@ -506,9 +506,9 @@ validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/r
 validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/'] = '/docs/developer_guide/platform_integration_guides/ios/content_cards/integration/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/requesting_unread_card_count/'] = '/docs/developer_guide/platform_integration_guides/ios/news_feed/customization/badges/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/customizing_the_news_feed/'] = '/docs/developer_guide/platform_integration_guides/ios/news_feed/customization/custom_styling/';
-validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/advanced_settings/'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/advanced_settings/';
-validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/badge_counts/'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/badges/';
-validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/rich/'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/advanced_settings/'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/badge_counts/'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/badges/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/rich/'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/';
 validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/badges/'] = '/docs/developer_guide/platform_integration_guides/web/content_cards/customization/badges/';
 validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/read_unread_indicators/'] = '/docs/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/';
 validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/data_models/'] = '/docs/developer_guide/platform_integration_guides/web/content_cards/integration/';
@@ -520,7 +520,7 @@ validurls['/docs/developer_guide/platform_integration_guides/android/news_feed/c
 validurls['/docs/developer_guide/platform_integration_guides/android/news_feed/integration_overview/'] = '/docs/developer_guide/platform_integration_guides/android/news_feed/integration/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/news_feed_data_model/'] = '/docs/developer_guide/platform_integration_guides/ios/news_feed/integration/#news-feed-data-model/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/news_feed_integration_overview/'] = '/docs/developer_guide/platform_integration_guides/ios/news_feed/integration/';
-validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/kvp/'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/kvp/'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs/';
 validurls['/docs/developer_guide/platform_integration_guides/web/in-app_messaging/overview/'] = '/docs/developer_guide/platform_integration_guides/web/in-app_messaging/integration/';
 validurls['/docs/api/objects_filters/email_object/'] = '/docs/api/objects_filters/messaging/email_object/';
 validurls['/docs/user_guide/message_building_by_channel/push/ios/create_push_primer/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages';
@@ -607,7 +607,7 @@ validurls['/docs/developer_guide/platform_integration_guides/fireos/push_notific
 validurls['/docs/developer_guide/platform_integration_guides/fireos/push_notifications/testing/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/testing';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/push_story/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/push_story';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/news_feed_data_model/'] = '/docs/developer_guide/platform_integration_guides/ios/news_feed/integration/#news-feed-model';
-validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/action_buttons/'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/action_buttons/'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/';
 validurls['/docs/developer_guide/platform_integration_guides/react_native/android_and_fireos/analytics/attribute_tracking/'] = '/docs/developer_guide/platform_integration_guides/react_native/analytics/';
 validurls['/docs/developer_guide/platform_integration_guides/react_native/android_and_fireos/content_cards/'] = '/docs/developer_guide/platform_integration_guides/react_native/content_cards/';
 validurls['/docs/developer_guide/platform_integration_guides/react_native/android_and_fireos/inapp_messages/'] = '/docs/developer_guide/platform_integration_guides/react_native/inapp_messages/';
@@ -719,3 +719,17 @@ validurls['/docs/user_guide/message_building_by_channel/email/gmail_promotions_t
 validurls['/docs/user_guide/message_building_by_channel/email/email_private_relay_apple_sso/'] = '/docs/user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_sso/';
 validurls['/docs/user_guide/message_building_by_channel/email/mpp/'] = '/docs/user_guide/message_building_by_channel/email/apple_mail/mpp/';
 
+validurls['/docs/user_guide/data_and_analytics/query_builder/custom_sql/'] = '/docs/user_guide/data_and_analytics/query_builder/#custom-sql';
+
+validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping';
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/';
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/redshift/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/redshift/';
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/snowflake/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/snowflake/';
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/overview/';
+
+validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/snowflake/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/';
+validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/redshift/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/'] = '/docs/user_guide/administrative/company_settings/';
+
+validurls['/docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/overview/#create-a-preference-center-via-api';
+validurls['/docs/user_guide/message_building_by_channel/email/preference_center/preference_center/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/overview/';

@@ -16,11 +16,11 @@ Braze does not sanitize HTML data during ingestion time. This means that script 
 
 ## REST API
 
-You can use Braze's User Track REST API endpoint to record custom events, user attributes, and purchases for users. See [User Track Endpoint][12] for more information.
+You can use Braze's [`/users/track` endpoint][12] to record custom events, user attributes, and purchases for users.
 
 ## Cloud Data Ingestion
 
-You can use Braze's Cloud Data Ingestion to import and maintain user attributes. See [Cloud Data Ingestion][14] for more information.
+You can use Braze's [Cloud Data Ingestion][14] to import and maintain user attributes. 
 
 ## CSV
 
@@ -56,7 +56,7 @@ If you are uploading or updating user profiles that are alias only, you must hav
 When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` and `user_alias_label`. If a user isn't found, Braze will create a newly identified user with that `user_alias_name` set.
 
 {% alert important %}
-You can't use a CSV import to update an existing user with a `user_alias_name` if they already have an `external_id`. Instead, this will create a new user profile with the associated `user_alias_name`. To associate an alias-only user with an `external_id`, use the [Identify Users]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
+You can't use a CSV import to update an existing user with a `user_alias_name` if they already have an `external_id`. Instead, this will create a new user profile with the associated `user_alias_name`. To associate an alias-only user with an `external_id`, use the [Identify users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/).
 {% endalert %}
 
 <i class="fas fa-file-download"></i> Download: [CSV Alias Import Template][template_alias]
@@ -86,7 +86,7 @@ There are several data types in Braze. When importing or updating user profiles 
 When importing customer data, the column headers you use must exactly match the spelling and capitalization of default user attributes. Otherwise, Braze will automatically create a custom attribute on that user's profile.
 {% endalert %}
 
-Braze accepts user data in the standard CSV format from files up to 500MB in size. Refer to the preceding sections on importing for downloadable CSV templates.
+Braze accepts user data in the standard CSV format from files up to 500&nbsp;MB in size. Refer to the preceding sections on importing for downloadable CSV templates.
 
 #### Data point considerations
 
@@ -149,7 +149,7 @@ The following data types are accepted in User Import:
 Arrays, push tokens, and custom event data types are not supported in User Import.
 Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file.
 
-For uploading these kinds of values, use the [User Track Endpoint]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint) or [Cloud Data Ingestion][14].
+For uploading these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion][14].
 {% endalert %}
 
 ### Updating subscription group status
@@ -308,7 +308,7 @@ Braze will ban or block users with over 5 million sessions ("dummy users") and n
 [7]: {% image_buster /assets/img/segment-imported-users.png %}
 [8]: {% image_buster /assets/img_archive/user_alias_import_1.png %}
 [9]: {% image_buster /assets/img/subscription_group_import.png %}
-[12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint
+[12]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
 [errors]:#common-errors

@@ -17,12 +17,12 @@ The following lists an overview of terms you may see in the Braze REST API docum
 
 ### Endpoints
 
-Braze manages a number of different instances for our dashboard and REST Endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket][support] or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket][support] or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
 
 {% alert important %}
-When using endpoints for API calls, use the "REST Endpoint".
+When using endpoints for API calls, use the REST endpoint.
 
-For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the "REST Endpoint".
+For SDK integration, use the [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the REST endpoint.
 {% endalert %}
 
 |Instance|URL|REST Endpoint|SDK Endpoint|
@@ -305,7 +305,7 @@ This client library is currently in beta. Want to help us make this library bett
 
 [1]: https://en.wikipedia.org/wiki/UTF-8
 [7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
 [2]: {{site.baseurl}}/api/identifier_types/

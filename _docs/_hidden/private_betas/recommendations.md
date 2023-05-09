@@ -3,6 +3,7 @@ nav_title: Item Recommendations
 article_title: Item Recommendations
 permalink: "/recommendations/"
 description: "This reference article covers how to create an Item Recommendation for most popular products."
+layout: dev_guide
 ---
 
 # Item Recommendations

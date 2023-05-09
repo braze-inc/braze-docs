@@ -60,7 +60,7 @@ Vous pouvez également tirer parti du suivi de localisation avec certains de nos
 Découvrez notre [FAQ sur la localisation][11] pour obtenir des réponses aux questions fréquemment posées sur la localisation.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/
 [6]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/

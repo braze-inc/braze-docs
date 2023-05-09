@@ -2,6 +2,7 @@
 nav_title: Custom Currents Connector
 alias: /currents_connector/
 hidden: true
+layout: dev_guide
 ---
 
 # Partner custom Currents connector

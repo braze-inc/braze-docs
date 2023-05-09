@@ -21,7 +21,7 @@ Control over card creation is unavailable for use in Canvas steps.
 
 To take advantage of this feature, you must upgrade to the following minimum SDK versions:
 
-{% sdk_min_versions web:4.2.0 android:23.0.0 ios:4.5.0 %}
+{% sdk_min_versions swift:5.2.0 android:23.0.0 web:4.2.0 %}
 
 After upgrading the SDK, your mobile users must upgrade their app. You can filter your campaign audience to only [target users on these minimum app versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
 
@@ -95,7 +95,7 @@ Braze recommends not changing how cards are created after a campaign has launche
 
 ### Potential processing time
 
-We recommend that campaigns with large audiences select the option to create cards at first impression, as cards will be available much more quickly after the campaign is launched. Campaigns which are triggered on session start may also want to consider moving to create card at first impression to realize performance improvements.
+We recommend that campaigns with large audiences select the option to create cards at first impression, as cards will be available much more quickly after the campaign is launched. Campaigns which are triggered on session start may also want to consider moving to create card at first impression (available through scheduled delivery) to realize performance improvements.
 
 When cards are created at first impression, it may take 1–2 seconds for the cards to process. The length of this processing time depends on various factors, such as the card size and the complexity of the message templating options. For example, the processing time for cards using Connected Content will be at least as long as the Connected Content response time.
 

@@ -18,7 +18,10 @@ To complete the installation, you will need the [app identifier API key]({{site.
 ## Prerequisites and compatibility 
 Braze React Native SDK v1.38.0+:
 * Supports React Native v0.64+
-* Is not compatible with apps that have opted-in to the experimental React Native New Architecture.
+
+#### React Native New Architecture Support
+* React Native v0.68+
+* Braze React Native SDK v2.0.1+
 
 ## Step 1: Integrate the Braze library
 
@@ -117,9 +120,9 @@ Run your application as specified in the [Expo docs](https://docs.expo.dev/workf
 
 #### Step 2.1a: Add our repository
 
-In your top-level project `build.gradle`, add the following as repositories under `allprojects` > `repositories` and `buildscript` > `dependencies`:
+In your top-level project `build.gradle`, add the following under `buildscript` > `dependencies`:
 
-```gradle
+```groovy
 buildscript {
     dependencies {
         ...
@@ -127,15 +130,9 @@ buildscript {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10")
     }
 }
-
-allprojects {
-    repositories {
-        maven { url "https://braze-inc.github.io/braze-android-sdk/sdk" }
-    }
-}
 ```
 
-This will add the Braze SDK repository source and Kotlin to your project.
+This will add Kotlin to your project.
 
 #### Step 2.1b: Configure the Braze SDK
 
@@ -386,5 +383,5 @@ You can then search for the user with `some-user-id` in the dashboard under [Use
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK Install"
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/ "iOS SDK Install"
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/ "iOS SDK Install"
 [user-search]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search

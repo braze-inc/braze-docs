@@ -139,7 +139,7 @@ Marketers should test that silent push notifications trigger expected behavior b
 Upon campaign launch, you should check that you have not received any visible push notification on your test device.
 
 {% alert note %}
-The iOS operating system may [gate notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations) for some features (uninstall tracking, geofences, and Push Stories). Note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.
+The iOS operating system may [gate notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations) for some features (uninstall tracking, geofences, and Push Stories). Note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.
 {% endalert %}
 
 ## In-app messages
@@ -169,8 +169,8 @@ To add a key-value pair to a Content Card, go to the **Settings** tab in the Bra
 ![Add key-value pair to Content Card][24]{: style="max-width:70%;"}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority

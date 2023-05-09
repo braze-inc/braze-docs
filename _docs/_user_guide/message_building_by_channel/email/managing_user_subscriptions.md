@@ -36,9 +36,9 @@ There are three ways a user's email subscription state can be updated:
 
 ### Checking email subscription state
 
-![User profile for John Doe with their push subscription state set to Subscribed.][3]{: style="float:right;max-width:35%;margin-left:15px;"}
+![User profile for John Doe with their email subscription state set to Subscribed.][3]{: style="float:right;max-width:35%;margin-left:15px;"}
 
-There are two ways you can check a user's push subscription state with Braze:
+There are two ways you can check a user's email subscription state with Braze:
 
 1. **User Profile**: You can access individual user profiles through the Braze dashboard on the **[User Search][5]** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state. 
 <br><br>
@@ -181,7 +181,7 @@ For example, this can be useful if you want to target users who have neither opt
 ![Email Subscription Status used as a segment filter.][18]
 
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}
-[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-up-user-subscriptions
+[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [16]: {% image_buster /assets/img_archive/user-profile-subscription-ui.png %}
 [17]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}

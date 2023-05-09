@@ -28,7 +28,7 @@ To further keep track of anonymous users, you can implement [user aliases]({{sit
 
 If an anonymous user profile with an alias is later recognized with an `external_id`, they will be treated as a normal identified user profile, but will retain their existing alias and can still be referenced by that alias.
 
-For alias users that you want to merge with identified users, you can merge any fields that are pertinent to the actual profile that you want to keep. You would have to export that data before deleting it from the alias profile using our [POST: User Profile Export by Identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint. You can then use our [POST: User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint to post these events to the profile you kept. This will preserve any data you want to keep such as attributes that were previously recorded on one profile, but not the other.
+For alias users that you want to merge with identified users, you can merge any fields that are pertinent to the actual profile that you want to keep. You would have to export that data before deleting it from the alias profile using our [Export user profile by identifier endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/). You can then use our [Track users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to post these events to the profile you kept. This will preserve any data you want to keep such as attributes that were previously recorded on one profile, but not the other.
 
 For a full breakdown of different methods for collecting new and existing user data in Braze, check out [data collection best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/).
 
@@ -55,9 +55,9 @@ For more information and to download CSV import templates, refer to [user import
 
 #### API
 
-To upload users via API, you can use our [POST: User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint to import them into Braze.
+To upload users via API, you can use our [Track users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to import them into Braze.
 
-If you are unsure whether the user already exists in Braze, you can implement our [POST: User Profile Export by Identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint to verify. If you identify that the user already exists in Braze, you can use our POST: User Track endpoint to post the new data you'd like to add to the user profile that already exists in Braze.
+If you are unsure whether the user already exists in Braze, you can implement our [Export user profile by identifier endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) to verify. If you identify that the user already exists in Braze, you can use our `/users/track` endpoint to post the new data you'd like to add to the user profile that already exists in Braze.
 
 {% alert note %}
 Keep the following nuances in mind when using the `/users/track` endpoint:
@@ -97,9 +97,9 @@ Users
 
 If you have identified duplicate users, you will need to clean up those user profiles. You can do so through the following steps:
 
-1. Export the user profiles using our users/export/ids endpoint API.
+1. Export the user profiles using our `/users/export/ids` endpoint.
 2. Identify correct user profile (ultimately, your team will need to decide on the correct information) and either:
-    - Merge any fields that are pertinent to the actual profile that you want to keep using the user/track endpoint.
+    - Merge any fields that are pertinent to the actual profile that you want to keep using the `/user/track` endpoint.
     - Delete the duplicate, non-useful profile without merging any data using the users/delete endpoint. Once you delete a user profile, **there is no way to retrieve the information**.
 
 {% alert important %}

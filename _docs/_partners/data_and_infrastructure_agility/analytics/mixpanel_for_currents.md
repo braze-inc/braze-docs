@@ -122,6 +122,15 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.contentcard.Impression`
   - `users.messages.contentcard.Send`
 - Email (abort, bounce, click, delivery, markasspam, open, send, softbounce, unsubscribe)
+  - `users.messages.email.Abort`
+  - `users.messages.email.Bounce`
+  - `users.messages.email.Click`
+  - `users.messages.email.Delivery`
+  - `users.messages.email.MarkAsSpam`
+  - `users.messages.email.Open`
+  - `users.messages.email.Send`
+  - `users.messages.email.SoftBounce`
+  - `users.messages.email.Unsubscribe`
 - In-app message (abort, click, impression)
   - `users.messages.inappmessage.Abort`
   - `users.messages.inappmessage.Click`
@@ -148,7 +157,14 @@ Braze supports exporting the following data listed in the Currents [user behavio
 - Webhook (abort, send)
   - `users.messages.webhook.Abort`
   - `users.messages.webhook.Send`
-
+- WhatsApp (abort, delivery, failure, inbound recieve, read, send)
+  - `users.messages.whatsapp.Abort`
+  - `users.messages.whatsapp.Delivery`
+  - `users.messages.whatsapp.Failure`
+  - `users.messages.whatsapp.InboundReceive`
+  - `users.messages.whatsapp.Read`
+  - `users.messages.whatsapp.Send`
+  
 [support]: {{site.baseurl}}/braze_support/
 [1]: {% image_buster /assets/img_archive/mixpanel1.png %}
 [2]: {% image_buster /assets/img_archive/mixpanel2.png %}

@@ -150,7 +150,7 @@ There are a few situations where test messages don't have complete feature parit
 - For in-app messages and Content Cards, the target user must have a push token for the target device
 
 [1]: {% image_buster /assets/img_archive/testmessages1.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#setting-user-ids
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids
 [3]: {% image_buster /assets/img_archive/testmessages2.png %}
 [4]: {% image_buster /assets/img_archive/testmessages3.png %}
 [5]: {% image_buster /assets/img_archive/testmessages45.png %}

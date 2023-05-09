@@ -69,7 +69,7 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spri
 
 ![][10]
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance
 [4]: https://support.google.com/analytics/answer/1033863?hl=en

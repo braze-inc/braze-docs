@@ -5,7 +5,7 @@ page_order: 0
 layout: dev_guide
 search_rank: 3
 guide_top_header: "Personalization Using Liquid Tags"
-guide_top_text: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them.<br><br>For more on Liquid, check out our guided <b><a href='https://learning.braze.com/dynamic-personalization-with-liquid'>Dynamic Personalization with Liquid</a></b> Braze Learning course!"
+guide_top_text: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them.<br><br>For more on Liquid, check out our guided <b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Dynamic Personalization with Liquid</a></b> Braze Learning path!"
 description: "This landing page covers all things Liquid, such as supported personalization tags, filters, setting default values, and more."
 
 guide_featured_title: "Section Articles"
@@ -37,6 +37,10 @@ guide_featured_list:
 - name: Liquid Use Cases
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
   fa_icon: fas fa-list-ul
+- name: Frequently Asked Questions
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
+  fa_icon: fas fa-question
+  
 ---
 
 ## About Liquid

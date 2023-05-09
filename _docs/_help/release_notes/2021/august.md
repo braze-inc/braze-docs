@@ -34,4 +34,4 @@ Amplitude's User Profile API serves Amplitude user profiles. This includes user 
 
 ## Campaign details endpoint 
 
-The [GET: `/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) API endpoint has added a dedicated `message` response for the in-app message channel. Documentation on this can be found [here]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).
+The [`/campaigns/details` endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) has added a dedicated `message` response for the in-app message channel. Documentation on this can be found [here]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).

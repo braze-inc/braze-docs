@@ -1,20 +1,22 @@
 ---
-nav_title: "GET: App Group Apps"
+nav_title: "GET: List App Group Apps"
 layout: api_page
 page_type: reference
 hidden: true
 permalink: /get_app_group_apps/
 
 platform: API
-description: "This article outlines details about the GET App Group Apps endpoint, which allows you to retrieve an `apps` object array."
+description: "This article outlines details about the List app group apps Braze endpoint."
 ---
 {% api %}
-# App group apps endpoint
+# List app group apps
 {% apimethod get %}
 /app_group/apps
 {% endapimethod %}
 
-Use this endpoint to list the name and unique identifier (`api_key`) for apps in an app group. Hitting this endpoint returns an object array called `apps`. Each object in `apps` contains the name and unique identifier for the app. 
+> Use this endpoint to list the name and unique identifier (`api_key`) for apps in an app group. 
+
+Hitting this endpoint returns an object array called `apps`. Each object in `apps` contains the name and unique identifier for the app. 
 
 {% apiref postman %}  {% endapiref %}
 
@@ -22,11 +24,11 @@ Use this endpoint to list the name and unique identifier (`api_key`) for apps in
 
 This endpoint has a rate limit of 100 requests per day (24 hours).
 
-## Request Parameters
+## Request parameters
 
 This request doesn't take parameters.
 
-## Example Request
+## Example request
 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/app_group/apps' \
@@ -49,10 +51,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Possible Errors
+### Troubleshooting
 
-- `401: Unauthorized` — API key does not have the required permissions. Make sure your API key has `apps.get` permissions.
-- `403: Forbidden` — Feature flipper is not on for this company. Contact your customer success manager for assistance.
+The following table lists possible returned errors and their associated troubleshooting steps.
 
+| Error | Troubleshooting |
+| --- | --- |
+| `401: Unauthorized` | API key does not have the required permissions. Make sure your API key has `apps.get` permissions. |
+| `403: Forbidden` | The feature flipper is not on for this company. Contact your customer success manager for assistance. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
