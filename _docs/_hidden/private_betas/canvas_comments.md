@@ -12,7 +12,7 @@ layout: dev_guide
 Comments in Canvases can be a great collaborative space for your marketing team to identify, discuss, and review the finer details for your Canvases. As you build out a Canvas, you can make and manage comments to identify these areas that may require additional feedback from your colleagues. 
 
 {% alert important %}
-Commenting in Canvas is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+Commenting in Canvas is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
 {% endalert %} 
 
 ![][1]{: style="float:right;max-width:60%;margin-left:15px;"}
