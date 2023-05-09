@@ -9,11 +9,17 @@ layout: dev_guide
 
 # Commenting in Canvas
 
-Comments in Canvases can be a great collaborative space for your marketing team to identify, discuss, and review the finer details for your Canvases. As you build out a Canvas, you can make and manage comments to identify these areas that may require additional feedback from your colleagues.
+Comments in Canvases can be a great collaborative space for your marketing team to identify, discuss, and review the finer details for your Canvases. As you build out a Canvas, you can make and manage comments to identify these areas that may require additional feedback from your colleagues. 
+
+{% alert important %}
+Commenting in Canvas is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %} 
+
+![][1]{: style="float:right;max-width:60%;margin-left:15px;"}
 
 ## Benefits
 
-Some benefits of commenting and including comment threads in your Canvas include:
+Some benefits of commenting in your Canvas include:
 - Keeping all details and discussions about a Canvas within a Canvas
 - Reviewing edits to a Canvas and encouraging a sign-off process on these changes
 - Identifying granular details of a Canvas, such as specific segmentation, including properties and attributes that are unique to a Canvas
@@ -26,10 +32,10 @@ To leave a comment, click the comment icon at the top of the Canvas. This will t
 
 To view an existing comment, open the sidebar or click the comment icon on a step. You can also reply to existing comments in a thread. 
 
-{% alert important %}
-Commenting in Canvas is currently in early access. Contact your customer success manager if you're interested in participating in this early access. <br><br>Tagging users in comments and notifications for comments are not currently supported.
-{% endalert %}
-
 ## Managing comments
 
 You can delete comments and threads you have created at the top right of a comment. You won't be able to delete another user's comments or threads. However, anyone can resolve a comment by selecting the resolve option.
+
+Note that tagging users in comments and notifications for comments are not currently supported.
+
+[1]: {% image_buster /assets/img_archive/canvas_comments.png %}
