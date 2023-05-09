@@ -110,7 +110,11 @@ There are two ways to enable geofences for a particular app: from the **Location
 
 ### Enable geofences from the Locations page
 
-Enable geofences on the **Locations** page of the dashboard. 
+Enable geofences on the **Locations** page of the dashboard.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Locations** under **Audience**.
+{% endalert %}
 
 1. Go to the **Locations** page.
 2. The number of apps in your app group that currently have geofences enabled is displayed beneath the map, for example: **0 of 1 Apps with Geofences enabled**. Click this text.
@@ -121,7 +125,11 @@ Enable geofences on the **Locations** page of the dashboard.
 
 Enable geofences from your app's settings.
 
-1. Go to the **Manage Settings** page.
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Settings** is now **App Settings** and is located at **Settings** > **Setup and Testing** > **App Settings**.
+{% endalert %}
+
+1. Go to the **Manage Settings** page. The **Settings** tab is open by default.
 2. Select the app for which you wish to enable geofences.
 3. Select the **Geofences Enabled** checkbox. Click **Save.**
 
