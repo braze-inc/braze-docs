@@ -22,7 +22,13 @@ There is a default allotment of 25 active Segment Extensions per app group at a 
 
 ## Step 1: Navigate to Segment Extensions
 
-Under **Engagements**, expand **Segments** and click **Segment Extension**. From the Segment Extensions table, click <i class="fas fa-plus"></i> **Create New Extension**.
+Under **Engagements**, expand **Segments** and click **Segment Extension**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Segment Extensions** under **Audience**.
+{% endalert %}
+
+From the Segment Extensions table, click <i class="fas fa-plus"></i> **Create New Extension**.
 
 ## Step 2: Name your Segment Extension
 

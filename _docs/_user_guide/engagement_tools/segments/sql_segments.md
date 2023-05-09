@@ -26,6 +26,10 @@ You can do a manual full refresh on all SQL Segments created in either SQL edito
 
 ## Creating SQL Segment Extensions
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Segment Extensions** under **Audience**.
+{% endalert %}
+
 {% tabs %}
 {% tab SQL Editor %}
 
