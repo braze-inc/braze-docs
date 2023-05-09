@@ -11,7 +11,7 @@ The Currents tool is a real-time data stream of your engagement events that is t
 
 * Stream Braze event data into a data warehouse or to one of our [analytics partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) for detailed analysis.
 * Stream Braze event data continuously to power business intelligence tools, machine learning algorithms, and more.
-* Route Braze event data to a variety of other systems using [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/), [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/) or [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/).
+* Route Braze event data to a variety of other systems using [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/), [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/), or [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/).
 
 Looking for more Currents guidance and examples? Refer to our [Currents documentation]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents).
 
