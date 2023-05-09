@@ -26,15 +26,15 @@ Some benefits of commenting in your Canvas include:
 
 ## How to comment
 
-In order to leave a comment in a Canvas, you must save a step first. So, when creating a new Canvas, you must first save the Canvas a draft. Or, as you're adding steps to an existing Canvas, you must save or update the Canvas.
+In order to leave a comment in a Canvas, you must save a step first. So, when creating a new Canvas, you must first save the Canvas a draft. Or, as you're adding steps to an existing Canvas, save or update the Canvas to begin commenting.
 
-To leave a comment, click the comment icon at the top of the Canvas. This will turn your cursor into a comment icon. Click the step you want to comment on. To revert your cursor, press the **Esc** key.
+To leave a comment, click the <i class="fas fa-comment"></i> comment icon at the top of the Canvas. This turns your cursor into a comment icon. Click the step you want to comment on. To revert your cursor, press the **Esc** key.
 
-To view an existing comment, open the sidebar or click the comment icon on a step. You can also reply to existing comments in a thread. 
+To view an existing comment, open the sidebar or select the <i class="fas fa-comment"></i> comment icon next to the step name. You can also reply to existing comments in a thread. 
 
 ## Managing comments
 
-You can delete comments and threads you have created at the top right of a comment. You won't be able to delete another user's comments or threads. However, anyone can resolve a comment by selecting the resolve option.
+You can delete comments and threads you have created by clicking the <i class="fa-solid fa-ellipsis-vertical"></i> menu icon in your comment. You won't be able to delete another user's comments or threads. However, anyone can resolve a comment by selecting **Resolve Thread**.
 
 Note that tagging users in comments and notifications for comments are not currently supported.
 
