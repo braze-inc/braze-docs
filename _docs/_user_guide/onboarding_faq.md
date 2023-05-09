@@ -47,6 +47,10 @@ To import previously identified users, you can upload a CSV to Braze, or send da
 
 You can upload and update user profiles via CSV files from the **User Import** page. When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **User Import** is now **Import Users** and can be found under **Audience**.
+{% endalert %}
+
 Before starting your CSV import, it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Learn more about Braze's [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
