@@ -36,6 +36,8 @@ These customer data platforms collect and route information from multiple source
 
 * [Tealium][8]
 
+* [RudderStack][9]
+
 
 ## Behavioral analytics
 
@@ -55,3 +57,4 @@ These partners specialize in product analytics and business intelligence and can
 [6]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
 [7]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/
 [8]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents#tealium-for-currents
+[9]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack_for_currents/
