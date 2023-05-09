@@ -31,8 +31,10 @@ After selecting the Drag & Drop Editor as your editing experience, you can choos
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the Drag & Drop Editor. 
 
-{% alert tip %}
 You can also access all templates in the **Templates & Media** page under the **Engagement** section.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
 {% endalert %}
 
 After selecting your template, you'll see an overview of your email where you can edit the sending information and email body, and view any errors or warnings to resolve before sending. Click **Edit Email Body** to begin designing your email structure in the Drag & Drop Editor! 

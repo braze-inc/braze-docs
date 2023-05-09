@@ -21,6 +21,10 @@ search_rank: 1
 
 In the left navigation, click **Templates & Media**, under the **Engagement** section. This will open up the **Email Template Gallery**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+{% endalert %}
+
 ### Step 2: Create or choose a template
 
 Now, you can create a new template or edit an existing template (plain or [mobile responsive][8]) using the drag & drop editing experience or standard HTML experience. If you'd like to create a new template, you can choose from Braze's predesigned templates or create a new layout.
