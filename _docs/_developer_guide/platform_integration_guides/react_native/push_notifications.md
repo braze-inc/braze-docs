@@ -19,23 +19,16 @@ Integrating push notifications in React Native requires setting up each native p
 
 Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` props to enable push for iOS and Android, respectively.
 
-### iOS setup
+{% endtab %}
+{% tab Android %}
 
-#### Generating a new push key
-If you do not have an existing push key or certificate from Apple or want to generate a new one, follow [Step 1 of the iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-1-configure-push-notifications) to generate a new push key and upload it to the Braze dashboard.
+Follow the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/).
 
-#### Migrating a push key from expo-notifications
-If you were previously using `expo-notifications` to manage your push key, run `expo fetch:ios:certs` from your application's root folder. This will download your push key (a .p8 file), which can then be uploaded to the Braze dashboard.
-
-### Android setup
-
-#### Step 1.1
+### Step 1.1a
 Set the `firebaseCloudMessagingSenderId` config prop in your `app.json`. See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-set-your-firebase-credentials) on retrieving your sender ID.
 
-If you'd like the Braze SDK to automatically handle push deep links, set `androidHandlePushDeepLinksAutomatically: true` in your `app.json`.
-
-#### Step 1.2
-Add your `google-services.json` filepath to your `app.json`. This file is required when setting `enableFirebaseCloudMessaging: true` in your configuration.
+### Step 1.2a
+Add your `google-services.json` file path to your `app.json`. This file is required when setting `enableFirebaseCloudMessaging: true` in your configuration.
 
 ```json
 {
@@ -61,14 +54,15 @@ Add your `google-services.json` filepath to your `app.json`. This file is requir
 ```
 
 {% endtab %}
-{% tab Android %}
-
-Follow the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/).
-
-{% endtab %}
 {% tab iOS %}
 
 Follow the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/). If you prefer not to request push permission upon launching the app, you should omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate and follow the step below.
+
+### Generating a new push key
+If you do not have an existing push key or certificate from Apple or want to generate a new one, follow [step 1 of the iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-1-configure-push-notifications) to generate a new push key and upload it to the Braze dashboard.
+
+### Migrating a push key from expo-notifications
+If you were previously using `expo-notifications` to manage your push key, run `expo fetch:ios:certs` from your application's root folder. This will download your push key (a .p8 file), which can then be uploaded to the Braze dashboard.
 
 {% endtab %}
 {% endtabs %}
@@ -90,7 +84,7 @@ const permissionOptions = {
 Braze.requestPushPermission(permissionOptions);
 ```
 
-#### Step 2.1: Listen for push notifications on Android (optional)
+### Step 2.1: Listen for push notifications on Android (optional)
 
 ```javascript
 Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
@@ -99,12 +93,76 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 });
 ```
 
-## Step 3: Test displaying push notifications
+## Step 3 (optional)
+
+{% tabs %}
+{% tab Expo %}
+
+To enable Braze to handle deep links inside of React components when a push notification is clicked, follow the additional steps. Our [AppboyProject sample app](https://github.com/braze-inc/braze-react-native-sdk) contains a complete example of implemented deep links. To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
+
+{% endtab %}
+{% tab Android %}
+
+### Step 3.1a
+
+For Android, setting up deep links is identical to [setting up deep links on native Android apps]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-add-deep-links). If you want the Braze SDK to handle push deep links automatically, set `androidHandlePushDeepLinksAutomatically: true` in your `app.json`.
+
+{% endtab %}
+{% tab iOS %}
+
+### Step 3.1b
+
+For iOS, add `populateInitialUrlFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. 
+
+For example:
+
+```objective-c
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  self.moduleName = @"BrazeProject";
+  self.initialProps = @{};
+
+  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
+  configuration.triggerMinimumTimeInterval = 1;
+  configuration.logger.level = BRZLoggerLevelInfo;
+  Braze *braze = [BrazeReactBridge initBraze:configuration];
+  AppDelegate.braze = braze;
+
+  [self registerForPushNotifications];
+  [[BrazeReactUtils sharedInstance] populateInitialUrlFromLaunchOptions:launchOptions];
+
+  return [super application:application didFinishLaunchingWithOptions:launchOptions];
+}
+
+```
+
+### Step 3.2b
+
+Add the `getInitialURL()` method to handle when a deep link opens your app.
+
+For example:
+
+```javascript
+    Linking.getInitialURL()
+      .then(url => {
+        if (url) {
+          console.log('Linking.getInitialURL is ' + url);
+          showToast('Linking.getInitialURL is ' + url);
+          handleOpenUrl({ url });
+        }
+      })
+      .catch(err => console.error('Error getting initial URL', err));
+```
+
+{% endtab %}
+{% endtabs %}
+
+## Step 4: Test displaying push notifications
 
 At this point, you should be able to send notifications to the devices. Adhere to the following steps to test your push integration.
 
 {% alert important %}
-You can't test push notification related app behavior on an iOS simulator because simulators don't support the device tokens required to send and receive a push notification.
+To test iOS push notifications, you must use a real device. You can't test push notification related app behavior on an iOS simulator because simulators don't support the device tokens required to send and receive a push notification.
 {% endalert %}
 
 1. Set an active user in the React application by calling `Braze.changeUserId('your-user-id')` method.
