@@ -4,6 +4,7 @@ article_title: Integration Overview for the Swift SDK
 platform: Swift
 page_order: 0
 layout: featured
+search_rank: 3
 
 guide_top_header: "Integration Overview for the Swift SDK"
 guide_top_text: "Installing the Braze Swift SDK will provide you with basic analytics functionality (session handling) and basic in-app messages. You must further customize your integration for additional channels and features. <br> <br> The Braze Swift SDK can be installed or updated using Swift Package Manager or CocoaPods."
