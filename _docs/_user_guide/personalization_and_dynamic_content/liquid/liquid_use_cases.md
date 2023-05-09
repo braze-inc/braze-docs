@@ -661,7 +661,7 @@ This use case captures a list of the categories a user has purchased from, and i
 {% if {{uniq_cat | size}} == 1%}
 {{uniq_cat}}
 {% else %}
-{% abort_message() %}
+{% abort_message("Purchase category doesn't exist") %}
 {% endif %}
 ```
 {% endraw %}
