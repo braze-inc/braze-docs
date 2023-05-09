@@ -20,6 +20,10 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 Go to the **Canvas** page, located under the **Engagement** section, then click **Create Canvas**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Messaging**.
+{% endalert %}
+
 ## Step 2: Use the entry wizard to set up your Canvas
 
 The Entry Wizard will guide you through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the following tabs to see what settings you can adjust in each of the Entry Wizard steps.
