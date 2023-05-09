@@ -3,6 +3,7 @@ nav_title: Sample Apps
 article_title: Sample Apps for iOS
 platform: Swift
 page_order: 9
+search_rank: 2
 description: "This article covers iOS Swift SDK sample apps."
 
 ---
