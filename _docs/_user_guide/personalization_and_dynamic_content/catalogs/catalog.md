@@ -14,6 +14,12 @@ Creating a catalog involves importing a CSV file of non-user data into Braze. Th
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
+You can find **Catalogs** under **Data** in the dashboard.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Catalogs** under **Data Settings**.
+{% endalert %}
+
 ## Preparing your CSV file
 
 Before creating a catalog, be sure to have your CSV file ready first if your preferred catalog creation method is to upload. 
