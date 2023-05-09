@@ -29,7 +29,11 @@ The primary conversion event is the first event added during the campaign or Can
 
 ## Step 1: Create a campaign with conversion tracking
 
-Navigate to the **Campaigns** page in your company dashboard and click **Create Campaign**, then select the type of campaign you'd like to create.
+Navigate to the **Campaigns** page, under **Engagement** and click **Create Campaign**, then select the type of campaign you'd like to create.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Messaging**.
+{% endalert %}
 
 After setting up your campaign's messages and schedule, you'll have the option to add up to four conversion events for tracking. 
 
