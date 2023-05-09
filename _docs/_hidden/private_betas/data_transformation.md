@@ -148,6 +148,10 @@ Shown below is an [example Typeform webhook](https://www.typeform.com/help/a/web
 
 Navigate to the Braze dashboard, and select the **Transformations** page under the **Data** section.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Data Transformations** under **Data Settings**.
+{% endalert %}
+
 Next, name your transformation and click **Create Transformation**. 
 
 First, click into your transformation. This will open a detailed view showing your most recent webhook this transformation has received, and room to write your own transformation. 
