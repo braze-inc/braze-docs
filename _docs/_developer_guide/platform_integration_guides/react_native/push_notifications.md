@@ -95,10 +95,12 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 
 ## Step 3 (optional)
 
+To enable Braze to handle deep links inside of React components when a push notification is clicked, follow the additional steps.
+
 {% tabs %}
 {% tab Expo %}
 
-To enable Braze to handle deep links inside of React components when a push notification is clicked, follow the additional steps. Our [AppboyProject sample app](https://github.com/braze-inc/braze-react-native-sdk) contains a complete example of implemented deep links. To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
+Our [AppboyProject sample app](https://github.com/braze-inc/braze-react-native-sdk) contains a complete example of implemented deep links. To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
 {% endtab %}
 {% tab Android %}
@@ -116,7 +118,8 @@ For iOS, add `populateInitialUrlFromLaunchOptions` to your AppDelegate's `didFin
 
 For example:
 
-```objective-c
+```objc
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   self.moduleName = @"BrazeProject";
