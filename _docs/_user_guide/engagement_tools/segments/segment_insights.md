@@ -11,9 +11,17 @@ description: "This how-to article will walk you through how to use, interpret, a
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Segment Insights
 
-> Segment Insights allows you to quickly and easily see how a segment is performing compared to another across a set of pre-selected KPIs. 
+> Learn how to how to use, interpret, and share Segment Insights. 
 
-Go to the **Segment Insights** page of your dashboard, under **Segments**, and click <i class="fas fa-plus"></i> **Add Segment** to view up to four different segments compared against a baseline. 
+Segment Insights allows you to quickly see how one segment is performing compared to another across a set of pre-selected KPIs.
+
+## Viewing Segment Insights
+
+Go to the **Segment Insights** page of your dashboard, under **Segments**, and click <i class="fas fa-plus"></i> **Add Segment** to view up to four different segments compared against a baseline.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Segment Insights** under **Analytics** > **Reports** > **Segment Insights**.
+{% endalert %}
 
 ![Segment Insights dashboard.][1]
 
