@@ -21,7 +21,7 @@ Updating or removing items in an array requires identifying the item by key and 
 
 ## API example
 
-{% tabs %}
+{% tabs local %}
 {% tab Create %}
 
 The following is a `/users/track` example with a `pets` array. To capture the properties of the pets, send an API request that lists `pets` as an array of objects. Note that each object has been assigned a unique `id` that can be referenced later when making updates.
@@ -164,7 +164,7 @@ The following example shows removing any object in the `pets` array that has an 
 
 ## SDK example
 
-{% tabs %}
+{% tabs local %}
 {% tab Android SDK %}
 
 **Create**
@@ -532,7 +532,7 @@ You can create a segment with up to one level of array nesting (array within ano
 
 Data points are consumed differently depending on whether you create, update, or remove a property.
 
-{% tabs %}
+{% tabs local %}
 {% tab Create %}
 
 Creating a new array consumes one data point for each attribute in an object. This example costs eight data points—each pet object has four attributes and there are two objects.
