@@ -26,9 +26,9 @@ The Braze and Heap integration enables you to [import Heap data to Braze](#data-
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
-1. Re-engage users who have abandoned a funnel: Trigger re-engagement messaging when users abandon the purchase or subscription funnel.
-2. Personalize the trial experience: Identify friction points in your trial experience and send correctly timed reminders to re-engage users during a trial and help them get to value.
-3. Drive higher engagement on announcements and offers: Target promotions, updates, and new service announcements to the relevant audiences.
+- Re-engage users who have abandoned a funnel: Trigger re-engagement messaging when users abandon the purchase or subscription funnel.
+- Personalize the trial experience: Identify friction points in your trial experience and send correctly timed reminders to re-engage users during a trial and help them get to value.
+- Drive higher engagement on announcements and offers: Target promotions, updates, and new service announcements to the relevant audiences.
 
 ## Data import integration
 
@@ -48,7 +48,7 @@ In Braze, navigate to **Segments**, name your Heap cohort segment, and select **
 
 ### Using this integration
 
-To use your Heap segment, create a Braze campaign or Canvas and select the segment as your target audience. 
+To use your Heap segment, create a Braze campaign or Canvas and select the segment as your target audience.
 
 ![In the Braze campaign builder on the targeting step, the "Target users by segment" filter is set to "Heap cohort".][4]{: style="max-width:90%;"}
 
@@ -58,7 +58,7 @@ Use Braze Currents to automatically send engagement events (e.g email sent, push
 
 ### Step 1: Get Heap credentials
 
-You'll need a webhook endpoint URL to configure this integration, which you can get from your Heap account manager.
+You’ll need a webhook endpoint URL to configure this integration, which you can get from your Heap account manager.
 
 ### Step 2: Configure Braze Currents
 

@@ -9,7 +9,7 @@ description: "This landing page lists the Braze preference center endpoints."
 page_type: landing
 
 guide_top_header: "Preference Center Endpoints"
-guide_top_text: "Use the Braze Preference Center endpoints to create and update preference centers to allow your users to manage their notification preferences for email campaigns.<br><br>Check out <a href='/docs/user_guide/message_building_by_channel/email/preference_center/overview/'>Preference center overview</a> for more details on how to customize your preference center."
+guide_top_text: "Use the endpoints in this section to build a preference center, which is a Braze-hosted website that can display your user's subscription state and subscription group statuses. Using HTML and CSS, your developer team can build your preference center so that the styling of the page matches your brand guidelines.<br><br>Check out <a href='/docs/user_guide/message_building_by_channel/email/preference_center/overview/'>Preference center overview</a> for more details on how to create and customize your preference center."
 
 guide_featured_list:
   - name: "POST: Create Preference Center"
