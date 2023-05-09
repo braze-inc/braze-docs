@@ -84,5 +84,5 @@ Once the initial setup is complete, you can access the `BrazePlugin` JavaScript 
 
 [1]: https://github.com/braze-inc/braze-cordova-sdk
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/
+[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/
