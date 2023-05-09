@@ -6,11 +6,13 @@ platform:
   - iOS
   - Android
 page_order: 1
-description: "Cet article couvre l’intégration de notifications push sur Android et FireOS pour la plate-forme Xamarin."
-channel: push 
+description: "Cet article couvre l’intégration de notifications push sur Android, FireOS et iOS pour la plate-forme Xamarin."
+channel: Notification push 
 ---
 
-# Notifications push
+# Intégration de notifications Push
+
+> Cet article de référence explique comment configurer les notifications push Android, FireOS et iOS pour Xamarin. 
 
 ## Android
 
@@ -18,11 +20,11 @@ Consultez les [instructions d’intégration Android][11] pour savoir comment in
 
 ## iOS
 
-Consultez les [instructions d’intégration iOS][1]  pour plus d’informations sur la configuration de votre application pour les notifications push et le stockage de vos informations d’identification sur notre serveur.
+Consultez les [instructions d’intégration iOS][1] pour plus d’informations sur la configuration de votre application pour les notifications push et le stockage de vos informations d’identification sur notre serveur.
 
 ### Demander des autorisations de notifications push
 
-Configurez des autorisations de notification push en ajoutant le code suivant à la rubrique ```FinishedLaunching``` de votre ```AppDelegate.cs```:
+Configurez les autorisations de notifications push en ajoutant le code suivant à la section ```FinishedLaunching``` de votre ```AppDelegate.cs``` :
 
 ```csharp
 // C#
@@ -31,11 +33,11 @@ UIApplication.SharedApplication.RegisterForRemoteNotifications();
 UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
 ```
 
->  Si vous avez implémenté une demande d'inscription aux notifications push personnalisée, assurez-vous d’appeler le code précédent CHAQUE fois que l’application s’exécute après qu’elle ait attribué les autorisations de push à votre application. Les applications doivent se réenregistrer avec des APN car les jetons de périphérique peuvent changer arbitrairement.
+>  Si vous avez implémenté une demande d'inscription aux notifications push personnalisée, assurez-vous d’appeler le code précédent CHAQUE fois que l’application s’exécute après qu’elle ait attribué les autorisations de push à votre application. Les applications doivent se réenregistrer avec des APN car les jetons d’appareil peuvent changer arbitrairement.
 
 ### Enregistrer des jetons de notification push
 
-Inscrivez vos jetons de notification push en ajoutant le code suivant dans la méthode ```RegisteredForRemoteNotifications``` de votre ```AppDelegate.cs```:
+Enregistrez vos jetons de notification push en ajoutant le code suivant à la méthode ```RegisteredForRemoteNotifications``` de votre ```AppDelegate.cs``` :
 
 ```csharp
 // C#
@@ -63,9 +65,9 @@ Si [le dénombrement des badges est activé][2], Braze affiche un badge lorsqu�
 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 ```
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
 [2]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#badge-count-with-braze
 [3]: https://developer.xamarin.com/guides/cross-platform/application_fundamentals/notifications/ios/local_notifications_in_ios/#Handling_Notifications
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
-[12]: https://github.com/Appboy/appboy-xamarin-bindings
+[12]: https://github.com/braze-inc/braze-xamarin-sdk
 

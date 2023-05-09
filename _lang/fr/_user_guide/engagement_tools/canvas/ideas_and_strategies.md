@@ -8,11 +8,11 @@ page_order: 5
 
 tool: Canvas
 page_type: landing
-description: "Cette page d’accueil est le lieu où se trouvent des idées et des stratégies Canvas, y compris la manière dont vous pouvez optimiser le lancement de vos Canvas."
+description: "Cette page d’accueil contient des idées et des stratégies Canvas, y compris les bonnes pratiques, une liste de contrôle avant et après le lancement, et des conseils sur le lancement avec Canvas Flow."
 
 guide_featured_title: "Articles"
 guide_featured_list:
-  - name: Meilleures pratiques 
+  - name: Bonnes pratiques
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/
     fa_icon: fas fa-book-open
   - name: Liste de contrôle avant et après lancement
@@ -21,6 +21,9 @@ guide_featured_list:
   - name: Lancement avec Canvas Flow
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     fa_icon: fas fa-code-branch
+  - name: Localisation
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/
+    fa_icon: fas fa-globe
   - name: Envoyer des Canvas de test
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     fa_icon: fas fa-user-check

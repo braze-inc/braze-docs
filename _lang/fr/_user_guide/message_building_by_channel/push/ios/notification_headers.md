@@ -7,14 +7,14 @@ description: "Cet article de référence explique brièvement comment utiliser, 
 
 platform: iOS
 channel:
-  - notification push
+  - Notification push
 
 
 ---
 
 # Titres des notifications push pour iOS
 
-Pour ajouter un titre à une notification push pour iOS, utilisez le champ **Title** (Titre) dans le compositeur de messages de Braze. Le titre apparaîtra en gras une fois le message envoyé.
+> Pour ajouter un titre à une notification push pour iOS, utilisez le champ **Title** (Titre) dans le compositeur de messages de Braze. Le titre apparaîtra en gras une fois le message envoyé.
 
 ![Image de titre pour iOS][1]
 

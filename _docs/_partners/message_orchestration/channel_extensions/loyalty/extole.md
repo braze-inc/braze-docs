@@ -1,7 +1,7 @@
 ---
 nav_title: Extole
 article_title: Extole
-description: "This article outlines the partnership between Braze and Extole, a referral marketing company, that allows you to pull customer events and attributes from refer-a-friend and growth programs into Braze"
+description: "This reference article outlines the partnership between Braze and Extole, a referral marketing company, that allows you to pull customer events and attributes from refer-a-friend and growth programs into Braze"
 alias: /partners/extole/
 page_type: partner
 search_tag: Partner
@@ -20,7 +20,7 @@ With the Braze and Extole integration, you can pull customer events and attribut
 | ----------- | ----------- |
 | Extole account | An Extole account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze test REST API key (optional) | A test API key that can be used for testing purposes if you’d like these requests sent to a separate staging Braze instance. |
+| Braze test REST API key (optional) | A test API key that can be used for testing purposes if you'd like these requests sent to a separate staging Braze instance. |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview]({{site.baseurl}}/api/basics/#endpoints) page. |
 | User identity | The unique identifier for a user in Braze and Extole. This is generally the `external_id`. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -40,7 +40,7 @@ Complete the following steps to get your integration up and running quickly. You
 
 ### Step 1: Define event names and attributes 
 
-Any event that Extole tracks can be sent to Braze. Work with your Extole implementation or client success manager to identify the event names and user attributes you’d like to send into Braze or select from the default options in the tables below. Your Extole implementation or client success manager will then map and configure the event names in the Extole dashboard.
+Any event that Extole tracks can be sent to Braze. Work with your Extole implementation or client success manager to identify the event names and user attributes you'd like to send into Braze or select from the default options in the tables below. Your Extole implementation or client success manager will then map and configure the event names in the Extole dashboard.
 
 #### Event names
 
@@ -62,7 +62,7 @@ Any event that Extole tracks can be sent to Braze. Work with your Extole impleme
 | `external_id` (required) | The unique identifier for the customer, such as a user ID. | User ID |
 | `email` | The customer's email address. | jsmith@yourcompany.com |
 | `phone_number` | The customer's phone number, including country code. | +15555555555 |
-| `share_link` | The customer’s personal share link. | refer.yourcompany.com/jsmith |
+| `share_link` | The customer's personal share link. | refer.yourcompany.com/jsmith |
 | `first_name` | The customer's first name. | John |
 | `last_name` | The customer's last name. | Smith |
 | `city` | The customer's city, spelled out. | Boston |
@@ -73,7 +73,7 @@ Any event that Extole tracks can be sent to Braze. Work with your Extole impleme
 
 ### Step 2: Connect to your Braze account 
 
-To start sending data from your Extole programs into Braze, create a new webhook integration in Extole’s outbound webhook center.
+To start sending data from your Extole programs into Braze, create a new webhook integration in Extole's outbound webhook center.
 
 
 1. Navigate to **Tech Center > Outbound Webhooks** in your My Extole account and click on the **+ New Integration** button.
@@ -92,11 +92,11 @@ If you only provide one Braze REST API key to Extole, only production events wil
 
 ### Creating a new user alias
 
-For certain use cases, such as a new email or SMS subscription where Extole does not have an external ID (user ID) for the user, Extole can check for the user's identifier using Braze's [export user by identifier endpoint][2]. If the user exists within Braze, Extole will add and update any profile attributes. If the request does not return a user profile, Extole will instead use the [user track endpoint][3] to create a user alias with the user's email address as the alias name.
+For certain use cases, such as a new email or SMS subscription where Extole does not have an external ID (user ID) for the user, Extole can check for the user's identifier using Braze's [Export user by identifier endpoint][2]. If the user exists within Braze, Extole will add and update any profile attributes. If the request does not return a user profile, Extole will instead use the [`/user/track` endpoint][3] to create a user alias with the user's email address as the alias name.
 
 ## Using this integration
 
-After connecting your Braze account to the Extole dashboard, events will automatically begin flowing from Extole to Braze. A live view of events being sent to Braze can be found in Extole’s outbound webhook center for troubleshooting. 
+After connecting your Braze account to the Extole dashboard, events will automatically begin flowing from Extole to Braze. A live view of events being sent to Braze can be found in Extole's outbound webhook center for troubleshooting. 
 
 ![][6]
 

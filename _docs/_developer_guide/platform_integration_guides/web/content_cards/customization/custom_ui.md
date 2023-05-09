@@ -9,7 +9,9 @@ description: "This article covers components of creating a custom UI for your we
 
 ---
 
-# Create a custom UI
+# Custom UI
+
+> This article covers components of creating a custom UI for your web application.
 
 ## Refreshing the feed
 
@@ -22,6 +24,7 @@ function refresh(){
   braze.requestContentCardsRefresh();    
 }
 ```
+
 ## Listening for card updates
 
 A callback function can be registered to subscribe for updates when cards are refreshed. 

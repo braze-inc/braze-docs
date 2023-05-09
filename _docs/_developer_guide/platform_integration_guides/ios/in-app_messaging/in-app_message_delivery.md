@@ -3,7 +3,7 @@ nav_title: In-App Message Delivery
 article_title: In-App Message Delivery for iOS
 platform: iOS
 page_order: 3
-description: "This article covers iOS in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps."
+description: "This reference article covers iOS in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps."
 channel:
   - in-app messages
 
@@ -19,7 +19,7 @@ channel:
 Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). If you're working with iOS, visit our [tracking custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) article to learn more. 
+Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). If you're working with iOS, visit our [tracking custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) article to learn more. 
 {% endalert %}
 
 ## Delivery semantics

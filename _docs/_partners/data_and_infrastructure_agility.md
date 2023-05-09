@@ -11,7 +11,6 @@ search_tag: Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Data & Infrastructure Agility"
-partner_top_text: "These partners allow you to send, store, and otherwise coordinate your data across different tools and providers."
 
 valid_partner_list:
 - name: Fivetran
@@ -38,8 +37,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/
 - name: Looker
   url: /docs/partners/data_and_infrastructure_agility/analytics/looker/
-- name: Neura Insights
-  url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
 - name: Kubit
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
 - name: Segment
@@ -58,9 +55,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
 - name: Phrasee
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
-- name: Neura
-  url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
-  title: Insights
 - name: Nexla
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
 - name: Amperity
@@ -87,7 +81,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
 - name: Clarisights
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
-- name: Dynamics 365 Customer Insights
+- name: Microsoft Dynamics 365
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/
@@ -107,5 +101,17 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
 - name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
+- name: Sisu
+  url: /docs/partners/data_and_infrastructure_agility/business_intelligence/sisu_data/
+- name: ActionIQ
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
+- name: Airbyte
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/airbyte/
+- name: Flywheel
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/
+- name: Mozart Data
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
+- name: Merkury
+  url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 
 ---

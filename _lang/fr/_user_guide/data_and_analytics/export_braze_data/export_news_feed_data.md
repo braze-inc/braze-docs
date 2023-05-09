@@ -4,21 +4,21 @@ article_title: Exporter les données du Fil d'actualité
 page_order: 5
 page_type: reference
 description: "Cet article de référence explique comment exporter les données du fil d’actualités."
-tool: Rapports
-channel: Fil d’actualité
+tool: Reports
+channel: fil d’actualité
 
 ---
 
-# Données du fil d’actualité
+# Exporter les données du Fil d'actualité
 
 {% alert note %}
-Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 Lors de l’analyse de la performance d’une carte de fil d’actualité, vous pouvez exporter les données des graphiques de performance :
 
 - Impressions par date
-    - Taux de clics
+    - Taux de clics (CTR)
     - Impressions
     - Impressions uniques
 - Clics par date

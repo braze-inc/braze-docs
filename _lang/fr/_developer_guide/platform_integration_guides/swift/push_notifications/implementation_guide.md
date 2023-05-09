@@ -11,7 +11,7 @@ channel:
 
 <br>
 {% alert important %}
-Vous recherchez le guide d’intégration du développeur de notification push prêt à l’emploi ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
+Vous recherchez le guide d’intégration de base du développeur de notifications push ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).
 {% endalert %}
 
 # Guide d’implémentation des notifications push
@@ -24,20 +24,20 @@ Vous recherchez le guide d’intégration du développeur de notification push p
 
 Les notifications push, en apparence standard sur différentes plateformes, offrent de très nombreuses options de personnalisation, au-delà de ce qui est normalement implémenté dans l’interface utilisateur par défaut. Lorsqu’une notification push est étendue, les extensions de notification de contenu permettent un affichage personnalisé de la notification push agrandie. 
 
-Les notifications push peuvent être étendues de trois manières différentes : <br>- Un appui long sur la bannière de notification push<br>- Faire glisser sur la bannière de notification push<br>- Faire glisser la bannière vers la gauche et sélectionner « View (Visualiser)" 
+Les notifications push peuvent être étendues de trois manières différentes : <br>- Un appui long sur la bannière de notification push<br>- Faire glisser sur la bannière de notification push<br>- Faire glisser la bannière vers la gauche et sélectionner « View (Visualiser) » 
 
 Ces vues personnalisées offrent des moyens astucieux d’engager les clients en vous permettant d’afficher de nombreux types de contenu différents, y compris des notifications interactives, des notifications push incluant des données utilisateur, et même des messages push qui peuvent recueillir des informations telles que les numéros de téléphone et l’e-mail. Bien qu’implémenter de cette manière puisse ne pas être familier, l’une de nos caractéristiques bien connues chez Braze, [Notification push de stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), sont un exemple de premier exemple de ce qu’un affichage personnalisé pour une extension d’application de contenu de notification peut ressembler à celle-ci !
 
-#### Exigences
+#### Conditions
 ![][15]{: style="float:right;max-width:50%;margin-left:10px; border:0;margin-top:10px"}
-- [Notifications push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) intégrées avec succès dans votre application
+- [Notifications push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) intégrées avec succès dans votre application
 - iOS 10 ou supérieur
 - Les fichiers suivants générés par Xcode en fonction de votre langue de codage :
 
 Swift<br>
 &#45; `NotificationViewController.swift`<br>
 &#45; `MainInterface.storyboard`<br><br>
-Objective-C<br>
+Objectif-C<br>
 &#45; `NotificationViewController.h`<br>
 &#45; `NotificationViewController.m`<br>
 &#45; `MainInterface.storyboard`
@@ -46,7 +46,7 @@ Objective-C<br>
 
 Pour configurer un affichage personnalisé dans le tableau de bord, vous devez activer les boutons de notification et saisir votre catégorie personnalisée. La catégorie iOS personnalisée pré-enregistrée que vous fournissez est ensuite vérifiée par rapport à `UNNotificationExtensionCategory` dans le `.plist` de votre cible d’extension de contenu de notification. La valeur donnée ici doit correspondre à ce qui est défini dans le tableau de bord de Braze.
 
-![Options de bouton de notification dans les paramètres de l’éditeur de messages de notification push.][16]{: style="max-width:75%;border:0;margin-top:10px"}
+![Options de bouton de notification dans les paramètres de l’éditeur de messages push.][16]{: style="max-width:75%;border:0;margin-top:10px"}
 ![][17]{: style="max-width:75%;border:0;margin-top:10px"}
 
 {% alert tip %}
@@ -72,7 +72,7 @@ Pour configurer un affichage personnalisé dans le tableau de bord, dans les par
 
 ![][3]{: style="float:right;max-width:45%;"}
 
-![Options de bouton de notification dans les paramètres de l’éditeur de messages de notification push.][14]{: style="max-width:50%;"}
+![Options de bouton de notification dans les paramètres de l’éditeur de messages push.][14]{: style="max-width:50%;"}
 
 #### Autres cas d’utilisation
 Les extensions de contenu de notifications push sont une option intéressante pour introduire de l’interactivité dans vos promotions et vos applications. Certains exemples incluent un jeu auquel les utilisateurs peuvent jouer, une roue pour gagner des réductions ou un bouton « J’aime » pour enregistrer une liste ou une chanson.
@@ -81,7 +81,7 @@ Les extensions de contenu de notifications push sont une option intéressante po
 Consultez la [section suivante](#logging-analytics) pour mieux comprendre à quoi le flux de données devrait ressembler.
 
 ### Notifications push personnalisées
-![Deux iPhone affichés côte à côte. Le premier iPhone affiche la vue non étendue du message push. Le deuxième iPhone affiche la version étendue du message de notification push affichant une « progression » de l’état d’avancement d’un cours, la prochaine session et la date d’échéance de la prochaine session le][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
+![Deux iPhone affichés côte à côte. Le premier iPhone affiche la vue non étendue du message push. Le deuxième iPhone affiche la version étendue du message push affichant une « progression » de l’état d’avancement d’un cours, la prochaine session et la date d’échéance de la prochaine session.][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
 
 Les notifications push peuvent afficher des informations spécifiques à l’utilisateur dans une extension de contenu. L’exemple à droite montre une notification push après qu’un utilisateur a terminé une tâche spécifique (cours d’apprentissage de Braze) et est maintenant encouragé à développer cette notification pour vérifier ses progrès. Les informations fournies ici sont spécifiques à l’utilisateur et peuvent être lancées à la fin de la session ou après une action spécifique de l’utilisateur en tirant parti d’un déclencheur API. 
 
@@ -105,7 +105,7 @@ func didReceive(_ notification: UNNotification) {
      
   guard let value = userInfo["YOUR-KEY-VALUE-PAIR"] as? String,
         let otherValue = userInfo["YOUR-OTHER-KEY-VALUE-PAIR"] as? String,
-  else { fatalError("Les paires clé-valeur sont incorrectes")}
+  else { fatalError("Key-Value Pairs are incorrect.")}
  
   ...
 }
@@ -150,9 +150,9 @@ Notez que les informations demandées ici peuvent être très variables, comme l
 
 #### Configuration du tableau de bord
 
-Pour configurer une notification push de capture d’information dans le tableau de bord, vous devez enregistrer et définir votre catégorie personnalisée et fournir les paires clé-valeur nécessaires. Comme illustré par l’exemple, vous pouvez également inclure une image dans votre notification push. Pour ce faire, vous devez intégrer les [notifications enrichies]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/), définissez le style de notification dans votre campagne à Rich Notification, et incluez une image de notification push riche.
+Pour configurer une notification push de capture d’information dans le tableau de bord, vous devez enregistrer et définir votre catégorie personnalisée et fournir les paires clé-valeur nécessaires. Comme illustré par l’exemple, vous pouvez également inclure une image dans votre notification push. Pour ce faire, vous devez intégrer les [notifications enrichies]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/), définissez le style de notification dans votre campagne à Rich Notification, et incluez une image de notification push riche.
 
-![Une notification push avec trois ensembles de paires clé-valeur. 1. « Braze_id » défini comme appel Liquid pour récupérer l’ID de Braze. 2. « cert_title » défini comme « Braze Marketer Certificiation ». 3. « Cert_description » défini comme « Certified Braze marketers drive... ».][9]
+![Un message de notification push avec trois ensembles de paires clé-valeur. 1. "Braze_id" défini comme un appel Liquid pour récupérer l’ID Braze. 2. "cert_title" défini comme « Certification du marketeur Braze ». 3. "Cert_description" défini comme « Les marketeurs certifiés Braze conduisent… ».][9]
 
 #### Gérer les actions des boutons
 
@@ -206,9 +206,9 @@ Consultez la [section suivante](#logging-analytics) pour mieux comprendre à quo
 
 Il n’est possible d’enregistrer l’analytique en temps réel qu’à l’aide du serveur client tapant dans l’endpoint [utilisateur/suivi]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) de l’API Braze. Pour enregistrer l’analytique, envoyez la valeur `braze_id` dans le champ des paires clé-valeur (comme indiqué dans la capture d’écran suivante) pour identifier le profil utilisateur à mettre à jour.
 
-![Une notification push avec trois ensembles de paires clé-valeur. 1. « Braze_id » défini comme appel Liquid pour récupérer l’ID de Braze. 2. « cert_title » défini comme « Braze Marketer Certificiation ». 3. « Cert_decription » défini comme « Certified Braze marketers drive... »][18]{: style="max-width:80%;"}
+![Un message de notification push avec trois ensembles de paires clé-valeur. 1. "Braze_id" défini comme un appel Liquid pour récupérer l’ID Braze. 2. "cert_title" défini comme « Certification du marketeur Braze ». 3. "Cert_description" défini comme « Les marketeurs certifiés Braze conduisent… ».][18]{: style="max-width:80%;"}
 
-### Journalisation manuelle
+### Enregistrement manuel
 
 La journalisation manuelle exigera la configuration préalable des groupes d’apps dans Xcode, puis la création, l’enregistrement et la récupération des analytiques. Cela nécessitera un travail de développeur personnalisé de votre côté. Les extraits de code suivants vous aideront à résoudre ce problème. 
 
@@ -217,12 +217,12 @@ Il est également important de noter que les analytiques ne seront pas envoyées
 ![Un graphique décrivant la manière dont les analytiques sont traités par Braze. 1. Les données analytiques sont créées. 2. Les données analytiques sont enregistrées. 3. La notification push est rejetée. 4. Période indéterminée entre le moment où la notification push est rejetée et l’application mobile est lancée. 5. L’application mobile est lancée. 6. Les données analytiques sont reçues. 7. Les données analytiques sont envoyées à Braze.][13]
 
 #### Étape 1 : Configurer les groupes d’apps dans Xcode
-Ajouter une capacité `App Groups`. Si vous n’avez pas de groupe d’apps dans votre application, allez sur Capacité de la cible de l’application principale, activez `App Groups`, et cliquez sur le bouton « + ». Utilisez l’ID de l’ensemble de votre application pour créer le groupe d’apps. Par exemple, si l’ID de l’ensemble de votre application est `com.company.appname`, vous pouvez nommer votre groupe d’apps `group.com.company.appname.xyz`. Assurez-vous que les `App Groups` sont activés pour la cible de votre application principale et la cible de l’extension de contenu.
+Ajoutez une capacité de `Groupes d'apps`. Si vous n’avez pas de groupe d’apps dans votre application, allez sur Capacité de la cible de l’application principale, activez les `Groupes d'apps`, et cliquez sur le bouton « + ». Utilisez l’ID de l’ensemble de votre application pour créer le groupe d’apps. Par exemple, si l’ID de l’ensemble de votre application est `com.company.appname`, vous pouvez nommer votre groupe d’apps `group.com.company.appname.xyz`. Assurez-vous que les `Groupes d'apps` sont activés pour la cible de votre application principale et la cible de l’extension de contenu.
 
 ![][19]
 
 #### Étape 2 : Intégrer les extraits de code
-Les extraits de code suivants sont une référence utile sur la façon d’enregistrer et d’envoyer des événements personnalisés, des attributs personnalisés et des attributs utilisateur. Ce guide sera en cours de conversation par défaut d’utilisateur, mais la représentation du code sera sous la forme d’un fichier d’aide `RemoteStorage`. Il existe également des fichiers auxiliaires supplémentaires `UserAttributes` et `EventName Dictionary` utilisés lors de l’envoi et de l’enregistrement des attributs utilisateur. Tous les fichiers d’aide sont disponibles à la fin de ce guide.
+Les extraits de code suivants sont une référence utile sur la façon d’enregistrer et d’envoyer des événements personnalisés, des attributs personnalisés et des attributs utilisateur. Ce guide sera en cours de conversation par défaut d’utilisateur, mais la représentation du code sera sous la forme d’un fichier d’aide `RemoteStorage`. Il existe également des fichiers auxiliaires supplémentaires, `UserAttributes` et `Dictionnaire EventName`, utilisés lors de l’envoi et de l’enregistrement des attributs utilisateur. Tous les fichiers d’aide sont disponibles à la fin de ce guide.
 
 {% tabs local %}
 {% tab Custom Events %}
@@ -381,8 +381,8 @@ Pour enregistrer des attributs personnalisés, vous devez créer l’analytique 
 {% subtab Swift %}
 ``` swift 
 func saveCustomAttribute() {
-  1` 
-  let customAttributeDictionary: [Chaîne de caractères : Any] = ["YOUR-CUSTOM-ATTRIBUTE-KEY": "YOUR-CUSTOM-ATTRIBUTE-VALUE"]
+  // 1 
+  let customAttributeDictionary: [String: Any] = ["YOUR-CUSTOM-ATTRIBUTE-KEY": "YOUR-CUSTOM-ATTRIBUTE-VALUE"]
   
   // 2 
   let remoteStorage = RemoteStorage(storageType: .suite)
@@ -525,7 +525,7 @@ func saveUserAttribute() {
   NSData *data = [NSKeyedArchiver archivedDataWithRootObject:userAttribute requiringSecureCoding:YES error:&error];
 
   if (error != nil) {
-    // journaliser les erreurs
+    // log error
   }
   // 2  
   RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
@@ -535,7 +535,7 @@ func saveUserAttribute() {
   if (pendingAttributes) {
     [pendingAttributes addObject:data];
     [remoteStorage store:pendingAttributes forKey:RemoteStorageKeyPendingUserAttributes];
-  } sinon {
+  } else {
   // 4 
     [remoteStorage store:@[data] forKey:RemoteStorageKeyPendingUserAttributes];
   }
@@ -590,7 +590,7 @@ func logPendingUserAttributesIfNecessary() {
     UserAttribute *userAttribute = [NSKeyedUnarchiver unarchivedObjectOfClass:[UserAttribute class] fromData:attributeData error:&error];
 
     if (error != nil) {
-      // journaliser les erreurs
+      // log error
     }
     
   // 3  
@@ -613,13 +613,13 @@ func logPendingUserAttributesIfNecessary() {
 
 ##### Fichiers d’aide
 
-{% details RemoteStorage Helper File %}
+{% details Fichier d’aide RemoteStorage %}
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
 enum RemoteStorageKey: String, CaseIterable {
    
-  // MARQUER : - Analyse d’extension de contenu de notification
+  // MARK: - Notification Content Extension Analytics
   case pendingCustomEvents = "pending_custom_events"
   case pendingCustomAttributes = "pending_custom_attributes"
   case pendingUserAttributes = "pending_user_attributes"
@@ -731,7 +731,7 @@ class RemoteStorage: NSObject {
 {% endsubtab %}
 {% endsubtabs %}
 {% enddetails %}
-{% details UserAttribute Helper File %}
+{% details Fichier d’aide UserAttribute %}
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
@@ -739,7 +739,7 @@ enum UserAttribute: Hashable {
   case email(String?)
 }
  
-// MARQUER : - Codable
+// MARK: - Codable
 extension UserAttribute: Codable {
   private enum CodingKeys: String, CodingKey {
     case email
@@ -795,7 +795,7 @@ extension UserAttribute: Codable {
 {% endsubtab %}
 {% endsubtabs %}
 {% enddetails %}
-{% details EventName Dictionary Helper File %}
+{% details Fichier d’aide du dictionnaire EventName %}
 {% subtabs global %}
 {% subtab Swift %}
 ```swift

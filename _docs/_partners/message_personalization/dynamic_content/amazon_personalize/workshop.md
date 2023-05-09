@@ -2,14 +2,14 @@
 nav_title: Workshop
 article_title: Amazon Personalize Workshop
 alias: /partners/amazon_personalize_workshop/
-description: "This article outlines the process of configuring Amazon Personalize and integrating it into your Braze environment using Connected Content."
+description: "This reference article outlines the process of configuring Amazon Personalize and integrating it into your Braze environment using Connected Content."
 page_type: partner
 search_tag: Partner
 ---
 
 # Amazon Personalize workshop
 
-> This article will walk you through the process of configuring Amazon Personalize and integrating it into your Braze environment using Connected Content. This is done using a hands-on workshop that will walk you through all the steps required to deploy and train Amazon Personalize solutions and integrate them into a Braze email campaign.
+> This reference article will walk you through the process of configuring Amazon Personalize and integrating it into your Braze environment using Connected Content. This is done using a hands-on workshop that will walk you through all the steps required to deploy and train Amazon Personalize solutions and integrate them into a Braze email campaign.
 
 The following examples are deployed in a fully-functional example eCommerce site called the Retail Demo Store. The resources and code for this tutorial are published in the [AWS Samples Retail Demo Store](https://github.com/aws-samples/retail-demo-store/). You can use this reference architecture implementation as an outline to implement Amazon Personalize in your own environment.
 

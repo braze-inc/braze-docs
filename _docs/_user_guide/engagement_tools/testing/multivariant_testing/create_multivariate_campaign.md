@@ -6,9 +6,9 @@ page_type: reference
 description: "This article explains how to create multivariate and A/B tests with Braze."
 ---
 
-# Creating multivariate and A/B tests with Braze {#creating-tests}
+# Creating multivariate and A/B tests {#creating-tests}
 
-You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) for any campaign that targets a single channel.
+> You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) for any campaign that targets a single channel.
 
 ![][2]{: style="max-width:25%;float:right;margin-left:15px;" }
 
@@ -42,12 +42,12 @@ For push, email, and webhook campaigns scheduled to send once, you can also use 
 
 You can reserve a percentage of your target audience for a randomized control group. Users in the control group don't receive the test, but Braze monitors their conversion rate for the duration of the campaign.
 
-When viewing your results, you can compare the conversion rates of your variants against a baseline conversion rate provided by your control group. This lets you compare both the effects of your variants and the effects of your variants against the conversion rate that would result if you didn’t send a message at all.
+When viewing your results, you can compare the conversion rates of your variants against a baseline conversion rate provided by your control group. This lets you compare both the effects of your variants and the effects of your variants against the conversion rate that would result if you didn't send a message at all.
 
 ![A/B Testing panel that shows the percentage breakdown of the Control Group, Variant 1, Variant 2, and Variant 3 with 25% for each group.][5]
 
 {% alert important %}
-Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
+Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won't receive the message, those users cannot perform any opens or clicks. Therefore, that group's conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
 {% endalert %}
 
 #### Control groups with Intelligent Selection
@@ -72,9 +72,9 @@ Sending the winning variant is similar to a standard A/B test. Users in this gro
 
 | Field | Description |
 | --- | --- | 
-| Optimization metric | The metric to optimize for. Choose between *Unique Opens* or *Clicks* for email, *Opens* for push, or *Primary Conversion Rate* for all channels. Selecting *Opens* or *Clicks* to determine the winner does not affect what you choose for the campaign’s [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). <br><br>Keep in mind that if you’re using a control group, users in the control group can't perform *Opens* or *Clicks*, so the performance of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message. |
+| Optimization metric | The metric to optimize for. Choose between *Unique Opens* or *Clicks* for email, *Opens* for push, or *Primary Conversion Rate* for all channels. Selecting *Opens* or *Clicks* to determine the winner does not affect what you choose for the campaign's [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). <br><br>Keep in mind that if you're using a control group, users in the control group can't perform *Opens* or *Clicks*, so the performance of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message. |
 | Initial test start date | The date and time the initial test starts. |
-| Initial test end date | The date and time the initial test ends. This is when the winning variant is sent to the remaining users.<br><br>When sending in users’ local time or with Intelligent Timing, the winning variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the winning variant group. |
+| Initial test end date | The date and time the initial test ends. This is when the winning variant is sent to the remaining users.<br><br>When sending in users' local time or with Intelligent Timing, the winning variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the winning variant group. |
 | Fallback | What happens if no variant wins by a statistically significant margin. Choose between sending the best performing variant anyway, or ending the test and not sending any further messages. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -90,9 +90,9 @@ To determine the best variant for each user, Braze will send an initial test to 
 
 | Field | Description |
 | --- | --- | 
-| Optimization metric | The metric to optimize for. Choose between *Unique Opens* or *Clicks* for email, *Opens* for push, or *Primary Conversion Rate* for all channels. Selecting *Opens* or *Clicks* to determine the winner does not affect what you choose for the campaign’s [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events). <br><br>Keep in mind that if you’re using a control group, users in the control group can't perform *Opens* or *Clicks*, so the performance of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message. |
+| Optimization metric | The metric to optimize for. Choose between *Unique Opens* or *Clicks* for email, *Opens* for push, or *Primary Conversion Rate* for all channels. Selecting *Opens* or *Clicks* to determine the winner does not affect what you choose for the campaign's [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events). <br><br>Keep in mind that if you're using a control group, users in the control group can't perform *Opens* or *Clicks*, so the performance of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message. |
 | Initial test start date | The date and time the initial test starts. |
-| Initial test end date | The date and time the initial test ends. This is when personalized variants are sent to the remaining users. We recommend 24 hours as a baseline to ensure statistically significant and meaningful results. The more time you allow for the test, the more responses will be received and the more Braze can optimize. This is especially important for email campaigns. Initial tests for personalized variants shouldn't last any less than 4 hours.<br><br>When sending in users’ local time or with Intelligent Timing, personalized variants must be sent at least 24 hours after the A/B test to ensure delivery to all users in the personalized variant group. |
+| Initial test end date | The date and time the initial test ends. This is when personalized variants are sent to the remaining users. We recommend 24 hours as a baseline to ensure statistically significant and meaningful results. The more time you allow for the test, the more responses will be received and the more Braze can optimize. This is especially important for email campaigns. Initial tests for personalized variants shouldn't last any less than 4 hours.<br><br>When sending in users' local time or with Intelligent Timing, personalized variants must be sent at least 24 hours after the A/B test to ensure delivery to all users in the personalized variant group. |
 | Fallback | What happens if no personalized variants are found. Choose between sending the winning variant instead, or ending the test and not sending any further messages. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -111,9 +111,13 @@ On the confirmation page, review the details of your multivariate campaign and l
 
 ## Things to know
 
+{% alert important %}
+Making edits to your messages after your experiment is finished will result in invalidated test results. 
+{% endalert %}
+
 ### Tips for different channels {#tips-different-channels}
 
-Depending on which channel you select, you’ll be able to test different components of your message. Try to compose variants with an idea of what you want to test and what you hope to prove.
+Depending on which channel you select, you'll be able to test different components of your message. Try to compose variants with an idea of what you want to test and what you hope to prove.
 
 What levers do you have to pull and what are the desired effects? While there are millions of possibilities that you can investigate using a multivariate and A/B test, we have some suggestions to get you started:
 
@@ -125,12 +129,12 @@ What levers do you have to pull and what are the desired effects? While there ar
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
-When running A/B tests, don’t forget to generate [funnel reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
+When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
 {% endalert %}
 
 In addition, the ideal length of your test may also vary depending on the channel. Keep in mind the average amount of time most users may need to engage with each channel.
 
-For instance, if you’re testing a push, you may achieve significant results faster than when testing email, since users see pushes immediately, but it may be days before they see or open an email. If you’re testing in-app messages, keep in mind that users must open the app in order to see the campaign, so you should wait longer in order to collect results from both your most active app openers as well as your more typical users.
+For instance, if you're testing a push, you may achieve significant results faster than when testing email, since users see pushes immediately, but it may be days before they see or open an email. If you're testing in-app messages, keep in mind that users must open the app in order to see the campaign, so you should wait longer in order to collect results from both your most active app openers as well as your more typical users.
 
 If you're unsure how long your test should run for, the [Intelligent Selection][6] feature can be useful for finding a winning variant efficiently.
 
@@ -138,7 +142,7 @@ If you're unsure how long your test should run for, the [Intelligent Selection][
 
 Since different segments of your users may respond differently to messaging, the success of a particular message says something about both the message itself and its target segment. Therefore, try to design a test with your target segment in mind.
 
-For instance, while active users may have equal response rates to “This deal expires tomorrow!” and “This deal expires in 24 hours!”, users who haven’t opened the app for a week may be more responsive toward the latter wording since it creates a greater sense of urgency.
+For instance, while active users may have equal response rates to "This deal expires tomorrow!" and "This deal expires in 24 hours!", users who haven't opened the app for a week may be more responsive toward the latter wording since it creates a greater sense of urgency.
 
 Additionally, when choosing which segment to run your test on, be sure to consider whether the size of that segment will be large enough for your test. In general, multivariate and A/B tests with more variants require a larger test group to achieve statistically significant results. This is because more variants will result in fewer users seeing each individual variant.
 

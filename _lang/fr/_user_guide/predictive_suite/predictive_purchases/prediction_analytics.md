@@ -8,7 +8,9 @@ page_order: 2
 
 # Analyses prédictives
 
-Une fois que votre prédiction a été construite et entraînée, vous aurez accès à la page **Analyse prédictive**. Cette page vous aide à décider des utilisateurs que vous devez cibler en fonction de leur score de risque ou catégorie de probabilité d’achat. Dès que l’entraînement de la prédiction est terminé et que cette page est renseignée, vous pouvez passer directement à l’utilisation de [filtres]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux. 
+> Une fois que votre prédiction a été construite et entraînée, vous aurez accès à la page **Prediction Analytics (Analyse prédictive)**. Cette page vous aide à décider des utilisateurs que vous devez cibler en fonction de leur score de risque ou catégorie de probabilité d’achat. 
+
+Dès que l’entraînement de la prédiction est terminé et que cette page est renseignée, vous pouvez passer directement à l’utilisation de [filtres]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux. 
 
 **Composants analytiques**<br>
 &#45; [Score de probabilité d’achat](#purchase_score)<br>
@@ -24,9 +26,9 @@ Les utilisateurs de l’audience de prédiction recevront un score de probabilit
 - Les utilisateurs avec des scores de probabilité d’achat compris entre 0 et 50 seront étiquetés dans la catégorie « Faible ». 
 - Les utilisateurs ayant des scores compris entre 50 et 75 ainsi que 75 et 100 seront étiquetés respectivement dans les catégories de probabilité moyenne et élevée. 
 
-Les scores et les catégories correspondantes seront mis à jour conformément à la planification que vous avez choisie sur la page de **Création de la prédiction**. Le nombre d’utilisateurs avec des scores de probabilité d’achat dans chacun des 20 compartiments de taille égale ou dans chacune des catégories de probabilité d’achat est affiché dans le graphique en haut de la page.
+Les scores et les catégories correspondantes seront mis à jour conformément à la planification que vous avez choisie sur la page de **Prediction Creation (Création de la prédiction)**. Le nombre d’utilisateurs avec des scores de probabilité d’achat dans chacun des 20 compartiments de taille égale ou dans chacune des catégories de probabilité d’achat est affiché dans le graphique en haut de la page.
 
-## Segmentation d'audience {#target_users}
+## Segmentation d’audience {#target_users}
 
 La distribution des scores de probabilité d’achat pour l’audience de prédiction toute entière s’affiche en haut de la page. Les utilisateurs dans les compartiments de droite ont des scores plus élevés et sont plus susceptibles d’acheter. Les utilisateurs dans les compartiments plus à gauche sont moins susceptibles d’acheter. Le curseur sous le graphique vous permet de sélectionner un groupe d’utilisateurs et d’estimer quel résultat aurait le ciblage de ces utilisateurs.
 
@@ -48,7 +50,7 @@ Dans la partie droite du volet en dessous du graphique, nous montrons les estima
 
 ### Qualité de prédiction {#prediction_quality}
 
-Pour mesurer la précision de votre modèle, la métrique de **Qualité de prédiction** vous montrera l’efficacité apparente de ce modèle de machine learning particulier. Il s’agit essentiellement d’une mesure de l’efficacité de cette prédiction pour distinguer les acheteurs des non-acheteurs. Une qualité de prédiction de 100 signifie qu’elle détermine parfaitement qui va ou ne va pas acheter sans erreur (cela ne se produit jamais !) et 0 signifie que c’est une estimation aléatoire. Consultez ce document pour en savoir plus sur ce qui joue sur la [Qualité de prédiction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
+Pour mesurer la précision de votre modèle, l’indicateur de **Qualité de prédiction** vous montrera l’efficacité apparente de ce modèle de machine learning particulier. Il s’agit essentiellement d’une mesure de l’efficacité de cette prédiction pour distinguer les acheteurs des non-acheteurs. Une qualité de prédiction de 100 signifie qu’elle détermine parfaitement qui va ou ne va pas acheter sans erreur (cela ne se produit jamais !) et 0 signifie que c’est une estimation aléatoire. Consultez ce document pour en savoir plus sur ce qui joue sur la [Qualité de prédiction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
 Voici ce que nous recommandons pour diverses plages de qualité de prédiction :
 
@@ -60,9 +62,9 @@ Voici ce que nous recommandons pour diverses plages de qualité de prédiction 
 | 0 à 20 | Faible. Nous vous recommandons de modifier les définitions de votre audience et de réessayer. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-La prédiction sera entraînée à nouveau toutes les deux semaines et mise à jour en même temps que la métrique de qualité de prédiction afin de maintenir vos prédictions actualisées sur les schémas les plus récents de comportement des utilisateurs. La date du dernier entraînement sera affichée sur la page de liste des prédictions ainsi que sur votre page d’analyses prédictives. 
+La prédiction sera entraînée à nouveau toutes les deux semaines et mise à jour en même temps que l’indicateur de qualité de prédiction afin de maintenir vos prédictions actualisées sur les schémas les plus récents de comportement des utilisateurs. La date du dernier entraînement sera affichée sur la page de liste des prédictions ainsi que sur votre page d’analyses prédictives. 
 
-Lorsqu’une prédiction est créée pour la première fois, la qualité de prédiction sera basée sur les données historiques demandées lorsque vous cliquez sur **Construire la prédiction**. Toutes les deux semaines, la qualité de prédiction est obtenue en comparant les scores de prédiction aux résultats réels.
+Lorsqu’une prédiction est créée pour la première fois, la qualité de prédiction sera basée sur les données historiques demandées lorsque vous cliquez sur **Build Prediction (Construire la prédiction).** Toutes les deux semaines, la qualité de prédiction est obtenue en comparant les scores de prédiction aux résultats réels.
 
 ## Tableau de corrélation d’achat {#correlation_table}
 

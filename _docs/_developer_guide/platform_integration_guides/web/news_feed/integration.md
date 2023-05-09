@@ -9,7 +9,9 @@ channel: news feed
 
 ---
 
-# News Feed
+# News Feed integration
+
+> This article covers how to set up News Feed for the Braze Web SDK.
 
 {% alert note %}
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
@@ -31,7 +33,7 @@ braze.toggleFeed();
 
 This will display the most recent cached News Feed cards (kicking off a refresh if these cards are more than 1 minute stale, or if the News Feed has never been refreshed) and will automatically update the display when new cards are received from Braze servers for as long as it's on the screen.
 
-By default, the feed will be shown in a fixed-position sidebar on the right-hand side of the website (or as a full-screen overlay on mobile devices, through responsive CSS). If you wish to override this behavior and display a statically positioned News Feed inside your own parent element, provide the following element as the first argument to `showFeed`:
+By default, the feed will be shown in a fixed-position sidebar on the right-hand side of the website (or as a fullscreen overlay on mobile devices, through responsive CSS). If you wish to override this behavior and display a statically positioned News Feed inside your own parent element, provide the following element as the first argument to `showFeed`:
 
 ``` javascript
 braze.toggleFeed(document.getElementById('my-news-feed-parent'));
@@ -71,7 +73,7 @@ This is often used to power badges signifying how many unread News Feed cards th
 
 Braze UI elements come with a default look and feel that matches the composers within the Braze dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more.
 
-For instance, the following is an example override that will cause the News Feed to appear 800px wide:
+For instance, the following is an example override that will cause the News Feed to appear 800&nbsp;px wide:
 
 ``` css
 body .ab-feed {
@@ -81,7 +83,7 @@ body .ab-feed {
 
 ## Categories
 
-Instances of the Braze News Feed can be configured to only receive cards from a certain “category”. This allows for the effective integration of multiple News Feed streams within a single application.
+Instances of the Braze News Feed can be configured to only receive cards from a certain "category". This allows for the effective integration of multiple News Feed streams within a single application.
 
 News Feed categories can be defined by providing the third `allowedCategories` parameter to `toggleFeed`:
 

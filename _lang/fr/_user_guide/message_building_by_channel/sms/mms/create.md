@@ -5,13 +5,13 @@ page_order: 2
 description: "Cet article de référence couvre les étapes impliquées dans la création, l’envoi et la prévisualisation d’un message MMS."
 page_type: reference
 tool:
-  - Campagnes
+  - Campaigns
 channel:
   - MMS
-search_rank: 2  
+search_rank: 1  
 ---
 
-# Envoi de message MMS
+# Créer une campagne par MMS
 
 > Cette page contient uniquement des informations spécifiques à la création de MMS dans l’éditeur SMS. Pour plus d’informations sur l’éditeur de SMS/MMS, consultez la section [Éditeur de SMS][1].
 
@@ -38,7 +38,7 @@ La création d’un message MMS nécessite que votre groupe d’abonnement soit 
 
 ![][2]
 
-### Spécifications de l’image
+### Spécifications des images
 
 **Spécifications de l’image** | **Propriétés recommandées**
 --- | ---

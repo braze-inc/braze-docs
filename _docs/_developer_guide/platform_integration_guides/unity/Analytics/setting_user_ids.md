@@ -6,11 +6,13 @@ platform:
   - iOS
   - Android
 page_order: 0
-description: "This reference article covers how to set user ids on Unity platform."
+description: "This reference article covers how to set user ids on Unity platform, including suggested naming conventions and best practices."
  
 ---
 
 # Setting user IDs
+
+> This reference article covers how to set user ids on Unity platform, including suggested naming conventions and best practices.
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 

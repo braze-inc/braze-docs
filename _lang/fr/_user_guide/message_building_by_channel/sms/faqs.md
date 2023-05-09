@@ -1,6 +1,6 @@
 ---
 nav_title: FAQ
-article_title: FAQ sur les SMS
+article_title: FAQ SMS
 page_order: 8
 description: "Cet article aborde certaines des questions les plus fréquemment posées lors de la configuration des campagnes par SMS."
 page_type: FAQ
@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# FAQ sur les SMS
+# Foire aux questions
 
 > Sur cette page, nous allons essayer de répondre à vos questions les plus exigeantes concernant les SMS.
 
@@ -22,13 +22,6 @@ Vous pouvez inclure un lien dans les campagnes par SMS. Prenez cependant ces poi
 - Un [code court]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/) est donc le type le plus fiable pour y inclure les liens.
 
 Braze dispose également de sa propre fonctionnalité de raccourcissement des liens qui les réduira et fournira automatiquement des analytiques de clics. Consultez la section [Raccourcissement des liens]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) pour plus d’informations.
-
-### Quels sont les cas d’utilisation de SMS que Braze ne prend pas en charge ?
-
-Il existe trois cas d’utilisation courants des SMS que Braze ne prend actuellement pas en charge :
-- Autorisation à deux facteurs
-- Chatbots
-- Appels téléphoniques
 
 ### Les messages texte de test sont-ils pris en compte pour les limites ?
 
@@ -116,17 +109,16 @@ Vous pouvez recevoir des frais pour des segments de messages supplémentaires si
 
 La clé API de l’identifiant d’application, ou `app_id`, est un paramètre associant une activité à une application spécifique dans votre groupe d’apps. Il désigne l’application dans le groupe d’apps que vous utilisez. Par exemple, vous pouvez voir un `app_id` pour votre application iOS, un `app_id` pour votre application Android, et un `app_id` pour votre intégration Web. 
 
-Votre `app_id` se trouve dans le tableau de bord, dans **Developer Console (Console développeur) > API Settings (Paramètres API) > Identification**.
+Votre `app_id` se trouve dans le tableau de bord, dans **Developer Console > API Settings > Identification (Console développeur > Paramètres API  > Identification).**.
 
 ### Comment serai-je facturé pour les SMS ?
 
-Outre les frais pour les codes courts et longs, la facturation est effectuée par le nombre de segments de messages envoyés par pays. Pour en savoir plus sur la manière dont les segments de messages sont calculés, consultez notre guide [Segments de message et limites de texte]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown). 
-Concernant les dépassements, votre gestionnaire de compte vous contactera pour vous informer si vous êtes proche de votre limite, avec des rapports pertinents pour illustrer la situation. Pour plus d’informations sur les dépassements, contactez votre conseiller Braze.
+Outre les frais pour les codes courts et longs, Braze fournit une allocation de messages SMS pour différents pays. C’est-à-dire que nous travaillons avec vous pour définir un certain nombre de segments de message pour différents pays, que vous utiliserez pour envoyer des campagnes SMS. La facturation est effectuée par le nombre de segments de message envoyés par pays. Pour en savoir plus sur la manière dont les segments de messages sont calculés, consultez notre guide [Segments de message et limites de texte]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown). Votre gestionnaire de compte vous contactera pour vous informer si vous êtes proche de votre limite, avec des rapports pertinents pour illustrer la situation. Pour plus d’informations sur les dépassements, contactez votre conseiller Braze.
 
 ### Si un message est envoyé à un téléphone fixe, est-il toujours comptabilisé comme un envoi de SMS ?
 
 Aux États-Unis, au Canada et au Royaume-Uni :
-- Si un SMS est envoyé à un téléphone fixe, il est marqué comme **Non livré**. Notez que Twilio continuera à facturer les tentatives de livraison. Les messages marqués comme **Envoyé**, **Livré** ou **Non livré** dans vos registres de messages seront donc facturés.
+- Si un SMS est envoyé à un téléphone fixe, il est marqué comme **Non livré**. Notez que Twilio continuera à facturer les tentatives de livraison. Les messages marqués comme ** Sent (Envoyé)**, ** Delivered (Livré)** ou **Undelivered (Non livré)** dans vos registres de messages seront donc facturés.
 - Au Royaume-Uni, certains opérateurs convertissent les SMS en messages vocaux et assurent ainsi leur livraison.
 
 Dans d’autres pays :

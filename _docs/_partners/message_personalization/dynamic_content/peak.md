@@ -1,7 +1,7 @@
 ---
 nav_title: Peak
 article_title: Peak
-description: "Integrating Decision Intelligence from Peak’s platform to Braze platform"
+description: "This reference article outlines the partnership between Braze and Peak, a decision intelligence platform, allows you to take predicted churn probability and attributes based on customer behaviors and interactions, and import them into Braze to use in customer segmentation and targeting."
 alias: /partners/Peak/
 page_type: partner
 search_tag: Partner
@@ -26,7 +26,7 @@ As a starting point, a Peak tenant must host the integration between Peak and Br
 
 ## Integration
 
-The Peak solution customer intelligence utilizes a model to predict a range of forward-looking attributes based on customer behaviors and interactions. These attributes are stored within Peak and can be used to generate predictive segmentation, including a customer’s probability of churning. The updating of these predictive attributes will be based on a configurable cadence (daily or weekly).
+The Peak solution customer intelligence utilizes a model to predict a range of forward-looking attributes based on customer behaviors and interactions. These attributes are stored within Peak and can be used to generate predictive segmentation, including a customer's probability of churning. The updating of these predictive attributes will be based on a configurable cadence (daily or weekly).
 
 ### Step 1: Run model and extract customers
 
@@ -36,7 +36,7 @@ Based on when attributes have been updated, a selection is carried out to collec
 
 ### Step 2: Update Braze
 
-With the updated customers and associated attributes, Peak will POST these to Braze using the [/user/track][1] endpoint, utilizing the [bulk]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#making-bulk-updates) header.
+With the updated customers and associated attributes, Peak will POST these to Braze using the [`/user/track` endpoint][1], utilizing the [bulk]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#making-bulk-updates) header.
 
 On receipt of successful status codes from the API, Peak will record the successful sync between Peak and Braze.
 

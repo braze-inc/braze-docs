@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: News Feed Card Analytics"
-article_title: "GET: News Feed Card Analytics"
+nav_title: "GET: Export News Feed Card Analytics"
+article_title: "GET: Export News Feed Card Analytics"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about and using the Segments List endpoint to export a list of available Segments."
+description: "This article outlines details about the Export News Feed card analytics Braze endpoint."
 
 ---
 {% api %}
-# News Feed card analytics endpoint
+# Export News Feed card analytics
 {% apimethod get %}
 /feed/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a daily series of engagement stats for a card over time.
+> Use this endpoint to retrieve a daily series of engagement stats for a card over time.
 
 {% alert note %}
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
@@ -30,7 +30,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 | Parameter   | Required | Data Type | Description |
 | ----------- | -------- | --------- | ----------- |
-| `card_id` | Required | String | See [Card API identifier]({{site.baseurl}}/api/identifier_types/). <br><br> The `card_id` for a given card can be found in the **Developer Console** page and on the card details page within your dashboard, or you can use the [News Feed List Endpoint]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
+| `card_id` | Required | String | See [Card API identifier]({{site.baseurl}}/api/identifier_types/). <br><br> The `card_id` for a given card can be found in the **Developer Console** page and on the card details page within your dashboard, or you can use the [Export News Feed cards list endpoint]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
 | `length` | Required | Integer | Maximum number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
 | `unit` | Optional | String | Unit of time between data points. Can be `day` or `hour`, defaults to `day`.  |
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |

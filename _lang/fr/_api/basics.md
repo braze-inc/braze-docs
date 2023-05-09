@@ -13,14 +13,14 @@ alias: /api/api_key/
 
 ## Définitions relatives aux API
 
-Voici un bref aperçu des termes que vous pouvez rencontrer dans la documentation de l’API REST de Braze.
+Voici un aperçu des termes que vous pouvez rencontrer dans la documentation de l’API REST de Braze.
 
 ### Endpoints
 
 Braze gère plusieurs instances différentes pour notre tableau de bord et nos Endpoints REST. Une fois votre compte provisionné ; vous vous connecterez à l’une des URL suivantes. Utilisez le bon Endpoint REST en vous basant sur l’instance qui vous a été provisionnée. Si vous n’êtes pas sûr, créez un [ticket de support][support] ou utilisez le tableau ci-dessous pour faire correspondre l’URL du tableau de bord que vous utilisez au bon Endpoint REST.
 
 {% alert important %}
-Quand vous utilisez des endpoints pour des appels API, utilisez le « REST Endpoint ».
+Quand vous utilisez des endpoints pour des appels API, utilisez le « Endpoint REST ».
 
 Pour l’intégration SDK, utilisez le [« Endpoint SDK »]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), et non pas le « Endpoint REST ».
 {% endalert %}
@@ -40,27 +40,27 @@ Pour l’intégration SDK, utilisez le [« Endpoint SDK »]({{site.baseurl}}/u
 
 ### Limites de l’API
 
-Pour la plupart des API, la limite de débit par défaut définie par Braze est de 250 000 requêtes par heure. Cependant, certains types de requêtes ont leur propre limite de débit pour une meilleure gestion des grands volumes de données de notre base client. Consultez les [limites de débit de l’API]({{site.baseurl}}/api/api_limits/) pour plus d’informations
+Pour la plupart des API, la limite de débit par défaut définie par Braze est de 250 000 requêtes par heure. Cependant, certains types de requêtes ont leur propre limite de débit pour une meilleure gestion des grands volumes de données de notre base client. Consultez les [limites de débit de l’API]({{site.baseurl}}/api/api_limits/) pour plus d’informations
 
 ### ID utilisateur 
 
 - **ID utilisateur externe** : Le `external_id` sert d’identifiant utilisateur unique pour lequel vous soumettez des données. Cet identifiant doit être identique à celui que vous avez défini dans le SDK Braze afin d’éviter de créer plusieurs profils pour le même utilisateur.
-- **ID d’identifiant Braze**: `braze_id` est un identifiant utilisateur unique défini par Braze. Cet identifiant peut être utilisé pour supprimer des utilisateurs via l’API REST en plus des external_ids.
+- **ID d’identifiant Braze** : `braze_id` est un identifiant utilisateur unique défini par Braze. Cet identifiant peut être utilisé pour supprimer des utilisateurs via l’API REST, en plus des external_ids.
 
-Pour plus d’informations, consultez l’article suivant spécifique à votre plateforme : [iOS][9], [ Android][10] et [Web][13]..
+Pour plus d’informations, consultez l’article suivant spécifique à votre plateforme : [iOS][9], [Android][10] et [Web][13].
 
 ## Clé API REST
 
-Une clé d’interface de programmation d’application REST (clé API REST) est un code unique qui est passé dans une API pour authentifier l’appel API et identifier l’application ou l’utilisateur d’appel. L’accès API est effectué en utilisant les requêtes Web HTTPS dans l’endpoint REST API de votre entreprise. Nous utilisons les clés API REST chez Braze en tandem avec nos clés d’identification App pour suivre, accéder, envoyer, exporter et analyser les données afin de vous assurer que tout fonctionne bien de votre côté et du nôtre. 
+Une clé d’interface de programmation d’application REST (clé API REST) est un code unique qui est passé dans une API pour authentifier l’appel API et identifier l’application ou l’utilisateur d’appel. L’accès API s’effectue à l’aide des requêtes Web HTTPS dans l’endpoint de l’API REST de votre entreprise.  Chez Braze, nous utilisons conjointement les clés API REST et nos clés d’identification App pour accéder aux données, et les suivre, les envoyer, les exporter et les analyser afin de vous assurer que tout fonctionne bien de votre côté et du nôtre. 
 
 Les groupes d’apps et les clés API vont de pair chez Braze. Les groupes d’apps sont conçus pour héberger les versions de la même application sur plusieurs plateformes. De nombreux clients utilisent également des groupes d’apps pour avoir des versions gratuites et premium de leurs applications sur la même plateforme. Comme vous pouvez le constater, ces groupes d’apps utilisent également l’API REST et possèdent leurs propres clés API REST. Ces clés peuvent être personnalisées individuellement pour inclure l’accès à des endpoints spécifiques sur l’API. Chaque appel d’API doit inclure une clé ayant accès à l’endpoint.
 
-Nous faisons référence à la clé API REST et à la clé API du groupe d’apps comme `api_key`. Le `api_key` est inclus dans chaque requête comme en-tête de requête et sert de clé d’authentification qui vous permet d’utiliser nos API REST. Ces API REST sont utilisées pour suivre les utilisateurs, envoyer des messages, exporter des données utilisateur, etc. Quand vous créez une nouvelle clé d’API REST, vous devez lui accorder l’accès à des endpoints spécifiques. En affectant des autorisations spécifiques à une clé API, vous pouvez limiter de façon précise les appels qu’une clé API peut authentifier.
+Nous faisons référence à la clé API REST et à la clé API du groupe d’apps comme `api_key`. La `api_key` est incluse dans chaque requête comme en-tête de requête et sert de clé d’authentification qui vous permet d’utiliser nos API REST. Ces API REST sont utilisées pour suivre les utilisateurs, envoyer des messages, exporter des données utilisateur, etc. Quand vous créez une nouvelle clé d’API REST, vous devez lui accorder l’accès à des endpoints spécifiques. En affectant des autorisations spécifiques à une clé API, vous pouvez limiter de façon précise les appels qu’une clé API peut authentifier.
 
 ![Volet Clés API REST sur l’onglet API Settings (Paramètres API) de la Developer Console (Console du développeur).][27]
 
 {% alert tip %}
-En plus des clés API REST, il existe un troisième type appelé Clés d’identification pouvant être utilisé pour référencer des objets spécifiques tels que des apps, des modèles, des Canvas, des campagnes, des cartes de contenu et des segments de l’API. Pour plus d’informations, consultez la rubrique [Types d’identifiant API]({{site.baseurl}}/api/identifier_types/).
+En plus des clés API REST, il existe un troisième type appelé Clés d’identification qui permet de référencer des objets spécifiques tels que des apps, des modèles, des Canvas, des campagnes, des cartes de contenu et des segments de l’API. Pour plus d’informations, consultez la rubrique [Types d’identifiant API]({{site.baseurl}}/api/identifier_types/).
 {% endalert %}
 
 ### Autorisations de clé API REST
@@ -76,14 +76,14 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 | `users.delete` | Supprimer un utilisateur. |
 | `users.alias.new` | Créer un nouvel alias pour un utilisateur existant.  |
 | `users.identify` | Requête pour les informations de profil utilisateur par ID utilisateur.  |
-| `users.export.ids` | Requête pour les informations de profil utilisateur par Identifiant, par exemple device_id, email_address, external_id.  |
+| `users.export.ids` | Requête pour les informations de profil utilisateur par Identifiant, par exemple device_id, email_address et external_id.  |
 | `users.export.segment` | Requête pour les informations de profil utilisateur par segment. |
 | `users.external_ids.rename` | Renommer l’ID externe existant d’un utilisateur. |
 | `users.external_ids.remove` | Supprimer l’ID externe obsolète d’un utilisateur. |
 {: .reset-td-br-1 .reset-td-br-2}
 
  {% endtab %}
- {% tab E-mail %}
+ {% tab Email %}
 
 | Nom | Description |
 |---|---|---|
@@ -105,6 +105,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 | `messages.schedule.update` | Mettre à jour un message planifié. |
 | `messages.schedule.delete` | Supprimer un message planifié. |
 | `messages.schedule_broadcasts` | Interroger tous les messages de diffusion programmés. |
+| `messages.live_activity.update` | Mettre à jour une activité iOS Live. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -149,7 +150,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Achat %}
+{% tab Purchases %}
 
 | Nom | Description |
 |---|---|---|
@@ -171,7 +172,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {% tab News Feed %}
 
 {% alert note %}
-Le Fil d'actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de messagerie de cartes de contenu qui est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 | Nom | Description |
@@ -194,7 +195,7 @@ Le Fil d'actualité est obsolète. Braze recommande aux clients qui utilisent no
 
 | Nom | Description |
 |---|---|---|
-| `kpi.mau.data_series` | Requête pour les utilisateurs actifs uniques sur une fenêtre de 30 jours glissants sur une période donnée. |
+| `kpi.mau.data_series` | Requête pour les utilisateurs actifs uniques sur une fenêtre de 30 jours glissants sur une période donnée. |
 | `kpi.dau.data_series` |  Requête pour les utilisateurs actifs uniques par jour sur une période donnée. |
 | `kpi.new_users.data_series` | Requête pour les nouveaux utilisateurs par jour sur une période donnée. |
 | `kpi.uninstalls.data_series` | Requête pour les désinstallations d’applications par jour sur une période donnée. |
@@ -205,7 +206,7 @@ Le Fil d'actualité est obsolète. Braze recommande aux clients qui utilisent no
 
 | Nom | Description |
 |---|---|---|
-| `templates.email.create` | Créez un nouveau modèle d’e-mail sur le tableau de bord. |
+| `templates.email.create` | Créer un nouveau modèle d’e-mail sur le tableau de bord. |
 | `templates.email.update` | Mettre à jour un modèle d’e-mail stocké sur le tableau de bord. |
 | `templates.email.info` | Requête pour les informations d’un modèle spécifique. |
 | `templates.email.list` | Requête pour une liste de modèles d’e-mail. |
@@ -236,7 +237,7 @@ Le Fil d'actualité est obsolète. Braze recommande aux clients qui utilisent no
 |---|---|---|
 | `subscription.status.set` | Définir le statut du groupe d’abonnement. |
 | `subscription.status.get` | Obtenir le statut du groupe d’abonnement. |
-| `subscription.groups.get` | Obtenez le statut des groupes d’abonnement auxquels les utilisateurs spécifiques sont explicitement abonnés/désabonnés. |
+| `subscription.groups.get` | Obtenir le statut des groupes d’abonnement auxquels les utilisateurs spécifiques sont explicitement abonnés/désabonnés. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -259,7 +260,7 @@ Les clés API REST existantes peuvent être visualisées ou supprimées en cliqu
 ![][29]
 
 {% alert important %}
-Gardez à l’esprit qu’une fois que vous avez créé une nouvelle clé API, vous ne pouvez plus modifier les autorisations ou la liste des adresses IP autorisées. Cette restriction est en place pour des raisons de sécurité. Si vous devez modifier le périmètre d’une clé, créez une nouvelle clé avec les autorisations mises à jour et implémentez cette clé à la place de l’ancienne. Une fois que votre implémentation est terminée, vous pouvez supprimer l’ancienne clé.
+Gardez à l’esprit qu’une fois que vous avez créé une nouvelle clé API, vous ne pouvez plus modifier les autorisations ni la liste des adresses IP autorisées. Cette restriction est en place pour des raisons de sécurité. Si vous devez modifier le périmètre d’une clé, créez une nouvelle clé avec les autorisations mises à jour et implémentez cette clé à la place de l’ancienne. Une fois que votre implémentation est terminée, vous pouvez supprimer l’ancienne clé.
 {% endalert %}
 
 ## Sécurité clé API REST
@@ -304,7 +305,7 @@ Cette bibliothèque cliente est actuellement en version bêta. Voulez-vous nous 
 
 [1]: https://en.wikipedia.org/wiki/UTF-8
 [7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
 [2]: {{site.baseurl}}/api/identifier_types/

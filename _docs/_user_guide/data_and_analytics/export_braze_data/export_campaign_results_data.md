@@ -3,16 +3,16 @@ nav_title: Export Campaign Data
 article_title: Export Campaign Data
 page_order: 0
 page_type: reference
-description: "This reference article covers how to export campaign analytics."
+description: "This reference article covers how to export campaign results data from single, multi-channel, or multivariate campaigns. The article also lists how to export user data from the recipients."
 tool: 
   - Campaigns
   - Reports
   
 ---
 
-# Campaign results data
+# Export campaign data
 
-All of the analytics from your Braze campaigns can be exported to a CSV. From the **Campaigns** page of the dashboard, select the campaign you wish to view and scroll down to the historical performance graphs, which can be exported.
+> From the **Campaigns** page of the dashboard, select the campaign you wish to view and scroll down to the historical performance graphs, which can be exported.
 
 ## Multichannel campaigns
 

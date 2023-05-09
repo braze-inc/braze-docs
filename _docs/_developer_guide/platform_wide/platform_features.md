@@ -2,7 +2,7 @@
 nav_title: Platform Features
 article_title: Platform Features
 page_order: 0
-description: "This reference article covers specific platform features including SDK sizes, dashboard UI, multichannel messaging, and more."
+description: "This reference article covers specific platform features including SDK sizes, dashboard UI, data API, multichannel messaging, and more."
 platform:
   - iOS
   - Android
@@ -12,18 +12,11 @@ platform:
 
 # Platform features
 
-Braze provides a comprehensive user engagement solution for your mobile and web applications. The Braze platform has three primary components - the SDK, the dashboard, and the data API.
+> Braze provides a comprehensive user engagement solution for your mobile and web applications. The Braze platform has three primary components - the SDK, the dashboard, and the data API.
 
 ## SDK
 
 The Braze SDKs can be integrated into your mobile and web applications to provide powerful marketing, customer support, and analytics tools.
-
-| Platform | Approximate SDK Size |
-|---|---|
-| Android | 800 KB |
-| iOS | (IPA - Addition to App File) 1MB - 2MB; (Framework) 30MB |
-| Web | 35 KB |
-{: .reset-td-br-1 .reset-td-br-2}
 
 ## Dashboard user interface
 

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update Email Template Braze endpoint."
+description: "This article outlines details about the Update email template Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,9 @@ description: "This article outlines details about the Update Email Template Braz
 /templates/email/update
 {% endapimethod %}
 
-Use this endpoint to update email templates on the Braze dashboard. You can access an email template's `email_template_id` by navigating to it on the **Templates & Media** page. The [Create email template endpoint]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) will also return an `email_template_id` reference.
+> Use this endpoint to update email templates on the Braze dashboard. 
+
+You can access an email template's `email_template_id` by navigating to it on the **Templates & Media** page. The [Create email template endpoint]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) will also return an `email_template_id` reference.
 
 All fields other than the `email_template_id` are optional, but you must specify at least one field to update.
 
@@ -58,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`should_inline_css`|Optional|Boolean|Enables or disables the `inline_css` feature per template. If not provided, Braze will use the default setting for the AppGroup. One of `true` or `false` is expected.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request example
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/update' \
 --header 'Content-Type: application/json' \
@@ -74,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/up
 }'
 ```
 
-## Possible errors
+## Troubleshooting
 
 The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
 

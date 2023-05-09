@@ -2,7 +2,7 @@
 nav_title: Tinyclues
 article_title: Tinyclues
 alias: /partners/tinyclues/
-description: "This article outlines the partnership between Braze and Tinyclues, which offers an audience-building feature to help you send to more targeting campaigns, find new product opportunities, and elevate revenue using an incredibly user-friendly UI."
+description: "This reference article outlines the partnership between Braze and Tinyclues, which offers an audience-building feature to help you send to more targeting campaigns, find new product opportunities, and elevate revenue using an incredibly user-friendly UI."
 page_type: partner
 search_tag: Partner
 
@@ -27,7 +27,7 @@ To integrate Braze and Tinyclues, you must configure the Tinyclues platform, exp
 
 ### Step 1: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Tinyclues**. Here, you will find your REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.<br><br>![][6]{: style="max-width:90%;"} 
+In Braze, navigate to **Technology Partners** and select **Tinyclues**. Here, you will find your REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.<br><br>![][6]{: style="max-width:90%;"} 
 
 To complete the integration, you will need to provide the data import key and REST endpoint to your Tinyclues data operations team. Tinyclues will then establish the connection and reach out to you once the setup is complete.
 

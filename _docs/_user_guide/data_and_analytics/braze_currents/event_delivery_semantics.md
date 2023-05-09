@@ -69,7 +69,7 @@ File naming conventions may change in the future, Braze recommends searching all
 
 ### Avro write threshold
 
-Under normal circumstances, Braze will write data files to your storage bucket every 5 minutes of 15,000 events, whichever is sooner. Under heavy load, we may write larger data files with as many as 100,000 events within the same 5-minute period.
+Under normal circumstances, Braze will write data files to your storage bucket every 5 minutes or 15,000 events, whichever is sooner. Under heavy load, we may write larger data files with as many as 100,000 events within the same 5-minute period.
 
 {% alert important %}
 Currents will never write empty files.

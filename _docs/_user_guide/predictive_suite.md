@@ -2,7 +2,7 @@
 nav_title: Predictive Suite
 article_title: Predictive Suite
 page_order: 6.4
-layout: featured
+layout: dev_guide
 search_rank: 3
 guide_top_header: "Predictive Suite"
 guide_top_text: "The Braze Predictive Suite puts machine learning tools in your hands without any additional engineering required. Predictive Churn and Predictive Purchases are customizable, on-demand predictive models you create in minutes to effectively leverage and act on data seamlessly within the Braze platform. Learn more about the features by visiting the following articles."

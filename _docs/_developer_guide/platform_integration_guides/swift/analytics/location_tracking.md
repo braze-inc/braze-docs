@@ -1,47 +1,106 @@
 ---
-hidden: true
 nav_title: Location Tracking
 article_title: Location Tracking for iOS
-platform: iOS
+platform: Swift
 page_order: 6
-description: "This article shows how to configure location tracking for your iOS application."
+description: "This article shows how to configure location tracking for the Swift SDK."
 Tool:
   - Location
 
 ---
 
-# Location tracking for iOS
+# Location tracking
 
-By default, Braze disables location tracking. We enable location tracking after the host application has opted into location tracking and gained permission from the user. Provided users have opted into location tracking, Braze will log a single location for each user on session start.
-
-{% alert important %}
-For location tracking to work reliably in iOS 14 for users who give approximate location permission, you must update your SDK version to at least `3.26.1`.
-{% endalert %}
+> By default, Braze disables location tracking. We enable location tracking after the host application has opted into location tracking and gained permission from the user. Provided users have opted into location tracking, Braze will log a single location for each user on session start.
 
 ## Enabling automatic location tracking
 
-Starting with Braze iOS SDK `v3.17.0`, location tracking is disabled by default. You can enable automatic location tracking using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `EnableAutomaticLocationCollection` boolean subentry and set the value to `YES`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
+Go over [Requesting Authorization for Location Services](https://developer.apple.com/documentation/corelocation/requesting_authorization_to_use_location_services) and make sure to configure your application purpose strings. When using Braze location features, your application is responsible for requesting authorization for using location services. 
 
-You can also enable automatic location tracking at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableAutomaticLocationCollectionKey` to `YES`. For example:
+To enable location tracking, add the `BrazeLocation` module in the **General** tab of your application configuration page.
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab swift %}
 
-```objc
-[Appboy startWithApiKey:@"YOUR-API_KEY"
-          inApplication:application
-      withLaunchOptions:options
-      withAppboyOptions:@{ ABKEnableAutomaticLocationCollectionKey : @(YES) }];
+In your `AppDelegate.swift` file, import the `BrazeLocation` module at the top of the file. Add a `BrazeLocationProvider` instance to the Braze configuration, making sure all changes to the configuration are done prior to calling `Braze(configuration:)`. See `Braze.Configuration.Location` for the available configurations.
+
+```swift
+import UIKit
+import BrazeKit
+import BrazeLocation
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+  static var braze: Braze? = nil
+
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
+    // Setup Braze
+    let configuration = Braze.Configuration(apiKey: brazeApiKey, endpoint: brazeEndpoint)
+    configuration.logger.level = .info
+    configuration.location.brazeLocationProvider = BrazeLocationProvider()
+    configuration.location.automaticLocationCollection = true
+    configuration.location.geofencesEnabled = true
+    configuration.location.automaticGeofenceRequests = true
+    let braze = Braze(configuration: configuration)
+    AppDelegate.braze = braze
+
+    return true
+  }
+
+}
+
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab OBJECTIVE-C %}
 
-```swift
-Appboy.start(withApiKey: "YOUR-API-KEY",
-                 in:application,
-                 withLaunchOptions:launchOptions,
-                 withAppboyOptions:[ ABKEnableAutomaticLocationCollectionKey : true ])
+In your `AppDelegate.m` file, import the `BrazeLocation` module at the top of the file. Add a `BrazeLocationProvider` instance to the Braze configuration, making sure all changes to the configuration are done prior to calling Braze(configuration:). See `BRZConfigurationLocation` for the available configurations.
+
+```objc
+#import "AppDelegate.h"
+
+@import BrazeKit;
+@import BrazeLocation;
+
+@implementation AppDelegate
+
+#pragma mark - Lifecycle
+
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  // Setup Braze
+  BRZConfiguration *configuration =
+      [[BRZConfiguration alloc] initWithApiKey:brazeApiKey
+                                      endpoint:brazeEndpoint];
+  configuration.logger.level = BRZLoggerLevelInfo;
+  configuration.location.brazeLocationProvider = [[BrazeLocationProvider alloc] init];
+  configuration.location.automaticLocationCollection = YES;
+  configuration.location.geofencesEnabled = YES;
+  configuration.location.automaticGeofenceRequests = YES;
+  Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+  AppDelegate.braze = braze;
+
+  [self.window makeKeyAndVisible];
+  return YES;
+}
+
+#pragma mark - AppDelegate.braze
+
+static Braze *_braze = nil;
+
++ (Braze *)braze {
+  return _braze;
+}
+
++ (void)setBraze:(Braze *)braze {
+  _braze = braze;
+}
+
+@end
 ```
 
 {% endtab %}
@@ -49,42 +108,48 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 ### Passing location data to Braze
 
-The following two methods can be used to manually set the last known location for the user.
+The following methods can be used to manually set the last known location for the user. These examples assume you’ve assigned the Braze instance as a variable in the AppDelegate.
+
+
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].user setLastKnownLocationWithLatitude:latitude
-                                                     longitude:longitude
-                                            horizontalAccuracy:horizontalAccuracy];
-
-```
-
-```objc
-[[Appboy sharedInstance].user setLastKnownLocationWithLatitude:latitude
-                                                     longitude:longitude
-                                            horizontalAccuracy:horizontalAccuracy
-                                                      altitude:altitude
-                                              verticalAccuracy:verticalAccuracy];
-
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitude, longitude: longitude, horizontalAccuracy: horizontalAccuracy)
+AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
+                                             longitude:longitude)
 ```
 
 ```swift
-Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitude, longitude: longitude, horizontalAccuracy: horizontalAccuracy, altitude: altitude, verticalAccuracy: verticalAccuracy)
+AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
+                                             longitude:longitude,
+                                             altitude:altitude,
+                                             horizontalAccuracy:horizontalAccuracy,
+                                             verticalAccuracy:verticalAccuracy)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setLastKnownLocationWithLatitude:latitude
+                                               longitude:longitude
+                                      horizontalAccuracy:horizontalAccuracy];
+
+```
+
+```objc
+[AppDelegate.braze.user setLastKnownLocationWithLatitude:latitude
+                                               longitude:longitude
+                                      horizontalAccuracy:horizontalAccuracy
+                                                altitude:altitude
+                                        verticalAccuracy:verticalAccuracy];
+
 ```
 
 {% endtab %}
 {% endtabs %}
 
-Refer to [`ABKUser.h`][5] for more information.
+Refer to [`Braze.User.swift`][5] for more information.
 
-[4]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKUser.h
+[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/

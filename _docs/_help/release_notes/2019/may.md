@@ -10,7 +10,7 @@ description: "This article contains release notes for May 2019."
 
 ## Content Cards
 
-Content Cards are persistent content that appear within customers’ app and web experiences.
+Content Cards are persistent content that appear within customers' app and web experiences.
 
 With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. Or, you can pair Content Cards with other channels, like email or push notifications, to enable cohesive marketing strategies.
 
@@ -83,7 +83,7 @@ Unique Clicks and Unique Opens for email are now captured and displayed on a 7-d
 
 Using `dispatch_id` allows for recurring messages to reflect the true unique open or unique click count of each message. It will be easy for customers to match this data, now that the `dispatch_id` is available in Currents.
 
-Any users also using Mailjet will see a spike in these numbers, since the previous uniqueness timeframe was over 30 days. You should have been made aware of this change three (3) weeks ago.  Sendgrid customers should see no difference.
+Any users also using Mailjet will see a spike in these numbers, since the previous uniqueness timeframe was over 30 days. You should have been made aware of this change three (3) weeks ago.  SendGrid customers should see no difference.
 
 You can search for these updated terms in our [report metrics glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
@@ -100,7 +100,7 @@ _Update noted in August 2019._
 As of the [November 2019 product release]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to ["Intelligent Channel"]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/).
 {% endalert %}
 
-The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their “best” channel. In this case, “best” means “has the highest likelihood of engagement, given the user’s history”. You can select email, web push, or mobile push (which includes any available mobile OS or device) as a channel.
+The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. In this case, "best" means "has the highest likelihood of engagement, given the user's history". You can select email, web push, or mobile push (which includes any available mobile OS or device) as a channel.
 
 Check this new filter out in our [Segmentation Filters library]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 

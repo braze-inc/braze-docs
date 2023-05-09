@@ -2,10 +2,10 @@
 nav_title: Amperity
 article_title: Amperity
 alias: /partners/amperity/
-description: "This article covers the Braze and Amperity integration. Amperity provides intelligent capabilities across data management unification, analytics and insights, and activation."
+description: "This reference article outlines the partnership between Braze and Amperity, a comprehensive enterprise customer data platform, allowing you to sync Amperity users, unify data, send data using AWS S3 buckets to Braze, and more."
 page_type: partner
-page_order: 2.2
 search_tag: Partner
+page_order: 2
 
 ---
 
@@ -74,7 +74,7 @@ Once the query has run, you can either:
 
 ##### Lambda function 
 
-The following [Lambda function](https://github.com/braze-inc/growth-shares-lambda-user-csv-import) is a serverless application that allows you to easily post user attribute data from an Amperity CSV file directly to Braze through the Braze users/track/ endpoint. This process launches immediately upon uploading a CSV file to a configured AWS S3 bucket. To read more, visit our [dedicated Lambda function article]({{site.baseurl}}/user_csv_lambda/).
+The following [Lambda function](https://github.com/braze-inc/growth-shares-lambda-user-csv-import) is a serverless application that allows you to easily post user attribute data from an Amperity CSV file directly to Braze through the Braze `users/track/` endpoint. This process launches immediately upon uploading a CSV file to a configured AWS S3 bucket. To read more, visit our [dedicated Lambda function article]({{site.baseurl}}/user_csv_lambda/).
 
 The Lambda function can handle large files and uploads, but the function will stop execution after 10 minutes due to Lambda's time limits. This process will then launch another Lambda instance to finish processing the remaining part of the file.
 

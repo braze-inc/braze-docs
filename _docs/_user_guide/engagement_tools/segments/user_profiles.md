@@ -11,9 +11,7 @@ description: "This reference article describes how to access a user's profile in
 
 # User profiles
 
-> This reference article describes how to access user profiles in the dashboard, the different components involved in a user profile, and showcases some examples of how you can use user profiles to troubleshoot campaigns.
-
-User profiles are a great way to find information about specific users. All persistent data associated with a user is stored in their user profile.
+> User profiles are a great way to find information about specific users. All persistent data associated with a user is stored in their user profile.
 
 ## Access profiles
 
@@ -36,7 +34,7 @@ User profiles are a great resource for troubleshooting and testing because you c
 
 For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you are troubleshooting a [multi-lingual campaign][13] that didn't behave as expected.
 
-You can use the [Engagement tab](#engagement-tab) to verify whether a certain user received a campaign. In addition, if this particular user did receive the campaign, you can see when they received it. You can also verify whether a user is in a certain segment, and whether a user is opted in to push, e-mail, or both. This information is useful for troubleshooting purposes. For example, you should check this information if a user doesn't receive a campaign that you expected them to receive or receives a campaign that you did not expect them to receive.
+You can use the [Engagement tab](#engagement-tab) to verify whether a certain user received a campaign. In addition, if this particular user did receive the campaign, you can see when they received it. You can also verify whether a user is in a certain segment, and whether a user is opted in to push, email, or both. This information is useful for troubleshooting purposes. For example, you should check this information if a user doesn't receive a campaign that you expected them to receive or receives a campaign that you did not expect them to receive.
 
 ## Elements of user profile
 
@@ -44,7 +42,6 @@ There are four main sections of a user's profile.
 
 - **Overview:** Basic information about the user, session data, custom attributes, custom events, purchases, and the most recent device that the user logged into.
 - **Engagement:** Information about the user's contact settings, campaigns received, segments, communication stats, install attribution, and random bucket number.
-- **Social:** High-level view of the user's activity on Twitter and Facebook, if connected.
 - **Messaging History:** Recent messaging-related events for this user from the past 30 days.
 
 ### Overview tab {#overview-tab}
@@ -71,7 +68,7 @@ The **Engagement** tab contains information about a user's interactions with the
 
 | Engagement category | Contains |
 | --- | --- |
-| Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. |
+| Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/), and [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) for information on how subscriptions and opt-ins are set. |
 | Campaigns received | Campaigns this user has received and when. Select a campaign from the list to view it. |
 | Segments | Segments this user is included in. Select a segment from the list to view it. |
 | Communication stats | When this user has last received messages from you from each channel. |
@@ -82,18 +79,6 @@ The **Engagement** tab contains information about a user's interactions with the
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][3]
-
-### Social tab
-
-The **Social** tab contains a high-level view of the user's activity on Twitter and Facebook, if these platforms are connected.
-
-| Social category | Contains |
-| --- | --- |
-| Twitter | Twitter username, number of followers, number of users they're following, and number of tweets. |
-| Facebook | Facebook posts this user has liked. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-![][4]
 
 ### Messaging History tab
 
@@ -150,7 +135,6 @@ While email open statistics can be useful in aggregate, for example to compare t
 [1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
 [2]: {% image_buster /assets/img_archive/user_profile2.png %}
 [3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
-[4]: {% image_buster /assets/img_archive/profiles_social_tab.png %}
 [5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
 
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/

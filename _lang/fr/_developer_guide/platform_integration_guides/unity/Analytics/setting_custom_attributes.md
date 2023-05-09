@@ -1,20 +1,20 @@
 ---
-nav_title: Définir des attributs personnalisés
+nav_title: Définition des attributs personnalisés
 article_title: Définition des attributs personnalisés pour Unity
 platform: 
   - Unity
   - iOS
   - Android
 page_order: 2
-description: "Cet article de référence explique comment définir des attributs personnalisés sur la plateforme Unity."
+description: "Cet article de référence explique comment activer et désactiver les attributs personnalisés sur la plateforme Unity."
 
 ---
 
-# Définir des attributs personnalisés
+# Définition des attributs personnalisés
 
-Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
+> Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 
-Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques.][1].
+Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques][1].
 
 ## Affecter des attributs utilisateur par défaut
 
@@ -55,9 +55,9 @@ Pour attribuer des attributs utilisateur, vous devez appeler la méthode appropr
 ## Affecter des attributs utilisateur personnalisés
 
 Au-delà des attributs utilisateur par défaut, Braze vous permet également de définir des attributs personnalisés en utilisant un certain nombre de types de données différents :
-Pour plus d’informations sur les options de segmentation que chacun de ces attributs vous offre, consultez notre [documentation « Meilleures pratiques » ][1] dans cette section.
+Pour plus d’informations sur les options de segmentation que chacun de ces attributs vous offre, consultez notre [documentation « Meilleures pratiques »][1] dans cette section.
 
-### Définition des valeurs d’attributs personnalisés
+### Définir des valeurs d’attributs personnalisés
 
 {% tabs %}
 {% tab Boolean Value %}
@@ -70,9 +70,9 @@ AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean va
 {% tab Integer %}
 
 ```csharp
-// Configurer un attribut entier
+// Set Integer Attribute
 AppboyBinding.SetCustomUserAttribute("custom int attribute key", 'integer value');
-// incrémenter un attribut entier
+// Increment Integer Attribute
 AppboyBinding.IncrementCustomUserAttribute("key", increment(int))
 ```
 
@@ -101,17 +101,17 @@ AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
 AppboyBinding.SetCustomUserAttributeToSecondsFromEpoch("custom date attribute key", 'integer value');
 ```
 
->  Les dates transmises à Braze doivent être au format [ISO 8601][2] par ex. `2013-07-16T19:20:30+01:00` ou au  format`yyyy-MM-dd'T'HH:mm:ss:SSSZ`, par exemple,`2016-12-14T13:32:31.601-0800`
+>  Les dates transmises à Braze doivent être au format [ISO 8601][2] (par ex. `2013-07-16T19:20:30+01:00`) ou au `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format (`2016-12-14T13:32:31.601-0800`).
 
 {% endtab %}
 {% tab Array %}
 
 ```csharp
-// Configuration d’un tableau
+// Setting An Array
 AppboyBinding.SetCustomUserAttributeArray("key", array(List), sizeOfTheArray(int))
-// Ajout d’un tableau
+// Adding to an Array
 AppboyBinding.AddToCustomUserAttributeArray("key", "Attribute")
-// Supprimer un élément d’un tableau
+// Removing an item from an Array
 AppboyBinding.RemoveFromCustomUserAttributeArray("key", "Attribute")
 ```
 {% endtab %}
@@ -143,14 +143,14 @@ Pour configurer un abonnement pour vos utilisateurs (par e-mail ou notification 
 | `UNSUBSCRIBED` | Désinscrit ou explicitement désabonné |
 {: .reset-td-br-1 .reset-td-br-2}
 
->  Aucun abonnement explicite n’est requis par Windows pour envoyer des notifications push aux utilisateurs. Lorsqu’un utilisateur est inscrit aux notifications push, il est défini `SUBSCRIBED` sur plutôt que `OPTED_IN` par défaut. Pour en savoir plus, consultez notre documentation sur [l’implémentation des souscriptions et des abonnements explicites][10].
+>  Aucun abonnement explicite n’est requis par Windows pour envoyer des notifications push aux utilisateurs. Lorsqu’un utilisateur est enregistré pour les notifications push, il est défini sur `SUBSCRIBED` plutôt que `OPTED_IN` par défaut. Pour en savoir plus, consultez notre documentation sur [l’implémentation des souscriptions et des abonnements explicites][10].
 
 - `EmailNotificationSubscriptionType`
-  - Les utilisateurs seront définis sur `SUBSCRIBED` automatiquement à la réception d’une adresse e-mail valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OPTED_IN` dès réception du consentement explicite de votre utilisateur. Consultez notre [Modification des abonnements utilisateur][8] pour plus de détails.
+  - Les utilisateurs seront définis sur `SUBSCRIBED` automatiquement à la réception d’une adresse e-mail valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OPTED_IN` dès réception du consentement explicite de votre utilisateur. Consultez notre [Modification des souscriptions utilisateur][8] pour plus de détails.
 - `PushNotificationSubscriptionType`
-  - Les utilisateurs seront définis sur `SUBSCRIBED` automatiquement après une inscription aux notifications push valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OPTED_IN` dès réception du consentement explicite de votre utilisateur. Consultez notre [Modification des abonnements utilisateur][8] pour plus de détails.
+  - Les utilisateurs seront définis sur `SUBSCRIBED` automatiquement après une inscription aux notifications push valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OPTED_IN` dès réception du consentement explicite de votre utilisateur. Consultez notre [Modification des souscriptions utilisateur][8] pour plus de détails.
 
->  Ces types relèvent de `Appboy.Models.AppboyNotificationSubscriptionType`.
+>  Ces types tombent dans la catégorie `Appboy.Models.AppboyNotificationSubscriptionType`.
 
 ## Exemple de code
 

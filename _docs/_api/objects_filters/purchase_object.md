@@ -3,11 +3,11 @@ nav_title: "Purchase Object"
 article_title: API Purchase Object
 page_order: 8
 page_type: reference
-description: "This article explains the different components of a purchase object, how to use it correctly, and examples to draw from."
+description: "This reference article explains the different components of a purchase object, how to use it correctly, and examples to draw from."
 
 ---
 
-# Purchase object specification
+# Purchase object
 
 > This article explains the different components of a purchase object, how to use it correctly, best practices, and examples to draw from.
 
@@ -15,7 +15,7 @@ description: "This article explains the different components of a purchase objec
 
 A purchase object is an object that gets passed through the API when a purchase has been made. Each purchase object is located within a purchase array, with each object being a single purchase by a particular user at a particular time. The purchase object has many different fields that allow Braze's backend to store and use this information for customization, data collection, and personalization.
 
-### Purchase object
+### Object body
 
 ```json
 {
@@ -39,8 +39,8 @@ A purchase object is an object that gets passed through the API when a purchase 
 }
 ```
 
-- [External User ID][23]
-- [App Identifier][21]
+- [External User ID]({{site.baseurl}}/api/basics/#user-ids)
+- [App identifier]({{site.baseurl}}/api/identifier_types/)
 - [ISO 4217 Currency Code Wiki][20]
 - [ISO 8601 Time Code Wiki][22]
 
@@ -87,7 +87,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Purchase properties object
 
-Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. 
+Custom events and purchases may have event properties. The "properties" values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. 
 
 Property values can be any of the following data types:
 
@@ -101,7 +101,7 @@ Property values can be any of the following data types:
 | Objects | Objects will be ingested as strings. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Event property objects that contain array or object values can have an event property payload of up to 50KB.
+Event property objects that contain array or object values can have an event property payload of up to 50&nbsp;KB.
 
 ### Purchase properties
 

@@ -8,9 +8,9 @@ channel: push
 
 ---
 
-# Push notifications
+# Push notification integration
 
-Integrating push notifications in React Native requires setting up each native platform separately. Follow the respective guides listed to finish the installation.
+> This reference article covers how to set push notifications for React Native. Integrating push notifications requires setting up each native platform separately. Follow the respective guides listed to finish the installation.
 
 ## Step 1: Complete native setup
 

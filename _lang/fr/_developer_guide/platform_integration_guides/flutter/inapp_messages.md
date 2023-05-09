@@ -1,17 +1,17 @@
 ---
-nav_title: Messages in-app
+nav_title: Messages In-App
 article_title: Messages in-app pour Flutter
 platform: Flutter
 page_order: 4
 page_type: reference
 description: "Cet article couvre les messages in-app des applications pour iOS et Android utilisant Flutter, y compris l’analytique de la personnalisation et de la journalisation."
-channel: messages in-app
+channel: messages In-App
 
 ---
 
-# Messages in-app
+# Intégration de messages in-app
 
-Les messages in-app natifs s’affichent automatiquement d’origine sur Android et iOS lors de l’utilisation de Flutter. Cet article couvre différentes options de personnalisation pour les messages in-app.
+> Les messages in-app natifs s’affichent automatiquement sur Android et iOS lors de l’utilisation de Flutter. Cet article couvre différentes options de personnalisation des messages in-app pour Flutter.
 
 ## Analytique
 
@@ -22,11 +22,11 @@ Pour enregistrer l’analytique à l’aide de votre `BrazeInAppMessage`, passez
 
 Par exemple :
 ```dart
-// Journaliser un clic
+// Log a click
 braze.logInAppMessageClicked(inAppMessage);
-// Journaliser une impression
+// Log an impression
 braze.logInAppMessageImpression(inAppMessage);
-// Index de bouton de journalisation `0` cliqué
+// Log button index `0` being clicked
 braze.logInAppMessageButtonClicked(inAppMessage, 0);
 ```
 
@@ -41,17 +41,17 @@ Pour désactiver l’affichage automatique des messages in-app, effectuez ces mi
 2. Définissez l’opération par défaut de message in-app `DISCARD` en ajoutant la ligne suivante à votre fichier `braze.xml`.
 
 ```xml
-<string name="com_braze_flutter_automatic_integration_iam_operation">SUPPRIMER</string>
+<string name="com_braze_flutter_automatic_integration_iam_operation">DISCARD</string>
 ```
 
 {% endtab %}
 {% tab iOS %}
 
-1. Implémentez le délégué `ABKInAppMessageControllerDelegate` comme décrit dans notre article iOS sur le [délégué de message in-app de base]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate).
+1. Implémentez le délégué `BrazeInAppMessageUIDelegate` comme décrit dans notre [article iOS ici](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
-2. Mettez à jour votre implémentation de délégué `beforeInAppMessageDisplayed` pour qu’elle retourne `ABKInAppMessageDisplayChoice.discardInAppMessage`.
+2. Mettez à jour votre méthode de délégué `inAppMessage(_:displayChoiceForMessage:)` pour qu’elle retourne `.discard`.
 
-Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) dans notre exemple d’application pour en avoir un exemple.
+Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) dans votre exemple d’application.
 
 {% endtab %}
 {% endtabs %}
@@ -62,7 +62,7 @@ Pour recevoir des données dans le mesage in-app dans votre appli Flutter, le `B
 
 L’objet `BrazeInAppMessage` prend en charge un sous-ensemble de champs disponibles dans les objets du modèle natif, y compris `uri`, `message`, `header`, `buttons`, `extras` et plus encore.
 
-{% alert note %} La méthode de fonction de rappel de données héritées sera bientôt déconseillée. Il est possible d’ajouter des messages in-app aux flux de données et aux fonctions de rappel de données. SI vous avez déjà des fonctions de rappel de données intégrées et souhaitez utiliser des flux de données, supprimez toute logique de fonction de rappel pour garantir que les messages in-app sont traités exactement une seule fois. {% endalert %}
+{% alert note %} La méthode de fonction de rappel de données héritées sera bientôt obsolète. Il est possible d’ajouter des messages in-app aux flux de données et aux fonctions de rappel de données. SI vous avez déjà des fonctions de rappel de données intégrées et souhaitez utiliser des flux de données, supprimez toute logique de fonction de rappel pour garantir que les messages in-app sont traités exactement une seule fois. {% endalert %}
 
 ### Méthode 1  : Flux de données de message in-app (recommandée)
 
@@ -71,14 +71,14 @@ Vous pouvez définir une fonction de rappel dans Dart pour recevoir les données
 Pour commencer à écouter le flux, utilisez le code ci-dessous pour créer un `StreamSubscription` dans votre appli Flutter et appelez la méthode `subscribeToInAppMessages()` avec une fonction prenant l’instance `BrazeInAppMessage`. N’oubliez pas de `cancel()` l’abonnement au flux lorsqu’il n’est plus nécessaire.
 
 ```dart
-// Créer un abonnement au flux
+// Create stream subscription
 StreamSubscription inAppMessageStreamSubscription;
 
 inAppMessageStreamSubscription = _braze.subscribeToInAppMessages((BrazeInAppMessage inAppMessage) {
-  // Fonctionnalité de gestion des messages in-app
+  // Function to handle in-app messages
 }
 
-// Annuler un abonnement au flux
+// Cancel stream subscription
 inAppMessageStreamSubscription.cancel();
 ```
 
@@ -98,11 +98,11 @@ Cette fonction de rappel marche sans requérir d’intégration supplémentaire.
 {% endtab %}
 {% tab iOS %}
 
-1. Implémentez le délégué `ABKInAppMessageControllerDelegate` comme décrit dans notre article iOS sur le [délégué de message in-app de base]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate).
+1. Implémentez le délégué `BrazeInAppMessageUIDelegate` comme décrit dans notre article iOS sur le [délégué de message in-app de base](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
-2. Mettez à jour votre implémentation de délégué `beforeInAppMessageDisplayed` pour qu’elle appelle `BrazePlugin.process(inAppMessage)`.
+2. Mettez à jour votre implémentation de délégué `willPresent` pour qu’elle appelle `BrazePlugin.process(inAppMessage)`.
 
-Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) dans notre exemple d’application pour en avoir un exemple.
+Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) dans votre exemple d’application.
 
 {% endtab %}
 {% endtabs %}
@@ -120,7 +120,7 @@ Suivez ces étapes pour tester un exemple de message in-app.
 
 1. Définissez un utilisateur actif dans l’application React en appelant la méthode `braze.changeUser('your-user-id')`.
 2. Dirigez-vous vers la page **Campaigns** de votre tableau de bord et suivez [ce guide][1] pour créer une nouvelle campagne de messages in-app.
-3. Composez votre campagne de messages in-app et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Envoyer le test**.
+3. Composez votre campagne de messages in-app et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Send Test (Envoyer le test)**.
 4. Appuyez sur la notification push qui devrait afficher le message in-app sur votre appareil.
 
 ![Une campagne de messages in-app Braze montrant que vous pouvez ajouter votre propre ID utilisateur en tant que destinataire de test pour essayer votre message in-app.][2]

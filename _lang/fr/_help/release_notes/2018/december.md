@@ -11,11 +11,11 @@ description: "Cet article contient les notes de version de décembre 2018."
 
 Les [Blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) vous permettent de gérer votre contenu cross- canal réutilisable depuis un emplacement unique centralisé. Pour accéder à cette fonction, allez sur l’onglet **Content Blocks Library** (Bibliothèque de blocs de contenu) dans la section **Templates & Media** (Modèles et médias) de votre compte Braze. 
 
-Avec les Blocs de contenu, vous pouvez :
+Avec les blocs de contenu, vous pouvez :
  - Créer un look & feel cohérent pour vos campagnes d’e-mail en utilisant des blocs de contenu pour les en-têtes et pieds de page.
  - Distribuer les mêmes codes promotionnels sur différents canaux.
  - Créer des ressources prédéfinies qui peuvent être utilisées pour créer des messages avec des informations et des ressources cohérentes.
- - Copier les corps de message entiers vers d’autres messages.
+ - Copier-coller des corps de message entiers dans d’autres messages.
 
 ## Outil promotionnel Gmail
 

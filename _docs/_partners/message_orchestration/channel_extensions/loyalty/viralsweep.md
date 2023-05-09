@@ -2,7 +2,7 @@
 nav_title: ViralSweep
 article_title: ViralSweep
 alias: /partners/viralsweep/
-description: "This article outlines the partnership between Braze and ViralSweep, a software service that allows brands to build, run, and manage digital marketing promotions like sweepstakes, contests, instant win, waitlists, referral promotions, and more. "
+description: "This reference article outlines the partnership between Braze and ViralSweep, a software service that allows brands to build, run, and manage digital marketing promotions like sweepstakes, contests, instant win, waitlists, referral promotions, and more."
 page_type: partner
 search_tag: Partner
 
@@ -20,7 +20,7 @@ The Braze and ViralSweep integration allows you to hold sweepstakes and contests
 | ----------- | ----------- |
 | ViralSweep account | A ViralSweep account utilizing the business plan is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with all user data and email permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-|Braze REST Endpoint | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
+|Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration

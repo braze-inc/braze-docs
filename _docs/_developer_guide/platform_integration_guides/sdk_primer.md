@@ -1,26 +1,40 @@
 ---
-nav_title: SDK 101
+nav_title: SDK Overview for Developers
+article_title: SDK Overview for Developers
+description: "This onboarding reference article provides a technical overview for developers of the Braze SDK."
 page_order: 0
 ---
 
-# SDK 101
+# SDK overview for developers
 
-Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. Further, you may find yourself curious about how you can customize it further to meet your needs. This article can help you answer all of your SDK questions. You can also check out our [Technical Integration Checklists and Toolkits](https://learning.braze.com/technical-integration-checklists-and-toolkits) course on Braze Learning.
+> Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. You may be curious about how you can customize the SDK to further to meet your needs. This article can help you answer all of your SDK questions. You can also check out our [Technical Integration Checklists and Toolkits](https://learning.braze.com/technical-integration-checklists-and-toolkits) course on Braze Learning.
+
+Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview][3], instead.
+
+In brief, the Braze SDK:
+* Collects and syncs user data into a consolidated user profile
+* Automatically collects session data, device info, and push tokens
+* Captures marketing engagement data and custom data specific to your business
+* Powers push notifications, in-app messages, and Content Card messaging channels
 
 ## App performance
 
-Braze should have no negative impact on your app’s performance.
+Braze should have no negative impact on your app's performance.
 
 The Braze SDKs have a very small footprint. We automatically change the rate that we flush user data depending on the quality of the network, in addition to allowing manual network control. We automatically batch API requests from the SDK to make sure that data is logged quickly while maintaining maximum network efficiency. Lastly, the amount of data sent from the client to Braze within each API call is extremely small.
 
-## Feature set defaults
+## SDK compatibility
 
-If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
+The Braze SDK is designed to be very well-behaved, and not interfere with other SDKs present in your app. If you are experiencing any issues you think might be due to incompatibility with another SDK, reach out to Braze Support.
+
+## Default analytics and session handling
+
+Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and end, all other automatically tracked data does not count toward your data point allotment.
 
 {% alert note %}
-All of our features are configurable, but it would not be advantageous to avoid these in your integration. 
+All of our features are configurable, but it's a good idea to fully implement the default data collection model.
 
-<br>For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. If necessary, it is possible to [block the default collection of certain data, as well as allowlist processes that do so](#blocking-data-collection).
+<br>If necessary for your use case, you can [limit the collection of certain data](#blocking-data-collection) once the integration is complete. 
 {% endalert %}
 
 ### Device properties
@@ -69,7 +83,7 @@ These properties are collected by the iOS SDK upon proper integration.
 | Device Locale <br> `ABKDeviceOptionLocale`| The default locale of the device. |
 | Device Model <br> `ABKDeviceOptionModel`| The specific hardware of the device.
 | Device OS Version <br> `ABKDeviceOptionOSVersion` | The version of the iOS OS installed on the device. |
-| Device IDFV <br> `ABKDeviceOptionIDFV`| Device identifier for vendors. IDFV collection is now optional on our [iOS SDK v5.7.0+](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/)|
+| Device IDFV <br> `ABKDeviceOptionIDFV`| Device identifier for vendors. IDFV collection is now optional on our [iOS SDK v5.7.0+](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/other_sdk_customizations/swift_idfv/)|
 | Device IDFA <br> `ABKDeviceOptionIDFA`| (if supplied) Device identifier for advertisers. |
 | Device Push Enabled <br> `ABKDeviceOptionPushEnabled`| Whether this app has push notifications enabled.
 | Device Timezone <br> `ABKDeviceOptionTimezone`| The reported time zone of the device.
@@ -97,25 +111,32 @@ Braze sends data to the SDK at the beginning of a session based on which segment
 
 ## Blocking data collection
 
-It is possible, though not suggested, to block the automatic collection of certain data from your SDK integrations. As stated in the section [Feature set defaults](#feature-set-defaults), not fully integrating our SDKs can reduce the capabilities of personalization and targeting.
+It is possible (though not suggested) to block the automatic collection of certain data from your SDK integration, or allowlist processes that do so. 
 
-For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. If you choose not to integrate for time zone, you might not be able to send messages within a user's time zone. If you choose to not integrate for specific device visual information, message content might not be optimized for that device.
+Blocking data collection is not recommended because removing analytical data reduces your platform's capacity for personalization and targeting. For example:
 
-We highly recommend fully integrating the SDKs to take full advantage of our product's capabilities.
+- If you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. 
+- If you choose not to integrate for time zone, you might not be able to send messages within a user's time zone. 
+- If you choose to not integrate for specific device visual information, message content might not be optimized for that device.
 
-### Web SDK
+We highly recommend completely integrating the SDKs to take full advantage of our product's capabilities.
+
+{% tabs %}
+{% tab Web SDK %}
 
 You may either simply not integrate certain parts of the SDK, or use [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) for a user. This method will sync data logged prior to when `disableSDK()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) method in the future to resume data collection. You can learn more about this in our [Disabling Web Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/) article.
 
-### Android SDK
+{% endtab %}
+{% tab Android SDK %}
 
-You can use [`setDeviceObjectAllowlist`][1]to configure to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`][2].
+You can use [`setDeviceObjectAllowlist`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html?query=fun%20setDeviceObjectAllowlist(deviceObjectAllowlist:%20EnumSet%3CDeviceKey%3E):%20BrazeConfig.Builder) to configure the SDK to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html?query=fun%20setDeviceObjectAllowlistEnabled(enabled:%20Boolean):%20BrazeConfig.Builder).
 
 {% alert important %}
 An empty allowlist will result in **no** device data being sent to Braze.
 {% endalert %}
 
-### iOS SDK
+{% endtab %}
+{% tab iOS SDK %}
 
 You can pass an `appboyOptions` value for `ABKDeviceAllowlistKey` to specify an allowlist for device fields that are collected by the SDK. Fields are defined in `ABKDeviceOptions`. To turn off the collection of all device fields, set the value of this key to `ABKDeviceOptionNone`. Refer to [`Appboy.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h) for `appboyOptions` key documentation.
 
@@ -125,11 +146,8 @@ To specify allowlisted device fields, assign the bitwise OR of desired fields to
 By default, all fields are collected by the Braze iOS SDK.
 {% endalert %}
 
-## SDK compatibility
+{% endtab %}
+{% endtabs %}
 
-Braze's SDK is designed to be very well-behaved, and not interfere with other SDKs present in your mobile app. If you are experiencing any issues you think might be due to incompatibility with another mobile SDK, reach out to Braze Support.
 
-Additionally, the Braze iOS SDK fully supports RubyMotion apps.
-
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html?query=fun%20setDeviceObjectAllowlist(deviceObjectAllowlist:%20EnumSet%3CDeviceKey%3E):%20BrazeConfig.Builder
-[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html?query=fun%20setDeviceObjectAllowlistEnabled(enabled:%20Boolean):%20BrazeConfig.Builder
+[3]: {{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/

@@ -14,11 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 /templates/email/list
 {% endapimethod %}
 
-Utilisez cet endpoint pour obtenir une liste des e-mails disponibles sur votre compte Braze.
+> Utilisez cet endpoint pour obtenir une liste des modèles d’e-mails disponibles sur votre compte Braze.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -41,20 +41,20 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 ## Réponse 
 
 {% alert important %}
-Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas fournis dans cette réponse.
+Les modèles construits à l’aide de l’éditeur Drag & Drop pour les e-mails ne sont pas fournis dans cette réponse.
 {% endalert %}
 
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "count": le nombre de modèles renvoyés
-  "templates": [modèle comportant les propriétés suivantes]:
-    "email_template_id": (string) votre identifiant API du modèle d’e-mail,
-    "template_name": (string) le nom de votre modèle d’e-mail,
-    "created_at": (string) le moment auquel l’e-mail a été créé en ISO 8601,
-    "updated_at": (string) le moment auquel l’e-mail a été mis à jour en ISO 8601,
-    "tags": (array of strings) les balises jointes au modèle
+  "count": the number of templates returned
+  "templates": [template with the following properties]:
+    "email_template_id": (string) your email template's API Identifier,
+    "template_name": (string) the name of your email template,
+    "created_at": (string) the time the email was created at in ISO 8601,
+    "updated_at": (string) the time the email was updated in ISO 8601,
+    "tags": (array of strings) tags appended to the template
 }
 ```
 {% endapi %}

@@ -9,9 +9,9 @@ description: "Cet article de référence montre comment suivre les achats et les
 
 ---
  
-# Enregistrer les achats pour Android et FireOS
+# Enregistrer les achats
 
-Enregistrez les achats dans l’application afin que vous puissiez suivre vos revenus au fil du temps et entre leurs différentes sources, tout en segmentant vos utilisateurs selon leur valeur à vie.
+> Enregistrez les achats dans l’application afin que vous puissiez suivre vos revenus au fil du temps et entre leurs différentes sources, tout en segmentant vos utilisateurs selon leur valeur à vie. Cet article de référence montre comment suivre les achats et les revenus dans l’application et attribuer des propriétés d’achat dans votre application Android ou FireOS.
 
 Braze prend en charge les achats dans plusieurs devises. Les achats que vous effectuez dans une devise autre qu’USD seront affichés dans le tableau de bord en USD en fonction du taux de change à la date à laquelle ils ont été enregistrés.
 
@@ -52,9 +52,9 @@ Braze.getInstance(context).logPurchase(
 Si vous transmettez une valeur de `10 USD` et une quantité de `3`, trois achats de 10 dollars pour un total de 30 dollars seront enregistrés sur le profil utilisateur. Les quantités doivent être inférieures ou égales à 100. Les valeurs des achats peuvent être négatives.
 {% endalert %}
 
-### Ajout de propriétés
+### Ajouter des propriétés
 
-Vous pouvez ajouter des métadonnées sur les achats en transmettant un [tableau de propriétés d'événement]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) ou un [objet Braze Properties][4] avec vos informations d'achat.
+Vous pouvez ajouter des métadonnées sur les achats en transmettant un [tableau de propriétés de l'événement]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) ou un [objet Propriétés Braze][4] avec vos informations d'achat.
 
 #### Formatage de l’objet Braze Properties
 
@@ -99,10 +99,10 @@ Les clés suivantes sont réservées et ne peuvent pas être utilisées comme pr
 
 ### API REST
 
-Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la [Documentation de l’API ][1]utilisateur pour plus de détails.
+Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la [Documentation de l’API utilisateur][1] pour plus de détails.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
 [5]: http://developer.android.com/reference/java/util/Date.html
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html
+[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html

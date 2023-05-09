@@ -23,7 +23,7 @@ guide_featured_list:
   - name: Cartes de contenu
     link: /docs/help/help_articles/content_cards/
     fa_icon: fas fa-stream
-  - name: Données
+  - name: Data
     link: /docs/help/help_articles/data/
     fa_icon: fas fa-chart-line
   - name: Docs
@@ -32,7 +32,7 @@ guide_featured_list:
   - name: E-mail
     link: /docs/help/help_articles/email/
     fa_icon: fas fa-envelope
-  - name: Messages in-app
+  - name: Messages In-App
     link: /docs/help/help_articles/in-app_messages/
     fa_icon: fas fa-mobile-alt
   - name: Notification push

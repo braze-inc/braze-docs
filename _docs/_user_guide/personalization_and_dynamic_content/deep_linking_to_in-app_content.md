@@ -2,7 +2,7 @@
 nav_title: Deep Linking to In-App Content
 article_title: Deep Linking to In-App Content
 page_order: 3
-description: "Deep linking is a way of launching a native app and providing additional information telling it to do some specific action or show specific content. This reference article covers how to deep-link in your in-app message content."
+description: "This reference article covers guidance on how to add deep linking to your in-app message content."
 
 ---
 
@@ -69,8 +69,8 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spri
 
 ![][10]
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance
 [4]: https://support.google.com/analytics/answer/1033863?hl=en
 [5]: https://developers.google.com/analytics/devguides/collection/

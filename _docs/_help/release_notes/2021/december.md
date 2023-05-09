@@ -24,7 +24,7 @@ New [iOS push notification guidelines]({{site.baseurl}}/user_guide/message_build
 Additional IPs to whitelist in EU for webhooks and Connected Content have been added to our [webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) and [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) article. These new IPs include `18.157.135.97`, `3.123.166.46`, `3.64.27.36`, `3.65.88.25`, `3.68.144.188`, and `3.70.107.88`.
 
 ## Export purchases endpoint
-A new [GET: `/purchases/product_list`]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/) endpoint has been added to Braze. This endpoint returns paginated lists of product IDs.
+A new [`/purchases/product_list` endpoint]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/) has been added to Braze. This endpoint returns paginated lists of product IDs.
 
 ## New Braze partnerships
 
@@ -35,7 +35,7 @@ The Braze and [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/
 With [Blueconic]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/#blueconic), Braze users can unify data into persistent, individual profiles and then sync it across customer touchpoints and systems in support of a wide range of growth-focused initiatives, including customer lifecycle orchestration, modeling and analytics, digital products and experiences, audience-based monetization, and more.
 
 ### Worthy - Dynamic content
-The Braze and [Worthy]({{site.baseurl}}/partners/message_personalization/dynamic_content/worthy/#worthy) integration allows you to easily create personalized, rich in-app experiences using Worthy’s drag and drop dynamic content editor and deliver them through Braze.
+The Braze and [Worthy]({{site.baseurl}}/partners/message_personalization/dynamic_content/worthy/#worthy) integration allows you to easily create personalized, rich in-app experiences using Worthy's drag and drop dynamic content editor and deliver them through Braze.
 
 ### Judo - Dynamic content
 The [Judo]({{site.baseurl}}/partners/message_personalization/dynamic_content/judo/#judo) and Braze integration allows you to overwrite components of your campaign and replace them with Judo experiences. Data from Braze may be used to support personalized content in a Judo experience. User events and data from the experience can feedback into Braze for attribution and targeting.

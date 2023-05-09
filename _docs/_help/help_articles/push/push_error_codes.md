@@ -1,7 +1,7 @@
 ---
 nav_title: Common Push Error Messages
 article_title: Common Push Error Messages
-page_order: 0
+page_order: 2
 
 page_type: solution
 description: "This help article covers common push-related error messages for iOS and Android, and walks you through potential solutions."
@@ -26,7 +26,7 @@ Common failures may include:
 
 ### Push bounced: InvalidRegistration
 `InvalidRegistration` can happen when a push token is malformed. Common failures may include when:
-- People are passing Braze registration tokens manually but don’t call `getToken()`. For example, they may pass the entire instance ID. The token in the error message looks like `&#124;ID&#124;1&#124;:[regular token]`.  
+- People are passing Braze registration tokens manually but don't call `getToken()`. For example, they may pass the entire instance ID. The token in the error message looks like `&#124;ID&#124;1&#124;:[regular token]`.  
 - People are registering with multiple services. We currently expect push registration intents to arrive old-style, so if folks are registering in multiple places and we catch intents from other services we can get malformed push tokens.
 
 ### Push bounced: NotRegistered
@@ -38,14 +38,14 @@ Common failures may include:
 ### Push bounced: Error sending to bad push token
 
 This error may occur for several reasons:
-- The push token isn’t being sent to us correctly in `[[Appboy sharedInstance] registerPushToken:]`
-	- Check the token in the **Message Activity Log**. It should generally look like a long string of letters and numbers. (e.g `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`) If it doesn’t, check the code involved in sending Braze push token errors.<br><br>
+- The push token isn't being sent to us correctly in `[[Appboy sharedInstance] registerPushToken:]`
+	- Check the token in the **Message Activity Log**. It should generally look like a long string of letters and numbers. (e.g `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`) If it doesn't, check the code involved in sending Braze push token errors.<br><br>
 - Mismatched provisioning environment:
 	- If you register with a development certificate and try to send with a production one, you can see this error.  
 	- Braze only supports universal certificates for production environments. Testing push on development environments with a universal certificate will not work. 
 	- This reporting sends bouncing in production but not development.<br><br>
 - Mismatched provisioning profile:
-	- This can happen if your certificate doesn’t match the one that was used to get the token. If this is suspected, the next steps include:
+	- This can happen if your certificate doesn't match the one that was used to get the token. If this is suspected, the next steps include:
 		- Ensuring that the push certificate being used to send push from the Braze dashboard and the provisioning profile are configured correctly.
 		- Recreating the APNS certification and then recreate the provisioning profile once the APNS certificate is configured to the `app_id`. This can sometimes solve some more visible problems.
 

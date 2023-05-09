@@ -3,7 +3,7 @@ nav_title: Segment.io
 article_title: Segment.io
 page_order: 1
 alias: /partners/segment/
-description: "This article outlines the partnership between Braze and Segment.io, a customer data platform that collects and routes information between sources in your marketing stack."
+description: "This reference article outlines the partnership between Braze and Segment.io, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
 search_tag: Partner
 
@@ -17,7 +17,7 @@ search_tag: Partner
 
 The Braze and Segment.io integration allows you to track your users and route data to various user analytics providers. Segment.io allows you to:
 - Sync [Segment.io Engage]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/) to Braze for use in Braze campaign and Canvas segmentation.
-- [Import data across the two platforms](#integration-options). We offer a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for syncing your data to Braze’s REST APIs
+- [Import data across the two platforms](#integration-options). We offer a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for syncing your data to Braze's REST APIs
 - [Connect data to Segment.io through Currents]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). 
 
 ## Prerequisites
@@ -48,8 +48,8 @@ Your choice of connection mode will be determined by the type of Source the dest
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment.io’s SDK to translate events into Braze’s native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment.io does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn’t mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
-| [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment.io to Braze’s REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
+| [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment.io's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment.io does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn't mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
+| [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment.io to Braze's REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -58,13 +58,13 @@ Visit [Segment.io](https://segment.com/docs/destinations/#connection-modes) to l
 
 #### Side-by-side SDK integration
 
-Also called device-mode, this integration maps Segment.io’s SDK and [methods](#methods) to Braze's SDK, allowing access to all the features our SDK provides, such as push, in-app messaging, and other methods native to Braze. 
+Also called device-mode, this integration maps Segment.io's SDK and [methods](#methods) to Braze's SDK, allowing access to all the features our SDK provides, such as push, in-app messaging, and other methods native to Braze. 
 
 {% alert note %}
 When using Segment.io's device-mode, you do not need to integrate the Braze SDK directly. When adding Braze as a device-mode destination for Segment.io, the Segment.io SDK will initialize the Braze SDK and call the relevant mapped Braze methods.
 {% endalert %}
 
-When using a device-mode connection, similar to integrating the Braze SDK natively, Braze’s SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
+When using a device-mode connection, similar to integrating the Braze SDK natively, Braze's SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
 
 {% tabs local %}
 {% tab Android %}
@@ -88,9 +88,9 @@ To set up Braze as a device-mode destination for your Android source, choose **C
 
 ![]({% image_buster /assets/img/segment/android.png %})
 
-To complete the side-by-side integration, refer to Segment.io’s detailed instructions for adding the Braze destination dependency to your [Android](https://segment.com/docs/connections/destinations/catalog/braze/#android) app.
+To complete the side-by-side integration, refer to Segment.io's detailed instructions for adding the Braze destination dependency to your [Android](https://segment.com/docs/connections/sources/catalog/libraries/mobile/kotlin-android/destination-plugins/braze-kotlin-android/) app.
 
-The source code for the [Braze Web Mode (Actions) destination](https://github.com/segmentio/action-destinations/tree/main/packages/browser-destinations/src/destinations/braze) is maintained by Segment.io. 
+The source code for the Android device mode integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
 {% endtab %}
 {% tab iOS %}
@@ -112,27 +112,43 @@ To set up Braze as a device-mode destination for your iOS source, choose **Class
 
 ![]({% image_buster /assets/img/segment/ios.png %})
 
-To complete the side-by-side integration, refer to Segment.io’s detailed instructions for adding the Braze Segment.io pod to your [iOS](https://segment.com/docs/connections/destinations/catalog/braze/#ios) app.
+To complete the side-by-side integration, refer to Segment.io's detailed instructions for adding the Braze Segment.io pod to your [iOS](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/) app.
 
 The source code for the [iOS device mode](https://github.com/Appboy/appboy-segment-ios) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
 {% endtab %}
 {% tab Web or Javascript %}
 
-Segment.io’s new Braze Web Mode (Actions) framework is recommended for setting up Braze as a device-mode destination for your Web source. 
+Segment.io's new Braze Web Mode (Actions) framework is recommended for setting up Braze as a device-mode destination for your Web source. 
 
 Within the setup UI, choose **Actions** as your destination framework and **Device Mode** as your Connection mode.
 
 ![]({% image_buster /assets/img/segment/website.png %})
 
 {% endtab %}
+{% tab React Native %}
+The source code for the [React Native Braze plugin](https://github.com/segmentio/analytics-react-native/tree/master/packages/plugins/plugin-braze) is maintained by Segment and is updated regularly to reflect new Braze SDK releases.
+
+When connecting a React Native Segment Source to Braze, you must set up a source and destination per operating system. For example, setting up an iOS destination and an Android destination. 
+
+Within your app codebase, conditionally initialize the Segment SDK by device type, using the respective source write key associated with each app.
+
+When a push token is registered from a device and sent to Braze, it is associated with the app identifier used when initializing the SDK. The device-type conditional initialization ensures that any push tokens sent to Braze are associated with the relevant app.
+
+{% alert important %}
+If the React Native app initializes Braze with the same Braze app identifier for all devices, then all React Native users will be considered Android or iOS users in Braze, and all push tokens will be associated with that operating system.
+{% endalert %}
+
+To set up Braze as a device-mode destination for each source, choose **Classic** as the destination framework and click **Save**.
+
+{% endtab %}
 {% endtabs %}
 
 #### Server-to-server integration
 
-Also called cloud-mode, this integration forwards data from Segment.io to Braze's REST APIs. Use Segment.io’s new [Braze Cloud Mode (Actions)](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/) framework to set up a cloud-mode destination for any of your sources. 
+Also called cloud-mode, this integration forwards data from Segment.io to Braze's REST APIs. Use Segment.io's new [Braze Cloud Mode (Actions)](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/) framework to set up a cloud-mode destination for any of your sources. 
 
-Unlike the side-by-side integration, the server-to-server integration does not support Braze’s UI features, such as in-app messaging, Content Cards, or automatic push token registration. There also exists [automatically captured]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection) data (such as anonymous users and device-level fields) that are not available through cloud-mode.
+Unlike the side-by-side integration, the server-to-server integration does not support Braze's UI features, such as in-app messaging, Content Cards, or automatic push token registration. There also exists [automatically captured]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection) data (such as anonymous users and device-level fields) that are not available through cloud-mode.
 
 If you wish to use this data and these features, consider using the side-by-side (device-mode) SDK integration.
 
@@ -207,7 +223,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 Braze supports the [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page), [Identify](https://segment.com/docs/spec/identify/), [Track](https://segment.com/docs/spec/track/) and [Group](https://segment.com/docs/connections/spec/group/) Segment.io methods. The types of identifiers used within these methods will depend on whether the data is being sent through a server-to-server (cloud-mode) or side-by-side (device-mode) integration. In the Braze Web Mode Actions and Cloud Mode Actions destinations, you can also choose to set up a mapping for a [Segment.io alias call](https://segment.com/docs/connections/spec/alias/). 
 
 {% alert note %}
-Although user aliases are supported as an identifier in the Braze Cloud Mode (Actions) destination, it should be noted that Segment.io’s alias call is not directly related to Braze user aliases.
+Although user aliases are supported as an identifier in the Braze Cloud Mode (Actions) destination, it should be noted that Segment.io's alias call is not directly related to Braze user aliases.
 {% endalert %}
 
 | Identifier type | Supported destination |
@@ -219,7 +235,7 @@ Although user aliases are supported as an identifier in the Braze Cloud Mode (Ac
 
 The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` once one becomes available for the user. 
 
-It is also possible to engineer a workaround and use `braze_id` to send anonymous user data in cloud-mode. This requires manually including the user’s `braze_id` in all your Segment.io API calls. You can learn more about how to set up this workaround in [Segment.io’s documentation](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users).
+It is also possible to engineer a workaround and use `braze_id` to send anonymous user data in cloud-mode. This requires manually including the user's `braze_id` in all your Segment.io API calls. You can learn more about how to set up this workaround in [Segment.io's documentation](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users).
 
 {% tabs local %}
 {% tab Identify %}
@@ -227,7 +243,7 @@ It is also possible to engineer a workaround and use `braze_id` to send anonymou
 
 The [Identify](https://segment.com/docs/spec/identify/) call lets you tie a user to their actions and record attributes about them. 
 
-Certain Segment.io special traits map to Braze’s standard attribute profile fields:
+Certain Segment.io special traits map to Braze's standard attribute profile fields:
 
 | Special Segment.io traits | Braze standard attributes |
 | ------------- | ----------- |
@@ -241,7 +257,7 @@ Certain Segment.io special traits map to Braze’s standard attribute profile fi
 | `gender` | `gender` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using Braze’s naming convention for these fields and passing them as traits within an identify call.
+Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using Braze's naming convention for these fields and passing them as traits within an identify call.
 
 All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
 
@@ -256,7 +272,7 @@ All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_g
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the above mappings can be set using the Update User Profile Action.
 
 {% alert important %}
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points towards your allotment. For client-side sources, use Segment.io’s open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment.io. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points towards your allotment. For client-side sources, use Segment.io's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment.io. 
 
 {% endalert %}
 {% endtab %}
@@ -319,7 +335,7 @@ If you use a server-to-server integration (cloud-mode), filters related to autom
 
 ## User deletion and suppression 
 
-If you need to delete or suppress users, note that [Segment.io's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint). Note that verification of these deletions could take up to 30 days.
+If you need to delete or suppress users, note that [Segment.io's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [`/users/delete` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). Note that verification of these deletions could take up to 30 days.
 
 You must ensure that you select a common user identifier between Braze and Segment.io (as in `external_id`). Once you've initiated a deletion request with Segment.io, you can view the status within the deletion requests tab in your Segment.io dashboard.
 
@@ -327,7 +343,7 @@ You must ensure that you select a common user identifier between Braze and Segme
 
 Segment.io provides a service to clients to "replay" all historical data to a new technology partner. New Braze customers who want to import all relevant historical data can do so through Segment.io. Talk to your Segment.io rep if this is something you are interested in.
 
-Segment.io will connect to our [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to import user data into Braze on your behalf.
+Segment.io will connect to our [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to import user data into Braze on your behalf.
 
 {% alert important %}
 All identifiers supported in the Cloud Mode Actions destination are supported as part of Segment.io Replays.
@@ -349,7 +365,7 @@ Segment.io **does not** limit the number of data elements clients send to them. 
 | Braze REST endpoint | Custom REST API endpoint |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Your Braze API endpoint (called the "Custom API Endpoint" in Segment.io) is the SDK endpoint that Braze sets up for your SDK (for example, `sdk.iad-03.braze.com`). Your Braze REST API Endpoint (called the "Custom REST API Endpoint" in Segment.io) is the REST API Endpoint (for example, `https://rest.iad-03.braze.com`)
+Your Braze API endpoint (called the "Custom API Endpoint" in Segment.io) is the SDK endpoint that Braze sets up for your SDK (for example, `sdk.iad-03.braze.com`). Your Braze REST API endpoint (called the "Custom REST API Endpoint" in Segment.io) is the REST API endpoint (for example, `https://rest.iad-03.braze.com`)
 {% enddetails %}
 
 {% details Ensure your custom API endpoint is correctly input into the mobile device mode destination settings. %}
@@ -385,7 +401,7 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 {% details Sending deltas to Braze. %}
 
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points towards your allotment. For client-side sources, use Segment.io’s open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit Data Point usage by debouncing duplicate `identify()` calls from Segment.io. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points towards your allotment. For client-side sources, use Segment.io's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit Data Point usage by debouncing duplicate `identify()` calls from Segment.io. 
 
 {% enddetails %}
 
@@ -400,9 +416,9 @@ When passing user attribute data, check that you only pass values for attributes
 [24]: {{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
 [25]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
 [26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[27]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/
+[27]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
 [28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
-[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
+[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [36]: https://segment.com/docs/sources/#server
 [38]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/

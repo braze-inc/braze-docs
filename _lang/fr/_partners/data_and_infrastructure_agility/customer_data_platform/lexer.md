@@ -2,7 +2,7 @@
 nav_title: Lexer
 article_title: Lexer
 page_order: 1
-description: "Cet article présente le partenariat entre Braze et Lexer, une plateforme de données client qui aide les marketeurs à créer des expériences qui génèrent des ventes grâce aux données."
+description: "Cet article de référence présente le partenariat entre Braze et Lexer, une plateforme de données client qui aide les marketeurs à créer des expériences qui génèrent des ventes grâce aux données."
 alias: /partners/lexer/
 page_type: partner
 search_tag: Partenaire
@@ -16,10 +16,10 @@ L’intégration entre Braze et Lexer vous permet de synchroniser des données e
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte partenaire | Un compte Lexer est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST de Braze avec des autorisations `users.track` (sauf `user.delete`) et des autorisations `segment.list`. Les autorisations peuvent changer à mesure que Lexer prend en charge un plus grand nombre d’objets Braze. Vous pouvez donc choisir d’accorder davantage d’autorisations maintenant ou prévoir de mettre à jour ces autorisations à l’avenir.<br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
+| Clé d’API REST Braze | Une clé API REST de Braze avec des autorisations `users.track` (sauf `user.delete`) et des autorisations `segment.list`. Les autorisations peuvent changer à mesure que Lexer prend en charge un plus grand nombre d’objets Braze. Vous pouvez donc choisir d’accorder davantage d’autorisations maintenant ou prévoir de mettre à jour ces autorisations à l’avenir.<br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console (Console du développeur) > REST API Key (Clé API REST) > Create New Api Key (Créer une nouvelle clé API)** |
 | Endpoint REST de Braze | [L’URL de votre endpoint REST]({{site.baseurl}}/api/basics/#endpoints). Votre endpoint dépendra de l’URL Braze pour votre instance. |
 | Informations d’identification et compartiment S3 d’Amazon AWS | Avant de commencer l’intégration, vous devez disposer des informations d’identification d’un compartiment S3 d’AWS connecté à votre hub Lexer (il peut s’agir d’un compartiment que vous créez ou d’un que Lexer crée et gère pour vous). Rendez-vous sur le site Web de [Lexer](https://learn.lexer.io/docs/amazon-s3) pour obtenir des conseils sur cette exigence. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -31,8 +31,8 @@ Dans Lexer, accédez **Manage (Gérer) > Integration (Intégration)**, puis sél
 - **Clé API REST Braze**
 - **Informations d’identification AWS**
   - **Nom du compartiment AWS S3**
-  - **Région du compartiment [S3 AWS][4]**
-  - **Chemin d’accès du compartiment AWS S3** Cette adresse doit correspondre à l’adresse que vous avez indiquée en [connectant votre compartiment S3 à Braze][5]. Ce champ doit être vide si vous n’avez rien indiqué dans Braze.
+  - **Région du compartiment [AWS S3][4]**
+  - **Chemin d’accès du compartiment AWS S3** : Ce chemin doit correspondre au chemin que vous avez indiqué en [connectant votre compartiment S3 à Braze][5]. Ce champ doit être vide si vous n’avez rien indiqué dans Braze.
   - **Clé d’accès secrète AWS S3** : Consultez le site Web d’Amazon pour obtenir des informations sur la [création d’une clé d’accès][3].
 - **ID du segment d’exportation Braze** : L’ID du segment que vous avez créé dans Braze, contenant tous les utilisateurs que vous souhaitez exporter vers Lexer. Si vous ne souhaitez pas exporter certains utilisateurs vers Lexer, vous pouvez les exclure du segment que vous avez créé dans Braze. Pour trouver l’identifiant de votre segment, cliquez sur le segment souhaité dans Braze et recherchez l’**Identifiant d’API Segment**.
 
@@ -69,7 +69,7 @@ Une fois votre activation confirmée comme envoyée dans Activate, vous verrez q
 
 Dans Braze, vous verrez que le nom de votre audience dans Lexer est maintenant une valeur dans votre attribut personnalisé d’`lexer_audience`. Braze a une limite de 100 valeurs par attribut.
 
-Pour créer votre segment, accédez à **Segment > > + Create Segment (+ Créer segment)** et sélectionnez **Custom Attribute (Attribut personnalisé)** en tant que filtre. Ensuite, sélectionnez `lexer_audience` comme votre attribut et le nom de l’audience Lexer que vous souhaitez. Une fois terminé, **enregistrez** votre audience.
+Pour créer votre segment, accédez à **Segment > + Create Segment (+ Créer segment)** et sélectionnez **Custom Attribute (Attribut personnalisé)** en tant que filtre. Ensuite, sélectionnez `lexer_audience` comme votre attribut et le nom de l’audience Lexer que vous souhaitez. Une fois terminé, **enregistrez** votre audience.
 
 Vous pouvez maintenant ajouter le segment que vous venez de créer dans de futures campagnes et Canvas de Braze pour cibler ces utilisateurs finaux.
 

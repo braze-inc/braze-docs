@@ -10,7 +10,11 @@ tool: Campaigns
 
 # Approving campaigns
 
-Campaign approval adds a review process to your workflow before launching a campaign. Available exclusively for campaigns, this feature adds new states available in the campaign confirmation workflow step. Now, you can ensure that each confirmation is approved in order to launch the campaign.
+> Campaign approval adds a review process to your workflow before launching a campaign. Available exclusively for campaigns, this feature adds new states available in the campaign confirmation workflow step. Now, you can ensure that each confirmation is approved in order to launch the campaign.
+
+{% alert important %}
+Campaign approval is not supported in the building workflow for Canvases, API campaigns, and Transactional Email campaigns.
+{% endalert %}
 
 ## Turning on campaign approval
 
@@ -27,9 +31,5 @@ In the **Review Summary** step of the campaign building workflow, there is an ap
 ![][1]
 
 Once each section is approved, the **Launch** button will be enabled and you can launch your campaign! 
-
-{% alert important %}
-Campaign approval is not supported in the building workflow for Canvases or API campaigns.
-{% endalert %}
 
 [1]: {% image_buster /assets/img_archive/campaign_approval_example.png %} 

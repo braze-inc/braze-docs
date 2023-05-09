@@ -6,13 +6,11 @@ description: "This article covers how to pull user profiles into your Connected 
 
 ---
 
-# Pulling user profile data in Connected Content calls
+# Pulling user profile data
 
-If a Connected Content response contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid, before the Connected Content call in order to render the Liquid passback properly. Similarly, the `:rerender` flag must be included in the request. 
+> If a Connected Content response contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid, before the Connected Content call in order to render the Liquid passback properly. 
 
-{% alert note %}
-The `:rerender` flag is only one level deep, meaning that it will not apply to any nested Connected Content tags.
-{% endalert %}
+Similarly, the `:rerender` flag must be included in the request. Note that the `:rerender` flag is only one level deep, meaning that it will not apply to any nested Connected Content tags.
 
 For personalization, Braze pulls user profile fields before passing that field to Liquid—so if the response from Connected Content has user profile fields, it must be defined beforehand. 
 
@@ -23,9 +21,9 @@ Hi ${first_name},
 {% connected_content https://examplewebsite.com :rerender %}
 ```
 {% endraw %}
-And the Connected Content response is {% raw %}`Your language is ${language}`{% endraw %}, the content displayed in this scenario will be `Hi Jon, your language is`. The language itself will not be templated.
+And the Connected Content response is {% raw %}`Your language is ${language}`{% endraw %}, the content displayed in this scenario will be `Hi Jon, your language is`. The language itself will not be templated. This is because Braze needs to know what fields to retrieve from the user before we make the Connected Content call.
 
-In order to render the Liquid passback properly, you must put the {% raw %}`${language}`{%endraw%} tag anywhere in the body, as shown in the following code snippet.
+In order to render the Liquid passback properly, you must put the {% raw %}`${language}`{%endraw%} tag anywhere in the request, as shown in the following code snippet. The Liquid preprocessor will know to grab the "language" attribute from the user to have it ready for templating the response.
 {%raw%}
 ```liquid
 "Hi ${first_name}, {% connected_content https://examplewebsite.com?language=${language} :rerender %}

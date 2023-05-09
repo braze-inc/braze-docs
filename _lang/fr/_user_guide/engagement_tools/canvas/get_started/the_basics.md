@@ -10,6 +10,8 @@ tool: Canvas
 
 # Fondamentaux de Canvas
 
+> Cet article de référence aborde les fondamentaux de Canvas, notamment diverses questions que vous devez vous poser lorsque vous configurez votre premier Canvas.
+
 ## Comprendre la structure d’un Canvas
 
 Avant d’aborder les détails plus précis du [paramétrage Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), commençons par identifier les éléments clés constituant un Canvas.
@@ -20,23 +22,23 @@ Avant d’aborder les détails plus précis du [paramétrage Canvas]({{site.base
 
   {% endtab %}
 
-  {% tab Parcours %}
+  {% tab Journey %}
 
   Un parcours, généralement appelé « parcours client », désigne une expérience utilisateur spécifique dans le Canvas.<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
-  {% tab Assistant de saisie %}
-  L’assistant d’entrée comprend les premières étapes à effectuer lors de la création de votre Canvas. Il contient des bases comme le fait de donner un nom à votre Canvas et d’ajouter des équipes. L’assistant d’entrée constitue donc le paramétrage fondamental nécessaire avant de commencer à créer votre Canvas. Vous pouvez contrôler à cet endroit la manière dont vos utilisateurs commencent et terminent leur parcours utilisateur avec des options permettant de modifier la [planification d’entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), l’[audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) d’entrée et les [paramètres d’envoi]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  {% tab Entry Wizard %}
+  L’assistant d’entrée comprend les premières étapes à effectuer lors de la création de votre Canvas. Il contient des bases comme le fait de donner un nom à votre Canvas et d’ajouter des équipes. L’assistant d’entrée constitue donc le paramétrage fondamental nécessaire avant de commencer à créer votre Canvas. Vous pouvez contrôler à cet endroit la manière dont vos utilisateurs commencent et terminent leur parcours utilisateur avec des options permettant de modifier la [planification d’entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), l’[audience ciblée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) et les [paramètres d’envoi]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
-  {% tab Variantes %}
+  {% tab Variants %}
   Une variante désigne le chemin que chaque utilisateur suit au cours de son parcours. Canvas prend en charge jusqu’à huit variantes avec un groupe de contrôle. Vous pouvez nommer chaque variante et contrôler la répartition de l’audience cible, suivant chaque variante.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_variants.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
-  {% tab Étapes %}
+  {% tab Steps %}
   Une étape dans un Canvas est un point de décision marketing déterminant votre parcours utilisateur. Vous pouvez tirer parti des [composant Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) pour construire les étapes de votre parcours utilisateur.<br>Dans une étape, vous pouvez définir des déclencheurs ou planifier une livraison, affiner le ciblage en ajoutant des filtres ou en marquant des [événements d’exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) et ajouter des canaux à partir d’e-mails, notifications push et webhooks.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_step.png %}){: style="max-width:90%;"}
 
   {% endtab %}
@@ -65,7 +67,7 @@ Sélectionner au moins un [événement de conversion]({{site.baseurl}}/user_guid
 * **Lancer la session** : Je souhaite que mes utilisateurs reviennent et interagissent avec l’application.
 * **Effectuer un achat** : Je souhaite que mes utilisateurs achètent.
 * **Effectuer un événement personnalisé** : Je souhaite que mes utilisateurs effectuent une action spécifique pour laquelle je réalise un suivi comme événement personnalisé.
-* **Mises à niveau d’application :** Je souhaite que mes utilisateurs mettent à niveau leur version d’application.
+* **Mises à niveau d’application** : Je souhaite que mes utilisateurs mettent à niveau leur version d’application.
 
 ### Le « quand » : Créer des conditions de démarrage
 

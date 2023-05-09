@@ -5,13 +5,15 @@ page_order: 0
 platform: 
   - Android
   - FireOS
-description: "This article covers the Content Card integration and the different data models and card-specific properties available for your Android or FireOS application."
+description: "This reference article covers the Content Card integration and the different data models and card-specific properties available for your Android or FireOS application."
 channel:
   - content cards
 search_rank: 1
 ---
 
 # Content Cards integration
+
+> This reference article covers the Content Card integration and the different data models and card-specific properties available for your Android or FireOS application.
 
 In Android, the Content Cards feed is implemented as a [fragment][2] available in the Braze Android UI project. View [Google's Fragments][3] for information on adding a fragment to an activity.
 
@@ -31,10 +33,10 @@ The [base card][29] model provides foundational behavior for all cards.
 
 |Property | Description |
 |---|---|
-|`getId()` | Returns the card’s ID set by Braze.|
+|`getId()` | Returns the card's ID set by Braze.|
 |`getViewed()` | Returns a boolean reflects if the card is read or unread by the user.|
 |`getExtras()` | Returns a map of key-value extras for this card.|
-|`getCreated()`  | Returns the unix timestamp of the card’s creation time from Braze.|
+|`getCreated()`  | Returns the unix timestamp of the card's creation time from Braze.|
 |`getIsPinned` | Returns a boolean that reflects whether the card is pinned.|
 |`getOpenUriInWebView()`  | Returns a boolean that reflects whether Uris for this card should be opened <br> in Braze's WebView or not.|
 |`getExpiredAt()` | Gets the expiration date of the card.|
@@ -48,7 +50,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 |Property | Description |
 |---|---|
-|`getImageUrl()` | Returns the URL of the card’s image.|
+|`getImageUrl()` | Returns the URL of the card's image.|
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.|
 |`getDomain()` | Returns link text for the property URL.|
 {: .reset-td-br-1 .reset-td-br-2}
@@ -59,7 +61,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 |Property | Description |
 |---|---|
-|`getImageUrl()` | Returns the URL of the card’s image.|
+|`getImageUrl()` | Returns the URL of the card's image.|
 |`getTitle()` | Returns the title text for the card.|
 |`getDescription()` | Returns the body text for the card.|
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.|
@@ -92,7 +94,7 @@ All `Card` data model objects offer the following analytics methods for logging 
 
 ## Custom Content Cards {#fully-custom-content-card-display-for-android}
 
-If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s Content Cards models, you will need to subscribe to Content Card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's Content Cards models, you will need to subscribe to Content Card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
 ### Part 1: Subscribing to Content Card updates
 
@@ -189,15 +191,15 @@ You can manually log or set a Content Card as "dismissed" to Braze for a particu
 
 If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
-[7]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-click.html
-[8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-impression.html
-[55]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/is-control.html
-[57]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/index.html#-1644350493%2FProperties%2F-1725759721
-[29]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/index.html
-[30]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-banner-image-card/index.html
-[31]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-captioned-image-card/index.html
-[32]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-text-announcement-card/index.html
-[41]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-short-news-card/index.html
+[7]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html
+[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html
+[55]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-control.html
+[57]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html#-1644350493%2FProperties%2F-1725759721
+[29]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
+[30]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html
+[31]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
+[32]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
+[41]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
 [2]: https://developer.android.com/guide/components/fragments.html
 [3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
-[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html

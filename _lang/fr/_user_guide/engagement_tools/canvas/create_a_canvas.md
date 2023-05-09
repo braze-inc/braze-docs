@@ -18,7 +18,7 @@ guide_featured_list:
   - name: Fonctionnalités basées sur le temps
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
     fa_icon: fas fa-clock
-  - name: Création de branche
+  - name: Création de branches
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/branching/
     fa_icon: fas fa-code-branch
   - name: Comportements d’avancement
@@ -33,7 +33,7 @@ guide_featured_list:
   - name: Propriétés d’entrées persistantes
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
     fa_icon: fas fa-project-diagram
-  - name: Messages dans l’application de Canvas
+  - name: Messages in-app de Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
     fa_icon: fas fa-mobile
   - name: Cartes de contenu dans Canvas

@@ -14,15 +14,15 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1/list
 {% endapimethod %}
 
-Utilisez cet endpoint pour répertorier vos centres de préférences disponibles.
+> Utilisez cet endpoint pour répertorier vos centres de préférences disponibles.
 
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
-## Limites de débit
+## Limite de débit
 
 Cet endpoint a une limitation du débit de 1 000 demandes par minute, par groupe d’apps.
+
+## Paramètres de chemin et de requête
+
+Cet endpoint n’a pas de paramètres de chemin ni de requête.
 
 ## Exemple de demande
 
@@ -32,29 +32,30 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 ```
 
 ## Réponse
+
 ```json
 {
   "preference_centers": [
     {
-      "name": "Mon centre de préférences 1",
+      "name": "My Preference Center 1",
       "preference_center_api_id": "preference_center_api_id",
       "created_at": "2022-08-17T15:46:10Z",
       "updated_at": "2022-08-17T15:46:10Z"
     },
     {
-      "name": "Mon centre de préférences 2",
+      "name": "My Preference Center 2",
       "preference_center_api_id": "preference_center_api_id",
       "created_at": "2022-08-19T11:13:06Z",
       "updated_at": "2022-08-19T11:13:06Z"
     },
     {
-      "name": "Mon centre de préférences 3",
+      "name": "My Preference Center 3",
       "preference_center_api_id": "preference_center_api_id",
       "created_at": "2022-08-19T11:30:50Z",
       "updated_at": "2022-08-19T11:30:50Z"
     },
     {
-      "name": "Mon centre de préférences 4",
+      "name": "My Preference Center 4",
       "preference_center_api_id": "preference_center_api_id",
       "created_at": "2022-09-13T20:41:34Z",
       "updated_at": "2022-09-13T20:41:34Z"

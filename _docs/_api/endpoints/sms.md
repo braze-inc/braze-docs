@@ -5,13 +5,13 @@ search_tag: Endpoint
 page_order: 6
 layout: dev_guide
 
-description: "This landing page lists the Braze SMS Endpoints."
+description: "This landing page lists the Braze SMS endpoints."
 page_type: landing
 
 guide_top_header: "SMS Endpoints"
 guide_top_text: "Use the Braze SMS Endpoints to manage your users' phone numbers in your subscription groups."
 
-guide_featured_title: "Braze SMS Endpoints"
+guide_featured_title: ""
 guide_featured_list:
   - name: "GET: Query Invalid Phone Numbers"
     link: /docs/api/endpoints/sms/get_query_invalid_numbers/

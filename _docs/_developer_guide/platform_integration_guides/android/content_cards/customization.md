@@ -2,7 +2,7 @@
 page_order: 1
 nav_title: Customization
 article_title: Android and FireOS Content Card Customization
-layout: featured
+layout: dev_guide
 
 platform:
   - Android

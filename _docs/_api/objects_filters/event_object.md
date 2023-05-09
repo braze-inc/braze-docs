@@ -7,7 +7,7 @@ description: "This reference article goes over the event object, what it is, and
 
 ---
 
-# Event object specification
+# Event object
 
 > This article explains the different components of an event object, how you can use this object, and examples to draw from.
 
@@ -23,7 +23,7 @@ Tracking Custom Events article:
 - [iOS][3]
 - [Web][4]
 
-### Event object
+### Object body
 
 ```json
 {
@@ -42,8 +42,8 @@ Tracking Custom Events article:
 }
 ```
 
-- [External User ID][23]
-- [App Identifier][21]
+- [External User ID]({{site.baseurl}}/api/basics/#user-ids)
+- [App identifier]({{site.baseurl}}/api/identifier_types/)
 - [ISO 8601 Time Code Wiki][22]
 
 #### Update existing profiles only
@@ -51,11 +51,11 @@ Tracking Custom Events article:
 If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the `external_id` does not already exist.
 
 {% alert note %}
-If you are creating an alias-only user profile via the users/track endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
+If you are creating an alias-only user profile via the `/users/track` endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
 {% endalert %}
 
 ## Event properties object
-Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs ($).
+Custom events and purchases may have event properties. The "properties" values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs ($).
 
 Property values can be any of the following data types:
 
@@ -69,7 +69,7 @@ Property values can be any of the following data types:
 | Objects | Objects will be ingested as strings. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Event property objects that contain array or object values can have an event property payload of up to 50KB.
+Event property objects that contain array or object values can have an event property payload of up to 50&nbsp;KB.
 
 ### Event property persistence
 Event properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent events. By default, they are not persisted on the Braze user profile. To use event property values in segmentation, refer to [custom events][5], which details the various approaches to storing event property values long-term.
@@ -116,7 +116,7 @@ Using the example provided, we can see that someone watched a trailer recently, 
 
 [1]: {{site.baseurl}}/developer_guide/home/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
 [5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"

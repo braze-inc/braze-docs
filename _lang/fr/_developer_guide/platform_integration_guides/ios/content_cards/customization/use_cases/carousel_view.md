@@ -12,17 +12,17 @@ channel:
 
 ![Exemple d’application d’actualités montrant le carrousel des cartes de contenu dans un article.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-Cette section couvre l’implémentation d’un flux de carrousel multi-cartes dans lequel un utilisateur peut faire glisser horizontalement pour afficher des cartes en vedette supplémentaires. Pour intégrer une vue carrousel, vous devez utiliser une implémentation entièrement personnalisée de cartes de contenu : la phase « courir » de l’[approche ramper, marcher, courir.][1].
+Cette section couvre l’implémentation d’un flux de carrousel multi-cartes dans lequel un utilisateur peut faire glisser horizontalement pour afficher des cartes en vedette supplémentaires. Pour intégrer une vue carrousel, vous devez utiliser une implémentation entièrement personnalisée de cartes de contenu : la phase « courir » de l’[approche ramper, marcher, courir][1].
 
 Avec cette approche, vous n’utiliserez pas les vues de Braze ni la logique par défaut, mais afficherez plutôt les cartes de contenu de manière entièrement personnalisée en utilisant vos propres vues avec les données des modèles Braze.
 
-En termes de niveau d’effort de développement, les différences clés entre l’implémentation prête à l’emploi et celle du carrousel comprennent :
+En termes de niveau d’effort de développement, les différences clés entre l’implémentation de base et celle du carrousel comprennent :
 
 - Construire vos propres vues
 - Enregistrer les métriques des performances de contenu
 - Introduire une logique additionnelle côté client pour dicter combien et quelles cartes afficher dans le carrousel
 
-## Implémentation
+## Mise en œuvre
 
 ### Étape 1 : Créer un contrôleur de visualisation personnalisé
 

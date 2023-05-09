@@ -3,7 +3,7 @@ nav_title: Configuration des IP et des domaines
 article_title: Configuration des IP et des domaines
 page_order: 0
 page_type: tutorial
-channel: (e-mail)
+channel: email
 description: "Le présent article pratique vous expliquera comment configurer vos IP et domaines pour envoyer des e-mails via Braze."
 
 ---

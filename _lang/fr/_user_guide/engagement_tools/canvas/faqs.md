@@ -8,9 +8,13 @@ tool: Canvas
 
 ---
 
-# FAQ Canvas
+# Foire aux questions
 
 > Cet article fournit des réponses à certaines questions fréquemment posées sur Canvas et [Canvas Flow](#canvas-flow).
+
+{% alert important %}
+Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
 
 ## Généralités
 
@@ -26,7 +30,7 @@ Lorsque vous arrêtez un Canvas, les éléments suivants s’appliquent :
 
 - L’accès au Canvas sera bloqué pour les utilisateurs.
 - Plus aucun message ne sera envoyé, quel que soit le niveau auquel se situe un utilisateur dans le flux.
-- **Exception :** Les Canvas e-mail ne seront pas automatiquement arrêtés. Une fois que les requêtes sont transmises à SendGrid, nous ne pouvons rien faire pour arrêter la livraison à l’utilisateur.
+- **Exception :** Les Canvas avec des e-mails ne seront pas automatiquement arrêtés. Une fois que les requêtes sont transmises à SendGrid, nous ne pouvons rien faire pour arrêter la livraison à l’utilisateur.
 
 {% alert note %}
 L’arrêt de Canvas ne forcera pas les utilisateurs en attente de réception de messages à quitter leur parcours utilisateur. Si vous activez à nouveau le Canvas et que les utilisateurs attendent toujours le message, ils le recevront (à moins que le temps d’envoi du message se soit écoulé, dans ce cas, ils ne le recevront pas).
@@ -34,15 +38,13 @@ L’arrêt de Canvas ne forcera pas les utilisateurs en attente de réception de
 
 ### À quel moment un événement d’exception est-il déclenché ?
 
-[Les événements d’exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) sont uniquement déclenchés alors qu’un utilisateur attend de recevoir le composant de l’étape Canvas associée. Si un utilisateur effectue une action à l’avance, l’événement d’exception ne sera pas déclenché.
-
-Si vous souhaitez créer une exception pour des utilisateurs ayant effectué un événement spécifique en avance, utilisez plutôt [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+[Les événements d’exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) sont uniquement déclenchés alors qu’un utilisateur attend de recevoir le composant de l’étape Canvas associée. Si un utilisateur effectue une action à l’avance, l’événement d’exception ne sera pas déclenché. Si vous souhaitez exclure en avance des utilisateurs ayant effectué un événement spécifique, utilisez plutôt [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
 ### En quoi la modification d’un Canvas affecte-t-elle des utilisateurs déjà présents dans les Canvas ?
 
-Si vous modifiez certaines étapes d’un Canvas à plusieurs étapes, les utilisateurs qui étaient déjà dans le public, mais n’ayant pas encore reçu les étapes, recevront la version mise à jour du message. Notez que ce cas se produit uniquement s’ils n’ont pas encore été évalués pour l’étape.
+Si vous modifiez certaines étapes d’un Canvas à plusieurs étapes, les utilisateurs qui étaient déjà dans l’audience, mais n’ayant pas encore reçu les étapes, recevront la version mise à jour du message. Notez que ce cas se produit uniquement s’ils n’ont pas encore été évalués pour l’étape.
 
-Pour plus d’informations sur ce que vous pouvez modifier ou pas après le lancement, consultez [Modification de votre Canvas après le lancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+Pour plus d’informations sur ce que vous pouvez modifier après le lancement, consultez [Modification de votre Canvas après le lancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
 
 ### Comment le suivi des conversions utilisateur est-il effectué dans Canvas ?
 
@@ -81,6 +83,10 @@ Il existe un Canvas à une seule étape avec les heures calmes activées :
 - Le taux de conversion de la variante ou le bloc de synthèse au début d’un Canvas illustre toutes les conversions effectuées par les utilisateurs dans ce parcours, qu’ils aient reçu un message ou pas, sous forme d’un total additionné. 
 - Le taux de conversion d’étape illustre le nombre d’individus qui ont reçu cette étape de message et terminé n’importe lequel des événements de conversion décrits.
 
+### Quelle est la différence entre un composant et une étape ?
+
+Un [composant]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) est une partie individuelle de votre Canvas que vous pouvez utiliser pour déterminer l’efficacité de votre Canvas. Les composants peuvent comprendre des actions telles que découper votre parcours utilisateur, ajouter un délai et même tester plusieurs parcours Canvas. Une étape du Canvas fait référence au parcours utilisateur personnalisé dans les branches du Canvas. Pour simplifier, votre Canvas est constitué de composants individuels qui créent des étapes dans votre parcours utilisateur.
+
 ### Comment puis-je afficher les analytiques pour chacun des composants de mon Canvas ?
 
 Pour afficher les analytiques d’un composant de Canvas, rendez-vous sur votre Canvas et parcourez la page des **Détails de Canvas**. Vous pouvez y visualiser les analytiques de chacun des composants. Consultez les [analytiques de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) pour plus de détails.
@@ -105,31 +111,11 @@ Par défaut, les filtres et segments pour des étapes complètes dans le Canvas 
 
 ### Qu’est-ce que le Canvas Flow ?
 
-Canvas Flow est la nouvelle expérience d’édition améliorée qui simplifie la façon dont les marketeurs peuvent développer et gérer leurs parcours d’utilisateur Canvas. Vous pouvez facilement voir et utiliser les composants Canvas dans le générateur de Canvas. Vous avez également accès à plus de fonctions de modification après le lancement pour éditer les connexions entre les étapes, supprimer les étapes et des variantes et rediriger les utilisateurs vers différentes étapes.
-
-### Comment utiliser Canvas Flow ?
-
-Pour utiliser le flux de travail Canvas Flow, allez dans **Canvas** dans l’onglet **Engagement**. Cliquez sur <i class="fas fa-plus"></i> **Create Canvas** (Créer un Canvas). Ensuite, vous aurez la possibilité de générer avec Canvas Flow ou d’utiliser l’expérience Canvas originale. Sélectionnez **Flux de travail Canvas Flow** et commencez à créer votre Canvas comme vous le feriez normalement !
-
-### Quelle est la différence entre un composant et une étape ?
-
-Un [composant]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) est une partie individuelle de votre Canvas que vous pouvez utiliser pour déterminer l’efficacité de votre Canvas. Les composants peuvent comprendre des actions telles que découper votre parcours utilisateur, ajouter un délai et même tester plusieurs parcours Canvas. Une étape du Canvas fait référence au parcours utilisateur personnalisé dans les branches du Canvas. Pour simplifier, votre Canvas est constitué de composants individuels qui créent des étapes dans votre parcours utilisateur.
-
-### Puis-je utiliser des étapes complètes dans Canvas Flow ?
-
-Non. Dans Canvas Flow, les étapes complètes sont remplacées par les [composants Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) allégés. Vous pouvez également tirer parti des [propriétés d’entrées persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) pour la personnalisation des messages tout au long du parcours utilisateur.
+Canvas Flow est l’expérience d’édition améliorée qui simplifie la façon dont les marketeurs peuvent développer et gérer leurs parcours d’utilisateur Canvas. Vous pouvez facilement voir et utiliser les composants Canvas dans le générateur de Canvas. Vous avez également accès à plus de fonctions de modification après le lancement pour éditer les connexions entre les étapes, supprimer les étapes et des variantes et rediriger les utilisateurs vers différentes étapes.
 
 ### Comment convertir un Canvas existant en Canvas Flow ?
 
 Vous pouvez [dupliquer votre Canvas vers Canvas Flow]({{site.baseurl}}/cloning_canvases/). Vous créerez ainsi une copie de votre Canvas d’origine dans le flux de travail Canvas Flow.
-
-### Puis-je revenir en arrière vers l’éditeur Canvas d’origine ?
-
-Lorsque vous générez ou modifiez votre Canvas, si vous souhaitez revenir à l’éditeur Canvas d’origine, cliquez sur **Basculer sur le workflow d’origine** en bas de l’éditeur Canvas ou en haut du générateur de Canvas. 
-
-{% alert important %}
-Basculer de Canvas Flow au Canvas d’origine n’est autorisé que si vous n’utilisez pas les fonctionnalités de Canvas Flow et fonctionnera uniquement s’il n’existe pas d’étapes complètes dans votre Canvas.
-{% endalert %}
 
 ### Qu’adviendra-t-il de mes Canvas créées à l’aide de l’éditeur Canvas d’origine ?
 
@@ -191,4 +177,4 @@ Pour les segments et filtres, le composant de message Canvas Flow comporte une n
 
 ##### Réglage de la planification « dans » ou « suivant »/« prochain »
 
-Les événements d’exception dans Canvas Flow sont créés avec des parcours d’action. Les chemins d’action prennent uniquement en charge « après une fenêtre X temps » et non « dans X temps » ou « le X suivant/prochain ».
+Les événements d’exception dans Canvas Flow sont créés avec des parcours d’action. Les chemins d’action prennent uniquement en charge « après une fenêtre X temps » et non « dans X temps » ou « le X suivant/prochain ».

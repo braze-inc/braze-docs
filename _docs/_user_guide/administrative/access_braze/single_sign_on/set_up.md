@@ -17,7 +17,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 
 | Requirement | Details |
 |---|---|
-| Sign-On URL | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> For the subdomain, use the coordinating subdomain listed in your [Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
+| Sign-On URL | `https://<SUBDOMAIN>.braze.com` <br><br> For the subdomain, use the coordinating subdomain listed in your [Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
 | Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>/auth/saml/callback` <br><br> For some IdPs, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
 | Entity ID | `braze_dashboard` |
 | RelayState API key | Create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permissions, and then input the generated API key as the `RelayState` parameter within your IdP. |
@@ -27,9 +27,11 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 
 ### Configure your identity provider
 
-First, you must set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the following information.
+First, you must set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the following information. In addition, you'll need to set up SAML attribute mapping.
 
-In addition, you’ll need to set up SAML attribute mapping.
+{% alert important %}
+If you plan on using Okta as your identity provider, make sure to use the pre-built integration found on the [Okta site](https://www.okta.com/integrations/braze/).
+{% endalert %}
 
 | SAML Attribute | Required? | Accepted SAML Attributes |
 |---|---|---|
@@ -51,7 +53,7 @@ On this page, you, input:
 
 | Requirement | Details |
 |---|---|
-| `SAML Name` | This will appear as the button text on the login screen.<br>This is typically your IdP name, like “Okta.” |
+| `SAML Name` | This will appear as the button text on the login screen.<br>This is typically your IdP name, like "Okta." |
 | `Target URL` | This is provided after setting up Braze within your IdP.<br> Some IdPs reference this as the SSO URL or SAML 2.0 Endpoint. |
 | `Certificate` | The `x.509` certificate is provided by your IdP.|
 {: .reset-td-br-1 .reset-td-br-2}

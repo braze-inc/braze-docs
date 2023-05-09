@@ -1,8 +1,8 @@
 ---
 nav_title: Toovio
 article_title: Toovio
-page_order: 1
-description: "This article outlines the partnership between Braze and Toovio, a data-as-a-service company, that helps you discover your actionable data and use the most important elements to drive incremental results based on pre-defined objectives."
+page_order: 11
+description: "This reference article outlines the partnership between Braze and Toovio, a data-as-a-service company, that helps you discover your actionable data and use the most important elements to drive incremental results based on pre-defined objectives."
 alias: /partners/toovio/
 page_type: partner
 search_tag: Partner
@@ -26,7 +26,7 @@ The Braze and Toovio partnership provides near real-time message triggering, the
 
 ## Integration
 
-The following integration allows Toovio to generate triggers targeting specific customers and communicate near real-time. Triggers determined by Toovio will transmit to Braze via the Braze [users/track][3] API endpoint.
+The following integration allows Toovio to generate triggers targeting specific customers and communicate near real-time. Triggers determined by Toovio will transmit to Braze via the Braze [`/users/track` endpoint][3].
 
 ### Step 1: Define data partner
 

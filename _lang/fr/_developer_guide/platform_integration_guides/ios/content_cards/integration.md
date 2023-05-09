@@ -3,10 +3,10 @@ nav_title: Intégration
 article_title: Intégration de la carte de contenu pour les contrôleurs iOS
 platform: iOS
 page_order: 1
-description: "Cet article couvre les étapes d’intégration, les modèles de données et les propriétés spécifiques à la carte disponibles pour votre application iOS."
+description: "Cet article de référence couvre les étapes d’intégration, les modèles de données et les propriétés spécifiques à la carte disponibles pour votre application iOS."
 channel:
   - cartes de contenu
-search_rank: 4
+search_rank: 3
 ---
 
 # Intégration d’une carte de contenu
@@ -22,8 +22,8 @@ Pour accéder au modèle de données des cartes de contenu, abonnez-vous aux év
 {% tabs %}
 {% tab OBJECTIVE-C %}
 ```objc
-// Abonner aux mises à jour des cartes de contenu
-// Remarque : vous devez supprimer l’observateur, le cas échéant
+// Subscribe to Content Cards updates
+// Note: you should remove the observer where appropriate
 [[NSNotificationCenter defaultCenter] addObserver:self
                                          selector:@selector(contentCardsUpdated:)
                                              name:ABKContentCardsProcessedNotification
@@ -31,30 +31,30 @@ Pour accéder au modèle de données des cartes de contenu, abonnez-vous aux év
 ```
 
 ```objc
-// Appelé lors de la réactualisation des Cartes de contenu (via `requestContentCardsRefresh`)
+// Called when Content Cards are refreshed (via `requestContentCardsRefresh`)
 - (void)contentCardsUpdated:(NSNotification *)notification {
   BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
   if (updateIsSuccessful) {
-    // obtenir des cartes à l’aide [[Appboy sharedInstance].contentCardsController getContentCards];
+    // get the cards using [[Appboy sharedInstance].contentCardsController getContentCards];
   }
 }
 ```
 {% endtab %}
 {% tab swift %}
 ```swift
-// Abonne aux mises à jour des cartes de contenu
-// Remarque : vous devez supprimer l’observateur, le cas échéant
+// Subscribe to content card updates
+// Note: you should remove the observer where appropriate
 NotificationCenter.default.addObserver(self, selector:
   #selector(contentCardsUpdated),
   name:NSNotification.Name.ABKContentCardsProcessed, object: nil)
 ```
 
 ```swift
-// Appelé lors de la réactualisation des Cartes de contenu (via `requestContentCardsRefresh`)
+// Called when the Content Cards are refreshed (via `requestContentCardsRefresh`)
 @objc private func contentCardsUpdated(_ notification: Notification) {
   if let updateIsSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool {
     if (updateIsSuccessful) {
-      // obtenir des cartes à l ‘aide Appboy.sharedInstance()?.contentCardsController.contentCards
+      // get the cards using Appboy.sharedInstance()?.contentCardsController.contentCards
     }
   }
 }
@@ -77,14 +77,14 @@ Braze propose trois types de cartes de contenu : bannière, image légendée et
 | `created` | (Lecture seule) Cette propriété est l’horodatage Unix du temps de création de la carte par Braze. |
 | `expiresAt` | (Lecture seule) Cette propriété est l’horodatage Unix du temps du délai d’expiration de la carte.|
 | `dismissible` | Cette propriété indique si l’utilisateur peut ignorer la carte.|
-| `pinned` | Cette propriété reflète si la carte a été définie comme « épinglée » dans le tableau de bord.|
+| `pinned` | Cette propriété indique si la carte a été définie comme « épinglée » dans le tableau de bord.|
 | `dismissed` | Cette propriété reflète si l’utilisateur a rejeté la carte.|
 | `url` | L’URL qui sera ouverte après avoir cliqué sur la carte. Il peut s’agir d’une URL http(s) ou d’une URL de protocole.|
 | `openURLInWebView` | Cette propriété détermine si l’URL sera ouverte dans l’application ou dans un navigateur Web externe.|
 | `extras`| Un `NSDictionary` facultatif de valeurs `NSString`.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Propriétés de la carte de contenu de la bannière - ABKBannerContentCard
+### Propriétés de la Content Card de la bannière - ABKBannerContentCard
 
 |Propriété|Description|
 |---|---|
@@ -100,17 +100,17 @@ Braze propose trois types de cartes de contenu : bannière, image légendée et
 | `imageAspectRatio` | Cette propriété est le rapport d’aspect de l’image de la carte.|
 | `title` | Le texte du titre pour la carte.|
 | `cardDescription` | Le texte du corps pour la carte.|
-| `domain` | Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com". Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action/la direction du clic sur la carte.|
+| `domain` | Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com ». Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action/la direction du clic sur la carte..|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Propriétés de la carte de contenu classique - ABKClassicContentCard
+### Propriétés de la Classic Content Card - ABKClassicContentCard
 
 |Propriété|Description|
 |---|---|
 | `image` | (Facultatif) Cette propriété est l’URL de l’image de la carte.|
 | `title` | Le texte du titre pour la carte. |
 | `cardDescription` | Le texte du corps pour la carte. |
-| `domain` | Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com". Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
+| `domain` | Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com ». Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Méthodes de carte
@@ -119,7 +119,7 @@ Braze propose trois types de cartes de contenu : bannière, image légendée et
 |---|---|
 | `logContentCardImpression` | Enregistrer manuellement une impression sur Braze pour une carte particulière. |
 | `logContentCardClicked` | Enregistrer manuellement un clic sur Braze pour une carte particulière. Le SDK ne journalisera une carte que lorsque la carte aura la propriété `url` avec une valeur valide. |
-| `logContentCardDismissed` | Enregistrer manuellement un rejet sur Braze pour une carte particulière. Le SDK ne journalisera que le rejet de la carte si la propriété `dismissed` de la carte n’est pas déjà définie sur `true`. |
+| `logContentCardDismissed` | Enregistrer manuellement un rejet sur Braze pour une carte particulière. Le SDK ne journalisera qu’une fermeture de carte de contenu si la propriété `dismissed` de la carte n’est pas déjà définie sur `true`. |
 | `isControlCard` | Déterminez si une carte est la carte de contrôle pour un test A/B. |
 {: .reset-td-br-1 .reset-td-br-2}
 

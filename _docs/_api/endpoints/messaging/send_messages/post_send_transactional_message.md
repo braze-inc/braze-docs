@@ -5,29 +5,38 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Send Transactional Email Messages via API-Triggered Delivery Braze endpoint."
+description: "This article outlines details about the Send transactional email messages via API-triggered delivery Braze endpoint."
 
 ---
 
 {% api %}
-# Sending transactional email via API-triggered delivery
+# Send transactional emails via API-triggered delivery
 {% apimethod post %}
-/transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
+/transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}
 
-Use this endpoint to send immediate, ad-hoc transactional messages to a designated user. This endpoint is used alongside the creation of a [Transactional Email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
+> Use this endpoint to send immediate, ad-hoc transactional messages to a designated user. 
+
+This endpoint is used alongside the creation of a [Transactional Email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
 
 {% alert important %}
 Transactional Email is currently available as part of select Braze packages. Reach out to your Braze customer success manager for more details.
 {% endalert %}
 
-Similar to the [Send Triggered Campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send Triggered Campaign endpoint, which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by `external_user_id` or `user_alias`, as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
+Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send triggered campaign endpoint, which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by `external_user_id` or `user_alias`, as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cec874e1-fa51-42a6-9a8d-7fc57d6a63bc {% endapiref %}
 
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='transactional email' %}
+
+## Path parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `campaign_id` | Required | String | ID of the campaign |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Request body
 
@@ -77,12 +86,12 @@ curl -X POST \
           }
         ]
       }' \
-  https://rest.iad-01.braze.com/transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
+  https://rest.iad-01.braze.com/transactional/v1/campaigns/{campaign_id}/send
 ```
 
 ## Response 
 
-The send transactional email endpoint will respond with the message's `dispatch_id` which represents the instance of this message send. This identifier can be used along with events from the Transactional HTTP event postback to trace the status of an individual email sent to a single user.
+The Send transactional email endpoint will respond with the message's `dispatch_id` which represents the instance of this message send. This identifier can be used along with events from the Transactional HTTP event postback to trace the status of an individual email sent to a single user.
 
 ### Example responses
 
@@ -94,23 +103,26 @@ The send transactional email endpoint will respond with the message's `dispatch_
 }
 ```
 
+## Troubleshooting
+
 The endpoint may also return an error code and a human-readable message in some cases, most of which are validation errors. Here are some common errors you may get when making invalid requests.
 
-| Error Code | Example Error Message | Cause |
-| ---------- | ----------------------| ----- |
-| 400 | The campaign is not a transactional campaign. Only transactional campaigns may use this endpoint | The campaign ID provided is not for a transactional campaign. |
-| 400 | The external reference has been queued.  Please retry to obtain send_id. | The external_send_id has been created recently, try a new external_send_id if you are intending to send a new message. |
-| 400 | Campaign does not exist | The campaign ID provided does not correspond to an existing campaign. |
-| 400 | The campaign is archived. Unarchive the campaign to ensure trigger requests will take effect. | The campaign ID provided corresponds to an archived campaign. |
-| 400 | The campaign is paused. Resume the campaign to ensure trigger requests will take effect. | The campaign ID provided corresponds to a paused campaign. |
-| 400 | campaign_id must be a string of the campaign api identifier | The campaign ID provided is not a valid format. |
-| 401 | Error authenticating credentials | The API key provided is invalid | 
-| 403 | Invalid whitelisted IPs | The IP address sending the request is not on the IP whitelist (if it is being utilized) | 
-| 403 | You do not have permission to access this resource | The API key used does not have permission to take this action |
+| Error | Troubleshooting |
+| ----- | --------------- |
+| `The campaign is not a transactional campaign. Only transactional campaigns may use this endpoint` | The campaign ID provided is not for a transactional campaign. |
+| `The external reference has been queued.  Please retry to obtain send_id.` | The external_send_id has been created recently, try a new external_send_id if you are intending to send a new message. |
+| `Campaign does not exist` | The campaign ID provided does not correspond to an existing campaign. |
+| `The campaign is archived. Unarchive the campaign to ensure trigger requests will take effect.` | The campaign ID provided corresponds to an archived campaign. |
+| `The campaign is paused. Resume the campaign to ensure trigger requests will take effect.` | The campaign ID provided corresponds to a paused campaign. |
+| `campaign_id must be a string of the campaign api identifier` | The campaign ID provided is not a valid format. |
+| `Error authenticating credentials` | The API key provided is invalid | 
+| `Invalid whitelisted IPs `| The IP address sending the request is not on the IP whitelist (if it is being utilized) | 
+| `You do not have permission to access this resource` | The API key used does not have permission to take this action |
+{: .reset-td-br-1 .reset-td-br-2}
 
-Most endpoints at Braze have a rate limit implementation that will return a 429 response code if you have made too many requests. The transactional sending endpoint works differently -- if you exceed your allotted rate limit, our system will continue to ingest the API calls, return success codes, and send the messages, however those messages may not be subject to the contractual SLA for the feature. Please reach out if you need more information about this functionality.
+Most endpoints at Braze have a rate limit implementation that will return a 429 response code if you have made too many requests. The transactional sending endpoint works differently—if you exceed your allotted rate limit, our system will continue to ingest the API calls, return success codes, and send the messages, however those messages may not be subject to the contractual SLA for the feature. Please reach out if you need more information about this functionality.
 
- ### Transactional HTTP event postback
+## Transactional HTTP event postback
 
 All transactional emails are complemented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real-time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency.
 
@@ -119,7 +131,6 @@ In order to associate the incoming events to a particular instance of send, you 
 To get started using the Transactional HTTP Event Postback, navigate to **Manage Settings** > **Email Settings** > **Transactional Webpush URL** in your Braze dashboard and input your desired URL to receive postbacks.
 
 ![]({% image_buster /assets/img/transactional_webhook_url.png %})
-
 
 ### Postback body
 

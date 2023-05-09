@@ -4,12 +4,14 @@ article_title: Push Integration for FireOS
 platform: FireOS
 page_order: 0
 page_type: solution
-description: "This article walks you through how to integrate Braze push notifications in your FireOS application."
+description: "This reference article walks you through how to integrate Braze push notifications in your FireOS application."
 channel: push
 search_rank: 0.9
 ---
 
-# Integration
+# FireOS push integration
+
+> This reference article walks you through how to integrate Braze push notifications in your FireOS application.
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content to re-engage them with your app.
 
@@ -117,7 +119,7 @@ Braze does not recommend using manual registration, but if you need to handle AD
 <!-- This will disable automatic registration for ADM via the Braze SDK-->
 <bool name="com_braze_push_adm_messaging_registration_enabled">false</bool>
 ```
-Next, use [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) to pass your user's ADM `registration_id` to Braze:
+Next, use [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) to pass your user's ADM `registration_id` to Braze:
 
 {% tabs local %}
 {% tab Java %}

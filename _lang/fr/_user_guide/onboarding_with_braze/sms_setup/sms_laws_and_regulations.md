@@ -2,7 +2,7 @@
 nav_title: "Lois et réglementations SMS"
 article_title: Lois et réglementations SMS
 page_order: 2
-description: "Le présent article de référence couvre les lois et réglementations qui encadrent SMS ."
+description: "Le présent article de référence couvre les lois et réglementations qui encadrent les SMS."
 page_type: reference
 noindex: true
 channel:
@@ -12,7 +12,7 @@ channel:
 
 # Lois SMS, réglementations et prévention des abus
 
-Comme les messages SMS sont l’une des façons les plus directes d’atteindre les clients et les utilisateurs, en allant directement au téléphone de l’utilisateur, il faut qu’il existe des réglementations pour empêcher les marques d’abuser de cette relation ou de l’utiliser de façon excessive, et les amendes en cas d’infraction pourraient coûter des milliers de dollars. 
+> Comme les messages SMS sont l’une des façons les plus directes d’atteindre les clients et les utilisateurs, en allant directement au téléphone de l’utilisateur, il faut qu’il existe des réglementations pour empêcher les marques d’abuser de cette relation ou de l’utiliser de façon excessive, et les amendes en cas d’infraction pourraient coûter des milliers de dollars. 
 
 {% alert warning %}
 Le présent article n’est pas destiné à fournir, et ne peut être considéré comme fournissant des conseils juridiques. L’utilisation de SMS est soumise à des exigences légales spécifiques. Pour vous assurer que vous utilisez les services SMS conformément à toutes les lois applicables, vous devez demander conseil à votre conseiller juridique.
@@ -44,7 +44,7 @@ Il y a six règles que vous devez suivre :
 
 Voici quelques liens que vous pourriez avoir besoin de consulter lorsque vous construisez votre campagne SMS :
 
-- [Principes et bonnes pratiques CTIA pour 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
+- [Principes et bonnes pratiques des messages CTIA pour 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
 - [Guide Twilio de la conformité pour les SMS aux États-Unis](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
 - [Conformité et ressources des SMS des États-Unis d’Acoustic](https://help.goacoustic.com/hc/en-us/articles/360043717414-United-States-SMS-compliance-and-resources)
 
@@ -56,13 +56,13 @@ Le respect de la vie privée d’un client est essentielle à une relation signi
 
 Heureusement pour vous, Braze suit les directives de [beaucoup de règlements de sécurité]({{site.baseurl}}/developer_guide/disclosures/security_qualifications/#security-qualifications "Braze security qualifications"), y compris le [RGPD]({{site.baseurl}}/dp-technical-assistance/).
 
-Le [TIA](https://www.ctia.org/) (une association professionnelle représentant le secteur des communications sans fil aux États-Unis) recommande de maintenir et de présenter visiblement une politique de confidentialité claire et facile à comprendre.
+Le [CTIA](https://www.ctia.org/) (une association professionnelle représentant le secteur des communications sans fil aux États-Unis) recommande de maintenir et de présenter visiblement une politique de confidentialité claire et facile à comprendre.
 
 ### Consentement
 
 Les options d’abonnement, d’aide et de désabonnement sont un must absolu lors de la création de campagnes SMS.
 
-La [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991 "Wikipedia:Telephone Consumer Protection Act of 1991") (Loi sur la protection des consommateurs à l’égard du téléphone) stipule qu’une entreprise doit recevoir un « consentement écrit exprès » pour envoyer des messages aux clients. Vous pouvez le faire de diverses manières, y compris par le Web ou un appareil mobile. Vous devez être clair avec le client sur la façon dont vous avez l’intention d’utiliser le SMS pour communiquer avec lui.
+La Loi sur la protection des consommateurs à l’égard du téléphone ([TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991 « Wikipedia : Loi de 1991 sur la protection des consommateurs à l’égard du téléphone »)) stipule qu’une entreprise doit recevoir un « consentement écrit exprès » pour envoyer des messages aux clients. Vous pouvez le faire de diverses manières, y compris par le Web ou un appareil mobile. Vous devez être clair avec le client sur la façon dont vous avez l’intention d’utiliser le SMS pour communiquer avec lui.
 
 Rappelez-vous de respecter les [Registre national Ne pas appeler](https://www.donotcall.gov/).
 
@@ -70,7 +70,7 @@ Braze utilise les [Groupes d’abonnement]({{site.baseurl}}/user_guide/message_b
 
 ### Spam et cadence
 
-Comme pour l’e-mail, vos utilisateurs ou clients peuvent connaître le burnout de la boîte de réception. Mais ce n’est qu’une des raisons de ne pas envoyer des messages sans cesse à vos clients. Vous devez regarder spécifiquement la [Section 5 de la Loi FTC](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf "PDF: Federal Trade Commission Act Section 5") pour assurer la conformité (aux États-Unis).
+Comme pour l’e-mail, vos utilisateurs ou clients peuvent connaître le burnout de la boîte de réception. Mais ce n’est qu’une des raisons de ne pas envoyer des messages sans cesse à vos clients. Vous devez regarder spécifiquement la [Section 5 de la Loi FTC](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf « PDF : Section 5 de la loi de la Commission fédérale du commerce) pour assurer la conformité (aux États-Unis).
 
 Certaines considérations relatives au spam sont intégrées dans les capacités SMS en général (limites d’envoi pour code long et code court), de même que les limites de débit de Braze. Cependant, vous devez toujours tenir compte des lois sur la conformité lorsque vous planifiez vos campagnes.
 

@@ -7,13 +7,13 @@ description: "Cet article explique comment configurer et suivre l’analytique d
 
 ---
  
-# Analytique
+# Analytique pour Flutter
 
-Cet article explique comment configurer et suivre l’analytique de base dans votre application Flutter.
+> Cet article explique comment configurer et suivre l’analytique de base dans votre application Flutter.
 
 Avant de commencer, lisez notre article [Aperçu de l’analytique][0] pour en savoir plus sur l’analytique de Braze et ce qui est déjà suivi par défaut. Nous vous recommandons également de vous familiariser avec nos [conventions de dénomination des événements][1].
 
-## Suivi de session
+## Suivi d’une session
 
 Le SDK Braze rapporte les données de session utilisées par le tableau de bord de Braze pour calculer l’engagement des utilisateurs et d’autres analytiques essentielles à la compréhension de vos utilisateurs. Sur la base de la sémantique de session suivante, notre SDK génère des points de données « démarrage de la session » et « fin de la session » qui comptent pour la longueur de session et le nombre de sessions visibles dans le tableau de bord de Braze.
 
@@ -23,7 +23,7 @@ Pour définir un ID utilisateur ou démarrer une session, utilisez la méthode `
 braze.changeUser('user_id');
 ```
 
-## Enregistrer des événements personnalisés
+## Journalisation des événements personnalisés
 
 Vous pouvez enregistrer des événements personnalisés dans Braze pour en savoir plus sur les modèles d’utilisation de votre application et segmenter vos utilisateurs en fonction de leurs actions dans le tableau de bord.
 
@@ -67,7 +67,7 @@ Les attributs suivants sont pris en charge :
 
 Toutes les valeurs de chaîne de caractères telles que le prénom, le nom de famille, le pays et la ville d’origine sont limitées à 255 caractères.
 
-### Définition des valeurs d’attributs personnalisés
+### Définir des valeurs d’attributs personnalisés
 
 Au-delà des attributs utilisateur par défaut, Braze vous permet également de définir des attributs personnalisés en utilisant un certain nombre de types de données différents :
 
@@ -82,9 +82,9 @@ braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
 {% tab Integer %}
 
 ```dart
-// Configurer un attribut entier
+// Set Integer Attribute
 braze.setIntCustomUserAttribute("custom int attribute key", integer);
-// incrémenter un attribut entier
+// Increment Integer Attribute
 braze.incrementCustomUserAttribute("key", integer);
 ```
 
@@ -111,9 +111,9 @@ braze.setDateCustomUserAttribute("custom date attribute key", date);
 {% tab Array %}
 
 ```dart
-// Ajout d’un tableau
+// Adding to an Array
 braze.addToCustomAttributeArray("key", "attribute");
-// Supprimer un élément d’un tableau
+// Removing an item from an Array
 braze.removeFromCustomAttributeArray("key", "attribute");
 ```
 {% endtab %}

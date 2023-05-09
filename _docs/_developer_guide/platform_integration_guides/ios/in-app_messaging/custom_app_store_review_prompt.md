@@ -3,7 +3,7 @@ nav_title: Custom App Store review prompt
 article_title: Custom App Store review prompt
 platform: iOS
 page_order: 4
-description: "This reference article shows how to set up a custom App Store review prompt."
+description: "This reference article shows how to set up a custom iOS App Store review prompt."
 channel:
   - in-app messages
 
@@ -87,7 +87,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 Next, create an in-app messaging campaign with the following:
 
-- The key-value pair `“Appstore Review” : “true”`
+- The key-value pair `"Appstore Review" : "true"`
 - The on-click behavior set to "Deep Link Into App", using the deep link `{YOUR-APP-SCHEME}:appstore-review`.
 
 {% endraw %}

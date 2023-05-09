@@ -10,7 +10,9 @@ description: "This article describes initial SDK setup steps for iOS apps runnin
 search_rank: 2
 ---
 
-# Initial SDK Setup
+# Initial SDK iOS Setup
+
+> This reference article covers how to install the Braze iOS SDK for Cordova. 
 
 Download the SDK from [Github][1] and run the following from the root your project:
 
@@ -59,7 +61,7 @@ To enable the automatic collection of the [iOS IDFA][3], set the following confi
 
 ### Location collection and geofences
 
-To enable location collection and Braze Geofences, use the [`geofence-branch`][3] instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
+To enable location collection and Braze Geofences, use the `geofence-branch` instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
 
 ```xml
 <platform name="ios">
@@ -81,6 +83,6 @@ See [iOS Geofences][4] for more details.
 Once the initial setup is complete, you can access the `AppboyPlugin` JavaScript interface in your app.
 
 [1]: https://github.com/Appboy/appboy-cordova-sdk
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/locations_and_geofences/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/

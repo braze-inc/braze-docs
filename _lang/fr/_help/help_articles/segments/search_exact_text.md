@@ -4,11 +4,11 @@ article_title: Rechercher le texte exact dans les champs de recherche
 page_order: 5
 
 page_type: solution
-description: "Cet article explique comment trouver un texte exact dans les champs de recherche de Braze."
+description: "Cet article d’aide explique comment trouver un texte exact dans les champs de recherche de Braze."
 tool: Segments
 ---
 
-# Rechercher le texte exact dans les champs de recherche
+# Rechercher le texte exact
 
 Vous pouvez constater que la recherche d’un élément spécifique peut parfois renvoyer trop de résultats, car Braze renverra tous les résultats contenant votre terme de recherche.
 

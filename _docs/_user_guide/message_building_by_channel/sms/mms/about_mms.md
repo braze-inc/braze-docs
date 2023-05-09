@@ -2,7 +2,7 @@
 nav_title: "About MMS"
 article_title: About MMS
 page_order: 0
-description: "This reference article covers what MMS message are and general use cases of the MMS channel."
+description: "This reference article covers what MMS messages are and general use cases for the MMS channel."
 page_type: reference
 channel:
   - MMS
@@ -11,14 +11,7 @@ search_rank: 2
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}About MMS messages
 
-> This reference article covers what MMS message are and general use cases of the MMS channel.
-
-![MMS message from a fashion brand. A picture of heels, earrings, and a dress on a white carpet is followed by the text message "Flash and Thread: Telling you first, Sophia. We just launched our new Spring Collection. Get it before the rest", followed by a link to the collection.][picture]{: style="float:right; max-width:23%; margin-left:15px; margin-bottom:15px; border:0"}
-
-MMS, also known as Multimedia Message Service, is used to send messages containing multimedia assets (JPG, GIF, PNG) to mobile phones. 
-
-Like SMS, MMS is a high urgency messaging channel that allows you to communicate with customers immediately in a way you can't with any other channel. However, MMS extends the capabilities of SMS by giving you the ability to add media to otherwise text-only SMS.
-<br><br>
+> MMS, also known as Multimedia Message Service, is used to send messages containing multimedia assets (JPG, GIF, PNG) to mobile phones.<br><br>Like SMS, MMS is a high urgency messaging channel that allows you to communicate with customers immediately in a way you can't with any other channel. However, MMS extends the capabilities of SMS by giving you the ability to add media to otherwise text-only SMS.
 
 ## Potential use cases
 
@@ -40,7 +33,7 @@ A [Subscription Group][1] is a collection of sending phone numbers (i.e. short c
 
 ### MMS message limits and throughput
 
-For MMS, the message limit is 5MB (this includes the multimedia asset and the message body size). To be on the safer side, Braze recommends not exceeding 4MB for your multimedia asset while also including a message body.
+For MMS, the message limit is 5&nbsp;MB (this includes the multimedia asset and the message body size). To be on the safer side, Braze recommends not exceeding 4&nbsp;MB for your multimedia asset while also including a message body.
 
 MMS throughput is one segment per second via a long code.
 

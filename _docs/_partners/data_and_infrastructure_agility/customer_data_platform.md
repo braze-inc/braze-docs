@@ -4,7 +4,7 @@ article_title: Customer Data Platform Partners
 page_order: 5
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to sync data between applications to use in your messaging campaigns."
+description: "This landing page lists Braze partners (Alloys) who allow you to sync data between applications to use in your messaging campaigns."
 
 layout: partner_page
 search_tag: Partner
@@ -38,9 +38,13 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/toovio/
 - name: Lexer
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lexer/
-- name: Dynamics 365 Customer Insights
+- name: Microsoft Dynamics 365
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Octolis
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
+- name: ActionIQ
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
+
+
 
 ---

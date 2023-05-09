@@ -2,6 +2,7 @@
 nav_title: Enregistrer des ébauches pour Canvas
 permalink: "/save_as_draft/"
 hidden: true
+layout: dev_guide
 ---
 
 # Enregistrer des ébauches pour Canvas

@@ -13,9 +13,7 @@ channel:
 
 ![An iOS push notification with two push action buttons: Accept and Decline.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-> This reference article covers what push action buttons are and the difference across iOS and Android platforms. 
-
-Push action buttons enable you to set content and actions for buttons when utilizing Braze's iOS and Android push notifications. With action buttons, your users can interact directly with your app from a notification without needing to click into an app experience to take action.
+> Push action buttons enable you to set content and actions for buttons when utilizing Braze's iOS and Android push notifications. With action buttons, your users can interact directly with your app from a notification without needing to click into an app experience to take action.
 
 ## How to use action buttons
 
@@ -35,7 +33,7 @@ Then select your **Notification Category**. You can select from the following av
 
 ![iOS Notification Category dropdown menu.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
->  Due to iOS’s handling of buttons, you will need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/). In particular, you will need to either configure iOS Categories or will need to select from certain default button options. For Android integrations, these buttons will work automatically.
+>  Due to iOS's handling of buttons, you will need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/). In particular, you will need to either configure iOS Categories or will need to select from certain default button options. For Android integrations, these buttons will work automatically.
 
 ### Android push action buttons {#android}
 

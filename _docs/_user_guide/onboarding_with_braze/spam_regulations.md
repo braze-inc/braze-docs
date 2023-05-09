@@ -9,11 +9,13 @@ channel:
 - push
 - SMS
 
-
 ---
+
 # Spam regulations
 
-There are a number of laws that regulate senders of electronic communications, including email, push notifications and SMS. You should always be aware of [local regulations][4] that may affect you or your users. Braze is providing relevant information based on our own research, but you should also refer to the full text of these laws for complete and up-to-date details.
+> There are a number of laws that regulate senders of electronic communications, including email, push notifications and SMS. You should always be aware of [local regulations][4] that may affect you or your users. 
+
+Braze is providing relevant information based on our own research, but you should also refer to the full text of these laws for complete and up-to-date details.
 
 - [CAN-SPAM][1]
 - [Canadian Anti-Spam Law][2]
@@ -24,10 +26,10 @@ The CAN-SPAM Act of 2003 regulates email senders in the U.S. sending "any electr
 
 There are seven key requirements for CAN-SPAM:
 
-1. Don’t use false or misleading header information (ie, "From", "To" and "Reply-To")
-2. Don’t use deceptive subject lines
+1. Don't use false or misleading header information (ie, "From", "To" and "Reply-To")
+2. Don't use deceptive subject lines
 3. Identify the message as an ad
-4. Tell recipients where you’re located (ie, physical address)
+4. Tell recipients where you're located (ie, physical address)
 5. Tell recipients how to opt out of receiving future email from you
 6. Honor opt-out requests promptly
 7. Monitor what others are doing on your behalf
@@ -84,15 +86,15 @@ Express consent is written or oral confirmation from the message recipient and o
 
 ## Spam filters
 
-Just because your emails have successfully sent doesn’t mean that they have necessarily been seen. There is no cure-all solution to avoid all spam filters because each filter is unique in how they evaluate the “spamminess score” of an email. However, here are some tips to avoid having your emails labeled as “spam”:
+Just because your emails have successfully sent doesn't mean that they have necessarily been seen. There is no cure-all solution to avoid all spam filters because each filter is unique in how they evaluate the "spamminess score" of an email. However, here are some tips to avoid having your emails labeled as "spam":
 
 - Get Permission: A double opt-in process consists of sending a follow up email with a confirmation link after an initial opt-in. Using this provides validation that recipients want to receive your content. You can also take this even one step further by asking users to add you to their address book. Also be sure to grow your email lists organically: purchased lists often tend to be stale!
 
 - Build Your Reputation: Make sure you set expectations when people are signing up to receive your emails. Be explicit about what you will send and how often you will send it. Then, encourage users to interact with your email campaigns by providing valuable content. Having personalized and relevant content decreases the probability of your recipients marking the messages as spam.
 
-- Maintain Your Reputation: Be in constant contact with your users to prevent your email lists from becoming stale. Waiting too long to send a message may cause the recipient to forget about you and mark you as spam. Keep your email lists up to date by implementing a sunset policy to remove email addresses that bounce. Bounce rates are a key factor used by ISPs to evaluate a sender’s reputation.
+- Maintain Your Reputation: Be in constant contact with your users to prevent your email lists from becoming stale. Waiting too long to send a message may cause the recipient to forget about you and mark you as spam. Keep your email lists up to date by implementing a sunset policy to remove email addresses that bounce. Bounce rates are a key factor used by ISPs to evaluate a sender's reputation.
 
-- Check and Test: Make sure your message does not contain anything that can trigger spam filters. This includes superfluous tags from external text editors like Microsoft Word, abnormal text formatting, over-usage of ! and ? as punctuation, writing in ALL CAPS, and spam trigger words (see [HubSpot][7] for a list of common trigger words). Send emails with varying content using Braze’s multivariate testing capabilities to make sure your emails are not going to spam.
+- Check and Test: Make sure your message does not contain anything that can trigger spam filters. This includes superfluous tags from external text editors like Microsoft Word, abnormal text formatting, over-usage of ! and ? as punctuation, writing in ALL CAPS, and spam trigger words (see [HubSpot][7] for a list of common trigger words). Send emails with varying content using Braze's multivariate testing capabilities to make sure your emails are not going to spam.
 
 ## Messaging channel
 

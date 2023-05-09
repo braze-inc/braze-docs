@@ -6,9 +6,9 @@ page_order: 3
 
 ---
 
-# Résolution des problèmes de la prédiction du taux d'attrition
+# Résolution des problèmes
 
-> La prédiction du taux d'attrition (et n’importe quel modèle de machine learning) est aussi juste que les données disponibles pour le modèle. Elle dépend également fortement du volume de données disponibles. Cela signifie que certains utilisateurs peuvent rencontrer des messages d’erreur ou une qualité de prédiction faible lorsqu’ils apprennent à connaître cette nouvelle fonctionnalité. 
+> La prédiction du taux d'attrition (et tout modèle de machine learning) est aussi bonne que les données disponibles pour le modèle. Elle dépend également fortement de la disponibilité de certains volumes de données avec lesquelles travailler. 
 
 ## Erreurs potentielles
 
@@ -28,7 +28,7 @@ Bien que la fonction de prédiction du taux d'attrition soit activée au niveau 
 
 Lorsque vous créez votre audience de prédiction pour affiner le type d’utilisation contre lequel vous souhaitez que votre modèle soit entraîné, vous pouvez rencontrer ce message vous informant que votre audience de prédiction n’a pas assez d’utilisateurs : 
 
-« Nombre insuffisant de personnes ayant abandonné par le passé disponibles dans l’audience de prédiction sélectionnée au cours des 7 derniers jours pour établir la prédiction de manière fiable. »"
+« Nombre insuffisant de personnes désabonnées par le passé disponibles dans l’audience de prédiction sélectionnée au cours des 7 derniers jours pour établir la prédiction de manière fiable. »"
 
 Si la définition de votre audience de prédiction est trop stricte, il se peut que vous ne disposiez pas d’un nombre suffisant d’utilisateurs historiques et actifs avec lequel travailler. Pour le résoudre, vous devrez soit modifier le nombre de jours et le type d’attributs utilisés dans cette définition, soit changer les actions qui définissent l’attrition. 
 
@@ -51,7 +51,7 @@ Voici quelques questions à vous poser lorsque vous configurez la prédiction du
 
 - Quelles actions de grande valeur mènent à la rétention et à la fidélité ?
 - Avez-vous mis en place des événements personnalisés qui correspondent à ces actions spécifiques ? La prédiction du taux d'attrition fonctionne avec des événements personnalisés plutôt que des attributs personnalisés.
-- Pensez-vous en termes de fenêtres temporelles pour lesquelles vous définirez l’attrition ? Vous pouvez définir l’attrition comme quelque chose qui se produit en 14 jours maximum.
+- Pensez-vous en termes de fenêtres temporelles pour lesquelles vous définirez l’attrition ? Vous pouvez définir l’attrition comme quelque chose qui se produit en 60 jours maximum.
 - Avez-vous envisagé des moments de l’année qui conduisent à des comportements d’utilisateur atypiques, comme des vacances ? Des changements rapides dans le comportement des consommateurs auront un impact sur vos prédictions. 
 
 [1]: {% image_buster /assets/img/churn/churn3.png %}

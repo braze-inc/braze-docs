@@ -18,7 +18,7 @@ This issue template is for **documentation-related issues** such as broken links
 
 - [ ] Fill out the relevant items under **Submit an Issue** above.
 - [ ] [Label](https://github.com/Appboy/braze-docs/issues/labels) this issue.
-- [ ] Assign this issue to either yourself, the Braze Technical Writers (@Timothy-Kim and @KellieHawks), or to another appropriate person. _If you do not assign anyone to an issue, your issue may be closed or left uncompleted._
+- [ ] Assign this issue to either yourself, the Braze Technical Writers (@josh-mccrowell-braze and @KellieHawks), or to another appropriate person. _If you do not assign anyone to an issue, your issue may be closed or left uncompleted._
 </details>
 
 ---

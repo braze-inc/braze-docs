@@ -5,11 +5,13 @@ platform: Web
 channel: in-app messages
 page_order: 4
 page_type: reference
-description: "This article describes in-app message delivery via the Braze SDK, such as manually displaying in-app messages or sending exit-intent messages."
+description: "This article describes in-app message delivery via the Braze SDK, such as manually displaying in-app messages or sending local in-app and exit-intent messages."
 
 ---
 
 # In-app message delivery
+
+> This article describes in-app message delivery via the Braze SDK, such as manually displaying in-app messages or sending local in-app and exit-intent messages.
 
 ## Trigger types
 

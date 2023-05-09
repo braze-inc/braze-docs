@@ -4,14 +4,12 @@ article_title: Création d’une formule
 page_order: 1.2
 page_type: reference
 description: "Cet article de référence couvre la création et la gestion des formules pour vous aider à comprendre facilement les relations complexes entre vos données."
-tool: Rapports
+tool: Reports
 
 ---
 # Création d’une formule
 
-## A quoi servent les formules ?
-
-Les vues analytiques de Braze vous permettent désormais de combiner plusieurs points de données pour obtenir des informations précieuses sur vos données utilisateur. On les appelle des formules. Les formules vous permettent de normaliser vos données de séries temporelles selon votre nombre total d’utilisateurs actifs par mois (MAU) et d’utilisateurs actifs par jour (DAU). Elles vous aident également à comprendre facilement les relations complexes qui existent au sein de vos données. 
+> Les vues analytiques de Braze vous permettent désormais de combiner plusieurs points de données pour obtenir des informations précieuses sur vos données utilisateur. On les appelle des formules. Les formules vous permettent de normaliser vos données de séries temporelles selon votre nombre total d’utilisateurs actifs par mois (MAU) et d’utilisateurs actifs par jour (DAU). Elles vous aident également à comprendre facilement les relations complexes qui existent au sein de vos données. 
 
 Par exemple, vous pouvez comparer combien d’événements personnalisés ont été effectués par des utilisateurs actifs quotidiens qualifiés pour un segment spécifique, par rapport à l’ensemble des clients (ou par rapport à un autre segment).
 
@@ -34,10 +32,10 @@ Les formules sont accessibles sur les panneaux de statistiques des pages [Overvi
 Pour créer une nouvelle formule :
 
 1. Rendez-vous sur le tableau de bord approprié (Overview, Revenue, or Custom Events).
-2. Cliquez sur **Gérer les formules d’indicateurs clés de performance**.
+2. Cliquez sur **Manage KPI Formulas (Gérer les formules d’indicateurs clés de performance)**.
 3. Saisissez un nom pour votre formule.
 4. Sélectionnez les numérateurs et dénominateurs pertinents.
-5. Cliquez sur **Enregistrer**.
+5. Cliquez sur **Save (Enregistrer)**.
 
 ## Numérateurs et dénominateurs disponibles
 
@@ -67,7 +65,7 @@ table td {
 
 | Numérateurs | Dénominateurs |
 | --- | --- |
-| Utilisateurs actifs quotidiens (DAU) | Utilisateurs actifs mensuels (MAU) |
+| Utilisateurs actifs quotidiens (DAU) | MAU |
 | Sessions | Utilisateurs actifs quotidiens (DAU) |
 | | Taille du segment |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -77,7 +75,7 @@ table td {
 | Numérateurs | Dénominateurs |
 | --- | --- |
 | Achats (tous) | Utilisateurs actifs quotidiens (DAU) |
-| Sélectionnez Achats (comme une carte-cadeau ou un ID Produit) | Utilisateurs actifs mensuels (MAU) |
+| Sélectionnez Achats (comme une carte-cadeau ou un ID Produit) | MAU |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Tableau de bord des événements personnalisés

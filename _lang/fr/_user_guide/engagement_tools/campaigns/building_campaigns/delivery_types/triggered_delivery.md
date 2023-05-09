@@ -4,13 +4,13 @@ article_title: Livraison par événement
 page_order: 1
 page_type: reference
 description: "Le présent article de référence décrit comment déclencher des campagnes à envoyer après qu’un utilisateur a effectué un certain événement."
-tool: Campagnes
+tool: Campaigns
 
 ---
 
 # Livraison par événement
 
-Les campagnes de livraison par événement ou les campagnes déclenchées par des événements sont très efficaces pour les messages transactionnels ou basés sur le résultat. Au lieu d’envoyer votre campagne certains jours, vous pouvez les déclencher pour qu’elles s’envoient après qu’un utilisateur a effectué un certain événement. Les étapes suivantes décrivent la configuration d’une planification basée sur les événements :
+> Les campagnes de livraison par événement ou les campagnes déclenchées par des événements sont très efficaces pour les messages transactionnels ou basés sur le résultat. Au lieu d’envoyer votre campagne certains jours, vous pouvez les déclencher pour qu’elles s’envoient après qu’un utilisateur a effectué un certain événement. 
 
 {% alert important %}
 La livraison par événement n’est pas disponible pour des [composants Canvas avec des messages in-app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). Ces étapes doivent être planifiées.
@@ -30,7 +30,8 @@ Sélectionnez un événement déclencheur. Il peut comprendre l’un des éléme
 - Effectuer l’événement de conversion primaire de la campagne
 - Effectuer l’événement d’exception pour une autre campagne
 - Ajouter une adresse e-mail à un profil utilisateur
-- Mise à jour d’un statut du groupe d’abonnement
+- Mise à jour du statut du groupe d’abonnement
+- Message WhatsApp ou SMS entrant
 
 Vous pouvez filtrer de manière plus approfondie les événements déclencheurs à l’aide des [propriétés d’événements personnalisés][32] de Braze qui permettent des propriétés de l’événement personnalisables pour les événements personnalisés et les achats in-app. Cette fonction vous permet d’adapter davantage quel utilisateur va recevoir un message sur la base des attributs spécifiques de l’événement personnalisé, ce qui permet une personnalisation plus importante de la campagne et une collecte de données plus sophistiquée. 
 
@@ -128,11 +129,11 @@ L’un des éléments suivants empêchera un utilisateur qui a effectué l’év
 
 [Segmenter]({{site.baseurl}}/user_guide/engagement_tools/segments/) une campagne déclenchée sur la base des données utilisateur enregistrées au moment de l’événement peut entraîner une [condition de course]({{site.baseurl}}/help/best_practices/race_conditions/#race-conditions). Cela se produit lorsque l’attribut utilisateur sur lequel la campagne est segmentée est modifié, mais que le changement n’a pas été traité pour l’utilisateur lorsque la campagne est envoyée. Étant donné que les campagnes vérifient l’appartenance au segment à l’entrée, cela peut entraîner des utilisateurs ne recevant pas la campagne.
 
-Imaginez par exemple que vous souhaitiez envoyer une campagne déclenchée par un événement aux utilisateurs masculins qui viennent juste de s’enregistrer. Lorsque l’utilisateur s’enregistre, vous notez un événement personnalisé `enregistrement` et définissez simultanément un attribut de `sexe` de l’utilisateur. L’événement peut déclencher la campagne avant que Braze ne traite le genre de l’utilisateur, ce qui empêche qu’il ne reçoive la campagne.
+Imaginez par exemple que vous souhaitiez envoyer une campagne déclenchée par un événement aux utilisateurs masculins qui viennent juste de s’enregistrer. Lorsque l’utilisateur s’enregistre, vous notez un événement personnalisé `registration` et définissez simultanément un attribut `gender`. L’événement peut déclencher la campagne avant que Braze ne traite le genre de l’utilisateur, ce qui empêche qu’il ne reçoive la campagne.
 
-En tant que bonne pratique, assurez-vous que l’attribut sur lequel la campagne est segmentée est envoyé vers les serveurs de Braze avant l’événement. Si cela n’est pas possible, la meilleure manière de garantir la livraison est d’utiliser des [propriétés de l’événement personnalisées][48] pour joindre les propriétés utilisateur pertinentes à l’événement et appliquer un filtre de propriété pour la propriété de l’événement spécifique au lieu d’un filtre de segmentation. Dans notre exemple, vous ajouteriez une propriété de `sexe` à l’événement personnalisé `enregistrement` afin que Braze dispose forcément des données dont vous avez besoin lorsque votre campagne est déclenchée.
+En tant que bonne pratique, assurez-vous que l’attribut sur lequel la campagne est segmentée est envoyé vers les serveurs de Braze avant l’événement. Si cela n’est pas possible, la meilleure manière de garantir la livraison est d’utiliser des [propriétés de l’événement personnalisées][48] pour joindre les propriétés utilisateur pertinentes à l’événement et appliquer un filtre de propriété pour la propriété de l’événement spécifique au lieu d’un filtre de segmentation. Dans notre exemple, vous ajouteriez une propriété `gender` à l’événement personnalisé `registration` afin que Braze dispose forcément des données dont vous avez besoin lorsque votre campagne est déclenchée.
 
-De plus, si une campagne est basée sur des actions et dispose d’un délai, vous pouvez cocher l’option **Re-evaluate segment membership at send-time (Réévaluer l’appartenance au segment au moment de l’envoi)** pour vous assurer que les utilisateurs font toujours partie de l’audience cible lorsque le message est envoyé.
+De plus, si une campagne est basée sur des actions et dispose d’un délai, vous pouvez cocher l’option **Réévaluer l’appartenance au segment au moment de l’envoi** pour vous assurer que les utilisateurs font toujours partie de l’audience cible lorsque le message est envoyé.
 
 ![][51]
 

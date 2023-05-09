@@ -3,7 +3,7 @@ nav_title: Searching for Campaigns
 article_title: Searching for campaigns
 page_order: 10
 page_type: reference
-description: "This article covers search terms you can use to find campaigns."
+description: "This article covers how to use the campaign search to find campaigns."
 tool:
   - Campaigns
 
@@ -11,7 +11,7 @@ tool:
 
 # Searching for campaigns
 
-This page describes how you can use the search field of the campaigns list to refine your results.
+> This article covers how you can use the search field of the campaigns list to refine your results.
 
 ## Keyword search
 
@@ -23,7 +23,7 @@ Enter the name of a campaign, or search for keywords in a campaign name, descrip
 
 To find exact matches to your search terms, wrap your search in square brackets `[ ]`.
 
-For example, if you search for `[flow]`, you’ll see any campaigns that have the word "flow” in it, but not “flower" or “overflow”.
+For example, if you search for `[flow]`, you'll see any campaigns that have the word "flow" in it, but not "flower" or "overflow".
 
 ## Filters
 

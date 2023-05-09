@@ -3,7 +3,7 @@ page_order: 1
 hidden: true
 nav_title: Personnalisation
 article_title: Personnalisation des notifications push iOS
-layout: featured
+layout: dev_guide
 
 platform: iOS
 
@@ -17,22 +17,22 @@ description: "Cette page d’accueil couvre les options de personnalisation des 
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Boutons d’action
-    link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
+    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/
     fa_icon: fa fa-exclamation
   - name: Sons personnalisés
-    link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/custom_sounds/
-    fa_icon: fa fa-file-audio-o
+    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds/
+    fa_icon: fa-regular fa-file-audio
   - name: Notifications enrichies
-    link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/
+    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/
     fa_icon: fa fa-paint-brush
   - name: Badges
-    link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/badges/
+    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/badges/
     fa_icon: fa fa-id-badge
   - name: Ignorer les notifications push internes
-    link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/
+    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
     fa_icon: fa fa-eye-slash
   - name: Paramètres avancés
-    link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/advanced_settings/
+    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/
     fa_icon: fa fa-cog
 
 

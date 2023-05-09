@@ -4,7 +4,7 @@ nav_title: Segmentation Filters
 article_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
-glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
+glossary_top_text: Braze's SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
 
 page_type: glossary
 tool: Segments
@@ -46,11 +46,11 @@ glossaries:
     tags:
       - Marketing Activity
   - name: X Custom Event in Y Days
-    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
     tags:
       - Custom Data
   - name: X Custom Event Property in Y Days
-    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
     tags:
       - Custom Data
   - name: Date of Recurring Event
@@ -242,7 +242,7 @@ glossaries:
     tags:
       - Marketing Activity
   - name: Last Engaged With Message
-    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). Includes option to filter by machine opens or other opens for email messages. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Enrolled in Any Control Group
@@ -306,7 +306,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Device Model
-    description: Segments your users by their mobile phone’s model version.
+    description: Segments your users by their mobile phone's model version.
     tags:
       - User Attributes
   - name: Device OS
@@ -330,7 +330,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Directly Opened Push Notification
-    description: Segments your users by whether or not they have directly opened a specific push notification. The proportion of opens that are affected by Apple’s Mail Privacy Protection (MPP) for iOS 15. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    description: Segments your users by whether or not they have directly opened a specific push notification. The proportion of opens that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
     tags:
       - Retargeting
   - name: Dismissed Content Card
@@ -342,11 +342,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Opened Email (Other Opens)
-    description: Segments your users by whether or not they have opened a specific email. This includes email opens that haven’t been identified as “Machine opens”. For example, when a user opens an email on another platform (i.e. Gmail app on a phone, Gmail on desktop browser), this will be logged as an “Other opens”. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    description: Segments your users by whether or not they have opened a specific email. This includes email opens that haven't been identified as "Machine opens". For example, when a user opens an email on another platform (i.e. Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
     tags:
       - Retargeting
   - name: Opened Email (Machine Opens)
-    description: Segments your users by whether or not they have opened a specific email. This includes email opens that are affected by Apple’s Mail Privacy Protection (MPP) for iOS 15. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    description: Segments your users by whether or not they have opened a specific email. This includes email opens that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
     tags:
       - Retargeting
   - name: Replied to SMS
@@ -414,7 +414,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Push Enabled
-    description: Segments your users who have explicitly activated push notifications for any of the apps in your app group. This count includes only foreground push, and does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
+    description: Segments your users who have provisional push authorization or are enabled for foreground push. Specifically, this count includes:<br>1. iOS users who are provisionally authorized for push. <br>2. Users who explicitly activated push notifications for any of the apps in your app group. For these users, this count includes only foreground push.<br><br>Push Enabled does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
     tags:
       - User Attributes
   - name: Push Enabled For App

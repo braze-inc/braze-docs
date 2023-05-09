@@ -1,5 +1,5 @@
 ---
-nav_title: Implémentation avancée (facultatif)
+nav_title: Guide d’implémentation avancée (facultatif)
 article_title: Guide d’implémentation de la carte de contenu pour Android (facultatif) 
 platform: Android
 page_order: 7
@@ -10,12 +10,12 @@ channel:
 ---
 <br>
 {% alert important %}
-Vous recherchez le guide d’intégration du développeur de carte de contenu prêt à l’emploi ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
+Vous recherchez le guide d’intégration de base du développeur de carte de contenu ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
 {% endalert %}
 
-# Guide d’implémentation de carte de contenu
+# Guide d’implémentation avancée (facultatif)
 
-> Ce guide d’implémentation avancée optionnel couvre les considérations du code de carte de contenu, trois cas d’utilisation personnalisés construits par notre équipe, les extraits de code l’accompagnant et les directives sur la journalisation des impressions, des clics et des rejets. Consultez notre référentiel de démonstration Braze [ici](https://github.com/braze-inc/braze-growth-shares-android-demo-app) ! Notez que ce guide d’implémentation est centré autour d’une implémentation Kotlin, mais les extraits de code Java sont fournis aux personnes intéressées.
+> Ce Guide d’implémentation avancé optionnel couvre les considérations du code de carte de contenu, trois cas d’utilisation personnalisés construits par notre équipe, les extraits de code l’accompagnant et les directives sur la journalisation des impressions, des clics et des rejets. Consultez notre référentiel de démonstration Braze [ici](https://github.com/braze-inc/braze-growth-shares-android-demo-app) ! Notez que ce guide d’implémentation est centré autour d’une implémentation Kotlin, mais les extraits de code Java sont fournis aux personnes intéressées.
 
 ## Considérations du code
 
@@ -190,8 +190,8 @@ enum class ContentCardClass{
     MESSAGE_WEB_VIEW;
 
     companion object {
-        // Il faut synchroniser cette valeur avec la valeur`class_type` configurée dans votre
-        // tableau de bord de Braze ou son type sera configuré sur `ContentCardClassType.none.`
+        // This value must be synced with the `class_type` value that has been set up in your
+        // Braze dashboard or its type will be set to `ContentCardClassType.none.`
         fun valueFrom(str: String?): ContentCardClass {
             return when(str?.toLowerCase()){
                 "coupon_code" -> COUPON
@@ -253,7 +253,7 @@ enum ContentCardClass {
 {% endtab %}
 {% endtabs %}
 
-## Exemples de cas d’usage
+## Exemples de cas d’utilisation
 
 Trois exemples de cas d’usage client sont fournis. Chaque cas d’usage offre une explication détaillée, des extraits de code pertinents et un aperçu de la façon dont les variables de la carte de contenu peuvent être rassemblées et utilisées dans le tableau de bord de Braze :
 - [Cartes de contenu en tant que contenu supplémentaire](#content-cards-as-supplemental-content)
@@ -549,7 +549,7 @@ Pour une carte de contenu de variante de contrôle, un objet personnalisé doit 
 
 ## Fichiers d’aide
 
-{% details ContentCardKey Helper File %}
+{% details Fichier d’aide ContentCardKey %}
 {% tabs %}
 {% tab Kotlin %}
 ```kotlin

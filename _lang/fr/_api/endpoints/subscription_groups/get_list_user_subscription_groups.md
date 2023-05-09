@@ -9,12 +9,12 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 
 ---
 {% api %}
-# Obtenir les groupes d’abonnement des utilisateurs
+# Répertorier les groupes d’abonnement de l’utilisateur
 {% apimethod get %}
 /subscription/user/status
 {% endapimethod %}
 
-Utilisez cet endpoint pour répertorier et obtenir les groupes d’abonnement d’un utilisateur donné.
+> Utilisez cet endpoint pour répertorier et obtenir les groupes d’abonnement d’un utilisateur donné.
 
 Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d’abonnement aux e-mails** :
 
@@ -24,7 +24,7 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -32,11 +32,11 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `external_id`  | Requis | String | Le `external_id` de l’utilisateur (maximum 50 `external_ids`, minimum 1). |
+| `external_id`  | Requis | String | L’`external_id` de l’utilisateur (maximum 50 `external_ids`, minimum 1). |
 | `email`  |  Requis* | String | L’adresse e-mail de l’utilisateur peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (maximum 50). |
 | `phone` | Requis* | Chaîne de caractères au format [E.164](https://en.wikipedia.org/wiki/E.164) | Le numéro de téléphone de l’utilisateur. Doit inclure au moins un numéro de téléphone (maximum 50). |
-| `limit` | Facultatif | Integer | La limite du nombre maximum de résultats renvoyés. La `limit` par défaut (et au maximum) est de 100. |
-| `offset`  |  Facultatif | Integer | Nombre de modèles à ignorer avant de renvoyer le reste des modèles qui correspondent aux critères de recherche. |
+| `limit` | Facultatif | Entier | La limite du nombre maximum de résultats renvoyés. La `limit` par défaut (et au maximum) est de 100. |
+| `offset`  |  Facultatif | Entier | Nombre de modèles à ignorer avant de renvoyer le reste des modèles qui correspondent aux critères de recherche. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert tip %}
@@ -46,7 +46,7 @@ S’il existe plusieurs utilisateurs (plusieurs `external_ids`) qui partagent la
 ## Exemple de demande 
 
 {% tabs %}
-{% tab Utilisateurs multiples %}
+{% tab Multiple Users %}
 {% raw %}
 `https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`
 {% endraw %}
@@ -59,7 +59,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 ```
 {% endraw %}
 {% endtab %}
-{% tab E-mail %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&email=example@braze.com&limit=100&offset=1' \

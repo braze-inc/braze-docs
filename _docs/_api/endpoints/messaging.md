@@ -1,19 +1,18 @@
 ---
-nav_title: Messaging
+nav_title: Messages
 article_title: Messaging Endpoints
 search_tag: Endpoint
 page_order: 3
-local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
-  parameter-definitions: '/docs/api/parameters/'
-  app-group-rest-api-key: '/docs/api/parameters/'
-  app-identifier: '/docs/api/parameters/'
-  external-user-id: '/docs/api/parameters/'
-  segment-identifier: '/docs/api/parameters/'
-  campaign-identifier: '/docs/api/parameters/'
-  canvas-identifier: '/docs/api/parameters/'
-  send-identifier: '/docs/api/parameters/'
-  trigger-properties: '/docs/api/parameters/'
-  canvas-entry-properties: '/docs/api/parameters/'
+local_redirect: #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
+  app-group-rest-api-key: '/docs/api/basics/#rest-api-key'
+  app-identifier: '/docs/api/identifier_types/'
+  external-user-id: '/docs/api/objects_filters/user_attributes_object/#braze-user-profile-fields'
+  segment-identifier: '/docs/api/identifier_types/'
+  campaign-identifier: '/docs/api/identifier_types/'
+  canvas-identifier: '/docs/api/identifier_types/'
+  send-identifier: '/docs/api/identifier_types/'
+  trigger-properties: '/docs/api/objects_filters/trigger_properties_object'
+  canvas-entry-properties: '/docs/api/objects_filters/canvas_entry_properties_object'
   server-responses: '/docs/api/errors/'
   messaging-queued: '/docs/api/errors/'
   responses-for-tracked-send-ids: '/docs/api/errors/'
@@ -22,11 +21,11 @@ local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #
 layout: dev_guide
 
 #Required
-description: "This landing page explains and lists the Braze Messaging Endpoints."
+description: "This landing page lists the Braze messaging endpoints."
 page_type: landing
 
 guide_top_header: "Messaging Endpoints"
-guide_top_text: "The Braze Messaging API provides you with two distinct options for sending messages to your users. You can provide the message contents and configuration in the API request with the <code class='highlighter-rouge'>/messages/send</code> and `/messages/schedule` endpoints. Alternatively, you can manage the details of your message with an API-Triggered Delivery campaign in the dashboard and just control when and to whom it is sent with the `campaigns/trigger/send` and `campaigns/trigger/schedule` endpoints. The following sections will detail the request specification for both methods. <br> <br> Similarly to other campaigns, you can limit the number of times a particular user can receive a Messaging API campaign by configuring [re-eligibility settings](/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) in the Braze dashboard. Braze will not deliver API messages to users that haven't become re-eligible for the campaign regardless of how many API requests are sent. <br> <br> The Send endpoints allow you to send immediate, ad-hoc messages to designated users. If you are targeting a segment, a record of your request will be stored in the Developer Console. The Schedule endpoints allow you to send messages at a designated time and modify or cancel messages that you have already scheduled."
+guide_top_text: "The Braze Messaging API provides you with two distinct options for sending messages to your users. You can provide the message contents and configuration in the API request with the <code class='highlighter-rouge'>/messages/send</code> and `/messages/schedule` endpoints. Alternatively, you can manage the details of your message with an API-triggered campaign in the Braze dashboard and just control when and to whom it is sent with the `/campaigns/trigger/send` and `/campaigns/trigger/schedule` endpoints. The following sections will detail the request specification for both methods. <br> <br> Similarly to other campaigns, you can limit the number of times a particular user can receive a messaging API campaign by configuring [re-eligibility settings](/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) in the Braze dashboard. Braze will not deliver API messages to users that haven't become re-eligible for the campaign regardless of how many API requests are sent. <br> <br> The Send Message endpoints allow you to send immediate, ad-hoc messages to designated users. If you are targeting a segment, a record of your request will be stored in the **Developer Console** section. Use the Schedule Message endpoints to send messages at a designated time, and modify or cancel messages that you have already scheduled."
 
 guide_featured_title: "Schedule Messages Endpoints"
 guide_featured_list:
@@ -75,4 +74,10 @@ guide_menu_list:
   - name: "POST: Send API-Triggered Canvas Messages Immediately"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     fa_icon: fas fa-inbox
+
+guide_menu_title2: "Live Activity Endpoints"
+guide_menu_list2:
+  - name: "POST: Update Live Activity"
+    link: /docs/api/endpoints/messaging/live_activity/update/
+    fa_icon: fas fa-tablet-alt
 ---

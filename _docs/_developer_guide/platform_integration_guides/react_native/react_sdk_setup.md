@@ -9,17 +9,21 @@ search_rank: 1
 
 # Initial SDK setup
 
-Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
+> This reference article covers how to install the Braze SDK for React Native. Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
 
 You will need to complete installation steps on both platforms separately.
 
-To complete the installation, you will need the [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located under **Manage Settings** in the dashboard.
+To complete the installation, you will need the [app identifier API key]({{site.baseurl}}/api/identifier_types/) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located under **Manage Settings** in the dashboard.
+
+## Prerequisites and compatibility 
+Braze React Native SDK v1.38.0+:
+* Supports React Native v0.64+
+
+#### React Native New Architecture Support
+* React Native v0.68+
+* Braze React Native SDK v2.0.1+
 
 ## Step 1: Integrate the Braze library
-
-{% alert note %}
-Braze React Native SDK v1.38.0+ requires at least React Native v0.64+. Braze React Native SDK is not yet compatible with the new React Native architecture.
-{% endalert %}
 
 {% tabs local %}
 {% tab bash %}
@@ -116,16 +120,19 @@ Run your application as specified in the [Expo docs](https://docs.expo.dev/workf
 
 #### Step 2.1a: Add our repository
 
-In your top-level project `build.gradle`, add the following as repositories under `allprojects` > `repositories`:
+In your top-level project `build.gradle`, add the following under `buildscript` > `dependencies`:
 
-```gradle
-allprojects {
-  repositories {
-    ...
-    maven { url "https://appboy.github.io/appboy-android-sdk/sdk" }
-  }
+```groovy
+buildscript {
+    dependencies {
+        ...
+        // Choose your Kotlin version
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10")
+    }
 }
 ```
+
+This will add Kotlin to your project.
 
 #### Step 2.1b: Configure the Braze SDK
 
@@ -216,25 +223,83 @@ cd ios && pod install
 #### Step 2.2: Configure the Braze SDK
 
 {% subtabs global %}
+{% subtab SWIFT %}
+
+Import the Braze SDK at the top of the `AppDelegate.swift` file:
+```swift
+import BrazeKit
+```
+
+In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
+
+```swift
+func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+) -> Bool {
+    // Setup Braze bridge
+    let jsCodeLocation : URL = RCTBundleURLProvider.sharedSettings().jsBundleURL(
+      forBundleRoot: "index"
+    )
+    let rootView = RCTRootView(
+      bundleURL: jsCodeLocation,
+      moduleName: "<YOUR_PROJECT_NAME>",
+      initialProperties: nil,
+      launchOptions: launchOptions
+    )
+    self.bridge = rootView.bridge
+
+    // Configure views in the application
+    window = UIWindow(frame: UIScreen.main.bounds)
+    let rootViewController = UIViewController()
+    rootViewController.view = rootView
+    window?.rootViewController = rootViewController
+    window?.makeKeyAndVisible()
+
+    // Setup Braze
+    let configuration = Braze.Configuration(
+        apiKey: "<BRAZE_API_KEY>",
+        endpoint: "<BRAZE_ENDPOINT>")
+    // - Enable logging and customize the configuration here
+    configuration.logger.level = .info
+    let braze = BrazeReactBridge.perform(
+      #selector(BrazeReactBridge.initBraze(_:)),
+      with: configuration
+    ).takeUnretainedValue() as! Braze
+
+    AppDelegate.braze = braze
+
+    /* Other configuration */
+
+    return true
+}
+
+// MARK: - AppDelegate.braze
+
+static var braze: Braze? = nil
+```
+
+{% endsubtab %}
 {% subtab OBJECTIVE-C %}
 
 Import the Braze SDK at the top of the `AppDelegate.m` file:
 ```objc
-@import BrazeKit;
+#import <BrazeKit/BrazeKit-Swift.h>
+#import "BrazeReactBridge.h"
 ```
 
-In the `application:didFinishLaunchingWithOptions:` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the AppDelegate for easy access:
+In the `application:didFinishLaunchingWithOptions:` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 ```objc
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Setup Braze bridge
-  id<RCTBridgeDelegate> moduleInitializer = [[BrazeReactBridge alloc] init];
-  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:moduleInitializer
-                                            launchOptions:launchOptions];
-  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"<YOUR_PROJECT_NAME>"
-                                            initialProperties:nil];
+  NSURL *jsCodeLocation =
+      [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                      moduleName:@"<YOUR_PROJECT_NAME>"
+                                               initialProperties:nil
+                                                   launchOptions:launchOptions];
   self.bridge = rootView.bridge;
 
   // Configure views in the application
@@ -248,8 +313,11 @@ In the `application:didFinishLaunchingWithOptions:` method, replace the API key 
   BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
                                                                     endpoint:@"<BRAZE_ENDPOINT>"];
   // - Enable logging and customize the configuration here
+  configuration.logger.level = BRZLoggerLevelInfo;
   Braze *braze = [BrazeReactBridge initBraze:configuration];
   AppDelegate.braze = braze;
+
+  /* Other configuration */
 
   return YES;
 }
@@ -315,5 +383,5 @@ You can then search for the user with `some-user-id` in the dashboard under [Use
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK Install"
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/ "iOS SDK Install"
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/ "iOS SDK Install"
 [user-search]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search

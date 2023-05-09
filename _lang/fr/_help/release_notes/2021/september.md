@@ -8,9 +8,9 @@ description: "Cet article contient les notes de version de septembre 2021."
 
 # Septembre 2021
 
-## Synchronisation de l’audience avec Google
+## Google Audience Sync
 
-L’intégration entre Braze et [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) permet aux marques d’étendre la portée de leurs parcours client multicanal sur Google Search, Google Shopping, Gmail, YouTube et Google Display. En utilisant vos données client propriétaires, vous pouvez livrer des publicités en toute sécurité en fonction de déclencheurs comportementaux dynamiques, de segmentations et bien plus encore. Les critères que vous utilisez généralement pour déclencher un message (p. ex., notification push, e-mail, SMS, etc.) dans le cadre d’un Canvas Braze peuvent être utilisés pour envoyer une publicité à cet utilisateur via Customer Match de Google.
+L’intégration entre Braze et [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) permet aux marques d’étendre la portée de leurs parcours client multicanal sur Google Search, Google Shopping, Gmail, YouTube et Google Display. En utilisant vos données client propriétaires, vous pouvez livrer des publicités en toute sécurité en fonction de déclencheurs comportementaux dynamiques, de segmentations et bien plus encore. Les critères que vous utilisez généralement pour déclencher un message (par ex., notification push, e-mail, SMS, etc.) dans le cadre d’un Canvas Braze peuvent être utilisés pour envoyer une publicité à cet utilisateur via la fonction Customer Match (Correspondance client) de Google.
 
 ## Guide sur les meilleures pratiques d’intégration du SDK iOS
 
@@ -18,7 +18,7 @@ Ce [Guide d’intégration du SDK iOS]({{site.baseurl}}/developer_guide/platform
 
 ## Achats prédictifs
 
-Les achats prédictifs donnent aux marketeurs un outil puissant pour identifier et communiquer avec les utilisateurs en fonction de leur probabilité de faire un achat. Quand vous créez une prédiction d’achat, Braze forme un modèle d’apprentissage machine en utilisant les [arbres de décision boostés par gradient](https://en.wikipedia.org/wiki/Gradient_boosting) pour tirer les leçons des activités d’achat précédentes et prévoir les activités d’achat futures. Consultez notre documentation sur les [achats prédictifs]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/) pour en savoir plus. 
+Les achats prédictifs donnent aux marketeurs un outil puissant pour identifier et communiquer avec les utilisateurs en fonction de leur probabilité de réaliser un achat.  Lorsque vous créez une prédiction d’achat, Braze entraîne un modèle de machine learning en utilisant des [arbres de décision à gradient renforcé](https://en.wikipedia.org/wiki/Gradient_boosting) pour apprendre de l’activité d’achat précédente et prévoir la future. Consultez notre documentation sur les [achats prédictifs]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/) pour en savoir plus. 
 
 ## Éditeur Drag & Drop
 

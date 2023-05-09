@@ -9,7 +9,7 @@ tool:
   - Media
 
 ---
-# Archive Templates in Templates & Media
+# Archive templates
 
 > Archiving templates can help better organize and manage your templates. This reference article covers how to archive templates in the **Templates & Media** section of the Braze dashboard.
 

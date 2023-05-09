@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: Campaign FAQs
+nav_title: FAQ
+article_title: Campaign FAQ
 page_order: 10
 page_type: FAQ
 description: "This page provides answers to frequently asked questions about campaigns."
@@ -8,7 +8,9 @@ tool: Campaigns
 
 ---
 
-# Campaign FAQs
+# Campaign FAQ
+
+> This article provides answers to some frequently asked questions about campaigns.
 
 ### How do you create a multichannel campaign?
 
@@ -42,13 +44,13 @@ If you have a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tool
 
 ### What does local time zone delivery offer?
 
-Local time zone delivery allows you to deliver messaging campaigns to a segment based on a user’s individual time zone. Without local time zone delivery, campaigns will be scheduled based on your company’s time zone settings in Braze. 
+Local time zone delivery allows you to deliver messaging campaigns to a segment based on a user's individual time zone. Without local time zone delivery, campaigns will be scheduled based on your company's time zone settings in Braze. 
 
 For example, a London-based company sending a campaign at 12 pm will reach users on the west coast of America at 4 am. If your app is only available in certain countries, this may not be a risk for you, otherwise, we highly recommend avoiding sending early morning push notifications to your user base!
 
 ### How does Braze recognize a user's time zone?
 
-Braze will automatically determine a user’s time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company’s time zone as their default time zone until they are recognized in your app by the SDK. 
+Braze will automatically determine a user's time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company's time zone as their default time zone until they are recognized in your app by the SDK. 
 
 You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) on the dashboard.
 
@@ -66,7 +68,7 @@ For a user to be eligible for entry, they must be eligible for both checks. For 
 
 Note that the user needs to be in the segment for 24 hours prior to the launch. If the user is not eligible in the first check, then Braze will not attempt the second check.
 
-For example, if a campaign is scheduled to be delivered at 7 PM UTC, we start queuing the campaign sends as soon as a time zone is identified (such as Samoa). This means we're getting ready to send the message, not that we send the campaign out. If users then don't match any filters when we check eligibility, they won't fall in the target audience.
+For example, if a campaign is scheduled to be delivered at 7 pm UTC, we start queuing the campaign sends as soon as a time zone is identified (such as Samoa). This means we're getting ready to send the message, not that we send the campaign out. If users then don't match any filters when we check eligibility, they won't fall in the target audience.
 
 As another example, say you want to create two campaigns scheduled to send on the same day—one in the morning and one in the evening—and add a filter that users can only receive the second campaign if they've already received the first. With local time zone delivery, some users may not receive the second campaign. This is because we check eligibility when the user's time zone is identified, so if the scheduled time hasn't occurred in their time zone yet, they haven't received the first campaign. Therefore they won't be eligible for the second campaign.
 
@@ -76,9 +78,9 @@ When scheduling a campaign, you need to choose to send it at a designated time, 
 
 Braze highly recommends that all local time zone campaigns are scheduled 24 hours in advance. Since such a campaign needs to send over the course of an entire day, scheduling them 24 hours in advance ensures that your message will reach your entire segment. However, you can schedule these campaigns less than 24 hours in advance if necessary. Keep in mind that Braze will not send messages to any users that have missed the send time by more than 1 hour. 
 
-For example, if it is 1 pm and you schedule a local time zone campaign for 3 pm, then the campaign will immediately send to all users whose local time is between 3 pm and 4 pm, but not to users whose local time is 5 pm. In addition, the send time you choose for your campaign needs to have not yet occurred in your company’s time zone.
+For example, if it is 1 pm and you schedule a local time zone campaign for 3 pm, then the campaign will immediately send to all users whose local time is between 3 pm and 4 pm, but not to users whose local time is 5 pm. In addition, the send time you choose for your campaign needs to have not yet occurred in your company's time zone.
 
-Editing a local time zone campaign that is scheduled less than 24 hours in advance will not alter the message’s schedule. If you decide to edit a local time zone campaign to send at a later time (for instance, 7 pm instead of 6 pm), users who were in the targeted segment when the original send time was chosen will still receive the message at the original time (6 pm). If you edit a local time zone to send at an earlier time (for instance, 4 pm instead of 5 pm), then the campaign will still send to all segment members at the original time (5 pm). 
+Editing a local time zone campaign that is scheduled less than 24 hours in advance will not alter the message's schedule. If you decide to edit a local time zone campaign to send at a later time (for instance, 7 pm instead of 6 pm), users who were in the targeted segment when the original send time was chosen will still receive the message at the original time (6 pm). If you edit a local time zone to send at an earlier time (for instance, 4 pm instead of 5 pm), then the campaign will still send to all segment members at the original time (5 pm). 
 
 {% alert note %}
 For Canvas components, users do not need to be in the component for 24 hours to receive the next component in the user journey for local time zone delivery. 
@@ -93,11 +95,11 @@ Target segments for local time zone campaigns should include at least a 48-hour 
 - First used app more than 1 day ago
 - First used app less than 2 days ago
 
-Local time zone delivery may miss users in this segment based on the delivery time and the users’ local time zone. This is because a user can leave the segment by the time their time zone triggers delivery.
+Local time zone delivery may miss users in this segment based on the delivery time and the users' local time zone. This is because a user can leave the segment by the time their time zone triggers delivery.
 
 ### What changes can I make to scheduled campaigns ahead of launch?
 
-When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can’t edit conversion events after it is launched.
+When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can't edit conversion events after it is launched.
 
 ### What is the "safe zone" before messages on a scheduled campaign are enqueued?
 

@@ -4,12 +4,12 @@ article_title: Targeting Users
 page_order: 4
 tool: Campaigns
 page_type: reference
-description: "This reference article covers the Targeting Users step of campaign creation."
+description: "This reference article covers the Targeting options found in the targeting users step of campaign creation."
 ---
 
 # Targeting users
 
-Once you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Users** step. Only the users who match your defined criteria will receive the campaign. Keep in mind that exact segment membership is always calculated just before the message is sent.
+> Once you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Users** step. Only the users who match your defined criteria will receive the campaign. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 ## Targeting options
 
@@ -35,15 +35,21 @@ To target users without adding a segment, you can use a series of filters. This 
 
 ![][26]
 
+## Testing your audience
+
+After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the audience criteria.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
+
 ## Audience summary
 
-Once you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting][3] delivery speed. For email and push notification campaigns, you can select which subscription and opt-in status to target.
+Once you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting][3] delivery speed. For email and push notification campaigns, you can select which subscription and opt-in status to target.
 
 ![][27]
 
 ## A/B testing
 
-Under the **A/B Testing** section, you can set up a test to compare users’ responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style. The objective is to identify the version of the campaign that best accomplishes your marketing goals. 
+Under the **A/B Testing** section, you can set up a test to compare users' responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style. The objective is to identify the version of the campaign that best accomplishes your marketing goals. 
 
 For more information and best practices, refer to [Multivariate & A/B Testing][4].
 

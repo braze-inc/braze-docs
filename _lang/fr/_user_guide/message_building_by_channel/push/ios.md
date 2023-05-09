@@ -2,12 +2,12 @@
 nav_title: "Options iOS"
 article_title: Options de notification push iOS
 page_order: 8
-layout: featured
+layout: dev_guide
 
 page_type: landing
 channel: push
 platform: iOS
-description: "Les articles suivants répertorient tout ce qui concerne uniquement les notifications push iOS pour Braze."
+description: "Cette page d’accueil répertorie tout ce qui concerne les notifications push iOS pour Braze."
 
 guide_top_header: "Articles de notification push iOS"
 guide_top_text: "Les articles suivants répertorient tout ce qui concerne uniquement les notifications push iOS pour Braze."

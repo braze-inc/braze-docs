@@ -2,6 +2,7 @@
 nav_title: "Idle Campaigns"
 permalink: "/idle_campaigns/"
 hidden: true
+layout: dev_guide
 ---
 
 # Idle campaigns
@@ -41,7 +42,7 @@ We will stop these campaign seven days after the end date.
 
 To make a campaign no longer Idle and ensure it remains active, update the campaign so it does not meet the above criteria for being Idle. Reference this table for steps to make idle campaigns active, depending on your use case.
 
-| Reason for idle campaign status | Steps to make campaign actie |
+| Reason for idle campaign status | Steps to make campaign active |
 | --- | --- |
 | Action-based campaigns with end dates seven days after the end date | Extend the end date |
 | Scheduled campaigns with end dates seven days after the end date | Extend the end date |

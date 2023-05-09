@@ -11,7 +11,7 @@ tool:
 
 ---
 
-# How to duplicate templates in Templates & Media
+# Duplicate templates
 
 > Duplicating a template can save a lot of time. You can duplicate a single template or multiple.
 

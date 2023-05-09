@@ -4,7 +4,7 @@ article_title: Partenaires de personnalisation des messages
 page_order: 1
 
 page_type: landing
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’ajouter une personnalisation supplémentaire à vos campagnes et à vos Canvas de Braze."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’ajouter une personnalisation supplémentaire à vos campagnes et à vos Canvas Braze."
 layout: partner_page
 search_tag: Partenaire
 
@@ -36,9 +36,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/foursquare/
 - name: Gimbal
   url: /docs/partners/message_personalization/location/gimbal/
-- name: Neura
-  url: /docs/partners/message_personalization/location/neura_actions/
-  title: Actions
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
@@ -57,5 +54,10 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
 - name: Sheetlabs
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
-
+- name: loplat
+  url: /docs/partners/message_personalization/location/loplat/
+- name: Komo
+  url: /docs/partners/message_personalization/dynamic_content/komo/
+- name: Phrase
+  url: /docs/partners/message_personalization/localization/phrase/ 
 ---

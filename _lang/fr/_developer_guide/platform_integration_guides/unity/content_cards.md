@@ -7,11 +7,13 @@ platform:
   - Android
 channel: cartes de contenu
 page_order: 4
-description: "Cet article de référence couvre les directives d’implémentation des cartes de contenu pour la plateforme Unity."
+description: "Cet article de référence couvre les directives d’implémentation des cartes de contenu pour la plateforme Unity comme l’affichage des cartes, des cartes d’analyse et les analytiques."
 
 ---
 
-# Cartes de contenu
+# Intégration d’une carte de contenu
+
+> Cet article de référence couvre les directives d’implémentation des cartes de contenu pour la plateforme Unity comme l’affichage des cartes, des cartes d’analyse et les analytiques.
 
 ## Affichage natif des cartes de contenu {#unity-content-cards-native-ui}
 
@@ -31,7 +33,7 @@ Notez que vous devrez également appeler `AppboyBinding.RequestContentCardsRefre
 
 ## Analyse des cartes de contenu
 
-Les messages `string` entrants reçus dans votre fonction de rappel d’objet de jeu de cartes de contenu peuvent être analysés dans notre objet de modèle [`ContentCard`][17] pré-fournis pour plus de commodité.
+Les messages `string` entrants reçus dans votre rappel d’objet de jeu de cartes de contenu peuvent être analysés dans notre objet de modèle [`ContentCard`][17] pré-fournis pour plus de commodité.
 
 L’analyse des cartes de contenu nécessite l’analyse Json, consultez l’exemple suivant pour plus de détails :
 
@@ -42,28 +44,28 @@ void ExampleCallback(string message) {
   try {
     JSONClass json = (JSONClass)JSON.Parse(message);
 
-    // Les données de carte de contenus dans le champ`mContentCards` supérieur de l’objet.
+    // Content Card data is contained in the `mContentCards` field of the top level object.
     if (json["mContentCards"] != null) {
       JSONArray jsonArray = (JSONArray)JSON.Parse(json["mContentCards"].ToString());
-      Debug.Log(String.Format("Array de cartes de contenu parsé avec {0} cartes", jsonArray.Count));
+      Debug.Log(String.Format("Parsed content cards array with {0} cards", jsonArray.Count));
 
-      // Iterate sur le tableau de carte pour analyser les cartes individuelles.
+      // Iterate over the card array to parse individual cards.
       for (int i = 0; i < jsonArray.Count; i++) {
         JSONClass cardJson = jsonArray[i].AsObject;
         try {
           ContentCard card = new ContentCard(cardJson);
-          Debug.Log(String.Format("Un objet de carte a été créé pour la carte : {0}", card));
+          Debug.Log(String.Format("Created card object for card: {0}", card));
 
-          // Exemple de journalisation des métriques des performances d’objet des carte de contenu  
+          // Example of logging Content Card analytics on the ContentCard object 
           card.LogImpression();
           card.LogClick();
         } catch {
-          Debug.Log(String.Format("Impossible de créer et d'enregistrer des analytiques pour la carte {0}", cardJson));
+          Debug.Log(String.Format("Unable to create and log analytics for card {0}", cardJson));
         }
       }
     }
   } catch {
-    throw new ArgumentException("Impossible de parser le message JSON de la carte de contenu.");
+    throw new ArgumentException("Could not parse content card JSON message.");
   }
 }
 ```
@@ -73,7 +75,7 @@ void ExampleCallback(string message) {
 Pour actualiser les cartes de contenu de Braze, appelez l’une des méthodes suivantes :
 
 ```csharp
-// entraîne une requête de réseau à Braze
+// results in a network request to Braze
 AppboyBinding.RequestContentCardsRefresh()
 
 AppboyBinding.RequestContentCardsRefreshFromCache()

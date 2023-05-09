@@ -11,7 +11,7 @@ channel:
 
 # Intégration de premières notifications push
 
-Les campagnes de premières notifications push encouragent vos utilisateurs à activer les notifications push sur leur périphérique pour votre application. Obtenir la permission des utilisateurs d’envoyer des messages directement sur leurs périphériques peut être complexe, mais nos guides peuvent vous aider ! Ce guide montre les étapes que les développeurs doivent suivre pour intégrer les planifications de notifications push.
+Les campagnes de premières notifications push encouragent vos utilisateurs à activer les notifications push sur leur appareil pour votre application. Obtenir la permission des utilisateurs d’envoyer des messages directement sur leurs appareils peut être complexe, mais nos guides peuvent vous aider ! Ce guide montre les étapes que les développeurs doivent suivre pour intégrer les planifications de notifications push.
 
 ## Étape 1 : Ajouter un extrait de code au fichier AppDelegate.m
 
@@ -27,7 +27,7 @@ if (@available(iOS 10.0, *)) {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
     [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
       if (settings.authorizationStatus != UNAuthorizationStatusNotDetermined) {
-        // l’autorisation a déjà été demandée, il faut suivre les étapes habituelles
+        // authorization has already been requested, need to follow usual steps
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
           [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
         }];
@@ -54,7 +54,7 @@ if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
   center.getNotificationSettings(completionHandler: { (settings) in
     if settings.authorizationStatus != .notDetermined {
-      // l’autorisation a déjà été demandée, il faut suivre les étapes habituelles
+      // authorization has already been requested, need to follow usual steps
       center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
       Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
       }
@@ -87,7 +87,7 @@ if (@available(iOS 10.0, *)) {
     [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
       if (settings.authorizationStatus == UNAuthorizationStatusNotDetermined) {
         // ...
-        // Déclencher un événement personnalisé
+        // fire custom event
         // ...
       }
     }];
@@ -95,7 +95,7 @@ if (@available(iOS 10.0, *)) {
     UIUserNotificationSettings *notificationSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
     if (!notificationSettings.types) {
         // …
-        // Déclencher un événement personnalisé
+        // fire custom event
         // ...
     }
   }
@@ -108,7 +108,7 @@ if #available(iOS 10, *) {
   center.getNotificationSettings(completionHandler: { (settings) in
     if settings.authorizationStatus == .notDetermined {
       // ...
-      // Déclencher un événement personnalisé
+      // fire custom event
       // ...
     }
   })
@@ -116,7 +116,7 @@ if #available(iOS 10, *) {
 let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
   if notificationSettiings?.types != nil {
     // ...
-    // Déclencher un événement personnalisé
+    // fire custom event
     // ...
   }
 }
@@ -134,7 +134,7 @@ Consultez [personnalisation de la gestion des liens]({{site.baseurl}}/developer_
 {% tab OBJECTIVE-C %}
 ```objc
   // ...
-  // vérifiez que le lien ciblé concerne l’invite de notification push
+  // check that this deep link relates to the push prompt
   // ...
   if (@available(iOS 10.0, *)) {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -156,7 +156,7 @@ Consultez [personnalisation de la gestion des liens]({{site.baseurl}}/developer_
 
 ```swift
   // ...
-  // vérifiez que le lien ciblé concerne l’invite de notification push
+  // check that this deep link relates to the push prompt
   // ...
   if #available(iOS 10, *) {
     let center = UNUserNotificationCenter.current()

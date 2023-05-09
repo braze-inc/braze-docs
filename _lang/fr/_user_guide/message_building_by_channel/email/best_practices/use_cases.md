@@ -4,19 +4,19 @@ article_title: Exemples d’utilisation de l’e-mail
 page_order: 3
 page_type: reference
 description: "Le présent article donne des conseils et astuces spécifiques au contenu pour différents cas d’utilisation de l’e-mail."
-channel: E-mail
+channel: email
 
 ---
 
 # Exemples d’utilisation de l’e-mail
 
-Voici quelques recommandations générales sur la création de votre contenu en fonction de vos cas d’utilisation dans vos campagnes par e-mail.
+> Voici quelques recommandations générales sur la création de votre contenu en fonction de vos cas d’utilisation dans vos campagnes par e-mail.
 
 ## Onboarding
 
 Une fois vos utilisateurs onboardés, donnez leur des conseils utiles pour démarrer et décrivez uniquement les fonctionnalités les plus essentielles. Essayez d’envoyer toujours un e-mail de bienvenue lorsqu’un utilisateur s’inscrit. Voici un exemple de LivingSocial qui contient des CTA (appel à l’action) simples et informe les utilisateurs sur une offre :
 
-![E-mail d’onboarding envoyé par LivingSocial pour accueillir les nouveaux utilisateurs.][26]{: style="max-width:70%;"}
+![E-mail envoyé par LivingSocial pour accueillir les nouveaux utilisateurs.][26]{: style="max-width:70%;"}
 
 Cependant, trop d’informations peuvent accabler voire désorienter l’utilisateur si ce dernier ne connait pas bien votre application ! Lorsque vous communiquez plus d’informations sur votre appli, il peut être utilise de fournir des liens vers votre documentation et d’informer les utilisateurs sur la façon d’obtenir de l’assistance.
 
@@ -26,7 +26,7 @@ Votre contenu doit décrire la valeur d’une promotion, comme les remises, les 
 
 Pour recommander certains produits, essayez de les présenter comme des suggestions personnalisées susceptibles d'intéresser l’utilisateur. Si votre offre a une durée limitée, faites-le bien savoir à vos utilisateurs ! Dans cet e-mail, Ideeli réussit parfaitement à transmettre le sentiment d’urgence :
 
-![E-mail promotionnel envoyé par Ideeli pour informer les utilisateurs d’une offre à durée limitée. Une grande bannière avec le texte « Se termine à minuit EDT. Vente flash pendant 6 heures. » Dépêchez-vous ! Ces offres incroyables ne dureront pas longtemps."][27]{: style="max-width:70%;"}
+![E-mail promotionnel envoyé par Ideeli pour informer les utilisateurs d’une offre à durée limitée. Une grande bannière avec le texte « Se termine à minuit EDT. Vente flash pendant 6 heures. » Dépêchez-vous ! Ces offres incroyables ne dureront pas longtemps. »][27]{: style="max-width:70%;"}
 
 ## Transactionnel
 
@@ -48,7 +48,7 @@ Le ton utilisé doit être amical ! C’est peut-être votre dernière chance d
 
 Essayez de personnaliser votre message personnel pour montrer à l’utilisateur qu’il est toujours apprécié. Pour son e-mail de conservation, Rue La La, par exemple, envoie un message de son PDG :
 
-![E-mail de conservation envoyé aux clients sous la forme d’un message personnalisé du PDG de Rue La La. L’e-mail dit « Bonjour,  En tant que PDG de Rue La La, j’aime demander l’avis de nos clients. La plupart du temps, ils m’expliquent pourquoi ils aiment utiliser Rue. (Et nous en sommes très flattés) Mais on dirait que ce n’est pas (encore) votre cas. Je vais aller droit au but. Je vous offre une remise de 25 dollars sur vos achats sur notre site, qu’il s’agisse d’un sac de créateur, d’une nouvelle paire de jeans ou d’une chose incroyable pour votre maison. Je pense (vraiment) que cela vous permettra de commencer à apprécier Rue La La. Profitez-en !"][29]{: style="max-width:80%;"}
+![E-mail de conservation envoyé aux clients sous la forme d’un message personnalisé du PDG de Rue La La. L’e-mail dit « Bonjour,  En tant que PDG de Rue La La, j’aime demander l’avis de nos clients. La plupart du temps, ils m’expliquent pourquoi ils aiment utiliser Rue. (Et nous en sommes très flattés) Mais on dirait que ce n’est pas (encore) votre cas. Je vais aller droit au but. Je vous offre une remise de 25 dollars sur vos achats sur notre site, qu’il s’agisse d’un sac de créateur, d’une nouvelle paire de jeans ou d’une chose incroyable pour votre maison. Je pense (vraiment) que cela vous permettra de commencer à apprécier Rue La La. Profitez-en ! »][29]{: style="max-width:80%;"}
 
 ## Social
 

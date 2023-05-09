@@ -2,16 +2,16 @@
 nav_title: Fonctionnalités basées sur le temps pour les campagnes
 article_title: Fonctionnalités basées sur le temps pour les campagnes
 page_order: 2
-tool: Campagnes
+tool: Campaigns
 page_type: reference
-description: "Le présent article de référence couvre les fonctionnalités basées sur le temps pour les campagnes."
+description: "Cet article de référence explique les fonctionnalités basées sur le temps pour les campagnes telles que la livraison planifiée, le timing intelligent et la livraison par événement."
 
 ---
 # Fonctionnalités basées sur le temps pour les campagnes
 
-> Le présent article de référence aborde les fonctionnalités basées sur le temps pour campagnes, pour proposer des stratégies, des résolutions de problèmes et répondre aux questions courantes. Vous pouvez également consulter notre cours d'apprentissage de Braze pour [Configurer une campagne](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) pour plus d’informations sur la livraison des campagnes. 
+> Lorsque vous utilisez des campagnes, vous pouvez vous servir des options de planification basées sur le temps pour atteindre votre audience. Ces fonctionnalités temporelles comprennent des campagnes qui sont définies pour la livraison planifiée et la livraison par événement.
 
-Lorsque vous utilisez des campagnes, vous pouvez vous servir des options de planification basées sur le temps pour atteindre votre public. Ces fonctionnalités temporelles comprennent des campagnes qui sont définies pour la livraison planifiée et la livraison par événement.
+Vous pouvez également consulter notre cours d'apprentissage de Braze pour [Configurer une campagne](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) pour plus d’informations sur la livraison des campagnes. 
 
 ## Livraison planifiée
 
@@ -33,7 +33,7 @@ Cette section couvre les options de planification et de livraison basées sur le
 | Heure optimale de l’utilisateur. Chaque utilisateur recevra la campagne au moment où il est le plus susceptible de s’engager. Consultez le [Timing Intelligent]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) pour en savoir plus. | Si vous sélectionnez une heure spécifique comme [heure de secours]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), le message sera envoyé à l’heure locale de l’utilisateur. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Une campagne avec l’option « Timing intelligent » sélectionnée pour envoyer une fois à l’heure optimale le 13 juillet 2021 avec une heure de secours personnalisée réglée à 9 h pour les utilisateurs n’ayant pas suffisamment de données dans leurs profils pour calculer un moment optimal.][3]
+![Une campagne avec l’option « Timing intelligent » sélectionnée pour envoyer une fois à l’heure optimale le 13 juillet 2021 avec une heure de secours personnalisée réglée à 9 h pour les utilisateurs n’ayant pas suffisamment de données dans leurs profils pour calculer un moment optimal.][3]
 
 ### Envoyer une campagne aux utilisateurs dans leur fuseau horaire local
 
@@ -42,7 +42,7 @@ Cette section couvre les options de planification et de livraison basées sur le
 | Vous permet d’envoyer des messages à un segment en fonction [fuseau horaire individuel]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#when-does-braze-evaluate-users-for-local-time-zone-delivery) d’un utilisateur. | Heure locale de l’utilisateur. Si le fuseau horaire de l’utilisateur n’est pas défini, le fuseau horaire de la société servira de base. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Une campagne avec l’option « Envoyer à un moment spécifié » sélectionnée pour envoyer une fois à partir de 9 h le 13 juillet 2021 avec la case « Envoyer la campagne aux utilisateurs dans leur fuseau horaire local » de cochée.][4]
+![Une campagne avec l’option « Envoyer à un moment spécifié » sélectionnée pour envoyer une fois à partir de 9 h le 13 juillet 2021 avec la case « Envoyer la campagne aux utilisateurs dans leur fuseau horaire local » de cochée.][4]
 
 ### Autoriser les utilisateurs à devenir rééligibles pour recevoir la campagne
 
@@ -92,7 +92,7 @@ Par exemple, supposons que vous sélectionniez « Envoyer samedi prochain à 15
 
 ![][8]
 
-#### Envoyer dans X jours calendaires à Y heure
+#### Envoyer dans X jours civils à Y heure
 
 | Définition | Fuseau horaire |
 | ---------- | --------- |
@@ -130,13 +130,13 @@ Braze calcule le délai comme suit : `day of the week` + `calendar days`, puis 
 
 Par défaut, la limite de fréquence est désactivée pour les nouveaux Canvas. La limite de fréquence est appliquée au niveau de l’étape, pas à la base du Canvas.
 
-La Limite de fréquence est basée sur des jours calendaires, non pas sur une période de 24 h. En d’autres termes, vous pourriez configurer une règle de limite de fréquence d’envoi, de pas plus d’une campagne par jour, mais si un utilisateur reçoit un message à 23 h dans son fuseau horaire, il peut toujours recevoir un autre message une heure plus tard (à minuit le jour civil suivant). 
+La Limite de fréquence est basée sur des jours civils, non pas sur une période de 24h. En d’autres termes, vous pourriez configurer une règle de limite de fréquence d’envoi, de pas plus d’une campagne par jour, mais si un utilisateur reçoit un message à 23 h dans son fuseau horaire, il peut toujours recevoir un autre message une heure plus tard (à minuit le jour civil suivant). 
 
 ## Date limite de conversion
 
 | Définition | Fuseau horaire |
 | ---------- | --------- |
-| Durée maximale pouvant s’écouler entre la réception de la campagne par l’utilisateur et le moment où il effectue l’action assignée pour qu’elle soit considérée comme une conversion. Pour plus d’informations, consultez les [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/). | N/A |
+| Durée maximale pouvant s’écouler entre la réception de la campagne par l’utilisateur et le moment où il effectue l’action assignée pour qu’elle soit considérée comme une conversion. Pour plus d’informations, consultez les [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/). | S.O. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 

@@ -31,7 +31,7 @@ When this feature is not enabled (by default), devices will continue to be assig
 
 The diagram below describes when a UUID or IDFV will be assigned as the device ID. Note that the IDFV field can only be read from devices that support this feature (e.g., iOS, tvOS, macCatalyst)
 
-![Flow chart for Swift v5.7 Device ID Configuration Scenarios — full description of flow chart included under “Process description”]({% image_buster /assets/img/swift_idfv.png %}){: style="max-width:80%"}
+![Flow chart for Swift v5.7 Device ID Configuration Scenarios — full description of flow chart included under "Process description"]({% image_buster /assets/img/swift_idfv.png %}){: style="max-width:80%"}
 
 {% details Process description %}
 1. User initializes SDK v5.7+
@@ -58,7 +58,7 @@ The diagram below describes when a UUID or IDFV will be assigned as the device I
 
 **Currents**: Enabling the `useUUIDAsDeviceId` option will mean the device ID sent in Currents will no longer equal IDFV.
 
-## FAQs
+## Frequently asked questions
 
 #### Will this change impact my existing users in Braze?
 No. When enabled, this feature will not overwrite any user data in Braze. Only newly created devices - or after `wipedata()` is called - will generate new UUID device IDs.

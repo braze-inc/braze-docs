@@ -4,7 +4,7 @@ article_title: Message Personalization Partners
 page_order: 1
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to add additional personalization to your Braze Campaigns and Canvases."
+description: "This landing page lists Braze partners (Alloys) who allow you to add additional personalization to your Braze Campaigns and Canvases."
 layout: partner_page
 search_tag: Partner
 
@@ -36,9 +36,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/foursquare/
 - name: Gimbal
   url: /docs/partners/message_personalization/location/gimbal/
-- name: Neura
-  url: /docs/partners/message_personalization/location/neura_actions/
-  title: Actions
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
@@ -57,5 +54,10 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
 - name: Sheetlabs
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
-
+- name: loplat
+  url: /docs/partners/message_personalization/location/loplat/
+- name: Komo
+  url: /docs/partners/message_personalization/dynamic_content/komo/
+- name: Phrase
+  url: /docs/partners/message_personalization/localization/phrase/ 
 ---

@@ -38,7 +38,7 @@ Alternatively try using a different type of in-app message template or size of i
 
 Find out if you have customized your session timeout. By default, Braze retrieves in-app messages at the start of a session from the server.
 
-If you have an extended the session timeout it will extended the period of time from which we can refresh the potential in-app messages you are eligible for. Additionally, if your campaign is set to trigger off of a session start, you’ll need to make sure the appropriate amount of time has passed for a new session to be registered. For example, the session timeout may have been customized to be 30 seconds. If you open and close the app in less than 30 seconds you will not be eligible to receive another in-app message triggered on session start. 
+If you have an extended the session timeout it will extended the period of time from which we can refresh the potential in-app messages you are eligible for. Additionally, if your campaign is set to trigger off of a session start, you'll need to make sure the appropriate amount of time has passed for a new session to be registered. For example, the session timeout may have been customized to be 30 seconds. If you open and close the app in less than 30 seconds you will not be eligible to receive another in-app message triggered on session start. 
 
 Learn more about customizing session timeouts for the following platforms:
 * [iOS][16]
@@ -47,7 +47,7 @@ Learn more about customizing session timeouts for the following platforms:
 
 ## Minimum interval
 
-There is a minimum interval at which we’ll allow in-app messages to be consecutively triggered, so you might be trying to trigger them too quickly. Learn more about the minimum interval for the following platforms: 
+There is a minimum interval at which we'll allow in-app messages to be consecutively triggered, so you might be trying to trigger them too quickly. Learn more about the minimum interval for the following platforms: 
 * [iOS][19]
 * [Android][20]
 * [Web][21]
@@ -58,13 +58,13 @@ Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on July 15, 2021_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#understanding-your-app-usage-data
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
 [14]: {% image_buster /assets/img_archive/trouble5.png %}
 [15]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
-[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#customizing-session-timeout
+[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/
 [17]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#customizing-session-timeout
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#customizing-session-timeout
-[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
+[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
 [20]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
 [21]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#in-app-message-delivery

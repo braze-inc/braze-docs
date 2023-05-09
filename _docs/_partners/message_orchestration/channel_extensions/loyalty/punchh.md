@@ -5,10 +5,10 @@ page_order: 5
 alias: /partners/punchh/
 
 noindex: true
-layout: featured
+layout: dev_guide
 guide_top_header: "Punchh"
 guide_top_text: "Punchh is the leading customer loyalty and engagement solution for restaurant, retail, and convenience store brands. For a decade, Punchh has created consistent, modern loyalty experiences to help physical retailers understand their customers and use real-time insights to serve them the best."
-description: "Punchh is the leading customer loyalty and engagement solution for restaurant, retail, and convenience store brands. For a decade, Punchh has created consistent, modern loyalty experiences to help physical retailers understand their customers and use real-time insights to serve them the best."
+description: "This landing page is home to all things Punchh including integration guidance, and dynamic code generation."
 
 guide_featured_list:
 - name: Punchh

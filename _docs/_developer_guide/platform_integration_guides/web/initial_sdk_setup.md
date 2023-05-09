@@ -4,13 +4,13 @@ article_title: Initial SDK Setup for Web
 platform: Web
 page_order: 0
 page_type: reference
-description: "This article covers initial SDK setup for the Braze Web SDK."
+description: "This article covers the initial SDK setup for the Braze Web SDK."
 search_rank: 4
 ---
 
 # Initial SDK setup
 
-The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users.
+> This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users.
 
 See our [JavaScript Documentation][9] for a complete technical reference.
 
@@ -21,7 +21,6 @@ See our [JavaScript Documentation][9] for a complete technical reference.
 There are three easy ways to integrate the Web SDK to include analytics and messaging components on your site. Be sure to view our [Push integration guide][16] if you plan to use Web push features.
 
 If your website uses a `Content-Security-Policy`, then follow our [CSP Header Guide][19] in addition to the following integration steps.
-
 
 ### Option 1: NPM or Yarn {#install-npm}
 
@@ -61,7 +60,7 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 
 ## Step 2: Initialize Braze
 
-Once the Braze Web SDK is added to your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Manage Settings > Settings** within your Braze dashboard.
+Once the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Manage Settings > Settings** within your Braze dashboard.
 
 {% alert note %}
 If you've configured your Braze initialization options in a Tag Manager, you can skip this step.
@@ -188,6 +187,10 @@ optimizeDeps: {
     exclude: ['@braze/web-sdk']
 },
 ```
+
+### Electron support {#electron}
+
+Electron does not officially support web push notifications (see: this [Github issue](https://github.com/electron/electron/issues/6697)). There are other [open source workarounds](https://github.com/MatthieuLemoine/electron-push-receiver) you may try that have not been tested by Braze.
 
 ### AMD module loader
 

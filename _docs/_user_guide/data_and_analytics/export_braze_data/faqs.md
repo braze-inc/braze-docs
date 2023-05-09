@@ -1,13 +1,13 @@
 ---
-nav_title: FAQs
-article_title: Export FAQs
+nav_title: FAQ
+article_title: Export FAQ
 page_order: 11
 page_type: FAQ
 description: "This article covers some frequently asked questions for API and CSV exports."
 
 ---
 
-# Export FAQs
+# Frequently asked questions
 
 > This page provides answers to some commonly asked questions about API and CSV exports.
 
@@ -19,7 +19,7 @@ No. If you have provided S3 credentials, all your exports will appear in your S3
 
 No. If you do not add S3 credentials, your exports will appear in an S3 bucket belonging to Braze.
 
-### What happens if you set up S3 credentials in the dashboard but don't select “make this the default data export destination?”
+### What happens if you set up S3 credentials in the dashboard but don't select "make this the default data export destination?"
 
 That checkbox will impact whether exports go to S3 or Azure, assuming you've added credentials for both.
 

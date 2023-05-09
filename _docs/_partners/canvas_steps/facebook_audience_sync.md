@@ -23,9 +23,7 @@ Using the Braze Audience Sync to Facebook, brands can elect to add their own use
 
 This feature gives brands the option to control what specific first-party data is shared with Facebook. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
-## Integration
-
-### Integration requirements
+## Prerequisites
 
 You will need to ensure that you have the following items created and completed before setting up your Facebook Audience Step in Canvas. 
 
@@ -69,13 +67,25 @@ For customers who have previously undergone the Facebook App Review process for 
 Before building out your Canvas, you must first accept the Facebook custom audiences terms of service. Your terms of service can be found at the following link:
 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=<your_ad_account_id>`
 
-### Step 3: Add a Facebook Audience component in Canvas Flow
+### Step 3: Configure your Canvas entry criteria
+
+When building audiences for Ad Tracking, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the [CCPA](https://oag.ca.gov/privacy/ccpa). Marketers should implement the relevant filters for users’ eligibility within their Canvas entry criteria. Below we list some options. 
+
+If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
+
+![][16]{: style="max-width:75%;"}
+
+If you are collecting ‘opt-ins’,  ‘opt-outs’, ‘Do Not Sell Or Share’ or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
+
+![A Canvas with an entry audience of "opted_in_marketing" equals "true".][15]{: style="max-width:75%;"}
+
+### Step 4: Add a Facebook Audience component in Canvas Flow
 
 Add a component in your Canvas and select **Facebook Audience**.
 
-![Workflow of the previous steps to add a Facebook Audience component in Canvas Flow.][11]
+![Workflow of the previous steps to add a Facebook Audience component in Canvas.][11]
 
-### Step 4: Sync setup
+### Step 5: Sync setup
 
 Click on the **Custom Audience** button to open the component editor.
 
@@ -106,7 +116,7 @@ It's important to note that Facebook prohibits removing users from custom audien
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Launch Canvas
+### Step 6: Launch Canvas
 
 Once you have configured your Facebook Audience component, simply launch the Canvas! The new custom audience will be created, and users who flow through the Facebook Audience component will be passed into this custom audience on Facebook. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
 
@@ -135,8 +145,6 @@ The following table includes metrics and descriptions to help you better underst
 | Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![A Canvas tile listing the preceding metrics for the given component.][10]{: style="max-width:25%;"}
-
 {% alert important %}
 Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
 {% endalert %}   
@@ -161,6 +169,20 @@ Facebook does not provide this information for privacy reasons.
 At this time, value-based custom audiences are not supported by Braze. If you are interested in syncing these types of custom audiences, reach out to your customer success manager or contact support.
 {% enddetails %}
 
+{% details Why did I receive a Braze email "Accept Facebook terms of service to complete Audience Sync step"? %}
+
+We have received an error from Facebook regarding the user account used to connect to Facebook. As a result, Braze has temporarily disabled your Audience Sync step until this has been corrected. 
+
+To fix this, you must agree to one of Facebook's terms of service:
+
+- User ToS: `https://business.facebook.com/ads/manage/customaudiences/tos/`
+- Account ToS: `https://business.facebook.com/ads/manage/customaudiences/tos/?act=<%= @ad_account_id %>`
+
+Once you have accepted the terms of service, you must do the following:
+1. Refresh your Facebook access token with Braze by disconnecting and reconnecting your Facebook Account.
+2. Re-enable your Facebook Audience Sync step by editing and updating your Canvas. Braze will then be able to sync users as soon as they reach the Facebook audience step. 
+{% enddetails %}
+
 [0]: https://www.braze.com/privacy
 [1]: https://www.facebook.com/business/help/113163272211510
 [2]: https://www.facebook.com/business/help/910137316041095
@@ -176,3 +198,5 @@ At this time, value-based custom audiences are not supported by Braze. If you ar
 [12]: {% image_buster /assets/img/fb_audience_sync/add_audience.png %}
 [13]: {% image_buster /assets/img/fb_audience_sync/create_audience.png %}
 [14]: {% image_buster /assets/img/fb_audience_sync/new_audience.png %}
+[15]: {% image_buster /assets/img/tiktok/tiktok13.png %}
+[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}

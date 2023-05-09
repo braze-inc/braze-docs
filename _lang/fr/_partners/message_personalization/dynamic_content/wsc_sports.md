@@ -1,7 +1,7 @@
 ---
 nav_title: WSC Sports
 article_title: WSC Sports
-description: "Cet article présente le partenariat entre Braze et WSC Sports, une plateforme de vidéos sportives qui vous permet d’inclure des médias sportifs riches et attrayants dans vos notifications push de Braze."
+description: "Cet article de référence présente le partenariat entre Braze et WSC Sports, une plateforme de vidéos sportives qui vous permet d’inclure des médias sportifs riches et attrayants dans vos notifications push de Braze."
 alias: /partners/wsc_sports/
 page_type: partner
 search_tag: Partenaire
@@ -16,10 +16,10 @@ L’intégration de Braze et WSC Sports vous permet d’inclure des médias spor
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte WSC | Un compte WSC est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -43,7 +43,7 @@ Le corps du message qui en résulte est le suivant :
 {
   "apple_push": {
     "alert": {
-      "body": "Titre du message de notification push"
+      "body": "Push Message Title"
     },
     "asset_url": "internalURI.mp4",
     "asset_file_type": "mp4"

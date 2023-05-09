@@ -11,4 +11,4 @@ description: "Cette page répertorie les mises à jour du journal de modificatio
 
 # Journal de modifications SDK React Native
 
-{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-react-sdk/master/CHANGELOG.md %}
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-react-native-sdk/master/CHANGELOG.md %}

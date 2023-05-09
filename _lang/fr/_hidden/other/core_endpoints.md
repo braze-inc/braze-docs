@@ -2,6 +2,7 @@
 nav_title: Principaux endpoints
 permalink: "/core_endpoints/"
 hidden: true
+layout: dev_guide
 ---
 
 # Principaux endpoints d’API Braze
@@ -12,7 +13,7 @@ Les principaux endpoints comprennent :
 - [`/users/track`][1]
 - [`/users/delete`][2]
 - [`/email/status`][3]
-- [`/email/blacklist`][4]
+- [`/email/blocklist`][4]
 - [`/messages/send`][5]
 - [`/messages/schedule/create`][6]
 - [`/messages/schedule/update`][7]
@@ -31,7 +32,7 @@ Les principaux endpoints comprennent :
 [1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/#user-track
 [2]: {{site.baseurl}}/api/endpoints/user_data/post_user_delete
 [3]: {{site.baseurl}}/api/endpoints/email/post_email_subscription_status/#change-users-email-subscription-status
-[4]: {{site.baseurl}}/api/endpoints/email/post_blacklist/
+[4]: {{site.baseurl}}/api/endpoints/email/post_blocklist/
 [5]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#sending-messages-immediately-via-api-only
 [6]: {{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/#create-scheduled-messages
 [7]: {{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/

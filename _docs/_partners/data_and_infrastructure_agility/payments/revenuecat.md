@@ -1,5 +1,6 @@
 ---
 nav_title: RevenueCat
+article_title: RevenueCat
 description: "The RevenueCat and Braze integration allows you to automatically sync your customer's purchase and subscription lifecycle events across platforms. This allows you to build campaigns that react to the subscription lifecycle stage of your customers, such as engaging with customers that opted out during their free trial or sending reminders to customers with billing issues."
 alias: /partners/revenuecat/
 page_type: partner
@@ -142,7 +143,7 @@ If you only provide one Braze REST API key to RevenueCat, only production events
 [2]: {{site.baseurl}}/api/objects_filters/user_alias_object/
 [3]: {% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %}
 [4]: https://docs.revenuecat.com/docs/subscriber-attributes
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [8]: https://docs.revenuecat.com/docs/configuring-sdk

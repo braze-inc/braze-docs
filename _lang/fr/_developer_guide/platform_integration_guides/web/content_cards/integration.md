@@ -6,14 +6,16 @@ platform: Web
 channel: cartes de contenu
 page_type: reference
 description: "Cet article couvre l’intégration d’une carte de contenu pour le Web, y compris les modèles de données de carte de contenu, les options standard d’IU de flux et des méthodes de carte supplémentaires."
-search_rank: 4
+search_rank: 1
 ---
 
 # Intégration d’une carte de contenu
 
+> Cet article couvre l’intégration d’une carte de contenu pour le Web, y compris les modèles de données de carte de contenu, les options standard d’IU de flux et des méthodes de carte supplémentaires.
+
 {% multi_lang_include archive/web-v4-rename.md %}
 
-## Modèle de données de carte de contenu {#data-models}
+## Modèle de données de cartes de contenu {#data-models}
 
 Le modèle de données de cartes de contenu est disponible dans le SDK Web.
 
@@ -27,7 +29,7 @@ Le SDK Braze pour le Web propose trois types de carte de contenu : [Banner](htt
 | `expiresAt` | L’horodatage UNIX du moment d’expiration de la carte.|
 | `extras`| (Facultatif) Les données de paires clé-valeur formatées en tant qu’objet de chaîne de caractères avec une chaîne de valeur. |
 | `id` | (Facultatif) L’ID de la carte. Cela sera rapporté à Braze avec des événements à des fins d’analytique. |
-| `pinned` | Cette propriété reflète si la carte a été définie comme « épinglée » dans le tableau de bord.|
+| `pinned` | Cette propriété indique si la carte a été définie comme « épinglée » dans le tableau de bord.|
 | `updated` | L’horodatage UNIX de la dernière modification de cette carte. |
 | `viewed` | Cette propriété indique si l’utilisateur a vu la carte ou non.|
 | `isControl` | Cette propriété est `true` lorsqu’une carte est un groupe de « contrôle » au cours d’un test A/B.|
@@ -45,7 +47,7 @@ Le SDK Braze pour le Web propose trois types de carte de contenu : [Banner](htt
 | `dismissible` | Cette propriété reflète si l’utilisateur peut rejeter la carte, la supprimant de la vue. |
 | `imageUrl` | L’URL de l’image de la carte.|
 | `linkText` | Le texte d’affichage de l’URL. |
-| `url` | L’URL qui sera ouvert après avoir cliqué sur la carte. |
+| `url` | L’URL qui sera ouverte après avoir cliqué sur la carte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Propriétés de la carte de contenu de l’image sous-titrée : CaptionedImage
@@ -61,7 +63,7 @@ Le SDK Braze pour le Web propose trois types de carte de contenu : [Banner](htt
 | `imageUrl` | L’URL de l’image de la carte.|
 | `linkText` | Le texte d’affichage de l’URL. |
 | `title` | Le texte du titre pour cette carte. |
-| `url` | L’URL qui sera ouvert après avoir cliqué sur la carte. |
+| `url` | L’URL qui sera ouverte après avoir cliqué sur la carte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Propriétés de la Classic Content Card : ClassicCard
@@ -78,7 +80,7 @@ Le SDK Braze pour le Web propose trois types de carte de contenu : [Banner](htt
 | `imageUrl` | L’URL de l’image de la carte.|
 | `linkText` | Le texte d’affichage de l’URL. |
 | `title` | Le texte du titre pour cette carte. |
-| `url` | L’URL qui sera ouvert après avoir cliqué sur la carte. |
+| `url` | L’URL qui sera ouverte après avoir cliqué sur la carte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Méthodes de carte
@@ -109,12 +111,12 @@ Dans cet exemple, nous avons un `<div id="feed"></div>` dans lequel nous voulons
 
 ```html
 
-<button id="toggle" type="button">Basculer le fil des cartes</button>
-<button id="hide" type="button">Dissimuler le fil des cartes</button>
-<button id="show" type="button">Afficher le fil des cartes</button>
+<button id="toggle" type="button">Toggle Cards Feed</button>
+<button id="hide" type="button">Hide Cards Feed</button>
+<button id="show" type="button">Show Cards Feed</button>
 
 <nav>
-    <h1>Votre fil personnalisé</h1>
+    <h1>Your Personalized Feed</h1>
     <div id="feed"></div>
 </nav>
 

@@ -6,7 +6,7 @@ page_order: 3
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint de Braze Lister les détails de plusieurs produits du catalogue."
+description: "Cet article présente en détail l’endpoint Braze Lister les détails de plusieurs produits du catalogue."
 
 ---
 {% api %}
@@ -15,11 +15,13 @@ description: "Cet article présente en détail l’endpoint de Braze Lister les 
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-Utilisez cet endpoint pour retourner plusieurs produits du catalogue et leur contenu.
+> Utilisez cet endpoint pour retourner plusieurs produits du catalogue et leur contenu.
 
-## Limites de débit
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#63a19dd5-10e0-4649-bdf0-097216748bbb {% endapiref %}
 
-Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
+## Limite de débit
+
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Paramètres de chemin
 
@@ -30,7 +32,7 @@ Cet endpoint a une limitation du débit partagée de 50 requêtes par minute en
 
 ## Paramètres de recherche
 
-Notez que chaque appel de cet endpoint retournera 50 produits. Pour un catalogue ayant plus de 50 produits, utilisez l’en-tête `Link` pour extraire les données de la page suivante tel que montré dans l’exemple de réponse suivant.
+Notez que chaque appel de cet endpoint retournera 50 produits. Pour un catalogue comportant plus de 50 produits, utilisez l’en-tête `Link` pour extraire les données de la page suivante, comme indiqué dans l’exemple de réponse ci-dessous.
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
@@ -61,7 +63,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## Réponse
 
-Trois réponses de code d’état existent pour cet endpoint : `200`, `400` et `404`..
+Trois réponses de code de statut existent pour cet endpoint : `200`, `400` et `404`.
 
 ### Exemple de réponse réussie
 
@@ -82,7 +84,7 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
       "id": "restaurant1",
       "Name": "Restaurant1",
       "City": "New York",
-      "Cuisine": "Américain",
+      "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": true,
       "Open_Time": "2022-11-02T09:03:19.967Z"
@@ -91,7 +93,7 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
       "id": "restaurant2",
       "Name": "Restaurant2",
       "City": "New York",
-      "Cuisine": "Américain",
+      "Cuisine": "American",
       "Rating": 10,
       "Loyalty_Program": true,
       "Open_Time": "2022-11-02T09:03:19.967Z"
@@ -100,7 +102,7 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
       "id": "restaurant3",
       "Name": "Restaurant3",
       "City": "New York",
-      "Cuisine": "Américain",
+      "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": false,
       "Open_Time": "2022-11-02T09:03:19.967Z"
@@ -112,14 +114,14 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait retourner le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
   "errors": [
     {
       "id": "invalid-cursor",
-      "message": "« cursor » (curseur) n’est pas valide",
+      "message": "'cursor' is not valid",
       "parameters": [
         "cursor"
       ],
@@ -128,7 +130,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 

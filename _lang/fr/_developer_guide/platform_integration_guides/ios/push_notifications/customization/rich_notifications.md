@@ -15,15 +15,15 @@ iOS 10 offre la possibilité d’envoyer des notifications push avec des image
 
 ## Création d’une extension de service
 
-Pour créer un [`Extension du service de notification`][23], naviguez jusqu’à **Fichier > Nouveau > Cible** dans Xcode et sélectionnez **Extension du service de notification**.
+Pour créer un [`Notification Service Extension`][23], naviguez jusqu’à **File > New > Target** (Fichier > Nouveau > Cible) dans Xcode et sélectionnez **Notification Service Extension** (Extension du service de notification).
 
 ![][26]{: style="max-width:90%"}
 
-Assurez-vous que **Intégré dans l’application** est défini pour intégrer l’extension dans votre application.
+Assurez-vous que **Embed In Application** (Intégré dans l’application) est défini pour intégrer l’extension dans votre application.
 
 ## Configuration de l’extension de service
 
-Une `Notification Service Extension` est son propre binaire fourni avec votre application. Il doit être configuré dans le [Portail Développeur Apple ][27]avec son propre identifiant d’application et son profil de provisionnement.
+Une `Notification Service Extension` est son propre binaire fourni avec votre application. Il doit être configuré dans le [Portail Développeur Apple][27] avec son propre identifiant d’application et son profil de provisionnement.
 
 L’ID de lot `Notification Service Extension` doit être différent de l’ID de lot de la cible de votre application principale. Par exemple, si l’ID de lot de votre application est `com.company.appname`, vous pouvez utiliser `com.company.appname.AppNameServiceExtension` pour votre extension de service.
 
@@ -53,16 +53,16 @@ Braze envoie une charge utile de pièce jointe dans la charge utile APN sous la 
 Les valeurs de charges utiles pertinentes sont les suivantes :
 
 ```objc
-// la clé du dictionnaire Braze
+// The Braze dictionary key
 static NSString *const AppboyAPNSDictionaryKey = @"ab";
 
-// le dictionnaire en pièce jointe
+// The attachment dictionary
 static NSString *const AppboyAPNSDictionaryAttachmentKey = @"att";
 
-// l’URL de la pièce jointe
+// The attachment URL
 static NSString *const AppboyAPNSDictionaryAttachmentURLKey = @"url";
 
-// Le type de pièce jointe - un suffixe pour le fichier que vous enregistrez
+// The type of the attachment - a suffix for the file you save
 static NSString *const AppboyAPNSDictionaryAttachmentTypeKey = @"type";
 ```
 
@@ -80,7 +80,7 @@ Pour utiliser notre échantillon de code Swift, remplacez le contenu de votre ci
 
 Pour créer une notification enrichie dans votre tableau de bord de Braze, créez une notification push iOS, mettez en pièce jointe une image ou GIF, ou indiquez une URL qui héberge une image, GIF ou vidéo. Notez que les ressources sont téléchargées à la réception des notifications push, vous devez donc prévoir des pics importants et synchrones de demandes si vous hébergez votre contenu.
 
-Consultez [`unnotificationattachment`][28]  pour obtenir une liste des types et tailles de fichiers pris en charge.
+Consultez [`unnotificationattachment`][28] pour obtenir une liste des types et tailles de fichiers pris en charge.
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/StopwatchNotificationService/NotificationService.m
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftNotificationExtension/NotificationService.swift

@@ -10,15 +10,13 @@ channel: email
 
 # Email guidelines
 
-> This article covers general tips and tricks to keep in mind as you build email campaigns for various use cases and topics.
+> As you build your email campaign, it's important to keep in mind how your email messaging is received across your various users and email service providers (ESPs). 
 
-## General
-
-As you build your email campaign, it's important to keep in mind how your email messaging is received across your various users and email service providers (ESPs). Here are some quick tips to keep in mind while building your content:
+Here are some quick tips to keep in mind while building your content:
 
 - When formatting your email, use inline style sheets as CSS.
 - To use one email template for both mobile and desktop versions, keep the width under 500 pixels.
-- Images uploaded to the email template must be less than 5MB. Supported formats include PNG, JPG, and GIF.
+- Images uploaded to the email template must be less than 5&nbsp;MB. Supported formats include PNG, JPG, and GIF.
 - Don't set heights and widths for images as this will cause unnecessary white space in a degraded email.
 - `div` tags should not be used as most email clients do not support their use. Instead, use nested tables.
 - Avoid using JavaScript because it does not work with any ESP.
@@ -26,7 +24,7 @@ As you build your email campaign, it's important to keep in mind how your email 
 
 ### Implementing alternative text
 
-Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. In addition, alternative text `(alt="")` can serve to complement and in some cases stand in lieu of images included in your email body that may have been filtered out by a user’s email provider. Screen readers announce alt text to explain images, so this is an opportunity to use plain language to provide key information about an image.
+Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. In addition, alternative text `(alt="")` can serve to complement and in some cases stand in lieu of images included in your email body that may have been filtered out by a user's email provider. Screen readers announce alt text to explain images, so this is an opportunity to use plain language to provide key information about an image.
 
 ### Email validation
 

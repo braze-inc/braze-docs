@@ -9,7 +9,9 @@ channel:
 search_rank: 3
 ---
 
-# Integration
+# Standard Android push integration
+
+> This article covers how to integrate push notifications in your Android application.
 
 ![Android inline image push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
 
@@ -21,7 +23,7 @@ Check out our [help documentation][8] for push best practices.
 
 ## Registering for push 
 
-Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase push sample app](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
+Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase push sample app](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
 
 ### Step 1: Enable Firebase
 
@@ -36,7 +38,7 @@ implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING
 
 ### Step 2: Configure token registration
 
-Braze push notifications won't work until a Firebase Cloud Messaging token (FCM registration token) is registered. FCM registration tokens can either be registered by the Braze SDK **automatically** (recommended) or **manually** registered. Tokens can be manually registered using the [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) method.
+Braze push notifications won't work until a Firebase Cloud Messaging token (FCM registration token) is registered. FCM registration tokens can either be registered by the Braze SDK **automatically** (recommended) or **manually** registered. Tokens can be manually registered using the [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) method.
 
 Make sure to use your Firebase Sender ID. This is a unique numerical value created when you create your Firebase project, available in the **Cloud Messaging** tab of the Firebase console **Settings** pane. The sender ID is used to identify each sender that can send messages to the client app.
 
@@ -82,7 +84,7 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% tab Manual registration %}
 
-To manually register your tokens, we recommended you call [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) from within your application [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method to ensure that push tokens are reliably delivered to Braze.
+To manually register your tokens, we recommended you call [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) from within your application [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method to ensure that push tokens are reliably delivered to Braze.
 
 {% subtabs local %}
 {% subtab JAVA %}
@@ -139,15 +141,24 @@ If you are migrating from using GCM to using Firebase with Braze, visit the [GCM
 
 ### Step 4: Set Your Firebase credentials
 
-First, you must locate your Firebase server key and sender ID in the [Firebase developers console][58]. Select your Firebase project and go to **Settings > Cloud Messaging** and copy the Server Key and Sender ID:
+{% alert warning %}
+The **Legacy** Cloud Messaging API server key is required to configure Android Push in Braze. Using the Firebase Cloud Messaging API (V1) credentials will not allow you to send push notifications.
+{% endalert %}
 
-![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.][59]
+First, you must locate your Cloud Messaging API server key and sender ID in the [Firebase developers console][58]. Select your Firebase project, go to **Settings > Cloud Messaging**, and copy the **Cloud Messaging API (Legacy) Server Key** and **Sender ID**:
 
-You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
+![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.][80]
+
+{% alert note %}
+If Cloud Messaging API is disabled, click on the three dots to enable the API in Google Cloud Console, then refresh the **Project settings** page.
+{% endalert %}
+![The Cloud Messaging API can be enabled by clicking on the three dots on the right.][79]
+
+Input your Cloud Messaging API (Legacy) server key and sender ID into the Braze dashboard:
 
 1. On the **Settings** page (where your API keys are located), select your Android app.
-2. Enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field, under the push notification settings section.
-3. Enter your Firebase Sender ID in the **Firebase Cloud Messaging Sender ID** field, under the push notification settings section.
+2. Enter your Cloud Messaging API (Legacy) server key in the **Firebase Cloud Messaging Server Key** field, under the push notification settings section.
+3. Enter your Cloud Messaging API (Legacy) sender ID in the **Firebase Cloud Messaging Sender ID** field, under the push notification settings section.
 
 ![][16]
 
@@ -271,9 +282,9 @@ Setting a small notification icon is required. **If you do not set one, Braze wi
 
 Setting a large notification icon is optional but recommended.
 
-#### Specifying icon background color
+#### Specifying icon accent color
 
-The notification icon background color can be overridden in your `braze.xml`. If the color is not specified, the default background color is the same gray Lollipop uses for system notifications.
+The notification icon accent color can be overridden in your `braze.xml`. If the color is not specified, the default color is the same gray Lollipop uses for system notifications.
 
 ```xml
 <integer name="com_braze_default_notification_accent_color">0xFFf33e3e</integer>
@@ -415,7 +426,7 @@ If you'd like to test in-app and push notifications via the command-line, you ca
 - `YOUR_VALUE1` (optional)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
   "messages": {
     "android_push": {
@@ -478,7 +489,7 @@ override fun createNotification(brazeNotificationPayload: BrazeNotificationPaylo
 You can return `null` from your custom `createNotification()` method to not show the notification at all, use `BrazeNotificationFactory.getInstance().createNotification()` to obtain Braze's default `notification` object for that data and modify it before display, or generate a completely separate `notification` object for display.
 
 {% alert note %}
-For documentation on Braze push data keys, refer to the [Android SDK](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html).
+For documentation on Braze push data keys, refer to the [Android SDK](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html).
 {% endalert %}
 
 #### Step 2: Set your custom notification factory
@@ -529,7 +540,11 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html
+## Push primers
+
+Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+
+[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
 [22]: {{site.baseurl}}/api/endpoints/messaging/
@@ -556,11 +571,13 @@ setCustomBrazeNotificationFactory(null)
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
-[70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
-[72]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html
-[73]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-description.html
-[74]: hhttps://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/handle-braze-remote-message.html
+[70]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
+[72]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html
+[73]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-description.html
+[74]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/-companion/handle-braze-remote-message.html
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
 [76]: https://developer.android.com/reference/android/app/Application
-[77]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/index.html
-[78]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html
+[77]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/index.html
+[78]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html
+[79]: {% image_buster /assets/img_archive/cloud_messaging_legacy_disabled.png %} "Firebase Legacy Disabled"
+[80]: {% image_buster /assets/img_archive/cloud_messaging_legacy_enabled.png %} "Firebase Server Key"

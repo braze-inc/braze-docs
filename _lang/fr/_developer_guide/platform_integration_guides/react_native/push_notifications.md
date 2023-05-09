@@ -1,16 +1,16 @@
 ---
-nav_title: Notifications Push
+nav_title: Notifications push
 article_title: Notifications Push pour React Native
 platform: React Native
 page_order: 2
 description: "Cet article couvre les notifications push sur React Native."
-channel: Notification push
+channel: push
 
 ---
 
-# Notifications push
+# Intégration de notifications Push
 
-L’intégration des notifications push dans React Native nécessite de configurer séparément chaque plateforme native. Suivez les guides respectifs listés pour terminer l’installation.
+> Cet article de référence explique comment paramétrer les notifications push pour React Native. L’intégration des notifications push nécessite de configurer séparément chaque plateforme native. Suivez les guides respectifs listés pour terminer l’installation.
 
 ## Étape 1 : Configuration native complète
 
@@ -22,7 +22,7 @@ Configurer les invites `enableBrazeIosPush` et `enableFirebaseCloudMessaging` af
 ### Configuration de l’iOS
 
 #### Générer une nouvelle clé de notification push
-Si vous n’avez pas de clé de notification push ou de certificat d’Apple existant ou souhaitez en générer un nouveau, suivez [Étape 1 des instructions d’intégration d’iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-1-configure-push-notifications) pour générer une nouvelle clé de notification push et la télécharger sur le tableau de bord de Braze.
+Si vous n’avez pas de clé de notification push ou de certificat d’Apple existant ou souhaitez en générer un nouveau, suivez [Étape 1 des instructions d’intégration d’iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-configure-push-notifications) pour générer une nouvelle clé de notification push et la télécharger sur le tableau de bord de Braze.
 
 #### Migration d’une clé de notification push à partir des notifications d’exposition
 Si vous utilisiez auparavant `expo-notifications` pour gérer votre clé de notification push, exécutez `expo fetch:ios:certs` dans le dossier racine de votre application. Cela téléchargera votre clé de notification push (un fichier .p8), qui peut ensuite être téléchargée sur le tableau de bord de Braze.
@@ -35,7 +35,7 @@ Paramétrez `firebaseCloudMessagingSenderId` l’invit config dans votre `app.js
 Si vous souhaitez que le SDK Braze gère automatiquement les liens profonds de notification push, définissez `androidHandlePushDeepLinksAutomatically: true` dans votre `app.json`.
 
 #### Étape 1.2
-Ajoutez votre chemin `google-services.json` à votre `app.json`. Ce fichier est requis lors du réglage `enableFirebaseCloudMessaging: true` dans votre configuration.
+Ajoutez votre chemin `google-services.json` à votre `app.json`. Ce fichier est nécessaire lors du paramétrage de `enableFirebaseCloudMessaging: true` dans votre configuration.
 
 ```json
 {
@@ -68,7 +68,7 @@ Suivez les [Instructions d’intégration Android]({{site.baseurl}}/developer_gu
 {% endtab %}
 {% tab iOS %}
 
-Suivez les [Instructions d’intégration iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/). Si vous préférez ne pas demander une autorisation de notification push lors du lancement de l’application, vous devez omettre l’appel `requestAuthorizationWithOptions:completionHandler:` dans votre AppDelegate et suivre les étapes ci-dessous.
+Suivez les [Instructions d’intégration iOS](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/). Si vous préférez ne pas demander une autorisation de notification push lors du lancement de l’application, vous devez omettre l’appel `requestAuthorizationWithOptions:completionHandler:` dans votre AppDelegate et suivre les étapes ci-dessous.
 
 {% endtab %}
 {% endtabs %}
@@ -90,11 +90,11 @@ const permissionOptions = {
 Braze.requestPushPermission(permissionOptions);
 ```
 
-#### Étape 2.1 : Ecouter les notifications push sur Android (facultatif)
+#### Étape 2.1 : Ecouter les notifications push sur Android (facultatif)
 
 ```javascript
 Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
-  console.log(`Événement de notification push du type ${data.push_event_type} constaté. Titre ${data.title}\n et lien profond ${data.deeplink}`);
+  console.log(`Push Notification event of type ${data.push_event_type} seen. Title ${data.title}\n and deeplink ${data.deeplink}`);
   console.log(JSON.stringify(data, undefined, 2));
 });
 ```
@@ -107,9 +107,9 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 Vous ne pouvez pas tester le comportement des applications liées à la notification push sur un émulateur iOS, car les émulateurs ne prennent pas en charge les jetons de périphérique requis pour envoyer et recevoir une notification push.
 {% endalert %}
 
-1. Définir un utilisateur actif dans l’application React en appelant la méthode `Braze.changeUserId('your-user-id')`.
-2. Dirigez-vous vers la page **Campaigns** et créez une nouvelle campagne de notification push. Choisissez les plateformes que vous souhaitez tester.
-3. Composez votre notification test et rendez-vous sur l’onglet **Test**. Ajouter le même `user-id` comme utilisateur de test et cliquez sur **Envoyer le test**. Vous devriez recevoir rapidement la notification sur votre périphérique.
+1. Définissez un utilisateur actif dans l’application React en appelant la méthode `Braze.changeUserId('your-user-id')`.
+2. Dirigez-vous vers la page **Campaigns (Campagnes)** et créez une nouvelle campagne de notification push. Choisissez les plateformes que vous souhaitez tester.
+3. Composez votre notification test et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Send Test (Envoyer le test)**. Vous devriez recevoir rapidement la notification sur votre appareil.
 
 ![Une campagne de notifications push Braze montrant que vous pouvez ajouter votre propre ID utilisateur en tant que destinataire de test pour essayer votre notification push.][1]
 

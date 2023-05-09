@@ -5,7 +5,8 @@ page_order: 9
 platform: 
   - Android
   - FireOS
-description: "Cet article explique comment répondre aux questions de confidentialité de Google Play."
+description: "Cet article de référence explique comment répondre aux questions de confidentialité de Google Play."
+
 ---
 <style>
 table td {
@@ -15,7 +16,7 @@ table td {
 
 # Questionnaire de confidentialité de Google Play
 
-À compter d’avril 2022, les développeurs Android doivent remplir le [formulaire de sécurité des données][4] de Google Play pour révéler leurs pratiques de confidentialité et de sécurité. Ce guide fournit des instructions sur la façon de remplir ce nouveau formulaire avec des informations sur la manière dont Braze traite les données de votre application. 
+> À compter d’avril 2022, les développeurs Android doivent remplir le [formulaire de sécurité des données][4] de Google Play pour révéler leurs pratiques de confidentialité et de sécurité. Ce guide fournit des instructions sur la façon de remplir ce nouveau formulaire avec des informations sur la manière dont Braze gère les données de votre application. 
 
 En tant que développeur d’applications, vous contrôlez les données que vous envoyez à Braze. Les données reçues par Braze sont traitées conformément à vos instructions. Google le classifie en tant que [fournisseur de services][3]. 
 
@@ -112,7 +113,7 @@ Les données obtenues par Braze sont déterminées par votre intégration spéci
             <td>SMS ou MMS</td>          
         </tr>
         <tr>
-            <td>Autres messages dans l’application</td>
+            <td>Autres messages in-app</td>
             <td>Si vous envoyez des messages in-app ou des notifications push via Braze, nous collectons des informations sur le moment où les utilisateurs ont ouvert ou lu ces messages.</td>
         </tr>
         <tr>

@@ -4,11 +4,14 @@ article_title: Résolution des problèmes des notifications push pour FireOS
 platform: FireOS
 page_order: 20
 page_type: solution
-description: "Cet article fournit des scénarios de résolution des problèmes FireOS pour les problèmes que vous pourriez rencontrer avec des notifications push."
-channel: notification push
+description: "Cet article de référence fournit des scénarios de résolution des problèmes FireOS pour les problèmes que vous pourriez rencontrer avec des notifications push."
+channel: push
 
 ---
+
 # Résolution des problèmes
+
+> Cet article fournit plusieurs scénarios de résolution des problèmes concernant FireOS.
 
 ## Utiliser les journaux d’erreur de notification push
 
@@ -18,7 +21,7 @@ Braze fournit des erreurs de notification push dans le journal des activités de
 
 ## Scénarios de résolution des problèmes
 
-### Aucun utilisateur « Enregistré pour les notifications push » ne s’affiche dans le tableau de bord de Braze (avant l’envoi de messages)
+### Aucun utilisateur « Push Registered » (Enregistré pour les notifications push) ne s’affiche dans le tableau de bord de Braze (avant l’envoi de messages)
 
 - Assurez-vous que votre application est correctement configurée pour autoriser les notifications push.
 - Assurez-vous que l’ID client et le secret client configurés dans votre tableau de bord de Braze sont corrects.
@@ -28,11 +31,11 @@ Braze fournit des erreurs de notification push dans le journal des activités de
 Il y a plusieurs raisons pour lesquelles cela pourrait se produire :
 
 - Si vous forcez votre application à quitter, vos notifications push ne seront pas affichées tant que votre application n’est pas en cours d’exécution.
-- Assurez-vous que le réglage [Priorité de notification][15] est défini sur `HIGH` dans votre campagne.
+- Assurez-vous que le réglage [Notification Priority (Priorité de notification)][15] est défini sur `HIGH` dans votre campagne.
 - La clé API ADM dans votre `api_key.txt` est incorrecte ou contient des caractères non valides.
 - Le `BrazeAmazonDeviceMessagingReceiver` n’est pas correctement enregistré dans `AndroidManifest.xml` avec des filtres d’intention pour `<action android:name="com.amazon.device.messaging.intent.RECEIVE" />` et `<action android:name="com.amazon.device.messaging.intent.REGISTRATION" />`.
 
-### Les utilisateurs « Enregistré pour les notifications push » ne sont plus activés après l’envoi de messages
+### Les utilisateurs « Push Registered » (Enregistré pour les notifications push) ne sont plus activés après l’envoi de messages
 
 Cela se produit généralement lorsque les utilisateurs ont désinstallé l’application, ce qui rend invalide leur ID d’enregistrement ADM.
 

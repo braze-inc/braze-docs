@@ -9,9 +9,9 @@ description: "This reference article shows how to track in-app purchases and rev
 
 ---
  
-# Logging purchases for Android and FireOS
+# Logging purchases
 
-Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
+> Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value. This reference article shows how to track in-app purchases and revenue and assign purchase properties in your Android or FireOS application.
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
@@ -103,6 +103,6 @@ You can also use our REST API to record purchases. Refer to the [User API docume
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
 [5]: http://developer.android.com/reference/java/util/Date.html
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html
+[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html

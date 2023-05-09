@@ -15,9 +15,9 @@ channel:
 
 ![Sample news app showing carousel of Content Cards in an article]({% image_buster/assets/img_archive/cc_politer_carousel_android.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;"}
 
-This section covers implementing a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
+> This section covers implementing a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
 
-With this approach, you will not use Braze’s views and default logic but will instead display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
+With this approach, you will not use Braze's views and default logic but will instead display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
 
 In terms of the level of development effort, the key differences between the basic implementation and the carousel implementation include:
 
@@ -49,7 +49,7 @@ Follow the steps for [Using multiple Content Card feeds]({{site.baseurl}}/develo
 It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g., `feed_type = brand_homepage`), as any key-value pairs used must match the key-value pairs that the developers build into the app logic.
 {% endalert %}
 
-For Android-specific developer documentation on the Content Cards class, methods, and attributes in Kotlin, refer to the Android [com.braze.ui.contentcards.view](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/index.html) documentation.
+For Android-specific developer documentation on the Content Cards class, methods, and attributes in Kotlin, refer to the Android [com.braze.ui.contentcards.view](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/index.html) documentation.
 
 ## Considerations
 

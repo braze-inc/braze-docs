@@ -1,16 +1,16 @@
 ---
 nav_title: Cas d’utilisation
 article_title: "Cas d’utilisation de Shopify dans Braze"
-description: "Cet article décrit les cas d’utilisation pour utilisateurs débutants et avancés de Shopify."
+description: "Cet article de référence décrit les cas d’utilisation pour utilisateurs débutants et avancés de Shopify."
 page_type: partner
 search_tag: Partenaire
 alias: "/shopify_use_cases/"
 page_order: 5
 ---
 
-# Cas d’utilisation de Shopify
+# Cas d’utilisation
 
-> Vous voulez savoir comment tirer parti de votre intégration Shopify pour créer des messages efficaces et en temps opportun pour vos utilisateurs ? Pour en savoir plus, reportez-vous aux sections suivantes des cas d’utilisation pour [utilisateur débutant](#beginner) et [utilisateur avancé](#advanced).
+> Vous voulez savoir comment tirer parti de votre intégration Shopify pour créer des communications efficaces et en temps opportun pour vos utilisateurs ? Pour en savoir plus, reportez-vous aux sections suivantes des cas d’utilisation pour [utilisateur débutant](#beginner) et [utilisateur avancé](#advanced).
 
 ## Débutant
 
@@ -28,9 +28,9 @@ Les utilisateurs ont reçu un remboursement, partiel ou complet. Cette campagne 
 
 ![Campagne par événement qui enregistre les utilisateurs qui effectuent l’événement personnalisé « shopify_created_refund ».]({% image_buster /assets/img/Shopify/refund.png %}){: style="max-width:45%;"}
 
-**Exemple de messagerie**
+**Exemple d’envoi de messages**
 
-![E-mail avec le texte « Votre commande a été remboursée, nous sommes désolés que vous n’ayez pas été satisfait de votre commande. Nous avons bien envoyé votre remboursement. Veuillez attendre 3 à 5 jours ouvrables pour que les fonds apparaissent dans votre relevé », accessible via le bouton « Afficher le compte ».]({% image_buster /assets/img/Shopify/refund2.png %}){: style="max-width:80%;border:0;"}
+![E-mail avec le texte « Votre commande a été remboursée, nous sommes désolés que vous n’ayez pas été satisfait de votre commande. Nous avons bien envoyé votre remboursement. Veuillez attendre 3 à 5 jours ouvrables pour que les fonds apparaissent dans votre relevé, accessible via le bouton « Afficher le compte ».]({% image_buster /assets/img/Shopify/refund2.png %}){: style="max-width:80%;border:0;"}
 {% endtab %}
 {% tab Cancellation %}
 **Événement d’annulation Shopify** - `shopify_cancelled_order`
@@ -39,43 +39,43 @@ Les utilisateurs ont pu annuler leurs commandes avant l’exécution. Cette camp
 
 ![Campagne par événement qui enregistre les utilisateurs qui effectuent l’événement personnalisé « shopify_cancelled_order ».]({% image_buster /assets/img/Shopify/cancellation.png %}){: style="max-width:45%;"}
 
-**Exemple de messagerie**
+**Exemple d’envoi de messages**
 
-![E-mail avec le texte « Votre commande a été annulée, nous sommes désolés de vous voir partir ! Nous avons annulé votre commande avec succès. Veuillez attendre 3 à 5 jours ouvrables pour que les fonds apparaissent dans votre relevé », accessible via le bouton « Afficher le compte ».]({% image_buster /assets/img/Shopify/cancellation2.png %}){: style="max-width:80%;border:0;"}
+![E-mail avec le texte « Votre commande a été annulée, nous sommes désolés de vous voir partir ! Nous avons annulé votre commande avec succès. Veuillez attendre 3 à 5 jours ouvrables pour que les fonds apparaissent dans votre relevé, accessible via le bouton « Afficher le compte ».]({% image_buster /assets/img/Shopify/cancellation2.png %}){: style="max-width:80%;border:0;"}
 
 {% endtab %}
-{% tab Commande traitée %}
+{% tab Fulfilled order %}
 **Evénement réalisé Shopify** - `shopify_fulfilled_order`
 
 Tous les articles de la commande d’un utilisateur ont bien été préparés. Cette campagne permet à l’utilisateur de savoir que sa commande a été réalisée avec succès.
 
 ![Campagne par événement qui enregistre les utilisateurs qui effectuent l’événement personnalisé « shopify_fulfilled_order ».]({% image_buster /assets/img/Shopify/fulfilled.png %}){: style="max-width:45%;"}
 
-**Exemple de messagerie**
+**Exemple d’envoi de messages**
 
 ![Message texte avec le texte « Votre commande a été préparée ! Tous les articles de votre panier ont été livrés ! Veuillez accéder à votre compte et confirmer la réception. Points bonus pour avoir donné son avis. »]({% image_buster /assets/img/Shopify/fulfilled2.png %}){: style="max-width:40%;border:0;"}
 
 {% endtab %}
-{% tab Order Partially Fulfilled %}
+{% tab Partially fulfilled order %}
 **Evénement partiellement réalisé Shopify** - `shopify_partially_fulfilled_order`
 
 Certains articles de la commande d’un utilisateur ont été préparés avec succès. Cette campagne permet à l’utilisateur de savoir qu’une partie de sa commande a été réalisée avec succès.
 
 ![Campagne par événement qui enregistre les utilisateurs qui effectuent l’événement personnalisé « shopify_partially_fulfilled_order ».]({% image_buster /assets/img/Shopify/partially_fulfilled.png %}){: style="max-width:45%;"}
 
-**Exemple de messagerie**
+**Exemple d’envoi de messages**
 
 ![Message texte avec le texte « Votre commande a été partiellement préparée ! Nous avons livré certains des articles de votre commande et le reste est en cours d’acheminement ! Nous vous enverrons une autre alerte lorsque la livraison sera complètement terminée. »]({% image_buster /assets/img/Shopify/partially_fulfilled2.png %}){: style="max-width:40%;border:0;"}
 
 {% endtab %}
-{% tab Commande payée %}
+{% tab Paid order %}
 **Événement commande payée Shopify** - `shopify_paid_order`
 
 L’utilisateur paie sa commande et le statut de la commande passe en « payé ». Cette campagne permet à l’utilisateur de savoir que le paiement de sa carte de crédit a été réalisé ou que la commande a été marquée comme payée si un paiement manuel est effectué.
 
 ![Campagne par événement qui enregistre les utilisateurs qui effectuent l’événement personnalisé « shopify_paid_order ».]({% image_buster /assets/img/Shopify/paid.png %}){: style="max-width:45%;"}
 
-**Exemple de messagerie**
+**Exemple d’envoi de messages**
 
 ![E-mail avec le texte « Nous avons reçu votre paiement ! Votre commande est payée ! Veuillez attendre 1 à 2 jours ouvrables pour que nous permettre de traiter le paiement et préparer vos articles. Puis nous l'expédierons ! » et un bouton « View Account » (Afficher le compte).]({% image_buster /assets/img/Shopify/paid2.png %}){: style="max-width:80%;border:0;"}
 

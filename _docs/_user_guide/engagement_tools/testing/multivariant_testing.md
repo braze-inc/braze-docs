@@ -3,7 +3,7 @@ nav_title: Multivariate & A/B Testing
 article_title: Multivariate and A/B Testing
 page_order: 2
 page_type: reference
-description: "This reference article explains Multivariate and A/B Testing and their benefits."
+description: "This reference article explains Multivariate and A/B Testing and its benefits."
 search_rank: 2
 ---
 
@@ -17,7 +17,7 @@ Multivariate and A/B testing can be quickly utilized using [Intelligent Selectio
 
 ### A/B test
 
-An A/B test is an experiment that compares users’ responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style.
+An A/B test is an experiment that compares users' responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style.
 
 The objective is to identify the version of the campaign that best accomplishes your marketing goals. In this section, we'll walk through how to test the effectiveness of differences in content.
 
@@ -30,7 +30,7 @@ Suppose you have two options for a push notification:
 - "This deal expires tomorrow!"
 - "This deal expires in 24 hours!"
 
-Using an A/B test, you can see which wording results in a higher conversion rate. The next time you send a push notification about a deal, you’ll know which type of wording is more effective. However, this test only examines the effect of one variable—the copy in the push notification.
+Using an A/B test, you can see which wording results in a higher conversion rate. The next time you send a push notification about a deal, you'll know which type of wording is more effective. However, this test only examines the effect of one variable—the copy in the push notification.
 
 ### Multivariate test
 
@@ -47,11 +47,17 @@ Specific scenarios in which multivariate and A/B testing could come in handy inc
 - **When trying out a messaging type for the first time:** Worried about getting in-app messaging right the first time? Multivariate testing allows you to experiment and learn what resonates with your users.
 - **When creating onboarding campaigns and other campaigns that are constantly sent out:** Since most of your users will encounter this campaign, why not ensure that it's as effective as possible?
 - **When you have multiple ideas for messages to send:** If you're unsure of which to choose, run a test and then make a data-driven decision.
-- **When investigating whether your users respond to "tried and true" marketing techniques:**  Marketers often stick to conventional tactics to engage with users, but every product’s user base is different. Sometimes, repeating your call-to-action and using social proof won’t get you the results you desired. Multivariate and A/B testing lets you step outside the box and discover unconventional tactics that work for your specific audience.
+- **When investigating whether your users respond to "tried and true" marketing techniques:** Marketers often stick to conventional tactics to engage with users, but every product's user base is different. Sometimes, repeating your call-to-action and using social proof won't get you the results you desired. Multivariate and A/B testing lets you step outside the box and discover unconventional tactics that work for your specific audience.
+
+### Variant distribution
+
+The distribution between variants is not always even. Variant distribution works by independently selecting a random option each time it sends a message-it doesn't plan out sending so that it exactly matches the percentages you have set.
+
+If you have multiple variants that you want to split evenly, you also need to make sure the number of variants are a multiple of 100%. Otherwise, some variants will have a higher percentage of users distributed to that variant compared to others. For example, if your campaign has 7 variants, there can't be an even variant distribution since 7 does not equally divide by 100 as a whole number. In this case, you would have 2 variants of 15% and 5 variants of 14%. 
 
 ## Five rules for multivariate and A/B testing {#five-rules-for}
 
-Multivariate and A/B testing can unveil powerful insights regarding your users. To ensure that your test results are truly reflective of your users’ behaviors, follow these guidelines.
+Multivariate and A/B testing can unveil powerful insights regarding your users. To ensure that your test results are truly reflective of your users' behaviors, follow these guidelines.
 
 #### Run the test on a large number of users
 

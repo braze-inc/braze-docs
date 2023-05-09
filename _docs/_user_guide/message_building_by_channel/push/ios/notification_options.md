@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# iOS notification options
+# Notification options
 
 > With the release of Apple's iOS 12, Braze offers support for several of its features, including [Notification Groups](#notification-groups), [Quiet Notifications/Provisional Authorization](#provisional-push-authentication--quiet-notifications), and [Critical Alerts](#critical-alerts).
 
@@ -98,10 +98,10 @@ If you utilize additional push prompts or [in-app push primers](https://www.braz
 
 #### Set up provisional push notifications
 
-Braze allows you to register for Provisional Authentication by updating your code in your token registration snippet within your Braze iOS SDK implementation using the following snippets as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
+Braze allows you to register for Provisional Authentication by updating your code in your token registration snippet within your Braze iOS SDK implementation using the following snippets as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#using-usernotification-framework-ios-10)).
 
 {% alert warning %}
-The implementation of provisional push authentication only supports iOS 12+ and will error out if the deployment target is before that. You can learn more about this [in our more detailed implementation documentation here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10).
+The implementation of provisional push authentication only supports iOS 12+ and will error out if the deployment target is before that. You can learn more about this [in our more detailed implementation documentation here]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#using-usernotification-framework-ios-10).
 {% endalert %}
 
 {% tabs local %}
@@ -160,7 +160,7 @@ This feature does not have minimum SDK version requirements, but is only applied
 
 ![A notification summary for iOS titled "Your Evening Summary" with three notifications.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
-iOS 15 also introduces a new way for users to optionally schedule a digest grouping of multiple notifications at designated times throughout the day. This is done to prevent constant interruptions throughout the day for notifications which don’t need immediate attention.
+iOS 15 also introduces a new way for users to optionally schedule a digest grouping of multiple notifications at designated times throughout the day. This is done to prevent constant interruptions throughout the day for notifications which don't need immediate attention.
 
 Apps can specify which push notifications are most relevant by setting a **Relevance Score**. Apple will use this score to determine which notifications should be showcased in the scheduled Notification Summary while others are made available when users click into the summary. 
 

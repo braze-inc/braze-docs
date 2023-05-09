@@ -13,7 +13,7 @@ Tool:
 
 # Location and geofences
 
-[Geofences]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/) are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze customer success manager.
+> [Geofences]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences/) are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze customer success manager.
 
 To support geofences for Android:
 
@@ -54,14 +54,6 @@ Add the Braze boot receiver to the `application` element of your `AndroidManifes
   </intent-filter>
 </receiver>
 ```
-
-{% alert note %}
-If you are using a version of the Android SDK less than `2.3.0`, the following manifest declaration is also required:
-
-```
-<service android:name="com.appboy.services.AppboyGeofenceService"/>
-```
-{% endalert %}
 
 ## Step 3: Enable Braze location collection
 
@@ -318,7 +310,7 @@ Note that Braze syncs geofences to devices using background push. In most cases,
 However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
 
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
-[4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
+[4]: https://github.com/braze-inc/braze-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.kt
 [10]: https://developers.google.com/android/guides/setup
-[11]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html
+[11]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html
 [support]: {{site.baseurl}}/braze_support/

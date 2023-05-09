@@ -2,15 +2,15 @@
 nav_title: "Exemples de requêtes"
 article_title: Exemples de requêtes Snowflake
 page_order: 1
-description: "Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes."
+description: "Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes Snowflake."
 page_type: partner
 search_tag: Partenaire
 
 ---
 
-# Exemples de requêtes Snowflake
+# Exemples de requêtes
 
->  Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes.
+> Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes.
 
 {% tabs %}
 {% tab Filter By Time%}
@@ -19,7 +19,7 @@ Un exemple de requête courante peut être de filtrer les événements par heure
 
 Vous pouvez les filtrer au moment où ils se produisent. Les tableaux d’événements sont regroupés par `time`, pour optimiser le filtrage par `time` :
 ```sql
--- trouver les événements personnalisés qui se sont produits après le 15/04/2019 @ 7:02pm (UTC) c.-à-d., timestamp=1555354920
+-- find custom events that occurred after 04/15/2019 @ 7:02pm (UTC) i.e., timestamp=1555354920
 SELECT *
 FROM users_behaviors_customevent_shared
 WHERE time > 1555354920
@@ -27,14 +27,14 @@ LIMIT 10;
 ```
 Vous pouvez également filtrer les événements en fonction de l’heure à laquelle ils ont été conservés dans l’entrepôt de données Snowflake en utilisant `sf_created_at`. `sf_created_at` et `time` ne sont pas identiques, mais sont généralement proches, cette requête devrait donc avoir des caractéristiques de performance similaires :
 ```sql
--- trouver les événements personnalisés qui sont arrivés à Snowflake après le 15/04/2019 @ 7:02pm (UTC)
+-- find custom events that arrived in Snowflake after time 04/15/2019 @ 7:02pm (UTC)
 SELECT *
 FROM users_behaviors_customevent_shared
 WHERE sf_created_at > to_timestamp_ntz('2019-04-15 19:02:00')
 LIMIT 10;
 ```
 {% alert note %}
-La valeur de `sf_created_at` est uniquement fiable pour les événements conservés après `Nov 15th, 2019 9:31 pm UTC`..
+La valeur de `sf_created_at` est uniquement fiable pour les événements qui ont été conservés après `Nov 15th, 2019 9:31 pm UTC`.
 {% endalert %}
 {% endtab %}
 
@@ -75,7 +75,7 @@ qualify row_number() over (partition by campaign_join.event_id ORDER BY canvas.t
 {% endtab %}
 {% tab Push Funnel %}
 
-Vous pouvez utiliser cette requête push funnel pour regrouper les données brutes d’événements d’envoi de notifications push, les données brutes d’événements de livraison et les données brutes d’événements d’ouverture. Cette requête montre comment tous les tableaux doivent être joints, car chaque événement brut dispose généralement d’un tableau séparé :
+Vous pouvez utiliser cette requête d’entonnoir de notification push pour regrouper les données brutes d’événements d’envoi de notifications push, les données brutes d’événements de livraison et les données brutes d’événements d’ouverture. Cette requête montre comment tous les tableaux doivent être joints, car chaque événement brut dispose généralement d’un tableau séparé :
 
 ```sql
 
@@ -105,7 +105,7 @@ LIMIT 500;
 {% tab Email Cadence %}
 Vous pouvez utiliser cette requête de fréquence quotidienne des envois d’e-mail pour analyser le temps écoulé entre les e-mails reçus par un utilisateur.
 
-Par exemple, si un utilisateur a reçu deux e-mails en un jour, ils seraient catégorisés comme `0 “days since last received”`. S’ils ont reçu un e-mail le lundi et un autre mardi, ils seraient catégorisés dans la cohorte `1 “days since last received”`.
+Par exemple, si un utilisateur a reçu deux e-mails en un jour, ils seraient catégorisés comme `0 "days since last received"`. S’ils ont reçu un e-mail le lundi et un autre mardi, ils seraient catégorisés dans la cohorte `1 "days since last received"`.
 
 ```sql
 WITH email_messaging_cadence AS (WITH deliveries AS

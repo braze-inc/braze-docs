@@ -2,16 +2,18 @@
 nav_title: AMP for Email
 article_title: AMP for Email
 alias: /amphtml/
-page_order: 9.2
+page_order: 9
 description: "This reference article provides an overview of AMP for Email and common use cases."
 channel:
   - email
 
 ---
 
-# AMP for Email
+# AMP for email
 
-With [AMP for Email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers, delivering a full experience directly to your user’s inbox. AMP makes this possible through its use of various components that can be used to help build exciting in email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more! Tools like these offer significant opportunities to increase engagement and retention. 
+> With [AMP for Email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers, delivering a full experience directly to your user's inbox. 
+
+AMP makes this possible through its use of various components that can be used to help build exciting in email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more! Tools like these offer significant opportunities to increase engagement and retention. 
 
 {% alert important %}
 AMP for Email is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -29,31 +31,30 @@ Braze is not responsible for the customer registering with Google or meeting the
 | AMP Email Elements | A compelling AMP Email includes the strategic use of various components.<br>Check out the Essentials tab in the [Components](#components) section below. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Supported Clients
+### Supported clients
 
 Before you can send AMP Emails to users, you must register with our clients. The registration process involves sending a test AMPHTML email to get approved. Approval times vary client to client. Follow the register links for more information.
 
 | Client | Register Link |
 | ------ | -------- |
-| Gmail for iOS | [Google](https://developers.google.com/gmail/ampemail/register) |
-| Gmail for Android | [Google](https://developers.google.com/gmail/ampemail/register) |
-| Gmail Desktop | [Google](https://developers.google.com/gmail/ampemail/register) |
-| Outlook on Web | [Outlook](https://docs.microsoft.com/en-us/outlook/amphtml/register-outlook)
-| Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/?lang=en) |
+| Gmail | [Google](https://developers.google.com/gmail/ampemail/register) |
+| FairEmail | [FairEmail](https://email.faircode.eu/) |
+| Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
+| Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
-For a full list of supported platforms, click [here](https://developers.google.com/gmail/ampemail/supported-platforms). 
+For a full list of supported platforms, visit the [AMP documentation](https://amp.dev/support/faq/email-support). 
 
-### Enabling Gmail Account
+### Enabling Gmail account
 
 Go into your Gmail Settings, and under General, check the `Enable Dynamic Email` box.
 
 ![Dynamic Content][1]
 
-## API Usage
+## API usage
 
 You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{site.baseurl}}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
 
-### Email Object Specification
+### Email object specification
 
 ```json
 {
@@ -74,7 +75,7 @@ You can utilize AMP for Email using our API. When you use any of [our Messaging 
 }
 ```
 
-## Writing Your AMP Email
+## Writing your AMP email
 
 Construct your AMP email using the [components](#components) below, check out our [example use cases](#example-use-cases), and then use [our API](#api-usage) to send your message! Be sure to use `amp_body` for your AMP HTML! 
 
@@ -149,7 +150,7 @@ Any component that requires authenticating the user must use [Google Access Toke
 
 For a full list of AMP Components, check out the [AMP Documentation](https://amp.dev/documentation/components/?format=email).  
 
-### Example Use Cases
+### Example use cases
 Below you will find a couple of example use cases for the various components discussed above.
 
 {% tabs local %}
@@ -198,7 +199,7 @@ Similar to Liquid, AMP supports a scripting language for more advanced use cases
 
 By wrapping your content around the Raw tag, the Braze processing engine will correctly ignore any content between the raw tags and send out the Mustache variable your team needs.
 
-## Metrics and Analytics
+## Metrics and analytics
 
 | Metric | Details |
 |---|---|
@@ -208,8 +209,7 @@ By wrapping your content around the Raw tag, the Braze processing engine will co
 | AMP Clicks | Total count for clicks in your AMP HTML Email, cumulative count of the HTML, plaintext, and AMPHTML versions of the email. |
 {: .reset-td-br-1 .reset-td-br-2}  
 
-
-## Testing & Troubleshooting
+## Testing and troubleshooting
 
 Please note that total clicks and unique clicks do not account for any click that happened from an AMP message (HTML and Plaintext only). AMP specific clicks are attributed to the `amp_click` metric.
 
@@ -219,17 +219,17 @@ For your AMP email to be delivered to any Gmail account, the email must meet the
 - The AMP for Email security requirements must be met (see table above).
 - The AMP MIME part must contain a valid AMP document.
 - The email should include the AMP MIME part before the HTML MIME part.
-- The AMP MIME part must be smaller than 100KB.
+- The AMP MIME part must be smaller than 100&nbsp;KB.
 
 If none of these conditions are causing the error, reach out to [support][support].
 
 ### Frequently Asked Questions
 
-{% details Should I Segment with AMP Emails? %}
-We advocate not segmenting to send to all different types of users. This is because we send AMP messages in multipart, having different versions included in the original email. If you customer can’t see the AMP version, it will default back to HTML. 
+{% details Should I segment with AMP Emails? %}
+We advocate not segmenting to send to all different types of users. This is because we send AMP messages in multipart, having different versions included in the original email. If you customer can't see the AMP version, it will default back to HTML. 
 {% enddetails %}
 
-{% details Any Tips as I build out my AMP Emails? %}
+{% details Any tips as I build out my AMP Emails? %}
 Lean on your engineering as much as possible to build out the AMP elements. Once the elements are set up, we encourage you to include whatever design resources and elements you have to add an extra layer of polish. Showcasing some of the things AMP can do in email can be pretty compelling in terms of getting your engineering team to prioritize this.
 {% enddetails %}
 

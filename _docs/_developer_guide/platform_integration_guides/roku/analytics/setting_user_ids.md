@@ -4,11 +4,13 @@ article_title: Setting User IDs for Roku
 platform: Roku
 page_order: 0
 page_type: reference
-description: "This page covers methods to identify users, as well as best practices and important considerations."
+description: "This reference article covers methods to identify and set user IDs for Roku, as well as best practices and important considerations."
  
 ---
 
 # Setting user IDs
+
+> This reference article covers methods to identify and set user IDs for Roku, as well as best practices and important considerations.
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 

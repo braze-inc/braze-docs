@@ -6,28 +6,28 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint de Braze Lister les catalogue."
+description: "Cet article présente en détail l’endpoint Braze Lister des catalogues."
 
 ---
 {% api %}
-# Lister les catalogues dans le groupe d'apps
+# Lister des catalogues
 {% apimethod get %}
 /catalogs
 {% endapimethod %}
 
-Utilisez cet endpoint pour renvoyer une liste de catalogues dans le groupe d’apps.
+> Utilisez cet endpoint pour renvoyer une liste de catalogues dans le groupe d’apps.
 
-## Limites de débit
+{% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
 
-Cet endpoint a une limitation du débit partagée de 5 requêtes par minute entre tous les endpoints synchronisés du catalogue.
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d65fb86-ccf7-423f-9eb2-f68ab36df824 {% endapiref %}
 
-## Paramètres de chemin
+## Limite de débit
 
-Cet endpoint n’a pas de chemin de paramètres.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
-## Paramètres de demande
+## Paramètres de chemin et de requête
 
-Cet endpoint n’a pas de corps de demande.
+Cet endpoint n’a pas de paramètres de chemin ni de requête.
 
 ### Exemple de demande
 
@@ -41,24 +41,24 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
 
 ### Exemple de réponse réussie
 
-Le code de statut `200` pourrait retourner le corps de réponse suivant.
+Le code de statut `200` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {
   "catalogs": [
     {
-      "description": "Mes restaurants",
+      "description": "My Restaurants",
       "fields": [
         {
           "name": "id",
           "type": "string"
         },
         {
-          "name": "Nom",
+          "name": "Name",
           "type": "string"
         },
         {
-          "name": "Ville",
+          "name": "City",
           "type": "string"
         },
         {
@@ -66,7 +66,7 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
           "type": "string"
         },
         {
-          "name": "Note",
+          "name": "Rating",
           "type": "number"
         },
         {
@@ -83,7 +83,7 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
       "updated_at": "2022-11-02T20:04:06.879+00:00"
     },
     {
-      "description": "Mon catalogue",
+      "description": "My Catalog",
       "fields": [
         {
           "name": "id",

@@ -1,22 +1,24 @@
 ---
-nav_title: "POST: Send Campaign Messages via API-Triggered Delivery"
-article_title: "POST: Send Campaign Messages via API-Triggered Delivery"
+nav_title: "POST: Send Campaigns via API-Triggered Delivery"
+article_title: "POST: Send Campaigns via API-Triggered Delivery"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Send Campaign Messages via API-Triggered Delivery Braze endpoint."
+description: "This article outlines details about the Send campaigns via API-triggered delivery Braze endpoint."
 
 ---
 {% api %}
-# Sending campaign messages via API-triggered delivery
+# Send campaign messages via API-triggered delivery
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/send
 {% endapimethod %}
 
-Use this endpoint to send immediate, ad-hoc messages to designated users via API-triggered delivery. API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
+> Use this endpoint to send immediate, ad-hoc messages to designated users via API-triggered delivery. 
 
-If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Note that to send messages with this endpoint, you must have a Campaign ID created when you build an [API-triggered campaign]({{site.baseurl}}/api/api_campaigns/).
+API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
+
+If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Note that to send messages with this endpoint, you must have a [Campaign ID](https://www.braze.com/docs/api/identifier_types/) created when you build an [API-triggered campaign]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
@@ -60,7 +62,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`campaign_id`|Required|String|See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
 |`trigger_properties`| Optional | Object | See [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Personalization key-value pairs that will apply to all users in this request. |
-|`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your campaign to a larger than expected audience. |
+|`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
 |`audience`| Optional | Connected audience object| See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`recipients`| Optional | Array | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). If not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the campaign. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -69,7 +71,9 @@ The recipients array may contain up to 50 objects, with each object containing a
 
 When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with the `id` and attributes before sending the message.
 
-Additionally, a user's subscription group status can be updated via the inclusion of a `subscription_groups` parameter within the `attributes` object. Further details can be found in the [User Attributes Object specification]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+{% alert important %}
+A user's subscription group status can be updated via the inclusion of a `subscription_groups` parameter within the `attributes` object. This is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access. More details can be found in the [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+{% endalert %}
 
 ## Example request
 ```
@@ -146,13 +150,14 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ```
 
 ## Response details
-Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch, a unique ID for each transmission sent from the Braze platform. When using this endpoint, you receive a single `dispatch_id` for an entire batched set of users. For more information on `dispatch_id` check out our documentation on [Dispatch ID Behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch, a unique ID for each transmission sent from the Braze platform. When using this endpoint, you receive a single `dispatch_id` for an entire batched set of users. For more information on `dispatch_id` check out our documentation on [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 ## Create send endpoint
 
 **Using the Attributes Object in Campaigns**
 
-Braze has a Messaging Object called `Attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
+Braze has a Messaging Object called `attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
 
 {% alert important %}
 Looking for the Canvas version of this endpoint? Check out [Sending Canvas messages via API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).

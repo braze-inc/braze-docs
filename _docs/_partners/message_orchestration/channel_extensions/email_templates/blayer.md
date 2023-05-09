@@ -1,7 +1,7 @@
 ---
 nav_title: B.Layer
 article_title: B.Layer
-description: "Using B.Layer, an in-app message builder, you can create custom-designed in-app messages simply, rapidly, and without coding. "
+description: "This reference article outlines the partnership between Braze and B.Layer, an in-app message builder, you can use to create custom-designed in-app messages simply, rapidly, and without coding."
 alias: /partners/blayer-inapps/
 page_type: partner
 search_tag: Partner
@@ -35,7 +35,7 @@ They are working with brands like Lifesum, Blinkist, OnX Hunt, and many more to 
 
 #### Set brand colors and fonts
 
-In B.Layer, on the hamburger menu at the top of the page, click **Brand assets > add your brand assets**. Here you can assign your brand color and fonts. 
+In B.Layer, on the hamburger menu at the top of the page, click **Brand assets > add your brand assets**. Here, you can assign your brand color and fonts. 
 You are all set. Now you can start designing your in-app message.
 
 ![][4]

@@ -22,9 +22,9 @@ Ce n’est pas la même chose que de définir les ouvertures d’application en 
 
 Les ouvertures influencées sont ajoutées aux ouvertures directes d’une campagne pour donner un nombre total de visites. Vous pouvez le voir sur la page **Détails** d’une campagne de notification push. Les ouvertures totales et les ouvertures directes sont affichées dans les sections **Performance de message** et **Historique des Performances**. Les ouvertures influencées sont la différence entre les deux mesures.
 
-![Statistiques sur les ouvertures influencées sur la page Détails de la campagne d’une campagne][1]
+![Statistiques sur les ouvertures influencées sur la page Campaign Details (Détails de la campagne) d’une campagne][1]
 
-Pour plus d’informations sur le suivi des ouvertures, consultez la section de suivi des conversions dans nos [Meilleures pratiques pour les notifications push][bp].
+Pour plus d’informations sur le suivi, consultez la section Suivi des conversions dans nos [Bonnes pratiques pour les notifications push][bp].
 
 [bp]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [1]: {% image_buster /assets/img_archive/Influenced_Opens2.png %}

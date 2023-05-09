@@ -2,19 +2,17 @@
 nav_title: Conditional Messaging Logic
 article_title: Conditional Liquid Messaging Logic
 page_order: 6
-description: "Tags allow you to include programming logic in your messaging campaigns. This reference article covers how tags can and should be used in your campaigns."
+description: "This reference article covers how tags can and should be used in your campaigns."
 
 ---
 
-# Conditional messaging logic (tags)
+# Conditional messaging logic
 
-[Tags][7] allow you to include programming logic in your messaging campaigns.
+> [Tags][7] allow you to include programming logic in your messaging campaigns. Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
 
 {% raw %}
 A tag must be wrapped in `{% %}`.
 {% endraw %}
-
-Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
 
 {% alert tip %}
 To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you've correctly formatted your Liquid syntax. Green formatting can help identify tags, while purple formatting highlights areas that contain personalization.
@@ -44,7 +42,7 @@ Buy now! Would 5% off convince you?
 
 ## Conditional logic
 
-You can include many types of [intelligent logic within messages][1] — one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
+You can include many types of [intelligent logic within messages][1]—one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
 {% raw %}
 
 ```liquid
@@ -104,7 +102,7 @@ The following tag allows you to specify a message for users with a null "first n
 
 {% raw %}
 ```liquid
-{% if ${first_name} == blank %}
+{% if ${first_name} == null %}
   ....
 {% endif %}
 
@@ -115,12 +113,15 @@ The following tag allows you to specify a message for users with a null "first n
 
 {% raw %}
 ```liquid
-{% if ${first_name} == blank %}
+{% if ${first_name} == null %}
 We're having a sale! Hurry up and get 10% off all items today only!
 {% else %}
 Hey {{${first_name | default: 'there'}}, we're having a sale! Hurry up and get 10% off all items today only!
 {% endif %}
 ```
+
+Note that a null attribute value isn't strictly associated with a value type (e.g., a "null" string is the same as a "null" array), so in the example above, the null attribute value is referencing an unset first name, which would be a string.
+
 {% endraw %}
 
 ## Referencing custom attributes

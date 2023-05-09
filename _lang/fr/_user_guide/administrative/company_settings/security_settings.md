@@ -3,13 +3,13 @@ nav_title: Paramètres de sécurité
 article_title: Paramètres de sécurité
 page_order: 2
 page_type: reference
-description: "Cet article de référence couvre les paramètres génériques de sécurité inter-entreprise, y compris les règles d’authentification, la whiteliste IP et l’authentification à deux facteurs (2FA)."
+description: "Cet article de référence couvre les paramètres génériques de sécurité inter-entreprise, y compris les règles d’authentification, la whiteliste IP, les informations personnellement identifiables et l’authentification à deux facteurs (2FA)."
 
 ---
 
 # Paramètres de sécurité
 
-En tant qu’administrateur, la sécurité est une priorité absolue sur votre liste de préoccupations. Cette page peut vous aider à gérer les paramètres de sécurité génériques et interentreprises, y compris les règles d’authentification, la whiteliste IP et l’authentification à deux facteurs.
+> En tant qu’administrateur, la sécurité est une priorité absolue sur votre liste de préoccupations. Cette page peut vous aider à gérer les paramètres de sécurité génériques et interentreprises, y compris les règles d’authentification, whitelister l’adresse IP et l’authentification à deux facteurs.
 
 ## Règles d’authentification
 
@@ -31,11 +31,11 @@ Utilisez ce champ pour définir quand vous souhaitez que les utilisateurs de vot
 
 ### Règles de durée de session
 
-Utilisez ce champ pour définir la durée pendant laquelle Braze tiendra votre session active. Une fois que Braze considère que votre session est inactive (aucune activité pour le nombre défini de minutes), l’utilisateur sera déconnecté. Le nombre maximum de minutes que vous pouvez saisir est de 1 440 (égale à 24 heures).
+Utilisez ce champ pour définir la durée pendant laquelle Braze gardera votre session active. Une fois que Braze considère que votre session est inactive (aucune activité pour le nombre défini de minutes), l’utilisateur sera déconnecté. Le nombre maximum de minutes que vous pouvez saisir est de 10 080 (soit 1 semaine) si l'authentification à deux facteurs est appliquée pour votre entreprise, sinon la durée maximale de la session sera de 1 440 minutes (soit 24 heures).
 
-### Restriction SSO
+### Authentification par authentification unique (SSO)
 
-Vous pouvez restreindre vos utilisateurs à la connexion à l’aide d’un mot de passe ou d’une SSO.
+Vous pouvez restreindre vos utilisateurs à la connexion à l’aide d’un mot de passe ou d’une Authentification unique (SSO).
 
 Pour l’[Authentification unique (SSO) SAML][15], les clients devront configurer leurs paramètres SAML avant de les appliquer. Si les clients utilisent l’authentification unique de Google, ils devront simplement faire appliquer la page des paramètres de sécurité sans charges supplémentaires.
 
@@ -45,37 +45,35 @@ Utilisez le champ affiché pour répertorier les adresses IP et sous-réseaux sp
 
 ## Authentification à deux facteurs
 
-L’authentification à deux facteurs ajoute un deuxième niveau de vérification d’identité à un journal de compte, ce qui le rend plus sûr qu’un nom d’utilisateur et un mot de passe. Basculer ce bouton sur **Activé** réalisera une authentification à deux facteurs obligatoire pour tous les utilisateurs de compte Braze dans votre entreprise.
+L’authentification à deux facteurs ajoute un deuxième niveau de vérification d’identité à un journal de compte, ce qui le rend plus sûr qu’un nom d’utilisateur et un mot de passe. Cette fonctionnalité est activée par défaut pour tous les comptes Braze.  
 
-Lorsque l’authentification à deux facteurs est activée, en plus de saisir un mot de passe, les utilisateurs devront saisir un code de vérification envoyé à leur appareil mobile lors de la connexion à leur compte Braze.
+Lorsque l’authentification à deux facteurs est activée, en plus de saisir un mot de passe, les utilisateurs devront saisir un code de vérification lors de la connexion à leur compte Braze. Le code peut être envoyé via l’application Authy, par e-mail ou par SMS.
 
-{% alert tip %} Braze recommande de configurer une authentification à deux facteurs via l’application Authy plutôt que par SMS, au cas où vous rencontreriez des problèmes de réception de SMS à l’avenir.{% endalert %}
-
-L’authentification à deux facteurs est facultative par défaut. Cependant, lorsqu’elle est activée, les utilisateurs qui ne configurent pas leur authentification à deux facteurs seront bloqués dans leur compte Braze. Les utilisateurs du compte Braze peuvent également configurer une authentification à deux facteurs par eux-mêmes dans **Paramètres du compte**, même si cela n’est pas exigé par l’administrateur.
+L’authentification à deux facteurs peut être facultative pour les administrateurs et activée par défaut pour les utilisateurs n’étant pas administrateurs. Cependant, lorsqu’elle est activée, les utilisateurs qui ne configurent pas leur authentification à deux facteurs seront bloqués dans leur compte Braze. Les utilisateurs du compte Braze peuvent également configurer une authentification à deux facteurs par eux-mêmes dans Account Settings (Paramètres du compte), même si cela n’est pas exigé par l’administrateur.
 
 ### Se souvenir de moi
 
-![Case à cocher Se souvenir de ce compte pendant 30 jours][04]{: style="float:right;max-width:35%;margin-left:15px;"}
-Lors de l’activation de l’authentification à deux facteurs pour votre entreprise, la case à cocher **Se souvenir de moi** devient accessible aux utilisateurs. Cette fonctionnalité stocke un cookie sur votre appareil, ce qui vous oblige uniquement à vous connecter avec l’authentification à deux facteurs **une fois** au cours de 30 jours.
+![Case à cocher Remember this account for 30 days (Se souvenir de ce compte pendant 30 jours)][04]{: style="float:right;max-width:35%;margin-left:15px;"}
 
-Les clients ayant plusieurs comptes sous un tableau de bord de l’entreprise peuvent rencontrer des problèmes en utilisant cette fonctionnalité en raison du cookie lié à un périphérique spécifique. Si les utilisateurs utilisent le même périphérique pour se connecter à plusieurs comptes, le cookie sera remplacé pour les comptes précédemment autorisés sur ce périphérique. Braze prévoit qu’un seul périphérique soit associé à un compte, et non pas un seul périphérique pour plusieurs comptes.
+Lors de l’activation de l’authentification à deux facteurs pour votre entreprise, la case à cocher **Remember Me (Se souvenir de moi)** devient accessible aux utilisateurs. Cette fonctionnalité stocke un cookie sur votre appareil, ce qui vous oblige uniquement à vous connecter avec l’authentification à deux facteurs **une fois** au cours de 30 jours.
+
+Les clients ayant plusieurs comptes sous un tableau de bord de l’entreprise peuvent rencontrer des problèmes en utilisant cette fonctionnalité en raison du cookie lié à un appareil spécifique. Si les utilisateurs utilisent le même appareil pour se connecter à plusieurs comptes, le cookie sera remplacé pour les comptes précédemment autorisés sur cet appareil. Braze prévoit qu’un seul appareil soit associé à un compte, et non pas un seul appareil pour plusieurs comptes.
 
 Assurez-vous d’enregistrer vos modifications avant de quitter la page !
 
 ### Réinitialisation de l’authentification utilisateur
 
-Les utilisateurs qui rencontrent des problèmes se connectant via une authentification à deux facteurs peuvent contacter les administrateurs de leur entreprise pour réinitialiser leur authentification à deux facteurs. Pour ce faire, demandez à un administrateur de naviguer vers **Gérer les utilisateurs**, sélectionnez l’utilisateur dans la liste fournie, puis sélectionnez **Réinitialiser** sous **Authentification à deux facteurs**. Une réinitialisation peut résoudre des problèmes d’authentification courants, tels que des problèmes avec Authy, une défaillance de connexion en raison d’interruptions de SMS ou d’erreurs de l’utilisateur, etc.
+Les utilisateurs qui rencontrent des problèmes se connectant via une authentification à deux facteurs peuvent contacter les administrateurs de leur entreprise pour réinitialiser leur authentification à deux facteurs. Pour ce faire, demandez à un administrateur de naviguer vers **Manage Users (Gérer les utilisateurs)**, sélectionnez l’utilisateur dans la liste fournie, puis sélectionnez **Reset (Réinitialiser)** sous **Two-Factor Authentication (Authentification à deux facteurs)**. Une réinitialisation peut résoudre des problèmes d’authentification courants, tels que des problèmes avec Authy, la vérification par e-mail n’étant pas envoyée, une défaillance de connexion en raison d’interruptions de SMS ou d’erreurs de l’utilisateur, etc.
 
 Application de l’authentification à deux facteurs :
-
-- Si l’authentification à deux facteurs n’est pas appliquée au niveau de l’entreprise, une fois réinitialisée, l’utilisateur se connectera normalement et devra aller à **Paramètres du compte** pour activer et configurer une authentification à deux facteurs.
+- Si l’authentification à deux facteurs n’est pas appliquée au niveau de l’entreprise, une fois réinitialisée, l’utilisateur se connectera normalement et devra aller à **Account Settings (Paramètres du compte)** pour activer et configurer une authentification à deux facteurs.
 - Si l’authentification à deux facteurs est appliquée au niveau de l’entreprise, la prochaine fois que l’utilisateur se connecte, il lui sera demandé de configurer son authentification à deux facteurs.
 
 ## Téléchargement des événements de sécurité
 
-Le rapport d’événement de sécurité est un rapport CSV d’événements de sécurité tels que les invitations de compte, les retraits de compte, les échecs et réussites de connexion, les tentatives de connexion et autres activités. Pour télécharger ce rapport, cliquez sur le profil utilisateur en haut à droite de votre tableau de bord de Braze, sélectionnez **Paramètres de l’entreprise**, puis l’onglet **Paramètres de sécurité**. Descendez et sélectionnez **Télécharger le rapport** dans la section **Télécharger l’événement de sécurité**. Ce rapport contient uniquement les 10 000 événements de sécurité les plus récents pour votre compte. Si vous avez besoin de données d’événements spécifiques, contactez l’assistance technique.
+Le rapport d’événement de sécurité est un rapport CSV d’événements de sécurité tels que les invitations de compte, les retraits de compte, les échecs et réussites de connexion, les tentatives de connexion et autres activités. Pour télécharger ce rapport, cliquez sur le profil utilisateur en haut à droite de votre tableau de bord de Braze, sélectionnez **Company Settings (Paramètres de l’entreprise)**, puis l’onglet **Security Settings (Paramètres de sécurité)**. Descendez et sélectionnez **Download report (Télécharger le rapport)** dans la section **Security Event Download (Télécharger l’événement de sécurité)**. Ce rapport contient uniquement les 10 000 événements de sécurité les plus récents pour votre compte. Si vous avez besoin de données d’événements spécifiques, contactez l’assistance technique.
 
-## Afficher les informations personnellement identifiables
+## Afficher les Informations personnellement identifiables
 
 Cette section décrit une autorisation qui n’est disponible que pour quelques utilisateurs Braze sélectionnés. Pour les capacités d’autorisation d’équipe existantes, consultez [Définition des autorisations utilisateur]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
 
@@ -83,13 +81,13 @@ Par défaut, tous les administrateurs peuvent utiliser la fonction **Afficher le
 
 ### Définir les informations personnellement identifiables
 
-Braze vous autorise à définir quels champs sont définis comme étant des informations personnellement identifiables (PII) dans votre tableau de bord. Pour ce faire, rendez-vous sur **Paramètres de l’entreprise > Paramètres de sécurité**.
+Braze vous autorise à définir quels champs sont définis comme étant des informations personnellement identifiables (PII) dans votre tableau de bord. Pour ce faire, rendez-vous sur **Company Settings > Security Settings (Paramètres de l’entreprise > Paramètres de sécurité)**.
 
 Les champs suivants peuvent être cachés pour les utilisateurs Braze qui n’ont pas l’autorisation de **visualiser les informations personnellement identifiables**.
 
 | Attributs standard | Attributs personnalisés |
 | ------------------- | ----------------- |
-| - Adresse e-mail<br>- Numéro de téléphone<br>- Prénom<br>- Nom<br>- Sexe<br>- Anniversaire<br>- ID de l’appareil<br>- Emplacement le plus récent | - Tous les attributs personnalisés |
+| {::nomarkdown} <ul> <li>Adresse e-mail </li> <li> Numéro de téléphone </li> <li> Prénom </li> <li> Nom </li> <li> Sexe </li> <li> Anniversaire </li> <li> ID de l’appareil </li> <li> Emplacement le plus récent </li> </ul> {:/} | {::nomarkdown} <ul> <li> Tous les attributs personnalisés </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Zones restreintes
@@ -98,9 +96,9 @@ Ce qui suit présuppose que tous les champs sont définis comme étant des infor
 
 | Navigation sur le tableau de bord | Résultat | Remarques |
 | -------------------- | ------ | ----- |
-| User Search | L’utilisateur qui se connecte ne peut pas rechercher par adresse e-mail, numéro de téléphone, prénom ou nom de famille :<br><br>• Ne verra pas le standard et les attributs personnalisés précédents lorsqu’il affiche un profil utilisateur.<br><br>• Ne pourra pas modifier les attributs standard précédents dans un profil utilisateur dans le tableau de bord de Braze.| L’accès à cette section nécessite toujours l’accès au profil utilisateur. |
-| User Import | L’utilisateur ne peut pas télécharger les fichiers de la page **User Import**. | |
-| Segments<br>Campagnes<br>Canvas | Dans la liste déroulante **Données utilisateur** :<br><br>• L’utilisateur n’aura pas accès à l’option **Exportation CSV des e-mails**.<br><br>• L’utilisateur n’obtiendra pas la norme et les attributs utilisateur précédents dans le fichier CSV lorsque vous sélectionnez **Exportation CSV des données utilisateur**. | |
+| User Search | L’utilisateur qui se connecte ne peut pas rechercher par adresse e-mail, numéro de téléphone, prénom ou nom de famille : {::nomarkdown} <ul> <li> Ne verra pas le standard et les attributs personnalisés précédents lorsqu’il affiche un profil utilisateur. </li> <li> Ne pourra pas modifier les attributs standard précédents dans un profil utilisateur dans le tableau de bord de Braze. </li> </ul> {:/} | L’accès à cette section nécessite toujours l’accès au profil utilisateur. |
+| User Import | L’utilisateur ne peut pas télécharger les fichiers de la page **User Import (Importation d’utilisateurs)**. | |
+| {::nomarkdown} <ul> <li> Segments </li> <li> Campagnes </li> <li> Canvas </li> </ul> {:/} | Dans la liste déroulante **User Data (Données utilisateur)** : {::nomarkdown} <ul> <li> L’utilisateur n’aura pas accès à l’option <b>CSV Export Email Address (Exportation CSV des e-mails)</b>. </li> <li> L’utilisateur n’obtiendra pas la norme et les attributs utilisateur précédents dans le fichier CSV lorsque vous sélectionnez <b>CSV Export User Data (Exportation CSV des données utilisateur)</b>. </li> </ul> {:/} | |
 | Groupe de test interne | L’utilisateur n’aura pas accès aux attributs standards précédents d’un utilisateur ajouté au groupe de test interne. | |
 | Journal des activités du message | L’utilisateur n’aura pas accès aux attributs standards précédents pour les utilisateurs identifiés dans le journal d’activité de message. | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

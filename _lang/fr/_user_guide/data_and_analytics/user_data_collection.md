@@ -2,12 +2,12 @@
 nav_title: Collecte de données utilisateur
 article_title: Collecte de données utilisateur
 page_order: 3.5
-layout: featured
+layout: dev_guide
 guide_top_header: "Collecte de données utilisateur"
 guide_top_text: "Avant de terminer votre implémentation de Braze, assurez-vous que vos équipes marketing et développement soient bien sur la même longueur d’onde concernant vos objectifs marketing. Lorsque vous décidez de ce que vous voulez suivre et de la façon dont vous voulez le suivre avec Braze, il est utile d’envisager ces objectifs d’abord et de travailler à rebours ensuite en partant des objectifs."
 
 page_type: landing
-description: "Cette page d’accueil contient des articles sur la collecte de données utilisateur. Ici, vous pouvez trouver des ressources sur l’importation d’utilisateurs, le cycle de vie du profil de l'utilisateur, les cas d’utilisation, etc."
+description: "Cette page d’accueil contient des articles sur la collecte de données utilisateur. Ici, vous pouvez trouver des ressources sur les définitions de l’archivage, l’importation d’utilisateurs, le cycle de vie du profil de l'utilisateur, les cas d’utilisation, les bonnes pratiques, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -23,12 +23,15 @@ guide_featured_list:
   - name: Exemple de cas d’utilisation de collecte de données
     link: /docs/user_guide/data_and_analytics/user_data_collection/collection_use_case/
     fa_icon: fas fa-taxi
-  - name: Meilleures pratiques de collecte de données
+  - name: Bonnes pratiques de collecte de données
     link: /docs/user_guide/data_and_analytics/user_data_collection/best_practices/
     fa_icon: fa fa-thumbs-up
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
     fa_icon: fas fa-user
+  - name: Ingestion de données Cloud
+    link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
+    fa_icon: fa-solid fa-cloud
   - name: Codes de langue utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/language_codes/
     fa_icon: fas fa-language

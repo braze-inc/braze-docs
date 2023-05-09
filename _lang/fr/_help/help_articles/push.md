@@ -7,7 +7,7 @@ guide_top_text: "Consultez les articles d’aide suivants pour obtenir de l’ai
 
 page_type: landing
 description: "Cette page d’accueil contient des articles d’aide sur les problèmes courants des messages push."
-channel: notification push
+channel: push
 noindex: true
 guide_menu_title: ""
 guide_menu_list:

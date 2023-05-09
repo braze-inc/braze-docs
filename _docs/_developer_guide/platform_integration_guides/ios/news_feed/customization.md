@@ -2,7 +2,7 @@
 page_order: 1
 nav_title: Customization
 article_title: iOS News Feed Customization
-layout: featured
+layout: dev_guide
 
 platform: iOS
 
@@ -11,7 +11,7 @@ channel:
 
 guide_top_header: "iOS News Feed Customization"
 guide_top_text: ""
-description: "This landing page covers the Braze iOS SDK News Feed customization options. News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the <a href='/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/'>migration guide</a> for more."
+description: "This landing page covers the Braze iOS SDK News Feed customization options such as custom styling and badges."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

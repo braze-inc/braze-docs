@@ -3,13 +3,14 @@ nav_title: Location Tracking
 article_title: Location Tracking
 page_order: 0
 page_type: reference
-description: "This reference article explains how to use location tracking and location targeting in your apps."
+description: "This reference article explains how to use location tracking and location targeting in your apps and which partners support location tracking."
 tool: Location
 search_rank: 2
 ---
+
 # Location tracking
 
-Location collection captures a user's most recent location when the app was opened using GPS location data. You can use this information to segment data based on users who were in a defined location. 
+> Location collection captures a user's most recent location when the app was opened using GPS location data. You can use this information to segment data based on users who were in a defined location. 
 
 ## Enabling location tracking
 
@@ -31,7 +32,7 @@ Refer to [Location targeting][1] for more information on creating a location seg
 
 ## Hard setting the default location attribute
 
-You can also use the [`users/track`][8] endpoint in our API to update the [`current_location`][9] standard attribute. An example is: 
+You can also use the [`users/track` endpoint][8] in our API to update the [`current_location`][9] standard attribute. An example is: 
 ```
 https://[your_braze_rest_endpoint]/users/track
 Content-Type: application/json
@@ -50,20 +51,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 You can also leverage location tracking with some of our partners: 
 
-- [Neura][5]
 - [Radar][6]
 - [Foursquare][7]
 - [Gimbal][10]
 
 ## Frequently asked questions
 
-Check out our [Locations FAQs][11] for answers to frequently asked questions about locations.
+Check out our [Locations FAQ][11] for answers to frequently asked questions about locations.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/
-[5]: {{site.baseurl}}/partners/data_augmentation/contextual_location/neura_actions/
 [6]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
 [7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

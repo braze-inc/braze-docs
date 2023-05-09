@@ -3,7 +3,7 @@ nav_title: Microsoft Azure Blob Storage
 article_title: Microsoft Azure Blob Storage
 page_order: 3
 alias: /partners/microsoft_azure_blob_storage_for_currents/
-description: "This article outlines the partnership between Braze Currents and Microsoft Azure Blog Storage, a massively scalable object storage for unstructured data."
+description: "This reference article outlines the partnership between Braze Currents and Microsoft Azure Blog Storage, a massively scalable object storage for unstructured data."
 page_type: partner
 tool: Currents
 search_tag: Partner
@@ -56,10 +56,8 @@ Provide a name for your Blob Service Container. Other default settings will not 
 
 ![]({% image_buster /assets/img/azure-currents-step-3.png %})
 
-### Step 4: Choose an export method
+### Step 4: Set up Currents
 
-{% tabs %}
-{% tab Currents %}
 In Braze, navigate to **Currents > + Create Current > Azure Blob Data Export** and provide your integration name and contact email.
 
 Next, provide your connection string, container name, and BlobStorage prefix (optional).
@@ -68,17 +66,20 @@ Next, provide your connection string, container name, and BlobStorage prefix (op
 
 Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you would like to export. Once completed, launch your Current.
 
-{% endtab %}
-{% tab Azure data export %}
+### Step 5: Set up Azure data export
+
+The following configures credentials that are used for:
+1. Segment exports through the API
+2. CSV exports (campaign, segment, Canvas user data export via the dashboard)
+3. Engagement reports
+
 In Braze, navigate to **Technology Partners** > **Microsoft Azure** and provide your connection string, Azure storage container name, and Azure storage prefix.
 
 Next, make sure the **Make this the default data export destination** box is checked, this will make sure your exported data is sent to Azure. Once completed, save your integration.
 
 ![The Microsoft Azure data export page in Braze. On this page exist fields for connection string, container name, and prefix.]({% image_buster /assets/img/azure_data_export.png %})
 
-{% endtab %}
-{% endtabs %}
-
 {% alert important %}
 It's important to keep your connection string up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
+

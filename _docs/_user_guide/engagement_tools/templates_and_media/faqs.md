@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: Media Library FAQs
+nav_title: FAQ
+article_title: Media Library FAQ
 page_order: 5
 page_type: FAQ
 tool: Media
@@ -8,7 +8,7 @@ description: "This article provides answers to frequently asked questions about 
 
 ---
 
-# Media library FAQs
+# Frequently asked questions
 
 > This page provides answers to frequently asked questions about the Braze Media Library.
 

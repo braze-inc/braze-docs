@@ -1,20 +1,20 @@
 ---
-nav_title: "POST: User Track"
-article_title: "POST: User Track"
+nav_title: "POST: Track User"
+article_title: "POST: Track User"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the User Track Braze endpoint."
+description: "This article outlines details about the Track user Braze endpoint."
 
 ---
 {% api %}
-# User track
+# Track users
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /users/track
 {% endapimethod %}
 
-Use this endpoint to record custom events, purchases, and update user profile attributes.
+> Use this endpoint to record custom events, purchases, and update user profile attributes.
 
 {% alert note %}
 Braze processes the data passed via API at face value and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#data-points). 
@@ -69,6 +69,91 @@ For each of the request components listed in the following table, one of `extern
   ]
 }
 ```
+
+## Example request for updating a user profile by email address
+
+{% alert important %}
+Updating a user profile by email address with this endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
+Using the `/users/track` endpoint, you can update a user profile by email address. You'll need to generate an API key with `users.track` permissions to use this endpoint.
+
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+    "attributes": [
+        {
+            "email": "test@braze.com",
+            "string_attribute": "fruit",
+            "boolean_attribute_1": true,
+            "integer_attribute": 25,
+            "array_attribute": [
+                "banana",
+                "apple"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "email": "test@braze.com",
+            "app_id": "your_app_identifier",
+            "name": "rented_movie",
+            "time": "2022-12-06T19:20:45+01:00",
+            "properties": {
+                "release": {
+                    "studio": "FilmStudio",
+                    "year": "2022"
+                },
+                "cast": [
+                    {
+                        "name": "Actor1"
+                    },
+                    {
+                        "name": "Actor2"
+                    }
+                ]
+            }
+        },
+        {
+            "user_alias": {
+                "alias_name": "device123",
+                "alias_label": "my_device_identifier"
+            },
+            "app_id": "your_app_identifier",
+            "name": "rented_movie",
+            "time": "2013-07-16T19:20:50+01:00"
+        }
+    ],
+    "purchases": [
+        {
+            "email": "test@braze.com",
+            "app_id": "your_app_identifier",
+            "product_id": "product_name",
+            "currency": "USD",
+            "price": 12.12,
+            "quantity": 6,
+            "time": "2017-05-12T18:47:12Z",
+            "properties": {
+                "color": "red",
+                "monogram": "ABC",
+                "checkout_duration": 180,
+                "size": "Large",
+                "brand": "Backpack Locker"
+            }
+        }
+    ]
+}`
+```
+
+### Frequently asked questions
+
+#### What happens when multiple profiles with the same email address are found?
+If the `external_id` exists, the most recently updated profile with an external ID will be prioritized for updates. If the `external_id` doesn't exist, the most recently updated profile will be prioritized for updates.
+
+#### What happens if no profile with the email address currently exists?
+A new profile will be created and an email-only user will be created. An alias will not be created. The email field will be set to test@braze.com, as noted in the example request for updating a user profile by email address.
 
 ## Example request
 ```
@@ -225,16 +310,7 @@ If your message has a fatal error, you will receive the following response:
 
 ### Fatal error response codes
 
-The following status codes and associated error messages will be returned if your request encounters a fatal error. The following error codes indicate that no data will be processed.
-
-| Error Code | Reason / Cause |
-| ---------------------| --------------- |
-| `400 Bad Request` | Bad Syntax. |
-| `401 Unauthorized` | Unknown or missing REST API Key. |
-| `404 Not Found` | Unknown REST API Key (if provided). |
-| `429 Rate Limited` | Over rate limit. |
-| `5XX` | Internal server error, you should retry with exponential backoff. |
-{: .reset-td-br-1 .reset-td-br-2}
+For status codes and associated error messages that will be returned if your request encounters a fatal error, reference [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user". For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
 

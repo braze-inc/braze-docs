@@ -15,26 +15,28 @@ description: "Cet article présente en détail l’endpoint Braze Créer un cata
 /catalogs
 {% endapimethod %}
 
-Utilisez cet endpoint pour créer un catalogue.
+> Utilisez cet endpoint pour créer un catalogue.
 
-## Limites de débit
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#af9f3e2d-b7e7-49e7-aa64-f4652892be6e {% endapiref %}
 
-Cet endpoint a une limitation du débit partagée de 5 requêtes par minute entre tous les endpoints synchronisés du catalogue.
+## Limite de débit
+
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalogs` | Requis | Array | Un tableau qui contient des objets de catalogue. Un seul objet de catalogue est autorisé pour cette requête. |
+| `catalogs` | Requis | Tableau | Un tableau qui contient des objets Catalogue. Un seul objet Catalogue est autorisé pour cette requête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Paramètres de l’objet de catalogue
+### Paramètres de l’objet Catalogue
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `name` | Requis | String | Le nom du catalogue que vous voulez créer. |
 | `description` | Requis | String | La description du catalogue que vous voulez créer. |
-| `fields` | Requis | Array | Un array d’objets dans lequel l’objet contient les clés `name` et `type`. |
+| `fields` | Requis | Tableau | Un tableau d’objets dans lequel l’objet contient les clés `name` et `type`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -47,18 +49,18 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
   "catalogs": [
     {
       "name": "restaurants",
-      "description": "Mes restaurants",
+      "description": "My Restaurants",
       "fields": [
         {
           "name": "id",
           "type": "string"
         },
         {
-          "name": "Nom",
+          "name": "Name",
           "type": "string"
         },
         {
-          "name": "Ville",
+          "name": "City",
           "type": "string"
         },
         {
@@ -66,12 +68,16 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
           "type": "string"
         },
         {
-          "name": "Note",
+          "name": "Rating",
           "type": "number"
         },
         {
           "name": "Loyalty_Program",
           "type": "boolean"
+        },
+        {
+          "name": "Location",
+          "type": "object"
         },
         {
           "name": "Created_At",
@@ -85,28 +91,28 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 
 ## Réponse
 
-Deux réponses de code d’état existent pour cet endpoint : `201` et `400`..
+Deux réponses de code de statut existent pour cet endpoint : `201` et `400`.
 
 ### Exemple de réponse réussie
 
-Le code de statut `201` pourrait retourner le corps de réponse suivant.
+Le code de statut `201` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {
   "catalogs": [
     {
-      "description": "Mes restaurants",
+      "description": "My Restaurants",
       "fields": [
         {
           "name": "id",
           "type": "string"
         },
         {
-          "name": "Nom",
+          "name": "Name",
           "type": "string"
         },
         {
-          "name": "Ville",
+          "name": "City",
           "type": "string"
         },
         {
@@ -114,12 +120,16 @@ Le code de statut `201` pourrait retourner le corps de réponse suivant.
           "type": "string"
         },
         {
-          "name": "Note",
+          "name": "Rating",
           "type": "number"
         },
         {
           "name": "Loyalty_Program",
           "type": "boolean"
+        },
+        {
+          "name": "Location",
+          "type": "object"
         },
         {
           "name": "Created_At",
@@ -137,14 +147,14 @@ Le code de statut `201` pourrait retourner le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait retourner le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
   "errors": [
     {
       "id": "catalog-name-already-exists",
-      "message": "Un catalogue avec ce nom existe déjà.",
+      "message": "A catalog with that name already exists",
       "parameters": [
         "name"
       ],
@@ -153,7 +163,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 

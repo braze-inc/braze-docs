@@ -3,15 +3,15 @@ nav_title: Cas d’utilisation de collecte de données
 article_title: Cas d’utilisation de collecte de données
 page_order: 3
 page_type: reference
-description: "Cet article de référence couvre un exemple d’utilisation de collecte de données utilisateur et comment une appli de taxi/co-voiturage pourrait décider des données utilisateur à collecter."
+description: "Cet article de référence couvre un exemple d’utilisation de collecte de données utilisateur, la manière dont une application de partage de trajets peut décider de ce que les données utilisateur peuvent collecter."
 
 ---
 
-# Cas d’utilisation :application de taxi/partage de trajets
+# Cas d’utilisation de collecte de données
 
 > Cet article de référence couvre un exemple d’utilisation de collecte de données utilisateur, la manière dont une application de partage de trajets peut décider de ce que les données utilisateur peuvent collecter.
 
-Dans cet exemple, prenons une application de taxi/partage de trajets (comme Hailo, Uber, Lyft, etc.) qui décide quelles données utilisateur collecter. Le brainstorming et les questions suivantes sont un excellent modèle à suivre pour les équipes de marketing et de développement . À la fin de cet exercice, les deux équipes doivent avoir une solide compréhension des événements et attributs personnalisés qu’elles devraient collecter pour essayer d’atteindre leur objectif.
+Dans cet exemple, prenons une application de taxi/partage de trajets (comme Hailo, Uber, Lyft, etc.) qui décide quelles données utilisateur collecter. Le brainstorming et les questions suivantes sont un excellent modèle à suivre pour les équipes de marketing et de développement. À la fin de cet exercice, les deux équipes doivent avoir une solide compréhension des événements et attributs personnalisés qu’elles devraient collecter pour essayer d’atteindre leur objectif.
 
 ## Question n° 1 : Quel est l’objectif ?
 
@@ -39,7 +39,7 @@ Une fois que les événements ont été définis, vous pouvez maintenant exécut
 4. Envoyer des remises aux utilisateurs qui ont pris de nombreux taxis pour les remercier leur fidélité.
 5. Et beaucoup, beaucoup d’autres.
 
-## Question n° 3 : Quelles autres informations pourrions-nous connaître sur nos utilisateurs qui informeront notre communication ?
+## Question n° 3 : Quelles autres informations pourrions-nous connaître sur nos utilisateurs qui renseigneront nos envois de messages ?
 
 - Ont-ils ou non un crédit promotionnel ?
 - La note moyenne qu’ils donnent à leurs chauffeurs ?
@@ -54,7 +54,7 @@ Ces caractéristiques peuvent ensuite être des tags pour les attributs personna
 L’ajout de ces attributs vous permettrait d’envoyer des campagnes aux utilisateurs pour :
 
 1. Rappeler aux utilisateurs qui n’ont pas utilisé l’application depuis 7 jours que leur compte est éligible pour une remise et qu’ils devraient revenir sur l’appli pour en profiter !
-2. Utilisez nos [fonctionnalités de personnalisation][13] et de création de modèles pour faire glisser l’attribut de code de promotion unique dans le message envoyé aux utilisateurs.
+2. Utilisez nos [fonctionnalités de personnalisation et de modélisation de messages][13] pour faire glisser l’attribut de Promotion Code unique dans la communication envoyée aux utilisateurs.
 
 
 {% alert important %}

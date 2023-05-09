@@ -3,14 +3,14 @@ nav_title: Testing Canvases
 article_title: Testing Canvases
 layout: dev_guide
 guide_top_header: "Testing Canvases"
-guide_top_text: "After you send your Canvas, you should always look at the results to ensure your Canvas went well and will affect your future messaging positively.<br><br> Here you can find resources on Canvas analytics and other reports to help you measure the effectiveness of your messaging."
+guide_top_text: "After you send your Canvas, you should always look at the results to ensure your Canvas went well and will affect your future messaging positively.<br><br> Here, you can find resources on Canvas analytics and other reports to help you measure the effectiveness of your messaging."
 page_order: 4
 
 tool: 
   - Canvas
   - Reports
 page_type: landing
-description: "This landing page is home to resources on Canvas analytics."
+description: "This landing page is home to resources on Canvas testing including articles on sending test Canvases, Canvas analytics, retention reports, and funnel reports."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

@@ -3,13 +3,13 @@ nav_title: "Recipients Object"
 article_title: API Recipients Object
 page_order: 9
 page_type: reference
-description: "This article explains the different components of the Braze Recipients object."
+description: "This reference article explains the different components of the Braze recipients object."
 
 ---
 
-# Recipients object specification
+# Recipients object
 
-The recipients object allows you to request or write information in our endpoints.
+> The recipients object allows you to request or write information in our endpoints.
 
 Either `external_user_id` or `user_alias` is required in this object. **Requests must specify only one.**
 
@@ -25,6 +25,9 @@ The recipients object allows you to combine the [User Alias object]({{site.baseu
   "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties
 }]
 ```
+
+- [User Aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
+- [External User ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 
 ## Recipient object deduping
 

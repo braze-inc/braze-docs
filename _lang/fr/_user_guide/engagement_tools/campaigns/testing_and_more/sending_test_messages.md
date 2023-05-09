@@ -1,9 +1,9 @@
 ---
-nav_title: Envoi des messages de test
+nav_title: Envoyer des messages de test
 article_title: Envoyer des messages de test
 page_order: 0
 tool: 
-  - Campagnes
+  - Campaigns
 page_type: reference
 description: "Le présent article de référence explique comment envoyer des messages de test sur les différents canaux de Braze et comment incorporer des propriétés de l’événement personnalisées ou des attributs utilisateur."
 
@@ -11,13 +11,19 @@ description: "Le présent article de référence explique comment envoyer des me
 
 # Envoyer des messages de test
 
-> Le présent article de référence explique comment envoyer des messages de test sur les différents canaux de Braze et comment incorporer des propriétés de l’événement personnalisées ou des attributs utilisateur.
-
-Avant d’envoyer une campagne de communication à vos utilisateurs, en tant que bonne pratique, vous pouvez la tester pour vous assurer qu’elle semble correcte et fonctionne de la manière prévue. Vous pouvez créer et envoyer des messages de test pour sélectionner des appareils ou des membres de l’équipe à l’aide des outils du tableau de bord.
+> Avant d’envoyer une campagne de communication à vos utilisateurs, en tant que bonne pratique, vous pouvez la tester pour vous assurer qu’elle semble correcte et fonctionne de la manière prévue. Vous pouvez créer et envoyer des messages de test pour sélectionner des appareils ou des membres de l’équipe à l’aide des outils du Tableau de bord de Braze.
 
 {% alert important %}
 Assurez-vous d’enregistrer le brouillon de votre campagne après l’avoir testée pour éviter de la supprimer. Vous pouvez envoyer des messages de test sans enregistrer le message comme brouillon.
 {% endalert %}
+
+## Identifier vos utilisateurs test
+
+Avant de tester votre campagne de communication, il est important d’identifier vos utilisateurs test. Ces utilisateurs peuvent être soit des ID utilisateur ou des adresses e-mail existants, soit de nouveaux utilisateurs qui sont utilisés exclusivement pour tester les campagnes de communication. 
+
+### Créer un groupe interne
+
+Vous pouvez également mieux organiser vos utilisateurs test en créant un [Groupe de tests de contenu]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), qui comprend un groupe d’utilisateurs qui recevront des messages test des campagnes. De cette façon, vous pouvez ajouter ce groupe de tests dans le champ **Add Content Test Groups (Ajouter des groupes de tests de contenu)** sous **Test Recipients (Destinataires de test)** dans votre campagne, et lancer vos tests sans créer ou ajouter des utilisateurs test individuels.
 
 ## Envoyer un test spécifique à un canal
 
@@ -39,7 +45,7 @@ Après avoir rédigé votre notification push mobile, sélectionnez l’onglet *
 
 ![Test de notification push]({% image_buster /assets/img_archive/testpush.png %})
 
-#### Notification push Web
+#### Push Web
 
 Après avoir créé votre notification push Web, sélectionnez l’onglet **Paramètres**. Cochez **Envoyer le test à moi-même** et cliquez sur **Envoyer un test**.
 
@@ -48,7 +54,7 @@ Après avoir créé votre notification push Web, sélectionnez l’onglet **Para
 Si vous avez déjà accepté des messages de notification push depuis le tableau de bord de Braze, vous verrez la notification push dans le coin de votre écran. Sinon, cliquez sur **Autoriser** lorsque vous y êtes invité et le message va apparaître.
 
 {% endtab %}
-{% tab Messages in-app %}
+{% tab In-App Message %}
 
 Si vous avez les notifications push configurées dans votre application et sur votre appareil de test, vous pouvez envoyer des messages in-app à votre application pour voir à quoi ils ressemblent en temps réel. 
 
@@ -59,7 +65,7 @@ Après avoir rédigé votre message in-app, sélectionnez l’onglet **Tester** 
 Cliquer directement et ouvrir le message de notification push vous enverra à votre application dans laquelle vous pourrez visualiser votre test de message in-app. Notez que la fonctionnalité de test du message in-app dépend du fait que l’utilisateur clique sur une notification push pour le déclencher.
 
 {% endtab %}
-{% tab Carte de contenu %}
+{% tab Content Card %}
 
 Après avoir créé votre carte de contenu, vous pouvez en envoyer une de test à votre application pour voir ce à quoi elle ressemblera en temps réel. Après avoir rédigé votre carte de contenu, sélectionnez l’onglet **Tester** et sélectionnez au moins un groupe de test de contenu ou un utilisateur individuel pour recevoir ce message de test. 
 
@@ -75,15 +81,15 @@ Après avoir créé votre message SMS ou MMS, vous pouvez envoyer un message de 
 {% endtab %}
 {% tab Webhook %}
 
-Après avoir créé votre webhook, vous pouvez effectuer un envoi de test pour vérifier la réponse du webhook. Sélectionnez l’onglet **Tester** et sélectionnez **Envoyer un test** pour envoyer un test à l’URL du webhook fourni. Vous pouvez également sélectionner un utilisateur individuel pour prévisualiser la réponse en tant qu’utilisateur spécifique. 
+Après avoir créé votre webhook, vous pouvez effectuer un envoi de test pour vérifier la réponse du webhook. Sélectionnez l’onglet **Test (Tester)** et sélectionnez **Send Test (Envoyer un test)** pour envoyer un test à l’URL du webhook fourni. Vous pouvez également sélectionner un utilisateur individuel pour prévisualiser la réponse en tant qu’utilisateur spécifique. 
 
 ![Tester une carte de contenu]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
-{% tab Fil d’actualité %}
+{% tab News Feed %}
 
 {% alert note %}
-Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 L’envoi d’un test de carte de fil d’actualité nécessite de configurer un segment d’essai et d’envoyer ensuite une campagne de test.
@@ -96,17 +102,17 @@ Allez à la page **Segments** et créez un nouveau segment. Dans le menu déroul
 
 ![Filtres de test]({% image_buster /assets/img_archive/testmessages1.png %})
 
-Utilisez ces filtres de test pour sélectionner des utilisateurs avec des adresses e-mail spécifiques ou des [ID utilisateur]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/) externes.
+Utilisez ces filtres de test pour sélectionner des utilisateurs avec des adresses e-mail spécifiques ou des [ID utilisateur]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) externes.
 
 ![Options de filtre de test]({% image_buster /assets/img_archive/testmessages2.png %})
 
 Ces filtres ont les options suivantes :
 
-1. **Égal** : recherche l’adresse e-mail exacte ou l’ID utilisateur que vous fournissez. Utilisez cette option si vous souhaitez envoyer les campagnes de test uniquement aux appareils associés à un seul e-mail ou ID utilisateur.
-2. **N’est pas égal** : utilisez cette option si vous souhaitez exclure un e-mail ou un ID utilisateur particulier des campagnes de test.
+1. **Égal à** : recherche l’e-mail ou l’ID utilisateur exact que vous fournissez. Utilisez cette option si vous souhaitez envoyer les campagnes de test uniquement aux appareils associés à un seul e-mail ou ID utilisateur.
+2. **N’est pas égal à** : exclut un e-mail ou un ID utilisateur particulier des campagnes de test.
 3. **Correspond** : trouve les utilisateurs qui ont des adresses e-mail ou des ID d’utilisateur qui correspondent à une partie du terme que vous fournissez. Vous pouvez l’utiliser pour trouver uniquement les utilisateurs disposant d’une adresse « @votresociété.com », ce qui vous permet d’envoyer des messages à tous les membres de votre équipe.
 
-Ces filtres peuvent également être utilisés conjointement pour limiter votre liste d’utilisateurs de test. Par exemple, le segment d’essai peut inclure un filtre d’adresse e-mail qui `matches` à « @braze.com » et un autre filtre qui `does not equal` à « sales@braze.com ». Vous pouvez également sélectionner plusieurs e-mails spécifiques en utilisant l’option `matches` et en séparant les adresses e-mail avec un caractère "\|"(par ex., `matches` "email1@braze.com\|email2@braze.com").
+Ces filtres peuvent également être utilisés conjointement pour limiter votre liste d’utilisateurs de test. Par exemple, le segment d’essai peut inclure un filtre d’adresse e-mail qui `matches` à « @braze.com » et un autre filtre qui `does not equal` à « sales@braze.com ». Vous pouvez également sélectionner plusieurs e-mails spécifiques en utilisant l’option `matches` et en séparant les adresses e-mail avec un caractère « \| » (p. ex., `matches` « email1@braze.com\|email2@braze.com »).
 
 Après avoir ajouté les filtres de test à votre segment d’essai, vérifiez que vous n’avez sélectionné que les utilisateurs désirés en cliquant sur **Aperçu** en haut de l’éditeur de segments ou en exportant les données utilisateur de ce segment en CSV. Pour exporter des données utilisateur du segment, cliquez sur la liste déroulante **Données utilisateur** et sélectionnez **Exporter toutes les données utilisateur en CSV**.
 
@@ -137,7 +143,7 @@ Lorsque vous envoyez un message de test, assurez-vous de choisir soit l’option
 
 ![Tester un message personnalisé][23]{: style="max-width:70%;" }
 
-Si vous sélectionnez un utilisateur existant, saisissez l’ID utilisateur ou l’e-mail d’un utilisateur de l’application spécifique dans le champ de recherche. Utilisez ensuite l’aperçu du tableau de bord pour voir comment votre message s’affiche à cet utilisateur et envoyer un message test à votre appareil qui reflète ce que l’utilisateur verra.
+Si vous sélectionnez un utilisateur existant, saisissez l’ID utilisateur ou l’e-mail de l’utilisateur spécifique dans le champ de recherche. Utilisez ensuite l’aperçu du tableau de bord pour voir comment votre message s’affiche à cet utilisateur et envoyer un message test à votre appareil qui reflète ce que l’utilisateur verra.
 
 ![Sélectionner un utilisateur][24]
 
@@ -163,17 +169,15 @@ Ciblez les utilisateurs comme vous le feriez pour tester à l’aide d’un filt
 
 ![Tester le ciblage d’un message][17]
 
-Accédez à votre application et effectuez l’événement personnalisé et la campagne se déclenchera. Vous devriez voir le message personnalisé avec la propriété de l’événement :
+Accédez à votre application et finalisez l’événement personnalisé. La campagne se déclenchera, et vous devriez voir le message personnalisé avec la propriété de l’événement :
 
 ![Tester l’exemple de message][18]
 
-Sinon, si vous enregistrez des ID utilisateur personnalisés, vous pouvez également tester la campagne en envoyant un message de test personnalisé à vous-même. Après avoir écrit le texte de votre campagne, sélectionnez l’onglet **Test** et choisissez **Utilisateur personnalisé**. Ajoutez la propriété de l’événement personnalisée au bas de la page, ajoutez votre ID utilisateur ou votre adresse e-mail à la boîte supérieure, puis cliquez sur **Envoyer un test**. 
-
-Vous devriez recevoir un message personnalisé avec la propriété.
+Sinon, si vous enregistrez des ID utilisateur personnalisés, vous pouvez également tester la campagne en envoyant un message de test personnalisé à vous-même. Après avoir écrit le texte de votre campagne, sélectionnez l’onglet **Test** et choisissez **Customized User (Utilisateur personnalisé)**. Ajoutez la propriété de l’événement personnalisée au bas de la page, ajoutez votre ID utilisateur ou votre adresse e-mail à la boîte supérieure, puis cliquez sur **Send Test (Envoyer un test)**. Vous devriez recevoir un message personnalisé avec la propriété.
 
 ![Tester en utilisant un utilisateur personnalisé][22]
 
-[7]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#user-preview
+[7]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#user-preview
 [13]: {% image_buster /assets/img_archive/test-push-for-in-app.png %}
 [15]: {% image_buster /assets/img_archive/testeventproperties-compose.png %}
 [16]: {% image_buster /assets/img_archive/testeventproperties-delivery.png %}

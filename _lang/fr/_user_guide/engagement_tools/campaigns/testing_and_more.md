@@ -7,10 +7,10 @@ guide_top_text: "Avant d’envoyer vos campagnes, vous devez toujours tester vos
 page_order: 4
 
 tool: 
-  - Campagnes
+  - Campaigns
   - Rapports
 page_type: landing
-description: "Cette page d’accueil présente des tests et des conseils pour les campagnes. Vous trouverez ici des ressources pour tester les campagnes, telles que l’envoi de messages de test et l’exécution de tests A/B."
+description: "Cette page d’accueil présente des tests et des conseils pour les campagnes. Vous trouverez ici des ressources pour tester les campagnes, telles que l’envoi de messages de test, l’exécution de tests A/B, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -27,12 +27,12 @@ guide_featured_list:
 guide_menu_title: "Articles supplémentaires"
 guide_menu_list:
   - name: Analyse de campagne
-    link: /docs/user_guide/data_and_analytics/your_reports/campaign_analytics/
+    link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
     fa_icon: fas fa-chart-pie
   - name: Rapports de rétention
-    link: /docs/user_guide/data_and_analytics/your_reports/retention_reports/
+    link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
     fa_icon: fas fa-chart-area
-  - name: Rapports d’entonnoir
-    link: /docs/user_guide/data_and_analytics/your_reports/funnel_reports/
+  - name: Rapports d'entonnoir
+    link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
     fa_icon: fas fa-filter
 ---

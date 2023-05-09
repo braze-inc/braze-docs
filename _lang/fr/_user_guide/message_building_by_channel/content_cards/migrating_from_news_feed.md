@@ -2,20 +2,20 @@
 nav_title: Migration du fil d'actualité
 article_title: Migration du fil d'actualité
 page_order: 10
-description: "Les cartes de contenu offrent beaucoup plus de fonctionnalités qui ne sont pas prises en charge par le fil d'actualité de Braze. Le présent article décrit les différences entre ces deux options et donne des conseils pour la migration et l’adoption."
+description: "Cet article de référence fournit des conseils sur la migration du fil d’actualité vers les cartes de contenu Braze."
 channel:
   - cartes de contenu
-  - Fil d’actualité
+  - fil d’actualité
   
 ---
 
 # Migration du fil d'actualité vers les cartes de contenu
 
 {% alert note %}
-Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable.
 {% endalert %}
 
-Passer du fil d'actualité aux cartes de contenu prend du temps, mais l’essayer, c’est l’adopter ! Vous ne pouvez pas migrer automatiquement le contenu du fil d’actualité vers des cartes de contenu. Vous devez intégrer des cartes de contenu à partir de zéro. Mais vu la flexibilité des cartes de contenu, nous sommes sûrs que vous le regretterez pas !
+> Passer du fil d'actualité aux cartes de contenu prend du temps, mais l’essayer, c’est l’adopter ! Vous ne pouvez pas migrer automatiquement le contenu du fil d’actualité vers des cartes de contenu. Vous devez intégrer des cartes de contenu à partir de zéro. Mais vu la flexibilité des cartes de contenu, nous sommes sûrs que vous le regretterez pas !
 
 Contactez votre gestionnaire de compte Braze pour plus d’informations.
 
@@ -30,20 +30,20 @@ Si vous prévoyez de migrer du fil d'actualité vers les cartes de contenu, il e
 
 Le tableau suivant décrit davantage les différences entre les fonctionnalités des fils d’actualités et celles des cartes de contenu :
 
-| Caractéristique | Fil d'actualité | Cartes de contenu |
+| Fonctionnalité | Fil d’actualité | Cartes de contenu |
 |---|---|---|
-| Campagnes multivariées et multicanales | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| Livraison planifiée, par événement et basée sur l’API | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| Messages créés par API | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| Tests A/B | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Fermeture et épinglage des cartes][4] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Analytiques enrichies][3] (par ex., suivi des conversions) | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Disponible dans Canvas][2] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Contenu connecté][5] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| Campagnes multivariées et multicanales | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Pris en charge"></i> |
+| Livraison planifiée, par événement et basée sur l’API | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Pris en charge"></i> |
+| Messages créés par API | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Pris en charge"></i> |
+| Tests A/B | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Pris en charge"></i> |
+| [Fermeture et épinglage des cartes][4] | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Pris en charge"></i> |
+| [Analytiques enrichies][3] (par ex., suivi des conversions) | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Pris en charge"></i> |
+| [Disponible dans Canvas][2] | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Pris en charge"></i> |
+| [Contenu connecté][5] | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Pris en charge"></i> |
 | Personnalisation et segmentation | Modélisé à l’impression | Modélisation à l’envoi ou à la première impression |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3} 
 
-## Implémentation
+## Mise en œuvre
 
 - Les cartes de contenu et le fil d'actualité sont des produits distincts. Une intégration simple pour votre application ou site Internet est nécessaire pour pouvoir utiliser les cartes de contenu.
 - Le cas échéant, les cartes de fil d'actualité existantes devront être migrés manuellement vers les campagnes de carte de contenu lorsque vous ferez la transition.

@@ -40,16 +40,6 @@ In the case of a success, any messages that were not affected by an error in the
 }
 ```
 
-## Queued responses {#messaging-queued}
-
-During times of maintenance, Braze might pause real-time processing of the API. In these situations, the server will return an `HTTP Accepted 202` response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to the [Braze System Status](http://status.braze.com) page ahead of time.
-
-```json
-{
-  "message" : "queued"
-}
-```
-
 ## Responses for tracked send IDs
 
 Analytics are always available for campaigns. In addition, analytics are available for a specific campaign send instance when the campaign is sent as a broadcast. When tracking is available for a specific campaign send instance, you will receive the following response:
@@ -60,7 +50,7 @@ Analytics are always available for campaigns. In addition, analytics are availab
 }
 ```
 
-The provided send id can be used as a parameter for the send/data_series endpoint to pull back send specific analytics.
+The provided send id can be used as a parameter for the `/send/data_series` endpoint to pull back send specific analytics.
 
 ## Errors
 
@@ -68,7 +58,7 @@ The status code element of a server response is a 3-digit number where the first
 
 - The **2XX class** of status code (non-fatal) indicates that **your request** was successfully received, understood, and accepted.
 - The **4XX class** of status code (fatal) indicates a **client error**. Refer to the fatal errors chart for a full list of 4XX error codes and descriptions.
-- The **5XX class** of status code (fatal) indicates a **server error**. There are several potential causes, e.g., the server you’re trying to access is unable to execute the request, the server is undergoing maintenance making it unable to execute the request, or the server is experiencing high levels of traffic. When this happens, we recommend you retry your request with exponential backoff.
+- The **5XX class** of status code (fatal) indicates a **server error**. There are several potential causes, e.g., the server you're trying to access is unable to execute the request, the server is undergoing maintenance making it unable to execute the request, or the server is experiencing high levels of traffic. When this happens, we recommend you retry your request with exponential backoff. In the event of an incident or outage, Braze is not able to replay any REST API call that failed during the incident window. You will need to retry any calls that failed during the incident window.
 
 ### Fatal errors
 
@@ -99,7 +89,7 @@ All of the following error codes indicate that no messages will be sent.
 | `400 Android Push Length Exceeded` | JSON payload is more than 4000 bytes.|
 | `400 Bad Request` | Cannot parse send_at datetime.|
 | `400 Bad Request` | In your request, `in_local_time` is true but `time` has passed in your company’s time zone.|
-| `401 Unauthorized` | Unknown or missing REST API Key.|
+| `401 Unauthorized` | Invalid API Key.|
 | `403 Forbidden` | Rate plan doesn't support or account is otherwise inactivated.|
 | `403 Access Denied` | The REST API Key you are using does not have sufficient permissions, check the API key permissions in the Braze Developer Console.|
 | `404 Not Found` | Unknown REST API Key.|

@@ -12,7 +12,7 @@ description: "This reference article describes the device-level properties captu
 
 # Storage
 
-This article describes the different device-level properties captured when using the Braze Android SDK.
+> This article describes the different device-level properties captured when using the Braze Android SDK.
 
 ## Device properties
 
@@ -29,7 +29,7 @@ By default, Braze will collect the following [device-level properties][1] to all
 * `TIMEZONE`
 
 {% alert note %}
-`AD_TRACKING_ENABLED` and `TIMEZONE` aren't collected if they are `null` or blank. `GOOGLE_ADVERTISING_ID` is not collected automatically by the SDK and must be passed in via `com.appboy.IAppboy.setGoogleAdvertisingId`.
+`AD_TRACKING_ENABLED` and `TIMEZONE` aren't collected if they are `null` or blank. `GOOGLE_ADVERTISING_ID` is not collected automatically by the SDK and must be passed in via [`setGoogleAdvertisingId`][4].
 {% endalert %}
 
 You can disable or specify the properties you wish to collect by setting them using [`BrazeConfig.Builder.setDeviceObjectAllowlistEnabled()`][2] and [`BrazeConfig.Builder.setDeviceObjectAllowlist()`][3].
@@ -44,6 +44,7 @@ By default, all fields are enabled. Note that without some properties, not all f
 
 Visit our [SDK Data Collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/) article to read more about the automatically collected device properties.
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.enums/-device-key/index.html
-[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html
-[3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html
+[2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html
+[3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html

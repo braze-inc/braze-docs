@@ -8,7 +8,7 @@ description: "This article covers how to create a Purchase Prediction within the
 
 # Creating a Purchase Prediction
 
-On the left navigation bar of the Braze dashboard, choose the **Predictions** page. A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions and some basic info about them. Here you can rename, archive, and create new Predictions. Archived Predictions are inactive and do not update user scores. 
+> On the left navigation bar of the Braze dashboard, choose the **Predictions** page. A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions and some basic info about them. Here, you can rename, archive, and create new Predictions. Archived Predictions are inactive and do not update user scores. 
 
 To create a new Prediction, choose **Create Prediction** and select a new **Purchase Prediction**.
 
@@ -46,7 +46,7 @@ The Prediction Audience definition is also used to query historical data to allo
 The Prediction Audience cannot exceed 100 million users.
 {% endalert %}
 
-When the Prediction Window is 14 days or less, the time window for filters that begin with "Last..." like "Last Used App" and "Last Made Purchase" **cannot exceed the Prediction Window specified in Purchase Event Tracking**. For example, if the Prediction Window is set to 14 days, the time window for the “Last...” filters cannot exceed 14 days.
+When the Prediction Window is 14 days or less, the time window for filters that begin with "Last..." like "Last Used App" and "Last Made Purchase" **cannot exceed the Prediction Window specified in Purchase Event Tracking**. For example, if the Prediction Window is set to 14 days, the time window for the "Last..." filters cannot exceed 14 days.
 
 #### Full Filter Mode
 
@@ -54,7 +54,7 @@ In order to build a new Prediction immediately, only a subset of Braze segmentat
 
 ### Step 4: Choose the update frequency
 
-The machine learning model created when you complete this page will be used on a schedule you select here, to generate fresh scores of users’ probability to Purchase. Select the **maximum frequency of updates** that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from Purchasing, set the update frequency to **Weekly** on the day and time of your choosing. 
+The machine learning model created when you complete this page will be used on a schedule you select here, to generate fresh scores of users' probability to Purchase. Select the **maximum frequency of updates** that you'll find useful. For example, if you're going to send a weekly promotion to prevent users from Purchasing, set the update frequency to **Weekly** on the day and time of your choosing. 
 
 {% alert note %}
 Preview and Demo Predictions will never update users' likelihood to Purchase. 

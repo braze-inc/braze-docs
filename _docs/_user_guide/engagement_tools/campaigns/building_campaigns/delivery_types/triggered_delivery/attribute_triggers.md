@@ -10,11 +10,11 @@ tool:
 
 ---
 
-# Attribute triggers overview
+# Attribute triggers
 
-> This reference article gives an overview of attribute triggers and how you can use them to send action-based messages.
+> Attribute triggers allow you to send action-based messages when a user's subscription state or custom attribute values change. 
 
-Attribute triggers allow you to send action-based messages when a user's subscription state or custom attribute values change. Attribute triggers are available for the following scenarios:
+Attribute triggers are available for the following scenarios:
 
 - Subscription state updates.
 - Boolean, integer, string, or date custom attribute values change to any value.
@@ -48,6 +48,8 @@ For example, you may want to only send your welcome SMS when the update comes fr
 
 ### Change custom attribute value
 
+For change attribute, the trigger is evaluated first, then the audience criteria. This differs from the default behavior of audience criteria evaluated first, then trigger. To avoid a race condition, ensure the attribute used as the trigger is not the same as the attribute used to qualify your audience.
+
 #### Any new value option
 
 Use the `Change Custom Attribute Value` trigger with the `any new value` option to target users when a boolean, integer, string or date value changes to any new value.
@@ -70,7 +72,6 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 ```
 {% endraw %}
 
-
 #### Specific value
 
 Use the `Change Custom Attribute Value` trigger with the `specific value` option to target users when a boolean, integer, or string custom attribute changes to a specific value. 
@@ -85,8 +86,6 @@ For example, target users when their loyalty tier changes to the best tier. For 
 - The custom attribute values change trigger will only trigger when the value of a custom attribute changes. If a custom attribute's current value is re-sent to Braze (e.g the value for the favorite color attribute is red, and you resend the value red to Braze), the custom attribute values change trigger will not occur.
 - The custom attribute values change trigger also applies for new users created. 
 {% endalert %}
-
-
 
 [1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
 [2]:{% image_buster /assets/img_archive/any_value.png %}

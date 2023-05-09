@@ -47,7 +47,11 @@ Consultez la section [Canvas Flow](#best-practices) pour y trouver certaines bon
 
 {% endtab %}
 
-{% tab Éditeur Canvas d’origine %}
+{% tab Original Canvas Editor %}
+
+{% alert important %}
+Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
 
 Vous ne pouvez ni éditer ni supprimer des connexions existantes et vous ne pouvez pas non plus insérer un composant entre des étapes connectées existantes. 
 
@@ -60,7 +64,7 @@ Si vous souhaitez modifier ou ajouter des composants aux parcours utilisateurs d
 Si vous mettez à jour les options **Délai** ou **Fenêtre** pour une étape Canvas, seuls les nouveaux utilisateurs accédant au Canvas et les utilisateurs n’ayant pas été mis en file d’attente pour cette étape recevront les messages une fois le délai mis à jour. Si un composant de délai est la dernière étape du Canvas, les utilisateurs atteignant cette étape sont automatiquement sortis du Canvas et ne recevront plus les étapes nouvellement créées. 
 
 {% alert note %}
-Arrêter un Canvas ne fera pas sortir les utilisateurs qui attendent de recevoir un message. Si vous activez à nouveau le Canvas et que des utilisateurs attendent toujours le message, ils le recevront (à moins que le délai dont ils disposent pour l’envoi du message soit écoulé).
+Arrêter un Canvas ne fera pas sortir les utilisateurs qui attendent de recevoir un message. Si vous activez à nouveau le Canvas et que les utilisateurs attendent toujours le message, ils le recevront (à moins que le temps d’envoi du message se soit écoulé, dans ce cas, ils ne le recevront pas).
 {% endalert %}
 
 {% endtab %}
@@ -86,7 +90,7 @@ Concernant les composants de Canvas individuels, vous pouvez éditer les éléme
 * Nom
 * Contenu du message
 * Déclencheurs
-* Public
+* Audience
 * Événements d'exception
 * Délais
 
@@ -94,7 +98,7 @@ Cependant, le type de planification du composant et les pourcentages de contrôl
 
 ### Pourcentages Canvas Variant
 
-Si un pourcentage de variante est modifié dans Canvas, vous pourrez voir que les utilisateurs peuvent être répartis sur d’autres variantes.
+Après le lancement d'un Canvas, vous pouvez uniquement diminuer les pourcentages des variantes de contrôle. Si un pourcentage de variante est modifié dans Canvas, vous pourrez voir que les utilisateurs peuvent être répartis sur d’autres variantes.
 
 Initialement, une variante spécifique est affectée de manière aléatoire à ces utilisateurs, avant qu’ils reçoivent une campagne pour la première fois. À partir de ce moment-là, à chaque réception de campagne (ou lorsque l’utilisateur entre à nouveau une Canvas Variant), ils recevront la même variante à moins que les pourcentages de variante soient modifiés.
 

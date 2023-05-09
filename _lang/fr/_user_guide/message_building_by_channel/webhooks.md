@@ -5,10 +5,10 @@ page_order: 5
 layout: dev_guide
 guide_top_header: "Webhooks"
 guide_top_text: "Les webhook ne sont pas pour tout le monde, mais ils peuvent être utilisés pour presque tout ! Consultez les articles suivants et ayez des envois flexibles."
-description: "Les webhook ne sont pas pour tout le monde, mais ils peuvent être utilisés pour presque tout ! Consultez les articles dont les liens sont ici pour avoir des envois flexibles."
+description: "Cette page d’accueil présente tout ce qui concerne les webhooks. Vous trouverez ici des articles sur la façon de créer des webhooks, des modèles de webhook et des webhooks Braze à Braze."
 channel:
   - Webhooks
-search_rank: 1
+search_rank: 3
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: À propos des webhooks

@@ -4,11 +4,11 @@ article_title: Push Stories for FireOS
 platform: FireOS
 page_order: 6
 page_type: reference
-description: "This page provides resources on Android Push Stories."
+description: "This reference page provides resources on Android Push Stories."
 
 ---
 
-# Push Stories setup for Android
+# Push Stories
 
 No extra integration for Android Push Stories is required. It's built into Braze already! 
 

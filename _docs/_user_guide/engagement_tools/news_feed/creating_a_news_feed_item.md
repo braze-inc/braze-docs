@@ -3,7 +3,7 @@ nav_title: Creating a News Feed Item
 article_title: Creating a News Feed Item
 page_order: 3
 page_type: reference
-description: "This reference article covers how to create a News Feed item. News-Feed items allow you to insert permanent content directly into your app from our web dashboard."
+description: "This reference article covers how to create a News Feed item. News Feed items allow you to insert permanent content directly into your app from our web dashboard."
 channel: news feed
 
 ---
@@ -14,7 +14,7 @@ channel: news feed
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-News Feed items allow you to insert permanent content directly into your app from our web dashboard. Better yet, the News Feed also is targetable to individual segments just like all of our other message types. This means what you see in the feed might be completely different from another individual. The possibilities for the news-feed are nearly limitless.
+> News Feed items allow you to insert permanent content directly into your app from our web dashboard. Better yet, the News Feed also is targetable to individual segments just like all of our other message types. This means what you see in the feed might be completely different from another individual. The possibilities for the news-feed are nearly limitless.
 
 Check out our [case studies][13], [use cases][15], and [best practices][16] to see examples and helpful tips for News Feeds.
 
@@ -61,14 +61,14 @@ Banner cards consist of:
 
 |          Card type         |          Aspect Ratio         | Recommended Image Size | Maximum Image Size |   File Types  |
 |:-----------------------------:|:----------------------:|:------------------:|:-------------:|
-|          Classic         | 1:1 (110 pixels wide minimum) |          500KB         |         1MB        | PNG, JPG, GIF |
-|          Captioned image         | 4:3 (600 pixels wide minimum) |          500KB         |         1MB        | PNG, JPG, GIF |
-|          Banner         | 6:1 (600 pixels wide minimum) |          500KB         |         1MB        | PNG, JPG, GIF |
+|          Classic         | 1:1 (110 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPG, GIF |
+|          Captioned image         | 4:3 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPG, GIF |
+|          Banner         | 6:1 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPG, GIF |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 - PNG files are recommended.
 - A custom image loading library is required to display GIFs on Android. We recommend Glide.
-- Smaller, high-quality images will load faster, so it’s recommended to use the smallest asset possible to achieve your desired output.
+- Smaller, high-quality images will load faster, so it's recommended to use the smallest asset possible to achieve your desired output.
 
 ## Step 2: Add a title, summary, image, and links
 
@@ -84,7 +84,7 @@ Under the News Feed Card editor, you will find options for when to publish this 
 
 ## Step 4: Select a segment
 
-You can configure your News Feed Card to target any [segment][10] you've defined within the dashboard at any schedule you desire. Select your target segment by clicking on the dropdown menu. Here you can see high-level statistics, including email availability and lifetime value per user.
+You can configure your News Feed Card to target any [segment][10] you've defined within the dashboard at any schedule you desire. Select your target segment by clicking on the dropdown menu. Here, you can see high-level statistics, including email availability and lifetime value per user.
 
 ![][11]
 
@@ -115,7 +115,7 @@ You can re-order your cards within Braze's News Feed page.
 [3]: {% image_buster /assets/img_archive/captionedimage.png %}
 [4]: {% image_buster /assets/img_archive/newsfeedbanner.png %}
 [6]: {% image_buster /assets/img_archive/news-feed-title-summary_new.png %}
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-linking-to-app-settings
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
 [8]: {% image_buster /assets/img_archive/newsfeed2_new.png %}
 [10]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [11]: {% image_buster /assets/img_archive/targetsegment_new.png %}

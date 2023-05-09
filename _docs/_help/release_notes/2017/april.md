@@ -14,19 +14,19 @@ We now support interactive in-browser message types including custom HTML and em
 
 ## Personalized in-app message with connected content
 
-We’ve added {% raw %} {%connected_content%} {% endraw %} blocks in triggered in-app messages which allows you to add rich personalization by inserting any information accessible via API directly into your messages. Now, you can use Connected Content inside your app in addition to your push, email and webhooks. Learn more about [Connected Content][34].
+We've added {% raw %} {%connected_content%} {% endraw %} blocks in triggered in-app messages which allows you to add rich personalization by inserting any information accessible via API directly into your messages. Now, you can use Connected Content inside your app in addition to your push, email and webhooks. Learn more about [Connected Content][34].
 
 ## Improved navigation for News Feed cards
 
-We’ve improved the UI for building News Feed cards, making it easier for you to navigate and create your campaigns. Learn more about [News Feed cards][33].
+We've improved the UI for building News Feed cards, making it easier for you to navigate and create your campaigns. Learn more about [News Feed cards][33].
 
 ## Improved preview for iOS rich notifications
 
 Our preview notifications on iOS now display rich notifications giving you a clear view of exactly what you are sending out to your customers, down to the font size. Learn more about [iOS rich notifications][32].
 
-## Added “Influenced Opens” to push statistics
+## Added "Influenced Opens" to push statistics
 
-We’ve added “Influenced Opens” to our list of standard campaign and Canvas statistics offered in Braze, making it easier to know your campaigns breakdown of Influenced, Direct and Total Opens. Learn more about [Influenced Opens][31].
+We've added "Influenced Opens" to our list of standard campaign and Canvas statistics offered in Braze, making it easier to know your campaigns breakdown of Influenced, Direct and Total Opens. Learn more about [Influenced Opens][31].
 
 ## Upgrade to internal groups
 
@@ -48,7 +48,7 @@ We've added a new "Performed Conversion" event and an "In Canvas Control" filter
 [29]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
 [30]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
 [31]: {{site.baseurl}}/user_guide/data_and_analytics/influenced_opens/#influenced-opens
-[32]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications
+[32]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications
 [33]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/#news-feed-cards
 [34]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [48]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/

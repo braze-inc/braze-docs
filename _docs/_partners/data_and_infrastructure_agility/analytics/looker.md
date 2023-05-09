@@ -2,7 +2,7 @@
 nav_title: Looker
 article_title: Looker
 alias: /partners/looker/
-description: "This article outlines the partnership between Braze and Looker, a business intelligence and big-data analytics platform."
+description: "This reference article outlines the partnership between Braze and Looker, a business intelligence and big-data analytics platform."
 page_type: partner
 search_tag: Partner
 
@@ -70,7 +70,7 @@ Only existing users will be flagged. You cannot use pivoted Looks when flagging 
 
 Set up a Braze Looker Action with your Braze REST API key and REST endpoint.
 
-![The Looker Braze configuration page. Here you can find fields for Braze API key and Braze REST API endpoint.][12]
+![The Looker Braze configuration page. Here, you can find fields for Braze API key and Braze REST API endpoint.][12]
 
 #### Step 2: Set up Looker Develop
 
@@ -110,7 +110,7 @@ Note the following limitations:
 
 ##### Sample outgoing API
 
-The following is a sample of an outgoing API call, which will be sent to the [/users/track/][10] endpoint.
+The following is a sample of an outgoing API call, which will be sent to the [`/users/track/` endpoint][10].
 
 ###### Header
 ```

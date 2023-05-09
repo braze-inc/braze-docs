@@ -1,20 +1,22 @@
 ---
 nav_title: FAQ
-article_title: FAQ sur les campagnes
+article_title: FAQ Campagnes
 page_order: 10
 page_type: FAQ
 description: "Le présent article fournit des réponses aux questions fréquemment posées sur les campagnes."
-tool: Campagnes
+tool: Campaigns
 
 ---
 
-# FAQ sur les campagnes
+# FAQ Campagnes
+
+> Cet article fournit des réponses à des questions fréquemment posées sur les campagnes.
 
 ### Comment créer une campagne multicanale ?
 
-Les campagnes multicanales peuvent être créées en sélectionnant **Create Campaign** (Créer une campagne) puis **Multichannel Campaign** (Campagne multicanale) dans le tableau de bord. Une fois dans une campagne multicanale, sélectionnez **Add Messaging Channel** (Ajouter un canal de messagerie) au sein de l’onglet **Compose** (Composer) pour ajouter les canaux souhaités. En cliquant sur les icônes de canal qui apparaissent, vous pouvez basculer entre différents composeurs de messages lorsque vous créez le texte de votre campagne pour les différents canaux.
+Les campagnes multicanal peuvent être créées en sélectionnant **Create Campaign (Créer une campagne)** puis **Multichannel Campaign (Campagne multicanal)** dans le tableau de bord. Une fois dans une campagne multicanal, sélectionnez **Add Messaging Channel (Ajouter un canal de communication)** au sein de l’onglet **Compose (Composer)** pour ajouter les canaux souhaités. En cliquant sur les icônes de canal qui apparaissent, vous pouvez basculer entre différents composeurs de messages lorsque vous créez le texte de votre campagne pour les différents canaux.
 
-### Puis-je ajouter un groupe de contrôle à ma campagne multicanale ?
+### Puis-je ajouter un groupe de contrôle à ma campagne multicanal ?
 
 Non, les groupes de contrôle dans les campagnes sont prévus pour un envoi de messages omnicanal tel que e-mail A versus e-mail B. Vous pouvez essayer à la place d’utiliser [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas) pour tester plusieurs canaux, le contenu de communication et le timing de livraison. 
 
@@ -42,7 +44,7 @@ Si vous avez configuré un [groupe de contrôle global]({{site.baseurl}}/user_gu
 
 ### Qu’est-ce que l’offre de livraison selon le fuseau horaire local ?
 
-La livraison selon le fuseau horaire local vous permet de livrer des campagnes de messagerie à un segment en fonction du fuseau horaire individuel d’un utilisateur. Sans la livraison selon le fuseau horaire local, les campagnes seront planifiées en fonction des paramètres de fuseau horaire de votre société dans Braze. 
+La livraison selon le fuseau horaire local vous permet de livrer des campagnes de communication à un segment en fonction du fuseau horaire individuel d’un utilisateur. Sans la livraison selon le fuseau horaire local, les campagnes seront planifiées en fonction des paramètres de fuseau horaire de votre société dans Braze. 
 
 Par exemple, une société basée à Londres qui envoie une campagne à midi atteindra les utilisateurs sur la côte ouest de l’Amérique à 4 h du matin. Si votre application n’est disponible que dans certains pays, cela peut ne pas représenter un risque pour vous, sinon nous vous recommandons vivement d’éviter d’envoyer des notifications push matinales à votre base d’utilisateurs !
 
@@ -97,7 +99,7 @@ La livraison selon un fuseau horaire local peut manquer les utilisateurs de ce s
 
 ### Quels changements puis-je apporter aux campagnes planifiées avant le lancement ?
 
-Lorsque la campagne est planifiée, les modifications touchant autre chose que la composition du message doivent être effectuées avant qu’il ne soit placé dans la file d’attente d’envoi. Comme pour toutes les campagnes, vous ne pouvez pas modifier les événements de conversion après son lancement.
+Lorsque la campagne est planifiée, les modifications touchant autre chose que la composition du message doivent être effectuées avant qu’il ne soit placé dans la file d’attente d’envois. Comme pour toutes les campagnes, vous ne pouvez pas modifier les événements de conversion après son lancement.
 
 ### Quelle est la « zone sécurisée » avant que les messages d’une campagne programmée soient placés en file d’attente ?
 
@@ -125,7 +127,7 @@ Le nombre d’utilisateurs accédant à une campagne peut être différent du no
 
 ### Quelle est la différence entre les options Exportation CSV des données utilisateurs et Exportation CSV des adresses e-mail sur ma page d’analytiques de campagne ?
 
-Sélectionner l’option **Exportation CSV des adresses e-mail** téléchargera uniquement les données des utilisateurs ayant des adresses e-mail. Par exemple, si vous disposez d’un segment de 100 000 utilisateurs, mais que seulement 50 000 de ces utilisateurs ont des adresses e-mail, puis que vous cliquez sur **Exportation CSV des adresses e-mail**, alors vous devez vous attendre à ne voir que 50 000 lignes de données dans le fichier CSV. Comparativement, sélectionner **Exportation CSV des données utilisateurs** exportera toutes les données utilisateur.
+Sélectionner l’option **Exportation CSV des adresses e-mail** téléchargera uniquement les données des utilisateurs ayant des adresses e-mail. Par exemple, si vous disposez d’un segment de 100 000 utilisateurs, mais que seulement 50 000 de ces utilisateurs ont des adresses e-mail, puis que vous cliquez sur **Exportation CSV des adresses e-mail**, alors vous devez vous attendre à ne voir que 50 000 lignes de données dans le fichier CSV. Comparativement, sélectionner **Exportation CSV des données utilisateurs** exportera toutes les données utilisateur.
 
 ### Puis-je rechercher une campagne en utilisant son identifiant API ?
 
@@ -154,7 +156,7 @@ Les campagnes de livraison par événement ou les campagnes déclenchées par é
 
 | Avantages | Inconvénients | 
 | ---- | ---- |
-| • Visibilité des charges utiles JSON à venir sur la plateforme (si l’événement est déclenché par l’utilisateur de test) via la **Journalisation d’activité des messages**<br><br>• Les éléments de personnalisation sont compris dans les propriétés de l’événement personnalisées<br><br>• Les événements personnalisés peuvent être utilisés pour créer des segments d’utilisateurs éligibles pour le message | • Utilise des points de données |
+| • Visibilité des charges utiles JSON à venir sur la plate-forme (si l’événement est déclenché par l’utilisateur de test) via la **Journalisation d’activité des messages**<br><br>• Les éléments de personnalisation sont compris dans les propriétés de l’événement personnalisées<br><br>• Les événements personnalisés peuvent être utilisés pour créer des segments d’utilisateurs éligibles pour le message | • Utilise des points de données |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Déclenchée par API

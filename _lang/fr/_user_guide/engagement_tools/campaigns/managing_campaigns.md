@@ -6,9 +6,9 @@ guide_top_header: "Gérer les campagnes"
 guide_top_text: "Une fois que vous avez lancé votre Campagne, installez-vous confortablement et regardez les données se charger devant vos yeux. Cependant, si vous devez apporter des modifications ou archiver votre campagne ou mettre en place des alertes, reportez-vous aux articles suivants pour obtenir de l’aide."
 page_order: 3
 
-tool: Campagnes
+tool: Campaigns
 page_type: landing
-description: ""
+description: "Cette page d’accueil couvre la gestion des campagnes. Vous trouverez ici des articles sur l’approbation de campagne, sa duplication, les alertes, l’archivage, la modification de votre campagne après le lancement, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

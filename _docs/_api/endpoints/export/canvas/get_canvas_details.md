@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Canvas Details"
-article_title: "GET: Canvas Details"
+nav_title: "GET: Export Canvas Details"
+article_title: "GET: Export Canvas Details"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Canvas Details Endpoint."
+description: "This article outlines details about the Export Canvas details Braze endpoint."
 
 ---
 {% api %}
-# Canvas details endpoint
+# Export Canvas details
 {% apimethod get %}
 /canvas/details
 {% endapimethod %}
 
-Use this endpoint to export metadata about a Canvas, such as the name, time created, current status, and more.
+> Use this endpoint to export metadata about a Canvas, such as the name, time created, current status, and more.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
@@ -24,12 +24,13 @@ Use this endpoint to export metadata about a Canvas, such as the name, time crea
 
 ## Request parameters
 
-| Parameter   | Required | Data Type | Description            |
-| ----------- | -------- | --------- | ---------------------- |
+| Parameter | Required | Data Type | Description |
+| --------- | -------- | --------- | ----------- |
 | `canvas_id` | Required | String | See [Canvas API Identifier]({{site.baseurl}}/api/identifier_types/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
+
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?canvas_id={{canvas_identifier}}' \
@@ -38,6 +39,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 {% endraw %}
 
 ## Response
+
+{% alert note %}
+All Canvas steps have a `next_paths` field, which is an array of `{name, next_step_id}` data. For full steps and Message steps, the `next_step_ids` field will be present, but will not contain data for other Canvas Flow steps.
+{% endalert %}
 
 ```json
 Content-Type: application/json
@@ -69,13 +74,13 @@ Authorization: Bearer YOUR-REST-API-KEY
       "type" (string) the type of Canvas component,
       "id": (string) the API identifier of the step,
       "next_step_ids": (array of strings) IDs for next steps that are full steps or Message steps,
-      "next_paths": {
+      "next_paths": { (array of objects)
       // for Decision Splits, this property should evaluate to "Yes" or "No"
       // for Audience Path and Action Paths, this property should evaluate to the group name
       // for Experiment Paths, this property should evaluate to the path name
       // for other steps, this property should evaluate to "null"
         "name": (string) name the name of step,
-        "next_step_id": (array of strings) IDs for next steps that are full steps or Message steps,
+        "next_step_id": (string) IDs for next steps that are full steps or Message steps,
         }
       "channels": (array of strings) the channels used in step,
       "messages": {

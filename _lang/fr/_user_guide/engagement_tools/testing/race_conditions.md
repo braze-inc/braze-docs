@@ -10,7 +10,9 @@ description: "Cet article aborde les meilleures pratiques à suivre pour éviter
 
 # Conditions de concurrence
 
-Une condition de concurrence est un concept à travers lequel un résultat dépend de la séquence ou du timing d’autres événements. Par exemple, si la séquence d’événements souhaitée est « événement A », puis « événement B », mais que « événement B » arrive parfois en premier, cette situation est connue sous le nom de condition de concurrence.
+> Une condition de concurrence est un concept à travers lequel un résultat dépend de la séquence ou du timing d’autres événements. 
+
+Par exemple, si la séquence d’événements souhaitée est « événement A », puis « événement B », mais que « événement B » arrive parfois en premier, cette situation est connue sous le nom de condition de concurrence.
 
 {% multi_lang_include video.html id="LyJaxDoMtMs" align="right" %}
 
@@ -25,7 +27,7 @@ Cependant, dans certains cas, le deuxième événement se déclenchera d’abord
 
 ## Utiliser plusieurs endpoints API
 
-Si vous utilisez des endpoints API distincts pour créer des utilisateurs et déclencher des campagnes ou Canvas, cela peut également entraîner une condition de concurrence. Lorsque des informations utilisateur sont envoyées à Braze via l’endpoint `users/track`, le traitement de ces informations peut parfois prendre quelques secondes. Par conséquent, lorsque des requêtes sont envoyées aux endpoints `users/track` et [ d’envoi de messages][4] en même temps, il n’est pas actuellement garanti que les informations utilisateur seront mises à jour avant qu’un message ne soit envoyé. Si ces requêtes sont effectuées dans la même requête API, il ne devrait y avoir aucun problème. Notez que si vous envoyez une requête API pour un message planifié, ces requêtes doivent être séparées et un utilisateur doit être créé avant d’envoyer la requête API programmée.
+Si vous utilisez des endpoints API distincts pour créer des utilisateurs et déclencher des campagnes ou Canvas, cela peut également entraîner une condition de concurrence. Lorsque des informations utilisateur sont envoyées à Braze via l’endpoint `users/track`, le traitement de ces informations peut parfois prendre quelques secondes. Par conséquent, lorsque des requêtes sont envoyées aux endpoints `users/track` et [d’envoi de messages][4] en même temps, il n’est pas actuellement garanti que les informations utilisateur seront mises à jour avant qu’un message ne soit envoyé. Si ces requêtes sont effectuées dans la même requête API, il ne devrait y avoir aucun problème. Notez que si vous envoyez une requête API pour un message planifié, ces requêtes doivent être séparées et un utilisateur doit être créé avant d’envoyer la requête API programmée.
 
 {% alert note %}
 Si des attributs et des événements utilisateurs sont envoyés dans la même requête (soit à partir de `users/track`, soit depuis le SDK), Braze traitera alors généralement les attributs avant les événements ou essayer d’envoyer un message.

@@ -6,9 +6,9 @@ page_order: 3
 
 ---
 
-# Predictive Churn Troubleshooting
+# Troubleshooting
 
-> Predictive Churn (and any machine learning model) is only as good as the data available to the model. it also is highly dependent on having certain volumes of data to work with. this means that users may encounter some error messages, or low prediction quality, as they're getting to know this new feature. 
+> Predictive Churn (and any machine learning model) is only as good as the data available to the model. It also is highly dependent on having certain volumes of data to work with. 
 
 ## Potential errors
 
@@ -43,7 +43,7 @@ A Prediction Audience definition cannot exceed 100 million users. If you see a m
 ![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 If your model has a [prediction quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) of 40% or greater, you are in a great place! But if your prediction quality drops to 39% or less, you may need to edit your Churn and Prediction Audience definitions to be more specific or have different time windows. 
 
-If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a prediction quality of greater than 40%, it likely means that the data sent to Braze is not ideal for this use case, that there are not enough users with which to build a model against, or that your product life cycle is longer than our current 30-day lookback window supports. 
+If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a prediction quality of greater than 40%, it likely means that the data sent to Braze is not ideal for this use case, that there are not enough users with which to build a model against, or that your product life cycle is longer than our current 60-day lookback window supports. 
 
 ## Data considerations
 
@@ -51,7 +51,7 @@ The following lists some questions to ask yourself as you set up Predictive Chur
 
 - What high-value actions lead to retention and loyalty?
 - Have you set up custom events that map back to these specific actions? Predictive Churn works with custom events as opposed to custom attributes.
-- Are you thinking in windows of time within which you'll define churn? You can define churn as something that happens in up to 14 days.
+- Are you thinking in windows of time within which you'll define churn? You can define churn as something that happens in up to 60 days.
 - Have you considered times of the year that lead to atypical user behaviors - like holidays. Rapid shifts in consumer behavior will impact your predictions. 
 
 [1]: {% image_buster /assets/img/churn/churn3.png %}

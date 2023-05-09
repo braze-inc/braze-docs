@@ -10,19 +10,19 @@ search_rank: 1
 
 # Configuration initiale du SDK
 
+> Cet article de référence explique comment installer le SDK Braze pour tvOS. L’installation du SDK Braze vous fournira des fonctionnalités d’analyse de base.
+
 {% alert note %}
 Notre SDK tvOS prend actuellement en charge la fonctionnalité d’analyse. Pour ajouter une application tvOS dans votre tableau de bord, ouvrez un [ticket de support]({{site.baseurl}}/braze_support/).
 {% endalert %}
 
-L’installation du SDK Braze vous fournira des fonctionnalités d’analyse de base.
-
-Le SDK Braze pour tvOS doit être installé ou mis à jour à l’aide de [la configuration][apple_initial_setup_1], un gestionnaire de dépendances pour les projets Objective-C et Swift. CocoaPods offre une simplicité supplémentaire pour l’intégration et la mise à jour.
+Le SDK Braze pour tvOS doit être installé ou mis à jour à l’aide de [CocoaPods][apple_initial_setup_1], un gestionnaire de dépendances pour les projets Objective-C et Swift. CocoaPods offre une simplicité supplémentaire pour l’intégration et la mise à jour.
 
 ## Intégration de SDK CocoaPod pour tvOS
 
 ### Étape 1 : Installer CocoaPods
 
-L’installation du SDK via le tvOS [la configuration][apple_initial_setup_1] permet d’automatiser la majorité du processus d’installation pour vous. Avant de lancer ce processus, assurez-vous d’utiliser la [Version Ruby 2.0.0 ][apple_initial_setup_2] ou ultérieure.
+L’installation du SDK via le tvOS [CocoaPod][apple_initial_setup_1] permet d’automatiser la majorité du processus d’installation pour vous. Avant de lancer ce processus, assurez-vous d’utiliser la [Version Ruby 2.0.0][apple_initial_setup_2] ou ultérieure.
 
 Exécutez la commande suivante pour démarrer :
 
@@ -30,10 +30,10 @@ Exécutez la commande suivante pour démarrer :
 $ sudo gem install cocoapods
 ```
 
-- Si vous êtes invité·e à remplacer l’exécutable `rake`, reportez-vous à la rubrique [Démarrage ][apple_initial_setup_3] sur CocoaPods.org pour plus de détails.
-- Si vous avez des questions concernant les CocoaPods, consultez le [guide de résolution des problèmes des CocoaPods.][apple_initial_setup_25].
+- Si vous êtes invité à remplacer l’exécutable `rake`, reportez-vous à la rubrique [Démarrage][apple_initial_setup_3] sur CocoaPods.org pour plus de détails.
+- Si vous avez des questions concernant les CocoaPods, consultez le [guide de résolution des problèmes][apple_initial_setup_25] des CocoaPods.
 
-### Étape 2 : Créer le fichier Podfile
+### Étape 2 : Construction du Podfile
 
 Maintenant que vous avez installé CocoaPods Ruby Gem, vous devez créer un fichier dans votre répertoire de projet Xcode nommé `Podfile`.
 
@@ -90,7 +90,7 @@ import AppboyTVOSKit
 
 Pour plus d’informations sur l’utilisation du code Objective-C dans les projets Swift, consultez la [Documentation des développeurs Apple](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html).
 
-Dans `AppDelegate.swift`, ajoutez l’extrait de code suivant dans votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
+Dans `AppDelegate.swift`, ajoutez l’extrait de code suivant à votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` :
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
@@ -110,10 +110,10 @@ Assurez-vous d’initialiser Braze dans le fil principal de votre application. L
 ### Étape 5 : Spécifiez votre endpoint ou cluster de données personnalisé
 
 {% alert note %}
-Depuis décembre 2019, les endpoints personnalisés ne sont plus distribués, si vous avez un endpoint personnalisé préexistant, vous pouvez continuer à l’utiliser. Pour plus de détails, consultez notre <a href="{{site.baseurl}}/api/basics/#endpoints">liste d’endpoints disponibles</a>.
+À partir de décembre 2019, les endpoints personnalisés ne sont plus fournis. Si vous disposez d’un endpoint personnalisé préexistant, vous pouvez continuer à l’utiliser. Pour plus de détails, consultez notre <a href="{{site.baseurl}}/api/basics/#endpoints">liste d’endpoints disponibles</a>.
 {% endalert %}
 
-Votre représentant Braze aurait déjà dû vous conseiller l’[endpoint adéquat]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
+Votre représentant Braze aurait déjà dû vous conseiller le [bon endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 #### Configuration des endpoints de compilation (recommandée)
 Si vous avez un endpoint personnalisé préexistant :
@@ -136,7 +136,7 @@ Braze devrait maintenant collecter des données depuis votre application et votr
 Pour mettre à jour un Cocoapod, il vous suffit de lancer les commandes suivantes dans votre répertoire de projet :
 
 ```
-mise à jour pod
+pod update
 ```
 
 ## Personnaliser Braze au démarrage
@@ -157,7 +157,7 @@ Dans votre fichier `AppDelegate.m`, au sein de votre méthode `application:didFi
 {% endtab %}
 {% tab swift %}
 
-Dans `AppDelegate.swift`, dans votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` method, ajoutez la méthode Braze suivante :
+Dans `AppDelegate.swift`, au sein de votre méthode `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`, ajoutez la méthode Braze suivante :
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",
@@ -173,14 +173,14 @@ où `appboyOptions` est un `Dictionary` de valeurs de configuration de démarrag
 
 Cette méthode remplacera la méthode d’initialisation `startWithApiKey:inApplication:withLaunchOptions:` et sera employée avec les paramètres suivants :
 
-- `YOUR-API-KEY`: La clé API de votre application est présente sous **Gérer les paramètres** dans le tableau de bord de Braze.
-- `application`: L’application actuelle.
-- `launchOptions`: Les options `NSDictionary` que vous obtenez de `application:didFinishLaunchingWithOptions:`.
-- `appboyOptions`: Un `NSDictionary` facultatif avec les valeurs de configuration de démarrage de Braze.
+- `YOUR-API-KEY` : la clé API de votre application est présente sous **Manage Settings (Gérer les paramètres)** dans le tableau de bord de Braze.
+- `application` : l’application actuelle.
+- `launchOptions` : les options `NSDictionary` que vous obtenez de `application:didFinishLaunchingWithOptions:`.
+- `appboyOptions` : un `NSDictionary` facultatif avec les valeurs de configuration de démarrage de Braze.
 
 Consultez [Appboy.h][apple_initial_setup_5] pour obtenir une liste des touches de démarrage Braze.
 
-## Valeurs nulles Appboy.sharedInstance() et Swift
+## Nullité Appboy.sharedInstance() et Swift
 Légèrement différent de la pratique courante, le singleton `Appboy.sharedInstance()` est facultatif. Cela est dû au fait que `sharedInstance` est `nil` avant l’appel de `startWithApiKey:`, et qu’il existe des implémentations non standard et non valides dans lesquelles une initialisation retardée peut être utilisée.
 
 Si vous utilisez `startWithApiKey:` dans votre délégation `didFinishLaunchingWithOptions:` avant tout accès à `sharedInstance` d’Appboy (l’implémentation standard), vous pouvez utiliser des chaînages facultatifs, comme `Appboy.sharedInstance()?.changeUser("testUser")`, pour éviter des vérifications fastidieuses. Il y aura parité avec une implémentation Objective-C qui a supposé un `sharedInstance` non nul.
@@ -193,7 +193,7 @@ Vous pouvez également intégrer notre SDK tvOS manuellement -il suffit de saisi
 Voir notre [Documentation iOS][3] pour plus d’informations sur la définition des identifiants utilisateur, la journalisation des événements personnalisés et la définition des attributs utilisateur. Nous vous recommandons également de vous familiariser avec nos [conventions de dénomination des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 [1]: https://github.com/appboy/appboy-ios-sdk
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
 [support]: {{site.baseurl}}/braze_support/
 [apple_initial_setup_1]: http://cocoapods.org/
 [apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/

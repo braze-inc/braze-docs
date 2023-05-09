@@ -9,20 +9,24 @@ description: "This article outlines details about the Update a preference center
 
 ---
 {% api %}
-# Update a preference center
+# Update preference center
 {% apimethod put %}
-/preference_center/v1/{preferenceCenterExternalId}
+/preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-Use this endpoint to update a preference center.
-
-{% alert important %}
-Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
+> Use this endpoint to update a preference center.
 
 ## Rate limit
 
 This endpoint has a rate limit of 10 requests per minute, per app group.
+
+## Path parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 
 ## Request body
 
@@ -36,7 +40,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   "name": "preference_center_name",
   "preference_center_title": "string",
   "preference_center_page_html": "string",
-  "confirmation_page_html": "string"
+  "confirmation_page_html": "string",
+  "options": {
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+  }
 }
 ```
 
@@ -48,9 +55,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_title`| Optional | String | The title for the preference center and confirmation pages. If a title is not specified, the title of the pages will default to "Preference Center". |
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 |`state` | Optional | String | Choose `active` or `draft`.|
+|`options` | Optional | Object | Attributes: `meta-viewport-content`. When present, a `viewport` meta tag will be added to the page with `content= <value of attribute>`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request example
+## Example request
+
 {% raw %}
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/v1/{preferenceCenterExternalId}' \
@@ -67,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
 ```
 {% endraw %}
 
-## Response example
+## Example response
 {% raw %}
 ```
 {

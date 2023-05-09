@@ -9,7 +9,7 @@ description: "This article contains release notes for May 2021."
 
 ## iOS push advanced implementation guide
 
-This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress-based push), accompanying code snippets, and guidance on logging analytics. Check out the [iOS push advanced implementation guide](/docs/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/) to learn more.
+This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress-based push), accompanying code snippets, and guidance on logging analytics. Check out the [iOS push advanced implementation guide](/docs/developer_guide/platform_integration_guides/swift/push_notifications/implementation_guide/) to learn more.
 
 ## VFC support for multimedia message service (MMS)
 
@@ -38,4 +38,4 @@ The [Airbridge and Braze integration]({{site.baseurl}}/partners/message_orchestr
 
 ## Phrasee - A/B testing
 
-Braze customer engagement develops relationships through multichannel marketing. Working together with [Phrasee]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/), Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee’s deep learning engine handles the testing, monitors the results, and generates new language based on what it’s learned. 
+Braze customer engagement develops relationships through multichannel marketing. Working together with [Phrasee]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/), Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee's deep learning engine handles the testing, monitors the results, and generates new language based on what it's learned. 

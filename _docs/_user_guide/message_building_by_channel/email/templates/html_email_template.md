@@ -1,7 +1,7 @@
 ---
-nav_title: Uploading an Email Template
+nav_title: Uploading an HTML Email Template
 article_title: Uploading an HTML Email Template
-page_order: 2.1
+page_order: 2
 description: "This reference article covers how to create, manage, and troubleshoot an HTML email template using the Braze dashboard."
 tool:
   - Templates
@@ -12,9 +12,7 @@ channel:
 
 # Uploading an HTML email template
 
-> This article covers creating, managing, and troubleshooting HTML email templates in the Braze dashboard.
-
-The Braze dashboard allows you to upload your very own HTML email templates and save them for later use in campaigns. You can also [create an email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) using our editor.
+> The Braze dashboard allows you to upload your very own HTML email templates and save them for later use in campaigns. You can also [create an email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) using our editor.
 
 ## Prerequisites {#upload-requirements}
 
@@ -46,11 +44,11 @@ There are several email error messages you may receive when uploading an HTML te
 
 | Error | Fix |
 |------|---|
-|.zip over 5MB| Reduce your file size and try uploading again.|
+|.zip over 5&nbsp;MB| Reduce your file size and try uploading again.|
 |.zip corrupt| Inspect your file and try uploading again. |
 |Missing HTML| Add the HTML file to your ZIP file and try uploading again.|
 |Multiple HTML| Remove one of the HTML files and try uploading again.|
-|Images over 5MB| Reduce the number of images and try uploading again. |
+|Images over 5&nbsp;MB| Reduce the number of images and try uploading again. |
 |Extra Images| You may have additional images in your file that are not referenced in your HTML file. This will not cause a fail error, but the extra images will be discarded. If those images were supposed to be referenced in the HTML file, then check the content, correct any errors, and try uploading again.
 |Missing Images| If there are images referenced in your HTML file, but those images are not included in the image folder of the ZIP file, you will receive a file error. Inspect your file and correct any errors (like misspellings), or add the missing images to your ZIP file and try uploading again.|
 {: .reset-td-br-1 .reset-td-br-2}
@@ -73,9 +71,9 @@ To use your email for an API campaign, you need the `email_template_id`, which c
 
 You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
-## FAQs
+## Frequently asked questions
 
-For answers to frequently asked questions about email templates, check out our [email and link templates FAQs][10] page.
+For answers to frequently asked questions about email templates, check out our [email and link templates FAQ][10] page.
 
 
 [4]: {% image_buster /assets/img_archive/email_template_id.png %}

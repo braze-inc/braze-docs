@@ -1,15 +1,15 @@
 ---
 nav_title: E-mail
 article_title: E-mail
-page_order: 1
+page_order: 2
 layout: dev_guide
 guide_top_header: "E-mail"
 guide_top_text: "Avec Braze Email, vous pouvez créer des e-mails personnalisés sur mesure dans des campagnes ou dans Canvas pour capter rapidement l’attention de votre utilisateur. Consultez les articles suivants pour en savoir plus."
-description: "Avec Braze Email, vous pouvez créer des messages électroniques personnalisés et personnalisés dans des campagnes ou dans Canvas pour capter rapidement l’attention de votre utilisateur. Consultez les articles suivants pour en savoir plus."
+description: "Cette page d’accueil contient les informations concernant l’e-mail de Braze. Ici, vous pouvez apprendre à créer une campagne par e-mail, à utiliser l’éditeur Drag & Drop, à gérer les abonnements des utilisateurs, le centre de préférences, etc."
 channel:
-  - E-mail
-search_rank: 1
-guide_featured_title: "Articles populaires"
+  - e-mail
+search_rank: 2
+guide_featured_title: "Articles courants"
 guide_featured_list:
 - name: À propos de l’e-mail
   link: /docs/user_guide/message_building_by_channel/email/about/
@@ -59,7 +59,7 @@ guide_menu_list:
 - name: Glossaire analytique pour l’e-mail
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/
   fa_icon: fas fa-chart-pie
-- name: Meilleures pratiques 
+- name: Bonnes pratiques
   link: /docs/user_guide/message_building_by_channel/email/best_practices/
   fa_icon: fas fa-check-square
 - name: Foire aux questions

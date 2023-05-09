@@ -10,10 +10,7 @@ description: "This reference article discusses the concept of rate limiting and 
 
 # Rate limiting and frequency capping
 
-> This reference article discusses the concept of rate limiting and frequency capping in campaigns, and how you can apply that marketing pressure to improve user experience.
-> <br>
-> <br>
-> We all want our users to have the best experience possible. With rate limiting and frequency capping, you can make sure your users are getting the message they need to, and none of the ones they don't.
+> Rate limiting and frequency capping can be used together to make sure your users are getting the messages they need to, and none of the ones they don't.
 
 ## Rate limiting
 
@@ -52,6 +49,15 @@ Additionally, in the **Target Users** step of your campaign composition, you can
 
 By selecting the max user limit, you can limit the rate at which your users receive notifications on a per-channel basis or globally across all message types.
 
+
+##### Max user cap with optimizations
+
+If you are using an optimization like Winning Variant or Personalized Variant, the campaign will consist of two sends: the initial experiment and the final send. 
+
+To set up a max user cap in this scenario, select **Limit the number of people who will receive this campaign**, then select **In total this campaign should**, and enter an audience limit. Your audience limit will be split up by the percentages shown in the A/B Testing panel. 
+
+If you select **Every time the campaign is scheduled**, those two phases will be separately limited to the number set. This is typically not desirable.
+
 #### Setting a max impression cap
 
 For in-app messages, you can control marketing pressure by setting a maximum number of impressions that will be displayed to your user base, after which Braze will not send down more messages to your users. However, it is important to note that this cap is not exact. New in-app message rules are sent down to an app on session start, meaning that Braze can send an in-app message down to the user before the cap is hit, but by the time the user triggers the message, the cap has now been hit. In this situation, the device will still display the message.
@@ -72,7 +78,7 @@ When sending a multichannel campaign with a speed rate limit, each channel is se
 
 #### Rate limiting and Connected Content retries
 
-When the [Connected Content Retry][19] feature is enabled, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s think again about the 75,000 messages with a 10,000 per minute rate limit. In the first minute, the call fails or is slow and only sends 4,000 messages.
+When the [Connected Content Retry][19] feature is enabled, Braze will retry call failures while respecting the rate limit you set for each resend. Let's think again about the 75,000 messages with a 10,000 per minute rate limit. In the first minute, the call fails or is slow and only sends 4,000 messages.
 
 Instead of attempting to make up for the delay and send the remaining 4,000 messages in the second minute or add it to the 10,000 it is already set to send, Braze will move those 6,000 failed messages to the "back of the queue" and add an additional minute, if necessary, to the total minutes it would take to send your message.
 
@@ -99,7 +105,7 @@ For push campaigns delivering on multiple platforms, the rate limit selected wil
 
 ## Frequency capping
 
-As your user base continues to grow and your messaging scales to include lifecycle, triggered, transactional, and conversion campaigns, it’s important to prevent your notifications from appearing spammy or disruptive. By providing greater control over your users’ experience, frequency capping enables you to create the campaigns you desire without overwhelming your audience.
+As your user base continues to grow and your messaging scales to include lifecycle, triggered, transactional, and conversion campaigns, it's important to prevent your notifications from appearing spammy or disruptive. By providing greater control over your users' experience, frequency capping enables you to create the campaigns you desire without overwhelming your audience.
 
 ### Feature overview {#freq-cap-feat-over}
 
@@ -208,8 +214,8 @@ Consider the following campaigns and frequency capping by tag rule:
 
 **Campaigns**:
 
-- **Campaign A** is a push campaign tagged as `promotional`. It is slated to send at 9:00 AM on Monday.
-- **Campaign B** is a push campaign tagged as `promotional`. It is slated to send at 9:00 AM on Wednesday.
+- **Campaign A** is a push campaign tagged as `promotional`. It is slated to send at 9 am on Monday.
+- **Campaign B** is a push campaign tagged as `promotional`. It is slated to send at 9 am on Wednesday.
 
 **Frequency Capping by Tag Rule:**
 

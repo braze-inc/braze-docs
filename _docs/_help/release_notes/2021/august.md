@@ -10,7 +10,7 @@ description: "This article contains release notes for August 2021."
 
 ## Simple Survey in-app message
 
-Use the new [Simple Survey in-app message template]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they’d like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers.
+Use the new [Simple Survey in-app message template]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers.
 
 ## Liquid use case library
 
@@ -30,8 +30,8 @@ Learn more about SSL at Braze, why SSL is important, and how you can acquire an 
 
 ## Amplitude user profile API endpoints
 
-Amplitude’s User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations. Refer to [Amplitude User Profile API Endpoints]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) to learn more.
+Amplitude's User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations. Refer to [Amplitude User Profile API Endpoints]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) to learn more.
 
 ## Campaign details endpoint 
 
-The [GET: `/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) API endpoint has added a dedicated `message` response for the in-app message channel. Documentation on this can be found [here]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).
+The [`/campaigns/details` endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) has added a dedicated `message` response for the in-app message channel. Documentation on this can be found [here]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).

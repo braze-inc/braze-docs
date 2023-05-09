@@ -10,7 +10,7 @@ tool: Campaigns
 
 # Scheduled delivery
 
-Campaigns sent using time-based scheduled delivery are delivered on specified days.
+> Campaigns sent using time-based scheduled delivery are delivered on specified days.
 
 ![][3]
 
@@ -34,7 +34,7 @@ If you select **Scheduled Delivery** and don't choose to send at user local time
 
 ### Local time zone campaigns
 
-You can deliver the message in users' local time zones so that members of your international audience won't receive a notification at inconvenient times. Local time zone campaigns need to be scheduled 24 hours in advance to ensure that eligible users from all time zones can receive them. Check out [Campaign FAQs][25] to understand how local time zone campaigns work and the associated delivery rules.
+You can deliver the message in users' local time zones so that members of your international audience won't receive a notification at inconvenient times. Local time zone campaigns need to be scheduled 24 hours in advance to ensure that eligible users from all time zones can receive them. Check out [Campaign FAQ][25] to understand how local time zone campaigns work and the associated delivery rules.
 
 Segments targeted with local time zone campaigns should include, at minimum, a 2-day window to incorporate users from all time zones. For instance, if your campaign is scheduled to send in the evening but has just a 1-day window, some users may have fallen out of the segment when their time zone is reached. Examples of filters that create a 2-day window are "last used more than 1 day ago" and "last used less than 3 days ago," or "first purchased more than 7 days ago" and "first purchased less than 9 days ago."
 

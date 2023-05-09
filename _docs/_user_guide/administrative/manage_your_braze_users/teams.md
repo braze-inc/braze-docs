@@ -3,13 +3,13 @@ nav_title: Teams
 article_title: Teams
 page_order: 4
 page_type: reference
-description: "This reference article covers various aspects of Teams in your Braze dashboard, such as creating and archiving teams, or assigning roles."
+description: "This reference article covers how to use Braze teams in the dashboard. Here, you can learn how to create teams, assign roles, and assign tags and filters."
 
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dive-into-braze-teams/869939){: style="float:right;width:120px;border:0;" class="noimgborder"}Teams
 
-Braze admins can group their dashboard users into Teams with varying user roles and permissions. Teams can be set up across customer base location, language, and custom attributes so that members and non-members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools. 
+> Braze admins can group their dashboard users into Teams with varying user roles and permissions. Teams can be set up across customer base location, language, and custom attributes so that members and non-members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools. 
 
 {% multi_lang_include video.html id="UYjKrFcL9sQ" align="right" %}
 
@@ -20,7 +20,7 @@ Go to the **Manage Settings** page, select **Manage Teams**, and click <i class=
 Teams can be used to filter end-users for engagement objects like campaigns, Canvases, Content Cards, segments, and more. See the section in this article on [Assigning tags and filters](#tags-and-filters) to learn more. 
 
 {% alert note %}
-Teams are not available on all Braze contracts. If you’d like to access this feature, reach out to your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
+Teams are not available on all Braze contracts. If you'd like to access this feature, reach out to your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
 {% endalert %}
 
 ![Adding a new team][68]

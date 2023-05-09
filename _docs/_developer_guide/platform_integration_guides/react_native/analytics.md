@@ -3,19 +3,19 @@ nav_title: Analytics
 article_title: Analytics for React Native
 platform: React Native
 page_order: 5
-description: "This article covers how to set up and track basic analytics in the React Native app."
+description: "This article covers how to set up and track basic analytics like session tracking, logging custom events, and more, in the React Native app."
 
 ---
  
-# Analytics
+# React Native Analytics
 
-This article covers how to set up and track basic analytics in your React Native app.
+> This article covers how to set up and track basic analytics in your React Native app.
 
 Before you start, read our [Analytics Overview][0] article to learn more about Braze analytics and what is already tracked by default. We also recommend familiarizing yourself with our [event naming conventions][1].
 
 ## Session tracking
 
-The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. based on the following session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze dashboard.
+The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. based on the following session semantics, our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard.
 
 To set a user ID or start a session, use the `changeUser` method, which takes a user ID parameter.
 
@@ -25,7 +25,7 @@ Braze.changeUser("user_id");
 
 ## Logging custom events
 
-You can record custom events in Braze to learn more about your app’s usage patterns and to segment your users by their actions in the dashboard.
+You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions in the dashboard.
 
 ```javascript
 Braze.logCustomEvent("react_native_custom_event");
@@ -43,7 +43,7 @@ Braze.logCustomEvent("custom_event_with_properties", {
 
 ## Logging custom attributes
 
-Braze provides methods for assigning attributes to users. You’ll be able to filter and segment your users according to these attributes on the dashboard.
+Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 ### Default user attributes
 

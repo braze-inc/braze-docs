@@ -1,142 +1,118 @@
 ---
-nav_title: Aperçu et bonnes pratiques
-article_title: Aperçu et bonnes pratiques de l’ingestion de données cloud
-page_order: 0
+nav_title: CDI pour Redshift
+article_title: Ingestion de données cloud dans Braze pour Redshift
+description: "Cet article de référence couvre l’Ingestion de Données Cloud dans Braze et comment synchroniser les données utilisateur pertinentes avec votre intégration Redshift."
+page_order: 2
 page_type: reference
-description: "Cet article de référence fournit un aperçu de l’ingestion de données cloud ainsi que des bonnes pratiques."
 
 ---
 
-# Ingestion de Données Cloud dans Braze
-
-## Qu’est-ce que l’ingestion de données Cloud ?
-
-L’ingestion de données cloud dans Braze vous permet de configurer une connexion directe entre votre instance Snowflake et Braze pour synchroniser les attributs, les événements et les achats pertinents de l’utilisateur. Une fois synchronisées avec Braze, ces données peuvent être exploitées dans des cas d’utilisation tels que la personnalisation ou la segmentation.
+# Ingestion de données cloud pour Redshift
 
 {% alert important %}
-L’ingestion de données cloud Braze est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+L’ingestion de données cloud Braze pour Redshift est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
 {% endalert %}
 
-### Fonctionnement
+## Paramétrage du produit
 
-Grâce à l’ingestion de données cloud de Braze, vous pouvez mettre en place une intégration entre votre instance Snowflake et le groupe d’apps de Braze pour synchroniser des données de manière récurrente. Cette synchronisation se fait selon la planification que vous déterminez et chaque intégration peut disposer d’une planification différente. Les synchronisations peuvent avoir lieu d’une fois toutes les 15 minutes à une fois par mois. Les clients ayant besoin d’une synchronisation plus fréquente que toutes les 15 minutes peuvent contacter leur gestionnaire du succès des clients ou envisager d’utiliser les appels API REST pour une ingestion de données en temps réel.
+Les nouvelles intégrations d’ingestion de données cloud nécessitent une configuration sur Braze ainsi que dans votre instance Redshift. Suivez ces étapes pour configurer votre intégration :
+1. Assurez-vous que Braze est autorisé à accéder aux tables Redshift que vous souhaitez synchroniser. Braze se connectera à Redshift sur Internet.
+2. Dans votre instance Redshift, paramétrez la ou les tables ou vues que vous voulez synchroniser avec Braze
+3. Créer une nouvelle intégration dans le tableau de bord de Braze
+4. Testez l’intégration et démarrez la synchronisation
 
-Pendant qu’une synchronisation a lieu, Braze se connectera directement à votre instance Snowflake, récupérera toutes les nouvelles données d’un tableau donné et mettra à jour les profils utilisateurs correspondants sur votre tableau de bord de Braze. Chaque fois qu’une synchronisation a lieu, toutes les données mises à jour s’afficheront sur les profils utilisateurs.
+### Paramétrez les tables et les vues
 
-### Qu’est-ce qui est synchronisé
+#### Étape 1 : Configurer le tableau 
 
-Chaque fois qu’une synchronisation a lieu, Braze cherchera les lignes qui n’ont pas déjà été synchronisées. Nous le vérifions en utilisant la colonne `UPDATED_AT` dans votre table ou votre affichage. Chaque ligne dans laquelle `UPDATED_AT` est plus ancien que la dernière synchronisation, la ligne sera sélectionnée et transmise à Braze.
-
-Dans Snowflake, vous ajoutez les utilisateurs et attributs suivants à votre table, en définissant la date `UPDATED_AT` sur la date à laquelle vous ajoutez ces données.
-
-| UPDATED_AT | EXTERNAL_ID | PAYLOAD |
-| --- | --- | --- |
-| `2022-07-19 09:07:23` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
-| `2022-07-19 09:07:23` | `customer_3456` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing"<br>} |
-| `2022-07-19 09:07:23` | `customer_5678` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":true,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
-
-Pendant la prochaine synchronisation planifiée, toutes les lignes possédant un timestamp `UPDATED_AT` plus ancien que le timestamp le plus récent seront synchronisées aux profils utilisateurs de Braze. Les champs seront mis à jour ou ajoutés et vous n’aurez donc pas besoin de synchroniser le profil utilisateur tout entier à chaque fois. Après la synchronisation, les utilisateurs afficheront les nouvelles mises à jour :
-
+De manière optionnelle, définissez une nouvelle base de données et un nouveau schéma pour contenir votre tableau source
 ```json
-{
-  "external_id":"customer_1234",
-  "email":"jane@exaple.com",
-  "attribute_1":"abcdefg",
-  "attribute_2":42,
-  "attribute_3":"2019-07-16T19:20:30+1:00",
-  "attribute_4":false,
-  "attribute_5":"testing"
-}
+CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
+CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
 ```
+Créer un tableau (ou vue) à utiliser pour votre intégration CDI
 ```json
-{
-  "external_id":"customer_3456",
-  "email":"michael@exaple.com",
-  "attribute_1":"abcdefg",
-  "attribute_2":42,
-  "attribute_3":"2019-07-16T19:20:30+1:00",
-  "attribute_4":true,
-  "attribute_5":"testing"
-}
-```
-```json
-{
-  "external_id":"customer_5678",
-  "email":"bob@exaple.com",
-  "attribute_1":"abcdefg",
-  "attribute_2":42,
-  "attribute_3":"2017-08-10T09:20:30+1:00",
-  "attribute_4":true,
-  "attribute_5":"testing_123"
-}
+CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
+   updated_at timestamptz default sysdate,
+   --at least one of external_id, alias_name and alias_label, or braze_id is required
+   external_id varchar,
+   --if using user alias, both alias_name and alias_label are required
+   alias_label varchar,
+   alias_name varchar,
+   --braze_id can only be used to update existing users created through the Braze SDK
+   braze_id varchar,
+   payload varchar(max)
+)
 ```
 
-### Utilisation de points de données
+Vous pouvez donner le nom que vous désirez à la base de données, au schéma et au tableau, mais les noms de colonnes doivent correspondre aux définitions ci-dessus.
 
-Chaque attribut envoyé pour un utilisateur utilisera un point de données. Il dépend de vous de n’envoyer que les données requises. Le suivi de points de données pour l’ingestion de données pour le cloud est équivalent au suivi à l’aide de l’endpoint [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Consultez les [points de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) pour plus d’informations.
+- `UPDATED_AT` : L’heure à laquelle la rangée a été mise à jour ou ajoutée au tableau. Nous ne synchroniserons que les rangées qui ont été ajoutées ou mises à jour depuis la dernière synchronisation.
+- Colonnes d’identifiant utilisateur. Votre tableau peut contenir une ou plusieurs colonnes d’identifiants utilisateur. Chaque ligne ne doit contenir qu’un seul identifiant (soit un `external_id`, la combinaison d’un `alias_name` et d’un `alias_label`, soit un `braze_id`. Une table source peut contenir des colonnes pour un, deux ou les trois types d’identifiants. 
+    - `EXTERNAL_ID` : Ceci identifie l’utilisateur que vous désirez mettre à jour.  Cela doit correspondre à la valeur `external_id` utilisée dans Braze. 
+    - `ALIAS_NAME` et `ALIAS_LABEL` : Ces deux colonnes créent un objet d'alias d'utilisateur. `alias_name` doit être un identifiant unique et `alias_label` spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec différentes étiquettes, mais seulement un `alias_name` par `alias_label`.
+    - `BRAZE_ID` : L’identifiant d’utilisateur Braze. Il est généré par le SDK Braze et les nouveaux utilisateurs ne peuvent pas être créés à l’aide d’un ID Braze via l’ingestion de données cloud. Pour créer de nouveaux utilisateurs, spécifiez un ID utilisateur externe ou un alias utilisateur. 
+- `PAYLOAD` : Il s’agit d’une chaîne de caractères JSON des champs que vous désirez synchroniser à l’utilisateur dans Braze.
+ 
+#### Étape 2 : Créer un utilisateur et attribuer des autorisations 
 
-## Recommandations de paramétrage de données
-
-#### N’écrivez que les attributs nouveaux ou mis à jour pour limiter l’utilisation
-
-Nous synchroniserons tous les attributs dans une ligne donnée, qu’elles soient ou non les mêmes que celles contenues actuellement dans le profil utilisateur. Voilà pourquoi nous recommandons de ne synchroniser que les attributs que vous voulez ajouter ou mettre à jour.
-
-#### Utilisez un timestamp UTC pour la colonne UPDATED_AT
-
-La colonne `UPDATED_AT` doit être en UTC pour éviter les problèmes liés aux heures d’été. Utilisez de préférence des fonctions uniquement en UTC, telles que `SYSDATE()` plutôt que `CURRENT_DATE()` lorsque c’est possible.
-
-#### Séparer EXTERNAL_ID de la colonne PAYLOAD. 
-L’objet PAYLOAD ne doit pas inclure d’identifiant externe ou d’autre type d’identifiant. 
-
-#### Retirer un attribut
-
-Vous pouvez le définir sur 'null' si vous désirez retirer complètement un attribut d’un profil utilisateur. Si vous désirez qu’un attribut reste inchangé, ne l’envoyez pas à Braze jusqu’à ce qu’il ait été mis à jour.
-
-#### Créer une chaîne de caractères JSON depuis une autre table
-
-Si vous préférez stocker de manière interne chaque attribut dans sa propre colonne, vous devez convertir ces colonnes en strings JSON pour renseigner la synchronisation avec Braze. Pour ce faire, vous pouvez utiliser une requête du type :
 ```json
-CREATE TABLE "EXAMPLE_USER_DATA"
-    (attribute_1 string,
-     attribute_2 string,
-     attribute_3 number,
-     my_user_id string);
-
-SELECT
-    CURRENT_TIMESTAMP as UPDATED_AT,
-    my_user_id as EXTERNAL_ID,
-    TO_JSON(
-        OBJECT_CONSTRUCT (
-            'attribute_1',
-            attribute_1,
-            'attribute_2',
-            attribute_2,
-            'yet_another_attribute',
-            attribute_3)
-    )as PAYLOAD FROM "EXAMPLE_DATA";
+CREATE USER braze_user PASSWORD '{password}';
+GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
+GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 ```
 
-#### Utilisation de l’horodatage UPDATED_AT
+Un nombre minimum d’autorisations est requis pour cet utilisateur. Si vous créez plusieurs intégrations CDI, vous devriez donner des autorisations pour un schéma ou les gérer en utilisant un groupe. 
 
-Nous utilisons l’horodatage `UPDATED_AT` pour suivre quelles données ont été synchronisées avec succès dans Braze. Si de nombreuses rangées sont écrites avec le même horodatage pendant qu’une synchronisation est en cours, ceci peut entraîner la synchronisation de données en double dans Braze. Voici quelques conseils pour éviter des données en double :
-- Si vous mettez en place une synchronisation pour une `VIEW`, n’utilisez pas `CURRENT_TIMESTAMP` comme valeur par défaut. Cela entrainera la synchronisation de toutes les données chaque fois qu’elle s’effectue, car le champ `UPDATED_AT` sera mis à jour à chaque exécution de nos requêtes. 
-- Si vous avez des flux de données à très longue durée d’exécution ou des requêtes écrivant des données dans votre table source, évitez de les exécuter en même temps que la synchronisation ou évitez d’utiliser le même horodatage pour chaque ligne insérée.
-- Utilisez une transaction pour écrire toutes les rangées qui ont le même horodatage.
+#### Étape 3 : Autoriser l’accès aux IP de Braze (facultatif) 
 
-#### Exemple de configuration de table
+Si vous avez un pare-feu ou d’autres politiques réseau actives, vous devrez donner accès au réseau de votre instance Redshift à Braze. Autorisez l’accès aux IP ci-dessous correspondant à la région de votre tableau de bord de Braze. 
 
-Nous avons un [GitHub dépôt](https://github.com/braze-inc/braze-examples/tree/main/data-ingestion) public où les clients peuvent partager leurs bonnes pratiques ou leurs extraits de code. Créez une requête d’extraction pour contribuer avec vos propres extraits de code !
+| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | Pour les instances `EU-01` et `EU-02` |
+|---|---|
+| `23.21.118.191`| `52.58.142.242`
+| `34.206.23.173`| `52.29.193.121`
+| `50.16.249.9`| `35.158.29.228`
+| `52.4.160.214`| `18.157.135.97`
+| `54.87.8.34`| `3.123.166.46`
+| `54.156.35.251`| `3.64.27.36`
+| `52.54.89.238`| `3.65.88.25`
+| `18.205.178.15`| `3.68.144.188`
+|   | `3.70.107.88`
 
-## Limites du produit
+### Créer une nouvelle intégration dans le tableau de bord de Braze
 
-| Limitations | Description |
-| --- | --- |
-| Nombre d’intégrations | Le nombre d’intégrations que vous pouvez définir n’est pas limité. Cependant, vous ne pourrez définir qu’une seule intégration par table ou par affichage.
-| Nombre de lignes | Le nombre de lignes que vous pouvez synchroniser n’est pas limité. Chaque ligne ne sera synchronisée qu’une fois, en fonction de la colonne `UPDATED_AT`. |
-| Attributs par ligne | Chaque ligne doit contenir un seul ID utilisateur et un seul objet JSON contenant jusqu’à 50 attributs. Chaque clé dans l’objet JSON compte comme un seul attribut (c.-à-d., un tableau compte comme un attribut). |
-| Type de données | Vous pouvez synchroniser les attributs utilisateurs via l’ingestion de données cloud. |
-| Région Braze | Ce produit est disponible dans toutes les régions Braze. Toutes les régions Braze peuvent se connecter à toutes les régions Snowflake |
-| Région Snowflake | Vous pouvez connecter votre instance Snowflake à Braze dans toutes les régions et tous les clouds en utilisant ce produit. |
-{: .reset-td-br-1 .reset-td-br-2}
+Rendez-vous sur la page Redshift de Braze, dans **.Technology Partners (partenaires technologiques)** et cliquez sur **Create new import sync (Créer une nouvelle synchronisation d’importation)**
 
-<br><br>
+1. **Ajoutez les informations de connexion et le tableau source de Redshift **<br>
+Saisissez les informations de votre entrepôt de données Redshift et du tableau source et passez à l’étape suivante.<br>![][1]<br><br>
+2. **Configurer les détails de la synchronisation**<br>
+Choisissez ensuite un nom pour votre synchronisation et entrez les e-mails de contact. Nous utiliserons ces informations de contact pour vous signaler toute erreur d’intégration (par ex., l’accès au tableau a été supprimé inopinément).<br>![][2]<br><br> Vous choisirez également le type de données et la fréquence de synchronisation. La fréquence peut être définie une fois toutes les 15 minutes jusqu’à une fois par mois. Nous utiliserons le fuseau horaire configuré dans votre tableau de bord de Braze pour planifier la synchronisation récurrente. Les types de données supportés sont Attributs personnalisés, Événements personnalisés, et Événements d’Achat. Le type de données pour une synchronisation ne peut pas être modifié une fois créé. 
+
+### Tester la connexion
+
+Une fois tous les détails de configuration de votre synchronisation saisis, cliquez sur **Test connection (Tester la connexion)**. Si vous avez réussi, vous pourrez voir un aperçu des données. Si, pour une raison quelconque, nous ne pouvons pas nous connecter, nous afficherons un message d’erreur pour vous aider à résoudre le problème.
+
+![][3]
+
+{% alert note %}
+Vous devez avoir testé une intégration avec succès pour qu’elle puisse passer du mode Draft au mode Active. Si vous avez besoin de fermer la page de création, votre intégration sera sauvegardée et vous pourrez revenir à la page Détails pour effectuer des changements et les tester.  
+{% endalert %}
+
+### Définir des intégrations ou des utilisateurs supplémentaires (optionnel)
+
+Vous pouvez également définir plusieurs intégrations avec Braze, mais chaque intégration devra être configurée pour se synchroniser à un tableau différent. Lorsque vous créez des synchronisations supplémentaires, vous pouvez réutiliser des identifiants existants si vous vous connectez au même compte Redshift.
+![][4]
+
+Si vous réutilisez le même utilisateur dans les intégrations, vous ne pourrez pas supprimer l’utilisateur dans le tableau de bord de Braze tant qu’il n’aura pas été supprimé de toutes les synchronisations actives.
+
+### Exécuter la synchronisation
+
+Une fois qu’elle est activée, votre synchronisation s’exécutera selon la planification définie pendant la configuration. Si vous désirez exécuter la synchronisation en dehors des horaires de planification habituels pour tester ou récupérer les données les plus récentes, cliquez sur **Sync Now (Synchroniser maintenant)**. Cette exécution n’aura pas d’impact sur les synchronisations futures et habituelles planifiées. 
+![][5]
+
+[1]: {% image_buster /assets/img/cloud_ingestion/ingestion_6.png %}
+[2]: {% image_buster /assets/img/cloud_ingestion/ingestion_7.png %}
+[3]: {% image_buster /assets/img/cloud_ingestion/ingestion_8.png %}
+[4]: {% image_buster /assets/img/cloud_ingestion/ingestion_9.png %}
+[5]: {% image_buster /assets/img/cloud_ingestion/ingestion_10.png %}

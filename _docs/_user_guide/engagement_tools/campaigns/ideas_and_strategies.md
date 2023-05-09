@@ -8,7 +8,7 @@ page_order: 5
 
 tool: Campaigns
 page_type: landing
-description: "This landing page is home to campaign ideas and strategies. Here you can find articles on topics like localizing, multilanguage options, and retargeting."
+description: "This landing page is home to campaign ideas and strategies. Here, you can find articles on topics like localization, retargeting, best practices, and more."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
@@ -27,11 +27,8 @@ guide_menu_list:
   - name:  Best Practices
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/
     fa_icon: fas fa-bullseye
-  - name: Localizing A Campaign
+  - name: Localization
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/
-    fa_icon: fas fa-street-view
-  - name: Campaigns in Multiple Languages
-    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/
     fa_icon: fas fa-globe
   - name: Install Attribution Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/

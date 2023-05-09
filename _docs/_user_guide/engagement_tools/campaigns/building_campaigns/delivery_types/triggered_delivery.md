@@ -10,7 +10,7 @@ tool: Campaigns
 
 # Action-based delivery
 
-Action-based delivery campaigns or event-triggered campaigns are very effective for transactional or achievement-based messages. Instead of sending your campaign on certain days, you can trigger them to send after a user completes a certain event. The following lists the steps for setting up an event-based schedule:
+> Action-based delivery campaigns or event-triggered campaigns are very effective for transactional or achievement-based messages. Instead of sending your campaign on certain days, you can trigger them to send after a user completes a certain event. 
 
 {% alert important %}
 Action-based delivery is not available for [Canvas components with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). These steps must be scheduled.
@@ -31,6 +31,7 @@ Select a trigger event. This can include any of the following:
 - Performing the exception event for another campaign
 - Adding an email address to a user profile
 - Updating a Subscription Group Status
+- Inbound SMS of WhatsApp message
 
 You can also further filter trigger events through Braze's [custom event properties][32], allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
 

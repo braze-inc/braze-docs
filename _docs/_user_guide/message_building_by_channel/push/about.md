@@ -1,6 +1,6 @@
 ---
-nav_title: "About Push"
-article_title: About Push
+nav_title: "About Push Notifications"
+article_title: About Push notifications
 page_order: 0
 page_type: reference
 description: "This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations."
@@ -11,9 +11,7 @@ channel:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-push){: style="float:right;width:120px;border:0;" class="noimgborder"}About push notifications
 
-> This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations.
-
-Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application. 
+> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application.
 
 Keep in mind that users need to opt-in to push to receive your messages, which means it's a good idea to use in-app messages to explain to your customers why you want to send them push notifications, and how enabling push will benefit them. This process is called [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
 
@@ -23,7 +21,7 @@ To see more examples of push notifications, check out our [Case Studies][8].
 
 ## Potential use cases
 
-Push notifications are a great tool for attracting new users and making re-engagement campaigns. Here are some examples of common push message use cases. 
+Push notifications are a great tool for attracting new users and making re-engagement campaigns. Here are some examples of common push message use cases.
 
 | Use Case | Explanation |
 | -------- | ----------- |
@@ -39,7 +37,7 @@ For more information on re-engaging lapsed users, see our [Quick Wins][23] page 
 
 Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website or app. For detailed steps, refer to our integration guides for each platform:
 
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/)
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/)
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)
 
@@ -61,12 +59,12 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 
 |Google Play Store Policy|
 |---|
-|[Unauthorized Use or Imitation of System Functionality][10] We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app’s integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
+|[Unauthorized Use or Imitation of System Functionality][10] We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app's integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
 {: .reset-td-br-1}
 
 ## Image and text specifications
 
-For best results, refer to the following image size and message length guidelines when crafting your push messages. There may be some variance depending on the presence of an image, the notification state (iOS) and display setting of the user’s device, as well as the size of the device. When in doubt, keep your copy short and sweet.
+For best results, refer to the following image size and message length guidelines when crafting your push messages. There may be some variance depending on the presence of an image, the notification state (iOS) and display setting of the user's device, as well as the size of the device. When in doubt, keep your copy short and sweet.
 
 ### Native mobile push notifications
 
@@ -75,9 +73,9 @@ For best results, refer to the following image size and message length guideline
 
 **Image Type** | **Recommended Image Size** | **Max Image Size** | **File Types**
 --- | --- | --- | ---
-(iOS) 2:1 *Recommended* | 500KB | 5MB | PNG, JPG, GIF
-(Android) Push icon | 500KB | 5MB | PNG, JPG
-(Android) Expanded notification | 500KB | 5MB | PNG, JPG
+(iOS) 2:1 *Recommended* | 500&nbsp;KB | 5&nbsp;MB | PNG, JPG, GIF
+(Android) Push icon | 500&nbsp;KB | 5&nbsp;MB | PNG, JPG
+(Android) Expanded notification | 500&nbsp;KB | 5&nbsp;MB | PNG, JPG
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
@@ -116,17 +114,21 @@ Android (FCM) | 4 KB
 | --- | ---
 Chrome | 192 x 192 ≥
 Firefox | 192 x 192 ≥
-Safari | Icons not configurable on a per-campaign basis
+Safari | 192 x 192 ≥ (Icons are configurable on a per-campaign basis with Safari 16 on macOS 13+)
 Opera | 192x192 ≥
 {: .reset-td-br-1 .reset-td-br-2}
 
 | **Browser** | **Platform** | **Large Image Size**
 | --- | --- | ---
-Chrome | macOS | N/A
-Chrome | Android | 2 : 1 aspect ratio
-Chrome | Windows | 360 ≥ x 240
-Firefox | macOS| N/A
+Chrome | Android | 2:1 aspect ratio
+Firefox | Android | N/A
+Chrome | Windows | 2:1 aspect ratio
+Edge | Windows | 2:1 aspect ratio
+Firefox | Windows | N/A
+Firefox | Windows | 2:1 aspect ratio
 Safari | macOS | N/A
+Chrome | macOS | N/A
+Firefox | macOS | N/A
 Opera | macOS | N/A
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -135,6 +137,12 @@ Opera | macOS | N/A
 
 | **Browser** | **Platform** | **Maximum Title Length**  | **Maximum Message Body Length**
 | --- | --- | --- | ---
+Chrome | Android | 35 | 50
+Firefox | Android | 35 | 50
+Chrome | Windows | 50 | 120
+Edge | Windows | 50 | 120
+Firefox | Windows | 54 | 200
+Opera | Windows | 50 | 120
 Chrome | macOS | 35 | 50
 Safari | macOS | 38 | 84
 Firefox | macOS | 38 | 42

@@ -11,7 +11,9 @@ tool: Canvas
 
 # Audience Paths 
 
-> Canvas Audience Paths allow you to intuitively filter and segment users on a large scale with strategic priority-based user-groupings. This Canvas component replaces the need to create excessive audience-based full steps, allowing you to combine what might have been 8 full components into one! The Audience Paths component will help you simplify user targeting while clearing up your Canvases from unnecessary clutter and complexity. 
+> Canvas Audience Paths allow you to intuitively filter and segment users on a large scale with strategic priority-based user-groupings. 
+
+This Canvas component replaces the need to create excessive audience-based full steps, allowing you to combine what might have been 8 full components into one! The Audience Paths component will help you simplify user targeting while clearing up your Canvases from unnecessary clutter and complexity. 
 
 ![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 
@@ -29,7 +31,7 @@ With Audience Paths, you can:
 
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-To create Audience Paths, first add a step to your Canvas. For Canvas Flow, drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Audience Paths**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Audience Paths**.
+To create Audience Paths, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Audience Paths**.
 
 In the default Audience Paths component show to the right, there are already two default audience groups, **Group 1** and **Everybody Else**. The Everybody Else group includes any user who does not fall into a defined audience group. This group will always be ranked last.
 <br><br><br>
@@ -45,6 +47,12 @@ For example, if you wanted to send a group of users helpful food recommendations
 Once the Audience Paths component has been completed, each audience group will have a separate branch, allowing you to continue using Audience Paths to further filter your audience as needed, or continue on your Canvas journey with the standard Canvas components. 
 
 ![][4]{: style="max-width:90%;margin-left:15px;"}
+
+### Testing audience groups
+
+After adding segments and filters to your audience, you can test if your audience groups are set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the audience criteria.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
 
 ## Using Audience Paths
 

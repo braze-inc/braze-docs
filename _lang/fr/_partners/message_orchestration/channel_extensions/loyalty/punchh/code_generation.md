@@ -2,16 +2,15 @@
 nav_title: Génération de code dynamique
 article_title: Génération de code dynamique Punchh
 page_order: 5
-description: "Cet article décrit comment utiliser la génération de code dynamique Punchh dans Braze."
+description: "Cet article de référence décrit comment utiliser la génération de code dynamique Punchh dans Braze."
 page_type: partner
 search_tag: Partenaire
 
 ---
 
+# Génération de code dynamique
 
-# Génération de code de réduction dynamique Punchh dans Braze
-
-Un code de réduction est un code unique qui peut être utilisé par un seul utilisateur (une seule ou plusieurs utilisations). Le cadre Punchh génère des codes de réduction, qui peuvent être traités dans une application mobile ou au POS.
+> Un code de réduction est un code unique qui peut être utilisé par un seul utilisateur (une seule ou plusieurs utilisations). Le cadre Punchh génère des codes de réduction, qui peuvent être traités dans une application mobile ou au POS.
 
 En utilisant le cadre de réduction Punchh et Braze, les scénarios suivants peuvent être réalisés :
 1. Générez un code de réduction lorsque le client clique sur un lien de génération de réduction dans un e-mail : Le code de réduction sera généré dynamiquement et affiché sur une page Web.
@@ -33,7 +32,7 @@ En utilisant le cadre de réduction Punchh et Braze, les scénarios suivants peu
 La bibliothèque JWT.IO est utilisée pour décoder, vérifier et générer des jetons Web JSON, une méthode ouverte et normalisée selon la norme du secteur RFC 7519 pour représenter en toute sécurité les réclamations entre deux parties. 
 
 Les noms `ClaimType` mentionnés ci-dessous peuvent être utilisés pour garantir la singularité des clients et des réductions.
-- `e-mail` : représente l’adresse e-mail de l’utilisateur. 
+- `email` : représente l’adresse e-mail de l’utilisateur. 
 - `campaign_id` : représente l’ID de campagne Punchh généré par le système. 
 - `first_name` : capture le prénom de l’utilisateur. 
 - `last_name` : capture le nom de famille de l’utilisateur.

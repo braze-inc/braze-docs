@@ -2,7 +2,7 @@
 nav_title: Kubit
 article_title: Kubit
 page_order: 1
-description: "This article outlines the partnership between Braze and Kubit, a no-code, self-service analytics platform that delivers instant product insights."
+description: "This reference article outlines the partnership between Braze and Kubit, a no-code, self-service analytics platform that delivers instant product insights, allowing you to import Kubit user cohorts and target them in the Braze messaging."
 alias: /partners/kubit/
 page_type: partner
 search_tag: Partner
@@ -58,6 +58,6 @@ After importing cohorts to Braze, you can use them as filters to create Braze se
 ![In the Braze segment builder, the user attribute "Kubit cohorts" is set to "includes_value" and shows a list of available cohorts.]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
 
 ## Analyze Braze data in Kubit (optional)
-Take advantage of [Snowflake secure data sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) to share your Braze raw campaign and impression data with Kubit to incorporate them into Kubit’s self-service analytics, providing you a full picture of users’ lifecycle.
+Take advantage of [Snowflake secure data sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) to share your Braze raw campaign and impression data with Kubit to incorporate them into Kubit's self-service analytics, providing you a full picture of users' lifecycle.
 
 For reference, here are all the [Braze fields]({{site.baseurl}}/assets/download_file/data-sharing-raw-table-schemas.txt?ed79384e6ac6a97fe3b3d9f76852b7c2) which are available to be incorporated into Kubit analytics. The details of this step are very customer-specific and require special configurations. Talk to your Kubit account manager or [support@kubit.ai](support@kubit.ai) to learn more.

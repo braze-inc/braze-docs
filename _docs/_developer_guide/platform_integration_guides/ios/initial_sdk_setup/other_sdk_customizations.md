@@ -2,7 +2,7 @@
 nav_title: Other SDK Customizations
 article_title: Other SDK Customizations for iOS
 platform: iOS
-description: "This document covers SDK customizations such as Log Level, IDFA Collection, and other customizations."
+description: "This reference article covers SDK customizations such as log level, IDFA collection, and other customizations."
 page_order: 3
 
 ---
@@ -183,7 +183,7 @@ In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withA
 
 ## Approximate iOS SDK size {#ios-sdk-size}
 
-The approximate iOS SDK framework file size is 30MB, and the approximate .ipa (addition to app file) size is between 1MB and 2MB.
+The approximate iOS SDK framework file size is 30&nbsp;MB, and the approximate .ipa (addition to app file) size is between 1&nbsp;MB and 2&nbsp;MB.
 
 Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` size, per Apple's [recommendations on app sizing][31]. If you are calculating the iOS SDK's size addition to your application, we recommend following [Getting an app size report][31] to compare the size difference in your `.ipa` before and after integrating the Braze iOS SDK. When comparing sizes from the app thinning size report, we also recommend looking at app sizes for thinned `.ipa` files, as universal `.ipa` files will be larger than the binaries downloaded from the App Store and installed onto user devices.
 

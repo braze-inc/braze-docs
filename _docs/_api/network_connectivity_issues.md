@@ -6,7 +6,7 @@ description: "This reference article touches on API connectivity issues and how 
 page_type: reference
 
 ---
-# API connectivity issues
+# API network connectivity issues
 
 > This reference article touches on API connectivity issues and how to troubleshoot them. 
 
@@ -17,7 +17,7 @@ HTTPS/TLS traffic which interferes with connections to Braze's API endpoints. If
 
 Occasionally, iptables setups that filter on SYN/ACK/RST packets can also cause issues, so if you are using iptables on your host you could also whitelist outbound traffic to our CDN providers (Fastly.com) to see if that resolves the issue.
 
-If you are still having network issues with connecting to Braze's API Endpoint, provide an [MTR Test][1] and the results from [Fastly Debug][2]
+If you are still having network issues with connecting to Braze's API endpoint, provide an [MTR Test][1] and the results from [Fastly Debug][2]
 while experiencing an issue and submit that with your support request.
 Note that the test results must be obtained from a server that is having issues connecting to Braze's API endpoint, not from a development machine.  A network capture (tcpdump or .pcap file) will also be helpful if it can be obtained.
 

@@ -7,7 +7,7 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Edit Multiple Catalog Items Braze endpoint."
+description: "This article outlines details about the Edit multiple catalog items Braze endpoint."
 
 ---
 {% api %}
@@ -16,11 +16,15 @@ description: "This article outlines details about the Edit Multiple Catalog Item
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-Use this endpoint to edit multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous.
+> Use this endpoint to edit multiple items in your catalog. 
+
+Each request can support up to 50 items. This endpoint is asynchronous.
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#03f3548e-4139-4f60-812d-7e1a695a738a {% endapiref %}
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints.
+{% multi_lang_include rate_limits.md endpoint='asynchronous catalog item' %}
 
 ## Path parameters
 
@@ -48,6 +52,10 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
       "id": "restaurant1",
       "Name": "Restaurant",
       "Loyalty_Program": false,
+      "Location": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      },
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     },
     {
@@ -112,6 +120,8 @@ The following table lists possible returned errors and their associated troubles
 | `items-too-large` | Item values can't exceed 5,000 characters. |
 | `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
 | `unable-to-coerce-value` | Item types can't be converted. |
+| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

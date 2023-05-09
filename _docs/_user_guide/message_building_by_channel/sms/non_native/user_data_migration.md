@@ -11,7 +11,7 @@ channel:
 
 # User data migration
 
-Let’s run through all the considerations you’ll need to keep in mind when you’re migrating your user data to Braze. 
+> This reference article will run through all the considerations you'll need to keep in mind when you're migrating your user data to Braze. 
 
 ## Format user phone numbers to carrier standards
 
@@ -21,27 +21,27 @@ Phone carriers have a specific type of format they expect called E.164 which is 
 
 ## Adding aliases to the user profiles
 
-Aliases are necessary to be able to capture any custom events or [custom keyword responses][customkeyword]. You will want to set the “alias label” to “phone” and the “alias name” to the user’s phone number.
+Aliases are necessary to be able to capture any custom events or [custom keyword responses][customkeyword]. You will want to set the "alias label" to "phone" and the "alias name" to the user's phone number.
 
 ## Update historical information on users subscription states
 
-If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, be sure to update this information in Braze. 
+If you have any historical information about your user's [subscription states][subscriptionstate] for your various messaging channels, be sure to update this information in Braze. 
 
 ## Example migration steps
 
-Before you begin composing SMS campaigns through Braze, you’ll need to update your user data to ensure that all of this works. 
+Before you begin composing SMS campaigns through Braze, you'll need to update your user data to ensure that all of this works. 
 
 **Here's a quick summary of the user data you'll need to update in Braze:**
 
-1. **Import users' phone numbers in the correct format** ([E.164][0]) formatting requires a '+' and a country code, e.g., +12408884782. For more information on how to import user phone numbers, refer to [user phone numbers][userphone].
-  - Use the [users/track][1] REST API endpoint to assign the `phone` value.<br><br>
+1. **Import users' phone numbers in the correct format** ([E.164][0]) formatting requires a plug sign "+" and a country code (e.g., +12408884782). For more information on how to import user phone numbers, refer to [user phone numbers][userphone].
+  - Use the [`/users/track` endpoint][1] to assign the `phone` value.<br><br>
 
-2. **Add a user alias** to identified user profiles with a user's phone number. The required format for this is alias_label: 'phone' and alias_name: '+12408884782'
-  - Use the [users/alias/new][2] REST API endpoint to assign an alias to existing user profiles.
-  - There are also SDK methods for Aliasing Users [iOS][3] / [Android][4] / [Web][5].<br><br>
+2. **Add a user alias** to identified user profiles with a user's phone number. The required format for this is `alias_label`: 'phone' and `alias_name`: '+12408884782'
+  - Use the [`/users/alias/new` endpoint][2] to assign an alias to existing user profiles.
+  - There are also SDK methods for aliasing users [iOS][3] / [Android][4] / [Web][5].<br><br>
 
 3. **Assign your user's SMS [subscription state][subscriptionstate]** (e.g.,subscribed or unsubscribed) if you have this information.
-  - Use the [subscription/status/set][6] REST API endpoint to set users as subscribed or unsubscribed from your SMS Subscription Group(s).
+  - Use the [`/subscription/status/set` endpoint][6] to set users as subscribed or unsubscribed from your SMS Subscription Groups.
   - Note that once the SMS Subscription Groups have been configured in your dashboard, you'll be able to grab the necessary `subscription_group_id` which you'll need for your API request.
 
 
@@ -49,7 +49,7 @@ Before you begin composing SMS campaigns through Braze, you’ll need to update 
 [userphone]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
 [1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [2]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#aliasing-users
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
 [6]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/

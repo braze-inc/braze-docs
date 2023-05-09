@@ -10,6 +10,8 @@ tool: Location
 
 # Intégrations mobiles
 
+> Cet article de référence aborde les intégrations mobiles nécessaires pour utiliser les geofences.
+
 ## Exigences interplateformes
 
 Des campagnes déclenchées par geofence sont disponibles sur iOS et Android. Pour prendre en charge les geofences, assurez-vous de respecter les points ci-dessous :
@@ -38,7 +40,7 @@ Les utilisateurs reçoivent des notifications déclenchées par geofence après 
 
 ## Foire aux questions
 
-Consultez nos [FAQ sur les geofences][5] pour obtenir des réponses aux questions fréquemment posées sur les geofences.
+Consultez notre [FAQ sur les geofences][5] pour obtenir des réponses aux questions fréquemment posées sur les geofences.
 
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html

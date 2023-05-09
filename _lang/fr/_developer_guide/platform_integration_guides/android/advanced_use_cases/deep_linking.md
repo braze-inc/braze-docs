@@ -9,14 +9,14 @@ description: "Cet article explique comment implémenter le délégué universel 
 
 ---
 
-# Création de liens profonds pour Android
+# Création de liens profonds
 
-Dans le cadre du [processus d’implémentation pour votre Android SDK][1], vous devez configurer la capacité de votre application à utiliser les liens profonds. Cet article présente des exemples supplémentaires pour les cas d’utilisation des liens profonds.
+> Dans le cadre du [processus d’implémentation pour votre Android SDK][1], vous devez configurer la capacité de votre application à utiliser les liens profonds. Cet article présente des exemples supplémentaires pour les cas d’utilisation des liens profonds.
 
-Pour des informations de présentation sur les liens profonds, consultez [l’article ][4] du Guide de l’utilisateur.
+Pour des informations de base sur les liens profonds, consultez notre [article du Guide de l’utilisateur][4].
 
 {% alert note %}
-Cet article contient des informations sur le Fil d’actualité, qui est en cours d’obsolescence. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Cet article comprend des informations sur les fils d’actualité, qui deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 ## Délégué universel de lien profond
@@ -178,7 +178,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 ## Création de liens profonds avec le Fil d’actualité{#Android_Deep_Advance}
 
 {% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 Pour réaliser un lien profond avec le fil d’actualité de Braze à partir d’une notification push, [créez un lien profond personnalisé][1] pour votre activité de fil d'actualité.
@@ -189,8 +189,8 @@ Ensuite, lorsque vous configurez votre campagne de notification push (soit par l
 
 Par défaut, lorsque les liens profonds du site Internet sont ouverts à l’intérieur de l’application par Braze, ils sont gérés par [`BrazeWebViewActivity`][udl-4]. Pour modifier ceci :
 
-**1.**Créez une nouvelle activité qui gère l’URL cible à partir de `Intent.getExtras()` avec la clé `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. Consultez [`BrazeWebViewActivity.java`][udl-8] pour un exemple.<br><br>
-**2.** Ajoutez cette activité à `AndroidManifest.xml` et définissez `exported` sur `false`.
+**1.** Créez une nouvelle activité qui gère l’URL cible de `Intent.getExtras()` avec la clé `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. Consultez [`BrazeWebViewActivity.java`][udl-8] pour un exemple.<br><br>
+**2.** Ajoutez cette activité à `AndroidManifest.xml` et définir `exported` sur `false`.
 
 ```xml
 <activity
@@ -198,7 +198,7 @@ Par défaut, lorsque les liens profonds du site Internet sont ouverts à l’int
     android:exported="false" />
 ```
 
-**3.**Définissez votre activité personnalisée dans un `BrazeConfig`[`Retrait en magasin`][objet générateur][udl-6]. Construisez le générateur et transmettez-le à[`Braze.configure()`][udl-5]  dans votre[`Application.onCreate()`][udl-7]
+**3.** Définissez votre activité personnalisée dans un `BrazeConfig`[objet générateur][udl-6]. Construisez le générateur et transmettez-le à[`Braze.configure()`][udl-5]  dans votre[`Application.onCreate()`][udl-7]
 
 {% tabs %}
 {% tab JAVA %}
@@ -230,11 +230,11 @@ Braze.configure(this, brazeConfig)
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [3]: {{site.baseurl}}/api/endpoints/messaging/
 [4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[udl-1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html
-[udl-2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/-companion/set-braze-deeplink-handler.html
-[udl-3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/index.html
-[udl-4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html
-[udl-5]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721
-[udl-6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html
+[udl-1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html
+[udl-2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/-companion/set-braze-deeplink-handler.html
+[udl-3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/index.html
+[udl-4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html
+[udl-5]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721
+[udl-6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html
 [udl-7]: https://developer.android.com/reference/android/app/Application.html#onCreate()
-[udl-8]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt
+[udl-8]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt

@@ -16,7 +16,7 @@ La fonction Push Story nécessite l’infrastructure `UNNotification` et iOS 10
 
 ## Étape 1 : Activer les notifications push dans votre application
 
-Suivez l’[intégration des notifications push][1] pour activer les notifications push dans votre application.
+Suivez l’[intégration des notifications push][1] pour activer l’application dans votre application.
 
 ## Étape 2 : Ajout de la cible de l’extension de contenu de notification
 
@@ -48,7 +48,7 @@ La fonction de l’historique de notification push nécessite le mode arrière-p
 
 ![][3]
 
-Vous devez également ajouter `Capability App Groups`. Si vous n’avez pas de groupe d’apps dans votre application, allez sur **Capacité** de la cible de l’application principale, activez `App Groups`, et cliquez sur le bouton **+**. Utilisez l’ID de l’ensemble de votre application pour créer le groupe d’apps. Par exemple, si l’ID de l’ensemble de votre application est `com.company.appname`, vous pouvez nommer votre groupe d’apps `group.com.company.appname.xyz`. Vous devez activer le `App Groups` pour les cibles d’extension de contenu et de l’application principale.
+Vous devez également ajouter `Capability App Groups`. Si vous n’avez pas de groupe d’apps dans votre application, allez sur **Capability (fonctionnalité)** de la cible de l’application principale, activez `App Groups`, et cliquez sur le bouton **+**. Utilisez l’ID de l’ensemble de votre application pour créer le groupe d’apps. Par exemple, si l’ID de l’ensemble de votre application est `com.company.appname`, vous pouvez nommer votre groupe d’apps `group.com.company.appname.xyz`. Vous devez activer le `App Groups` pour les cibles d’extension de contenu et de l’application principale.
 
 {% alert important %}
 Dans ce contexte`App Groups`, se réfère aux [Droit des groupes d’apps](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) d’Apple et non à votre ID de groupe d’apps Braze.
@@ -73,7 +73,7 @@ Ajoutez la ligne suivante à votre Podfile :
 ```ruby
 target 'YourContentExtensionTarget' do
   pod 'Appboy-Push-Story'
-fin
+end
 ```
 
 Après avoir mis à jour le Podfile, naviguez jusqu’au répertoire de votre projet d’application Xcode dans votre terminal et exécutez `pod install`.
@@ -88,7 +88,7 @@ Téléchargez les dernières `AppboyPushStory.zip` de la [Page Github](https://g
 ![]({% image_buster /assets/img/ios/push_story/manual1.png %})
 
 {% alert important %}
-Assurez-vous que **Do Not Embed** (Ne pas intégrer) est sélectionné pour **AppboyPushStory.xcframework** sous la colonne **Embed** (Intégrer).
+Assurez-vous que **Do Not Embed (Ne pas intégrer)** est sélectionné pour **AppboyPushStory.xcframework** sous la colonne **Embed (Intégrer)**.
 {% endalert %}
 
 Ajouter l’indicateur `-ObjC` à la `Notification Content Extension` de votre projet dans **Build Settings > Other Linker Flags** (Paramètres de création > Autres indicateurs de lien).
@@ -143,7 +143,7 @@ Dans votre `NotificationViewController.m`, supprimez l’implémentation par dé
 Dans votre `NotificationViewController.swift`, ajoutez la ligne suivante pour importer les fichiers d’en-tête :
 
 ```swift
-importer AppboyPushStory
+import AppboyPushStory
 ```
 
 Puis, supprimez l’implémentation par défaut et ajoutez le code suivant :
@@ -187,7 +187,7 @@ Ensuite, liez le contrôleur de visualisation de notification IBOutlet `storiesV
 
 ![][13]
 
-## Étape 7 : Définissez le plist d’extension de contenu de notification
+## Étape 7 : Définissez la plist d’extension de contenu de notification
 
 Ouvrez le fichier `Info.plist` de `Notification Content Extension` et ajoutez et modifiez les clés suivantes dans `NSExtension \ NSExtensionAttributes` :
 
@@ -230,9 +230,9 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 ##### Option 2 : Info.plist
 
-Sinon, pour configurer le groupe d’applications Push Story de votre fichier `Info.plist`, ajoutez un dictionnaire nommé `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez une sous-entrée de type chaîne de caractères `PushStoryAppGroup` et définissez la valeur sur votre identifiant de groupe d’apps. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
+Sinon, pour configurer le groupe d’applications Push Story de votre fichier `Info.plist`, ajoutez un dictionnaire nommé `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez une sous-entrée de type chaîne de caractères `PushStoryAppGroup` et définissez la valeur sur votre identifiant de groupe d’apps. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
 [2]: {% image_buster /assets/img/ios/push_story/add_content_extension.png %}
 [3]: {% image_buster /assets/img/ios/push_story/enable_background_mode.png %}
 [4]: {% image_buster /assets/img/ios/push_story/add_app_groups.png %}

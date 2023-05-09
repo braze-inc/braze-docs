@@ -1,8 +1,8 @@
 ---
 nav_title: Treasure Data
 article_title: Treasure Data
-page_order: 3.5
-description: "This article outlines the partnership between Braze and Treasure Data, an enterprise customer data platform that allows you to write job results directly to Braze."
+page_order: 12
+description: "This reference article outlines the partnership between Braze and Treasure Data, an enterprise customer data platform that allows you to write job results directly to Braze."
 alias: /partners/treasure_data/
 page_type: partner
 search_tag: Partner
@@ -44,6 +44,10 @@ In the **New Authentication** prompt that shows up, name your connection and pro
 ### Step 2: Define your query
 
 In Treasure Data, navigate to **Queries** under your **Data Workbench** and select a query for which you would like to export data. Run this query to validate the result set.
+
+{% alert note %}
+For users using HIVE to build quieries, HIVE requires that any columns or tables that begin with an underscore be wrapped by backquotes. For example, `_merge_objects`.
+{% endalert %}
 
 Next, select **Export Results** and select an existing integration authentication.
 

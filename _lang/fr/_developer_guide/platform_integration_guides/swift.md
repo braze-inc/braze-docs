@@ -1,5 +1,5 @@
 ---
-nav_title: swift
+nav_title: Swift
 layout: featured
 page_order: 90
 hidden: true
@@ -14,12 +14,12 @@ permalink: /swift/
   - [Intégration de Carthage]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/carthage_integration/)
   - [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/)
   - [Gestionnaire de paquets Swift]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/)
-  - [Manuel]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration_options/)
+  - [Manual (Manuel)]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration_options/)
 - [Terminer l’intégration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/)
 - [Autres personnalisations SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/)
 - [Guide d’intégration SDK (facultatif)]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/ios_sdk_integration/)
 
-## Notifications Push
+## Notifications push
 - [Intégration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/)
 - [Personnalisation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/)
   - [Boutons d’action]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/)
@@ -36,7 +36,7 @@ permalink: /swift/
 - [Test d’unité (facultatif)]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/unit_tests/)
 - [Résolution des problèmes]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/)
 
-## Messagerie In-app
+## Envoi de messages in-app
 - [Overview]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/)
 - [Personnalisation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/)
  - [Définir des délégués]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates/)

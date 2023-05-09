@@ -8,9 +8,9 @@ description: "This page describes initial setup steps for the Braze Roku SDK."
 search_rank: 1
 ---
 
-# Initial Roku SDK integration
+# Initial SDK integration
 
-Installing the Braze Roku SDK will provide you with basic analytics and segmentation functionality.
+> This reference article covers how to install the Braze SDK for Roku. Installing the Braze Roku SDK will provide you with basic analytics and segmentation functionality.
 
 ## Step 1: Add files
 
@@ -42,7 +42,7 @@ config[config_fields.HEARTBEAT_FREQ_IN_SECONDS] = 5
 globalNode.addFields({brazeConfig: config})
 ```
 
-You can find your [SDK Endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) and API key within the Braze dashboard.
+You can find your [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) and API key within the Braze dashboard.
 
 ## Step 4: Initialize Braze
 

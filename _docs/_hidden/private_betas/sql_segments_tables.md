@@ -3,6 +3,7 @@ nav_title: "SQL Segment Extensions Tables"
 permalink: "/sql_segments_tables/"
 hidden: true
 toc_headers: h2
+layout: dev_guide
 ---
 
 <style>
@@ -30,7 +31,7 @@ Table | Description
 [USERS_BEHAVIORS_APP_SESSIONEND_SHARED](#USERS_BEHAVIORS_APP_SESSIONEND_SHARED) | When a user ends a session on an app
 [USERS_BEHAVIORS_APP_SESSIONSTART_SHARED](#USERS_BEHAVIORS_APP_SESSIONSTART_SHARED) | When a user begins a session on an app
 [USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | When a user triggers a geofenced area (e.g., when they enter or exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
-[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | When a user triggers a geofenced area (e.g., when they enter or exit a geofence). This event was received through the dedicated Geofence endpoint, and is therefore received in real-time as soon as a user's device detects that it has triggered a geofence. <br><br>In addition, due to rate limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
+[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | When a user triggers a geofenced area (e.g., when they enter or exit a geofence). This event was received through the dedicated geofence endpoint, and is therefore received in real-time as soon as a user's device detects that it has triggered a geofence. <br><br>In addition, due to rate limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
 [USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED) | When a user is subscribed or unsubscribed globally from a channel such as email
 [USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED) | When a user is subscribed or unsubscribed to or from a subscription group
 [USERS_CAMPAIGNS_ABORT_SHARED](#USERS_CAMPAIGNS_ABORT_SHARED) | An originally scheduled campaign message was aborted for some reason.
@@ -712,7 +713,7 @@ Field | Type | Description
 `sending_ip` | `null,`&nbsp;`string` | IP address from which the email send was made
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 `bounce_reason` | `null,`&nbsp;`string` | [PII] The SMTP reason code and user friendly message received for this bounce event
-`esp` | `null,`&nbsp;`string` | ESP related to the event (Sparkpost or Sendgrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
 `from_domain` | `null,`&nbsp;`string` | sending domain for the email
 `is_drop` | `null, boolean` | indicates that this event counts as a drop event
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -747,7 +748,7 @@ Field | Type | Description
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 `link_id` | `null,`&nbsp;`string` | unique ID for the link which was clicked, as created by Braze
 `link_alias` | `null,`&nbsp;`string` | alias associated with this link ID
-`esp` | `null,`&nbsp;`string` | ESP related to the event (Sparkpost or Sendgrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
 `from_domain` | `null,`&nbsp;`string` | sending domain for the email
 `is_amp` | `null, boolean` | indicates that this is an AMP event
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -779,7 +780,7 @@ Field | Type | Description
 `email_address` | `string` | [PII] email address of the user
 `sending_ip` | `null,`&nbsp;`string` | IP address from which the email was sent
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
-`esp` | `null,`&nbsp;`string` | ESP related to the event (Sparkpost or Sendgrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
 `from_domain` | `null,`&nbsp;`string` | sending domain for the email
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -810,7 +811,7 @@ Field | Type | Description
 `email_address` | `string` | [PII] email address of the user
 `user_agent` | `null,`&nbsp;`string` | user agent on which the spam report occurred
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
-`esp` | `null,`&nbsp;`string` | ESP related to the event (Sparkpost or Sendgrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
 `from_domain` | `null,`&nbsp;`string` | sending domain for the email
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -842,7 +843,7 @@ Field | Type | Description
 `user_agent` | `null,`&nbsp;`string` | user agent on which the open occurred
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 `machine_open` | `null,`&nbsp;`string` | Populated to 'true' if the open event is triggered without user engagement, e.g., by an Apple device with Mail Privacy Protection enabled. Value may change over time to provide more granularity.
-`esp` | `null,`&nbsp;`string` | ESP related to the event (Sparkpost or Sendgrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
 `from_domain` | `null,`&nbsp;`string` | sending domain for the email
 `is_amp` | `null, boolean` | indicates that this is an AMP event
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -903,7 +904,7 @@ Field | Type | Description
 `sending_ip` | `null,`&nbsp;`string` | IP address from which the email send was made
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 `bounce_reason` | `null,`&nbsp;`string` | [PII] The SMTP reason code and user friendly message received for this bounce event
-`esp` | `null,`&nbsp;`string` | ESP related to the event (Sparkpost or Sendgrid)
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
 `from_domain` | `null,`&nbsp;`string` | sending domain for the email
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

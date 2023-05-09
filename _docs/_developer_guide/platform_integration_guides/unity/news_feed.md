@@ -7,11 +7,13 @@ platform:
   - iOS
   - Android
 page_order: 5
-description: "This reference article covers News Feed integration for the Unity platform."
+description: "This reference article covers News Feed integration for the Unity platform, such as parsing cards, receiving News Feed data, and analytics."
 
 ---
 
-# News Feed
+# News Feed integration
+
+> This article covers how to set up a News Feed for the Unity platform.
 
 {% alert note %}
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
@@ -66,5 +68,5 @@ Use `LogClick()` and `LogImpression()` on [Card][12] to log clicks and impressio
 
 To log that the user viewed the feed as a whole, call `AppboyBinding.LogFeedDisplayed()`.
 
-[11]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Feed.cs
-[12]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/Card.cs
+[11]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Feed.cs
+[12]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/Card.cs

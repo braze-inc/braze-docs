@@ -1,20 +1,22 @@
 ---
-nav_title: "POST: User Profile Export by Identifier"
-article_title: "POST: User Profile Export by Identifier"
+nav_title: "POST: Export User Profile by Identifier"
+article_title: "POST: Export User Profile by Identifier"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Users by ID Braze endpoint."
+description: "This article outlines details about the Export users by identifier Braze endpoint."
 
 ---
 {% api %}
-# Users by identifier endpoint
+# Export user profile by identifier
 {% apimethod post %}
 /users/export/ids
 {% endapimethod %}
 
-Use this endpoint to export data from any user profile by specifying a user identifier. Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id` or `email_address` only one of either identifier can be included per request.
+> Use this endpoint to export data from any user profile by specifying a user identifier. 
+
+Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id` or `email_address` only one of either identifier can be included per request.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
@@ -102,7 +104,8 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 | `last_coordinates` | Array of floats | User's most recent device location, formatted as `[longitude, latitude]`. |
 | `last_name` | String | User's last name. |
 | `phone` | String | User's telephone number in E.164 format. |
-| `purchase`s | Array | Purchases this user has made in the last 90 days. |
+| `purchases` | Array | Purchases this user has made in the last 90 days. |
+| `push_tokens` | Array | Unique anonymous identifier that specifies where to send an app's notifications. |
 | `random_bucket` | Integer | User's [random bucket number]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event), used to create uniformly distributed segments of random users. |
 | `time_zone` | String | User's time zone in the same format as the IANA Time Zone Database. |
 | `total_revenue` | Float | Total revenue attributed to this user. Total revenue is calculated based on purchases the user made during conversion windows for the campaigns and Canvases they received. |

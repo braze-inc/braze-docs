@@ -2,7 +2,7 @@
 nav_title: optilyz
 article_title: optilyz
 page_order: 1
-description: "This article outlines the partnership between Braze and optilyz, which enables you to run more customer-centric, sustainable, and profitable direct mail campaigns."
+description: "This reference article outlines the partnership between Braze and optilyz, which enables you to run more customer-centric, sustainable, and profitable direct mail campaigns."
 alias: /partners/optilyz/
 page_type: partner
 search_tag: Partner
@@ -40,7 +40,7 @@ To integrate with optilyz, use the [optilyz API][2] to send recipient data to th
 To create an optilyz webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off optilyz webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
 In your new Webhook template, fill out the following fields:
-- **Webhook URL**: `https://www.optilyz.com/api/v2/automations/<OPTILYZ_AUTOMATION_ID>/recipient`
+- **Webhook URL**: The Webhook URL is unique to each customer and your optilyz customer success manager will provide it to you.
 - **Request Body**: Raw Text
 
 #### Request headers and method

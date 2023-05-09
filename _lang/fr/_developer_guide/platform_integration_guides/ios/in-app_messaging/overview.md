@@ -1,12 +1,12 @@
 ---
-nav_title: Overview
+nav_title: Aperçu
 article_title: Aperçu du message In-App pour iOS
 platform: iOS
 page_order: 0
-description: "Cet article couvre les types de messageries dans l’application iOS, les comportements attendus et plusieurs cas d’utilisation."
+description: "Cet article de référence couvre les types d’envois de messages in-app dans l’application iOS, les comportements attendus et plusieurs cas d’utilisation."
 channel:
-  - messages in-app
-search_rank: 3
+  - messages In-App
+search_rank: 4
 ---
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
@@ -14,9 +14,9 @@ search_rank: 3
 
 # Messages in-app
 
-Les [messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) vous aident à obtenir du contenu à votre utilisateur sans interrompre votre journée avec une notification push. Des messages in-app personnalisés et adaptés améliorent l’expérience utilisateur et aident votre audience à tirer le meilleur parti de votre application. Avec plusieurs mises en page et outils de personnalisation, les messages in-app impliquent plus que jamais vos utilisateurs.
+Les [messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) vous aident à obtenir du contenu à votre utilisateur sans interrompre votre journée avec une notification push. Des messages in-app personnalisés et adaptés améliorent l’expérience utilisateur et aident votre audience à tirer le meilleur parti de votre application. Grâce à un choix de mises en page et d’outils de personnalisation, les messages In-App supposent un engagement inédit de vos utilisateurs.
 
-Pour voir des exemples de messages in-app, consultez notre [étude de cas][31].
+Pour voir des exemples de messages in-app, consultez nos [études de cas][31].
 
 ## Types de messages in-app
 
@@ -41,7 +41,7 @@ Notez que l’intégration de `SDWebImage` est requise si vous prévoyez d’uti
 
 ### Comportements attendus par types de messages
 
-Voici à quoi cela ressemble lorsque vos utilisateurs ouvrent l’un de nos types de messages in-app prêts à l’emploi.
+Voilà à quoi ressemble l’ouverture de nos types de messages in-app par défaut pour vos utilisateurs.
 
 {% tabs %}
 {% tab Slideup %}

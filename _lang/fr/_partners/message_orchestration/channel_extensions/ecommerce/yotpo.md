@@ -2,7 +2,7 @@
 nav_title: Yotpo
 article_title: Yotpo
 alias: /partners/yotpo/
-description: "Cet article présente le partenariat entre Braze et Yotpo, une plateforme leader de marketing de commerce en ligne qui aide des milliers de marques avant-gardistes à accélérer la croissance des ventes directes au consommateur."
+description: "Cet article de référence présente le partenariat entre Braze et Yotpo, une plateforme leader de marketing de commerce en ligne qui aide des milliers de marques avant-gardistes à accélérer la croissance des ventes directes au consommateur."
 page_type: partner
 search_tag: Partenaire
 ---
@@ -15,7 +15,7 @@ Grâce à l’intégration de Braze et de Yotpo, vous pouvez extraire et affiche
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte Yotpo | Un compte Yotpo est requis pour profiter de ce partenariat. |
 | Clé d’API des avis Yotpo | Cette API sera mise en œuvre dans l’extrait de code du Contenu connecté.<br><br>Pour plus d’informations, reportez-vous à [trouver votre clé d’application Yotpo et votre clé secrète](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key). |
@@ -28,8 +28,8 @@ Pour trouver votre ID du produit Yotpo, procédez comme suit :
 
 1. Accédez au site Web de votre boutique.
 2. Ouvrez la page du produit.
-3. Cliquez avec le bouton droit de la souris et sélectionnez **Inspecter**.
-4. Appuyez sur <kbd>Ctrl</kbd> + <kbd>F</kbd> et recherchez `yotpo-main` dans le code. La variable `data-product ID` et sa valeur apparaissent dans le div Yotpo.
+3. Cliquez avec le bouton droit de la souris et sélectionnez **Inspect (Inspecter)**.
+4. Appuyez sur <kbd>Ctrl</kbd> + <kbd>F</kbd> et recherchez `yotpo-main` dans le code. La variable `data-product ID` et sa valeur apparaissent dans le div Yotpo.
 
 ![Inspecter et rechercher yotpo-main pour trouver la variable data-product-id][1]
 
@@ -38,9 +38,9 @@ Pour trouver votre ID du produit Yotpo, procédez comme suit :
 Pour intégrer Yotpo et Braze, procédez comme suit :
 
 1. Accédez à votre Tableau de bord de Braze.
-2. Sur la page **Campaign** (Campagne), cliquez sur **Create Campaign** (Créer une campagne) et sélectionnez **Email**. (Courriel)
+2. Sur la page **Campaign (Campagne)**, cliquez sur **Create Campaign (Créer une campagne)** et sélectionnez **Email (E-mail)**.
 3. Sélectionnez votre modèle préféré.
-4. Cliquez sur **Edit email body** (Modifier le corps de l’e-mail) et ajoutez l’extrait de code de [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) pour votre cas d’utilisation :
+4. Cliquez sur **Edit email body (Modifier le corps de l’e-mail)** et ajoutez l’extrait de code de [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) pour votre cas d’utilisation :
     - [Afficher le classement par étoiles et le nombre d’avis d’un produit](#star-review-count)
     - [Afficher un récent avis 5 étoiles pour un produit](#five-star-review)
     - [Afficher le CGU visuel par produit](#visual-ugc)
@@ -56,9 +56,9 @@ Utilisez cet extrait de code pour fournir la note moyenne publique et le nombre 
 
 {% if {{result.response.bottomline.average_score}} != 0 %}
 
-La note moyenne de ce produit est :
+The average rating for this product is:
 
-{{result.response.bottomline.average_score}}/5, selon les {{result.response.bottomline.total_reviews}} avis.
+{{result.response.bottomline.average_score}}/5, based on {{result.response.bottomline.total_reviews}} reviews.
 
 {% else %}                    
 {% endif %}
@@ -79,7 +79,7 @@ Utilisez cet extrait de code pour fournir le meilleur avis (publié) d’un prod
 
 {% if {{result.response.reviews[0].score}} == 5 %}
 
-Avis récent à 5 étoiles pour ce produit :
+Recent 5 Star Review for this product:
 
 {{result.response.reviews[0].content}}
 
@@ -105,13 +105,13 @@ Utilisez cet extrait de code pour récupérer les images Yotpo balisées et publ
 
 {% if {{result.response.images[0].tagged_products[0].image_url}} != null %}
 
-Le contenu visuel du produit : 
+The Visual content of the product: 
 
 <img src="{{result.response.images[0].tagged_products[0].image_url}}" border="0" width="200" height="200" alt="" />
 
 {% else %}
 
-L’image retourne NULL
+Image return NULL
 
 {% endif %}
 ```
@@ -125,7 +125,7 @@ Exemple d’extrait de code :
 
 ### Afficher le solde de fidélisation d’un client dans un e-mail {#loyalty-balance}
 
-Utilisez cet extrait de code pour récupérer le solde des points de fidélisation d’un client et l’utiliser dans votre e-mail :
+Utilisez cet extrait de code pour récupérer le solde des points de fidélisation d’un client et l’utiliser dans votre communication par e-mail :
 
 {% raw %}
 ```liquid
@@ -141,9 +141,9 @@ https://loyalty.yotpo.com/api/v2/customers?customer_email=**{{${email_address}}}
 :save publication
 %}
 
-Vous avez {{publication.points_balance}} points
+You have {{publication.points_balance}} points
 
-Plus que {{publication.vip_tier_upgrade_requirements.points_needed}} points de plus pour faire partie de notre offre VIP !
+Only {{publication.vip_tier_upgrade_requirements.points_needed}} more points to become part of our VIP Tier!
 ```
 {% endraw %}
 

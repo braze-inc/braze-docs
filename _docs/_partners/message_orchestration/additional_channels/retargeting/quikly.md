@@ -1,7 +1,7 @@
 ---
 nav_title: Quikly
 article_title: Quikly
-description: "Quickly, a urgency marketing platform, allows you to accelerate conversions on events within a Braze customer journey."
+description: "This reference article outlines the partnership between Braze and Quickly, a urgency marketing platform, that allows you to accelerate conversions on events within a Braze customer journey."
 alias: /partners/quikly/
 page_type: partner
 search_tag: Partner
@@ -52,7 +52,7 @@ Here is an outline of how Quikly executes this workflow.
     - Do not create a new profile.
     - If desired, Quikly can log a custom attribute on the user's profile to indicate that the user participated in the activation.
   - If the user does not exist:
-    - Quikly creates an alias-only profile via Braze's [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, setting the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
+    - Quikly creates an alias-only profile via Braze's [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), setting the user's email as the user alias to reference that user in the future (as the user won't have an external ID).
     - If desired, Quikly can log custom events to indicate this profile participated in Quikly activation.
 
 {% details /users/track request %}
@@ -84,19 +84,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### SMS subscriptions
 
-Quikly activations can collect mobile phone numbers directly from customers and initiate a new SMS subscription. To enable this integration, provide your Quikly client success manager with the `subscription_group_id`. You can access a subscription group’s `subscription_group_id` by navigating to the **Subscription Group** page.
+Quikly activations can collect mobile phone numbers directly from customers and initiate a new SMS subscription. To enable this integration, provide your Quikly client success manager with the `subscription_group_id`. You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
 
 Quikly will perform a subscription lookup using the customer's phone number and automatically credit them in the activation if an SMS subscription already exists. Otherwise, a new subscription will be initiated, and once the subscription status is verified, the customer will be credited.
 
 Here is the complete workflow when a customer provides their mobile number and consent via Quikly:
 1. Quikly performs a subscription lookup using the [subscription group status]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) to see if a given `phone` is subscribed to a `subscription_group_id`. If a subscription exists, credit the user in the Quikly activation. No further action is necessary.
-2. Quikly performs a user lookup using the [export API]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) to see if a user profile exists with a given `email_address`. If no user exists, create an alias-only profile via Braze's [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, setting the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
-3. Update the subscription status using the [update user subscription group status]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) endpoint.
+2. Quikly performs a user lookup using the [Export user profile by identifier endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) to see if a user profile exists with a given `email_address`. If no user exists, create an alias-only profile via Braze's [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), setting the user's email as the user alias to reference that user in the future (as the user won't have an external ID).
+3. Update the subscription status using the [Update user's subscription group status endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
 
 To support existing double opt-in SMS subscription workflows, Quikly can send a custom event to Braze rather than the workflow above. In that case, rather than updating the subscription status directly, the [custom event triggers the double opt-in process]({{site.baseurl}}/user_guide/message_building_by_channel/sms/non_native/double_opt_in/) and the subscription status is periodically monitored to verify the user has fully opted-in before crediting them in the Quikly activation.
 
 {% alert important %}
-Braze advises that when creating new users via the /users/track endpoint, there should be a delay of about 2 minutes before adding users to the relevant subscription group to allow Braze time to fully create the user profile.
+Braze advises that when creating new users via the `/users/track` endpoint, there should be a delay of about 2 minutes before adding users to the relevant subscription group to allow Braze time to fully create the user profile.
 {% endalert %}
 
 {% details Detailed /subscription/status/set request %}

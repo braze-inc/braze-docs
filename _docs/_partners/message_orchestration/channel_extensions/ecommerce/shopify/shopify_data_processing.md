@@ -1,16 +1,16 @@
 ---
 nav_title: Data Processing
 article_title: "Shopify Data Processing"
-description: "This article outlines how Shopify data processing is deal with, including supported events, user syncing, advanced settings, and more."
+description: "This reference article outlines how Shopify data processing is deal with, including supported events, user syncing, advanced settings, and more."
 page_type: partner
 search_tag: Partner
 alias: "/shopify_processing/"
 page_order: 3
 ---
 
-# Shopify data processing
+# Data processing
 
-Once the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
+> Once the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
 
 ## Supported Shopify events
 
@@ -21,7 +21,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
 | `shopify_product_viewed` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)| Product views will trigger when products are fully visible on the Shopify store to the customer. | ScriptTag integration |
 | `shopify_product_clicked` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Product clicks will trigger as soon as the customer clicks into the product information page. | ScriptTag integration |
 | `shopify_abandoned_cart` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | As soon as a customer adds items to their cart, Braze will store the cart token ID. <br><br>The default Abandoned Cart Delay is set at 1 hour. Meaning, after 1 hour of cart abandonment where no updates have been made to the cart, Braze will then trigger the event. You can update your Abandoned Cart Delay within **Advanced Settings**. | ScriptTag integration |
-| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Checkout updates webhook’s trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned. The Abandoned Checkout Delay is set to 1 hour but is configurable within the **Advanced Settings** section on the Shopify partner page. | Shopify webhooks |
+| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Checkout updates webhook's trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned. The Abandoned Checkout Delay is set to 1 hour but is configurable within the **Advanced Settings** section on the Shopify partner page. | Shopify webhooks |
 | `shopify_created_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>**OR**<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.| Shopify webhooks |
 | Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event immediately triggers a Braze purchase event. | Shopify webhooks |
 | `shopify_paid_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order paid events will trigger when an order's payment status is changed to paid. An order is in paid status after a credit card payment has been captured or when an order using a manual payment method is marked as paid. | Shopify webhooks |
@@ -547,13 +547,13 @@ Braze will update existing user profiles or create new ones for leads, sign-ups,
 - Customer email is collected on your store from Shopify's footer
 - Customer email or phone number is collected through a third-party tool connected to Shopify
 
-Braze will first attempt to map the supported Shopify data to any existing user profiles using the customer’s email address or phone number.
+Braze will first attempt to map the supported Shopify data to any existing user profiles using the customer's email address or phone number.
 
 **Anonymous users**<br>
 - If the email address or phone number is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user. 
   - For existing alias-only profiles, we'll add the Shopify alias object for that user.
 - If the email address or phone number is **not** associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
-  - If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
+  - If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
 
 **Identified users**<br>
 - As the customers proceed into the checkout process, Braze will check to see if the inputted email address, phone number, or their Shopify Customer ID matches an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). If there is a match, Braze will sync the Shopify user data to that profile. 
@@ -585,9 +585,17 @@ Some of the user data and events collected by the Shopify integration will count
 - As the customers proceed into the checkout process, Braze will check to see if the inputted email address, phone number, or their Shopify Customer ID matches an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). If there is a match, Braze will sync the Shopify user data to that profile using our [merge functionality](#user-profile-merging). 
 - If the email address or phone number is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity.  
 
-##### User reconciling issues
+## User reconciliation outside of checkout flow
 
-If you use the ScriptTag integration and your Shopify store offers a "Buy Now" option that skips the cart, Braze may be unable to reconcile users created through this flow. Shopify does not allow our script tags to retrieve a `device_id` to map the events back to this user who skips the cart.
+The Shopify integration reconciles your user’s device ID and personal information when they reach the checkout flow and perform any Shopify webhook events here. Outside of the checkout flow, to support user reconciliation via your Shopify sign-up and login flow, you can execute the following Javascript function within your `theme.liquid` file:
+
+```
+reconcileEmail(<email address>);
+```
+
+If you want to implement this approach, contact your customer success manager or account manager to enable this functionality. Once this has been enabled, you will need to implement the above function on your Shopify store.
+
+This will cause the anonymous user on the web to be associated with the given email address, which you will supply. For example, if the user enters their email address into a sign-up or login field, you should ensure this is being passed. Once this function is called, any other Shopify events referencing the given email address will be assigned to the same Braze user.
 
 ### User profile merging
 
@@ -604,13 +612,13 @@ Braze will merge the following fields on the anonymous user created from our Sho
 - Language
 - Custom attributes
 - Custom event and purchase event data (excluding event properties, count, and first date and last date timestamps)
-- Custom event and purchase event properties for “X times in Y days” segmentation (where X<=50 and Y<=30)
+- Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
 - Push tokens
 - Message history
 
 Any of the following fields found on the anonymous user to the identified user:
 - Custom event and purchase event count and first date and last date timestamps
-  - These merged fields will update “for X events in Y days” filters. For purchase events, these filters include “number of purchases in Y days” and “money spent in last Y days”.
+  - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
 {% alert warning%}
 Session data is not yet supported as part of our merging process.

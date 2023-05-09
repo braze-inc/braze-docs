@@ -1,6 +1,6 @@
 ---
-nav_title: Automate Zoom registration
-article_title: Automate Zoom registration
+nav_title: Automate Zoom Registration
+article_title: Automate Zoom Registration
 page_order: 1
 page_type: tutorial
 description: "This article describes how to automate Zoom attendee registration in your email, push, and in-app message campaigns."
@@ -11,10 +11,11 @@ channel:
 
 ---
 
-# Automate Zoom attendee registration
+# Automate Zoom registration
 
-Webinars have become common for Braze customers to host over the past few years. When hosting a Zoom webinar, users must enter their information on a Zoom landing page to sign up. A recommended user flow is outlined below:
+> Webinars have become common for Braze customers to host over the past few years. When hosting a Zoom webinar, users must enter their information on a Zoom landing page to sign up. 
 
+A recommended user flow is outlined below:
 1. Schedule a webinar in Zoom and generate a `meetingId`.
 2. Use Braze to promote Zoom webinars via email, push, and in-app message channels. 
 3. Include a call-to-action button in these communications that automatically adds users to the webinar.
@@ -23,7 +24,7 @@ This can be accomplished by using the [Zoom APIs](https://marketplace.zoom.us/do
 
 POST: `/meetings/{meetingId}/registrants`
 
-For more information, refer to the Zoom [Add meeting registrant](https://marketplace.zoom.us/docs/api-reference/zoom-api/methods/#operation/meetingRegistrantCreate) endpoint.<br><br>
+For more information, refer to the Zoom [Add meeting registrant endpoint](https://marketplace.zoom.us/docs/api-reference/zoom-api/methods/#operation/meetingRegistrantCreate).<br><br>
 
 {% tabs %}
 {% tab Email %}

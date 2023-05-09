@@ -2,23 +2,19 @@
 nav_title: Actions deeplink de Braze
 article_title: Actions deeplink de Braze
 page_order: 100
-description: "Utilisez les deeplinks (liens profonds)`brazeActions://` pour effectuer des actions SDK dans les boutons de canal de messagerie"
+description: "Cet article de référence explique comment utiliser les liens profonds d’action Braze pour effectuer des actions SDK dans les boutons du canal de communication."
 hidden: true
 ---
 
-# Actions de Braze
+# Actions deeplink de Braze
 
-Les actions de Braze vous permettent d’utiliser des « deeplinks » pour exécuter la fonctionnalité de SDK natif.
-
-Le tableau de bord de Braze comprend quelques actions prêtes à l’emploi (demande de permission push, journal d’événement personnalisé journal et attribut personnalisé du journal) qui peuvent être utilisées dans les messages dans l’application et les cartes de contenu.
-
-Pour toutes les autres actions, ou pour combiner plusieurs actions, utilisez ce Guide pour construire votre propre action deeplink de Braze.
+> Les actions de Braze vous permettent d’utiliser des « deeplinks » pour exécuter la fonctionnalité de SDK natif.<br><br>Le tableau de bord de Braze comprend plusieurs actions lors du clic standard (demande de permission pour les notifications push, enregistre l’événement personnalisé et enregistre l’attribut personnalisé) qui peuvent être utilisées dans les messages in-app et les cartes de contenu.<br><br>Pour toutes les autres actions, ou pour combiner plusieurs actions, utilisez ce Guide pour construire votre propre action deeplink de Braze.
 
 ## Support SDK
 
 {% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
-Le schéma deeplink `brazeActions://` peut être utilisé partout où un deeplink ou une option de redirection existe dans les messages dans l’application et les cartes de contenu.
+Le schéma deeplink `brazeActions://` peut être utilisé partout où un deeplink ou une option de redirection existe dans les messages in-app et les cartes de contenu.
 
 Pour les messages HTML dans l’application, utilisez plutôt [`Javascript Bridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge), les deeplinks ne sont pas pris en charge dans les types de messages HTML.
 
@@ -46,7 +42,7 @@ Une `step` individuelle correspond à une action `type` et un tableau `args` fac
 
 Le schéma URI des actions Braze est `brazeActions://v1/{base64encodedJsonString}`.
 
-Le Javascript suivant montre comment encoder et décoder la chaîne de caractères JSON :
+Le JavaScript suivant montre comment encoder et décoder la chaîne de caractères JSON :
 
 ```javascript
 function decode(encoded) {
@@ -60,14 +56,14 @@ function decode(encoded) {
 }
 
 /**
- * Renvoie une chaîne de caractères encodée base64 url-safe dans la saisie.
- * Les saisies d’unicode sont acceptées.
- * Convertit une chaîne de caractères UTF-16 en UTF-8 pour respecter les limites d’encodage base64.
+ * Returns an url-safe base64 encoded string of the input.
+ * Unicode inputs are accepted.
+ * Converts a UTF-16 string to UTF-8 to comply with base64 encoding limitations.
  */
 function encode(input) {
-    // Divisez alors le code original caractère 16-bits en codes caractères 8-bits 
-    // Reconstituez une nouvelle chaîne de caractère (de double longueur) à l’aide des codes 8-bits
-    // en chaîne de caractères UTF-8.
+    // Split the original 16-bit char code into two 8-bit char codes then 
+    // reconstitute a new string (of double length) using those 8-bit codes
+    // into a UTF-8 string.
     const codeUnits = new Uint16Array(input.length);
     for (let i = 0; i < codeUnits.length; i++) {
         codeUnits[i] = input.charCodeAt(i);
@@ -87,11 +83,11 @@ function encode(input) {
 |--|--|
 |`container`|Éventail d’autres actions à réaliser|
 |`logCustomEvent`|1. `event name`<br>2. `event properties JSON object` (facultatif)|
-|`setEmailNotificationSubscriptionType`|`"abonné" | "Inscrit" | "Non inscrit"`|
-|`setPushNotificationSubscriptionType`|`"abonné " | "Inscrit" | "Non inscrit"`|
+|`setEmailNotificationSubscriptionType`|`"opted_in" | « abonné » | « désabonné »`|
+|`setPushNotificationSubscriptionType`|`"opted_in" | « abonné » | « désabonné »`|
 |`setCustomUserAttribute`|1. `attribute_name`<br>2. `attribute_value`|
 |`requestPushPermission`| S.O. |
-|`openLink`|1. `url`<br>2. `openInNewTab` (boolean)|
+|`openLink`|1. `url`<br>2. `openInNewTab` (booléen)|
 |`openLinkInWebview`| `url`|
 |`addToSubscriptionGroup`| `subscriptionGroupId`|
 |`removeFromSubscriptionGroup`| `subscriptionGroupId`|

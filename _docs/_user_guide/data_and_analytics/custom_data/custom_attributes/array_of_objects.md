@@ -9,13 +9,13 @@ description: "This reference article covers using an array of objects as a data 
 
 # Array of objects
 
-Use an array of objects to group related attributes. For example, you may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
+> Use an array of objects to group related attributes. For example, you may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
 
 ## Limitations
 
-- Arrays of objects are intended for custom attributes sent via the API. They are not supported for use with Braze SDKs or CSV upload. Commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file. 
+- Arrays of objects are intended for custom attributes sent via the API. CSV uploads are not supported. This is because commas in the CSV file will be interpreted as a column separator, and commas in values will cause parsing errors. 
 - Partners do not support arrays of objects. We recommend against using this feature with app groups that have partner integrations enabled.
-- Arrays of objects have no limit on the number of items but do have a maximum size of 50KB.
+- Arrays of objects have no limit on the number of items but do have a maximum size of 50&nbsp;KB.
 
 Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
 

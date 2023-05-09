@@ -22,7 +22,7 @@ When creating a Canvas with a control group, ensure that all users in the Entry 
 
 ## Example
 
-Let’s imagine the following scenario:
+Let's imagine the following scenario:
 - A Canvas has a single variant and a control group.
 - The first step of the variant is a push notification.
 - 90% of users were selected to enter the variant, and 10% to enter the control group.

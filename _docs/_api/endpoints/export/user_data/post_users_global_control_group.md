@@ -1,20 +1,22 @@
 ---
-nav_title: "POST: User Profile Export by Global Control Group"
-article_title: "POST: User Profile Export by Global Control Group"
+nav_title: "POST: Export User Profile by Global Control Group"
+article_title: "POST: Export User Profile by Global Control Group"
 search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Users in Global Control Groups Braze endpoint."
+description: "This article outlines details about the Export users in Global Control Groups Braze endpoint."
 
 ---
 {% api %}
-# Users by Global Control Group
+# Export user profile by Global Control Group
 {% apimethod post %}
 /users/export/global_control_group
 {% endapimethod %}
 
-Use this endpoint to export all users within a Global Control Group. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line).
+> Use this endpoint to export all users within a Global Control Group. 
+
+User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
@@ -48,7 +50,7 @@ Example ZIP File:
 
 We strongly suggest that customers who use this endpoint set up their own S3 or Azure credentials so that customers can enforce their own bucket policies on the export. If you do not have your cloud storage credentials provided, the response to the request provides the URL where a ZIP file containing all the user files can be downloaded. The URL will only become a valid location once the export is ready. 
 
-Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you’re exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using ‘fields_to_export’ and specifying only the fields you need in order to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (e.g., create a segment where random bucket number <1000, between 1000 and 2000, etc).
+Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you're exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using 'fields_to_export' and specifying only the fields you need in order to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (e.g., create a segment where random bucket number <1000, between 1000 and 2000, etc).
 
 In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be "success":true. If you have not added your cloud storage credentials to Braze, then the body of the post will additionally have the attribute `url` with the download URL as the value.
 
@@ -70,7 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-Individual custom attributes cannot be exported. However, all custom attributes can be exported by including custom_attributes in the fields_to_export array (e.g.,[‘first_name’, ‘email’, ‘custom_attributes’]).
+Individual custom attributes cannot be exported. However, all custom attributes can be exported by including custom_attributes in the fields_to_export array (e.g.,['first_name', 'email', 'custom_attributes']).
 {% endalert %}
 
 ## Request parameters
@@ -102,9 +104,9 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 |---|---|---|
 | `apps` | Array | Apps this user has logged sessions for, which includes the fields:<br><br>- `name`: app name<br>- `platform`: app platform, such as iOS, Android, or Web<br>- `version`: app version number or name <br>- `sessions`: total number of sessions for this app<br>- `first_used`: date of first session<br>- `last_used`: date of last session<br><br>All fields are strings. |
 | `attributed_campaign` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for a particular ad campaign. |
-| `attributed_source` | String | Data from [attribution integrations]({{site.baseurl}}<br>/partners/message_orchestration/attribution<br>), if set up. Identifier for the platform the ad was on. |
-| `attributed_adgroup` | String | Data from [attribution integrations]({{site.baseurl}}<br>/partners/message_orchestration/attribution<br>), if set up. Identifier for an optional sub-grouping below campaign. |
-| `attributed_ad` | String | Data from [attribution integrations]({{site.baseurl}}<br>/partners/message_orchestration/attribution<br>), if set up. Identifier for an optional sub-grouping below campaign and adgroup. |
+| `attributed_source` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for the platform the ad was on. |
+| `attributed_adgroup` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign. |
+| `attributed_ad` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign and adgroup. |
 | `braze_id` | String | Device-specific unique user identifier set by Braze for this user. |
 | `country` | String | User's country using [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard. |
 | `created_at` | String | Date and time for when the user profile was created, in ISO 8601 format. |

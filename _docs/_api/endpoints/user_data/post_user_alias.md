@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines details about the create new User Aliases Braze endpoint."
+description: "This article outlines details about the Create new user alias Braze endpoint."
 
 ---
 {% api %}
@@ -14,11 +14,9 @@ description: "This article outlines details about the create new User Aliases Br
 /users/alias/new
 {% endapimethod %}
 
-Use this endpoint to add new user aliases for existing identified users, or to create new unidentified users.
+> Use this endpoint to add new user aliases for existing identified users, or to create new unidentified users.
 
-{% alert note %}
-You can add up to 50 user aliases per request.
-{% endalert %}
+Up to 50 user aliases may be specified per request.
 
 **Adding a user alias for an existing user** requires an `external_id` to be included in the new user alias object. If the `external_id` is present in the object but there is no user with that `external_id`, the alias will not be added to any users. If an `external_id` is not present, a user will still be created but will need to be identified later. You can do this using the "Identifying Users" and the `users/identify` endpoint.
 
@@ -75,6 +73,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
   ]
 }'
 ```
+
+## Response
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR-API-KEY-HERE
+{
+    "aliases_processed": 1,
+    "message": "success"
+}
+```
+
 
 {% endapi %}
 

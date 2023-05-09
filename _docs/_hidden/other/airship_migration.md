@@ -3,6 +3,7 @@ nav_title: SDK Migration from Airship to Braze
 permalink: /sdk_migration_guide_airship/
 hidden: true
 page_type: reference
+layout: dev_guide
 ---
 
 # Migrating SDKs from Airship to Braze (iOS)
@@ -20,9 +21,9 @@ Braze uses Apple's device token for iOS.
 
 It is required to [migrate push tokens via API]({{site.baseurl}}/help/help_articles/push/push_token_migration/#migration-via-api). The documentation linked contains specific steps, as well as an example payload, but the overall process is as follows:
 
-1. Import the tokens via the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. For large batch imports, we have resources available to help expedite the process. Reach out to your COM or SA for more details!
+1. Import the tokens via the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). For large batch imports, we have resources available to help expedite the process. Reach out to your COM or SA for more details!
 2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.
-3. QA the push integration. Ensure that the steps to [configure push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) have been completed.
+3. QA the push integration. Ensure that the steps to [configure push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) have been completed.
 
 If your user profiles and push tokens happen to be stored in separate locations, we recommend importing push tokens anonymously and then a subsequent migration of your existing user profiles. It is not necessary to map them together since the Braze iOS SDK will handle the token resolution upon successful integration.
 
@@ -53,7 +54,7 @@ Braze is able to send push notifications to users who do not update their applic
 For the case of lifecycle-specific campaigns that would need to continue during your migration process to the Braze SDK, users may be eligible to receive notifications from both Braze and Airship, given that Braze has received a valid push token.
 
 #### Message center
-To replace Airship's message center campaign functionality, we recommend creating a multichannel campaign that consists of a push notification and a [Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/). To read more about how to use Content Cards in a message center format, check out our [iOS Content Card implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/#content-cards-in-a-message-center).
+To replace Airship's message center campaign functionality, we recommend creating a multichannel campaign that consists of a push notification and a [Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/). To read more about how to use Content Cards in a message center format, check out our [iOS Content Card implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/implementation_guide/#content-cards-in-a-message-center).
 
 ### Segmentation
 Braze offers multiple [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/) filters to provide a rich user experience for your customers.
@@ -65,11 +66,11 @@ Braze offers multiple [segmentation]({{site.baseurl}}/user_guide/engagement_tool
 
 To directly recreate a static Airship segment in Braze, there exist two options:
 - **Import via API - Assign a Custom Attribute** (Recommended)<br>
-We recommend importing users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint and while doing so, assigning a custom attribute to those imported users. For example, you might create a segment of users that each have a custom attribute `Segment_Group_1` that is set to `true`. To later segment these users, you would [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) of all users where `Segment_Group_1` is `true`.<br><br>
+We recommend importing users via the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) and while doing so, assigning a custom attribute to those imported users. For example, you might create a segment of users that each have a custom attribute `Segment_Group_1` that is set to `true`. To later segment these users, you would [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) of all users where `Segment_Group_1` is `true`.<br><br>
 - **Filter Based on CSV User Import**<br>
 There is an option in Braze to filter specifically users who are included within a specific CSV import. This filtering option can be found during the target users step of our engagement tools under "filter users by `Updated/Imported via CSV`".
 ![CSV Import Filter][1]{: style="max-width:90%;border:0;"}
-Note that for CSV imports, an `External ID` is required for each imported user and **segments with anonymous or alias only users will not able to be imported**. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
+Note that for CSV imports, an external ID is required for each imported user and **segments with anonymous or alias only users will not able to be imported**. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
 
 ## Rip and replace SDK code snippets
 To simplify migration, we have highlighted the following Airship SDK snippets that exist in your code and have provided the corresponding Braze SDK snippets necessary to replace them. Visit the following topics to get started:

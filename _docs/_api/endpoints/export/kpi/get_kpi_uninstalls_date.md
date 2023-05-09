@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: KPIs for Daily App Uninstalls by Date"
-article_title: "GET: KPIs for Daily App Uninstalls by Date"
+nav_title: "GET: Export KPIs for Daily App Uninstalls by Date"
+article_title: "GET: Export KPIs for Daily App Uninstalls by Date"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Get Daily App Uninstalls endpoint."
+description: "This article outlines details about the Export daily app uninstalls by date Braze endpoint."
 
 ---
 {% api %}
-# Daily app uninstalls by date endpoint
+# Export KPIs for daily app uninstalls by date
 {% apimethod get %}
 /kpi/uninstalls/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a daily series of the total number of uninstalls on each date.
+> Use this endpoint to retrieve a daily series of the total number of uninstalls on each date.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#59c4d592-3e77-42f8-8ff1-d5d250acbeae {% endapiref %}
 

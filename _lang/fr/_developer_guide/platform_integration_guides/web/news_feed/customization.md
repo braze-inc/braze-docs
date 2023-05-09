@@ -1,16 +1,16 @@
 ---
 page_order: 1
 nav_title: Personnalisation
-article_title: Personnalisation du fil d'actualité pour le Web
-layout: featured
+article_title: Personnalisation du fil d’actualité pour le Web
+layout: dev_guide
 
 platform: Web
 
-channel: Fil d’actualité
+channel: fil d’actualité
 
-guide_top_header: "Personnalisation du fil d'actualité pour le Web"
+guide_top_header: "Personnalisation du fil d’actualité pour le Web"
 guide_top_text: ""
-description: "Cette page d’accueil couvre les options de personnalisation des fils d'actualité du SDK Braze pour le Web."
+description: "Cette page d’accueil couvre les options de personnalisation des fils d’actualité du SDK Braze pour le Web."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

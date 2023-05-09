@@ -4,14 +4,14 @@ article_title: Campagnes
 page_order: 2
 layout: dev_guide
 guide_top_header: "Campagnes"
-guide_top_text: "Si vous souhaitez interagir avec vos utilisateurs à l’aide d’une unique étape de message, vous pouvez leur envoyer une campagne en utilisant tout <a href='/docs/user_guide/message_building_by_channel/'>canal de messagerie</a> qui est pris en charge. Il est mieux de créer la plupart des parcours utilisateurs en plusieurs étapes à l’aide de <a href='/docs/user_guide/engagement_tools/canvas/'>Canvas</a>.<br> <br>Sélectionnez l’un des sujets suivants pour consulter les articles qui peuvent vous intéresser."
-tool: Campagnes
+guide_top_text: "Si vous souhaitez interagir avec vos utilisateurs à l’aide d’une unique étape de message, vous pouvez leur envoyer une campagne en utilisant tout <a href='/docs/user_guide/message_building_by_channel/'>canal de communication</a> qui est pris en charge. Il est mieux de créer la plupart des parcours utilisateurs en plusieurs étapes à l’aide de <a href='/docs/user_guide/engagement_tools/canvas/'>Canvas</a>.<br> <br>Sélectionnez l’un des sujets suivants pour consulter les articles qui peuvent vous intéresser."
+tool: Campaigns
 page_type: landing
-description: "Cette page d’accueil contient les campagnes du tableau de bord de Braze. Vous y trouverez des ressources pour créer, configurer et personnaliser une campagne."
-search_rank: 1
+description: "Cette page d’accueil contient les campagnes du tableau de bord de Braze. Vous trouverez ici des ressources sur la création, la gestion et le test de vos campagnes, ainsi que des idées et des stratégies utiles."
+search_rank: 3
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Commençons
+  - name: Démarrage
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/
     fa_icon: fas fa-book-open
   - name: Construire des campagnes
@@ -26,7 +26,7 @@ guide_featured_list:
   - name: Idées et stratégies
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/
     fa_icon: fas fa-lightbulb
-  - name: Foire aux Questions
+  - name: Foire aux questions
     link: /docs/user_guide/engagement_tools/campaigns/faq/
     fa_icon: fas fa-question
 

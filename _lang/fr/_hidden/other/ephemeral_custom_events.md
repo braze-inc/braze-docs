@@ -3,6 +3,7 @@ nav_title: Événements personnalisés éphémères
 permalink: /ephemeral_custom_events/
 hidden: true
 page_type: reference
+layout: dev_guide
 ---
 
 # Événements personnalisés éphémères

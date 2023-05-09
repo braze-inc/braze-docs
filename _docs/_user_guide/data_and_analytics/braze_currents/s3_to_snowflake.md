@@ -18,7 +18,7 @@ If you have more specific use cases and would like Braze to service your Current
 
 ## Automated load process
 
-This automated load process moves data into [Snowflake](https://www.snowflake.com/), which will allow you to use the [Braze Looker Blocks](https://looker.com/platform/blocks/directory?utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct#braze) to visualize that data in Looker to help drive insights and feedback into your campaigns, Canvases, and Segments.
+This automated load process moves data into [Snowflake](https://www.snowflake.com/), which will allow you to use the [Braze Looker Blocks](https://marketplace.looker.com/marketplace/directory) to visualize that data in Looker to help drive insights and feedback into your campaigns, Canvases, and Segments.
 
 Once you have a Currents to S3 export set up and are receiving live events data, it is time to configure your live ELT pipeline in Snowflake by configuring the following components:
 
@@ -37,7 +37,7 @@ Tables in your database are created from this stage.
 
 When you set up Currents in Braze, specify a folder path for your Currents files to follow into your S3 bucket. Here we use ```currents```, the default folder path.
 
-In AWS, create a new **public-private key pair** for the desired S3 bucket, with grants according to your organization’s security requirements.
+In AWS, create a new **public-private key pair** for the desired S3 bucket, with grants according to your organization's security requirements.
 
 Then, in Snowflake, create a database and schema of your choice (named ```currents``` and ```public``` in the following example).
 
@@ -270,7 +270,7 @@ You must repeat the `CREATE TABLE` and `CREATE PIPE` commands for every event ty
 To see the types of analytics you can perform using Braze Currents, consult our [Looker Blocks](https://github.com/llooker?q=braze).
 
 {% alert note %}
-Reach out to your Braze account manager if you have any questions or if you’re interested in having Braze guide you through this process.
+Reach out to your Braze account manager if you have any questions or if you're interested in having Braze guide you through this process.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/aws-properties.png %}

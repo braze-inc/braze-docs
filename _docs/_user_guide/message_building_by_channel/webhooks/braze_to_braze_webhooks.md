@@ -10,13 +10,11 @@ description: "This article covers how to create a Braze to Braze webhook for key
 
 # Braze to Braze webhooks
 
-> This article covers how to create a Braze to Braze webhook for key use cases.
-
-You can use webhooks to communicate with the Braze [REST API][2], essentially doing anything that our API allows you to do. We refer to this as a Braze to Braze webhook—a webhook that is communicating from Braze to Braze. 
+> You can use webhooks to communicate with the Braze [REST API][2], essentially doing anything that our API allows you to do. We refer to this as a Braze to Braze webhook—a webhook that is communicating from Braze to Braze. 
 
 ## Prerequisites
 
-To create a Braze to Braze webhook, you'll need an [API key][3] with permissions for the endpoint you want to reach. For example, if you're using the User track endpoint, you'll need an API key with `users.track` permissions.
+To create a Braze to Braze webhook, you'll need an [API key][3] with permissions for the endpoint you want to reach. For example, if you're using the `/users/track` endpoint, you'll need an API key with `users.track` permissions.
 
 ## Use cases
 

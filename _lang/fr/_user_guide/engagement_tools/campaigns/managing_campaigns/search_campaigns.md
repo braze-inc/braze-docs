@@ -3,15 +3,15 @@ nav_title: Recherche de campagnes
 article_title: Recherche de campagnes
 page_order: 10
 page_type: reference
-description: "Cet article décrit les termes de recherche que vous pouvez utiliser pour trouver des campagnes."
+description: "Cet article explique comment utiliser la recherche de campagne pour trouver des campagnes."
 tool:
-  - Campagnes
+  - Campaigns
 
 ---
 
 # Recherche de campagnes
 
-Cette page explique comment vous pouvez utiliser le champ de recherche dans la liste des campagnes pour affiner vos résultats.
+> Cet article explique comment vous pouvez utiliser le champ de recherche dans la liste des campagnes pour affiner vos résultats.
 
 ## Recherche par mot-clé
 
@@ -41,7 +41,7 @@ Sélectionner un filtre de campagne ajoutera automatiquement la syntaxe adéquat
 
 Voici une liste des filtres de recherche pris en charge :
 
-| Chercher par | Filtrer | Entrée |
+| Chercher par | Filtre | Entrée |
 | --- | --- | --- |
 | Identifiant API de campagne | `api_id` | Un [identifiant API de campagne]({{site.baseurl}}/api/identifier_types#api-identifier-types) donné |
 | Le segment ciblé par une campagne | `segment` | Nom du segment |

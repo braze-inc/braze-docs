@@ -14,19 +14,17 @@ description: "Cet article présente en détail l’endpoint Supprimer des ID ext
 /users/external_ids/remove
 {% endapimethod %}
 
-Utilisez cet endpoint pour supprimer les anciens ID externes obsolètes de vos utilisateurs. Cet endpoint supprime complètement l’ID obsolète et ne peut pas être annulé.
+> Utilisez cet endpoint pour supprimer les anciens ID externes obsolètes de vos utilisateurs. 
+
+Vous pouvez envoyer jusqu’à 50 ID externes par demande. Vous devrez créer une nouvelle [clé API]({{site.baseurl}}/api/api_key/) avec les autorisations pour cet endpoint.
 
 {% alert warning %}
 Cet endpoint supprime complètement l’ID obsolète et ne peut pas être annulé. Utilisez cet endpoint pour enlever des `external_ids` obsolètes qui sont toujours associés à des utilisateurs dans votre système peut vous empêcher définitivement de trouver les données de ces utilisateurs.
 {% endalert %}
 
-Vous pouvez envoyer jusqu’à 50 ID externes par demande.
-
-Vous devrez créer une nouvelle [clé API]({{site.baseurl}}/api/api_key/) avec les autorisations pour cet endpoint.
-
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
@@ -71,16 +69,16 @@ La réponse confirmera toutes les suppressions réussies et les suppressions inf
 
 ```
 {
-  "message" : (string) message d’état,
-  "external_ids" : (array) opérations de renommage réussies,
-  "rename_errors": (tableau) <minor error message>
+  "message" : (string) status message,
+  "removed_ids" : (array of strings) successful remove operations,
+  "removal_errors": (array of arrays) <minor error message>
 }
 ```
 
 Le champ `message` renverra `success` pour toutes les demandes valides. Des erreurs plus spécifiques sont saisies dans le tableau `removal_errors`. Le champ `message` renvoie une erreur dans les cas suivants :
 - Clé API non valide
 - Tableau `external_ids` vide
-- Tableau `external_ids` avec plus de 50 articles
-- Dépassement de la limite de débit (> 1 000 demandes/minute)
+- Tableau `external_ids` avec plus de 50 éléments
+- Atteinte de la limite de débit (plus de 1 000 requêtes/minute)
 
 {% endapi %}

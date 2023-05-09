@@ -5,14 +5,14 @@ platform: iOS
 page_order: 0
 description: "Cet article couvre une vue d’ensemble du modèle de données du fil d’actualités, l’intégration du fil d’actualités dans votre application iOS et un exemple d’intégration de contrôleur de visualisation personnalisée."
 channel:
-  - Fil d’actualité
+  - fil d’actualité
 
 ---
 
 # Intégration du fil d’actualité
 
-{% alert tip %}
-Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de messagerie de cartes de contenu - il est plus flexible, personnalisable et fiable. Il est également plus facile à trouver et utiliser dans le produit Braze. Contactez votre gestionnaire de compte Braze pour plus d’informations.
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 ## Modèle de données de fil d’actualités
@@ -25,8 +25,8 @@ Pour accéder au modèle de données de fil d’actualités, abonnez-vous aux é
 {% tab OBJECTIVE-C %}
 
 ```objc
-//S’abonner aux mises à jour du fil
-// Remarque : vous devez supprimer l’observateur, le cas échéant
+// Subscribe to feed updates
+// Note: you should remove the observer where appropriate
 [[NSNotificationCenter defaultCenter] addObserver:self
                                          selector:@selector(feedUpdated:)
                                              name:ABKFeedUpdatedNotification
@@ -34,11 +34,11 @@ Pour accéder au modèle de données de fil d’actualités, abonnez-vous aux é
 ```                                           
 
 ```objc
-// Appelé lorsque le fil est réactualisé (via `requestFeedRefresh`)
+// Called when the feed is refreshed (via `requestFeedRefresh`)
 - (void)feedUpdated:(NSNotification *)notification {
   BOOL updateIsSuccessful = [notification.userInfo[ABKFeedUpdatedIsSuccessfulKey] boolValue];
-  // contrôler la réussite
-  // obtenir les cartes à l’aide d’[[Appboy sharedInstance].feedController getCardsInCategories:ABKCardCategoryAll];
+  // check for success
+  // get the cards using [[Appboy sharedInstance].feedController getCardsInCategories:ABKCardCategoryAll];
 }
 ```
 
@@ -46,19 +46,19 @@ Pour accéder au modèle de données de fil d’actualités, abonnez-vous aux é
 {% tab swift %}
 
 ```swift
-//S’abonner aux mises à jour du fil
-// Remarque : vous devez supprimer l’observateur, le cas échéant
+// Subscribe to feed updates
+// Note: you should remove the observer where appropriate
 NotificationCenter.default.addObserver(self, selector:
   #selector(feedUpdated),
   name:NSNotification.Name.ABKFeedUpdated, object: nil)
 ```
 
 ```swift
-// Appelé lorsque le fil est réactualisé (via `requestFeedRefresh`)
+// Called when the feed is refreshed (via `requestFeedRefresh`)
 private func feedUpdated(_ notification: Notification) {
   if let updateSuccessful = notification.userInfo?[ABKFeedUpdatedIsSuccessfulKey] as? Bool {
-    // contrôler la réussite
-    // // obtenir les cartes à l’aide d’Appboy.sharedInstance()?.feedController.getCardsInCategories(.all);      
+    // check for success
+    // get the cards using Appboy.sharedInstance()?.feedController.getCardsInCategories(.all);      
   }
 }
 ```
@@ -84,16 +84,16 @@ Braze propose cinq types de cartes uniques : image de bannière, image sous-tit
 | `extras` | Un `NSDictionary` facultatif de valeurs `NSString`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Propriétés de la carte d’image de la bannière
+### Propriétés de la carte image de bannière
 
 |Propriété|Description|
 |---|---|
 | `image` | (Obligatoire) Cette propriété est l’URL de l’image de la carte. |
 | `URL` | (Facultatif) L’URL qui s’ouvrira après avoir cliqué sur la carte. Il peut s’agir d’une URL HTTP(S) ou d’une URL de protocole. |
-| `domain` | (Facultatif) Le texte du lien pour l’URL de propriété, comme @"blog.braze.com ». Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction de cliquer sur la carte, mais est masqué dans le fil d’actualité de Braze par défaut. |
+| `domain` | (Facultatif) Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com". Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction de cliquer sur la carte, mais est masqué dans le fil d’actualité de Braze par défaut. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Propriétés de la carte d’image sous-titrée
+### Propriétés de carte image sous-titrée
 
 |Propriété|Description|
 |---|---|
@@ -101,7 +101,7 @@ Braze propose cinq types de cartes uniques : image de bannière, image sous-tit
 | `title` | (Obligatoire) Le texte du titre de la carte. |
 | `description`(Obligatoire) Le texte du corps de la carte. |
 | `URL` | (Facultatif) L’URL qui s’ouvrira après avoir cliqué sur la carte. Il peut s’agir d’une URL HTTP(S) ou d’une URL de protocole. |
-| `domain` | (Facultatif) Le texte du lien pour l’URL de propriété, comme @"blog.braze.com ». Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
+| `domain` | (Facultatif) Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com". Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Propriétés de la carte d’annonce textuelle (image sous-titrée sans image)
@@ -111,7 +111,7 @@ Braze propose cinq types de cartes uniques : image de bannière, image sous-tit
 | `title` | (Obligatoire) Le texte du titre de la carte. |
 | `description` | (Obligatoire) Le texte du corps de la carte. |
 | `url` | (Facultatif) L’URL qui s’ouvrira après avoir cliqué sur la carte. Il peut s’agir d’une URL HTTP(S) ou d’une URL de protocole. |
-| `domain` | (Facultatif) Le texte du lien pour l’URL de propriété, comme @"blog.braze.com". Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
+| `domain` | (Facultatif) Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com". Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Propriétés de la carte classique
@@ -122,7 +122,7 @@ Braze propose cinq types de cartes uniques : image de bannière, image sous-tit
 | `title` | (Facultatif) Le texte du titre de la carte. |
 | `description` | (Obligatoire) Le texte du corps de la carte. |
 | `URL` | (Facultatif) L’URL qui s’ouvrira après avoir cliqué sur la carte. Il peut s’agir d’une URL HTTP(S) ou d’une URL de protocole. |
-| `domain` | (Facultatif) Le texte du lien pour l’URL de propriété, comme @"blog.braze.com ». Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
+| `domain` | (Facultatif) Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com". Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Méthodes de carte
@@ -214,7 +214,7 @@ self.present(newsFeed, animated: true, completion: nil)
 {% endtab %}
 {% endtabs %}
 
-Pour consulter les exemples de contrôleur, consultez notre [exemple d’application de fil d’actualité][3].
+Pour consulter les exemples de contrôleur, consultez notre [exemple d’application de fil d’actualités.][3].
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/behavior_on_click/#customizing-in-app-message-body-clicks

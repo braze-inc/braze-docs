@@ -2,7 +2,7 @@
 page_order: 1
 nav_title: Customization
 article_title: iOS Push Customization
-layout: featured
+layout: dev_guide
 
 platform: iOS
 
@@ -11,7 +11,7 @@ channel:
 
 guide_top_header: "iOS Push Customization"
 guide_top_text: ""
-description: "This landing page covers the Braze iOS SDK push customization options."
+description: "This landing page covers the Braze iOS SDK push customization options, including action buttons, custom sounds, rich notifications, badges, and more.."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

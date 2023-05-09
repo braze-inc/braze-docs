@@ -3,7 +3,7 @@ nav_title: Rich Notifications
 article_title: Rich Push Notifications for iOS
 platform: iOS
 page_order: 3
-description: "This article covers implementing rich push notifications in your iOS application."
+description: "This reference article covers implementing rich push notifications in your iOS application."
 channel:
   - push
 

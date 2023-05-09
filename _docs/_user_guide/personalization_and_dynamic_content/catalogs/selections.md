@@ -7,13 +7,13 @@ description: "This reference article covers how to create and use selections wit
 
 # Selections
 
-Selections are groups of data that can be used to personalize a message for each user in your campaign. After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), you can further reference this data by incorporating selections in your Braze campaigns. Note that the free tier of catalogs allows one selection to be created per catalog. 
-
-{% alert important %}
-Selections are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
+> Selections are groups of data that can be used to personalize a message for each user in your campaign. After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), you can further reference this data by incorporating selections in your Braze campaigns. Note that the free tier of catalogs allows one selection to be created per catalog. 
 
 To create a selection, select your catalog and click **Create Selection**. Select the catalog column from the **Filter Field** dropdown. Next, select the operator, and enter the attribute. Continue to add any additional filters as needed for filter settings.
+
+{% alert note %}
+You can create up to 10 selections per catalog.
+{% endalert %}
 
 In the **Sort type** section, you can specify the order in which results are returned. This includes an option to randomize the sort order. Next, enter the maximum number of results, up to 10, for the **Limit number** under the **Results limit** section.
 

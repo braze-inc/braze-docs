@@ -9,11 +9,9 @@ description: "Cet article décrit comment configurer et utiliser plusieurs flux 
 
 ---
 
-# Utilisation de plusieurs flux de carte de contenu
+# Fils multiples
 
-Les cartes de contenu peuvent être filtrées sur l’application pour afficher uniquement des cartes spécifiques, ce qui vous permet d’avoir plusieurs flux de carte de contenu pour différents cas d’usage (par exemple, avoir un flux `Transactional` et un flux `Marketing`).
-
-La documentation suivante montre un exemple d’implémentation qui peut être modifié pour correspondre à votre intégration spécifique.
+> Les cartes de contenu peuvent être filtrées sur l’application pour afficher uniquement des cartes spécifiques, ce qui vous permet d’avoir plusieurs flux de carte de contenu pour différents cas d’usage (par exemple, avoir un flux `Transactional` et un flux `Marketing`).<br><br>La documentation suivante montre un exemple d’implémentation qui peut être modifié pour correspondre à votre intégration spécifique.
 
 ## Étape 1 : Définir des paires clé-valeur sur les cartes
 
@@ -42,7 +40,7 @@ function showCardsByFeedType(feed_type) {
 Ensuite, vous pouvez configurer un basculement pour votre flux personnalisé :
 
 ```javascript
-// afficher le fil « Transactionnel » lorsque l’on clique sur ce bouton
+// show the "Transactional" feed when this button is clicked
 document.getElementById("show-transactional-feed").onclick = function() {
   showCardsByFeedType("Transactional"); 
 };

@@ -1,10 +1,9 @@
 ---
-hidden: true
 nav_title: Custom Sounds
 article_title: Custom Push Notification Sounds for iOS
-platform: iOS
+platform: Swift
 page_order: 3
-description: "This article covers implementing custom sounds in your iOS push notifications."
+description: "This article covers implementing iOS custom sounds in the Swift SDK."
 channel:
   - push
 
@@ -14,34 +13,45 @@ channel:
 
 ## Step 1: Hosting the sound in the app
 
-Custom push notification sounds must be hosted locally within the main bundle of the client application. The following audio data formats are accepted:
+Custom push notification sounds must be hosted locally within the main bundle of your app. The following audio data formats are accepted:
 
 - Linear PCM
 - MA4
 - µLaw
 - aLaw
 
-You can package the audio data in an AIFF, WAV, or CAF file. In Xcode, add the sound file to your project as a nonlocalized resource of the application bundle.
+You can package the audio data in an AIFF, WAV, or CAF file. In Xcode, add the sound file to your project as a non-localized resource of the application bundle.
 
-You may use the afconvert tool to convert sounds. For example, to convert the 16-bit linear PCM system sound Submarine.aiff to IMA4 audio in a CAF file, use the following command in the terminal:
+{% alert note %}
+Custom sounds must be under 30 seconds when played. If a custom sound is over that limit, the default system sound is played instead.
+{% endalert %}
+
+### Converting sound files
+
+You can use the afconvert tool to convert sounds. For example, to convert the 16-bit linear PCM system sound Submarine.aiff to IMA4 audio in a CAF file, use the following command in the terminal:
 
 ```bash
 afconvert /System/Library/Sounds/Submarine.aiff ~/Desktop/sub.caf -d ima4 -f caff -v
 ```
 
-You can inspect a sound to determine its data format by opening it in QuickTime Player and choosing **Show Movie Inspector** from the **Movie** menu.
+{% alert tip %}
+You can inspect a sound to determine its data format by opening it in QuickTime Player and choosing **Show Movie Inspector** from the **Movie** menu. 
+{% endalert %}
 
-Custom sounds must be under 30 seconds when played. If a custom sound is over that limit, the default system sound is played instead.
+## Step 2: Providing a protocol URL for the sound
 
-## Step 2: Providing the dashboard with a protocol URL for the sound
+You must specify a protocol URL that directs to the location of the sound file in your app. There are two methods for doing this:
 
-Your sound must be hosted locally within the app. You must specify a protocol URL that directs to the location of the sound file in the app within the **Sound** field in the push composer. Specifying "default" in this field will play the default notification sound on the device. This can be specified via our [messaging API][25] or our dashboard under **Settings** in the push composer wizard, as pictured in the following screenshot:
+* Use the `sound` parameter of the [Apple push object][1] to pass the URL to Braze.
+* Specify the URL in the dashboard. In the [push composer][2], select **Settings** and enter the protocol URL in the **Sound** field. 
 
-![][8]
+![The push composer in the Braze dashboard][8]
 
-If the specified sound file doesn’t exist or the keyword "default" is entered, Braze will use the default device alert sound. Aside from our dashboard, sound can also be configured via our [messaging API][12]. See the Apple Developer Documentation regarding [preparing custom alert sounds][9] for additional information.
+If the specified sound file doesn't exist or the keyword "default" is entered, Braze will use the default device alert sound. Aside from our dashboard, sound can also be configured via our [messaging API][12].
 
+See the Apple Developer Documentation regarding [preparing custom alert sounds][9] for additional information.
+
+[1]: {{site.baseurl}}/api/objects_filters/messaging/apple_object#apple-push-object
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#step-3-select-notification-type-ios-and-android
 [8]: {% image_buster /assets/img_archive/sound_push_ios.png %}
 [9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html
-[12]: {{site.baseurl}}/api/endpoints/messaging/
-[25]: {{site.baseurl}}/api/endpoints/messaging/

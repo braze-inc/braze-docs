@@ -2,12 +2,12 @@
 nav_title: "iOS Options"
 article_title: iOS Push Options
 page_order: 8
-layout: featured
+layout: dev_guide
 
 page_type: landing
 channel: push
 platform: iOS
-description: "The following articles list all things solely iOS push for Braze."
+description: "This landing page lists all things solely iOS push for Braze."
 
 guide_top_header: "iOS Push Articles"
 guide_top_text: "The following articles list all things solely iOS push for Braze."

@@ -3,17 +3,19 @@ nav_title: Style personnalisé
 article_title: Style personnalisé de fil d’actualité pour iOS
 platform: iOS
 page_order: 0
-description: "Cet article de référence montre comment implémenter des styles de fil d’actualités personnalisé à votre application iOS."
+description: "Cet article de référence montre comment implémenter des styles de fil d’actualités personnalisé et remplacer les images par défaut de votre application iOS."
 channel:
-  - Fil d’actualité
+  - fil d’actualité
 
 ---
 
 # Style personnalisé
 
-{% alert important %}
-L’intégration de `SDWebImage` est nécessaire si vous prévoyez d’utiliser notre interface utilisateur Braze pour afficher des images dans les messages in-app iOS, le fil d’actualités ou les cartes de contenu.
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
+
+L’intégration de `SDWebImage` est nécessaire si vous prévoyez d’utiliser notre interface utilisateur Braze pour afficher des images dans les messages in-app iOS, le fil d’actualités ou les cartes de contenu.
 
 ## Remplacer les images par défaut
 

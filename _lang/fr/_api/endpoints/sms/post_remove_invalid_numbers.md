@@ -5,7 +5,8 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Récupérer une liste des numéros de téléphone non valides."
+description: "Cet article présente en détail l’endpoint Braze Supprimer les numéros de téléphone non valides."
+
 ---
 {% api %}
 # Supprimer les numéros de téléphone non valides
@@ -13,11 +14,13 @@ description: "Cet article décrit l’utilisation et les paramètres pour se ser
 /sms/invalid_phone_numbers/remove
 {% endapimethod %}
 
-Cet endpoint vous permet de supprimer des numéros de téléphone « non valides » de la liste de numéros non valides de Braze. Cela peut être utilisé pour revalider les numéros de téléphone après avoir été marqués comme non valides.
+> Cet endpoint vous permet de supprimer des numéros de téléphone « non valides » de la liste de numéros non valides de Braze. 
+
+Cela peut être utilisé pour revalider les numéros de téléphone après avoir été marqués comme non valides.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76495aac-8c2d-4e1a-8cac-12e3856ab1d3 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 

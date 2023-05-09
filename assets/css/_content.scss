@@ -65,6 +65,11 @@
         }
       }
     }
+    > h1:first-of-type {
+      &::before {
+        height: ($calc_offset_top - 40px);
+      }
+    }
 
     $content_transition_time: 0.2s;
 
@@ -196,15 +201,34 @@
         }
 
       }
+      .footnote {
+        &::before {
+          content: "[";
+        }
+        &::after {
+          content: "]";
+        }
+      }
+      .footnotes {
+        li {
+          &::before {
+            content: counter(li) ':';
+          }
+        }
+      }
   }
 
   details {
     summary {
-      font-size: 14px;
+      font-size: 18px;
       color: #212123;
     }
     p, ol, ul {
       padding: 5px 0 0 0px;
+    }
+    .detail_div {
+      border: 1px solid $grey-ghost !important;
+      padding: 30px 30px 0 30px;
     }
   }
 
@@ -273,7 +297,6 @@
   }
 
   h1 {
-
     font-size: 42px;
     font-family: $braze-medium;
     line-height: 1.5;
@@ -390,14 +413,24 @@ div.highlight {
   }
 }
 #breadcrumb {
+  margin-top: 45px;
   padding-bottom: 15px;
   min-height: 15px;
-  font-size: 12px;
+  font-size: 13px;
   font-family: $braze-regular;
   line-height: 1.7;
-  color: $black-shark;
+  color: $grey-boulder;
   a {
-    border-bottom-width: 0 !important;
+    border-bottom-width: 1px !important;
+    border-bottom-color: transparent !important;
+    font-weight: normal !important;
+    font-family: $braze-regular !important;
+    color: $grey-boulder !important;
+    &:hover {
+      background-color: transparent !important;
+      border-bottom-width: 1px !important;
+      border-bottom-color: $braze-link-color !important;
+    }
   }
 }
 #basic_page {
@@ -546,6 +579,30 @@ blockquote {
     padding-right: 2rem;
     padding-left: 2rem;
   }
+}
+
+/*
+* Blockquotes
+*/
+
+blockquote {
+  color: $black-shark;
+  border-left: 2px solid $navy-bay !important;
+  padding: 20px 20px 2px 20px;
+  font-size: 16px;
+  font-style: normal;
+  background-color: $grey-athens;
+
+}
+
+/* Sub intro */
+.subintro {
+  background-color: $grey-athens;
+  border-left: 2px solid $navy-bay !important;
+  font-size: 16px;
+  font-style: normal;
+  color: $black-shark;
+  padding: 20px 20px 20px 20px;
 }
 
 

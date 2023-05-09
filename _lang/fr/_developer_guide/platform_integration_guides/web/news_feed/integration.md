@@ -9,7 +9,13 @@ channel: fil d’actualité
 
 ---
 
-# Fil d’actualité
+# Intégration du fil d’actualité
+
+> Cet article explique comment paramétrer un fil d’actualité pour le SDK Web de Braze.
+
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
 
 Le fil d’actualités est un fil de contenu in-app entièrement personnalisable pour vos utilisateurs. Notre ciblage et notre segmentation vous permettent de créer un fil de contenu individuel, adapté aux intérêts de chaque utilisateur. Selon leur position dans le cycle de vie de l’utilisateur et la nature de votre application, il peut s’agir d’un serveur de contenu d’onboarding, d’un centre de publicité, de réalisation ou d’actualités génériques.
 
@@ -38,7 +44,7 @@ Si vous souhaitez afficher un jeu statique spécifique de cartes de fil d'actual
 ``` javascript
 braze.subscribeToFeedUpdates(function(feed) {
   var cards = feed.cards;
-  braze.showFeed(undefined, cartes);
+  braze.showFeed(undefined, cards);
 });
 braze.requestFeedRefresh();
 ```
@@ -47,7 +53,7 @@ Consultez [JSDocs][2] pour une documentation complète sur `showFeed`, `destroyF
 
 ## Types de cartes
 
-Le SDK Braze pour le Web prend en charge 3 types de cartes de fil d'actualité uniques, [ClassicCard][3 ],[Banner][4], [CaptionedImage][5] qui partagent un modèle de base, [Card][1].
+Le SDK Braze pour le Web prend en charge 3 types de cartes de fil d'actualité uniques, [ClassicCard][3], [Banner][4], [CaptionedImage][5] qui partagent un modèle de base, [Card][1].
 
 ### Demande de décompte de cartes non lues
 
@@ -57,7 +63,7 @@ Vous pouvez à tout moment demander le nombre de cartes non lues en appelant :
 braze.getCachedFeed().getUnreadCardCount();
 ```
 
-Cela est souvent utilisé pour alimenter les badges indiquant combien de cartes de fil d'actualité n’ont pas été lues. consultez les [Documents de référence JS ][17] pour plus d’informations. Notez que Braze n’actualisera pas les cartes de fil d'actualité sur les pages nouvellement chargées (cette fonction reviendra à 0) jusqu’à ce que vous affichiez le fil ou appelez `braze.requestFeedRefresh();`
+Cela est souvent utilisé pour alimenter les badges indiquant combien de cartes de fil d’actualité n’ont pas été lues. consultez les [Documents de référence JS][17] pour plus d’informations. Notez que Braze n’actualisera pas les cartes de fil d’actualité sur les pages nouvellement chargées (cette fonction reviendra à 0) jusqu’à ce que vous affichiez le fil ou appelez `braze.requestFeedRefresh();`
 
 ### Paires clé-valeur
 
@@ -77,9 +83,9 @@ body .ab-feed {
 
 ## Catégories
 
-Les instances du fil d'actualité Braze peuvent être configurées pour ne recevoir que des cartes d’une certaine « catégorie ». Cela permet l’intégration efficace de plusieurs flux de fils d'actualité au sein d’une seule application.
+Les instances du fil d’actualité Braze peuvent être configurées pour ne recevoir que des cartes d’une certaine « catégorie ». Cela permet l’intégration efficace de plusieurs flux de fils d’actualité au sein d’une seule application.
 
-Les catégories de fils d'actualité peuvent être définies en fournissant le troisième paramètre `allowedCategories` à `toggleFeed` :
+Les catégories de fils d’actualité peuvent être définies en fournissant le troisième paramètre `allowedCategories` à `toggleFeed` :
 
 ``` javascript
 braze.toggleFeed(undefined, undefined, [braze.Card.Category.NEWS]);
@@ -95,7 +101,7 @@ braze.toggleFeed(undefined, undefined, [braze.Card.Category.ANNOUNCEMENTS, braze
 
 Braze fournit un indicateur de messages lus et non lus sur les cartes de fil d'actualité comme illustré ci-dessous :
 
-![Une carte de fil d'actualité affichant l’image d’une montre accompagnée d’un texte. Dans le coin supérieur droit du texte, on trouve un triangle bleu ou gris, indiquant si une carte a été lue ou non. Un triangle bleu signifie qu’une carte a été lue.][25]
+![Une carte de fil d’actualité affichant l’image d’une montre accompagnée d’un texte. Dans le coin supérieur droit du texte, on trouve un triangle bleu ou gris, indiquant si une carte a été lue ou non. Un triangle bleu signifie qu’une carte a été lue.][25]
 
 ### Désactiver les indicateurs
 

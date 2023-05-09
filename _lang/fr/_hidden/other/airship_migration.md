@@ -3,6 +3,7 @@ nav_title: Migration du SDK depuis Airship vers Braze
 permalink: /sdk_migration_guide_airship/
 hidden: true
 page_type: reference
+layout: dev_guide
 ---
 
 # Migration des SDK depuis Airship vers Braze (iOS)
@@ -22,11 +23,11 @@ Il est nécessaire de [migrer des jetons de notification push via l’API]({{sit
 
 1. Importer les jetons via le endpoint [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Pour les importations de lots, nous disposons de ressources pour accélérer le processus. Contactez votre COM ou SA pour plus de détails !
 2. Si le jeton existe déjà dans Braze, il sera ignoré. Sinon, un profil anonyme sera généré.
-3. Assurance qualité de l’intégration de notification push. Assurez-vous que les étapes de [configuration des notifications push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) ont été achevées.
+3. Assurance qualité de l’intégration de notification push. Assurez-vous que les étapes de [configuration des notifications push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) ont été achevées.
 
 Si vos profils d’utilisateur et vos jetons de notification push sont stockés à des endroits distincts, nous vous recommandons d’importer des jetons de notification push de manière anonyme, puis de migration ultérieurement vos profils d’utilisateur existants. Il n’est pas nécessaire de les mapper ensemble car le SDK iOS de Braze va gérer la résolution du jeton lors de l’intégration réussie.
 
-- Nous recommandons de migrer des utilisateurs via API, mais s’il est nécessaire d’importer une liste statique d’utilisateurs, cela peut être fait avec un CSV. Notez que **les jetons de notification push ne peuvent pas être importés via CSV** parce que le « jeton de notification push » ne peut pas être spécifié dans le CSV. Pour afficher un modèle d’importation et en savoir plus sur l’importation des données dans le tableau de bord, consultez notre [Documentation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
+- Nous recommandons de migrer des utilisateurs via API, mais s’il est nécessaire d’importer une liste statique d’utilisateurs, cela peut être fait avec un CSV. Notez que **les jetons de notification push ne peuvent pas être importés via CSV** parce que l’objet « push_token » ne peut pas être spécifié dans le CSV. Pour afficher un modèle d’importation et en savoir plus sur l’importation des données dans le tableau de bord, consultez notre [Documentation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
 
 {% alert note %}
 Les jetons de notification push peuvent apparaître sous la forme `subscribed` dans le tableau de bord de Braze, mais ils deviendront `opted-in` une fois que les utilisateurs débuteront une session avec le SDK Braze.
@@ -219,7 +220,7 @@ extension AppboyManager {
 {% endtab %}
 {% endtabs %}
 
-### Gestion des notifications push {#pushnotifications}
+### Gérer les notifications push {#pushnotifications}
 {% tabs %}
 {% tab Swift %}
 **Airship**
@@ -296,7 +297,7 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 {% endtab %}
 {% endtabs %}
 
-### Analyse {#analytics}
+### Analytique {#analytics}
 {% tabs %}
 {% tab Swift %}
 **Airship**
@@ -371,7 +372,7 @@ extension AppboyManager {
 {% endtab %}
 {% endtabs %}
 
-### Gestion des messages dans l’application {#iammessages}
+### Gérer les messages in-app {#iammessages}
 {% tabs %}
 {% tab Swift %}
 **Airship**

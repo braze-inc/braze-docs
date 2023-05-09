@@ -9,12 +9,12 @@ description: "This reference article covers Internal Groups, a great way to get 
 
 # Internal Groups
 
-> This reference article covers Internal Groups, and how to create and use them. In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use internal groups to conduct your own troubleshooting and debugging.
+> Internal Groups are a great way to build and organize internal or third-party test groups. They provide insight into your SDK or API logs, and are useful when testing your SDK integration. You can create an unlimited number of custom Internal Groups with up to 1,000 members.
 
-Internal Groups are a great way to build and organize internal or third-party test groups. They provide insight into your SDK or API logs, and are useful when testing your SDK integration. You can create an unlimited number of custom Internal Groups with up to 1,000 members.
-
-{% alert note %}
 You need the **Access Dev Console** [permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for your app group to create and manage Internal Groups.
+
+{% alert tip %}
+In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use internal groups to conduct your own troubleshooting and debugging.
 {% endalert %}
 
 ## Creating a group
@@ -58,7 +58,7 @@ Similar to sending a preview test of a message, the Content Test group saves you
 
 You can select individual Braze users or as many Internal Groups to send the message to as you want. If your message includes any Liquid or other dynamic personalization, Braze will use the attributes available for each individual user to personalize the message contents. For users who have no attributes, Braze will use the default value set.
 
-Additionally, if you preview the message as a random user, custom user, or existing user, you can send that previewed version instead. Clearing the checkbox allows you to send based on each users’ attributes versus the previewed version.
+Additionally, if you preview the message as a random user, custom user, or existing user, you can send that previewed version instead. Clearing the checkbox allows you to send based on each users' attributes versus the previewed version.
 
 Lastly, if you use an IP pool to send out email, you can select which IP pool you would like the email to be sent from by selecting the pool from the dropdown available.
 

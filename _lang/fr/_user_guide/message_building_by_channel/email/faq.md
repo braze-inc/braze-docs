@@ -3,17 +3,19 @@ nav_title: FAQ
 article_title: FAQ sur les e-mails
 page_order: 12
 description: "Le présent article fournit des réponses aux questions fréquemment posées sur les courriers électroniques."
-channel: E-mail
+channel: email
 
 ---
 
-# FAQ sur les e-mails
+# Foire aux questions
+
+> Cet article fournit des réponses à des questions fréquemment posées sur les e-mails.
 
 ### Puis-je ajouter un lien « Afficher cet e-mail dans un navigateur » à mes e-mails ?
 
 Non, Braze n’offre pas cette fonctionnalité. C’est parce qu’une majorité croissante d’e-mails sont ouverts sur des appareils mobiles et des clients par e-mail modernes, qui rendent les images et le contenu sans aucun problème.
 
-**Contournement :** Pour obtenir ce même résultat, vous pouvez héberger le contenu de votre e-mail sur une page d’accueil externe (comme votre site Internet), qui peut ensuite être lié à la campagne par e-mail que vous construisez à l’aide de l’outil **Lien** lors de la modification du corps de l’email.
+**Contournement :** Pour obtenir ce même résultat, vous pouvez héberger le contenu de votre e-mail sur une page d’accueil externe (comme votre site Internet), qui peut ensuite être lié à la campagne par e-mail que vous construisez à l’aide de l’outil **Link (Lien)** lors de la modification du corps de l’email.
 
 ### Que se passe-t-il lorsqu’un e-mail est envoyé et que plusieurs profils ont la même adresse e-mail ?
 
@@ -21,13 +23,13 @@ Si plusieurs utilisateurs avec des e-mails correspondants sont tous dans le mêm
 
 Notez que cette déduplication se produit si les utilisateurs ciblés sont inclus dans le même envoi. Par conséquent, les campagnes déclenchées peuvent entraîner plusieurs envois à la même adresse e-mail (même dans une période où les utilisateurs peuvent être exclus en raison de la rééligibilité) si différents utilisateurs avec des e-mails correspondants enregistrent l’événement déclencheur à différents moments. Les utilisateurs ne sont pas dédupliqués par e-mail sur l’entrée Canvas, il est donc possible que les utilisateurs ne soient pas dédupliqués au-delà de la première étape d’un Canvas s’ils progressent à des moments légèrement différents en raison de l’entrée limitée. Lorsqu’un utilisateur lié à une adresse e-mail donnée ouvre ou clique sur un e-mail, tous les profils d’utilisateur qui partagent cette adresse e-mail sont marqués comme ayant ouvert et cliqué sur la campagne.
 
-#### Exception : Campagnes déclenchées par une API
+#### Exception : Campagnes déclenchées par API
 
 Les campagnes déclenchées par une API dédupliquent ou envoient des e-mails en double selon l’endroit où l’audience est définie. En résumé, les e-mails dupliqués doivent être directement ciblés comme `user_ids` différents dans le cadre de l’appel afin de recevoir plusieurs détails. Voici trois scénarios possibles pour les campagnes déclenchées par une API :
 
 - **Scénario 1 : Dupliquer les e-mails dans le segment cible :** Si le même e-mail apparaît dans plusieurs profils utilisateur regroupés dans les filtres d'audience du tableau de bord pour une campagne déclenchée par une API, un seul des profils recevra l’e-mail.
 - **Scénario 2 : Dupliquer les e-mails en différents `user_ids` dans l’objet Destinataires :** Si le même e-mail apparaît dans plusieurs `External_user_IDs` référencés par l’objet « Destinataires », l’e-mail sera envoyé deux fois.
-- **Scénario 3 : Dupliquer les e-mails en raison d’_id utilisateur en double dans l’objet Destinataires :** Si vous essayez d’ajouter le même profil utilisateur deux fois, seul un des profils recevra l’e-mail.
+- **Scénario 3 : Dupliquer les e-mails en raison d’user_ids en double dans l’objet Destinataires :** Si vous essayez d’ajouter le même profil utilisateur deux fois, seul un des profils recevra l’e-mail.
 
 ### Qu’est-ce qu’un « bon » taux de délivrabilité par e-mail ?
 
@@ -57,7 +59,7 @@ Les [pixels de suivi]({{site.baseurl}}/user_guide/administrative/app_settings/ma
 
 ### Comment mettre à jour les groupes d’abonnement e-mail de l’utilisateur ?
 
-- **API Rest :** Des profils d’utilisateur peuvent être définis en programmation par l’endpoint [/subscription/status/set]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) au moyen de l’API REST de Braze.
+- **API Rest :** Des profils d’utilisateur peuvent être définis en programmation par l’endpoint [/subscription/status/set]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) en utilisant l’API REST de Braze.
 
 ### Comment vérifier le groupe d’abonnement e-mail d’un utilisateur ?
 

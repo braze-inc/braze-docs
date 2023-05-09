@@ -2,15 +2,15 @@
 nav_title: "Modèles et médias"
 article_title: Modèles et médias
 page_order: 5
-layout: featured
+layout: dev_guide
 guide_top_header: "Modèles et médias"
-guide_top_text: "La fonction Templates and Media (Modèles et médias) de Braze vous permet de gérer des modèles et de télécharger des images pour vos messages dans un seul emplacement centralisé. Vous pouvez également utiliser cette fonction pour consolider et organiser vos modèles sur votre tableau de bord afin qu’ils soient visuellement cohérents."
-search_rank: 1
+guide_top_text: "La fonctionnalité Templates and Media (Modèles et médias) de Braze vous permet de gérer des modèles et de télécharger des images pour vos messages dans un seul emplacement centralisé. Vous pouvez également utiliser cette fonction pour consolider et organiser vos modèles sur votre tableau de bord afin qu’ils soient visuellement cohérents."
+search_rank: 2
 page_type: landing
 tool: 
-- Modèles
+- Templates
 - Médias
-description: "Cette page d’accueil regroupe plusieurs articles sur les modèles et médias. Vous trouverez ici des ressources pour vous aider à gérer vos modèles, à télécharger des images et à créer des blocs de contenu."
+description: "Cette page d’accueil regroupe plusieurs articles sur les modèles et médias. Vous trouverez ici des ressources sur la bibliothèque multimédia et vous aider à gérer vos modèles, à télécharger des images, à créer des blocs de contenu, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -33,11 +33,11 @@ guide_featured_list:
 
 ## À propos des modèles et des médias
 
-Pour accéder aux modèles et aux médias, sélectionnez **Engagement** dans la barre de navigation de gauche de votre compte Braze, puis cliquez sur **Modèles et médias**. 
+Pour accéder aux modèles et aux médias, sélectionnez **Engagement** dans la barre de navigation de gauche de votre compte Braze, puis cliquez sur **Templates & Media (Modèles et médias)**. 
 
 Vous pouvez utiliser et gérer des modèles ainsi que des contenus créatifs dans Templates & Media (Modèles et médias) pour les fonctionnalités suivantes :
 
-- **[Modèles d’e-mail][2]**
+- **[Modèles d'e-mail][2]**
 - **[Blocs de contenu][7]**
 - **[Modèles de webhook][3]**
 - **[Modèles de lien][6]**

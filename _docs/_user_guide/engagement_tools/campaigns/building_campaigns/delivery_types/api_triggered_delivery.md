@@ -3,15 +3,15 @@ nav_title: API-Triggered Delivery
 article_title: API-Triggered Delivery
 page_order: 2
 page_type: reference
-description: "This reference article describes how to schedule an API-triggered campaign."
+description: "This reference article describes how to schedule and set up an API-triggered campaign."
 tool: Campaigns
 platform: API
 
 ---
 
-# API-triggered campaigns
+# API-triggered delivery
 
-API-triggered campaigns or server-trigger campaigns are ideal for more advanced transactional use-cases. Braze API-triggered campaigns allow marketers to manage campaign copy, multivariate testing, and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from their own servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real-time.
+> API-triggered campaigns or server-trigger campaigns are ideal for more advanced transactional use-cases. Braze API-triggered campaigns allow marketers to manage campaign copy, multivariate testing, and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from their own servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real-time.
 
 ## Setting up an API-triggered campaign
 
@@ -21,7 +21,7 @@ Setting up an API-triggered campaign takes a few quick steps. First, create a ne
 An API-triggered campaign is different from an [API campaign]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns).
 {% endalert %}
 
-Next, configure your copy and notifications the same way as you would normally for scheduled notifications and select **API-Triggered Delivery**. For more information on the triggering of these campaigns from your server, check out the endpoint documentation on [API-triggered campaign sending]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
+Next, configure your copy and notifications the same way as you would normally for scheduled notifications and select **API-Triggered Delivery**. For more information on the triggering of these campaigns from your server, check out this [API-triggered campaign sending]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) article.
 
 ![][37]
 

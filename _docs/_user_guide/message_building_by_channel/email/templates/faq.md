@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: Email and Link Template FAQs
+nav_title: FAQ
+article_title: Email and Link Template FAQ
 page_order: 10
 
 page_type: FAQ
@@ -11,7 +11,7 @@ channel: email
 
 ---
 
-# Email and link templates FAQs
+# Frequently asked questions
 
 > This page provides answers to some frequently asked questions about email templates and link templates.
 
@@ -32,7 +32,7 @@ You could change the unsubscribe link in the custom footer from {% raw %} `{{${s
 > https://www.braze.com/unsubscribe?user_id={{${user_id}}}
 {% endraw %}
 
-Next, you could call the [email status]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) endpoint to update the user's subscription status. For more details, see our documentation on [changing email subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
+Next, you could call the [`/email/status` endpoint]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) to update the user's subscription status. For more details, see our documentation on [changing email subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
 
 ### What happens if I edit an email template that is currently being used in a campaign?
 

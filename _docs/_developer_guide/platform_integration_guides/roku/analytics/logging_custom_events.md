@@ -4,13 +4,13 @@ article_title: Tracking Custom Events for Roku
 platform: Roku
 page_order: 2
 page_type: reference
-description: "This page covers methods to record custom events via the Braze SDK."
+description: "This page covers methods to record custom events for Roku via the Braze SDK."
 
 ---
 
 # Tracking custom events
 
-You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+> You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Add a custom event
 

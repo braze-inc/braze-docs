@@ -9,9 +9,11 @@ description: "This reference article covers the Event User Log, which can help y
 
 # Event User Log
 
-> This reference article covers the Event User Log, including how to access and use the logs for troubleshooting. In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use the Event User Log to conduct your own troubleshooting and debugging.
+> The Event User Log can help you break down, debug, or otherwise troubleshoot issues in your Braze Integration. This tab gives you a log of errors that details the type of error, which app it's associated with, when it happened, and often an opportunity to view the raw data associated with it.
 
-The Event User Log can help you break down, debug, or otherwise troubleshoot issues in your Braze Integration. This tab gives you a log of errors that details the type of error, which app it's associated with, when it happened, and often an opportunity to view the raw data associated with it.
+{% alert tip %}
+In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use the Event User Log to conduct your own troubleshooting and debugging.
+{% endalert %}
 
 To find your logs easily, you can filter based on:
 
@@ -59,7 +61,7 @@ In relation to user sessions, you can use Braze to monitor data like:
 - How many sessions a user has had
 - When a user last started a session
 - If the user starts a session after receiving a campaign
-- What the user’s median session duration is
+- What the user's median session duration is
 
 These behaviors are not impacted by the session end event being flushed on the next session.
 

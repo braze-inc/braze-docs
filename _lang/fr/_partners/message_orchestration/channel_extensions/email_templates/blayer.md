@@ -1,7 +1,7 @@
 ---
 nav_title: B.Layer
 article_title: B.Layer
-description: "À l'aide de B.Layer, un générateur de messages in-app, vous pouvez créer des messages in-app personnalisés simplement, rapidement et sans coder. "
+description: "Cet article de référence décrit le partenariat entre Braze et B.Layer, un générateur de messages in-app, que vous pouvez utiliser pour créer des messages in-app personnalisés simplement, rapidement et sans coder."
 alias: /partners/blayer-inapps/
 page_type: partner
 search_tag: Partenaire
@@ -18,7 +18,7 @@ L'intégration Braze et B.Layer vous permet de tirer parti du générateur de me
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte B.Layer | Un compte [B.Layer](https://blayer.phiture.com) est requis pour profiter de ce partenariat. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -35,7 +35,7 @@ Ils travaillent avec des marques comme Lifesum, Blinkist, OnX Hunt et bien d'aut
 
 #### Définir les couleurs et les polices de la marque
 
-Dans B.Layer, dans le menu hamburger en haut de la page, cliquez sur **Brand assets > add your brand assets** (Actifs de marque > ajoutez vos actifs de marque). Ici, vous pourrez attribuer la couleur et les polices de votre marque. 
+Dans B.Layer, dans le menu hamburger en haut de la page, cliquez sur **Brand assets > add your brand assets (Actifs de marque > ajoutez vos actifs de marque)**. Vous pourrez attribuer ici la couleur et les polices de votre marque. 
 Vous êtes prêt. Vous pouvez maintenant commencer à concevoir votre message in-app.
 
 ![][4]

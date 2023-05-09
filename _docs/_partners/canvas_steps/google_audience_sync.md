@@ -9,21 +9,22 @@ Tool:
 
 # Audience Sync to Google 
 
+{% alert important %}
+Starting May 1, 2023, Google Ads will no longer generate similar audiences, also known as "lookalike audiences", for targeting and reporting. Refer to [Google Ads documentation](https://support.google.com/google-ads/answer/12463119?) to learn more.
+{% endalert %}
+
 The Braze Audience Sync to Google integration enables brands to extend the reach of their cross-channel customer journeys to Google Search, Google Shopping, Gmail, YouTube, and Google Display. Using your first-party customer data, you can securely deliver ads based upon dynamic behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (e.g., push, email, SMS, etc.) as part of a Braze Canvas can be used to trigger an ad to that user via Google's [Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en).
 
 **Common use cases for syncing Custom Audiences include**:
 - Targeting high-value users via multiple channels to drive purchases or engagement.
 - Retargeting users who are less responsive to other marketing channels.
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand.
-- Creating similar audiences to acquire new users more efficiently.
 
 {% alert note %}
 This feature gives brands the option to control what specific first-party data is shared with Google. At Braze, the integrations with which you can and cannot share your first-party data are given the utmost consideration. To learn more about our Braze data privacy policy, click [here](https://www.braze.com/privacy).
 {% endalert %}
 
-## Integration
-
-### Integration requirements
+## Prerequisites
 
 You will need to ensure that you have the following items created and completed before setting up your Google Audience component in Canvas.
 
@@ -33,12 +34,13 @@ You will need to ensure that you have the following items created and completed 
 | Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>**To use Customer Match, your account must have:**<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet this criteria, then your account is currently ineligible to use Customer Match.<br><br>Chat with your Google Ads Rep for more guidance on Customer Match availability for your account. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Implementation process
+## Integration
+
 ### Step 1: Connect Google account
 
-To get started, go to the **Google Ads** tab in the **Technology Partners** page and select **Connect Google Ads**. You’ll then be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
+To get started, go to the **Google Ads** tab in the **Technology Partners** page and select **Connect Google Ads**. You'll then be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
 
-Once you have successfully connected your Google Ads account, you will be taken back to your Google Ads partner page. You’ll then be prompted to select which ad accounts you would like to be accessed within the Braze App Group.
+Once you have successfully connected your Google Ads account, you will be taken back to your Google Ads partner page. You'll then be prompted to select which ad accounts you would like to be accessed within the Braze App Group.
 
 ![]({% image_buster /assets/img/google_sync/googlesync.gif %}){: style="max-width:85%;"}
 
@@ -48,13 +50,25 @@ If you plan to export iOS IDFA or Google Advertising IDs within your audience sy
 ![The updated Google Ads technology page showing the Ad accounts connected, allowing you to re-sync accounts and add mobile advertising IDs.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
 {% endalert %}
 
-### Step 2: Add a Google Audience step in Canvas Flow
+### Step 2: Configure your Canvas entry criteria
+
+When building audiences for Ad Tracking, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the [CCPA](https://oag.ca.gov/privacy/ccpa). Marketers should implement the relevant filters for users’ eligibility within their Canvas entry criteria. Below we list some options. 
+
+If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
+
+![][16]{: style="max-width:75%;"}
+
+If you are collecting ‘opt-ins’,  ‘opt-outs’, ‘Do Not Sell Or Share’ or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
+
+![A Canvas with an entry audience of "opted_in_marketing" equals "true".][13]{: style="max-width:75%;"}
+
+### Step 3: Add a Google Audience step in Canvas Flow
 
 Add a component in your Canvas and select **Google Audience**.
 
-![Workflow of the previous steps to add a Google audience in Canvas Flow.][6]
+![Workflow of the previous steps to add a Google audience in Canvas.][6]
 
-### Step 3: Sync setup
+### Step 4: Sync setup
 
 Click on the **Custom Audience** button to open the component editor.
 
@@ -66,7 +80,6 @@ Select the desired Google ad account. Under the **Choose a New or Existing Audie
 Enter a name for the new custom audience, select **Add Users to Audience** and select the first-party user field data to send to with your audience. You can choose either: 
 - **Customer Contact Info** which will contain your users' email and/or phone numbers if they exist in Braze
 - **Mobile Advertiser ID** which you will then need to select either iOS IDFA or Android GAID   
-
 Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
 ![Expanded view of the Custom Audience Canvas component. Here, the desired Ad account is selected, a new audience is created, and the "customer contact info" checkbox is selected.]({% image_buster /assets/img/google_sync/google_sync7.png %})
@@ -92,7 +105,7 @@ Once you've configured your Google Audience step, select **Done**. Your Google A
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Launch Canvas
+### Step 5: Launch Canvas
 
 Complete the remainder of your user journey within Canvas and then launch! If you have opted to create a new audience, Braze will first create the audience within Google and then add users as they reach this step in your Canvas. If you have selected to add or remove users from an existing audience, Braze will either add or remove users when they reach this step in their user journey.
 
@@ -142,3 +155,5 @@ Check that your audiences contain at least **5,000** users to ensure that ads st
 [4]: {% image_buster /assets/img/google_sync/google_sync4.png %}
 [6]: {% image_buster /assets/img/google_sync/google_sync6.png %}
 [8]: {% image_buster /assets/img/google_sync/google_sync8.png %}
+[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
+[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}

@@ -4,39 +4,37 @@ article_title: Recommandations pour les e-mails
 page_order: 1
 page_type: reference
 description: "Le présent article couvre les conseils généraux et les astuces à garder en tête lorsque vous créez des campagnes par e-mail pour différents cas d’utilisation et différents sujets."
-channel: E-mail
+channel: email
 
 ---
 
 # Recommandations pour les e-mails
 
-> Le présent article couvre les conseils généraux et les astuces à garder en tête lorsque vous créez des campagnes par e-mail  pour différents cas d’utilisation et différents sujets.
+> Lorsque vous créez votre campagne par e-mail, il est important de garder à l’esprit comment vos messages vont être reçus par vos divers utilisateurs et par les ESP (fournisseurs de services d'e-mail). 
 
-## Généralités
-
-Lorsque vous créez votre campagne par e-mail, il est important de garder à l’esprit comment vos messages vont être reçus par vos divers utilisateurs et par les ESP (fournisseurs de services d'e-mail). Voici quelques conseils rapides à garder à l’esprit en construisant votre contenu :
+Voici quelques conseils rapides à garder à l’esprit en construisant votre contenu :
 
 - Lors du formatage de votre e-mail, utilisez les feuilles de style inline en tant que CSS.
 - Pour utiliser un modèle d’e-mail sur mobile et PC en même temps, spécifiez une largeur inférieure à 500 pixels.
 - Les images téléchargées sur le modèle d’e-mail doivent faire moins de 5 Mo. Les formats pris en charge incluent PNG, JPG et GIF.
 - Ne définissez pas de hauteurs et de largeurs pour les images, car cela générera un espace blanc inutile dans un e-mail dégradé.
-- `div` tags ne doivent pas être utilisées car la plupart des clients par e-mail ne les prennent pas en charge. Utilisez plutôt des tables imbriquées.
-- Évitez d’utiliser Javascript parce qu’il ne fonctionne avec aucun fournisseur de services de courrier électronique.
+- Les tags `div` ne doivent pas être utilisés car la plupart des clients e-mail ne les prennent pas en charge. Utilisez plutôt des tables imbriquées.
+- Évitez d’utiliser Javascript parce qu’il ne fonctionne avec aucun ESP.
 - Braze améliore les temps de chargement en utilisant un CDN global pour héberger toutes les images des e-mails.
 
 ### Utiliser du texte alternatif
 
 Comme les filtres anti-spam surveillent à la fois la version HTML et la version texte brut d’un message, l’utilisation d’alternatives en texte brut est un excellent moyen de réduire votre score de spam. De plus, le texte alternatif `(alt="")` peut compléter, voire remplacer les images incluses dans le corps de votre e-mail, qui peuvent avoir été filtrées et supprimées par le fournisseur d’e-mail d’un utilisateur. Les lecteurs d’écran dévoilent le texte alternatif pour expliquer les images. C’est donc l’occasion d’utiliser un langage simple pour fournir des informations clés sur une image.
 
-### Validation de le-mail
+### Validation de l’e-mail
 
 {% alert important %}
 La validation est utilisée pour les adresses e-mail du tableau de bord, les adresses e-mail de l’utilisateur final (vos clients), ainsi que les adresses de réponse et de réponse effectuées par e-mail.
 {% endalert %}
 
-La validation par e-mail est effectuée lorsque l’adresse e-mail d’un utilisateur a été mise à jour ou est importée dans Braze via API, Upload CSV, SDK ou modifiée dans le tableau de bord. Prenez en compte le fait que les adresses e-mail ne peuvent pas comprendre d’espace et que, si elles sont envoyées à l’aide de l’API, les espaces entraîneront une erreur 400.
+La validation par e-mail est effectuée lorsque l’adresse e-mail d’un utilisateur a été mise à jour ou est importée dans Braze via API, Upload CSV, SDK ou modifiée dans le tableau de bord. Prenez en compte le fait que les adresses e-mail ne peuvent pas comprendre d’espace et que, si elles sont envoyées à l’aide de l’API, les espaces entraîneront une erreur 400.
 
-Les adresses e-mail ciblées par les serveurs Braze doivent être validées selon les standards [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822). Braze n’accepte pas certains caractères et les considère comme invalides. Si un e-mail est renvoyé, Braze marque l’adresse e-mail comme non valide et le statut d’abonnement n’est pas modifié. 
+Les adresses e-mail ciblées par les serveurs Braze doivent être validées selon les standards [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822). Braze n’accepte pas certains caractères et les considère comme invalides. Si un e-mail est renvoyé, Braze marque l’adresse e-mail comme non valide et le statut d’abonnement n’est pas modifié. 
 
 {% details Caractères refusés (en dehors des normes RFC) %}
 - *
@@ -60,7 +58,7 @@ Les adresses e-mail ciblées par les serveurs Braze doivent être validées selo
 
 ### Définir les adresses « De » et « Répondre à »
 
-Lorsque vous définissez vos adresses d’expéditeur, assurez-vous que votre domaine d’e-mail «  De » correspond à votre domaine d’envoi (c.-à-d., `marketing.yourdomain.com`). Le non-respect de cette consigne peut entraîner un mauvais alignement SPF et DKIM. Tous les e-mails Reply-to peuvent être définies sur votre domaine racine.
+Lorsque vous définissez vos adresses d’expéditeur, assurez-vous que votre domaine d’e-mail «  De » correspond à votre domaine d’envoi (c.-à-d., `marketing.yourdomain.com`). Le non-respect de cette consigne peut entraîner un mauvais alignement SPF et DKIM. Tous les e-mails Reply-to (Répondre à) peuvent être définis sur votre domaine racine.
 
 ### Vérification des détails HTML
 

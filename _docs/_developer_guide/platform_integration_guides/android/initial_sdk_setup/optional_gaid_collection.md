@@ -4,13 +4,15 @@ article_title: Optional Google Advertising ID for Android
 page_order: 9
 platform: 
   - Android
-description: "This article covers Google advertising IDs and how to pass this advertising information to Braze for your Android or FireOS application."
+description: "This reference article covers Google advertising IDs and how to pass this advertising information to Braze for your Android or FireOS application."
 
 ---
 
-# Optional Google Advertising ID (Android only)
+# Google Advertising ID (Android only)
 
-The [Google Advertising ID][2] is a user-specific, anonymous, unique, and resettable ID for advertising, provided by Google Play services. GAID gives users the power to reset their identifier, opt-out of interest-based ads within Google Play apps, and provides developers with a simple, standard system to continue to monetize their apps.
+> The [Google Advertising ID][2] is an optional user-specific, anonymous, unique, and resettable ID for advertising, provided by Google Play services. This reference article covers Google advertising IDs and how to pass this advertising information to Braze for your Android or FireOS application.
+
+GAID gives users the power to reset their identifier, opt-out of interest-based ads within Google Play apps, and provides developers with a simple, standard system to continue to monetize their apps.
 
 ## Passing the Google Advertising ID to Braze
 
@@ -55,5 +57,5 @@ Thread(Runnable {
 {% endtabs %}
 
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html
 [2]: https://support.google.com/googleplay/android-developer/answer/6048248/advertising-id?hl=en

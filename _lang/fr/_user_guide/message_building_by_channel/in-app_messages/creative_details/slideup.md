@@ -12,7 +12,7 @@ description: "Le présent article de référence aborde les exigences de concept
 
 # Messages In-App Slideup
 
-Nos slideups apparaissent généralement en haut ou en bas de l’écran de l’application (vous pouvez le définir à la création du message). Ils sont parfaits pour avertir vos utilisateurs de nouvelles conditions de service, cookies et autres extraits de code d’information. Ils ne supposent pas d’intrusion et permettent à vos utilisateurs finaux de poursuivre l’interaction avec votre application quand le message s’affiche.
+> Nos slideups apparaissent généralement en haut ou en bas de l’écran de l’application (vous pouvez le définir à la création du message). Ils sont parfaits pour avertir vos utilisateurs de nouvelles conditions de service, cookies et autres extraits de code d’information. Ils ne supposent pas d’intrusion et permettent à vos utilisateurs finaux de poursuivre l’interaction avec votre application quand le message s’affiche.
 
 ![Deux messages In-App slideup, l’un apparaissant en haut de l’écran et l’autre en bas, indiquant les recommandations en matière d’image et de texte. Voir les sections suivantes pour plus de détails.][2a]{: style="max-width: 40%; border: none;"}
 
@@ -28,10 +28,10 @@ Les messages slideup peuvent contenir jusqu’à trois lignes de texte avant tro
 
 | Disposition | Taille de la ressource | Remarques |
 |--- | --- | --- |
-| Image + Texte | Format 1:1<br>Haute-Res 150 x 150 px<br> Min. 50 x 50 px | Les images de différents rapports d’aspect s’insèrent dans un conteneur d’images carré, sans rognage. |
+| Image + Texte | Format 1:1<br>Haute-Res 150 x 150 px<br> Min. 50 x 50 px | Les images de différents formats seront insérées dans un conteneur d’images carré, sans rognage. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Vous devez toujours [prévisualiser et tester vos messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) sur divers appareils pour vous assurer que les parties les plus importantes de votre image et de votre message s’affichent comme prévu.
+Vous devez toujours [prévisualiser et tester vos messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) sur divers appareils pour s’assurer que les parties les plus importantes de votre image et de votre message s’affichent comme prévu.
 
 [2a]: {% image_buster /assets/img/slideup-spec.png %}
 [2b]: {% image_buster /assets/img/slideup-large-viewport.png %}

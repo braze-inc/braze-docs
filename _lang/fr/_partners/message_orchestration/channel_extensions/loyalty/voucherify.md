@@ -2,10 +2,10 @@
 nav_title: Voucherify
 noindex: true
 alias: /partners/voucherify/
-layout: featured
+layout: dev_guide
 guide_top_header: "Voucherify"
-guide_top_text: "Voucherify est une plateforme promotionnelle all-in-one qui permet aux utilisateurs d’envoyer automatiquement des coupons personnalisés, des cartes-cadeaux, des cartes de fidélité, des codes de recommandation et plus encore - le tout par le biais du compte Braze tout en suivant les échanges de points et la croissance de la campagne à chaque étape."
-description: "Voucherify est une plateforme promotionnelle all-in-one qui permet aux utilisateurs d’envoyer automatiquement des coupons personnalisés, des cartes-cadeaux, des cartes de fidélité, des codes de recommandation et plus encore - le tout par le biais du compte Braze tout en suivant les échanges de points et la croissance de la campagne à chaque étape."
+guide_top_text: "Voucherify est une plateforme promotionnelle tout-en-un qui permet aux utilisateurs d’envoyer automatiquement des coupons personnalisés, des cartes-cadeaux, des cartes de fidélité, des codes de recommandation et plus encore - le tout par le biais du compte Braze tout en suivant les échanges de points et la croissance de la campagne à chaque étape."
+description: "Cette page d’accueil contient tout ce qui concerne Voucherify, y compris la manière de le mettre en œuvre, de récupérer des données via le Contenu connecté, les distributions avec des attributs personnalisés ainsi que la liste Voucherify et de codes de promotion."
 
 guide_featured_list:
 - name: Voucherify

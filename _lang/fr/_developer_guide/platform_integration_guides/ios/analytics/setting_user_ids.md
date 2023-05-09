@@ -1,5 +1,5 @@
 ---
-nav_title: Définir des ID utilisateur
+nav_title: Définir des ID Utilisateur
 article_title: Définir des ID Utilisateur pour iOS
 platform: iOS
 page_order: 1
@@ -14,11 +14,11 @@ description: "Cet article explique comment définir des ID utilisateur dans votr
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
-## Convention de dénomination des ID utilisateur suggérée
+## Convention de dénomination des ID utilisateurs suggérée
 
 {% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
-## Attribution d’un ID utilisateur
+## Attribuer un ID utilisateur
 
 Vous devez effectuer l’appel suivant dès que l’utilisateur est identifié (généralement après la connexion) pour définir l’ID utilisateur :
 
@@ -45,7 +45,7 @@ Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
 
 N’oubliez pas d’employer cette méthode dans le fil principal de votre application. L’utilisation asynchrone de la méthode peut entraîner un comportement non défini.
 
-Nous recommandons également de ne pas modifier l’ID utilisateur lorsqu’un utilisateur se déconnecte, car cela vous empêcherait de cibler l’utilisateur précédemment connecté avec des campagnes de réengagement. Si vous envisagez plusieurs utilisateurs sur le même périphérique, mais que vous souhaitez n’en cibler qu’un seul lorsque votre application est déconnectée, nous vous recommandons de suivre séparément l’ID utilisateur que vous souhaitez cibler lorsqu’il est déconnecté et de revenir à cet utilisateur. ID dans le cadre du processus de déconnexion de votre application.
+Nous recommandons également de ne pas modifier l’ID utilisateur lorsqu’un utilisateur se déconnecte, car cela vous empêcherait de cibler l’utilisateur précédemment connecté avec des campagnes de réengagement. Si vous envisagez plusieurs utilisateurs sur le même appareil, mais que vous souhaitez n’en cibler qu’un seul lorsque votre application est déconnectée, nous vous recommandons de suivre séparément l’ID utilisateur que vous souhaitez cibler lorsqu’il est déconnecté et de revenir à cet utilisateur. ID dans le cadre du processus de déconnexion de votre application.
 
 ## Meilleures pratiques et remarques sur l’intégration de l’ID utilisateur
 

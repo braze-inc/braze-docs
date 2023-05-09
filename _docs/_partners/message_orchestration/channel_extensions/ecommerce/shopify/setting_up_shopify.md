@@ -1,7 +1,7 @@
 ---
 nav_title: Setting up Shopify
 article_title: "Setting up Shopify"
-description: "This article outlines how to set up Shopify, a global commerce company that allows you to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze."
+description: "This reference article outlines how to set up Shopify, a global commerce company that allows you to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze."
 page_type: partner
 search_tag: Partner
 alias: "/setting_up_shopify/"
@@ -16,8 +16,8 @@ In Braze, go to the **Technology Partners** section and then search **Shopify**.
 
 ![Data Import and Web SDK Installation section of the Shopify partner page in Braze.][2]{: style="max-width:80%;"}
 
-### Step 2: Braze’s setup wizard
-Next, you are prompted by Braze’s setup wizard. Within this flow, you must enter your Shopify store name. Make sure to enter the store name, and not your Shopify domain. Note that currently, we can only connect one store per app group.
+### Step 2: Braze's setup wizard
+Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your Shopify store name. Make sure to enter the store name, and not your Shopify domain. Note that currently, we can only connect one store per app group.
 
 ### Step 3: Flexible event selection
 There will be a step explaining which events require us to implement the Braze Web SDK on your store and what to expect when this is added. Proceed to the next page to select the Shopify events you want Braze to track. Selecting any events with an * next to them will enable our Web SDK. The next step will ask you to confirm the selected events.
@@ -46,8 +46,8 @@ Legacy Shopify customers may have the old method of collecting email and SMS sub
 
 If you have existing campaigns or Canvases using these legacy custom attributes today, you should remove them and ensure the campaigns or Canvases are using the appropriate subscription state, group, or both."
 
-### Step 6: Install Braze’s Shopify application
-You’ll then be redirected to your Shopify store to install the Braze app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard. 
+### Step 6: Install Braze's Shopify application
+You'll then be redirected to your Shopify store to install the Braze app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard. 
 
 ### Step 7: Verify completion
 That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. Once the Braze app has been successfully installed and the webhook creation is complete, you will be notified via email and ingestion will begin. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established.

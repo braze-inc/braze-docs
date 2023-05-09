@@ -1,7 +1,7 @@
 ---
 nav_title: Pré-remplissage des données personnalisées
 article_title: Pré-remplissage des données personnalisées
-page_order: 0.2
+page_order: 1
 page_type: reference
 description: "Cet article de référence décrit le processus de pré-remplissage de vos campagnes et segments avec des données personnalisées."
 tool:
@@ -12,9 +12,9 @@ tool:
 
 # Pré-remplissage des données personnalisées
 
-Il peut arriver que vous souhaitiez commencer à configurer des campagnes et des segments avec des données personnalisées avant que votre équipe de développement ait intégré ces données personnalisées. Braze vous permet de pré-renseigner des événements et des attributs personnalisés sur le tableau de bord avant que ne commence le suivi de ces données, pour que ces événements et attributs soient disponibles dans les menus déroulants et durant le processus de création de campagnes.
+> Il peut arriver que vous souhaitiez commencer à configurer des campagnes et des segments avec des données personnalisées avant que votre équipe de développement ait intégré ces données personnalisées. Braze vous permet de pré-renseigner des événements et des attributs personnalisés sur le tableau de bord avant que ne commence le suivi de ces données, pour que ces événements et attributs soient disponibles dans les menus déroulants et durant le processus de création de campagnes.
 
-Pour pré-renseigner les événements et attributs personnalisés, allez sur la page **Manage Settings** et sélectionnez l’onglet **Attributs personnalisés** ou **Événements personnalisés**. Ajoutez ensuite un nouvel attribut / événement personnalisé.
+Pour pré-renseigner les événements et attributs personnalisés, allez sur la page **Manage Settings (Gérer les paramètres)** et sélectionnez l’onglet **Custom Attributes (Attributs personnalisés)** ou **Custom Events (Événements personnalisés)**. Ajoutez ensuite un nouvel attribut/événement personnalisé.
 
 ![Accédez aux attributs personnalisés ou aux événements personnalisés][21]
 

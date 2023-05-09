@@ -6,9 +6,9 @@ description: "This reference article covers how to make a Connected Content API 
 search_rank: 2
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making a Connected Content API call
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making an API call
 
-Use Connected Content to insert any information accessible via API directly into messages you send to users. You can pull content either directly from your web server or from publicly accessible APIs.
+> Use Connected Content to insert any information accessible via API directly into messages you send to users. You can pull content either directly from your web server or from publicly accessible APIs.
 
 ## Connected Content tag
 
@@ -36,7 +36,7 @@ Hi, here are some articles that you might find interesting:
 ```
 {% endraw %}
 {% alert note %}
-Attribute values must be surrounded by `${}` to operate properly within Braze’s version of Liquid syntax.
+Attribute values must be surrounded by `${}` to operate properly within Braze's version of Liquid syntax.
 {% endalert %}
 
 Connected Content requests support GET and POST requests only.
@@ -107,7 +107,7 @@ When using Braze's Connected Content, you may find that certain APIs require a t
 
 ### Using Open Authentication (OAuth)
 
-Some API configurations require retrieval of an access token that can then be used to authenticate the API Endpoint that you want to access.
+Some API configurations require retrieval of an access token that can then be used to authenticate the API endpoint that you want to access.
 
 #### Retrieve the access token
 
@@ -197,6 +197,15 @@ Braze has a reserved set of IPs used for all services, not all of which are acti
 | `40.76.166.71`
 | `40.76.166.144`
 | `40.76.166.145`
+
+## Troubleshooting
+
+Use [Webhook.site](https://webhook.site/) to troubleshoot your Connected Content calls. 
+
+1. Switch the URL in your Connected Content call with the unique URL generated on the site.
+2. Preview and test your campaign or Canvas step to see the requests come through to this website.
+
+Using this tool, you can diagnose issues with the request headers, request body, and other information that is being sent in the call.
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview

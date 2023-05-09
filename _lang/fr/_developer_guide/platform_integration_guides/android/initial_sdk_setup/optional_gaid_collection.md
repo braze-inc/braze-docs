@@ -4,13 +4,15 @@ article_title: ID publicitaire Google en option pour Android
 page_order: 9
 platform: 
   - Android
-description: "Cet article couvre les ID publicitaires Google et comment transmettre ces informations publicitaires à Braze pour votre application Android ou FireOS."
+description: "Cet article de référence couvre les ID publicitaires Google et comment transmettre ces informations publicitaires à Braze pour votre application Android ou FireOS."
 
 ---
 
-# ID publicitaire Google en option (Android uniquement)
+# ID publicitaire Google (Android uniquement)
 
-L’[ID publicitaire Google][2] est un ID pour la publicité spécifique, anonyme, unique et pouvant être réinitialisé, fourni par les services Google Play. Le GAID permet aux utilisateurs de réinitialiser leur identifiant, de désactiver les publicités axées sur les centres d’intérêt dans les applications Google Play et de fournir aux développeurs un système simple et standard pour continuer à monétiser leurs applications.
+> L’[ID publicitaire Google][2] est un ID facultatif pour la publicité spécifique, anonyme, unique et pouvant être réinitialisé, fourni par les services Google Play. Cet article de référence couvre les ID publicitaires Google et comment transmettre ces informations publicitaires à Braze pour votre application Android ou FireOS.
+
+Le GAID permet aux utilisateurs de réinitialiser leur identifiant, de désactiver les publicités axées sur les centres d’intérêt dans les applications Google Play et de fournir aux développeurs un système simple et standard pour continuer à monétiser leurs applications.
 
 ## Transmettre l’ID publicitaire Google à Braze
 
@@ -55,5 +57,5 @@ Thread(Runnable {
 {% endtabs %}
 
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html
 [2]: https://support.google.com/googleplay/android-developer/answer/6048248/advertising-id?hl=en

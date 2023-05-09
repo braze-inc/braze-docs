@@ -8,7 +8,7 @@ description: "This help article walks you through troubleshooting steps if you'v
 tool: Dashboard
 ---
 
-# Locked out of Braze account
+# Locked out of account
 
 So you're locked out of your Braze Account—no worries! We can help you get back in.	
 
@@ -21,7 +21,6 @@ You can tell what kind of lock out you're experiencing by the error message you 
 ## Password error
 
 Your account security is important to us, so passwords are required to log into your Braze account.	
-
 - Check that you are logging into the correct [Braze dashboard instance][1]. Check with your account administrator or Braze account manager to be sure.	
 - Your password may have expired, so you'll need to [reset it][2].	
 - If you use a [single sign-on][3] service, check with your account administrator that the set up has been completed properly.	
@@ -45,4 +44,4 @@ _Last updated on October 19, 2019_
 [support]: {{site.baseurl}}/support_contact/	
 [1]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances
 [2]: {{site.baseurl}}/user_guide/administrative/logging_in_and_security/resetting_your_password/	
-[3]: {{site.baseurl}}/user_guide/administrative/logging_in_and_security/single_sign_on/	
+[3]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/

@@ -2,7 +2,7 @@
 nav_title: Kochava
 article_title: Kochava
 alias: /partners/kochava/
-description: "This article outlines the partnership between Braze and Kochava, a mobile attribution platform that offers attribution and analytics insights to help you harness your data for growth."
+description: "This reference article outlines the partnership between Braze and Kochava, a mobile attribution platform that offers attribution and analytics insights to help you harness your data for growth."
 page_type: partner
 search_tag: Partner
 
@@ -34,26 +34,31 @@ The [Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-and
 ```java
 Apppboy.getInstance(context).getDeviceId();
 ```
+
 #### iOS
 
-{% tabs local %}
-{% tab Objective-C %}
+{% alert important %}
+Prior to February 2023, our Kochava attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Kochava upon install as there will be no disruption of service. 
+{% endalert%}
 
-If you have an iOS app, your IDFV will be collected by Kochava and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
+For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to Kochava upon app install in order for Braze to appropriately match iOS attributions.
 
-Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
+Braze has two APIs that will produce the same value, one with a completion handler and another using the new Swift concurrency support. Note that you will need to modify the following code snippets to conform with Kochava's [iOS SDK](https://support.kochava.com/sdk-integration/ios-sdk-integration/) instructions. For additional help, reach out to Kochava support.
 
-{% endtab %}
-{% tab Swift %}
-
-If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from Kochava to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
- 
-{% endtab %}
-{% endtabs %}
+##### Completion handler
+```
+AppDelegate.braze?.deviceId(completion: { deviceId in
+  // Use `deviceId`
+})
+```
+##### Swift concurrency
+```
+let deviceId = await AppDelegate.braze?.deviceId()
+```
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Kochava**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kochava's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Kochava technology page. In this box, you are shown the data import key and the REST endpoint.][4]{: style="max-width:90%;"}
+In Braze, navigate to **Technology Partners** and select **Kochava**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kochava's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Kochava technology page. In this box, you are shown the data import key and the REST endpoint.][4]{: style="max-width:90%;"}
 
 ### Step 3: Set up a postback from Kochava
 

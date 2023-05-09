@@ -7,7 +7,7 @@ guide_top_text: "Consultez les articles d’aide suivants pour plus d’informat
 
 page_type: landing
 description: "Cette page d’accueil contient des articles d’aide sur les problèmes courants de l’e-mail."
-channel: e-mail
+channel: email
 noindex: true
 guide_menu_title: ""
 guide_menu_list:

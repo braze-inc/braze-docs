@@ -8,7 +8,7 @@ page_order: 5
 
 tool: Canvas
 page_type: landing
-description: "This landing page is home to Canvas ideas and strategies, including how to optimize your Canvas launch."
+description: "This landing page is home to Canvas ideas and strategies, including best practices, a pre and post-launch checklist, and guidance on launching with Canvas Flow."
 
 guide_featured_title: "Articles"
 guide_featured_list:
@@ -21,6 +21,9 @@ guide_featured_list:
   - name: Launching with Canvas Flow
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     fa_icon: fas fa-code-branch
+  - name: Localization
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/
+    fa_icon: fas fa-globe
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     fa_icon: fas fa-user-check

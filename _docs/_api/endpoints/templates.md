@@ -5,11 +5,11 @@ page_order: 8
 layout: dev_guide
 
 search_tag: Endpoint
-description: "This landing page explains and lists the Braze Templates Endpoints for Email and Email Content Blocks."
+description: "This landing page explains and lists the Braze templates endpoints for email and email Content Blocks."
 page_type: landing
 
 guide_top_header: "Templates Endpoints"
-guide_top_text: "Use the Template Endpoints to create and manage your Email and Content Block templates."
+guide_top_text: "Using the Template endpoints, you can create and manage your templates for email and Content Blocks. <br><br> Looking for more guidance on creating templates for email and Content Blocks? Check out our dedicated for <a href='/docs/user_guide/message_building_by_channel/email/templates/'>Email Templates section</a> and <a href='/docs/user_guide/engagement_tools/templates_and_media/content_blocks/'>Content Blocks article</a>."
 
 guide_featured_title: "Email Template Endpoints"
 guide_featured_list:

@@ -11,12 +11,14 @@ tool: Canvas
 
 # Decision Split 
 
-The Decision Split component in Canvas allows you to deliver personalized, real-time experiences for your users. This component can be used to create Canvas branches based on whether a user matches a query.
+> The Decision Split component in Canvas allows you to deliver personalized, real-time experiences for your users. 
+
+This component can be used to create Canvas branches based on whether a user matches a query.
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 ## Create a Decision Split 
 
-To create a Decision Split in your workflow, first add a step to your Canvas. For Canvas Flow, drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Decision Split**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Decision Split**.
+To create a Decision Split in your workflow, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Decision Split**.
 
 ### Define your split
 
@@ -32,14 +34,14 @@ By default, segments and filters for a Decision Split component are checked righ
 
 Using the Decision Split can help you distinguish paths for your users based on their segment or their attributes, even whether they utilize certain messaging channels to receive your messages!
 
-Let’s say that you’re creating an onboarding flow. You might start with a welcome email upon signing up. Then, two days later, you want to send a push message, but only to users who are push enabled. After that, all users get another email three days after they signed up. You could also use your decision split to send an in-app message to users who don't have push enable to encourage them to enable push.
+Let's say that you're creating an onboarding flow. You might start with a welcome email upon signing up. Then, two days later, you want to send a push message, but only to users who are push enabled. After that, all users get another email three days after they signed up. You could also use your decision split to send an in-app message to users who don't have push enable to encourage them to enable push.
 
 ![][3]{: style="max-width:60%;"}
 
 If there is no step following one of the paths, users who go down that path will exit the Canvas. 
 
 {% alert important %}
-A decision split cannot have full step sibling steps. In other words, you cannot create a full step that branches into a filter step and a full step. This restriction exists because if there was a branch with a filter step and a full step, it wouldn’t be clear which branch users would go down.
+A decision split cannot have full step sibling steps. In other words, you cannot create a full step that branches into a filter step and a full step. This restriction exists because if there was a branch with a filter step and a full step, it wouldn't be clear which branch users would go down.
 <br>
 A filter step can only connect to one next step.
 {% endalert %}
@@ -51,14 +53,11 @@ Refer to the following table for descriptions of analytics for this step:
 | Metric | Description |
 |---|---|
 | Entered | The total number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Decision Split component twice, two entries will be recorded. |
-| Yes | The number of entries that met the specified criteria and proceeded down the “yes” path. |
-| No | The number of entries that did not meet the specified criteria and proceeded down the “no” path. |
+| Yes | The number of entries that met the specified criteria and proceeded down the "yes" path. |
+| No | The number of entries that did not meet the specified criteria and proceeded down the "no" path. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-![][4]{: style="max-width:80%;"}
 
 [1]: {% image_buster /assets/img/decision-split-1.png %}
 [2]: {% image_buster /assets/img/define-split-2.png %}
 [3]: {% image_buster /assets/img/use-split-onboarding-3.png %}
-[4]: {% image_buster /assets/img/decision-step-analytics-4.png %}
 [5]: {{site.baseurl}}/user_guide/engagement_tools/segments/

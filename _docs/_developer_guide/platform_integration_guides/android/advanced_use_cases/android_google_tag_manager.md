@@ -5,17 +5,19 @@ platform:
   - Android
   - FireOS
 page_order: 8
-description: "This article covers how to initialize, configure, and implement the Google Tag manager into your Android or FireOS app."
+description: "This reference article covers how to initialize, configure, and implement the Google Tag manager into your Android or FireOS app."
 
 ---
 
 # Google Tag Manager for Android
 
+> This reference article covers how to initialize, configure, and implement the Google Tag manager into your Android or FireOS app.
+
 ## Initializing the SDK {#initializing-android-google-tag-provider}
 
 Braze's Android SDK can be initialized and controlled by tags configured within [Google Tag Manager][5].
 
-But first - before using Google Tag Manager - be sure to first follow our [initial SDK setup][1].
+As a prerequisite for this implementation, your [Android SDK integration][1] must be complete.
 
 ## Configuring your Google Tag Manager {#configuring-android-google-tag-manager}
 

@@ -5,20 +5,20 @@ search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
-description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Récupérer une liste d’adresses e-mail avec rebond élevé."
+description: "Cet article présente en détail l’endpoint Braze Interroger ou Lister les adresses e-mail avec rebond élevé."
 
 ---
 {% api %}
-# Requête ou liste des e-mails avec rebond élevé.
+# Requêter les e-mails ayant subi un hard bounce
 {% apimethod get %}
 /email/hard_bounces
 {% endapimethod %}
 
-Utilisez cet endpoint pour extraire une liste d’adresses e-mail qui ont rejeté définitivement vos e-mails dans un certain délai.
+> Utilisez cet endpoint pour extraire une liste d’adresses e-mail qui ont rejeté définitivement vos e-mails dans un certain délai.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -26,11 +26,11 @@ Utilisez cet endpoint pour extraire une liste d’adresses e-mail qui ont rejet�
 
 | Paramètre | Requis | Type de données | Description |
 | ----------|-----------| ----------|----- |
-| `start_date` | Facultatif<br>(voir la note) | Chaîne de caractères au format AAAA-MM-JJ| Date de début de la plage pour récupérer les rebonds élevés doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API. |
-| `end_date` | Facultatif<br>(voir la note) | Chaîne de caractères au format AAAA-MM-JJ | Date de fin de la plage pour récupérer les rebonds élevés. Ce traitement est effectué à minuit (UTC) par l’API. |
-| `limit` | Facultatif | Integer | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
-| `offset` | Facultatif | Integer | Point de départ facultatif dans la liste où récupérer les informations. |
-| `email` | Facultatif<br>(voir la note) | String | S’il est fourni, nous renverrons si l’utilisateur a un rebond élevé ou pas. |
+| `start_date` | Optional<br>(voir la note) | Chaîne de caractères au format YYYY-MM-DD| Date de début de la plage pour récupérer les rebonds élevés. Doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `end_date` | Optional<br>(voir la note) | Chaîne de caractères au format YYYY-MM-DD | Date de fin de la plage pour récupérer les rebonds élevés. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `limit` | Facultatif | Entier | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
+| `offset` | Facultatif | Entier | Point de départ facultatif dans la liste où récupérer les informations. |
+| `email` | Optional<br>(voir la note) | String | S’il est fourni, nous renverrons si l’utilisateur a un rebond élevé ou pas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
@@ -54,16 +54,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {
-      "email": (string) un e-mail qui a été rejeté définitivement,
-      "unsubscribed_at": (string) le moment auquel l’e-mail a été rejeté définitivement en ISO 8601
+      "email": (string) an email that has hard bounced,
+      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
     },
     {
-      "email": (string) un e-mail qui a été rejeté définitivement,
-      "unsubscribed_at": (string) le moment auquel l’e-mail a été rejeté définitivement en ISO 8601
+      "email": (string) an email that has hard bounced,
+      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
     },
     {
-      "email": (string) un e-mail qui a été rejeté définitivement,
-      "unsubscribed_at": (string) le moment auquel l’e-mail a été rejeté définitivement en ISO 8601
+      "email": (string) an email that has hard bounced,
+      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
     }
   ],
   "message": "success"

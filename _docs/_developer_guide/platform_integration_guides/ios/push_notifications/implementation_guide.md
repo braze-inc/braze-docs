@@ -206,7 +206,7 @@ Visit the [following section](#logging-analytics) to get a better understanding 
 
 ### Logging with the Braze API (recommended)
 
-Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the following screenshot) to identify which user profile to update.
+Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the following screenshot) to identify which user profile to update.
 
 ![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certification". 3. "Cert_description" set as "Certified Braze marketers drive...".][18]{: style="max-width:80%;"}
 
@@ -219,7 +219,7 @@ It's also important to note that analytics are not sent to Braze until the mobil
 ![A graphic describing how analytics are processed in Braze. 1. Analytics data is created. 2. Analytics data is saved. 3. Push notification is dismissed. 4. Indeterminate period of time between when push notification is dismissed and mobile app is launched. 5. Mobile app is launched. 6. Analytics data is received. 7. Analytics data is sent to Braze.][13]
 
 #### Step 1: Configure app groups within Xcode
-Add a capability `App Groups`. If you haven’t had any app group in your app, go to the capability of the main app target, turn on the `App Groups`, and click the “+”. Use your App’s bundle ID to create the App Group. For example, if your app’s bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
+Add a capability `App Groups`. If you haven't had any app group in your app, go to the capability of the main app target, turn on the `App Groups`, and click the "+". Use your App's bundle ID to create the App Group. For example, if your app's bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
 
 ![][19]
 
@@ -288,7 +288,7 @@ After the SDK is initialized is the best time to log any saved analytics from a 
 
 1. Loop through the array of pending events
 2. Loop through each key-value pair in the `pendingEvents` dictionary
-3. Explicitly checking key for “Event Name” to set the value accordingly
+3. Explicitly checking key for "Event Name" to set the value accordingly
 4. Every other key-value will be added to the `properties` dictionary
 5. Log individual custom event 
 6. Remove all pending events from storage

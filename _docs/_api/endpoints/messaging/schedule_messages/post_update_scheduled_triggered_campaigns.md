@@ -1,10 +1,10 @@
 ---
-nav_title: "POST: Update Scheduled API-Triggered Campaign Messages"
-article_title: "POST: Update Scheduled API-Triggered Campaign Messages"
+nav_title: "POST: Update Scheduled API-Triggered Campaigns"
+article_title: "POST: Update Scheduled API-Triggered Campaigns"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-description: "This article outlines details about the Update Scheduled API-Triggered Campaigns Braze endpoint."
+description: "This article outlines details about the Update scheduled API-triggered campaigns Braze endpoint."
 
 ---
 {% api %}
@@ -13,7 +13,9 @@ description: "This article outlines details about the Update Scheduled API-Trigg
 /campaigns/trigger/schedule/update
 {% endapimethod %}
 
-Use this endpoint to update scheduled API-triggered campaigns created in the dashboard, allowing you to decide what action should trigger the message to be sent. You can pass in `trigger_properties` that will be templated into the message itself.
+> Use this endpoint to update scheduled API-triggered campaigns created in the dashboard, allowing you to decide what action should trigger the message to be sent.
+
+You can pass in `trigger_properties` that will be templated into the message itself.
 
 Note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API-Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
 

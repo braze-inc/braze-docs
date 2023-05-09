@@ -1,32 +1,34 @@
 ---
-nav_title: "GET : Informations relatives à la campagne"
-article_title: "GET : Informations relatives à la campagne"
+nav_title: "GET : Exporter les informations relatives à la campagne"
+article_title: "GET : Exporter les informations relatives à la campagne"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Obtenir les informations relatives à la campagne."
+description: "Cet article présente en détail l’endpoint Braze Exporter les informations relatives à la campagne."
 
 ---
 {% api %}
-# Endpoint Informations relatives à la campagne
+# Exporter les informations relatives à la campagne
 {% apimethod get %}
 /campaigns/details
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer des informations pertinentes sur une campagne spécifique, qui peuvent être identifiées par le `campaign_id`. Si vous souhaitez récupérer les données de Canvas, reportez-vous à l’endpoint [Informations relatives au Canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+> Utilisez cet endpoint pour récupérer des informations pertinentes sur une campagne spécifique, qui peuvent être identifiées par le `campaign_id`. 
+
+Si vous souhaitez récupérer les données de Canvas, reportez-vous à l’endpoint [Exporter les informations relatives au Canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 
-| Paramètre     | Requis | Type de données | Description             |
-| ------------- | -------- | --------- | ----------------------- |
-| `campaign_id` | Requis      | String    | Voir [Identifiant API de campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Le `campaign_id` pour les campagnes API se trouvent sur la page **Developer Console (Console du développeur)** et la page **Campaign Details (Informations relatives à la campagne)** dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Campaign List (Liste de campagnes)](#campaign-list-endpoint).   .|
+| Paramètre | Requis | Type de données | Description |
+| --------- | -------- | --------- | ----------- |
+| `campaign_id` | Requis | String | Voir [identifiant API de campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Le `campaign_id` pour les campagnes API se trouvent sur la page **Developer Console (Console du développeur)** et la page **Campaign Details (Informations relatives à la campagne)** dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Exporter la liste des campagnes](#campaign-list-endpoint). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande 
@@ -39,82 +41,80 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 
 ## Réponses
 
-### Réponse API de l’endpoint Informations relatives à la campagne
-
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-    "message": (required, string) le statut de l’exportation, renvoie « réussite » lorsqu’elle s’achève sans erreur,
-    "created_at" : (string) la date de création en tant que date ISO 8601,
-    "updated_at" : (string) la date de dernière mise à jour en tant que date ISO 8601,
-    "archived": (boolean) si cette campagne est archivée ou non,
-    "draft": (boolean) si cette campagne est un brouillon ou non,
-    "name" : (string) le nom de la campagne,
-    "description" : (string) la description de la campagne,
-    "schedule_type" : (string) le type d’action de planification,
-    "channels" : (array) la liste de canaux avec lesquels envoyer,
-    "first_sent" : (string) la date et l’heure du premier envoi en tant que date ISO 8601,
-    "last_sent" : (string) la date et l’heure du dernier envoi en tant que date ISO 8601,
-    "tags" : (array) les noms de balise associés à la campagne,
+    "message": (required, string) the status of the export, returns 'success' when completed without errors,
+    "created_at" : (string) the date created as ISO 8601 date,
+    "updated_at" : (string) the date last updated as ISO 8601 date,
+    "archived": (boolean) whether this campaign is archived,
+    "draft": (boolean) whether this campaign is a draft,
+    "name" : (string) the campaign name,
+    "description" : (string) the campaign description,
+    "schedule_type" : (string) the type of scheduling action,
+    "channels" : (array) the list of channels to send via,
+    "first_sent" : (string) the date and hour of first sent as ISO 8601 date,
+    "last_sent" : (string) the date and hour of last sent as ISO 8601 date,
+    "tags" : (array) the tag names associated with the campaign,
     "messages": {
-        "message_variation_id": (string) { // <=Ceci est l’ID réel
-            "channel": (string) le type de message du canal qui doit être un e-mail, ios_push, webhook, content_card, in-app_messageou SMS,
-            "name": (string) le nom du message dans le tableau de bord (par ex., « Variation 1 »)
+        "message_variation_id": (string) { // <=This is the actual id
+            "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_card, in-app_message, or sms,
+            "name": (string) the name of the message in the dashboard (eg., "Variation 1")
             ... channel-specific fields for this message, see the following messages section ...
         }
     },
-    "conversion_behaviors": (array) les comportements d’événement de conversion assignés à la campagne, voir la section suivante sur le comportement des conversions.
+    "conversion_behaviors": (array) the conversion event behaviors assigned to the campaign, see the following conversions behavior section.
 }
 ```
 
-### Messages
+### Messages par canal
 
 La réponse `messages` contiendra des informations sur chaque message. Voici des exemples de réponses de message pour chaque canal :
 
-#### Canaux de notification push
+#### Notification push
 
 ```json
 {
-    "channel": (string) la description du canal, telle que « ios_push » ou « android_push »
-    "alert": (string) le texte du corps de l’alerte,
-    "extras": (hash) n’importe quelle paire clé-valeur fournie
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push"
+    "alert": (string) the alert body text,
+    "extras": (hash) any key-value pairs provided
 }
 ```
 
-#### Canal d’e-mail
+#### E-mail
 
 ```json
 {
-    "channel": "e-mail",
-    "subject": (string) l’objet,
-    "body": (string) le corps HTML,
-    "from": (string) l’adresse d’émission et le nom affiché,
-    "reply_to": (string) le champ « répondre à » pour les messages s’il est différent de l’adresse « de »,
-    "title": (string) le nom de l’e-mail,
-    "extras": (hash) n’importe quelle paire clé-valeur fournie
+    "channel": "email",
+    "subject": (string) the subject,
+    "body": (string) the HTML body,
+    "from": (string) the from address and display name,
+    "reply_to": (string) the reply-to for message, if different than "from" address,
+    "title": (string) the name of the email,
+    "extras": (hash) any key-value pairs provided
 }
 ```
 
-#### Canal de message in-app
+#### Messages in-app
 
 ```json
 {
-    "type": (string) la description du type de messages dans l’appli, telle que « sondage »,
+    "type": (string) the description of in-app message type, such as "survey",
     "data": {
         "pages": [
             {
                 "header": 
                     {
-                         "text":(string) le texte affiché pour l’en-tête du sondage,
+                         "text":(string) the display text for the header of the survey,
                     }
                 "choices": [
                     {
-                       "choice_id": (string) l’identifiant de choix,
-                       "text": (string) le texte affiché, 
-                       "custom_attribute_key": (string) la clé d’attribut personnalisé, 
-                       "custom_attribute_value": (string) la valeur d’attribut personnalisé,
-                       "deleted": (boolean) supprimé d’une campagne active, 
+                       "choice_id": (string) the choice identifier,
+                       "text": (string) the display text, 
+                       "custom_attribute_key": (string) the custom attribute key, 
+                       "custom_attribute_value": (sting) the custom attribute value,
+                       "deleted": (boolean) deleted from live campaign, 
                     },
                     ...
                 ]
@@ -124,37 +124,37 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-#### Canal de carte de contenu
+#### Cartes de contenu
 
 ```json
 {
     "channel": "content_cards",
-    "name": (string) le nom de la variante,
-    "extras": (hash) n’importe quelle paire clé-valeur fournie ; présent uniquement si au moins une paire clé-valeur a été définie
+    "name": (string) the name of variant,
+    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
-#### Canal de webhook
+#### Webhook
 
 ```json
 {
     "channel": "webhook",
-    "url": (string) l’URL du webhook,
-    "body": (string) le corps des charges utiles,
-    "type": (string) le type de contenu du corps,
-    "headers": (hash) les en-têtes de requête spécifiés,
-    "method": (string) la méthode HTTP, soit POST, soit GET
+    "url": (string) the URL for webhook,
+    "body": (string) the payload body,
+    "type": (string) the body content type,
+    "headers": (hash) the specified request headers,
+    "method": (string) the HTTP method, either POST or GET
 }
 ```
 
-#### Canal SMS
+#### SMS
 
 ```json
 {
   "channel": "sms",
-  "body": (string) le corps des charges utiles,
-  "from": (string) la liste de nombres associés au groupe d’abonnement,
-  "subscription_group_id": (string) l’ID d’API du groupe d’abonnement ciblé dans le message SMS
+  "body": (string) the payload body,
+  "from": (string) the list of numbers associated with the subscription group,
+  "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
 }
 ```
 
@@ -162,7 +162,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 
 ```json
 {
-    "channel": (string) la description du canal pour lequel existe le contrôle,
+    "channel": (string) the description of the channel that the control is for,
     "type": "control"
 }
 ```
@@ -175,8 +175,8 @@ Le tableau `conversion_behaviors` contiendra des informations sur chaque comport
 
 ```json
 {
-    "type": "Clique sur l’e-mail",
-    "window": (integer) le nombre de secondes pendant lesquelles un utilisateur peut se convertir sur cet événement, par ex., - 86 400, qui représente 24 heures
+    "type": "Clicks Email",
+    "window": (integer) the number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours
 }
 ```
 
@@ -184,8 +184,8 @@ Le tableau `conversion_behaviors` contiendra des informations sur chaque comport
 
 ```json
 {
-    "type": "Ouvre l’e-mail",
-    "window": (integer) le nombre de secondes pendant lesquelles un utilisateur peut se convertir sur cet événement, par ex., - 86 400, qui représente 24 heures
+    "type": "Opens Email",
+    "window": (integer) the number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours
 }
 ```
 
@@ -193,8 +193,8 @@ Le tableau `conversion_behaviors` contiendra des informations sur chaque comport
 
 ```json
 {
-    "type": "Effectue n’importe quel achat",
-    "window": (integer) le nombre de secondes pendant lesquelles un utilisateur peut se convertir sur cet événement, par ex., - 86 400, qui représente 24 heures
+    "type": "Makes Any Purchase",
+    "window": (integer) the number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours
 }
 ```
 
@@ -202,9 +202,9 @@ Le tableau `conversion_behaviors` contiendra des informations sur chaque comport
 
 ```json
 {
-    "type": "Effectue un achat spécifique",
-    "window": (integer) le nombre de secondes pendant lesquelles un utilisateur peut se convertir sur cet événement, par ex., - 86 400, qui représente 24 heures,
-    "product": (string) le nom du produit, par ex., - « Armure pour félin »"
+    "type": "Makes Specific Purchase",
+    "window": (integer) the number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "product": (string) the name of the product, i.e., - "Feline Body Armor"
 }
 ```
 
@@ -212,9 +212,9 @@ Le tableau `conversion_behaviors` contiendra des informations sur chaque comport
 
 ```json
 {
-    "type": "Effectue un événement personnalisé",
-    "window": (integer) le nombre de secondes pendant lesquelles un utilisateur peut se convertir sur cet événement, par ex., - 86 400, qui représente 24 heures,
-    "custom_event_name": (string) le nom du produit, par ex., - « Armure pour félin d’occasion »"
+    "type": "Performs Custom Event",
+    "window": (integer) the number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "custom_event_name": (string) the name of the event, i.e., - "Used Feline Body Armor"
 }
 ```
 
@@ -222,9 +222,9 @@ Le tableau `conversion_behaviors` contiendra des informations sur chaque comport
 
 ```json
 {
-    "type": "Met à niveau l’application",
-    "window": (integer) le nombre de secondes pendant lesquelles un utilisateur peut se convertir sur cet événement, par ex., - 86 400, qui représente 24 heures,
-    "app_ids": (array or null) tableau des ID d’application, par ex., - ["12345", "67890"] ou `null` si « Track sessions for any app » (Suivre les sessions pour toutes les applis) est sélectionné dans l’interface utilisateur
+    "type": "Upgrades App",
+    "window": (integer) the number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "app_ids": (array or null) array of app ids, i.e., - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
 
@@ -232,14 +232,14 @@ Le tableau `conversion_behaviors` contiendra des informations sur chaque comport
 
 ```json
 {
-    "type": "Lancer la session",
-    "window": (integer) le nombre de secondes pendant lesquelles un utilisateur peut se convertir sur cet événement, par ex., - 86 400, qui représente 24 heures,
-    "app_ids": (array or null) tableau des ID d’application, par ex., - ["12345", "67890"] ou `null` si « Track sessions for any app » (Suivre les sessions pour toutes les applis) est sélectionné dans l’interface utilisateur
+    "type": "Starts Session",
+    "window": (integer) the number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "app_ids": (array or null) array of app ids, i.e., - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)..
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

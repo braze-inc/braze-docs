@@ -14,7 +14,7 @@ channel: news feed
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-The Braze News Feed is a targeted, dynamic stream of rich content. It offers a powerful way to reach users with continuously updated content that does not require additional development work. This content can be targeted at various segments and scheduled in the same way as other Braze messages. Each card consists of a title, a summary, an image, and optionally a URL. The feed also includes the ability to deep-link within the app, link directly to the App Store, Google Play, etc. or direct users to a web view. This unique Braze UI element must be enabled during [integration][1]. Make sure to discuss it with your developers.
+> The Braze News Feed is a targeted, dynamic stream of rich content. It offers a powerful way to reach users with continuously updated content that does not require additional development work. This content can be targeted at various segments and scheduled in the same way as other Braze messages. Each card consists of a title, a summary, an image, and optionally a URL. The feed also includes the ability to deep-link within the app, link directly to the App Store, Google Play, etc. or direct users to a web view. This unique Braze UI element must be enabled during [integration][1]. Make sure to discuss it with your developers.
 
 To learn about the different types of News Feed cards, how to create them, use cases, as well as card and image specifications, read our page on [creating News Feed items][4].
 
@@ -36,7 +36,7 @@ The more noticeable, relevant and interesting your News Feed is, the more likely
 
 Companies and their users love and value personalization.
 
-- Customize the News Feed to reflect your brand’s identity and create a seamless app experience.
+- Customize the News Feed to reflect your brand's identity and create a seamless app experience.
 - Keep in mind that targeted modules can immediately inspire action within the app, and protocol URLs can direct attention to different sections of the app, encouraging specific behavior like reviews, purchases and more.
 - Segment users and tailor certain announcements to inspire specific action.
 

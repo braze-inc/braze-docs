@@ -7,11 +7,13 @@ platform:
   - Android
 page_order: 1
 page_type: reference
-description: "This article covers initial SDK setup steps for Android and FireOS apps running on Cordova."
+description: "This article covers initial SDK setup steps for iOS, Android, and FireOS apps running on Cordova."
 
 ---
  
 # Cordova integration
+
+> This article covers initial SDK setup steps for apps running on Cordova.
 
 ## Setting a custom API endpoint
 
@@ -34,17 +36,17 @@ A custom API endpoint can be configured via the `config.xml`. For example, to us
 
 ## Push notifications
 
-If you use the Cordova SDK default setup you won't have to make any new changes client-side. For modified integrations, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/) or [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) integration instructions.
+If you use the Cordova SDK default setup you won't have to make any new changes client-side. For modified integrations, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/) or [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) integration instructions.
 
 ## In-app messaging
 
-By default the Cordova SDK supports in-app messages with no changes. See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/) or [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/) integration examples for information on customizing in-app messages. Furthermore, you can look at the [sample Cordova application](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) or the sample [Android](https://github.com/Appboy/appboy-android-sdk) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/) application for implementation samples.
+By default the Cordova SDK supports in-app messages with no changes. See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/) integration examples for information on customizing in-app messages. Furthermore, you can look at the [sample Cordova application](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) or the sample [Android](https://github.com/braze-inc/braze-android-sdk) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/) application for implementation samples.
 
 ## Analytics
 
 ### Setting user IDs
 
-See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/) integration instructions for an in-depth discussion of when to set and change a user ID.
+See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) integration instructions for an in-depth discussion of when to set and change a user ID.
 
 ```javascript
 AppboyPlugin.changeUser("YOUR_USER_ID");
@@ -52,7 +54,7 @@ AppboyPlugin.changeUser("YOUR_USER_ID");
 
 ### Logging custom events
 
-See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) integration instructions for in-depth discussion of event tracking best practices and interfaces.
+See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) integration instructions for in-depth discussion of event tracking best practices and interfaces.
 
 ```javascript
 var properties = {};
@@ -62,7 +64,7 @@ AppboyPlugin.logCustomEvent("cordovaCustomEventWithProperties", properties);
 
 ### Setting custom attributes
 
-See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/) integration instructions for in-depth discussion of attribute tracking best practices and interfaces.
+See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/) integration instructions for in-depth discussion of attribute tracking best practices and interfaces.
 
 ```javascript
 AppboyPlugin.setFirstName("firstName");
@@ -70,7 +72,7 @@ AppboyPlugin.setFirstName("firstName");
 
 ### Logging purchases
 
-See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/) integration instructions for in-depth discussion of revenue tracking best practices and interfaces.
+See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/) integration instructions for in-depth discussion of revenue tracking best practices and interfaces.
 
 ```javascript
 var properties = {};
@@ -87,6 +89,6 @@ If you would like to log purchases at the order level instead of the product lev
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/#news-feed) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/news_feed/) integration instructions for information on how to integrate the News Feed into your Cordova app. Alternatively, our Cordova plugin provides a method, `launchNewsFeed`, that will launch a modal News Feed without further integration. 
+See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/news_feed/) integration instructions for information on how to integrate the News Feed into your Cordova app. Alternatively, our Cordova plugin provides a method, `launchNewsFeed`, that will launch a modal News Feed without further integration. 
 
 The Braze Cordova SDK has several methods to get the number of read or unread News Feed cards for different categories. Check out a [sample project implementation](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) for an example.

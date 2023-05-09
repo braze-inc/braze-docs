@@ -4,7 +4,7 @@ article_title: Action Paths
 alias: /action_paths/
 page_order: 0.1
 page_type: reference
-description: "This reference article covers Action Paths and how to use them in your Canvases."
+description: "This reference article covers how to use Action Paths, a component that allows you to sort users based on their actions."
 tool: Canvas
 ---
 
@@ -12,18 +12,19 @@ tool: Canvas
 
 ![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Action Paths in Canvas allow you to sort your users based on their actions. Using Action Paths, you can: 
- 
+> Action Paths in Canvas allow you to sort your users based on their actions. 
+
+Using Action Paths, you can: 
 * Customize user paths based on a specific action, including user engagement events and custom events
 * Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
 
 ## Create Action Paths
 
-To create an action path, add a component to your Canvas. For Canvas Flow, drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Action Paths**.
+To create an action path, add a component to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**. 
 
 ### Action settings
 
-In the **Action Settings** module, you can choose how long you’d like to hold users in the action step by setting the **Evaluation Window**. By default, users are evaluated within one day, but you can adjust this window by seconds, minutes, hours, days, and weeks depending on your Canvas.
+In the **Action Settings** module, you can choose how long you'd like to hold users in the action step by setting the **Evaluation Window**. By default, users are evaluated within one day, but you can adjust this window by seconds, minutes, hours, days, and weeks depending on your Canvas.
 
 Within the **Action Settings**, you can also turn on the ranked order for your components by switching on the **Advance users based on ranked order** toggle.
 
@@ -32,6 +33,10 @@ Within the **Action Settings**, you can also turn on the ranked order for your c
 By default, **Ranking** is off. When a user enters the action path and performs the trigger event attached to any action group, they will immediately advance through the relevant action group. If a user doesn't perform a trigger event, then they will advance through the default **Everyone Else** group at the end of the evaluation period.
 
 When **Advanced users based on ranked order** is enabled, this means that **Ranking** is on. So, all users will be held until the end of the evaluation window. At the end of the evaluation period, users will advance through the highest priority action group that they are eligible for at the end of the evaluation window. Users who do not perform any of the actions during the evaluation window will advance through the default **Everyone Else** group.
+
+#### In-app messages
+
+Note that when the action group trigger is starting a session and the next step is an in-app message, the user will need to perform two session starts to receive the in-app message. The first session assigns the user to the action group within the action path, and the second session triggers the in-app message.
 
 #### Ranking status example
 

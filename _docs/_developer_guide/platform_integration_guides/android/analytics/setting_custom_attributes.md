@@ -9,9 +9,9 @@ description: "This reference article shows how to set custom attributes in your 
 
 ---
 
-# Setting custom attributes for Android and FireOS
+# Setting custom attributes
 
-Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
+> Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard. This reference article shows how to set custom attributes in your Android or FireOS application.
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [analytics overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
@@ -310,7 +310,7 @@ Braze.getInstance(context).currentUser?.setPushNotificationSubscriptionType(push
 {% endtab %}
 {% endtabs %}
 
-[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html
+[2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
 [7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

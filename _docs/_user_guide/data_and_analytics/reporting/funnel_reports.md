@@ -7,11 +7,11 @@ description: "This reference article covers the benefits of funnel reports, how 
 tool: Reports
 ---
 
-# Funnel reports for campaigns and Canvases
+# Funnel reports
 
-> This reference article covers how to use Funnel Reports to analyze the journeys your customers take after receiving a campaign or Canvas. ![Funnel Report 2][2]{: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
+> Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. ![Funnel Report 2][2]{: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
 
-Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you can understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
+If your campaign or Canvas uses a control group or multiple variants, you can understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
 ![Funnel Report 1][1]{: style="max-width:80%;"}
 
@@ -46,13 +46,13 @@ For every funnel report, the first event is when the user receives your message.
 
 ![Funnel Report 3][3]{: style="max-width:80%;"}
 
-Funnel reports allow you to compare the success of your messages beyond just the conversion events or message engagement events you initially set up. So if there’s a conversion event you didn’t add initially, you can still track conversions for that event using a funnel.
+Funnel reports allow you to compare the success of your messages beyond just the conversion events or message engagement events you initially set up. So if there's a conversion event you didn't add initially, you can still track conversions for that event using a funnel.
 
 For example, if you select a 14-day report time window, followed by the events `Added to cart` and `Made purchase`, you will see both the number of users who added to cart within 14 days of receiving the message and the number of users who added to cart and then made a purchase within 14 days of receiving the campaign.
 
 As another example, you may want to see the percentage of users that converted on an email after clicking on it. To calculate this, you could create a report where the second event is clicking your email and the third event is performing your conversion event.
 
-After clicking **Build Report**, the funnel report may take several minutes to generate. During this time, you can navigate away from the report to other pages in the dashboard. You’ll receive an in-dashboard notification when your report is ready.
+After clicking **Build Report**, the funnel report may take several minutes to generate. During this time, you can navigate away from the report to other pages in the dashboard. You'll receive an in-dashboard notification when your report is ready.
 
 ## Interpreting your funnel report
 

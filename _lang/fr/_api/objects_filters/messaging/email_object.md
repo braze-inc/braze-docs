@@ -1,41 +1,42 @@
 ---
 nav_title: "Objet E-mail"
-article_title: Objet d’e-mail
+article_title: Objet Messagerie e-mail
 page_order: 5
 page_type: reference
 channel: email
-description: "Cet article explique les différents composants de l’objet E-mail de Braze."
+description: "Cet article de référence explique les différents composants de l’objet E-mail de Braze."
 
 ---
 
-# Spécification de l’objet E-mail
+# Objet E-mail
 
-L’objet `email` vous permet de modifier ou de créer des e-mails via nos [endpoints d’envoi de messages]({{site.baseurl}}/api/endpoints/messaging).
+> Le `email` vous permet de modifier ou de créer des e-mails via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
-## Corps
+## Objet E-mail
+
 ```json
 {
-  "app_id": (required, string), voir identifiant de l’application,
+  "app_id": (required, string), see App Identifier,
   "subject": (optional, string),
   "from": (required, valid email address in the format "Display Name <email@address.com>"),
-  "reply_to": (optional, valid email address in the format "email@address.com" - defaults to your app group's default reply to if not set) - utilisez « NO_REPLY_TO » pour définir l’adresse de réponse sur « Vide »,
-  "bcc": (optional, one of the BCC addresses defined in your app group's email settings) S’il est fourni et que la fonctionnalité BCC est activée pour votre compte, cette adresse sera ajoutée à votre message émis en tant qu’adresse CCI.,
+  "reply_to": (optional, valid email address in the format "email@address.com" - defaults to your app group's default reply to if not set) - use "NO_REPLY_TO" to set reply-to address to null,
+  "bcc": (optional, one of the BCC addresses defined in your app group's email settings) If provided and the BCC feature is enabled for your account, this address will get added to your outbound message as a BCC address,
   "body": (required unless email_template_id is given, valid HTML),
   "plaintext_body": (optional, valid plaintext, defaults to autogenerating plaintext from "body" when this is not set),
-  "preheader": (optional*, string) Longueur recommandée entre 50 et 100 caractères,
-  "email_template_id": (optional, string) Si elle est fournie, elle utilisera les valeurs subject/body/should_inline_css du modèle d’e-mail donné SAUF si elles sont spécifiées ici, auquel cas nous substituerons le modèle fourni.,
-  "message_variation_id": (optional, string) utilisé lorsqu’un campaign_id est fourni pour spécifier avec quelle variation du message ce message doit être suivi,
-  "extras": (optional, valid Key-Value Hash), hachage supplémentaire ; pour les clients SendGrid, il sera transmis à SendGrid en tant qu’arguments uniques,
-  "headers": (optional, valid Key-Value Hash), hachage des en-têtes des extensions personnalisées. Pris en charge uniquement pour les clients SendGrid actuellement.,
-  "should_inline_css": (optional, boolean), si du CSS doit être inséré dans le corps. S’il n’est pas fourni, il revient sur la valeur d’insertion du CSS par défaut pour le groupe d’apps.,
-  "attachments": (optional, array), array d’objets JSON qui définit les fichiers que vous devez attacher, définis par « file_name » et « url »,
-    "file_name": (required, string) le nom du fichier que vous désirez attacher à votre e-mail sans son extension (par ex., « .pdf »). Vous pouvez attacher autant de fichiers que vous désirez jusqu’à 2 MB. Ceci est obligatoire si vous utilisez des « pièces jointes »,
-    "url": (required, string) l’URL correspondante du fichier que vous désirez joindre à votre e-mail. L’extension du nom de fichier sera détectée automatiquement à partir de l’URL défini, ce qui devrait renvoyer le « Content-Type » adéquat en tant qu’en-tête de réponse. Ceci est obligatoire si vous utilisez des « pièces jointes »,
+  "preheader": (optional*, string) Recommended length 50-100 characters,
+  "email_template_id": (optional, string) If provided, we will use the subject/body/should_inline_css values from the given email template UNLESS they are specified here, in which case we will override the provided template,
+  "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
+  "extras": (optional, valid Key-Value Hash), extra hash - for SendGrid customers, this will be passed to SendGrid as Unique Arguments,
+  "headers": (optional, valid Key-Value Hash), hash of custom extensions headers. Currently, only supported for SendGrid customers,
+  "should_inline_css": (optional, boolean), whether to inline CSS on the body. If not provided, falls back to the default CSS inlining value for the App Group,
+  "attachments": (optional, array), array of JSON objects that define the files you need attached, defined by "file_name" and "url",
+    "file_name": (required, string) the name of the file you would like to attach to your email, excluding the extension (e.g., ".pdf"). You can attach any number of files up to 2 MB. This is required if you use "attachments",
+    "url": (required, string) the corresponding URL of the file you would like to attach to your email. The file name's extension will be detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
 }
 ```
 
 - [Identifiant d’application]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key)
-- Pour plus d’informations et les meilleures pratiques sur les accroches, consultez notre article d’aide sur le [style des corps de l’e-mail][46].
+- Pour plus d’informations et les meilleures pratiques sur les accroches, consultez notre article d’aide sur le [style des corps de message][46].
 
 {% alert warning %}
 Braze recommande d’éviter d’utiliser les liens Google Drive pour les `url` de pièces jointes, car cela peut bloquer les appels de nos serveurs pour obtenir le fichier ce qui empêche l’envoi d’e-mails.
@@ -56,7 +57,7 @@ Un `email_template_id` peut être récupéré au bas des modèles d’e-mail cr�
      "email":{
         "app_id":"YOUR_APP_ID",
         "attachments":[{
-            "file_name":"LeNomDeVotreFichier",
+            "file_name":"YourFileName",
             "url":"https://exampleurl.com/YourFileName.pdf"
          }]
      }

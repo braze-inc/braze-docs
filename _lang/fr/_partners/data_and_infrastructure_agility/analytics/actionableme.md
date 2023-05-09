@@ -2,7 +2,7 @@
 nav_title: actionable.me
 article_title: actionable.me
 page_order: 1
-description: "actionable.me est un logiciel propriétaire et des processus qui vous aident à tirer immédiatement le meilleur parti de votre investissement Braze."
+description: "Cet article de référence présente le partenariat entre Braze et actionable.me, un logiciel propriétaire et des processus qui vous aident à tirer immédiatement le meilleur parti de votre investissement Braze."
 alias: /partners/actionableme/
 page_type: partner
 search_tag: Partenaire
@@ -17,10 +17,10 @@ L’intégration Braze et actionable.me vous permet de déployer un service vous
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | --- | --- |
 | Compte actionable.me | Un compte actionable.me est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé API REST Braze avec les autorisations répertoriées dans la section suivante.<br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Clé d’API REST Braze | Une clé API REST Braze avec les autorisations répertoriées dans la section suivante.<br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -30,7 +30,7 @@ Pour intégrer Braze et actionable.me, la plateforme actionable.me doit être co
 
 ### Étape 1 : Créez votre clé API Braze
 
-Dans Braze, accédez à **Developer Console** et sélectionnez l'onglet **Clés API REST**. Sélectionnez **Créer une nouvelle clé API** et assurez-vous que les autorisations suivantes sont ajoutées :
+Dans Braze, accédez à la **Developer Console (Console du développeur)** et sélectionnez l'onglet **REST API Keys (Clés API REST)**. Sélectionnez **Create New API Key (Créer une nouvelle clé API)** et assurez-vous que les autorisations suivantes sont ajoutées :
 
 - `campaigns.list`
 - `campaigns.data_series`

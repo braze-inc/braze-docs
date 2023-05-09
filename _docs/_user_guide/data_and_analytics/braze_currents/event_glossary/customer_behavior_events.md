@@ -40,7 +40,7 @@ Certain events return a `platform` value that specifies the platform of the user
 {% enddetails %}
 
 {% alert important %}
-Note that these schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage), and are not available for Segment.io connectors. For schema that apply to other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB. 
+Note that these schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage), and are not available for Segment.io connectors. For schema that apply to other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB. 
 
 {% endalert %}
 {% api %}
@@ -56,26 +56,26 @@ This event occurs when a specific custom event is triggered. Use this to track w
 ```json
 // Custom Event: users.behaviors.CustomEvent
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "name": (string) name of the custom event,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred,
-  "properties": (string) JSON encoded string of the properties for this event,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (optional, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "name": (required, string) name of the custom event,
+  "properties": (required, string) JSON encoded string of the properties for this event,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 
 {% endapi %}
@@ -96,26 +96,26 @@ Purchases are special custom events and come with a JSON encoded string of custo
 ```json
 // Purchase Event: users.behaviors.Purchase
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "product_id": (string) id of the product purchased,
-  "price": (float) price of the purchase,
-  "currency": (string) three letter alpha ISO 4217 currency code,
-  "properties": (string) JSON encoded string of the custom properties for this event,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (optional, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "product_id": (required, string) id of the product purchased,
+  "price": (required, float) price of the purchase,
+  "currency": (required, string) three letter alpha ISO 4217 currency code,
+  "properties": (required, string) JSON encoded string of the custom properties for this event,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -137,21 +137,21 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 ```json
 // Session Start: users.behaviors.app.FirstSession
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "session_id": (string) id of the session,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of the device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the session occurred,
-  "gender": (string) gender of the user,
-  "country": (string) country of the user,
-  "language": (string) language of the user,
-  "sdk_version": (string) version of the Braze SDK in use during the session
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "session_id": (required, string) id of the session,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the session occurred,
+  "gender": (optional, string) gender of the user,
+  "country": (optional, string) country of the user,
+  "language": (optional, string) language of the user,
+  "sdk_version": (optional, string) version of the Braze SDK in use during the session
 }
 ```
 {% endapi %}
@@ -173,16 +173,15 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 ```json
 // Session Start: users.behaviors.app.SessionStart
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "session_id": (string) id of the session,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of the device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the session occurred
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the session occurred
 }
 ```
 
@@ -205,17 +204,17 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 ```json
 // Session End: users.behaviors.app.SessionEnd
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "session_id": (string) id of the session,
-  "duration": (float) seconds session lasted,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of the device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the session occurred
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "duration": (optional, float) seconds session lasted,
+  "session_id": (required, string) id of the session,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the session occurred
 }
 ```
 {% endapi %}
@@ -233,27 +232,27 @@ This event is triggered when a user visits a specified location. Use this to tra
 ```json
 // Location Event: users.behaviors.Location
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "longitude": (float) longitude of recorded location,
-  "latitude": (float) latitude of recorded location,
-  "altitude": (float) altitude of recorded location,
-  "ll_accuracy": (float) latitude/longitude accuracy of recorded location,
-  "alt_accuracy": (float) altitude accuracy of recorded location,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "latitude": (required, float) latitude of recorded location,
+  "longitude": (required, float) longitude of recorded location,
+  "altitude": (optional, float) altitude of recorded location,
+  "ll_accuracy": (optional, float) latitude/longitude accuracy of recorded location,
+  "alt_accuracy": (optional, float) altitude accuracy of recorded location,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -278,15 +277,15 @@ We do track other News Feed events; these are located in [Message Engagement Eve
 ```json
 // News Feed Impression: users.behaviors.app.NewsFeedImpression
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of the device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the event occurred
 }
 ```
 
@@ -304,11 +303,11 @@ This event occurs when an app installation is attributed to a source. Use this t
 ```json
 // Install Attribution Event: users.behaviors.InstallAttribution
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "source": (string) the source of the attribution
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (requierd, int) 10-digit UTC time of the event in seconds since the epoch,
+  "source": (required, string) the source of the attribution
 }
 ```
 
@@ -327,13 +326,13 @@ This user event occurs every time a new user is created within their app group. 
 ```json
 // Random Bucket Number Event: users.RandomBucketNumberUpdate
 {
-  "id": (string) unique id of this event,
-  "app_group_id": (string) AppGroup API id
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) UTC time of the event in milliseconds since the epoch,
-  "random_bucket_number": (int) new random bucket number
-  "prev_random_bucket_number":  (int) old random bucket number, optional
+  "id": (required, string) unique id of this event,
+  "app_group_id": (required, string) AppGroup API id
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (optional, int) UTC time of the event in milliseconds since the epoch,
+  "random_bucket_number": (required, int) new random bucket number
+  "prev_random_bucket_number":  (optional, int) old random bucket number, optional
 }
 ```
 
@@ -343,4 +342,3 @@ Note that this Currents event is only available for customers that have purchase
 {% endalert %}
 
 {% endapi %}
-

@@ -2,11 +2,11 @@
 page_order: 1
 nav_title: Customization
 article_title: Android Push Customization
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Android Push Customization"
 guide_top_text: ""
-description: "This landing page covers the Braze Android SDK push customization options."
+description: "This landing page covers the Braze Android SDK push customization options such as HTML push notifications, inline image push, advanced settings, and more."
 
 platform:
   - Android

@@ -11,7 +11,7 @@ tool: Media
 
 # Editor blocks
 
-Editor blocks are the various blocks available in the Drag & Drop Editor under the **Content** section. This section includes a series of tiles that represent the different kinds of content you can use in your message.
+> Editor blocks are the various blocks available in the Drag & Drop Editor under the **Content** section. This section includes a series of tiles that represent the different kinds of content you can use in your message.
 
 To use them, drag an editor block inside a column. It will auto-adjust to the column width. Each editor block has its owns settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
 
@@ -26,7 +26,7 @@ The following table describes how users can use each editor block type.
 | name | description |
 |---|---|
 |`Title`| Adds text with H1, H2, and H3 tags for email. | 
-|`Text`| Enters text into their message. A toolbar helps with font and text editing functionality. | 
+|`Paragraph`| Enters text into their message. A toolbar helps with font and text editing functionality. | 
 |`Image`| Inserts an image from the Media Library. | 
 |`Button`| Adds a standard button. Properties for this block allow for editing and setting links easily. | 
 |`Divider`| Inserts a solid, dotted, or dashed line to help with spacing.|
@@ -196,7 +196,7 @@ Refer to the following table for details on the `Video` editor block.
 |`Title`| Auto-generated from the video meta data or can be customized.  Note that only Youtube and Vimeo are supported. |
 |`Play Icon Style`| Includes different options for the play button located at the top of a video image. |
 |`Play Icon Color`| Option to select either **Light** or **Dark** for the play button. |
-|`Play Icon Size`| Choose the pixel size for the play button. Pre-fixed range from 50 px to 80 px (incremented by 5 px). |
+|`Play Icon Size`| Choose the pixel size for the play button. Pre-fixed range from 50&nbsp;px to 80&nbsp;px (incremented by 5&nbsp;px). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}

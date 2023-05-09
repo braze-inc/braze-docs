@@ -6,7 +6,7 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint de Braze Lister les détails du produit du catalogue."
+description: "Cet article présente en détail l’endpoint Braze Lister les détails du produit du catalogue."
 
 ---
 {% api %}
@@ -15,11 +15,13 @@ description: "Cet article présente en détail l’endpoint de Braze Lister les 
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Utilisez cet endpoint pour renvoyer un produit de catalogue et son contenu.
+> Utilisez cet endpoint pour renvoyer un produit de catalogue et son contenu.
 
-## Limites de débit
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#52c6631c-7366-48e5-9e0e-16de7b6285cc {% endapiref %}
 
-Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
+## Limite de débit
+
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Paramètres de chemin
 
@@ -43,11 +45,11 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## Réponse
 
-Deux réponses de code d’état existent pour cet endpoint : `200` et `404`..
+Deux réponses de code de statut existent pour cet endpoint : `200` et `404`.
 
 ### Exemple de réponse réussie
 
-Le code de statut `200` pourrait retourner le corps de réponse suivant.
+Le code de statut `200` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {
@@ -56,7 +58,7 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
       "id": "restaurant3",
       "Name": "Restaurant1",
       "City": "New York",
-      "Cuisine": "Américain",
+      "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": true,
       "Open_Time": "2022-11-01T09:03:19.967Z"
@@ -75,7 +77,7 @@ Le code de statut `404` pourrait retourner la réponse suivante. Consultez la [r
   "errors": [
     {
       "id": "item-not-found",
-      "message": "Produit introuvable.",
+      "message": "Could not find item",
       "parameters": [
         "item_id"
       ],
@@ -84,7 +86,7 @@ Le code de statut `404` pourrait retourner la réponse suivante. Consultez la [r
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 

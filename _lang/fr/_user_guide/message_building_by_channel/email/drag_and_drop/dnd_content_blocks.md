@@ -2,16 +2,16 @@
 nav_title: Blocs de contenu
 article_title: Blocs de contenu de l’éditeur Drag & Drop
 alias: "/dnd/content_blocks/"
-channel: E-mail
+channel: email
 page_order: 2
 description: "Le présent article de référence explique comment créer et utiliser des blocs de contenu dans l’éditeur Drag & Drop."
 tool: Media
 
 ---
 
-# Blocs de contenu de l’éditeur Drag & Drop
+# Blocs de contenu
 
-Les blocs de contenu utilisés exclusivement dans l’éditeur Drag & Drop ont des fonctionnalités similaires aux [blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) utilisés sur différents canaux. Ils servent d’emplacement centralisé pour la conservation d’informations qui peuvent être référencées dans diverses campagnes par e-mail. Il peut s’agir de regrouper des en-têtes de courriels, des pointeurs promotionnelles et plus encore, le tout sur une seule ligne réutilisable.
+> Les blocs de contenu utilisés exclusivement dans l’éditeur Drag & Drop ont des fonctionnalités similaires aux [blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) utilisés sur différents canaux. Ils servent d’emplacement centralisé pour la conservation d’informations qui peuvent être référencées dans diverses campagnes par e-mail. Il peut s’agir de regrouper des en-têtes de courriels, des pointeurs promotionnels et plus encore, le tout sur une seule ligne réutilisable.
 
 ## Création d’un bloc de contenu
 
@@ -37,8 +37,6 @@ Vous pouvez également ajouter autant de blocs de contenu de l’éditeur Drag &
 
 ## Utilisation d’un bloc de contenu
 
-![][2]{: style="float:right;max-width:50%;margin-left:15px;margin-top:15px;"}
-
 Il existe deux moyens d’ajouter le bloc de contenu à votre e-mail. 
 
 ### Lignes
@@ -50,6 +48,8 @@ Une fois que le bloc de contenu est ajouté dans l’éditeur d’e-mail, vous p
 De mauvais alignements peuvent se produire dans l’éditeur Drag & Drop lorsque plusieurs blocs de contenu sont ajoutés à un bloc à ligne unique. Essayez de faire en sorte d’utiliser des blocs de lignes séparés pour assurer l’alignement de votre contenu au niveau de la ligne.
 
 ### Liquid
+
+![][2]{: style="float:right;max-width:50%;margin-left:15px;margin-top:15px;"}
 
 Accédez à votre campagne par e-mail et sélectionnez **Modifier le corps du courriel**. Cliquez sur le bouton<i class="fas fa-plus"></i> **Personnalisation**. 
 

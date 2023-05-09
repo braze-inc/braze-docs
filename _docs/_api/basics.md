@@ -17,12 +17,12 @@ The following lists an overview of terms you may see in the Braze REST API docum
 
 ### Endpoints
 
-Braze manages a number of different instances for our dashboard and REST Endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket][support] or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket][support] or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
 
 {% alert important %}
-When using endpoints for API calls, use the "REST Endpoint".
+When using endpoints for API calls, use the REST endpoint.
 
-For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the "REST Endpoint".
+For SDK integration, use the [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the REST endpoint.
 {% endalert %}
 
 |Instance|URL|REST Endpoint|SDK Endpoint|
@@ -105,6 +105,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `messages.schedule.update` | Update a scheduled message. |
 | `messages.schedule.delete` | Delete a scheduled message. |
 | `messages.schedule_broadcasts` | Query all scheduled broadcast messages. |
+| `messages.live_activity.update` | Update an iOS Live Activity. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -284,7 +285,7 @@ For additional security, you can specify a list of IP addresses and subnets whic
 
 ![Option to whitelist IPs when creating an API key][26]
 
-If you don’t specify any, requests can be sent from any IP address.
+If you don't specify any, requests can be sent from any IP address.
 
 {% alert tip %}
 Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [IPs to whitelist]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
@@ -296,7 +297,7 @@ Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [I
 
 If you're implementing Braze using Ruby, you can use our [Ruby client library](https://github.com/braze-inc/braze-api-client-ruby) to reduce your data import time. A client library is a collection of code specific to one programming language—in this case, Ruby—that makes it easier to use an API.
 
-The Ruby client library supports the [User Endpoints]({{site.baseurl}}/api/endpoints/#user-data).
+The Ruby client library supports the [User Endpoints]({{site.baseurl}}/api/endpoints/user_data).
 
 {% alert note %}
 This client library is currently in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
@@ -304,7 +305,7 @@ This client library is currently in beta. Want to help us make this library bett
 
 [1]: https://en.wikipedia.org/wiki/UTF-8
 [7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
 [2]: {{site.baseurl}}/api/identifier_types/

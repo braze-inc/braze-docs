@@ -2,7 +2,7 @@
 nav_title: Foursquare
 article_title: Foursquare
 alias: /partners/foursquare/
-description: "This article outlines the partnership between Braze and Foursquare, a location data platform, providing real-time event triggering based on location."
+description: "This reference article outlines the partnership between Braze and Foursquare, a location data platform, providing real-time event triggering based on location."
 page_type: partner
 search_tag: Partner
 

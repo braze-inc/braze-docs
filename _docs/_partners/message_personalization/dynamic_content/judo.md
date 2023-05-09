@@ -1,6 +1,7 @@
 ---
 nav_title: Judo
-description: "This article outlines the partnership between Braze and Judo, a no-code server-driven UI platform that allows you to add location context and tracking to your iOS and Android apps."
+article_title: Judo
+description: "This reference article outlines the partnership between Braze and Judo, a no-code server-driven UI platform that allows you to add location context and tracking to your iOS and Android apps."
 alias: /partners/judo/
 page_type: partner
 search_tag: Partner

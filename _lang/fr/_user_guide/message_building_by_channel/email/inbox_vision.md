@@ -2,39 +2,41 @@
 nav_title: Inbox Vision
 article_title: Inbox Vision
 page_order: 6
-description: "Inbox Vision permet aux marketeurs de consulter leurs e-mails du point de vue de différents clients par e-mail et appareils mobiles. Le présent article de référence explique comment configurer et utiliser Inbox Vision."
+description: "Cet article de référence explique comment configurer Inbox Vision, une fonctionnalité qui permet aux spécialistes du marketing d’afficher leurs e-mails du point de vue de divers clients de messagerie et appareils mobiles."
 tool:
-  - Tableau de bord
+  - Dashboard
 channel:
-  - E-mail
+  - e-mail
 
 ---
 
 # Inbox Vision
 
-Inbox Vision permet aux marketeurs de consulter leurs e-mails du point de vue de différents clients par e-mail et appareils mobiles. Pour tester votre e-mail dans Inbox Vision, allez sur l’onglet **Aperçu et test** dans votre éditeur Drag & Drop ou l’éditeur d’e-mail HTML. Sélectionner **Inbox Vision** et cliquez sur **Exécuter Inbox Vision**.
+> Inbox Vision permet aux marketeurs de consulter leurs e-mails du point de vue de différents clients e-mail et appareils mobiles. 
+
+Pour tester votre e-mail dans Inbox Vision, allez sur l’onglet **Preview and Test (Aperçu et test)** dans votre éditeur Drag & Drop ou l’éditeur d’e-mail HTML. Sélectionner **Inbox Vision** et cliquez sur **Run Inbox Vision (Exécuter Inbox Vision)**.
 
 ![][3]{: style="max-width:80%;"}
 
-Braze envoie ensuite une version HTML de votre e-mail à différents clients par e-mail utilisés dans le monde entier, ce qui peut prendre entre deux et dix minutes. Ces aperçus HTML sont divisés en trois sections : **Clients Web**, **Clients d’application**, et **Clients mobiles**. 
+Braze envoie ensuite une version HTML de votre e-mail à différents clients e-mail utilisés dans le monde entier, ce qui peut prendre entre deux et dix minutes. Ces aperçus HTML sont divisés en trois sections : **Web Clients (Clients Web)**, **Application Clients (Clients d’application)**, et **Mobile Clients (Clients mobiles)**. 
 
-Sélectionnez une mosaïque pour afficher l’aperçu plus en détail. Votre e-mail doit inclure une ligne d’objet et un domaine d’envoi valide afin de voir ces aperçus. Prenez garde au fait que votre e-mail peut s’afficher différemment sur les ordinateurs de bureau que sur les appareils mobiles. En affichant ces prévisualisations, vous pouvez identifier les modifications à faire pour vous assurer que le contenu de vos e-mails s’affiche comme vous le désirez.
+Sélectionnez une mosaïque pour afficher l’aperçu plus en détail. Votre e-mail doit inclure une ligne d’objet et un domaine d’envoi valide afin de voir ces aperçus. Prenez garde au fait que votre e-mail peut s’afficher différemment sur les ordinateurs de bureau que sur les appareils mobiles. En affichant ces prévisualisations, vous pouvez vous assurer que le contenu de vos e-mails s’affiche comme vous le désirez.
 
 {% alert tip %}
 Utilisez Inbox Vision pour tester les différences entre les modes clairs et sombres pour vous assurer que vos e-mails sont parfaits !
 {% endalert %}
 
-![Aperçu d’Inbox Vision pour l’éditeur HTML.][1]
+![Overview d’Inbox Vision pour l’éditeur HTML.][1]
 
-Lorsque vous apportez des modifications à un modèle, cliquez sur **Relancer le test** pour voir les aperçus mis à jour.
+Lorsque vous apportez des modifications à un modèle, cliquez sur **Re-run Test (Relancer le test)** pour voir les aperçus mis à jour.
 
 {% alert important %} 
-En général, votre e-mail ne fonctionnera pas avec Inbox Vision si le contenu de votre e-mail s’appuie sur des informations de modèles, telles que les informations de profil utilisateur. En effet, les modèles Braze se base sur un utilisateur vide lorsque nous envoyons des e-mails à l’aide de cette fonctionnalité. 
+En général, votre e-mail ne fonctionnera pas avec Inbox Vision si le contenu de votre e-mail s’appuie sur des informations de modèles, telles que les informations de profil utilisateur. En effet, Braze modélise un utilisateur vide lorsque nous envoyons des e-mails à l’aide de cette fonctionnalité. 
 {% endalert %}
 
 ## Analyse des codes
 
-L’analyse des codes est un moyen pour Braze de mettre en évidence les problèmes qui peuvent exister avec votre HTML, indiquant le nombre d’occurrences de chaque problème et fournissant des informations sur les éléments HTML non pris en charge. Ces informations sont disponibles dans l’onglet **Inbox Vision** en sélectionnant <i class="fas fa-list"></i> **Afficher la liste**.
+L’analyse des codes est un moyen pour Braze de mettre en évidence les problèmes qui peuvent exister avec votre HTML, indiquant le nombre d’occurrences de chaque problème et fournissant des informations sur les éléments HTML non pris en charge. Ces informations sont disponibles dans l’onglet **Inbox Vision** en sélectionnant <i class="fas fa-list"></i> **List view (Afficher la liste)**.
 
 ![Exemple d’analyse de code sur l’aperçu d’Inbox Vision.][2]
 
@@ -44,13 +46,13 @@ Parfois, l’analyse de code s’affiche plus rapidement que l’aperçu d’un 
 
 ## Tests de courrier indésirable
 
-Les tests de courrier indésirable visent à prédire si votre e-mail s’affichera dans les dossiers de courrier indésirable ou dans les boîtes de réception de vos clients. Les tests de courrier indésirable sont exécutés sur les principaux filtres anti-spam, comme IronPort, SpamAssassin et Barracuda, ainsi que sur les principaux filtres de fournisseurs de services Internet, tels que Gmail.com et Outlook.com.
+Les tests de courrier indésirable visent à prédire si votre e-mail s’affichera dans les dossiers de courrier indésirable ou dans les boîtes de réception de vos clients. Les tests de courrier indésirable sont exécutés sur les principaux filtres anti-spam, comme IronPort, SpamAssassin et Barracuda, ainsi que sur les principaux filtres de fournisseurs de services Internet (ISP), tels que Gmail.com et Outlook.com.
 
-Pour vérifier les résultats de vos tests de courrier indésirable, cliquez sur l’onglet **Tests de courrier indésirable** dans la section **Inbox Vision**. Le tableau **Résultats des tests de courrier indésirable** répertorie le nom, l’état et le type du filtre de courrier indésirable.
+Pour vérifier les résultats de vos tests de courrier indésirable, cliquez sur l’onglet **Spam Testing (Tests de courrier indésirable)** dans la section **Inbox Vision**. Le tableau **Spam Test Result (Résultats des tests de courrier indésirable)** répertorie le nom, l’état et le type du filtre de courrier indésirable.
 
-![Tableau des résultats des tests de courrier indésirable à trois colonnes : Nom, État et Type. Il existe une liste de filtres antispam et de filtres de fournisseurs de services Internet qui ont réussi les tests de courrier indésirable, indiquant que la campagne par e-mail ne s’affichera pas dans le dossier de courrier indésirable.][4]
+![Tableau des résultats des tests de courrier indésirable à trois colonnes : Nom, État et Type. Il existe une liste de filtres anti-spam et de filtres de fournisseurs de services Internet qui ont réussi les tests de courrier indésirable, indiquant que la campagne par e-mail ne s’affichera pas dans le dossier de courrier indésirable.][4]
 
-Après avoir examiné ces résultats et effectué des ajustements à votre campagne par e-mail, cliquez sur **Relancer le test** pour recharger vos résultats de tests de courrier indésirable.
+Après avoir examiné ces résultats et effectué des ajustements à votre campagne par e-mail, cliquez sur **Re-run Test (Relancer le test)** pour recharger vos résultats de tests de courrier indésirable.
 
 ## Précision du test
 

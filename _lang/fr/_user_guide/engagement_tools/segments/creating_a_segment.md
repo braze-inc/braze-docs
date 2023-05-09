@@ -5,14 +5,12 @@ page_order: 1
 page_type: tutorial
 description: "Cet article pratique vous explique comment configurer et créer un segment avec Braze."
 tool: Segments
-search_rank: 2
+search_rank: 3
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Créer un segment
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}La création d’un segment
 
-> Cet article vous guidera étape par étape à travers la création d’un segment, le filtrage de votre audience cible, la navigation dans les segments et l’archivage.
-
-La segmentation vous permet de cibler les utilisateurs en fonction de leurs actions et de leurs caractéristiques démographiques, comportementales, ou techniques. La segmentation et les messages automatiques peuvent être utilisés de manière intelligente et créative pour transformer vos prospects en clients à long terme. Les segments sont mis à jour en temps réel en fonction des modifications de données, et vous pouvez créer autant de segments que nécessaire pour remplir vos objectifs de ciblage et de communication.
+> La segmentation vous permet de cibler les utilisateurs en fonction de leurs actions et de leurs caractéristiques démographiques, comportementales, ou techniques. La segmentation et l’envoi de messages automatiques peuvent être utilisés de manière intelligente et créative pour transformer vos prospects en clients à long terme de manière harmonieuse. Les segments sont mis à jour en temps réel en fonction des modifications de données, et vous pouvez créer autant de segments que nécessaire pour remplir vos objectifs de ciblage et de communication.
 
 ## Étape 1 : Accédez à la section Segments
 
@@ -30,7 +28,7 @@ Vous pouvez aussi ajouter une description à votre segment pour fournir plus de 
 
 ## Étape 3 : Choisissez votre application ou plateforme
 
-Choisissez les apps ou plateformes que vous voulez cibler en sélectionnant **Users from all apps (Utilisateurs de toutes les apps)** (option par défaut), ou **Users from specific apps (Utilisateurs d’apps spécifiques)**. Si vous choisissez **Users from all apps (Utilisateurs de toutes les apps)**, le segment inclura tous les utilisateurs, quelles que soient les sessions ou données d’application. Si vous choisissez **Users from specific apps (Utilisateurs d’apps spécifiques)**, vous pourrez sélectionner les applications ou plateformes à inclure dans votre segment. 
+Choisissez les apps ou plateformes que vous voulez cibler en sélectionnant **Users from all apps (Utilisateurs de toutes les apps)** (option par défaut), ou **Users from specific apps (Utilisateurs d’apps spécifiques)**. Si vous choisissez **Utilisateurs de toutes les apps**, le segment inclura tous les utilisateurs, quelles que soient les sessions ou données d’application. Si vous choisissez **Users from specific apps (Utilisateurs d’apps spécifiques)**, vous pourrez sélectionner les applications ou plateformes à inclure dans votre segment. 
 
 Par exemple, si vous souhaitez envoyer un message in-app uniquement aux appareils iOS, sélectionnez votre application iOS. Cela permettra aux utilisateurs qui peuvent utiliser à la fois un appareil iOS et Android de recevoir uniquement le message sur leur appareil iOS. Dans la liste des apps spécifiques, l’option **Users from no apps (Utilisateurs n’ayant pas d’apps)** vous permet d’inclure les utilisateurs sans sessions et sans données d’application (typiquement créés via une User Import ou l’API REST).
 
@@ -54,11 +52,17 @@ Notez que les statistiques de votre segment s’actualisent en temps réel lorsq
 Les segments qui utilisent déjà le filtre Segment Membership (Appartenance à un segment) ne peuvent pas être inclus ou imbriqués dans d’autres segments.
 {% endalert %}
 
+### Tester des segments
+
+Après avoir ajouté des applications et des filtres à votre segment, vous pouvez tester si votre segment est configuré comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) pour confirmer s’il correspond aux critères du segment.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
+
 ### Segments mono-utilisateur
 
 Vous pouvez créer des segments comportant un seul utilisateur (ou une poignée d’utilisateurs) en utilisant des attributs uniques qui identifient les utilisateurs, comme un nom d’utilisateur ou un ID utilisateur.
 
-Cependant, il se peut que cet utilisateur individuel ne soit pas reflété dans les statistiques ou l’aperçu de segmentation, car les statistiques des segments sont calculées sur la base d’un échantillon aléatoire avec un degré de confiance de 95 % que le résultat est compris entre +/- 1 %. Plus votre base d’utilisateurs est grande, plus il est probable que la taille de votre segment soit une estimation approximative. Pour vous assurer que votre segment contient le seul utilisateur que vous souhaitez cibler, cliquez sur **Calculate Exact Statistics (Calculer les statistiques exactes)** sur la page **Segment Details (Informations relatives au segment)**. Cela calculera le nombre exact d’utilisateurs dans votre segment, sans arrondi.
+Cependant, il se peut que cet utilisateur individuel ne soit pas reflété dans les statistiques ou l’aperçu de segmentation, car les statistiques des segments sont calculées sur la base d’un échantillon aléatoire avec un degré de confiance de 95 % que le résultat est compris entre +/- 1 %. Plus votre base d’utilisateurs est grande, plus il est probable que la taille de votre segment soit une estimation approximative. Pour vous assurer que votre segment contient le seul utilisateur que vous souhaitez cibler, cliquez sur **Calculate Exact Statistics (Calculer les statistiques exactes)** sur la page **Informations relatives au segment**. Cela calculera le nombre exact d’utilisateurs dans votre segment, sans arrondi.
 
 Braze propose des filtres de test pour cibler des utilisateurs spécifiques en fonction de leur ID utilisateur ou de leur adresse e-mail.
 
@@ -72,15 +76,15 @@ Braze met à jour l’appartenance des utilisateurs à un segment au fur et à m
 
 ### Calcul du nombre total d’utilisateurs pouvant être atteints
 
-Chaque segment affiche le nombre total d’utilisateurs qui sont membres de ce segment. Lorsque vous filtrez pour les **Users from all apps (Utilisateurs de toutes les apps)**, il affiche aussi tous les canaux disponibles pour communiquer avec ces utilisateurs, comme les notifications push Web ou l’e-mail. Il est possible que le nombre total d’utilisateurs diffère du nombre d’utilisateurs pouvant être atteints par chaque canal. Pourquoi donc ?
+Chaque segment affiche le nombre total d’utilisateurs qui sont membres de ce segment. Lorsque vous filtrez pour les **Utilisateurs de toutes les applications**, il affiche aussi tous les canaux disponibles pour communiquer avec ces utilisateurs, comme les notifications push Web ou l’e-mail. Il est possible que le nombre total d’utilisateurs diffère du nombre d’utilisateurs pouvant être atteints par chaque canal. Pourquoi donc ?
 
-![Un tableau affichant un nombre total d’utilisateurs pouvant être atteint de 9 100, 8 899 pouvant être atteints par e-mail, 6 720 par notification push Web, 4 521 par notification push Android et 5 122 par notification iOSpush.][4]
+![Un tableau affichant un nombre total d’utilisateurs pouvant être atteints de 9 100, 8 899 pouvant être atteints par e-mail, 6 720 par notification push Web, 4 521 par notification push Android et 5 122 par notification push iOS.][4]
 
 Pour qu’un utilisateur soit indiqué comme pouvant être atteint par un canal donné, il doit avoir à la fois :
-* Une adresse e-mail/un jeton de notification push valide associé à leur profil; et
-* accepté ou abonné à votre app.
+*Une adresse e-mail/jeton de notification push valide associé avec son profil ; et
+* Être abonné ou inscrit à votre application.
 
-Un utilisateur donné peut appartenir à plusieurs groupes d’utilisateurs atteignables. Par exemple, un utilisateur peut disposer d’une adresse e-mail valide et d’un jeton de notification push Android valide et être abonné aux deux, mais ne pas avoir de jeton de notification push iOS associé. La différence entre le nombre total d’utilisateurs pouvant être atteints et la somme des différents canaux est le nombre d’utilisateurs qualifiés pour le segment mais ne pouvant pas être atteints par ces canaux de communication.
+Un utilisateur donné peut appartenir à plusieurs groupes d’utilisateurs atteignables. Par exemple, un utilisateur peut disposer d’une adresse e-mail valide et d’un jeton de notification push Android valide et être abonné aux deux, mais ne pas avoir de jeton de notification push associé. La différence entre le nombre total d’utilisateurs pouvant être atteints et la somme des différents canaux est le nombre d’utilisateurs qualifiés pour le segment mais ne pouvant pas être atteints par ces canaux de communication.
 
 ## Archivage des segments
 

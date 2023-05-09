@@ -8,7 +8,7 @@ guide_top_text: "This section includes information on News Feed, which is being 
 search_rank: 1
 page_type: landing
 channel: news feed
-description: "This landing page is home to various News Feed articles. Here you can find resources to create, categorize, and analyze your News Feed items."
+description: "This landing page is home to various News Feed articles. Here, you can find resources to create, categorize, and analyze your News Feed items."
 
 guide_featured_title: "Section Articles"
 

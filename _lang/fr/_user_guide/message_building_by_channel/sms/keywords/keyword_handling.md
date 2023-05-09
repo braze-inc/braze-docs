@@ -1,6 +1,6 @@
 ---
-nav_title: Gestion des mots-clés personnalisés
-article_title: Gestion des mots-clés personnalisés
+nav_title: Gestion personnalisée des mots-clés
+article_title: Gestion personnalisée des mots-clés
 page_order: 2
 description: "Cet article de référence explique comment Braze traite les messages SMS bidirectionnels et les réponses automatiques. Il inclut des explications sur le fonctionnement des déclencheurs de mots-clés, ainsi que sur les catégories de mots-clés personnalisés et la prise en charge multilingue."
 page_type: reference
@@ -9,10 +9,13 @@ channel:
 
 ---
 
-<br>
+# Gestion personnalisée des mots-clés
+
 {% alert important %}
 Êtes-vous actuellement un client SMS non natif ? Si oui, consultez la [documentation sur les SMS non natifs](/docs/user_guide/message_building_by_channel/sms/non_native/) et l’article sur la gestion des mots-clés.
 {% endalert %}
+
+> Cet article de référence explique comment Braze traite les messages SMS bidirectionnels et les réponses automatiques. Il inclut des explications sur le fonctionnement des déclencheurs de mots-clés, ainsi que sur les catégories de mots-clés personnalisés et la prise en charge multilingue.
 
 ## Messagerie bidirectionnelle (réponses aux mots-clés personnalisés)
 
@@ -23,7 +26,7 @@ La messagerie bidirectionnelle vous permet d’envoyer des messages et de traite
 Les SMS avec Braze vous permettent de créer des déclencheurs de mots-clés, de personnaliser les réponses, de définir des ensembles de mots-clés pour plusieurs langues et d’établir des catégories de mots-clés personnalisés. 
 
 {% tabs %}
-{% tab Ajouter des déclencheurs de mots-clés %}
+{% tab Add Keyword Triggers %}
 
 #### Ajouter des déclencheurs de mots-clés
 
@@ -48,7 +51,7 @@ Vous voulez voir comment utiliser ces mots-clés dans vos campagnes et Canvas po
 {% endalert %}
 {% endtab %}
 
-{% tab Gérer les réponses %}
+{% tab Manage responses %}
 
 #### Gérer les réponses
 
@@ -114,11 +117,11 @@ Ce déclencheur prend en charge le filtrage sur le message entrant spécifique �
 
 #### Canvas
 
-![Une étape de Canvas par événement avec le déclencheur « Envoyer un SMS entrant » au groupe d’abonnement « Service de message marketing A » dans la catégorie de mots-clés « Autre », où le corps du message correspond à l’expression régulière de « saut de symbole caret. »][14]{: style="max-width:80%;"}
+![Canvas Step par événement avec le déclencheur Envoyer un SMS entrant au groupe d’abonnement « Service de message marketing A » dans la catégorie de mots-clés « Autre », où le corps du message correspond à l’expression régulière de saut de symbole caret. »][14]{: style="max-width:80%;"}
 
 #### Campagne
 
-![Campagne par événement avec le déclencheur « Envoyer un SMS » entrant au groupe d’abonnement « Service de message marketing A » dans la catégorie de mots-clés « Autre », où le corps du message est « Mot-clé 1 » ou « Mot-clé 2 » ou n’est pas « Mot-clé A ».][15]{: style="max-width:80%;"}
+![Campagne par événement avec le déclencheur Envoyer un SMS entrant au groupe d’abonnement « Service de message marketing A » dans la catégorie de mots-clés « Autre », où le corps du message est « Mot-clé 1 » ou « Mot-clé 2 » ou n’est pas « Mot-clé A ».][15]{: style="max-width:80%;"}
 
 ### Gérer les mots-clés inconnus
 

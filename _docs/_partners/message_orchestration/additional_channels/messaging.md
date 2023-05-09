@@ -4,7 +4,7 @@ article_title: Instant Chat Partners
 page_order: 2
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to coordinate your messages with instant chat services."
+description: "This landing page lists Braze partners (Alloys) who allow you to coordinate your messages with instant chat services."
 
 layout: partner_page
 search_tag: Partner

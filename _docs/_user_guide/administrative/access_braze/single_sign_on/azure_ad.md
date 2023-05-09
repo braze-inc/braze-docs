@@ -9,9 +9,7 @@ description: "This article will walk you through how to set up Azure AD sign-on 
 
 # Azure Active Directory
 
-> This article will walk you through how to set up Azure AD sign-on capabilities with Braze.
-
-[Azure Active Directory (Azure AD)](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/braze-tutorial) is Microsoft’s cloud-based identity and access management service, which helps your employee's sign in and access resources. You can use Azure AD to control access to your apps and your app resources, based on your business requirements.
+> [Azure Active Directory (Azure AD)](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/braze-tutorial) is Microsoft's cloud-based identity and access management service, which helps your employee's sign in and access resources. You can use Azure AD to control access to your apps and your app resources, based on your business requirements.
 
 ## Requirements
 
@@ -150,7 +148,7 @@ On this page, you will add the following:
 
 | Requirement | Details |
 |---|---|
-| `SAML Name` | This will appear as the button text on the login screen. This is typically your IdP name, like "Azure AD.” |
+| `SAML Name` | This will appear as the button text on the login screen. This is typically your IdP name, like "Azure AD." |
 | `Target URL` | This is the Login URL provided by Azure AD.|
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your IdP. |
 {: .reset-td-br-1 .reset-td-br-2}

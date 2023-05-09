@@ -4,7 +4,7 @@ article_title: Contributing to Braze Docs
 page_order: 0
 
 page_type: reference
-description: "This page covers how you can contribute to Braze's open source documentation."
+description: "This help page covers how you can contribute to Braze's open source documentation."
 ---
 
 # Contributing to Braze docs

@@ -6,7 +6,7 @@ layout: dev_guide
 
 guide_top_header: "Engagement Tools"
 guide_top_text: "Braze offers many ways to reach your customers and users with our campaign and Canvas tools. You can also optimize for consistency (and upload images and other content) using our Templates & Media tools. From there, you can create Segments and Geofences to target your audience by location or other attributes. <br> <br> If you're looking for the channels you can send using Braze's Canvas and campaigns, check out our <a href='/docs/user_guide/message_building_by_channel/'>Message Building by Channel</a> section."
-description: "Braze offers many ways to reach your customers and users with our campaigns and Canvas tools. You can also optimize for consistency using our Templates & Media tools."
+description: "Braze offers many ways to reach your customers and users with our campaigns, Canvas, and segmentation tools. You can also optimize for consistency using our Templates & Media tools."
 
 guide_featured_title: "Build a messaging campaign"
 guide_featured_list:

@@ -1,7 +1,7 @@
 ---
 nav_title: ThoughtSpot
 article_title: ThoughtSpot
-description: "The ThoughtSpot and Braze integration enables users to limitlessly search across their Braze interaction data and uncover actionable insights."
+description: "This reference article outlines the partnership between Braze and ThoughtSpot, a next-generation analytics platform, that enables users to limitlessly search across their Braze interaction data and uncover actionable insights."
 alias: /partners/thoughtspot/
 page_type: partner
 search_tag: Partner
@@ -23,7 +23,7 @@ To start using ThoughtSpot on Braze, your data needs to be sent to a cloud data 
 | ThoughtSpot account | A ThoughtSpot account is required to take advantage of this partnership. |
 | Cloud data warehouse| Braze data is stored in Cloud Data Warehouse using Braze Currents. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze REST endpoint | [Your REST Endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## TML Blocks

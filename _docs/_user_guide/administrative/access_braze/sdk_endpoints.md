@@ -1,48 +1,39 @@
 ---
-nav_title: SDK Endpoints
-article_title: SDK Endpoints
+nav_title: API and SDK Endpoints
+article_title: API and SDK Endpoints
 page_order: 1
 page_type: reference
-description: "This reference article covers Braze's SDK Endpoints and their use."
+description: "This reference article lists the dashboard URLs, API endpoints, and SDK endpoints for available Braze instances."
 
 ---
 
-# SDK endpoints
+# API and SDK endpoints
 
-## What is an SDK?
+> Your Braze instance determines the URL required to log into Braze, access the API, and integrate your SDK. Learn more about the Braze SDK in our Braze Learning course, [Braze 101][1].
 
-A Software Development Kit (SDK) is a set of tools that can be used to develop software applications targeting a specific platform. The Braze SDK makes it possible to track your users' engagement with your app or site and allows the sending of targeted campaigns. Learn more about the Braze SDK in our Braze Learning course, [Braze 101][85].
+Braze manages a number of different instances for our dashboard, SDK, and REST endpoints, which we call "clusters." Your Braze onboarding manager will let you know which cluster you're on.
 
-## Braze SDK endpoints
+Logging in at [dashboard.braze.com](https://dashboard.braze.com) will automatically send you to the right cluster address.
 
-|Instance | SDK Endpoint
-|---|---|
-|US-01 | sdk.iad-01.braze.com |
-|US-02 | sdk.iad-02.braze.com |
-|US-03 | sdk.iad-03.braze.com |
-|US-04 | sdk.iad-04.braze.com |
-|US-05 | sdk.iad-05.braze.com |
-|US-06 | sdk.iad-06.braze.com |
-|US-08 | sdk.iad-08.braze.com |
-|EU-01 | sdk.fra-01.braze.eu |
-|EU-02 | sdk.fra-02.braze.eu |
-{: .reset-td-br-1 .reset-td-br-2}
+|Instance|URL|REST Endpoint|SDK Endpoint|
+|---|---|---|
+|US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
+|US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
+|US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `sdk.iad-03.braze.com` |
+|US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `sdk.iad-04.braze.com` |
+|US-05| `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com` | `sdk.iad-05.braze.com` |
+|US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
+|US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
+|EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
+|EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-When using endpoints for SDK integration, use the **SDK Endpoint** listed on this page, not the [REST endpoint][2] used for API calls.
-
-{% alert note %}
-To configure the Braze Web SDK to use the appropriate endpoint for your integration, you must use the `baseUrl` option when initializing the function and include the SDK endpoint here. For example `braze.initialize('YOUR-API-KEY-HERE', {baseUrl: 'sdk.iad-03.braze.com'})`
-<br><br>For more information, check out our [initial setup guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/).
+{% alert important %}
+When integrating your SDK, use the SDK endpoint. When making calls to our REST API, use the REST endpoint.
 {% endalert %}
 
-## SDK file sizes
+For details about accessing the API, see the [API overview article][2]. 
 
-| Platform | Approximate SDK Size |
-|---|---|
-| Android | 800 KB |
-| iOS | (IPA - Addition to App File) 1MB - 2MB; (Framework) 30MB |
-| Web | 36KB (core), 50KB (core + UI) |
-{: .reset-td-br-1 .reset-td-br-2}
 
-[85]: https://learning.braze.com/braze-101
-[2]: {{site.baseurl}}/api/basics/#endpoints
+[1]: https://learning.braze.com/braze-101
+[2]: {{site.baseurl}}/api/basics/

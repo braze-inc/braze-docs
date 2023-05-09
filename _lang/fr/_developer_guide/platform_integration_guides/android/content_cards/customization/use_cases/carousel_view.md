@@ -15,19 +15,19 @@ channel:
 
 ![Exemple d’application d’actualités montrant le carrousel des cartes de contenu dans un article]({% image_buster/assets/img_archive/cc_politer_carousel_android.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;"}
 
-Cette section couvre l’implémentation d’un flux de carrousel multi-cartes dans lequel un utilisateur peut faire glisser horizontalement pour afficher des cartes en vedette supplémentaires. Pour intégrer une vue carrousel, vous devez utiliser une implémentation entièrement personnalisée de cartes de contenu : la phase « courir » de l’[approche ramper, marcher, courir.][1].
+> Cette section couvre l’implémentation d’un flux de carrousel multi-cartes dans lequel un utilisateur peut faire glisser horizontalement pour afficher des cartes en vedette supplémentaires. Pour intégrer une vue carrousel, vous devez utiliser une implémentation entièrement personnalisée de cartes de contenu : la phase « courir » de l’[approche ramper, marcher, courir][1].
 
 Avec cette approche, vous n’utiliserez pas les vues de Braze ni la logique par défaut, mais afficherez plutôt les cartes de contenu de manière entièrement personnalisée en utilisant vos propres vues avec les données des modèles Braze.
 
-En termes de niveau d’effort de développement, les différences clés entre l’implémentation prête à l’emploi et celle du carrousel comprennent :
+En termes de niveau d’effort de développement, les différences clés entre l’implémentation de base et celle du carrousel comprennent :
 
 - Construire vos propres vues
 - Enregistrer les métriques des performances de contenu
 - Introduire une logique additionnelle côté client pour dicter combien et quelles cartes afficher dans le carrousel
 
-## Implémentation
+## Mise en œuvre
 
-### Étape 1 : Créer un contrôleur de vue personnalisé
+### Étape 1 : Créer un contrôleur de visualisation personnalisé
 
 Pour créer le carrousel de cartes de contenu, créez vos propres vues personnalisées et [abonnez-vous aux mises à jour des données]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/#fully-custom-content-card-display-for-android). Notez que vous ne pourrez pas utiliser la valeur par défaut de `ContentCardFragment` de Braze, car il est uniquement capable de gérer nos types de carte de contenu par défaut.
 
@@ -49,7 +49,7 @@ Suivez les étapes pour l’[utilisation de plusieurs flux de cartes de contenu]
 Il est important de veiller à ce que vos équipes marketing et de développeurs coordonnent les paires clé-valeur (par ex., `feed_type = brand_homepage`), car toute paire clé-valeur utilisée doit correspondre aux paires clé-valeur que les développeurs construisent dans la logique de l’application.
 {% endalert %}
 
-Pour obtenir la documentation développeur spécifique à Android sur la classe des cartes de contenu, les méthodes et les attributs en Kotlin, consultez la documentation [com.braze.ui.contentcards.view](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/index.html) Android.
+Pour obtenir la documentation développeur spécifique à Android sur la classe des cartes de contenu, les méthodes et les attributs en Kotlin, consultez la documentation [com.braze.ui.contentcards.view](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/index.html) Android.
 
 ## Considérations
 

@@ -3,15 +3,15 @@ nav_title: Livraison déclenchée par API
 article_title: Livraison déclenchée par API
 page_order: 2
 page_type: reference
-description: "Le présent article de référence décrit comment planifier une campagne déclenchée par API."
-tool: Campagnes
+description: "Le présent article de référence décrit comment planifier et configurer une campagne déclenchée par API."
+tool: Campaigns
 platform: API
 
 ---
 
-# Campagnes déclenchées par API
+# Livraison déclenchée par API
 
-Les campagnes déclenchées par API ou les campagnes déclenchées par serveur sont idéales pour des cas d’utilisation transactionnels plus avancés. Les campagnes déclenchées par API de Braze permettent aux marketeurs de gérer les copies de campagne, les tests multivariés et les règles de rééligibilité dans le tableau de bord de Braze tout en déclenchant la livraison de ce contenu à partir de leurs propres serveurs et systèmes. La demande API pour déclencher le message peut également inclure des données supplémentaires à modéliser dans le message en temps réel.
+> Les campagnes déclenchées par API ou les campagnes déclenchées par serveur sont idéales pour des cas d’utilisation transactionnels plus avancés. Les campagnes déclenchées par API de Braze permettent aux marketeurs de gérer les copies de campagne, les tests multivariés et les règles de rééligibilité dans le tableau de bord de Braze tout en déclenchant la livraison de ce contenu à partir de leurs propres serveurs et systèmes. La demande API pour déclencher le message peut également inclure des données supplémentaires à modéliser dans le message en temps réel.
 
 ## Configurer une campagne déclenchée par API
 
@@ -21,7 +21,7 @@ La configuration d’une campagne déclenchée par API nécessite quelques étap
 Une campagne déclenchée par API est différente d’une [campagne API]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns).
 {% endalert %}
 
-Configurez ensuite votre texte et vos notifications comme vous le feriez normalement pour les notifications planifiées et sélectionnez **API-Triggered Delivery** (Livraison déclenchée par API). Pour plus d’informations sur le déclenchement de ces campagnes depuis votre serveur, consultez la documentation de l’endpoint dans [Envoyer une campagne déclenchée par API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
+Configurez ensuite votre texte et vos notifications comme vous le feriez normalement pour les notifications planifiées et sélectionnez **API-Triggered Delivery (Livraison déclenchée par API)**. Pour plus d’informations sur le déclenchement de ces campagnes depuis votre serveur, consultez la documentation de l’endpoint dans [Envoyer une campagne déclenchée par API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
 
 ![][37]
 

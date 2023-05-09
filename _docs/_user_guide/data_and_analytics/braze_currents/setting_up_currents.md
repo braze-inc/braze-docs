@@ -26,10 +26,10 @@ The following requirements are the basic, minimum requirements to integrate with
 
 | Requirement | Origin | Access | Description
 |---|---|---|---|
-| Account with Partner | Arrange account with that partner or reach out to your Braze account manager for suggestions. | Check that Partner’s site or reach out to that Partner to sign up. | Braze will not send data to a Partner if you don’t have access to that data through your company’s account.
-| Partner API Key or Token | Usually the Partner’s dashboard. | Just copy and paste it into the designated Braze field. | Braze has a designated field for this in the Integrations page for that Partner. We need this to map where we are sending your data. **It's important to keep your Partner Keys/Tokens up to date; invalid credentials may result in disabling your connector, and dropping events.**
-| Authentication Code/Key, Secret Key, Certification File | Contact a representative for your account with that Partner. May also exist in the Partner’s dashboard. | Copy and paste keys into the designated Braze field. Generate and upload `.json` or other certification files into the appropriate place in Braze. | Braze has a designated field for this in the Integrations page for that Partner. This gives Braze credentials and authorizes us to write files to your Partner account. **It's important to keep your authentication details up to date; invalid credentials may result in disabling your connector, and dropping events.**
-| Bucket, Folder Path | Some partners organize and sort data by buckets. This should be found in the Partner’s dashboard. | If this is required, be sure to copy the Bucket name or file path exactly into the designated space in Braze. We don’t want your data to get lost! | Though this is required for some Partners, it’s important to get right when you do need it. |
+| Account with Partner | Arrange account with that partner or reach out to your Braze account manager for suggestions. | Check that Partner's site or reach out to that Partner to sign up. | Braze will not send data to a Partner if you don't have access to that data through your company's account.
+| Partner API Key or Token | Usually the Partner's dashboard. | Just copy and paste it into the designated Braze field. | Braze has a designated field for this in the Integrations page for that Partner. We need this to map where we are sending your data. **It's important to keep your Partner Keys/Tokens up to date; invalid credentials may result in disabling your connector, and dropping events.**
+| Authentication Code/Key, Secret Key, Certification File | Contact a representative for your account with that Partner. May also exist in the Partner's dashboard. | Copy and paste keys into the designated Braze field. Generate and upload `.json` or other certification files into the appropriate place in Braze. | Braze has a designated field for this in the Integrations page for that Partner. This gives Braze credentials and authorizes us to write files to your Partner account. **It's important to keep your authentication details up to date; invalid credentials may result in disabling your connector, and dropping events.**
+| Bucket, Folder Path | Some partners organize and sort data by buckets. This should be found in the Partner's dashboard. | If this is required, be sure to copy the Bucket name or file path exactly into the designated space in Braze. We don't want your data to get lost! | Though this is required for some Partners, it's important to get right when you do need it. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert important %}
@@ -41,7 +41,7 @@ It's important to keep your Partner Keys/Tokens and authentication details up to
 
 Braze Currents allows you to integrate through Data Storage using flat files or to our Behavioral Analytics and Customer Data partners using a batched JSON payloads to a designated endpoint.  
 
-Before you begin your integration, it’s best to decide which integration is best for your purposes. For example, if you already utilize mParticle and Segment.io and would like Braze data to stream there, it would be best to use a batched JSON payload. If you would prefer to manipulate the data on your own or have a more complex system of data analysis, it might be best to use Data Storage ([Braze uses this method]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!)
+Before you begin your integration, it's best to decide which integration is best for your purposes. For example, if you already utilize mParticle and Segment.io and would like Braze data to stream there, it would be best to use a batched JSON payload. If you would prefer to manipulate the data on your own or have a more complex system of data analysis, it might be best to use Data Storage ([Braze uses this method]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!)
 
 ## Step 2: Navigate to Currents
 
@@ -68,5 +68,5 @@ If needed, you can learn more about our events in our [event delivery semantics]
 You may test your integration or take a look at the sample Currents data in our Currents examples [GitHub repository](https://github.com/Appboy/currents-examples).
 
 {% alert important %}
-Note that Currents will drop events with excessively large payloads of greater than 900KB. 
+Note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB. 
 {% endalert %}

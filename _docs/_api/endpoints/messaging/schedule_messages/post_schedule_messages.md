@@ -1,11 +1,11 @@
 ---
-nav_title: "POST: Schedule Messages"
-article_title: "POST: Schedule Messages"
+nav_title: "POST: Create Scheduled Messages"
+article_title: "POST: Create Scheduled Messages"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Schedule Messages Braze endpoint."
+description: "This article outlines details about the Create scheduled messages Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,9 @@ description: "This article outlines details about the Schedule Messages Braze en
 /messages/schedule/create
 {% endapimethod %}
 
-Use this endpoint to schedule a campaign, Canvas, or other message to be sent at a designated time (up to 90 days in the future) and provides you with an identifier to reference that message for updates. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
+> Use this endpoint to schedule a campaign, Canvas, or other message to be sent at a designated time (up to 90 days in the future) and provides you with an identifier to reference that message for updates. 
+
+If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
@@ -66,8 +68,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
-| `external_user_ids` | Optional | Array of strings | See [external user identifier]({{site.baseurl}}/api/parameters/#external-user-id). |
+|`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
+| `external_user_ids` | Optional | Array of strings | See [external user identifier]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 | `user_aliases` | Optional | Array of user alias objects | See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 | `segment_id` | Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
@@ -160,6 +162,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 ```
 
 ## Response
+
+### Example success response
 
 ```json
 {

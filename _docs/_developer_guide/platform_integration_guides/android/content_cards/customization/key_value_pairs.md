@@ -13,6 +13,8 @@ channel:
 
 # Key-value pairs
 
+> This article covers how to use Content Card key-value pairs in your Android or FireOS application.
+
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data along with a `Card` for further handling by the application.
 
 See our [KDoc][36] for more information.
@@ -22,4 +24,4 @@ Content Cards have a maximum size limit of 2 KB for content you enter in the Bra
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches
-[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/#-2118252107%2FProperties%2F-1725759721
+[36]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721

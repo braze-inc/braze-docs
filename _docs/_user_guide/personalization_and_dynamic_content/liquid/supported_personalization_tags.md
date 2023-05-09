@@ -8,13 +8,15 @@ search_rank: 1
 
 # Supported personalization tags
 
+> This reference article covers a complete list of supported Liquid personalization tags.
+
 As a convenience, a summary of supported personalization tags are provided. For more detail on each kind of tag and best practices, continue reading.
 
 {% raw %}
 
 | Personalization Tag Type | Tags |
 | -------------  | ---- |
-| Standard (Default) Attributes | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${twitter_handle}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
+| Standard (Default) Attributes | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
 | Device Attributes | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
 | [Email List Attributes][43] | `{{${set_user_to_unsubscribed_url}}}` <br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
 | [SMS Attributes][48] | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
@@ -40,7 +42,7 @@ Campaign, Card, and Canvas attributes are only supported in their corresponding 
 
 The behavior for the following tags differs between Canvas and campaigns:
 {% raw %}
-- `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps as triggered events, even when they are "scheduled" (except for Entry Steps, which can be scheduled). To learn more, refer to [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+- `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps as triggered events, even when they are "scheduled" (except for Entry Steps, which can be scheduled). To learn more, refer to [Dispatch ID behavior][50].
 - Using the `{{campaign.${name}}}` tag with Canvas will display the Canvas component name. When using this tag with campaigns, it will display the campaign name.
 {% endraw %}
 
@@ -192,10 +194,6 @@ Syntax tags can be used to control how Liquid is rendered. You can use the `echo
 
 With [whitespace control][49], you can remove whitespaces around your tags, helping you further control what the Liquid output looks like.
 
-## Theme tags
-
-Theme tags can assign content that is a part of your theme. Braze currently supports the `render` tag, which allows you to render a snippet or app block. For more information, check out Shopify's documentation on [`render` tags][30].
-
 ## HTTP status codes {#http-personalization}
 
 You can utilize the HTTP status from a [Connected Content][38] call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
@@ -242,9 +240,9 @@ Message in default language
 {% endif %}
 ```
 
-In this example, customers with a most recent locale of 'pt_BR' will get a message in Brazilian Portuguese, customers with a most recent locale of 'pt_PT' will get a message in European Portuguese and customers who don't meet the first two conditions but have their language set to Portuguese will get a message in whatever you'd like the default Portuguese language type to be.
+In this example, customers with a most recent locale of 'pt_BR' will get a message in Brazilian Portuguese, and customers with a most recent locale of 'pt_PT' will get a message in European Portuguese. Customers who don't meet the first two conditions but have their language set to Portuguese will get a message in whatever you'd like the default Portuguese language type to be.
 
-You can also target users based off of their time zone. For example, send one message if they are based in EST and another if they are PST. To do this, save the current time in UTC, and compare an if/else statement with the user's current time to ensure you're sending the right message for the right time zone. You should set the campaign to send in the user's local time zone, to ensure they are getting the campaign at the right time. See the following example for how to write a message that will go out between 2PM and 3PM and will have a specific message for each time zone.
+You can also target users by their time zone. For example, send one message if they are based in EST and another if they are PST. To do this, save the current time in UTC, and compare an if/else statement with the user's current time to ensure you're sending the right message for the right time zone. You should set the campaign to send in the user's local time zone, to ensure they are getting the campaign at the right time. See the following example for how to write a message that will go out between 2 pm and 3 pm and will have a specific message for each time zone.
 
 ```liquid
 {% assign hour_in_utc = 'now' | date: '%H' | plus:0 %}
@@ -273,3 +271,4 @@ It is between 2:00:00 pm and 2:59:59 pm PT!
 [47]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
 [48]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword
 [49]: https://shopify.github.io/liquid/basics/whitespace/
+[50]: {{site.baseurl}}/help/help_articles/data/dispatch_id/

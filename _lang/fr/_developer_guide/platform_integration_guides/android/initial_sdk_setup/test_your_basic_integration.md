@@ -5,15 +5,17 @@ page_order: 1
 platform: 
   - Android
   - FireOS
-description: "Cet article explique comment tester l’intégration de base pour votre application Android ou FireOS."
+description: "Cet article de référence explique comment tester l’intégration de base pour votre application Android ou FireOS."
 
 ---
 
 # Testez votre intégration de base
 
+> Cet article de référence explique comment tester l’intégration de base pour votre application Android ou FireOS.
+
 ## Confirmer que le suivi de session fonctionne
 
-À ce stade, vous devriez avoir un suivi de session dans votre intégration Braze. Pour la tester, allez dans **Overview**, sélectionnez votre application dans le menu déroulant de l’application sélectionnée (par défaut « Toutes les applications ») et définissez **Afficher les données pour** sur « Aujourd’hui ». Ouvrez ensuite votre application et actualisez la page. Vos principales métriques devraient toutes avoir augmenté de 1.
+À ce stade, vous devriez avoir un suivi de session dans votre intégration Braze. Pour la tester, allez dans **Overview**, sélectionnez votre application dans le menu déroulant de l’application sélectionnée (par défaut « Toutes les applications ») et définissez **Display Data For (Afficher les données pour)** sur « Aujourd’hui ». Ouvrez ensuite votre application et actualisez la page. Vos principales métriques devraient toutes avoir augmenté de 1.
 
 ![][55]
 

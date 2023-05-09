@@ -11,7 +11,7 @@ description: "This reference article covers how to implement specific Android SD
 
 # Accessibility
 
-The Braze Android SDK follows the [Android accessibility guidelines][1].
+> This reference article covers how to implement specific Android SDK accessibility features such as in-app message talkback into your Android or FireOS application. The Braze Android SDK follows the [Android accessibility guidelines][1].
 
 ## In-app message talkback
 

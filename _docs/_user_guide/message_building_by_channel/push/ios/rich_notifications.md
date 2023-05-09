@@ -1,5 +1,5 @@
 ---
-nav_title: "Create Rich Notifications for iOS"
+nav_title: "Create iOS Rich Notifications"
 article_title: Create Rich Push Notifications
 page_order: 3
 page_type: tutorial
@@ -15,14 +15,14 @@ tool:
 
 # Create iOS rich notifications
 
-> Rich Notifications allow for more customization in your push notifications by adding additional content beyond copy. Android notifications have included images in push notifications for some time now, messaged as an ‘Expanded Notification Image’. Starting with iOS 10, your customers will be able to receive iOS push notifications that include GIFs, images, videos, or audio.
+> Rich Notifications allow for more customization in your push notifications by adding additional content beyond copy. Android notifications have included images in push notifications for some time now, messaged as an 'Expanded Notification Image'. Starting with iOS 10, your customers will be able to receive iOS push notifications that include GIFs, images, videos, or audio.
 
 ## Requirements
 
 - To ensure your app can send rich notifications, follow the [iOS push integration][1] instructions, as your developer will need to add a service extension to your app.
 - You should also reference [Apple's documentation][2] for media limitations and specs.
 
-> As of January 2020, iOS rich push notifications can handle images 1038x1038 as long as they are under 10MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
+> As of January 2020, iOS rich push notifications can handle images 1038x1038 as long as they are under 10&nbsp;MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
 
 - iOS will scale images to fit in the screen and will scale rich images for the active or locked view.
 - File types that we currently support for direct uploading within our dashboard include JPG, PNG, or GIF. These files can also be entered into the templatable URL field along with these additional file types: AIF, M4A, MP3, MP4, or WAV.
@@ -145,7 +145,7 @@ When a user receives the push notification, they can hard press on the push mess
 
 ![A user receives a push notification and hard presses the message to show an expanded image that says "Hello!".][8]{: style="max-width:50%;" }
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications
 [2]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [4]: {% image_buster /assets/img_archive/rich_notification_add_image.png %}

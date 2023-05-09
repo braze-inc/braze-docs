@@ -3,7 +3,7 @@ nav_title: User Profile Lifecycle
 article_title: User Profile Lifecycle
 page_order: 2
 page_type: reference
-description: "This reference article describes the user profile lifecycle in Braze, and the various ways a user profile can be identified and referenced."
+description: "This reference article describes the Braze user profile lifecycle, and the various ways a user profile can be identified and referenced."
 
 ---
 
@@ -31,14 +31,14 @@ The `braze_id` is automatically assigned by Braze, cannot be edited, and is devi
 
 ## Identified user profiles
 
-Once a user is recognizable in your app (by providing a form of user ID or email address), we suggest assigning an `external_id` to that user's profile using the `changeUser` method ([web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). An `external_id` allows you to identify the same user profile across multiple devices. 
+Once a user is recognizable in your app (by providing a form of user ID or email address), we suggest assigning an `external_id` to that user's profile using the `changeUser` method ([web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). An `external_id` allows you to identify the same user profile across multiple devices. 
 
 Additional benefits of using an `external_id` include the following: 
 
-- Provide a consistent user experience across multiple devices and platforms (e.g., not sending lapsing user notifications to a user’s Android tablet when they are a loyal user of the app on the iPhone).
-- Improve the accuracy of your analytics by ensuring users aren’t creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
-- Enable import of user data from sources outside the app using the [User Data endpoint]({{site.baseurl}}/api/endpoints/user_data/) and target users with transactional messages using our [Messaging endpoint]({{site.baseurl}}/api/endpoints/messaging/).
-- Search for individual users using our “Testing” [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
+- Provide a consistent user experience across multiple devices and platforms (e.g., not sending lapsing user notifications to a user's Android tablet when they are a loyal user of the app on the iPhone).
+- Improve the accuracy of your analytics by ensuring users aren't creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
+- Enable import of user data from sources outside the app using the [User Data endpoints]({{site.baseurl}}/api/endpoints/user_data/) and target users with transactional messages using our [Messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/).
+- Search for individual users using our "Testing" [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
 
 {% alert warning %}
 Do not assign an `external_id` to a user profile before you are able to uniquely identify them. Once you identify a user, you cannot revert them to anonymous.
@@ -60,7 +60,7 @@ To refer to users by other identifiers than only the Braze `external_id`, set us
 
 Each alias consists of two parts: a label, which defines the key of the alias, and a name, which defines the value. An alias name for any single label must be unique across the user base. If you attempt to update a second user profile with a pre-existing label and name combination, the user profile will not be updated.
 
-Unlike an `external_id`, an alias can be updated with a new name for a given label once set either via the [User Data endpoint][32] or by passing a new name via the SDK. The user alias will then be visible when exporting that user's data.
+Unlike an `external_id`, an alias can be updated with a new name for a given label once set either via our [User Data endpoints][32] or by passing a new name via the SDK. The user alias will then be visible when exporting that user's data.
 
 ![Two different user profiles for separate users with the same user alias label but different alias values][29]
 
@@ -80,7 +80,7 @@ Having trouble picturing how this may look for the user profile lifecycle of you
 
 ## Advanced use case information
 
-You can set a new user alias for existing identified user profiles via our SDK and our API using the [User Data endpoint][27]. However, user aliases can't be set via the API for an unknown user profile.
+You can set a new user alias for existing identified user profiles via our SDK and our API using the [User Data endpoints][27]. However, user aliases can't be set via the API for an unknown user profile.
 
 If you attempt to set a pre-existing `external_id` on an anonymous user profile which shares a matching alias name but has different labels, only the alias label on the pre-existing known user profile will be maintained.
 
@@ -94,12 +94,12 @@ All user IDs can be used to find and identify users within your dashboard for te
 Braze will ban or block users with over 5 million sessions ("dummy users") and no longer ingest their SDK events, as these users are generally the result of misintegration. If you find that this has happened to a legitimate user, reach out to your Braze account manager.
 {% endalert %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#aliasing-users
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
 
-[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#assigning-a-user-id
-[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
+[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
 [25]: {{site.baseurl}}/developer_guide/home/
 [26]: {% image_buster /assets/img_archive/Braze_User_flowchart.png %}
 [27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint

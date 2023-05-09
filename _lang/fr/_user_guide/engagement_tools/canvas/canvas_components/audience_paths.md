@@ -11,7 +11,9 @@ tool: Canvas
 
 # Parcours d’audience 
 
-> Les parcours d’audience Canvas vous permettent de filtrer et de segmenter les utilisateurs de manière intuitive à une grande échelle avec des regroupements d’utilisateurs en fonction de la priorité. Ce composant de Canvas supplante la nécessité de créer des étapes complètes superflues basées sur l’audience, ce qui vous permet de regrouper 8 composants complets en un seul ! Ce nouveau composant de parcours d’audience vous permettra de simplifier le ciblage de l’utilisateur en supprimant de vos Canvas encombrement et complexité inutiles. 
+> Les parcours d’audience Canvas vous permettent de filtrer et de segmenter les utilisateurs de manière intuitive à une grande échelle avec des regroupements d’utilisateurs en fonction de la priorité. 
+
+Ce composant de Canvas supplante la nécessité de créer des étapes complètes superflues basées sur l’audience, ce qui vous permet de regrouper 8 composants complets en un seul ! Ce nouveau composant de parcours d’audience vous permettra de simplifier le ciblage de l’utilisateur en supprimant de vos Canvas encombrement et complexité inutiles. 
 
 ![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 
@@ -29,9 +31,9 @@ Le parcours d’audience vous permet d’effectuer les actions suivantes :
 
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-Pour créer des parcours d’audience, commencez par ajouter une étape à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant depuis la barre latérale ou cliquez le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Parcours d’audience**. Pour l’éditeur Canvas d’origine, utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail et sélectionnez **Parcours d’audience**.
+Pour créer des parcours d’audience, commencez par ajouter une étape à votre Canvas. Glissez-déplacez le composant depuis la barre latérale ou cliquez le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Parcours d’audience**.
 
-Dans le composant Parcours d’audience par défaut affiché à droite, il y a déjà deux groupes d’audiences par défaut, **Groupe 1** et **Tout les autres**. Le groupe Tout le monde inclut tout utilisateur qui ne relève pas d’un groupe d’audiences défini. Ce groupe sera toujours en fin de classement.
+Dans le composant Parcours d’audience par défaut affiché à droite, il y a déjà deux groupes d’audiences par défaut, **Groupe 1** et **Tous les autres**. Le groupe Tous les autres inclut tout utilisateur qui ne relève pas d’un groupe d’audiences défini. Ce groupe sera toujours en fin de classement.
 <br><br><br>
 
 ### Définir des groupes d’audiences
@@ -45,6 +47,12 @@ Par exemple, si vous souhaitez envoyer des informations de flux utiles à un gro
 Une fois que le composant Parcours d’audience est terminé, chaque groupe d’audiences aura une branche distincte vous permettant de continuer à utiliser des parcours d’audience pour filtrer davantage votre audience, le cas échéant ou poursuivre votre parcours Canvas avec les composants Canvas habituels. 
 
 ![][4]{: style="max-width:90%;margin-left:15px;"}
+
+### Tester les groupes d’audience
+
+Après avoir ajouté des segments et des filtres à votre audience, vous pouvez tester si vos groupes d’audience sont configurés comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) pour confirmer s’il correspond aux critères de l’audience.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
 
 ## Utilisation de parcours d’audience
 

@@ -2,7 +2,7 @@
 nav_title: Customize
 article_title: Customize Content Cards
 page_order: 2
-description: "Customizing Content Cards and the feed they'll sit in must be done with your engineers and developers."
+description: "This reference article cover how to customize Content Cards."
 channel:
   - content cards
   
@@ -178,7 +178,7 @@ The Braze SDK does not handle the on-click behavior, order, or analytics. These 
 - Trigger Content Cards based on other messaging channels.
 
 {% alert tip %}
-Check out the sample use cases for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/#sample-use-cases) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/#sample-use-cases) outlined in our Advanced Content Card implementation guides to get an idea of what you can do with this approach.
+Check out the sample use cases for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/implementation_guide/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/#sample-use-cases) outlined in our Advanced Content Card implementation guides to get an idea of what you can do with this approach.
 {% endalert %}
 
 {% endtab %}
@@ -186,7 +186,7 @@ Check out the sample use cases for [iOS]({{site.baseurl}}/developer_guide/platfo
 
 ## Change "empty feed" language
 
-You can change the language that appears automatically in empty Content Card feeds by [redefining the localizable content card strings](https://github.com/Appboy/appboy-ios-sdk/blob/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources/en.lproj/AppboyContentCardsLocalizable.strings) in your app’s localizable strings file: 
+You can change the language that appears automatically in empty Content Card feeds by [redefining the localizable content card strings](https://github.com/Appboy/appboy-ios-sdk/blob/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources/en.lproj/AppboyContentCardsLocalizable.strings) in your app's localizable strings file: 
 ```
 "Appboy.content-cards.no-card.text" = "No Cards!!!!";
 "Appboy.content-cards.done-button.title" = "Done";
@@ -200,5 +200,5 @@ If you want to update it for different languages, find the corresponding languag
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/custom_styling/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/

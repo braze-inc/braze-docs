@@ -12,7 +12,7 @@ description: "This reference article covers the message and design requirements 
 
 # Modal in-app messages
 
-Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
+> Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
 
 ![Two modal in-app messages side-by-side, detailing the image and text recommendations. See following sections for details.][1a]{: style="max-width: 801px; border: none;"}
 
@@ -20,16 +20,16 @@ Modals appear in the center of the device's screen with a screen overlay that he
 
 Modal in-app messages are designed to fit the device at the best and most filling ratios possible, while staying true to the size and ratios of your chosen image or copy for your message.
 
-- All images must be less than 5MB.
+- All images must be less than 5&nbsp;MB.
 - We only accept PNG, JPG, and GIF file types.
-- We recommend that your images be 500KB.
+- We recommend that your images be 500&nbsp;KB.
 
 {% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
 | Layout | Asset Size | Notes |
 |--- | --- | ------ |
-| Image + Text | 29:10 aspect ratio<br>Hi-Res 1450 x 500px<br> Min. 725 x 250px | Tall or narrow images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
-| Image Only | Nearly any aspect ratio<br>Hi-Res up to 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most aspect ratios. |
+| Image + Text | 29:10 aspect ratio<br>High-res 1450 x 500&nbsp;px<br> Minimum 725 x 250&nbsp;px | Tall or narrow images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
+| Image Only | Nearly any aspect ratio<br>High-res up to 1200 x 2000&nbsp;px<br> Minimum 600 x 600&nbsp;px | The message will resize to fit images of most aspect ratios. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 You should always [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.

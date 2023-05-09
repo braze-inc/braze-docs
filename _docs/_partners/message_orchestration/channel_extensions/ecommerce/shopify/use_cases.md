@@ -1,14 +1,14 @@
 ---
 nav_title: Use Cases
 article_title: "Shopify Use Cases in Braze"
-description: "This article outlines common beginner and advanced Shopify use cases."
+description: "This reference article outlines common beginner and advanced Shopify use cases."
 page_type: partner
 search_tag: Partner
 alias: "/shopify_use_cases/"
 page_order: 5
 ---
 
-# Shopify use cases
+# Use cases
 
 > Interested in seeing how you can leverage your Shopify integration to create timely and effective messaging for your users? Refer to the following sections on common [beginner](#beginner) and [advanced](#advanced) use cases to learn more!
 

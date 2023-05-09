@@ -19,7 +19,7 @@ github "SDWebImage/SDWebImage"
 
 Consultez le [Guide de démarrage rapide de Carthage][1] pour plus d’instructions sur l’importation du SDK.
 
-Lors de la migration d’une version antérieure à `4.4.0`, suivez le [Guide de migration de Carthage pour XCFrameworks.][2]
+Lors de la migration d’une version antérieure à `4.4.0`, suivez le [Guide de migration de Carthage pour XCFrameworks][2].
 
 {% alert note %}
 Pour plus de détails sur la syntaxe du `Cartfile` ou des fonctionnalités telles que l’épinglage de la version, consultez la [Documentation de Carthage](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile). 
@@ -38,11 +38,11 @@ Pour importer des versions antérieures à `3.24.0`, incluez les éléments suiv
 github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
 
-Assurez-vous de remplacer `<BRAZE_IOS_SDK_VERSION>` avec la [version appropriée du SDK ][4] Braze pour iOS au format « x.y.z ».
+Assurez-vous de remplacer `<BRAZE_IOS_SDK_VERSION>` avec la [version appropriée][4] du SDK Braze pour iOS au format « x.y.z ».
 
 ## Étapes suivantes
 
-Suivez les instructions pour [compléter l’intégration.][5].
+Suivez les instructions pour [compléter l’intégration][5].
 
 ## Intégration principale uniquement
 
@@ -55,5 +55,5 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 [1]: https://github.com/Carthage/Carthage#quick-start
 [2]: https://github.com/Carthage/Carthage#migrating-a-project-from-framework-bundles-to-xcframeworks
 [4]: https://github.com/Appboy/appboy-ios-sdk/releases
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/
 [6]: https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile

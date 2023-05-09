@@ -13,9 +13,7 @@ channel:
 
 ![Une notification push iOS avec deux boutons d’action push : Accepter et Refuser.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-> Le présent article de référence couvre les boutons d’action push et la différence entre les plates-formes iOS et Android. 
-
-Les boutons d’action push vous permettent de définir du contenu et des actions pour les boutons lorsque vous utilisez les notifications push iOS et Android de Braze. Avec les boutons d’action, vos utilisateurs peuvent interagir directement avec votre application à partir d’une notification sans avoir besoin de cliquer sur une expérience sur l’application pour prendre des mesures.
+> Les boutons d’action push vous permettent de définir du contenu et des actions pour les boutons lorsque vous utilisez les notifications push iOS et Android de Braze. Avec les boutons d’action, vos utilisateurs peuvent interagir directement avec votre application à partir d’une notification sans avoir besoin de cliquer sur une expérience sur l’application pour prendre des mesures.
 
 ## Comment utiliser les boutons d’action
 
@@ -35,7 +33,7 @@ Sélectionnez ensuite votre **Notification Category** (Catégorie de notificatio
 
 ![Menu déroulant Catégorie de notification iOS.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
->  En raison de la façon dont sont traités les boutons par iOS, vous devrez effectuer des étapes d’intégration supplémentaires lors de la configuration des boutons d’action push, qui sont décrits dans notre [documentation du développeur]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/). En particulier, vous devrez configurer des catégories iOS ou vous devrez sélectionner parmi certaines options de bouton par défaut. Pour les intégrations Android, ces boutons fonctionnent d’origine.
+>  En raison de la façon dont sont traités les boutons par iOS, vous devrez effectuer des étapes d’intégration supplémentaires lors de la configuration des boutons d’action push, qui sont décrits dans notre [documentation du développeur]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/). En particulier, vous devrez configurer des catégories iOS ou vous devrez sélectionner parmi certaines options de bouton par défaut. Pour les intégrations Android, ces boutons fonctionnent automatiquement.
 
 ### Boutons d’action push Android {#android}
 
@@ -44,7 +42,7 @@ Pour utiliser des boutons d’action dans vos messages de notification push Andr
 Cliquez ensuite sur <i class="fas fa-plus-circle"></i> **Add Button** (Ajouter un bouton) et spécifiez votre texte de bouton et le **On-Click Behavior** (Comportement lors du clic). Vous pouvez choisir parmi les actions disponibles suivantes :
 
 - Ouvrir l’application
-- Rediriger vers URL Web
+- Rediriger vers une URL Web
 - [Lien profond]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) dans l’application
 - Rejeter la notification
 

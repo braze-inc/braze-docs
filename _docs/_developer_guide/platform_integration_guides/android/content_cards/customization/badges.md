@@ -13,6 +13,8 @@ channel:
 
 # Badges
 
+> This article covers how to add badges to your Content Cards in your Android or FireOS application.
+
 ## Requesting unread Content Card counts
 
 You can [request the number of unread cards][1] at any time by calling:
@@ -34,4 +36,4 @@ Braze.getInstance(context).contentCardUnviewedCount
 {% endtab %}
 {% endtabs %}
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/get-content-card-unviewed-count.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/get-content-card-unviewed-count.html

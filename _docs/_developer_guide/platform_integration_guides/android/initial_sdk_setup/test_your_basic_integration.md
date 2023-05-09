@@ -5,11 +5,13 @@ page_order: 1
 platform: 
   - Android
   - FireOS
-description: "This article covers how to test your basic integration for your Android or FireOS application."
+description: "This reference article covers how to test your basic integration for your Android or FireOS application."
 
 ---
 
 # Test your basic integration
+
+> This reference article covers how to test your basic integration for your Android or FireOS application.
 
 ## Confirm session tracking is working
 

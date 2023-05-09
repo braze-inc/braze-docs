@@ -2,14 +2,14 @@
 nav_title: Sending Test Canvases
 article_title: Sending Test Canvases
 page_order: 1
-description: "This reference article covers how to test a Canvas before launch."
+description: "This reference article covers how to test a Canvas before launch and best practices."
 page_type: reference
 tool: Canvas
 ---
 
 # Sending test Canvases
 
-After [creating your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), there are several checks you may want to perform before launching, depending on details such as your audience size or number of segmentation filters.
+> After [creating your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), there are several checks you may want to perform before launching, depending on details such as your audience size or number of segmentation filters.
 
 When possible, Braze recommends testing a Canvas before launching. This test will typically take place in your Braze environment. Testing your Canvas can involve duplicating it, taking test users through the user journey, and checking if the user behavior aligns with what you have outlined in your Canvas.
 
@@ -71,7 +71,7 @@ To help run tests more efficiently, we suggest reducing time delays to minutes o
 
 If any content is going to be repeated in your testing framework (e.g., complex Liquid to filter users into different Canvas steps), try saving this repeated content as a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks). Now, you'll be able to include the Content Block throughout the individual Canvas steps.
 
-### Use Postman and the user track endpoint
+### Use Postman and the Track user endpoint
 
 You can run tests with Postman and the [Braze Postman Collection]({{site.baseurl}}/api/postman_collection/). Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to record and track custom events and purchases for your various test users.
 

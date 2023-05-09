@@ -1,9 +1,9 @@
 ---
-nav_title: Braze Account User Permissions
+nav_title: Setting User Permissions
 article_title: Braze Account User Permissions
 page_order: 2
 page_type: reference
-description: "This reference article covers user permissions in Braze, such as choosing who can access your apps on the Braze dashboard."
+description: "This reference article covers how user permissioning works at Braze. Here, you can learn how to edit and set user permissions, choosing who can access your apps in the dashboard."
 tool: Dashboard
 
 ---
@@ -16,39 +16,41 @@ tool: Dashboard
 }
 </style>
 
-Braze’s user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the app group will automatically be granted Administrator access. These settings can be found by navigating to your name in the dashboard and selecting **Manage Users** from the drop-down. 
+> Braze's user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the app group will automatically be granted administrator access. 
+
+These settings can be found by navigating to your name in the dashboard and selecting **Manage Users** from the drop-down. 
 
 ![Account users list on the Manage Settings page][30]
 
 |Level of Access|Permissions|
 |---|---|
 |Administrator|Administrators have access to all available features.|
-|Limited|Limited users are completely customized at several levels, outlined in the following sections. When you switch a user’s permissions from admin to limited, that user no longer has access to any portion of the Braze dashboard until you deem it so using the checkboxes that appear under the Edit User box.|
+|Limited|Limited users are completely customized at several levels, outlined in the following sections. When you switch a user's permissions from admin to limited, that user no longer has access to any portion of the Braze dashboard until you deem it so using the checkboxes that appear under the Edit User box.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Editing user permissions
 
-From the Manage Users page, you can edit a specific user’s permissions, either by allowing them to remain as the default Administrator role, or changing them to a Limited role. To change their role, click on the edit icon in the user’s row and select Limited from the User Role drop down.
+From the **Manage Users** page, you can edit a specific user's permissions, either by allowing them to remain as the default administrator role, or changing them to a limited role. To change their role, click the edit icon in the user's row and select **Limited** from the **User Role** dropdown.
 
 ![Selecting Administrator or Limited when editing a user][29]{: style="border:none"}
 
-When you switch a user’s permissions from Administrator to Limited, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear under the Edit User box. Explanations for each of these permissions can be found in the Level of Access chart at the top of this page.
+When you switch a user's permissions from **Administrator** to **Limited**, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear under the Edit User box.
 
 ## Limited and team role permissions
 
-You can manage user permissions by group or on an individual basis using the User Permissions page.
+You can manage user permissions by group or on an individual basis using the **User Permissions** page.
 
 ![Manage User Permissions][89]
 
 |Permission Name|Definition/Parameters|
 |---|---|
-|Admin|Has access to all available features, default setting for all new users. Can update company settings (company name and time zone), which Limited Users are unable to do.|
+|Admin|Has access to all available features, default setting for all new users. Can update company settings (company name and time zone), which limited users are unable to do.|
 |Access Campaigns, Canvases, Cards, Segments, Media Library| User can view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of News Feed, segments, templates and media, create templates, upload media, view engagement reports, and be granted global message settings in the dashboard. However, users with this permission cannot pause or edit existing live content. |
 |Send Campaigns, Canvases| Allows user to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. To launch existing Content Blocks, **Send campaigns, Canvases** permission is required. |
 |Publish Cards| This permission is only visible if your account is enabled for News Feed, which is being deprecated. This does not affect Content Cards.<br><br>Allows user to create and edit News Feed cards. You can still view News Feed cards without this permission. If your account is enabled for News Feed and a user should be able to launch existing Content Blocks, they need both **Publish Cards** and **Send campaigns, Canvases** permissions. |
 |Edit Segments| Allows user to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
 |Export User Data| Allows user to export your user data from Segments, campaigns and Canvases. |
-|View PII | Allows user to view the personally identifiable information fields as defined by your company within the dashboard. |
+|View PII | Allows user to view the personally identifiable information fields as defined by your company within the dashboard. This also allows you to edit the subscription status of a user, and their subscription group opt-in/opt-out rules.|
 |View User Profiles PII Compliant| Allows users to view user profiles but redacts fields your company has defined as personally identifiable information (PII). |
 |Manage Dashboard Users| Allows user to view, edit, and manage the **Manage Users** tab. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level.|
 |Manage Media Library| Allows user to upload images to library. You can still upload pictures/audio etc. directly to a campaign without this permission.|
@@ -63,7 +65,7 @@ You can manage user permissions by group or on an individual basis using the Use
 |Manage Tags|Allows users to edit or delete tags (under **Manage Settings**). You do not need this permission to add tags to campaigns or segments.|
 |Manage Email Settings|Allows user to save email configuration changes (email settings tab under **Manage Settings**).|
 |Manage Subscription Groups | Allows user to create and manage subscription groups. |
-|Manage Approval Settings| Allows user to turn [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) on or off. |
+|Manage Approval Settings| This setting has been removed. Only users with admin permissions can turn the [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) settings on or off for your app group. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## App-by-app user permissions
@@ -72,9 +74,9 @@ Individual users can be granted different degrees of access on an app-by-app bas
 
 |Limited Permission Degree|Details|
 |---|---|---|
-|Company Level|Regarding managing the company's app and group settings.|
-|App Group Level Permissions|Which App Groups should the limited user be able to manage?|
-|App Level Settings|What level of editing access should this limited user have?|
+|Company Level|Manages the company's app and group settings.|
+|App Group Level Permissions|Determines which app groups should be managed by the user.|
+|App Level Settings|Determines the user's level of editing access.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 [29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"

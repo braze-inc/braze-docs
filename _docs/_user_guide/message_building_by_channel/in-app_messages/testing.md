@@ -1,16 +1,16 @@
 ---
 nav_title: Testing
 article_title: Testing In-App Messages
-page_order: 3
-description: "It is extremely important to always test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages."
+page_order: 4.5
+description: "This reference article explains the value of testing your in-app messages, how to test them, as well as a checklist of things to consider before sending."
 channel:
   - in-app messages
   
 ---
 
-# Testing
+# In-app message testing
 
-It is extremely important to always test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages. You can preview your message, to help you visualize as you compose it, as well as send a test message to your or a specific user's device. We recommend you take advantage of both.
+> It is extremely important to always test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages. You can preview your message, to help you visualize as you compose it, as well as send a test message to your or a specific user's device. We recommend you take advantage of both.
 
 ## Preview
 

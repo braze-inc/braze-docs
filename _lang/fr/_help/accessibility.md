@@ -8,7 +8,7 @@ description: "Cet article de référence explique pourquoi il est important de p
 
 # Créer des messages accessibles dans Braze
 
-Le contenu marketing qui exclut les personnes présentant un handicap, même involontairement, peut empêcher des millions de personnes d’interagir avec votre marque. L’accessibilité dans le marketing consiste à faciliter l’utilisation de celui-ci, à recevoir et à comprendre vos communications, et de permettre à tous de s’investir ou de devenir fan de votre produit, service ou marque. Lorsque vous concevez vos envois de message, prenez le temps de réfléchir à la façon dont vous pouvez rendre vos conceptions accessibles à tous vos clients.
+> Le contenu marketing qui exclut les personnes présentant un handicap, même involontairement, peut empêcher des millions de personnes d’interagir avec votre marque. L’accessibilité dans le marketing consiste à faciliter l’utilisation de celui-ci, à recevoir et à comprendre vos communications, et de permettre à tous de s’investir ou de devenir fan de votre produit, service ou marque. Lorsque vous concevez vos envois de message, prenez le temps de réfléchir à la façon dont vous pouvez rendre vos conceptions accessibles à tous vos clients.
 
 ## Pourquoi l’accessibilité compte
 
@@ -29,7 +29,7 @@ Pour interagir avec votre contenu, ces utilisateurs ont besoin de :
 
 - Agrandir ou réduire la taille du texte et des images
 - Personnaliser les paramètres des polices, couleurs et espacement
-- Écouter une synthèse text-to-speech du contenu (c’est-à-dire, utiliser un lecteur d’écran)
+- Écouter une synthèse vocale du contenu (c’est-à-dire, utiliser un lecteur d’écran)
 - Écouter des descriptions audio de la vidéo
 - Lire le texte à l’aide de braille actualisable
 
@@ -161,7 +161,7 @@ Vous pouvez utiliser l’[outil de vérification de contraste WebAim](https://we
 
 **Évitez de bloquer les caractères non valides dans les champs** <br>N’empêchez pas certains types de caractères d’être saisis dans les champs de formulaire. Il est préférable de permettre aux utilisateurs de saisir ce qu’ils veulent, puis d’envoyer un message d’erreur concernant ce qui est incorrect. Bloquer la saisie au clavier pose un problème particulier pour les utilisateurs de technologie d’assistance, car elles dépendent fortement de la validation en ligne pour déterminer si elles ont rempli le formulaire correctement.
 
-**Écrivez des messages d’erreur clairs** <br>Un bon message d’erreur est composé de trois parties : ce qui s’est passé, ce qui s’est mal passé et comment cela peut être résolu. Le message d’erreur doit être clair et facile à comprendre. Essayez de parler en langage simple. N’utilisez pas de jargon fantaisiste.
+**Écrivez des messages d’erreur clairs** <br>Un bon message d’erreur est composé de trois parties : ce qui s’est passé, ce qui s’est mal passé et comment cela peut être résolu. Le message d’erreur doit être clair et facile à comprendre. Essayez de parler en langage simple. N’utilisez pas de jargon trop technique.
 <br>
 
 ### HTML personnalisé

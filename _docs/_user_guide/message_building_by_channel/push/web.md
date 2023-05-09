@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Web push notifications
+# Web push
 
 > Web push is another great way to engage with users of your web application. Customers visiting your website via Chrome, Safari, Firefox, and Opera can opt-in to receive web push from your web application whether or not the web page is loaded. This feature is also supported on Android Chrome and Firefox Mobile on Android allowing for mobile web notifications. 
 
@@ -23,9 +23,11 @@ Users of your web application need to opt-in to receive web push.
 ![An opt-in web push example for Safari with two buttons: Don't Allow and Allow.][13]
 
 For more information on the push protocol standards and browser support, you can review resources based on your browser:
-- [Apple][3]
-- [Mozilla][1]
-- [Microsoft][2]
+
+- [Safari (desktop)][3]
+- [Safari (mobile)][3.1]
+- [Mozilla Firefox][1]
+- [Microsoft Edge][2]
 
 {% alert important %}
 Private browsing windows do not currently support web push.
@@ -34,6 +36,7 @@ Private browsing windows do not currently support web push.
 [1]: https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility
 [2]: https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/
 [3]: https://developer.apple.com/notifications/safari-push-notifications/
+[3.1]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/
 [11]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [12]: {% image_buster /assets/img_archive/Macbook_Push.png %}
 [13]: {% image_buster /assets/img_archive/WebPush_Prompt.png %}

@@ -6,16 +6,16 @@ excerpt_separator: ""
 page_type: glossary
 description: "Ce glossaire répertorie les différents comportement des clients et événements utilisateur que Braze peut suivre et envoyer via Currents à des entrepôts de données désignés."
 tool: Currents
-search_rank: 3
+search_rank: 7
 ---
 
 Contactez votre conseiller Braze ou ouvrez un [ticket de support ]({{site.baseurl}}/braze_support/) si vous avez besoin d’accéder à des événements supplémentaires. Si vous ne trouvez pas ce dont vous avez besoin dans cet article, consultez notre [Bibliothèque des Événements d’engagement sur les messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) ou notre [Exemples d’échantillons de données Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
-{% details Explication du comportement des clients, de la structure d’un événement utilisateur, et des valeurs de plateforme %}
+{% details Explication du comportement des clients et de la structure des événements utilisateur et des valeurs de la plateforme %}
 
-### Structure d’un événement 
+### Structure d’événement 
 
-Cette ventilation des comportement des clients et des événements utilisateur montre le type d’informations généralement incluses dans un comportement des clients ou événement utilisateur. Avec une bonne compréhension de ses composants, vos développeurs et votre équipe BI peuvent utiliser les données d’événements Currents entrants pour créer des rapports et des graphiques axés sur les données, et tirer parti des métriques de données fournies. 
+Cette ventilation des comportement des clients et des événements utilisateur montre le type d’informations généralement incluses dans un comportement des clients ou événement utilisateur. Avec une bonne compréhension de ses composants, vos développeurs et votre équipe BI peuvent utiliser les données d’événements Currents entrants pour créer des rapports et des graphiques axés sur les données, et tirer parti des précieux indicateurs de données fournis. 
 
 ![Décomposition d’un événement utilisateur montrant un événement d’achat avec les propriétés spécifiques à l’utilisateur, les propriétés spécifiques au comportement et les propriétés spécifiques à l’appareil]({% image_buster /assets/img/customer_engagement_event.png %})
 
@@ -23,7 +23,7 @@ Le comportement des clients et les événements utilisateur sont composés de pr
 
 ### Valeurs de la plateforme
 
-Certains événements renvoient une valeur`platform` qui spécifie la plate-forme de l’appareil de l’utilisateur. 
+Certains événements renvoient une valeur `platform` qui spécifie la plate-forme de l’appareil de l’utilisateur. 
 <br>Le tableau suivant détaille les valeurs retournées possibles :
 
 | Appareil de l’utilisateur | Valeur de la plateforme |
@@ -54,29 +54,34 @@ Notez que ces schémas ne s’appliquent qu’aux données d’événements de f
 Cet événement se produit lorsqu’un événement personnalisé spécifique est déclenché. Utilisez cette option pour suivre les événements personnalisés pour les utilisateurs dans votre application.
 
 ```json
-// Custom Event : users.behaviors.CustomEvent
+// Custom Event: users.behaviors.CustomEvent
 {
-  "id": (string) identifiant unique de cet événement,
-  "user_id": (string) ID utilisateur Braze de l’utilisateur,
-  "external_user_id": (string) ID externe de l’utilisateur,
-  "time": (int) heure en UTC à 10 chiffres de l’événement, en secondes, depuis la période,
-  "timezone": (string) fuseau horaire de l’utilisateur au format IANA à l’heure de l’événement,
-  "name": (string) nom de l’événement personnalisé,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
-  "platform": (string) plateforme de l’appareil (un parmi 'ios', 'android', 'web', 'kindle', 'tvos' OU 'roku'),
-  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
-  "device_model": (string) modèle matériel de l’appareil,
-  "device_id": (string) identifiant de l’appareil sur lequel l’événement s’est produit,
-  "properties": (string) chaîne de caractères codée en JSON des propriétés pour cet événement,
-  "ad_id": (string) identifiant publicitaire,
-  "ad_id_type": (string) Un parmi 'ios_idfa', 'google_ad_id', 'windows_ad_id' OU 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) si le suivi publicitaire est activé pour l’appareil ou non
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to, 
+  "app_id": (optional, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "gender": (optional, string) [PII] gender of the user, 
+  "country": (optional, string) [PII] country of the user, 
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "language": (optional, string) [PII] language of the user,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "sdk_version": (optional, string) version of the Braze SDK in use during the event, 
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "name": (required, string) name of the custom event,
+  "properties": (string) JSON encoded string of the properties for this event,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 
 #### Détails de la propriété
-- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les idfa iOS et les adid Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) , contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les idfa iOS et les adid Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 
 {% endapi %}
 {% api %}
@@ -94,29 +99,31 @@ Les achats sont des événements personnalisés spéciaux et sont accompagnés d
 {% endalert %}
 
 ```json
-// Purchase Event : users.behaviors.Purchase
+// Purchase Event: users.behaviors.Purchase
 {
-  "id": (string) identifiant unique de cet événement,
-  "user_id": (string) ID utilisateur Braze de l’utilisateur,
-  "external_user_id": (string) ID externe de l’utilisateur,
-  "time": (int) heure en UTC à 10 chiffres de l’événement, en secondes, depuis la période,
-  "product_id": (string) identifiant du produit acheté,
-  "price": (float) prix de l’achat,
-  "currency": (string) code de devise ISO 4217 alphabétique à trois lettres,
-  "properties": (string) chaîne de caractères codée en JSON des propriétés personnalisées pour cet événement,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
-  "platform": (string) plateforme de l’appareil (un parmi 'ios', 'android', 'web', 'kindle', 'tvos' OU 'roku'),
-  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
-  "device_model": (string) modèle matériel de l’appareil,
-  "device_id": (string) identifiant de l’appareil sur lequel l’événement s’est produit,
-  "ad_id": (string) identifiant publicitaire,
-  "ad_id_type": (string) Un parmi 'ios_idfa', 'google_ad_id', 'windows_ad_id' OU 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) si le suivi publicitaire est activé pour l’appareil ou non
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_id": (optional, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "sdk_version": (optional, string) version of the Braze SDK in use during the purchase,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "product_id": (required, string) id of the product purchased,
+  "price": (required, float) price of the purchase,
+  "currency": (required, string) three letter alpha ISO 4217 currency code,
+  "properties": (required, string) JSON encoded string of the custom properties for this event,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Détails de la propriété
-- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les idfa iOS et les adid Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) , contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les idfa iOS et les adid Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 {% endapi %}
 
 
@@ -131,27 +138,27 @@ Sessions
 Cet événement se produit lorsqu’un utilisateur commence sa première session dans votre application. Utilisez ces données pour suivre quand les utilisateurs commencent les sessions. 
 
 {% alert tip %}
-Lorsqu’un utilisateur commence sa première session, les événements `FirstSession` et `SessionStart` sont déclenchés.
+Lorsqu’un utilisateur commence sa première session, un événement `FirstSession` et un événement `SessionStart` sont déclenchés.
 {% endalert %}
 
 ```json
-// Démarrage de Session : users.behaviors.app.FirstSession
+// Session Start: users.behaviors.app.FirstSession
 {
-  "id": (string) identifiant unique de cet événement,
-  "user_id": (string) ID utilisateur Braze de l’utilisateur,
-  "external_user_id": (string) ID externe de l’utilisateur,
-  "time": (int) heure en UTC à 10 chiffres de l’événement, en secondes, depuis la période,
-  "timezone": (string) fuseau horaire de l’utilisateur au format IANA à l’heure de l’événement,
-  "session_id": (string) identifiant de la session,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
-  "platform": (string) plateforme de l’appareil (un parmi 'ios', 'android', 'web', 'kindle', 'tvos' OU 'roku'),
-  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
-  "device_model": (string) modèle matériel de l’appareil,
-  "device_id": (string) identifiant de l’appareil sur lequel la session s’est produite,
-  "gender": (string) genre de l’utilisateur,
-  "country": (string) pays de l’utilisateur,
-  "language": (string) langue de l’utilisateur,
-  "sdk_version": (string) version du SDK Braze utilisée pendant la session
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "session_id": (required, string) id of the session,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the session occurred,
+  "gender": (optional, string) gender of the user,
+  "country": (optional, string) country of the user,
+  "language": (optional, string) language of the user,
+  "sdk_version": (optional, string) version of the Braze SDK in use during the session
 }
 ```
 {% endapi %}
@@ -167,22 +174,22 @@ Sessions
 Cet événement se produit lorsqu’un utilisateur démarre une session. Utilisez ces données pour suivre quand les utilisateurs commencent les sessions.
 
 {% alert tip %}
-Lorsqu’un utilisateur commence sa première session, les événements `FirstSession` et `SessionStart` sont déclenchés.
+Lorsqu’un utilisateur commence sa première session, un événement `FirstSession` et un événement `SessionStart` sont déclenchés.
 {% endalert %}
 
 ```json
-// Démarrage de Session : users.behaviors.app.SessionStart
+// Session Start: users.behaviors.app.SessionStart
 {
-  "id": (string) identifiant unique de cet événement,
-  "user_id": (string) ID utilisateur Braze de l’utilisateur,
-  "external_user_id": (string) ID externe de l’utilisateur,
-  "time": (int) heure en UTC à 10 chiffres de l’événement, en secondes, depuis la période,
-  "session_id": (string) identifiant de la session,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
-  "platform": (string) plateforme de l’appareil (un parmi 'ios', 'android', 'web', 'kindle', 'tvos' OU 'roku'),
-  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
-  "device_model": (string) modèle matériel de l’appareil,
-  "device_id": (string) identifiant de l’appareil sur lequel la session s’est produite
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "session_id": (required, string) id of the session,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the session occurred
 }
 ```
 
@@ -199,23 +206,23 @@ Sessions
 Cela se produit lorsqu’un utilisateur quitte votre application, ce qui termine sa session actuelle. Utilisez ces données pour suivre les sessions. Avec l’événement de début de session, il permet de calculer la durée des sessions des utilisateurs.
 
 {% alert tip %}
-Lorsqu’un utilisateur commence sa première session, les événements `FirstSession` et `SessionStart` sont déclenchés.
+Lorsqu’un utilisateur commence sa première session, un événement `FirstSession` et un événement `SessionStart` sont déclenchés.
 {% endalert %}
 
 ```json
-// Fin de Session : users.behaviors.app.SessionEnd
+// Session End: users.behaviors.app.SessionEnd
 {
-  "id": (string) identifiant unique de cet événement,
-  "user_id": (string) ID utilisateur Braze de l’utilisateur,
-  "external_user_id": (string) ID externe de l’utilisateur,
-  "time": (int) heure en UTC à 10 chiffres de l’événement, en secondes, depuis la période,
-  "session_id": (string) identifiant de la session,
-  "duration": (float) durée de la session en secondes,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
-  "platform": (string) plateforme de l’appareil (un parmi 'ios', 'android', 'web', 'kindle', 'tvos' OU 'roku'),
-  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
-  "device_model": (string) modèle matériel de l’appareil,
-  "device_id": (string) identifiant de l’appareil sur lequel la session s’est produite
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "session_id": (required, string) id of the session,
+  "duration": (optional, float) seconds session lasted,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the session occurred
 }
 ```
 {% endapi %}
@@ -225,36 +232,38 @@ Lorsqu’un utilisateur commence sa première session, les événements `FirstSe
 ## Événement de localisation
 
 {% apitags %}
-Locations
+Emplacements
 {% endapitags %}
 
 Cet événement est déclenché lorsqu’un utilisateur est à un endroit spécifié. Utilisez cette option pour suivre les utilisateurs qui déclenchent des événements de localisation dans votre application.
 
 ```json
-// Événement de position : users.behaviors.Location
+// Location Event: users.behaviors.Location
 {
-  "id": (string) identifiant unique de cet événement,
-  "user_id": (string) ID utilisateur Braze de l’utilisateur,
-  "external_user_id": (string) ID externe de l’utilisateur,
-  "time": (int) heure en UTC à 10 chiffres de l’événement, en secondes, depuis la période,
-  "longitude": (float) longitude du lieu enregistré,
-  "latitude": (float) latitude du lieu enregistré,
-  "altitude": (float) altitude du lieu enregistré,
-  "ll_accuracy": (float) précision de la latitude et longitude du lieu enregistré,
-  "alt_accuracy": (float) précision de l’altitude du lieu enregistré,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
-  "platform": (string) plateforme de l’appareil (un parmi 'ios', 'android', 'web', 'kindle', 'tvos' OU 'roku'),
-  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
-  "device_model": (string) modèle matériel de l’appareil,
-  "device_id": (string) identifiant de l’appareil sur lequel l’événement s’est produit,
-  "ad_id": (string) identifiant publicitaire,
-  "ad_id_type": (string) Un parmi 'ios_idfa', 'google_ad_id', 'windows_ad_id' OU 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) si le suivi publicitaire est activé pour l’appareil ou non
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to, 
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "longitude": (required, float) longitude of recorded location,
+  "latitude": (required, float) latitude of recorded location,
+  "altitude": (optional, float) altitude of recorded location,
+  "ll_accuracy": (optional, float) latitude/longitude accuracy of recorded location,
+  "alt_accuracy": (optional, float) altitude accuracy of recorded location,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "sdk_version": (optional, string) version of the Braze SDK in use when the location was recorded,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Détails de la propriété
-- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les idfa iOS et les adid Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) , contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les idfa iOS et les adid Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -262,7 +271,7 @@ Cet événement est déclenché lorsqu’un utilisateur est à un endroit spéci
 ## Événement d’impression du Fil d'actualité
 
 {% alert note %}
-Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 {% apitags %}
@@ -276,17 +285,17 @@ Nous suivons d’autres fils d'actualité ; ils sont situés dans [Événements
 {% endalert %}
 
 ```json
-// Impression de fil d’actualité : users.behaviors.app.NewsFeedImpression
+// News Feed Impression: users.behaviors.app.NewsFeedImpression
 {
-  "id": (string) identifiant unique de cet événement,
-  "user_id": (string) ID utilisateur Braze de l’utilisateur,
-  "external_user_id": (string) ID externe de l’utilisateur,
-  "time": (int) heure en UTC à 10 chiffres de l’événement, en secondes, depuis la période,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
-  "platform": (string) plateforme de l’appareil (un parmi 'ios', 'android', 'web', 'kindle', 'tvos' OU 'roku'),
-  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
-  "device_model": (string) modèle matériel de l’appareil,
-  "device_id": (string) identifiant de l’appareil sur lequel l’événement s’est produit
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the event occurred
 }
 ```
 
@@ -296,19 +305,21 @@ Nous suivons d’autres fils d'actualité ; ils sont situés dans [Événements
 ## Événements d’attribution
 
 {% apitags %}
-Événements d’attribution
+Attribution
 {% endapitags %}
 
 Cet événement se produit lorsqu’une installation d’application est attribuée à une source. Utilisez cette option pour savoir d’où viennent les installations de votre application.
 
 ```json
-// Événement d’attribution d’installation : users.behaviors.InstallAttribution
+// Install Attribution Event: users.behaviors.InstallAttribution
 {
-  "id": (string) identifiant unique de cet événement,
-  "user_id": (string) ID utilisateur Braze de l’utilisateur,
-  "external_user_id": (string) ID externe de l’utilisateur,
-  "time": (int) heure en UTC à 10 chiffres de l’événement, en secondes, depuis la période,
-  "source": (string) la source de l’attribution
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "device_id": (optional, string) device_id that is tied to this user if user is anonymous,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "time": (requierd, int) 10-digit UTC time of the event in seconds since the epoch,
+  "source": (required, string) the source of the attribution
 }
 ```
 
@@ -325,15 +336,15 @@ Numéro de compartiment aléatoire
 Cet événement utilisateur se produit chaque fois qu’un nouvel utilisateur est créé dans son groupe d’apps. Au cours de cet événement, chaque nouvel utilisateur reçoit un numéro de compartiment aléatoire que vous pouvez ensuite utiliser pour créer des segments  d’utilisateurs aléatoires distribués uniformément Utilisez cette option pour regrouper une série de valeurs de numéro de compartiment aléatoire et comparer les performances à travers vos campagnes et variantes de campagne. 
 
 ```json
-// Événement de numéro de compartiment aléatoire : users.RandomBucketNumberUpdate
+// Random Bucket Number Event: users.RandomBucketNumberUpdate
 {
-  "id": (string) identifiant unique de cet événement,
-  "app_group_id": (string) identifient API du groupe d’apps
-  "user_id": (string) ID utilisateur Braze de l’utilisateur,
-  "external_user_id": (string) ID externe de l’utilisateur,
-  "time": (int) heure en UTC de l’événement, en millisecondes, depuis la période,
-  "random_bucket_number": (int) nouveau numéro de compartiment aléatoire
-  "prev_random_bucket_number":  (int) ancien numéro de compartiment aléatoire, optionnel
+  "id": (string) unique id of this event,
+  "app_group_id": (string) AppGroup API id
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) UTC time of the event in milliseconds since the epoch,
+  "random_bucket_number": (int) new random bucket number
+  "prev_random_bucket_number":  (int) old random bucket number, optional
 }
 ```
 
@@ -343,4 +354,5 @@ Notez que cet événement Currents est uniquement disponible pour les clients ay
 {% endalert %}
 
 {% endapi %}
+
 

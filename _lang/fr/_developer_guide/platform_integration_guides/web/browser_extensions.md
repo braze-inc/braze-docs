@@ -8,7 +8,9 @@ description: "Cet article décrit comment utiliser le SDK Braze pour le Web dans
 
 ---
 
-# Intégration de l’extension de navigateur
+# Extension de navigateur
+
+> Cet article décrit comment utiliser le SDK Braze pour le Web dans vos extensions de navigateur (Google Chrome, Firefox).
 
 Intégrez le SDK Braze pour le Web au sein de votre extension de navigateur pour collecter l’analytique et afficher des messages détaillés aux utilisateurs. Cela inclut les **Extensions Google Chrome** et les **Modules Firefox**.
 
@@ -40,7 +42,7 @@ Braze peut être inclus dans les parties suivantes de votre extension :
 
 Aucune autorisation supplémentaire n’est requise dans votre `manifest.json` lors de l’intégration du SDK Braze (`braze.min.js`) en tant que fichier local associé à votre extension. 
 
-Cependant, si vous utilisez le [gestionnaire de balises Google][8] ou faites référence au SDK Braze à partir d’une URL externe, ou si vous avez défini une politique de sécurité du contenu stricte pour votre extension, vous devrez ajuster les paramètres dans votre [`content_security_policy`][6] pour autoriser des sources de script à distance`manifest.json`.
+Cependant, si vous utilisez le [gestionnaire de balises Google][8] ou faites référence au SDK Braze à partir d’une URL externe, ou si vous avez défini une politique de sécurité du contenu stricte pour votre extension, vous devrez ajuster les paramètres [`content_security_policy`][6] dans votre `manifest.json` pour autoriser des sources de script à distance.
 
 ## Démarrage
 
@@ -54,9 +56,9 @@ Sinon, si vous préférez utiliser le [gestionnaire de balises Google][8] ou uti
 
 Une fois téléchargé, assurez-vous de copier le fichier `braze.min.js` dans le répertoire de votre extension.
 
-### Fenêtre contextuelle d’extension {#popup}
+### Fenêtres contextuelles d’extension {#popup}
 
-Pour ajouter Braze à une fenêtre contextuelle d’extension, reportez-vous au fichier JavaScript local dans votre `popup.html`, comme vous le feriez sur un site Internet normal. Si vous utilisez Google Tag Manager, vous pouvez ajouter Braze en utilisant nos [modèles Google Tag Manager ][8] à la place.
+Pour ajouter Braze à une fenêtre contextuelle d’extension, reportez-vous au fichier JavaScript local dans votre `popup.html`, comme vous le feriez sur un site Internet normal. Si vous utilisez Google Tag Manager, vous pouvez ajouter Braze en utilisant nos [modèles Google Tag Manager][8] à la place.
 
 ```html
 <html>
@@ -69,7 +71,7 @@ Pour ajouter Braze à une fenêtre contextuelle d’extension, reportez-vous au 
 </html>
 ```
 
-### Background script (Manifest v2 only) {#background-script}
+### Script d’arrière-plan (Manifeste v2 uniquement) {#background-script}
 
 Pour utiliser Braze dans le script en l’arrière-plan de votre extension, ajoutez la bibliothèque Braze à votre `manifest.json` dans le tableau `background.scripts`. La variable `braze` sera alors disponible dans votre contexte de script en arrière-plan.
 
@@ -86,7 +88,7 @@ Pour utiliser Braze dans le script en l’arrière-plan de votre extension, ajou
 }
 ```
 
-### Page d’options {#options-page}
+### Pages d’options {#options-page}
 
 Si vous utilisez une page d’options (à l’aide des propriétés de manifeste `options` ou `options_ui`), vous pouvez inclure Braze comme vous le feriez dans les [`popup.html`instructions](#popup).
 
@@ -106,7 +108,7 @@ braze.initialize("YOUR-API-KEY-HERE", {
 
 Pour plus d’informations sur les options d’initialisation que nous prenons en charge, consultez la page [référence du SDK pour le Web][10].
 
-## Push
+## Notification push
 
 Les boîtes de dialogue contextuelle d’extension ne permettent pas de demander des notifications push (elles ne disposent pas de barre d’URL dans la navigation). Pour vous enregistrer et demander une autorisation de notification push dans la boîte de dialogue contextuelle d’une extension, vous devrez utiliser un contournement par un domaine alternatif, tel que décrit dans [domaine alternatif de notification push][11].
 

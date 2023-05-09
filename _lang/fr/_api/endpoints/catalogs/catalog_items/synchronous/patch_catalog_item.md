@@ -1,12 +1,12 @@
 ---
-nav_title: "CORRECTIF : Éditer un produit du catalogue"
-article_title: "CORRECTIF : Éditer un produit du catalogue"
+nav_title: "PATCH : Éditer un produit du catalogue"
+article_title: "PATCH : Éditer un produit du catalogue"
 search_tag: Endpoint
 page_order: 4
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint de Braze Éditer un produit du catalogue."
+description: "Cet article présente en détail l’endpoint Braze Éditer un produit du catalogue."
 
 ---
 {% api %}
@@ -15,11 +15,13 @@ description: "Cet article présente en détail l’endpoint de Braze Éditer un 
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Utilisez cet endpoint pour éditer un produit de votre catalogue. 
+> Utilisez cet endpoint pour éditer un produit de votre catalogue. 
 
-## Limites de débit
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e35976ae-ff77-42b7-b691-a883c980d8c0 {% endapiref %}
 
-Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
+## Limite de débit
+
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Paramètres de chemin
 
@@ -33,7 +35,7 @@ Cet endpoint a une limitation du débit partagée de 50 requêtes par minute en
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `items` | Requis | Array | Un tableau qui contient certains objets de produit. Les objets de produits devraient contenir les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet de produit est autorisé par requête. |
+| `items` | Requis | Tableau | Un tableau qui contient certains objets Produit. Les objets Produits devraient contenir les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet de produit est autorisé par requête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -47,6 +49,10 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
     {
       "Name": "Restaurant",
       "Loyalty_Program": false,
+      "Location": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      },
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     }
   ]
@@ -55,11 +61,11 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 ## Réponse
 
-Trois réponses de code d’état existent pour cet endpoint : `200`, `400` et `404`..
+Trois réponses de code de statut existent pour cet endpoint : `200`, `400` et `404`.
 
 ### Exemple de réponse réussie
 
-Le code de statut `200` pourrait retourner le corps de réponse suivant.
+Le code de statut `200` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {
@@ -69,14 +75,14 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait retourner le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
   "errors": [
     {
       "id": "invalid-fields",
-      "message": "Certains des champs fournis n’existent pas dans le catalogue.",
+      "message": "Some of the fields given do not exist in the catalog",
       "parameters": [
         "id"
       ],
@@ -85,7 +91,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 
@@ -106,7 +112,9 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `invalid-fields` | Confirmez que les champs de la requête existent dans le catalogue. |
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
 | `filtered-set-field-too-long` | La valeur du champ est utilisée dans un ensemble filtré qui dépasse la limite de caractères pour un produit. |
-| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter notre [Support]({{site.baseurl}}/support_contact/). |
+| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter l’[Assistance]({{site.baseurl}}/support_contact/). |
+| `invalid-keys-in-value-object` | Les clés d’objet de produit ne peuvent pas inclure `.` ou `$`. |
+| `too-deep-nesting-in-value-object` | Les objets de produit ne peuvent pas avoir plus de 50 niveaux d’imbrication. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

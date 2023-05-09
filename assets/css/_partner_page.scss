@@ -1,5 +1,5 @@
 #partner-main {
-  padding-top: 15px;
+  padding-top: 0px;
   margin-top: 15px;
   margin-bottom: 30px;
   @media (min-width: $window-large-px) {
@@ -57,6 +57,7 @@
   h1 {
     color: $black-shark;
     font-family: $braze-medium;
+    margin-top: 10px;
   }
 
   .flex {

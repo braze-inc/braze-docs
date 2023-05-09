@@ -1,8 +1,8 @@
 ---
 page_order: 7.9
-nav_title: Meilleures pratiques
+nav_title: Bonnes pratiques
 article_title: Meilleures pratiques pour les SMS
-layout: featured
+layout: dev_guide
 guide_top_header: "Meilleures pratiques pour les SMS"
 guide_top_text: "Reportez-vous aux articles suivants pour découvrir ce que vous devez savoir et vérifier avant l’envoi de messages SMS. "
 
@@ -10,7 +10,7 @@ page_type: landing
 description: "Cette page d’accueil est la page de référence des meilleures pratiques qui mettent en évidence les choses que vous devez connaître et vérifier avant d’envoyer des messages."
 channel: SMS
 
-guide_featured_title: "Articles de section"
+guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "À savoir avant l’envoi"
   link: /docs/know_before_send/

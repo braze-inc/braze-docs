@@ -10,7 +10,9 @@ description: "This article covers iOS, Android, and FireOS analytics for the Xam
 
 ---
  
-# Xamarin analytics
+# Xaramin Analytics
+
+> This article covers how to handle analytics for Xamarin.
 
 ## Setting user IDs
 
@@ -29,7 +31,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 Appboy.SharedInstance().ChangeUser("YOUR_USER_ID");
 ```
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
 {% endtab %}
 {% endtabs %}
 
@@ -48,9 +50,9 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 Appboy.SharedInstance ().LogCustomEvent ("YOUR_EVENT_NAME");
 ```
 
-**Implementation Example** - `logCustomEvent` is utilized within the `AppboySampleViewController.cs` within the [TestApp.XamariniOS](https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS) sample application.
+**Implementation Example** - `logCustomEvent` is utilized within the `AppboySampleViewController.cs` within the [TestApp.XamariniOS](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS) sample application.
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
 {% endtab %}
 {% endtabs %}
 
@@ -71,7 +73,7 @@ Appboy.SharedInstance ().LogPurchase ("product_id", "USD", new NSDecimalNumber("
 
 **Implementation Example** - You can see user properties being set in the sample application's `EventsAndPurchasesButtonHandler` method inside `AppboySampleViewController.cs`.
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
 {% endtab %}
 {% endtabs %}
 
@@ -96,7 +98,7 @@ Appboy.SharedInstance ().User.FirstName = "YOUR_NAME";
 
 **Implementation Example** - You can see user properties being set in the sample application's `UserPropertyButtonHandler` method inside `AppboySampleViewController.cs`.
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
 {% endtab %}
 {% endtabs %}
 
@@ -104,8 +106,7 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 
 - Android: See the [Android integration instructions][2] for information on how to support location tracking.
 - iOS: See the Xamarin [using background location walkthrough][11] and the [iOS integration instructions][12] for information on how to support location tracking.
-```
 
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/#location-tracking
 [11]: http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/
-[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/locations_and_geofences/
+[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/

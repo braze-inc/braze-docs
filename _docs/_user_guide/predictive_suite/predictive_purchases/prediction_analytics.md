@@ -8,7 +8,9 @@ page_order: 2
 
 # Prediction analytics
 
-Once your Prediction has been built and trained, you will have access to the **Prediction Analytics** page. This page helps you decide what users you should target based on their Purchase Likelihood Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
+> Once your Prediction has been built and trained, you will have access to the **Prediction Analytics** page. This page helps you decide what users you should target based on their Purchase Likelihood Score or Category. 
+
+As soon as the Prediction is done training and this page is populated, you can jump to simply using [filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
 
 **Analytics Components**<br>
 &#45; [Purchase Likelihood Score](#purchase_score)<br>
@@ -50,7 +52,7 @@ Using this information, we encourage you to decide how many of the purchasers yo
 
 To measure the accuracy of your model, the **Prediction Quality** metric will show you how effective this particular machine learning model appears to be. Essentially, it's a measure of how good this Prediction is at telling apart the buyers from non-buyers. A Prediction Quality of 100 would mean it perfectly knows who will and will not purchase without error (this never happens!), and 0 meaning it's randomly guessing. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
-Here’s what we recommend for various ranges of Prediction Quality:
+Here's what we recommend for various ranges of Prediction Quality:
 
 | Prediction Quality Range (%) | Recommendation |
 | ---------------------- | -------------- |

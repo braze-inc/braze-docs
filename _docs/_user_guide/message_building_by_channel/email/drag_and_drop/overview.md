@@ -4,13 +4,13 @@ article_title: Create a Drag & Drop Email
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
-description: "This article covers how to set up and properly use the Drag & Drop Editor."
+description: "This article covers how to set up and properly use the Drag & Drop Editor for email messages."
 tool: 
   - Campaigns
   - Canvas
 ---
 
-# Create a drag & drop email
+# Drag & Drop Editor overview
 
 > With the Drag & Drop Editor, you can create completely custom and personalized email messages in either campaigns or Canvas using the drag & drop editing experience.
 
@@ -128,8 +128,13 @@ With attributes, you can easily append additional information to HTML tags in em
 
 A common use case is to insert an attribute into your anchor tag to disable click tracking when sending through Braze:
 
-* **Sendgrid:** `clicktracking = "off"`
+* **SendGrid:** `clicktracking = "off"`
 * **SparkPost:** `data-msys-clicktrack = "0"`
+
+Another common use case is to flag specific links as universal links. Universal links are those that redirect to your app:
+
+* **SendGrid:** `universal = "true"`
+* **SparkPost:** `data-msys-sublink = "open-in-app"`, a [custom sub-path](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) must be configured.
 
 ## Step 3: Add sending information
 

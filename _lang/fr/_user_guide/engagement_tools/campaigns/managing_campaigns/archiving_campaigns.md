@@ -3,17 +3,15 @@ nav_title: Archiver des campagnes
 article_title: Archiver des campagnes
 page_order: 2
 page_type: reference
-description: "Le présent article de référence explique comment archiver une campagne préexistante, les effets de l’archivage d’une campagne et comment reprendre cette campagne si nécessaire."
+description: "Le présent article de référence explique comment archiver une campagne préexistante, les effets de l’archivage d’une campagne et comment relancer cette campagne si nécessaire."
 tool:
-  - Campagnes
+  - Campaigns
 
 ---
 
 # Archiver des campagnes
 
-> Le présent article de référence explique comment archiver une campagne préexistante, les effets de l’archivage d’une campagne et comment relancer cette campagne si nécessaire.
-
-Si vous souhaitez empêcher une campagne de s’envoyer ou l’effacer de votre tableau de bord, vous pouvez l’archiver. Accédez à la page **Campagnes**, cliquez sur l’icône d’engrenage en regard de la campagne et cliquez sur **Archive** (Archiver).
+> Si vous souhaitez empêcher une campagne de s’envoyer ou l’effacer de votre tableau de bord, vous pouvez l’archiver. Accédez à la page **Campaigns**, cliquez sur l’icône d’engrenage en regard de la campagne et cliquez sur **Archive** (Archiver).
 
 ![][1]
 
@@ -23,7 +21,7 @@ Il existe également des actions par lot que vous pouvez utiliser, telles que la
 
 ![][3]
 
-Pour afficher les messages archivés depuis la page **Campagnes**, sélectionnez le dossier **Archived** (Archivé).
+Pour afficher les messages archivés depuis la page **Campaigns**, sélectionnez le dossier **Archived** (Archivé).
 
 ![][2]
 

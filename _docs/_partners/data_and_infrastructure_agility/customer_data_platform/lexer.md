@@ -1,11 +1,11 @@
 ---
 nav_title: Lexer
 article_title: Lexer
-page_order: 1
-description: "This article outlines the partnership between Braze and Lexer, a customer data platform that puts customer data in the hands of marketers to inspire experiences that drive sales."
+description: "This reference article outlines the partnership between Braze and Lexer, a customer data platform that puts customer data in the hands of marketers to inspire experiences that drive sales."
 alias: /partners/lexer/
 page_type: partner
 search_tag: Partner
+page_order: 5
 ---
 
 # Lexer
@@ -20,7 +20,7 @@ The Braze and Lexer integration allows you to sync data across the two platforms
 | ----------- | ----------- |
 | Partner account | A Lexer account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions (excluding `user.delete`) and `segment.list` permissions. The permission set may change as Lexer adds support for more Braze objects, so you may either want to grant more permissions now or plan to update these permissions in the future.<br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key** |
-| Braze REST endpoint | Your [REST Endpoint URL]({{site.baseurl}}/api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | Your [REST endpoint URL]({{site.baseurl}}/api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 | Amazon AWS S3 bucket and credentials | Before beginning the integration, you must have access credentials for an AWS S3 bucket connected to your Lexer hub (this may be a bucket you create or one that Lexer creates and manages for you). Visit [Lexer](https://learn.lexer.io/docs/amazon-s3) for guidance on this requirement. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -55,8 +55,8 @@ Lexer Activate will automatically update your Braze profiles, adding or removing
 2. Select the appropriate Braze activation for this campaign.
 3. Add your segment.
 4. Update your audience name; this will become your attribute value in Braze.
-5. This is the custom attribute we’ll be updating in Braze. Contact [Lexer support](support@lexer.io) to update.
-6. Check the appropriate list action—in most cases, you’ll want to maintain your list.
+5. This is the custom attribute we'll be updating in Braze. Contact [Lexer support](support@lexer.io) to update.
+6. Check the appropriate list action—in most cases, you'll want to maintain your list.
 7. Review the terms and conditions, and click **SEND AUDIENCE**.
 
 ![][7]

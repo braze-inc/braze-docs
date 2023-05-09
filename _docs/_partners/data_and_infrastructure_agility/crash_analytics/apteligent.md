@@ -2,7 +2,7 @@
 nav_title: Apteligent
 article_title: Apteligent
 alias: /partners/apteligent/
-description: "This article outlines the partnership between Braze and Apteligent, a mobile application that details crash reporting, allowing you to log critical data into your existing Braze solution."
+description: "This reference article outlines the partnership between Braze and Apteligent, a mobile application that details crash reporting, allowing you to log critical data into your existing Braze solution."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Apteligent
 
-> [Apteligent](https://kb.vmtestdrive.com/hc/en-us/articles/360001544114-Apteligent-by-VMware-Walkthrough) is a mobile application performance platform providing tools and insights for developers and product managers. 
+> [Apteligent](https://www.vmware.com/products/workspace-one/intelligence-consumer-apps.html) is a mobile application performance platform providing tools and insights for developers and product managers. 
 
 The Braze and Apteligent integration provides detailed iOS crash reporting, allowing you to log critical data into your existing Braze solution as well as  segment, understand, and engage with users who have experienced application crashes.
 
@@ -18,7 +18,7 @@ The Braze and Apteligent integration provides detailed iOS crash reporting, allo
 
 | Requirement | Description |
 |---|---|
-| TestDrive account | A [TestDrive account](https://kb.vmtestdrive.com/hc/en-us/articles/360001372254-Getting-Started-with-TestDrive) is required to take advantage of this partnership. |
+| TestDrive account | A TestDrive account is required to take advantage of this partnership. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}

@@ -7,7 +7,7 @@ page_type: reference
 
 ---
 
-# Postman et demandes d’échantillons d’API
+# Postman et demandes d’exemples
 
 > Braze vous permet de générer des demandes d’échantillons d’API pour tous nos endpoints via notre collection Postman. Cet article de référence couvre la collection Braze Postman, ce qu’elle est, comment la configurer et l’utiliser, ainsi que la façon de modifier et d’envoyer des demandes.
 
@@ -29,13 +29,13 @@ La collection Braze Postman utilise une variable de modèle, `{{instance_url}}`,
 
 Pour créer votre propre environnement, procédez comme suit :
 
-1. Dans l’onglet **Espaces de travail**, sélectionnez **Environnements**.
+1. Dans l’onglet **Workspaces (Espaces de travail)**, sélectionnez **Environments (Environnements)**.
 2. Cliquez sur le bouton plus **+** pour créer un nouvel environnement.
-3. Donnez un nom à cet environnement (p. ex., « Demandes API de Braze ») et ajoutez des clés pour `instance_url` et `api_key` avec des valeurs correspondant à votre [instance de Braze][7] et à votre [clé d’API REST de Braze][8].
-4. Cliquez sur **Enregistrer**.
+3. Donnez un nom à cet environnement (par ex., « Demandes API de Braze ») et ajoutez des clés pour `instance_url` et `api_key` avec des valeurs correspondant à votre [instance de Braze][7] et à votre [clé d’API REST de Braze][8].
+4. Cliquez sur **Save (Enregistrer)**.
 
 {% alert note %}
-Dans les corps de demande `POST`, la `api_key` doit être comprise entre des guillemets : `"MY-API-KEY-EXAMPLE"`. Dans les URL `GET`, elle ne devrait pas l’être. Nous vous avons déjà fourni ce formatage pour les corps de demande `POST`, les URL `GET` et le modèle d’environnement de `VOTRE-CLÉ-API-ICI` dans cette documentation.
+Dans les corps de demande `POST`, la `api_key` doit être comprise entre des guillemets : `"MY-API-KEY-EXAMPLE"`. Dans les URL `GET`, elle ne devrait pas l’être. Nous vous avons déjà fourni ce formatage pour les corps de demande `POST`, les URL `GET` et le modèle d’environnement de `YOUR-API-KEY-HERE` dans cette documentation.
 {% endalert %}
 
 ![Ajout de variables pour la clé API et l’URL d’instance à l’environnement API REST de Braze dans Postman.][3]

@@ -4,13 +4,13 @@ article_title: Exporter les agrégats d’événements personnalisés
 page_order: 6
 page_type: reference
 description: "Cet article de référence explique comment exporter des agrégats de données d’événements personnalisés."
-tool: Raports
+tool: Reports
 
 ---
 
-# Agrégats d’événements personnalisés
+# Exporter les agrégats d’événements personnalisés
 
-La page **Événements personnalisés** du tableau de bord vous permet d’afficher les occurrences d’un ou plusieurs événements personnalisés au fil du temps. Si vous affichez des statistiques détaillées pour des événements personnalisés ou des événements personnalisés par heure, vous pourrez également voir les données pour des segments spécifiques.
+> La page **Événements personnalisés** du tableau de bord vous permet d’afficher les occurrences d’un ou plusieurs événements personnalisés au fil du temps. Si vous affichez des statistiques détaillées pour des événements personnalisés ou des événements personnalisés par heure, vous pourrez également voir les données pour des segments spécifiques.
 
 ![Événements personnalisés][14]
 

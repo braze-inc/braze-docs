@@ -25,7 +25,7 @@ Confirmez que votre application recueille les données de localisation :
 
 Pour voir si les données de localisation de l’utilisateur sont envoyées à Braze, utilisez le filtre **Location Available** (Localisation disponible). Ce filtre vous permet de voir le pourcentage d’utilisateurs avec un « emplacement le plus récent ».
 
-![Tester l’emplacement récent][25]
+![Tester l’Emplacement le plus récent][25]
 
 ## Transfert de données
 
@@ -40,5 +40,5 @@ _Dernière mise à jour le 16 novembre 2022_
 
 [25]: {% image_buster /assets/img_archive/trouble7.png %}
 [26]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[27]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
+[27]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
 [28]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/

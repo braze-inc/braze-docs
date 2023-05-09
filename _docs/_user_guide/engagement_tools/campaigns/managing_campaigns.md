@@ -8,7 +8,7 @@ page_order: 3
 
 tool: Campaigns
 page_type: landing
-description: ""
+description: "This landing page covers managing campaigns. Here, you can find articles on campaign approval, duplication, alerts, archiving, changing your campaign after lauch, and more."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

@@ -2,7 +2,7 @@
 nav_title: PassKit
 article_title: PassKit
 alias: /partners/passkit/
-description: "This article outlines the partnership between Braze and Passkit. This partnership enables you to extend your mobile reach by integrating Apple Wallet and Google Pay passes into your customer's experience."
+description: "This reference article outlines the partnership between Braze and Passkit. This partnership enables you to extend your mobile reach by integrating Apple Wallet and Google Pay passes into your customer's experience."
 page_type: partner
 search_tag: Partner
 
@@ -26,7 +26,7 @@ The Braze and PassKit integration allows you to increase and measure the engagem
 
 ## Integration
 
-To further enrich your customers’ mobile wallet experiences, from within your PassKit dashboard, you can opt to pass data into Braze through Braze’s [users/track endpoint][7]. 
+To further enrich your customers' mobile wallet experiences, from within your PassKit dashboard, you can opt to pass data into Braze through Braze's [`/users/track` endpoint][7]. 
 
 Examples of data to share from PassKit includes:
 - **Pass created**: when a customer clicks on a pass link and is first shown a pass.
@@ -38,7 +38,7 @@ Once the data is passed into Braze, you can build audiences, personalize content
 
 ## Connect Passkit to Braze
 
-To pass data from PassKit, ensure that you have set your Braze external ID as PassKit’s `externalId`.
+To pass data from PassKit, ensure that you have set your Braze external ID as PassKit's `externalId`.
 
 1. Within **Settings**, under **Integrations** in your PassKit pass project or program click **Connect** under the **Braze** Tab.<br>![The Braze integration tile in the PassKit platform.][5]{: style="max-width:80%"}<br><br>
 2. Fill out your Braze API key, endpoint URL, and provide a name for your connector.<br><br>
@@ -62,8 +62,8 @@ There are many different components you can include in your payload, but here as
 
 | Component | Required | Type | Description |
 | --------- | -------- | ---- | ----------- |
-|`person.externalId` | Required | String | Set as the Braze External ID, this is crucial for the callbacks from PassKit back to Braze to work, allowing Braze users to have coupons for multiple offers in one campaign. Not enforced as unique. |
-| `members.member.externalId` | Optional | String | Set as the Braze External ID, you may use your External ID to update the membership pass. Setting this field enforces the user as unique within the membership program.|
+|`person.externalId` | Required | String | Set as the Braze external ID, this is crucial for the callbacks from PassKit back to Braze to work, allowing Braze users to have coupons for multiple offers in one campaign. Not enforced as unique. |
+| `members.member.externalId` | Optional | String | Set as the Braze external ID, you may use your external ID to update the membership pass. Setting this field enforces the user as unique within the membership program.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 For a full list of available fields, their types, and helpful descriptions, have a look at the [PassKit GitHub documentation][10].
@@ -84,7 +84,7 @@ For a full list of available fields, their types, and helpful descriptions, have
 
 ### Step 2: Create and encode an undefined payload variable
 
-Create and name a new Content Block by navigating to `Templates & Media` within the Braze dashboard. Here you can find the `Content Block Library` tab. Select `Create Content Block` to get started.
+Create and name a new Content Block by navigating to **Templates & Media** within the Braze dashboard. Here, you can find the **Content Block Library** tab. Select **Create Content Block** to get started.
 
 Next, you must define your **Content Block Liquid Tag**. After saving this Content Block, this Liquid tag can be referenced when composing messages. In this example, we have assigned the Liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 
@@ -147,7 +147,7 @@ At this point, you will have created a Content Block that looks something like t
 
 In this example, UTM parameters have been added to track the source of these installs back to Braze and this campaign.
 
-{% alert important %}
+{% alert tip %}
 Remember to save your Content Block before leaving the page.
 {% endalert %}
 
@@ -165,7 +165,7 @@ For example, maybe you want to change the introductory offer to include more ini
 
 #### Composing the message body
 
-You’ll want to capture both of these variables in your message body and then call your Content Block. 
+You'll want to capture both of these variables in your message body and then call your Content Block. 
 Capture your minified JSON payload from [step 1](#passkit-integrations):
 
 **Assign the project URL**
@@ -195,7 +195,7 @@ Your message body should look something like this:
 The output URL for the sample is:
 ![The output URL that includes a long, randomly generated string of letters and numbers.][2]{: style="max-width:70%"}
 
-The output URL will be long. The reason for this is that it contains all the pass data and incorporates best-in-class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly][3]. This can be done through a Connected Content call to a bit.ly endpoint!
+The output URL will be long. The reason for this is that it contains all the pass data and incorporates best-in-class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly][3]. This can be done through a Connected Content call to a bit.ly endpoint.
 
 ## Update pass using the PassKit webhook
 
@@ -210,7 +210,7 @@ Before you get started, here are the common JSON payload parameters that you can
 
 | Data | Type | Description |
 | ---- | ---- | ----------- |
-| `externalId` | String | Allows a unique Id to be added to the pass record to provide compatibility with an existing system using unique customer identifiers (e.g., membership numbers). You can retrieve pass data by using this endpoint via `userDefinedId` and `campaignName` instead of pass ID. This value must be unique within a campaign, and once this value is set, it cannot be changed.<br><br>For the Braze integration, we would recommend using the Braze external ID: {% raw %}{{${user_id}}}{% endraw %} |
+| `externalId` | String | Allows a unique Id to be added to the pass record to provide compatibility with an existing system using unique customer identifiers (e.g., membership numbers). You can retrieve pass data by using this endpoint via `userDefinedId` and `campaignName` instead of pass ID. This value must be unique within a campaign, and once this value is set, it cannot be changed.<br><br>For the Braze integration, we would recommend using the Braze external ID: {% raw %}`{{${user_id}}}`{% endraw %} |
 | `campaignId` (coupon) <br><br> `programId` (membership) | String | The ID for the campaign or program template you created in PassKit. To find this, head to the **Settings** tab in your PassKit pass project. |
 | `expiryDate` | IO8601 datetime | The pass expiry date. After the expiry date, the pass is automatically voided (see `isVoided`). This value will override the template and campaign end date value. |
 | `status` | String | The current status of a coupon, such as `REDEEMED` or `UNREDEEMED`. |
@@ -218,7 +218,7 @@ Before you get started, here are the common JSON payload parameters that you can
 
 ### Step 1: Create your Braze webhook template
 
-To create a PassKit webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off PassKit webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
+To create a PassKit webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze dashboard. If you would like to create a one-off PassKit webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
 Once you have selected the PassKit webhook template, you should see the following:
 - **Webhook URL**: `https://api-pub1.passkit.io/coupon/singleUse/coupon`
@@ -241,9 +241,9 @@ To set up the webhook, fill out the new event details within the request body, i
 
 ```json
 {% raw %}{
-  “externalId”: “{{${user_id}}}”,
-  “campaignId”: “ 2xa1lRy8dBz4eEElBfmIz8”,
-  “expiryDate”: “2020-05-10T00:00:00Z”
+  "externalId": "{{${user_id}}}",
+  "campaignId": " 2xa1lRy8dBz4eEElBfmIz8",
+  "expiryDate": "2020-05-10T00:00:00Z"
 }{% endraw %}
 ```
 
@@ -259,7 +259,7 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 
 ## Retrieve pass details via Connected Content
 
-In addition to creating and updating passes, you can also retrieve your users’ pass metadata via Braze’s [Connected Content][15] to incorporate personalized pass details within your messaging campaigns.
+In addition to creating and updating passes, you can also retrieve your users' pass metadata via Braze's [Connected Content][15] to incorporate personalized pass details within your messaging campaigns.
 
 **PassKit Connected Content call**
 

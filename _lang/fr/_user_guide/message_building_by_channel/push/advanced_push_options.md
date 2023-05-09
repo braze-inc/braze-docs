@@ -2,10 +2,10 @@
 nav_title: "Options avancées de notification push"
 article_title: Options avancées de notification push
 page_order: 5
-layout: featured
+layout: dev_guide
 
 page_type: landing
-channel: Notification push
+channel: push
 
 description: "Cette page d’accueil répertorie plusieurs options avancées de notification push telles que les Push Stories et les boutons d’action push."
 

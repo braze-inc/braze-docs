@@ -9,9 +9,11 @@ description: "Cet article de référence couvre le journal d’événements util
 
 # Journal d’événements utilisateurs
 
-> Cet article de référence couvre le journal d’événements utilisateurs, y compris la façon d’accéder aux journaux et de les utiliser pour la résolution des problèmes. En plus de cet article, nous vous recommandons également de consulter notre cours d’apprentissage Braze [Outils d’assurance qualité et de débogage](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), qui explique comment utiliser le Journal d’événements utilisateurs pour effectuer votre propre débogage et résoudre vous-même les problèmes.
+> Le journal d’événements utilisateurs peut vous aider à analyser, déboguer ou résoudre les problèmes dans votre intégration Braze. Cet onglet vous fournit un journal des erreurs qui détaille le type d’erreur, l’application correspondante, le moment de la survenue et la possibilité d’afficher les données brutes associées.
 
-Le journal d’événements utilisateurs peut vous aider à analyser, déboguer ou résoudre les problèmes dans votre intégration Braze. Cet onglet vous fournit un journal des erreurs qui détaille le type d’erreur, l’application correspondante, le moment de la survenue et la possibilité d’afficher les données brutes associées.
+{% alert tip %}
+En plus de cet article, nous vous recommandons également de consulter notre cours d’apprentissage Braze [Outils d’assurance qualité et de débogage](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), qui explique comment utiliser le Journal d’événements utilisateurs pour effectuer votre propre débogage et résoudre vous-même les problèmes.
+{% endalert %}
 
 Pour trouver facilement vos journaux, vous pouvez filtrer en fonction de :
 
@@ -22,10 +24,10 @@ Pour trouver facilement vos journaux, vous pouvez filtrer en fonction de :
 
 Chaque journal est divisé en plusieurs sections, qui peuvent inclure :
 
-* Attributs du dispositif
+* Attributs de l’appareil
 * Attributs utilisateur
 * Événements
-* Événements campagne
+* Événements de campagne
 * Données de réponse
 
 Cliquez sur le bouton **Raw Data (Données brutes)** pour afficher les données JSON brutes pour ce journal spécifique.

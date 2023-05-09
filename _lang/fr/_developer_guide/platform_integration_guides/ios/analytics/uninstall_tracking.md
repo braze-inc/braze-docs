@@ -1,5 +1,5 @@
 ---
-nav_title: Désinstaller le suivi
+nav_title: Suivi des désinstallations
 article_title: Désinstaller le suivi pour iOS
 platform: iOS
 page_order: 7
@@ -11,7 +11,7 @@ description: "Cet article montre comment désinstaller le suivi pour votre appli
 
 > Cet article explique comment configurer le suivi de désinstallation pour votre application iOS et comment effectuer des tests pour vous assurer que votre application n’effectue aucune action automatique indésirable lors de la réception d’un push de suivi de désinstallation Braze.
 
-Le suivi de désinstallation utilise des notifications push contextuelles avec un indicateur Braze dans la charge utile. Consultez [Désinstaller le suivi ][6] dans notre guide de l’utilisateur pour plus d’informations.
+Le suivi de désinstallation utilise des notifications push contextuelles avec un indicateur Braze dans la charge utile. Consultez [Désinstaller le suivi][6] dans notre guide de l’utilisateur pour plus d’informations.
 
 ## Étape 1 : Activer les notifications push d’arrière-plan
 
@@ -19,7 +19,7 @@ Assurez-vous d’avoir activé l’option **Notifications à distance** dans la 
 
 ## Étape 2 : Vérifier les notifications push en arrière-plan Braze
 
-Braze utilise des notifications push contextuelles pour collecter les analyses de suivi de désinstallation. Assurez-vous que votre application [n’effectue aucune action indésirable ][4] après avoir reçu les notifications de suivi de désinstallation de Braze.
+Braze utilise des notifications push contextuelles pour collecter les analyses de suivi de désinstallation. Assurez-vous que votre application [n’effectue aucune action indésirable][4] après avoir reçu les notifications de suivi de désinstallation de Braze.
 
 ## Étape 3 : Test du tableau de bord
 
@@ -38,8 +38,8 @@ Ces étapes de test sont un proxy pour l’envoi d’un push de suivi de désins
 
 Suivez les instructions pour [l’activation du suivi de désinstallation][6].
 
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
 [9]: {% image_buster /assets/img_archive/ios-uninstall-tracking-2.png %}
 [10]: {% image_buster /assets/img_archive/ios-uninstall-tracking-3.png %}

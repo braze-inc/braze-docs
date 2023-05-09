@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Delete Scheduled Messages Braze endpoint."
+description: "This article outlines details about the Delete scheduled messages Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines details about the Delete Scheduled Messages 
 /messages/schedule/delete
 {% endapimethod %}
 
-Use this endpoint to cancel a message that you previously scheduled before it has been sent.
+> Use this endpoint to cancel a message that you previously scheduled before it has been sent.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0 {% endapiref %}
 

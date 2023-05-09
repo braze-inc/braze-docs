@@ -10,9 +10,15 @@ description: "Braze offers a wide breadth of metrics for you to use when measuri
 
 guide_featured_title: "Topics"
 guide_featured_list:
+  - name: Data Points Overview
+    link: /docs/user_guide/data_and_analytics/data_points/
+    fa_icon: fa-solid fa-check
   - name: Report Metrics Glossary
     link: /docs/user_guide/data_and_analytics/report_metrics/
     fa_icon: fas fa-book-open
+  - name: Cloud Data Ingestion
+    link: /docs/user_guide/data_and_analytics/cloud_ingestion/
+    fa_icon: fa-solid fa-cloud
   - name: Configuring Reporting
     link: /docs/user_guide/data_and_analytics/configuring_reporting/
     fa_icon: fas fa-cog
@@ -35,7 +41,7 @@ guide_featured_list:
     link: /docs/user_guide/data_and_analytics/export_braze_data/
     fa_icon: fas fa-file-export
   - name: Cloud Data Ingestion
-    link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
+    link: /docs/user_guide/data_and_analytics/cloud_ingestion/
     fa_icon: fa-solid fa-cloud
   - name: Your Analytics Dashboard
     link: /docs/user_guide/data_and_analytics/analytics/
@@ -43,6 +49,9 @@ guide_featured_list:
   - name: Your Reports
     link: /docs/user_guide/data_and_analytics/reporting/
     fa_icon: fas fa-chart-bar
+  - name: Catalogs
+    link: /docs/user_guide/personalization_and_dynamic_content/catalog/
+    fa_icon: fas fa-list-ul
   - name: Query Builder
     link: /docs/user_guide/data_and_analytics/query_builder/
     fa_icon: fas fa-code

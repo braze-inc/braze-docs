@@ -1,7 +1,7 @@
 ---
 nav_title: Wyng
 article_title: Wyng
-description: "This article outlines the partnership between Braze and Wyng, a zero-party data platform, that makes it easy to collect, use, and integrate customer preferences and attributes via micro-experiences, customer preference portals, and an API platform."
+description: "This reference article outlines the partnership between Braze and Wyng, a zero-party data platform, that makes it easy to collect, use, and integrate customer preferences and attributes via micro-experiences, customer preference portals, and an API platform."
 alias: /partners/wyng/
 page_type: partner
 search_tag: Partner
@@ -38,7 +38,7 @@ In Wyng, go to [**Integrations**][1] and select the **Add** tab. Next, hover ove
 - **Subscriptions setup (required)**<br>
 To subscribe users to subscription groups, click **Add Subscription** and add your subscription group name and ID. To add multiple group names and IDs, click the **Add Subscription** button again.<br>![An image prompting you for a subscription group name and ID.][8]{: style="max-width:80%;"}<br><br>
 - **User track setup**<br>
-Click **Add custom property** to add attribute and event object pairs to send to the users/track endpoint. Use this to add hardcoded attribute values for each data transaction sent for the integration. To add multiple properties, click the **Add custom property** button again.<br>![An image prompting you to add attribute custom properties.][9]{: style="max-width:80%;"}<br><br>
+Click **Add custom property** to add attribute and event object pairs to send to the `/users/track` endpoint. Use this to add hardcoded attribute values for each data transaction sent for the integration. To add multiple properties, click the **Add custom property** button again.<br>![An image prompting you to add attribute custom properties.][9]{: style="max-width:80%;"}<br><br>
 - **Send custom event**<br>
 Optionally, you can enable **Sending custom event**. If enabled, you should include the event name and corresponding app ID.<br>![An image prompting you to send custom events, if needed.][10]{: style="max-width:80%;"}<br><br>
 4. Lastly, you must map Wyng fields to Braze API fields based on your use case. Click **Select a field** to choose fields to map, and afterwards, **Save** your integration. Once saved, these mapped fields can be found under **Integrations > Manage**.

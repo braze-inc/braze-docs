@@ -6,26 +6,26 @@ page_order: 0
 
 description: "Cet article explique comment configurer et utiliser correctement le groupe de contrôle global. Il explique également comment consulter les mesures et les rapports liés à l’utilisation de ces groupes."
 page_type: reference
-tool: Rapports
-search_rank: 2
+tool: Reports
+search_rank: 1
 
 ---
 
 # Groupe de contrôle global
 
-> Cet article explique comment configurer et utiliser correctement le groupe de contrôle global. Il explique également comment consulter les mesures et les rapports liés à l’utilisation de ces groupes.
+> Utilisez le groupe de contrôle global pour indiquer un pourcentage de tous les utilisateurs qui ne devraient pas recevoir de campagnes ou de Canvas, ce qui vous permet d’analyser l’impact global de vos efforts de communication au fil du temps. 
 
-Utilisez le groupe de contrôle global pour indiquer un pourcentage de tous les utilisateurs qui ne devraient pas recevoir de campagnes ou de Canvas, ce qui vous permet d’analyser l’impact global de vos efforts de communication au fil du temps. En comparant les comportements des utilisateurs qui reçoivent des messages à ceux qui n’en reçoivent pas, vous pouvez mieux comprendre comment vos Canvas et campagnes marketing entraînent une augmentation du nombre de sessions et d’événements personnalisés.
+En comparant les comportements des utilisateurs qui reçoivent des messages à ceux qui n’en reçoivent pas, vous pouvez mieux comprendre comment vos Canvas et campagnes marketing entraînent une augmentation du nombre de sessions et d’événements personnalisés.
 
 ## Fonctionnement du groupe de contrôle global
 
 Avec le groupe de contrôle global, vous pouvez définir un pourcentage de tous les utilisateurs comme groupe de contrôle. Une fois enregistrés, les utilisateurs du groupe ne recevront aucune campagne ni aucun Canvas. 
 
-Votre groupe de contrôle global est appliqué à tous les canaux, campagnes et Canvas à l’exception des [campagnes API]({{site.baseurl}}/api/api_campaigns#api-campaigns) et des cartes de fil d’actualité (obsolète) Les utilisateurs de votre groupe de contrôle vont quand même recevoir les campagnes API et les cartes de fil d’actualité. Notez que cette exception ne s’applique pas aux cartes de contenu. Si vous utilisez des cartes de contenu, les utilisateurs de votre groupe de contrôle ne les recevront pas.
+Votre groupe de contrôle global est appliqué à tous les canaux, campagnes et Canvas à l’exception des [campagnes API]({{site.baseurl}}/api/api_campaigns#api-campaigns) et des cartes de fil d’actualité (obsolète). Les utilisateurs de votre groupe de contrôle vont quand même recevoir les campagnes API et les cartes de fil d’actualité. Notez que cette exception ne s’applique pas aux cartes de contenu. Si vous utilisez des cartes de contenu, les utilisateurs de votre groupe de contrôle ne les recevront pas.
 
 ### Assigner des utilisateurs au groupe de contrôle global de manière aléatoire
 
-Braze sélectionne de manière aléatoire plusieurs plages de [numéros de compartiment aléatoires]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) et inclut les utilisateurs faisant partie des compartiments sélectionnés.  i vous utilisez actuellement des numéros de compartiment aléatoires à d’autres fins, consultez l’article [Points à surveiller](#things-to-watch-for). 
+Braze sélectionne de manière aléatoire plusieurs plages de [numéros de compartiment aléatoires]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) et inclut les utilisateurs faisant partie des compartiments sélectionnés. Si vous utilisez actuellement des numéros de compartiment aléatoires à d’autres fins, consultez l’article [Points à surveiller](#things-to-watch-for). 
 
 ### Suivi des données pour les rapports
 
@@ -79,7 +79,7 @@ Pour exporter un fichier CSV, accédez à l’onglet **Global Control Group Sett
 Les groupes de contrôle historiques ne sont pas conservés, vous pouvez donc uniquement exporter les membres de votre groupe actuel. Assurez-vous d’exporter toutes les informations nécessaires avant de désactiver un groupe de contrôle.
 {% endalert %}
 
-## Rapports
+## Reporting
 
 Consultez [Rapports sur le groupe de contrôle global]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) pour des informations sur les indicateurs relatifs aux rapports.
 

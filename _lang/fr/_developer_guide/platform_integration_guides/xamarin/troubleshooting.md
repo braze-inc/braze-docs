@@ -12,6 +12,8 @@ description: "Cet article couvre la résolution des problèmes sur iOS et Androi
 
 # Résolution des problèmes
 
+> Cet article fournit plusieurs scénarios de résolution des problèmes concernant Xamarin.
+
 ## Android
 
 ### La notification push n’apparaît pas après la fermeture de l’application à l’aide du commutateur de tâche
@@ -20,7 +22,7 @@ Si vous constatez que les notifications push n’apparaissent plus après la fer
 
 ### Le générateur de notifications personnalisées n’est pas correctement configuré
 
-Les générateurs de notifications personnalisées (et tous les délégués) doivent étendre [`Java.Lang.Object`][2] pour fonctionner correctement par-dessus le fossé entre C# et Java. Consultez [Xamarin ][1] pour plus d’informations concernant l’implémentation d’interfaces Java.
+Les générateurs de notifications personnalisées (et tous les délégués) doivent étendre [`Java.Lang.Object`][2] pour fonctionner correctement par-dessus le fossé entre C# et Java. Consultez [Xamarin][1] pour plus d’informations concernant l’implémentation d’interfaces Java.
 
 [1]: https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/working_with_jni/#Implementing_Interfaces
 [2]: https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/

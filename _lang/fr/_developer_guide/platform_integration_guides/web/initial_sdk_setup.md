@@ -5,33 +5,32 @@ platform: Web
 page_order: 0
 page_type: reference
 description: "Cet article couvre la configuration initiale du SDK pour le SDK Braze pour le Web."
-search_rank: 1
+search_rank: 4
 ---
 
 # Configuration initiale du SDK
 
-Le SDK Braze pour le Web vous permet de collecter des analytiques et d’afficher des messages in-app détaillés, des messages de notification push et de carte de contenu à vos utilisateurs Web.
+> Cet article de référence explique comment installer le SDK Web de Braze. Le SDK Braze pour le Web vous permet de collecter des analytiques et d’afficher des messages in-app détaillés, des messages de notification push et de carte de contenu à vos utilisateurs Web.
 
-Consultez notre [Documentation JavaScript ][9] pour obtenir une référence technique complète.
+Consultez notre [Documentation JavaScript][9] pour obtenir une référence technique complète.
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
 ## Étape 1 : Installer la bibliothèque Braze
 
-Il existe trois manières simples d’intégrer le SDK pour le Web pour inclure des éléments d’analytique et de messagerie sur votre site. Assurez-vous de consulter notre [guide d’intégration des notifications push ][16] si vous prévoyez d’utiliser des fonctionnalités de notification push pour le Web.
+Il existe trois manières simples d’intégrer le SDK pour le Web pour inclure des éléments d’analytique et de messagerie sur votre site. Assurez-vous de consulter notre [guide d’intégration des notifications push][16] si vous prévoyez d’utiliser des fonctions de ce type pour le Web.
 
 Si votre site Internet utilise un `Content-Security-Policy`, suivez notre [guide d’en-tête CSP][19] en plus des étapes d’intégration suivantes.
-
 
 ### Option 1 : NPM ou Yarn {#install-npm}
 
 Si votre site utilise des gestionnaires de packages NPM ou Yarn, vous pouvez ajouter le [package NPM Braze](https://www.npmjs.com/package/@braze/web-sdk) en tant que dépendance.
 
-Les définitions TypeScript sont désormais comprises dans la version v3.0.0. Pour obtenir les notes de mise à niveau de 2.x à 3.x, consultez notre [Journal de modifications][17].
+Les définitions TypeScript sont désormais comprises dans la version v3.0.0. Pour obtenir les notes de mise à niveau de 2.x à 3.x, consultez notre [Journal de modifications][17].
 
 ```bash
 npm install --save @braze/web-sdk
-# ou, à l’aide de yarn:
+# or, using yarn:
 # yarn add @braze/web-sdk
 ```
 
@@ -39,7 +38,7 @@ Une fois installé, vous pouvez `import` ou `require` la bibliothèque de la man
 
 ```typescript
 import * as braze from "@braze/web-sdk";
-// ou, à l’aide de `require`
+// or, using `require`
 const braze = require("@braze/web-sdk");
 ```
 
@@ -50,9 +49,9 @@ Le SDK Braze pour le Web peut être rapidement installé à partir de la bibliot
 1. Balise d’initialisation : charge le SDK pour le Web sur votre site Internet et définit facultativement l’ID d’utilisateur externe.
 2. Balise Actions : utilisée pour déclencher des événements personnalisés, des achats, modifier des ID utilisateur ou basculer le suivi du SDK.
 
-Consultez le [guide d’intégration de Google Tag Manager ][18]pour plus d’informations.
+Consultez le [guide d’intégration de Google Tag Manager][18] pour plus d’informations.
 
-### Option 3 : CDN (réseau de diffusion de contenu) Braze {#install-cdn}
+### Option 3 : Braze CDN {#install-cdn}
 
 Ajoutez le SDK Braze pour le Web directement à votre code HTML en faisant référence à notre script hébergé par le CDN (réseau de diffusion de contenu), qui charge la bibliothèque asynchrone.
 
@@ -70,41 +69,41 @@ Si vous avez configuré vos options d’initialisation Braze dans un gestionnair
 Pour une liste complète des options pour `braze.initialize()` consultez notre [documentation JavaScript](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
 
 ```javascript
-// Initialiser le SDK
+// initialize the SDK
 braze.initialize('YOUR-API-KEY-HERE', {
     baseUrl: "YOUR-SDK-ENDPOINT-HERE"
 });
 
-// afficher en option tous les messages in-app sans gestion personnalisée
+// optionally show all in-app messages without custom handling
 braze.automaticallyShowInAppMessages();
 
-// Si vous utilisez les Cartes de contenu
+// if you use Content Cards
 braze.subscribeToContentCardsUpdates(function(cards){
-    // cartes ont été mises à jour
+    // cards have been updated
 });
 
-// en option, configurez l’ID externe actuel de l’utilisateur
+// optionally set the current user's External ID
 if (isLoggedIn){
     braze.changeUser(userIdentifier);
 }
 
-// Assurez-vous d’appeler `openSession` après `automaticallyShowInAppMessages`
+// Be sure to call `openSession` after `automaticallyShowInAppMessages`
 braze.openSession();
 ```
 
 Consultez notre [documentation de référence JavaScript][9] pour toutes les autres méthodes JavaScript.
 
 {% alert note %}
-Les utilisateurs anonymes sur les appareils mobiles ou Web peuvent être comptés dans vos [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). Par conséquent, vous pouvez charger ou initialiser conditionnellement le SDK pour exclure ces utilisateurs de votre compte de MAU.
+Les utilisateurs anonymes sur les appareils mobiles ou Web peuvent être comptés dans vos [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). Par conséquent, vous pouvez charger ou initialiser conditionnellement le SDK pour exclure ces utilisateurs de votre décompte de MAU.
 {% endalert %}
 
 ## Étape 3 : Notification push pour le Web (en option)
 
 Une configuration supplémentaire est requise pour utiliser les notifications push pour le Web. Consultez [Notifications push][16] pour obtenir des instructions.
 
-## Résolution des problèmes {#error-logging}
+## Résolution des problèmes{#error-logging}
 
-Pour faciliter la résolution des problèmes, vous pouvez activer la journalisation verbeuse dans le SDK. Cela est utile pour le développement mais est visible pour tous les utilisateurs. Vous devriez donc supprimer cette option ou fournir un autre enregistreur avec `braze.setLogger()` dans votre environnement de production.
+Pour faciliter la résolution des problèmes, vous pouvez activer la journalisation verbeuse dans le SDK. Cela est utile pour le développement, mais est visible pour tous les utilisateurs. Vous devriez donc supprimer cette option ou fournir un autre enregistreur avec `braze.setLogger()` dans votre environnement de production.
 
 ```javascript
 braze.initialize("YOUR-API-KEY-HERE", {
@@ -112,7 +111,7 @@ braze.initialize("YOUR-API-KEY-HERE", {
     enableLogging: true
 });
 
-// ou, après initialisation :
+// or, after initialization:
 
 braze.toggleLogging()
 ```
@@ -130,7 +129,7 @@ Cependant, lorsque nous publions des changements majeurs, nous vous demandons de
 
 Vous pouvez vous maintenir à jour avec notre dernière version [en suivant notre flux de versions](https://github.com/braze-inc/braze-web-sdk/tags.atom) avec le lecteur RSS ou le service de votre choix et consulter [notre journal de modifications](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) pour une description complète de notre historique de versions SDK pour le Web. Pour mettre à niveau le SDK Braze pour le Web :
 
-- Mettez à jour la version de bibliothèque Braze en modifiant le numéro de version de`https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/braze.min.js`, ou dans votre package des dépendances du gestionnaire.
+- Mettez à jour la version de la bibliothèque Braze en modifiant le numéro de version de `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/braze.min.js` ou dans les dépendances de votre responsable de packages.
 - Si vous avez intégré des notifications push pour le Web, mettez à jour le fichier du service de traitement sur votre site. Par défaut, ce paramètre est situé à `/service-worker.js` dans le répertoire racine de votre site, mais l’emplacement peut être personnalisé dans certaines intégrations. Vous devez accéder au répertoire racine pour héberger un fichier de service de traitement.
 
 Ces deux fichiers doivent être mis à jour en coordination les uns avec les autres afin de garantir une fonctionnalité appropriée.
@@ -139,17 +138,17 @@ Ces deux fichiers doivent être mis à jour en coordination les uns avec les aut
 
 ### Cadres de rendu côté serveur {#ssr}
 
-Si vous utilisez un cadre de rendu côté serveur comme Next.js, vous pourriez rencontrer des erreurs car le SDK est conçu pour être exécuté dans un environnement de navigateur. Vous pouvez résoudre ces problèmes en important le SDK de façon dynamique.
+Si vous utilisez un cadre de rendu côté serveur comme Next.js, vous pourriez rencontrer des erreurs, car le SDK est conçu pour être exécuté dans un environnement de navigateur. Vous pouvez résoudre ces problèmes en important le SDK de façon dynamique.
 
 Vous pouvez conserver les bénéfices du nettoyage lorsque vous y procédez en exportant les parties du SDK dont vous avez besoin dans un fichier séparé et en important ensuite de façon dynamique ce fichier dans votre composant.
 
 ```javascript
 // MyComponent/braze-exports.js
-// exporter les parties du SDK dont vous avez besoin ici
+// export the parts of the SDK you need here
 export { initialize, openSession } from "@braze/web-sdk";
 
 // MyComponent/MyComponent.js
-//importe les fonctionnalités dont vous avez besoin depuis le fichiers d’exportation Braze
+// import the functions you need from the braze exports file
 useEffect(() => {
     import("./braze-exports.js").then(({ initialize, openSession }) => {
         initialize("YOUR-API-KEY-HERE", {
@@ -179,15 +178,19 @@ useEffect(() => {
 }, []);
 ```
 
-### Assistance Vite {#vite}
+### Prise en charge de Vite {#vite}
 
-Si vous utilisez Vite et voyez un avertissement autour des dépendances circulaires ou `Uncaught TypeError : La classe étend la valeur non définie n’est pas un constructeur ou nul`, vous devrez peut-être exclure le SDK Braze de sa [découverte de dépendance](https://vitejs.dev/guide/dep-pre-bundling.html#customizing-the-behavior) :
+Si vous utilisez Vite et voyez un avertissement autour des dépendances circulaires ou `Uncaught TypeError: Class extends value undefined is not a constructor or null`, vous pourriez devoir exclure le SDK de Braze de sa [découverte de dépendance](https://vitejs.dev/guide/dep-pre-bundling.html#customizing-the-behavior) :
 
 ```
 optimizeDeps: {
     exclude: ['@braze/web-sdk']
 },
 ```
+
+### Prise en charge d’Electron {#electron}
+
+Electron ne prend pas officiellement en charge les notifications push Web (voir : ce [problème Github](https://github.com/electron/electron/issues/6697)). Il existe d’autres [solutions de contournement open source](https://github.com/MatthieuLemoine/electron-push-receiver) que vous pourriez essayer et qui n’ont pas été testées par Braze.
 
 ### Chargeur de module AMD
 
@@ -216,7 +219,7 @@ Braze peut également être compatible avec d’autres solutions de gestion des 
 
 ### Résolution des problèmes du cadre Jest {#jest}
 
-Lorsque vous utilisez Jest, vous pouvez visualiser une erreur similaire à `SyntaxError: Unexpected token 'export'`. Pour la réparer, ajustez votre configuration dans `package.json` pour ignorer le Braze SDK:
+Lorsque vous utilisez Jest, vous pouvez visualiser une erreur similaire à `SyntaxError: Unexpected token 'export'`. Pour la réparer, ajustez votre configuration dans `package.json` pour ignorer le Braze SDK :
 
 ```
 "jest": {

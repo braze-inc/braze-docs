@@ -6,15 +6,15 @@ alias: /attribute_triggers/
 page_type: reference
 description: "Le présent article de référence donne un aperçu des déclencheurs d’attributs et la manière dont vous pouvez les utiliser pour envoyer des messages basés sur des actions aux utilisateurs."
 tool:
-  - Campagnes
+  - Campaigns
 
 ---
 
-# Aperçu des déclencheurs d’attributs
+# Déclencheurs d’attributs
 
-> Le présent article de référence donne un aperçu des déclencheurs d’attributs et la manière dont vous pouvez les utiliser pour envoyer des messages basés sur des actions.
+> Les déclencheurs d’attributs vous permettent d’envoyer des messages basés sur des actions lorsque le statut d’abonnement d’un utilisateur ou les valeurs d’attribut personnalisé changent. 
 
-Les déclencheurs d’attributs vous permettent d’envoyer des messages basés sur des actions lorsque le statut d’abonnement d’un utilisateur ou les valeurs d’attribut personnalisé changent. Les déclencheurs d’attributs sont disponibles pour les scénarios suivants :
+Les déclencheurs d’attributs sont disponibles pour les scénarios suivants :
 
 - Mises à jour du statut d’abonnement.
 - Les valeurs d’attribut personnalisé booléennes, entières, chaînes de caractères ou dates changent vers n’importe quelle valeur.
@@ -32,13 +32,23 @@ Par exemple, vous pouvez cibler les utilisateurs lorsque leur statut d’abonnem
 
 ### Mettre à jour le statut du groupe d’abonnement
 
-Utilisez le déclencheur `Update Subscription Group Status` pour cibler les utilisateurs lorsque leur statut du groupe d’abonnement pour les e-mails et les SMS est mis à jour. 
+Utilisez le déclencheur `Update Subscription Group Status` pour cibler les utilisateurs lorsque leur statut du groupe d’abonnement pour les e-mails, les SMS ou WhatsApp est mis à jour. 
 
 Par exemple, vous pouvez cibler les utilisateurs avec un message SMS de bienvenue une fois qu’ils s’abonnent à votre programme. Vous pouvez également spécifier la source de la mise à jour afin d’obtenir un contrôle plus précis du moment où un message est envoyé. 
 
-Les sources de mise à jour peuvent être une API REST, un centre de préférence (e-mail) ou un message entrant (SMS). Par exemple, vous pouvez désirer envoyer votre SMS de bienvenue uniquement lorsque la mise à jour provient de l’API REST et non pas d’un message entrant puisque Braze répond déjà automatiquement à certains SMS entrants.
+Les sources de mise à jour disponibles varient selon le canal :
+- Importation CSV
+- Centre de préférences
+- API REST
+- SDK
+- Shopify (e-mail, SMS)
+- Message entrant (SMS)
+
+Par exemple, vous pouvez désirer envoyer votre SMS de bienvenue uniquement lorsque la mise à jour provient de l’API REST et non pas d’un message entrant puisque Braze répond déjà automatiquement à certains SMS entrants.
 
 ### Modifier la valeur d’attribut personnalisé
+
+Pour modifier l’attribut, le déclencheur est évalué en premier, puis les critères d’audience. Cela diffère du comportement par défaut des critères d’audience évalués en premier, puis déclenchés. Pour éviter une condition de compétition, assurez-vous que l’attribut utilisé comme déclencheur n’est pas le même que l’attribut utilisé pour qualifier votre audience.
 
 #### Toute nouvelle option de valeur
 
@@ -58,10 +68,9 @@ Vous pouvez également utiliser Liquid pour personnaliser le corps du message av
 
 {% raw %}
 ```liquid
-Votre niveau de fidélité vient d'être changé en {{custom_attribute.${loyalty_tier}}}
+Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 ```
 {% endraw %}
-
 
 #### Valeur spécifique
 
@@ -77,8 +86,6 @@ Par exemple, cibler les utilisateurs lorsque leur niveau de fidélité passe au 
 - Le déclencheur de changement de valeurs d’attribut personnalisé ne se déclenche que lorsque la valeur d’un attribut personnalisé change. Si la valeur actuelle d’un attribut personnalisé est envoyée à nouveau à Braze (par ex. la valeur de l’attribut de couleur préféré est rouge et que vous envoyez à nouveau la valeur rouge à Braze), le déclenchement de changement de valeurs d’attribut personnalisé n’aura pas lieu.
 - Le déclencheur de changement de valeurs d’attribut personnalisé s’applique également aux nouveaux utilisateurs créés. 
 {% endalert %}
-
-
 
 [1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
 [2]:{% image_buster /assets/img_archive/any_value.png %}

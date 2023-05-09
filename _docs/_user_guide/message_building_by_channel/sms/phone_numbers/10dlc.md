@@ -9,12 +9,12 @@ channel:
   
 ---
 
-# Application-to-Person 10-Digit Long Codes (A2P 10DLC)
+# Application-to-Person 10-Digit Long Codes
 
 > A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. These registered long codes are granted higher throughput, better deliverability, and improved compliance than the standard long code.
 
 {% alert important %}
-All customers who currently have and/or use US long codes to send to US customers are required to register their long codes for 10DLC; those who fail to do so will experience heavy filtering of all messages.
+All customers who currently have and/or use US long codes to send to US customers are required to register their long codes for 10DLC; those who fail to do so will experience heavy filtering of all messages. This application process takes 4-6 weeks.
 {% endalert %}
 
 ## Why it's necessary
@@ -30,6 +30,10 @@ All customers who currently have and/or use US long codes to send to US customer
 Since 2019, carriers have begun adopting 10DLC for commercial messaging, with Verizon and AT&T currently supporting 10DLC, and we expect all major carriers to follow soon. While it may cause inconveniences in the short term, in the long term, customers will enjoy better deliverability rates while protecting their consumers from unwanted messages. 
 
 ## What you need to know
+
+### Access
+
+Registering long codes with A2P 10DLC will take 4-6 weeks.
 
 ### Costs 
 
