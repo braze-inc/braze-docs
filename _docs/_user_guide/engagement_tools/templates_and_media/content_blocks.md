@@ -16,7 +16,7 @@ tool:
 
 With Content Blocks, you can:
 
-- Create a consistent look and feel to your email campaigns using Content Blocks as headers and footers.
+- Create a consistent look and feel to your email campaigns using them as headers and footers.
 - Distribute the same offer codes through different channels.
 - Create pre-defined assets that can be used to build messages with consistent information and assets.
 - Copy entire message bodies to other messages.
@@ -25,9 +25,7 @@ With Content Blocks, you can:
 
 Creating a Content Block is easy—go to **Templates & Media**, then select the **Content Blocks Library** tab. Click **Create Content Block.** Then, create your Content Block!
 
-![][1]
-
-Content Blocks have two types: `HTML` or `text`. Braze will select the type for you based on the content you inserted into the block. If Braze detects `HTML` markup in the Content Block, the block type will switch to `HTML` automatically. Otherwise, it will be considered `text`.  
+Content Blocks have two types: drag-and-drop or HTML. Braze will select the type for you based on the content you inserted into the block. If Braze detects HTML markup in the Content Block, the block type will switch to an HTML type automatically. Otherwise, it will be considered drag-and-drop.  
 
 You can also create and manage your Content Blocks [via API][5].
 
@@ -99,7 +97,6 @@ If you made a mistake in archiving a Content Block, you can unarchive it.
 | Creation | HTML or Text. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-[1]: {% image_buster /assets/img/create-content-blocks.gif %}
 [2]: {% image_buster /assets/img/copy-content-block.png %}
 [3]: {% image_buster /assets/img/template_archive_cog.png %}
 [4]: {% image_buster /assets/img/unarchive-content-block.png %}
