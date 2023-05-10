@@ -43,6 +43,10 @@ You will need to ensure that you have the following items created and/or complet
 
 In the Braze dashboard, go to **Technology Partners** and select **Pinterest**. In the Pinterest Audience Export module, click **Connect Pinterest**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
 ![Pinterest technology page in Braze that includes an Overview module and Pinterest Audience Sync module with the Connected Pinterest button.][1]{: style="max-width:80%;"}
 
 You'll then be redirected to the Pinterest OAuth page to authorize Braze for Ad Account Management and Audience Management.

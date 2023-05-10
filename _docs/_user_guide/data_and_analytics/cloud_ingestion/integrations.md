@@ -250,6 +250,10 @@ If you have network policies in place, you must give Braze network access to you
 
 Navigate to the Snowflake page on Braze, under **Technology Partners**, and click **Create new import sync**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
 #### Step 1: Add Snowflake connection information and source table
 
 Input the information for your Snowflake data warehouse and source table, then proceed to the next step.

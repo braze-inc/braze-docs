@@ -12,7 +12,13 @@ page_order: 2
 # Setting up Shopify
 
 ### Step 1: Locate Shopify within the dashboard
-In Braze, go to the **Technology Partners** section and then search **Shopify**. On the Shopify partner page, select **Begin Setup** to start the integration process.
+In Braze, go to the **Technology Partners** section and then search **Shopify**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
+On the Shopify partner page, select **Begin Setup** to start the integration process.
 
 ![Data Import and Web SDK Installation section of the Shopify partner page in Braze.][2]{: style="max-width:80%;"}
 

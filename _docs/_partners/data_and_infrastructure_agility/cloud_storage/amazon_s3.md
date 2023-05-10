@@ -136,6 +136,10 @@ A notification will inform you whether your credentials have been successfully v
 
 In Braze, navigate to the **Technology Partners** page under **Integrations** and click **Amazon S3**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
 On the AWS Credentials page, make sure the **AWS Secret Access Key** radio button is selected, then input your AWS access ID, AWS secret access key, and AWS S3 bucket name in the designated fields. When inputting your secret key, click **Test Credentials** first to ensure your credentials work, then click **Save** once successful.
 
 ![]({{site.baseurl}}/assets/img/s3_tech_partners.png)
