@@ -25,7 +25,13 @@ Some common custom event use cases include:
 
 ## Managing custom events
 
-To create and manage custom events in the dashboard, go to **Manage Settings** > **Custom Events**. From this page, you can view, manage, or blocklist existing custom events, or create a new one. If you block a custom event, no data will be collected regarding that event, existing data will be unavailable unless reactivated, and blocklisted events will not show up in filters or graphs.
+To create and manage custom events in the dashboard, go to **Manage Settings** > **Custom Events**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Events** under **Data Settings**.
+{% endalert %}
+
+From this page, you can view, manage, or blocklist existing custom events, or create a new one. If you block a custom event, no data will be collected regarding that event, existing data will be unavailable unless reactivated, and blocklisted events will not show up in filters or graphs.
 
 ## Logging custom events
 

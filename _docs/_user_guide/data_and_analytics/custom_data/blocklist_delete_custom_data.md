@@ -31,6 +31,10 @@ To blocklist a custom data object:
 3. Find the custom data object in the table.
 4. Select **Blocklist**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find all of these pages under **Data Settings**.
+{% endalert %}
+
 ![Warning that prevents you from blocklisting a custom data object and lists where the custom data is currently being referenced.][1]{: style="max-width:50%;float:right;margin-left:15px;"}
 
 If the custom data object is still in use, you need to remove it from the segment filters or campaign triggers it is referenced in before you can blocklist it. You can see where the custom data is currently in use when you attempt to blocklist it.
