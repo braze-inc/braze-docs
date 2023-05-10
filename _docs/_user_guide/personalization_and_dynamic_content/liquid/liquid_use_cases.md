@@ -104,7 +104,7 @@ This use case shows how to calculate a user's birthday month, check if their bir
 {% if {{this_month}} == {{birth_month}} %}
 Message body 
 {% else %} 
-{% abort_message() %}
+{% abort_message("Not their birthday month") %}
 {% endif %}
 ```
 {% endraw %}
@@ -909,7 +909,7 @@ Today's offer from {{store}}
 {% break %}
 
 {% else %}
-{% abort_message("No Attribute Found") %}
+{% abort_message("No attribute found") %}
 {% endif %}
 {% endfor %}
 ```
@@ -1166,7 +1166,7 @@ This use case takes a list of soon-to-be-expired shows, checks if any of a user'
 All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now before they're gone!
 
 {% else %}
-{% abort_message("Not Found") %}
+{% abort_message("Not found") %}
 {% endif %}
 ```
 {% endraw %}
@@ -1405,7 +1405,7 @@ For example, the following scenario lets a user know that a store is closed.
 Store's closed. Come back between 11 am and 9 pm!
 
 {% else %} 
-{% abort_message("not sent because the store is open") %}
+{% abort_message("Not sent because the store is open") %}
 {% endif %}
 ```
 {% endraw %}
@@ -1515,7 +1515,7 @@ This use case will check if the current date falls within a list of dates, and d
 The date is correct
 
 {% else %}
-{% abort_message() %}
+{% abort_message("Date is not listed") %}
 {% endif %}
 ```
 {% endraw %}
@@ -1603,7 +1603,7 @@ Message for 2019-12-02
 Message for 2019-12-03
 
 {% else %}
-{% abort_message() %}
+{% abort_message("Date not listed") %}
 {% endif %}
 ```
 {% endraw %}
