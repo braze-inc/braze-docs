@@ -72,9 +72,14 @@ Braze currently supports overriding the ESP's default open tracking pixel locati
 ![][13]{: style="max-width:80%;" }
 
 To change the location:
+
 1. Go to **Manage App Group**, then **Email Settings** in your Braze account.
 2. Click the checkbox under **Custom Open Tracking Pixel Settings**. 
 3. Press **Save**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Email Settings** is now **Email Preferences** and is located at **Settings** > **Workspace Settings** > **Email Preferences**.
+{% endalert %}
 
 Once saved, Braze will send special instructions to the ESP in order to place the open tracking pixel at the top of all HTML emails.
   
