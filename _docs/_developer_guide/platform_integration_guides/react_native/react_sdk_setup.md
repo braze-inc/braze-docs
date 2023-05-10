@@ -233,7 +233,7 @@ import BrazeKit
 In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 {% alert note %}
-Our example uses the `bundleURL` parameter to initialize the `RCTRootView` object, but note that your project is not strictly tied to these initialization method and may use other initializers such as the `initWithBridge` method instead.
+Our example uses the `bundleURL` parameter to initialize the `RCTRootView` object, but note that your project is not strictly tied to this initialization method and may use other initializers such as the `initWithBridge` method instead.
 {% endalert %}
 
 ```swift
@@ -294,7 +294,7 @@ Import the Braze SDK at the top of the `AppDelegate.m` file:
 In the `application:didFinishLaunchingWithOptions:` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 {% alert note %}
-Our example uses the `bundleURL` parameter to initialize the `RCTRootView` object, but note that your project is not strictly tied to these initialization method and may use other initializers such as the `initWithBridge` method instead.
+Our example uses the `bundleURL` parameter to initialize the `RCTRootView` object, but note that your project is not strictly tied to this initialization method and may use other initializers such as the `initWithBridge` method instead.
 {% endalert %}
 
 ```objc
