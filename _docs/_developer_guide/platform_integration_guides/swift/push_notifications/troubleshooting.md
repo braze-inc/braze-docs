@@ -52,6 +52,10 @@ If [APNs][20] informs us that any of the push tokens we were attempting to send 
 
 The **Message Activity Log** in the [Developer Console][3] gives you the opportunity to see any messages (especially error messages) associated with your campaigns and sends, including push notification errors. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** at **Settings** > **Setup and Testing** > **Message Activity Log**.
+{% endalert %}
+
 ![Push error logs displaying the time the error occurred, the app name, the channel, error type, and error message.][26]
 
 Common errors you might see here include user-specific notifications, such as ["Received Unregistered Sending to Push Token"][35].
