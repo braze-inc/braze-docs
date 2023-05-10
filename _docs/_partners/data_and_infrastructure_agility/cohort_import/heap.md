@@ -68,7 +68,13 @@ You’ll need a webhook endpoint URL to configure this integration, which you ca
 
 ### Step 2: Configure Braze Currents
 
-In Braze, navigate to **Currents** under **Integrations** and click **Create New Current** and select **Custom Currents Export**. Give your export a name, and then proceed to the **Current Details** page. On this page, you'll need to enter the endpoint and optional bearer token (if provided).
+In Braze, navigate to **Currents** under **Integrations** and click **Create New Current** and select **Custom Currents Export**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Currents** under **Partner Integrations** > **Data Export**.
+{% endalert %}
+
+Give your export a name, and then proceed to the **Current Details** page. On this page, you'll need to enter the endpoint and optional bearer token (if provided).
 
 After configuring your integration's credentials, check all message engagement, customer behavior, and user events you would like to export to Heap, and click **Launch Current**.
 
