@@ -81,8 +81,7 @@ Historical control groups are not preserved, so you can only export the members 
 
 ## Reporting
 
-Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) for information on report metrics.
-
+Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) for information on report metrics.
 
 ## Troubleshooting
 
