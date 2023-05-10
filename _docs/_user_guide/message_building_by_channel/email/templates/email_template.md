@@ -108,7 +108,7 @@ The **Preview & Test** section allows you to preview your email based on differe
 
 - **Random User:** Braze will randomly select a user from the database and preview the email based on their attributes/event information.
 Note: This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.<br><br>
-- **Select User:** You can select a specific user based on their email address or `external_id`. The email will preview based on that user's attributes and event information<br><br>
+- **Select User:** You can select a specific user based on their email address or external ID. The email will preview based on that user's attributes and event information<br><br>
 - **Custom User:** You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
 {% endsubtab %}
 {% endsubtabs %}
