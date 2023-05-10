@@ -13,4 +13,4 @@ description: "This page lists updates to Braze's Cordova SDK changelog for Andro
 
 # Cordova SDK changelog
 
-{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-cordova-sdk/master/CHANGELOG.md %}
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-cordova-sdk/master/CHANGELOG.md %}
