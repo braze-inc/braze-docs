@@ -14,25 +14,25 @@ search_rank: 2
 
 > This reference article covers how to install the Braze iOS SDK for Cordova. 
 
-Download the SDK from [Github][1] and run the following from the root your project:
+Download the SDK from [GitHub][1] and run the following from the root your project:
 
 ```
-cordova plugin add path_to_repo/appboy-cordova-sdk/
+cordova plugin add path_to_repo/braze-cordova-sdk/
 ```
 
 Alternatively, if you are running Cordova 6 or later, you could install directly from Github:
 
 ```
-cordova plugin add https://github.com/appboy/appboy-cordova-sdk#master
+cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#master
 ```
 
 ## Configure the plugin
 
-In your `config.xml`, add a `preference` element under the iOS `platform` element that contains your Braze API key with the name `com.appboy.api_key`:
+In your `config.xml`, add a `preference` element under the iOS `platform` element that contains your Braze API key with the name `com.braze.api_key`:
 
 ```xml
 <platform name="ios">
-    <preference name="com.appboy.api_key" value="YOUR_API_KEY" />
+    <preference name="com.braze.api_key" value="YOUR_API_KEY" />
 </platform>
 ```
 
@@ -44,7 +44,7 @@ If you want to turn off iOS automatic push registration, set the following confi
 
 ```xml
 <platform name="ios">
-    <preference name="com.appboy.ios_disable_automatic_push_registration" value="YES" />
+    <preference name="com.braze.ios_disable_automatic_push_registration" value="YES" />
     ...
 </platform>
 ```
@@ -55,7 +55,7 @@ To enable the automatic collection of the [iOS IDFA][3], set the following confi
 
 ```xml
 <platform name="ios">
-    <preference name="com.appboy.ios_enable_idfa_automatic_collection" value="YES" />
+    <preference name="com.braze.ios_enable_idfa_automatic_collection" value="YES" />
 </platform>
 ```
 
@@ -65,24 +65,24 @@ To enable location collection and Braze Geofences, use the `geofence-branch` ins
 
 ```xml
 <platform name="ios">
-    <preference name="com.appboy.enable_location_collection" value="true" />
-    <preference name="com.appboy.geofences_enabled" value="true" />
+    <preference name="com.braze.enable_location_collection" value="true" />
+    <preference name="com.braze.geofences_enabled" value="true" />
 </platform>
 ```
 
 The `geofence-branch` can be added to your Cordova project with the following:
 
 ```
-cordova plugin add https://github.com/appboy/appboy-cordova-sdk#geofence-branch
+cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branch
 ```
 
 See [iOS Geofences][4] for more details.
 
 ### Initial setup complete
 
-Once the initial setup is complete, you can access the `AppboyPlugin` JavaScript interface in your app.
+Once the initial setup is complete, you can access the `BrazePlugin` JavaScript interface in your app.
 
-[1]: https://github.com/Appboy/appboy-cordova-sdk
+[1]: https://github.com/braze-inc/braze-cordova-sdk
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/
+[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/

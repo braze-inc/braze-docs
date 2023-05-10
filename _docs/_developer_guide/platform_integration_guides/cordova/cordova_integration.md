@@ -23,14 +23,14 @@ A custom API endpoint can be configured via the `config.xml`. For example, to us
 ```
 <platform name="android">
     ...
-    <preference name="com.appboy.android_api_endpoint" value="sdk.fra-01.braze.eu" />
+    <preference name="com.braze.android_api_endpoint" value="sdk.fra-01.braze.eu" />
 </platform>
 ```
 #### iOS
 ```
 <platform name="ios">
     ...
-    <preference name="com.appboy.ios_api_endpoint" value="sdk.fra-01.braze.eu" />
+    <preference name="com.braze.ios_api_endpoint" value="sdk.fra-01.braze.eu" />
 </platform>
 ```
 
@@ -40,7 +40,7 @@ If you use the Cordova SDK default setup you won't have to make any new changes 
 
 ## In-app messaging
 
-By default the Cordova SDK supports in-app messages with no changes. See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/) integration examples for information on customizing in-app messages. Furthermore, you can look at the [sample Cordova application](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) or the sample [Android](https://github.com/braze-inc/braze-android-sdk) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/) application for implementation samples.
+By default the Cordova SDK supports in-app messages with no changes. See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/) integration examples for information on customizing in-app messages. Furthermore, you can look at the [sample Cordova application](https://github.com/braze-inc/braze-cordova-sdk/blob/master/sample-project/www/js/index.js) or the sample [Android](https://github.com/braze-inc/braze-android-sdk) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/) application for implementation samples.
 
 ## Analytics
 
@@ -49,7 +49,7 @@ By default the Cordova SDK supports in-app messages with no changes. See the [An
 See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) integration instructions for an in-depth discussion of when to set and change a user ID.
 
 ```javascript
-AppboyPlugin.changeUser("YOUR_USER_ID");
+BrazePlugin.changeUser("YOUR_USER_ID");
 ```
 
 ### Logging custom events
@@ -59,7 +59,7 @@ See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/a
 ```javascript
 var properties = {};
 properties["KeyOne"] = "Val1";
-AppboyPlugin.logCustomEvent("cordovaCustomEventWithProperties", properties);
+BrazePlugin.logCustomEvent("cordovaCustomEventWithProperties", properties);
 ```
 
 ### Setting custom attributes
@@ -67,7 +67,7 @@ AppboyPlugin.logCustomEvent("cordovaCustomEventWithProperties", properties);
 See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/) integration instructions for in-depth discussion of attribute tracking best practices and interfaces.
 
 ```javascript
-AppboyPlugin.setFirstName("firstName");
+BrazePlugin.setFirstName("firstName");
 ```
 
 ### Logging purchases
@@ -77,7 +77,7 @@ See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/a
 ```javascript
 var properties = {};
 properties["KeyOne"] = "ValueOne";
-AppboyPlugin.logPurchase("product_id_with_null_currency", 10, null, 5, properties);
+BrazePlugin.logPurchase("product_id_with_null_currency", 10, null, 5, properties);
 ```
 
 #### Log purchases at the order level
@@ -89,6 +89,6 @@ If you would like to log purchases at the order level instead of the product lev
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/news_feed/) integration instructions for information on how to integrate the News Feed into your Cordova app. Alternatively, our Cordova plugin provides a method, `launchNewsFeed`, that will launch a modal News Feed without further integration. 
+See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/news_feed/) integration instructions for information on how to integrate the News Feed into your Cordova app. Alternatively, our Cordova plugin provides a method, `launchNewsFeed`, that will launch a modal News Feed without further integration. 
 
-The Braze Cordova SDK has several methods to get the number of read or unread News Feed cards for different categories. Check out a [sample project implementation](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) for an example.
+The Braze Cordova SDK has several methods to get the number of read or unread News Feed cards for different categories. Check out a [sample project implementation](https://github.com/braze-inc/braze-cordova-sdk/blob/master/sample-project/www/js/index.js) for an example.
