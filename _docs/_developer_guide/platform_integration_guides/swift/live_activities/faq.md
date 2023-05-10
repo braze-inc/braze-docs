@@ -50,6 +50,10 @@ Apple requires that the user initiates the Live Activity through some action in 
 
 Any Live Activity errors will be logged in the Braze dashboard under **Developer Console** > **Message Activity Log**, where you can filter by "LiveActivity Errors".
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** at **Settings** > **Setup and Testing** > **Message Activity Log**.
+{% endalert %}
+
 ### I am receiving an Access Denied response when I try to use the `live_activity/update` endpoint. Why?
 
 The API keys you use need to be given the correct permissions to access the different Braze API endpoints. If you are using an API key that you previously created, it's possible that you neglected to update its permissions. Read our [API key security overview][3] for a refresher.

@@ -247,7 +247,13 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 ![][28]{: style="max-width:20%;float:right;margin-left:15px;"}
 
-To create a new REST API key, visit the **Developer Console** on your Braze dashboard. This page displays your existing API keys. To create a new key, click **Create New API Key**.
+To create a new REST API key, visit the **Developer Console** > **API Settings** on your Braze dashboard. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
+
+This page displays your existing API keys. To create a new key, click **Create New API Key**.
 
 You can then to do the following:
 

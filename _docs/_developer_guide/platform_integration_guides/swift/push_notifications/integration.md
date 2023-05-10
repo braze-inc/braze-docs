@@ -264,10 +264,14 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API][29]. You will need to replace the following fields with the correct values for your test case:
 
-- `YOUR_API_KEY` - available on the **Developer Console** page.
+- `YOUR_API_KEY` - available at **Developer Console** > **API Settings**.
 - `YOUR_EXTERNAL_USER_ID` - available on the **User Search** page. See [assigning user IDs][32] for more information.
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), these pages are in a new location: <br>- **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys** <br>- **User Search** is now **Search Users** and can be found under **Audience**
+{% endalert %}
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{

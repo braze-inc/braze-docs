@@ -22,6 +22,10 @@ Programmatically migrate iOS (APNs) and Android (FCM) tokens to your platform by
 
 You need to specify your app's `app_id` during push token migration to associate the appropriate push token with the appropriate app. Each app (iOS, Android, etc.) has its own `app_id`, which can be found in the **Developer Console**, under the **API Settings** tab in the **Identification** section. Be sure to use the correct platform's `app_id`.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
+
 {% alert important %}
 It is not possible to migrate web push tokens through the API. This is because web push tokens do not conform to the same schema as other platforms. 
 

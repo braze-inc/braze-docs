@@ -50,13 +50,17 @@ To create an audience in mParticle, navigate to **Audiences > Single Workspace >
 
 To connect Braze as an output for your audience, you must provide the following fields:
 
-- **API key**: Found in the Braze **Developer Console** under **Settings**.
+- **API key**: Found in the Braze at **Developer Console** > **API Settings**.
 - **API key operating system**: Select which operating system your Braze API key corresponds to. This selection will limit the types of push tokens forwarded on an audience update.
 - **Send segments as**: The method of sending audiences to Braze: Single Attribute, One Attribute Per Segment, or Both. 
 - **App group REST API key**:  Braze REST API key with full permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
 - **External identity type**: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
 - **Email identity type**: The mParticle user identity type to forward as the email to Braze.
 - **Braze instance**: Specify which cluster your Braze data will be forwarded to
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
 
 Lastly **Save** your audience. 
 

@@ -14,9 +14,14 @@ channel:
 If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API][29]. You will need to replace the following fields with the correct values for your test case:
 
 Required fields:
-- `YOUR-API-KEY-HERE` - available on the **Developer Console** page. Ensure the key is authorized to send messages via the `/messages/send` REST API endpoint. 
-- `EXTERNAL_USER_ID` - available on the **User Profile Search** page.
+
+- `YOUR-API-KEY-HERE` - available at **Developer Console** > **API Settings**. Ensure the key is authorized to send messages via the `/messages/send` REST API endpoint. 
+- `EXTERNAL_USER_ID` - available on the **User Search** page.
 - `REST_API_ENDPOINT_URL` - listed on the Braze [Instances]({{site.baseurl}}/api/basics/#endpoints. Ensure using the endpoint corresponds to the Braze instance your app group is on.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), these pages are in a new location: <br>- **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys** <br>- **User Search** is now **Search Users** and can be found under **Audience**
+{% endalert %}
 
 Optional fields:
 - `YOUR_KEY1` (optional)

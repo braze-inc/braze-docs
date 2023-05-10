@@ -25,6 +25,10 @@ You can also specify an abort reason, which will be saved to the **Message Activ
 `{% abort_message('Could not get enough recommendations') %}`
 {% endraw %}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** at **Settings** > **Setup and Testing** > **Message Activity Log**.
+{% endalert %}
+
 {% alert important %}
 Braze does not count aborted messages towards the send count in your Braze account or in Currents.
 {% endalert %}

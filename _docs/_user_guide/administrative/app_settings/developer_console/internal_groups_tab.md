@@ -21,10 +21,14 @@ In addition to this article, we also recommend checking out our [Quality Assuran
 
 To create an Internal Group, perform the following steps: 
 
-1. Go to the **Developer Console** and select the **Internal Groups** tab. 
+1. Go to the **Developer Console** and select the **Internal Groups** tab.
 2. Click **Create Internal Group**.
 3. Give your group a meaningful name.
 4. Choose one or more group types, as listed in the following chart.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Internal Groups** at **Settings** > **Setup and Testing** > **Internal Groups**.
+{% endalert %}
 
 ![Creating an Internal Group in Braze][7]
 
