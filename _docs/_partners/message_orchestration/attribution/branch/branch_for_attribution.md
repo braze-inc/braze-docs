@@ -89,6 +89,10 @@ Here, you will find the REST endpoint and generate your Braze data import key. O
 
 ### Step 3: Set up data feeds
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Currents** under **Data Settings**.
+{% endalert %}
+
 1. In Branch, under the **Exports** section, click **Data Feeds**.
 2. On the **Data Feeds Manager** page, click the **Data Integrations** tab at the top of the page. 
 3. Select Braze from the list of available data partners. 
