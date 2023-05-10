@@ -52,6 +52,3 @@ search_tag: Partner
 Once your data has been exported, Personalize.AI will continue to pass data to Braze at the intervals determined by the sync frequency that you set during integration.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: {% image_buster /assets/img/personalize/PAI1.png %}
-[3]: {% image_buster /assets/img/personalize/PAI2.png %}
-[4]: {% image_buster /assets/img/personalize/PAI3.png %}
