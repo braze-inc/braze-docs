@@ -35,6 +35,10 @@ Before you can send an iOS push notification using Braze, you must provide your 
 6. Navigate to **Manage Settings > Settings** in the dashboard and upload the `.p8` file under **Apple Push Certificate**.
 7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/documentation/foundation/nsbundle/1418023-bundleidentifier), [key ID](https://developer.apple.com/help/account/manage-keys/get-a-key-identifier/), and [team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id). Click **Save**.<br><br>
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Settings** is now **App Settings** and can be found at **Settings** > **Setup and Testing** > **App Settings**.
+{% endalert %}
+
 {% endtab %}
 {% tab .p12 Certificate (Legacy) %}
 **Using a .p12 certificate (legacy)**

@@ -60,6 +60,10 @@ The following requirements are typical requirements you might need from Braze. W
 |Braze API endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a [support ticket]({{site.baseurl}}/braze_support/). | Description pending. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Settings** is now **App Settings** and can be found at **Settings** > **Setup and Testing** > **App Settings**.
+{% endalert %}
+
 ## [Type of Integration] Integration
 
 This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents which will be used by marketers and developers alike to get the integration up and running. Your only goal for this section is to write descriptive documentation that helps the Braze User get the job done. By 'Type of Integration' in the section title, we mean to indicate whether or not this is a Side-by-Side integration, server-to-server, or Out-of the Box. This enables you to have multiple Integration Sections if there is more than one way to integrate with this partner.

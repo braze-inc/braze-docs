@@ -27,6 +27,10 @@ App groups are where you organize your apps. Think of each of these app groups a
 
 Next, you'll be taken to the **Settings** page. Generally, you can access this page by going to **Manage Settings** > **Settings**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find this page under **Settings** > **Setup and Testing** > **App Settings**.
+{% endalert %}
+
 ### Step 2: Add your apps
 
 1. From the **Settings** page, click <i class="fas fa-plus"></i> **Add App**.
