@@ -93,7 +93,7 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 });
 ```
 
-## Step 3 (optional)
+## Step 3: Enable deep linking (optional)
 
 To enable Braze to handle deep links inside of React components when a push notification is clicked, follow the additional steps.
 
@@ -105,14 +105,14 @@ Our [AppboyProject sample app](https://github.com/braze-inc/braze-react-native-s
 {% endtab %}
 {% tab Android %}
 
-### Step 3.1a
+### Step 3.1a: Handle deep links automatically
 
 For Android, setting up deep links is identical to [setting up deep links on native Android apps]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-add-deep-links). If you want the Braze SDK to handle push deep links automatically, set `androidHandlePushDeepLinksAutomatically: true` in your `app.json`.
 
 {% endtab %}
 {% tab iOS %}
 
-### Step 3.1b
+### Step 3.1b: Add `populateInitialUrlFromLaunchOptions`
 
 For iOS, add `populateInitialUrlFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. 
 
@@ -139,7 +139,7 @@ For example:
 
 ```
 
-### Step 3.2b
+### Step 3.2b: Add `getInitialURL()`
 
 Add the `getInitialURL()` method to handle when a deep link opens your app.
 
