@@ -265,7 +265,7 @@ BrazePlugin.getFeatureFlagNumberProperty(
   "my_flag",
   "height",
   (height) => {
-    if (!height) {
+    if (height === null) {
       console.log(`Property not found`);
     } else {
       console.log(height);
