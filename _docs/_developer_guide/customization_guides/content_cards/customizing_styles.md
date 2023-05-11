@@ -13,9 +13,7 @@ channel:
 
 ## Customizing styling
 
-Braze provides five Content Card templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Then, you can tweak certain parts of the card's styling. 
-
-<!--- Question: Is `BrazeUI` a concept that all platform SDKs share, or is the term here inappropriate when used outside of the Swift SDK? --->
+Braze provides five Content Card templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated when importing the UI layer of the Braze SDK. Then, you can tweak certain parts of the card's styling. 
 
 ![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]
 
@@ -45,8 +43,6 @@ By default, Android and FireOS SDK Content Cards match the standard Android UI g
 ```
 
 To customize your Content Card stylings, override this default style. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The entire style must be copied over to your local `styles.xml` file for all attributes to be correctly set.
-
-<!--- To do: Is there a repo with customization examples we can link to here? --->
 
 {% subtabs local %}
 {% subtab Correct style override %}
@@ -232,9 +228,20 @@ When creating a Content Card, marketers have the option of pinning the card. A p
 {% tabs %}
 {% tab Android %}
 
-To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
+To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element. For example:
 
-<!--- To do: Can we add a code sample of what this looks like with some dummy src element? --->
+```xml
+  <style name="Braze.ContentCards.PinnedIcon">
+    <item name="android:src">@drawable/{my_custom_image_here}</item>
+
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_alignParentTop">true</item>
+    <item name="android:contentDescription">@null</item>
+    <item name="android:importantForAccessibility">no</item>
+  </style>
+```
 
 {% endtab %}
 {% tab iOS %}
@@ -334,22 +341,10 @@ To change the color of the unread indicator of a card, add custom CSS to your we
 
 ### Disabling unread indicator
 
-To disable the unread indicator, hide the indicator bar by setting its color to clear or none.
-
 {% tabs %}
 {% tab Android %}
 
-Hide the unread indicator bar by altering the value in `com_braze_content_cards_unread_bar_color` in your `colors.xml` file:
-
-  <!-- TO DO: What color should be used here? -->
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <!-- The color used to highlight unread Content Cards at their bottom edge -->
-  <color name="com_braze_content_cards_unread_bar_color">#1676d0</color>
-</resources>
-```
+Hide the unread indicator bar by setting [`setUnreadBarVisible`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/-content-card-view-holder/set-unread-bar-visible.html?query=fun%20setUnreadBarVisible(isVisible:%20Boolean)) on `ContentCardViewHolder` to `false`. 
 
 {% endtab %}
 {% tab iOS %}
