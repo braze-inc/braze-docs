@@ -93,7 +93,7 @@ For this option, each email category will require its own specific unsubscribe l
 `http://mycompany.com/query-string-form-fill?field_id=John&field_category=offers`
 
 {% alert tip %}
-It is also possible to hash the users `external_id` at the point of send using a Liquid filter. This will convert the `user_id` to an MD5 hash value, for example:
+It is also possible to hash the user's external ID at the point of send using a Liquid filter. This will convert the `user_id` to an MD5 hash value, for example:
 {% raw %}
 ```liquid
 {% assign my_string = {{${user_id}}} | md5 %}

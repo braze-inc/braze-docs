@@ -207,7 +207,7 @@ To import your CSV file, navigate to the **User Import** page under the Users se
 
 The upper box, **Import CSV**, will contain importing directions and a button to begin your import. Click **Select CSV File** and select your file of interest, then click **Start Upload**. Braze will upload your file and check the column headers as well as the data types of each column. 
 
-To download a CSV template, refer to the sections [Import with External ID](#import-with-external-id) or [Import with User Alias](#import-with-user-alias) on this page.
+To download a CSV template, refer to the sections [Importing with external ID](#importing-with-external-id) or [Importing with user alias](#importing-with-user-alias) on this page.
 
 {% alert important %}
 CSV imports are case sensitive. This means capital letters in CSV imports will write the field as a custom attribute instead of a standard one. For example, "email" is correct, but "Email" would be written as a custom attribute.

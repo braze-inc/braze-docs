@@ -67,7 +67,7 @@ If you are unsure whether the user already exists in Braze, you can implement ou
 Keep the following nuances in mind when using the `/users/track` endpoint:
 
 - When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to false.
-- Updating the subscription status with this endpoint will both update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
+- Updating the subscription status with this endpoint will both update the user specified by their external ID (such as User1) and update the subscription status of any users with the same email as that user (User1).
 {% endalert %}
 
 {% endapi %}

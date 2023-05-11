@@ -3,7 +3,7 @@ nav_title: Audience Sync to Criteo
 article_title: Canvas Audience Sync to Criteo
 description: "This reference article will cover how to use Braze Audience Sync to Criteo, to deliver advertisements based upon behavioral triggers, segmentation, and more."
 page_order: 4
-alias: "/audience_sync_criteo/"
+permalink: "/audience_sync_criteo/"
 hidden: true
 
 Tool:

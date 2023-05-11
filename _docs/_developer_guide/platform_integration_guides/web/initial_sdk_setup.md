@@ -86,7 +86,7 @@ braze.subscribeToContentCardsUpdates(function(cards){
     // cards have been updated
 });
 
-// optionally set the current user's External ID
+// optionally set the current user's external ID
 if (isLoggedIn){
     braze.changeUser(userIdentifier);
 }
