@@ -1,35 +1,33 @@
 ---
 nav_title: Navigation
-permalink: /navigation/
-hidden: true
-layout: dev_guide
+article_title: Braze Navigation
+alias: /navigation/
+page_order: 0
+page_type: reference
+description: "This article describes how to go about resetting your Braze password."
 ---
 
 # Braze navigation
 
 > We're updating the Braze navigation to help you create and access your content more quickly and efficiently. To make this transition easier for you and your team, this guide covers what has changed and what you can expect next.
 
-{% alert important %}
-The new navigation is currently in early access and is being tested with a select group of customers. During the early access period, we'll be collecting feedback regularly. You can share feedback directly from the dashboard: when in the new navigation view, expand the **Tour new navigation** button and select **Send feedback**.
-{% endalert %}
-
 ![Sidebar of Braze demonstrating the submenu appearing when you hover over a main section.]({% image_buster /assets/img/navigation/sidebar_behavior.gif %}){: style="max-width:50%;float:right;margin-left:15px"}
 
 The new Braze navigation features a completely redesigned information architecture (how information is organized, grouped, and presented) to make each part of Braze more findable and understandable.
 
-Features are now organized into intuitive categories that are familiar and relevant to a marketer's workflow in Braze. Hover over a main section in the sidebar to open the submenu and view all available pages in that section. 
+Features are now organized into intuitive categories that are familiar and relevant to a marketer's workflow in Braze. Hover over a main section in the sidebar to open the submenu and view all available pages in that section.
 
 Some pages have been renamed to better represent their contents. For a complete list of where features are now located, refer to the **Changes** tab in the [Sidebar](#sidebar) section of this article.
 
 ## Switch to the new navigation
 
-Early access participants can turn on the new navigation at any time by selecting **Switch to new nav** in the global header.
+You can turn on the new navigation at any time by selecting **Switch to new nav** in the global header.
 
 ![Global header of Braze with a button to switch to the new navigation.]({% image_buster /assets/img/navigation/global_header_switch.png %}){: style="max-width:70%"}
 
 ## What to expect next
 
-The new navigation will be released to all Braze customers in **May 2023**. You will still be able to switch back and forth between the new and old navigation until **November 2023**.
+You will still be able to switch back and forth between the new and old navigation until **November 2023**.
 
 ## What's changed
 
@@ -157,6 +155,7 @@ The following table lists where each page is located in the new navigation. Some
 | Feature Flags                 | **Messaging** > **Feature Flags**                                |
 | Global Control (report)       | **Analytics** > **Reports** > **Global Control**                 |
 | Global Control Group Settings | **Audience** > **Global Control Group**                          |
+| Global Message Settings       | **Settings** > **Workspace** > **Frequency Capping Rules**       |
 | In-App Message Templates      | **Templates** > **In-App Message Templates**                     |
 | Internal Groups               | **Settings** > **Setup and Testing** > **Internal Groups**       |
 | Link Templates                | **Templates** > **Email Link Templates**                         |
@@ -178,7 +177,6 @@ The following table lists where each page is located in the new navigation. Some
 | Segments                      | **Audience** > **Segments**                                      |
 | Segment Extensions            | **Audience** > **Segment Extensions**                            |
 | Segment Insights              | **Analytics** > **Reports** > **Segment Insights**               |
-| Global Message Settings       | **Settings** > **Workspace** > **Frequency Capping Rules**       |
 | SMS Performance               | **Analytics** > **Analytics Dashboards** > **SMS Performance**   |
 | Subscription Groups           | **Audience** > **Subscriptions** > **Subscription Groups**       |
 | Tags                          | **Settings** > **Workspace** > **Tag Management**                |
