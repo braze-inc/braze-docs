@@ -240,39 +240,36 @@ const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag", "heig
 BrazePlugin.getFeatureFlagStringProperty(
   "my_flag",
   "color",
-  // Success callback
   (color) => {
-    console.log(color);
-  },
-  // Error callback
-  (error) => {
-    console.log(error);
+    if (!color) {
+      console.log(`Property not found`);
+    } else {
+      console.log(color);
+    }
   }
 );
 // boolean properties
 BrazePlugin.getFeatureFlagBooleanProperty(
   "my_flag",
   "expanded",
-  // Success callback
   (expanded) => {
-    console.log(expanded);
-  },
-  // Error callback
-  (error) => {
-    console.log(error);
+    if (!expanded) {
+      console.log(`Property not found`);
+    } else {
+      console.log(expanded);
+    }
   }
 );
 // number properties
 BrazePlugin.getFeatureFlagNumberProperty(
   "my_flag",
   "height",
-  // Success callback
   (height) => {
-    console.log(height);
-  },
-  // Error callback
-  (error) => {
-    console.log(error);
+    if (!height) {
+      console.log(`Property not found`);
+    } else {
+      console.log(height);
+    }
   }
 );
 ```
