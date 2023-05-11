@@ -204,12 +204,12 @@ braze.user.unsetCustomAttribute(key: "most_played_song")
 ```javascript
 import * as braze from "@braze/web-sdk";
 const json = {
-  "song_name": "Solea"
+  "song_name": "Solea",
   "artist_name": "Miles Davis",
   "album_name": "Sketches of Spain",
   "genre": "Jazz",
   "play_analytics": {
-    "count": 1000
+    "count": 1000,
     "top_10_listeners": true
   }
 };
