@@ -14,22 +14,25 @@ guide_featured_title: "Messaging Channels"
 guide_featured_list:
   - name: Content Cards
     link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
-    image: /assets/img/cc_icon.png
+    image: /assets/img/icons/content_card.svg
   - name: Email
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
-    image: /assets/img/email_icon.png
+    image: /assets/img/icons/email.svg
   - name: In-app messages
     link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
-    image: /assets/img/in-app_message_icon.png
+    image: /assets/img/icons/in-app_message.svg
   - name: Push
     link: /docs/user_guide/message_building_by_channel/push/push_reporting/
-    image: /assets/img/push_icon.png
+    image: /assets/img/icons/push.svg
   - name: SMS
     link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
-    image: /assets/img/sms_icon.png
+    image: /assets/img/icons/sms.svg
+  - name: Webhooks
+    link: /docs/user_guide/message_building_by_channel/webhooks
+    image: /assets/img/icons/webhook.svg
   - name: WhatsApp
     link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
-    image: 
+    image: /assets/img/icons/whatsapp.svg
 
 guide_menu_title: "More Articles"
 guide_menu_list:
