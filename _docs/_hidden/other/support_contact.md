@@ -335,8 +335,8 @@ var ticket_lookuptable = {
   'SelectText' : 'What can we help you with?',
   'Label': '* What can we help you with?',
   'SelectDefault': 'Select a topic...',
-  'LinksTitle': ['Marketer documentation','Developer documentation','Marketer troubleshooting guide','FAQs'],
-  'Links': ['{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/developer_guide/platform_wide/platform_features/','{{site.baseurl}}/help/home/','{{site.baseurl}}/help/faqs/'],
+  'LinksTitle': ['Marketer documentation','Developer documentation','Best Practices & FAQs'],
+  'Links': ['{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/developer_guide/home','{{site.baseurl}}/help/faqs'],
   'SelectOption': {
     'Technical Question': {
       'Label': '* Category',
