@@ -152,17 +152,12 @@ if (featureFlag.enabled) {
 ```javascript
 BrazePlugin.getFeatureFlag(
   "expanded_user_profile",
-  // Success callback
   (featureFlag) => {
     if (featureFlag.enabled) {
       console.log(`expanded_user_profile is enabled`);  
     } else {
       console.log(`expanded_user_profile is not enabled`);
     }
-  },
-  // Error callback
-  (error) => {
-    console.log(error);
   }
 );
 ```
@@ -241,7 +236,7 @@ BrazePlugin.getFeatureFlagStringProperty(
   "my_flag",
   "color",
   (color) => {
-    if (!color) {
+    if (color === null) {
       console.log(`Property not found`);
     } else {
       console.log(color);
@@ -253,7 +248,7 @@ BrazePlugin.getFeatureFlagBooleanProperty(
   "my_flag",
   "expanded",
   (expanded) => {
-    if (!expanded) {
+    if (expanded === null) {
       console.log(`Property not found`);
     } else {
       console.log(expanded);
@@ -322,15 +317,10 @@ for(const feature of features) {
 {% tab Cordova %}
 ```javascript
 BrazePlugin.getAllFeatureFlags(
-  // Success callback
   (features) => {
     for(const feature of features) {
       console.log(`Feature: ${feature.id}`, feature.enabled);
     }
-  },
-  // Error callback
-  (error) => {
-    console.log(error);
   }
 );
 ```
