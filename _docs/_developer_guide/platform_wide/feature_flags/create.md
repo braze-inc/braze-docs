@@ -173,37 +173,37 @@ If a feature flag is not enabled, or a property you reference does not exist, th
 {% tabs %}
 {% tab Javascript %}
 ```javascript
-// feature flag instance
+// Feature flag instance
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-// string properties
+// String properties
 const stringProperty = featureFlag.getStringProperty("color");
-// boolean properties
+// Boolean properties
 const booleanProperty = featureFlag.getBooleanProperty("expanded");
-// number properties
+// Number properties
 const numberProperty = featureFlag.getNumberProperty("height");
 ```
 {% endtab %}
 {% tab Swift %}
 ```swift
-// feature flag instance
+// Feature flag instance
 let featureFlag: FeatureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
-// string properties
+// String properties
 let stringProperty: String? = featureFlag.stringProperty(key: "color")
-// boolean properties
+// Boolean properties
 let booleanProperty: Bool? = featureFlag.boolProperty(key: "expanded")
-// number properties
+// Number properties
 let numberProperty: Double? = featureFlag.numberProperty(key: "height")
 ```
 {% endtab %}
 {% tab Java %}
 ```java
-// feature flag instance
+// Feature flag instance
 FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
-// string properties
+// String properties
 String stringProperty = featureFlag.getStringProperty("color");
-// boolean properties
+// Boolean properties
 Boolean booleanProperty = featureFlag.getBooleanProperty("expanded");
-// number properties
+// Number properties
 Number numberProperty = featureFlag.getNumberProperty("height");
 ```
 {% endtab %}
@@ -221,17 +221,17 @@ val numberProperty = featureFlag.getNumberProperty("height")
 {% endtab %}
 {% tab React Native %}
 ```javascript
-// string properties
+// String properties
 const stringProperty = await Braze.getFeatureFlagStringProperty("my_flag", "color");
-// boolean properties
+// Boolean properties
 const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag", "expanded");
-// number properties
+// Number properties
 const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag", "height");
 ```
 {% endtab %}
 {% tab Cordova %}
 ```javascript
-// string properties
+// String properties
 BrazePlugin.getFeatureFlagStringProperty(
   "my_flag",
   "color",
@@ -243,7 +243,7 @@ BrazePlugin.getFeatureFlagStringProperty(
     }
   }
 );
-// boolean properties
+// Boolean properties
 BrazePlugin.getFeatureFlagBooleanProperty(
   "my_flag",
   "expanded",
@@ -255,7 +255,7 @@ BrazePlugin.getFeatureFlagBooleanProperty(
     }
   }
 );
-// number properties
+// Number properties
 BrazePlugin.getFeatureFlagNumberProperty(
   "my_flag",
   "height",
@@ -387,11 +387,11 @@ This is useful if you want to update your app if a user is no longer eligible fo
 {% tabs %}
 {% tab Javascript %}
 ```javascript
-// register an event listener
+// Register an event listener
 const subscriptionId = braze.subscribeToFeatureFlagsUpdates((features) => {
   console.log(`Features were updated`, features);
 });
-// unregister this event listener
+// Unregister this event listener
 braze.removeSubscription(subscriptionId);
 ```
 {% endtab %}
@@ -428,7 +428,7 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 {% endtab %}
 {% tab React Native %}
 ```javascript
-// register an event listener
+// Register an event listener
 Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
   console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
 });
@@ -436,7 +436,7 @@ Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
 {% endtab %}
 {% tab Cordova %}
 ```javascript
-// register an event listener
+// Register an event listener
 BrazePlugin.subscribeToFeatureFlagUpdates(
   // On updated
   (featureFlags) => {
