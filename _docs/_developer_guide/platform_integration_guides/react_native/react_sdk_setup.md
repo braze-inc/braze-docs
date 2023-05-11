@@ -158,7 +158,7 @@ Add the required permissions to your `AndroidManifest.xml` file:
 The calls to `openSession()` and `closeSession()` are handled automatically.
 Add the following code to the `onCreate()` method of your `MainApplication` class:
 
-{% subtabs global %}
+{% subtabs local %}
 {% subtab JAVA %}
 ```java
 import com.braze.BrazeActivityLifecycleCallbackListener;
@@ -188,7 +188,7 @@ override fun onCreate() {
 
 If your MainActivity has `android:launchMode` set to `singleTask`, add the following code to your `MainActivity` class:
 
-{% subtabs global %}
+{% subtabs local %}
 {% subtab JAVA %}
 ```java
 @Override
@@ -210,7 +210,7 @@ override fun onNewIntent(intent: Intent) {
 {% endtab %}
 {% tab iOS %}
 
-#### Step 2.1: Install pods
+#### Step 2.1b: Install pods
 
 Since React Native automatically links the libraries to the native platform, you can install the SDK with the help of CocoaPods.
 
@@ -220,9 +220,9 @@ From the root folder of the project:
 cd ios && pod install
 ```
 
-#### Step 2.2: Configure the Braze SDK
+#### Step 2.2b: Configure the Braze SDK
 
-{% subtabs global %}
+{% subtabs local %}
 {% subtab SWIFT %}
 
 Import the Braze SDK at the top of the `AppDelegate.swift` file:
@@ -231,6 +231,10 @@ import BrazeKit
 ```
 
 In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
+
+{% alert note %}
+Our example uses the `bundleURL` parameter to initialize the `RCTRootView` object, but note that your project is not strictly tied to this initialization method and may use other initializers such as the `initWithBridge` method instead.
+{% endalert %}
 
 ```swift
 func application(
@@ -247,7 +251,6 @@ func application(
       initialProperties: nil,
       launchOptions: launchOptions
     )
-    self.bridge = rootView.bridge
 
     // Configure views in the application
     window = UIWindow(frame: UIScreen.main.bounds)
@@ -290,6 +293,10 @@ Import the Braze SDK at the top of the `AppDelegate.m` file:
 
 In the `application:didFinishLaunchingWithOptions:` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
+{% alert note %}
+Our example uses the `bundleURL` parameter to initialize the `RCTRootView` object, but note that your project is not strictly tied to this initialization method and may use other initializers such as the `initWithBridge` method instead.
+{% endalert %}
+
 ```objc
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -300,7 +307,6 @@ In the `application:didFinishLaunchingWithOptions:` method, replace the API key 
                                                       moduleName:@"<YOUR_PROJECT_NAME>"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
-  self.bridge = rootView.bridge;
 
   // Configure views in the application
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
