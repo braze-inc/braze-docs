@@ -27,7 +27,9 @@ guide_featured_list:
   - name: SMS
     link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
     image: /assets/img/sms_icon.png
-
+  - name: WhatsApp
+    link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
+    image: 
 
 guide_menu_title: "More Articles"
 guide_menu_list:
