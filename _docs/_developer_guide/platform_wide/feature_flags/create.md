@@ -148,6 +148,25 @@ if (featureFlag.enabled) {
 }
 ```
 {% endtab %}
+{% tab Cordova %}
+```javascript
+BrazePlugin.getFeatureFlag(
+  "expanded_user_profile",
+  // Success callback
+  (featureFlag) => {
+    if (featureFlag.enabled) {
+      console.log(`expanded_user_profile is enabled`);  
+    } else {
+      console.log(`expanded_user_profile is not enabled`);
+    }
+  },
+  // Error callback
+  (error) => {
+    console.log(error);
+  }
+);
+```
+{% endtab %}
 {% endtabs %}
 
 ### Accessing properties {#accessing-properties}
@@ -215,6 +234,49 @@ const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag", "ex
 const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag", "height");
 ```
 {% endtab %}
+{% tab Cordova %}
+```javascript
+// string properties
+BrazePlugin.getFeatureFlagStringProperty(
+  "my_flag",
+  "color",
+  // Success callback
+  (color) => {
+    console.log(color);
+  },
+  // Error callback
+  (error) => {
+    console.log(error);
+  }
+);
+// boolean properties
+BrazePlugin.getFeatureFlagBooleanProperty(
+  "my_flag",
+  "expanded",
+  // Success callback
+  (expanded) => {
+    console.log(expanded);
+  },
+  // Error callback
+  (error) => {
+    console.log(error);
+  }
+);
+// number properties
+BrazePlugin.getFeatureFlagNumberProperty(
+  "my_flag",
+  "height",
+  // Success callback
+  (height) => {
+    console.log(height);
+  },
+  // Error callback
+  (error) => {
+    console.log(error);
+  }
+);
+```
+{% endtab %}
 {% endtabs %}
 
 You can also get a list of all enabled feature flags:
@@ -258,6 +320,22 @@ const features = await Braze.getAllFeatureFlags();
 for(const feature of features) {
   console.log(`Feature: ${feature.id}`, feature.enabled);
 }
+```
+{% endtab %}
+{% tab Cordova %}
+```javascript
+BrazePlugin.getAllFeatureFlags(
+  // Success callback
+  (features) => {
+    for(const feature of features) {
+      console.log(`Feature: ${feature.id}`, feature.enabled);
+    }
+  },
+  // Error callback
+  (error) => {
+    console.log(error);
+  }
+);
 ```
 {% endtab %}
 {% endtabs %}
@@ -304,6 +382,11 @@ braze.refreshFeatureFlags()
 {% tab React Native %}
 ```javascript
 Braze.refreshFeatureFlags();
+```
+{% endtab %}
+{% tab Cordova %}
+```javascript
+BrazePlugin.refreshFeatureFlags();
 ```
 {% endtab %}
 {% endtabs %}
@@ -362,6 +445,17 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
   console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
 });
+```
+{% endtab %}
+{% tab Cordova %}
+```javascript
+// register an event listener
+BrazePlugin.subscribeToFeatureFlagUpdates(
+  // On updated
+  (featureFlags) => {
+    console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
+  }
+);
 ```
 {% endtab %}
 {% endtabs %}
