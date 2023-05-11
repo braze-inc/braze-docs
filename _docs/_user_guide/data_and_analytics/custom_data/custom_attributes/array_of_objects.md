@@ -372,8 +372,8 @@ import * as braze from "@braze/web-sdk";
 const json = [{
   "id": 1,
   "type": "dog",
-  "breed", "beagle",
-  "name", "Gus"
+  "breed": "beagle",
+  "name": "Gus"
 }, {
   "id": 2,
   "type": "cat",
@@ -404,7 +404,7 @@ const json = {
     "name":  "Mary",
   }]
 };
-braze.getUser().setCustomerUserAttribute("pets", json, true);
+braze.getUser().setCustomUserAttribute("pets", json, true);
 ```
 
 **Update**
@@ -416,7 +416,7 @@ const json = {
       "$identifier_key": "id",
       "$identifier_value": 4,
       "$new_object": {
-        "breed", "goldfish"
+        "breed": "goldfish"
       }
     },
     {
@@ -446,7 +446,7 @@ const json = {
     },
     {
       "$identifier_key": "type",
-      "$identifier_value", "dog",
+      "$identifier_value": "dog",
     }
   ]
 };
