@@ -30,12 +30,12 @@ Once you have created a **Custom Event** or **Product**, you can click **Manage 
 To make these added custom attributes, events, products, or event properties trackable, you must ask your developer to create it in the SDK using the exact name you used to add it earlier. Or, you can use Braze's [APIs]({{site.baseurl}}/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other will be actionable and apply to your users!
 
 {% alert note %}
-All User Profile data (custom events, custom attributes, custom data) is stored as long as those profiles are active.
+All user profile data (custom events, custom attributes, custom data) is stored as long as those profiles are active.
 {% endalert %}
 
 ## Blocklisting custom attributes, custom events, and products
 
-If you want to stop tracking a specific custom attribute, event, or product (e.g., accidental creation during testing, no longer useful), search for it in the **Custom Events** tab, then click **Blocklist**.
+To stop tracking a specific custom attribute, event, or product (e.g., accidental creation during testing, no longer useful), search for it in the **Custom Attributes**, **Custom Events**, or **Products** tab, then click **Blocklist**.
 
 To prevent collecting certain device attributes, see our [SDK guide][88].
 
