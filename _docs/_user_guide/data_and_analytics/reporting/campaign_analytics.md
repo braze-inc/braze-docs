@@ -28,7 +28,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
     image: /assets/img/icons/sms.svg
   - name: Webhooks
-    link: /docs/user_guide/message_building_by_channel/webhooks
+    link: /docs/user_guide/message_building_by_channel/webhooks/reporting/
     image: /assets/img/icons/webhook.svg
   - name: WhatsApp
     link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
