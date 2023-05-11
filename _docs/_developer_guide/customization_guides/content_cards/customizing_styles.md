@@ -333,7 +333,7 @@ Customization of only the unviewed indicator via `Attributes` is not supported i
 To change the color of the unread indicator of a card, add custom CSS to your webpage. For example, to set the color of the unviewed indicator to green:
 
 ```css
-.ab-unread-indicator { background-color: green !important; }
+.ab-unread-indicator { background-color: green; }
 ```
 
 {% endtab %}
