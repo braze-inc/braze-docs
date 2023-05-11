@@ -403,8 +403,8 @@ var ticket_lookuptable = {
             },
             'Other' :{
               'ShowSubmit': true,
-              'LinksTitle': ['iOS: push integration','Android: push integration'],
-              'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/']
+              'LinksTitle': ['Marketer documentation','Developer documentation','Best Practices & FAQs'],
+              'Links': ['{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/developer_guide/home','{{site.baseurl}}/help/faqs'],
             }
           }
         },
@@ -664,36 +664,31 @@ var ticket_lookuptable = {
       }
     },
 
-    'Marketing strategy question' : {
+    'Marketing Strategy' : {
       'Label': '* Category',
       'SelectDefault': 'Select a category...',
-      'LinksTitle': ['Campaign ideas and strategies','Mobile marketing best practices'],
-      'Links': ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/'],
+      'LinksTitle': ['Campaign Ideas and Strategies','Canvas Ideas and Strategies', 'Building Accessible Messages', 'Braze Learning Course: Create Customer Journeys with Canvas Flow'],
+      'Links': ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies','{{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies', 'https://www.braze.com/docs/help/accessibility/','https://learning.braze.com/create-customer-journeys-with-canvas-flow'],
       'SelectOption' : {
-        'Campaign and Canvas strategies' : {
+        'Segmentation and Targeting' : {
           'ShowSubmit': true,
-          'LinksTitle': ['Campaign ideas and strategies','Braze Learning course: Canvas'],
-          'Links': ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','https://learning.braze.com/canvas-course']
-        },
-        'Segmentation and targeting' : {
-          'ShowSubmit': true,
-          'LinksTitle': ['Creating a segment','Segment insights','Braze Learning course: segmentation'],
+          'LinksTitle': ['Segments Overview','Segment Insights','Braze Learning Course: Segmentation'],
           'Links': ['{{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment','{{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/#segment-insights','https://learning.braze.com/segmentation-course']
         },
-        'Managing push opt-ins' : {
+        'Managing Push Opt-Ins' : {
           'ShowSubmit': true,
-          'LinksTitle': ['Creating custom opt-in prompts','Push subscription states'],
-          'Links': ['{{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts','{{site.baseurl}}/help/best_practices/push/push_subscription_status/#subscribed-opted-in-and-unsubscribed']
+          'LinksTitle': ['Push Enablement and Subscription'],
+          'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/']
         },
-        'Setting up custom events, attributes and purchases' :{
+        'Setting up Custom Attributes, Event, and Purchases' :{
           'ShowSubmit': true,
-          'LinksTitle': ['Data automatically tracked by Braze SDK','Custom events','Custom event properties','Custom attributes'],
-          'Links':  ['{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data','{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-events','{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-event-properties','{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attributes']
+          'LinksTitle': ['Custom Attributes','Custom Events','Purchase Events','Automatically Collected Data','Event Naming Conventions'],
+          'Links':  ['{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/','{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/','https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/purchase_events/','{{site.baseurl}}/developer_guide/platform_wide/analytics_overview#automatically-collected-data','{{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/']
         },
         'Other' :{
           'ShowSubmit': true,
-          'LinksTitle': ['Campaign ideas and strategies','Mobile marketing best practices'],
-          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/']
+          'LinksTitle': ['None1','None1'],
+          'Links':  ['None1','None1']
         }
       }
     },
@@ -703,21 +698,21 @@ var ticket_lookuptable = {
       'SelectDefault': 'Select a category...',
 
       'Links': [],
-      'ReferenceText': 'Your Account Manager is a great resource for billing and contract related questions. ',
       'SelectOption' : {
-        'Understanding data points usage' : {
+        'Understanding Data Point Usage' : {
           'ShowSubmit': true,
-          'ReferenceText': 'Your Account Manager is a great resource for billing and contract related questions. ',
-          'Links': []
+          'LinksTitle': ['Data Points'],
+          'Links': ['https://www.braze.com/docs/user_guide/data_and_analytics/data_points/'],
+          'ReferenceText': 'Your Account Manager is a great resource for billing and contract related questions.<br>'
         },
-        'Account/ contract questions' : {
+        'Account & Contract' : {
           'ShowSubmit': true,
-          'ReferenceText': 'Your Account Manager is a great resource for billing and contract related questions. ',
+          'ReferenceText': 'Your Account Manager is a great resource for billing and contract related questions.',
           'Links': []
         },
         'Other' :{
           'ShowSubmit': true,
-          'ReferenceText': 'Your Account Manager is a great resource for billing and contract related questions. ',
+          'ReferenceText': 'Your Account Manager is a great resource for billing and contract related questions.',
           'Links': []
         }
       }
@@ -725,8 +720,8 @@ var ticket_lookuptable = {
     'Other' :{
       'ShowSubmit': true,
       'Label': '* Category',
-      'LinksTitle': ['Marketer documentation','Developer documentation','Marketer troubleshooting guide','FAQs'],
-      'Links': ['{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/developer_guide/platform_wide/platform_features/','{{site.baseurl}}/help/home/','{{site.baseurl}}/help/faqs/']
+      'LinksTitle': ['Marketer Documentation','Developer Documentation','Best Practices & Frequently Asked Questions'],
+      'Links': ['{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/developer_guide/home','{{site.baseurl}}/help/faqs'],
     }
   }
 }
