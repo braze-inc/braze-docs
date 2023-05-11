@@ -4,7 +4,7 @@ layout: dev_guide
 page_order: 9
 hidden: true
 
-guide_top_header: "ISV Partners"
+guide_top_header: "<br>ISV Partners"
 guide_top_text: "The following articles are provided to our Alloys ISV partners to reference when developing a market integration with the Braze platform. Visit your corresponding partner integration document to get started!"
 
 guide_featured_title: "Partner Documentation"

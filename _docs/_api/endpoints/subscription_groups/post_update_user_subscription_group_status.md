@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
    "subscription_group_id": (required, string) the id of your subscription group,
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
-   "external_id": (required*, array of strings) the external_id of the user or users, may include up to 50 ids,
+   "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
    // SMS subscription group - one of external_id or phone is required
  }
@@ -60,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
    "subscription_group_id": (required, string) the id of your subscription group,
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
-   "external_id": (required*, array of strings) the external_id of the user or users, may include up to 50 ids,
+   "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
    // Email subscription group - one of external_id or email is required
    // Note that sending an email address that is linked to multiple profiles will update all relevant profiles

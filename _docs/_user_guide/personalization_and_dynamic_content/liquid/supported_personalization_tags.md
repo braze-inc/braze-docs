@@ -194,10 +194,6 @@ Syntax tags can be used to control how Liquid is rendered. You can use the `echo
 
 With [whitespace control][49], you can remove whitespaces around your tags, helping you further control what the Liquid output looks like.
 
-## Theme tags
-
-Theme tags can assign content that is a part of your theme. Braze currently supports the `render` tag, which allows you to render a snippet or app block. For more information, check out Shopify's documentation on [`render` tags][30].
-
 ## HTTP status codes {#http-personalization}
 
 You can utilize the HTTP status from a [Connected Content][38] call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
