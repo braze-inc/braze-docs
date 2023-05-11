@@ -204,12 +204,12 @@ braze.user.unsetCustomAttribute(key: "most_played_song")
 ```javascript
 import * as braze from "@braze/web-sdk";
 const json = {
-  "song_name": "Solea"
+  "song_name": "Solea",
   "artist_name": "Miles Davis",
   "album_name": "Sketches of Spain",
   "genre": "Jazz",
   "play_analytics": {
-    "count": 1000
+    "count": 1000,
     "top_10_listeners": true
   }
 };
@@ -289,7 +289,7 @@ You can also use the **Copy Liquid for segment** feature to generate Liquid code
 
 ![An example segment with the selected checkbox for Multi-Criteria Segmentation.][14]
 
-When you select **Copy Liquid for segment**, Brae will automatically generate Liquid code that returns an object array that only contains accounts that are active and taxable.
+When you select **Copy Liquid for segment**, Braze will automatically generate Liquid code that returns an object array that only contains accounts that are active and taxable.
 
 {%raw%}
 ```
