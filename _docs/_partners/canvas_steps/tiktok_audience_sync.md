@@ -20,7 +20,7 @@ Using the Braze Audience Sync to TikTok, brands can elect to add user data from 
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand
 - Creating Actalike Audiences to acquire new users more efficiently
 
-This feature allows brands to control what specific first-party data is shared with TikTok. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
+This feature lets brands control what specific first-party data is shared with TikTok. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
 {% alert important %}
 **Audience Sync Pro disclaimer**<br>
@@ -29,12 +29,13 @@ Reach out to your Braze Customer Success Manager for more details on this integr
 
 ## Prerequisites
 
-You must ensure that you have the following items completed before setting up your Audience Sync to TikTok.
+You must ensure the following items are created, completed, and/or accepted before setting up your TikTok Audience Step in Canvas.
 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
 | TikTok for Business Center Account | [TikTok](https://business.tiktok.com/) | A centralized tool to manage your brand's TikTok assets (i.e., ad accounts, pages, apps). |
 | TikTok Ad Account | [TikTok](https://ads.tiktok.com/) | An active TikTok ad account tied to your brand's Business Center account.<br><br>Ensure that your TikTok Business Center manager admin has granted you admin permissions to the TikTok ad accounts you plan to use with Braze. |
+| TikToK terms & policies | [TikTok](https://ads.tiktok.com/i18n/official/policy/terms) | Agree to comply with any of TikTok’s required terms, policies, guidelines, and documentation related to your use of the Pinterest Audience Sync, including any terms, policies, guidelines, and documentation incorporated by reference therein, which may include: the Commercial Terms of Service, Advertising Terms, Privacy Policy, Custom Audience Terms, Developer Terms of Service, Developer Data Sharing Agreement, Advertising Policies, Brand Guidelines, and Community Guidelines. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration 
@@ -101,7 +102,7 @@ Braze also offers the ability to add users to existing TikTok audiences to ensur
 ### Step 4: Launch Canvas
 Once you have configured your TikTok Audience component, simply launch the Canvas! A new audience will be created, and users who flow through the TikTok Audience component will be passed into this audience on TikTok. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
 
-You can view the audience in TikTok by going into your **Ads Manager Account** and then selecting **Audiences** from the **Assets** dropdown. From the **Audience** page, you can see the size of each audience after it reaches &#126;1,000.
+You can view the audience in TikTok by entering your **Ads Manager Account** and selecting **Audiences** from the **Assets** dropdown. From the **Audience** page, you can see the size of each audience after it reaches &#126;1,000.
 
 ![TikTok page listing the following metrics for the given audience.][5]
 
