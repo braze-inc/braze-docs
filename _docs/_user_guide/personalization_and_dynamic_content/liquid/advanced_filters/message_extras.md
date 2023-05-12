@@ -8,11 +8,9 @@ alias: "/message_extras_tag/"
 
 # Message extras Liquid tag
 
-Using the `message_extras` Liquid tag, you can annotate your send events with dynamic data from Connected Content, Catalogs, custom attributes (such as language, country), Canvas entry properties, or other data sources. This Liquid tag appends key-value pairs to the corresponding send event in Currents.
+> Using the `message_extras` Liquid tag, you can annotate your send events with dynamic data from Connected Content, Catalogs, custom attributes (such as language, country), Canvas entry properties, or other data sources. 
 
-{% alert important %}
-This Liquid tag is currently in early access for email, SMS, webhooks, Content Cards, and push send events. Contact your Braze customer success manager if you're interested in participating in the early access. <br><br>
-{% endalert %}
+The `message_extras` Liquid tag appends key-value pairs to the corresponding send event in Currents. This is supported for all message types with a send event.
 
 To send dynamic or extra data back to your Currents send event, insert the proper Liquid tag into your message body. The following is an example of the standard Liquid tag format for `message_extras`: 
 
