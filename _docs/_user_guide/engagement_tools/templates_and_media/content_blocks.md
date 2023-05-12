@@ -1,6 +1,6 @@
 ---
-nav_title: Content Blocks
-article_title: Content Blocks
+nav_title: Content Blocks Library
+article_title: Content Blocks Library
 page_order: 1
 page_type: reference
 description: "This reference article explains how to use the Content Blocks Library to manage your reusable, cross-channel content in a single, centralized location."
@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Content Blocks
+# Content Blocks Library
 
 > The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location. To access this feature, go into the **Content Blocks Library** tab in the [Templates & Media][6] section of your Braze account.
 
