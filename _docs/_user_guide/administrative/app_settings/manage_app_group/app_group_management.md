@@ -9,12 +9,12 @@ description: "This reference article covers managing workspaces in your Braze da
 
 # Workspace management
 
-> Workspaces are designed to house versions of the same application across multiple platforms. Many Braze customers also use workspaces to contain free and premium versions of their application on the same platform.
+> Workspaces are designed to house versions of the same application across multiple platforms. Many Braze customers also use workspaces to contain free and premium versions of their application on the same platform. Looking for steps on how to create a new workspace? Refer to [Workspace configuration]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/).
 
-You can manage, segment, and communicate with multiple applications simultaneously all from the **Manage Settings** page in the Braze dashboard.
+You can manage, segment, and communicate with multiple applications simultaneously all from **Manage Settings** > **Settings** in the Braze dashboard.
 
 {% alert note %}
-Looking for steps on how to create a new workspace? Refer to [Workspace configuration]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/).
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Settings** is now **App Settings** and can be found at **Settings** > **Setup and Testing** > **App Settings**.
 {% endalert %}
 
 ## Multiple apps in an workspace
