@@ -17,7 +17,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 ## General
 
 #### Things to check
-- [**API rate limits**](https://braze.com/resources/articles/whats-rate-limiting): Review the Braze API [rate limits]({{site.baseurl}}/api/api_limits/) for your app groups to avoid running into errors. If you are looking to increase your rate limits (and are already batching requests), reach out to your customer success manager. Keep in mind that this process requires lead-time, so plan accordingly.
+- [**API rate limits**](https://braze.com/resources/articles/whats-rate-limiting): Review the Braze API [rate limits]({{site.baseurl}}/api/api_limits/) for your workspaces to avoid running into errors. If you are looking to increase your rate limits (and are already batching requests), reach out to your customer success manager. Keep in mind that this process requires lead-time, so plan accordingly.
 - [**Necessary frequency capping overrides**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping): There are some campaigns, like transactional messages, that you will want to always reach the user, even if you have already reached their frequency cap (for example, a delivery notification). If you want a particular campaign to override frequency capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling frequency capping off.
 
 #### Things to know

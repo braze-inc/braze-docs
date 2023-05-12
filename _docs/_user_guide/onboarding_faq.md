@@ -177,7 +177,7 @@ Segments
 
 You can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)! Segment Extensions enable you to target a more precise list of users than you otherwise could with a regular segment.
 
-You can create up to 10 Segment Extensions per app group. After these extension lists are generated, they can then be included or excluded as a filter in your segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
+You can create up to 10 Segment Extensions per workspace. After these extension lists are generated, they can then be included or excluded as a filter in your segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
 
 1. Under Engagements, expand **Segments** and click **Segment Extension**.
 2. From the Segment Extensions table, click **+ Create New Extension**.

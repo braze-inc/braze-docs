@@ -213,14 +213,14 @@ Logging analytics can be done in real-time with the help of the Braze API [`/use
 
 ### Logging manually
 
-Logging manually will require you to first configure app groups within Xcode, and then create, save, and retrieve analytics. This will require some custom developer work on your end. The following code snippets shown will help address this. 
+Logging manually will require you to first configure workspaces within Xcode, and then create, save, and retrieve analytics. This will require some custom developer work on your end. The following code snippets shown will help address this. 
 
 It's important to note that analytics are not sent to Braze until the mobile application is subsequently launched. This means that, depending on your dismissal settings, there often exists an indeterminate period of time between when a push notification is dismissed and the mobile app is launched and the analytics are retrieved. While this time buffer may not affect all use cases, you should consider this impact adjust your user journey as necessary to include opening the application to address this concern. 
 
 ![A graphic describing how analytics are processed in Braze. 1. Analytics data is created. 2. Analytics data is saved. 3. Push notification is dismissed. 4. Indeterminate period of time between when push notification is dismissed and mobile app is launched. 5. Mobile app is launched. 6. Analytics data is received. 7. Analytics data is sent to Braze.][13]
 
-#### Step 1: Configure app groups within Xcode
-In Xcode, add the `App Groups` capability. If you haven’t had any app groups in your app, go to the capability of the main app target, turn on the `App Groups`, and click the **+** Add button. Then, use your app’s bundle ID to create the app group. For example, if your app’s bundle ID is `com.company.appname`, you can name your app group `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
+#### Step 1: Configure workspaces within Xcode
+In Xcode, add the `App Groups` capability. If you haven’t had any workspaces in your app, go to the capability of the main app target, turn on the `App Groups`, and click the **+** Add button. Then, use your app’s bundle ID to create the workspace. For example, if your app’s bundle ID is `com.company.appname`, you can name your workspace `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
 
 ![][19]
 

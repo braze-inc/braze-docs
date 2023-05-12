@@ -44,7 +44,7 @@ To get started, go to the **Google Ads** tab in the **Technology Partners** page
 If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
 {% endalert %}
 
-Once you have successfully connected your Google Ads account, you will be taken back to your Google Ads partner page. You'll then be prompted to select which ad accounts you would like to be accessed within the Braze App Group.
+Once you have successfully connected your Google Ads account, you will be taken back to your Google Ads partner page. You'll then be prompted to select which ad accounts you would like to be accessed within the Braze workspace.
 
 ![]({% image_buster /assets/img/google_sync/googlesync.gif %}){: style="max-width:85%;"}
 

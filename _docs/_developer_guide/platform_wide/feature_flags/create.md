@@ -29,7 +29,7 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 
 ## Implement feature flags in the dashboard
 
-Create, edit, and archive feature flags from the **Feature Flags** page, located under **Engagement**. This page displays a list of existing feature flags for this app group.
+Create, edit, and archive feature flags from the **Feature Flags** page, located under **Engagement**. This page displays a list of existing feature flags for this workspace.
 
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Feature Flags** under **Messaging**.
@@ -57,7 +57,7 @@ For example, it's common to use a naming convention of `{verb}_{product}_{featur
 {% alert important %} 
 To prevent breaking production app behavior, feature flag `ID`s must be unique and cannot be modified once created. 
 
-Feature flags are shared across apps within an app group so that different platforms (iOS/Android/Web) can share references to the same feature.
+Feature flags are shared across apps within an workspace so that different platforms (iOS/Android/Web) can share references to the same feature.
 {% endalert %}
 
 #### Properties {#properties}

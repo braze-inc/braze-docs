@@ -24,7 +24,7 @@ Acknowledge the following before proceeding with integration:
 - **Compliance:** Comply with all applicable Braze and Meta documentation and any applicable [Meta policies](https://www.whatsapp.com/legal/?lang=en).
 - **24-hour conversation limits:** After a business sends an initial templated message or a user sends a message, a 24-hour window will occur where the two parties can message back and forth. 
 - **Initiating conversation:** Users can initiate a conversation at any point. A business can only initiate a conversation through an approved message template.
-- **Account limitations:** Each Braze app group can hold one WhatsApp Business account, subscription group, and phone number. Additionally, each WhatsApp Business account can only hold [one third-party integration](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). 
+- **Account limitations:** Each Braze workspace can hold one WhatsApp Business account, subscription group, and phone number. Additionally, each WhatsApp Business account can only hold [one third-party integration](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). 
 <br><br>
 
 | Requirement| Description|
@@ -59,7 +59,7 @@ Next, you will be prompted by Braze's setup wizard. Within this flow, you will:
 	![][2]{: style="max-width:100%;"}
 
 {% alert note %}
-WhatsApp Business Accounts (WABA) cannot be shared with multiple Business Solution Providers. You will need a specific WABA for each Braze app group.
+WhatsApp Business Accounts (WABA) cannot be shared with multiple Business Solution Providers. You will need a specific WABA for each Braze workspace.
 {% endalert %}	
 
 Once the setup is complete, a dedicated WhatsApp subscription group will be created for your users.

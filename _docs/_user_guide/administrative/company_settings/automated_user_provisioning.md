@@ -22,7 +22,7 @@ If you're using our [updated navigation]({{site.baseurl}}/navigation), you can f
 
 You will need to provide the following information to get your SCIM token:
 
-1. Select a default app group for new dashboard developers to be added to. If you do not specify an app group in the [create users SCIM API call](/docs/post_create_user_account/), they will be added here.
+1. Select a default workspace for new dashboard developers to be added to. If you do not specify an workspace in the [create users SCIM API call](/docs/post_create_user_account/), they will be added here.
 2. Provide a service origin. The service origin is how Braze identifies where the request is coming from.
 3. Optionally provide a comma-separated list or range of IP addresses allowed for SCIM requests. The `X-Origin-Request` header in each request will be used to check the request IP address against the allowlist.<br><br>
 

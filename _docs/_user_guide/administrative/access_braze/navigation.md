@@ -33,7 +33,7 @@ You will still be able to switch back and forth between the new and old navigati
 
 ### App group rename
 
-As part of our navigation and information architecture changes, we have renamed "app group" to "workspace". We recognize that the language "app group" doesn't reflect the way many users onboard, approach, and use the Braze platform. To better reflect the many use cases of Braze, "app group" is now "workspace".
+As part of our navigation and information architecture changes, we have renamed "workspace" to "workspace". We recognize that the language "workspace" doesn't reflect the way many users onboard, approach, and use the Braze platform. To better reflect the many use cases of Braze, "workspace" is now "workspace".
 
 If you're using our updated navigation, this change will appear throughout the platform.
 
@@ -113,7 +113,7 @@ If you're using our updated navigation, this change will appear throughout the p
 <tbody>
   <tr>
     <td><img src="{% image_buster /assets/img/navigation/sidebar_old.png %}"></td>
-    <td><b>1. App Group selector</b> - See what app group you're currently in or switch between app groups.<br><br><b>2. Data</b> - Contains various reports, dashboards, and settings related to user data in Braze.<br><br><b>3. Engagement</b> - Contains pages related to messaging, such as your segments campaigns, Canvases, message templates, and more.<br><br><b>4. Users</b> - Search or import users, or manage your subscription groups.<br><br><b>5. Integrations</b> - Contains integrations including our technology partners, Currents, and promotion codes.<br><br><b>6. Settings</b> - Contains app group settings, various data settings, logs, and more.</td>
+    <td><b>1. App Group selector</b> - See what workspace you're currently in or switch between workspaces.<br><br><b>2. Data</b> - Contains various reports, dashboards, and settings related to user data in Braze.<br><br><b>3. Engagement</b> - Contains pages related to messaging, such as your segments campaigns, Canvases, message templates, and more.<br><br><b>4. Users</b> - Search or import users, or manage your subscription groups.<br><br><b>5. Integrations</b> - Contains integrations including our technology partners, Currents, and promotion codes.<br><br><b>6. Settings</b> - Contains workspace settings, various data settings, logs, and more.</td>
   </tr>
 </tbody>
 </table>

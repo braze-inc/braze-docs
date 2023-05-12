@@ -109,7 +109,7 @@ As your user base continues to grow and your messaging scales to include lifecyc
 
 ### Feature overview {#freq-cap-feat-over}
 
-Frequency capping is applied at the campaign or Canvas component send level and can be set up for each app group by selecting **Global Message Settings** found in the **Engagement** tab. 
+Frequency capping is applied at the campaign or Canvas component send level and can be set up for each workspace by selecting **Global Message Settings** found in the **Engagement** tab. 
 
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation), **Global Message Settings** is now **Frequency Capping Rules** and is located at **Settings** > **Workspace Settings** > **Frequency Capping Rules**.
@@ -123,7 +123,7 @@ By default, frequency capping is toggled on when new campaigns are created. From
 
 This time frame can be measured in minutes, days, weeks (seven days), or months, with a maximum duration of 30 days.
 
-Each line of frequency caps will be connected using the `AND` operator, and you can add up to 10 rules per app group. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week.
+Each line of frequency caps will be connected using the `AND` operator, and you can add up to 10 rules per workspace. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week.
 
 ![][14]
 
@@ -182,7 +182,7 @@ This following example uses the following frequency capping rules:
 
 ### Frequency capping by tag
 
-[Frequency capping rules](#delivery-rules) can be applied to app groups using specific tags you have applied to your campaigns and Canvases, allowing you to essentially base your frequency capping on custom-named groups.
+[Frequency capping rules](#delivery-rules) can be applied to workspaces using specific tags you have applied to your campaigns and Canvases, allowing you to essentially base your frequency capping on custom-named groups.
 
 With frequency capping by tag, rules can be set on the main and nested tags, so Braze will take into account all tags. For example, if you've selected to use the main tag A to frequency cap, we'll also include information in all the nested tags (for example, tags B and C) when determining the limit.
 

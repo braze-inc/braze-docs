@@ -3,13 +3,13 @@ nav_title: API Settings
 article_title: API Settings
 page_order: 0
 page_type: reference
-description: "This reference article covers the API Settings page, which displays API identifications for your app group."
+description: "This reference article covers the API Settings page, which displays API identifications for your workspace."
 
 ---
 
 # API settings
 
-> The **API Settings** tab displays API identifications for your app group. The first section on **Services** lists relevant articles for different uses of the Braze API ([user data][3],[messaging][4], [email sync][5], and [export][6]).
+> The **API Settings** tab displays API identifications for your workspace. The first section on **Services** lists relevant articles for different uses of the Braze API ([user data][3],[messaging][4], [email sync][5], and [export][6]).
 
 The **API Settings** page is further divided into the following sections:
 
@@ -19,7 +19,7 @@ The **API Settings** page is further divided into the following sections:
 
 ### REST API keys
 
-This section provides your App Group REST API keys, the unique identifiers that allow you access to your data for an app group. A REST API key is required with every request to the Braze API. For more information on creating and using API keys, refer to our [REST API key overview]({{site.baseurl}}/api/api_key/).
+This section provides your workspace REST API keys, the unique identifiers that allow you access to your data for an workspace. A REST API key is required with every request to the Braze API. For more information on creating and using API keys, refer to our [REST API key overview]({{site.baseurl}}/api/api_key/).
 
 #### API IP allowlisting
 

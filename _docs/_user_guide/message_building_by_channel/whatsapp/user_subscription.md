@@ -15,7 +15,7 @@ channel:
 
 ## WhatsApp subscription states
 
-There are two subscription states for WhatsApp users: `subscribed` and `unsubscribed`. WhatsApp has one subscription group per app group.
+There are two subscription states for WhatsApp users: `subscribed` and `unsubscribed`. WhatsApp has one subscription group per workspace.
 
 | State | Definition |
 | --- | --- |

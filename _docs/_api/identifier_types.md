@@ -9,7 +9,7 @@ page_type: reference
 
 # API identifier types
 
-> This reference guide touches on the different types of API identifiers that can be found within the Braze dashboard, their purpose, where you can find them, and how they are typically used. For information on REST API keys or app group API keys, refer to the [Rest API key overview]({{site.baseurl}}/api/api_key/)
+> This reference guide touches on the different types of API identifiers that can be found within the Braze dashboard, their purpose, where you can find them, and how they are typically used. For information on REST API keys or workspace API keys, refer to the [Rest API key overview]({{site.baseurl}}/api/api_key/)
 
 The following identifiers can be used to access your template, Canvas, campaign, segment, send  or card from Braze's external API. All messages should follow [UTF-8][1] encoding.
 
@@ -18,7 +18,7 @@ The following identifiers can be used to access your template, Canvas, campaign,
 
 ## The app identifier
 
-The app identifier or `app_id` is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your Android app, and an `app_id` for your web integration. At Braze, you might find that you have multiple apps for the same platform across the various platform types that Braze supports.
+The app identifier or `app_id` is a parameter associating activity with a specific app in your workspace. It designates which app within the workspace you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your Android app, and an `app_id` for your web integration. At Braze, you might find that you have multiple apps for the same platform across the various platform types that Braze supports.
 
 #### Where can I find it?
 

@@ -59,7 +59,7 @@ Once successfully connected, you will be taken back to the partner page, where y
 
 ![An updated version of the Pinterest technology partners page showing the ad accounts successfully connected.][3]{: style="max-width:80%;"}
 
-Your Pinterest connection will be applied at the Braze app group level. If your Pinterest admin removes you from your Pinterest Business Hub or access to the connected Pinterest accounts, Braze will detect an invalid token. As a result, your active Canvases using Pinterest Audience components will show errors, and Braze will not be able to sync users.
+Your Pinterest connection will be applied at the Braze workspace level. If your Pinterest admin removes you from your Pinterest Business Hub or access to the connected Pinterest accounts, Braze will detect an invalid token. As a result, your active Canvases using Pinterest Audience components will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Configure your Canvas entry criteria
 

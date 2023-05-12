@@ -53,7 +53,7 @@ There are two ways you can check a user's email subscription state with Braze:
 <br><br>
 ## Subscription groups
 
-Subscription groups are segment filters that can further narrow your audience from the [global subscription states](#subscription-states). You can add up to 100 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
+Subscription groups are segment filters that can further narrow your audience from the [global subscription states](#subscription-states). You can add up to 100 subscription groups per workspace. These groups allow you to present more granular subscription options to end-users.
 
 For example, suppose you send out multiple categories of email campaigns (promotional, newsletter, product updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using our [email preference center](#email-preference-center). 
 
@@ -98,7 +98,7 @@ In most cases, your users will manage their email subscription through subscript
 ### Custom footers {#custom-footer}
 
 {% raw %}
-Braze provides the ability to set an app group-wide custom email footer which you can template into every email using the ``{{${email_footer}}}`` Liquid attribute.
+Braze provides the ability to set an workspace-wide custom email footer which you can template into every email using the ``{{${email_footer}}}`` Liquid attribute.
 {% endraw %}
 
 This way, you don't have to create a new footer for every email template or email campaign you use. Changes you make to your custom footer will be reflected in all new and existing email campaigns. Remember that compliance with the [CAN-SPAM Act of 2003](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business) requires you to include a physical address for your company and an unsubscribe link in your emails. 

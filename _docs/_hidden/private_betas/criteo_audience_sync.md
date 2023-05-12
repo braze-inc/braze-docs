@@ -60,7 +60,7 @@ Once you have successfully connected, you will be taken back to the partner page
 
 ![An updated version of the Criteo technology partners page showing the ad accounts successfully connected.][4]{: style="max-width:80%;"}
 
-Your Criteo connection will be applied at the Braze app group level. If your Criteo admin removes you from your Criteo ad account, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
+Your Criteo connection will be applied at the Braze workspace level. If your Criteo admin removes you from your Criteo ad account, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Configure your Canvas entry criteria
 

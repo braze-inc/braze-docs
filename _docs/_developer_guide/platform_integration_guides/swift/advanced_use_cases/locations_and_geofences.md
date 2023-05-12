@@ -117,7 +117,7 @@ If you are using our [updated navigation]({{site.baseurl}}/navigation), you can 
 {% endalert %}
 
 1. Go to the **Locations** page.
-2. The number of apps in your app group that currently have geofences enabled is displayed beneath the map, for example: **0 of 1 Apps with Geofences enabled**. Click this text.
+2. The number of apps in your workspace that currently have geofences enabled is displayed beneath the map, for example: **0 of 1 Apps with Geofences enabled**. Click this text.
 3. Select the app to enable geofences. Click **Done.**
 ![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 

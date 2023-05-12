@@ -117,7 +117,7 @@ Results, and exports of results, are tables that can contain up to 500 rows. For
 
 ## Monitoring your Query Builder usage
 
-Each Braze app group has 2,000 Query Builder credits available per month. Credits are used whenever you run a query or preview a table. Credit usage corresponds to the run time of your queries. Credits are not used when writing, editing, or saving reports within the Braze SQL editor. 
+Each Braze workspace has 2,000 Query Builder credits available per month. Credits are used whenever you run a query or preview a table. Credit usage corresponds to the run time of your queries. Credits are not used when writing, editing, or saving reports within the Braze SQL editor. 
 
 Your credits will reset to 2,000 on the first of each month at 12 am UTC. You can monitor your credits usage throughout the month at the top of the Query Builder page.
 
