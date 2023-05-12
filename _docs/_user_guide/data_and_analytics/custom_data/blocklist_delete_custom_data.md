@@ -12,19 +12,7 @@ description: "This reference article covers how to blocklist or delete custom ev
 
 ## Blocklisting custom data
 
-Blocklisting prevents a particular custom data object from being recorded by Braze going forward.
-
-{% alert important %}
-Blocklisting does not remove data from user profiles or retroactively decrease the amount of data points incurred for that custom data object. For specific details, refer to [Custom event and attribute management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/).
-{% endalert %}
-
-To blocklist a custom data object:
-
-1. Go to the **Manage Settings** section.
-2. Select the relevant page for the custom data object you want to block: **Custom Attributes**, **Custom Events**, or **Products**.
-3. Find the custom data object in the table. Select **Blocklist**.
-
-![Warning that prevents you from blocklisting a custom data object and lists where the custom data is currently being referenced.][1]{: style="max-width:50%;float:right;margin-left:15px;"}
+Blocklisting prevents a particular custom data object from being recorded by Braze going forward. Blocklisting does not remove data from user profiles or retroactively decrease the amount of data points incurred for that custom data object. For specific details, refer to [Custom event and attribute management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/#blocklisting-custom-attributes-custom-events-and-products).
 
 ## Deleting custom data
 
