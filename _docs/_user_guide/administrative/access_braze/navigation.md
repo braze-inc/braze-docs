@@ -4,7 +4,7 @@ article_title: Braze Navigation
 alias: /navigation/
 page_order: 0
 page_type: reference
-description: "This article describes how to go about resetting your Braze password."
+description: "This article describes the changes in Braze navigation."
 ---
 
 # Braze navigation
