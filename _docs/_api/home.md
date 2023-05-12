@@ -374,7 +374,7 @@ glossaries:
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/'>/catalogs</a>
-    description: List the catalogs in an workspace.
+    description: List the catalogs in a workspace.
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>

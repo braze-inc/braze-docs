@@ -85,7 +85,7 @@ The workspace billing data and workspace charts only display for dates after Oct
 
 #### Drill to workspaces
 
-The **Drill to Workspaces** lets you view granular data point data for each of your workspaces. Click an workspace to see its data point details.
+The **Drill to Workspaces** lets you view granular data point data for each of your workspaces. Click a workspace to see its data point details.
 
 ![Drill to workspaces for billable data points][9]{: style="max-width:90%;"}
 

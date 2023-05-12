@@ -15,7 +15,7 @@ description: "This article outlines details about the List catalogs Braze endpoi
 /catalogs
 {% endapimethod %}
 
-> Use this endpoint to return a list of catalogs in an workspace.
+> Use this endpoint to return a list of catalogs in a workspace.
 
 {% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
 

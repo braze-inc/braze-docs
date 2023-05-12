@@ -12,7 +12,7 @@ channel: push
 
 When you first set up your push notifications, it's important to understand how and which users will receive your messages.
 
-Push enabled refers to users who have a push token available. For example, this may be an active push token for an app within an workspace.
+Push enabled refers to users who have a push token available. For example, this may be an active push token for an app within a workspace.
 
 Background push enabled refers to users that are push enabled but have disabled foreground push notifications. In this case, Braze cannot display user-visible notifications on that device. However, you can use background push for tracking uninstalls, enabling silent push notifications, and geofencing.  
 

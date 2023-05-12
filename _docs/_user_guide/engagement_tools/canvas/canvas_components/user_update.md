@@ -22,7 +22,7 @@ Users will only advance to the next Canvas steps after the relevant user updates
 
 Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of the variant or step and select **User Update**. 
 
-There are three options that allow you to update existing, add new, or remove user profile information. All combined, the User Update steps in an workspace can update up to 200,000 user profiles per minute.
+There are three options that allow you to update existing, add new, or remove user profile information. All combined, the User Update steps in a workspace can update up to 200,000 user profiles per minute.
 
 {% alert tip %}
 You can also test the changes made with this component by searching for a user and applying the change to them. This will update the user.

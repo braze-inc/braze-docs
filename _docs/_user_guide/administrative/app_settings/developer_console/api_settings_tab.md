@@ -19,7 +19,7 @@ The **API Settings** page is further divided into the following sections:
 
 ### REST API keys
 
-This section provides your workspace REST API keys, the unique identifiers that allow you access to your data for an workspace. A REST API key is required with every request to the Braze API. For more information on creating and using API keys, refer to our [REST API key overview]({{site.baseurl}}/api/api_key/).
+This section provides your workspace REST API keys, the unique identifiers that allow you access to your data for a workspace. A REST API key is required with every request to the Braze API. For more information on creating and using API keys, refer to our [REST API key overview]({{site.baseurl}}/api/api_key/).
 
 #### API IP allowlisting
 

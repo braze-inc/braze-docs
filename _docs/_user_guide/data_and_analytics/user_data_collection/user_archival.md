@@ -34,8 +34,8 @@ If you set user IDs to identify users when a new user logs in they will be count
 - Can't receive email. For example, they do not have an email address or they are unsubscribed from all email lists.
 - Can't receive SMS. For example, they do not have a valid phone number or they are unsubscribed from all SMS subscription groups.
 - Can't receive push. For example, they have uninstalled the app or disabled push permissions.
-- Haven't used any mobile app or visited a website in an workspace in more than six months.
-- Haven't received any messages from an workspace in more than six months.
+- Haven't used any mobile app or visited a website in a workspace in more than six months.
+- Haven't received any messages from a workspace in more than six months.
 - Braze hasn't processed any data points for this user profile in more than six months.
 
 In this case, these users cannot be messaged and are not engaging with your brand. These users have effectively churned.
@@ -44,8 +44,8 @@ In this case, these users cannot be messaged and are not engaging with your bran
 
 "Dormant users" are users who have had no activity in the last twelve months and:
 
-- Haven't used any mobile app or visited a website in an workspace in more than 12 months.
-- Haven't received any messages from an workspace in more than 12 months.
+- Haven't used any mobile app or visited a website in a workspace in more than 12 months.
+- Haven't received any messages from a workspace in more than 12 months.
 - Braze hasn't processed any data points for this user profile in more than 12 months.
 
 ## Spam blocking

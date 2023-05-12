@@ -17,7 +17,7 @@ You can manage, segment, and communicate with multiple applications simultaneous
 If you are using our [updated navigation]({{site.baseurl}}/navigation), **Settings** is now **App Settings** and can be found at **Settings** > **Setup and Testing** > **App Settings**.
 {% endalert %}
 
-## Multiple apps in an workspace
+## Multiple apps in a workspace
 
 There is no limit to the number of apps that can exist in a single workspace. The draw to have multiple apps under one workspace can be enticing, as it lets you rate limit messaging across your entire app portfolio. However, as a best practice we suggest only putting different versions of the same (or very similar) apps together under one workspace.
 
@@ -47,7 +47,7 @@ To delete your workspace entirely from the dashboard, click <span style="font-si
 ![Rename workspace from the Settings tab][70]
 
 {% alert warning %}
-Be careful when deleting workspaces! Once an workspace is deleted, it can't be restored.
+Be careful when deleting workspaces! Once a workspace is deleted, it can't be restored.
 {% endalert %}
 
 [69]: {% image_buster /assets/img_archive/manageappgroupnavigation1.png %}

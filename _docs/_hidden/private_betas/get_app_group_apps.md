@@ -14,7 +14,7 @@ description: "This article outlines details about the List workspace apps Braze 
 /app_group/apps
 {% endapimethod %}
 
-> Use this endpoint to list the name and unique identifier (`api_key`) for apps in an workspace. 
+> Use this endpoint to list the name and unique identifier (`api_key`) for apps in a workspace. 
 
 Hitting this endpoint returns an object array called `apps`. Each object in `apps` contains the name and unique identifier for the app. 
 

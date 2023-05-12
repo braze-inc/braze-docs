@@ -8,13 +8,13 @@ description: "This reference article covers single and multi-workspace configura
 
 # Workspace configuration
 
-> This article covers how to create and set up an workspace, and some best practices to keep in mind when grouping applications.
+> This article covers how to create and set up a workspace, and some best practices to keep in mind when grouping applications.
 
-## What is an workspace?
+## What is a workspace?
 
 Workspaces are where you organize your apps. Think of each of these workspaces as an individual title. For example, you should group the iOS and Android versions of the same app or the free and premium versions of the same app. Grouping these apps into the same workspace allows for ease of navigation, segmentation, and messaging across both platforms.
 
-## Create an workspace
+## Create a workspace
 
 ![][3]{: style="max-width:40%;float:right;margin-left:15px;"} 
 

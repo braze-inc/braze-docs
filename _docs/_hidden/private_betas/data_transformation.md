@@ -38,7 +38,7 @@ These real-time notifications, sent via an HTTP POST request to a destination of
 | Requirement | Description |
 | --- | --- |
 | 2FA or SSO | You must have 2FA or SSO enabled for your account. |
-| Correct permissions | You must be either an account admin or an workspace admin, or have user permissions for **Manage Transformations**. |
+| Correct permissions | You must be either an account admin or a workspace admin, or have user permissions for **Manage Transformations**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Example use cases
