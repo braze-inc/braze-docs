@@ -32,9 +32,9 @@ These default limits can be increased upon request. Reach out to your customer s
 | [`/users/external_id/remove`][21] | 1,000 requests per minute. |
 | [`/events/list`][15] | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |
 | [`/purchases/product_list`][16] | 1,000 requests per hour, shared with the `/events/list` endpoint. |
-| [`/messages/send`][17] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
-| [`/campaigns/trigger/send`][17.1] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
-| [`/canvas/trigger/send`][17.2] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
+| [`/messages/send`][17] | 250 requests per minute for broadcast calls (when only specifying a segment or Connected Audience). Otherwise, 250,000 requests per hour. |
+| [`/campaigns/trigger/send`][17.1] | 250 requests per minute for broadcast calls (when only specifying a segment or Connected Audience). Otherwise, 250,000 requests per hour. |
+| [`/canvas/trigger/send`][17.2] | 250 requests per minute for broadcast calls (when only specifying a segment or Connected Audience). Otherwise, 250,000 requests per hour. |
 | [`/sends/id/create`][18] | 100 requests per day. |
 | [`/subscription/status/set`][19] | 5,000 requests per minute. |
 | [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1,000 requests per minute, per app group. |
