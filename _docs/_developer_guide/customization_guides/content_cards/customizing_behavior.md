@@ -12,7 +12,9 @@ channel:
 ## Key-value pairs
 Key-value pairs can control the layout, text, font, colors, position, and general info.
 
-
+{% alert note %}
+We do not recommend sending nested JSON values as key-value pairs. Instead, flatten the JSON before sending it. 
+{% endalert %}
 
 {% tabs %}
 {% tab Android %}
