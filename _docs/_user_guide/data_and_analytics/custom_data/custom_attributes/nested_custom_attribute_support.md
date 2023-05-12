@@ -229,7 +229,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", updatedJson, true);
 **Delete**
 ```javascript
 import * as braze from "@braze/web-sdk";
-braze.getUser().unsetCustomUserAttribute("most_played_song");
+braze.getUser().setCustomUserAttribute("most_played_song", null);
 ```
 
 {% endtab %}
