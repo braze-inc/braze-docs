@@ -219,7 +219,7 @@ It's important to note that analytics are not sent to Braze until the mobile app
 
 ![A graphic describing how analytics are processed in Braze. 1. Analytics data is created. 2. Analytics data is saved. 3. Push notification is dismissed. 4. Indeterminate period of time between when push notification is dismissed and mobile app is launched. 5. Mobile app is launched. 6. Analytics data is received. 7. Analytics data is sent to Braze.][13]
 
-#### Step 1: Configure workspaces within Xcode
+#### Step 1: Configure app groups within Xcode
 In Xcode, add the `App Groups` capability. If you haven’t had any workspaces in your app, go to the capability of the main app target, turn on the `App Groups`, and click the **+** Add button. Then, use your app’s bundle ID to create the workspace. For example, if your app’s bundle ID is `com.company.appname`, you can name your workspace `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
 
 ![][19]
