@@ -9,7 +9,7 @@ page_type: reference
 
 # Rate limits
 
-> The Braze API infrastructure is designed to handle high volumes of data across our customer base. To this end, we enforce API rate limits perworkspace. 
+> The Braze API infrastructure is designed to handle high volumes of data across our customer base. To this end, we enforce API rate limits per workspace. 
 
 A rate limit is the number of requests the API can receive in a given time period. Many load-based denial-of-service incidents in large systems are unintentional—caused by errors in software or configurations—not malicious attacks. Rate limits ensure that such errors don't deprive our customers of Braze API resources. If too many requests are sent in a given time frame, you may see error responses with a status code of `429`, which indicates the rate limit has been hit.
 
