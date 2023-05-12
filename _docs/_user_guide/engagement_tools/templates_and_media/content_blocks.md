@@ -23,9 +23,11 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-Creating a Content Block is easy—go to **Templates & Media**, then select the **Content Blocks Library** tab. Click **Create Content Block.** Then, create your Content Block!
+Creating a Content Block is easy—go to the **Templates & Media** section, then select the **Content Blocks Library** tab. Click **Create Content Block.** Then, create your Content Block!
 
-Content Blocks have two types: drag-and-drop or HTML. Braze will select the type for you based on the content you inserted into the block. If Braze detects HTML markup in the Content Block, the block type will switch to an HTML type automatically. Otherwise, it will be considered drag-and-drop.  
+There are two types of Content Blocks—classic and drag-and-drop. 
+
+Braze will select the type for you based on the content you inserted into the block. If Braze detects HTML markup in the Content Block, the block type will switch to an HTML type automatically. Otherwise, it will be considered drag-and-drop.  
 
 You can also create and manage your Content Blocks [via API][5].
 
@@ -44,7 +46,7 @@ When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by
 
 1. Create your Content Block.
 2. Copy the Content Block Liquid Tag from your Content Block page.
-3. Insert the Content Block Liquid Tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
+3. Insert the Content Block Liquid tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
 ## Updating and copying Content Blocks
 
@@ -82,7 +84,7 @@ Messages using the archived Content Block will still perform as though it was th
 You can save a Content Block without content in it.
 {% endalert %}
 
-If you made a mistake in archiving a Content Block, you can unarchive it.  
+If you accidentally archive a Content Block, you can unarchive it.  
 
 ![Saved Content Blocks panel where the settings dropdown menu for "Content_Block_1" is expanded to show two options: Unarchive and Duplicate.][4]
 
