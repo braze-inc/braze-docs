@@ -9,7 +9,7 @@ page_order: 0
 
 > Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. You may be curious about how you can customize the SDK to further to meet your needs. This article can help you answer all of your SDK questions. You can also check out our [Technical Integration Checklists and Toolkits](https://learning.braze.com/technical-integration-checklists-and-toolkits) course on Braze Learning.
 
-Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview][3], instead.
+Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview][1], instead.
 
 In brief, the Braze SDK:
 * Collects and syncs user data into a consolidated user profile
@@ -79,12 +79,12 @@ These properties are collected by the Swift SDK upon proper integration.
 | Name | Description |
 |---|---|
 | Device Resolution <br> `resolution`| The screen resolution of the device. The format of this value is "`<width>`x`<height>`". |  
-| Device Carrier <br> `carrier`| The reported mobile carrier. (see note on the [`CTCarrier` deprecation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier)) |
+| Device Carrier <br> `carrier`| The reported mobile carrier (see note on the [`CTCarrier` deprecation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier)). |
 | Device Locale <br> `locale`| The default locale of the device. |
 | Device Model <br> `model`| The specific hardware of the device.
 | Device OS Version <br> `osVersion` | The version of the iOS OS installed on the device. |
-| Device IDFV <br> `idfv`| Device identifier for vendors. IDFV collection is now optional on our [Swift SDK v5.7.0+](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/)|
-| Device IDFA <br> `idfa`| (if supplied) Device identifier for advertisers. |
+| Device IDFV <br> `idfv`| Device identifier for vendors. IDFV collection is now optional on our [Swift SDK v5.7.0+](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).|
+| Device IDFA <br> `idfa`| Device identifier for advertisers (if supplied). |
 | Device Push Enabled <br> `notificationEnabled`| Whether this app has push notifications enabled.
 | Device Timezone <br> `timeZone`| The reported time zone of the device.
 | Device Push Authorization Status <br> `notificationAuthorizationStatus`| Whether this app has push authorization for the device.
@@ -139,19 +139,16 @@ An empty allowlist will result in **no** device data being sent to Braze.
 {% endtab %}
 {% tab Swift SDK %}
 
-You can assign a set of eligible fields to [`configuration.devicePropertyAllowList`][4] on your `Braze.Configuration` to specify an allowlist for device fields that are collected by the SDK. The full list of fields is defined in [`Braze.Configuration.DeviceProperty`][5]. To turn off the collection of all device fields, set the value of this property to an empty set (`[]`).
+You can assign a set of eligible fields to [`configuration.devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) on your `Braze.Configuration` to specify an allowlist for device fields that are collected by the SDK. The full list of fields is defined in [`Braze.Configuration.DeviceProperty`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty). To turn off the collection of all device fields, set the value of this property to an empty set (`[]`).
 
 {% alert important %}
 By default, all fields are collected by the Braze Swift SDK. Removing some device properties may disable SDK features.
 {% endalert %}
 
-For more usage details, refer to [Storage][6] in the Swift SDK documentation.
+For more usage details, refer to [Storage]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage) in the Swift SDK documentation.
 
 {% endtab %}
 {% endtabs %}
 
 
-[3]: {{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/
-[4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist
-[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage
+[1]: {{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/
