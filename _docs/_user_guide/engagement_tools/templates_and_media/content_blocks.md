@@ -23,17 +23,41 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-Creating a Content Block is easy—go to the **Templates & Media** section, then select the **Content Blocks Library** tab. Click **Create Content Block.** Then, create your Content Block!
+Creating a Content Block is easy—go to the **Templates & Media** section, then select the **Content Blocks Library** tab. Click **Create Content Block.** Then, start editing the details of your Content Block!
 
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
 {% endalert %}
 
-There are two types of Content Blocks—classic and drag-and-drop. 
+There are two types of editors used to create a Content Block—classic and drag-and-drop. You can also create and manage your Content Blocks [via API][5].
 
-Braze will select the type for you based on the content you inserted into the block. If Braze detects HTML markup in the Content Block, the block type will switch to an HTML type automatically. Otherwise, it will be considered drag-and-drop.  
+{% tabs %}
+{% tab Drag-and-drop %}
 
-You can also create and manage your Content Blocks [via API][5].
+**Steps:**
+
+Text text text
+
+{% endtab %}
+{% tab HTML %}
+
+**Steps:**
+
+Text text text
+
+{% endtab %}
+{% endtabs %}
+
+### Content Block specifications
+
+| Content Block Attribute | Specifications |
+|---|---|
+| Name | Required field limited to 100 characters. It cannot be renamed after Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
+| Description | Optional field limited to 250 characters. Describe the Content Block so that others viewing it in the Braze product will know what it's for and where it's being used. |
+| Content Size | Limited to 50kB (kilobyte). |
+| Placement | Content Blocks cannot be used within an email footer. |
+| Creation | HTML or Text. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
 When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, utilize the **Capture** tag on your block along with the **&#124; strip** filter. 
@@ -48,13 +72,14 @@ When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by
 
 ## Using Content Blocks
 
-1. Create your Content Block.
+After creating your Content Block, you can insert it in your messaging by following these steps: 
+
 2. Copy the Content Block Liquid Tag from your Content Block page.
 3. Insert the Content Block Liquid tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
-## Updating and copying Content Blocks
+### Updating and copying Content Blocks
 
-If you choose to update a Content Block, it will update in all messages the Content Block is used.
+If you choose to update a Content Block, it will update in all messages the Content Block is used. 
 
 If you want to update a Content Block for a single message or make a copy to use in other messages, you can copy the HTML from the original message to your new one, or edit the original Content Block (it must have been used in a message already) and save it. You will then get a prompt that allows you to save it as a new Content Block.
 
@@ -62,7 +87,7 @@ If you want to update a Content Block for a single message or make a copy to use
 
 You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) a Content Block with our Templates & Media feature. When you do this, a "draft" copy is created.
 
-## Nesting Content Blocks
+### Nesting Content Blocks
 
 Content Blocks can be nested, but only once! You can nest Content Block A into Content Block B, but you will not be able to then nest Content Block B into Content Block C.
 
@@ -72,7 +97,7 @@ Nothing will prevent you from nesting a third level of Content Block, but you wi
 
 Additionally, Content Blocks cannot be used within an email footer, though email footers can be used within Content Blocks.
 
-## Archiving Content Blocks
+### Archiving Content Blocks
 
 ![Expanded Settings dropdown menu that shows three options: Edit, Archive, and Duplicate, where the Archive option is highlighted.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
@@ -91,17 +116,6 @@ You can save a Content Block without content in it.
 If you accidentally archive a Content Block, you can unarchive it.  
 
 ![Saved Content Blocks panel where the settings dropdown menu for "Content_Block_1" is expanded to show two options: Unarchive and Duplicate.][4]
-
-## Content Block specifications
-
-| Content Block Attribute | Specifications |
-|---|---|
-| Name | Required field limited to 100 characters. It cannot be renamed after Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
-| Description | Optional field limited to 250 characters. Describe the Content Block so that others viewing it in the Braze product will know what it's for and where it's being used. |
-| Content Size | Limited to 50kB (Kilobyte). |
-| Placement | Content Blocks cannot be used within an email footer. |
-| Creation | HTML or Text. |
-{: .reset-td-br-1 .reset-td-br-2}
 
 [2]: {% image_buster /assets/img/copy-content-block.png %}
 [3]: {% image_buster /assets/img/template_archive_cog.png %}
