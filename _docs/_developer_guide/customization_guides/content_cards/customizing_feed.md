@@ -9,7 +9,7 @@ channel:
 
 # Customizing the default Content Card feed
 
-> Content Cards are interactive, visually appealing elements that can be used to deliver personalized and engaging content to users. A Content Card feed is your sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages.
+> Content Cards are interactive, visually appealing elements that can be used to deliver personalized and engaging content to users. A Content Card feed is the sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages.
 
 ## Refreshing the feed
 
@@ -24,7 +24,7 @@ You can configure the SDK to refresh manually at specific times as well.
 {% tabs %}
 {% tab Android %}
 
-You can queue a manual refresh of Braze Content Cards from the Android SDK at any time by calling [`requestContentCardsRefresh`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html). 
+Request a manual refresh of Braze Content Cards from the Android SDK at any time by calling [`requestContentCardsRefresh`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html). 
 
 {% subtabs local %}
 {% subtab Java %}
@@ -45,7 +45,7 @@ Braze.getInstance(context).requestContentCardsRefresh(false)
 {% endtab %}
 {% tab iOS %}
 
-You can manually request Braze to refresh the user's Content Cards using the `requestRefresh` method on the [`Braze.ContentCards`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class) class:
+Request a manual refresh of Braze Content Cards from the Swift SDK at any time by calling the `requestRefresh` method on the [`Braze.ContentCards`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class) class:
 
 {% subtabs local %}
 {% subtab Swift %}
@@ -78,7 +78,7 @@ let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
 {% endtab %}
 {% tab Web %}
 
-You can queue a manual refresh of the Braze Content Cards at any time by calling [`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh). 
+Request a manual refresh of Braze Content Cards from the Web SDK at any time by calling [`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh). 
 
 You can also call [`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards) to get all currently available cards from the last Content Cards refresh. 
 
@@ -96,7 +96,7 @@ function refresh(){
 
 ## Customizing displayed card order
 
-You can change the displayed card order within your app's Content Card feed. This allows you to fine tune user experiences by prioritizing certain types of content, such as time-sensitive promotions, or personalizing card sequencing based on user preferences. 
+You can change the order in which your Content Cards are displayed. This allows you to fine tune the user experience by prioritizing certain types of content, such as time-sensitive promotions.
 
 {% tabs %}
 {% tab Android %}
@@ -283,7 +283,7 @@ You can configure what is displayed in this empty feed message.
 
 If the [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) determines that a Content Card refresh has failed, it will display a network connection error message.
 
-A special adapter, the [`EmptyContentCardsAdapter`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/EmptyContentCardsAdapter.kt)replaces the standard [`ContentCardAdapter`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/ContentCardAdapter.kt) to display the error message. To set the custom message itself, override the string resource `com_braze_feed_empty`.
+A special adapter, the [`EmptyContentCardsAdapter`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/EmptyContentCardsAdapter.kt), replaces the standard [`ContentCardAdapter`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/ContentCardAdapter.kt) to display the error message. To set the custom message itself, override the string resource `com_braze_feed_empty`.
 
 The style used to display this message can be found via [`Braze.ContentCardsDisplay.Empty`](https://github.com/braze-inc/braze-android-sdk/blob/2e386dfa59a87bfc24ef7cb6ff5adf6b16f44d24/android-sdk-ui/src/main/res/values/styles.xml#L522-L530) and is reproduced in the following code snippet:
 
@@ -348,7 +348,7 @@ Content Cards can be filtered on your app so that only specific cards are displa
 
 ### Step 1: Set key-value pairs on cards
 
-When creating a Content Card campaign, [key-value pair data]({{site.baseurl}}/docs/developer_guide/customization_guides/content_cards/customizing_behavior/) can be set on each card. Our filtering logic will use this key-value pair data to categorize cards. 
+When creating a Content Card campaign, set [key-value pair data]({{site.baseurl}}/docs/developer_guide/customization_guides/content_cards/customizing_behavior/) on each card. Our filtering logic will use this key-value pair to categorize cards. 
 
 For this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be, such as `home_screen` or `marketing`.
 
@@ -541,7 +541,7 @@ document.getElementById("show-transactional-feed").onclick = function() {
 };
 ```
 
-For more information, see [SDK method documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards).
+For more information, see the [SDK method documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards).
 
 {% endtab %}
 {% endtabs %}
