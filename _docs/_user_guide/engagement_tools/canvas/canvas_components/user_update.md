@@ -57,6 +57,7 @@ You don't need to include sensitive data like your API key while using the JSON 
 * API key
 * Braze cluster URL
 * Fields related to push token imports
+
 {% raw %}
 #### Log custom events
 
@@ -103,9 +104,23 @@ This next example links an event to a specific app using a custom event with opt
 }
 ```
 
+#### Edit subscription state
+
+Within the JSON composer, you can also edit your user's subscription state. For example, the following shows a user's subscription state updated to `opted_in`. 
+
+```
+{
+  "attributes": [
+    {
+      "email_subscribe": "opted_in"
+    }
+  ]
+}
+```
+
 #### Update subscription groups 
 
-You can also update subscription groups using the user update step. The following example shows an update to subscription groups. You can perform one or multiple subscription group updates.
+You can also update subscription groups using this Canvas step. The following example shows an update to subscription groups. You can perform one or multiple subscription group updates.
 
 ```
 {
@@ -130,6 +145,7 @@ You can also update subscription groups using the user update step. The followin
 }
 ```
 {% endraw %}
+
 ## Use cases
 
 ### Set Canvas entry property as an attribute
