@@ -55,7 +55,7 @@ Intelligent timing predicts when a user is most likely to open or click.
 
 ### How is the most popular app time determined?
 
-The most popular app time is determined by the average session start time for the app group (in local time). This metric can be found in the dashboard when previewing times for a campaign, shown in red.
+The most popular app time is determined by the average session start time for the workspace (in local time). This metric can be found in the dashboard when previewing times for a campaign, shown in red.
 
 ### How far in advance should I launch an Intelligent Timing campaign to successfully deliver it to all users in all time zones?
 
@@ -63,7 +63,7 @@ Braze calculates the optimal time at midnight in Samoa time, one of the first ti
 
 ### Why is my Intelligent Timing campaign showing little to no sends?
 
-Braze needs a baseline number of data points to make a good estimate. If there is not enough session data or the users targeted have little to no email clicks or opens (such as new users), Intelligent Timing may default to the app group's most popular hour on that day of the week. If there isn't enough information about the app group, we fall back to a default time of 5 pm. You can also choose to set a specific [fallback time]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options).
+Braze needs a baseline number of data points to make a good estimate. If there is not enough session data or the users targeted have little to no email clicks or opens (such as new users), Intelligent Timing may default to the workspace's most popular hour on that day of the week. If there isn't enough information about the workspace, we fall back to a default time of 5 pm. You can also choose to set a specific [fallback time]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options).
 
 ### Why is my Intelligent Timing campaign sending past the scheduled date?
 

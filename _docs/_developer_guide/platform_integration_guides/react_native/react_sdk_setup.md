@@ -72,6 +72,10 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `enableAutomaticGeofenceRequests`         | boolean  |  Whether geofence requests should be made automatically.                                                                                               |
 | `dismissModalOnOutsideTap`                | boolean  |  iOS only. Whether a modal in-app message will be dismissed when the user clicks outside of the in-app message.                                        |
 | `androidHandlePushDeepLinksAutomatically` | boolean  |  Android only. Whether the Braze SDK should automatically handle push deep links.                                                                      |
+| `androidPushNotificationHtmlRenderingEnabled` | boolean  |  Android only. Sets whether the text content in a push notification should be interpreted and rendered as Html using `android.text.Html.fromHtml`.                                                                      |
+| `androidNotificationAccentColor` | string  |  Android only. Sets the Android notification accent color.                                                                      |
+| `androidNotificationLargeIcon` | string  |  Android only. Sets the Android notification large icon.                                                                    |
+| `androidNotificationSmallIcon` | string  |  Android only. Sets the Android notification small icon.                                                                      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Example configuration:
@@ -98,6 +102,10 @@ Example configuration:
           "enableAutomaticLocationCollection": false,
           "enableAutomaticGeofenceRequests": false,
           "dismissModalOnOutsideTap": true,
+          "androidPushNotificationHtmlRenderingEnabled": true,
+          "androidNotificationAccentColor": "#ff3344",
+          "androidNotificationLargeIcon": "@drawable/custom_app_large_icon",
+          "androidNotificationSmallIcon": "@drawable/custom_app_small_icon",
         }
       ],
     ]

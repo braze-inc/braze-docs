@@ -43,7 +43,7 @@ In Xcode, add the Background Modes capability using the **Signing & Capabilities
 Additionally, from the **Signing & Capabilities** pane in Xcode, add the App Groups capability to your main app target as well as the Notification Content Extension targets. Then, click the **+** button. Use your app's bundle ID to create the app group. For example, if your app's bundle ID is `com.company.appname`, you can name your app group `group.com.company.appname.xyz`.
 
 {% alert important %}
-App Groups in this context refer to Apple's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) and not your Braze app group ID.
+App Groups in this context refer to Apple's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) and not your Braze workspace (previously app group) ID.
 {% endalert %}
 
 ## Step 3: Adding the Push Story framework to your app {#enable-capabilities}
@@ -115,7 +115,7 @@ Your `Info.plist` file should match the following image:
 
 ## Step 6: Updating the Braze integration in your main app {#update-braze}
 
-Before initializing Braze, assign the name of your App Group to your Braze configuration's [`push.appGroup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/appgroup) property.
+Before initializing Braze, assign the name of your app group to your Braze configuration's [`push.appGroup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/appgroup) property.
 
 ```swift
 let configuration = Braze.Configuration(apiKey: "<YOUR-BRAZE-API-KEY>",

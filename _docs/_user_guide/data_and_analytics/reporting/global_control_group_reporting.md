@@ -14,6 +14,10 @@ tool:
 
 To view a report for your [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) from the dashboard, navigate to **Global Control** under **Data**. Next, select the parameter you wish to run your report with (sessions or a particular custom event) and click **Run Report**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Global Control** is now **Global Control Group Report** and can be found under **Analytics** > **Reports** > **Global Control Group Report**.
+{% endalert %}
+
 ![][6]
 
 ## About your report

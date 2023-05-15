@@ -374,7 +374,7 @@ glossaries:
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/'>/catalogs</a>
-    description: List the catalogs in an app group.
+    description: List the catalogs in a workspace.
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>
@@ -402,7 +402,7 @@ glossaries:
     tags:
       - Catalogs
   - name: <a href='/docs/post_create_user_account/'>/scim/v2/Users</a>
-    description: Create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level).
+    description: Create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, workspace, and team level).
     tags:
       - SCIM
   - name: <a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>
@@ -410,7 +410,7 @@ glossaries:
     tags:
       - SCIM
   - name: <a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>
-    description: Update an existing dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level).
+    description: Update an existing dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, workspace, and team level).
     tags:
       - SCIM
   - name: <a href='/docs/delete_existing_dashboard_user/'>/scim/v2/Users/{id}</a>

@@ -69,11 +69,14 @@ Alternatively, if you'd like to test push notifications via the command-line you
 
 You can send a single notification through the terminal via CURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
 
-- `YOUR_API_KEY` - available on the **Developer Console** page
+- `YOUR_API_KEY` - available at **Developer Console** > **API Settings**
 - `YOUR_EXTERNAL_USER_ID` - available on the the **User Search** page
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), these pages are in a new location: <br>- **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys** <br>- **User Search** is now **Search Users** and can be found under **Audience**
+{% endalert %}
 
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 

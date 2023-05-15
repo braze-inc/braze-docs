@@ -9,7 +9,7 @@ page_order: 0
 
 > Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. You may be curious about how you can customize the SDK to further to meet your needs. This article can help you answer all of your SDK questions. You can also check out our [Technical Integration Checklists and Toolkits](https://learning.braze.com/technical-integration-checklists-and-toolkits) course on Braze Learning.
 
-Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview][3], instead.
+Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview][1], instead.
 
 In brief, the Braze SDK:
 * Collects and syncs user data into a consolidated user profile
@@ -72,23 +72,24 @@ These properties are collected by the Android SDK upon proper integration.
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab iOS SDK %}
+{% tab Swift SDK %}
 
-These properties are collected by the iOS SDK upon proper integration.
+These properties are collected by the Swift SDK upon proper integration.
 
 | Name | Description |
 |---|---|
-| Device Resolution <br> `ABKDeviceOptionResolution`| The screen resolution of the device. The format of this value is "`<width>`x`<height>`". |  
-| Device Carrier <br> `ABKDeviceOptionCarrier`| The reported mobile carrier. |
-| Device Locale <br> `ABKDeviceOptionLocale`| The default locale of the device. |
-| Device Model <br> `ABKDeviceOptionModel`| The specific hardware of the device.
-| Device OS Version <br> `ABKDeviceOptionOSVersion` | The version of the iOS OS installed on the device. |
-| Device IDFV <br> `ABKDeviceOptionIDFV`| Device identifier for vendors. IDFV collection is now optional on our [iOS SDK v5.7.0+](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/other_sdk_customizations/swift_idfv/)|
-| Device IDFA <br> `ABKDeviceOptionIDFA`| (if supplied) Device identifier for advertisers. |
-| Device Push Enabled <br> `ABKDeviceOptionPushEnabled`| Whether this app has push notifications enabled.
-| Device Timezone <br> `ABKDeviceOptionTimezone`| The reported time zone of the device.
-| Device Push Authorization Status <br> `ABKDeviceOptionPushAuthStatus`| Whether this app has push authorization for the device.
-| Device Ad Tracking Enabled <br> `ABKDeviceAdTrackingEnabled`| Whether this app has Ad Tracking enabled. |
+| Device Resolution <br> `resolution`| The screen resolution of the device. The format of this value is "`<width>`x`<height>`". |  
+| Device Carrier <br> `carrier`| The reported mobile carrier (see note on the [`CTCarrier` deprecation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier)). |
+| Device Locale <br> `locale`| The default locale of the device. |
+| Device Model <br> `model`| The specific hardware of the device.
+| Device OS Version <br> `osVersion` | The version of the iOS OS installed on the device. |
+| Device IDFV <br> `idfv`| Device identifier for vendors. IDFV collection is now optional on our [Swift SDK v5.7.0+](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).|
+| Device IDFA <br> `idfa`| Device identifier for advertisers (if supplied). |
+| Device Push Enabled <br> `notificationEnabled`| Whether this app has push notifications enabled.
+| Device Timezone <br> `timeZone`| The reported time zone of the device.
+| Device Push Authorization Status <br> `notificationAuthorizationStatus`| Whether this app has push authorization for the device.
+| Device Ad Tracking Enabled <br> `adTrackingEnabled`| Whether this app has Ad Tracking enabled. |
+| Device Push Display Options <br> `notificationDisplayOptions`| Display options to match those available in `UNNotificationSettings`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -136,18 +137,18 @@ An empty allowlist will result in **no** device data being sent to Braze.
 {% endalert %}
 
 {% endtab %}
-{% tab iOS SDK %}
+{% tab Swift SDK %}
 
-You can pass an `appboyOptions` value for `ABKDeviceAllowlistKey` to specify an allowlist for device fields that are collected by the SDK. Fields are defined in `ABKDeviceOptions`. To turn off the collection of all device fields, set the value of this key to `ABKDeviceOptionNone`. Refer to [`Appboy.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h) for `appboyOptions` key documentation.
-
-To specify allowlisted device fields, assign the bitwise OR of desired fields to `ABKDeviceAllowlistKey` in the `appboyOptions` object passed to `startWithApiKey`.
+You can assign a set of eligible fields to [`configuration.devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) on your `Braze.Configuration` to specify an allowlist for device fields that are collected by the SDK. The full list of fields is defined in [`Braze.Configuration.DeviceProperty`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty). To turn off the collection of all device fields, set the value of this property to an empty set (`[]`).
 
 {% alert important %}
-By default, all fields are collected by the Braze iOS SDK.
+By default, all fields are collected by the Braze Swift SDK. Removing some device properties may disable SDK features.
 {% endalert %}
+
+For more usage details, refer to [Storage]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage) in the Swift SDK documentation.
 
 {% endtab %}
 {% endtabs %}
 
 
-[3]: {{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/
+[1]: {{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/

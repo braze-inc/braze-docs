@@ -23,4 +23,7 @@ guide_featured_list:
 - name: Braze to Braze Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/
   fa_icon: fas fa-exchange-alt
+- name: Reporting
+  link: /docs/user_guide/message_building_by_channel/webhooks/reporting/
+  fa_icon: fas fa-chart-bar
 ---

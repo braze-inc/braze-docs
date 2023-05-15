@@ -109,7 +109,7 @@ Check the schedule you set for your test message. If it is set to local time zon
 
 #### User not "push registered" for the app being tested
 
-Check the user profile of the user you are trying to send a test message to. Under the **Engagement** tab, there should be a list of "pushable apps". Verify the app you are trying to send test messages to is in this list. Users will show up as "Push Registered" if they have a push token for any app in your app group, so this could be something of a false positive.
+Check the user profile of the user you are trying to send a test message to. Under the **Engagement** tab, there should be a list of "pushable apps". Verify the app you are trying to send test messages to is in this list. Users will show up as "Push Registered" if they have a push token for any app in your workspace, so this could be something of a false positive.
 
 The following would indicate a problem with push registration or that the user's token had been returned to Braze as invalid by APNs after being pushed:
 
@@ -132,7 +132,7 @@ This error indicates that your app's push certificate and bundle ID are mismatch
 The `BadDeviceToken` is an APNs error code and does not originate from Braze. There could be a number of reasons for this response being returned, including the following:
 
 - The app received a push token that was invalid for the credentials uploaded to the dashboard.
-- Push was disabled for this app group.
+- Push was disabled for this workspace.
 - The user has opted out of push.
 - The app was uninstalled.
 - Apple refreshed the push token, which invalidated the old token.

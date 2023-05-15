@@ -321,7 +321,7 @@ This event occurs when an app installation is attributed to a source. Use this t
 Random Bucket Number
 {% endapitags %}
 
-This user event occurs every time a new user is created within their app group. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly distributed segments of random users. Use this to group a range of random bucket number values and compare performance across your campaigns and campaign variants. 
+This user event occurs every time a new user is created within their workspace. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly distributed segments of random users. Use this to group a range of random bucket number values and compare performance across your campaigns and campaign variants. 
 
 ```json
 // Random Bucket Number Event: users.RandomBucketNumberUpdate
@@ -338,7 +338,7 @@ This user event occurs every time a new user is created within their app group. 
 
 {% alert important %}
 Note that this Currents event is only available for customers that have purchased an "all events connector" and is only available for storage event connectors (i.e Amazon S3, Microsoft Azure, Google Cloud Storage).
-<br><br>To get this event enabled and to schedule the backfill for existing users' random bucket numbers in your app group, contact your customer success manager.
+<br><br>To get this event enabled and to schedule the backfill for existing users' random bucket numbers in your workspace, contact your customer success manager.
 {% endalert %}
 
 {% endapi %}
