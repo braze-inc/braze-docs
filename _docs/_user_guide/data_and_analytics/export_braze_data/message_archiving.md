@@ -15,11 +15,11 @@ description: "This reference article covers Message Archiving, a feature that al
 ## Prerequisites
 
 1. You have purchased this feature, and your customer success manager has enabled the feature.
-2. You have connected an S3 bucket to your app group via the **Technology Partners** page.
+2. You have connected an S3 bucket to your workspace via the **Technology Partners** page.
 
 ## Overview
 
-When this feature is enabled and you have successfully connected an S3 bucket via your app group's **Technology Partners** page, Braze will write a gzipped JSON file to your S3 bucket for each email, SMS, or push message sent to a user. Your customer success manager can enable any or all of the channels to be saved.
+When this feature is enabled and you have successfully connected an S3 bucket via your workspace's **Technology Partners** page, Braze will write a gzipped JSON file to your S3 bucket for each email, SMS, or push message sent to a user. Your customer success manager can enable any or all of the channels to be saved.
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (e.g., {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements. 
 

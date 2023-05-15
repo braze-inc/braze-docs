@@ -98,7 +98,7 @@ Sending a test News Feed card requires you to set up a test segment and subseque
 
 Once you set up a test segment, you can utilize these messaging channels. The process takes a few short steps and, if configured properly, will only need to be done once.
 
-Go to the **Segments** page and create a new segment. In the dropdown menu under **Add Filter**, locate the testing filters at the bottom of the list.
+Go to the **Segments** page and [create a new segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). In the dropdown menu under **Add Filter**, locate the testing filters at the bottom of the list.
 
 ![Testing Filters]({% image_buster /assets/img_archive/testmessages1.png %})
 

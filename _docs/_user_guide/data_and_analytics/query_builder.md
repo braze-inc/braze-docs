@@ -23,6 +23,10 @@ To run a report:
 6. Save your query.
 7. To download a CSV of your report, click **Export**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Query Builder** under **Analytics** > **Reports** > **Query Builder**.
+{% endalert %}
+
 ![Query builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".]({% image_buster /assets/img_archive/query_builder.png %})
 
 Results from each report can be generated once a day. If you run the same report more than once in one calendar day, you'll see the same results in both reports.
@@ -113,7 +117,7 @@ Results, and exports of results, are tables that can contain up to 500 rows. For
 
 ## Monitoring your Query Builder usage
 
-Each Braze app group has 2,000 Query Builder credits available per month. Credits are used whenever you run a query or preview a table. Credit usage corresponds to the run time of your queries. Credits are not used when writing, editing, or saving reports within the Braze SQL editor. 
+Each Braze workspace has 2,000 Query Builder credits available per month. Credits are used whenever you run a query or preview a table. Credit usage corresponds to the run time of your queries. Credits are not used when writing, editing, or saving reports within the Braze SQL editor. 
 
 Your credits will reset to 2,000 on the first of each month at 12 am UTC. You can monitor your credits usage throughout the month at the top of the Query Builder page.
 

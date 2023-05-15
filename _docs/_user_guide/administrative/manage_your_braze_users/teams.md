@@ -9,19 +9,23 @@ description: "This reference article covers how to use Braze teams in the dashbo
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dive-into-braze-teams/869939){: style="float:right;width:120px;border:0;" class="noimgborder"}Teams
 
-> Braze admins can group their dashboard users into Teams with varying user roles and permissions. Teams can be set up across customer base location, language, and custom attributes so that members and non-members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools. 
+> Braze admins can group their dashboard users into Teams with varying user roles and permissions.
 
 {% multi_lang_include video.html id="UYjKrFcL9sQ" align="right" %}
 
+Teams can be set up across customer base location, language, and custom attributes so that members and non-members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools.
+
+Teams are not available on all Braze contracts. If you'd like to access this feature, reach out to your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
+
 ## Creating Teams
 
-Go to the **Manage Settings** page, select **Manage Teams**, and click <i class="fas fa-plus"></i> **Add Team**. Enter the **Team Name**. Use the **Define Team (Optional)** to select a custom attribute, location, or language to further define permissions. 
-
-Teams can be used to filter end-users for engagement objects like campaigns, Canvases, Content Cards, segments, and more. See the section in this article on [Assigning tags and filters](#tags-and-filters) to learn more. 
+Go to the **Manage Settings** page, select **Manage Teams**, and click <i class="fas fa-plus"></i> **Add Team**. Enter the **Team Name**. Use the **Define Team (Optional)** to select a custom attribute, location, or language to further define permissions.
 
 {% alert note %}
-Teams are not available on all Braze contracts. If you'd like to access this feature, reach out to your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Manage Teams** is now **Internal Teams** and is located under **Settings** > **Workspace Settings** > **Internal Teams**.
 {% endalert %}
+
+Teams can be used to filter end-users for engagement objects like campaigns, Canvases, Content Cards, segments, and more. See the section in this article on [Assigning tags and filters](#tags-and-filters) to learn more. 
 
 ![Adding a new team][68]
 
@@ -29,7 +33,7 @@ Teams are not available on all Braze contracts. If you'd like to access this fea
 
 Braze admins can assign Team Roles to their dashboard users who are limited to only read or write data available to their particular Teams. Predefined Team Roles include language and location. 
 
-To assign a Team Role, navigate to **Manage Users** and select a user you'd like to add to your team. Click <i class="fa fa-edit"></i> **Edit**, set their User Role to **Limited**, and add them to the appropriate app group. Next, select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column. Note that some permissions are only granted via app group, and these permissions will appear as "--" in the **Teams** permissions column.
+To assign a Team Role, navigate to **Manage Users** and select a user you'd like to add to your team. Click <i class="fa fa-edit"></i> **Edit**, set their User Role to **Limited**, and add them to the appropriate workspace. Next, select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column. Note that some permissions are only granted via workspace, and these permissions will appear as "--" in the **Teams** permissions column.
 
 ![Assigning Team roles][2]
 

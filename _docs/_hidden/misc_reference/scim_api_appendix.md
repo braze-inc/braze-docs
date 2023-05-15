@@ -37,9 +37,9 @@ A valid app group permission object is a JSON object with the following key-valu
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
-| `appGroupName`| Optional | String | Name of the app group. Used to specify which app group the permissions contained within this object are for. | 
-| `appGroupId` | Required if `appGroupName` is missing | String | ID of the app group, serving as an alternative method of specifying the app group. |
-| `appGroupPermissions` | Required | Array | Array of app group-level permission strings from the [App group permission strings](#app-group) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified app group. |
+| `appGroupName`| Optional | String | Name of the workspace. Used to specify which workspace the permissions contained within this object are for. | 
+| `appGroupId` | Required if `appGroupName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace. |
+| `appGroupPermissions` | Required | Array | Array of workspace-level permission strings from the [App group permission strings](#app-group) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified workspace. |
 | `team` | Optional | Array | Array of [Team permission objects](#team-permissions-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -62,7 +62,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | --- | --- |
 | Administrator | `admin` |
 | Can Manage Company Settings | `manage_company_settings` |
-| Can Add/Remove App Groups| `add_remove_app_groups` |
+| Can Add/Remove Workspaces| `add_remove_app_groups` |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### App group permission strings

@@ -16,9 +16,13 @@ tool: Dashboard
 }
 </style>
 
-> Braze's user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the app group will automatically be granted administrator access. 
+> Braze's user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the workspace will automatically be granted administrator access. 
 
-These settings can be found by navigating to your name in the dashboard and selecting **Manage Users** from the drop-down. 
+These settings can be found by navigating to your name in the dashboard and selecting **Manage Users** from the dropdown.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Manage Users** is now **Company Users** and is located under **Settings** > **Company Settings** > **Company Users**.
+{% endalert %}
 
 ![Account users list on the Manage Settings page][30]
 
@@ -65,7 +69,7 @@ You can manage user permissions by group or on an individual basis using the **U
 |Manage Tags|Allows users to edit or delete tags (under **Manage Settings**). You do not need this permission to add tags to campaigns or segments.|
 |Manage Email Settings|Allows user to save email configuration changes (email settings tab under **Manage Settings**).|
 |Manage Subscription Groups | Allows user to create and manage subscription groups. |
-|Manage Approval Settings| This setting has been removed. Only users with admin permissions can turn the [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) settings on or off for your app group. |
+|Manage Approval Settings| This setting has been removed. Only users with admin permissions can turn the [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) settings on or off for your workspace. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## App-by-app user permissions
@@ -75,7 +79,7 @@ Individual users can be granted different degrees of access on an app-by-app bas
 |Limited Permission Degree|Details|
 |---|---|---|
 |Company Level|Manages the company's app and group settings.|
-|App Group Level Permissions|Determines which app groups should be managed by the user.|
+|Workspace Level Permissions|Determines which workspaces should be managed by the user.|
 |App Level Settings|Determines the user's level of editing access.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

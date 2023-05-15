@@ -22,6 +22,10 @@ In Voucherify, navigate to your Voucherify campaign. Next, select **Export to CS
 
 Go to **Promotion Codes** in the **Braze Integrations** section and click **Create Promotion Code List**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Promotion Codes** under **Data Settings**.
+{% endalert %}
+
 You can use the Voucherify campaign name to name the list and ensure data consistency.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_code_list.png %}){: style="max-width:50%;"}

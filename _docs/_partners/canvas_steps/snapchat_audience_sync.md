@@ -45,6 +45,10 @@ You must ensure the following items are created, completed and/or accepted befor
 
 In the Braze dashboard, go to **Technology Partners** and select **Snapchat**. In the Snapchat Audience Export module, click **Connect Snapchat**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
 ![Snapchat technology page in Braze that includes an Overview module and Snapchat Audience Sync module with the Connected Snapchat button.][1]{: style="max-width:80%;"}
 
 You'll then be redirected to the Snapchat OAuth page to authorize Braze for the permissions related to your Audience Sync integration.
@@ -57,7 +61,7 @@ Once successfully connected, you will be returned to the partner page, where you
 
 ![An updated version of the Snapchat technology partners page showing the ad accounts successfully connected.][3]{: style="max-width:80%;"}
 
-Your Snapchat connection will be applied at the Braze app group level. If your Snapchat admin removes you from your Snapchat Business Manager or access to the connected Snapchat ad accounts, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
+Your Snapchat connection will be applied at the Braze workspace level. If your Snapchat admin removes you from your Snapchat Business Manager or access to the connected Snapchat ad accounts, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Add an Audience Sync Step with Snapchat
 

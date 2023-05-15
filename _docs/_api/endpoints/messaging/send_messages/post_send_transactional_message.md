@@ -128,7 +128,11 @@ All transactional emails are complemented with event status postbacks sent as an
 
 In order to associate the incoming events to a particular instance of send, you can choose to either capture and store the Braze `dispatch_id` returned in the [API response](#example-response), or pass your own identifier to the `external_send_id` field. An example of a value you may choose to pass to that field may be an order ID, where after completing order 1234, an order confirmation message is triggered to the user through Braze, and `external_send_id : 1234` is included in the request. All following event postbacks such as `Sent` and `Delivered` will include `external_send_id : 1234` in the payload allowing you to confirm that user successfully received their order confirmation email.
 
-To get started using the Transactional HTTP Event Postback, navigate to **Manage Settings** > **Email Settings** > **Transactional Webpush URL** in your Braze dashboard and input your desired URL to receive postbacks.
+To get started using the Transactional HTTP Event Postback, navigate to **Manage Settings** > **Email Settings** in your Braze dashboard and locate the section **Transactional Event Status Postback**. Input your desired URL to receive postbacks.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Email Settings** is now **Email Preferences** and is located at **Settings** > **Workspace Settings** > **Email Preferences**.
+{% endalert %}
 
 ![]({% image_buster /assets/img/transactional_webhook_url.png %})
 

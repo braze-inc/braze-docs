@@ -112,7 +112,13 @@ After creating a new policy, navigate to **Users** and click into your specific 
 {% tabs %}
 {% tab Braze Currents %}
 
-In Braze, navigate to the **Currents** page under **Integrations**. Next, click **Create Current** and select **Amazon S3 Data Export**.
+In Braze, navigate to the **Currents** page under **Integrations**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Currents** under **Partner Integrations** > **Data Export**.
+{% endalert %}
+
+Next, click **Create Current** and select **Amazon S3 Data Export**.
 
 Name your current, and then in the **Credentials** section, make sure the **AWS Secret Access Key** radio button is selected, then input your S3 access ID, AWS secret access key, and AWS S3 bucket name in the designated fields.
 
@@ -135,6 +141,10 @@ A notification will inform you whether your credentials have been successfully v
 {% tab Dashboard Data Export %}
 
 In Braze, navigate to the **Technology Partners** page under **Integrations** and click **Amazon S3**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
 
 On the AWS Credentials page, make sure the **AWS Secret Access Key** radio button is selected, then input your AWS access ID, AWS secret access key, and AWS S3 bucket name in the designated fields. When inputting your secret key, click **Test Credentials** first to ensure your credentials work, then click **Save** once successful.
 
@@ -226,6 +236,10 @@ Retrieve your Braze account ID and external ID from your Braze account:
 - **Currents**: In Braze, navigate to the **Currents** page under **Integrations**. Next, click **Create Current** and select **Amazon S3 Data Export**. Here you will find the identifiers needed to create your role.
 - **Dashboard data export**: In Braze, navigate to the **Technology Partners** page under **Integrations** and click **Amazon S3**. Here you will find the identifiers needed to create your role.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), these pages are in a new location:<br>- **Currents** is located under **Partner Integrations** > **Data Export** <br>- **Technology Partners** is located under **Partner Integrations**
+{% endalert %}
+
 Back on the AWS Console, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, check the **Require external ID** box, and enter the Braze external ID. Click **Next** when complete.
 
 ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({{site.baseurl}}/assets/img/create_role_2_another.png)
@@ -296,7 +310,7 @@ A notification will inform you whether your credentials have been successfully v
 
 ## Multiple connectors
 
-If you intend to create more than one Currents connector to send to your S3 bucket, you will be able to use the same credentials, but must specify a different folder path for each. These can be created in the same app group, or split and created within multiple app groups. You also have the option of creating a single policy for each integration, or create one policy that covers both integrations. 
+If you intend to create more than one Currents connector to send to your S3 bucket, you will be able to use the same credentials, but must specify a different folder path for each. These can be created in the same workspace, or split and created within multiple workspaces. You also have the option of creating a single policy for each integration, or create one policy that covers both integrations. 
 
 If you plan on using the same S3 bucket for both Currents and data exports, you will need to create two separate policies as each integration requires different permissions.
 

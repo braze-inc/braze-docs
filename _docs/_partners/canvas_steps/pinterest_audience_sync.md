@@ -44,6 +44,10 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 In the Braze dashboard, go to **Technology Partners** and select **Pinterest**. In the Pinterest Audience Export module, click **Connect Pinterest**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
 ![Pinterest technology page in Braze that includes an Overview module and Pinterest Audience Sync module with the Connected Pinterest button.][1]{: style="max-width:80%;"}
 
 You'll then be redirected to the Pinterest OAuth page to authorize Braze for Ad Account Management and Audience Management.
@@ -56,7 +60,7 @@ Once successfully connected, you will be returned to the partner page, where you
 
 ![An updated version of the Pinterest technology partners page showing the ad accounts successfully connected.][3]{: style="max-width:80%;"}
 
-Your Pinterest connection will be applied at the Braze app group level. If your Pinterest admin removes you from your Pinterest Business Hub or access to the connected Pinterest accounts, Braze will detect an invalid token. As a result, your active Canvases using Pinterest Audience components will show errors, and Braze will not be able to sync users.
+Your Pinterest connection will be applied at the Braze workspace level. If your Pinterest admin removes you from your Pinterest Business Hub or access to the connected Pinterest accounts, Braze will detect an invalid token. As a result, your active Canvases using Pinterest Audience components will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Add an Audience Sync Step with Pinterest
 

@@ -126,7 +126,11 @@ Note that a null attribute value isn't strictly associated with a value type (e.
 
 ## Referencing custom attributes
 
-After you have created [custom attributes][2] from **Manage Settings** > **Custom Attributes**, you can reference these custom attributes in your Liquid messaging. 
+After you have created [custom attributes][2] from **Manage Settings** > **Custom Attributes**, you can reference these custom attributes in your Liquid messaging.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Data Settings**.
+{% endalert %}
 
 When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the **Custom Attributes** page in the dashboard, look for the data type associated with your custom attribute, then reference the following examples listed for each data type.
 

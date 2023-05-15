@@ -22,7 +22,13 @@ Soft bounces occur when your recipient's email address is valid or when the emai
 - The message is too large for your recipient's inbox  
 - An email server was down
 
-While soft bounces aren't tracked in your campaign analytics, you can monitor the soft bounces in the **Message Activity Log** tab in the **Developer Console**. Here, you can also see the reason for the soft bounces and understand possible discrepancies between the "sends" and "deliveries" for your email campaigns.
+While soft bounces aren't tracked in your campaign analytics, you can monitor the soft bounces in the **Message Activity Log** tab in the **Developer Console**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** at **Settings** > **Setup and Testing** > **Message Activity Log**.
+{% endalert %}
+
+Here, you can also see the reason for the soft bounces and understand possible discrepancies between the "sends" and "deliveries" for your email campaigns.
 
 To learn more about managing your email subscriptions and campaign, check out [Best practices for email][2].
 

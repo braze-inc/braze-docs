@@ -24,6 +24,10 @@ description: "This article will walk you through how to configure Braze to use O
 | Braze admin privileges | Make sure you have admin privileges before setting up Okta |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
+
 ## Step 1: Configure Braze
 
 ### Step 1a: Navigate to Security Settings in Braze

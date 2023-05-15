@@ -28,7 +28,7 @@ Several test applications are available within the `Examples` folder of the [Swi
 
 Follow these instructions to build and run our test applications.
 
-1. Create a new [app group][2] and note the app identifier API key and endpoint.
+1. Create a new [workspace][2] and note the app identifier API key and endpoint.
 2. Based on your integration method (Swift Package Manager, Cocoapods, Manual), select the appropriate `xcodeproj` file to open.
 3. Place your API key and your endpoint within the appropriate field in the `Credentials` file.
 

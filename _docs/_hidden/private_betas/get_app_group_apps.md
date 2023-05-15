@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: List App Group Apps"
+nav_title: "GET: List workspace Apps"
 layout: api_page
 page_type: reference
 hidden: true
 permalink: /get_app_group_apps/
 
 platform: API
-description: "This article outlines details about the List app group apps Braze endpoint."
+description: "This article outlines details about the List workspace apps Braze endpoint."
 ---
 {% api %}
-# List app group apps
+# List workspace apps
 {% apimethod get %}
 /app_group/apps
 {% endapimethod %}
 
-> Use this endpoint to list the name and unique identifier (`api_key`) for apps in an app group. 
+> Use this endpoint to list the name and unique identifier (`api_key`) for apps in a workspace. 
 
 Hitting this endpoint returns an object array called `apps`. Each object in `apps` contains the name and unique identifier for the app. 
 

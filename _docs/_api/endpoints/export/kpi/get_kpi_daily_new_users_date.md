@@ -28,8 +28,12 @@ description: "This article outlines details about the Export daily new users Bra
 | -------- | -------- | --------- | ----------- |
 | `length` | Required | Integer | Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
-| `app_id` | Optional | String | App API identifier retrieved from the **Developer Console**. If excluded, results for all apps in app group will be returned. |
+| `app_id` | Optional | String | App API identifier retrieved from **Developer Console** > **API Settings**. If excluded, results for all apps in workspace will be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
 
 ## Example request
 {% raw %}

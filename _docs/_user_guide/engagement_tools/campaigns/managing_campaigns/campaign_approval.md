@@ -21,6 +21,10 @@ Campaign approval is not supported in the building workflow for Canvases, API ca
 By default, the campaign approval setting is turned off. To enable this feature, go to **Manage Settings** > **Approval Workflow**.
 
 {% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Approval Workflow** at **Settings** > **Workspace Settings** > **Approval Workflow**.
+{% endalert %}
+
+{% alert note %}
 Only admins and users with permission to manage approval settings will see this page.
 {% endalert %}
 

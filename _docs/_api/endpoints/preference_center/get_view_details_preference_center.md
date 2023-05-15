@@ -18,7 +18,7 @@ description: "This article outlines details about the View details for preferenc
 
 ## Rate limit
 
-This endpoint has a rate limit of 1,000 requests per minute, per app group.
+This endpoint has a rate limit of 1,000 requests per minute, per workspace.
 
 ## Path parameters
 
