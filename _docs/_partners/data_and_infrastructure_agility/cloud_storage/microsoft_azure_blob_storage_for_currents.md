@@ -75,6 +75,10 @@ The following configures credentials that are used for:
 
 In Braze, navigate to **Technology Partners** > **Microsoft Azure** and provide your connection string, Azure storage container name, and Azure storage prefix.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
 Next, make sure the **Make this the default data export destination** box is checked, this will make sure your exported data is sent to Azure. Once completed, save your integration.
 
 ![The Microsoft Azure data export page in Braze. On this page exist fields for connection string, container name, and prefix.]({% image_buster /assets/img/azure_data_export.png %})

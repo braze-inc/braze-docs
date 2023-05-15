@@ -18,9 +18,13 @@ If you are a customer who was previously sending push notifications, either on y
 
 ## Migration via API
 
-Programmatically migrate iOS (APNs) and Android (FCM) tokens to your platform by using the [`users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). You can migrate both identified users (users with an associated `external_id`) and anonymous users (users without an `external_id`).
+Programmatically migrate iOS (APNs) and Android (FCM) tokens to your platform by using the [`users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). You can migrate both identified users (users with an associated external ID) and anonymous users (users without an external ID).
 
 You need to specify your app's `app_id` during push token migration to associate the appropriate push token with the appropriate app. Each app (iOS, Android, etc.) has its own `app_id`, which can be found in the **Developer Console**, under the **API Settings** tab in the **Identification** section. Be sure to use the correct platform's `app_id`.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
 
 {% alert important %}
 It is not possible to migrate web push tokens through the API. This is because web push tokens do not conform to the same schema as other platforms. 

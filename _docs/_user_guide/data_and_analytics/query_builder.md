@@ -23,6 +23,10 @@ To run a report:
 6. Save your query.
 7. To download a CSV of your report, click **Export**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Query Builder** under **Analytics** > **Reports** > **Query Builder**.
+{% endalert %}
+
 ![Query builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".]({% image_buster /assets/img_archive/query_builder.png %})
 
 Results from each report can be generated once a day. If you run the same report more than once in one calendar day, you'll see the same results in both reports.
@@ -58,9 +62,9 @@ table td {
 | Query name | Description | Metrics | Preview |
 | --- | --- | --- | --- |
 | Channel engagement and revenue | For each channel, you'll see all engagement metrics for that channel (opens, clicks, etc), revenue, number of transactions, and average price. | {::nomarkdown} <ul> <li> <b>Number of transactions:</b> number of purchase events </li> <li> <b>Average price:</b> revenue divided by transactions </li> </ul> {:/} | ![]({% image_buster /assets/img_archive/query_builder_q1.png %}) |
-| Email bounces per domain | Number of bounces per email domain | | ![]({% image_buster /assets/img_archive/query_builder_q2.png %}) |
+| Email bounces per domain | Number of bounces per email domain | | ![]({% image_buster /assets/img_archive/query_builder_q4.png %}) |
 | Email performance by country | For each country, you'll see the following metrics: sends, indirect open rate, and direct open rate. Country is the country of the user at the time of push send. | | ![]({% image_buster /assets/img_archive/query_builder_q3.png %}) |
-| Email subscription group opt-ins and opt-outs | For each week, you'll see the number of unique user opt-ins and opt-outs of any email subscription groups. | | ![]({% image_buster /assets/img_archive/query_builder_q4.png %}) |
+| Email subscription group opt-ins and opt-outs | For each week, you'll see the number of unique user opt-ins and opt-outs of any email subscription groups. | | ![]({% image_buster /assets/img_archive/query_builder_q2.png %}) |
 | Email URLs clicked | This report shows the number of clicks each link in an email had. To run this report, you'll need to specify the API identifier for a campaign or Canvas. You can find a campaign's API identifier at the bottom of that campaign's details page, and you can find the Canvas API identifier under **Analyze Variants**. <br><br>For each de-personalized link, you'll see a count of clicks. Your CSV download will include the user IDs of all users that clicked, the link they clicked on, and a timestamp of when they clicked. | **De-personalized URLs:** URLs that are stripped of any Liquid tags | ![]({% image_buster /assets/img_archive/query_builder_q5.png %}) |
 | Revenue by country | This report provides revenue per country for a specific campaign/Canvas. To run this report, you'll need to specify the API identifier for a campaign or Canvas. You can find a campaign's API identifier at the bottom of that campaign's details page, and you can find the Canvas API identifier under **Analyze Variants**.<br><br>For each country, you'll see the amount of revenue generated, number of orders, number of returns, net revenue, and gross revenue. | {::nomarkdown} <ul> <li> <b>Number of orders:</b> number of purchase events </li> <li> <b>Number of returns:</b> number of purchase events with negative revenue values </li> <li> <b>Net revenue:</b> revenue of all non-returns </li> <li> <b>Gross revenue:</b> revenue that includes the value of returns </li> </ul> {:/} | ![]({% image_buster /assets/img_archive/query_builder_q6.png %}) |
 | Push performance by country | For each country, you'll see the following metrics: deliveries, open rate, and click rate. Country is the country of the user at the time of email send. | | ![]({% image_buster /assets/img_archive/query_builder_q7.png %}) |
@@ -113,7 +117,7 @@ Results, and exports of results, are tables that can contain up to 500 rows. For
 
 ## Monitoring your Query Builder usage
 
-Each Braze app group has 2,000 Query Builder credits available per month. Credits are used whenever you run a query or preview a table. Credit usage corresponds to the run time of your queries. Credits are not used when writing, editing, or saving reports within the Braze SQL editor. 
+Each Braze workspace has 2,000 Query Builder credits available per month. Credits are used whenever you run a query or preview a table. Credit usage corresponds to the run time of your queries. Credits are not used when writing, editing, or saving reports within the Braze SQL editor. 
 
 Your credits will reset to 2,000 on the first of each month at 12 am UTC. You can monitor your credits usage throughout the month at the top of the Query Builder page.
 

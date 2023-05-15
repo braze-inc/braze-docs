@@ -23,6 +23,10 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 {% tabs %}
 {% tab Campaign %}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Messaging**.
+{% endalert %}
+
 **Steps:**
 
 1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
@@ -38,6 +42,10 @@ If all of the messages in your campaign are going to be similar or have the same
 
 {% endtab %}
 {% tab Canvas %}
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Messaging**.
+{% endalert %}
 
 **Steps:**
 
@@ -165,7 +173,13 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 ### Errors, retry logic, and timeouts
 
-Webhooks rely on Braze's servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Developer Console][42], under **Message Activity Log**. This description contains the time the error occurred, the app name, and the error message:
+Webhooks rely on Braze's servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Developer Console][42], under **Message Activity Log**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** at **Settings** > **Setup and Testing** > **Message Activity Log**.
+{% endalert %}
+
+This description contains the time the error occurred, the app name, and the error message:
 
 ![Webhook error with the message "An active access token must be used to query information about the current user"][43]
 

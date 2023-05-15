@@ -30,6 +30,10 @@ This ZIP file should be under 5 MB.
 
 Go to the **Templates & Media** page in the **Engagement** section. This opens the **Email Templates** page.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+{% endalert %}
+
 ### Step 2: Open the uploader
 
 Under the **Template Type** section, select **HTML Editor**. Then scroll down to the section **Start from a Basic HTML Template** and select **From File**.

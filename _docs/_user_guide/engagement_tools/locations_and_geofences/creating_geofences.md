@@ -8,6 +8,7 @@ tool:
   - Location
 search_rank: 1
 ---
+
 # Geofences
 
 > At the core of Braze's real-time location offering is the concept of a geofence. A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position. Geofences can vary from the size of a building to the size of an entire city.
@@ -16,7 +17,13 @@ You can define geofences on the Braze dashboard and use them to trigger campaign
 
 ## Overview
 
-Manage geofences from the **Locations** page. Geofences are organized into geofence sets—a group of geofences that can be used to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences.
+Manage geofences from the **Locations** page.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Locations** under **Audience**.
+{% endalert %}
+
+Geofences are organized into geofence sets—a group of geofences that can be used to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences.
 
 You may create or upload an unlimited amount of geofences on the dashboard, allowing your marketing team to setup geofence sets and campaigns without needing to calculate numbers of geofences. Braze will dynamically re-synchronize the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
 

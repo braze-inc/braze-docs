@@ -36,7 +36,7 @@ Custom attribute objects can contain [data types][1], such as:
 ## Limitations
 
 - Nested custom attributes are intended for custom attributes sent via the Braze SDK or API. 
-- Partners do not support arrays of objects. We recommend against using this feature with app groups that have partner integrations enabled.
+- Partners do not support arrays of objects. We recommend against using this feature with workspaces that have partner integrations enabled.
 - Objects have a maximum size of 50&nbsp;KB.
 - Key names and string values have a size limit of 255 characters.
 - Key names cannot contain spaces.
@@ -204,12 +204,12 @@ braze.user.unsetCustomAttribute(key: "most_played_song")
 ```javascript
 import * as braze from "@braze/web-sdk";
 const json = {
-  "song_name": "Solea"
+  "song_name": "Solea",
   "artist_name": "Miles Davis",
   "album_name": "Sketches of Spain",
   "genre": "Jazz",
   "play_analytics": {
-    "count": 1000
+    "count": 1000,
     "top_10_listeners": true
   }
 };
@@ -229,7 +229,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", updatedJson, true);
 **Delete**
 ```javascript
 import * as braze from "@braze/web-sdk";
-braze.getUser().unsetCustomUserAttribute("most_played_song");
+braze.getUser().setCustomUserAttribute("most_played_song", null);
 ```
 
 {% endtab %}
@@ -289,7 +289,7 @@ You can also use the **Copy Liquid for segment** feature to generate Liquid code
 
 ![An example segment with the selected checkbox for Multi-Criteria Segmentation.][14]
 
-When you select **Copy Liquid for segment**, Brae will automatically generate Liquid code that returns an object array that only contains accounts that are active and taxable.
+When you select **Copy Liquid for segment**, Braze will automatically generate Liquid code that returns an object array that only contains accounts that are active and taxable.
 
 {%raw%}
 ```
@@ -330,7 +330,13 @@ For this example, suppose we have an `accounts` object array that we've just sen
  ]
 ```
 
-In the Braze dashboard, navigate to **Manage Settings** > **Custom Attributes**. Search for your object or object array. In the **Attribute Name** column, click **Generate Schema**.
+In the Braze dashboard, navigate to **Manage Settings** > **Custom Attributes**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Data Settings**.
+{% endalert %}
+
+Search for your object or object array. In the **Attribute Name** column, click **Generate Schema**.
 
 ![][8]
 

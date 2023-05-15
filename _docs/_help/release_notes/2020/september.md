@@ -26,7 +26,7 @@ This new email syntax validation process is an upgrade to Braze's existing one. 
 
 ## Random bucket user event in Currents
 
-The random bucket number (i.e., RBN) occurs every time a new user is created within their app group. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly distributed segments of random users. Use this to group a range of random bucket number values and compare performance across your campaigns and campaign variants. To see if this event is available to you, take a look at the Currents [customer behavior events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/).
+The random bucket number (i.e., RBN) occurs every time a new user is created within their workspace. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly distributed segments of random users. Use this to group a range of random bucket number values and compare performance across your campaigns and campaign variants. To see if this event is available to you, take a look at the Currents [customer behavior events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/).
 
 ## Canvas components - Coming soon!
 

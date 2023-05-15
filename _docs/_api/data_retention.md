@@ -20,7 +20,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 ## Data Retention Handled by Customers Through Braze's Dashboard or API
 
-Braze enables its customers to delete entire User Profiles and Attribute data themselves from their app group.
+Braze enables its customers to delete entire User Profiles and Attribute data themselves from their workspace.
 
 This means you can: 
 - Delete user profiles using the Braze [Delete user API endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
@@ -50,7 +50,7 @@ Customers have full control over whether or not a user is Inactive or Dormant an
 {% tab Campaign Interactions Data %}
 **What is it?** Campaign Interactions are data related to End Users' interactions with a campaign. They are used for retargeting filters and to determine campaign re-eligibility.
 
-**When is it deleted?** Braze automatically deletes from the Customer's App Groups the Campaign Interactions for campaigns that have not sent any messages in 25 calendar months and are not used for retargeting in any campaigns, Canvases, or Content Cards in an active status.
+**When is it deleted?** Braze automatically deletes from the Customer's workspaces the Campaign Interactions for campaigns that have not sent any messages in 25 calendar months and are not used for retargeting in any campaigns, Canvases, or Content Cards in an active status.
 
 **What happens after deletion?**
 
@@ -64,7 +64,7 @@ Customers have full control over whether or not a user is Inactive or Dormant an
 
 **What is it?** Canvas Interactions are data related to End Users' interactions with a Canvas or Canvas step. They are used for retargeting filters and to determine Canvas re-eligibility.
 
-**When is it deleted?** Braze automatically deletes from the Customer's App Groups the Canvas Interactions for Canvases that have not sent any messages in 25 calendar months and are not used for retargeting by any Active Campaigns or Canvases.
+**When is it deleted?** Braze automatically deletes from the Customer's workspaces the Canvas Interactions for Canvases that have not sent any messages in 25 calendar months and are not used for retargeting by any Active Campaigns or Canvases.
 
 **What happens after deletion?**
 - Canvases with no Canvas Interactions cannot be used in retargeting filters for campaigns, Canvases, and Segments.

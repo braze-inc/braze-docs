@@ -21,6 +21,10 @@ search_rank: 1
 
 In the left navigation, click **Templates & Media**, under the **Engagement** section. This will open up the **Email Template Gallery**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+{% endalert %}
+
 ### Step 2: Create or choose a template
 
 Now, you can create a new template or edit an existing template (plain or [mobile responsive][8]) using the drag & drop editing experience or standard HTML experience. If you'd like to create a new template, you can choose from Braze's predesigned templates or create a new layout.
@@ -44,7 +48,13 @@ When composing your email template copy, do not switch back and forth between di
 {% tabs %}
 {% tab HTML Editor %}
 
-Braze will add a footer with an unsubscribe link at the bottom of your HTML emails by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page. For more information, read our [custom footer documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer).
+Braze will add a footer with an unsubscribe link at the bottom of your HTML emails by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Email Settings** is now **Email Preferences** and is located at **Settings** > **Workspace Settings** > **Email Preferences**.
+{% endalert %}
+
+For more information, read our [custom footer documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer).
 
 To enter a subject line, click <i class="fas fa-pencil-alt"></i> **Edit Sending Info**. 
 
@@ -108,7 +118,7 @@ The **Preview & Test** section allows you to preview your email based on differe
 
 - **Random User:** Braze will randomly select a user from the database and preview the email based on their attributes/event information.
 Note: This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.<br><br>
-- **Select User:** You can select a specific user based on their email address or `external_id`. The email will preview based on that user's attributes and event information<br><br>
+- **Select User:** You can select a specific user based on their email address or external ID. The email will preview based on that user's attributes and event information<br><br>
 - **Custom User:** You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
 {% endsubtab %}
 {% endsubtabs %}

@@ -47,6 +47,10 @@ To import previously identified users, you can upload a CSV to Braze, or send da
 
 You can upload and update user profiles via CSV files from the **User Import** page. When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **User Import** is now **Import Users** and can be found under **Audience**.
+{% endalert %}
+
 Before starting your CSV import, it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Learn more about Braze's [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
@@ -63,7 +67,7 @@ If you are unsure whether the user already exists in Braze, you can implement ou
 Keep the following nuances in mind when using the `/users/track` endpoint:
 
 - When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to false.
-- Updating the subscription status with this endpoint will both update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
+- Updating the subscription status with this endpoint will both update the user specified by their external ID (such as User1) and update the subscription status of any users with the same email as that user (User1).
 {% endalert %}
 
 {% endapi %}
@@ -173,7 +177,7 @@ Segments
 
 You can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)! Segment Extensions enable you to target a more precise list of users than you otherwise could with a regular segment.
 
-You can create up to 10 Segment Extensions per app group. After these extension lists are generated, they can then be included or excluded as a filter in your segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
+You can create up to 10 Segment Extensions per workspace. After these extension lists are generated, they can then be included or excluded as a filter in your segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
 
 1. Under Engagements, expand **Segments** and click **Segment Extension**.
 2. From the Segment Extensions table, click **+ Create New Extension**.

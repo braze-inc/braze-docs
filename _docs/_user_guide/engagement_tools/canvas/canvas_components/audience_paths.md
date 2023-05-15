@@ -17,7 +17,7 @@ This Canvas component replaces the need to create excessive audience-based full 
 
 ![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 
-Audience Paths are similar to sorting funnels with ranking criteria. Users will be evaluated for each criterion in priority order and be sent down the path of the highest-ranking criteria they qualify. This means there will never be any ambiguity as to where users will go, and what messages they will receive. 
+Audience Paths are similar to sorting funnels with ranking criteria. Users will be evaluated for each criterion in priority order and be sent down the path of the highest-ranking criteria they qualify. This means there will never be any ambiguity as to where users will go, and what messages they will receive. Note that the rankings aren't [editable after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
 
 With Audience Paths, you can:
 

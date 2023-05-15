@@ -455,3 +455,43 @@
       {% endunless %}
   </nav>
 </header>
+{%- if site.language == 'fr' -%}
+<style type="text/css">
+	#braze_banner {
+		width: 100%;
+		text-align: center;
+		background-image: linear-gradient(to right, rgb(59, 204, 222), rgb(253, 222, 221), rgb(255, 148, 74));
+		padding: 10px;
+		height: 45px;
+		position: sticky;
+		z-index: 10;
+	}
+	@media (max-width: 1400px) {
+		#braze_banner {
+			height: 70px;
+			padding: 10px 40px;
+		}
+	}
+	@media (max-width: 992px) {
+		#braze_banner {
+			height: 90px;
+		}
+	}
+	@media (max-width: 768px) {
+		#braze_banner {
+			height: 110px;
+			padding: 10px 20px;
+		}
+	}
+	#braze_banner a {
+	  color: #27368F;
+	  text-decoration: none;
+	}
+	#braze_banner a:hover{
+	  color: #27368F;
+	}
+</style>
+<div id="braze_banner" >
+	Notre page de documentation en français est en cours de maintenance. Veuillez vous référer à la <a href="https://www.braze.com/docs/">documentation en anglais</a>  pour accéder aux informations les plus récentes.
+</div>
+{%- endif -%}

@@ -118,7 +118,7 @@ To view all of your tracked linked aliases, go to the **Manage Settings** page u
 
 Untracking a link will not deallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until they are evicted by newer data. The following segmentation filters will continue to exist, but new segments cannot be created with that filter.
 
-For segmentation purposes, only 100 links can be tracked per app group by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again.
+For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again.
 
 When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
 

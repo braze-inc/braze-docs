@@ -30,6 +30,10 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 - **Automatically handled upon user opt-in/opt-out:** By users texting a default opt-in or opt-out [keyword][7], Braze automatically sets and updates users' subscription state.
 - **User import**: Users can be added into email or SMS subscription groups via user import. When updating subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) for more information.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **User Import** is now **Import Users** and can be found under **Audience**.
+{% endalert %}
+
 ### How to check a user's SMS subscription group
 
 - **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's SMS subscription groups. 

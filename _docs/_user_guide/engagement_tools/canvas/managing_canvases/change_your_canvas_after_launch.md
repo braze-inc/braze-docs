@@ -94,7 +94,7 @@ For individual Canvas components, you can edit the following details after launc
 * Exception events
 * Delays
 
-However, the component's schedule type and control percentages are not editable after launch.
+However, the component's schedule type and control percentages are not editable after launch. For Action Paths and Audience Paths steps, the rankings aren't editable after launch.
 
 ### Canvas variant percentages
 

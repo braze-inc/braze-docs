@@ -18,4 +18,8 @@ You can subscribe to this report on your **Account Settings** page by clicking t
 
 Additionally, if you're utilizing custom events, you can select up to 5 key events to be included in your weekly report. The events can be updated at any time on the **Custom Events** tab of the **Manage Settings** page.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Events** under **Data Settings**.
+{% endalert %}
+
 [1]: {% image_buster /assets/img/checkbox.png %}

@@ -11,7 +11,7 @@ description: "This reference article covers Internal Groups, a great way to get 
 
 > Internal Groups are a great way to build and organize internal or third-party test groups. They provide insight into your SDK or API logs, and are useful when testing your SDK integration. You can create an unlimited number of custom Internal Groups with up to 1,000 members.
 
-You need the **Access Dev Console** [permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for your app group to create and manage Internal Groups.
+You need the **Access Dev Console** [permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for your workspace to create and manage Internal Groups.
 
 {% alert tip %}
 In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use internal groups to conduct your own troubleshooting and debugging.
@@ -21,10 +21,14 @@ In addition to this article, we also recommend checking out our [Quality Assuran
 
 To create an Internal Group, perform the following steps: 
 
-1. Go to the **Developer Console** and select the **Internal Groups** tab. 
+1. Go to the **Developer Console** and select the **Internal Groups** tab.
 2. Click **Create Internal Group**.
 3. Give your group a meaningful name.
 4. Choose one or more group types, as listed in the following chart.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Internal Groups** at **Settings** > **Setup and Testing** > **Internal Groups**.
+{% endalert %}
 
 ![Creating an Internal Group in Braze][7]
 
