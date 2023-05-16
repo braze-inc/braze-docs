@@ -14,8 +14,11 @@ layout: dev_guide
 
 # Smartling
 
-> Welcome to the Braze partner template! Here, you'll find everything you need to create your partner page. In this first section, include a brief description of your company. Also, include a link to your main site. 
-In this second paragraph, explore the relationship between your company and Braze. This paragraph should explain how Braze and your company partner together to tighten the bond between the Braze user and their customer. Explain the "elevation" that occurs when a Braze user integrates with or leverages your partnership and the services you offer.
+> [Smartling][8] provides an enterprise-class LanguageAI™ platform for translating and localizing all forms of digital content.
+
+As an integrated platform built on artificial intelligence, Smartling’s LanguageAI™ generates human-quality translations faster, more reliably, and at a significantly lower cost when compared to traditional approaches.
+
+
 
 ## Prerequisites
 
@@ -29,13 +32,11 @@ In this second paragraph, explore the relationship between your company and Braz
 
 ## Use cases
 
-Use cases can be a critical part of your documentation. Although optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
+By utilizing Smartling's Braze connector, users can communicate with their global audience more efficiently, resulting in a decreased time to market. The integration with Braze enables the automation of the localization process for email templates and content blocks. 
+
+The integration of Smartling and Braze translation platforms provides linguists with the benefit of visual context, enabling them to accurately and contextually translate content by seeing how the translated text appears within the original visual layout.
 
 ## Integration
-
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done. 
-
-Optionally, you can also provide details on if this is a side-by-side, server-to-server, or basic integration. This enables you to have multiple integration sections if more than one way to integrate exists.
 
 ### Step 1: Set up the Braze project in Smartling TMS
 
@@ -62,13 +63,13 @@ Please check the full [connector configuration documentation here][3].
 
 Configure the source and target languages in **Language Configuration**. It will be used by the connector for ingesting content into Smartling TMS and delivering translations back to Braze.
 
-![Connector language configuration][8]
+![Connector language configuration][9]
 
-### Step 2: Send content to Smartling  
+### Step 2: Send content to Smartling
 
 Once the Braze Connector has been connected and set up, you will find Braze content in the Braze tab in your Smartling project. Please see the full [documentation here][7].
 
-![Content blocks list][9]
+![Content blocks list][10]
 
 ### Step 3: Add translations to Braze
 
@@ -78,8 +79,9 @@ As translations are completed, they are automatically sent to Braze. However, yo
 [2]: https://dashboard.smartling.com/
 [3]: https://help.smartling.com/hc/en-us/articles/13248549217435
 [4]: https://help.smartling.com/hc/article_attachments/13347533624347
-[5]: https://help.smartling.com/hc/article_attachments/13946813331739 
+[5]: https://help.smartling.com/hc/article_attachments/13946813331739
 [6]: https://help.smartling.com/hc/en-us/articles/115003074093
 [7]: https://help.smartling.com/hc/en-us/articles/13248577069979
-[8]: {% image_buster /assets/img/smartling/smartling-braze-settings.png %}
-[9]: {% image_buster /assets/img/smartling/smartling-content-blocks-list.png %}
+[8]: https://www.smartling.com/
+[9]: {% image_buster /assets/img/smartling/smartling-braze-settings.png %}
+[10]: {% image_buster /assets/img/smartling/smartling-content-blocks-list.png %}
