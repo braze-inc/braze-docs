@@ -27,16 +27,16 @@ The Braze and Fresh Relevance integration allows you to:
 ## Use cases
 
 * Send advanced triggered email campaigns such as price drop, back in stock, multi-stage browse, or cart abandoned messages.
-* Include peronalized content in triggered emails such as product recommendations based on the customer's browsed product or items within the same category.
-* Personalize bulk email campaigns with AI-driven recommendation, countdown times, real-time weather forecases, social media feeds, and more.
-* Grow the email database with new contacts collected through data capture op-ups.
+* Include personalized content in triggered emails, such as product recommendations based on the customer's browsed product or items within the same category.
+* Personalize bulk email campaigns with AI-driven recommendations, countdown times, real-time weather forecasts, social media feeds, and more.
+* Grow the email database with new contacts collected through data capture pop-ups.
 * Identify website visitors that arrive from a Braze email link.
 
 ## Integration
 
-To set up the integration, in Fresh Relevance, you must create a Braze channel in **Messaging Channels** and use the channel in appropriate Fresh Relevance triggers or content as required. 
+To set up the integration in Fresh Relevance, you must create a Braze channel in **Messaging Channels** and use the channel in appropriate Fresh Relevance triggers or content as required. 
 
-For step-by-step instructions, login to Fresh Relevance and follow their [documentation][2].
+For step-by-step instructions, log in to Fresh Relevance and follow their [documentation][2].
 
 [1]: https://www.freshrelevance.com/
 [2]: https://admin.freshrelevance.com/help/esp_instructions/?esp_class_name=EspBraze
