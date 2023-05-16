@@ -169,6 +169,20 @@ if (featureFlag.enabled) {
 ```
 
 {% endtab %}
+{% tab Cordova %}
+```javascript
+BrazePlugin.getFeatureFlag(
+  "expanded_user_profile",
+  (featureFlag) => {
+    if (featureFlag.enabled) {
+      console.log(`expanded_user_profile is enabled`);  
+    } else {
+      console.log(`expanded_user_profile is not enabled`);
+    }
+  }
+);
+```
+{% endtab %}
 {% endtabs %}
 
 ### Accessing properties {#accessing-properties}
@@ -181,13 +195,13 @@ If a feature flag is not enabled, or a property you reference does not exist, th
 {% tab Javascript %}
 
 ```javascript
-// feature flag instance
+// Feature flag instance
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-// string properties
+// String properties
 const stringProperty = featureFlag.getStringProperty("color");
-// boolean properties
+// Boolean properties
 const booleanProperty = featureFlag.getBooleanProperty("expanded");
-// number properties
+// Number properties
 const numberProperty = featureFlag.getNumberProperty("height");
 ```
 
@@ -195,13 +209,13 @@ const numberProperty = featureFlag.getNumberProperty("height");
 {% tab Swift %}
 
 ```swift
-// feature flag instance
+// Feature flag instance
 let featureFlag: FeatureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
-// string properties
+// String properties
 let stringProperty: String? = featureFlag.stringProperty(key: "color")
-// boolean properties
+// Boolean properties
 let booleanProperty: Bool? = featureFlag.boolProperty(key: "expanded")
-// number properties
+// Number properties
 let numberProperty: Double? = featureFlag.numberProperty(key: "height")
 ```
 
@@ -209,13 +223,13 @@ let numberProperty: Double? = featureFlag.numberProperty(key: "height")
 {% tab Java %}
 
 ```java
-// feature flag instance
+// Feature flag instance
 FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
-// string properties
+// String properties
 String stringProperty = featureFlag.getStringProperty("color");
-// boolean properties
+// Boolean properties
 Boolean booleanProperty = featureFlag.getBooleanProperty("expanded");
-// number properties
+// Number properties
 Number numberProperty = featureFlag.getNumberProperty("height");
 ```
 
@@ -237,14 +251,54 @@ val numberProperty = featureFlag.getNumberProperty("height")
 {% tab React Native %}
 
 ```javascript
-// string properties
+// String properties
 const stringProperty = await Braze.getFeatureFlagStringProperty("my_flag", "color");
-// boolean properties
+// Boolean properties
 const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag", "expanded");
-// number properties
+// Number properties
 const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag", "height");
 ```
 
+{% endtab %}
+{% tab Cordova %}
+```javascript
+// String properties
+BrazePlugin.getFeatureFlagStringProperty(
+  "my_flag",
+  "color",
+  (color) => {
+    if (color === null) {
+      console.log(`Property not found`);
+    } else {
+      console.log(color);
+    }
+  }
+);
+// Boolean properties
+BrazePlugin.getFeatureFlagBooleanProperty(
+  "my_flag",
+  "expanded",
+  (expanded) => {
+    if (expanded === null) {
+      console.log(`Property not found`);
+    } else {
+      console.log(expanded);
+    }
+  }
+);
+// Number properties
+BrazePlugin.getFeatureFlagNumberProperty(
+  "my_flag",
+  "height",
+  (height) => {
+    if (height === null) {
+      console.log(`Property not found`);
+    } else {
+      console.log(height);
+    }
+  }
+);
+```
 {% endtab %}
 {% endtabs %}
 
@@ -300,6 +354,17 @@ for(const feature of features) {
 }
 ```
 
+{% endtab %}
+{% tab Cordova %}
+```javascript
+BrazePlugin.getAllFeatureFlags(
+  (features) => {
+    for(const feature of features) {
+      console.log(`Feature: ${feature.id}`, feature.enabled);
+    }
+  }
+);
+```
 {% endtab %}
 {% endtabs %}
 
@@ -358,6 +423,11 @@ Braze.refreshFeatureFlags();
 ```
 
 {% endtab %}
+{% tab Cordova %}
+```javascript
+BrazePlugin.refreshFeatureFlags();
+```
+{% endtab %}
 {% endtabs %}
 
 
@@ -371,11 +441,11 @@ This is useful if you want to update your app if a user is no longer eligible fo
 {% tab Javascript %}
 
 ```javascript
-// register an event listener
+// Register an event listener
 const subscriptionId = braze.subscribeToFeatureFlagsUpdates((features) => {
   console.log(`Features were updated`, features);
 });
-// unregister this event listener
+// Unregister this event listener
 braze.removeSubscription(subscriptionId);
 ```
 
@@ -420,12 +490,23 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 {% tab React Native %}
 
 ```javascript
-// register an event listener
+// Register an event listener
 Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
   console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
 });
 ```
 
+{% endtab %}
+{% tab Cordova %}
+```javascript
+// Register an event listener
+BrazePlugin.subscribeToFeatureFlagUpdates(
+  // On updated
+  (featureFlags) => {
+    console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
+  }
+);
+```
 {% endtab %}
 {% endtabs %}
 
