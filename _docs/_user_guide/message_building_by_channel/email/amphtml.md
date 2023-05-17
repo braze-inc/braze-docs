@@ -15,10 +15,6 @@ channel:
 
 AMP makes this possible through its use of various components that can be used to help build exciting in email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more! Tools like these offer significant opportunities to increase engagement and retention. 
 
-{% alert important %}
-AMP for Email is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 ## Requirements
 
 Braze is not responsible for the customer registering with Google or meeting the necessary security requirements.
@@ -150,7 +146,7 @@ Any component that requires authenticating the user must use [Google Access Toke
 
 For a full list of AMP Components, check out the [AMP Documentation](https://amp.dev/documentation/components/?format=email).  
 
-### Example use cases
+### Use cases
 Below you will find a couple of example use cases for the various components discussed above.
 
 {% tabs local %}
@@ -223,7 +219,7 @@ For your AMP email to be delivered to any Gmail account, the email must meet the
 
 If none of these conditions are causing the error, reach out to [support][support].
 
-### Frequently Asked Questions
+### Frequently asked questions
 
 {% details Should I segment with AMP Emails? %}
 We advocate not segmenting to send to all different types of users. This is because we send AMP messages in multipart, having different versions included in the original email. If you customer can't see the AMP version, it will default back to HTML. 
