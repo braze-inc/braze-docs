@@ -59,5 +59,7 @@ valid_partner_list:
 - name: Komo
   url: /docs/partners/message_personalization/dynamic_content/komo/
 - name: Phrase
-  url: /docs/partners/message_personalization/localization/phrase/ 
+  url: /docs/partners/message_personalization/localization/phrase/
+- name: Smartling
+  url: /docs/partners/message_personalization/localization/smartling/
 ---
