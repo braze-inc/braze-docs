@@ -1,0 +1,54 @@
+---
+nav_title: User Retargeting
+article_title: User Retargeting
+page_order: 1
+description: "This reference article covers how users can retarget their messages by users WhatsApp interactions."
+page_type: reference
+channel:
+  - WhatsApp
+
+---
+
+# User retargeting 
+
+> In addition to changing the user’s subscription state, Braze will also record interactions with the user profile for filtering and triggering messages.<br><br>These filters and triggers allow you to filter users that have received WhatsApp messages or received WhatsApp messages from a specific WhatsApp campaign or canvas step.
+
+## Retargeting options
+
+### Filter users by WhatsApp
+
+Users can be filtered by when they last received a WhatsApp or if they have received a WhatsApp from a specific WhatsApp campaign. Filters can be set in the Target Users step of the campaign builder.
+
+**Filter by last received WhatsApp**<br>
+![][5]{: style="max-width:75%"}
+
+**Filter by received messages from WhatsApp campaign**<br>
+Filters users who have received a message from a specific WhatsApp campaign. With this filter, you also have the option to filter off those that have not received messages from a WhatsApp campaign.<br>
+![][4]
+
+### Filter by engagement
+Retarget users who have, or have not, read a WhatsApp campaign or canvas step. 
+
+**Retarget users who have opened/read a specific WhatsApp Campaign**
+1. Create a segment using the **Clicked/Opened Campaign** filter.
+2. Select **read WhatsApp message**.
+3. Choose the desired campaign.<br>
+
+![][3]
+
+**Retarget users who have opened/read a specific Canvas Step**
+1. Create a segment using the **Clicked/Opened Step** filter.
+2. Select **read WhatsApp message**.
+3. Choose the desired Canvas and Canvas steps.<br>
+
+![][2]
+
+**Filter by campaign or Canvas attribution**<br>
+Filter for users who have opened/read to a specific WhatsApp campaign or Canvas component or tag.
+![][1]
+
+[1]: {% image_buster /assets/img/whatsapp/whatsapp19.png %} 
+[2]: {% image_buster /assets/img/whatsapp/whatsapp20.png %} 
+[3]: {% image_buster /assets/img/whatsapp/whatsapp21.png %} 
+[4]: {% image_buster /assets/img/whatsapp/whatsapp22.png %} 
+[5]: {% image_buster /assets/img/whatsapp/whatsapp23.png %} 

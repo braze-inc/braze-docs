@@ -1,7 +1,6 @@
 ---
 nav_title: User Retargeting
 article_title: SMS User Retargeting
-page_order: 5
 description: "This reference article covers how users can retarget their messages by users SMS interactions."
 page_type: reference
 tool:
