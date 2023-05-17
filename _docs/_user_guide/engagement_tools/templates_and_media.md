@@ -4,7 +4,7 @@ article_title: Templates and Media
 page_order: 5
 layout: dev_guide
 guide_top_header: "Templates and Media"
-guide_top_text: "The Templates and Media feature of Braze allows you to manage templates and upload images for messages in a single, centralized location. You can consolidate and organize your templates across the dashboard for a coherent look and feel."
+guide_top_text: "The **Templates and Media** section in Braze allows you to manage templates and upload images for messages in a single, centralized location. You can also consolidate and organize your templates across the dashboard for a coherent look and feel."
 search_rank: 2
 page_type: landing
 tool: 
@@ -33,13 +33,13 @@ guide_featured_list:
 
 ## About templates and media
 
-To access Templates and Media, navigate to **Engagement** in your left navigation bar of your Braze account, then select **Templates & Media**.
+To access your templates and media, navigate to **Engagement** in your left navigation bar of your Braze account, then select **Templates & Media**.
 
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
 {% endalert %}
 
-You can use and manage templates and creative content in Templates & Media for the following features:
+You can use and manage templates and creative content in **Templates & Media** for the following features:
 
 - **[Email templates][2]**
 - **[Content Blocks][7]**

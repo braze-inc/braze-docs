@@ -12,11 +12,11 @@ tool:
 
 # Content Blocks Library
 
-> The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location. To access this feature, go into the **Content Blocks Library** tab in the [Templates & Media][6] section of your Braze account.
+> The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location.
 
 With Content Blocks, you can:
 
-- Create a consistent look and feel to your email campaigns using them as headers and footers.
+- Create a consistent look and feel to your email campaigns by using them as headers and footers.
 - Distribute the same offer codes through different channels.
 - Create pre-defined assets that can be used to build messages with consistent information and assets.
 - Copy entire message bodies to other messages.
@@ -29,21 +29,37 @@ Creating a Content Block is easy—go to the **Templates & Media** section, then
 If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
 {% endalert %}
 
-There are two types of editors used to create a Content Block—classic and drag-and-drop. You can also create and manage your Content Blocks [via API][5].
+There are two types of editors used to create a Content Block—classic and drag-and-drop. These two types of editors correspond to the type of Content Block: HTML and drag-and-drop. You can also create and manage your Content Blocks [via API][5].
 
 {% tabs %}
 {% tab Drag-and-drop %}
 
+{% alert note %}
+The drag-and-drop editor is only available for Content Blocks used in email messaging.
+{% endalert %}
+
 **Steps:**
 
-Text text text
+1. Enter a name for your Content Block. This name will autopopulate as part of the **Content Block Liquid Tag**.
+2. (optional) Add a description.
+3. Select **Drag-And-Drop Editor** as your editing experience, making this a drag-and-drop Content Block type.
+4. Click **Edit Content Block** to begin editing.
+4. In the editor, drag and drop the blocks in the **Content** tab to build out your Content Block. 
+5. Using the **Row** tab, you can adjust details such as the row or content area background colors, alignment, padding, and more.
+6. Once you've finished creating your Content Block, click **Done**.
 
 {% endtab %}
 {% tab HTML %}
 
 **Steps:**
 
-Text text text
+1. Enter a name for your Content Block. This name will autopopulate as part of the **Content Block Liquid Tag**.
+2. (optional) Add a description.
+3. Select **HTML Editor** as your editing experience, making this an HTML Content Block type.
+4. Click **Edit Content Block** to begin editing.
+4. In the editor, enter your HTML. 
+5. Using the **Row** tab, you can adjust details such as the row or content area background colors, alignment, padding, and more.
+6. Once you've finished creating your Content Block, click **Done**.
 
 {% endtab %}
 {% endtabs %}
@@ -52,11 +68,11 @@ Text text text
 
 | Content Block Attribute | Specifications |
 |---|---|
-| Name | Required field limited to 100 characters. It cannot be renamed after Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
-| Description | Optional field limited to 250 characters. Describe the Content Block so that others viewing it in the Braze product will know what it's for and where it's being used. |
-| Content Size | Limited to 50kB (kilobyte). |
+| Name | Required field with maximum of 100 characters. It cannot be renamed after Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
+| Description | (optional) Maximum of 250 characters. Describe the Content Block so that others viewing it in the Braze product will know what it's for and where it's being used. |
+| Content Size | Maximum of 50kB (kilobyte). |
 | Placement | Content Blocks cannot be used within an email footer. |
-| Creation | HTML or Text. |
+| Creation | HTML editor or drag-and-drop editor. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
@@ -74,8 +90,8 @@ When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by
 
 After creating your Content Block, you can insert it in your messaging by following these steps: 
 
-2. Copy the Content Block Liquid Tag from your Content Block page.
-3. Insert the Content Block Liquid tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
+1. Copy the **Content Block Liquid Tag** from the **Content Block Details** section.
+2. Insert the Content Block Liquid tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
 ### Updating and copying Content Blocks
 
