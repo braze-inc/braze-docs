@@ -14,11 +14,9 @@ layout: dev_guide
 
 # Smartling
 
-> [Smartling][8] provides an enterprise-class LanguageAI™ platform for translating and localizing all forms of digital content.
+An end-to-end cloud translation management software for customers looking to automate the translation of websites, applications, and customer experiences.
 
-As an integrated platform built on artificial intelligence, Smartling’s LanguageAI™ generates human-quality translations faster, more reliably, and at a significantly lower cost when compared to traditional approaches.
-
-
+The Braze and Smartling integration allows you to translate email templates and content blocks. Smartling provides linguists with the benefit of visual context during the translation process, which reduces errors and maintains quality.
 
 ## Prerequisites
 
@@ -29,12 +27,6 @@ As an integrated platform built on artificial intelligence, Smartling’s Langua
 | Braze REST API key | A Braze REST API key with all templates and content blocks permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-## Use cases
-
-By utilizing Smartling's Braze connector, users can communicate with their global audience more efficiently, resulting in a decreased time to market. The integration with Braze enables the automation of the localization process for email templates and content blocks. 
-
-The integration of Smartling and Braze translation platforms provides linguists with the benefit of visual context, enabling them to accurately and contextually translate content by seeing how the translated text appears within the original visual layout.
 
 ## Integration
 
@@ -61,19 +53,26 @@ The integration of Smartling and Braze translation platforms provides linguists 
 
 Please check the full [connector configuration documentation here][3].
 
+Select how you want automation of prior requests for translation.
+
 Configure the source and target languages in **Language Configuration**. It will be used by the connector for ingesting content into Smartling TMS and delivering translations back to Braze.
 
-![Connector language configuration][9]
+![Connector language configuration][8]
 
 ### Step 2: Send content to Smartling
 
 Once the Braze Connector has been connected and set up, you will find Braze content in the Braze tab in your Smartling project. Please see the full [documentation here][7].
 
-![Content blocks list][10]
+Smartling provides advanced features to search and select content by:
+* Keyword Search
+* Braze Content Type
+* Braze tagging
+
+![Content blocks list][9]
 
 ### Step 3: Add translations to Braze
 
-As translations are completed, they are automatically sent to Braze. However, you can always get the translation to Braze manually by clicking **Export** translation for emails or blocks.
+As translations are completed in the Smartling Platform, they are automatically sent to Braze. No need to manual sync content between Smartling and Braze, everything is fully automated!
 
 [1]: {{site.baseurl}}/api/basics/#endpoints
 [2]: https://dashboard.smartling.com/
@@ -82,6 +81,5 @@ As translations are completed, they are automatically sent to Braze. However, yo
 [5]: https://help.smartling.com/hc/article_attachments/13946813331739
 [6]: https://help.smartling.com/hc/en-us/articles/115003074093
 [7]: https://help.smartling.com/hc/en-us/articles/13248577069979
-[8]: https://www.smartling.com/
-[9]: {% image_buster /assets/img/smartling/smartling-braze-settings.png %}
-[10]: {% image_buster /assets/img/smartling/smartling-content-blocks-list.png %}
+[8]: {% image_buster /assets/img/smartling/smartling-braze-settings.png %}
+[9]: {% image_buster /assets/img/smartling/smartling-content-blocks-list.png %}
