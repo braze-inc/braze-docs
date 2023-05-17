@@ -147,7 +147,7 @@ Any component that requires authenticating the user must use [Google Access Toke
 For a full list of AMP Components, check out the [AMP Documentation](https://amp.dev/documentation/components/?format=email).  
 
 ### Use cases
-Below you will find a couple of example use cases for the various components discussed above.
+Check out these examples of the previous components.
 
 {% tabs local %}
 {% tab Interactive Surveys %}
