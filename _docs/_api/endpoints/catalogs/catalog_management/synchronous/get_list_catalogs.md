@@ -27,7 +27,7 @@ description: "This article outlines details about the List catalogs Braze endpoi
 
 There are no path or request parameters for this endpoint.
 
-### Example request
+## Example request
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
