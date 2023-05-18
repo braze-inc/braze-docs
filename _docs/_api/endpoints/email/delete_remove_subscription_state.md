@@ -10,7 +10,7 @@ description: "This article outlines the details about the Delete subscription st
 ---
 
 {% api %}
-# Query based on email address or phone number
+# Delete subscription state by email address or phone number
 {% apimethod DELETE %}
 /users/subscription
 {% endapimethod %}
