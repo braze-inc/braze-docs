@@ -18,9 +18,12 @@ layout: dev_guide
 
 ## Prerequisites
 
-| Requirement              | Description |
-|--------------------------| ----------- |
-| Fresh Relevance Account  | A Fresh Relevance account is required to take advantage of this partnership. |
+| Requirement              | Description                                                                                                                                                                                           |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Fresh Relevance Account  | A Fresh Relevance account is required to take advantage of this partnership.                                                                                                                          |
+| Braze REST API key | A Braze REST API key with permissions sufficient for the endpoints listed below. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST endpoint | [Your REST endpoint URL][3]. Your endpoint will depend on the Braze URL for your instance.                                                                                                            |
+| Braze Campaign ID | The default Braze campaign that you want to use to send emails                                                                                                                                        |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
@@ -37,5 +40,21 @@ To set up the integration between Braze and Fresh Relevance, you must create a B
 
 For step-by-step instructions, please log into Fresh Relevance and see the instructions here: [https://admin.freshrelevance.com/help/esp_instructions/?esp_class_name=EspBraze][2].
 
+The Fresh Relevance system will communicate with Braze using the API key provided. A full integration makes use of the following Braze API endpoints:
+
+* [`/users/alias/new`][4]
+* [`/users/track`][5]
+* [`/campaigns/triggers/send`][6]
+* [`/users/export/ids`][7]
+* [`/subscription/status/get`][8]
+* [`/v2/subscription/status/set`][9]
+
 [1]: https://www.freshrelevance.com/
 [2]: https://admin.freshrelevance.com/help/esp_instructions/?esp_class_name=EspBraze
+[3]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[4]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
+[5]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
+[6]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
+[7]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
+[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
+[9]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/
