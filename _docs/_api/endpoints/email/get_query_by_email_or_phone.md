@@ -1,30 +1,28 @@
 ---
-nav_title: "GET: Retrieve Subscription State with Email Address or Phone Number"
-article_title: "GET: Retrieve Subscription State with Email Address or Phone Number"
+nav_title: "GET: List Subscription State with Email Address or Phone Number"
+article_title: "GET: List Subscription State with Email Address or Phone Number"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines the usage of and parameters for using the retrieve the subscription state associated with an email address or phone number."
+description: "This article outlines the details about the List subscription state with an email address or phone number Braze endpoint."
 
 ---
 {% api %}
-# Retrieve subscription state based on email address or phone number
+# List subscription state based on email address or phone number
 {% apimethod get %}
 /users/subscription
 {% endapimethod %}
 
-This endpoint allows you to pull the subscription state value based on an email address or phone number.
+> Use this endpoint to return the subscription state value based on an email address or phone number.
 
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |
-| ----------|-----------| ----------|----- |
+| --- | --- | --- | --- |
 | `email` | Yes * | String | The email address of the user (must include at least one address and at most 50 addresses). |
-| `phone` | Yes * | String | The phone number of the user (must include at least one phone number and at most 50 phone numbers). We recommend providing this in the E.164 format. |
-
+| `phone` | Yes * | String | The phone number of the user (must include at least one phone number and at most 50 phone numbers). We recommend providing this in E.164 format. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
 
 ## Example request
 ```
@@ -69,4 +67,5 @@ Authorization: Bearer YOUR_REST_API_KEY
 	"message": "success"
 }
 ```
+
 {% endapi %}
