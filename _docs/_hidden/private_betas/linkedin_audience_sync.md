@@ -51,7 +51,7 @@ Once you have successfully connected, you will be returned to the partner page, 
 
 ![][6]{: style="max-width:75%;"}
 
-Your LinkedIn connection will be applied at the Braze app group level. If your LinkedIn admin removes you from your LinkedIn ad account, Braze will detect an invalid token. As a result, your active Canvases using LinkedIn will show errors, and Braze will not be able to sync users.
+Your LinkedIn connection will be applied at the Braze workspace level. If your LinkedIn admin removes you from your LinkedIn ad account, Braze will detect an invalid token. As a result, your active Canvases using LinkedIn will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Configure your Canvas entry criteria
 
