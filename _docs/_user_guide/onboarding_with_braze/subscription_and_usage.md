@@ -1,25 +1,33 @@
 ---
-nav_title: Subscriptions and Usage
-article_title: Dashboard Subscription and Usage
+nav_title: Billing
+article_title: Billing
 alias: /subscription_and_usage/
 page_order: 4.1
 page_type: reference
-description: "This reference article covers the Subscriptions and Usage page, where you can monitor and check your data consumption."
+description: "This reference article covers the Billing page, where you can monitor and check your data consumption."
 tool: Dashboard
 search_rank: 5
 ---
 
-# Subscriptions and usage
+# Billing
 
-> Use this page as a self-serve tool to monitor and check your data consumption. 
+> Use this page as a self-serve tool to monitor and check your data consumption.
 
-To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select **Subscriptions and Usage** from the dropdown menu.
+To navigate to the **Billing** page, go to **Settings** > **Company Settings** > **Billing**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Subscriptions and Usage** is now **Billing** and is located under **Settings** > **Company Settings** > **Billing**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon, then select **Subscriptions and Usage**.
 {% endalert %}
 
-## Page contents
+The **Billing** page includes the following tabs:
+
+- [Subscriptions and Usage](#subscriptions-and-usage)
+- [Most Used Events and Attributes by App](#most-used-events-and-attributes-by-app)
+- [Total Data Points Usage](#total-data-points-dashboard)
+
+## Subscriptions and Usage
+
+The **Subscriptions and Usage** page includes usage graphs and your contract details.
 
 ### Usage graphs
 
@@ -33,11 +41,19 @@ Usage graphs like these are particularly helpful when trying to budget usage and
 
 Contract details list the start and end date of your current contract with Braze.
 
+## Most used events and attributes by app
+
+The **Most Used Events and Attributes By App** page is a useful tool to understand the drivers of your attribute and custom event data point consumption. For each app, you can find an estimated count of each specific custom attribute, profile attribute, and custom event for the selected time period as well as the percentage of that app's attribute and event updates that were driven by that attribute or event. 
+
+Data breakdowns like these can help you understand what specific data points are taking up large percentages of your allotment. We recommend that you monitor this information from time to time to make sure you aren't spending data points in accidental and unnecessary ways. Your customer success manager can provide guidance to get the most out of your current plan or provide options for greater flexibility. 
+
+![Most Used Events and Attributes By App][4]
+
 ## Total data points dashboard
 
-Your **Data Points Usage** can be found under the **Total Data Points Usage** tab. You can view all data in this section aggregated by either weeks or months. Click **Run** to apply any changes.
+The **Total Data Points Usage** page provides an in-depth look at your data point consumption. You can view all data in this section aggregated by either weeks or months. Click **Update** to apply any changes.
 
-![Filtering Data Point Usage by weeks][2]{: style="max-width:80%;"}
+![Filtering Data Point Usage by weeks][2]
 
 ### Contract details
 
@@ -100,14 +116,6 @@ The **Workspace Level Data Point Usage over Time** table enables you to see how 
 The **App Level Total Data Point Usage** table enables you to see data point usage for each of the apps in your workspace. You can use this table to identify which apps are driving data point consumption for the workspace.
 
 ![App Level Total Data Point Usage table for multiple apps][12]{: style="max-width:90%;"}
-
-## Most used events and attributes by app
-
-The **Most Used Events and Attributes By App** page is a useful tool to understand the drivers of your attribute and custom event data point consumption. For each app, you can find an estimated count of each specific custom attribute, profile attribute, and custom event for the selected time period as well as the percentage of that app's attribute and event updates that were driven by that attribute or event. 
-
-Data breakdowns like these can help you understand what specific data points are taking up large percentages of your allotment. We recommend that you monitor this information from time to time to make sure you aren't spending data points in accidental and unnecessary ways. Your customer success manager can provide guidance to get the most out of your current plan or provide options for greater flexibility. 
-
-![Most Used Events and Attributes By App][4]
 
 
 
