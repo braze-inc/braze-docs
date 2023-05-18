@@ -2,7 +2,7 @@
 nav_title: Billing
 article_title: Billing
 alias: /subscription_and_usage/
-page_order: 4.1
+page_order: 1.5
 page_type: reference
 description: "This reference article covers the Billing page, where you can monitor and check your data consumption."
 tool: Dashboard
@@ -13,7 +13,7 @@ search_rank: 5
 
 > Use this page as a self-serve tool to monitor and check your data consumption.
 
-To navigate to the **Billing** page, go to **Settings** > **Company Settings** > **Billing**.
+To navigate to the **Billing** page, go to **Settings** > **Billing**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon, then select **Subscriptions and Usage**.

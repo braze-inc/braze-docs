@@ -13,10 +13,13 @@ guide_featured_list:
 - name: Access Braze
   link: /docs/user_guide/administrative/access_braze/
   fa_icon: fa-solid fa-arrow-right-to-bracket
-- name: Company Settings
+- name: Admin Settings
   link: /docs/user_guide/administrative/company_settings/
   fa_icon: fa-regular fa-building
-- name: Manage Your Braze Users
+- name: Billing
+  link: /docs/user_guide/administrative/subscription_and_usage/
+  fa_icon: fa fa-users
+- name: Company Users
   link: /docs/user_guide/administrative/manage_your_braze_users/
   fa_icon: fa-solid fa-users
 - name: Settings
