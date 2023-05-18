@@ -171,6 +171,11 @@
           }
         }
       }
+      @for $oli from 1 through 5 {
+        ol[start="#{$oli}"] {
+          counter-reset: li #{$oli - 1};
+        }
+      }
       img {
         border: 1px solid $grey-ghost;
         border-width: 1px;
