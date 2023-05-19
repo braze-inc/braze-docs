@@ -246,7 +246,31 @@ To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style.
 {% endtab %}
 {% tab iOS %}
 
-<!--- To do: Add recipe for customizing the pinned icon on iOS --->
+The structure of the Content Card pinned icon is:
+
+```css
+<div class="ab-pinned-indicator">
+  <i class="fa fa-star"></i>
+</div>
+```
+
+If you want to use a different FontAwesome icon, you can simply replace the class name of the `i` element with the class name of the desired icon. 
+
+If you want to swap out the icon altogether, remove the `i` element and add the custom icon as a child of `ab-pinned-indicator`. There are a few different ways you can go about it, but one simple method would be to `replaceChildren()` on the `ab-pinned-indicator` element.
+
+For example:
+
+```javascript
+// Get the parent element
+const pinnedIndicator = document.querySelector('.ab-pinned-indicator');
+
+// Create a new custom icon element
+const customIcon = document.createElement('span');
+customIcon.classList.add('customIcon');
+
+// Replace the existing icon with the custom icon
+pinnedIndicator.replaceChildren(customIcon);
+```
 
 {% subtabs %}
 {% subtab Swift %}
@@ -263,9 +287,14 @@ Objective-C content
 {% endtab %}
 {% tab Web %}
 
-<!--- To do: Add recipe for customizing font through CSS --->
+Just like any other web element, you can easily customize the appearance of Content Cards through CSS. In your CSS file or inline styles, use the `font-family` property and specify the desired font name or font stack.
 
-Web content
+```css
+/* CSS selector targeting the Content Card element */
+.card-element {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+```
 
 {% endtab %}
 {% endtabs %}
