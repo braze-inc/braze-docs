@@ -13,9 +13,7 @@ channel:
 
 ## Refreshing the feed
 
-<!--- Check me here, please. I think this is true for Web, but might not be true for other SDKs--->
-
-The Content Card feed will refresh automatically in the following instances: 
+By default, the Content Card feed will refresh automatically in the following instances: 
 1. A new session is started
 2. When the feed is opened and more than 60 seconds have elapsed since the last refresh
 
@@ -272,8 +270,6 @@ Web content
 
 When a user does not qualify for any Content Cards, an "empty feed" error message is displayed. 
 
-<!--Question: What does this look like? -->
-
 You can configure what is displayed in this empty feed message.
 
 ![An empty feed error message that reads "This is a custom empty state message."][1]
@@ -317,15 +313,13 @@ attributes.emptyStateMessageColor = .secondaryLabel
 {% endsubtab %}
 {% subtab Objective-C %}
 
-<!-- Question: This content is pulled from the old iOS SDK. How can it be updated for the Swift SDK since customization through Attributes isn't supported for Objective-C? -->
-Change the language that appears automatically in empty Content Card feeds by [redefining the localizable content card strings](https://github.com/Appboy/appboy-ios-sdk/blob/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources/en.lproj/AppboyContentCardsLocalizable.strings) in your app's localizable strings file: 
+Change the language that appears automatically in empty Content Card feeds by redefining the localizable content card strings in your app's [`ContentCardsLocalizable.strings`]((https://github.com/braze-inc/braze-swift-sdk/tree/main/Sources/BrazeUI/Resources/Localization/en.lproj) file: 
 
 ```obj-c
-"Appboy.content-cards.no-card.text" = "No Cards!!!!";
-"Appboy.content-cards.done-button.title" = "Done";
-"Appboy.content-cards.no-card.text" = "We have no updates.\nCheck again later.";
-"Appboy.content-cards.no-connection.title" = "Connection Error";
-"Appboy.content-cards.no-connection.message" = "Cannot establish network connection.\nPlease try again later.";
+public var emptyStateMessage: String = localize(
+  "braze.content-cards.no-card.text",
+  for: .contentCard
+)
 ```
 
 {% alert note %}
