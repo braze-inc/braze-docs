@@ -39,6 +39,9 @@ module Jekyll
         @cordova = get_full_version(text, 'cordova')
         @cordova_changelog_ref = get_changelog_ref(@cordova)
 
+        @xamarin = get_full_version(text, 'xamarin')
+        @xamarin_changelog_ref = get_changelog_ref(@xamarin)
+
       end
 
       def render(context)
@@ -75,6 +78,9 @@ module Jekyll
         end
         if !@cordova.nil?
           render_html += "<a href='/docs/developer_guide/platform_integration_guides/cordova/changelog/##{@cordova_changelog_ref}' class='sdk-versions--chip cordova-sdk' target='_blank'>Cordova: #{@cordova}+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a>"
+        end
+        if !@xamarin.nil?
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/xamarin/changelog/##{@xamarin_changelog_ref}' class='sdk-versions--chip xamarin-sdk' target='_blank'>Xamarin: #{@xamarin}+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a>"
         end
         render_html += "</div>"
         return render_html
