@@ -10,9 +10,9 @@ alias: "/message_extras_tag/"
 
 > Using the `message_extras` Liquid tag, you can annotate your send events with dynamic data from Connected Content, Catalogs, custom attributes (such as language, country), Canvas entry properties, or other data sources. 
 
-The `message_extras` Liquid tag appends key-value pairs to the corresponding send event in Currents. This is supported for all message types with a send event.
+The `message_extras` Liquid tag appends key-value pairs to the corresponding send event in Currents and Snowflake Data Sharing. This is supported for all message types with a send event.
 
-To send dynamic or extra data back to your Currents send event, insert the proper Liquid tag into your message body. The following is an example of the standard Liquid tag format for `message_extras`: 
+To send dynamic or extra data back to your Currents or Snowflake Data Sharing send event, insert the proper Liquid tag into your message body. The following is an example of the standard Liquid tag format for `message_extras`: 
 
 {% raw %}
 ```
@@ -20,17 +20,17 @@ To send dynamic or extra data back to your Currents send event, insert the prope
 ```
 {% endraw %}
 
-You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values should not exceed 1&nbsp;KB. In Currents, you'll see a new event field called `message_extras` for your send events. This will generate a JSON serialized string in one field. 
+You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values should not exceed 1&nbsp;KB. In Currents and Snowflake Data Sharing, you'll see a new event field called `message_extras` for your send events. This will generate a JSON serialized string in one field. 
 
 ## How to use
 
 1. In the message body for the channel, input the `message_extras` Liquid tag. Or, you can use the **Add Personalization** modal and select **Message Extras** for the personalization type. <br>![The Add Personalization modal with Message Extras selected as the personalization type.][1]{: style="max-width:70%;"}
 2. Enter the [key-value pair]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) for each `message_extras` tag. <br>![An example of key-value pairs for the message extras tag. The title field reads "Your New Favorites." The message reads key-value pairs for the message extras tag and the following sentence: "We're excited to bring you a side selection of fresh and exciting products that are sure to become your new go-to favorites"][2]{: style="max-width:70%;"}
-3. After your campaign or Canvas has been sent, Braze will attach the dynamic data at the send time via the Currents send events to the `message_extras` field.
+3. After your campaign or Canvas has been sent, Braze will attach the dynamic data at the send time via the Currents or Snowflake Data Sharing send events to the `message_extras` field.
 
 ## Checking syntax
 
-Any other input that doesn't match the aforementioned tag standard may fail to pass to Currents. Check that your syntax or formatting doesn't include any of the following:
+Any other input that doesn't match the aforementioned tag standard may fail to pass to Currents or Snowflake. Check that your syntax or formatting doesn't include any of the following:
 
 - Non-existent, empty, or mistyped delimiters
 - Duplicate keys (Braze will default to sending the key-value pair that is encountered first)
