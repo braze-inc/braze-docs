@@ -85,7 +85,7 @@ You can also call [`getCachedContentCards`](https://js.appboycdn.com/web-sdk/lat
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-function refresh(){
+function refresh() {
   braze.requestContentCardsRefresh();    
 }
 ```
