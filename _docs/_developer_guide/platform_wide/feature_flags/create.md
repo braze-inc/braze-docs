@@ -25,7 +25,7 @@ Feature flags are currently in beta. Contact your Braze account manager if you'r
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
 
-{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 %}
+{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:9.9.9 %}
 
 ## Implement feature flags in the dashboard
 
