@@ -43,16 +43,10 @@ Use feature flags to modify your app's functionality in production. This can be 
 For example, you can use a feature flag's property values to quickly change your app's homepage links or text. You can even dynamically personalize this content using Braze profile attributes.
 
 ### Message coordination
-{% alert important %} 
-This functionality is not yet supported in beta.
-{% endalert %}
 
 Use feature flags to synchronize a feature's rollout and messaging. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a Campaign or Canvas that only targets that segment. 
 
 ### Feature experimentation
-{% alert important %} 
-This functionality is not yet supported in beta.
-{% endalert %}
 
 Use feature flags to experiment and confirm your hypotheses around your new feature. By splitting traffic into two or more groups, you can compare the impact of a feature flag across groups, and determine the best course of action based on the results.
 

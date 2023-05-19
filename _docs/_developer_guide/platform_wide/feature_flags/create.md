@@ -17,10 +17,6 @@ platform:
 
 Looking to learn more about what feature flags are and how you can use them in Braze? Check out [About feature flags][5] before proceeding.
 
-{% alert important %}
-Feature flags are currently in beta. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## Prerequisites
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:

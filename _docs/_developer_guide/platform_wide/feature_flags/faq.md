@@ -18,7 +18,7 @@ platform:
 
 ### How can I join the feature flags beta program? {#join-beta}
 
-Braze feature flags are currently in an open beta. Please ask your Braze account team to learn more about joining the beta program.
+Braze feature flags are currently in an open beta. [Click here](https://dashboard.braze.com/engagement/feature_flags) to request beta access, or speak with your Braze account team.
 
 ### What platforms are Braze feature flags supported on? {#platforms}
 
