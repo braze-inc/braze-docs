@@ -525,10 +525,8 @@ The following example will show the Content Cards feed for `Transactional` type 
  */
 function showCardsByFeedType(feed_type) {
   braze.showContentCards(null, function(cards) {
-    return cards.filter(function(card) {
-      return card.extras["feed_type"] === feed_type;
-    });
-  })
+    return cards.filter((card) => card.extras["feed_type"] === feed_type);
+  });
 }
 ```
 
