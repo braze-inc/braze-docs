@@ -2,17 +2,83 @@
 nav_title: Customizing Card Behavior
 article_title: Customizing Content Card Behavior
 page_order: 2
-description: ""
+description: "This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations."
 channel:
   - content cards
 ---
 
 # Customizing Content Card behavior
 
+> This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations.
+
 ## Key-value pairs
-Key-value pairs can control the layout, text, font, colors, position, and general info.
 
+Braze enables you to send extra data payloads to user devices using key-value pairs. Extra data payloads can help you track internal metrics, update app content, and customize properties.
 
+<!--Question: This alert specifically calls out a size limit for content "entered in the dashboard." Does that include Content Cards with extras programmatically added? -->
+
+{% alert note %}
+Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.
+{% endalert %}
+
+{% tabs %}
+{% tab Android %}
+
+[`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721) objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html) to access these values.
+
+{% endtab %}
+{% tab iOS %}
+
+iOS content
+
+{% subtabs %}
+{% subtab Swift %}
+
+Swift content
+
+{% endsubtab %}
+{% subtab Objective-C %}
+
+Objective-C content
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Web %}
+
+[`Card`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) to access these values.
+
+{% endtab %}
+{% endtabs %}
+
+Marketers can also add key-value pairs through the [dashboard][1].
+
+### Retrieving key-value pairs
+
+Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
+
+## Interactive Content Cards
+
+![]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
+
+### Dashboard configuration
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. 
+
+![]({% image_buster /assets/img/cc_implementation/discount.png %}){: style="max-width:35%;float:left;margin-right:15px;border:none;"}
+
+Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
+
+## Content card badges
+
+Badges are small icons that are ideal for getting a user's attention. Using badges to alert the user about new Content Card content can attract users back to your app and increase sessions.
+
+![An iPhone home screen showing a Braze sample app named Swifty with a red badge displaying the number 7]({% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+
+### Displaying the number of unread Content Cards as a badge
+
+You can display the number of unread Content Cards your user has as a badge on your app's icon. 
 
 {% tabs %}
 {% tab Android %}
@@ -56,34 +122,7 @@ Web content
 {% endtab %}
 {% endtabs %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
-
-### Retrieving key-value pairs
-
-Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
-
-## Interactive Content Cards
-
-![]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
-
-### Dashboard configuration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. 
-
-![]({% image_buster /assets/img/cc_implementation/discount.png %}){: style="max-width:35%;float:left;margin-right:15px;border:none;"}
-
-Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
-
-## Content card badges
-
-Badges are small icons that are ideal for getting a user's attention. Using badges to alert the user about new Content Card content can attract users back to your app and increase sessions.
-
-![An iPhone home screen showing a Braze sample app named Swifty with a red badge displaying the number 7]({% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
-
-### Displaying the number of unread Content Cards as a badge
-
-You can display the number of unread Content Cards your user has as a badge on your app's icon. The following sample uses `braze.contentCards` to request and display the number of unread Content Cards. Once the app is closed and the user's session ends, this code requests a card count, filtering the number of cards based on the `viewed` property.
+The following sample uses `braze.contentCards` to request and display the number of unread Content Cards. Once the app is closed and the user's session ends, this code requests a card count, filtering the number of cards based on the `viewed` property.
 
 {% tabs %}
 {% tab swift %}
@@ -121,57 +160,4 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 {% endtab %}
 {% endtabs %}
 
-## Adding read/unread indicators
-
-Content Cards contain a blue line at the bottom of the card which indicates whether or not the card has been viewed. This article provides examples of modifying this behavior. For more information on customizing Content Cards UI attributes, refer to [Customizing Feed]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/).
-
-![Two Content Cards displayed side by side. The card on the left has a blue line at the bottom, indicating it has not been seen. The card on the right does not have a blue line, indicating it has already been seen.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
-
-### Disabling the unread indicator
-
-Disable the unviewed indicator line by setting the `attributes.cellAttributes.unviewedIndicatorColor` property in your `Attributes` struct to `.clear`. 
-
-### Changing unread indicator color
-
-The color of the unviewed indicator can be set by assigning a value to the tint color of your `BrazeContentCardUI.ViewController` instance:
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
-viewController.view.tintColor = .systemGreen
-```
-
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-BRZContentCardUIViewController *viewController = [[BRZContentCardUIViewController alloc] initWithBraze:AppDelegate.braze];
-[viewController.view setTintColor:[UIColor systemGreenColor]];
-```
-
-{% endtab %}
-{% endtabs %}
-
-However, if you wish to modify only the unviewed indicator, you can access the `unviewedIndicatorColor` property of your `BrazeContentCardUI.ViewController.Attributes` struct. If you utilize Braze's `UITableViewCell` implementations, you should access the property before the cell is drawn.
-
-For example, to set the color of the unviewed indicator to red:
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
-attributes.cellAttributes.unviewedIndicatorColor = .red
-
-let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
-```
-
-{% endtab %}
-{% endtabs %}
-
-{% alert note %}
-Customization via `Attributes` is only available in Swift.
-{% endalert %}
-
+[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/#content-cards
