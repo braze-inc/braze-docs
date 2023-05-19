@@ -13,10 +13,10 @@ tool:
 
 > On the **Revenue** page of the dashboard you can view data on revenue over specific periods of time, a specific product revenue, and your app's total revenue.
 
-You can find the **Revenue** page under **Data**.
+You can find the **Revenue Report** under **Analytics**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Revenue Report** under **Analytics** > **Reports** > **Revenue Report**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Revenue** under **Data**.
 {% endalert %}
 
 {% alert tip %}

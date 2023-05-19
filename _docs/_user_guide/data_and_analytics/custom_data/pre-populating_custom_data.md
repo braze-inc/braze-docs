@@ -14,10 +14,10 @@ tool:
 
 > There may be times when you'd like to start setting up campaigns and segments using custom data before your development team has integrated that custom data. Braze allows you to pre-populate custom events and attributes on the dashboard before these pieces of data start tracking so that these events and attributes are available for use in dropdowns and as part of the campaign creation process.
 
-To pre-populate custom events and attributes, navigate to the **Manage Settings** page and select the **Custom Attributes** or **Custom Events** tab. Then add a new custom attribute or custom event.
+To pre-populate custom events and attributes, go to **Data Settings** and select either **Custom Events** or **Custom Attributes**. Then add a new custom attribute or custom event.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Events** and **Custom Attributes** under **Data Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find these pages under **Manage Settings**.
 {% endalert %}
 
 ![Navigate to Custom Attributes or Custom Events][21]

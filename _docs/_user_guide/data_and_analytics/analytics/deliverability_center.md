@@ -24,12 +24,12 @@ Before setting up your Deliverability Center, check that your domains have been 
 
 Follow these steps to integrate with Google Postmaster and set up your Deliverability Center:
 
-1. Go to the **Overview** page in the Braze dashboard.
-2. Click **Email Performance** and select the **Deliverability Center** tab. <br>![][3]
+1. Go to the **Analytics** > **Email Performance**.
+2. Select the **Deliverability Center** tab. <br>![][3]
 3. Click **Connect with Google Postmaster**. Select your Google Account, and click the **Allow** button to allow Braze to view email traffic metrics for the domains registered with the Postmaster Tools.
 4. Your verified domains will display in the Deliverability Center. <br>![][5]
 
-You can also access Google Postmaster in the Braze dashboard by navigating to **Technology Partners > Google Postmaster**. After integrating, Braze pulls reputation and error data for the last 30 days. The data may not be immediately available and could take several minutes to populate.
+You can also access Google Postmaster in the Braze dashboard by navigating to **Partner Integrations** > **Technology Partners** > **Google Postmaster**. After integrating, Braze pulls reputation and error data for the last 30 days. The data may not be immediately available and could take several minutes to populate.
 
 #### About IP reputation
 
