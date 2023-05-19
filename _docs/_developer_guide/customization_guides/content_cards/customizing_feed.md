@@ -83,7 +83,7 @@ You can also call [`getCachedContentCards`](https://js.appboycdn.com/web-sdk/lat
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-function refresh(){
+function refresh() {
   braze.requestContentCardsRefresh();    
 }
 ```
@@ -519,10 +519,8 @@ The following example will show the Content Cards feed for `Transactional` type 
  */
 function showCardsByFeedType(feed_type) {
   braze.showContentCards(null, function(cards) {
-    return cards.filter(function(card) {
-      return card.extras["feed_type"] === feed_type;
-    });
-  })
+    return cards.filter((card) => card.extras["feed_type"] === feed_type);
+  });
 }
 ```
 
