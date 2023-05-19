@@ -1,17 +1,23 @@
 ---
-nav_title: Email Settings
-article_title: Email Settings
+nav_title: Email Preferences
+article_title: Email Preferences
 page_type: reference
-page_order: 3
-description: "This reference article covers email settings in the Braze dashboard, including sending configurations, open tracking pixels, subscription page and footers, and more."
+page_order: 14
+description: "This reference article covers email preferences in the Braze dashboard, including sending configurations, open tracking pixels, subscription page and footers, and more."
 tool: Dashboard
 channel: email
 
 ---
 
-# Email settings
+# Email Preferences
 
-> Email settings can be found within the **Manage Settings** page of the dashboard. Here, Braze allows you to set specific outbound email settings like custom footers, custom opt-in and opt-out pages, and more. Including these options in your outbound emails make for a fluid and cohesive experience for your users.
+> Email Preferences is where you can set specific outbound email settings like custom footers, custom opt-in and opt-out pages, and more. Including these options in your outbound emails make for a fluid and cohesive experience for your users.
+
+**Email Preferences** can be found under **Settings** in the dashboard.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is called **Email Settings** and is located under **Settings** > **Manage Settings** > **Email Settings**.
+{% endalert %}
 
 ## Sending configuration
 

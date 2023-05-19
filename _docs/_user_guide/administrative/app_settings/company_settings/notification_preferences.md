@@ -15,10 +15,10 @@ The **Notification Preferences** page is where you can configure who (if anyone)
 
 ![Notification Preferences page in the Braze dashboard][61]
 
-To access the **Notification Preferences** page, select your account dropdown and go to **Company Settings** > **Notification Preferences**.
+To access this page, go to **Settings** > **Admin Settings** > **Notification Preferences**.
 
 {% alert note %}
-If you're using our [updated navigation]({{site.baseurl}}/navigation), you can find **Notification Preferences** under **Settings** > **Company Settings** > **Admin Settings** > **Notification Preferences**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), select your account dropdown and go to **Company Settings** > **Notification Preferences**.
 {% endalert %}
 
 ## Available notifications

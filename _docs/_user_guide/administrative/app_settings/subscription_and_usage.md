@@ -2,7 +2,7 @@
 nav_title: Billing
 article_title: Billing
 alias: /subscription_and_usage/
-page_order: 1.5
+page_order: 25
 page_type: reference
 description: "This reference article covers the Billing page, where you can monitor and check your data consumption."
 tool: Dashboard

@@ -1,7 +1,7 @@
 ---
 nav_title: Custom Event and Attribute Management
 article_title: Custom Event and Attribute Management
-page_order: 1
+page_order: 30
 page_type: reference
 description: "This reference article covers managing custom events and attributes and properties, as well as an overview on data type comparisons."
 
@@ -13,14 +13,14 @@ description: "This reference article covers managing custom events and attribute
 
 ## Adding custom attributes, custom events, and products
 
-You can manage custom attributes, custom events (and their properties), and products (and their properties) from the respective tabs on **Manage Settings** page:
+You can manage custom attributes, custom events (and their properties), and products (and their properties) from the respective pages under **Data Settings**:
 
 - Custom Attributes
 - Custom Events
 - Products
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find all of these pages under **Data Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find all of these pages under **Manage Settings**.
 {% endalert %}
 
 To add a custom attribute, event, or product, go to the respective tab and click **+ Add**. Give it a name (and for custom attributes, a data type) and click **Save**. This will enable tracking on it.
