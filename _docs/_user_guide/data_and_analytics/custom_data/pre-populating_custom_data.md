@@ -16,6 +16,10 @@ tool:
 
 To pre-populate custom events and attributes, navigate to the **Manage Settings** page and select the **Custom Attributes** or **Custom Events** tab. Then add a new custom attribute or custom event.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Events** and **Custom Attributes** under **Data Settings**.
+{% endalert %}
+
 ![Navigate to Custom Attributes or Custom Events][21]
 
 For custom attributes, select a [data type][20] for this attribute (for instance, boolean or string). An attribute's data type will determine the segmentation filters available for that attribute.

@@ -37,7 +37,13 @@ If you are using this feature alongside the [Audience Sync to Facebook]({{site.b
 
 ### Connect to Facebook
 
-In the Braze dashboard, go to **Technology Partners** and select **Facebook**. In the Facebook Audience Export module, click **Connect Facebook**.
+In the Braze dashboard, go to **Technology Partners** and select **Facebook**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
+In the Facebook Audience Export module, click **Connect Facebook**.
 
 ![Facebook technology partners page in the Braze platform.][6]{: style="max-width:70%;"}
 
@@ -45,7 +51,7 @@ A Facebook oAuth dialog window will appear to authorize Braze to create Custom A
 
 ![The first facebook dialog box prompting to "Connect as X", where X is your Facebook username.][8]{: style="max-width:30%;"}  ![The second Facebook dialog box prompting for permission to manage ads for your ad accounts.][7]{: style="max-width:40%;"}
 
-Once you have linked Braze to your Facebook account, you will then be able to select which ad accounts you would like to sync within your Braze app group. 
+Once you have linked Braze to your Facebook account, you will then be able to select which ad accounts you would like to sync within your Braze workspace. 
 
 ![A list of available ad accounts you can connect to Facebook.][9]{: style="max-width:70%;"}
 
@@ -53,10 +59,10 @@ Once you have successfully connected, you will be taken back to the partner page
 
 ![An updated version of the Facebook technology partners page showing the ad accounts successfully connected.][10]{: style="max-width:70%;"}
 
-Your Facebook connection will be applied at the Braze app group level. If your Facebook admin removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook audience steps will show errors, and Braze will not be able to sync users. 
+Your Facebook connection will be applied at the Braze workspace level. If your Facebook admin removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook audience steps will show errors, and Braze will not be able to sync users. 
 
 {% alert important %}
-For customers that have previously undergone the Facebook app review process for [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) and [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), your system user token will still be valid for the Facebook audience step. You will not be able to edit or revoke the Facebook system user token through the Facebook partner page. Instead, you can connect your Facebook account to replace your Facebook system user token within your Braze app group. 
+For customers that have previously undergone the Facebook app review process for [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) and [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), your system user token will still be valid for the Facebook audience step. You will not be able to edit or revoke the Facebook system user token through the Facebook partner page. Instead, you can connect your Facebook account to replace your Facebook system user token within your Braze workspace. 
 
 <br><br>The new Facebook oAuth configuration will also apply to [Facebook exports via segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
 {% endalert %}

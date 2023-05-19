@@ -15,9 +15,7 @@ description: "This article outlines details about the List catalogs Braze endpoi
 /catalogs
 {% endapimethod %}
 
-> Use this endpoint to return a list of catalogs in an app group.
-
-{% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
+> Use this endpoint to return a list of catalogs in a workspace.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d65fb86-ccf7-423f-9eb2-f68ab36df824 {% endapiref %}
 
@@ -29,7 +27,7 @@ description: "This article outlines details about the List catalogs Braze endpoi
 
 There are no path or request parameters for this endpoint.
 
-### Example request
+## Example request
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \

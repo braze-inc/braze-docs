@@ -39,7 +39,7 @@ Each request can support up to 50 items. This endpoint is asynchronous.
 | `items` | Required | Array | An array that contains item objects. The item objects should contain all of the fields in the catalog. Up to 50 item objects are allowed per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example Request
+## Example request
 
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \

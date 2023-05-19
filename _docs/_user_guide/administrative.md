@@ -22,6 +22,9 @@ guide_featured_list:
 - name: Settings
   link: /docs/user_guide/administrative/app_settings/
   fa_icon: fa-solid fa-gears
+- name: Privacy
+  link: /docs/user_guide/administrative/privacy/
+  fa_icon: fas fa-user-shield
 ---
 
 <br> 

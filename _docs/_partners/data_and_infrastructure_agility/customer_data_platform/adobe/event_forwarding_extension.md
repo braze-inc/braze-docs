@@ -82,7 +82,7 @@ To tie the event to a user, you must fill in either the `External User ID` field
 | --- | --- | --- |
 | Event name | Name of the event. | Yes |
 | Event time | Date-time as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | Yes |
-| App identifier | The app identifier or `app_id` is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. | No |
+| App identifier | The app identifier or `app_id` is a parameter associating activity with a specific app in your workspace. It designates which app within the workspace you are interacting with. | No |
 | Event Properties | A JSON object containing custom properties of the event. | No |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -148,7 +148,7 @@ To link the event to a user, you must complete either the `External User ID` fie
 | Currency | Currency as a string in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) alphabetic currency code format. | Yes |
 | Price | The price of the object. | Yes |
 | Quantity | The quantity purchased. If not provided, the default value will be 1. The maximum value must be lower than 100. | No |
-| App identifier | The app identifier or `app_id` is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. | No |
+| App identifier | The app identifier or `app_id` is a parameter associating activity with a specific app in your workspace. It designates which app within the workspace you are interacting with. | No |
 | Purchase properties | A JSON object containing custom properties of the purchase. | No |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

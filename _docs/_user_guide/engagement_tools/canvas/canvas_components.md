@@ -34,12 +34,9 @@ guide_featured_list:
   - name: User Update Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     fa_icon: fas fa-user-check
-  - name: Facebook Audience Sync
-    link: /docs/partners/canvas_steps/facebook_audience_sync/
-    fa_icon: fab fa-facebook
-  - name: Google Audience Sync
-    link: /docs/partners/advertising_technologies/social/canvas_steps/google_audience_sync/
-    fa_icon: fab fa-google
+  - name: Canvas Audience Sync
+    link: /docs/partners/canvas_steps/
+    fa_icon: fa-solid fa-rotate
 ---
 
 ## About Canvas components

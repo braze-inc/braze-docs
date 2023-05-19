@@ -150,6 +150,10 @@ To read more about different aspects of the Lambda function, such as monitoring 
 3. Once uploaded, confirm the default and custom attributes, assign an import name, and optionally create a group within the Braze platform from the uploaded Amperity query. 
 4. Click **Start Import**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **User Import** is now **Import Users** and can be found under **Audience**.
+{% endalert %}
+
 [2]: {% image_buster /assets/img/amperity/amperity2.png %} 
 [3]: {% image_buster /assets/img/amperity/amperity3.png %} 
 [4]: {% image_buster /assets/img/amperity/amperity4.png %} 

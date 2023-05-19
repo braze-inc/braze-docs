@@ -35,6 +35,10 @@ Before you can send an iOS push notification using Braze, you must provide your 
 6. Navigate to **Manage Settings > Settings** in the dashboard and upload the `.p8` file under **Apple Push Certificate**.
 7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/documentation/foundation/nsbundle/1418023-bundleidentifier), [key ID](https://developer.apple.com/help/account/manage-keys/get-a-key-identifier/), and [team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id). Click **Save**.<br><br>
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Settings** is now **App Settings** and can be found at **Settings** > **Setup and Testing** > **App Settings**.
+{% endalert %}
+
 {% endtab %}
 {% tab .p12 Certificate (Legacy) %}
 **Using a .p12 certificate (legacy)**
@@ -61,7 +65,7 @@ You may choose to use Apple's older authentication scheme (.p12 SSL certificates
 {% endtab %}
 {% endtabs %}
 
->  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate app group or app for the development version of your app.
+>  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate workspace or app for the development version of your app.
 
 ## Step 2: Enable push capabilities
 
@@ -260,10 +264,14 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API][29]. You will need to replace the following fields with the correct values for your test case:
 
-- `YOUR_API_KEY` - available on the **Developer Console** page.
+- `YOUR_API_KEY` - available at **Developer Console** > **API Settings**.
 - `YOUR_EXTERNAL_USER_ID` - available on the **User Search** page. See [assigning user IDs][32] for more information.
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), these pages are in a new location: <br>- **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys** <br>- **User Search** is now **Search Users** and can be found under **Audience**
+{% endalert %}
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{

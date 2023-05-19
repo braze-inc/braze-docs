@@ -50,7 +50,7 @@ The Push Story feature requires the background mode in the **Capabilities** sect
 You also need to add `Capability App Groups`. If you haven't had any app group in your app, go to the **Capability** of the main app target, turn on the `App Groups`, and click the **+** button. Use your app's bundle ID to create the app group. For example, if your app's bundle ID is `com.company.appname`, you can name your app group `group.com.company.appname.xyz`. You need to turn on the `App Groups` for both the main app and content extension targets.
 
 {% alert important %}
-`App Groups` in this context refer to Apple's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) and not your Braze app group ID.
+`App Groups` in this context refer to Apple's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) and not your Braze workspace (previously app group) ID.
 {% endalert %}
 
 ## Step 4: Adding the Push Story framework to your app
@@ -200,7 +200,7 @@ Open the `Info.plist` file of the `Notification Content Extension` and add and c
 
 ##### Option 1: Runtime
 
-In the `appboyOptions` dictionary used to configure your Braze instance, add an `ABKPushStoryAppGroupKey` entry and set the value to your app group API identifier.
+In the `appboyOptions` dictionary used to configure your Braze instance, add an `ABKPushStoryAppGroupKey` entry and set the value to your workspace API identifier.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -229,7 +229,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 ##### Option 2: Info.plist
 
-Alternatively, to configure the Push Story app group from your `Info.plist` file, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` dictionary, add a string-typed `PushStoryAppGroup` subentry and set the value to your App Group identifier. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
+Alternatively, to configure the Push Story workspace from your `Info.plist` file, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` dictionary, add a string-typed `PushStoryAppGroup` subentry and set the value to your workspace identifier. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
 ## Next steps
 

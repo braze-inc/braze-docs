@@ -23,7 +23,7 @@ Create your iOS push campaign, then look to the top of the **Compose** tab for t
 
 ![][26]{: style="max-width:60%;" }
 
-Select your Notification Groups from the dropdown. If your notification group settings malfunction or you select **None** from the dropdown, the message will automatically send as normal to all defined users in the app group.
+Select your Notification Groups from the dropdown. If your notification group settings malfunction or you select **None** from the dropdown, the message will automatically send as normal to all defined users in the workspace.
 
 If you don't have any Notification Groups listed here, you can add one using the iOS Thread ID. You will need one iOS Thread ID for every Notification Group you want to add. Then, add it to your Notification Groups by clicking **Manage Notification Groups** in the dropdown and filling out the required fields in the **Manage iOS Push Notification Groups** window that appears.
 

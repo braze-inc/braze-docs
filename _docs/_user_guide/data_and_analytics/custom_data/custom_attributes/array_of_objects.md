@@ -14,7 +14,7 @@ description: "This reference article covers using an array of objects as a data 
 ## Limitations
 
 - Arrays of objects are intended for custom attributes sent via the API. CSV uploads are not supported. This is because commas in the CSV file will be interpreted as a column separator, and commas in values will cause parsing errors. 
-- Partners do not support arrays of objects. We recommend against using this feature with app groups that have partner integrations enabled.
+- Partners do not support arrays of objects. We recommend against using this feature with workspaces that have partner integrations enabled.
 - Arrays of objects have no limit on the number of items but do have a maximum size of 50&nbsp;KB.
 
 Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
@@ -372,8 +372,8 @@ import * as braze from "@braze/web-sdk";
 const json = [{
   "id": 1,
   "type": "dog",
-  "breed", "beagle",
-  "name", "Gus"
+  "breed": "beagle",
+  "name": "Gus"
 }, {
   "id": 2,
   "type": "cat",
@@ -404,7 +404,7 @@ const json = {
     "name":  "Mary",
   }]
 };
-braze.getUser().setCustomerUserAttribute("pets", json, true);
+braze.getUser().setCustomUserAttribute("pets", json, true);
 ```
 
 **Update**
@@ -416,7 +416,7 @@ const json = {
       "$identifier_key": "id",
       "$identifier_value": 4,
       "$new_object": {
-        "breed", "goldfish"
+        "breed": "goldfish"
       }
     },
     {
@@ -446,7 +446,7 @@ const json = {
     },
     {
       "$identifier_key": "type",
-      "$identifier_value", "dog",
+      "$identifier_value": "dog",
     }
   ]
 };

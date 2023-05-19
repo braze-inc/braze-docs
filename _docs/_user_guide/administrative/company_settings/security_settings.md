@@ -11,6 +11,12 @@ description: "This reference article covers generic cross-company security setti
 
 > As an admin, security is a high priority on your list of concerns. This page can help you manage the generic, cross-company security settings, including authentication rules, IP whitelisting, and two-factor authentication.
 
+To access the **Security Settings** page, select your account dropdown and go to **Company Settings** > **Security Settings**.
+
+{% alert note %}
+If you're using our [updated navigation]({{site.baseurl}}/navigation), you can find **Security Settings** under **Settings** > **Company Settings** > **Admin Settings** > **Security Settings**.
+{% endalert %}
+
 ## Authentication rules
 
 ### Password length

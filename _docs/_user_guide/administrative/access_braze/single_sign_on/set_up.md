@@ -23,6 +23,10 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 | RelayState API key | Create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permissions, and then input the generated API key as the `RelayState` parameter within your IdP. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
+
 ## SAML SSO setup
 
 ### Configure your identity provider

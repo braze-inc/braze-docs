@@ -47,6 +47,10 @@ As described on the Apple [developer documentation](https://help.apple.com/devel
 6. Navigate to **Manage Settings > Settings** in the dashboard and upload the .p8 file under **Apple Push Certificate**.
 7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/account/ios/identifier/bundle/), [key ID](https://developer.apple.com/account/ios/authkey), and [team ID](https://developer.apple.com/account/#/membership). Click **Save**.<br><br>
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Settings** is now **App Settings** and can be found at **Settings** > **Setup and Testing** > **App Settings**.
+{% endalert %}
+
 {% endtab %}
 {% tab .p12 Certificate (Legacy) %}
 **Using a .p12 certificate (legacy)**
@@ -70,7 +74,11 @@ Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL cer
 3. Export it as a `.p12` file and use a temporary, unsecure password (you will need this password when uploading your certificate to Braze).
 4. Navigate to **Manage Settings > Settings** in the dashboard and upload your production certificate under **Apple Push Certificate**.
 
->  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate app group or app for the development version of your app.
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Settings** is now **App Settings** and can be found at **Settings** > **Setup and Testing** > **App Settings**.
+{% endalert %}
+
+>  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate workspace or app for the development version of your app.
 
 {% endtab %}
 {% endtabs %}

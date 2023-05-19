@@ -17,6 +17,10 @@ tool: Media
 
 To create a Content Block, go to **Templates & Media** under the **Engagement** section of your Braze dashboard. Select the **Content Blocks Library** tab and click <i class="fas fa-plus"></i> **Create Content Block**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+{% endalert %}
+
 Enter a **Content Block Name** and an optional description. 
 
 ![][1]
@@ -65,7 +69,11 @@ When a Content Block is added into the email editor via Liquid, this Content Blo
 
 To update an existing Content Block, you can either edit the original Content Block located in **Templates & Media**, or copy the HTML from the original message to your new one. If you update a Content Block template, it will update in all email messages where the Content Block is added via Liquid.
 
-To archive a Content Block, go to the **Templates & Media** page and select the <i class="fas fa-cog"></i> gear icon next to the selected Content Block and click **Archive**. When you archive a Content Block, your messages will still include the content in the archived block. 
+To archive a Content Block, go to the **Templates & Media** page and select the <i class="fas fa-cog"></i> gear icon next to the selected Content Block and click **Archive**. When you archive a Content Block, your messages will still include the content in the archived block.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+{% endalert %}
 
 
 [1]: {% image_buster /assets/img_archive/dnd_content_block_name.png %}

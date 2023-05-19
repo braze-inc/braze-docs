@@ -1,41 +1,39 @@
 ---
 nav_title: Navigation
-permalink: /navigation/
-hidden: true
-layout: dev_guide
+article_title: Braze Navigation
+alias: /navigation/
+page_order: 0
+page_type: reference
+description: "This article describes the changes in Braze navigation."
 ---
 
 # Braze navigation
 
 > We're updating the Braze navigation to help you create and access your content more quickly and efficiently. To make this transition easier for you and your team, this guide covers what has changed and what you can expect next.
 
-{% alert important %}
-The new navigation is currently in early access and is being tested with a select group of customers. During the early access period, we'll be collecting feedback regularly. You can share feedback directly from the dashboard: when in the new navigation view, expand the **Tour new navigation** button and select **Send feedback**.
-{% endalert %}
-
 ![Sidebar of Braze demonstrating the submenu appearing when you hover over a main section.]({% image_buster /assets/img/navigation/sidebar_behavior.gif %}){: style="max-width:50%;float:right;margin-left:15px"}
 
 The new Braze navigation features a completely redesigned information architecture (how information is organized, grouped, and presented) to make each part of Braze more findable and understandable.
 
-Features are now organized into intuitive categories that are familiar and relevant to a marketer's workflow in Braze. Hover over a main section in the sidebar to open the submenu and view all available pages in that section. 
+Features are now organized into intuitive categories that are familiar and relevant to a marketer's workflow in Braze. Hover over a main section in the sidebar to open the submenu and view all available pages in that section.
 
 Some pages have been renamed to better represent their contents. For a complete list of where features are now located, refer to the **Changes** tab in the [Sidebar](#sidebar) section of this article.
 
 ## Switch to the new navigation
 
-Early access participants can turn on the new navigation at any time by selecting **Switch to new nav** in the global header.
+You can turn on the new navigation at any time by selecting **Switch to new nav** in the global header.
 
 ![Global header of Braze with a button to switch to the new navigation.]({% image_buster /assets/img/navigation/global_header_switch.png %}){: style="max-width:70%"}
 
 ## What to expect next
 
-The new navigation will be released to all Braze customers in **May 2023**. You will still be able to switch back and forth between the new and old navigation until **November 2023**.
+You will still be able to switch back and forth between the new and old navigation until **November 2023**.
 
 ## What's changed
 
 ### App group rename
 
-As part of our navigation and information architecture changes, we have renamed "app group" to "workspace". We recognize that the language "app group" doesn't reflect the way many users onboard, approach, and use the Braze platform. To better reflect the many use cases of Braze, "app group" is now "workspace".
+As part of our navigation and information architecture changes, we have renamed "app group" to "workspace". We recognize that the language "workspace" doesn't reflect the way many users onboard, approach, and use the Braze platform. To better reflect the many use cases of Braze, "app group" is now "workspace".
 
 If you're using our updated navigation, this change will appear throughout the platform.
 
@@ -103,7 +101,7 @@ If you're using our updated navigation, this change will appear throughout the p
 <tbody>
   <tr>
     <td><img src="{% image_buster /assets/img/navigation/sidebar_new.png %}"></td>
-    <td><b>1. Home</b> - Braze home page. After your initial setup, this is your <b>Overview</b> dashboard.<br><br><b>2. Messaging</b> - Create and manage your campaigns and Canvases, and access a calendar view of your upcoming scheduled messages.<br><br><b>3. Audience</b> - Contains everything related to your users, such as searching or importing users, managing your segments, Global Control Group, subscription groups, and more.<br><br><b>4. Templates</b> - Contains your message templates, Content Blocks, and Media Library.<br><br><b>5. Analytics</b> - Contains your reports, analytics dashboard, and Predictions.<br><br><b>6. Partner Integrations</b> - Contains our technology partner integrations, solutions partners, and data export (Currents).<br><br><b>7. Data Settings</b> - Contains settings related to user data, such as custom attributes, custom events, catalogs, products, and more.<br><br><b>8. Settings</b> - Manage your workspace integration, Workspace, company settings, billing, and more.<br></td>
+    <td><b>1. Home</b> - Braze home page. After your initial setup, this is your <b>Overview</b> dashboard.<br><br><b>2. Messaging</b> - Create and manage your campaigns and Canvases, and access a calendar view of your upcoming scheduled messages.<br><br><b>3. Audience</b> - Contains everything related to your users, such as searching or importing users, managing your segments, Global Control Group, subscription groups, and more.<br><br><b>4. Templates</b> - Contains your message templates, Content Blocks, and Media Library.<br><br><b>5. Analytics</b> - Contains your reports, analytics dashboard, and Predictions.<br><br><b>6. Partner Integrations</b> - Contains our technology partner integrations, solutions partners, and data export (Currents).<br><br><b>7. Data Settings</b> - Contains settings related to user data, such as custom attributes, custom events, catalogs, products, and more.<br><br><b>8. Settings</b> - Manage your workspace integration, company settings, billing, and more.<br></td>
   </tr>
 </tbody>
 </table>
@@ -115,7 +113,7 @@ If you're using our updated navigation, this change will appear throughout the p
 <tbody>
   <tr>
     <td><img src="{% image_buster /assets/img/navigation/sidebar_old.png %}"></td>
-    <td><b>1. App Group selector</b> - See what app group you're currently in or switch between app groups.<br><br><b>2. Data</b> - Contains various reports, dashboards, and settings related to user data in Braze.<br><br><b>3. Engagement</b> - Contains pages related to messaging, such as your segments campaigns, Canvases, message templates, and more.<br><br><b>4. Users</b> - Search or import users, or manage your subscription groups.<br><br><b>5. Integrations</b> - Contains integrations including our technology partners, Currents, and promotion codes.<br><br><b>6. Settings</b> - Contains app group settings, various data settings, logs, and more.</td>
+    <td><b>1. App Group selector</b> - See what app group you're currently in or switch between app groups.<br><br><b>2. Data</b> - Contains various reports, dashboards, and settings related to user data in Braze.<br><br><b>3. Engagement</b> - Contains pages related to messaging, such as your segments campaigns, Canvases, message templates, and more.<br><br><b>4. Users</b> - Search or import users, or manage your subscription groups.<br><br><b>5. Integrations</b> - Contains integrations including our technology partners, Currents, and promotion codes.<br><br><b>6. Settings</b> - Contains workspace settings, various data settings, logs, and more.</td>
   </tr>
 </tbody>
 </table>
@@ -157,6 +155,7 @@ The following table lists where each page is located in the new navigation. Some
 | Feature Flags                 | **Messaging** > **Feature Flags**                                |
 | Global Control (report)       | **Analytics** > **Reports** > **Global Control**                 |
 | Global Control Group Settings | **Audience** > **Global Control Group**                          |
+| Global Message Settings       | **Settings** > **Workspace** > **Frequency Capping Rules**       |
 | In-App Message Templates      | **Templates** > **In-App Message Templates**                     |
 | Internal Groups               | **Settings** > **Setup and Testing** > **Internal Groups**       |
 | Link Templates                | **Templates** > **Email Link Templates**                         |
@@ -178,7 +177,6 @@ The following table lists where each page is located in the new navigation. Some
 | Segments                      | **Audience** > **Segments**                                      |
 | Segment Extensions            | **Audience** > **Segment Extensions**                            |
 | Segment Insights              | **Analytics** > **Reports** > **Segment Insights**               |
-| Global Message Settings       | **Settings** > **Workspace** > **Frequency Capping Rules**       |
 | SMS Performance               | **Analytics** > **Analytics Dashboards** > **SMS Performance**   |
 | Subscription Groups           | **Audience** > **Subscriptions** > **Subscription Groups**       |
 | Tags                          | **Settings** > **Workspace** > **Tag Management**                |

@@ -5,8 +5,8 @@ alias: /tiktok_audience_sync/
 description: "This reference article will cover how to use Braze Audience Sync to TikTok to deliver advertisements based upon behavioral triggers, segmentation, and more."
 Tool:
   - Canvas
-hidden: true
-layout: dev_guide
+page_order: 5
+
 ---
 
 # Audience Sync to TikTok
@@ -20,20 +20,22 @@ Using the Braze Audience Sync to TikTok, brands can elect to add user data from 
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand
 - Creating Actalike Audiences to acquire new users more efficiently
 
-This feature allows brands to control what specific first-party data is shared with TikTok. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
+This feature lets brands control what specific first-party data is shared with TikTok. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
 {% alert important %}
-Audience Sync to TikTok is currently in beta. Contact your Braze account manager if you're interested in participating in the beta.
+**Audience Sync Pro disclaimer**<br>
+Reach out to your Braze Customer Success Manager for more details on this integration.
 {% endalert %}
 
 ## Prerequisites
 
-You must ensure that you have the following items completed before setting up your Audience Sync to TikTok.
+You must ensure the following items are created, completed, and/or accepted before setting up your TikTok Audience Step in Canvas.
 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
 | TikTok for Business Center Account | [TikTok](https://business.tiktok.com/) | A centralized tool to manage your brand's TikTok assets (i.e., ad accounts, pages, apps). |
 | TikTok Ad Account | [TikTok](https://ads.tiktok.com/) | An active TikTok ad account tied to your brand's Business Center account.<br><br>Ensure that your TikTok Business Center manager admin has granted you admin permissions to the TikTok ad accounts you plan to use with Braze. |
+| TikToK terms & policies | [TikTok](https://ads.tiktok.com/i18n/official/policy/terms) | Agree to comply with any of TikTok’s required terms, policies, guidelines, and documentation related to your use of the Pinterest Audience Sync, including any terms, policies, guidelines, and documentation incorporated by reference therein, which may include: the Commercial Terms of Service, Advertising Terms, Privacy Policy, Custom Audience Terms, Developer Terms of Service, Developer Data Sharing Agreement, Advertising Policies, Brand Guidelines, and Community Guidelines. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration 
@@ -41,6 +43,10 @@ You must ensure that you have the following items completed before setting up yo
 ### Step 1: Connect to TikTok
 
 In the Braze dashboard, go to **Technology Partners** and select **TikTok**. In the TikTok Audience Export module, click **Connect TikTok**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
 
 ![TikTok technology page in Braze includes an Overview module and TikTok Audience Export module with the Connected TikTok button.][1]{: style="max-width:75%;"}
 
@@ -54,29 +60,19 @@ Once successfully connected, you will return to the partner page. Here, you can 
 
 Your TikTok connection will be applied at the Braze app-group level. If your TikTok admin removes you from your TikTok Business Center or access to the connected TikTok accounts, Braze will detect an invalid token. As a result, your active Canvases using TikTok Audience components will show errors, and Braze will not be able to sync users.
 
-### Step 2: Configure your Canvas entry criteria
+### Step 2: Add a TikTok Audience component in Canvas Flow
 
-When building audiences for Ad Tracking, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the [CCPA](https://oag.ca.gov/privacy/ccpa). Marketers should implement the relevant filters for users’ eligibility within their Canvas entry criteria. Below we list some options. 
+Add a component in your Canvas and select **Audience Sync**. 
 
-If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewother_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
+![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
 
-![][16]{: style="max-width:75%;"}
+### Step 3: Sync setup
 
-If you are collecting ‘opt-ins’,  ‘opt-outs’, ‘Do Not Sell Or Share’ or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
-
-![A Canvas with an entry audience of "opted_in_marketing" equals "true".][13]{: style="max-width:75%;"}
-
-### Step 3: Add a TikTok Audience component in Canvas Flow
-
-Add a component in your Canvas and select **Audience Sync**. Click on the **Custom Audience** button to open the component editor.
-
-![][14]{: style="max-width:45%;"} ![][15]{: style="max-width:50%;"}
-
-### Step 4: Sync setup
+Click on the **Custom Audience** button to open the component editor.
 
 Select **TikTok** as the desired Audience Sync partner.
 
-![][12]{: style="max-width:50%;"}
+![][19]{: style="max-width:80%;"}
 
 Then select the desired TikTok ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
 
@@ -88,11 +84,11 @@ Then select the desired TikTok ad account. Under the **Choose a New or Existing 
 **Create a New Audience**<br>
 Enter a name for the new audience, select **Add Users to Audience**, and select which fields you would like to sync with TikTok. Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
-![]({% image_buster /assets/img/tiktok/tiktok10.png %})
+![]({% image_buster /assets/img/audience_sync/tiktok3.png %})
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
-![]({% image_buster /assets/img/tiktok/tiktok9.png %})
+![]({% image_buster /assets/img/audience_sync/tiktok2.png %})
 
 When you launch a Canvas with a new audience, Braze syncs users in near real-time as they enter the audience step.
 
@@ -102,15 +98,15 @@ When you launch a Canvas with a new audience, Braze syncs users in near real-tim
 **Sync with an Existing Audience**<br>
 Braze also offers the ability to add users to existing TikTok audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then add users in near real-time as they enter the TikTok Audience step.
 
-![Expanded view of the Custom Audience Canvas step. Here, the desired ad account and existing audience are selected.]({% image_buster /assets/img/tiktok/tiktok17.png %})
+![Expanded view of the Custom Audience Canvas step. Here, the desired ad account and existing audience are selected.]({% image_buster /assets/img/audience_sync/tiktok.png %})
 
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Launch Canvas
+### Step 4: Launch Canvas
 Once you have configured your TikTok Audience component, simply launch the Canvas! A new audience will be created, and users who flow through the TikTok Audience component will be passed into this audience on TikTok. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
 
-You can view the audience in TikTok by going into your **Ads Manager Account** and then selecting **Audiences** from the **Assets** dropdown. From the **Audience** page, you can see the size of each audience after it reaches &#126;1,000.
+You can view the audience in TikTok by entering your **Ads Manager Account** and selecting **Audiences** from the **Assets** dropdown. From the **Audience** page, you can see the size of each audience after it reaches &#126;1,000.
 
 ![TikTok page listing the following metrics for the given audience.][5]
 
@@ -141,8 +137,7 @@ Remember that there will be a delay in reporting for users synced and users erro
 
 ## Troubleshooting
 
-{% details What should I do next if I receive an invalid token error?
- %}
+{% details What should I do next if I receive an invalid token error? %}
 You can disconnect and reconnect your TikTok account on the TikTok partner page. Ensure with your TikTok Business Center admin that you have the appropriate permissions to the ad account you wish to sync.
 {% enddetails %}
 
@@ -171,12 +166,12 @@ The audience size will update within 24-48 hours on the Audiences page in TikTok
 [6]: {% image_buster /assets/img/tiktok/tiktok6.png %}
 [7]: {% image_buster /assets/img/tiktok/tiktok7.png %}
 [8]: {% image_buster /assets/img/tiktok/tiktok8.png %}
-[9]: {% image_buster /assets/img/tiktok/tiktok9.png %}
-[10]: {% image_buster /assets/img/tiktok/tiktok10.png %}
 [11]: {% image_buster /assets/img/tiktok/tiktok11.png %}
 [12]: {% image_buster /assets/img/tiktok/tiktok12.png %}
 [13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
 [14]: {% image_buster /assets/img/tiktok/tiktok14.png %}
 [15]: {% image_buster /assets/img/tiktok/tiktok15.png %}
 [16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
-[17]: {% image_buster /assets/img/tiktok/tiktok17.png %}
+[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
+[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
+[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}

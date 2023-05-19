@@ -25,6 +25,10 @@ Not sure whether your message should be send using a campaign or a Canvas? Campa
 {% tabs %}
 {% tab Campaign %}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Messaging**.
+{% endalert %}
+
 **Steps:**
 
 1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
@@ -40,6 +44,10 @@ If all of the messages in your campaign are going to be similar or have the same
 
 {% endtab %}
 {% tab Canvas %}
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Messaging**.
+{% endalert %}
 
 **Steps:**
 

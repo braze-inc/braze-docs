@@ -21,6 +21,10 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 {% tabs %}
 {% tab Campaign %}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Messaging**.
+{% endalert %}
+
 **Steps:**
 
 1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
@@ -36,6 +40,10 @@ If all of the messages in your campaign are going to be similar or have the same
 
 {% endtab %}
 {% tab Canvas %}
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Messaging**.
+{% endalert %}
 
 **Steps:**
 
@@ -391,7 +399,7 @@ Braze values reliability and speed. Just like we suggest you send only the data 
 Processing action-based in-app message campaigns that are still in an active state but no longer sending messages or are no longer needed slows down the overall performance of the Braze services for you and other customers. This extra time needed to process these large numbers of idle campaigns means that any in-app messages will take longer to appear on the end-user's devices, which impacts the end user's experience.
 
 {% alert important %}
-There is a limit of 200 active, action-based in-app message campaigns per app group to optimize the speed of message delivery and to prevent timeouts. This does not apply to Canvases.
+There is a limit of 200 active, action-based in-app message campaigns per workspace to optimize the speed of message delivery and to prevent timeouts. This does not apply to Canvases.
 {% endalert %}
 
 The 200 count includes active in-app message campaigns that have not yet reached end time and those that have no end time. Active in-app message campaigns that have passed their end times will not be counted. The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation will impact you.

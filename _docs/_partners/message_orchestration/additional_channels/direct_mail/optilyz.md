@@ -37,7 +37,13 @@ To integrate with optilyz, use the [optilyz API][2] to send recipient data to th
 
 ### Step 1: Create your Braze webhook template
 
-To create an optilyz webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off optilyz webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
+To create an optilyz webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+{% endalert %}
+
+If you would like to create a one-off optilyz webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
 In your new Webhook template, fill out the following fields:
 - **Webhook URL**: The Webhook URL is unique to each customer and your optilyz customer success manager will provide it to you.
