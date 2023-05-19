@@ -39,8 +39,7 @@ description: "This article outlines details about the Create catalog Braze endpo
 | `fields` | Required | Array | An array of objects where the object contains keys `name` and `type`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example Request
-
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 --header 'Content-Type: application/json' \
