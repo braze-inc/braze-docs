@@ -2,15 +2,16 @@
 nav_title: Customizing Card Behavior
 article_title: Customizing Content Card Behavior
 page_order: 2
-description: ""
+description: "This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations."
 channel:
   - content cards
 ---
 
 # Customizing Content Card behavior
 
+> This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations.
+
 ## Key-value pairs
-Key-value pairs can control the layout, text, font, colors, position, and general info.
 
 {% alert note %}
 We do not recommend sending nested JSON values as key-value pairs. Instead, flatten the JSON before sending it. 
@@ -127,57 +128,4 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 {% endtab %}
 {% endtabs %}
 
-## Adding read/unread indicators
-
-Content Cards contain a blue line at the bottom of the card which indicates whether or not the card has been viewed. This article provides examples of modifying this behavior. For more information on customizing Content Cards UI attributes, refer to [Customizing Feed]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/).
-
-![Two Content Cards displayed side by side. The card on the left has a blue line at the bottom, indicating it has not been seen. The card on the right does not have a blue line, indicating it has already been seen.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
-
-### Disabling the unread indicator
-
-Disable the unviewed indicator line by setting the `attributes.cellAttributes.unviewedIndicatorColor` property in your `Attributes` struct to `.clear`. 
-
-### Changing unread indicator color
-
-The color of the unviewed indicator can be set by assigning a value to the tint color of your `BrazeContentCardUI.ViewController` instance:
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
-viewController.view.tintColor = .systemGreen
-```
-
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-BRZContentCardUIViewController *viewController = [[BRZContentCardUIViewController alloc] initWithBraze:AppDelegate.braze];
-[viewController.view setTintColor:[UIColor systemGreenColor]];
-```
-
-{% endtab %}
-{% endtabs %}
-
-However, if you wish to modify only the unviewed indicator, you can access the `unviewedIndicatorColor` property of your `BrazeContentCardUI.ViewController.Attributes` struct. If you utilize Braze's `UITableViewCell` implementations, you should access the property before the cell is drawn.
-
-For example, to set the color of the unviewed indicator to red:
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
-attributes.cellAttributes.unviewedIndicatorColor = .red
-
-let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
-```
-
-{% endtab %}
-{% endtabs %}
-
-{% alert note %}
-Customization via `Attributes` is only available in Swift.
-{% endalert %}
-
+[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/#content-cards
