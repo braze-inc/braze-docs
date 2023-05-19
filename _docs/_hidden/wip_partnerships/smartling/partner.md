@@ -30,6 +30,17 @@ The Braze and Smartling integration allows you to translate email templates and 
 
 ## Integration
 
+The Smartling Braze integration will allow you to translate both Email Templates and Content Blocks. 
+
+Email Templates: 
+* Only HTML Editor Emails are supported. 
+* Each translation will be stored as its own email template. 
+
+Content Blocks: 
+* All content blocks are supported. 
+* The content blocks contain both the original and translated versions.
+* Liquid script is used to determine the correct language for display based on the recipient's language preference.
+
 ### Step 1: Set up the Braze project in Smartling TMS
 
 #### Connecting Braze to Smartling
