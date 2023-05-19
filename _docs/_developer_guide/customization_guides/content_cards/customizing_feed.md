@@ -261,7 +261,13 @@ Objective-C content
 {% endtab %}
 {% tab Web %}
 
-Web content
+Customize the display order of Content Cards in your feed by using the [`filterFunction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards) param of `showContentCards():`. For example:
+
+```javascript
+braze.showContentCards(null, (cards) => {
+  return sortBrazeCards(cards); // Where sortBrazeCards is your sorting function that returns the sorted card array
+});
+```
 
 {% endtab %}
 {% endtabs %}
@@ -331,7 +337,7 @@ If you want to update it for different languages, find the corresponding languag
 {% endtab %}
 {% tab Web %}
 
-Web content
+The Web SDK does not support replacing the "empty feed" language programmatically. You can opt to replace it each time the feed is shown, but this is not recommended because the feed may take some time to refresh and the empty feed text won't display immediately. 
 
 {% endtab %}
 {% endtabs %}
