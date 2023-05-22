@@ -82,15 +82,6 @@ Each attribute sent for a user will consume one data point. It's up to you to on
 
 ## Data setup recommendations
 
-#### Create table
-
-```json
-CREATE OR REPLACE TABLE test_table (
-UPDATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-EXTERNAL_ID STRING,
-PAYLOAD JSON NOT NULL
-```
-
 #### Only write new or updated attributes to minimize consumption
 
 We will sync all attributes in a given row, regardless of whether they are the same as what's currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
@@ -153,6 +144,14 @@ SELECT
             'yet_another_attribute',
             attribute_3)
     ) as PAYLOAD FROM "EXAMPLE_USER_DATA";
+```
+{% endtab %}
+{% tab BigQuery %}
+```json
+CREATE OR REPLACE TABLE test_table (
+UPDATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+EXTERNAL_ID STRING,
+PAYLOAD JSON NOT NULL
 ```
 {% endtab %}
 {% endtabs %}
