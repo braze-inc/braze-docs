@@ -355,7 +355,7 @@ Content Cards can be filtered on your app so that only specific cards are displa
 
 ### Step 1: Set key-value pairs on cards
 
-When creating a Content Card campaign, set [key-value pair data]({{site.baseurl}}/docs/developer_guide/customization_guides/content_cards/customizing_behavior/) on each card. Our filtering logic will use this key-value pair to categorize cards. 
+When creating a Content Card campaign, set [key-value pair data]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/) on each card. Our filtering logic will use this key-value pair to categorize cards. 
 
 For this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be, such as `home_screen` or `marketing`.
 
