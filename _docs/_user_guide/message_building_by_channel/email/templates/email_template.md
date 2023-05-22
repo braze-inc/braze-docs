@@ -19,10 +19,10 @@ search_rank: 1
 
 ### Step 1: Navigate to the email template editor
 
-In the left navigation, click **Templates & Media**, under the **Engagement** section. This will open up the **Email Template Gallery**.
+Go to **Templates** > **Email Templates**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Email Templates**.
 {% endalert %}
 
 ### Step 2: Create or choose a template
@@ -48,13 +48,7 @@ When composing your email template copy, do not switch back and forth between di
 {% tabs %}
 {% tab HTML Editor %}
 
-Braze will add a footer with an unsubscribe link at the bottom of your HTML emails by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page.
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Email Settings** is now **Email Preferences** and is located at **Settings** > **Workspace Settings** > **Email Preferences**.
-{% endalert %}
-
-For more information, read our [custom footer documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer).
+Braze will add a footer with an unsubscribe link at the bottom of your HTML emails by default. You can [customize this footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) as needed.
 
 To enter a subject line, click <i class="fas fa-pencil-alt"></i> **Edit Sending Info**. 
 
@@ -132,7 +126,7 @@ To read more about the different components of the drag & drop editing experienc
 {% endtab %}
 {% endtabs %}
 
-Braze will add a footer with an unsubscribe link at the bottom of your email by default. You can [customize this footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in the **Email Settings** tab of the **Manage Settings** page.
+Braze will add a footer with an unsubscribe link at the bottom of your email by default. You can [customize this footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) as needed.
 
 #### Step 4a: Check for email errors
 

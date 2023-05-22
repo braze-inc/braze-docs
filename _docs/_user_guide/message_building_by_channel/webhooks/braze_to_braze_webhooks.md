@@ -10,7 +10,7 @@ description: "This article covers how to create a Braze to Braze webhook for key
 
 # Braze to Braze webhooks
 
-> You can use webhooks to communicate with the Braze [REST API][2], essentially doing anything that our API allows you to do. We refer to this as a Braze to Braze webhook—a webhook that is communicating from Braze to Braze. 
+> You can use webhooks to communicate with the Braze [REST API][2], essentially doing anything that our API allows you to do. We refer to this as a Braze to Braze webhook—a webhook that is communicating from Braze to Braze.
 
 ## Prerequisites
 
@@ -61,10 +61,10 @@ Braze requires an HTTP header for authorization that includes your API key and a
   - **Content-Type:** application/json
 - **HTTP Method:** POST
 
-Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **API Settings**, then click **Create New API Key**.
+Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Settings** > **API Keys**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
 {% endalert %}
 
 ![][1]
@@ -116,10 +116,10 @@ Braze requires an HTTP header for authorization that includes your API key and a
   - **Content-Type:** application/json
 - **HTTP Method:** POST
 
-Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **API Settings**, then click **Create New API Key**.
+Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Settings** > **API Keys**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
 {% endalert %}
 
 ![][1]
@@ -171,10 +171,10 @@ Braze requires an HTTP header for authorization that includes your API key and a
   - **Content-Type:** application/json
 - **HTTP Method:** POST
 
-Replace `YOUR_API_KEY` with a Braze API key with `canvas.trigger.send` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **API Settings**, then click **Create New API Key**.
+Replace `YOUR_API_KEY` with a Braze API key with `canvas.trigger.send` permissions. You can create an API key within the Braze dashboard at **Settings** > **API Keys**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
 {% endalert %}
 
 ![][1]

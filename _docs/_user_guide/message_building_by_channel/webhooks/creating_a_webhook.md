@@ -23,13 +23,14 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 {% tabs %}
 {% tab Campaign %}
 
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Messaging**.
-{% endalert %}
-
 **Steps:**
 
-1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
+1. Go to **Messaging** > **Campaigns** and click <i class="fas fa-plus"></i> **Create Campaign**.
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
+{% endalert %}
+
+{:start="2"}
 2. Select **Webhook**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
@@ -42,10 +43,6 @@ If all of the messages in your campaign are going to be similar or have the same
 
 {% endtab %}
 {% tab Canvas %}
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Messaging**.
-{% endalert %}
 
 **Steps:**
 
@@ -173,11 +170,7 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 ### Errors, retry logic, and timeouts
 
-Webhooks rely on Braze's servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Developer Console][42], under **Message Activity Log**. 
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** at **Settings** > **Setup and Testing** > **Message Activity Log**.
-{% endalert %}
+Webhooks rely on Braze's servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Message Activity Log][42].
 
 This description contains the time the error occurred, the app name, and the error message:
 
@@ -276,5 +269,5 @@ Check out:
 [21]: {% image_buster /assets/img/webhook_json_1.png %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
 [26]: {% image_buster /assets/img_archive/webhook_request_header.png %}
-[42]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/
+[42]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/
 [43]: {% image_buster /assets/img_archive/webhook-error.png %}

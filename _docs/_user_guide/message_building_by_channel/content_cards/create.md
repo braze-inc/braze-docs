@@ -25,13 +25,14 @@ Not sure whether your message should be send using a campaign or a Canvas? Campa
 {% tabs %}
 {% tab Campaign %}
 
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Messaging**.
-{% endalert %}
-
 **Steps:**
 
-1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
+1. Go to **Messaging** > **Campaigns** and click <i class="fas fa-plus"></i> **Create Campaign**.
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
+{% endalert %}
+
+{:start="2"}
 2. Select **Content Cards**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
@@ -44,10 +45,6 @@ If all of the messages in your campaign are going to be similar or have the same
 
 {% endtab %}
 {% tab Canvas %}
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Messaging**.
-{% endalert %}
 
 **Steps:**
 
