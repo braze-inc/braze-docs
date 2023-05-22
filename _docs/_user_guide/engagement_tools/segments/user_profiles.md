@@ -15,7 +15,7 @@ description: "This reference article describes how to access a user's profile in
 
 ## Access profiles
 
-To access a user's profile, go to the **User Search** page and search for a user by any of the following:
+To access a user's profile, go to the **Search Users** page and search for a user by any of the following:
 
 - External user ID
 - Email
@@ -23,7 +23,7 @@ To access a user's profile, go to the **User Search** page and search for a user
 - Push token
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **User Search** is now **Search Users** and can be found under **Audience**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), **Search Users** is **User Search** and can be found under **Users**.
 {% endalert %}
 
 If a match is found, you can view the information that you've recorded for this user with the Braze SDK.

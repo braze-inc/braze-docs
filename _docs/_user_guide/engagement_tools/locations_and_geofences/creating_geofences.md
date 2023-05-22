@@ -17,10 +17,10 @@ You can define geofences on the Braze dashboard and use them to trigger campaign
 
 ## Overview
 
-Manage geofences from the **Locations** page.
+Manage geofences from **Audience** > **Locations**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Locations** under **Audience**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Locations** under **Engagement**.
 {% endalert %}
 
 Geofences are organized into geofence sets—a group of geofences that can be used to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences.

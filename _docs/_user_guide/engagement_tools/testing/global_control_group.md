@@ -33,12 +33,12 @@ Braze measures the behaviors of users in your control group and users in your tr
 
 ## Create a Global Control Group
 
-### Step 1: Navigate to the Global Control Group Settings.
+### Step 1: Navigate to the Global Control Group Settings
 
-From the dashboard, go to **Global Message Settings** under **Engagement**, and select the **Global Control Group Settings** tab.
+From the dashboard, go to **Audience** > **Global Control Group**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Global Control Group Settings** is now **Global Control Group** and is located under **Audience**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located under **Engagement** > **Global Message Settings** > **Global Control Group Settings**.
 {% endalert %}
 
 ### Step 2: Assign a percentage of all users to this control group
