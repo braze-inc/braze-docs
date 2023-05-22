@@ -1,7 +1,7 @@
 ---
 nav_title: Regal
 article_title: Regal
-description: "Integrate Regal and Braze for a more consistent and personalized customer experience."
+description: "This reference article outlines the partnership between Braze and Regal, a phone and SMS sales solution that allows you to use data from both sources to create personalized experiences for your customers."
 permalink: /partners/regal/
 page_type: partner
 search_tag: Regal
@@ -11,7 +11,7 @@ layout: dev_guide
 
 # Regal
 
-> [Regal.io][6] is the phone and SMS sales solutions built to drive more conversations so you can hit your growth goals way faster.
+> [Regal.io][6] is the phone and SMS sales solution built to drive more conversations so you can hit your growth goals way faster.
 
 By integrating Regal and Braze, you can create a more consistent and personalized experience across all your customer touchpoints.
 - Send the right next best email or push notification from Braze based on what's said in a phone conversation on Regal.
@@ -22,19 +22,19 @@ By integrating Regal and Braze, you can create a more consistent and personalize
 | Requirement | Description |
 | ----------- | ----------- |
 | Regal account | A Regal account is required to take advantage of this partnership. |
-| Regal API key | A Regal API key will allow to send events from Braze to Regal.<br><br>Email support@regal.io to get this key. |
+| Regal API key | A Regal API key will allow sending events from Braze to Regal.<br><br>Email support@regal.io to get this key. |
 | Braze Data Transformation | Data transformation is currently in early access. Contact your Braze customer success manager if you are interested in participating in the early access. This is necessary to receive data from Regal. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration: Sending data from Braze to Regal
 
-The following section describes how to use Braze as a source for sending your customer profile and event data to Regal using Braze Canvas webhooks.
+The following section describes how to use Braze as a source for sending your customer profile and event data to Regal using Braze Canvas or campaign webhooks.
 
 ### Step 1: Create new contacts in Regal
 
-Build a Canvas that webhooks out to Regal every time a new contact is created in Braze who you want to be available for calls and texts in Regal. 
+Build a Canvas or campaign that webhooks out to Regal every time a new contact is created in Braze who you want to be available for calls and texts in Regal. 
 
-1. Create a Canvas titled "Create New Contact for Regal" and select **Action-Based** as the entry type.
+1. Create a Canvas or campaign titled "Create New Contact for Regal" and select **Action-Based** as the entry type.
 
 2. Set the trigger logic as **Custom Event** and select the event that is fired when a contact with a phone number is created. Regal also recommends adding an extra filter on the phone field that ensures it's set.
 
@@ -83,15 +83,19 @@ The only required field below is the `traits.phone` property. The rest is option
 }
 ```
 
-The above payload example assumes all your contacts have accepted opt-in for voice and SMS. If that's not true, you can remove the `optIn` property from the above and set up a separate Canvas to update a contact in Regal when `optIn` is collected.
+The above payload example assumes all your contacts have accepted opt-in for voice and SMS. If that's not true, you can remove the `optIn` property from the above and set up a separate Canvas or campaign to update a contact in Regal when `optIn` is collected.
 
 ### Step 2: Update opt-in information 
 
-If opt-in and out can happen at different parts of your user experience on your app, it's important to update Regal as users opt in or out. Below is a recommended Canvas for how to send up-to-date opt-in information to Regal. It assumes you save this as a Braze profile field, but if not, the trigger can just as easily be an event in your Braze account that represents a user opting in or unsubscribing. (The example below is for phone opt-in, but you can set up a similar Canvas for SMS opt-in if you collect those separately).
+If opt-in and out can happen at different parts of your user experience on your app, it's important to update Regal as users opt in or out. Below is a recommended Canvas for how to send up-to-date opt-in information to Regal. It assumes you save this as a Braze profile field, but if not, the trigger can just as easily be an event in your Braze account that represents a user opting in or unsubscribing. (The example below is for phone opt-in, but you can set up a similar Canvas or campaign for SMS opt-in if you collect those separately).
 
-1. Create a new Canvas titled "Send Opt In or Out to Regal".
+1. Create a new Canvas or campaign titled "Send Opt In or Out to Regal".
 
-2. Set the trigger node logic as "User Profile Field Updated" and select whatever field represents the user's opt-in status. If, you fire an event to Braze to represent opt-in or out, use that event as the trigger instead.
+2. Select one of the following trigger options and select whatever field represents the user's opt-in status. If you fire an event to Braze to represent opt-in or out, use that event as the trigger instead.
+
+- User Profile Field Updated
+- Update Subscription Group Status
+- Subscription Status
 
 3. In your new Webhook template, fill out the following fields:<br>
 **Webhook URL**: <https://events.regalvoice.com/events><br>
@@ -135,11 +139,11 @@ You are welcome to add additional user profile attributes in this payload as wel
 
 ### Step 3: Send custom events
 
-Finally, set up a Canvas for each of the key events you want to send Regal - Regal recommend sending any events that are important for triggering SMS and Calls in Regal (such as an event at each step of the signup or purchase flow) or will that be used as exit criteria for contacts to fall out of Regal campaigns.
+Finally, set up a Canvas or campaign for each of the key events you want to send Regal - Regal recommends sending any events that are important for triggering SMS and Calls in Regal (such as an event at each step of the signup or purchase flow) or will that be used as exit criteria for contacts to fall out of Regal campaigns.
 
 For example, below is a workflow for sending Regal an event when a user completes the first step of an Application.
 
-1. Create a new Canvas titled "Send Application Step 1 Completed Event to Regal".
+1. Create a new Canvas or campaign titled "Send Application Step 1 Completed Event to Regal".
 
 2. Set the trigger node logic as **Custom Event** and select the event name you want to send to Regal, such as "Application Step 1 Completed".
 
@@ -159,7 +163,7 @@ Regal.io also requires an HTTP Header for authorization and an HTTP method. The 
 
 #### Request body
 
-You are welcome to add additional user profile attributes in this payload as well if you want to ensure more attributes are up to date simultaneously.
+You are welcome to add additional user profile attributes in this payload if you want to ensure more attributes are up to date simultaneously.
 
 ```json
 {
@@ -188,7 +192,7 @@ You are welcome to add additional user profile attributes in this payload as wel
 While it's not necessary, Regal recommends also sending any key user profile data fields on the event payloads of your event workflows to ensure Regal has access to the most up-to-date contact attributes at the time key events become available.
 
 {% alert note %}
-If you have any questions about which events are important to send to Regal or how best to set up these Canvases, contact support@regal.io.
+If you have questions about which events are important to send to Regal or how best to set up these Canvases and campaigns, contact support@regal.io.
 {% endalert %}
 
 ## Integration: Sending data from Regal to Braze
@@ -222,7 +226,7 @@ To set up reporting Webhooks:
 ![][5]{: style="max-width:60%;"}
 
 #### Updating an endpoint
-When you edit an endpoint, it can take up to 5 minutes for the cache to refresh and start sending events to your new endpoint instead.
+When you edit an endpoint, it can take up to 5 minutes for the cache to refresh and send events to your new endpoint instead.
 #### Retries
 Currently, there are no retries on these events. If a response is not received within 5 seconds, the event is dropped and not retried. Regal will be adding retries in a future release.
 #### Events
@@ -236,7 +240,7 @@ Braze's [Data Transformation]({{site.baseurl}}/data_transformation) feature allo
 
 2. To test the connection, create an outbound call from the Regal Agent Desktop to your cell phone and submit the Conversation Summary form to create a call.completed event.
 
-3. Determine what identifiers you will use to map your contacts in Regal to your profiles in Braze. The available identifiers in Regal events include:
+3. Determine what identifiers you will use to map your Regal contacts to your Braze profiles. The available identifiers in Regal events include:
    - `userId` - only set on events if you've previously sent this identifier for a contact
    - `traits.phone`
    - `traits.email` - only set on events if you've previously sent this identifier for a contact
@@ -300,7 +304,7 @@ let unixTimestamp = payload.originalTimestamp;
 let dateObj = new Date(unixTimestamp * 1000);
 let isoString = dateObj.toISOString();
 
-// This is a default template that you can use as a starting point. Feel free to delete this entirely to start from scratch or to delete specific components as you see fit.
+// This is a default template you can use as a starting point. Feel free to delete this entirely to start from scratch or to delete specific components as you see fit.
 
 // First, this code defines a variable, "brazecall", to build up a /users/track request
 // Everything from the incoming webhook is accessible via the special variable "payload". As such, you can template in desired values in your /users/track request with JS dot notation, such as payload.x.y.z
