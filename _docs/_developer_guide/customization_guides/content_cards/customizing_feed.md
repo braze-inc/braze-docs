@@ -315,7 +315,7 @@ The style used to display this message can be found via [`Braze.ContentCardsDisp
 </style>
 ```
 
-For more information on customizing Content Card style elements, see [Customizing style]({{site.baseurl}}/docs/developer_guide/customization_guides/content_cards/customizing_styles).
+For more information on customizing Content Card style elements, see [Customizing style]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles).
 {% endtab %}
 {% tab iOS %}
 {% subtabs local %}
