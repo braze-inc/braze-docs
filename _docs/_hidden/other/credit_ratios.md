@@ -14,13 +14,6 @@ layout: dev_guide
 In the event that Meta modifies its pricing or packaging for WhatsApp, Braze reserves the right to modify its credit ratios accordingly upon reasonable notice.
 {% endalert %}
 
-**User-initiated Conversations**: End-user sends a message to the business. When the business sends a message in response, this begins the 24-hour window.
-
-**Business-initiated Conversations**: Business starts by sending an approved template message to the customer. As soon as the business sends a message, it begins the 24-hour window.
-
-**Credit Ratios**: The following credit ratios determine how many credits it takes to initiate one conversation as of March 15, 2023. 
-- For example, 1 Argentina business-initiated conversation will use up 14 WhatsApp credits. 
-
 **Marketing Conversations**: Include promotions or offers, informational updates, or invitations for customers to respond or take action. 
 
 **Utility Conversations**: Facilitate a specific, agreed-upon request or transaction or update to a customer about an ongoing transaction, including post-purchase notifications and recurring billing statements.
