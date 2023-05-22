@@ -31,6 +31,10 @@ To create a link template, navigate to the **Templates & Media** page, and selec
 Link templates are an optional feature. If the **Link Templates** tab is missing from your **Templates & Media** page, reach out to your customer success manager or account manager to enable the feature flipper for link templates.
 {% endalert %}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+{% endalert %}
+
 There are two types of link templates you can create:
 
 - [Link template that inserts before a URL](#prepend-link-template)

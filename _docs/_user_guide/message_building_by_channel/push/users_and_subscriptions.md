@@ -109,7 +109,7 @@ There are two ways a [push token][push-tokens] can be classified that are essent
 When a user profile has a valid foreground push token associated with an app, Braze considers the user "push registered" for the given app. Braze, then, provides a specific segmentation filter, `Push Enabled for App,` to help identify these users.
 
 {% alert note %}
-The `Push Enabled for App` filter only considers the presence of a valid foreground and background push token for the given app. However, the more generic `Push Enabled` filter segments users who have explicitly activated push notifications for any apps in your app group. This count includes only foreground push and doesn't include users who have unsubscribed. You can learn more about these and other filters in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+The `Push Enabled for App` filter only considers the presence of a valid foreground and background push token for the given app. However, the more generic `Push Enabled` filter segments users who have explicitly activated push notifications for any apps in your workspace. This count includes only foreground push and doesn't include users who have unsubscribed. You can learn more about these and other filters in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 {% endalert %}
 
 ### Multiple users on one device
@@ -138,7 +138,7 @@ The `Push Enabled` filter takes into account the following:
 
 ![A screenshot of the dashboard showing a user is "Push Registered for Marketing (iOS)"][1]{: style="float:right;max-width:50%;margin-left:15px;"}
 
-A user is considered "push enabled" or "push registered" if they have an active foreground push token for an app within your app group, meaning push enablement status is app-specific. 
+A user is considered "push enabled" or "push registered" if they have an active foreground push token for an app within your workspace, meaning push enablement status is app-specific. 
 
 {% alert note %}
 For information on how to check push registration state, visit [push registration status]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#checking-push-registration-status)

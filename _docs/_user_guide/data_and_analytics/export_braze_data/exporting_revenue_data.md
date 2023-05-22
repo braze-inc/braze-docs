@@ -13,6 +13,12 @@ tool:
 
 > On the **Revenue** page of the dashboard you can view data on revenue over specific periods of time, a specific product revenue, and your app's total revenue.
 
+You can find the **Revenue** page under **Data**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Revenue Report** under **Analytics** > **Reports** > **Revenue Report**.
+{% endalert %}
+
 {% alert tip %}
 Looking for more ways to get revenue data? Try adding purchase behavior (as well as purchase of a product) to campaigns or Canvases as [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
 {% endalert %}

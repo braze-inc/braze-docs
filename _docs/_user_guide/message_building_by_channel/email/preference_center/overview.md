@@ -11,7 +11,13 @@ channel:
 
 > Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/).
 
-In the Braze dashboard, navigate to **Subscription Groups > Email Preference Center** tab. This is where you can manage and view each subscription group. Each subscription group you create is added to this preference center list. You can create multiple preference centers.
+In the Braze dashboard, navigate to **Subscription Groups > Email Preference Center** tab. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Email Preference Center** under **Audience** > **Subscriptions**, then select the **Email Preference Center** tab.
+{% endalert %}
+
+This is where you can manage and view each subscription group. Each subscription group you create is added to this preference center list. You can create multiple preference centers.
 
 {% alert important %}
 The preference center is intended to be used within the Braze email channel. The preference center links are dynamic based on each user and cannot be hosted externally.
@@ -28,10 +34,14 @@ Using Liquid enables you to retrieve the names of your subscription groups, and 
 | Requirement | Description |
 |---|---|
 | Enabled preference center | Your Braze dashboard has permissions to use the preference center feature. |
-| Valid app group with an email, SMS, or WhatsApp subscription group | A working app group with valid users and an email, SMS, or WhatsApp subscription group. |
+| Valid workspace with an email, SMS, or WhatsApp subscription group | A working workspace with valid users and an email, SMS, or WhatsApp subscription group. |
 | Valid user | A user with an email address and an external ID. |
 | Generated API key with preference center permissions | In the Braze dashboard, go to **Developer Console** > **API Settings** to confirm that you have access to an API key with preference center permissions. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
 
 ### Step 1: Create a preference center via API
 
@@ -45,7 +55,7 @@ To place a link to the preference center in your emails, use the following Liqui
 
 {% raw %}
 ```liquid
-{{${preference_center_url}}}
+{{${preference_center.${preference_center_name_example}}}
 ```
 {%endraw%}
 
@@ -83,7 +93,7 @@ For this option, each email category will require its own specific unsubscribe l
 `http://mycompany.com/query-string-form-fill?field_id=John&field_category=offers`
 
 {% alert tip %}
-It is also possible to hash the users `external_id` at the point of send using a Liquid filter. This will convert the `user_id` to an MD5 hash value, for example:
+It is also possible to hash the user's external ID at the point of send using a Liquid filter. This will convert the `user_id` to an MD5 hash value, for example:
 {% raw %}
 ```liquid
 {% assign my_string = {{${user_id}}} | md5 %}

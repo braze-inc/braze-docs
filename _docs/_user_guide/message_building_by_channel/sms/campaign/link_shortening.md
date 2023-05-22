@@ -136,8 +136,8 @@ Link shortening will shorten any static URLs that start with _http://_ or _https
 #### Can delegated domains be shared across multiple subscription groups?
 Yes, a single domain can be used with multiple subscription groups. To do so, select the domain for each subscription group that it should be associated with.
 
-#### Can delegated domains be shared across multiple app groups?
-Yes, domains can be associated with subscription groups in multiple app groups, assuming the app groups are contained within the same company.
+#### Can delegated domains be shared across multiple workspaces?
+Yes, domains can be associated with subscription groups in multiple workspaces, assuming the workspaces are contained within the same company.
 
 [1]: {% image_buster /assets/img/link_shortening/shortening1.png %} 
 [2]: {% image_buster /assets/img/link_shortening/shortening2.png %} 

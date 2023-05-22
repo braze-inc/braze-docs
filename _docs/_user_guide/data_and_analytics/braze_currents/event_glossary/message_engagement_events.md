@@ -57,7 +57,7 @@ This event occurs when an WhatsApp message is read by the end user.
 // WhatsApp Read: users.messages.whatsapp.Read
 
 {
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -95,7 +95,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
 // WhatsApp Delivery: users.messages.whatsapp.Delivery
 
 {
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -134,7 +134,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
 // WhatsApp Delivery Failure: users.messages.whatsapp.Failure
 
 {
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -173,7 +173,7 @@ This event occurs when an email send request was successfully communicated betwe
 // WhatsApp Send: users.messages.whatsapp.Send
 
 {
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -215,7 +215,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, quie
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "action": (optional, string) action taken in response to this message (e.g. Subscribed, Unsubscribed, or None),
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) id of the Canvas if from a Canvas,
@@ -250,7 +250,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
 // WhatsApp Inbound Received: users.messages.whatsapp.InboundReceive
 
 {
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -294,7 +294,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (required, string) BSON ID of the app group this user belongs to,
+  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -334,7 +334,7 @@ This event occurs if an email message was aborted based on Liquid aborts, quiet 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (required, string) BSON ID of the app group this user belongs to,
+  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -376,7 +376,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (required, string) BSON ID of the app group this user belongs to,
+  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
   "app_id": (required, string) BSON ID of the app this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
@@ -417,7 +417,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, quiet ho
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (required, string) BSON ID of the app group this user belongs to,
+  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -454,7 +454,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts, quiet
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (required, string) BSON ID of the app group this user belongs to,
+  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -496,8 +496,8 @@ This event occurs when a user has exited a Canvas by performing an event.
   "id": (required, string) globally unique ID of this event,
   "user_id": (required, string) Braze user ID of the user, 
   "external_user_id": (optional, string) External user ID of the user,
-  "app_group_id": (required, string) BSON ID of the app group this user belongs to,
-  "app_group_api_id": (optional, string) API ID of the app group this user belongs to,
+  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
+  "app_group_api_id": (optional, string) API ID of the workspace this user belongs to,
   "time": (required, int) unix timestamp at which the event happened,
   "canvas_id": (required, string) ID of the Canvas if from a Canvas,
   "canvas_variation_id": (required, string) ID of the Canvas variation the user is in if from a Canvas,
@@ -526,8 +526,8 @@ This event occurs when a user has exited a Canvas by matching an audience.
   "id": (required, string) globally unique ID of this event,
   "user_id": (required, string) Braze user ID of the user, 
   "external_user_id": (optional, string) External user ID of the user,
-  "app_group_id": (required, string) BSON ID of the app group this user belongs to,
-  "app_group_api_id": (optional, string) API ID of the app group this user belongs to,
+  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
+  "app_group_api_id": (optional, string) API ID of the workspace this user belongs to,
   "time": (required, int) unix timestamp at which the event happened,
   "canvas_id": (required, string) ID of the Canvas if from a Canvas,
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
@@ -1509,7 +1509,7 @@ This event occurs when a user clicks an SMS short link.
   "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user targeted by short_url,
   "external_user_id": (optional, string) External ID of the user, null if short_url,
-  "app_group_id": (required, string) API ID of the app group associated with the inbound phone number,
+  "app_group_id": (required, string) API ID of the workspace associated with the inbound phone number,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (optional, string) IANA timezone of the user at the time of the event, null if short_url did not use user click tracking,
   "campaign_id": (optional, string) ID of the campaign if from a campaign,
@@ -1734,7 +1734,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
   "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
-  "app_group_id": (required, string) API ID of the app group associated with the inbound phone number,
+  "app_group_id": (required, string) API ID of the workspace associated with the inbound phone number,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "user_phone_number": (required, string) the phone number of the user who sent the message to your Braze number,
   "subscription_group_id": (optional, string) ID of the subscription group which the phone number the user messaged belongs to,
@@ -1975,7 +1975,7 @@ This event occurs when the global subscription state of the user changes.
   "channel": (optional, string) Channel: only email for now,
   "time": (required, string) 10-digit UTC time of the state change event in seconds since the epoch,
   "timezone": (optional, string) IANA timezone of the user at the time of the event,
-  "app_group_id": (required, string) BSON ID of the app group this user belongs to,
+  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
   "app_id": (optional, string) ID for the app on which the user action occurred,
   "campaign_id": (optional, string) BSON ID of the Campaign if from a Campaign,
   "campaign_name": (optional, string) name of the campaign,

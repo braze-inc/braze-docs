@@ -60,7 +60,13 @@ You can find your API URL, or REST endpoint, in the Braze API documentation and 
 
 To connect with the Braze servers, you will need an API key. This unique identifier allows Braze to verify your identity and upload your data. 
 
-To get your API key, go to the **Developer Console** page. You will need an API key that has permission to post to `/users/track` endpoint. If you know one of your API keys supports that endpoint, you can use that key. 
+To get your API key, go to the **API Settings** tab of the **Developer Console**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
+
+You will need an API key that has permission to post to `/users/track` endpoint. If you know one of your API keys supports that endpoint, you can use that key. 
 
 To create a new one, click **Create New API Key**. Next, name your API key and select **users.track** under the **User Data** endpoints group, then click **Save API Key**.
 

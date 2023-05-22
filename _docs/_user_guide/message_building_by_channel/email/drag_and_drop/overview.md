@@ -31,8 +31,10 @@ After selecting the Drag & Drop Editor as your editing experience, you can choos
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the Drag & Drop Editor. 
 
-{% alert tip %}
 You can also access all templates in the **Templates & Media** page under the **Engagement** section.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
 {% endalert %}
 
 After selecting your template, you'll see an overview of your email where you can edit the sending information and email body, and view any errors or warnings to resolve before sending. Click **Edit Email Body** to begin designing your email structure in the Drag & Drop Editor! 
@@ -155,7 +157,7 @@ Because you can view three different versions of the same email in the actual ed
 You can also view your email previews with these user types:
 
 - **Random User:** Braze will randomly select a user from the database and preview the email based on their attributes or event information.
-- **Select User:** You can select a specific user based on their email address or `external_id`. The email will preview based on that user's attributes and event information
+- **Select User:** You can select a specific user based on their email address or external ID. The email will preview based on that user's attributes and event information
 - **Custom User:** You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
 
 {% alert note %}

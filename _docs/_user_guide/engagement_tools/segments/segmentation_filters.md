@@ -74,7 +74,7 @@ glossaries:
     tags:
       - User Activity
   - name: First Used Specific App
-    description: Segments your users by the earliest recorded time that they opened any of your apps within your app group. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by the earliest recorded time that they opened any of your apps within your workspace. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Last Made Purchase
@@ -126,7 +126,7 @@ glossaries:
     tags:
       - User Activity
   - name: Session Count
-    description: Segments your users by the number of sessions they have had in any of your apps within your app group.
+    description: Segments your users by the number of sessions they have had in any of your apps within your workspace.
     tags:
       - User Activity
   - name: Session Count For App
@@ -414,7 +414,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Push Enabled
-    description: Segments your users who have provisional push authorization or are enabled for foreground push. Specifically, this count includes:<br>1. iOS users who are provisionally authorized for push. <br>2. Users who explicitly activated push notifications for any of the apps in your app group. For these users, this count includes only foreground push.<br><br>Push Enabled does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
+    description: Segments your users who have provisional push authorization or are enabled for foreground push. Specifically, this count includes:<br>1. iOS users who are provisionally authorized for push. <br>2. Users who explicitly activated push notifications for any of the apps in your workspace. For these users, this count includes only foreground push.<br><br>Push Enabled does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
     tags:
       - User Attributes
   - name: Push Enabled For App

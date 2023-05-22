@@ -3,6 +3,7 @@ nav_title: Session Tracking
 article_title: Session Tracking for iOS
 platform: Swift
 page_order: 0
+search_rank: 1
 description: "This reference article shows how to subscribe to session updates for the Swift SDK."
 
 ---

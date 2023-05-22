@@ -17,7 +17,7 @@ Data transformation is currently in early access. Contact your Braze customer su
 {% endalert %}
 
 {% alert important %}
-As of April 2022, an updated version of data transformation will be available for you. This updated version no longer requires a review and approval workflow. Enabled transformations will begin working instantaneously. If you are a first-time user, it is highly recommended that you test your webhook integration in a dev or sandbox app group first.<br><br> This updated version of data transformation will no longer accept Ruby transformation code but will instead support JavaScript code.
+As of April 2022, an updated version of data transformation will be available for you. This updated version no longer requires a review and approval workflow. Enabled transformations will begin working instantaneously. If you are a first-time user, it is highly recommended that you test your webhook integration in a dev or sandbox workspace first.<br><br> This updated version of data transformation will no longer accept Ruby transformation code but will instead support JavaScript code.
 Our team is happy to review your code before you enable a transformation; reach out to [data-transformation@braze.com](mailto:data-transformation@braze.com) if needed.
 {% endalert %}
 
@@ -38,7 +38,7 @@ These real-time notifications, sent via an HTTP POST request to a destination of
 | Requirement | Description |
 | --- | --- |
 | 2FA or SSO | You must have 2FA or SSO enabled for your account. |
-| Correct permissions | You must be either an account admin or an app group admin, or have user permissions for **Manage Transformations**. |
+| Correct permissions | You must be either an account admin or a workspace admin, or have user permissions for **Manage Transformations**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Example use cases
@@ -148,6 +148,10 @@ Shown below is an [example Typeform webhook](https://www.typeform.com/help/a/web
 
 Navigate to the Braze dashboard, and select the **Transformations** page under the **Data** section.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Data Transformations** under **Data Settings**.
+{% endalert %}
+
 Next, name your transformation and click **Create Transformation**. 
 
 First, click into your transformation. This will open a detailed view showing your most recent webhook this transformation has received, and room to write your own transformation. 
@@ -246,7 +250,7 @@ In this step, you will express how you'd like to map various webhook values to B
 3. Each attribute, event, and purchase object requires a user identifier, either an `external_id`, `user_alias`, email, or `braze_id`). Find the user identifier in the incoming webhook’s payload and template in that value in your transformation code via a payload line. Use dot notation to access payload object properties.<br>Simply template in the email address from the incoming webhook and use “email” as your identifier in the transformation code. For example, our Example Transformation Code page uses this new `/users/track` functionality.<br><br>
 4. Find the webhook values you’d like to represent as attributes, events, and/or purchases and template those values in your transformation code via a payload line. Use dot notation to access payload object properties.<br><br>
 5. For each attribute, event, and purchase object, examine the `_update_existing_only` value. Set this to `false` if you would like the transformation to create a new user that may not exist. Leave this as true if you’d like to only update existing profiles.<br><br>
-6. Activate your transformation. It is highly recommended that you do this first in a dev app group to test. If you’d like help with your code before activating it, contact [data-transformation@braze.com](mailto:data-transformation@braze.com).<br><br>
+6. Activate your transformation. It is highly recommended that you do this first in a dev workspace to test. If you’d like help with your code before activating it, contact [data-transformation@braze.com](mailto:data-transformation@braze.com).<br><br>
 7. Have your source platform begin sending webhooks. Your transformation code will run for each incoming webhook, and user profiles will begin updating. Your webhook integration is now complete!
 
 {% alert important %}

@@ -64,6 +64,10 @@ The following table describes the four different HTTP methods you can specify in
 
 In Braze, you can create a webhook as a webhook campaign, API campaign, or Canvas component.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find both **Campaigns** and **Canvas** under **Messaging**.
+{% endalert %}
+
 {% tabs %}
 {% tab Webhook Campaign %}
 

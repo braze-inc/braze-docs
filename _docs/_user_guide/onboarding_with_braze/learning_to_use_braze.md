@@ -54,7 +54,7 @@ Learn how to manage user access for your organization, best practices for dashbo
 | 5 | [Adding Braze users]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/adding_users_to_your_dashboard/) | Add company users to the company Braze account. |
 | 6 | [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) | How to create teams in Braze with varying roles and permissions. |
 | 7 | [Company-wide settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) | Learn about and set settings for your entire company's Braze account. |
-| 8 | [App group management]({{site.baseurl}}/user_guide/administrative/app_settings/app_group_management/) | Set up and manage your company apps. |
+| 8 | [Workspace management]({{site.baseurl}}/user_guide/administrative/app_settings/app_group_management/) | Set up and manage your company apps. |
 | 9 | [Message activity log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) | Learn about and utilize the message activity log, including all associated errors. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

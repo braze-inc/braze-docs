@@ -12,6 +12,7 @@ tool: in-app messages
 > This article provides answers to some frequently asked questions about in-app messages.
 
 ### What is an in-browser message and how does it differ from an in-app message?
+
 In-browser messages are in-app messages sent to web browsers. To create an in-browser message, make sure to select **Web Browser** under the **Send To** field when creating your in-app message campaign or Canvas. 
 
 ### Will an in-app message display if a device is offline?
@@ -43,6 +44,22 @@ MESSAGE HERE
 Eligibility for an in-app message is calculated at the time of delivery. If an in-app message is scheduled to send at 7 am, then eligibility is checked for this in-app message at 7 am.
 
 Once the in-app message is displayed, the eligibility will depend on when the in-app message is downloaded and triggered.
+
+### What are templated in-app messages?
+
+In-app messages will be delivered as templated in-app messages when **Re-evaluate campaign eligibility before displaying** is selected or if any of the following Liquid tags exist in the message:
+
+- `canvas_entry_properties`
+- `connected_content`
+- SMS variables such as {% raw %}`{sms.${*}}`{% endraw %}
+- `catalog_items`
+- `catalog_selection_items`
+
+This means during session start, the device will receive the trigger of that in-app message instead of the entire message. When the user triggers the in-app message, the user's device will make a network request to fetch the actual message.
+
+{% alert note %}
+The message will not deliver if the device doesn't have access to the internet. The message might not deliver if the Liquid logic takes too long to resolve.
+{% endalert %}
 
 ### Why is my archived in-app message campaign still delivering in-app message impressions?
 

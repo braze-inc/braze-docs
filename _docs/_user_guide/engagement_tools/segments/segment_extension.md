@@ -17,12 +17,18 @@ Segment Extensions are audience definitions which allow you to use nested event 
 The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
 
 {% alert important %}
-There is a default allotment of 25 active Segment Extensions per app group at a particular time. If you need to increase this limit, contact your Braze customer success manager to discuss your use case.
+There is a default allotment of 25 active Segment Extensions per workspace at a particular time. If you need to increase this limit, contact your Braze customer success manager to discuss your use case.
 {% endalert %}
 
 ## Step 1: Navigate to Segment Extensions
 
-Under **Engagements**, expand **Segments** and click **Segment Extension**. From the Segment Extensions table, click <i class="fas fa-plus"></i> **Create New Extension**.
+Under **Engagements**, expand **Segments** and click **Segment Extension**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Segment Extensions** under **Audience**.
+{% endalert %}
+
+From the Segment Extensions table, click <i class="fas fa-plus"></i> **Create New Extension**.
 
 ## Step 2: Name your Segment Extension
 

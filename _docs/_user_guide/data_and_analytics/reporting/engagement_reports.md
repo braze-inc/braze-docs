@@ -24,6 +24,8 @@ tool:
 Reports are not saved in the dashboard, and re-running the report can result in updated statistics.
 {% endalert %}
 
+Your Braze user account must have "Export User Data" permission to run Engagement Reports.
+
 ## Create a new report
 
 1. In your dashboard account, navigate to **Engagement Reports**, under **Data**.
@@ -38,10 +40,8 @@ Reports are not saved in the dashboard, and re-running the report can result in 
 10. Run the report, then open it in your email when it arrives!
 
 {% alert note %}
-Your Braze user account must have 'Export User Data' access to utilize Engagement Reports.
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Engagement Reports** under **Analytics** > **Reports** > **Engagement Reports**.
 {% endalert %}
-
----
 
 ## Add messages to your report
 

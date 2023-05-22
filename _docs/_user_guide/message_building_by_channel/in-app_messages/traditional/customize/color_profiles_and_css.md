@@ -14,6 +14,10 @@ channel:
 
 Go to **Templates & Media**, then the **In-App Message Templates** tab. From this page, you can either edit existing templates or click **+ Create** and choose **Color Profile** or **CSS Template** to create new templates to use in your in-app messages.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+{% endalert %}
+
 ## Color profile
 
 You can customize the color scheme of your message template by either entering a HEX color code or by clicking the colored box and selecting a color with the color picker.

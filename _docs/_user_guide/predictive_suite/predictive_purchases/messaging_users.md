@@ -8,6 +8,8 @@ page_order: 3
 
 # Messaging users {#what-do-next}
 
+> Learn how to target users for Predictive Purchases after you have created a Purchase Prediction.
+
 {% alert note %}
 Preview and Demo Predictions will not allow users to be targeted for messaging, and the **Create Segment**, and **Create Campaign** buttons will be disabled. To purchase this functionality, contact your account manager.
 {% endalert %}

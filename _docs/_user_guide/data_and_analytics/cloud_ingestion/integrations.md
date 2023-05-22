@@ -105,7 +105,7 @@ GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 After this step, you will share connection information with Braze and receive a public key to append to the user.
 
 {% alert note %}
-When connecting different app groups to the same Snowflake account, you must create a unique user for each Braze app group where you are creating an integration. Within an app group, you can reuse the same user across integrations, but integration creation will fail if a user on the same Snowflake account is duplicated across app groups.
+When connecting different workspaces to the same Snowflake account, you must create a unique user for each Braze workspace where you are creating an integration. Within a workspace, you can reuse the same user across integrations, but integration creation will fail if a user on the same Snowflake account is duplicated across workspaces.
 {% endalert %}
 
 #### Step 5: Allow Braze IPs in Snowflake network policy (optional)
@@ -249,6 +249,10 @@ If you have network policies in place, you must give Braze network access to you
 {% tab Snowflake %}
 
 Navigate to the Snowflake page on Braze, under **Technology Partners**, and click **Create new import sync**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
 
 #### Step 1: Add Snowflake connection information and source table
 
