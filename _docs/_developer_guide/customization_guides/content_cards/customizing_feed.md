@@ -244,17 +244,31 @@ The `ContentCardsFragment` source can be found on [GitHub](https://github.com/br
 {% endtab %}
 {% tab iOS %}
 
-<!--- Is this possible in the iOS SDK? If so, how? --->
-
 {% subtabs %}
 {% subtab Swift %}
 
-Swift content
+Customize the card feed order by directly modifying the static `Attributes.defaults` variable.
+
+```swift
+var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
+attributes.transform = { cards in
+    cards.sorted {
+        if $0.pinned && !$1.pinned {
+            return true
+        } else if !$0.pinned && $1.pinned {
+            return false
+        } else {
+            return $0.createdAt > $1.createdAt
+        }
+    }
+}
+let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
+```
 
 {% endsubtab %}
 {% subtab Objective-C %}
 
-Objective-C content
+Customization via `BrazeContentCardUI.ViewController.Attributes` is not available in Objective-C. 
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -274,7 +288,7 @@ braze.showContentCards(null, (cards) => {
 
 ## Change "empty feed" language
 
-When a user does not qualify for any Content Cards, an "empty feed" error message is displayed. 
+When a user does not qualify for any Content Cards, the SDK displays an "empty feed" error message stating: "We have no updates. Please check again later." 
 
 You can configure what is displayed in this empty feed message.
 
@@ -283,9 +297,9 @@ You can configure what is displayed in this empty feed message.
 {% tabs %}
 {% tab Android %}
 
-If the [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) determines that a Content Card refresh has failed, it will display a network connection error message.
+If the [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) determines that the user does not qualify for any Content Cards, it displays the empty feed error message.
 
-A special adapter, the [`EmptyContentCardsAdapter`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/EmptyContentCardsAdapter.kt), replaces the standard [`ContentCardAdapter`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/ContentCardAdapter.kt) to display the error message. To set the custom message itself, override the string resource `com_braze_feed_empty`.
+A special adapter, the [`EmptyContentCardsAdapter`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/EmptyContentCardsAdapter.kt), replaces the standard [`ContentCardAdapter`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/ContentCardAdapter.kt) to display this error message. To set the custom message itself, override the string resource `com_braze_feed_empty`.
 
 The style used to display this message can be found via [`Braze.ContentCardsDisplay.Empty`](https://github.com/braze-inc/braze-android-sdk/blob/2e386dfa59a87bfc24ef7cb6ff5adf6b16f44d24/android-sdk-ui/src/main/res/values/styles.xml#L522-L530) and is reproduced in the following code snippet:
 
@@ -319,17 +333,10 @@ attributes.emptyStateMessageColor = .secondaryLabel
 {% endsubtab %}
 {% subtab Objective-C %}
 
-Change the language that appears automatically in empty Content Card feeds by redefining the localizable content card strings in your app's [`ContentCardsLocalizable.strings`]((https://github.com/braze-inc/braze-swift-sdk/tree/main/Sources/BrazeUI/Resources/Localization/en.lproj) file: 
-
-```obj-c
-public var emptyStateMessage: String = localize(
-  "braze.content-cards.no-card.text",
-  for: .contentCard
-)
-```
+Change the language that appears automatically in empty Content Card feeds by redefining the localizable Content Card strings in your app's [`ContentCardsLocalizable.strings`](https://github.com/braze-inc/braze-swift-sdk/tree/main/Sources/BrazeUI/Resources/Localization/en.lproj) file.
 
 {% alert note %}
-If you want to update it for different languages, find the corresponding language in the [Resources folder structure](https://github.com/Appboy/appboy-ios-sdk/tree/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources) with the same string `Appboy.content-cards.no-card.text`.
+If you want to update this message in different locale languages, find the corresponding language in the [Resources folder structure](https://github.com/braze-inc/braze-swift-sdk/tree/main/Sources/BrazeUI/Resources/Localization) with the string `ContentCardsLocalizable.strings`.
 {% endalert %}
 
 {% endsubtab %}
