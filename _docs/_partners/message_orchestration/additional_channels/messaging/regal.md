@@ -2,10 +2,9 @@
 nav_title: Regal
 article_title: Regal
 description: "This reference article outlines the partnership between Braze and Regal, a phone and SMS sales solution that allows you to use data from both sources to create personalized experiences for your customers."
-permalink: /partners/regal/
+alias: /partners/regal/
 page_type: partner
-search_tag: Regal
-layout: dev_guide
+search_tag: Partner
 
 ---
 
@@ -92,10 +91,9 @@ If opt-in and out can happen at different parts of your user experience on your 
 1. Create a new Canvas or campaign titled "Send Opt In or Out to Regal".
 
 2. Select one of the following trigger options and select whatever field represents the user's opt-in status. If you fire an event to Braze to represent opt-in or out, use that event as the trigger instead.
-
-- User Profile Field Updated
-- Update Subscription Group Status
-- Subscription Status
+    - User Profile Field Updated
+    - Update Subscription Group Status
+    - Subscription Status
 
 3. In your new Webhook template, fill out the following fields:<br>
 **Webhook URL**: <https://events.regalvoice.com/events><br>
