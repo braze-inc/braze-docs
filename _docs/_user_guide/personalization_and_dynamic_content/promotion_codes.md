@@ -23,10 +23,10 @@ Promotion codes can't be sent in in-app messages.
 
 ![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-From the dashboard, go to **Promotion Codes**, located under the **Integrations** section, then select **Create Promotion Code List**.
+From the dashboard, go to **Data Settings** > **Promotion Codes**, then select **Create Promotion Code List**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Promotion Codes** under **Data Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Promotion Codes** under **Integrations**.
 {% endalert %}
 
 ### Step 2: Naming and creating your promotion code
