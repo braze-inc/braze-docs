@@ -34,20 +34,23 @@ search_tag: Partner
 
 ## FAQ
 
-1. What data is being imported into Braze (attributes, events, purchased, etc.)?
-    * The information being brought into Braze from P.AI are identifiers which are used for personalized targeting. These custom attributes indicate timing, content, treatment and offers for each customer. Depending on the integration used, fields can also be passed as an event, or pulled through connected content APIs instead of being stored on the customer's profile. Below you will find an example of customer attributes as they relate to an example churn focused canvas.
+### What data is being imported into Braze?
+Personalize.AI exports identifiers used for personalized targeting into Braze. These custom attributes indicate timing, content, treatment, and offers for each customer. Depending on the integration used, fields can also be passed as an event, or pulled into the [Connected Content APIs][2] instead of being stored on the customer's profile. 
 
-        | Customer_ID | Target_Canvas | Target_Objective   | C4_Target_Date | C4_Target_Variant | C4_Treatment | C4_Offer_Value | C4_Item_Recom     | C4_Subject_Line |
-        | ----------- | ------------- | ------------------ | -------------- | ----------------- | ------------ | -------------- | --------------- | --------------- |
-        | 12345       | C4            | “Churn_Mitigation” | 3/1/2023       | Treatment         | “P.AI_Model” | $3             | “Caesar   Salad” | “We miss you”   |
-2.	What do Braze users need to know about this data? How do they use this information?
-    * Braze users should know that the data attributes being pushed into Braze from P.AI will be intuitively named for simple use in canvases where we follow a consistent nomenclature (for example C402_Target_Variant = ”P.AI_Model_Treatment”), and are validated on an ongoing basis to ensure that users can reference them confidently.  The attributes from P.AI will not interfere with any existing attributes nor tracking that are in place as additional attributes are created for use by P.AI.
-3.	What identifiers are supported?
-    * We are using the attribute ‘external_id’ as an identifier.
-4.	Is there any flow of data from Braze to Personalize.AI, or is this one directional only?
-    * Currently the data flow is unidirectional which is from P.AI to Braze.
+The data attributes imported into Braze are intuitively named for use in Canvases, following a consistent nomenclature. For example, the attribute `C402_Target_Variant` in Personalize.AI would be exported as `"P.AI_Model_Treatment"` to Braze. The attributes exported from Personalize.AI are designed to not interfere with any existing attributes or tracking that you use. These attributes are validated on an ongoing basis to ensure that you can reference them confidently. 
+
+For example, here is a set of customer attributes as they relate to an example churn-focused Canvas.
+
+| Customer_ID | Target_Canvas | Target_Objective   | C4_Target_Date | C4_Target_Variant | C4_Treatment | C4_Offer_Value | C4_Item_Recom     | C4_Subject_Line |
+| ----------- | ------------- | ------------------ | -------------- | ----------------- | ------------ | -------------- | --------------- | --------------- |
+| 12345       | C4            | "Churn_Mitigation" | 3/1/2023       | Treatment         | "P.AI_Model" | $3             | "Caesar Salad" | "We miss you"   |
 
 
+### What identifiers are supported?
+Personalzie.AI uses the attribute `external_id` as an identifier.
+
+### Is there any flow of data from Braze to Personalize.AI or is this one directional only?
+The data flow is unidirectional from Personalize.AI to Braze.
 
 ## Integration
 
@@ -57,14 +60,14 @@ search_tag: Partner
 2. Click on **Braze**. 
 3. Configure your integration with Braze.
 
-    * **Connection Name:** Name your connection. This is how your integration will be referred to in Personalize.AI.
-    * **Sync Frequency:** The sync frequency controls how often Personalize.AI exports data to Braze. Select **Daily**, **Weekly**, or **Monthly**. 
-    * **API Key:** Add your Braze API key.
-    * **API URL:** Add your Braze REST endpoint URL.
+* **Connection Name:** Name your connection. This is how your integration will be referred to in Personalize.AI.
+* **Sync Frequency:** The sync frequency controls how often Personalize.AI exports data to Braze. Select **Daily**, **Weekly**, or **Monthly**. 
+* **API Key:** Add your Braze API key.
+* **API URL:** Add your Braze REST endpoint URL.
 
 4. Click **EXPORT** to export data to Braze.
 
 Once your data has been exported, Personalize.AI will continue to pass data to Braze at the intervals determined by the sync frequency that you set during integration.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-
+[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
