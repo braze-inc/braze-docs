@@ -297,7 +297,7 @@ The following table describes the limitations that apply at a catalog level:
 ### Storage limits
 
 {% alert important %}
-To request an upgrade for catalogs storage, contact your Braze account manager.
+The package entitlement shown in the Braze dashboard is rounded to the nearest unit for visual purposes; however, you are still entitled to the full entitlement purchased. To request an upgrade for catalogs storage, contact your Braze account manager.
 {% endalert %}
 
 #### Free version
