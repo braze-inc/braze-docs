@@ -44,6 +44,10 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 In the Braze dashboard, go to **Technology Partners** and select **TikTok**. In the TikTok Audience Export module, click **Connect TikTok**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
 ![TikTok technology page in Braze includes an Overview module and TikTok Audience Export module with the Connected TikTok button.][1]{: style="max-width:75%;"}
 
 You'll then be redirected to the TikTok OAuth page to authorize Braze for ad account management and Audience Management. Once you have selected **Confirm**, you'll be redirected back into Braze to select which TikTok ad accounts you wish to sync to. 
@@ -133,8 +137,7 @@ Remember that there will be a delay in reporting for users synced and users erro
 
 ## Troubleshooting
 
-{% details What should I do next if I receive an invalid token error?
- %}
+{% details What should I do next if I receive an invalid token error? %}
 You can disconnect and reconnect your TikTok account on the TikTok partner page. Ensure with your TikTok Business Center admin that you have the appropriate permissions to the ad account you wish to sync.
 {% enddetails %}
 
@@ -163,16 +166,12 @@ The audience size will update within 24-48 hours on the Audiences page in TikTok
 [6]: {% image_buster /assets/img/tiktok/tiktok6.png %}
 [7]: {% image_buster /assets/img/tiktok/tiktok7.png %}
 [8]: {% image_buster /assets/img/tiktok/tiktok8.png %}
-[9]: {% image_buster /assets/img/tiktok/tiktok9.png %}
-[10]: {% image_buster /assets/img/tiktok/tiktok10.png %}
 [11]: {% image_buster /assets/img/tiktok/tiktok11.png %}
 [12]: {% image_buster /assets/img/tiktok/tiktok12.png %}
 [13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
 [14]: {% image_buster /assets/img/tiktok/tiktok14.png %}
 [15]: {% image_buster /assets/img/tiktok/tiktok15.png %}
 [16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
-[17]: {% image_buster /assets/img/tiktok/tiktok17.png %}
-
 [18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
 [19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
 [20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}

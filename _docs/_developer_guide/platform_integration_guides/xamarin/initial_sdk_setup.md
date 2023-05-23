@@ -35,7 +35,11 @@ The second integration method is to include the [binding source][3]. Under `appb
 ### Step 2: Configure the Braze SDK in braze.xml
 Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `Resources/values` folder. The contents of that file should resemble the following code snippet:
 
->  Be sure to substitute `REPLACE_WITH_YOUR_API_KEY` with the API key located the **Developer Console** page of the Braze dashboard.
+>  Be sure to substitute `REPLACE_WITH_YOUR_API_KEY` with the API key located at **Developer Console** > **API Settings** in the Braze dashboard.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
 
 ```java
     <?xml version="1.0" encoding="utf-8"?>

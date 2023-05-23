@@ -22,7 +22,7 @@ While most domains do not require SSL, Braze strongly recommends using SSL for t
 
 Securing your website and links with SSL is a common practice even for companies that don't deal directly with sensitive customer information. Users are more trusting of links that are secured with SSL, and the additional layer of authentication helps protect your data.
 
-#### Neccesary for click and open tracking
+#### Necessary for click and open tracking
 
 At Braze, when we send out emails, we first transform your links using your branded link tracking subdomain to track user clicks and opens. By default, these links will begin with HTTP. This means that users with a browser or extension that restricts non-secure traffic may have difficulty passing through the redirect before landing at the destination URL, even if the URL is secure. This can lead to broken images and inaccurate click and open tracking throughout your emails. For this reason, it is a best practice to apply an SSL layer to the link tracking subdomain to ensure secure redirects in your emails. 
 

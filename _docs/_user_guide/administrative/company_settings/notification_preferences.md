@@ -15,6 +15,12 @@ The **Notification Preferences** page is where you can configure who (if anyone)
 
 ![Notification Preferences page in the Braze dashboard][61]
 
+To access the **Notification Preferences** page, select your account dropdown and go to **Company Settings** > **Notification Preferences**.
+
+{% alert note %}
+If you're using our [updated navigation]({{site.baseurl}}/navigation), you can find **Notification Preferences** under **Settings** > **Company Settings** > **Admin Settings** > **Notification Preferences**.
+{% endalert %}
+
 ## Available notifications
 
 The following table lists available notifications:
@@ -31,12 +37,18 @@ The following table lists available notifications:
 | Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempted to send but had no eligible users to send to. | Email, Webhook |
 | Scheduled Campaign Limit Met | Notifies recipients when the limit for a recurring scheduled campaign has been reached. | Email, Webhook |
 | Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Email, Webhook |
-| Weekly Analytics Report | Sends a summary of the past week's app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to. | Email |
+| Weekly Analytics Report | Sends a summary of the past week's workspace activity to recipients every Monday. Recipients receive a summary for each workspace that they belong to. | Email |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Weekly analytics reporting
 
-Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5 am EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the **Manage Settings** page of the dashboard. You may select up to five events to be included in your weekly report:
+Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5 am EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the **Manage Settings** page of the dashboard.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Events** under **Data Settings**.
+{% endalert %}
+
+You may select up to five events to be included in your weekly report:
 
 ![Selecting events to be included in the Analytics Report][22]
 

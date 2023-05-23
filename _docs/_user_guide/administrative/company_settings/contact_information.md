@@ -15,7 +15,15 @@ description: "This reference article covers important information for admins on 
 }
 </style>
 
-> You can get to the **Company Settings** section by clicking on your name, then selecting **Company Settings** in the drop-down. If you're an admin (you'll see a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username), this page is where you can manage your company's contact information and time zone. Make sure to hit **Save** before you leave the page!
+> This page covers important information for admins on managing your company's contact information and time zone in Braze.
+
+You can get to the **Company Settings** section by clicking on your name, then selecting **Company Settings** in the drop-down. If you're an admin (you'll see a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username). 
+
+{% alert note %}
+If you're using our [updated navigation]({{site.baseurl}}/navigation), you can find **Contact Information** under **Settings** > **Company Settings** > **Admin Settings** > **Contact Information**.
+{% endalert %}
+
+This page is where you can manage your company's contact information and time zone. Make sure to hit **Save** before you leave the page!
 
 ### Consequences of switching your time zone
 

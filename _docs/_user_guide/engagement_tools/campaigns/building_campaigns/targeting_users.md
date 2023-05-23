@@ -9,11 +9,15 @@ description: "This reference article covers the Targeting options found in the t
 
 # Targeting users
 
-> Once you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Users** step. Only the users who match your defined criteria will receive the campaign. Keep in mind that exact segment membership is always calculated just before the message is sent.
+> Once you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Users** step. 
 
 ## Targeting options
 
 Under the **Targeting Options** section, you'll find a few options for who you can send your campaign to.
+
+{% alert note %}
+Only the users who match your defined criteria will receive the campaign. Keep in mind that exact segment membership is always calculated just before the message is sent.
+{% endalert %}
 
 ### Target users in an existing segment {#existing-segment}
 

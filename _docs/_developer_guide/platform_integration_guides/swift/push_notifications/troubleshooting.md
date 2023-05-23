@@ -52,6 +52,10 @@ If [APNs][20] informs us that any of the push tokens we were attempting to send 
 
 The **Message Activity Log** in the [Developer Console][3] gives you the opportunity to see any messages (especially error messages) associated with your campaigns and sends, including push notification errors. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** at **Settings** > **Setup and Testing** > **Message Activity Log**.
+{% endalert %}
+
 ![Push error logs displaying the time the error occurred, the app name, the channel, error type, and error message.][26]
 
 Common errors you might see here include user-specific notifications, such as ["Received Unregistered Sending to Push Token"][35].
@@ -77,7 +81,7 @@ This error indicates that your app's push certificate and bundle ID are mismatch
 The `BadDeviceToken` is an APNs error code and does not originate from Braze. There could be a number of reasons for this response being returned, including the following:
 
 - The app received a push token that was invalid for the credentials uploaded to the dashboard.
-- Push was disabled for this app group.
+- Push was disabled for this workspace.
 - The user has opted out of push.
 - The app was uninstalled.
 - Apple refreshed the push token, which invalidated the old token.
@@ -134,7 +138,7 @@ Check the schedule you set for your test message. If it is set to local time zon
 
 ### User not "push registered" for the app being tested
 
-Check the user profile of the user you are trying to send a test message to. Under the **Engagement** tab, there should be a list of "pushable apps." Verify the app you are trying to send test messages to is in this list. Users will show up as "Push Registered" if they have a push token for any app in your app group, so this could be something of a false positive.
+Check the user profile of the user you are trying to send a test message to. Under the **Engagement** tab, there should be a list of "pushable apps." Verify the app you are trying to send test messages to is in this list. Users will show up as "Push Registered" if they have a push token for any app in your workspace, so this could be something of a false positive.
 
 The following would indicate a problem with push registration or that the user's token had been returned to Braze as invalid by APNs after being pushed:
 

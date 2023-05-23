@@ -36,7 +36,13 @@ In adherence to Mixpanel's data retention policies, events sent before January 1
 
 ### Step 1: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Mixpanel**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Mixpanel's dashboard.<br><br>![]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
+In Braze, navigate to **Technology Partners** and select **Mixpanel**. Here, you will find the REST endpoint and generate your Braze data import key. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
+Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Mixpanel's dashboard.<br><br>![]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
 
 ### Step 2: Set up the Braze integration in Mixpanel
 

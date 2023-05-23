@@ -4,7 +4,7 @@ article_title: Settings
 page_order: 3
 layout: dev_guide
 guide_top_header: "Settings"
-guide_top_text: "This is where you can manage global settings for your app group, custom events, and more. Developers may find the Developer Console useful, while marketers may want to set up custom events and attributes."
+guide_top_text: "This is where you can manage global settings for your workspace, custom events, and more. Developers may find the Developer Console useful, while marketers may want to set up custom events and attributes."
 
 page_type: landing
 description: "This landing page lists topics related to app settings. Here, you can manage settings and learn more about the developer console."

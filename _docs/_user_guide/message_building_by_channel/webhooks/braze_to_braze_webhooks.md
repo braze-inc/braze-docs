@@ -61,7 +61,11 @@ Braze requires an HTTP header for authorization that includes your API key and a
   - **Content-Type:** application/json
 - **HTTP Method:** POST
 
-Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **REST API Key** > **Create New API Key**.
+Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **API Settings**, then click **Create New API Key**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
 
 ![][1]
 
@@ -112,7 +116,11 @@ Braze requires an HTTP header for authorization that includes your API key and a
   - **Content-Type:** application/json
 - **HTTP Method:** POST
 
-Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **REST API Key** > **Create New API Key**.
+Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **API Settings**, then click **Create New API Key**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
 
 ![][1]
 
@@ -163,7 +171,11 @@ Braze requires an HTTP header for authorization that includes your API key and a
   - **Content-Type:** application/json
 - **HTTP Method:** POST
 
-Replace `YOUR_API_KEY` with a Braze API key with `canvas.trigger.send` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **REST API Key** > **Create New API Key**.
+Replace `YOUR_API_KEY` with a Braze API key with `canvas.trigger.send` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **API Settings**, then click **Create New API Key**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
 
 ![][1]
 

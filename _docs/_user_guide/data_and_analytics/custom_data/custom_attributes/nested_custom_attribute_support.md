@@ -36,7 +36,7 @@ Custom attribute objects can contain [data types][1], such as:
 ## Limitations
 
 - Nested custom attributes are intended for custom attributes sent via the Braze SDK or API. 
-- Partners do not support arrays of objects. We recommend against using this feature with app groups that have partner integrations enabled.
+- Partners do not support arrays of objects. We recommend against using this feature with workspaces that have partner integrations enabled.
 - Objects have a maximum size of 50&nbsp;KB.
 - Key names and string values have a size limit of 255 characters.
 - Key names cannot contain spaces.
@@ -235,9 +235,13 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 {% endtab %}
 {% endtabs %}
 
-#### Capturing dates as object properties
+## Capturing dates as object properties
 
 To capture dates as object properties, you must use the `$time` key. In the following example, an "Important Dates" object is used to capture the set of object properties, `birthday` and `wedding_anniversary`. The value for these dates is an object with a `$time` key.
+
+{% alert note %}
+If you haven't captured dates as object properties initially, we recommend resending this data using the `$time` key for all users. Otherwise, this may result in incomplete segments when using the `$time` attribute.
+{% endalert %}
 
 ```json
 {
@@ -330,7 +334,13 @@ For this example, suppose we have an `accounts` object array that we've just sen
  ]
 ```
 
-In the Braze dashboard, navigate to **Manage Settings** > **Custom Attributes**. Search for your object or object array. In the **Attribute Name** column, click **Generate Schema**.
+In the Braze dashboard, navigate to **Manage Settings** > **Custom Attributes**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Data Settings**.
+{% endalert %}
+
+Search for your object or object array. In the **Attribute Name** column, click **Generate Schema**.
 
 ![][8]
 

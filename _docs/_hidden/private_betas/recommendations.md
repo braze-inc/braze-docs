@@ -24,6 +24,10 @@ You must have at least one [catalog]({{site.baseurl}}/user_guide/personalization
 
 From the **Predictions** page, select **Create Prediction** > **Item Recommendation**. You can also choose to create a recommendation straight from an individual catalog. From the **Catalogs** page, select your catalog and click **Create Recommendation**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Analytics** and **Catalogs** under **Data Settings**.
+{% endalert %}
+
 ### Step 2: Specify catalog details
 
 1. Enter a name and optional description for your recommendation.

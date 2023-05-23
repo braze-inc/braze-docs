@@ -153,6 +153,10 @@ braze.changeUser("{some-user-id}");
 
 Then, search for the user with `{some-user-id}` in the dashboard under **User Search**. There, you can verify that session and device data have been logged.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **User Search** is now **Search Users** and can be found under **Audience**.
+{% endalert %}
+
 [1]: https://pub.dev/packages/braze_plugin
 [2]: https://flutter.dev/
 [3]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key

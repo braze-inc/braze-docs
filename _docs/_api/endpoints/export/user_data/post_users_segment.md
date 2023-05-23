@@ -34,7 +34,7 @@ Beginning December 2021, the following changed for this API:<br><br>1. The `fiel
 
 ## Credentials-based response details
 
-If you have added your [S3][1] or [Azure][2] credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, we will create 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large app group may result in multiple files. You can then unzip the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
+If you have added your [S3][1] or [Azure][2] credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, we will create 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then unzip the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
 
 {% details Export Pathing Breakdown for ZIP File %}
 ZIP file format:
@@ -88,11 +88,15 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-|`segment_id` | Required | String | Identifier for the segment to be exported. See [segment identifier]({{site.baseurl}}/api/identifier_types/).<br><br>The `segment_id` for a given segment can be found in your **Developer Console** within your Braze account or you can use the [Segment List Endpoint]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
+|`segment_id` | Required | String | Identifier for the segment to be exported. See [segment identifier]({{site.baseurl}}/api/identifier_types/).<br><br>The `segment_id` for a given segment can be found from **Developer Console** > **API Settings** within your Braze account or you can use the [Segment List Endpoint]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
 |`callback_endpoint` | Optional | String | Endpoint to post a download URL to when the export is available. |
 |`fields_to_export` | Required* | Array of Strings | Name of user data fields to export, you may also export custom attributes. <br><br>*Beginning April 2021, new accounts must specify specific fields to export. |
 |`output_format` | Optional | String | The output format of your file. Defaults to `zip` file format. If you are using your own S3 bucket, you can specify `zip` or `gzip`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+{% endalert %}
 
 ## Example request
 ```

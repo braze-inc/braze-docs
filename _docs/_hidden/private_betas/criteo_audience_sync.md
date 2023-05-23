@@ -44,6 +44,10 @@ You will need to ensure that you have the following items created and/or complet
 
 In the Braze dashboard, go to **Technology Partners** and select **Criteo**. In the Criteo Audience Export module, click **Connect Criteo**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
 ![Criteo technology page in Braze that includes an Overview module and Criteo module with the Connected Criteo button.][5]{: style="max-width:80%;"}
 
 A Criteo oAuth page will appear to authorize Braze for the permissions related to your Audience Sync integration.
@@ -56,7 +60,7 @@ Once you have successfully connected, you will be taken back to the partner page
 
 ![An updated version of the Criteo technology partners page showing the ad accounts successfully connected.][4]{: style="max-width:80%;"}
 
-Your Criteo connection will be applied at the Braze app group level. If your Criteo admin removes you from your Criteo ad account, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
+Your Criteo connection will be applied at the Braze workspace level. If your Criteo admin removes you from your Criteo ad account, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Configure your Canvas entry criteria
 

@@ -15,7 +15,13 @@ When stored in Braze, these characteristics can be used to build out audience se
 
 ## Managing custom attributes
 
-To create and manage custom attributes in the dashboard, go to **Manage Settings** > **Custom Attributes**. From this page, you can view, manage, or block existing custom attributes, or create a new one. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters.
+To create and manage custom attributes in the dashboard, go to **Manage Settings** > **Custom Attributes**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Data Settings**.
+{% endalert %}
+
+From this page, you can view, manage, or blocklist existing custom attributes, or create a new one. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters.
 
 To remove custom attributes from user profiles, set the value to "null" in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
 

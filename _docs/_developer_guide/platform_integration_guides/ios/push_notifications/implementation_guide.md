@@ -212,13 +212,13 @@ Logging analytics can only be done in real-time with the help of the customer's 
 
 ### Logging manually
 
-Logging manually will require you to first configure app groups within Xcode, and then create, save, and retrieve analytics. This will require some custom developer work on your end. The following code snippets shown will help address this. 
+Logging manually will require you to first configure App Groups within Xcode, and then create, save, and retrieve analytics. This will require some custom developer work on your end. The following code snippets shown will help address this. 
 
 It's also important to note that analytics are not sent to Braze until the mobile application is subsequently launched. This means that, depending on your dismissal settings, there often exists an indeterminate period of time between when a push notification is dismissed and the mobile app is launched and the analytics are retrieved. While this time buffer may not affect all use cases, users should consider the impact and if necessary, adjust their user journey to include opening the application to address this concern. 
 
 ![A graphic describing how analytics are processed in Braze. 1. Analytics data is created. 2. Analytics data is saved. 3. Push notification is dismissed. 4. Indeterminate period of time between when push notification is dismissed and mobile app is launched. 5. Mobile app is launched. 6. Analytics data is received. 7. Analytics data is sent to Braze.][13]
 
-#### Step 1: Configure app groups within Xcode
+#### Step 1: Configure App Groups within Xcode
 Add a capability `App Groups`. If you haven't had any app group in your app, go to the capability of the main app target, turn on the `App Groups`, and click the "+". Use your App's bundle ID to create the App Group. For example, if your app's bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
 
 ![][19]

@@ -247,4 +247,6 @@ valid_partner_list:
   url: /docs/user_guide/message_building_by_channel/whatsapp/
 - name: Regal
   url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
+- name: Tangerine
+  url: /docs/partners/message_personalization/location/tangerine/
 ---

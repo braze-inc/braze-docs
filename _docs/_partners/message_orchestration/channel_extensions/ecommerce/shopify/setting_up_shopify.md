@@ -12,12 +12,18 @@ page_order: 2
 # Setting up Shopify
 
 ### Step 1: Locate Shopify within the dashboard
-In Braze, go to the **Technology Partners** section and then search **Shopify**. On the Shopify partner page, select **Begin Setup** to start the integration process.
+In Braze, go to the **Technology Partners** section and then search **Shopify**. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+{% endalert %}
+
+On the Shopify partner page, select **Begin Setup** to start the integration process.
 
 ![Data Import and Web SDK Installation section of the Shopify partner page in Braze.][2]{: style="max-width:80%;"}
 
 ### Step 2: Braze's setup wizard
-Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your Shopify store name. Make sure to enter the store name, and not your Shopify domain. Note that currently, we can only connect one store per app group.
+Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your Shopify store name. Make sure to enter the store name, and not your Shopify domain. Note that currently, we can only connect one store per workspace.
 
 ### Step 3: Flexible event selection
 There will be a step explaining which events require us to implement the Braze Web SDK on your store and what to expect when this is added. Proceed to the next page to select the Shopify events you want Braze to track. Selecting any events with an * next to them will enable our Web SDK. The next step will ask you to confirm the selected events.

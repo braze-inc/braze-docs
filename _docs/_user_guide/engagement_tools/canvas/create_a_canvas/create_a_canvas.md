@@ -20,6 +20,10 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 Go to the **Canvas** page, located under the **Engagement** section, then click **Create Canvas**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Messaging**.
+{% endalert %}
+
 ## Step 2: Use the entry wizard to set up your Canvas
 
 The Entry Wizard will guide you through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the following tabs to see what settings you can adjust in each of the Entry Wizard steps.
@@ -85,7 +89,7 @@ If your Canvas has multiple variants or a Control Group, Braze will use this con
 
 ### Step 2b: Set your Canvas entry schedule
 
-You can choose one of three ways in which users can enter your Canvas.
+You can choose one of three ways in which users can enter your Canvas. 
 
 #### Entry schedule types
 
@@ -126,7 +130,7 @@ After you choose your delivery method, adjust those settings appropriately, and 
 
 ### Step 2c: Set your target entry audience
 
-You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey.
+You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey, meaning Braze evaluates the target audience for eligibility first before users enter the Canvas journey.
 
 For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
@@ -144,7 +148,11 @@ After adding segments and filters to your target audience, you can test if your 
 
 Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. 
 
-By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To manage your frequency capping rules, go  to your **Global Message Settings** page in your Braze account.
+By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To manage your frequency capping rules, go to your **Global Message Settings** page in your Braze account.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), **Global Message Settings** is now **Frequency Capping Rules** and is located at **Settings** > **Workspace Settings** > **Frequency Capping Rules**.
+{% endalert %}
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 

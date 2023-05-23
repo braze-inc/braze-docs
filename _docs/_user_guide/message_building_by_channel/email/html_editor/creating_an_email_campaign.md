@@ -30,6 +30,11 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 
 {% tabs %}
 {% tab Campaign %}
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Messaging**.
+{% endalert %}
+
 **Steps:**
 
 1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
@@ -46,6 +51,10 @@ If all of the messages in your campaign are going to be similar or have the same
 {% tab Canvas %}
 
 **Steps:**
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Messaging**.
+{% endalert %}
 
 1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas wizard.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
