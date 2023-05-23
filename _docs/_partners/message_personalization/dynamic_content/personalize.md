@@ -41,9 +41,18 @@ The data attributes imported into Braze are intuitively named for use in Canvase
 
 For example, here is a set of customer attributes as they relate to an example churn-focused Canvas.
 
-| Customer_ID | Target_Canvas | Target_Objective   | C4_Target_Date | C4_Target_Variant | C4_Treatment | C4_Offer_Value | C4_Item_Recom     | C4_Subject_Line |
-| ----------- | ------------- | ------------------ | -------------- | ----------------- | ------------ | -------------- | --------------- | --------------- |
-| 12345       | C4            | "Churn_Mitigation" | 3/1/2023       | Treatment         | "P.AI_Model" | $3             | "Caesar Salad" | "We miss you"   |
+| Personalize.AI Attribute | Value |
+| ----------- | ------------- | 
+| `Customer_ID` | 12345 |
+| `Target_Canvas` | C4 |
+| `Target_Objective` |  "Churn_Mitigation" |
+| `C4_Target_Date` | 3/1/2023 |
+| `C4_Target_Variant` | Treatment |
+| `C4_Treatment` | "P.AI_Model" |
+| `C4_Offer_Value` | $3 |
+| `C4_Item_Recom` | "Caesar Salad" |
+| `C4_Subject_Line` | "We miss you" |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ### What identifiers are supported?
@@ -59,12 +68,10 @@ The data flow is unidirectional from Personalize.AI to Braze.
 1. Navigate to the **Integrations** tab, located under **Operationalization**, in your Personalize.AI instance.
 2. Click on **Braze**. 
 3. Configure your integration with Braze.
-
-* **Connection Name:** Name your connection. This is how your integration will be referred to in Personalize.AI.
-* **Sync Frequency:** The sync frequency controls how often Personalize.AI exports data to Braze. Select **Daily**, **Weekly**, or **Monthly**. 
-* **API Key:** Add your Braze API key.
-* **API URL:** Add your Braze REST endpoint URL.
-
+    * **Connection Name:** Name your connection. This is how your integration will be referred to in Personalize.AI.
+    * **Sync Frequency:** The sync frequency controls how often Personalize.AI exports data to Braze. Select **Daily**, **Weekly**, or **Monthly**. 
+    * **API Key:** Add your Braze API key.
+    * **API URL:** Add your Braze REST endpoint URL.
 4. Click **EXPORT** to export data to Braze.
 
 Once your data has been exported, Personalize.AI will continue to pass data to Braze at the intervals determined by the sync frequency that you set during integration.
