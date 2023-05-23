@@ -17,8 +17,6 @@ description: "This article outlines details about the List catalogs Braze endpoi
 
 > Use this endpoint to return a list of catalogs in a workspace.
 
-{% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
-
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d65fb86-ccf7-423f-9eb2-f68ab36df824 {% endapiref %}
 
 ## Rate limit
@@ -29,7 +27,7 @@ description: "This article outlines details about the List catalogs Braze endpoi
 
 There are no path or request parameters for this endpoint.
 
-### Example request
+## Example request
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
