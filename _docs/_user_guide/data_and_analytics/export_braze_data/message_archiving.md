@@ -98,6 +98,8 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
 }
 ```
 
+Please see our code example repository for [message archive sample files](https://github.com/braze-inc/braze-examples/tree/main/message-archiving)
+
 ## Frequently asked questions
 
 ### What templating is not included in the payload? 
