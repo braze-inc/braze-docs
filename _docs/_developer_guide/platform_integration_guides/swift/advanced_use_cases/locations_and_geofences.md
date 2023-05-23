@@ -112,11 +112,12 @@ There are two ways to enable geofences for a particular app: from the **Location
 
 Enable geofences on the **Locations** page of the dashboard.
 
+1. Go to **Audience** > **Locations**.
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Locations** under **Audience**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Locations** under **Engagement**.
 {% endalert %}
 
-1. Go to the **Locations** page.
+{:start="2"}
 2. The number of apps in your workspace that currently have geofences enabled is displayed beneath the map, for example: **0 of 1 Apps with Geofences enabled**. Click this text.
 3. Select the app to enable geofences. Click **Done.**
 ![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
@@ -125,11 +126,12 @@ If you are using our [updated navigation]({{site.baseurl}}/navigation), you can 
 
 Enable geofences from your app's settings.
 
+1. Go to **Settings** > **App Settings**.
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Settings** is now **App Settings** and is located at **Settings** > **Setup and Testing** > **App Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find geofences at **Manage Settings** > **Settings**.
 {% endalert %}
 
-1. Go to the **Manage Settings** page. The **Settings** tab is open by default.
+{:start="2"}
 2. Select the app for which you wish to enable geofences.
 3. Select the **Geofences Enabled** checkbox. Click **Save.**
 
