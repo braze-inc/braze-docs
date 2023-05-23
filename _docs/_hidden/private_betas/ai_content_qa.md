@@ -1,8 +1,9 @@
 ---
 nav_title: Content QA with AI
 article_title: Content QA with AI
-page_order: 4.5
+permalink: "/user_guide/intelligence/ai_content_qa"
 description: "This reference article covers how to QA your message content with AI directly from the message composer."
+layout: dev_guide
 ---
 
 # Content QA with AI
@@ -10,6 +11,10 @@ description: "This reference article covers how to QA your message content with 
 > Learn how to QA your message content with AI directly from the message composer.
 
 Content QA with AI uses the capabilities of ChatGPT and OpenAI to perform checks on the content of your message, ensuring it adheres to quality standards by identifying ineffective elements such as spelling errors, grammar issues, inappropriate tone, and offensive language. You can access this feature from the **Test** tab when composing a message in a campaign or Canvas.
+
+{% alert important %}
+Content QA with AI is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
+{% endalert %}
 
 ## Key features
 

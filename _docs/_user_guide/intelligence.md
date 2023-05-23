@@ -37,10 +37,12 @@ guide_menu_list:
 - name: AI Image Generator
   link: /docs/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai
   fa_icon: fas fa-wand-magic-sparkles
+---
+
+<!--->
 - name: Content QA with AI
   link: /docs/user_guide/intelligence/ai_content_qa/
   fa_icon: fas fa-list-check
-
----
+<---->
 
 <br>
