@@ -1,7 +1,7 @@
 ---
 nav_title: Content QA with AI
 article_title: Content QA with AI
-permalink: "/user_guide/intelligence/ai_content_qa"
+hidden: true
 description: "This reference article covers how to QA your message content with AI directly from the message composer."
 layout: dev_guide
 ---
