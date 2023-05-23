@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Smartling
 
-> [Smartling][2], is an end-to-end cloud translation management software for customers looking to automate the translation of websites, applications, and customer experiences.
+> [Smartling][2] is an end-to-end cloud translation management software for customers looking to automate the translation of websites, applications, and customer experiences.
 
 The Braze and Smartling integration allows you to translate email templates and content blocks. Smartling provides linguists with the benefit of visual context during translation, which reduces errors and maintains quality.
 
@@ -24,6 +24,17 @@ The Braze and Smartling integration allows you to translate email templates and 
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
+
+The Smartling Braze integration will allow you to translate email templates and Content Blocks. 
+
+Email templates: 
+* Only HTML Editor Emails are supported. 
+* Each translation will be stored as its own email template. 
+
+Content Blocks: 
+* All Content Blocks are supported. 
+* The Content Blocks contain both the original and translated versions.
+* Liquid script determines the correct language for display based on the recipient's language preference.
 
 ### Step 1: Set up the Braze project in Smartling TMS
 
@@ -51,14 +62,14 @@ Once the Braze connector has been connected and set up, you will find Braze cont
 
 Smartling provides advanced features to search and select content by:
 * Keyword search
-* Braze Content type
+* Braze content type
 * Braze tagging
 
 ![][9]
 
 ### Step 3: Add translations to Braze
 
-As translations are completed in the Smartling platform, they are automatically sent to Braze. No need to manually sync content between Smartling and Braze.
+As translations are completed in the Smartling platform, they are automatically sent to Braze—no need to manually sync content between Smartling and Braze.
 
 [1]: {{site.baseurl}}/api/basics/#endpoints
 [2]: https://dashboard.smartling.com/
