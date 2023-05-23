@@ -1,15 +1,12 @@
 ---
 nav_title: SalesWings
 article_title: SalesWings
-page_order: 1
 
 description: "This reference article outlines the partnership between Braze and SalesWings, an analytics platform, that helps you track scoring and grading, sales insights and alerts, marketing alignment, and attribution reporting."
 alias: /partners/saleswings/
 
 page_type: partner
 search_tag: Partner
-hidden: true
-layout: dev_guide
 ---
 
 # SalesWings
