@@ -39,10 +39,10 @@ guide_menu_list:
   fa_icon: fas fa-wand-magic-sparkles
 ---
 
-<!--->
+<!---
 - name: Content QA with AI
   link: /docs/user_guide/intelligence/ai_content_qa/
   fa_icon: fas fa-list-check
-<---->
+---->
 
 <br>
