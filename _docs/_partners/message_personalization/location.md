@@ -26,5 +26,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/bluedot/
 - name: loplat
   url: /docs/partners/message_personalization/location/loplat/
-
+- name: Tangerine
+  url: /docs/partners/message_personalization/location/tangerine/
 ---
