@@ -23,6 +23,8 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 Looking for more ways to get revenue data? Try adding purchase behavior (as well as purchase of a product) to campaigns or Canvases as [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
 {% endalert %}
 
+To export your revenue data, click <i class="fas fa-bars" title="Chart context menu"></i> in the **Detailed Statistics** graph and select your export option.
+
 ## Detailed statistics graph
 
 The following data can be accessed via the **Detailed Statistics** graph:
@@ -43,7 +45,7 @@ The following data can be accessed via the **Detailed Statistics** graph:
 You can view revenue statistics on a case-by-case basis on the [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) or [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) pages. The Total Revenue statistic is generated from campaign recipients who have made a purchase within the campaign's primary conversion period.
 
 {% alert tip %}
-For help with CSV and API exports, refer to [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Revenue reports cannot be exported via API. For help with CSV exports, refer to [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% comment %}
