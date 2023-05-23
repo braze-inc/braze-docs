@@ -70,11 +70,13 @@ If you selected **Personalized Variant** for your optimization when setting up y
 
 The **Initial Test** tab shows the metrics for each variant from the initial A/B test sent to a portion of your target segment.
 
+![Results of an initial test sent to determine the best performing variant for each user. A table shows the performance of each variant based on various metrics for the target channel.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
+
 By default, the test looks for associations between user’s custom events and their message variant preferences. This analysis detects whether custom events increase or decrease likelihood of responding to a particular message variant. These relationships are then used to determine which users gets which message variant in the final send.
 
 The relationships between custom events and message preferences are displayed in the table on the **Initial Send** tab.
 
-> Insert image
+![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
 
 If the test can't find a meaningful relationship between custom events and variant preferences, the test will fall back to a session-based analysis method.
 
@@ -88,8 +90,6 @@ These characteristics are:
 - **Recency:** When they last had a session
 - **Frequency:** How often they have sessions
 - **Tenure:** How long they have been a user
-
-![Results of an initial test sent to determine the best performing variant for each user. A table shows the performance of each variant based on various metrics for the target channel.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
 
 For example, the test may find that most users prefer Variant A, but users who had a session about 3–12 days ago, have between 1–12 days between sessions, and were created in the last 67–577 days tend to prefer Variant B. Therefore, users in that subpopulation received Variant B in the second send, while the rest received Variant A.
 
