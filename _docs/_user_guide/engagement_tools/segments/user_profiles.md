@@ -139,10 +139,10 @@ Abort events are currently not available for in-app messages and Content Cards.
 
 ##### Frequency cap events
 
-A frequency cap event occurs when a user is qualified to receive a message, but did not actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. You can customize frequency capping settings on the **Global Message Settings** page of your dashboard.
+A frequency cap event occurs when a user is qualified to receive a message, but did not actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. You can customize frequency capping settings from **Settings** > **Frequency Capping Rules**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Global Message Settings** is now **Frequency Capping Rules** and is located at **Settings** > **Workspace Settings** > **Frequency Capping Rules**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can manage frequency capping from **Engagement** > **Global Message Settings**.
 {% endalert %}
 
 #### Note on email open event {#note-on-email-open-event}

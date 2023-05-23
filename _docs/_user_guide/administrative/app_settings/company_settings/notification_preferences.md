@@ -42,10 +42,10 @@ The following table lists available notifications:
 
 ## Weekly analytics reporting
 
-Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5 am EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the **Manage Settings** page of the dashboard.
+Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5 am EST. You can select the custom events to be included in the weekly report from **Data Settings** > **Custom Events**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Events** under **Data Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Manage Settings** > **Custom Events**.
 {% endalert %}
 
 You may select up to five events to be included in your weekly report:

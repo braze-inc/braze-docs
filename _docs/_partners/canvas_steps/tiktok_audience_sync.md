@@ -42,10 +42,10 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 ### Step 1: Connect to TikTok
 
-In the Braze dashboard, go to **Technology Partners** and select **TikTok**. In the TikTok Audience Export module, click **Connect TikTok**.
+In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **TikTok**. In the TikTok Audience Export module, click **Connect TikTok**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 ![TikTok technology page in Braze includes an Overview module and TikTok Audience Export module with the Connected TikTok button.][1]{: style="max-width:75%;"}

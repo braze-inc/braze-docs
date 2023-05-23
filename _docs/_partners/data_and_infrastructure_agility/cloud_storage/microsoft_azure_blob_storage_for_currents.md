@@ -73,10 +73,10 @@ The following configures credentials that are used for:
 2. CSV exports (campaign, segment, Canvas user data export via the dashboard)
 3. Engagement reports
 
-In Braze, navigate to **Technology Partners** > **Microsoft Azure** and provide your connection string, Azure storage container name, and Azure storage prefix.
+In Braze, navigate to **Partner Integrations** > **Technology Partners** > **Microsoft Azure** and provide your connection string, Azure storage container name, and Azure storage prefix.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 Next, make sure the **Make this the default data export destination** box is checked, this will make sure your exported data is sent to Azure. Once completed, save your integration.

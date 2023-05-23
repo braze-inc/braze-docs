@@ -37,11 +37,8 @@ Create a file called `AppboyConfiguration.xml` in the root directory of your pro
         <ApiKey>YOUR_API_KEY_HERE</ApiKey>
     </AppboyConfig>
 ```
->  Be sure to update `YOUR_API_KEY_HERE` with your API key which can be found in the **API Settings** tab of the **Developer Console** on the Braze dashboard.
 
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
-{% endalert %}
+>  Be sure to update `YOUR_API_KEY_HERE` with your API key which can be found on the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page.
 
 Once you've added that snippet, be sure to modify the following file properties for `AppboyConfiguration.xml`
 
