@@ -16,7 +16,7 @@ platform:
 > This article describes specific examples of using feature flags to improve your user experience. Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags][8].
 
 {% alert important %} 
-Feature flags are currently in beta. Contact your Braze account manager if you're interested in participating in the early access. 
+Feature flags are currently in beta. [Click here](https://dashboard.braze.com/engagement/feature_flags) to learn more about joining the beta program.
 {% endalert %}
 
 ## Gradual rollouts
