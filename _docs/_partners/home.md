@@ -247,6 +247,8 @@ valid_partner_list:
   url: /docs/user_guide/message_building_by_channel/whatsapp/
 - name: Kognitiv
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
+- name: SalesWings
+  url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
 - name: OneTrust
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/onetrust/
 - name: Tangerine
