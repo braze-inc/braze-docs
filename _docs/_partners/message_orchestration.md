@@ -94,4 +94,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
 - name: Nift
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
+- name: Kognitiv
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
 ---
