@@ -308,6 +308,13 @@ A notification will inform you whether your credentials have been successfully v
 {% endtab %}
 {% endtabs %}
 
+## Export behavior
+
+Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
+
+- All API exports will not return a download URl in the response body, and must be retrieced through data storage.
+- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage. 
+
 ## Multiple connectors
 
 If you intend to create more than one Currents connector to send to your S3 bucket, you will be able to use the same credentials, but must specify a different folder path for each. These can be created in the same workspace, or split and created within multiple workspaces. You also have the option of creating a single policy for each integration, or create one policy that covers both integrations. 
