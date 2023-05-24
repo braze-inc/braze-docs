@@ -18,4 +18,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
 - name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+- name: Regal
+  url: /docs/partners/message_orchestration/additional_channels/messaging/regal/  
 ---

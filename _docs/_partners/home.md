@@ -245,6 +245,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 - name: WhatsApp
   url: /docs/user_guide/message_building_by_channel/whatsapp/
+- name: Regal
+  url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
 - name: Kognitiv
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
 - name: SalesWings
