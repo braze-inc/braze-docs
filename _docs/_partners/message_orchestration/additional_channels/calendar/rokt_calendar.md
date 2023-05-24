@@ -108,7 +108,7 @@ Rokt Calendar requires an `HTTP Header` for authorization that includes your Rok
 - **HTTP Method**: POST
 - **Request Header**:
   - **Authorization**: Bearer `{% connected_content https://api.roktcalendar.com/oauth2/token :method post :basic_auth <Rokt-Calendar-API> :body grant_type=client_credentials :save token :retry %}{{token.access_token}}`
-  - **Request Body**: application/json
+  - **Content-Type**: application/json
 {% endraw %}
 
 #### Request body

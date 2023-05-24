@@ -27,7 +27,7 @@ The Braze and Clarisights integration allows you to import data from Braze campa
 
 ## Use cases
 
-With the Braze and Clarisights integration, users can create different visualizations and tabled to gain insights from the campaigns they have created. Popular use cases include:
+With the Braze and Clarisights integration, users can create different visualizations and tables to gain insights from the campaigns they have created. Popular use cases include:
 
 {% tabs %}
 {% tab Better visibility %}
