@@ -20,4 +20,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Sendbird
   url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/  
+- name: Regal
+  url: /docs/partners/message_orchestration/additional_channels/messaging/regal/  
+
 ---
