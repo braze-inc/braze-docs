@@ -247,4 +247,7 @@ valid_partner_list:
   url: /docs/user_guide/message_building_by_channel/whatsapp/
 - name: OneTrust
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/onetrust/
+- name: Tangerine
+  url: /docs/partners/message_personalization/location/tangerine/
+
 ---
