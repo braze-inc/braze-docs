@@ -214,7 +214,7 @@ To create a Data Transformation:
 
 ### Step 2: Enable reporting webhooks in Regal
 
-To set up reporting Webhooks:
+To set up reporting webhooks:
 1. Go to the Regal app and open the **Setting** page.
 
 2. In the **Reporting Webhooks** section, click **Create Webhooks**.
