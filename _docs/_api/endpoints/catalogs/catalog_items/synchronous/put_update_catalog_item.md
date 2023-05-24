@@ -19,6 +19,8 @@ description: "This article outlines details about the Update catalog item Braze 
 
 If the `item_id` isn't found, this endpoint will create the item. This endpoint is synchronous.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b2871ed7-734e-4a37-b8f1-e11584e569f5 {% endapiref %}
+
 {% alert note %}
 To use this endpoint, you'll need to generate an API key with the `catalogs.replace_item` permission.
 {% endalert %}
