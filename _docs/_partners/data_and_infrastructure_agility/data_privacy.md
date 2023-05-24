@@ -18,4 +18,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
 - name: DataGrail
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
+- name: OneTrust
+  url: /docs/partners/data_and_infrastructure_agility/data_privacy/onetrust/
 ---

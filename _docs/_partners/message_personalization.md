@@ -62,4 +62,7 @@ valid_partner_list:
   url: /docs/partners/message_personalization/localization/phrase/
 - name: Smartling
   url: /docs/partners/message_personalization/localization/smartling/
+- name: Tangerine
+  url: /docs/partners/message_personalization/location/tangerine/ 
+
 ---
