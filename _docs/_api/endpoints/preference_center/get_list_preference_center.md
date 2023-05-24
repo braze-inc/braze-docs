@@ -16,6 +16,8 @@ description: "This article outlines details about the List preference centers Br
 
 > Use this endpoint to list your available preference centers.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dd8f6667-5eba-4e19-a29e-ba74644c0b8e {% endapiref %}
+
 ## Rate limit
 
 This endpoint has a rate limit of 1,000 requests per minute, per workspace.

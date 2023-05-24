@@ -85,9 +85,9 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
+| `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 | `catalog-not-found` | Check that the catalog name is valid. |
 | `item-not-found` | Check that the item to be deleted exists in your catalog. |
-| `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
