@@ -16,6 +16,8 @@ description: "This article outlines details about the Create a preference center
 
 > Use this endpoint to create a preference center to allow users to manage their notification preferences for email campaigns. 
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
+
 Check out [Creating a preference center via API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/) for details on how to include this in your email campaigns.
 
 ## Rate limit
