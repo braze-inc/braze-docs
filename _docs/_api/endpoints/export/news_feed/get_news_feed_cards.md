@@ -34,7 +34,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 | --------- | -------- | --------- | ----------- |
 | `page` | Optional | Integer   | The page of cards to return, defaults to 0 (returns the first set of up to 100). |
 | `include_archived` | Optional | Boolean   | Whether or not to include archived cards, defaults to false. |
-| `sort_direction` | Optional | String | Sort creation time from newest to oldest: pass in the value `desc`.<br> - Sort creation time from oldest to newest: pass in the value `asc`. <br><br>If `sort_direction` is not included, the default order is oldest to newest. |
+| `sort_direction` | Optional | String | - Sort creation time from newest to oldest: pass in the value `desc`.<br> - Sort creation time from oldest to newest: pass in the value `asc`. <br><br>If `sort_direction` is not included, the default order is oldest to newest. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

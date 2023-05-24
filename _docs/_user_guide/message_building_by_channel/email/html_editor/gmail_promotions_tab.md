@@ -14,7 +14,7 @@ channel:
 
 ## Prerequisite
 
-First, forward your domains and subdomains to <a href="mailto:p-Gmail-Outreach@google.com">p-Gmail-Outreach@google.com</a> to be added to Gmail’s allowlist in order to use any feature that shows rich imagery, such as the product carousel for the Gmail Promotions tab.
+First, forward your domains and subdomains to Google’s Promotions Tab outreach team at <a href="mailto:p-promo-outreach@google.com">p-promo-outreach@google.com</a> to be added to Gmail’s allowlist in order to use any feature that shows rich imagery, such as the product carousel for the Gmail Promotions tab.
 
 ## Building the card with Braze
 
@@ -42,7 +42,7 @@ Promotion cards in your product carousel are helpful to provide images to your o
 
 | Customizable Variable | Description |
 |---|---|
-| Image URL | The URL to your image. Each image in your produc carousel must have a unique URL and use the same aspect ratio (4:5, 1:1, 1.91:1). |
+| Image URL | The URL to your image. Each image in your product carousel must have a unique URL and use the same aspect ratio (4:5, 1:1, 1.91:1). |
 | Target URL | The link for your promotion. |
 | Headline | (optional) One or two sentence description for the promotion. Displays under the preview image. |
 | Currency | (optional) The currency of the price. |

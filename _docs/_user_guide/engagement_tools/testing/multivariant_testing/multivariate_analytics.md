@@ -72,7 +72,20 @@ The **Initial Test** tab shows the metrics for each variant from the initial A/B
 
 ![Results of an initial test sent to determine the best performing variant for each user. A table shows the performance of each variant based on various metrics for the target channel.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
 
-This page also contains a breakdown of users' preferred variants based on a combination of certain characteristics. These characteristics are:
+By default, the test looks for associations between user’s custom events and their message variant preferences. This analysis detects whether custom events increase or decrease likelihood of responding to a particular message variant. These relationships are then used to determine which users gets which message variant in the final send.
+
+The relationships between custom events and message preferences are displayed in the table on the **Initial Send** tab.
+
+![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
+
+If the test can't find a meaningful relationship between custom events and variant preferences, the test will fall back to a session-based analysis method.
+
+{% details Fallback analysis method %}
+
+**Session-based analysis method**<br>
+If the fallback method is used to determine personalized variants, the **Initial Test** tab shows a breakdown of users' preferred variants based on a combination of certain characteristics. 
+
+These characteristics are:
 
 - **Recency:** When they last had a session
 - **Frequency:** How often they have sessions
@@ -82,11 +95,12 @@ For example, the test may find that most users prefer Variant A, but users who h
 
 ![The User Characteristics table, which shows which users are predicted to prefer Variant A and Variant B based on the three buckets they fall in for recency, frequency, and tenure.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
-#### How personalized variants are selected
-
-An individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. The time range of each bucket is determined by the data for users in each individual campaign and will change from campaign to campaign. 
+**How personalized variants are selected**<br>
+With this method, an individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. The time range of each bucket is determined by the data for users in each individual campaign and will change from campaign to campaign. 
 
 Each bucket can have a different contribution or "push" towards each message variant. The strength of the push for each bucket is determined from user responses in the initial send using [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression). This table only summarizes the results by displaying which variant users in each bucket tended to engage with. Any individual user's actual personalized variant depends on the sum of the effects of the three buckets they're in—one for each characteristic.
+
+{% enddetails %}
 
 {% endtab %}
 {% tab Personalized Variant %}
