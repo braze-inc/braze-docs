@@ -58,7 +58,7 @@ Inkit requires an `HTTP Header` for authorization, including your Inkit API key 
 - **HTTP Method**: POST
 - **Request Header**:
   - **Authorization**: Basic `{{ '<INKIT_API_TOKEN>' | base64_encode }}`
-  - **Request Body**: application/json
+  - **Content-Type**: application/json
 {% endraw %}
 
 #### Request body

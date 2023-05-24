@@ -238,7 +238,7 @@ PassKit requires an `HTTP Header` for authorization that includes your PassKit A
 - **HTTP Method**: PUT
 - **Request Header**:
   - **Authorization**: Bearer `<PASSKIT_LONG_LIVED_TOKEN>`
-  - **Request Body**: application/json
+  - **Content-Type**: application/json
 {% endraw %}
 
 #### Request body
