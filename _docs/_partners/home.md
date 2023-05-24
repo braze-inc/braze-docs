@@ -179,6 +179,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/wyng/
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
+- name: Personalize.AI
+  url: /docs/partners/message_personalization/dynamic_content/personalize/
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: WSC Sports
