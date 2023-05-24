@@ -17,15 +17,15 @@ platform:
 
 Looking to learn more about what feature flags are and how you can use them in Braze? Check out [About feature flags][5] before proceeding.
 
-{% alert important %}
-Feature flags are currently in beta. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## Prerequisites
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
 
-{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 %}
+{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 %}
+
+{% alert important %} 
+Feature flags are currently in beta. [Click here](https://dashboard.braze.com/engagement/feature_flags) to learn more about joining the beta program.
+{% endalert %}
 
 ## Implement feature flags in the dashboard
 
@@ -171,16 +171,12 @@ if (featureFlag.enabled) {
 {% endtab %}
 {% tab Cordova %}
 ```javascript
-BrazePlugin.getFeatureFlag(
-  "expanded_user_profile",
-  (featureFlag) => {
-    if (featureFlag.enabled) {
-      console.log(`expanded_user_profile is enabled`);  
-    } else {
-      console.log(`expanded_user_profile is not enabled`);
-    }
-  }
-);
+const featureFlag = await BrazePlugin.getFeatureFlag("expanded_user_profile");
+if (featureFlag.enabled) {
+  console.log(`expanded_user_profile is enabled`);  
+} else {
+  console.log(`expanded_user_profile is not enabled`);
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -252,52 +248,22 @@ val numberProperty = featureFlag.getNumberProperty("height")
 
 ```javascript
 // String properties
-const stringProperty = await Braze.getFeatureFlagStringProperty("my_flag", "color");
+const stringProperty = await Braze.getFeatureFlagStringProperty("my_flag_id", "color");
 // Boolean properties
-const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag", "expanded");
+const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag_id", "expanded");
 // Number properties
-const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag", "height");
+const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag_id", "height");
 ```
 
 {% endtab %}
 {% tab Cordova %}
 ```javascript
 // String properties
-BrazePlugin.getFeatureFlagStringProperty(
-  "my_flag",
-  "color",
-  (color) => {
-    if (color === null) {
-      console.log(`Property not found`);
-    } else {
-      console.log(color);
-    }
-  }
-);
+const stringProperty = await BrazePlugin.getFeatureFlagStringProperty("my_flag_id", "color");
 // Boolean properties
-BrazePlugin.getFeatureFlagBooleanProperty(
-  "my_flag",
-  "expanded",
-  (expanded) => {
-    if (expanded === null) {
-      console.log(`Property not found`);
-    } else {
-      console.log(expanded);
-    }
-  }
-);
+const booleanProperty = await BrazePlugin.getFeatureFlagBooleanProperty("my_flag_id", "expanded");
 // Number properties
-BrazePlugin.getFeatureFlagNumberProperty(
-  "my_flag",
-  "height",
-  (height) => {
-    if (height === null) {
-      console.log(`Property not found`);
-    } else {
-      console.log(height);
-    }
-  }
-);
+const numberProperty = await BrazePlugin.getFeatureFlagNumberProperty("my_flag_id", "height");
 ```
 {% endtab %}
 {% endtabs %}
@@ -357,13 +323,10 @@ for(const feature of features) {
 {% endtab %}
 {% tab Cordova %}
 ```javascript
-BrazePlugin.getAllFeatureFlags(
-  (features) => {
-    for(const feature of features) {
-      console.log(`Feature: ${feature.id}`, feature.enabled);
-    }
-  }
-);
+const features = await BrazePlugin.getAllFeatureFlags();
+for(const feature of features) {
+  console.log(`Feature: ${feature.id}`, feature.enabled);
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -500,12 +463,9 @@ Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
 {% tab Cordova %}
 ```javascript
 // Register an event listener
-BrazePlugin.subscribeToFeatureFlagUpdates(
-  // On updated
-  (featureFlags) => {
+BrazePlugin.subscribeToFeatureFlagUpdates((featureFlags) => {
     console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
-  }
-);
+});
 ```
 {% endtab %}
 {% endtabs %}

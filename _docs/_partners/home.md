@@ -179,6 +179,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/wyng/
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
+- name: Personalize.AI
+  url: /docs/partners/message_personalization/dynamic_content/personalize/
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: WSC Sports
@@ -245,4 +247,21 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 - name: WhatsApp
   url: /docs/user_guide/message_building_by_channel/whatsapp/
+- name: Fresh Relevance
+  url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
+- name: Sendbird
+  url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/
+- name: Smartling
+  url: /docs/partners/message_personalization/localization/smartling/
+- name: Regal
+  url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
+- name: Kognitiv
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
+- name: SalesWings
+  url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
+- name: OneTrust
+  url: /docs/partners/data_and_infrastructure_agility/data_privacy/onetrust/
+- name: Tangerine
+  url: /docs/partners/message_personalization/location/tangerine/
+
 ---
