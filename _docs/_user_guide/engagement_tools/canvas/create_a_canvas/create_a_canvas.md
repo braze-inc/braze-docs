@@ -89,7 +89,7 @@ If your Canvas has multiple variants or a Control Group, Braze will use this con
 
 ### Step 2b: Set your Canvas entry schedule
 
-You can choose one of three ways in which users can enter your Canvas.
+You can choose one of three ways in which users can enter your Canvas. 
 
 #### Entry schedule types
 
@@ -130,7 +130,7 @@ After you choose your delivery method, adjust those settings appropriately, and 
 
 ### Step 2c: Set your target entry audience
 
-You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey.
+You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey, meaning Braze evaluates the target audience for eligibility first before users enter the Canvas journey.
 
 For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 

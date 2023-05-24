@@ -7,11 +7,15 @@ description: "This reference article describes how to build reports using Braze 
 tool: Reports
 ---
 
-# Query builder
+# Query Builder
 
-> With the query builder, you can generate reports using Braze data in Snowflake. The query builder comes with pre-built SQL [query templates](#query-templates) to get you started, or you can write your own custom SQL queries to unlock even more insights.
+> With the Query Builder, you can generate reports using Braze data in Snowflake. The Query Builder comes with pre-built SQL [query templates](#query-templates) to get you started, or you can write your own custom SQL queries to unlock even more insights.
 
-## Running reports in the query builder
+## Who has access
+
+Because this feature allows direct access to some customer data, you can only access the Query Builder if you have "View PII" [permission]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/).
+
+## Running reports in the Query Builder
 
 To run a report:
 
@@ -27,7 +31,7 @@ To run a report:
 If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Query Builder** under **Analytics** > **Reports** > **Query Builder**.
 {% endalert %}
 
-![Query builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".]({% image_buster /assets/img_archive/query_builder.png %})
+![Query Builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".]({% image_buster /assets/img_archive/query_builder.png %})
 
 Results from each report can be generated once a day. If you run the same report more than once in one calendar day, you'll see the same results in both reports.
 
@@ -74,7 +78,7 @@ table td {
 
 Your SQL query should be written using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference). Consult the [table reference]({{site.baseurl}}/sql_segments_tables/) for a full list of tables and columns available to be queried.
 
-To view table details within the query builder:
+To view table details within the Query Builder:
 
 1. From the **Query Builder** page, open the **Reference** panel and select **Available Data Tables** to view available data tables and their names.
 3. Click <i class="fas fa-chevron-down" alt=""></i> **See Details** to view the table description and information about the table columns, such as data types.
@@ -117,11 +121,16 @@ Results, and exports of results, are tables that can contain up to 500 rows. For
 
 ## Monitoring your Query Builder usage
 
-Each Braze workspace has 2,000 Query Builder credits available per month. Credits are used whenever you run a query or preview a table. Credit usage corresponds to the run time of your queries. Credits are not used when writing, editing, or saving reports within the Braze SQL editor. 
+Each Braze workspace has 2,000 Query Builder credits available per month. Credits are used whenever you run a query or preview a table. Credit usage corresponds to the run time of your queries. 
 
-Your credits will reset to 2,000 on the first of each month at 12 am UTC. You can monitor your credits usage throughout the month at the top of the Query Builder page.
+For most users, one credit is about one second of run time. However, run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes. The longer the run time is, the more credits a query will cost.
 
-![Query builder showing the amount of credits used in the current month.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%"}
+{% alert note %}
+The ability to track credit usage for each query is coming soon.
+{% endalert %}
 
-When you reach the credit cap, you will not be able to run queries, but you will be able to create, edit, and save SQL reports. If you want to purchase more Query Builder credits, please reach out to your account manager.
- 
+Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits will reset to 2,000 on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
+
+![Query Builder showing the amount of credits used in the current month.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%"}
+
+When you reach the credit cap, you cannot run queries, but you can create, edit, and save SQL reports. If you want to purchase more Query Builder credits, please get in touch with your account manager.

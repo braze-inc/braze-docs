@@ -84,6 +84,12 @@ Here's an example that leverages the `LIKE_CATEGORY` displayed on the device:
 
 To register categories in your application, refer to the following code snippet:
 
+{% alert note %}
+When creating a `UNNotificationAction`, you may specify a list of action options. For example, adding `UNNotificationActionOptions.foreground` allows your users to open the app upon clicking the action button, which is necessary for Braze on-click behaviors that navigate into your app, such as "Open App" and "Deep Link into Application".
+
+Refer to [`UNNotificationActionOptions`](https://developer.apple.com/documentation/usernotifications/unnotificationactionoptions) for further usage details.
+{% endalert %}
+
 {% tabs %}
 {% tab swift %}
 
@@ -91,8 +97,8 @@ To register categories in your application, refer to the following code snippet:
 Braze.Notifications.categories.insert(
   .init(identifier: "LIKE_CATEGORY",
         actions: [
-          .init(identifier: "LIKE_IDENTIFIER", title: "Like"),
-          .init(identifier: "UNLIKE_IDENTIFIER", title: "Unlike")
+          .init(identifier: "LIKE_IDENTIFIER", title: "Like", options: [.foreground]),
+          .init(identifier: "UNLIKE_IDENTIFIER", title: "Unlike", options: [.foreground])
         ],
         intentIdentifiers: []
        )
@@ -107,10 +113,10 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 NSMutableSet<UNNotificationCategory *> *categories = [BRZNotifications.categories mutableCopy];
 UNNotificationAction *likeAction = [UNNotificationAction actionWithIdentifier:@"LIKE_IDENTIFIER"
                                                                         title:@"Like"
-                                                                      options:UNNotificationActionOptionNone];
+                                                                      options:UNNotificationActionOptionForeground];
 UNNotificationAction *unlikeAction = [UNNotificationAction actionWithIdentifier:@"UNLIKE_IDENTIFIER"
                                                                           title:@"Unlike"
-                                                                        options:UNNotificationActionOptionNone];
+                                                                        options:UNNotificationActionOptionForeground];
 UNNotificationCategory *likeCategory = [UNNotificationCategory categoryWithIdentifier:@"LIKE_CATEGORY"
                                                                               actions:@[likeAction,
                                                                                         unlikeAction

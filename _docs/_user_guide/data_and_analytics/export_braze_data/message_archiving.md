@@ -4,13 +4,13 @@ article_title: Message Archiving
 alias: "/message_archiving/"
 page_order: 0
 page_type: reference
-description: "This reference article covers Message Archiving, a feature that allows you to save a copy of messages sent to users."
+description: "This reference article covers message archiving, a feature that allows you to save a copy of messages sent to users."
 
 ---
 
-# Message Archiving
+# Message archiving
 
-> The Message Archiving feature lets you save a copy of messages sent to users for archival or compliance purposes to your S3 bucket.
+> Message archiving lets you save a copy of messages sent to users for archival or compliance purposes to your S3 bucket.
 
 ## Prerequisites
 
@@ -97,6 +97,8 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
   "message_variation_id": MessagVariationId, // may not be available
 }
 ```
+
+Refer to our code example repository for [message archive sample files](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
 
 ## Frequently asked questions
 
