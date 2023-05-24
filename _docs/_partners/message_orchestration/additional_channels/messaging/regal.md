@@ -21,7 +21,7 @@ By integrating Regal and Braze, you can create a more consistent and personalize
 | Requirement | Description |
 | ----------- | ----------- |
 | Regal account | A Regal account is required to take advantage of this partnership. |
-| Regal API key | A Regal API key will allow sending events from Braze to Regal.<br><br>Email support@regal.io to get this key. |
+| Regal API key | A Regal API key will allow sending events from Braze to Regal.<br><br>Email [support@regal.io](mailto:support@regal.io) to get this key. |
 | Braze Data Transformation | Data transformation is currently in early access. Contact your Braze customer success manager if you are interested in participating in the early access. This is necessary to receive data from Regal. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -37,13 +37,13 @@ Build a Canvas or campaign that webhooks out to Regal every time a new contact i
 
 2. Set the trigger logic as **Custom Event** and select the event that is fired when a contact with a phone number is created. Regal also recommends adding an extra filter on the phone field that ensures it's set.
 
-3. In your new Webhook template, fill out the following fields:<br>
-**Webhook URL**: <https://events.regalvoice.com/events><br>
-**Request Body**: Raw Text
+3. In your new Webhook template, fill out the following fields:
+   - **Webhook URL**: <https://events.regalvoice.com/events>
+   - **Request Body**: Raw Text
 
 #### Request headers and method
 
-Regal.io also requires an HTTP Header for authorization and an HTTP method. The following will already be included within the template as a key-value pair, but in the **Settings** tab:
+Regal.io also requires an HTTP Header for authorization and an HTTP method. The following will already be included within the template as a key-value pair in the **Settings** tab:
 {% raw %}
 - **HTTP Method**: POST
 - **Request Headers**:
@@ -95,9 +95,9 @@ If opt-in and out can happen at different parts of your user experience on your 
     - Update Subscription Group Status
     - Subscription Status
 
-3. In your new Webhook template, fill out the following fields:<br>
-**Webhook URL**: <https://events.regalvoice.com/events><br>
-**Request Body**: Raw Text
+3. In your new Webhook template, fill out the following fields:
+   - **Webhook URL**: <https://events.regalvoice.com/events>
+   - **Request Body**: Raw Text
 
 #### Request headers and method
 
@@ -145,9 +145,9 @@ For example, below is a workflow for sending Regal an event when a user complete
 
 2. Set the trigger node logic as **Custom Event** and select the event name you want to send to Regal, such as "Application Step 1 Completed".
 
-3. In your new Webhook template, fill out the following fields:<br>
-**Webhook URL**: <https://events.regalvoice.com/events><br>
-**Request Body**: Raw Text
+3. In your new Webhook template, fill out the following fields:
+   - **Webhook URL**: <https://events.regalvoice.com/events>
+   - **Request Body**: Raw Text
 
 #### Request headers and method
 
@@ -206,9 +206,9 @@ Data transformation is currently in early access. Contact your Braze customer su
 Braze recommends creating a transformation per the Regal webhook you plan to send to Braze. 
 
 To create a Data Transformation:
-- Navigate to the Transformations page in your Braze dashboard
-- Give your transformation a name and click **Create transformation**
-- Use the vertical menu icon to copy the webhook URL
+1. Navigate to the **Transformations** page in your Braze dashboard.
+2. Give your transformation a name and click **Create transformation**.
+3. From the list of transformations, click <i class="fa-solid fa-ellipsis-vertical" title="View actions"></i> and select **Copy webhook URL**.
 
 ![][4]
 
@@ -244,7 +244,7 @@ Braze's [Data Transformation]({{site.baseurl}}/data_transformation) feature allo
    - `traits.email` - only set on events if you've previously sent this identifier for a contact
 
 #### Braze-supported identifiers
-- Braze does not support phone numbers as an identifier. To use this as an identifier, the phone number can be set as a user alias. To learn more about Braze User Aliases, refer to this [documentation][8].
+- Braze does not support phone numbers as an identifier. To use this as an identifier, the phone number can be set as a [user alias][8] in Braze.
 - When using Braze Data Transformation email address can be used as an identifier. If the email address exists as a profile within Braze, the existing profile will be updated. If the email address does not yet exist within Braze, an email-only profile will be created.
 
 ## Use cases
