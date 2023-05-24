@@ -29,7 +29,7 @@ Note these guidelines when creating your CSV file. The first column of the CSV f
 - Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)
 - Maximum field (column) name of 250 characters
-- Maximum CSV file size of 100&nbsp;MB
+- Maximum CSV file size of 2&nbsp;GB
 - Maximum field value (cell) of 5,000 characters
 - Maximum field value (cell) size of 0.5&nbsp;KB 
 - Only letters, numbers, hyphens, and underscores for `id` and header values
@@ -297,7 +297,7 @@ The following table describes the limitations that apply at a catalog level:
 ### Storage limits
 
 {% alert important %}
-To request an upgrade for catalogs storage, contact your Braze account manager.
+The package entitlement shown in the Braze dashboard is rounded to the nearest unit for visual purposes; however, you are still entitled to the full entitlement purchased. To request an upgrade for catalogs storage, contact your Braze account manager.
 {% endalert %}
 
 #### Free version
