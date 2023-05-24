@@ -96,4 +96,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
 - name: Regal
   url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
+- name: Kognitiv
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
 ---
