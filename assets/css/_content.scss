@@ -225,11 +225,12 @@
 
   details {
     summary {
-      font-size: 18px;
+      font-size: 16px;
       color: #212123;
     }
     p, ol, ul {
       padding: 5px 0 0 0px;
+      font-size: 16px
     }
     .detail_div {
       border: 1px solid $grey-ghost !important;
