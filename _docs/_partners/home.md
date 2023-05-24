@@ -245,6 +245,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 - name: WhatsApp
   url: /docs/user_guide/message_building_by_channel/whatsapp/
+- name: Smartling
+  url: /docs/partners/message_personalization/localization/smartling/
 - name: Regal
   url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
 - name: Kognitiv
@@ -255,6 +257,5 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/onetrust/
 - name: Tangerine
   url: /docs/partners/message_personalization/location/tangerine/
-
 
 ---
