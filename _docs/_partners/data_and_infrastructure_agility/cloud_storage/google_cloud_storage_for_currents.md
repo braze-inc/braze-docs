@@ -76,7 +76,7 @@ Finally, scroll to the bottom of the page and select which message engagement ev
 
 Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
 
-- All API exports will not return a download URl in the response body, and must be retrieced through data storage.
+- All API exports will not return a download URL in the response body and must be retrieved through data storage.
 - All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage. 
 
 [2]: {% image_buster /assets/img/gcs1.png %}
