@@ -41,6 +41,6 @@ valid_partner_list:
 - name: Merkury
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 - name: SalesWings
-  url: /docs/partners/data_and_infrastructure_agility_analytics/saleswings/
+  url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
 
 ---

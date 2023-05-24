@@ -113,5 +113,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
 - name: Merkury
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
-
+- name: SalesWings
+  url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
 ---
