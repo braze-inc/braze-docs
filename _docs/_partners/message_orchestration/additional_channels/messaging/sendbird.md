@@ -47,7 +47,7 @@ The Braze and Sendbird Notifications integration offers a range of use cases to 
 
 ![][10]
 
-### Step 2: Set up the Braze integration on Sendbird Dashboard
+### Step 2: Set up the Braze integration on Sendbird dashboard
 
 From **Sendbird Dashboard**, select your application, navigate to **Notifications > Integrations**, and click **Add** under the **Braze** section. Here, you will need your Braze REST API key and Braze REST endpoint.
 
