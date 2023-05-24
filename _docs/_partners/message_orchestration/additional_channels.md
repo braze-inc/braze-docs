@@ -36,5 +36,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Quikly
   url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
-    
+- name: Regal
+  url: /docs/partners/message_orchestration/additional_channels/messaging/regal/    
 ---

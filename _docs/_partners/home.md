@@ -247,6 +247,8 @@ valid_partner_list:
   url: /docs/user_guide/message_building_by_channel/whatsapp/
 - name: Smartling
   url: /docs/partners/message_personalization/localization/smartling/
+- name: Regal
+  url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
 - name: Kognitiv
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
 - name: SalesWings
