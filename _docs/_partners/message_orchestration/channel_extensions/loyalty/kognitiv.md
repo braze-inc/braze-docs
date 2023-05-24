@@ -105,7 +105,7 @@ The following Kongitiv example creates a new user in Braze when they enroll in K
 
 ## Kognitiv Inspire documentation and integration features
 
-Once you integrate Braze with Inspire, Kognitiv empowers you to access its extensive API portfolio, cutting-edge webhook features, and robust data import and export capabilities for seamless bulk transfer. For more information on Inspire features and integration capabilities, view the Kognitiv [resource guide][2] or contact them for a guided demonstration.
+Once you integrate Braze with Kongitiv Inspire, Kognitiv empowers you to access its extensive API portfolio, cutting-edge webhook features, and robust data import and export capabilities for seamless bulk transfer. For more information on Kongitiv Inspire features and integration capabilities, view the Kognitiv [resource guide][2] or contact them for a guided demonstration.
 
 ### Endpoints
 
