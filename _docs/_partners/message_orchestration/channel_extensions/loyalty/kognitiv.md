@@ -37,7 +37,7 @@ Use Kognitiv webhooks to send requests to Braze when loyalty events occur. The f
 {% raw %}
 ### Braze issue reward
 
-The following Kongitiv example issues a member reward. Inspire will communicate that reward issuance event to Braze as a custom event via webhooks. To send a follow-up email to communicate the reward, create a campaign or Canvas that triggers off that custom event.
+The following Kongitiv example issues a member reward. Kongitiv Inspire will communicate that reward issuance event to Braze as a custom event via webhooks. To send a follow-up email to communicate the reward, create a campaign or Canvas that triggers off that custom event.
 
 **Webhook URL**: `<braze-api-rest-endpoint>`
 **Request Body**: `Raw Text`
