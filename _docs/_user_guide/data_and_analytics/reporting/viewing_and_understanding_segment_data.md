@@ -40,7 +40,7 @@ You will see the following segment statistics, which update in real-time as you 
 
 ## Messaging use and historical membership
 
-If you scroll down the page, you will see segment data on Messaging Use and Historical Membership. Under the **Messaging Use** section, see which campaigns have targeted this segment. Under **Historical Membership**, you see how the size of this segment changed over time. Use the dropdown to filter segment membership by date range.
+If you scroll down the page, you will see segment data on Messaging Use and Historical Membership. Under the **Messaging Use** section, see which campaigns have targeted this segment. Under **Historical Membership**, you see how the size of this segment changed over time. Use the dropdown to filter segment membership by date range. The way Braze calculates historical segment membership is by taking an estimate (similar to how Segment size is an estimate before you click “calculate exact statistics”). Braze gets the estimated count by querying for users in a random bucket range. This means that one day the historical segment size could be based on users with a random bucket number of 111 - 120, and on another day it could be users from 8,452 - 8,455. Therefore, it is possible that there may be less users in the segment that land within the randomly selected bucket ranges and hence why the Graph might show slight fluctuations each date.
 
 ![Under Messaging Use, view the campaigns that your segment is being used in.][4]
 ![Use the Historical Membership dropdown to filter segment membership by date range.][10]
