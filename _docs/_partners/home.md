@@ -263,5 +263,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/onetrust/
 - name: Tangerine
   url: /docs/partners/message_personalization/location/tangerine/
-
+- name: Stylitics
+  url: /docs/partners/message_personalization/dynamic_content/stylitics/
+  
 ---

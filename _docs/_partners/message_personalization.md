@@ -68,5 +68,7 @@ valid_partner_list:
   url: /docs/partners/message_personalization/localization/smartling/
 - name: Tangerine
   url: /docs/partners/message_personalization/location/tangerine/ 
-
+- name: Stylitics
+  url: /docs/partners/message_personalization/dynamic_content/stylitics/
+  
 ---
