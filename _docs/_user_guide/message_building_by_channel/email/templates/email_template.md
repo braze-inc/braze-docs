@@ -117,8 +117,6 @@ Note: This user may or may not be part of your segmentation criteria. Segmentati
 {% endsubtab %}
 {% endsubtabs %}
 
-Inbox Vision is currently unavailable during this testing phase and will be made available in the future.
-
 {% alert tip %}
 To read more about the different components of the drag & drop editing experience, visit our Drag & Drop Editor documentation articles [here]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). 
 {% endalert %}
