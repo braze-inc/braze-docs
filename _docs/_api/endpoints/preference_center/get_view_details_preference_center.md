@@ -16,6 +16,8 @@ description: "This article outlines details about the View details for preferenc
 
 > Use this endpoint to view the details for your preference centers, including when it was created and updated.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6a47fd7c-2997-4832-aedb-d101a2dd03a5 {% endapiref %}
+
 ## Rate limit
 
 This endpoint has a rate limit of 1,000 requests per minute, per workspace.

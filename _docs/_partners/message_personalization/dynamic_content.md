@@ -34,12 +34,17 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
+- name: Personalize.AI
+  url: /docs/partners/message_personalization/dynamic_content/personalize/
 - name: Dynamic Yield
   url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
 - name: Sheetlabs
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
 - name: Komo
   url: /docs/partners/message_personalization/dynamic_content/komo/
-
+- name: Fresh Relevance
+  url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
+- name: Stylitics
+  url: /docs/partners/message_personalization/dynamic_content/stylitics/
 
 ---

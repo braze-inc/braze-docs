@@ -33,6 +33,11 @@ An example file may look like this:<br>
 Enabling this feature will impact the delivery speed of your messages as the S3 file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
 {% endalert %}
 
+{% alert note %}
+**Having trouble finding your push tokens in your S3 buckets?**<br>
+Braze .downcase the push tokens **before** md5 hashing. This would result in the token `Test_Push_Token12345` to be the S3 folder `45a61753adab78677ad9e6585b59e328`.
+{% endalert %}
+
 ## File references
 
 Below are references of the JSON payload delivered to your S3 bucket each time a message is sent:

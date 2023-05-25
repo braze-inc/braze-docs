@@ -150,7 +150,7 @@ Quikly requires an `HTTP Header` for authorization.
 - **HTTP Method**: POST
 - **Request Header**:
   - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
-  - **Request Body**: application/json
+  - **Content-Type**: application/json
 
 #### Request body
 

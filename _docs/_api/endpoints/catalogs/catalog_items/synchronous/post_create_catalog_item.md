@@ -104,22 +104,22 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
-| `catalog-not-found` | Check that the catalog name is valid. |
-| `item-array-invalid` | `items` must be an array of objects. |
-| `request-includes-too-many-items` | You can only create one catalog item per request. | 
-| `id-in-body` | Remove any item IDs in the request body. |
-| `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
-| `ids-too-large` | Character limit for each item ID is 250 characters. |
-| `items-too-large` | Character limit for each item is 5,000 characters. |
-| `item-already-exists` | The item already exists in the catalog. |
-| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
-| `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
 | `already-reached-catalog-item-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
-| `already-reached-company-item-limit` | Maximum number of catalog items reached. Contact your Braze account manager for more information. | 
-| `unable-to-coerce-value` | Item types can't be converted. |
+| `already-reached-company-item-limit` | Maximum number of catalog items reached. Contact your Braze account manager for more information. |
 | `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| `catalog-not-found` | Check that the catalog name is valid. |
+| `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
+| `id-in-body` | Remove any item IDs in the request body. |
+| `ids-too-large` | Character limit for each item ID is 250 characters. |
+| `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
+| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
 | `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `item-already-exists` | The item already exists in the catalog. |
+| `item-array-invalid` | `items` must be an array of objects. | 
+| `items-too-large` | Character limit for each item is 5,000 characters. |
+| `request-includes-too-many-items` | You can only create one catalog item per request. |
 | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
+| `unable-to-coerce-value` | Item types can't be converted. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

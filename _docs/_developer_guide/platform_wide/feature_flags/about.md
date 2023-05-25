@@ -18,14 +18,14 @@ platform:
 Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags][3].
 
 {% alert important %} 
-Feature flags are currently in beta. Contact your Braze account manager if you're interested in participating in the early access. 
+Feature flags are currently in beta. [Click here](https://dashboard.braze.com/engagement/feature_flags) to learn more about joining the beta program.
 {% endalert %}
 
 ## Prerequisites
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
 
-{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 %}
+{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 %}
 
 ## Use cases
 Feature flags have a few different strategic uses, outlined below. To learn how you would implement these example use cases, see the [feature flag use cases][2] article.
@@ -43,16 +43,10 @@ Use feature flags to modify your app's functionality in production. This can be 
 For example, you can use a feature flag's property values to quickly change your app's homepage links or text. You can even dynamically personalize this content using Braze profile attributes.
 
 ### Message coordination
-{% alert important %} 
-This functionality is not yet supported in beta.
-{% endalert %}
 
 Use feature flags to synchronize a feature's rollout and messaging. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a Campaign or Canvas that only targets that segment. 
 
 ### Feature experimentation
-{% alert important %} 
-This functionality is not yet supported in beta.
-{% endalert %}
 
 Use feature flags to experiment and confirm your hypotheses around your new feature. By splitting traffic into two or more groups, you can compare the impact of a feature flag across groups, and determine the best course of action based on the results.
 

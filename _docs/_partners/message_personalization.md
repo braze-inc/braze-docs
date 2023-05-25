@@ -48,6 +48,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
+- name: Personalize.AI
+  url: /docs/partners/message_personalization/dynamic_content/personalize/
 - name: Lokalise
   url: /docs/partners/message_personalization/localization/lokalise/
 - name: Dynamic Yield
@@ -60,6 +62,13 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/komo/
 - name: Phrase
   url: /docs/partners/message_personalization/localization/phrase/
+- name: Fresh Relevance
+  url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
+- name: Smartling
+  url: /docs/partners/message_personalization/localization/smartling/
 - name: Tangerine
   url: /docs/partners/message_personalization/location/tangerine/ 
+- name: Stylitics
+  url: /docs/partners/message_personalization/dynamic_content/stylitics/
+  
 ---
