@@ -68,7 +68,7 @@ You can manage user permissions by group or on an individual basis using the **U
 |Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Manage Settings**. If your enabling for a non-admin Braze user, **Access Campaigns, Canvases, Cards, Segments, Media Library** permissions must also be granted. |
 |Manage Tags|Allows users to edit or delete tags (under **Manage Settings**). You do not need this permission to add tags to campaigns or segments.|
 |Manage Email Settings|Allows user to save email configuration changes (email settings tab under **Manage Settings**).|
-|Manage Subscription Groups | Allows user to create and manage subscription groups. |
+|Manage Subscription Groups | Allows user to create and manage subscription groups. This includes editing SMS keyword categories. |
 |Manage Approval Settings| This setting has been removed. Only users with admin permissions can turn the [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) settings on or off for your workspace. |
 {: .reset-td-br-1 .reset-td-br-2}
 
