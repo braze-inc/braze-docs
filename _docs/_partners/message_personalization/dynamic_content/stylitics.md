@@ -36,7 +36,7 @@ The following lists some common triggered email program examples:
 
 Stylitics provides bundle data for this integration. Your email service provider can create or update the email template to include Stylitics bundles. Stylitics cannot alter the layout or design of the emails. 
 
-1. Integrate the bundle into the email. ESP determines the position and customization
+1. Integrate the bundle into the email. ESP determines the position and customization.
 2. ESP updates trigger email code to include Stylitics content.
 3. ESP will test, preview and launch the updates triggered series. 
 
@@ -57,7 +57,7 @@ For example, {% raw %}`&styliticsoverride=001?styliticsCID=email[clientname]`{% 
 {% endalert %}
 
 ### 2. Flat file approach
-You of your ESP can reference an item's bundle data in a flat file to populate bundle data into your email. Stylitics can flatten bundle data into CSV, TXT, or XML format and send it to you daily. They can also help adjust the file format per your ESP's needs. Note that this takes 2-3 weeks to create this file.
+You or your ESP can reference an item's bundle data in a flat file to populate bundle data into your email. Stylitics can flatten bundle data into CSV, TXT, or XML format and send it to you daily. They can also help adjust the file format per your ESP's needs. Note that this takes 2-3 weeks to create this file.
 
 #### Requirements:
 - **Location**: Stylitics can drop the file on the Stylitics SFTP for you to pick up daily, or you can send them your SFTP credentials to drop the file. 
@@ -75,7 +75,7 @@ You and your ESP will create an HTML email template to insert Stylitics data and
 - Have a fallback option if there are no bundles available for the item 
 	- Hide the section where Stylitics bundles live 
 	- Show bundles for the next item the user viewed 
-- Displaying bundle images and a list of product titles and thumbnail images to ensure the user has a clear click-through.
+- Display bundle images and a list of product titles and thumbnail images to ensure the user has a clear click-through
 
 {% alert note %}
 The Stylitics widget JavaScript cannot be inserted into emails as emails do not support JavaScript. 
