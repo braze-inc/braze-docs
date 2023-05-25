@@ -33,7 +33,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 6. Save your query.
 7. To download a CSV of your report, click **Export**.
 
-![Query Builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".]({% image_buster /assets/img_archive/query_builder.png %})
+![Query Builder showing the results for the templated query "Channel engagement and revenue for the last 60 days".]({% image_buster /assets/img_archive/query_builder.png %})
 
 Results from each report can be generated once a day. If you run the same report more than once in one calendar day, you'll see the same results in both reports.
 
@@ -45,7 +45,7 @@ If a report times out or runs into errors even after retrying, please contact su
 
 ## Query templates
 
-All templates surface data from the last 30 days. You can access query templates from **Reference** > **Query Templates**.
+All templates surface data from the last 60 days. You can access query templates from **Reference** > **Query Templates**.
 
 <style>
 table th:nth-child(1) {
@@ -119,7 +119,7 @@ Your query may fail for any of the following reasons:
 
 ## Data and results
 
-Results, and exports of results, are tables that can contain up to 500 rows. For reports that require larger amounts of data, use another tool such as [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) or Braze’s [export APIs]({{site.baseurl}}/api/endpoints/export).
+Results, and exports of results, are tables that can contain up to 1,000 rows. For reports that require larger amounts of data, use another tool such as [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) or Braze’s [export APIs]({{site.baseurl}}/api/endpoints/export).
 
 ## Monitoring your Query Builder usage
 
