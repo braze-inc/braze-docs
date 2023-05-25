@@ -101,20 +101,20 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
+| `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 | `catalog-not-found` | Check that the catalog name is valid. |
+| `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
+| `id-in-body` | An item ID already exists in the catalog. |
+| `ids-too-large` | Character limit for each item ID is 250 characters. |
+| `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
+| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
+| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
 | `item-not-found` | Check that the item is in the catalog. |
 | `item-array-invalid` | `items` must be an array of objects. |
-| `request-includes-too-many-items` | You can only edit one catalog item per request. |
-| `id-in-body` | An item ID already exists in the catalog. |
-| `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
-| `ids-too-large` | Character limit for each item ID is 250 characters. |
 | `items-too-large` | Character limit for each item is 5,000 characters. |
-| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
-| `unable-to-coerce-value` | Item types can't be converted. |
-| `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
-| `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
-| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `request-includes-too-many-items` | You can only edit one catalog item per request. |
 | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
+| `unable-to-coerce-value` | Item types can't be converted. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

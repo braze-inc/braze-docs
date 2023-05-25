@@ -11,12 +11,12 @@ tool:
 
 # Understanding overview data
 
-> Learn about the **Overview** page and the statistics available there.
+> Learn about the **Home** page and the statistics available there.
 
-The **Overview** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. This is your home page in the dashboard.
+The **Home** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. This is your home page in the dashboard.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Overview** is now **Home**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), this is your **Overview** page.
 {% endalert %}
 
 ![Dashboard Screenshot][1]

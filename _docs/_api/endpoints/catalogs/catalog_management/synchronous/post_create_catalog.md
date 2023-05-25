@@ -173,19 +173,19 @@ The following table lists possible returned errors and their associated troubles
 | Error | Troubleshooting |
 | --- | --- |
 | `catalog-array-invalid` | `catalogs` must be an array of objects. |
-| `too-many-catalog-atoms` | You can only create one catalog per request. |
-| `invalid_catalog_name` | Catalog name can only include letters, numbers, hyphens, and underscores. |
-| `catalog-name-too-large`  | Character limit for a catalog name is 250. |
 | `catalog-name-already-exists` | Catalog with that name already exists. |
+| `catalog-name-too-large`  | Character limit for a catalog name is 250. |
+| `description-too-long` | Character limit for description is 250. |
+| `field-names-not-unique` | The same field name is referenced twice. |
+| `field-names-too-large` | Character limit for a field name is 250. |
 | `id-not-first-column` | The `id` must be the first field in the array. Check that the type is a string. |
-| `invalid-fields` | `fields` is not formatted correctly. |
-| `too-many-fields` | Number of fields limit is 30. |
+| `invalid_catalog_name` | Catalog name can only include letters, numbers, hyphens, and underscores. |
 | `invalid-field-names` | Fields can only include letters, numbers, hyphens, and underscores. |
 | `invalid-field-types` | Make sure the field types are valid. |
-| `field-names-too-large` | Character limit for a field name is 250. |
-| `field-names-not-unique` | The same field name is referenced twice. |
+| `invalid-fields` | `fields` is not formatted correctly. |
 | `reached-company-catalogs-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
-| `description-too-long` | Character limit for description is 250. |
+| `too-many-catalog-atoms` | You can only create one catalog per request. |
+| `too-many-fields` | Number of fields limit is 30. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

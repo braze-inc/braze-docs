@@ -27,11 +27,13 @@ This feature is in early access and is under active development. If you're inter
 
 ## Setting up your report
 
+1. Navigate to **Analytics** > **Conversions**.
+
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Conversions** under **Analytics** > **Analytics Dashboards** > **Conversions**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Conversions** under **Data**.
 {% endalert %}
 
-1. Navigate to the **Conversions** page, under **Data**.
+{:start="2"}
 2. Select a time period for your report, up to 365 days in the past.
 3. Select a conversion event, **Started session**, **Performed custom event**, or **Made a specific purchase**.
 4. Decide if you want your report to include [untracked events](#untracked-events) (Optional, this feature is currently being tested on a small subset of early access customers).

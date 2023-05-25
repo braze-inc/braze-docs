@@ -35,10 +35,10 @@ The real value of Predictive Purchases lies using Prediction results to create a
 
 ## Access Predictive Purchases
 
-The **Predictions** page is accessible from the left navigation bar on the Braze dashboard. For full access, contact your account manager. 
+The **Predictions** page is located in the **Analytics** section. For full access, contact your account manager.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Analytics**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Engagement**.
 {% endalert %}
 
 Prior to purchasing this feature, it is available in Preview mode. This will allow you to see a Demo Purchase Prediction with synthetic data as well as create one Preview Purchase Prediction model at a time. This Prediction will be created based on your actual user data, but it will not allow you to target users for messaging according to Purchase Likelihood. It will also not update regularly after creation.

@@ -110,18 +110,18 @@ The following table lists possible returned errors and their associated troubles
 | Error | Troubleshooting |
 | --- | --- |
 | `catalog-not-found` | Check that the catalog name is valid. |
-| `item-array-invalid` | `items` must be an array of objects. |
-| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
-| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
 | `ids-too-large` | Item IDs can't be more than 250 characters. |
-| `ids-not-unique` | Item IDs must be unique in the request. |
 | `ids-not-strings` | Item IDs must be of type string. |
-| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
-| `items-too-large` | Item values can't exceed 5,000 characters. |
+| `ids-not-unique` | Item IDs must be unique in the request. |
+| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
 | `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
-| `unable-to-coerce-value` | Item types can't be converted. |
 | `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
+| `item-array-invalid` | `items` must be an array of objects. |
+| `items-too-large` | Item values can't exceed 5,000 characters. |
+| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
 | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
+| `unable-to-coerce-value` | Item types can't be converted. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

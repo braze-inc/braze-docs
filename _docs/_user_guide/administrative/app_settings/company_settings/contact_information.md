@@ -17,10 +17,10 @@ description: "This reference article covers important information for admins on 
 
 > This page covers important information for admins on managing your company's contact information and time zone in Braze.
 
-You can get to the **Company Settings** section by clicking on your name, then selecting **Company Settings** in the drop-down. If you're an admin (you'll see a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username). 
+To access this page, go to **Settings** > **Admin Settings** > **Contact Information**.
 
 {% alert note %}
-If you're using our [updated navigation]({{site.baseurl}}/navigation), you can find **Contact Information** under **Settings** > **Company Settings** > **Admin Settings** > **Contact Information**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), select your account dropdown and go to **Company Settings** > **Contact Information**.
 {% endalert %}
 
 This page is where you can manage your company's contact information and time zone. Make sure to hit **Save** before you leave the page!

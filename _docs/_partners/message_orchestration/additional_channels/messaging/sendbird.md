@@ -7,7 +7,7 @@ alias: /partners/sendbird/
 
 page_type: partner
 search_tag: Partner
-layout: dev_guide
+
 ---
 
 # Sendbird

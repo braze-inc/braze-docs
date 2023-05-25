@@ -42,10 +42,10 @@ You will need to ensure that you have the following items created and/or complet
 
 ### Step 1: Connect to Criteo
 
-In the Braze dashboard, go to **Technology Partners** and select **Criteo**. In the Criteo Audience Export module, click **Connect Criteo**.
+In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Criteo**. In the Criteo Audience Export module, click **Connect Criteo**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 ![Criteo technology page in Braze that includes an Overview module and Criteo module with the Connected Criteo button.][5]{: style="max-width:80%;"}

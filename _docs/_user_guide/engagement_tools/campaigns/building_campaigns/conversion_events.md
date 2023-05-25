@@ -29,13 +29,7 @@ The primary conversion event is the first event added during the campaign or Can
 
 ## Step 1: Create a campaign with conversion tracking
 
-Navigate to the **Campaigns** page, under **Engagement** and click **Create Campaign**, then select the type of campaign you'd like to create.
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Messaging**.
-{% endalert %}
-
-After setting up your campaign's messages and schedule, you'll have the option to add up to four conversion events for tracking. 
+[Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign) for your desired messaging channel. After setting up your campaign's messages and schedule, you'll have the option to add up to four conversion events for tracking.
 
 We highly recommend using as many conversion events that you feel is necessary since the addition of a second (or third) conversion event can significantly enrich your reporting. For instance, let's say you have a campaign that targets lapsing users. In this case, adding a secondary conversion event in addition to the primary **Starts Session** conversion event can further your understanding of how effective your campaign is in ushering your users back into your application. 
 

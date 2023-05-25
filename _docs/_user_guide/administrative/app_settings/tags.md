@@ -1,7 +1,7 @@
 ---
 nav_title: Tags
 article_title: Tags
-page_order: 2
+page_order: 12
 page_type: reference
 description: "This reference article covers tags in the Braze dashboard, which you can use to further organize and sort your engagement."
 
@@ -68,17 +68,17 @@ table td {
 </tbody>
 </table>
 
-You can use the same tags across campaigns, Canvases, and segments. To efficiently rename, remove, or add tags across your dashboard, go to the **Manage Settings** page and select the **Tags** tab.
+You can use the same tags across campaigns, Canvases, and segments. To efficiently rename, remove, or add tags across your dashboard, go to **Settings** > **Tag Management**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Tags** is now **Tag Management** and is located at **Settings** > **Workspace Settings** > **Tag Management**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Settings** > **Manage Settings** > **Tags**.
 {% endalert %}
 
 ![Tags tab on the Manage Settings page][8]
 
 To further organize your tags, nest your tags under a parent tag. For example, you can keep all holiday tags nested under a parent `Holidays` tag, or all tags related to a stage of your marketing funnel under a parent `Funnel` tag. 
 
-To do so, create a new tag, select **Nest Tag Under**, and choose which existing tag to nest your new tag under. You can also nest existing tags from **Manage Settings** > **Tags**. On this page, hover over a row with your tag and click **<i class="fas fa-pencil-alt"></i>Edit**. Then, follow the same steps as before.
+To do so, create a new tag, select **Nest Tag Under**, and choose which existing tag to nest your new tag under. You can also nest existing tags from the **Tag Management** page. On this page, hover over a row with your tag and click **<i class="fas fa-pencil-alt"></i>Edit**. Then, follow the same steps as before.
 
 ![Create a nested tag][1]{: style ="max-width:70%;" }
 

@@ -26,11 +26,7 @@ Because API campaigns are typically transactional, all users are eligible for AP
 
 ## Create a new campaign
 
-Navigate to the **Campaigns** page in your Braze account and click **Create Campaign**, then select **API Campaigns**. Now, you can move on to configuring your API campaign.
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Messaging**.
-{% endalert %}
+Go to **Messaging** > **Campaigns** and click **Create Campaign**, then select **API Campaigns**. Now, you can move on to configuring your API campaign.
 
 An [API-triggered campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) is different from an API campaign.
 

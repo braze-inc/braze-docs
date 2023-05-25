@@ -126,11 +126,7 @@ Note that a null attribute value isn't strictly associated with a value type (e.
 
 ## Referencing custom attributes
 
-After you have created [custom attributes][2] from **Manage Settings** > **Custom Attributes**, you can reference these custom attributes in your Liquid messaging.
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Data Settings**.
-{% endalert %}
+After you have [created custom attributes][2], you can reference these custom attributes in your Liquid messaging.
 
 When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the **Custom Attributes** page in the dashboard, look for the data type associated with your custom attribute, then reference the following examples listed for each data type.
 
@@ -217,7 +213,7 @@ A time stamp of when an event took place. [Time][13] values must have a [math fi
 
 [36]:{% image_buster /assets/img/value_null.png %}
 [1]: http://docs.shopify.com/themes/liquid-documentation/basics
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes
 [5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
 [7]: https://docs.shopify.com/themes/liquid-documentation/tags
 [8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags"

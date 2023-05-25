@@ -29,10 +29,10 @@ Feature flags are currently in beta. [Click here](https://dashboard.braze.com/en
 
 ## Implement feature flags in the dashboard
 
-Create, edit, and archive feature flags from the **Feature Flags** page, located under **Engagement**. This page displays a list of existing feature flags for this workspace.
+Create, edit, and archive feature flags from **Messaging** > **Feature Flags**. This page displays a list of existing feature flags for this workspace.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Feature Flags** under **Messaging**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Feature Flags** under **Engagement**.
 {% endalert %}
 
 ![A list of previously created feature flags on the Braze dashboard][1]{: style="max-width:75%"}

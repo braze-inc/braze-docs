@@ -146,10 +146,10 @@ Shown below is an [example Typeform webhook](https://www.typeform.com/help/a/web
 
 ### Step 2: Create a transformation
 
-Navigate to the Braze dashboard, and select the **Transformations** page under the **Data** section.
+Navigate to the Braze dashboard, and go to **Data Settings** > **Data Transformations**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Data Transformations** under **Data Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Transformations** under **Data**.
 {% endalert %}
 
 Next, name your transformation and click **Create Transformation**. 

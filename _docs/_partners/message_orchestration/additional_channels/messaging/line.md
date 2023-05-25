@@ -66,13 +66,13 @@ Once you've set the channel access token inside a Content Block, you will be abl
 
 ### Step 4: Select a webhook template
 
-From **Templates & Media**, go to **Webhook Templates** and choose one of the following LINE Messenger webhook templates:
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
-{% endalert %}
+Go to **Templates** > **Webhook Templates** and choose one of the following LINE Messenger webhook templates:
 
 ![A selection of available predesigned webhook templates.]({% image_buster /assets/img_archive/line_templates.png %}){: style="border:0px;"}
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Engagement** > **Templates & Media** > **Webhook Templates**.
+{% endalert %}
 
 {% tabs %}
 {% tab LINE Text %}

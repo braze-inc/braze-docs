@@ -28,7 +28,13 @@ Your Braze user account must have "Export User Data" permission to run Engagemen
 
 ## Create a new report
 
-1. In your dashboard account, navigate to **Engagement Reports**, under **Data**.
+1. In your dashboard account, navigate to **Analytics** > **Engagement Reports**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Engagement Reports** under **Data**.
+{% endalert %}
+
+{:start="2"}
 2. Click **+ Create New Report**.
 3. Add the [campaigns and Canvas messages](#manually-select-campaigns-or-canvases) (individually or [by tag](#automatically-select-campaigns-or-canvases)) that you would like to compile in your report.
 4. [Add statistics](#add-statistics-to-your-report) to your report.
@@ -38,10 +44,6 @@ Your Braze user account must have "Export User Data" permission to run Engagemen
 8. Select the [intervals (daily, weekly, etc.)](#data-display) at which would like to see the breakdown of your data.
 9. Schedule your report to [send immediately](#send-immediately) or at a [future, specified time](#send-at-designated-time).
 10. Run the report, then open it in your email when it arrives!
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Engagement Reports** under **Analytics** > **Reports** > **Engagement Reports**.
-{% endalert %}
 
 ## Add messages to your report
 

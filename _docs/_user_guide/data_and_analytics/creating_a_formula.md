@@ -25,13 +25,13 @@ The following are some examples of the kinds of behavior patterns that can be de
 
 ## Creating formulas
 
-Formulas can be accessed in the statistics panels on the [Overview][9], [Revenue][10] and [Custom Events][11] pages in the dashboard. To view this panel, change the **View Statistics For** dropdown to **KPI Formulas**.
+Formulas can be accessed in the statistics panels on the [Home][9], [Revenue][10] and [Custom Events][11] pages in the dashboard. To view this panel, change the **View Statistics For** dropdown to **KPI Formulas**.
 
 ![View statistics for KPI formulas in the Braze dashboard][16]
 
 To create a new formula:
 
-1. Navigate to the appropriate dashboard (Overview, Revenue, or Custom Events).
+1. Navigate to the appropriate dashboard (Home, Revenue, or Custom Events).
 2. Click **Manage KPI Formulas**.
 3. Enter a name for your formula.
 4. Select the relevant numerators and denominators.

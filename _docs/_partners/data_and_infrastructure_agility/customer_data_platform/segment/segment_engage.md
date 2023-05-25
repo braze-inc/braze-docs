@@ -42,10 +42,10 @@ The Cohorts Destination is currently in early access. To get access to this feat
 
 ### Step 2: Capture your cohort data import key
 
-In Braze, navigate to **Technology Partners** and select **Segment**.
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Segment**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 Here, you will find your REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.

@@ -26,16 +26,17 @@ You can do a manual full refresh on all SQL Segments created in either SQL edito
 
 ## Creating SQL Segment Extensions
 
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Segment Extensions** under **Audience**.
-{% endalert %}
-
 {% tabs %}
 {% tab SQL Editor %}
 
 To create a full refresh SQL Segment Extension:
 
-1. Go to **Segments** > **Segment Extensions**.
+1. Go to **Audience** > **Segment Extensions**.
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
+{% endalert %}
+
+{:start="2"}
 2. Click **Create New Extension** and select **SQL Editor**.<br><br>
    ![Dropdown button on the Segment Extension page to open the SQL editor.]({% image_buster /assets/img_archive/sql_segments_create.png %}){: style="max-width:40%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
@@ -47,7 +48,12 @@ To create a full refresh SQL Segment Extension:
 
 The Incremental SQL Editor allows user query aggregations to happen on a per date basis for an event within a given time frame. To create an incremental refresh SQL Segment Extension:
 
-1. Go to **Segments** > **Segment Extensions**.
+1. Go to **Audience** > **Segment Extensions**.
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
+{% endalert %}
+
+{:start="2"}
 2. Click **Create New Extension** and select **Incremental SQL Editor**.<br><br>
    ![Dropdown button on the Segment Extension page to open the incremental SQL editor.]({% image_buster /assets/img_archive/sql_segments_create_incremental.png %}){: style="max-width:40%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
