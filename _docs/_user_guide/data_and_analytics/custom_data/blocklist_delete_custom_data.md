@@ -21,7 +21,7 @@ After you have blocklisted the custom data object and removed references to it f
 Deleting custom data does the following:
 
 - Removes the custom attribute, custom event, or purchase event from segment filter selections and analytics pages.
-- Removes the custom attribute, custom event, or purchase event from the respective page under **Manage Settings**.
+- Removes the custom attribute, custom event, or purchase event from the respective page under **Data Settings**.
 
 {% alert important %}
 Deleting does not remove data already recorded on user profiles, or prevent additional recording of the custom data objects on user profiles. Make sure the custom data is no longer being recorded before having the event or attribute deleted.

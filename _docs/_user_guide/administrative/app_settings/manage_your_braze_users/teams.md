@@ -19,11 +19,13 @@ Teams are not available on all Braze contracts. If you'd like to access this fea
 
 ## Creating Teams
 
-Go to the **Manage Settings** page, select **Manage Teams**, and click <i class="fas fa-plus"></i> **Add Team**. Enter the **Team Name**. Use the **Define Team (Optional)** to select a custom attribute, location, or language to further define permissions.
+Go to **Settings** > **Internal Teams** and click <i class="fas fa-plus"></i> **Add Team**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Manage Teams** is now **Internal Teams** and is located under **Settings** > **Workspace Settings** > **Internal Teams**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), **Internal Teams** is located under **Manage Settings** > **Manage Teams**.
 {% endalert %}
+
+Enter the **Team Name**. Use the **Define Team (Optional)** to select a custom attribute, location, or language to further define permissions.
 
 Teams can be used to filter end-users for engagement objects like campaigns, Canvases, Content Cards, segments, and more. See the section in this article on [Assigning tags and filters](#tags-and-filters) to learn more. 
 
@@ -33,7 +35,18 @@ Teams can be used to filter end-users for engagement objects like campaigns, Can
 
 Braze admins can assign Team Roles to their dashboard users who are limited to only read or write data available to their particular Teams. Predefined Team Roles include language and location. 
 
-To assign a Team Role, navigate to **Manage Users** and select a user you'd like to add to your team. Click <i class="fa fa-edit"></i> **Edit**, set their User Role to **Limited**, and add them to the appropriate workspace. Next, select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column. Note that some permissions are only granted via workspace, and these permissions will appear as "--" in the **Teams** permissions column.
+To assign a Team Role, navigate to **Settings** > **Company Users** and select a user you'd like to add to your team.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon and clicking **Manage Users**..
+{% endalert %}
+
+Then perform the following steps:
+
+1. Click <i class="fa fa-edit"></i> **Edit**.
+2. Set their User Role to **Limited**.
+3. Add them to the appropriate workspace. 
+4. Select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column. Note that some permissions are only granted via workspace, and these permissions will appear as "--" in the **Teams** permissions column.
 
 ![Assigning Team roles][2]
 
@@ -51,15 +64,13 @@ Based on assigned permissions, members of teams will only be allowed to access d
 
 ## Archiving an existing Team
 
-You can archive Teams from the **Manage Teams** page, under **Manage Settings**. Select one or many teams to archive.
+You can archive Teams from the **Internal Teams** page. 
 
-If the Team is not associated with any object within Braze, the Team will be archived immediately.
-
-If the Team is associated with an object, you will be presented with an option to remove the Team after the archive process or replace the Team.
+Select one or many teams to archive. If the Team is not associated with any object within Braze, the Team will be archived immediately. If the Team is associated with an object, you will be presented with an option to remove the Team after the archive process or replace the Team.
 
 ![Archiving a Team that is associated with an object in Braze][86]{: style="max-width:70%;"}
 
-Braze admins can unarchive a Team by selecting the archived Team and clicking **Unarchived**.
+Braze admins can unarchive a Team by selecting the archived Team and clicking **Unarchive**.
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

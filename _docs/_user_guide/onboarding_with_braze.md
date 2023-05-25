@@ -25,9 +25,6 @@ guide_featured_list:
   - name: Data Points
     link: /docs/user_guide/onboarding_with_braze/data_points/
     fa_icon: fa fa-asterisk
-  - name: Subscription and Usage
-    link: /docs/user_guide/onboarding_with_braze/subscription_and_usage/
-    fa_icon: fa fa-users
   - name: Email Setup
     link: /docs/user_guide/onboarding_with_braze/email_setup/
     fa_icon: fas fa-envelope

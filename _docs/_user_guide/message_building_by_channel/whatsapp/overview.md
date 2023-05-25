@@ -38,10 +38,10 @@ Acknowledge the following before proceeding with integration:
 
 ### Step 1: Connect WhatsApp Messenger to Braze
 
-In Braze, go to the **Technology Partners** section and then search **WhatsApp**. 
+In Braze, go to **Partner Integrations** > **Technology Partners** and search for **WhatsApp**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 On the WhatsApp partner page, select **Login with Facebook** to start the integration process.

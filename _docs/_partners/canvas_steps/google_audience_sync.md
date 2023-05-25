@@ -40,10 +40,10 @@ You must ensure the following items are created and completed before setting up 
 
 ### Step 1: Connect Google account
 
-To get started, go to the **Google Ads** tab in the **Technology Partners** page and select **Connect Google Ads**. You'll then be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
+To get started, go to **Partner Integrations** > **Technology Partners** > **Google Ads** and select **Connect Google Ads**. You'll then be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 Once you have successfully connected your Google Ads account, you will be taken back to your Google Ads partner page. You'll then be prompted to select which ad accounts you would like to be accessed within the Braze workspace.

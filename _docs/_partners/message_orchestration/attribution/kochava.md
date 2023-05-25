@@ -58,10 +58,10 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Kochava**. 
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Kochava**. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kochava's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Kochava technology page. In this box, you are shown the data import key and the REST endpoint.][4]{: style="max-width:90%;"}

@@ -16,10 +16,10 @@ Drag & drop email preference center is currently in early access. Contact your B
 
 ## Step 1: Create an email preference center
 
-Create a preference center by navigating to the **Subscription Group** > **Email Preference Center** page in the dashboard. 
+Create a preference center by navigating to **Audience** > **Subscriptions** > **Email Preference Center**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Email Preference Center** under **Audience** > **Subscriptions**, then select the **Email Preference Center** tab.
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Users** > **Subscription Groups** > **Email Preference Center**.
 {% endalert %}
 
 Here, a list of custom preference centers will be displayed. Click **Create New** to create a new preference center, or click the name of an existing one to make changes.

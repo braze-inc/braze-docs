@@ -1,7 +1,7 @@
 ---
 nav_title: Event User Log
 article_title: Event User Log
-page_order: 2
+page_order: 7
 page_type: reference
 description: "This reference article covers the Event User Log, which can help you debug or troubleshoot issues in your Braze Integration."
 
@@ -13,6 +13,12 @@ description: "This reference article covers the Event User Log, which can help y
 
 {% alert tip %}
 In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use the Event User Log to conduct your own troubleshooting and debugging.
+{% endalert %}
+
+To access the log, go to **Settings** > **Event User Log**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find the **Event User Log** under **Settings** > **Developer Console**.
 {% endalert %}
 
 To find your logs easily, you can filter based on:

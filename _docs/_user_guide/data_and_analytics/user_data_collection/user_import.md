@@ -24,11 +24,7 @@ You can use Braze's [Cloud Data Ingestion][14] to import and maintain user attri
 
 ## CSV
 
-You can also upload and update user profiles via CSV files from the **User Import** page.
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **User Import** is now **Import Users** and can be found under **Audience**.
-{% endalert %}
+You can also upload and update user profiles via CSV files from **Audience** > **Import Users**.
 
 This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. There are two different ways you can approach a CSV import: importing with an `external_id` or with a user alias.
 

@@ -15,7 +15,7 @@ description: "This reference article describes how to access a user's profile in
 
 ## Access profiles
 
-To access a user's profile, go to the **User Search** page and search for a user by any of the following:
+To access a user's profile, go to the **Search Users** page and search for a user by any of the following:
 
 - External user ID
 - Email
@@ -23,7 +23,7 @@ To access a user's profile, go to the **User Search** page and search for a user
 - Push token
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **User Search** is now **Search Users** and can be found under **Audience**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), **Search Users** is **User Search** and can be found under **Users**.
 {% endalert %}
 
 If a match is found, you can view the information that you've recorded for this user with the Braze SDK.
@@ -139,10 +139,10 @@ Abort events are currently not available for in-app messages and Content Cards.
 
 ##### Frequency cap events
 
-A frequency cap event occurs when a user is qualified to receive a message, but did not actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. You can customize frequency capping settings on the **Global Message Settings** page of your dashboard.
+A frequency cap event occurs when a user is qualified to receive a message, but did not actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. You can customize frequency capping settings from **Settings** > **Frequency Capping Rules**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Global Message Settings** is now **Frequency Capping Rules** and is located at **Settings** > **Workspace Settings** > **Frequency Capping Rules**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can manage frequency capping from **Engagement** > **Global Message Settings**.
 {% endalert %}
 
 #### Note on email open event {#note-on-email-open-event}

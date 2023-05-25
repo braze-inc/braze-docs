@@ -16,12 +16,12 @@ tool: Dashboard
 }
 </style>
 
-> Braze's user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the workspace will automatically be granted administrator access. 
+> Braze's user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin or limited permission. The creator of the workspace will automatically be granted administrator access.
 
-These settings can be found by navigating to your name in the dashboard and selecting **Manage Users** from the dropdown.
+These settings can be found at **Settings** > **Company Users**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Manage Users** is now **Company Users** and is located under **Settings** > **Company Settings** > **Company Users**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), **Company Users** is called **Manage Users** and is located under your account icon.
 {% endalert %}
 
 ![Account users list on the Manage Settings page][30]
@@ -34,7 +34,7 @@ If you are using our [updated navigation]({{site.baseurl}}/navigation), **Manage
 
 ## Editing user permissions
 
-From the **Manage Users** page, you can edit a specific user's permissions, either by allowing them to remain as the default administrator role, or changing them to a limited role. To change their role, click the edit icon in the user's row and select **Limited** from the **User Role** dropdown.
+From the **Company Users** page, you can edit a specific user's permissions, either by allowing them to remain as the default administrator role, or changing them to a limited role. To change their role, click the edit icon in the user's row and select **Limited** from the **User Role** dropdown.
 
 ![Selecting Administrator or Limited when editing a user][29]{: style="border:none"}
 
@@ -42,7 +42,7 @@ When you switch a user's permissions from **Administrator** to **Limited**, that
 
 ## Limited and team role permissions
 
-You can manage user permissions by group or on an individual basis using the **User Permissions** page.
+You can manage user permissions by group or on an individual basis when editing or adding a user from the **Company Users** page.
 
 ![Manage User Permissions][89]
 
@@ -53,22 +53,22 @@ You can manage user permissions by group or on an individual basis using the **U
 |Send Campaigns, Canvases| Allows user to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. To launch existing Content Blocks, **Send campaigns, Canvases** permission is required. |
 |Publish Cards| This permission is only visible if your account is enabled for News Feed, which is being deprecated. This does not affect Content Cards.<br><br>Allows user to create and edit News Feed cards. You can still view News Feed cards without this permission. If your account is enabled for News Feed and a user should be able to launch existing Content Blocks, they need both **Publish Cards** and **Send campaigns, Canvases** permissions. |
 |Edit Segments| Allows user to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
-|Export User Data| Allows user to export your user data from Segments, campaigns and Canvases. |
+|Export User Data| Allows user to export your user data from segments, campaigns and Canvases. |
 |View PII | Allows user to view the personally identifiable information fields as defined by your company within the dashboard. This also allows you to edit the subscription status of a user, and their subscription group opt-in/opt-out rules.|
 |View User Profiles PII Compliant| Allows users to view user profiles but redacts fields your company has defined as personally identifiable information (PII). |
-|Manage Dashboard Users| Allows user to view, edit, and manage the **Manage Users** tab. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level.|
+|Manage Dashboard Users| Allows user to view, edit, and manage the **Company Users** page. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level.|
 |Manage Media Library| Allows user to upload images to library. You can still upload pictures/audio etc. directly to a campaign without this permission.|
 |View Usage Data| Allows user to view app usage.|
 |Import and Update User Data| Allows user to import CSV and update files of app users as well as view the User Import page.|
 |View Billing Details| Allows user to view subscriptions and billing. |
 |Access Dev Console| Allows access to Developer Console (where you can view API keys, API campaign activity log, event user log, and internal groups for testing messages).|
 |Manage External Integrations| Allows access to all tabs under **Technology Partners** and the ability to sync Braze with other platforms.|
-|Manage Apps| Allows user to edit settings (under **Manage Settings**).|
-|Manage Teams|Allows user to manage teams which is under **Manage Settings**. The ability to select this permission depends on your contract with Braze.|
-|Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Manage Settings**. If your enabling for a non-admin Braze user, **Access Campaigns, Canvases, Cards, Segments, Media Library** permissions must also be granted. |
-|Manage Tags|Allows users to edit or delete tags (under **Manage Settings**). You do not need this permission to add tags to campaigns or segments.|
-|Manage Email Settings|Allows user to save email configuration changes (email settings tab under **Manage Settings**).|
-|Manage Subscription Groups | Allows user to create and manage subscription groups. This includes editing SMS keyword categories. |
+|Manage Apps| Allows user to edit **App Settings**.|
+|Manage Teams|Allows user to manage **Internal Teams**. The ability to select this permission depends on your contract with Braze.|
+|Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**. If you are enabling this for a non-admin Braze user, **Access Campaigns, Canvases, Cards, Segments, Media Library** permissions must also be granted. |
+|Manage Tags|Allows users to edit or delete tags (under **Tag Management**). You do not need this permission to add tags to campaigns or segments.|
+|Manage Email Settings|Allows user to save email configuration changes (**Settings** > **Email Preferences**).|
+|Manage Subscription Groups | Allows user to create and manage subscription groups. |
 |Manage Approval Settings| This setting has been removed. Only users with admin permissions can turn the [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) settings on or off for your workspace. |
 {: .reset-td-br-1 .reset-td-br-2}
 

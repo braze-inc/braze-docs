@@ -248,10 +248,10 @@ If you have network policies in place, you must give Braze network access to you
 {% tabs %}
 {% tab Snowflake %}
 
-Navigate to the Snowflake page on Braze, under **Technology Partners**, and click **Create new import sync**.
+Go to **Partner Integrations** > **Technology Partners**. Find the Snowflake page and click **Create new import sync**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
 {% endalert %}
 
 #### Step 1: Add Snowflake connection information and source table
@@ -278,7 +278,11 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 {% endtab %}
 {% tab Redshift %}
 
-Navigate to the Redshift page on Braze, under **Technology Partners**, and click **Create new import sync**.
+Go to **Partner Integrations** > **Technology Partners**. Find the Redshift page and click **Create new import sync**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
+{% endalert %}
 
 #### Step 1: Add Redshift connection information and source table
 Input the information for your Redshift data warehouse and source table, then proceed to the next step.
@@ -294,7 +298,11 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% endtab %}
 {% tab BigQuery %}
 
-Navigate to the BigQuery page on Braze, under **Technology Partners**, and click **Create new import sync**.
+Go to **Partner Integrations** > **Technology Partners**. Find the BigQuery page and click **Create new import sync**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
+{% endalert %}
 
 #### Step 1: Add BigQuery connection information and source table
 Upload the JSON key and provide a name for the service account, then input the details of your source table.

@@ -109,10 +109,10 @@ As your user base continues to grow and your messaging scales to include lifecyc
 
 ### Feature overview {#freq-cap-feat-over}
 
-Frequency capping is applied at the campaign or Canvas component send level and can be set up for each workspace by selecting **Global Message Settings** found in the **Engagement** tab. 
+Frequency capping is applied at the campaign or Canvas component send level and can be set up for each workspace from **Settings** > **Frequency Capping Rules**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Global Message Settings** is now **Frequency Capping Rules** and is located at **Settings** > **Workspace Settings** > **Frequency Capping Rules**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is called **Global Message Settings** and is located under **Engagement**.
 {% endalert %}
 
 By default, frequency capping is toggled on when new campaigns are created. From here, you can choose the following:

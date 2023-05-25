@@ -16,7 +16,11 @@ description: "This how-to article will walk you through how to set up Location t
 
 ## Step 1: Create your segment
 
-Navigate to the **Segments** page, under **Engagement**, to view all of your current user segments. On this page, you can create and name new segments. To get started, click **Create Segment** and give your segment a name.
+Navigate to the **Segments** page, under **Audience**, to view all of your current user segments. On this page, you can create and name new segments. To get started, click **Create Segment** and give your segment a name.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), **Segments** is located under **Engagement**.
+{% endalert %}
 
 ![][1]{: style="max-width:70%;"}
 

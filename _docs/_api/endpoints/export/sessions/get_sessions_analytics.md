@@ -29,13 +29,9 @@ description: "This article outlines details about the Export app sessions analyt
 | `length` | Required | Integer | Max number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
 | `unit` | Optional | String | Unit of time between data points. Can be `day` or `hour`, defaults to `day`.  |
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
-| `app_id` | Optional | String | App API identifier retrieved from **Developer Console** > **API Settings** to limit analytics to a specific app. |
+| `app_id` | Optional | String | App API identifier retrieved from the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page to limit analytics to a specific app. |
 | `segment_id` | Optional | String | See [Segment API identifier]({{site.baseurl}}/api/identifier_types/). Segment ID indicating the analytics-enabled segment for which sessions should be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
-{% endalert %}
 
 ## Example request
 {% raw %}

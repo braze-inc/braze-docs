@@ -1,21 +1,27 @@
 ---
-nav_title: API Settings
-article_title: API Settings
-page_order: 0
+nav_title: API Keys
+article_title: API Keys
+page_order: 3
 page_type: reference
-description: "This reference article covers the API Settings page, which displays API identifications for your workspace."
+description: "This reference article covers the API Keys page, which displays API identifications for your workspace."
 
 ---
 
-# API settings
+# API Keys
 
-> The **API Settings** tab displays API identifications for your workspace. The first section on **Services** lists relevant articles for different uses of the Braze API ([user data][3],[messaging][4], [email sync][5], and [export][6]).
+> The **API Keys** page displays API identifications for your workspace. The first section on **Services** lists relevant articles for different uses of the Braze API ([user data][3],[messaging][4], [email sync][5], and [export][6]).
 
-The **API Settings** page is further divided into the following sections:
+The **API Keys** page is further divided into the following sections:
 
 - REST API Keys
 - Identification
 - Additional API Identifiers
+
+You can find the **API Keys** page under **Settings**.
+
+{% alert note %}
+If you are using the older navigation, this page is called **API Settings** and is located under **Settings** > **Manage Settings**.
+{% endalert %}
 
 ### REST API keys
 

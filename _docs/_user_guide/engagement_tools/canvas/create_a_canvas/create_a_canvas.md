@@ -18,10 +18,10 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 ## Step 1: Create a new Canvas 
 
-Go to the **Canvas** page, located under the **Engagement** section, then click **Create Canvas**.
+Go to **Messaging** > **Canvas**, then click **Create Canvas**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Messaging**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Engagement**.
 {% endalert %}
 
 ## Step 2: Use the entry wizard to set up your Canvas
@@ -148,11 +148,7 @@ After adding segments and filters to your target audience, you can test if your 
 
 Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. 
 
-By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To manage your frequency capping rules, go to your **Global Message Settings** page in your Braze account.
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Global Message Settings** is now **Frequency Capping Rules** and is located at **Settings** > **Workspace Settings** > **Frequency Capping Rules**.
-{% endalert %}
+By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -309,8 +305,8 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 
 [1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
 [3]: {% image_buster /assets/img_archive/choose_canvas_experience.png %}
-[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
-[6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping
+[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting
+[6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping
 [11]:{% image_buster /assets/img_archive/canvas_add_variant.gif %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
 [13]:{% image_buster /assets/img_archive/Canvas_One_Day.png %}

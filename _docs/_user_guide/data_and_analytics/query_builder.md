@@ -19,17 +19,19 @@ Because this feature allows direct access to some customer data, you can only ac
 
 To run a report:
 
-1. Go to **Query Builder**, under **Data**.
+1. Go to **Analytics** > **Query Builder**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Query Builder** under **Data**.
+{% endalert %}
+
+{:start="2"}
 2. Click **Create New SQL Report**.
 3. Your report is automatically given a name with the current date and time. Hover over the name and click <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
 4. Write your SQL query in the editor or select a [query template](#query-templates) from the **Query Templates** tab. If you choose to write your own SQL, see [custom SQL](#custom-sql) for requirements and resources.
 5. Click **Run Query**.
 6. Save your query.
 7. To download a CSV of your report, click **Export**.
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Query Builder** under **Analytics** > **Reports** > **Query Builder**.
-{% endalert %}
 
 ![Query Builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".]({% image_buster /assets/img_archive/query_builder.png %})
 

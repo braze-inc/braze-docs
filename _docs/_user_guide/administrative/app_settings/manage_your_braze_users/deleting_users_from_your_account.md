@@ -11,13 +11,11 @@ description: "This reference article covers how to delete users in your company 
 
 > Learn how to delete users in your company account.
 
-To access the **Manage Users** page, select your account dropdown select **Manage Users**.
+To delete a user, go to **Settings** > **Company Users**, find their username and click <i class="fa fa-trash-can"></i> **Delete**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Manage Users** is now **Company Users** and is located under **Settings** > **Company Settings** > **Company Users**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), **Company Users** is called **Manage Users** and is located under your account icon.
 {% endalert %}
-
-To delete a user, find their username and click <i class="fa fa-trash-o"></i> **Delete**.
 
 ![Delete a user][34]
 

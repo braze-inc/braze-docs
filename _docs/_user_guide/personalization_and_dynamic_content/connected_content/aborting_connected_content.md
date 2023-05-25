@@ -20,14 +20,10 @@ In the following example, the conditionals `connected.recommendations.size < 5` 
    {% endif %}
 ```
 
-You can also specify an abort reason, which will be saved to the **Message Activity Log** in your **Developer Console**. This abort reason must be a string and cannot contain Liquid.
+You can also specify an abort reason, which will be saved to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/). This abort reason must be a string and cannot contain Liquid.
 
 `{% abort_message('Could not get enough recommendations') %}`
 {% endraw %}
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** at **Settings** > **Setup and Testing** > **Message Activity Log**.
-{% endalert %}
 
 {% alert important %}
 Braze does not count aborted messages towards the send count in your Braze account or in Currents.

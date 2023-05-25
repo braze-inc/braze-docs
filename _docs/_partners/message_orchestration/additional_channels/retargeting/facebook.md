@@ -37,10 +37,10 @@ If you are using this feature alongside the [Audience Sync to Facebook]({{site.b
 
 ### Connect to Facebook
 
-In the Braze dashboard, go to **Technology Partners** and select **Facebook**. 
+In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Facebook**. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 In the Facebook Audience Export module, click **Connect Facebook**.

@@ -36,10 +36,10 @@ This integration supports iOS and Android apps.
 
 ### Step 1: Create a webhook template in Braze
 
-To create a Jampp webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. 
+To create a Jampp webhook template to use in future campaigns or Canvases, navigate to **Templates** > **Webhook Templates** in the Braze platform.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Engagement** > **Templates & Media** > **Webhook Templates**.
 {% endalert %}
 
 If you would like to make a one-off Jampp webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.

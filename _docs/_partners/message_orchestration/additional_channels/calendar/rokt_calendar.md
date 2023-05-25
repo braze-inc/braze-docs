@@ -79,10 +79,10 @@ Within Braze, you can set up a webhook campaign or a webhook within a Canvas to 
 - Send a new personalized event: Allow new events to be added to a segment of subscribers' calendars.
 - Update a personalized event: Allow for an update to be made to an existing event in subscribers' calendars.
 
-To create a Rokt Calendar webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. 
+To create a Rokt Calendar webhook template to use in future campaigns or Canvases, navigate to **Templates** > **Webhook Templates** in the Braze platform. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Engagement** > **Templates & Media** > **Webhook Templates**.
 {% endalert %}
 
 If you would like to create a one-off Rokt Calendar webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.

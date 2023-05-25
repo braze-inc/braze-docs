@@ -14,10 +14,10 @@ search_rank: 3
 
 ## Step 1: Navigate to the segments section
 
-Go to the **Segments** page, located under **Engagements**.
+Go to **Audience** > **Segments**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Segments** under **Audience**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Segments** under **Engagement**.
 {% endalert %}
 
 ## Step 2: Name your segment
