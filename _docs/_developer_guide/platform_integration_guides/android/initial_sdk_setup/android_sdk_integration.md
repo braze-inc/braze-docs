@@ -60,7 +60,7 @@ As of December 2019, custom endpoints are no longer given out, if you have a pre
 
 Now that the libraries have been integrated, you must create a `braze.xml` file in your project's `res/values` folder. If you are on a specific data cluster or have a pre-existing custom endpoint, you need to specify the endpoint in your `braze.xml` file as well. 
 
-The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. To find out your specific cluster or endpoint, ask your customer success manager or open a [support ticket][support].
+The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. Log in at dashboard.braze.com to find your [cluster address][1]. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -141,6 +141,7 @@ Braze will now be able to collect [specified data from your application]({{site.
 
 Visit the following articles in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/), [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/) and the complete suite of Braze features.
 
+[1]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
 [2]: {{site.baseurl}}/user_guide/introduction/
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}
@@ -148,4 +149,3 @@ Visit the following articles in order to enable [custom event tracking]({{site.b
 [60]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
 [63]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
 [64]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html
-[support]: {{site.baseurl}}/braze_support/
