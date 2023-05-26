@@ -20,6 +20,10 @@ No, there are no storage limits for images within the Media Library.
 
 No, uploaded assets will not expire once added to the Media Library.
 
+### Can I upload video assets?
+
+No, the Media Library doesn't support video files. We recommend you host these externally, or on a platform such as Youtube.
+
 ### Can I crop all image types?
 
 No, the Media Library doesn't support cropping GIF images.
