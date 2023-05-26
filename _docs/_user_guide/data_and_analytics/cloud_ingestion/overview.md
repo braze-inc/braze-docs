@@ -148,10 +148,22 @@ SELECT
 {% endtab %}
 {% tab BigQuery %}
 ```json
-CREATE OR REPLACE TABLE test_table (
-UPDATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-EXTERNAL_ID STRING,
-PAYLOAD JSON NOT NULL
+CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (attribute_1 string,
+     attribute_2 STRING,
+     attribute_3 NUMERIC,
+     my_user_id STRING);
+
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    my_user_id as EXTERNAL_ID,
+    TO_JSON(
+      STRUCT(
+        'attribute_1' AS attribute_1,
+        'attribute_2'AS attribute_2,
+        'yet_another_attribute'AS attribute_3
+      )
+    ) as PAYLOAD 
+  FROM BRAZE.EXAMPLE_USER_DATA;
 ```
 {% endtab %}
 {% endtabs %}
