@@ -23,7 +23,7 @@ guide_featured_list:
   - name: Customizing Content Card Behavior
     link: /docs/developer_guide/customization_guides/content_cards/customizing_behavior/
     fa_icon: fa fa-cog
-  - name: Customizing the default Content Card feed
+  - name: Customizing the Default Content Card Feed
     link: /docs/developer_guide/customization_guides/content_cards/customizing_feed/
     fa_icon: fa fa-book
   - name: Logging Analytics
