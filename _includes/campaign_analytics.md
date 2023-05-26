@@ -1,14 +1,6 @@
 ## Campaign Analytics
 
-Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For 
-  {% if include.channel == "Content Card" %}Content Cards
-  {% elsif include.channel == "email" %}email
-  {% elsif include.channel == "in-app message" %}in-app messages
-  {% elsif include.channel == "push" %}push messages
-  {% elsif include.channel == "SMS" %}SMS messages
-  {% elsif include.channel == "whatsapp" %}WhatsApp messages
-  {% elsif include.channel == "webhook" %}webhooks{% endif %} 
-  sent in Canvas, refer to [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started measuring_and_testing_with_canvas_analytics/).
+Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For {% if include.channel == "Content Card" %}Content Cards {% elsif include.channel == "email" %}email {% elsif include.channel == "in-app message" %}in-app messages {% elsif include.channel == "push" %}push messages {% elsif include.channel == "SMS" %}SMS messages {% elsif include.channel == "whatsapp" %}WhatsApp messages {% elsif include.channel == "webhook" %}webhooks {% endif %}sent in Canvas, refer to [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).
 
 {% alert tip %}
 Looking for definitions for the terms and metrics listed in your report? Refer to our 
