@@ -17,7 +17,13 @@ By default, the Content Card feed will refresh automatically in the following in
 1. A new session is started
 2. When the feed is opened and more than 60 seconds have elapsed since the last refresh
 
+
+
 You can configure the SDK to refresh manually at specific times as well.
+
+{% alert tip %}
+To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed once they are available.
+{% endalert %}
 
 {% tabs %}
 {% tab Android %}
@@ -91,6 +97,9 @@ function refresh() {
 {% endtab %}
 {% endtabs %}
 
+{% alert important %}
+The default rate limit for manually refreshing the feed is 3 calls per 10 minutes per device to prevent performance degradation and errors.
+{% endalert %}
 
 ## Customizing displayed card order
 
