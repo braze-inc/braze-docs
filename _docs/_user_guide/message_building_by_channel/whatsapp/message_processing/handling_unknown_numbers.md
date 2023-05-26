@@ -5,7 +5,7 @@ description: "This reference article covers how Braze will go about handling unk
 page_type: reference
 channel:
   - WhatsApp
-
+page_order: 50
 ---
 
 # Handling unknown phone numbers
@@ -16,7 +16,7 @@ channel:
 
 Braze will attempt to find a user with a matching number first. If none is found, Braze automatically addresses an unknown number in one of three ways:
 
-1. **If a trigger word with an [opt-in Canvas]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/#braze-powered-opt-in-methods) is set up:**
+1. **If a trigger word with an [opt-in Canvas]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/) is set up:**
 - Braze creates an anonymous profile
 - Our system sets the phone attribute
 - Subscribes the user to the corresponding subscription group based on what opt-in keyword was received by Braze.<br><br>

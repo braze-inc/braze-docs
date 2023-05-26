@@ -1,7 +1,7 @@
 ---
 nav_title: "Subscription Groups"
 article_title: WhatsApp Subscription Groups
-page_order: 3
+page_order: 1
 description: "This article outlines WhatsApp subscription groups, what subscription states are offered, and how subscription groups are set."
 page_type: reference
 channel:
@@ -45,7 +45,7 @@ If you are using our [updated navigation]({{site.baseurl}}/navigation), **User S
 
 ## WhatsApp opt-in process
 
-Currently, users can subscribe and [opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/#set-up-opt-ins-for-your-braze-whatsapp-channel) to WhatsApp messaging in various ways, including [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), through a website, a WhatsApp thread, phone, or in person. Opt-in keywords are not currently supported for the WhatsApp channel, so it will be up to you to maintain a user list. WhatsApp has a retrospective approach to opt-ins and rate limits, where if users start reporting or blocking you, your rate limit will be lowered. 
+Currently, users can subscribe and [opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/) to WhatsApp messaging in various ways, including [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), through a website, a WhatsApp thread, phone, or in person. Opt-in keywords are not currently supported for the WhatsApp channel, so it will be up to you to maintain a user list. WhatsApp has a retrospective approach to opt-ins and rate limits, where if users start reporting or blocking you, your rate limit will be lowered. 
 
 
 [4]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
