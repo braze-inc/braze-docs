@@ -2,7 +2,7 @@
 nav_title: "POST: Change Email Subscription Status"
 article_title: "POST: Change Email Subscription Status"
 search_tag: Endpoint
-page_order: 2
+page_order: 5
 layout: api_page
 page_type: reference
 description: "This article outlines the details about the Change user's email subscription status Braze endpoint."
