@@ -51,6 +51,101 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## May 30, 2023 release
+
+### Redesigned Braze navigation
+
+We’ve updated the Braze navigation to help you create and access your content more quickly and efficiently. Features are now organized into intuitive categories familiar and relevant to a marketer’s workflow in Braze. For the next few months, you can switch back and forth between the old and new navigation experiences. For more information on what’s changed, refer to [Braze navigation]({{site.baseurl}}/navigation).
+
+### New Currents events
+
+The following WhatsApp Currents events have recently been released and added to the [message engagement event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) glossaries:
+
+Message abort events:
+- `users.messages.whatsapp.Send`
+- `users.messages.whatsapp.Abort`
+- `users.messages.whatsapp.Delivery`
+- `users.messages.whatsapp.Failure`
+- `users.messages.whatsapp.Read`
+- `users.messages.whatsapp.InboundReceive`
+
+### In-browser catalog editing and catalog selections 
+
+Catalogs now support in-browser editing and [selections](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/catalogs/selections). Selections are groups of data that can be used to personalize a message for each user in your campaign. After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), you can further reference this data by incorporating selections in your Braze campaigns.
+
+### Currents and Snowflake Data Sharing message_extras Liquid tag
+
+Using the [`message_extras` Liquid tag](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/), you can annotate your send events with dynamic data from Connected Content, Catalogs, custom attributes (such as language, country), Canvas entry properties, or other data sources, and send the extra data back to Currents or Snowflake Data Sharing.
+
+### New Braze partnerships
+
+#### Tangerine - Localization
+The Braze and [Tangerine](https://www.braze.com/docs/partners/message_personalization/location/tangerine/) integration allows you to integrate raw campaign and impression data from Braze into Store360 through Snowflake Secure Data Sharing. Brands can now measure the impact of these campaigns on physical store visits and in-store engagement.
+
+#### Personalize.AI - Dynamic Content
+The Braze and [Personalize.AI](https://www.braze.com/docs/partners/message_personalization/dynamic_content/personalize/) integration allows you to export data from Personalize.AI into the Braze platform for message personalization and targeting.
+
+#### Regal - Messaging
+By integrating [Regal](https://www.braze.com/docs/partners/message_orchestration/additional_channels/messaging/regal/) and Braze, you can create a more consistent and personalized experience across all your customer touchpoints.
+- Send the right next best email or push notification from Braze based on what’s said in a phone conversation on Regal.
+- Trigger a call in Regal when a high-value customer clicks through a marketing email from Braze but doesn’t convert.
+
+#### Sendbird - Messaging
+The Braze and [Sendbird](https://www.braze.com/docs/partners/message_orchestration/additional_channels/messaging/sendbird) integration allows Braze users to:
+- Utilize Braze’s segmentation and triggering capabilities to initiate personalized in-app notifications.
+- Create tailored in-app notifications on the Sendbird Notifications platform, which are then delivered within the app environment, enhancing user engagement.
+
+#### Fresh Relevance - Dynamic Content
+The Braze and [Fresh Relevance](https://www.braze.com/docs/partners/message_personalization/dynamic_content/fresh_relevance/) integration allows you to include personalized content in triggered emails, such as product recommendations based on the customer’s browsed product or items within the same category, Send advanced triggered email campaigns such as price drop, back in stock, multi-stage browse, or cart abandoned messages, and more!
+
+#### Smartling - Localization
+The Braze and [Smartling](https://www.braze.com/docs/partners/message_personalization/localization/smartling/) integration allows you to translate email templates and content blocks. Smartling provides linguists with the benefit of visual context during translation, which reduces errors and maintains quality.
+
+#### SalesWings - Analytics
+The Braze and [SalesWings](https://www.braze.com/docs/partners/data_and_infrastructure_agility/analytics/saleswings#saleswings) integration allows you to sync data across the two platforms in a flexible way to qualify leads with lead scoring and lead grading capabilities.
+
+#### Kognitiv Inspire - Loyalty
+The Braze and [Kognitiv](https://www.braze.com/docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/) integration allows you to implement and evaluate your loyalty strategy, offering innovative capabilities and tailored member communications for enhanced program efficacy.
+
+#### OneTrust - Data Privacy
+The Braze and [OneTrust](https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_privacy/onetrust/) integration allows you to use the OneTrust workflow builder to create security workflows for your product.
+
+#### Stylitics - Dynamic Content
+Your Braze and [Stylitics](https://www.braze.com/docs/partners/message_personalization/dynamic_content/stylitics/) integration allows you to enhance your existing email campaigns with engaging and relevant bundled content, creating a personalized customer experience.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Swift SDK 6.1.0-6.2.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#620)
+- [Web SDK 4.7.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#471)
+- [React Native SDK 5.0.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md#500)
+  - Updates the native iOS bridge from Braze Swift SDK 5.13.0 to 6.2.0.
+  - Removes `setSDKFlavor` and `setMetadata`, which were no-ops starting from version 2.0.0.
+  - On iOS, these fields must be set using the `Braze.Configuration` object at SDK initialization.
+  - On Android, these fields must be set via the braze.xml file.
+- [Cordova SDK 4.0.0-5.0.0](https://github.com/braze-inc/braze-cordova-sdk/blob/master/CHANGELOG.md#500)
+  - **Cordova SDK 4.0.0**
+    - Renamed instances of Appboy to Braze.
+      - To ensure that your project is properly migrated to the new naming conventions, note and replace the following instances in your project:
+        - The plugin has been renamed from `cordova-plonugin-appboy` to `cordova-plugin-braze`.
+          - Ensure that you run the Cordova plugin, remove `cordova-plugin-appboy` and then re-add the plugin using the instructions in the [README](https://github.com/braze-inc/braze-cordova-sdk/blob/master/README.md).
+        - This GitHub repository has been moved to the URL https://github.com/braze-inc/braze-cordova-sdk.
+        - In your project's config.xml file, rename instances of com.appboy to com.braze for each of your configuration property keys.
+        - The JavaScript class interface `AppboyPlugin` has been renamed `BrazePlugin`.
+    - Updated to Braze Android SDK 25.0.0.
+    - Updated to Braze Swift SDK 5.13.0.
+      - This update fixes the iOS behavior introduced in version 2.33.0 when logging clicks for content cards. Calling `logContentCardClicked` now only sends a click event for metrics instead of sending a click event and redirecting to the associated URL field.
+  - **Cordova SDK 5.0.0**
+    - Updated these Feature Flag methods to return promises instead of using a callback parameter
+      - `getAllFeatureFlags()`
+      - `getFeatureFlag(id)`
+      - `getFeatureFlagBooleanProperty(id, key)`
+      - `getFeatureFlagStringProperty(id, key)`
+      - `getFeatureFlagNumberProperty(id, key)`
+- [Unreal SDK 2.5.0](https://github.com/braze-inc/braze-unreal-sdk/blob/master/CHANGELOG.md#250)
+- [Unity SDK 4.1.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md#410)
+
 ## May 2, 2023 release
 
 ### Redesigned Braze UI/UX
@@ -557,59 +652,8 @@ The following SDK updates have been released. There are no breaking updates with
 - [iOS Swift SDK 5.6.0–5.6.2](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#562)
 - [Flutter SDK 2.6.1](https://pub.dev/packages/braze_plugin/changelog#261)
 
-## October 18, 2022 release
-
-### User profile Messaging History
-
-The **Message History** tab of the user profile shows recent messaging related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. Refer to [User profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab) to learn more.
-
-### Content Blocks for Drag & Drop Editor
-
-The [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) used exclusively in the Drag & Drop Editor are similar in functionality to the Content Blocks used across different channels. They're a centralized location for holding information that can be referenced in various email campaigns. This can include grouping together email headers, promotional callouts, and more all in one reusable row.
-
-### Shopify ScriptTag
-
-The [Braze and Shopify Integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify) now allows you to embed our Web SDK integration via ScriptTag on to your Shopify store. Embedding our Web SDK via ScriptTag supports tracking the following:
-- Anonymous user tracking to track guest activity in your store
-- Monthly active user tracking as the Web SDK is capable of tracking session data from your store visitors
-- Option to collect Shopify on-site activity users which will count toward your data point consumption
-- Option to enable in-browser messaging as a channel on your Shopify store
-
-### SCIM endpoint
-
-Use the following Braze SCIM endpoints to manage automated user provisioning:
-- [DELETE: Remove Dashboard User Account]({{site.baseurl}}/api/endpoints/scim/delete_existing_dashboard_user/)
-- [GET: Look Up an Existing Dashboard User Account]({{site.baseurl}}/api/endpoints/scim/get_see_user_account_information/)
-- [POST: Create New Dashboard User Account]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/)
-- [PUT: Update Dashboard User Account]({{site.baseurl}}/api/endpoints/scim/put_update_existing_user_account/)
-
-### SMS Fuzzy opt-outs
-
-[Fuzzy opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out#fuzzy-opt-out) attempts to recognize when an inbound SMS message does not match an opt-out keyword, but indicates opt-out intent. If fuzzy opt-out is enabled and an inbound keyword response is deemed "fuzzy", Braze will automatically respond asking the user to confirm their intent.
-
-### SDK updates
-
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
-
-- [Android SDK 23.2.0-23.2.1](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2321)
-- [iOS Objective-C SDK 4.5.1](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451)
-- [iOS Swift SDK 5.5.0S-SDK 5.5.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#550)
-- [Cordova SDK 2.31.0](https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md#2310)
-  - Updated to [Braze Android SDK 23.0.1](https://github.com/braze-inc/braze-android-sdk/releases/tag/v23.0.1).
-- [Unity 3.10.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3100)
-- [React SDK v1.39.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md#1400)
-  - Updated the native Android SDK to 23.2.0.
-  - Renamed the `kotlin_versio`n gradle template variable to `kotlinVersion`
-- [Flutter SDK 2.6.0](https://pub.dev/packages/braze_plugin/changelog#260)
-  - The native Android bridge uses Braze Android SDK 23.2.0.
-  - The native iOS bridge uses Braze iOS SDK 4.5.1.
-  - `process(inAppMessage)` is renamed to `processInAppMessage(inAppMessage)` in the iOS layer.
-- [Segment iOS 4.6.0](https://github.com/Appboy/appboy-segment-ios/blob/master/CHANGELOG.md#460)
-  - Updated to Braze [iOS SDK 4.5.1+](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451).
-
 
 [support]: {{site.baseurl}}/support_contact/
-
 [1]: {% image_buster /assets/img/doc-breadcrumbs.png %} 
 
 <br><br>
