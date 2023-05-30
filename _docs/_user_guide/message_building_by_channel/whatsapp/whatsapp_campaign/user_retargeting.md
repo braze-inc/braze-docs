@@ -28,7 +28,7 @@ Filters users who have received a message from a specific WhatsApp campaign. Wit
 ![][4]
 
 ### Filter by engagement
-Retarget users who have, or have not, read a WhatsApp campaign or canvas step. 
+Retarget users who have, or have not, read a WhatsApp campaign or Canvas step. 
 
 **Retarget users who have opened/read a specific WhatsApp Campaign**
 1. Create a segment using the **Clicked/Opened Campaign** filter.
