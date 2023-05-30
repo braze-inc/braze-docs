@@ -13,10 +13,6 @@ tool: Canvas
 
 This feature is best for Canvases with entries that are recurring or triggered, but can be used for Canvases with one-time entry with [a few extra steps](#one-time-entry).
 
-{% alert important %}
-Winning Path is currently in early access. If you're interested in participating in the early access, reach out to your customer success manager.
-{% endalert %}
-
 ## Using Winning Path
 
 Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Winning Path**.
