@@ -148,9 +148,6 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 
 {% endsubtab %}
 {% endsubtabs %}
-
-You can then use this information to display a badge signifying how many unread Content Cards there are. See the [SDK reference docs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html) for more information.
-
 {% endtab %}
 {% tab Web %}
 
