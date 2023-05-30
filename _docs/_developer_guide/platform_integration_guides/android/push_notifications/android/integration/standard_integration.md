@@ -32,7 +32,6 @@ To get started, follow the [Firebase instructions][49] on adding Firebase to you
 Next, add the Firebase messaging dependency to your module's `build.gradle`:
 
 ```gradle
-implementation "com.google.firebase:firebase-core:${FIREBASE_CORE_VERSION}"
 implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING_VERSION}"
 ```
 
