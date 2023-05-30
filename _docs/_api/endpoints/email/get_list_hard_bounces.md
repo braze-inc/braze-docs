@@ -2,7 +2,7 @@
 nav_title: "GET: Query Hard Bounced Emails"
 article_title: "GET: Query Hard Bounced Emails"
 search_tag: Endpoint
-page_order: 0
+page_order: 1
 layout: api_page
 page_type: reference
 description: "This article outlines the details about the Query or list hard bounced email addresses Braze endpoint."
