@@ -23,14 +23,20 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/
   fa_icon: fa-solid fa-phone
 - name: "Create a WhatsApp Campaign"
-  link: /docs/user_guide/message_building_by_channel/whatsapp/create/
+  link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/
   fa_icon: fas fa-mobile-alt
+- name: "User Retargeting"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting/
+  fa_icon: fa-solid fa-user
 - name: "Opt-in and Opt-outs"
-  link: /docs/user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
+  link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/
   fa_icon: fas fa-commenting
-- name: "Quick Replies"
-  link: /docs/user_guide/message_building_by_channel/whatsapp/quick_replies/
+- name: "Messaging Users"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
   fa_icon: fa-solid fa-comments
+- name: "Handling Unknown Phone Numbers"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
+  fa_icon: fa-solid fa-question
 - name: "WhatsApp Reporting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
   fa_icon: fas fa-file-alt

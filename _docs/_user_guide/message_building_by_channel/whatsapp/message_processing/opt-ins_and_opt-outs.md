@@ -1,5 +1,5 @@
 ---
-nav_title: Opt-ins and opt-outs
+nav_title: Opt-Ins & Opt-Outs
 article_title: WhatsApp opt-ins and opt-outs
 description: "This reference article covers different WhatsApp opt-in and opt-out methods."
 page_type: partner
@@ -50,7 +50,7 @@ If you have used WhatsApp previously, you may have already built a user list wit
 In your customer support channel, follow up on resolved issues with an automatic message asking if they want to opt-in to marketing messaging. The functionality here depends on the feature availability in your customer support tool of choice and where you keep user information.
 
 1. Provide a [message link] from your WhatsApp Business phone number.
-2. Provide [quick reply actions]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/quick_replies/) where the customer replies "Yes" to indicate opt-in
+2. Provide [quick reply actions]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#quick-replies) where the customer replies "Yes" to indicate opt-in
 3. Set up custom keyword trigger.
 4. For either of those ideas, you will probably need to finish the path with the following:
 	- Call the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to either update or create a user 

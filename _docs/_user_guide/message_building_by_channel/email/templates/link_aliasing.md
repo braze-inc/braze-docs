@@ -91,7 +91,7 @@ When composing your email message, a new column will be present in the **Link Ma
 To track link engagement metrics, make sure to precede your link with either HTTP or HTTPS.
 {% endalert %}
 
-While you can select an unlimited number of links to track, Braze only allows retargeting at a user level on the last 100 tracked links that were clicked. For example, if you track 500 links and a user clicks on all 500 of them, you'll be able to retarget or create segments based on the 100 links that were most recently clicked.
+Braze allows you to select unlimited links to track, though you may only retarget users on the most recent links they have opened. User profiles include their 100 most recently clicked links. For example, if you track 500 links and a user clicks on all 500 of them, you can retarget or create segments based on the 100 most recently clicked links.
 
 {% tabs local %}
 {% tab Drag-and-Drop Editor %}
