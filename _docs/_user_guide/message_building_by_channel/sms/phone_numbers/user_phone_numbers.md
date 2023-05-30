@@ -52,7 +52,7 @@ When a phone number is deemed unreachable or invalid, Braze will mark the user's
 
 A phone number is considered invalid for the following reasons:
 - **Provider Error**: a permanent error was received from the SMS provider. This indicates that phone number supplied is incorrectly formatted or permanently unable to receive SMS messages.
-- **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service is releasing their number from their carrier.
+- **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service and releasing their number from their carrier.
 
 #### Deactivated phone numbers
 When a mobile subscriber terminates or releases their phone number, their phone number becomes deactivated and will eventually get recycled and assigned to new users. On a daily basis, Braze receives these deactivated numbers and marks them as invalid within the Braze platform. This ensures that phone numbers you believe had opted into your program now belong to a different user who has not consented to receive messages.
