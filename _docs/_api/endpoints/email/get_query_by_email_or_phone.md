@@ -30,7 +30,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions
 --header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
-## Example response
+## Response
 
 Entries are listed in descending order.
 
