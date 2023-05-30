@@ -13,19 +13,23 @@ tool: Canvas
 
 This feature is best for Canvases with entries that are recurring or triggered, but can be used for Canvases with one-time entry with [a few extra steps](#one-time-entry).
 
-{% alert important %}
-Winning Path is currently in early access. If you're interested in participating in the early access, reach out to your customer success manager.
-{% endalert %}
-
 ## Using Winning Path
 
-Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Winning Path**. 
+Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Winning Path**.
 
 ![Settings in Experiment Path titled "Distribute Subsequent Users to Winning Path". The section includes a toggle for Winning Path, and options to configure the conversion event and experiment window.][1]
+
+### Winning Path settings
 
 Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Note that if you determine the winner with opens and clicks, only the first message in the path that generates opens or clicks will contribute to determining the winner.  
 
 Then set the **Experiment Window**. The **Experiment Window** specifies how long the experiment will run before the Winning Path is determined and all users that follow are sent down that path. The window begins when the first user enters the step.
+
+### Statistical significance
+
+By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the best performing path. Alternatively, you can select **Continue sending all future users the mix of paths**, which will send future users down the mix of paths according to the percentages specified in the experiment distribution.
+
+![Percentages specified in the experiment distribution][3]
 
 ## Using Winning Paths with one-time entry {#one-time-entry}
 
@@ -41,7 +45,7 @@ However, you can accomplish this use case by adding a preliminary additional Exp
 2. Add a delay step to the final send group path. 
 3. Add a second Experiment Path step to the test group (with Winning Path on). This step functions as normal, with users equally distributed between however many paths you'd like to test.
 
-The duration of the delay step should be slightly longer than the Experiment Window to ensure the experiment has been completed once the users advance after the delay. After the step with Winning Paths enabled selects a winner, it will set 100% of future users to the winning path. The users waiting in the Delay step will be released and flow through to the winning path.
+The duration of the delay step should be slightly longer than the experiment window to ensure the experiment has been completed once the users advance after the delay. After the step with Winning Paths enabled selects a winner, it will set 100% of future users to the winning path. The users waiting in the Delay step will be released and flow through to the winning path.
 
 {% alert note %}
 If you'd like this functionality to be built into Winning Path, please let the Braze product team know by [voting for it on the Braze Product Portal](https://portal.productboard.com/ko5rgqefrdssb5wesynqswxp/c/206-winning-path-for-one-time-sends?utm_medium=social&utm_source=portal_share).
@@ -49,9 +53,10 @@ If you'd like this functionality to be built into Winning Path, please let the B
 
 ## Using Winning Paths with local time delivery 
 
-We don't recommend using local time delivery in Canvases with Winning Paths. This is because Experiment Windows begin when the first user passes through. Users who are in very early time zones may enter the step and trigger the start of the Experiment Window much earlier than you expect, which can result in the Experiment concluding before the bulk of your users in more typical time zones have had enough time to enter the Canvas and/or convert. 
+We don't recommend using local time delivery in Canvases with Winning Paths. This is because experiment windows begin when the first user passes through. Users who are in very early time zones may enter the step and trigger the start of the experiment window much earlier than you expect, which can result in the Experiment concluding before the bulk of your users in more typical time zones have had enough time to enter the Canvas and/or convert. 
 
-Alternatively, if you wish to use local delivery, use an Experiment Window of 24-48 or more hours. That way, users in early time zones enter the canvas and trigger the experiment to start, but plenty of time in the Experiment Window remains. Users in later time zones will still have sufficient time to enter the Canvas and the Experiment Step with Winning Paths and possibly convert before the Experiment Window expires.
+Alternatively, if you wish to use local delivery, use an experiment window of 24-48 or more hours. That way, users in early time zones enter the canvas and trigger the experiment to start, but plenty of time in the experiment window remains. Users in later time zones will still have sufficient time to enter the Canvas and the Experiment Step with Winning Paths and possibly convert before the experiment window expires.
 
 [1]: {% image_buster /assets/img/experiment_step/experiment_winning_path.png %}
 [2]: {% image_buster /assets/img/experiment_step/experiment_onetime_workaround.png %}
+[3]: {% image_buster /assets/img/experiment_step/experiment_path_distribution.png %}
