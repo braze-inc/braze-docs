@@ -22,17 +22,17 @@ We do not recommend sending nested JSON values as key-value pairs. Instead, flat
 {% tabs %}
 {% tab Android %}
 
-You can place key-value pairs on [`card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721) objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html) to access these values.
+You can place key-value pairs on <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a> to access these values.
 
 {% endtab %}
 {% tab iOS %}
 
-You can place key-value pairs on [`card`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras) to access these values.
+You can place key-value pairs on <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a> to access these values.
 
 {% endtab %}
 {% tab Web %}
 
-You can place key-value pairs on [`card`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call `card.extras` to access these values.
+You can place key-value pairs on <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call `card.extras` to access these values.
 
 {% endtab %}
 {% endtabs %}
@@ -105,7 +105,7 @@ Braze.getInstance(context).contentCardUnviewedCount
 {% endsubtab %}
 {% endsubtabs %}
 
-You can then use this information to display a badge signifying how many unread Content Cards there are. See the [SDK reference docs](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/get-content-card-unviewed-count.html) for more information.
+You can then use this information to display a badge signifying how many unread Content Cards there are. See the <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/get-content-card-unviewed-count.html" target="_blank">SDK reference docs</a> for more information.
 
 
 {% endtab %}
@@ -157,7 +157,7 @@ You can request the number of unread cards at any time by calling:
 braze.getCachedContentCards().getUnviewedCardCount();
 ```
 
-You can then use this information to display a badge signifying how many unread Content Cards there are. See the [SDK reference docs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html) for more information.
+You can then use this information to display a badge signifying how many unread Content Cards there are. See the <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">SDK reference docs</a> for more information.
 
 {% endtab %}
 {% endtabs %}
