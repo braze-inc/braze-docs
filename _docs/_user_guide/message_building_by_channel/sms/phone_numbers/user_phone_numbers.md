@@ -48,15 +48,19 @@ For a customer to receive an SMS message, they must have a valid phone number an
 
 When a phone number is deemed unreachable or invalid, Braze will mark the user's phone number as invalid and will not attempt to send further communications to that phone number. An invalid phone number is marked in the **Engagement Tab** of a user profile.
 
-A phone number is considered invalid in the following cases:
+![][picture2]{: style="max-width:50%;border: 0;"}
 
-- The phone number supplied is not a valid phone number.
-- The phone number is incorrectly formatted.
+A phone number is considered invalid for the following reasons:
+- **Provider Error**: a permanent error was received from the SMS provider. This indicates that phone number supplied is incorrectly formatted or permanently unable to receive SMS messages.
+- **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service is releasing their number from their carrier.
+
+#### Deactivated phone numbers
+When a mobile subscriber terminates or releases their phone number, their phone number becomes deactivated and will eventually get recycled and assigned to new users. On a daily basis, Braze receives these deactivated numbers and marks them as invalid within the Braze platform. This ensures that phone numbers you believe had opted into your program now belong to a different user who has not consented to receive messages.
 
 These invalid phone numbers can be managed using [SMS endpoints]({{site.baseurl}}/api/endpoints/sms/). 
 
 {% alert note %}
-If multiple user profiles have the same phone number and that phone number is marked invalid, then all User Profiles will display as invalid.
+If multiple user profiles have the same phone number and that phone number is marked invalid, then all existing User Profiles with that number will display as invalid. Newly created user profiles will never initially be marked as invalid.
 {% endalert %}
 
 You can also include or exclude any users with invalid phone numbers when [creating a segment][2]. 
@@ -64,4 +68,4 @@ You can also include or exclude any users with invalid phone numbers when [creat
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment
 [picture]: {% image_buster /assets/img/sms/e164.png %}
-
+[picture2]: {% image_buster /assets/img/sms/invalid_banner.png %}
