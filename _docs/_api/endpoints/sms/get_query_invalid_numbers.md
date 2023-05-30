@@ -13,7 +13,7 @@ description: "This article outlines details about Query invalid phone numbers Br
 /sms/invalid_phone_numbers
 {% endapimethod %}
 
-> Use this endpoint to pull a list of phone numbers that have been deemed "invalid" within a certain time frame.
+> Use this endpoint to pull a list of phone numbers that have been marked "invalid" within a certain time frame. See [Invalid Phone Number Handling][1] documentation for more information.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d {% endapiref %}
 
@@ -30,6 +30,7 @@ description: "This article outlines details about Query invalid phone numbers Br
 | `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
 | `offset` | Optional | Integer | Optional beginning point in the list to retrieve from. |
 | `phone_numbers` | Optional <br>(see note) | Array of Strings in e.164 format | If provided, we will return the phone number if it has been found to be invalid. |
+| `reason` | Optional <br>(see note) | String | Available values are "provider_error" (invalidated by provider) or "deactivated" (phone number has been deactivated). If ommitted, all reasons are returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
@@ -55,17 +56,22 @@ Authorization: Bearer YOUR-REST-API-KEY
     {
       "phone": (string) phone number in e.164 format,
       "invalid_detected_at": (string) the time the invalid number was detected in ISO 8601
+      "reason" : "provider_error"
     },
     {
       "phone": (string) phone number in e.164 format,
       "invalid_detected_at": (string) the time the invalid number was detected in ISO 8601
+      "reason" : "deactivated"
     },
     {
       "phone": (string) phone number in e.164 format,
       "invalid_detected_at": (string) the time the invalid number was detected in ISO 8601
+      "reason" : "provider_error"
     }
   ],
   "message": "success"
 }
 ```
 {% endapi %}
+
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#handling-invalid-phone-numbers
