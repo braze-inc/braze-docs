@@ -21,4 +21,8 @@ To create a draft, go to an active Canvas and click the **Create Draft** button 
 
 To reference the active Canvas, click **View Active Canvas** in the footer from the analytics view or the Canvas header from the draft. To return to an active Canvas, you can click **Edit Canvas** from the analytics view or the active Canvas view.
 
+### In-app message prioritization
+
+For drafts of an active Canvas, in-app message priority within the Canvas builder will be updated immediately when a user changes the priority. However, in a Message step, the priority sorter will be updated when a user launches the draft since step settings apply at a step level.
+
 [1]: {% image_buster /assets/img_archive/canvas_draft1.png %}
