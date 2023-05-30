@@ -11,7 +11,7 @@ description: "This article outlines the details about the Delete subscription st
 
 {% api %}
 # Delete subscription state by email address or phone number
-{% apimethod DELETE %}
+{% apimethod delete %}
 /users/subscription
 {% endapimethod %}
 
