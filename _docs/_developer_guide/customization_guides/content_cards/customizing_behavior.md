@@ -27,12 +27,12 @@ You can place key-value pairs on [`card`](https://braze-inc.github.io/braze-andr
 {% endtab %}
 {% tab iOS %}
 
-You can place key-value pairs on [`card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721) objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html) to access these values.
+You can place key-value pairs on [`card`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras) to access these values.
 
 {% endtab %}
 {% tab Web %}
 
-You can place key-value pairs on [`card`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras) to access these values.
+You can place key-value pairs on [`card`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call `card.extras` to access these values.
 
 {% endtab %}
 {% endtabs %}
@@ -68,14 +68,16 @@ The example to the right shows a feed with a hybrid list of items that are popul
 Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 
 The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs allow you to filter and display type-specific Content Cards on the checkout screen. For more information on using key-value pairs to manage multiple feeds, see [Customizing the default Content Card feed][3]. 
+<br>
+<br>
 
 ![][5]{: style="max-width:70%;"} 
 
 ## Content card badges
 
-Badges are small icons that are ideal for getting a user's attention. Using badges to alert the user about new Content Card content can attract users back to your app and increase sessions.
-
 ![An iPhone home screen showing a Braze sample app named Swifty with a red badge displaying the number 7][8]{: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+
+Badges are small icons that are ideal for getting a user's attention. Using badges to alert the user about new Content Card content can attract users back to your app and increase sessions.
 
 ### Displaying the number of unread Content Cards as a badge
 
@@ -109,7 +111,7 @@ You can then use this information to display a badge signifying how many unread 
 {% endtab %}
 {% tab iOS %}
 
-You can display the number of unread Content Cards your user has as a badge on your app's icon. The following sample uses `braze.contentCards` to request and display the number of unread Content Cards. Once the app is closed and the user's session ends, this code requests a card count, filtering the number of cards based on the `viewed` property.
+The following sample uses `braze.contentCards` to request and display the number of unread Content Cards. Once the app is closed and the user's session ends, this code requests a card count, filtering the number of cards based on the `viewed` property.
 
 {% subtabs %}
 {% subtab Swift %}
@@ -146,6 +148,9 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 
 {% endsubtab %}
 {% endsubtabs %}
+
+You can then use this information to display a badge signifying how many unread Content Cards there are. See the [SDK reference docs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html) for more information.
+
 {% endtab %}
 {% tab Web %}
 
