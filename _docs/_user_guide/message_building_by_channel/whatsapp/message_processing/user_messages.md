@@ -21,7 +21,7 @@ Both campaigns and Canvases can start, branch, and have mid-journey changes from
 Ensure that your trigger word matches what you are expecting from users.
 
 **Things to know:**
-- Each letter of your trigger word must be capitalized when configured. Braze does not require inbound trigger words sent by users to be capitalized. For example, messaging "jOin2023" will still trigger the Canvas or Campaign.
+- Each letter of your trigger word must be capitalized when configured. Braze does not require inbound trigger words sent by users to be capitalized. For example, messaging "jOin2023" will still trigger the Canvas or campaign.
 - If no trigger word is specified on the entry schedule action-based trigger, the campaign or Canvas will run for ALL inbound WhatsApp messages. This includes messages that have matched phrases across active campaigns and Canvases, in which case the user will receive two WhatsApp messages.
 
 {% tabs %}
