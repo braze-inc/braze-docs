@@ -30,7 +30,7 @@ description: "This article outlines details about Query invalid phone numbers Br
 | `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
 | `offset` | Optional | Integer | Optional beginning point in the list to retrieve from. |
 | `phone_numbers` | Optional <br>(see note) | Array of Strings in e.164 format | If provided, we will return the phone number if it has been found to be invalid. |
-| `reason` | Optional <br>(see note) | String | Available values are "provider_error" (invalidated by provider) or "deactivated" (phone number has been deactivated). If ommitted, all reasons are returned. |
+| `reason` | Optional <br>(see note) | String | Available values are "provider_error" (provider error indicates phone cannot receive SMS) or "deactivated" (phone number has been deactivated). If ommitted, all reasons are returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
