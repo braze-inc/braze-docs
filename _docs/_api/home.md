@@ -337,6 +337,14 @@ glossaries:
     description: Return a paginated lists of product IDs.
     tags:
       - Purchases
+  - name: <a href='/docs/api/endpoints/export/purchases/get_number_of_purchases/'>/purchases/quantity_series</a>
+    description: Return the number of purchases made within a specific time.
+    tags:
+      - Purchases
+  - name: <a href='/docs/api/endpoints/export/purchases/get_revenue_series/'>/purchases/revenue_series</a>
+    description: Export revenue data by time.
+    tags:
+      - Purchases    
   - name: <a href='/docs/api/endpoints/preference_center/get_create_url_preference_center'>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</a>
     description: Create a URL for a preference center.
     tags:
