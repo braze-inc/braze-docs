@@ -13,8 +13,8 @@ channel:
 
 ## Key-value pairs
 
-Braze enables you to send extra data payloads to user devices using key-value pairs. These can help you track internal metrics, update app content, and customize properties.
-
+Braze enables you to send extra data payloads to user devices using key-value pairs. These can help you track internal metrics, update app content, and customize properties. [Add key-value pairs using the dashboard][9]. 
+ 
 {% alert note %}
 We do not recommend sending nested JSON values as key-value pairs. Instead, flatten the JSON before sending it. 
 {% endalert %}
@@ -22,37 +22,26 @@ We do not recommend sending nested JSON values as key-value pairs. Instead, flat
 {% tabs %}
 {% tab Android %}
 
-You can place key-value pairs on <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a> to access these values.
+Key-value pairs are stored on <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a> to access these values.
 
 {% endtab %}
 {% tab iOS %}
 
-You can place key-value pairs on <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a> to access these values.
+Key-value pairs are stored on <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a> to access these values.
 
 {% endtab %}
 {% tab Web %}
 
-You can place key-value pairs on <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call `card.extras` to access these values.
+Key-value pairs are stored on <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call `card.extras` to access these values.
 
 {% endtab %}
 {% endtabs %}
-
-You can also add key-value pairs through the [dashboard][6].
-
-<!--Question: This alert specifically calls out a size limit for content "entered in the dashboard." Does that include Content Cards with extras programmatically added? -->
-
-{% alert note %}
-Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.
-{% endalert %}
-
 
 ## Content Cards as supplemental content
 
 ![][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
 
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
-
-<!---In the Android Implementation Guide, the image is said to show a `ListView`. In the Swift context, it was a `UICollectionView`. Is the following a good way to talk about this generically so this content doesn't have to be tabbed? -->
 
 The example to the right shows a feed with a hybrid list of items that are populated via local data and Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content.
 
@@ -171,3 +160,4 @@ You can then use this information to display a badge signifying how many unread 
 [6]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/#content-cards
 [7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/
 [8]: {% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}
+[9]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create#step-3-compose-a-content-card
