@@ -42,25 +42,25 @@ From the side menu, specify which subscription group this template will collect 
 
 ![][img4]{: style="max-width:40%"}
 
-By default, we collect numbers globally, however you can limit the number of countries to collect numbers from. To do so, turn off **Collect numbers from all countries** and use the dropdown to select specific countries. Your users will only be able to select countries that are you have explicitly added.
+By default, we collect numbers globally, however you can limit the number of countries to collect numbers from. To do so, turn off **Collect numbers from all countries** and use the dropdown to select specific countries. Your users will only be able to select countries that you have explicitly added.
 
 ![][img5]{: style="max-width:40%"}
 
 #### Invalid phone numbers
 
-If your users input a phone number that includes any unaccepted special characters, they will see a generic error and will not be able to submit the form. This error cannot be customized. You can view the error behavior in the **Preview & Test** tab and on your test device. Refer to this article to learn [how Braze formats phone numbers][2].
+If your users input a phone number that includes any unaccepted special characters, they will see a generic error and will not be able to submit the form. The error message text cannot be customized. You can view the error behavior in the **Preview & Test** tab and on your test device. Refer to this article to learn [how Braze formats phone numbers][2].
 
 ### Step 3: Add disclaimer language
 
-Be sure to include opt-in language and links to your brand’s privacy policy and terms and conditions in your message. We have provided a placeholder disclaimer in the template solely as an example – it does not constitute legal advice and should not be relied upon for compliance purposes. Work with your legal team to develop language that is tailored to your specific brand.
+Be sure to include opt-in language and links to your brand’s privacy policy and terms and conditions in your message. We have provided a placeholder disclaimer in the template solely as an example—it does not constitute [legal advice][4] and should not be relied upon for compliance purposes. Work with your legal team to develop language that is tailored to your specific brand.
 
 ### Step 4: Style your message
 
-You can customize the look and feel of your message using the drag & drop editor. Refer to our [drag & drop editor][3] article for help.
+You can customize the look and feel of your message using the Drag & Drop Editor [in-app message components][3].
 
 ## Reporting
 
-Once your campaign has launched, you can analyze results in real-time to see how many users have engaged with your campaign and opted in to the subscription group.
+Once your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, refer to _______.
 
 > img
 
@@ -68,6 +68,8 @@ Once your campaign has launched, you can analyze results in real-time to see how
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#drag-and-drop-in-app-message-components
+[4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
+
 [img1]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example.png %}
 [img2]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}
 [img3]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}
