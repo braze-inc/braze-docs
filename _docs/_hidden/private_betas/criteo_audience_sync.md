@@ -60,7 +60,7 @@ Once you have successfully connected, you will be taken back to the partner page
 
 ![An updated version of the Criteo technology partners page showing the ad accounts successfully connected.][4]{: style="max-width:80%;"}
 
-Your Criteo connection will be applied at the Braze workspace level. If your Criteo admin removes you from your Criteo ad account, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
+Your Criteo connection will be applied at the Braze workspace level. If your Criteo admin removes you from your Criteo ad account, Braze will detect an invalid token. As a result, your active Canvases using Criteo will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Configure your Canvas entry criteria
 
@@ -107,7 +107,7 @@ When you launch a Canvas with a new audience, Braze sync users in near real-time
 {% endtab %}
 {% tab Sync with an Existing Audience %}
 **Sync with an Existing Audience**<br>
-Braze also offers the ability to either add users to existing Snapchat audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then either add users in near real-time as they enter the Audience Sync component.
+Braze also offers the ability to either add users to existing Criteo audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then either add users in near real-time as they enter the Audience Sync component.
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account and existing audience are selected.]({% image_buster /assets/img/criteo/criteo8.png %})
 
@@ -116,7 +116,7 @@ Braze also offers the ability to either add users to existing Snapchat audiences
 
 ### Step 5: Launch Canvas
 
-Once you have configured your Audience Sync to Criteo, simply launch the Canvas! The new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on Snapchat. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
+Once you have configured your Audience Sync to Criteo, simply launch the Canvas! The new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on Criteo. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
 
 You can view the audience in Criteo by going into your ads manager account and then selecting Segments from the **Audience Library** of the navigation. From the **Segments** page, you can see the size of each audience after it reaches ~1,000.
 
@@ -124,9 +124,9 @@ You can view the audience in Criteo by going into your ads manager account and t
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync Step, Braze will sync these users in near real-time while also respecting Snapchat’s API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Snapchat.
+As users reach the Audience Sync step, Braze will sync these users in near real-time while also respecting Criteo's API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Snapchat.
 
-Snapchat’s API rate limit states no more than 10 queries per second and 100k users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
+Criteo's API rate limit states no more than 250 requests minute. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric. 
 
 ## Understanding analytics
 
@@ -134,12 +134,12 @@ The following table includes metrics and descriptions to help you better underst
 
 | Metric | Description |
 | --- | --- |
-| Entered | Number of users who entered this component to be synced to Snapchat. |
+| Entered | Number of users who entered this component to be synced to Criteo. |
 | Proceeded to Next Step | How many users advanced to the next component if there is one. All users will auto-advance if this is the last step in the Canvas branch. |
-| Users Synced | Number of users who have successfully been synced to Snapchat. |
+| Users Synced | Number of users who have successfully been synced to Criteo. |
 | Users Not Synced | Number of users that have not been synced due to missing fields to match. |
-| Users Pending | Number of users currently being processed by Braze to sync into Snapchat. |
-| Users Errored | Number of users who were not synced to Snapchat due to an API error after about 13 hours of retries. Potential causes of errors can include an invalid Snapchat token or if the audience was deleted on Snapchat. |
+| Users Pending | Number of users currently being processed by Braze to sync into Criteo. |
+| Users Errored | Number of users who were not synced to Criteo due to an API error after about 13 hours of retries. Potential causes of errors can include an invalid Criteo token or if the audience was deleted on Criteo. |
 | Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is an Audience Sync component. |
 {: .reset-td-br-1 .reset-td-br-2}
 
