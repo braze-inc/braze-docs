@@ -23,6 +23,10 @@ Using the Braze Audience Sync to Facebook, brands can elect to add their own use
 
 This feature gives brands the option to control what specific first-party data is shared with Facebook. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
+{% alert note %}
+If you are participating in testing Meta Work Accounts in beta, ensure you disconnect and reconnect your account to the [Facebook partner page]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook). 
+{% endalert %}
+
 ## Prerequisites
 
 You will need to ensure that you have the following items created and completed before setting up your Facebook Audience Step in Canvas. 
