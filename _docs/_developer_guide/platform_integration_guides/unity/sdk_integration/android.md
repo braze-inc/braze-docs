@@ -57,7 +57,7 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
                android:label="@string/app_name">
 
     <!-- Calls the necessary Braze methods to ensure that analytics are collected and that push notifications are properly forwarded to the Unity application. -->
-    <activity android:name="com.appboy.unity.AppboyUnityPlayerActivity" 
+    <activity android:name="com.braze.unity.BrazeUnityPlayerActivity" 
       android:label="@string/app_name" 
       android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" 
       android:screenOrientation="sensor">
@@ -149,13 +149,13 @@ Braze should now be collecting data from your application, and your basic integr
 
 ### Extending Braze's Unity player (Android) {#extending-braze-unity-player}
 
-The example `AndroidManifest.xml` file provided has one Activity class registered, [`AppboyUnityPlayerActivity`](https://github.com/braze-inc/braze-android-sdk/blob/e67e09f785adeff075a5d7710e79f41ed3676a6a/android-sdk-unity/src/main/java/com/appboy/unity/AppboyUnityPlayerActivity.java). This class is integrated with the Braze SDK and extends `UnityPlayerActivity` with session handling, in-app message registration, push notification analytics logging, and more. See [Unity](https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html) for more information on extending the `UnityPlayerActivity` class.
+The example `AndroidManifest.xml` file provided has one Activity class registered, [`BrazeUnityPlayerActivity`](https://github.com/braze-inc/braze-android-sdk/blob/e804cb3a10ae68364b354b52abf1bef8a0d1a9dc/android-sdk-unity/src/main/java/com/braze/unity/BrazeUnityPlayerActivity.kt). This class is integrated with the Braze SDK and extends `UnityPlayerActivity` with session handling, in-app message registration, push notification analytics logging, and more. See [Unity](https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html) for more information on extending the `UnityPlayerActivity` class.
 
-If you are creating your own custom `UnityPlayerActivity` in a library or plugin project, you will need to extend Braze's `AppboyUnityPlayerActivity` to integrate your custom functionality with Braze. Before beginning work on extending `AppboyUnityPlayerActivity`, follow our instructions for integrating Braze into your Unity project.
+If you are creating your own custom `UnityPlayerActivity` in a library or plugin project, you will need to extend Braze's `BrazeUnityPlayerActivity` to integrate your custom functionality with Braze. Before beginning work on extending `BrazeUnityPlayerActivity`, follow our instructions for integrating Braze into your Unity project.
 1. Add the Braze Android SDK as a dependency to your library or plugin project as described in the [Braze Android SDK integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
-2. Integrate our Unity `.aar`, which contains Braze's Unity-specific functionality, to your Android library project you are building for Unity. The `appboy-unity.aar` is available from our [public repo](https://github.com/Appboy/appboy-unity-sdk/tree/master/Assets/Plugins/Android). Once our Unity library is successfully integrated, modify your `UnityPlayerActivity` to extend `AppboyUnityPlayerActivity`.
+2. Integrate our Unity `.aar`, which contains Braze's Unity-specific functionality, to your Android library project you are building for Unity. The `appboy-unity.aar` is available from our [public repo](https://github.com/braze-inc/braze-unity-sdk/tree/master/Assets/Plugins/Android). Once our Unity library is successfully integrated, modify your `UnityPlayerActivity` to extend `BrazeUnityPlayerActivity`.
 3. Export your library or plugin project and drop it into `/<your-project>/Assets/Plugins/Android` as normal. Do not include any Braze source code in your library or plugin as they will already be present in `/<your-project>/Assets/Plugins/Android`.
-4. Edit your `/<your-project>/Assets/Plugins/Android/AndroidManifest.xml` to specify your `AppboyUnityPlayerActivity` subclass as the main activity.
+4. Edit your `/<your-project>/Assets/Plugins/Android/AndroidManifest.xml` to specify your `BrazeUnityPlayerActivity` subclass as the main activity.
 
 You should now be able to package an `.apk` from the Unity IDE that is fully integrated with Braze and contains your custom `UnityPlayerActivity` functionality.
 
