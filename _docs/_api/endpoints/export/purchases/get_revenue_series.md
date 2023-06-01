@@ -24,10 +24,10 @@ description: "This article outlines details about the Export revenue data Braze 
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `ending_at` | Optional | Datetime (ISO-8601 string) | Date on which the data export should end. Defaults to time of the request. |
+| `ending_at` | Optional | Datetime ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data export should end. Defaults to time of the request. |
 | `length` | Required | Integer | Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
 | `unit` | Optional | String | Unit of time between data points. Can be day or hour, defaults to day. |
-| `app_id` | Optional | String | App API identifier retrieved from the **API Keys** page. If excluded, results for all apps in a workspace will be returned. |
+| `app_id` | Optional | String | App API identifier retrieved from the [**API Keys**]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page. If excluded, results for all apps in a workspace will be returned. |
 | `product` | Optional | String | Name of product to filter response by. If excluded, results for all apps will be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -44,15 +44,14 @@ curl --location --request GET 'https://rest.iad-01.braze.com/purchases/revenue_s
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  “data”: [{
-        "time": "2023-04-03",
-        "revenue": 1186.99
+  "message": (required, string) the status of the export, returns 'success' when completed without errors,
+  "data" : [
+    {
+      "time" : (string) the date as ISO 8601 date,
+      "revenue" : (int) amount of revenue for the time period
       },
-      {
-        "time": "2023-04-04",
-        "revenue": 1273.98
-      }],
-  “message”: “success”
+    ...
+  ]
 }
 ```
 
