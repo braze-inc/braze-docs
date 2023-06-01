@@ -140,7 +140,10 @@ When creating a custom footer, Braze suggests using attributes for personalizati
 | User's Custom Unsubscribe URL | `{{${set_user_to_unsubscribed_url}}}` |
 | User's Custom Opt-In URL | `{{${set_user_to_opted_in_url}}}` |
 | User's Custom Subscribe URL | `{{${set_user_to_subscribed_url}}}` |
+| User's Custom Braze Preference Center URL | `{{${preference_center_url}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
+
+
 
 As a best practice, Braze recommends including both an unsubscribe link (i.e., ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e., ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
 
