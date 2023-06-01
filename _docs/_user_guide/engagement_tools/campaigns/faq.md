@@ -168,3 +168,11 @@ API-triggered or server-trigger campaigns are ideal for more advanced transactio
 | • Does not consume data points<br><br>• Personalization elements are included in the JSON payload properties | • Does not allow you to create a segment of users eligible for the message in the JSON payload properties<br><br>• Not able to see incoming JSON payloads via the **Message Activity Log**|
 {: .reset-td-br-1 .reset-td-br-2}
 
+### Why was my campaign stopped automatically?
+
+Campaigns that are no longer sending messages will automatically stop if they meet any of the following criteria:
+- A scheduled or action-based campaign that is past its end date by over 7 days
+- A scheduled one-time send campaign that is past its send date by over 7 days
+- A campaign that has not sent a message or has not been edited in over 12 months
+
+This allows easier access to active campaigns. You can view which campaigns will be automatically stopped by selecting the **Idle** category. If a campaign that hasn't sent a message is updated, the 12 month countdown will reset. To continue running a campaign, you can update the end date or resume the campaign.

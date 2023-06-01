@@ -70,6 +70,15 @@ Open [tracking pixels]({{site.baseurl}}/user_guide/administrative/app_settings/m
 
 Users will be prevented from entering the Canvas and no further messages will be sent out. For email campaigns and Canvases, the stop button does not mean that send will immediately stop. This is because once the send requests are sent out, they cannot be stopped from being delivered to the user.
 
+#### Why was my email campaign stopped automatically?
+
+Campaigns that are no longer sending messages will automatically stop if they meet any of the following criteria:
+- A scheduled or action-based campaign that is past its end date by over 7 days
+- A scheduled one-time send campaign that is past its send date by over 7 days
+- A campaign that has not sent a message or has not been edited in over 12 months
+
+This allows easier access to active campaigns. You can view which campaigns will be automatically stopped by selecting the **Idle** category. If a campaign that hasn't sent a message is updated, the 12 month countdown will reset.
+
 ### Why am I seeing more email clicks than opens?
 
 You may be seeing more clicks than opens for any of the following reasons:
