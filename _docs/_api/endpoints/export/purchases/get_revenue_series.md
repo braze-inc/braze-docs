@@ -14,7 +14,7 @@ description: "This article outlines details about the Export revenue data Braze 
 /purchases/revenue_series
 {% endapimethod %}
 
-> Use this endpoint to export revenue data by a specific time.
+> Use this endpoint to return the total money spent in your app over a time range.
 
 ## Rate limit
 

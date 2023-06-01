@@ -14,7 +14,7 @@ description: "This article outlines details about the Export number of purchases
 /purchases/quantity_series
 {% endapimethod %}
 
-> Use this endpoint to return the number of purchases made within a specific time.
+> Use this endpoint to return the total number of purchases in your app over a time range.
 
 ## Rate limit
 
@@ -32,6 +32,7 @@ description: "This article outlines details about the Export number of purchases
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
+
 
 
 ## Response
