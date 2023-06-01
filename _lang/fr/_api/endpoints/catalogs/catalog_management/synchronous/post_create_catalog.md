@@ -180,7 +180,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `catalog-name-already-exists` | Un catalogue avec ce nom existe déjà. |
 | `id-not-first-column` | Le champ `id` doit être le premier champ dans le tableau. Vérifiez que le type est une chaîne de caractères. |
 | `invalid-fields` | `fields` n’est pas formaté correctement. |
-| `too-many-fields` | La limite du nombre de champs est de 30. |
+| `too-many-fields` | La limite du nombre de champs est de 500. |
 | `invalid-field-names` | Les champs peuvent uniquement inclure des chiffres, des lettres, des traits d’union et des traits de soulignement. |
 | `invalid-field-types` | Assurez-vous que les types des champs sont valides. |
 | `field-names-too-large` | La limite de caractères d’un nom de champ est de 250. |
