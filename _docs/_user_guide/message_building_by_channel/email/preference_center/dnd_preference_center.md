@@ -1,18 +1,14 @@
 ---
 nav_title: Drag & Drop Email Preference Center
 article_title: Drag & Drop Email Preference Center
-permalink: "/dnd_preference_center/"
+alias: "/dnd_preference_center/"
 description: "This reference page covers how to create an email preference center with the drag & drop editor."
-layout: dev_guide
+page_order: 2
 ---
 
 # Create an email preference center with Drag & Drop
 
 With the Drag & Drop Editor, you can now create and customize a preference center to help manage which users receive certain types of communication. 
-
-{% alert note %}
-Drag & drop email preference center is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
 
 ## Step 1: Create an email preference center
 
