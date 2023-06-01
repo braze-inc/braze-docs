@@ -33,7 +33,10 @@ description: "This article outlines details about the Export number of purchases
 
 ## Example request
 
-
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/purchases/quantity_series?length=100' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
+```
 
 ## Response
 
