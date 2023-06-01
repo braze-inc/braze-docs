@@ -125,7 +125,7 @@ Yes! Any static URL parameters can be added.
 
 #### How long do shortened URLs remain valid?
 
-One year.
+One year from the time of URL registration (i.e. first send). 
 
 #### Will Link Shortening work with deep links or universal links?
 

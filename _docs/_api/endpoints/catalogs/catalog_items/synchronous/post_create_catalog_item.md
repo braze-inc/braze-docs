@@ -112,7 +112,7 @@ The following table lists possible returned errors and their associated troubles
 | `id-in-body` | Remove any item IDs in the request body. |
 | `ids-too-large` | Character limit for each item ID is 250 characters. |
 | `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
-| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
+| `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalalog. This is not related to the ID field mentioned in the error. |
 | `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
 | `item-already-exists` | The item already exists in the catalog. |
 | `item-array-invalid` | `items` must be an array of objects. | 
