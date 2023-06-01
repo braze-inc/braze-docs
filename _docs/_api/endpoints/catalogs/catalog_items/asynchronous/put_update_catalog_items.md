@@ -112,19 +112,19 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
-| `catalog_not_found` | Check that the catalog name is valid. | 
-| `ids_not_string` | Confirm that each item ID is a string. |
-| `ids_not_unique` | Check that each item ID is unique. |
-| `ids_too_large` | Character limit for each item ID is 250 characters. |
-| `item_array_invalid` | `items` must be an array of objects. |
-| `items_missing_ids` | Confirm that each item has an ID. |
-| `items_too_large` | Item values can't exceed 5,000 characters. |
-| `invalid_ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
-| `invalid_fields` | Confirm that the fields in the request exist in the catalog. |
-| `invalid_keys_in_value_object` | Item object keys can't include `.` or `$`. |
-| `too_deep_nesting_in_value_object` | Item objects can't have more than 50 levels of nesting. 
-| `request_includes_too_many_items` | Your request has too many items. The item limit per request is 50. |
-| `unable_to_coerce_value` | Item types can't be converted. |
+| `catalog-not-found` | Check that the catalog name is valid. | 
+| `ids-not-string` | Confirm that each item ID is a string. |
+| `ids-not-unique` | Check that each item ID is unique. |
+| `ids-too-large` | Character limit for each item ID is 250 characters. |
+| `item-array-invalid` | `items` must be an array of objects. |
+| `items-missing-ids` | Confirm that each item has an ID. |
+| `items-too-large` | Item values can't exceed 5,000 characters. |
+| `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
+| `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalalog. This is not related to the ID field mentioned in the error. |
+| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
+| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
+| `unable-to-coerce-value` | Item types can't be converted. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
