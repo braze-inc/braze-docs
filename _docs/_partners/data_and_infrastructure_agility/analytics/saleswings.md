@@ -10,12 +10,12 @@ search_tag: Partner
 
 # SalesWings
 
-> [SalesWings][1] upgrades braze with essential B2B capabilities that are typically found in B2B marketing automation platforms.
+> [SalesWings][1] is a B2B SaaS lead profiling add-on, built for marketing and sales teams, which helps manage lead and account qualification through lead scoring and grading, sales insights and alerts, marketing alignment, and B2B attribution reporting, along with a tight Salesforce CRM integration.
 
-SalesWings is integrated with braze and your CRM solution such as Salesforce Sales Cloud CRM, and delivers B2B functionality including lead or account website tracking, lead scoring and grading, sales insights, sales alerts, sales and marketing alignment, and B2B attribution reporting.
+SalesWings allows marketing teams and marketing operations managers to qualify leads and accounts for their sales teams, which is essential for sales and marketing alignment and sales efficiency. Furthermore, SalesWings together with braze provides you with the ability to surface a lead’s customer journey and braze marketing campaign engagement data to sales reps, allowing to increase lead qualification rates through more educated conversations.
 
 ## Prerequisites
-
+ 
 | Requirement | Description |
 | ----------- | ----------- |
 | SalesWings account | A [SalesWings][1] account is required to take advantage of this partnership. |
@@ -76,23 +76,23 @@ _Example dashboard linked to braze email & marketing engagement within Salesforc
 
 ### Step 1: SalesWings account and configuration
 
-Please [schedule a demo][10] with the friendly SalesWings team to learn more about SalesWings.
+Please [schedule a demo][4] with the friendly SalesWings team to learn more about SalesWings.
 
 ### Step 2: Installing behavioral tracking on your website / app
 
 Currently there are 2 ways for you to collect behavioral data in SalesWings for lead scoring and sales insights:
-* [Deploy the SalesWings tracking Javascript][11] on the websites and apps where you want to track and identify leads
+* [Deploy the SalesWings tracking Javascript][5] on the websites and apps where you want to track and identify leads
 * Send behavioral lead activity data (and lead profile data) via SalesWings integration with Segment.com
 
 ### Step 3: Connecting SalesWings to braze
 
-Go to the [**SalesWings Settings** page][13] and expand the **Braze Integration** section.
+Go to the [**SalesWings Settings** page][6] and expand the **Braze Integration** section.
 
-![The Braze Integration section of the SalesWings Settings page.][14]
+![The Braze Integration section of the SalesWings Settings page.][7]
 
 Copy the value of the **Identifier** column for the newly created key and paste it into the **Braze API key** field of the SalesWings **Braze Integration** section.
 
-Add your Braze API endpoint as described in [API and SDK endpoints article][16], and enter it in the **Braze API endpoint** field. Copy the value of the **REST Endpoint** column and enter it in the **Braze API endpoint** field in the SalesWings **Braze Integration** section.
+Add your Braze API endpoint as described in [API and SDK endpoints article][8], and enter it in the **Braze API endpoint** field. Copy the value of the **REST Endpoint** column and enter it in the **Braze API endpoint** field in the SalesWings **Braze Integration** section.
 
 Then, click **Save Changes** in the SalesWings settings.
 
@@ -126,17 +126,8 @@ For configuration and further troubleshooting, contact the [SalesWings services 
 [1]: https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [3]: https://www.saleswingsapp.com/braze-lead-scoring-and-sales-insights?utm_source=braze&utm_campaign=technicaldocs
-[4]: {% image_buster /assets/img/saleswings/example_lead_scoring_builder_braze_lead_scoring.png %}
-[5]: {% image_buster /assets/img/saleswings/prioritized_lead_or_contact_list_braze_lead_scoring.png %}
-[6]: {% image_buster /assets/img/saleswings/prioritized_account_list_braze_lead_scoring.png %}
-[7]: {% image_buster /assets/img/saleswings/marketo_sales_insights_alternative_for_braze.png %}
-[8]: {% image_buster /assets/img/saleswings/smart_watch_alerts.png %}
-[9]: {% image_buster /assets/img/saleswings/saleswings_email_campaign_attribution_dashboard.png %}
-[10]: https://www.saleswingsapp.com/schedule-a-demo?utm_source=braze&utm_campaign=technicaldocs
-[11]: https://support.saleswingsapp.com/en/collections/3285135-1-implementing-saleswings-tracking-script
-[12]: {% image_buster /assets/img/saleswings/creating_api_key_in_braze_lead_scoring.png %}
-[13]: https://helium.saleswings.pro/settings
-[14]: {% image_buster /assets/img/saleswings/saleswings_braze_lead_scoring_integration_settings.png %}
-[15]: {% image_buster /assets/img/saleswings/braze_api_key_lead_scoring.png %}
-[16]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
-[17]: {% image_buster /assets/img/saleswings/braze_api_endpoint_for_lead_scoring.png %}
+[4]: https://www.saleswingsapp.com/schedule-a-demo?utm_source=braze&utm_campaign=technicaldocs
+[5]: https://support.saleswingsapp.com/en/collections/3285135-1-implementing-saleswings-tracking-script
+[6]: https://helium.saleswings.pro/settings
+[7]: {% image_buster /assets/img/saleswings/saleswings_braze_lead_scoring_integration_settings.png %}
+[8]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
