@@ -140,7 +140,7 @@ When creating a custom footer, Braze suggests using attributes for personalizati
 | User's Custom Unsubscribe URL | `{{${set_user_to_unsubscribed_url}}}` |
 | User's Custom Opt-In URL | `{{${set_user_to_opted_in_url}}}` |
 | User's Custom Subscribe URL | `{{${set_user_to_subscribed_url}}}` |
-| User's Custom Braze Preference Centre URL | `{{${preference_center_url}}}` |
+| User's Custom Braze Preference Center URL | `{{${preference_center_url}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
