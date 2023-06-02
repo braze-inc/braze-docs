@@ -58,9 +58,21 @@ If your users input a phone number that includes any unaccepted special characte
 
 ### Step 3: Add disclaimer language
 
-For SMS messaging, it's important to clearly communicate the type of SMS you will be sending. You should also include opt-in language and links to your brand's Privacy Policy and Terms & Conditions in your form for users to review before they consent to receive messaging.
+For SMS messaging, it's important to clearly communicate the type of SMS you will be sending. Make sure your list growth is compliant by including the following information in your form:
 
-We have provided a placeholder disclaimer in the template solely as an example—it does not constitute legal advice and should not be relied upon for compliance purposes. It's important to work with your legal team to develop language that is tailored to your specific brand, and we recommend that you review the [six rules to get compliance right][4].
+- Description of the types of SMS messages your customers can expect (cart reminders, promotions and deals, appointment reminders, etc.). You don't need to list every use case, but you should provide a description of the types of messages your brand will send.
+- Note that consent is not a condition of any purchase (if applicable).
+- Message frequency and reminder that message and data rates apply. If you don't know the exact message frequency, you can say that frequency may vary.
+- Links to your Terms & Conditions and SMS Privacy Policy.
+- Reminder of help and opt-out keywords (HELP for help; STOP to cancel).
+
+We have provided a placeholder disclaimer in the template solely as an example—it does not constitute legal advice and should not be relied upon for compliance purposes. It’s important to work with your legal team to develop language that is tailored to your specific brand.
+
+{% alert note %}
+This documentation is not intended to provide, nor may it be relied fully upon, as providing legal advise.
+{% endalert %}
+
+For more information about SMS compliance, see [SMS Laws and Regulations][4].
 
 ### Step 4: Style your message
 
@@ -70,13 +82,11 @@ You can customize the look and feel of your message using the Drag & Drop Editor
 
 Once your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, refer to the subscription group page.
 
-> img
-
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#drag-and-drop-in-app-message-components
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right
+[4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
 
 [img1]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example.png %}
 [img2]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}
