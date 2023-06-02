@@ -38,11 +38,11 @@ To get started building your phone number capture form, select the phone number 
 
 ![][img3]{: style="max-width:40%"}
 
-From the side menu, specify which subscription group this template will collect phone numbers for. As a best practice, you should use a new form to get the user’s consent for each subscription group.
+From the side menu, specify which subscription group this template will collect phone numbers for. To adhere to compliance best practices, you can only collect consent to one subscription group per Phone Number Capture form. However, you can use multiple forms to collect consent for other subscription groups if desired.
 
 ![][img4]{: style="max-width:40%"}
 
-By default, we collect numbers globally, however you can limit the number of countries to collect numbers from. To do so, turn off **Collect numbers from all countries** and use the dropdown to select specific countries. Your users will only be able to select countries that you have explicitly added.
+By default, we collect numbers globally, however you can limit the number of countries to collect numbers from. This is helpful if you intend to only message users who have phone numbers in specific countries, and can assist with list cleanliness. To do so, turn off **Collect numbers from all countries** and use the dropdown to select specific countries. Your users will only be able to select countries that you have explicitly added.
 
 ![][img5]{: style="max-width:40%"}
 
@@ -52,7 +52,9 @@ If your users input a phone number that includes any unaccepted special characte
 
 ### Step 3: Add disclaimer language
 
-Be sure to include opt-in language and links to your brand’s privacy policy and terms and conditions in your message. We have provided a placeholder disclaimer in the template solely as an example—it does not constitute [legal advice][4] and should not be relied upon for compliance purposes. Work with your legal team to develop language that is tailored to your specific brand.
+For SMS messaging, it's important to clearly communicate the type of SMS you will be sending. You should also include opt-in language and links to your brand's Privacy Policy and Terms & Conditions in your form for users to review before they consent to receive messaging.
+
+We have provided a placeholder disclaimer in the template solely as an example—it does not constitute legal advice and should not be relied upon for compliance purposes. It's important to work with your legal team to develop language that is tailored to your specific brand, and we recommend that you review the [six rules to get compliance right][4].
 
 ### Step 4: Style your message
 
@@ -60,7 +62,7 @@ You can customize the look and feel of your message using the Drag & Drop Editor
 
 ## Reporting
 
-Once your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, refer to _______.
+Once your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, refer to the subscription group page.
 
 > img
 
@@ -68,7 +70,7 @@ Once your campaign has launched, you can analyze results in real time to see how
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#drag-and-drop-in-app-message-components
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
+[4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right
 
 [img1]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example.png %}
 [img2]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}
