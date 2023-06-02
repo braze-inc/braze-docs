@@ -337,6 +337,14 @@ glossaries:
     description: Return a paginated lists of product IDs.
     tags:
       - Purchases
+  - name: <a href='/docs/api/endpoints/export/purchases/get_number_of_purchases/'>/purchases/quantity_series</a>
+    description: Return the total number of purchases in your app over a time range.
+    tags:
+      - Purchases
+  - name: <a href='/docs/api/endpoints/export/purchases/get_revenue_series/'>/purchases/revenue_series</a>
+    description: Return the total money spent in your app over a time range.
+    tags:
+      - Purchases    
   - name: <a href='/docs/api/endpoints/preference_center/get_create_url_preference_center'>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</a>
     description: Create a URL for a preference center.
     tags:
