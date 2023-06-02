@@ -16,6 +16,8 @@ description: "This article outlines details about the Export number of purchases
 
 > Use this endpoint to return the total number of purchases in your app over a time range.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6ac59282-d231-4317-88df-f7f12169b94e{% endapiref %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='purchases product list' %}
