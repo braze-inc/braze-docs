@@ -64,10 +64,6 @@ The **Settings** panel in the **Design and Build** section includes general sett
 
 ![][11]{: style="width:300px;height:auto;"} 
 
-#### Creating a Content Block
-
-You can save a row component as a Content Block that can then be used in all email campaigns and email messages in a Canvas. For more information on drag-and-drop Content Blocks, refer to [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/).
-
 ### Use email content
 
 When you first load into the drag-and-drop editor, you'll see the **Design and Build** tab in the **Content** section of the drag-and-drop editor. This is where you can leverage the [creative details](#creative-details) to the design of your email layout.
