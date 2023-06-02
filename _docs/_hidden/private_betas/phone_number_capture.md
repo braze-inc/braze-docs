@@ -36,6 +36,8 @@ This template is supported for both mobile apps and web browsers.
 
 Before you start customizing your template, you can set message-level styles for the entire message using the side menu. For example, you may want to customize the font of all the text or the color of all the links included in your message. You can also make the message a modal or fullscreen display type.
 
+![][img6]
+
 ### Step 2: Customize your phone number capture component
 
 To get started building your phone number capture form, select the phone number input element in the editor.
@@ -81,3 +83,4 @@ Once your campaign has launched, you can analyze results in real time to see how
 [img3]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}
 [img4]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %}
 [img5]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_countries.png %}
+[img6]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_message_styles.gif %}
