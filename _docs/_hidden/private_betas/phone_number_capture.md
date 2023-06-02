@@ -20,6 +20,10 @@ In addition to the [minimum SDK versions][1] required to receive messages built 
 
 {% sdk_min_versions swift:6.2.0 android:0.0.0 %}
 
+{% alert note %}
+If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, clicking on the link will close the message and the user will not be able to return to the message to submit the form.
+{% endalert %}
+
 ## Creating a phone number capture form
 
 When creating a drag-and-drop in-app message, select **Phone number capture form** for your template.
