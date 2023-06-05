@@ -85,7 +85,7 @@ Note that the tables available to query contain only event data. If you wish to 
 
 Your SQL must additionally adhere to the following rules:
 
-- Write a single SQL statement (that is, only one operator condition can be used). Do not include any semicolons.
+- Write a single SQL statement. Do not include any semicolons.
 - Your SQL must select only one column: the `user_id` column. This means your SQL must contain:
 
 ```sql
@@ -120,7 +120,8 @@ In the following example, the resulting segment would contain users that perform
 
 Your incremental refresh query must additionally adhere to the following rules:
 
-- Write a single SQL statement (that is, only one operator condition can be used). Do not include any semicolons.
+- Write a single SQL statement. Do not include any semicolons.
+- Your incremental SQL segment would be able to refer to just one single event. Your dropdowns for date and count are in reference to your chosen event.
 - Your SQL must have the following columns: `user_id`, `$start_date`, and an aggregation function (such as `COUNT`). Any SQL saved without these three fields will result in an error.
 
 {% alert tip %}
