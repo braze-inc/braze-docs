@@ -17,7 +17,7 @@ When implementing your custom Content Cards, you can parse Braze's Content Card 
 
 To obtain Braze's Content Card data model, subscribe to Content Card updates. There are two properties to pay particular attention to:
 
-* **`idString`**: Represents the Content Card ID. This is the unique identifier that must always be parsed in order to log analytics from custom Content Cards.
+* **`idString`**: Represents the Content Card ID. This is the unique identifier used to log analytics from custom Content Cards.
 * **`extras`**: Encompasses all the key-value pairs from the Braze dashboard.
 
 All properties outside of `idString` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android][1], [iOS][2], [Web][3].
