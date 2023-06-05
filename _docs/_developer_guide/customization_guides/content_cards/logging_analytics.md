@@ -3,34 +3,24 @@ nav_title: Logging Analytics
 article_title: Logging Analytics 
 page_order: 4
 description: "This article covers how to manually log clicks, events, and analytics for your customized Content Cards."
+toc_headers: "h2"
 
 ---
 
 # Logging analytics manually
 
-> If you would like to display the Content Cards in a completely custom manner, you can implement your own Content Cards presentation UI. To do this, populate your custom UI with data from Braze's data models and manually log analytics like impressions and clicks.
-
-Data such as impressions, clicks, and dismissals are only handled automatically when using Braze's default card models. When implementing completely custom UI, you will need to handle this data manually. 
-
-First, you can populate data from our models into your custom presentation UI. To obtain Braze's Content Cards models, subscribe to Content Card updates and use the resulting model data to populate your custom UI. 
-
-Next, manually log analytics on the model objects to capture your users' interactions with your custom Content Cards.
-
-<!--JOSH TO DO: Add link to Content Card Integration article for Android, iOS, and Web. Make sure the Content Card data model is on each page, e.g., https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/integration/ -->
-
-## Terms to know
-
-<!--JOSH TO DO: Is this content worth keeping? Source: https://braze.highspot.com/items/60da0e1b3f65f62d1c359ce1?lfrm=srp.0#8 --->
-
-**Table view**: A a scrollable list often seen in mobile applications. Also known as a list view, collection view, or scroll view. Content Cards are considered custom when a table view is not used.
-
-**Payload data**: The properties of a Content Card, such as `title`, `cardDescription`, `imageUrl`, etc. 
-
-Link to payload data for web, Android, and iOS.
-
-**Parse**: Extracting the payload data from a custom Content Card to be used elsewhere (anywhere outside the default table view)
+> If you would like to display the Content Cards in a completely custom manner, you can implement your own Content Cards presentation UI. However, data such as impressions, clicks, and dismissals are only handled automatically when using Braze's default card models. When implementing completely custom UI, you will need to handle this data manually. To do this, populate your custom UI with data from Braze's data models and manually log analytics like impressions and clicks. 
 
 ## Listening for card updates
+
+When implementing your custom Content Cards, you can parse Braze's Content Card objects and extract their payload data such as `title`, `cardDescription`, and `imageUrl`. Then, you can use the resulting model data to populate your custom UI. 
+
+To obtain Braze's Content Card data model, subscribe to Content Card updates. There are two properties to pay particular attention to:
+
+* **`idString`**: Represents the Content Card ID. This is the unique identifier that must always be parsed in order to log analytics from custom Content Cards.
+* **`extras`**: Encompasses all the key-value pairs from the Braze dashboard.
+
+All properties outside of `idString` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android][1], [iOS][2], [Web][3].
 
 <!--This alert was taken from the Web guide. Is it applicable for Android and Swift as well? -->
 
@@ -194,7 +184,7 @@ braze.openSession();
 
 After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. Set a custom click listener to manually handle these analytics.
 
-<!-- JOSH TO DO: Find out where to put the Android Helper Files (from Android implementation guide) --->
+<!-- JOSH TO DO: Reminder: When you remove the information from the Android guide that is duplicative with this article, move the Helper file information from Advanced Integration Guide into the Integration section --->
 
 {% tabs %}
 {% tab Android %}
@@ -205,7 +195,7 @@ The [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-de
 
 To log an impression or click on a card, call [`Card.logClick()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html) or [`Card.logImpression()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html) respectively. 
 
-You can manually log or set a Content Card as "dismissed" to Braze for a particular card with [`setIsDismissed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html#-1644350493%2FProperties%2F-1725759721). If a card is already marked as dismissed, it cannot be marked as dismissed again.
+You can manually log or set a Content Card as "dismissed" to Braze for a particular card with [`setIsDismissed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissed.html). If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
 {% subtabs %}
 {% subtab Java %}
@@ -362,3 +352,7 @@ braze.logCardClick(card, true);
 
 {% endtab %}
 {% endtabs %}
+
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/
