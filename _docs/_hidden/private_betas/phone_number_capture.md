@@ -44,7 +44,7 @@ To get started building your phone number capture form, select the phone number 
 
 ![][img3]{: style="max-width:40%"}
 
-From the side menu, specify which subscription group this template will collect phone numbers for. To adhere to compliance best practices, you can only collect consent to one subscription group per Phone Number Capture form. However, you can use multiple forms to collect consent for other subscription groups if desired.
+From the side menu, specify which subscription group this template will collect phone numbers for. To adhere to compliance best practices, you can only collect consent to one subscription group per phone number capture form. However, you can use multiple forms to collect consent for other subscription groups if desired.
 
 ![][img4]{: style="max-width:40%"}
 
@@ -93,4 +93,4 @@ Once your campaign has launched, you can analyze results in real time to see how
 [img3]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}
 [img4]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %}
 [img5]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_countries.png %}
-[img6]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_message_styles.gif %}
+[img6]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_custom_font.gif %}
