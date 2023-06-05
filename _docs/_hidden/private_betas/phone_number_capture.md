@@ -2,20 +2,20 @@
 nav_title: Phone Number Capture
 article_title: Phone Number Capture
 permalink: "/phone_number_capture/"
-description: "This reference page covers how to create a phone number capture form with the in-app message drag & drop editor."
+description: "This reference page covers how to create a phone number capture form with the in-app message drag-and-drop editor."
 ---
 
 # Phone number capture form
 
-> Learn how to create an in-app message to collect users' phone numbers capture  form.
+> Learn how to create an in-app message to collect users' phone numbers capture form.
 
-The phone number capture form is a template available in the Drag & Drop Editor for in-app messages. Use this template to collect users' phone numbers and grow your subscription groups.
+The phone number capture form is a template available in the drag-and-drop editor for in-app messages. Use this template to collect users' phone numbers and grow your subscription groups.
 
 ![][img1]{: style="max-width:35%"}
 
 ## SDK requirements
 
-In addition to the [minimum SDK versions][1] required to receive messages built using the Drag & Drop Editor, users will need to be on the following minimum SDK versions to include text links that do not dismiss the message:
+In addition to the [minimum SDK versions][1] required to receive messages built using the drag-and-drop editor, users will need to be on the following minimum SDK versions to include text links that do not dismiss the message:
 
 {% sdk_min_versions swift:6.2.0 android:26.0.0 %}
 
@@ -75,7 +75,7 @@ For more information about SMS compliance, see [SMS Laws and Regulations][4].
 
 ### Step 4: Style your message
 
-You can customize the look and feel of your message using the Drag & Drop Editor [in-app message components][3].
+You can customize the look and feel of your message using the drag-and-drop [in-app message components][3].
 
 ## Reporting
 
