@@ -24,9 +24,9 @@ Go to **Messaging** > **Canvas**, then click **Create Canvas**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Engagement**.
 {% endalert %}
 
-## Step 2: Use the entry wizard to set up your Canvas
+## Step 2: Set up your Canvas
 
-The Entry Wizard will guide you through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the following tabs to see what settings you can adjust in each of the Entry Wizard steps.
+The Canvas builder will guide you step-by-step through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the following tabs to see what settings you can adjust in each of the builder steps.
 
 {% tabs local %}
   {% tab Basics %}
@@ -67,9 +67,13 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
 
     Learn how to [build your Canvas](#step-3-build-your-canvas) using the Canvas builder.
   {% endtab %}
+  {% tab Summary %}
+    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow]({{site.baseurl}}/canvas_approval/) turned on, you can approve the Canvas details before launching.
+
+  {% endtab %}
 {% endtabs %}
 
-### Step 2a: Set up your Canvas basics
+### Step 2a: Start with your Canvas basics
 
 Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). You can also assign conversion events for the Canvas.
 
@@ -77,17 +81,17 @@ Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/admini
 Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
 {% endalert %}
 
-![][51]
+![][53]
 
 #### Choose conversion events
 
-Choose your Conversion Event Type, then select the conversions you would like to record. We will use the [Conversion Event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) that you set from this screen to measure the efficiency of your Canvas. 
+Choose your conversion event type, then select the conversions to record. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) will measure the efficiency of your Canvas. 
 
-![Primary Conversion Event A with the Makes Purchase conversion event type to record conversations for users who make any purchase within a three day conversion deadline.][52]{: style="max-width:75%;"}
+![Primary Conversion Event A with the Makes Purchase conversion event type to record conversations for users who make any purchase within a three day conversion deadline.][52]
 
-If your Canvas has multiple variants or a Control Group, Braze will use this conversion event to determine the best variation for achieving this conversion goal. Using the same logic, you can create multiple conversion events.
+If your Canvas has multiple variants or a control group, Braze will use this conversion event to determine the best variation for achieving this conversion goal. Using the same logic, you can create multiple conversion events.
 
-### Step 2b: Set your Canvas entry schedule
+### Step 2b: Determine your Canvas entry schedule
 
 You can choose one of three ways in which users can enter your Canvas. 
 
@@ -97,21 +101,22 @@ You can choose one of three ways in which users can enter your Canvas.
   {% tab Scheduled Delivery %}
     With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a campaign. You can enroll users in a Canvas as soon as it is launched, or enter them into your journey at some point in the future, or on a recurring basis.
 
-    ![Canvas Scheduled Delivery]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
+    ![An example of scheduled delivery. Users will enter the Canvas once, starting at 1:30 pm on June 10, 2023.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
   {% tab Action-Based Delivery %}
-    With action-based delivery, you can choose to enter users into a Canvas when they perform certain triggers. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event. <br><br>Note that action-based delivery is unavailable for Canvas components with in-app messages.
+    With action-based delivery, users will enter the Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event.
 
-    ![Canvas Action-Based Delivery]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
+    You can control other aspects of the Canvas behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings. Note that action-based delivery is unavailable for Canvas components with in-app messages.
 
-    You can control other aspects of your Canvas' behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings.
+    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2023.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
+
   {% endtab %}
   {% tab API-Triggered Delivery %}
-    With API-triggered deliver, you can choose to enter users into a Canvas via an API request. In the dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br><br>Users will enter your Canvas and begin receiving messages once they have been added using the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via the API.
+    With API-triggered delivery, users will enter your Canvas and begin receiving messages once they have been added using the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via the API. In the dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). 
 
-    ![Canvas API-Triggered Delivery]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
+    ![An example of API-triggered delivery with a Canvas ID and an example of a cURL request.]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
 
-    API-Triggered Delivery Endpoints:
+    You can use the following endpoints for API-triggered delivery:
     - [POST: Send Canvas Messages via API-Triggered Delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
     - [POST: Schedule API-Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
     - [POST: Update Scheduled API-Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/)
@@ -152,9 +157,7 @@ Entry controls determine if users are allowed to re-enter a Canvas. You can also
 
 ### Step 2d: Select your send settings
 
-Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. 
-
-By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
+Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -182,7 +185,7 @@ If desired, specify Quiet Hours (the time during which your messages will not se
 
 Click **Add Variant** and select the option to add a new variant to your Canvas. Variants represent a journey that your users will take, and can contain multiple steps and branches.
 
-You can add additional variants by pressing the <i class="fas fa-plus-circle"></i> plus button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies.
+You can add additional variants by clicking the <i class="fas fa-plus-circle"></i> plus button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies.
 
 ![][12]
 
@@ -298,9 +301,9 @@ For this reason, Intelligent Selection works best on Canvases that have new user
 
 ## Step 5: Save and launch your Canvas
 
-Once you're done creating your Canvas, press **Launch Canvas** to save and launch your Canvas. You can also save your Canvas as a draft if you need to come back to it.
+Once you're done creating your Canvas, click **Launch Canvas** to save and launch your Canvas. Once you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page. 
 
-Once you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page.
+You can also save your Canvas as a draft if you need to come back to it.
 
 ![][19]
 
@@ -323,8 +326,5 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
 [50]: {% image_buster /assets/img/quiet_hours.png %}
-[51]: {% image_buster /assets/img/Basics1.gif %}
 [52]: {% image_buster /assets/img/add_canvas_conversions.png %}
-[53]: {% image_buster /assets/img/entry-schedule-canvas-1.gif %}
-[54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %}
-[55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
+[53]: {% image_buster /assets/img/canvas_details.png %}
