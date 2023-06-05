@@ -32,6 +32,7 @@ $(document).ready(function() {
         bc_list = '<a href="' + base_url + '/' + page_collection + '/' + page_collection_default_path + '">' + page_collection_title + '</a> &nbsp; > &nbsp;' + bc_list;
       }
       breadcrumb.html(bc_list);
+      breadcrumb.parent().addClass('has_breadcrumb')
     }
     else {
       breadcrumb.hide();

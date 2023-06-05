@@ -5,7 +5,6 @@ page_type: reference
 permalink: "/device_and_carriers/"
 description: "This reference article explains what information can be found on the device and carriers page in the dashboard."
 hidden: true
-layout: dev_guide
 ---
 
 # Device & Carriers

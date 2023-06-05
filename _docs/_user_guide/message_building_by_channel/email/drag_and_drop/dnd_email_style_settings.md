@@ -63,7 +63,7 @@ Here, you can adjust the styles of your email titles by editing the font size, f
 
 ![][9]
 
-Optionally, you can override the default style of your Drag & Drop Editor theme. Click **Override default style** to apply your choice of title styling. This can include setting a different font and link color.
+Optionally, you can override the default style of your drag-and-drop editor theme. Click **Override default style** to apply your choice of title styling. This can include setting a different font and link color.
 
 ## Paragraph styling
 
@@ -94,7 +94,7 @@ In the **Button Styling** section, you can edit the following default styles for
 
 As with all other styling sections, you can adjust the block styling by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values.
 
-After editing the styles in the Drag & Drop Email editor, click **Save**. To further customize your email campaigns and Canvases, check out how you can incorporate [Drag & Drop Editor blocks][8].
+After editing the styles in the drag-and-drop email editor, click **Save**. To further customize your email campaigns and Canvases, check out how you can incorporate [drag-and-drop editor blocks][8].
 
 [1]: {% image_buster /assets/img_archive/dnd_global_style_settings.png %}
 [2]: {% image_buster /assets/img_archive/dnd_basic_styling.png %}

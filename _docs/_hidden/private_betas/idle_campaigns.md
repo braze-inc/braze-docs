@@ -2,7 +2,6 @@
 nav_title: "Idle Campaigns"
 permalink: "/idle_campaigns/"
 hidden: true
-layout: dev_guide
 ---
 
 # Idle campaigns
