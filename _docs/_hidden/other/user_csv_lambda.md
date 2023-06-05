@@ -3,7 +3,6 @@ nav_title: User Attribute CSV Lambda Process
 permalink: /user_csv_lambda/
 description: "The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Track users Braze endpoint."
 hidden: true
-layout: dev_guide
 ---
 
 # User attribute CSV to Braze import
