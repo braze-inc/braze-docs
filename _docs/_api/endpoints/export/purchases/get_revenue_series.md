@@ -16,6 +16,8 @@ description: "This article outlines details about the Export revenue data Braze 
 
 > Use this endpoint to return the total money spent in your app over a time range.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f6e05f9a-13c0-4d66-8caa-4a376d25749f{% endapiref %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='purchases product list' %}

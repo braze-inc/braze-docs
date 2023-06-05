@@ -8,7 +8,6 @@ hidden: true
 
 Tool:
   - Canvas
-layout: dev_guide
 ---
 
 # Audience Sync to Criteo

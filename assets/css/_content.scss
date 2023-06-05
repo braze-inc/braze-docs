@@ -65,12 +65,14 @@
         }
       }
     }
-    > h1:first-of-type {
-      &::before {
-        height: ($calc_offset_top - 40px);
+    &.has_breadcrumb {
+      > h1:first-of-type  {
+        &::before {
+          height: ($calc_offset_top - 40px);
+        }
       }
     }
-
+    
     $content_transition_time: 0.2s;
 
       *,
@@ -222,6 +224,7 @@
         }
       }
   }
+
 
   details {
     summary {
