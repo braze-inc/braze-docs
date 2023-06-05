@@ -3,7 +3,6 @@ nav_title: Phone Number Capture
 article_title: Phone Number Capture
 permalink: "/phone_number_capture/"
 description: "This reference page covers how to create a phone number capture form with the in-app message drag & drop editor."
-layout: dev_guide
 ---
 
 # Phone number capture form
@@ -20,7 +19,7 @@ In addition to the [minimum SDK versions][1] required to receive messages built 
 
 {% sdk_min_versions swift:6.2.0 android:0.0.0 %}
 
-{% alert note %}
+{% alert warning %}
 If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, clicking on the link will close the message and the user will not be able to return to the message to submit the form.
 {% endalert %}
 
@@ -54,7 +53,7 @@ By default, we collect numbers globally, however you can limit the number of cou
 
 #### Invalid phone numbers
 
-If your users input a phone number that includes any unaccepted special characters, they will see a generic error and will not be able to submit the form. The error message text cannot be customized. You can view the error behavior in the **Preview & Test** tab and on your test device. Refer to this article to learn [how Braze formats phone numbers][2].
+If your users input a phone number that includes any unaccepted special characters, they will see a generic error indicator that is not customizable and will not be able to submit the form. You can view the error behavior in the **Preview & Test** tab and on your test device. Refer to this article to learn [how Braze formats phone numbers][2].
 
 ### Step 3: Add disclaimer language
 
@@ -84,7 +83,7 @@ Once your campaign has launched, you can analyze results in real time to see how
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#drag-and-drop-in-app-message-components
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
 
