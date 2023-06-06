@@ -277,11 +277,11 @@ You can name the schema and table as you'd like, but the column names should mat
 
 In order for Braze to access Databricks, a personal access token needs to be created.
 
-1. In your Databricks workspace, click your Databricks username in the top bar, and then select `User Settings` from the drop down.
-2. On the Access tokens tab, click Generate new token.
-3. Enter a comment that helps you to identify this token such as Braze CDI, and change the token’s lifetime to no lifetime by leaving the Lifetime (days) box empty (blank).
-4. Click Generate.
-5. Copy the displayed token, and then click Done.
+1. In your Databricks workspace, click your Databricks username in the top bar, and then select **User Settings** from the drop-down.
+2. On the Access tokens tab, click **Generate new token**.
+3. Enter a comment that helps you to identify this token, such as "Braze CDI", and change the token’s lifetime to no lifetime by leaving the Lifetime (days) box empty (blank).
+4. Click **Generate**.
+5. Copy the displayed token, and then click **Done**.
 
 Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
 
@@ -397,7 +397,7 @@ Next, choose a name for your sync and input contact emails. We'll use this conta
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
-You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, Purchase Events, and User Deletes. The data type for a sync cannot be changed after creation. 
+You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are custom attributes, custom events, purchase events, and user deletes. The data type for a sync cannot be changed after creation. 
 
 {% endtab %}
 {% endtabs %}
