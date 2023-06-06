@@ -68,7 +68,7 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
     Learn how to [build your Canvas](#step-3-build-your-canvas) using the Canvas builder.
   {% endtab %}
   {% tab Summary %}
-    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow]({{site.baseurl}}/canvas_approval/) turned on, you can approve the Canvas details before launching.
+    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow]({{site.baseurl}}/canvas_approval/) turned on, you can approve the listed Canvas details before launching.
 
   {% endtab %}
 {% endtabs %}
@@ -233,7 +233,7 @@ The lightweight components in Canvas allow for a simple editing experience, so a
 
 #### Messages in Canvas
 
-Edit the messages in a Canvas component to control messages that a particular step will send. Canvas can send email, mobile, and web push messages, and webhooks to integrate with other systems. Similar to campaign messages, you can use certain Liquid templating to personalize your messages.
+Edit the messages in a Canvas component to control messages that a particular step will send. Canvas can send email, mobile, and web push messages, and webhooks to integrate with other systems. Similar to campaigns, you can use certain [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) templating to personalize your messages.
 
 {% alert tip %}
 Did you know you can include Canvas component names in your messages and link templates?<br>
