@@ -35,7 +35,7 @@ If you are using our [updated navigation]({{site.baseurl}}/navigation), you can 
 2. If not already populated, select the catalog for which this recommendation will calculate the most popular products.
 3. Select the recommendation type:<br><br>
    - **Most popular:** Calculates the items from the catalog that are purchased most often by users in the entire workspace.
-   - **Personalized:** Uses transformers, a new kind of deep learning, to predict each individual user's next most likely set of items to purchase. We calculate up to 20 of the next most likely items ranked from most to least likely.<br><br>
+   - **Personalized:** Uses transformers, a new kind of deep learning, to predict each individual user's next most likely set of items to purchase. We calculate up to 30 of the next most likely items ranked from most to least likely.<br><br>
    Both recommendation types use the last 6 months of purchase data.<br><br>
 4. Select the [Product IDs](#product-ids).
 
