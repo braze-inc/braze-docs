@@ -277,7 +277,7 @@ In order for Braze to access databricks, a personal access token needs to be cre
 4. Click Generate.
 5. Copy the displayed token, and then click Done.
 
-Keep the token in a safe place until you need to entry it on the Braze dashboard during integration credintial creation.
+Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
 
 #### Step 3: Allow access to Braze IPs    
 
