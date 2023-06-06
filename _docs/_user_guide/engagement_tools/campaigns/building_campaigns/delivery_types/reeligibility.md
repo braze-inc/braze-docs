@@ -18,7 +18,7 @@ If you enable re-eligibility, you are overriding this default behavior and allow
 
 ## Canvas
 
-To enable re-elibility for a canvas, check **allow users to re-enter this canvas** in the **entry controls** section of step 3. You can choose between allowing users to re-enter after the maximum duration of the canvas, or after a specified window.
+To enable re-elibility for a Canvas, check **Allow users to re-enter this Canvas** in the **Entry Controls** section. You can choose between allowing users to re-enter after the maximum duration of the Canvas, or after a specified window.
 
 ![Entry Controls][2]
 
@@ -30,7 +30,7 @@ If re-eligibility for a Canvas is set to shorter than the duration of the Canvas
 
 ## Campaigns
 
-To enable re-eligibility for a campaign, select the **Allow users to become re-eligible to receive campaign** checkbox in the **Delivery Controls** section.
+To enable re-eligibility for a campaign, select the **Allow users to become re-eligible to receive campaign** checkbox in the **Delivery Controls** section. The maximum time for re-eligibility for a campaign is 720 days.
 
 ![][1]
 
@@ -56,5 +56,4 @@ With regards to multivariate testing, Braze determines variant re-eligibility fo
 
 [1]: {% image_buster /assets/img_archive/reeligibility_controls_campaign.png %}
 [2]: {% image_buster /assets/img_archive/reeligibility_controls_canvas.png %}
-
 [24]: {% image_buster /assets/img_archive/ReEligible.png %}
