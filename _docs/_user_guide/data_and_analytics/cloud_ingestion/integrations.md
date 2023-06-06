@@ -36,6 +36,12 @@ New Cloud Data Ingestion integrations require some setup on the Braze side and i
 3. Create a new integration in the Braze dashboard  
 4. Test the integration and start the sync  
 {% endtab %}
+{% tab Databricks %}
+1. Create a service account and allow access to the Databricks project(s) and dataset(s) that contain the data you want to sync  
+2. In your Databricks account, set up the table(s) or view(s) you want to sync to Braze   
+3. Create a new integration in the Braze dashboard  
+4. Test the integration and start the sync  
+{% endtab %}
 {% endtabs %}
 
 ### Step 1: Set up tables or views
@@ -269,7 +275,7 @@ You can name the schema and table as you'd like, but the column names should mat
 
 #### Step 2: Create a Access Token  
 
-In order for Braze to access databricks, a personal access token needs to be created.
+In order for Braze to access Databricks, a personal access token needs to be created.
 
 1. In your Databricks workspace, click your Databricks username in the top bar, and then select `User Settings` from the drop down.
 2. On the Access tokens tab, click Generate new token.
