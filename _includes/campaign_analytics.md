@@ -214,7 +214,7 @@ Here are some key in-app message metrics you may see in your analytics. To see t
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-*Body clicks are not automatically collected for in-app messages created with the Drag & Drop Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
+*Body clicks are not automatically collected for in-app messages created with the Drag-and-Drop Editor and the Custom Code Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
 {% endalert %}
 
 {% elsif include.channel == "push" %}

@@ -2,7 +2,6 @@
 nav_title: "Test Currents Connectors"
 permalink: "/test_currents_connectors/"
 hidden: true
-layout: dev_guide
 ---
 
 # Braze Currents

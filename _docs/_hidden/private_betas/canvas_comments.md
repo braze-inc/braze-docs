@@ -4,7 +4,6 @@ article_title: Commenting in Canvas
 permalink: "/canvas_comments/"
 hidden: true
 description: "This reference article covers how to create and manage comments in your Canvases."
-layout: dev_guide
 ---
 
 # Commenting in Canvas

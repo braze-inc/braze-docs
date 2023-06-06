@@ -80,6 +80,14 @@ All images in the annotation still have to pass a quality filter. In order for p
 
 Furthermore, Gmail has a density cap on how many product carousels appear in a user’s Gmail Promotion tab. For instance, if a user subscribes to a lot of brands that use product carousel in their promotion email, Gmail eventually puts a cap on how many product carousels are shown. 
 
+### How are clicks on a promotion card or product carousel tracked?
+
+If you're using links within each promotion card or product carousel, these clicks are tracked by email click tracking. Email opens are tracked when a user opens the email.  
+
+### Is there a way to see how many users received a product carousel?
+
+Gmail determines when and who to display the card to, so there isn't a guarantee that every recipient will see the product carousel.
+
 [1]: https://developers.google.com/gmail/promotab/
 [2]: {% image_buster /assets/img/create-gmail-promo.png %}
 [3]: {% image_buster /assets/img/copy-gmail-promo-script.png %}
