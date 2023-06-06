@@ -10,7 +10,9 @@ description: "This reference article covers how to create an Item Recommendation
 You can use Item Recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
 
 {% alert important %}
-Item Recommendations is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
+Most popular product recommendations is currently in early access.<br>
+Personalized AI recommendations is currently in beta.<br><br>
+Contact your Braze customer success manager if you're interested in participating in the early access or beta.
 {% endalert %}
 
 ## Prerequisites
