@@ -44,7 +44,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
 - name: ActionIQ
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
-
+- name: Lytics
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lytics/
 
 
 ---
