@@ -125,7 +125,7 @@ Results, and exports of results, are tables that can contain up to 1,000 rows. F
 
 Each Braze workspace has 2,000 Query Builder credits available per month. Credits are used whenever you run a query or preview a table. Credit usage corresponds to the run time of your queries. 
 
-For most users, one credit is about one second of run time. However, run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes. The longer the run time is, the more credits a query will cost.
+Credit usage is correlated to the run time of your SQL query. The longer the run time is, the more credits a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
 
 {% alert note %}
 The ability to track credit usage for each query is coming soon.
