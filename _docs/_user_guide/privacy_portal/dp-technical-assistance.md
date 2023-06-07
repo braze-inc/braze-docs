@@ -2,12 +2,9 @@
 nav_title: Data Protection Technical Assistance
 article_title: Data Protection Technical Assistance
 page_order: 10
-noindex: false
-hide_nav: true
-layout: dev_guide
-page_type: reference
 description: "This page provides technical instructions to enable you to manage, through the Braze Platform, requests from individuals in relation to their personal data rights."
-permalink: /dp-technical-assistance/
+alias: /dp-technical-assistance/
+hide_toc: true
 ---
 
 <!--
@@ -140,6 +137,7 @@ Certain Data Protection Laws prevent automated decision-making without human int
 ### Braze Recommendation
 
 Braze does not perform any automated profiling or decision making actions with legal or equivalent ramifications for end users. If you believe that your own usage of the Braze Platform will have legal or equivalent impacts based upon your own usage and you have received an objection to this, you may choose to delete the User Profile in the same manner as under the "Right to Erasure."
+
 
 
 
