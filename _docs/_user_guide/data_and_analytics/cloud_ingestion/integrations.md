@@ -479,12 +479,14 @@ If you reuse the same user across integrations, you cannot delete the user in th
 {% tab Snowflake %}
 Once activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
+![]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
+
 {% endtab %}
 {% tab Redshift %}
 Once activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
+![]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
+
 {% endtab %}
 {% tab BigQuery %}
 
