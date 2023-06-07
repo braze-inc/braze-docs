@@ -1,18 +1,15 @@
 ---
 nav_title: Canvas Approval and Permissions
 article_title: Canvas Approval and Permissions 
-permalink: "/canvas_approval/"
-hidden: true
+page_order: 0.5
+alias: "/canvas_approval/"
 description: "This reference article covers how to approve Canvases before launch and describes related user permissions."
+tool: Canvas
 ---
 
 # Canvas approval and permissions
 
 Canvas approval adds a review process to your workflow before launch. Now, you can ensure that each confirmation is approved in order to launch the Canvas.
-
-{% alert important %}
-The approval workflow for Canvases is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
-{% endalert %}
 
 ## Turning on Canvas approval
 
