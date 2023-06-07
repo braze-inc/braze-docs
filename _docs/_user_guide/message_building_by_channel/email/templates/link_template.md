@@ -12,20 +12,18 @@ channel:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/creating-link-templates){: style="float:right;width:120px;border:0;" class="noimgborder"}Link templates
 
-> Link templates allow you to append parameters or prepend URLs to all links in an email message. This is most often used for the following use cases:
+> Link templates allow you to append parameters or prepend URLs to all links in an email message.
+
+Link templates are most often used for the following use cases:
 
 1. Appending Google Analytics query parameters to all links in a given email message
 2. Prepending a URL to all links in a given email message
-
-{% alert note %}
-When using link templates and [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), Liquid code must only be added within the body tag to ensure consistent rendering.
-{% endalert %}
 
 ## Creating a link template
 
 ![][11]{: style="float:right;max-width:20%;"}
 
-To create a link template, go to **Templates** > **Link Templates**.
+To create a link template, go to **Templates** > **Email Link Templates**. 
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Link Templates**.
@@ -34,13 +32,15 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 You can create an unlimited number of link templates to support your various needs. Click **Create Link Template** to get started.
 
 {% alert note %}
-Link templates are an optional feature. If the **Link Templates** tab is missing from your **Templates & Media** page, reach out to your customer success manager or account manager to enable the feature flipper for link templates.
+Link templates are an optional feature. If the **Link Templates** tab is missing from your **Templates & Media** page, reach out to your account manager to enable the feature.
 {% endalert %}
 
 There are two types of link templates you can create:
 
 - [Link template that inserts before a URL](#prepend-link-template)
 - [Link template that inserts after a URL](#append-link-template)
+
+When using link templates and [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), Liquid code must only be added within the body tag to ensure consistent rendering.
 
 ### Prepend: Create a link template that inserts before a URL {#prepend-link-template}
 
@@ -58,14 +58,14 @@ You can have multiple parameters appended to the end of a URL.
 
 ![Template Position, Query Parameters, and Template Preview fields for the link template insertion process after a URL.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
 
-## Using your templates in email campaigns
+## Using templates in email campaigns
 
-Once your templates are set up, you can select which template you would like to use in your email from the email editor.
+Once your link templates are set up, you can select the template to use in your email from the email editor.
 
-- **HTML email editor:** Select your template from the **Link Management** tab. 
-- **Drag & Drop Editor:** Select **Content** then **Link Management**. You will see all the links present in your email and can add the template from there. To access link templates in the Drag & Drop Editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on. 
+- **HTML editor:** Select your template from the **Link Management** tab. 
+- **Drag-and-drop editor:** Select **Content** then **Link Management**. You will see all the links present in your email and can add the template from there. To access link templates in the drag-and-drop editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on. 
 
-![Link Management tab in the Drag and Drop Editor with an example list of link templates.][1]
+![Link Management tab in the drag-and-drop editor with an example list of link templates.][1]
 
 ## Managing link templates
 
