@@ -20,11 +20,11 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 | Sign-On URL | `https://<SUBDOMAIN>.braze.com` <br><br> For the subdomain, use the coordinating subdomain listed in your [Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
 | Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>/auth/saml/callback` <br><br> For some IdPs, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
 | Entity ID | `braze_dashboard` |
-| RelayState API key | Create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permissions, and then input the generated API key as the `RelayState` parameter within your IdP. |
+| RelayState API key | Go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions, and then input the generated API key as the `RelayState` parameter within your IdP. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API keys under **Settings** at **Developer Console** > **API Settings**.
 {% endalert %}
 
 ## SAML SSO setup
@@ -51,9 +51,13 @@ Braze only requires `email` in the SAML Assertion.
 
 Once you have set up Braze within your IdP, they will provide a Target URL and `x.509` certificate which you will input into your Braze account.
 
-After your account manager has enabled SAML SSO for your account, go to `Company Settings` > `Security Settings` and toggle the SAML SSO section to `ON`.
+After your account manager has enabled SAML SSO for your account, go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**
 
-On this page, you, input:
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), select your account icon and go to **Company Settings** > **Security Settings** to find the SAML SSO section.
+{% endalert %}
+
+On this page, input the following:
 
 | Requirement | Details |
 |---|---|
@@ -78,11 +82,11 @@ When you save your Security Settings and log out, you should now be able to sign
 
 ## SSO behavior
 
-Members who opt to use SSO will **no longer be able to use their password as they did prior**. Users who continue to use their password will be able to unless restricted by the following settings. 
+Members who opt to use SSO will no longer be able to use their password as they did prior. Users who continue to use their password will be able to unless restricted by the following settings.
 
 ## Restriction
 
-You can also choose to restrict the members of your organization to sign-in with either Google SSO or SAML SSO. In order to enable, go to **Company Settings** > **Security Settings** and select either **Enforce Google SSO only login** or **Enforce custom SAML SSO only login**.
+You can also choose to restrict the members of your organization to sign-in with either Google SSO or SAML SSO. In order to enable, go to **Security Settings** and select either **Enforce Google SSO only login** or **Enforce custom SAML SSO only login**.
 
 ![Authentication Rules section of Security Settings page]({% image_buster /assets/img/sso3.png %})
 

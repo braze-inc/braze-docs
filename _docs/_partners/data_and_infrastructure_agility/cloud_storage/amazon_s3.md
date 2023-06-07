@@ -65,18 +65,19 @@ Specify a policy name of your choice, and input the following code snippet into 
 {% tab Braze Currents %}
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    { "Effect": "Allow",
-      "Action": ["s3:GetBucketLocation"],
-      "Resource": ["arn:aws:s3:::INSERTBUCKETNAME"]
-    }
-    ,
-    { "Effect": "Allow",
-      "Action": ["s3:PutObject", "s3:ListBucket"],
-      "Resource": ["arn:aws:s3:::INSERTBUCKETNAME*", "arn:aws:s3:::INSERTBUCKETNAME/", "arn:aws:s3:::INSERTBUCKETNAME"]
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
+            "Resource": ["arn:aws:s3:::INSERTBUCKETNAME"]
+        },
+        {
+            "Effect": "Allow",
+            "Action": ["s3:PutObject", "s3:GetObject"],
+            "Resource": ["arn:aws:s3:::INSERTBUCKETNAME/*"]
+        }
+    ]
 }
 ```
 {% endtab %}
@@ -92,8 +93,8 @@ Specify a policy name of your choice, and input the following code snippet into 
         },
         {
             "Effect": "Allow",
-            "Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"],
-            "Resource": ["arn:aws:s3:::INSERTBUCKETNAME*", "arn:aws:s3:::INSERTBUCKETNAME/", "arn:aws:s3:::INSERTBUCKETNAME"]
+            "Action": ["s3:PutObject", "s3:GetObject"],
+            "Resource": ["arn:aws:s3:::INSERTBUCKETNAME/*"]
         }
     ]
 }
@@ -112,10 +113,10 @@ After creating a new policy, navigate to **Users** and click into your specific 
 {% tabs %}
 {% tab Braze Currents %}
 
-In Braze, navigate to the **Currents** page under **Integrations**. 
+In Braze, navigate to **Partner Integrations** > **Data Export**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Currents** under **Partner Integrations** > **Data Export**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Currents** under **Integrations**.
 {% endalert %}
 
 Next, click **Create Current** and select **Amazon S3 Data Export**.
@@ -140,10 +141,10 @@ A notification will inform you whether your credentials have been successfully v
 {% endtab %}
 {% tab Dashboard Data Export %}
 
-In Braze, navigate to the **Technology Partners** page under **Integrations** and click **Amazon S3**.
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and click **Amazon S3**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 On the AWS Credentials page, make sure the **AWS Secret Access Key** radio button is selected, then input your AWS access ID, AWS secret access key, and AWS S3 bucket name in the designated fields. When inputting your secret key, click **Test Credentials** first to ensure your credentials work, then click **Save** once successful.
@@ -210,7 +211,7 @@ Open the **JSON** tab and input the following code snippet into the **Policy Doc
         },
         {
             "Effect": "Allow",
-            "Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"],
+            "Action": ["s3:PutObject", "s3:GetObject"],
             "Resource": ["arn:aws:s3:::INSERTBUCKETNAME/*"]
         }
     ]
@@ -233,11 +234,11 @@ Within the same IAM section of the console, click **Roles > Create Role**.
 ![]({{site.baseurl}}/assets/img/create_role_1_list.png)
 
 Retrieve your Braze account ID and external ID from your Braze account:
-- **Currents**: In Braze, navigate to the **Currents** page under **Integrations**. Next, click **Create Current** and select **Amazon S3 Data Export**. Here you will find the identifiers needed to create your role.
-- **Dashboard data export**: In Braze, navigate to the **Technology Partners** page under **Integrations** and click **Amazon S3**. Here you will find the identifiers needed to create your role.
+- **Currents**: In Braze, navigate to **Partner Integrations** > **Data Export**. Next, click **Create Current** and select **Amazon S3 Data Export**. Here you will find the identifiers needed to create your role.
+- **Dashboard data export**: In Braze, navigate to **Partner Integrations** > **Technology Partners** and click **Amazon S3**. Here you will find the identifiers needed to create your role.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), these pages are in a new location:<br>- **Currents** is located under **Partner Integrations** > **Data Export** <br>- **Technology Partners** is located under **Partner Integrations**
+If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location:<br>- **Currents** is located under **Integrations** > **Currents** <br>- **Technology Partners** is located under **Integrations**
 {% endalert %}
 
 Back on the AWS Console, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, check the **Require external ID** box, and enter the Braze external ID. Click **Next** when complete.
@@ -307,6 +308,13 @@ A notification will inform you whether your credentials have been successfully v
 
 {% endtab %}
 {% endtabs %}
+
+## Export behavior
+
+Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
+
+- All API exports will not return a download URL in the response body and must be retrieved through data storage.
+- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage. 
 
 ## Multiple connectors
 

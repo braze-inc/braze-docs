@@ -14,12 +14,6 @@ Creating a catalog involves importing a CSV file of non-user data into Braze. Th
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
-You can find **Catalogs** under **Data** in the dashboard.
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Catalogs** under **Data Settings**.
-{% endalert %}
-
 ## Preparing your CSV file
 
 Before creating a catalog, be sure to have your CSV file ready first if your preferred catalog creation method is to upload. 
@@ -29,7 +23,7 @@ Note these guidelines when creating your CSV file. The first column of the CSV f
 - Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)
 - Maximum field (column) name of 250 characters
-- Maximum CSV file size of 100&nbsp;MB
+- Maximum CSV file size of 2&nbsp;GB
 - Maximum field value (cell) of 5,000 characters
 - Maximum field value (cell) size of 0.5&nbsp;KB 
 - Only letters, numbers, hyphens, and underscores for `id` and header values
@@ -42,7 +36,13 @@ Need more space to accommodate for your CSV files? Contact your Braze account ma
 
 ## Selecting your method
 
-To start, click **Create New Catalog**, then choose to either **Upload CSV** or **Create in browser**. 
+To create a catalog, go to **Data Settings** > **Catalogs**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Catalogs** under **Data**.
+{% endalert %}
+
+Click **Create New Catalog**, then choose to either **Upload CSV** or **Create in browser**.
 
 ### Method 1: Upload CSV
 
@@ -297,7 +297,7 @@ The following table describes the limitations that apply at a catalog level:
 ### Storage limits
 
 {% alert important %}
-To request an upgrade for catalogs storage, contact your Braze account manager.
+The package entitlement shown in the Braze dashboard is rounded to the nearest unit for visual purposes; however, you are still entitled to the full entitlement purchased. To request an upgrade for catalogs storage, contact your Braze account manager.
 {% endalert %}
 
 #### Free version

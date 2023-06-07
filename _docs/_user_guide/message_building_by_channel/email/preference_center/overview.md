@@ -9,12 +9,12 @@ channel:
 
 # Preference center overview
 
-> Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/).
+> Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/).<br><br>The following article provides instructions on how to build an API-generated preference center, but you can also build a preference center using the [Drag-And-Drop Editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/).
 
-In the Braze dashboard, navigate to **Subscription Groups > Email Preference Center** tab. 
+In the Braze dashboard, navigate to **Audience** > **Subscriptions** > **Email Preference Center**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Email Preference Center** under **Audience** > **Subscriptions**, then select the **Email Preference Center** tab.
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups > Email Preference Center**.
 {% endalert %}
 
 This is where you can manage and view each subscription group. Each subscription group you create is added to this preference center list. You can create multiple preference centers.
@@ -36,11 +36,11 @@ Using Liquid enables you to retrieve the names of your subscription groups, and 
 | Enabled preference center | Your Braze dashboard has permissions to use the preference center feature. |
 | Valid workspace with an email, SMS, or WhatsApp subscription group | A working workspace with valid users and an email, SMS, or WhatsApp subscription group. |
 | Valid user | A user with an email address and an external ID. |
-| Generated API key with preference center permissions | In the Braze dashboard, go to **Developer Console** > **API Settings** to confirm that you have access to an API key with preference center permissions. |
+| Generated API key with preference center permissions | In the Braze dashboard, go to **Settings** > **API Keys** to confirm that you have access to an API key with preference center permissions. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
 {% endalert %}
 
 ### Step 1: Create a preference center via API

@@ -36,10 +36,10 @@ Use the Heap to Braze integration to automatically sync cohorts defined in Heap 
 
 ### Step 1: Get the Braze data import key
 
-In Braze, click on **Technology Partners** and then select **Heap**. 
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and then select **Heap**. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 On this page, you can find your data import key and a REST endpoint. Take note of both of these values and provide them to your Heap account manager to finish setting up the integration.
@@ -68,10 +68,10 @@ You’ll need a webhook endpoint URL to configure this integration, which you ca
 
 ### Step 2: Configure Braze Currents
 
-In Braze, navigate to **Currents** under **Integrations** and click **Create New Current** and select **Custom Currents Export**. 
+In Braze, navigate to **Partner Integrations** > **Data Export** and click **Create New Current** and select **Custom Currents Export**. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Currents** under **Partner Integrations** > **Data Export**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Currents** under **Integrations**.
 {% endalert %}
 
 Give your export a name, and then proceed to the **Current Details** page. On this page, you'll need to enter the endpoint and optional bearer token (if provided).

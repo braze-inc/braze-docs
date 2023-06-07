@@ -1,5 +1,5 @@
 
-# Short and long codes
+# Sending Phone Numbers
 
 Short and long codes are the phone number from which you send messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Each type of code offers specific benefits and all factors should be considered before choosing whether you want a short code, what type of short code you might want, in addition to the long code you will already be assigned.
 

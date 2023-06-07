@@ -14,7 +14,7 @@ channel:
 
 ## Prerequisite
 
-First, forward your domains and subdomains to <a href="mailto:p-Gmail-Outreach@google.com">p-Gmail-Outreach@google.com</a> to be added to Gmail’s allowlist in order to use any feature that shows rich imagery, such as the product carousel for the Gmail Promotions tab.
+First, forward your domains and subdomains to Google’s Promotions Tab outreach team at <a href="mailto:p-promo-outreach@google.com">p-promo-outreach@google.com</a> to be added to Gmail’s allowlist in order to use any feature that shows rich imagery, such as the product carousel for the Gmail Promotions tab.
 
 ## Building the card with Braze
 
@@ -42,7 +42,7 @@ Promotion cards in your product carousel are helpful to provide images to your o
 
 | Customizable Variable | Description |
 |---|---|
-| Image URL | The URL to your image. Each image in your produc carousel must have a unique URL and use the same aspect ratio (4:5, 1:1, 1.91:1). |
+| Image URL | The URL to your image. Each image in your product carousel must have a unique URL and use the same aspect ratio (4:5, 1:1, 1.91:1). |
 | Target URL | The link for your promotion. |
 | Headline | (optional) One or two sentence description for the promotion. Displays under the preview image. |
 | Currency | (optional) The currency of the price. |
@@ -79,6 +79,14 @@ There are many factors that determine whether product carousel will be shown in 
 All images in the annotation still have to pass a quality filter. In order for product carousel to populate, it's crucial that all images in the annotation are in the recommended image aspect ratio, high quality or high resolution close-up product images. The images should contain little to no text (preferable). The quality filter also filters inappropriate content, so the images must be family, user, and child-friendly.
 
 Furthermore, Gmail has a density cap on how many product carousels appear in a user’s Gmail Promotion tab. For instance, if a user subscribes to a lot of brands that use product carousel in their promotion email, Gmail eventually puts a cap on how many product carousels are shown. 
+
+### How are clicks on a promotion card or product carousel tracked?
+
+If you're using links within each promotion card or product carousel, these clicks are tracked by email click tracking. Email opens are tracked when a user opens the email.  
+
+### Is there a way to see how many users received a product carousel?
+
+Gmail determines when and who to display the card to, so there isn't a guarantee that every recipient will see the product carousel.
 
 [1]: https://developers.google.com/gmail/promotab/
 [2]: {% image_buster /assets/img/create-gmail-promo.png %}

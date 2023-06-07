@@ -151,10 +151,10 @@ BrazePlugin braze = BrazePlugin();
 braze.changeUser("{some-user-id}");
 ```
 
-Then, search for the user with `{some-user-id}` in the dashboard under **User Search**. There, you can verify that session and device data have been logged.
+Then, search for the user with `{some-user-id}` in the dashboard under **Audience** > **Search Users**. There, you can verify that session and device data have been logged.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **User Search** is now **Search Users** and can be found under **Audience**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can search for users from **Users** > **User Search**.
 {% endalert %}
 
 [1]: https://pub.dev/packages/braze_plugin

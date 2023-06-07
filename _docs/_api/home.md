@@ -209,6 +209,14 @@ glossaries:
     description: Return emails that have unsubscribed during the time period from <code>start_date</code> to <code>end_date</code>.
     tags:
       - Email List
+  - name: <a href='/docs/api/endpoints/email/get_query_by_email_or_phone'>/users/subscription</a>
+    description: Return the subscriptipn state value based on an email address or phone number.
+    tags:
+      - Email List
+  - name: <a href='/docs/api/endpoints/email/delete_remove_subscription_state'>/users/subscription</a>
+    description: Delete the subscription state value based on an email address or phone number.
+    tags:
+      - Email List
   - name: <a href='/docs/api/endpoints/templates/email_templates/get_see_email_template_information/'>/templates/email/info</a>
     description: Get information on your email templates.
     tags:
@@ -329,6 +337,14 @@ glossaries:
     description: Return a paginated lists of product IDs.
     tags:
       - Purchases
+  - name: <a href='/docs/api/endpoints/export/purchases/get_number_of_purchases/'>/purchases/quantity_series</a>
+    description: Return the total number of purchases in your app over a time range.
+    tags:
+      - Purchases
+  - name: <a href='/docs/api/endpoints/export/purchases/get_revenue_series/'>/purchases/revenue_series</a>
+    description: Return the total money spent in your app over a time range.
+    tags:
+      - Purchases    
   - name: <a href='/docs/api/endpoints/preference_center/get_create_url_preference_center'>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</a>
     description: Create a URL for a preference center.
     tags:

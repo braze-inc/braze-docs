@@ -41,11 +41,12 @@ After your Content Cards are sent, you can break down or debug any issues from t
 
 A common use case is trying to debug why a user can't see a particular Content Card. To do so, you can look in the **Event User Logs** for the Content Cards delivered to the SDK on session start, but prior to an impression, and trace those back to a specific campaign:
 
+1. Go to **Settings** > **Event User Log**.
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find the **Event User Log** at **Settings** > **Setup and Testing** > **Event User Log**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find the **Event User Log** in the **Developer Console**.
 {% endalert %}
 
-1. Go to the **Developer Console** and select the **Event User Log** tab.
+{:start="2"}
 2. Locate and expand the SDK Request for your test user.
 3. Click **Raw Data**.
 4. Find the `id` for your session. The following shows an example excerpt:

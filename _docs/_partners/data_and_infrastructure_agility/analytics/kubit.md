@@ -27,10 +27,10 @@ The Braze and Kubit integration allows you to import Kubit user cohorts and targ
 
 ### Step 1: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Kubit**. Here, you will find the REST endpoint and generate your Braze data import key. 
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Kubit**. Here, you will find the REST endpoint and generate your Braze data import key. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kubit's dashboard.

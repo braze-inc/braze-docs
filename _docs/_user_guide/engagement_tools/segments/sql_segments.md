@@ -26,16 +26,17 @@ You can do a manual full refresh on all SQL Segments created in either SQL edito
 
 ## Creating SQL Segment Extensions
 
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Segment Extensions** under **Audience**.
-{% endalert %}
-
 {% tabs %}
 {% tab SQL Editor %}
 
 To create a full refresh SQL Segment Extension:
 
-1. Go to **Segments** > **Segment Extensions**.
+1. Go to **Audience** > **Segment Extensions**.
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
+{% endalert %}
+
+{:start="2"}
 2. Click **Create New Extension** and select **SQL Editor**.<br><br>
    ![Dropdown button on the Segment Extension page to open the SQL editor.]({% image_buster /assets/img_archive/sql_segments_create.png %}){: style="max-width:40%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
@@ -47,7 +48,12 @@ To create a full refresh SQL Segment Extension:
 
 The Incremental SQL Editor allows user query aggregations to happen on a per date basis for an event within a given time frame. To create an incremental refresh SQL Segment Extension:
 
-1. Go to **Segments** > **Segment Extensions**.
+1. Go to **Audience** > **Segment Extensions**.
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
+{% endalert %}
+
+{:start="2"}
 2. Click **Create New Extension** and select **Incremental SQL Editor**.<br><br>
    ![Dropdown button on the Segment Extension page to open the incremental SQL editor.]({% image_buster /assets/img_archive/sql_segments_create_incremental.png %}){: style="max-width:40%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
@@ -79,7 +85,7 @@ Note that the tables available to query contain only event data. If you wish to 
 
 Your SQL must additionally adhere to the following rules:
 
-- Write a single SQL statement (that is, only one operator condition can be used). Do not include any semicolons.
+- Write a single SQL statement. Do not include any semicolons.
 - Your SQL must select only one column: the `user_id` column. This means your SQL must contain:
 
 ```sql
@@ -114,7 +120,8 @@ In the following example, the resulting segment would contain users that perform
 
 Your incremental refresh query must additionally adhere to the following rules:
 
-- Write a single SQL statement (that is, only one operator condition can be used). Do not include any semicolons.
+- Write a single SQL statement. Do not include any semicolons.
+- Your incremental SQL segment would be able to refer to just one single event. Your dropdowns for date and count are in reference to your chosen event.
 - Your SQL must have the following columns: `user_id`, `$start_date`, and an aggregation function (such as `COUNT`). Any SQL saved without these three fields will result in an error.
 
 {% alert tip %}

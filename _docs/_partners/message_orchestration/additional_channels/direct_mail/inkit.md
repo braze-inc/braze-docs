@@ -32,10 +32,10 @@ On the Inkit platform, create a template to be used in your Braze campaign in HM
 
 ### Step 2: Create your Braze webhook template
 
-To create an Inkit webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. 
+To create an Inkit webhook template to use in future campaigns or Canvases, navigate to **Templates** > **Webhook Templates** in the Braze platform. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Engagement** > **Templates & Media** > **Webhook Templates**.
 {% endalert %}
 
 If you would like to create a one-off Inkit webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
@@ -58,7 +58,7 @@ Inkit requires an `HTTP Header` for authorization, including your Inkit API key 
 - **HTTP Method**: POST
 - **Request Header**:
   - **Authorization**: Basic `{{ '<INKIT_API_TOKEN>' | base64_encode }}`
-  - **Request Body**: application/json
+  - **Content-Type**: application/json
 {% endraw %}
 
 #### Request body

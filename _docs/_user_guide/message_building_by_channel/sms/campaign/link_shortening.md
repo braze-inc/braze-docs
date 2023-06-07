@@ -19,10 +19,6 @@ channel:
 
 Link shortening and click tracking can be enabled at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 
 
-{% alert important %}
-Shortened links with advanced tracking are currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
-{% endalert %}
-
 The length of the URL will be determined by the type of tracking that is enabled:
 - **Basic tracking** enables campaign-level click tracking. Basic links will have a length of between 20-21 characters.
 - **Advanced tracking** enables campaign-level and user-level click tracking. Links with advanced tracking are longer by up to 7 characters and allow you to create segments of users who have clicked on URLs. Advanced links will have a length of between 27-28 characters.
@@ -125,7 +121,7 @@ Yes! Any static URL parameters can be added.
 
 #### How long do shortened URLs remain valid?
 
-One year.
+One year from the time of URL registration (i.e. first send). 
 
 #### Will Link Shortening work with deep links or universal links?
 

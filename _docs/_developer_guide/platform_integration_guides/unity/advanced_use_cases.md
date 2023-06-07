@@ -20,10 +20,10 @@ You can choose to customize and export the Braze Unity package using the provide
 1. Clone the [Braze Unity SDK GitHub project][1]:
 
 	```bash
-	git clone git@github.com:Appboy/appboy-unity-sdk.git
+	git clone git@github.com:braze-inc/braze-unity-sdk.git
 	```
-2. From the `appboy-unity-sdk/scripts` directory, run `./generate_package.sh` to export the Unity packages. Unity should be open while running `generate_package.sh`.
-3. The packages will be exported to `appboy-unity-sdk/unity-package/`.
+2. From the `braze-unity-sdk/scripts` directory, run `./generate_package.sh` to export the Unity packages. Unity should be open while running `generate_package.sh`.
+3. The packages will be exported to `braze-unity-sdk/unity-package/`.
 4. In the Unity Editor, import the desired package into your Unity project by navigating to **Assets > Import Package > Custom Package**.
 5. (Optional) Deselect any files you do not wish to import.
 
@@ -32,7 +32,7 @@ You can customize the exported Unity package by editing both `generate_package.s
 ## Prime 31 compatibility
 
 To use the Braze Unity plugin with Prime31 plugins, edit your project's `AndroidManifest.xml` to use the Prime31 compatible Activity classes. Change all references of
-`com.appboy.unity.AppboyUnityPlayerActivity` to `com.appboy.unity.prime31compatible.AppboyUnityPlayerActivity`
+`com.braze.unity.BrazeUnityPlayerActivity` to `com.braze.unity.prime31compatible.BrazeUnityPlayerActivity`
 
 ## Amazon ADM push
 

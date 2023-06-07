@@ -1,24 +1,24 @@
 ---
-nav_title: Campaign Calendar
-article_title: Campaign Calendar
+nav_title: Content Calendar
+article_title: Content Calendar
 page_order: 4
 tool: Campaigns
 page_type: reference
-description: "This reference page breaks down the components of the campaign calendar."
+description: "This reference page breaks down the components of the content calendar."
 
 ---
 
-# Campaign Calendar
+# Content Calendar
 
-> The Campaign Calendar is a useful central location in the dashboard where you can see a big picture view of upcoming and past scheduled campaigns. 
+> The Content Calendar is a useful central location in the dashboard where you can see a big picture view of upcoming and past scheduled campaigns.
 
 In addition to this, you will be presented with overall messaging analytics, providing useful information on the type and quantity of future campaigns as well as send stats for past campaigns. 
 ![][5]{: style="float:right;max-width:15%;margin-left:15px;margin-bottom:10px;margin-top:10px;"}
 
-The Campaign Calendar can be found by navigating to the Braze dashboard and selecting **Calendar**, listed under **Campaigns**. 
+To access the calendar, go to **Messaging** > **Content Calendar**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Calendar** is now **Content Calendar** and is located under **Messaging**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Campaigns** > **Calendar**.
 {% endalert %}
 
 ![][4]

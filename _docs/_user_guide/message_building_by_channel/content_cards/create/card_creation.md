@@ -34,7 +34,7 @@ You can choose when Braze creates a card on the **Delivery** step when creating 
 The following options are available:
 
 - **At campaign launch:** The previous default behavior for Content Cards. Braze calculates audience eligibility and personalization when the campaign launches, then creates the card and stores it until the user opens your app.
-- **At first impression:** When the user next opens your app (that is, starts a new [session][3]), Braze determines which Content Cards the user is eligible for, templates any personalization like Liquid or Connected Content, then creates the card.
+- **At first impression (recommended):** When the user next opens your app (that is, starts a new [session][3]), Braze determines which Content Cards the user is eligible for, templates any personalization like Liquid or Connected Content, then creates the card. This option will usually see better performance in card deliveries.
 
 {% alert note %}
 For both options, after a card is created, Braze does not recalculate audience eligibility or personalization.

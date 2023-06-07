@@ -44,11 +44,11 @@ As described on the Apple [developer documentation](https://help.apple.com/devel
 3. Under **Key Description**, enter a unique name for the signing key.
 4. Under **Key Services**, select the **APNs checkbox**, then click **Continue**. Click **Confirm**.
 5. Note the key ID. Click **Download** to generate and download the key. Make sure to save the downloaded file in a secure place, as you cannot download this more than once.
-6. Navigate to **Manage Settings > Settings** in the dashboard and upload the .p8 file under **Apple Push Certificate**.
+6. In Braze, navigate to **Settings > App Settings** and upload the .p8 file under **Apple Push Certificate**.
 7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/account/ios/identifier/bundle/), [key ID](https://developer.apple.com/account/ios/authkey), and [team ID](https://developer.apple.com/account/#/membership). Click **Save**.<br><br>
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Settings** is now **App Settings** and can be found at **Settings** > **Setup and Testing** > **App Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), upload the .p8 file at **Manage Settings** > **Settings**.
 {% endalert %}
 
 {% endtab %}
@@ -72,10 +72,10 @@ Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL cer
 1. Download the production push certificate you just created and open it with the Keychain Access application.
 2. In Keychain Access, click on **My Certificates** and locate your push certificate.
 3. Export it as a `.p12` file and use a temporary, unsecure password (you will need this password when uploading your certificate to Braze).
-4. Navigate to **Manage Settings > Settings** in the dashboard and upload your production certificate under **Apple Push Certificate**.
+4. In Braze, navigate to **Settings** > **App Settings** and upload your production certificate under **Apple Push Certificate**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Settings** is now **App Settings** and can be found at **Settings** > **Setup and Testing** > **App Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can upload the `.p12` file from **Manage Settings** > **Settings**.
 {% endalert %}
 
 >  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate workspace or app for the development version of your app.

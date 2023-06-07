@@ -87,7 +87,7 @@ When possible, breaking changes will be preceded by an announcement and a migrat
 - Changing the type or nullability of an existing column
 
 ### Snowflake regions
-Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. For users outside of those regions, Braze can provide Data Sharing to joint customers who are hosting their Snowflake infrastructure across any AWS or Azure region.
+Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. For users outside of those regions, Braze can provide Data Sharing to joint customers who are hosting their Snowflake infrastructure across any AWS, Azure, or GCP region.
 
 ### Historical data
 Braze's historical event data in Snowflake goes back to April 2019. In the first few months of Braze storing data there, product changes were made that may have resulted in some of that data looking slightly different or having some null values (as we weren't passing data into every available field at this time). It's best to assume that any results that include data before August 2019 may look slightly different from expectations.

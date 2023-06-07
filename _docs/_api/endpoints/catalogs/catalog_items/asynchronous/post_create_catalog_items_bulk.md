@@ -39,7 +39,7 @@ Each request can support up to 50 items. This endpoint is asynchronous.
 | `items` | Required | Array | An array that contains item objects. The item objects should contain all of the fields in the catalog. Up to 50 item objects are allowed per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example Request
+## Example request
 
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
@@ -133,18 +133,18 @@ The following table lists possible returned errors and their associated troubles
 | Error | Troubleshooting |
 | --- | --- |
 | `catalog-not-found` | Check that the catalog name is valid. |
-| `item-array-invalid` | `items` must be an array of objects. |
-| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
-| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
-| `ids-too-large` | Item IDs can't be more than 250 characters. |
-| `ids-not-unique` | Item IDs must be unique in the request. |
 | `ids-not-strings` | Item IDs must be of type string. |
+| `ids-not-unique` | Item IDs must be unique in the request. |
+| `ids-too-large` | Item IDs can't be more than 250 characters. |
+| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
+| `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalalog. This is not related to the ID field mentioned in the error. |
+| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `item-array-invalid` | `items` must be an array of objects. |
 | `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
 | `items-too-large` | Item values can't exceed 5,000 characters. |
-| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
-| `unable-to-coerce-value` | Item types can't be converted. |
-| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
 | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
+| `unable-to-coerce-value` | Item types can't be converted. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

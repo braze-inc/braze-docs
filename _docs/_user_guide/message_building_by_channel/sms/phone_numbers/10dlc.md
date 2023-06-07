@@ -99,7 +99,7 @@ A declared use case means you have chosen one specific non-marketing use case (f
 | Trust Score | Total throughput toward major US networks | AT&T | T-Mobile | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
 | 75-100 | 225 MPS | 75 MPS | 75 MPS | 75 MPS |
-| 51-75 | 120 MPS | 40 MPS | 40 MPS | 40 MPS |
+| 50-74	 | 120 MPS | 40 MPS | 40 MPS | 40 MPS |
 | 1-49 | 12 MPS | 4 MPS | 4 MPS | 4 MPS| 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

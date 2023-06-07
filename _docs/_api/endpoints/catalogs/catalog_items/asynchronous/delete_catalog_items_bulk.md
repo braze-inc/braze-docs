@@ -93,12 +93,12 @@ The following table lists possible returned errors and their associated troubles
 | Error | Troubleshooting |
 | --- | --- |
 | `catalog-not-found` | Check that the catalog name is valid. |
-| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
-| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
 | `ids-too-large` | Item IDs can't be more than 250 characters. |
 | `ids-not-unique` | Check that the item IDs are unique in the request. |
 | `ids-not-strings` | Item IDs must be of type string. |
 | `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
+| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
+| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

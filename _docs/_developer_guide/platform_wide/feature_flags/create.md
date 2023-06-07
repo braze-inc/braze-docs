@@ -17,22 +17,22 @@ platform:
 
 Looking to learn more about what feature flags are and how you can use them in Braze? Check out [About feature flags][5] before proceeding.
 
-{% alert important %}
-Feature flags are currently in beta. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## Prerequisites
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
 
-{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 %}
+{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 %}
+
+{% alert important %} 
+Feature flags are currently in beta. [Click here](https://dashboard.braze.com/engagement/feature_flags) to learn more about joining the beta program.
+{% endalert %}
 
 ## Implement feature flags in the dashboard
 
-Create, edit, and archive feature flags from the **Feature Flags** page, located under **Engagement**. This page displays a list of existing feature flags for this workspace.
+Create, edit, and archive feature flags from **Messaging** > **Feature Flags**. This page displays a list of existing feature flags for this workspace.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Feature Flags** under **Messaging**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Feature Flags** under **Engagement**.
 {% endalert %}
 
 ![A list of previously created feature flags on the Braze dashboard][1]{: style="max-width:75%"}
@@ -169,6 +169,16 @@ if (featureFlag.enabled) {
 ```
 
 {% endtab %}
+{% tab Cordova %}
+```javascript
+const featureFlag = await BrazePlugin.getFeatureFlag("expanded_user_profile");
+if (featureFlag.enabled) {
+  console.log(`expanded_user_profile is enabled`);  
+} else {
+  console.log(`expanded_user_profile is not enabled`);
+}
+```
+{% endtab %}
 {% endtabs %}
 
 ### Accessing properties {#accessing-properties}
@@ -181,13 +191,13 @@ If a feature flag is not enabled, or a property you reference does not exist, th
 {% tab Javascript %}
 
 ```javascript
-// feature flag instance
+// Feature flag instance
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-// string properties
+// String properties
 const stringProperty = featureFlag.getStringProperty("color");
-// boolean properties
+// Boolean properties
 const booleanProperty = featureFlag.getBooleanProperty("expanded");
-// number properties
+// Number properties
 const numberProperty = featureFlag.getNumberProperty("height");
 ```
 
@@ -195,13 +205,13 @@ const numberProperty = featureFlag.getNumberProperty("height");
 {% tab Swift %}
 
 ```swift
-// feature flag instance
+// Feature flag instance
 let featureFlag: FeatureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
-// string properties
+// String properties
 let stringProperty: String? = featureFlag.stringProperty(key: "color")
-// boolean properties
+// Boolean properties
 let booleanProperty: Bool? = featureFlag.boolProperty(key: "expanded")
-// number properties
+// Number properties
 let numberProperty: Double? = featureFlag.numberProperty(key: "height")
 ```
 
@@ -209,13 +219,13 @@ let numberProperty: Double? = featureFlag.numberProperty(key: "height")
 {% tab Java %}
 
 ```java
-// feature flag instance
+// Feature flag instance
 FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
-// string properties
+// String properties
 String stringProperty = featureFlag.getStringProperty("color");
-// boolean properties
+// Boolean properties
 Boolean booleanProperty = featureFlag.getBooleanProperty("expanded");
-// number properties
+// Number properties
 Number numberProperty = featureFlag.getNumberProperty("height");
 ```
 
@@ -237,14 +247,24 @@ val numberProperty = featureFlag.getNumberProperty("height")
 {% tab React Native %}
 
 ```javascript
-// string properties
-const stringProperty = await Braze.getFeatureFlagStringProperty("my_flag", "color");
-// boolean properties
-const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag", "expanded");
-// number properties
-const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag", "height");
+// String properties
+const stringProperty = await Braze.getFeatureFlagStringProperty("my_flag_id", "color");
+// Boolean properties
+const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag_id", "expanded");
+// Number properties
+const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag_id", "height");
 ```
 
+{% endtab %}
+{% tab Cordova %}
+```javascript
+// String properties
+const stringProperty = await BrazePlugin.getFeatureFlagStringProperty("my_flag_id", "color");
+// Boolean properties
+const booleanProperty = await BrazePlugin.getFeatureFlagBooleanProperty("my_flag_id", "expanded");
+// Number properties
+const numberProperty = await BrazePlugin.getFeatureFlagNumberProperty("my_flag_id", "height");
+```
 {% endtab %}
 {% endtabs %}
 
@@ -300,6 +320,14 @@ for(const feature of features) {
 }
 ```
 
+{% endtab %}
+{% tab Cordova %}
+```javascript
+const features = await BrazePlugin.getAllFeatureFlags();
+for(const feature of features) {
+  console.log(`Feature: ${feature.id}`, feature.enabled);
+}
+```
 {% endtab %}
 {% endtabs %}
 
@@ -358,6 +386,11 @@ Braze.refreshFeatureFlags();
 ```
 
 {% endtab %}
+{% tab Cordova %}
+```javascript
+BrazePlugin.refreshFeatureFlags();
+```
+{% endtab %}
 {% endtabs %}
 
 
@@ -371,11 +404,11 @@ This is useful if you want to update your app if a user is no longer eligible fo
 {% tab Javascript %}
 
 ```javascript
-// register an event listener
+// Register an event listener
 const subscriptionId = braze.subscribeToFeatureFlagsUpdates((features) => {
   console.log(`Features were updated`, features);
 });
-// unregister this event listener
+// Unregister this event listener
 braze.removeSubscription(subscriptionId);
 ```
 
@@ -420,12 +453,20 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 {% tab React Native %}
 
 ```javascript
-// register an event listener
+// Register an event listener
 Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
   console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
 });
 ```
 
+{% endtab %}
+{% tab Cordova %}
+```javascript
+// Register an event listener
+BrazePlugin.subscribeToFeatureFlagUpdates((featureFlags) => {
+    console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
+});
+```
 {% endtab %}
 {% endtabs %}
 

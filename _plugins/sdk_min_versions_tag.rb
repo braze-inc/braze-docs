@@ -26,6 +26,22 @@ module Jekyll
 
         @original_roku = get_full_version(text, 'roku')
         @roku_changelog_ref = get_changelog_ref(@original_roku)
+
+        @flutter = get_full_version(text, 'flutter')
+        @flutter_changelog_ref = get_changelog_ref(@flutter)
+
+        @reactnative = get_full_version(text, 'reactnative')
+        @reactnative_changelog_ref = get_changelog_ref(@reactnative)
+
+        @unity = get_full_version(text, 'unity')
+        @unity_changelog_ref = get_changelog_ref(@unity)
+
+        @cordova = get_full_version(text, 'cordova')
+        @cordova_changelog_ref = get_changelog_ref(@cordova)
+
+        @xamarin = get_full_version(text, 'xamarin')
+        @xamarin_changelog_ref = get_changelog_ref(@xamarin)
+
       end
 
       def render(context)
@@ -51,7 +67,21 @@ module Jekyll
         if !@original_roku.nil?
           render_html += "<a href='/docs/developer_guide/platform_integration_guides/roku/changelog/##{@roku_changelog_ref}' class='sdk-versions--chip roku-sdk' target='_blank'><i class='fa-solid fa-tv'></i> &nbsp; Roku: #{@original_roku}+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a>"
         end
-
+        if !@flutter.nil?
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/flutter/changelog/##{@flutter_changelog_ref}' class='sdk-versions--chip flutter-sdk' target='_blank'>Flutter: #{@flutter}+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a>"
+        end
+        if !@unity.nil?
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/unity/changelog/##{@unity_changelog_ref}' class='sdk-versions--chip unity-sdk' target='_blank'>Unity: #{@unity}+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a>"
+        end
+        if !@reactnative.nil?
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/react_native/changelog/##{@reactnative_changelog_ref}' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: #{@reactnative}+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a>"
+        end
+        if !@cordova.nil?
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/cordova/changelog/##{@cordova_changelog_ref}' class='sdk-versions--chip cordova-sdk' target='_blank'>Cordova: #{@cordova}+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a>"
+        end
+        if !@xamarin.nil?
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/xamarin/changelog/##{@xamarin_changelog_ref}' class='sdk-versions--chip xamarin-sdk' target='_blank'>Xamarin: #{@xamarin}+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a>"
+        end
         render_html += "</div>"
         return render_html
       end

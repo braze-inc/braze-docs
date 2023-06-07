@@ -235,9 +235,13 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 {% endtab %}
 {% endtabs %}
 
-#### Capturing dates as object properties
+## Capturing dates as object properties
 
 To capture dates as object properties, you must use the `$time` key. In the following example, an "Important Dates" object is used to capture the set of object properties, `birthday` and `wedding_anniversary`. The value for these dates is an object with a `$time` key.
+
+{% alert note %}
+If you haven't captured dates as object properties initially, we recommend resending this data using the `$time` key for all users. Otherwise, this may result in incomplete segments when using the `$time` attribute.
+{% endalert %}
 
 ```json
 {
@@ -330,10 +334,10 @@ For this example, suppose we have an `accounts` object array that we've just sen
  ]
 ```
 
-In the Braze dashboard, navigate to **Manage Settings** > **Custom Attributes**. 
+In the Braze dashboard, navigate to **Data Settings** > **Custom Attributes**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Data Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
 {% endalert %}
 
 Search for your object or object array. In the **Attribute Name** column, click **Generate Schema**.

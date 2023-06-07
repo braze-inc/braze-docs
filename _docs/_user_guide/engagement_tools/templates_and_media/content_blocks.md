@@ -23,10 +23,10 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-Creating a Content Block is easy—go to the **Templates & Media** section, then select the **Content Blocks Library** tab. Click **Create Content Block.** Then, start editing the details of your Content Block!
+Go to **Templates** > **Content Blocks**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **Templates & Media** is now just **Templates**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), **Templates** is **Templates & Media**.
 {% endalert %}
 
 There are two types of editors used to create a Content Block—classic and drag-and-drop. These two types of editors correspond to the type of Content Block: HTML and drag-and-drop. You can also create and manage your Content Blocks [via API][5].

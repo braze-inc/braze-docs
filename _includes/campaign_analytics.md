@@ -1,14 +1,6 @@
 ## Campaign Analytics
 
-Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For 
-  {% if include.channel == "Content Card" %}Content Cards
-  {% elsif include.channel == "email" %}email
-  {% elsif include.channel == "in-app message" %}in-app messages
-  {% elsif include.channel == "push" %}push messages
-  {% elsif include.channel == "SMS" %}SMS messages
-  {% elsif include.channel == "whatsapp" %}WhatsApp messages
-  {% elsif include.channel == "webhook" %}webhooks{% endif %} 
-  sent in Canvas, refer to [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started measuring_and_testing_with_canvas_analytics/).
+Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For {% if include.channel == "Content Card" %}Content Cards {% elsif include.channel == "email" %}email {% elsif include.channel == "in-app message" %}in-app messages {% elsif include.channel == "push" %}push messages {% elsif include.channel == "SMS" %}SMS messages {% elsif include.channel == "whatsapp" %}WhatsApp messages {% elsif include.channel == "webhook" %}webhooks {% endif %}sent in Canvas, refer to [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).
 
 {% alert tip %}
 Looking for definitions for the terms and metrics listed in your report? Refer to our 
@@ -222,7 +214,7 @@ Here are some key in-app message metrics you may see in your analytics. To see t
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-*Body clicks are not automatically collected for in-app messages created with the Drag & Drop Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
+*Body clicks are not automatically collected for in-app messages created with the Drag-and-Drop Editor and the Custom Code Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
 {% endalert %}
 
 {% elsif include.channel == "push" %}

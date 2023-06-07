@@ -24,6 +24,10 @@ Facebook audience export uses the **User Access Token** to authorize requests.<b
 If you are using this feature alongside the [Audience Sync to Facebook]({{site.baseurl}}/audience_sync_facebook/) feature (currently in Beta), Braze will default to using the more reliable **System User Token** that you have already generated, to authorize requests.
 {% endalert %}
 
+{% alert note %}
+If you are participating in testing Meta Work Accounts in beta, ensure you disconnect and reconnect your account to the [Facebook partner page]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook). 
+{% endalert %}
+
 ## Prerequisites
 
 | Requirement | Description |
@@ -37,10 +41,10 @@ If you are using this feature alongside the [Audience Sync to Facebook]({{site.b
 
 ### Connect to Facebook
 
-In the Braze dashboard, go to **Technology Partners** and select **Facebook**. 
+In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Facebook**. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Partner Integrations**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
 In the Facebook Audience Export module, click **Connect Facebook**.

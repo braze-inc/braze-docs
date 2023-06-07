@@ -4,13 +4,13 @@ article_title: Message Archiving
 alias: "/message_archiving/"
 page_order: 0
 page_type: reference
-description: "This reference article covers Message Archiving, a feature that allows you to save a copy of messages sent to users."
+description: "This reference article covers message archiving, a feature that allows you to save a copy of messages sent to users."
 
 ---
 
-# Message Archiving
+# Message archiving
 
-> The Message Archiving feature lets you save a copy of messages sent to users for archival or compliance purposes to your S3 bucket.
+> Message archiving lets you save a copy of messages sent to users for archival or compliance purposes to your S3 bucket.
 
 ## Prerequisites
 
@@ -31,6 +31,11 @@ An example file may look like this:<br>
 
 {% alert important %}
 Enabling this feature will impact the delivery speed of your messages as the S3 file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
+{% endalert %}
+
+{% alert note %}
+**Having trouble finding your push tokens in your S3 buckets?**<br>
+Braze .downcase the push tokens **before** md5 hashing. This would result in the token `Test_Push_Token12345` to be the S3 folder `45a61753adab78677ad9e6585b59e328`.
 {% endalert %}
 
 ## File references
@@ -97,6 +102,8 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
   "message_variation_id": MessagVariationId, // may not be available
 }
 ```
+
+Refer to our code example repository for [message archive sample files](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
 
 ## Frequently asked questions
 

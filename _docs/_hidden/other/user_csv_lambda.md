@@ -3,7 +3,6 @@ nav_title: User Attribute CSV Lambda Process
 permalink: /user_csv_lambda/
 description: "The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Track users Braze endpoint."
 hidden: true
-layout: dev_guide
 ---
 
 # User attribute CSV to Braze import
@@ -60,10 +59,10 @@ You can find your API URL, or REST endpoint, in the Braze API documentation and 
 
 To connect with the Braze servers, you will need an API key. This unique identifier allows Braze to verify your identity and upload your data. 
 
-To get your API key, go to the **API Settings** tab of the **Developer Console**. 
+To get your API key, go to **Settings** > **API Keys**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API key at **Developer Console** > **API Settings**.
 {% endalert %}
 
 You will need an API key that has permission to post to `/users/track` endpoint. If you know one of your API keys supports that endpoint, you can use that key. 

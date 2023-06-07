@@ -87,6 +87,10 @@ For more details, refer to the [`Context` class documentation](https://braze-inc
 
 ## Refreshing Content Cards
 
+{% alert tip %}
+To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed once they are available.
+{% endalert %}
+
 You can manually request Braze to refresh the user's Content Cards using the `requestRefresh` method on the `Braze` instance:
 {% tabs local %}
 {% tab Swift %}
@@ -119,6 +123,10 @@ let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
 
 {% endtab %}
 {% endtabs %}
+
+{% alert important %}
+The default rate limit for calling `requestRefresh` is 3 calls per 10 minutes per device to prevent performance degradation and errors.
+{% endalert %}
 
 ## Content Cards UI integration
 

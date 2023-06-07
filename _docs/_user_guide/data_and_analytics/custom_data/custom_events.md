@@ -25,10 +25,10 @@ Some common custom event use cases include:
 
 ## Managing custom events
 
-To create and manage custom events in the dashboard, go to **Manage Settings** > **Custom Events**. 
+To create and manage custom events in the dashboard, go to **Data Settings** > **Custom Events**. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Events** under **Data Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Events** under **Manage Settings**.
 {% endalert %}
 
 From this page, you can view, manage, or blocklist existing custom events, or create a new one. If you block a custom event, no data will be collected regarding that event, existing data will be unavailable unless reactivated, and blocklisted events will not show up in filters or graphs.
@@ -73,13 +73,13 @@ The following table shows the filters available for segmenting users by custom e
 
 ## Custom event analytics
 
-Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. You can view these analytics on the **Custom Events** page under **Data**.
+Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. You can view these analytics at **Analytics** > **Custom Events Report**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Events Report** under **Analytics** > **Reports** > **Custom Events Report**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find the **Custom Events** report under **Data**.
 {% endalert %}
 
-On the **Custom Events** reporting page in the dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
+On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
 
 ![Custom event counts graph on the Custom Events page in the dashboard showing trends for two different custom events][8]
 
@@ -205,6 +205,7 @@ You can use nested objects—objects that are inside of another object—to send
 
 - Nested data is supported for both [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/), but not other event types.
 - Event property objects that contain array or object values can have an event property payload of up to 50 KB.
+- Event property schemas cannot be generated for purchase events.
 - Event property schemas are generated through sampling custom events from the last 24 hours.
 - The following SDK versions support nested objects:
 

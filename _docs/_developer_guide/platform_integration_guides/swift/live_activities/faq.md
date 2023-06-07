@@ -48,11 +48,7 @@ Apple requires that the user initiates the Live Activity through some action in 
 
 ### How do I know if Live Activites has errors?
 
-Any Live Activity errors will be logged in the Braze dashboard under **Developer Console** > **Message Activity Log**, where you can filter by "LiveActivity Errors".
-
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** at **Settings** > **Setup and Testing** > **Message Activity Log**.
-{% endalert %}
+Any Live Activity errors will be logged in the Braze dashboard in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/), where you can filter by "LiveActivity Errors".
 
 ### I am receiving an Access Denied response when I try to use the `live_activity/update` endpoint. Why?
 

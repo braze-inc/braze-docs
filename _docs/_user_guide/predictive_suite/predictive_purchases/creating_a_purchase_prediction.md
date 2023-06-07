@@ -10,10 +10,10 @@ description: "This article covers how to create a Purchase Prediction within the
 
 > Learn how to create a Purchase Prediction within the Braze dashboard.
 
-On the left navigation bar of the Braze dashboard, choose the **Predictions** page.
+In Braze, go to **Analytics** > **Predictive Purchase**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Analytics**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Engagement**.
 {% endalert %}
 
 A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions and some basic info about them. Here, you can rename, archive, and create new Predictions. Archived Predictions are inactive and do not update user scores. 

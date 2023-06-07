@@ -65,12 +65,14 @@
         }
       }
     }
-    > h1:first-of-type {
-      &::before {
-        height: ($calc_offset_top - 40px);
+    &.has_breadcrumb {
+      > h1:first-of-type  {
+        &::before {
+          height: ($calc_offset_top - 40px);
+        }
       }
     }
-
+    
     $content_transition_time: 0.2s;
 
       *,
@@ -171,6 +173,11 @@
           }
         }
       }
+      @for $oli from 1 through 5 {
+        ol[start="#{$oli}"] {
+          counter-reset: li #{$oli - 1};
+        }
+      }
       img {
         border: 1px solid $grey-ghost;
         border-width: 1px;
@@ -218,13 +225,15 @@
       }
   }
 
+
   details {
     summary {
-      font-size: 18px;
+      font-size: 16px;
       color: #212123;
     }
     p, ol, ul {
       padding: 5px 0 0 0px;
+      font-size: 16px
     }
     .detail_div {
       border: 1px solid $grey-ghost !important;

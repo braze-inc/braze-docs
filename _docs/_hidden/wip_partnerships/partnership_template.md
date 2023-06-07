@@ -28,12 +28,12 @@ The following requirements listed are typical requirements you might need from B
 | Requirement | Description |
 | ----------- | ----------- |
 | Partner account | A partner account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), **API Settings** is now **API Keys** and can be found at **Settings** > **Setup and Testing** > **API Keys**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
 {% endalert %}
 
 ## Use cases
@@ -71,7 +71,7 @@ Once you have selected the [Partner] webhook template, you should see the follow
 - **HTTP Method**: POST
 - **Request Header**:
   - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
-  - **Request Body**: application/json
+  - **Content-Type**: application/json
 {% endraw %}
 #### Request body
 Include code of your webhook request body. 

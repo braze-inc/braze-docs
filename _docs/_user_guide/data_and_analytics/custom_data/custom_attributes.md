@@ -15,10 +15,10 @@ When stored in Braze, these characteristics can be used to build out audience se
 
 ## Managing custom attributes
 
-To create and manage custom attributes in the dashboard, go to **Manage Settings** > **Custom Attributes**. 
+To create and manage custom attributes in the dashboard, go to **Data Settings** > **Custom Attributes**. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Data Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
 {% endalert %}
 
 From this page, you can view, manage, or blocklist existing custom attributes, or create a new one. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters.

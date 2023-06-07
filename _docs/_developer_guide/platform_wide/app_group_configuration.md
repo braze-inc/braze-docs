@@ -25,10 +25,10 @@ Workspaces are where you organize your apps. Think of each of these workspaces a
    - You might want to adopt a naming convention so that others in your company can easily find your workspace. For example: *FinanceApp - Production* and *FinanceApp - Development*.
 3. Click **Add workspace** to confirm.
 
-Next, you'll be taken to the **Settings** page. Generally, you can access this page by going to **Manage Settings** > **Settings**.
+Next, you'll be taken to the **App Settings** page. You can access this page at any time from **Settings** > **App Settings**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find this page under **Settings** > **Setup and Testing** > **App Settings**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page under **Manage Settings** > **Settings**.
 {% endalert %}
 
 ### Step 2: Add your apps
@@ -42,7 +42,7 @@ After adding your app, you will have access to its API key. The API key is used 
 You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android, create four app instances within your workspace (Free iOS app, free Android app, pro iOS app, and pro Android app). This will give you four API keys to use, one for each app instance.
 
 {% alert tip %}
-The **Live SDK Version** displayed on the **Settings** page for a specific app is the highest app version with at least 5% of your total daily sessions and has least 500 sessions in the past day.
+The **Live SDK Version** displayed on the **App Settings** page for a specific app is the highest app version with at least 5% of your total daily sessions and has least 500 sessions in the past day.
 {% endalert %}
 
 #### Add a testing workspace

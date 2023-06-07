@@ -16,6 +16,8 @@ description: "This article outlines details about the Create a preference center
 
 > Use this endpoint to create a preference center to allow users to manage their notification preferences for email campaigns. 
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
+
 Check out [Creating a preference center via API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/) for details on how to include this in your email campaigns.
 
 ## Rate limit
@@ -77,7 +79,7 @@ Refer to the following Liquid tags that can be included in your HTML to generate
 | Liquid | Description |
 | --------- | ---------|
 |`{% form_field_name :email_global_state %}`| Indicates that a specific form input element corresponds to the user's global email subscribed state. The user's selection state should be "opted_in", "subscribed", or "unsubscribed" when the form is submitted with selection data for the global email subscribed state. If it's a checkbox, the user will either be "opted_in" or "unsubscribed". For a hidden input, the "subscribed" state will also be valid. |
-|`{% form_field_name :subscription_group <external_id> %}`| Indicates that a specific form input element corresponds to a given subscription group. The user's selection state should be either "subscribed" or "unsubscribed" when the form is submitted with selection data for a specific subscription group. |
+|`{% form_field_name :subscription_group <subscription_group_id> %}`| Indicates that a specific form input element corresponds to a given subscription group. The user's selection state should be either "subscribed" or "unsubscribed" when the form is submitted with selection data for a specific subscription group. |
 |`{{preference_center_submit_url}}`| Generates URL for form submission. |
 {: .reset-td-br-1 .reset-td-br-2}
 

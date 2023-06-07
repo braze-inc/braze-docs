@@ -35,10 +35,10 @@ Try to use the same conversion events for conversion A, B, etc across campaigns 
 
 ### Step 1: Create a new report
 
-Within the dashboard, navigate to the **Report Builder** page in the lefthand navigation. 
+Within the dashboard, navigate to **Analytics** > **Report Builder**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Report Builder** under **Analytics** > **Reports** > **Report Builder**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Report Builder** under **Data**.
 {% endalert %}
 
 Click **Create New Report** and select either a campaign comparison report or a Canvas comparison report.

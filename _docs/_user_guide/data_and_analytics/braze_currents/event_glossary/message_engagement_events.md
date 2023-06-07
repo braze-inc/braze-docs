@@ -263,7 +263,6 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
   "company_id": (optional, string) ID of the sending Company,
   "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
   "external_user_id": (optional, string) External user ID of the user,
-  "in_reply_to": (optional, string) WhatsApp message ID for the sent message for an inbound reply,
   "inbound_phone_number": (optional, string)the inbound number that the message was sent to,
   "medial_urls": (optional, string[]) media urls from the user, 
   "message_body": (optional, string) typed response from the user,
