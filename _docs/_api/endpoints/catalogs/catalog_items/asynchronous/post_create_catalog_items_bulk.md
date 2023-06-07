@@ -137,7 +137,7 @@ The following table lists possible returned errors and their associated troubles
 | `ids-not-unique` | Item IDs must be unique in the request. |
 | `ids-too-large` | Item IDs can't be more than 250 characters. |
 | `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
-| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
+| `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalalog. This is not related to the ID field mentioned in the error. |
 | `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
 | `item-array-invalid` | `items` must be an array of objects. |
 | `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |

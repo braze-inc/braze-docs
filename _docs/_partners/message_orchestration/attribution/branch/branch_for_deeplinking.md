@@ -25,7 +25,7 @@ Follow [Branch's SDK integration guide](https://help.branch.io/developers-hub/do
 To support sending iOS universal links as deep links from within Braze:
 
 1. Follow Branch's documentation for setting up [universal links][3].
-2. Add the `ABKURLDelegate` to your Braze SDK integration to [route universal links][4] from within your app.
+2. Implement the [`BrazeDelegate`][4] method [braze(_:shouldOpenURL:)][5] in your Braze SDK integration to [route universal links][6] from within your app.
 
 ### Deep linking in email
 
@@ -33,14 +33,16 @@ See [Branch's documentation](https://docs.branch.io/pages/integrations/braze/) t
 
 Depending on your ESP, additional customization may be required to support click-tracked universal links:
 
-- [SendGrid][5]
-- [Mailjet][6]
-- [SparkPost][7]
+- [SendGrid][7]
+- [Mailjet][8]
+- [SparkPost][9]
 
 [1]: https://branch.io/
 [2]: {{site.baseurl}}/partners/branch_for_attribution/
 [3]: https://docs.branch.io/pages/deep-linking/universal-links/#search
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization
-[5]: https://help.branch.io/using-branch/page/braze-sendgrid
-[6]: https://help.branch.io/using-branch/page/braze-mailjet
-[7]: https://help.branch.io/using-branch/page/braze-sparkpost
+[4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate
+[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization
+[7]: https://help.branch.io/using-branch/page/braze-sendgrid
+[8]: https://help.branch.io/using-branch/page/braze-mailjet
+[9]: https://help.branch.io/using-branch/page/braze-sparkpost

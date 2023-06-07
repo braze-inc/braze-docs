@@ -121,7 +121,7 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 After you've finished building the last of your campaign or Canvas, review its details, test it, then send it!
 
-Next, check out [WhatsApp reporting]() to learn how you can access the results of your WhatsApp campaigns.
+Next, check out [WhatsApp reporting]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/) to learn how you can access the results of your WhatsApp campaigns.
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %} 
 [2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %} 

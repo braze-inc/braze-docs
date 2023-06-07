@@ -28,10 +28,13 @@ Next, you are prompted by Braze's setup wizard. Within this flow, you must enter
 ### Step 3: Flexible event selection
 There will be a step explaining which events require us to implement the Braze Web SDK on your store and what to expect when this is added. Proceed to the next page to select the Shopify events you want Braze to track. Selecting any events with an * next to them will enable our Web SDK. The next step will ask you to confirm the selected events.
 
-### Step 4: Enable in-browser message channel
+### Step 4: Backfill historical data
+You have the option to enable a backfill of purchasers from the last 90 days prior to your installation. By automatically syncing over past customer and purchase data, you’ll be able to immediately start targeting and engaging with your customers. Refer to [Shopify historical backfill]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/) to learn more.
+
+### Step 5: Enable in-browser message channel
 You can optionally unlock a new channel on your Shopify store for in-browser messages. This will allow you to use our basic message types like slide-up, modal, full screen, simple surveys, and custom HTML. Note that enabling this will implement our Web SDK in your store. Check out our [guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) on how you can create your first in-browser message.
 
-### Step 5: Collect email or SMS subscribers
+### Step 6: Collect email or SMS subscribers
 
 At this step, select whether you want to collect email and SMS opt-ins from your Shopify store to sync to Braze.
 
@@ -52,15 +55,15 @@ Legacy Shopify customers may have the old method of collecting email and SMS sub
 
 If you have existing campaigns or Canvases using these legacy custom attributes today, you should remove them and ensure the campaigns or Canvases are using the appropriate subscription state, group, or both."
 
-### Step 6: Install Braze's Shopify application
+### Step 7: Install Braze's Shopify application
 You'll then be redirected to your Shopify store to install the Braze app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard. 
 
-### Step 7: Verify completion
-That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. Once the Braze app has been successfully installed and the webhook creation is complete, you will be notified via email and ingestion will begin. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established.
+### Step 8: Verify completion
+That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. Once the Braze app has been successfully installed and the webhook creation is complete, you will be notified via email and ingestion will begin. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established. If you need to support user reconciliation outside of the checkout flow, follow this [additional step]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing#user-reconciliation-outside-of-checkout-flow).
 
 ### Shopify setup within Braze
 
-<br>![Workflow of setting up Shopify within Braze by entering the store name and navigating to Shopify to install the Braze app.][4]{: style="max-width:90%;"}
+<br>![Workflow of setting up Shopify within Braze by entering the store name and navigating to Shopify to install the Braze app.][4]{: style="max-width:75%;"}
 
 ## Troubleshooting
 

@@ -79,10 +79,16 @@ guide_menu_list4:
     link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
     fa_icon: fas fa-stream
 
-guide_menu_title5: "Export Purchase Endpoint"
+guide_menu_title5: "Export Purchase Endpoints"
 guide_menu_list5:
-  - name: "GET: List Product IDs"
+  - name: "GET: Product IDs List"
     link: /docs/api/endpoints/export/purchases/get_list_product_id/
+    fa_icon: fas fa-list
+  - name: "GET: Number of Purchases"
+    link: /docs/api/endpoints/export/purchases/get_number_of_purchases/
+    fa_icon: fas fa-list
+  - name: "GET: Revenue Data by Time"
+    link: /docs/api/endpoints/export/purchases/get_revenue_series/
     fa_icon: fas fa-list
 
 guide_menu_title6: "Export Segment Endpoints"
