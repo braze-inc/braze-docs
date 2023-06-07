@@ -28,6 +28,10 @@ After the approval workflow for Canvas has been turned on, you can begin setting
 
 ![An example of an unselected checkbox for the Approve and Deny Canvases permission, meaning this user does not have permission to approve or deny Canvases.][3]{: style="max-width:70%" }
 
+{% alert important %}
+The Approve/Deny permission for Campaigns will be required if a user wants to edit a live campaign.  This is because the user will need to approve their changes since a draft version of campaigns is not yet available.  This is not the case for Canvases as a user can make changes and save as a draft, while another user can approve and launch the canvas.
+{% endalert %}
+
 ## Using approvals
 
 When the approval workflow is enabled, you'll have access to the **Summary** step of the Canvas builder. This page provides a summary of the key Canvas details with the option to approve or deny these details, including conversion events, entry schedule, and the type and amount of components in your Canvas. Note the default state for Canvas approval is **Pending Approval**.
