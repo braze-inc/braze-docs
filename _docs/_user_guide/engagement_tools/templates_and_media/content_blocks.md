@@ -68,8 +68,8 @@ The drag-and-drop editor is only available for Content Blocks used in email mess
 
 | Content Block Attribute | Specifications |
 |---|---|
-| Name | Required field with maximum of 100 characters. It cannot be renamed after Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
-| Description | (optional) Maximum of 250 characters. Describe the Content Block so that others viewing it in the Braze product will know what it's for and where it's being used. |
+| Name | Required field with a maximum of 100 characters. It cannot be renamed after Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
+| Description | (optional) Maximum of 250 characters. Provide a description of the Content Block so that other Braze users will know what it's for and where it's used. |
 | Content Size | Maximum of 50kB (kilobyte). |
 | Placement | Content Blocks cannot be used within an email footer. |
 | Creation | HTML editor or drag-and-drop editor. |
@@ -88,7 +88,7 @@ When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by
 
 ## Using Content Blocks
 
-After creating your Content Block, you can insert it in your messaging by following these steps: 
+After creating your Content Block, you can insert it in your messages by following these steps: 
 
 1. Copy the **Content Block Liquid Tag** from the **Content Block Details** section.
 2. Insert the Content Block Liquid tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
