@@ -12,7 +12,7 @@ When a campaign is no longer sending messages, Braze will assign an idle status 
 
 On an ongoing basis, the idle campaigns that meet the following criteria will be stopped:
  
-- Action-based and scheduled campaigns with end dates seven days after the end date
+- Action-based and scheduled campaigns with end dates seven days after the send date
 - Scheduled one-time campaigns seven days after the send date 
 - Action-based and scheduled campaigns without end dates that have not sent messages in one year
 - API-triggered campaigns that have not sent messages in one year
