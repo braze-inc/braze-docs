@@ -4,6 +4,9 @@ article_title: Creating Multivariate and A/B Tests
 page_order: 1
 page_type: reference
 description: "This article explains how to create multivariate and A/B tests with Braze."
+
+local_redirect: #optimizations
+  optimizations: '/docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/'
 ---
 
 # Creating multivariate and A/B tests {#creating-tests}
@@ -29,14 +32,14 @@ For some ideas on how to get started differentiating your variants, refer to [Ti
 Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types][4] are available.
 
 {% alert important %}
-If you want to use an [optimization](#optimizations) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for campaigns that repeat or have re-eligibility turned on.
+If you want to use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for campaigns that repeat or have re-eligibility turned on.
 {% endalert %}
 
 ## Step 4: Choose a segment and distribute your users across variants
 
 Select segments to target, then distribute its members across your selected variants and the optional [control group](#including-a-control-group). For best practices around choosing a segment to test with, see [Choosing a segment](#choosing-a-segment).
 
-For push, email, and webhook campaigns scheduled to send once, you can also use an [optimization](#optimizations). This will reserve a portion of your target audience from the A/B test and hold them for a second optimized send based on the results from the first test.
+For push, email, and webhook campaigns scheduled to send once, you can also use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/). This will reserve a portion of your target audience from the A/B test and hold them for a second optimized send based on the results from the first test.
 
 ### Control group {#including-a-control-group}
 
