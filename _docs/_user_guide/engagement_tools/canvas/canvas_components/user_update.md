@@ -69,7 +69,7 @@ Using the JSON composer, you can also log custom events. Note that this requires
   "events": [
     {
       "name": "logged_user_event",
-      "time": "timestamp"
+      "time": "{{timestamp}}"
     }
   ]
 }
@@ -84,7 +84,7 @@ This next example links an event to a specific app using a custom event with opt
     {
       "app_id": "insert_app_id",
       "name": "rented_movie",
-      "time": "timestamp",
+      "time": "{{timestamp}}",
       "properties": {
         "release": {
           "studio": "FilmStudio",
