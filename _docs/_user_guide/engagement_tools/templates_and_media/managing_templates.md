@@ -3,7 +3,7 @@ nav_title: Managing Templates
 article_title: Managing Templates
 page_order: 3
 page_type: reference
-description: "This reference article covers how to archive and duplicate templates in the templates and media section of the Braze dashboard."
+description: "This reference article covers how to archive and duplicate templates in the Braze dashboard."
 tool: 
   - Templates
   - Media
@@ -30,7 +30,7 @@ To archive an individual template, click the settings icon on the template grid 
 
 To archive multiple templates, select the checkbox next to each template that you want to archive. After you've selected multiple templates, click **Archive Selected**. You can find your archived templates by selecting **Archived** under **Show** in the template grid.
 
-![Saved Drop & Drop Email Templates section that shows two selected templates: "Try Premium Template" and "Welcome Template". The "Archive Selected" button is highlighted by the user.][11]
+![Saved Drag-And-Drop Email Templates section that shows two selected templates: "Try Premium Template" and "Welcome Template". The "Archive Selected" button is highlighted by the user.][11]
 
 {% alert important %}
 Archiving is not currently available for [link templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
