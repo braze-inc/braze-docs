@@ -65,18 +65,19 @@ Specify a policy name of your choice, and input the following code snippet into 
 {% tab Braze Currents %}
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    { "Effect": "Allow",
-      "Action": ["s3:GetBucketLocation"],
-      "Resource": ["arn:aws:s3:::INSERTBUCKETNAME"]
-    }
-    ,
-    { "Effect": "Allow",
-      "Action": ["s3:PutObject", "s3:ListBucket"],
-      "Resource": ["arn:aws:s3:::INSERTBUCKETNAME*", "arn:aws:s3:::INSERTBUCKETNAME/", "arn:aws:s3:::INSERTBUCKETNAME"]
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
+            "Resource": ["arn:aws:s3:::INSERTBUCKETNAME"]
+        },
+        {
+            "Effect": "Allow",
+            "Action": ["s3:PutObject", "s3:GetObject"],
+            "Resource": ["arn:aws:s3:::INSERTBUCKETNAME/*"]
+        }
+    ]
 }
 ```
 {% endtab %}
@@ -92,8 +93,8 @@ Specify a policy name of your choice, and input the following code snippet into 
         },
         {
             "Effect": "Allow",
-            "Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"],
-            "Resource": ["arn:aws:s3:::INSERTBUCKETNAME*", "arn:aws:s3:::INSERTBUCKETNAME/", "arn:aws:s3:::INSERTBUCKETNAME"]
+            "Action": ["s3:PutObject", "s3:GetObject"],
+            "Resource": ["arn:aws:s3:::INSERTBUCKETNAME/*"]
         }
     ]
 }
@@ -210,7 +211,7 @@ Open the **JSON** tab and input the following code snippet into the **Policy Doc
         },
         {
             "Effect": "Allow",
-            "Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"],
+            "Action": ["s3:PutObject", "s3:GetObject"],
             "Resource": ["arn:aws:s3:::INSERTBUCKETNAME/*"]
         }
     ]

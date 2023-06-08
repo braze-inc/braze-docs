@@ -544,10 +544,16 @@ Some of the user data and events collected by the Shopify integration will count
 
 ```json
 {
-  "user_alias" :
+  "user_aliases" :
     { 
       "alias_name" : "4306250531001", 
-      "alias_label" : "shopify_customer_id" }
+      "alias_label" : "shopify_customer_id" },
+ { 
+      "alias_name" : example@email.com 
+      "alias_label" : "shopify_email" },
+ { 
+      "alias_name" : "1234567890", 
+      "alias_label" : "shopify_phone" }
 }
 ```
 
@@ -563,9 +569,11 @@ The Shopify integration reconciles your user’s device ID and personal informat
 reconcileEmail(<email address>);
 ```
 
-If you want to implement this approach, contact your customer success manager or account manager to enable this functionality. Once this has been enabled, you will need to implement the above function on your Shopify store.
-
 This will cause the anonymous user on the web to be associated with the given email address, which you will supply. For example, if the user enters their email address into a sign-up or login field, you should ensure this is being passed. Once this function is called, any other Shopify events referencing the given email address will be assigned to the same Braze user.
+
+{% alert note %}
+Braze has a no-code solution to implement this function automatically on your Shopify store. If you’re interested in this beta feature, contact your customer success manager or account manager.
+{% endalert %}
 
 ### User profile merging
 
