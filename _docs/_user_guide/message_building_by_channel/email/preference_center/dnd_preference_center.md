@@ -1,14 +1,14 @@
 ---
-nav_title: Drag & Drop Email Preference Center
-article_title: Drag & Drop Email Preference Center
+nav_title: Drag-And-Drop Email Preference Center
+article_title: Drag-And-Drop Email Preference Center
 alias: "/dnd_preference_center/"
-description: "This reference page covers how to create an email preference center with the drag & drop editor."
+description: "This reference page covers how to create an email preference center with the drag-and-drop editor."
 page_order: 2
 ---
 
-# Create an email preference center with Drag & Drop
+# Create an email preference center with drag-and-drop
 
-With the Drag & Drop Editor, you can now create and customize a preference center to help manage which users receive certain types of communication. 
+With the drag-and-drop, you can now create and customize a preference center to help manage which users receive certain types of communication. 
 
 ## Step 1: Create an email preference center
 
@@ -32,7 +32,7 @@ This Liquid tag can be included in any outbound email campaigns or Canvas steps 
 
 ## Step 3: Add subscription groups to the preference center
 
-Click **Launch Editor** to begin designing your preference center in the Drag & Drop Editor.
+Click **Launch Editor** to begin designing your preference center in the drag-and-drop editor.
 
 ### Define available subscription groups
 To determine which subscription groups should be shown in the preference center, click the **+ Add subscription groups** button to launch a modal where desired subscription groups can be selected. After selecting, click the **Add Subscription Groups** button to add them to the preference center.
@@ -46,7 +46,7 @@ You can further configure the selected subscription groups by clicking on the sm
 
 ![][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
 
-## Step 4: Customize the preference center using the Drag & Drop Editor
+## Step 4: Customize the preference center using the drag-and-drop editor
 
 ### Set common styles
 You can set certain styles to be applied across all relevant blocks in your preference center from the **Common Styles** tab. The styles set in this section are used everywhere in your message except where you override them for a specific block. For an easier design experience, we recommend setting up page-level styles before you customize styles at the block level.
@@ -57,9 +57,9 @@ You can set certain styles to be applied across all relevant blocks in your pref
 To return to the common styles, click the "X" button on individual block properties. Next, select the message container, message "X" button, or editor background.
 {% endalert %}
 
-## Drag & drop preference center components
+## Drag and drop preference center components
 
-The Drag & Drop Editor uses two key components to make preference center composition quick and easy: rows and blocks. All blocks must be placed in a row.
+The drag-and-drop editor uses two key components to make preference center composition quick and easy: rows and blocks. All blocks must be placed in a row.
 
 {% tabs %}
 {% tab Rows %}
@@ -90,13 +90,13 @@ Every block has its own settings, such as granular control on padding. The right
 
 ## Step 5: Customize your confirmation page
 
-Don’t forget to customize the confirmation page! You can edit this page by clicking on **Confirmation Page** at the top of the **Drag & Drop Editor window**. This page will be displayed to users after updating their preferences using the preference center. The same styling capabilities above apply to this page as well.
+Don’t forget to customize the confirmation page! You can edit this page by clicking on **Confirmation Page** at the top of the drag-and-drop editor window. This page will be displayed to users after updating their preferences using the preference center. The same styling capabilities above apply to this page as well.
 
 ![][9]{: style="max-width:65%;"}
 
 ## Step 6: Preview and launch your preference center
 
-You can preview your preference center by clicking the **Preview** tab within the editor. However, testing functionality is disabled. After editing your preference center, you can close the Drag & Drop Editor by clicking the **Done** button.
+You can preview your preference center by clicking the **Preview** tab within the editor. However, testing functionality is disabled. After editing your preference center, you can close the editor by clicking the **Done** button.
 
 You will see a preview of both the preference center and the confirmation page. Click **Save as Draft** to return to this preference center later, or if you are satisfied, click **Launch Preference Center**.
 
