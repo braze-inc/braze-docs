@@ -1,7 +1,7 @@
 ---
 nav_title: Analytics
 article_title: Multivariate and A/B test analytics
-page_order: 2
+page_order: 10
 page_type: reference
 description: "This article explains how to view and interpret the results of a multivariate or A/B campaign."
 ---
