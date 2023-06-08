@@ -1,6 +1,6 @@
 ---
 nav_title: Overview
-article_title: Create a Drag-and-Drop Email
+article_title: Create a Drag-And-Drop Email
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
