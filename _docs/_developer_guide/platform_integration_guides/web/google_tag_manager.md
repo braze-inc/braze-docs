@@ -24,7 +24,7 @@ Use the Initialization Tag to add the Braze Web SDK to your website.
 ### Step 1: Push setup (optional)
 
 Optionally, if you want to be able to send push through the Google Tag Manager, first follow the [push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/) guidelines to:
-1. Configuring your site's service worker, placing it in the root directory of your site
+1. Configure your site's service worker, placing it in the root directory of your site
 2. Set up browser registration - Once the service worker is configured, your must set the `braze.requestPushPermission()` method either natively in their app or through a custom HTML tag (via the GTM dashboard). You will also need to make that the tag is fired abter the SDK has been initalized.
 
 ### Step 2: Select the Initialization Tag
