@@ -204,6 +204,10 @@ By default, Canvas component priority is set to medium, with the most recently c
 
 ![]({% image_buster /assets/img_archive/canvas_priority.png %}){: style="max-width:85%"}
 
+### Drafts of an active Canvas
+
+For drafts of an active Canvas, in-app message priority within the Canvas builder will be updated immediately when a user changes the priority. However, in a Message step, the priority sorter will be updated when a user launches the draft since step settings apply at a step level.
+
 ## Custom event properties in a Canvas
 
 Due to action-based delivery being unavailable for Canvas steps with in-app messages, you similarly cannot use custom event properties for these steps. If you'd like to template event properties in Canvas, we recommend storing your event properties as custom attributes in your first Canvas step, and then personalizing your in-app message with the custom attributes in the second step. 
