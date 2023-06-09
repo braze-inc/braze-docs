@@ -11,9 +11,9 @@ search_tag: Partner
 
 # Census
 
-> [Census][1] is the data integration platform that enables you to sync customer and product data from your cloud warehouse to the sales and marketing apps of your choice, all without ongoing help from your engineering department. 
+> [Census][1] is a data activation platform that connects cloud data warehouses like Snowflake and BigQuery to Braze. Marketing teams can unlock the power of their first-party data to build dynamic audience segments, sync customer attributes to personalize campaigns, and keep all their data in Braze up-to-date. It's easier than ever to take action with trusted, actionable data — no CSV uploads or engineering favors required.
 
-The Braze and Census integration allows you to dynamically import your Census product data into Braze to create targeted user segments. For example, after successfully testing and implementing the integration, Braze can create a user segment from the new data of 'Users Active in the Last 30 Days' to target specific users to ask them to test an upcoming beta feature.
+The Braze and Census integration allows you to dynamically import audiences or product data into Braze to send personalized campaigns. For example, you can create a cohort in Braze for 'Newsletter subscribers with CLV >1000' to target high value customers, or 'Users Active in the Last 30 Days' to target specific users to test an upcoming beta feature.
 
 ## Prerequisites
 
@@ -29,9 +29,9 @@ The Braze and Census integration allows you to dynamically import your Census pr
 
 ### Step 1: Create Braze service connection
 
-To integrate Census, in the Census platform, navigate to the **Settings** tab and select **Add Service** to create a new Braze service connection.
+To integrate Census, in the Census platform, navigate to the **Connections** tab and select **New Destination** to create a new Braze service connection.
 
-In the prompt that appears, name this connection, and provide your Braze endpoint URL and Braze REST API key.
+In the prompt that appears, name this connection, and provide your Braze endpoint URL and Braze REST API key (and optionally your Data Import Key to sync cohorts).
 
 ![][8]{: style="max-width:60%;"}
 
@@ -39,16 +39,15 @@ In the prompt that appears, name this connection, and provide your Braze endpoin
 
 To sync customers to Braze, you must build a sync. Here, you will define where to sync data and how you would like fields mapped across the two platforms.
 
-1. Navigate to the **Syncs** tab and select **Add Sync**. 
-2. In the prompt that appears, under **Connection**, select your desired data warehouse.
-3. Next, select the source. This is the data model built from your data warehouse data.
-4. Configure where the model will be synced to. Select **Braze** as the connection, and the [supported object type](#supported-objects) to sync.<br>![In the "What do you want to sync" prompt, "Redshift" is selected as the connection, and "Golden Users - VIP" is set as the source. In the "Where do you want to sync data to?" prompt, "Braze" is selected as the connection, and "User" is set as the object.][10]{: style="max-width:80%;"}<br><br>
-5. Make sure **Update or Create** is selected as a syncing rule.
-6. Next, for record matching purposes, choose your desired [In the "How are source and destination records matched?" prompt, "External User ID" is set as "id".](#supported-objects) for your Braze object type and associated model field.<br>![In the "Which fields should be updated?" prompt, "External User ID" is set as "id", "Email" is set as "email", "First Name" is set as "first_name", and "Last Name" is set as "last_name".][9]{: style="max-width:80%;"}<br><br>
-7. Lastly, map the Census data fields to the equivalent Braze fields.<br>![Census mapping][11]{: style="max-width:80%;"}<br><br>
-8. Confirm details and create the sync. 
+1. Navigate to the **Syncs** tab and select **New Sync**. 
+2. In the wizard, first select the source data model from your data warehouse.
+3. Configure where the model will be synced to. Select **Braze** as the destination, and the [supported object type](#supported-objects) to sync.<br>![In the "Select a Destination" prompt, "Braze" is selected as the connection, and various objects are listed.][10]{: style="max-width:80%;"}<br><br>
+4. Select what synchronization rule you want to apply (**Update or Create** is the most common choice but you can choose more advanced rules if you want to handle deleting data for example).
+5. Next, for record matching purposes, choose a sync key to map (#supported-objects) your Braze object to a model field.<br>![In the "Select a Sync Key" prompt, "External User ID" from Braze is matched to "user_id" in the source.][9]{: style="max-width:80%;"}<br><br>
+6. Lastly, map the Census data fields to the equivalent Braze fields.<br>![Census mapping][11]{: style="max-width:80%;"}<br><br>
+7. Confirm details and create the sync. 
 
-Once the sync is created, you will find the user data already in Braze. You can now create a Braze segment and add it to future Braze campaigns and Canvases to target these end-users. 
+Once the sync runs, you will find the user data in Braze. You can now create a Braze segment and add it to future Braze campaigns and Canvases to target these end-users. 
 
 {% alert note %}
 When using the Census and Braze integration, Census will only send the deltas (changing data) on each sync to Braze. 
@@ -56,12 +55,16 @@ When using the Census and Braze integration, Census will only send the deltas (c
 
 ## Supported objects
 
-Census currently supports syncing of the following Braze user and event objects:
+Census currently supports syncing of the following Braze objects:
 
-| Object name | Identifiers |
+| Object name | Sync Behaviors |
 | --- | --- |
-| User | External user ID |
-| Event | Event ID |
+| User | Update, Create, Mirror, Delete |
+| Cohort | Update, Create, Mirror | 
+| Catalog | Update, Create, Mirror |
+| Subscription Group Membership | Mirror |
+| Event | Append |
+
 
 Additionally, Census supports sending [structured data](https://docs.getcensus.com/destinations/braze#supported-objects) to Braze: 
 - User push tokens: To send push tokens, your data should be structured as an array of objects with 2-3 values: `app_id`, `token`, and an optional `device_id`.
