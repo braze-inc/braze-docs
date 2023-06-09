@@ -206,7 +206,7 @@ By default, Canvas component priority is set to medium, with the most recently c
 
 ### Drafts of an active Canvas
 
-When editing a draft of an active Canvas, changes to the in-app message priority within **Send Settings** are no saved with a draft. These changes are applied directly to the active Canvas when the priority sorter modal is closed. However, in a Message step, the priority sorter will be updated when a user launches the draft since step settings apply at a step level.
+When editing a draft of an active Canvas, changes to the in-app message priority within **Send Settings** are not saved with a draft. These changes are applied directly to the active Canvas when the priority sorter modal is closed. However, in a Message step, the priority sorter will be updated when a user launches the draft since step settings apply at a step level.
 
 ## Custom event properties in a Canvas
 
