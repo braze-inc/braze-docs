@@ -11,7 +11,7 @@ search_tag: Partner
 
 # Census
 
-> [Census][1] is a data activation platform that connects cloud data warehouses like Snowflake and BigQuery to Braze. Marketing teams can unlock the power of their first-party data to build dynamic audience segments; sync customer attributes to personalize campaigns, and keep all their data in Braze up-to-date. It's easier than ever to take action with trusted, actionable data — no CSV uploads or engineering favors required.
+> [Census][1] is a data activation platform that connects cloud data warehouses like Snowflake and BigQuery to Braze. Marketing teams can unlock the power of their first-party data to build dynamic audience segments, sync customer attributes to personalize campaigns, and keep all their data in Braze up-to-date. It's easier than ever to take action with trusted, actionable data — no CSV uploads or engineering favors required.
 
 The Braze and Census integration allows you to dynamically import audiences or product data into Braze to send personalized campaigns. For example, you can create a cohort in Braze for 'Newsletter subscribers with CLV >1000' to target high-value customers or 'Users Active in the Last 30 Days' to target specific users to test an upcoming beta feature.
 
