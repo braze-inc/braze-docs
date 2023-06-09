@@ -29,7 +29,17 @@ In order to leave a comment in a Canvas, you must save a step first. So, when cr
 
 By default, the sidebar will show open comments. You can toggle to view open comments or all comments by using the <i class="fa-solid fa-sliders"></i> filter icon.
 
-To leave a comment, click the <i class="fas fa-comment"></i> comment icon at the top of the Canvas. This turns your cursor into a comment icon. Click the step you want to comment on. To revert your cursor, press the **Esc** key.
+To leave a comment, click the <i class="fas fa-comment"></i> comment icon at the top of the Canvas. This turns your cursor into a comment icon. Click the step you want to comment on. To revert your cursor, press the **Esc** key or click the comment icon again. 
+
+##### Keyboard shortcuts
+
+You can also use keyboard shortcuts to add comments:
+
+| Mac | Windows |
+| --- | --- |
+| <kbd>⌘</kbd> + <kbd>Enter</kbd> | <kbd>Ctrl</kbd> + <kbd>Enter</kbd>|
+| <kbd>Tab</kbd> + <kbd>Enter</kbd> | <kbd>Tab</kbd> + <kbd>Enter</kbd> |
+{: .reset-td-br-1 .reset-td-br-2}
 
 To view an existing comment, open the sidebar or select the <i class="fas fa-comment"></i> comment icon next to the step name. You can also reply to existing comments in a thread. 
 
