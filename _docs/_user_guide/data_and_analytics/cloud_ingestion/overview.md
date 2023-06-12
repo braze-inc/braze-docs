@@ -12,7 +12,7 @@ description: "This reference article provides an overview of Cloud Data Ingestio
 > Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion can connect to Snowflake and Redshift data warehouses.
 
 {% alert important %}
-Braze Cloud Data Ingestion for Redshift is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
+Braze Cloud Data Ingestion for BigQuery and Databricks are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ### How it works
@@ -245,10 +245,9 @@ To sync purchase events, event name, `product_id`, `currency`, `price`, and `tim
 | --- | --- |
 | Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.
 | Number of rows | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column. |
-| Attributes per row | Each row should contain a single user ID and a JSON object with up to 50 attributes. Each key in the JSON object counts as one attribute (i.e., an array counts as one attribute). |
-| Data type | You can sync user attributes, events, and purchases through Cloud Data Ingestion. |
-| Braze region | This product is available in all Braze regions. Any Braze region can connect to any Snowflake region |
-| Snowflake region | You can connect your Snowflake instance in any region or cloud to Braze using this product. |
+| Attributes per row | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (i.e., an array counts as one attribute). |
+| Braze region | This product is available in all Braze regions|
+| Redshift connectivity | Only publicly-accessible Redshift clusters are supported at this time.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 <br><br>
