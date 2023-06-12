@@ -20,12 +20,11 @@ Before creating a catalog, be sure to have your CSV file ready first if your pre
 
 Note these guidelines when creating your CSV file. The first column of the CSV file must be a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
 
-- Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)
 - Maximum field (column) name of 250 characters
-- Maximum CSV file size of 2&nbsp;GB
+- Maximum CSV file size of 2&nbsp;GB (Pro)
+- Maximum CSV file size of 100 MB (Free)
 - Maximum field value (cell) of 5,000 characters
-- Maximum field value (cell) size of 0.5&nbsp;KB 
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
 Ensure that you are encoding your CSV file using the UTF-8 format in order to successfully upload your CSV file in the next step. We also recommend that you format all text in your CSV files as lowercase.
