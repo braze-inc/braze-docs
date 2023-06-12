@@ -1,5 +1,5 @@
 ---
-nav_title: Multiple store support
+nav_title: Multiple Store Support
 permalink: "/shopify_multiple_store/"
 hidden: true
 layout: dev_guide
