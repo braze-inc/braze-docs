@@ -58,7 +58,7 @@ If you have the same user across multiple Shopify stores, Braze syncs customer d
 ## Not currently supported
 The following features and functionalities are not currently supported but will be supported for general availability:
 - Ability to import a catalog for each store
-- Ability to override only a specific email subscription group state without overriding the global email subscription status. This is ideal for stores with multiple brands that want email subscriptions from different stores to be managed and updated individually without impacting other Email Subscription Groups and the overall global state.
+- Ability to override only a specific email subscription group state without overriding the global email subscription status. This is ideal for stores with multiple brands that want email subscriptions from different stores to be managed and updated individually without impacting other email subscription groups and the overall global state.
 - `shopify_storefront` property is not supported for [ScriptTag events]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing#supported-shopify-events).
 
 [1]: {% image_buster /assets/img/multiple_stores.png %}
