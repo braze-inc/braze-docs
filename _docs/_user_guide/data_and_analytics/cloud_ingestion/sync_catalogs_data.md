@@ -1,29 +1,29 @@
 ---
 nav_title: Sync Catalogs Data
 article_title: Cloud Data Ingestion Sync Catalogs Data
-page_order: 0
+page_order: 2.1
 page_type: reference
-description: "This reference article provides an overview of"
+description: "This reference article provides an overview of how to sync Catalogs data"
 
 ---
 
 # Sync Catalogs data
  
-## Create a new Catalog
+## Step 1: Create a new catalog
 
-Before creating a new CDI integration for Catalogs, you will need to create a new Catalog or identify an existing catalog you want to use for the integration. There are a few ways to create a new Catalog and any of these will work for the CDI integration:
+Before creating a new Cloud Data Ingestion (CDI) integration for [Catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), you will need to create a new catalog or identify an existing catalog you want to use for the integration. There are a few ways to create a new catalog and any of these will work for the CDI integration:
 - Upload a [CSV]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-1-upload-csv)
-- Create Catalog in the [Braze dashboard]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-2-create-in-browser)
+- Create a catalog in the [Braze dashboard]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-2-create-in-browser)
 - Create a catalog through the [API]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)
 
 The key things to note when creating this catalog are:
 - You should use the same name for the catalog and CDI integration 
-- Any changes to the Catalog schema (e.g., adding new fields, changing field type) must be made through the Catalogs dashboard or API before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your Snowflake data and the schema in Braze.
+- Any changes to the catalog schema (e.g., adding new fields, changing field type) must be made through the catalogs dashboard or API before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your Snowflake data and the schema in Braze.
 
-## Integrate Cloud Data Ingestion with Snowflake
-The Snowflake setup for a Catalogs sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
+## Step 2: Integrate Cloud Data Ingestion with Snowflake
+The Snowflake setup for a catalogs sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
 
-1. Set up the source table in Snowflake - you can use the names in the below example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
+1. Set up a source table in Snowflake. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
   ```json
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
@@ -35,7 +35,7 @@ The Snowflake setup for a Catalogs sync closely follows the process for [user-da
          PAYLOAD VARCHAR(16777216) NOT NULL
     );
     ```
-2. Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse those - just make sure to extend access to the Catalog source table.
+2. Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, just make sure to extend access to the catalog source table.
     ```json
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
@@ -56,7 +56,7 @@ The Snowflake setup for a Catalogs sync closely follows the process for [user-da
 7. Choose a sync frequency and proceed to the next step.
 8. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake. To complete this step, you will need someone with `SECURITYADMIN` access or higher in Snowflake. 
 9. Click **Test Connection** to ensure everything works as expected. 
-10. Save the sync, and use the synced catalog data for all your personalization use cases! 
+10. Save the sync, and use the synced catalog data for all your personalization use cases. 
 
 ## How the integration works
 - Each time the sync runs, we will pull in all rows where `UPDATED_AT` is after the last timestamp synced. 
