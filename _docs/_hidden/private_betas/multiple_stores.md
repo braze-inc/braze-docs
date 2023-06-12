@@ -27,7 +27,7 @@ With Braze’s multiple-store support, you can:
 - Have a 360° view of your customers across stores
 - Create segments of your customers with aggregate store data 
 - Set up messaging or journeys as your customers move across different stores
-- Manage Email & SMS subscriptions across different stores
+- Manage email and SMS subscriptions across different stores
 
 ### Setting up an additional store
 1. Once you have installed your first store, select the **+ Connect New Store** option.<br>![][1]<br><br>
