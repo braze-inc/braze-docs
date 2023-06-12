@@ -18,6 +18,9 @@ guide_featured_list:
   - name: Available Integrations
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/integrations/
     fa_icon: fa-solid fa-gears
+  - name: Sync Catalogs Data
+    link: /docs/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/
+    fa_icon: fa-solid fa-rotate
   - name: Delete Users with CDI
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/delete_users/
     fa_icon: fa-solid fa-trash
