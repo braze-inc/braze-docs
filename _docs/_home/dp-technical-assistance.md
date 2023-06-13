@@ -72,7 +72,7 @@ Individuals are entitled to have Personal Data corrected if it is inaccurate or 
 
 ### Braze Recommendation
 
-In the event that a Data Subject requests that you rectify inaccuracies within the Personal Data being processed by you or by Braze on your behalf, you can use the Braze SDKs or the Braze [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to correct such Personal Data.
+In the event that a data subject requests that you rectify inaccuracies within the Personal Data being processed by you or by Braze on your behalf, you can use the Braze SDKs or the Braze [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to correct such Personal Data.
 
 ## The Right to Erasure
 
