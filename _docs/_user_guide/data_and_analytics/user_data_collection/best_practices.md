@@ -19,6 +19,12 @@ Once a user provides information for you to log, we recommend you verify if the 
 
 If an unknown user were to view your site and then, at a later date, create an account or identify themselves via email sign-up, profile merging must be handled carefully. Based on the method in which you merge, alias-only user info or anonymous data may be overwritten.
 
+## Merging duplicate user profiles
+
+As your user data grows, you can merge duplicate user profiles from the Braze dashboard. These duplicate profiles must be found using the same search query. For more information on how to duplicate user profiles, check out [Merge profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#merge-profiles).
+
+You can also use the [Merge users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) to merge one user profile into another.
+
 ## Capturing user data through a web form
 
 ### Step 1: Check if user exists
@@ -33,7 +39,10 @@ When a user enters content through a web form, check if a user with that email a
     "fields_to_export": ["external_id", "user_aliases"]
   }'
   ```
+
+{% alert important %}
 It is not recommended to heavily leverage this endpoint when querying a single user; we apply a rate limit of 2,500 requests per minute to this endpoint. For more information on endpoint rate limits, refer to [Rate limits by request type]({{site.baseurl}}/api/api_limits/#rate-limits-by-request-type).
+{% endalert %}
 
 ### Step 2: Log or update user
 
