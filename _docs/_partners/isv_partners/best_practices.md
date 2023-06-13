@@ -15,12 +15,12 @@ Learn more about how Braze collects data:
 
 ## Braze identifiers
 
-- `Braze_id`: A Braze-assigned identifier that is unchangeable and associated with a particular user when created within our database.
-- `External_id`: A customer-assigned identifier, typically a UUID. We recommend customers assign the `external_id` once the user can be uniquely identified. Once a user is identified, they cannot be reverted to anonymous.
-- `User_alias`: A unique alternate identifier that the customer can assign as a means of referencing the user by an ID before an `external_id` being assigned. User aliases can later be merged with other aliases or an `external_id` when one becomes available through Braze’s [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
+- `braze_id`: A Braze-assigned identifier that is unchangeable and associated with a particular user when created within our database.
+- `external_id`: A customer-assigned identifier, typically a UUID. We recommend customers assign the `external_id` once the user can be uniquely identified. Once a user is identified, they cannot be reverted to anonymous.
+- `user_alias`: A unique alternate identifier that the customer can assign as a means of referencing the user by an ID before an `external_id` being assigned. User aliases can later be merged with other aliases or an `external_id` when one becomes available through Braze’s [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
     - Within the [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint the `merge_behavior` field can be used to specify what data from the user alias profile should persist on the known user profile.
     - Note that for the user alias to be a sendable profile, you must still include email and/or phone as a standard attribute on the profile.
-- `Device_id`: An automatically generated, device-specific identifier. A user profile can have a number of `device_ids` associated with it. For example, a user who has logged in to their account on their work computer, home computer, tablet, and iOS app would have 4 `device_ids` associated with their profile.
+- `device_id`: An automatically generated, device-specific identifier. A user profile can have a number of `device_ids` associated with it. For example, a user who has logged in to their account on their work computer, home computer, tablet, and iOS app would have 4 `device_ids` associated with their profile.
 - Email Address (in early access):
     - Supported as an identifier in Braze’s track user endpoint. 
     - When using the email address as the identifier within a request, there are three possible outcomes:
