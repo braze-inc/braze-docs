@@ -32,7 +32,7 @@ Learn more about how Braze collects data:
 
 ## Handling anonymous users
 
-For a use case where you need to create/update a user profile in Braze without having access to an `external_id`, another identifier like an email address or phone number can be passed into Braze's [Export user by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint to determine if a profile for the user exists within Braze. 
+For a use case where you need to create or update a user profile in Braze without having access to an `external_id`, another identifier like an email address or phone number can be passed into the Braze [Export user by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint to determine if a profile for the user exists within Braze. 
 
 ```json
 {
@@ -41,7 +41,7 @@ For a use case where you need to create/update a user profile in Braze without h
 }
 ```
 
-If a user exists within Braze with that email/phone, their profile will be returned. Otherwise, an empty "users" array will be returned. The benefit of using the export endpoint to determine if a user with that email address already exists is that this will allow you to determine if any anonymous user profiles are associated with the user. For example, an anonymous profile created via the SDK (which will have `braze_id`) or a previously created User alias profile. 
+If a user exists within Braze with that email or phone, their profile will be returned. Otherwise, an empty "users" array will be returned. The benefit of using the export endpoint to determine if a user with that email address already exists is that this will allow you to determine if any anonymous user profiles are associated with the user. For example, an anonymous profile created via the SDK (which will have `braze_id`) or a previously created User alias profile. 
 
 If the request does not return a user profile, you can choose to either create a user alias or create an email-only user:
 
@@ -99,28 +99,28 @@ This functionality is currently in early access.
 ## Syncing data to user profiles
 
 [User track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
-- This is a publicly accessible endpoint that can create and update users in Braze, such as logging attributes to the user profile. As a note, this endpoint has a rate limit of 50K RPM applied at the app group level.
+- This is a publicly accessible endpoint that can create and update users in Braze, such as logging attributes to the user profile. This endpoint has a rate limit of 50,000 requests per minute applied at the workspace level.
 - When using this endpoint, include the `partner` key as shown in our Partner documentation.
 
 [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/#what-is-cloud-data-ingestion)
-- Similar to the Track User endpoint, data can be synced to user profiles through Cloud Data Ingestion. When using this tool, attributes, events, and purchases are logged to profiles by setting up and connecting the data warehouse table/view you would like to sync to the desired Braze app group.
+- Similar to the user track endpoint, data can be synced to user profiles through Cloud Data Ingestion. When using this tool, attributes, events, and purchases are logged to profiles by setting up and connecting the data warehouse table or view you would like to sync to the desired Braze workspace.
 
 [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points)
 - Braze has a data point consumption model where data points are incurred per “write” to the user profile regardless of whether the value has changed. For this reason, we recommend that only those attributes that have changed are sent to Braze. 
 
-## Sending audiences of users to braze
+## Sending audiences of users to Braze
 
 [Cohort import sync partner documentation]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
 - Audiences of users can be synced to Braze as a cohort using Braze’s Cohort Import API endpoints. Rather than these audiences being stored on the user profile as user attributes, customers can build and target this cohort through a Partner branded filter within our Segmentation tool. This can make finding and targeting a particular segment of users easier and more simple for customers.
-- Cohort Import endpoints are not public and are specific to each Partner. For this reason, syncs to the cohort endpoints will not count toward a customer’s app group rate limits. 
+- Cohort Import endpoints are not public and are specific to each Partner. For this reason, syncs to the cohort endpoints will not count toward a customer’s workspace rate limits. 
 
 [User track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
-- This is a publicly accessible endpoint that can be used immediately to create users in Braze by denoting a user in a particular audience through a user attribute! The primary difference between this endpoint and the cohort import endpoint is that audiences sent using this endpoint would be stored on the user profile, whereas the cohort import endpoint would show as a filler in our segmentation tool. It is also worth noting that customers have a rate limit of 50k rpm on this endpoint. 
+- This is a publicly accessible endpoint that can be used immediately to create users in Braze by denoting a user in a particular audience through a user attribute. The primary difference between this endpoint and the cohort import endpoint is that audiences sent using this endpoint would be stored on the user profile, whereas the cohort import endpoint would show as a filler in our segmentation tool. This endpoint has a rate limit of 50,000 requests per minute applied at the workspace level.
 - When using this endpoint, ensure that you are including the `partner` key as shown in our [Partner documentation]({{site.baseurl}}/partners/isv_partners/api_partner).
 
 [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points)<br>
 - Braze has a data point consumption model where data points are incurred per “write” to the user profile regardless of if the value has changed.
-- Data points are incurred by both cohort import and the Track User endpoints.
+- Data points are incurred by both cohort import and the user track endpoints.
 
 ## Engagement analytics streaming to partner
 
