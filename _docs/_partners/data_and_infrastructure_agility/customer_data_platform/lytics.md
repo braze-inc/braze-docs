@@ -61,7 +61,7 @@ Enriching Lytics customer profiles using Braze customer journey events.
 | ----------- | ----------- |
 | Lytics account | A Lytics account is required to take advantage of this integration. |
 | Lytics account number | A Lytics account number is necessary for configuring the webhook endpoint URL. |
-| Braze REST API key | A Braze REST API key with `users.track` and `user.export.ids` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Lytics API Token | A Lytics REST API Token with Data Manager permissions. <br><br> This can be created within the **Lytics Dashboard > Account Settings Console > Access Tokens > Create New Token**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Step 1: Create a Lytics API token
