@@ -19,12 +19,6 @@ Once a user provides information for you to log, we recommend you verify if the 
 
 If an unknown user were to view your site and then, at a later date, create an account or identify themselves via email sign-up, profile merging must be handled carefully. Based on the method in which you merge, alias-only user info or anonymous data may be overwritten.
 
-## Merging duplicate user profiles
-
-As your user data grows, you can merge duplicate user profiles from the Braze dashboard. These duplicate profiles must be found using the same search query. For more information on how to duplicate user profiles, check out [Merge profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#merge-profiles).
-
-You can also use the [Merge users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) to merge one user profile into another.
-
 ## Capturing user data through a web form
 
 ### Step 1: Check if user exists
@@ -65,26 +59,15 @@ To check if a user is alias-only, [check if the user exists](#step-1-check-if-us
 
 ## Capturing user data when alias-only user info is already present
 
-When a user creates an account or identifies themselves via email sign-up, there are two options are merging the profiles depending on which data should be retained:
+When a user creates an account or identifies themselves via email sign-up, you can merging the profiles. For a list of fields that can be merged, refer to [Merge updates behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
 
-### Option 1: Overwrite alias-only data and maintain anonymous data
+### Merging duplicate user profiles
 
-Call `changeUser()` before making an API request to the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/), then, set the user alias. 
+As your user data grows, you can merge duplicate user profiles from the Braze dashboard. These duplicate profiles must be found using the same search query. For more information on how to duplicate user profiles, check out [Merge profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#merge-profiles).
 
-By calling `changeUser()` before the request, Braze will merge and preserve anonymous user data (for example, if the user downloaded the app and logged custom data before signing in) to the identified user profile but "orphan" all data associated with the alias-only profile (attributes, events, purchases, etc.).
+You can also use the [Merge users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) to merge one user profile into another. 
 
-![Diagram showing the process to overwrite alias-only data and maintain anonymous data when identifying a user. The process starts with an anonymous user and their Braze ID. Then the user creates an account, and anonymous user data is migrated to an identified user profile when changeUser is called. The identified user now has a Braze ID and external ID. An arrow pointing from the identified user to an identified user with an alias shows a Braze API request to the Identify user endpoint with the user's external ID, alias name, and alias label. During this step, the user data associated with that alias-only user is lost. The final step shows the identified user with a Braze ID, external ID, alias name, and alias label, but none of the custom attributes associated with the alias-only profile before they merged.][1]{: style="max-width:90%;"}
-
-#### Keep user alias profile information
-If you have events or attributes that you want to keep when you merge user profiles, you can export aliased user data before identification using the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/), then re-associate the attributes, events, and purchases with the identified user.
-
-### Option 2: Overwrite anonymous data and maintain the alias-only profile
-
-Make a Braze API request to the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) to identify any users that match a given user alias. If any exist, Braze will migrate the user alias data to the identified user profile. To prevent a race condition, we strongly recommend implementing a 5-minute delay. Next, call `changeUser()`.
-
-By calling `changeUser()` after hitting the `/users/identify` endpoint, Braze will merge and preserve all data associated with the alias-only profile but "orphan" any anonymous user data.
-
-![Diagram showing the process to overwrite anonymous data and maintain the alias-only profile. The process starts with an anonymous user and their Braze ID. Then the user creates an account. An arrow pointing from the account creation step to the identified user profile shows a Braze API request to the Identify user endpoint with the user's external ID, alias name, and alias label. A box above the arrow shows that this alias-only user already exists in Braze, and has custom attributes associated with the alias user. Those custom attributes are preserved and written to the identified user profile. The last step shows changeUser being called, after which the anonymous user data is lost.][2]{: style="max-width:90%;"}
+Note that once user profiles are merged, this action cannot be undone.
 
 ## Additional resources
 - Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) for additional context.<br>
