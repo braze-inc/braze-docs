@@ -34,7 +34,7 @@ func inAppMessageViewControllerWithInAppMessage(inAppMessage: ABKInAppMessage!) 
 {% endtab %}
 {% endtabs %}
 
-Our [in-app message view controllers][37] are open-source. You can use subclasses or categories to customize the display or behavior of in-app messages.
+Our [in-app message view controllers][37] are customizable. You can use subclasses or categories to customize the display or behavior of in-app messages.
 
 ## Method declarations
 
