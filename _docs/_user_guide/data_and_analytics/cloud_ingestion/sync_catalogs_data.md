@@ -3,7 +3,7 @@ nav_title: Sync Catalogs Data
 article_title: Cloud Data Ingestion Sync Catalogs Data
 page_order: 2.1
 page_type: reference
-description: "This reference article provides an overview of how to sync catalogs data"
+description: "This reference article provides an overview of how to sync catalogs data."
 
 ---
 
