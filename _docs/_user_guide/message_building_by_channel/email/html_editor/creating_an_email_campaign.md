@@ -33,7 +33,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 
 **Steps:**
 
-1. Go to **Messaging** > **Campaigns** and click <i class=“fas fa-plus”></i> **Create Campaign**.
+1. Go to **Messaging** > **Campaigns** and click **+ Create Campaign**.
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
 {% endalert %}

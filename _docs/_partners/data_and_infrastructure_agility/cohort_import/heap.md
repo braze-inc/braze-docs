@@ -68,7 +68,7 @@ You’ll need a webhook endpoint URL to configure this integration, which you ca
 
 ### Step 2: Configure Braze Currents
 
-In Braze, navigate to **Partner Integrations** > **Data Export** and click **Create New Current** and select **Custom Currents Export**. 
+In Braze, navigate to **Partner Integrations** > **Data Export** and click **Create New Current** and select **Heap Export**. 
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Currents** under **Integrations**.

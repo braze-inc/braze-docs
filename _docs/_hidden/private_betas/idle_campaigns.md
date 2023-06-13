@@ -8,9 +8,11 @@ hidden: true
 
 > This reference article explains the idle status for campaigns and provides answers to frequently asked questions.
 
-When a campaign is no longer sending messages, Braze will assign an idle status to these campaigns to help sort and manage your list of campaigns. Using this new filter, you can filter through your campaigns and see which campaigns will be automatically stopped and the associated stop date. On an ongoing basis, the idle campaigns that meet the following criteria will be stopped:
+When a campaign is no longer sending messages, Braze will assign an idle status to these campaigns to help sort and manage your list of campaigns. Using this new filter, you can filter through your campaigns and see which campaigns will be automatically stopped and the associated stop date.
+
+On an ongoing basis, the idle campaigns that meet the following criteria will be stopped:
  
-- Action-based and scheduled campaigns with end dates seven days after the end date
+- Action-based and scheduled campaigns with end dates seven days after the send date
 - Scheduled one-time campaigns seven days after the send date 
 - Action-based and scheduled campaigns without end dates that have not sent messages in one year
 - API-triggered campaigns that have not sent messages in one year
@@ -18,6 +20,8 @@ When a campaign is no longer sending messages, Braze will assign an idle status 
 Campaigns will be stopped at the later of the default stop date and one day after their last occurring conversion deadline. Sends that are a result of a winning or personalized variant are treated as scheduled sends, and will be stopped seven days after the winning or personalized variant is sent. All campaigns will be stopped at 4am UTC every day for all Braze users.
 
 For recurring campaigns without end dates, if a message is sent or the campaign is updated, the one-year countdown for stopping the campaign will be reset. When campaigns are stopped, Braze will notify customers in their dashboard and via email. If you have an idle campaign that you want to remain active, resume the campaign, then update the end date for the campaign. For idle campaigns without end dates, you can make any edit to keep the campaign active.
+
+Content Cards will not be stopped until their expiration deadline, and will also abide by the aforementioned criteria as well as the conversion deadline rule.
 
 ## Frequently asked questions
 
@@ -64,6 +68,12 @@ To resume a campaign that's past its end date, update the campaign's end date to
 #### Who will receive email notifications about stopped campaigns?
 
 By default, all users with administrator permissions are opted into email notifications about auto-stopping campaigns. The creator of the campaign will always be notified when it is stopped. Users can manage email notification preferences by going to **Company Settings > Notification Preferences**, then adding or removing recipients from the notification **Campaign Automatically Stopped**.
+
+#### How does stopping Content Cards work?
+
+Content Cards will not be stopped until their expiration deadline and the appropriate buffer period. They will be stopped at the later of the buffer period (corresponding to whether the campaign is a one-time send, has an end date, or does not have an end date) and the expiration deadline. 
+
+For example, if a Content Card expires on April 1, is a one-time send, and has a conversion deadline of 10 days, it will be stopped on April 12 (10 days after the conversion deadline, plus one day). If a Content Card expires on April 1, is API-triggered, and has not sent messages since March 15, it will expire on March 15 of next year.
 
 #### Is there any action required?
 
