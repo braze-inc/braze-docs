@@ -5,6 +5,7 @@ page_order: 1
 description: "This article covers custom styling options for your Content Cards."
 channel:
   - content cards
+toc_headers: "h2"
 ---
 
 # Customizing Content Card styles
@@ -28,7 +29,6 @@ Content Card properties such as title, description, image, etc. are directly ava
 By default, Android and FireOS SDK Content Cards match the standard Android UI guidelines to provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml) file in the Braze SDK distribution:
 
 ```xml
-  <!-- Content Cards Example -->
   <style name="Braze.ContentCards.CaptionedImage.Description">
     <item name="android:textColor">@color/com_braze_description</item>
     <item name="android:textSize">15.0sp</item>
@@ -81,7 +81,7 @@ The Content Cards view controller allows you to customize the appearance and beh
 {% subtabs %}
 {% subtab Swift %}
 
-**Modifying `Attributes.default`**
+### Modifying `Attributes.default`
 
 Customize the look and feel of all instances of the Braze Content Card UI view controller by directly modifying the static [`Attributes.defaults`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/defaults) variable.
 
@@ -92,7 +92,7 @@ BrazeContentCardUI.ViewController.Attributes.defaults.cellAttributes.cornerRadiu
 BrazeContentCardUI.ViewController.Attributes.defaults.cellAttributes.classicImageSize = CGSize(width: 65, height: 65)
 ```
 
-**Initializing the view controller with Attributes**
+### Initializing the view controller with Attributes
 
 If you wish to modify only a specific instance of the Braze Content Card UI view controller, use the [init(braze:attributes:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/init(braze:attributes:)/) initializer to pass a custom `Attributes` struct to the view controller.
 
@@ -106,7 +106,7 @@ attributes.cellAttributes.classicImageSize = CGSize(width: 65, height: 65)
 let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
 ```
 
-**Customizing cells by subclassing**
+### Customizing cells by subclassing
 
 Alternatively, you can create custom interfaces by registering custom classes for each desired card type. To use your subclass instead of the default cell, modify the [`cells`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cells) property in the `Attributes` struct. For example:
 
@@ -160,8 +160,6 @@ body .ab-feed {
 }
 ```
 
-<!--- To do: Is there a repo with customization examples we can link to here? --->
-
 {% endtab %}
 {% endtabs %}
 
@@ -194,27 +192,42 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 For more information about font customization in the Android SDK, see the [font family guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization).
 {% endtab %}
 {% tab iOS %}
-
-<!--- To do: Add recipe for customizing font on iOS --->
-
 {% subtabs %}
 {% subtab Swift %}
 
-Swift content
+Customize your fonts by customizing the `Attributes` of the [`cellAttributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cellattributes/) instance property. For example:
+
+```swift
+var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
+attributes.cellAttributes.titleFont = .preferredFont(textStyle: .callout, weight: .bold)
+attributes.cellAttributes.descriptionFont = .preferredFont(textStyle: .footnote, weight: .regular)
+attributes.cellAttributes.domainFont = .preferredFont(textStyle: .footnote, weight: .medium)
+
+let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attributes: attributes)
+```
+
+Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/Swift/Sources/ContentCards-Custom-UI/CardsInfoViewController.swift#L77) for a complete example.
 
 {% endsubtab %}
 {% subtab Objective-C %}
 
-Objective-C content
+Customization of fonts via `Attributes` is not supported in Objective-C. 
+
+Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/ObjC/Sources/ContentCards-Custom-UI/CardsInfoViewController.m#L97) for an example of building your own UI with custom fonts.
 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% tab Web %}
 
-<!--- To do: Add recipe for customizing font through CSS --->
+Just like any other web element, you can easily customize the appearance of Content Cards through CSS. In your CSS file or inline styles, use the `font-family` property and specify the desired font name or font stack.
 
-Web content
+```css
+/* CSS selector targeting the Content Card element */
+.card-element {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+```
 
 {% endtab %}
 {% endtabs %}
@@ -245,6 +258,37 @@ To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style.
 
 {% endtab %}
 {% tab iOS %}
+{% subtabs %}
+{% subtab Swift %}
+
+Customize the pin icon by modifying the `pinIndicatorColor` and `pinIndicatorImage` properties of the [`cellAttributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cellattributes/) instance property. For example:
+
+```swift
+var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
+attributes.cellAttributes.pinIndicatorColor = .red
+attributes.cellAttributes.pinIndicatorImage = UIImage(named: "my-image")
+
+let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attributes: attributes)
+```
+
+You can also use [subclassing](#customizing-cells-by-subclassing) to create your own custom version of `BrazeContentCardUI.Cell`, which includes the pin indicator. For example: 
+
+```swift
+var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
+attributes.cells[BrazeContentCardUI.ClassicImageCell.identifier] = CustomClassicImageCell.self
+
+let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
+```
+
+{% endsubtab %}
+{% subtab Objective-C %}
+
+Customization of the pin indicator via `Attributes` is not supported in Objective-C.
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Web %}
 
 The structure of the Content Card pinned icon is:
 
@@ -270,30 +314,6 @@ customIcon.classList.add('customIcon');
 
 // Replace the existing icon with the custom icon
 pinnedIndicator.replaceChildren(customIcon);
-```
-
-{% subtabs %}
-{% subtab Swift %}
-
-Swift content
-
-{% endsubtab %}
-{% subtab Objective-C %}
-
-Objective-C content
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Web %}
-
-Just like any other web element, you can easily customize the appearance of Content Cards through CSS. In your CSS file or inline styles, use the `font-family` property and specify the desired font name or font stack.
-
-```css
-/* CSS selector targeting the Content Card element */
-.card-element {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-}
 ```
 
 {% endtab %}
