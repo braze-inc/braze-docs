@@ -16,6 +16,10 @@ description: "This article outlines details about the List user's subscription g
 
 > Use this endpoint to list and get the subscription groups of a certain user.
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `subscription.groups.get` permission.
+{% endalert %}
+
 If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d1c3b617-22f1-47bf-9ee8-499526824470 {% endapiref %}
