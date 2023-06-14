@@ -31,6 +31,10 @@ API-triggered campaigns will dedupe or send dupes depending on where the audienc
 - **Scenario 2: Duplicate emails in different `user_ids` within recipients object:** If the same email appears within multiple `External_user_IDs` referenced by the "recipients" object, the email will be sent twice.
 - **Scenario 3: Duplicate emails due to duplicate user_ids within recipients object:** If you try to add the same user profile twice, only one of the profiles will get the email.
 
+### Will updates to my outbound email settings apply retroactively?
+
+No. Updates made to the outbound email settings do not retroactively affect existing sends. For example, changing your default display name in the email settings will not automatically replace the existing default display name in your active campaigns or Canvases. 
+
 ### What is a "good" email deliverability rate?
 
 Typically, the "magic number" is around 95% messages delivered with a bounce rate no higher than 3%. If your deliverability dips below that, there is usually cause for concern.
