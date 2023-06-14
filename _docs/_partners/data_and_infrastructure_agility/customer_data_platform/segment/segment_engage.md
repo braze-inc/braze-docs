@@ -41,7 +41,14 @@ The Cohorts Destination is currently in early access. To get access to this feat
 4. Preview your audience by clicking **Review & Create**. By default, Segment.io queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck **Historical Backfill**.
 
 ### Step 2: Capture your cohort data import key
-In Braze, navigate to **Technology Partners** and select **Segment**. Here, you will find your REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.
+
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Segment**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
+{% endalert %}
+
+Here, you will find your REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.
 
 ### Step 3: Connect the Braze Cohorts Destination
 Follow [Segment’s instructions](https://segment.com/docs/connections/destinations/catalog/actions-braze-cohorts/#getting-started) on setting up the Cohorts Destination to sync your Engage audiences as cohorts to Braze.

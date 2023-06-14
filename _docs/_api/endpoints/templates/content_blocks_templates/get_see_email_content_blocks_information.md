@@ -26,7 +26,7 @@ description: "This article outlines details about the See Content Blocks informa
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `content_block_id`  | Required | String | The content block identifier. <br><br>You can find this by either listing content block information through an API call or going to **Developer Console** > **API Settings**, then scrolling to the bottom and searching for your content block API identifier.|
+| `content_block_id`  | Required | String | The content block identifier. <br><br>You can find this by either listing content block information through an API call or going to the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page, then scrolling to the bottom and searching for your content block API identifier.|
 | `include_inclusion_data`  | Optional | Boolean | When set to `true`, the API returns back the Message Variation API identifier of campaigns and Canvases where this content block is included, to be used in subsequent calls.  The results exclude archived or deleted campaigns or Canvases. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -65,7 +65,7 @@ The following table lists possible returned errors and their associated troubles
 | Error | Troubleshooting |
 | --- | --- |
 | `Content Block ID cannot be blank` | Make sure that a Content Block is listed in your request and is encapsulated in quotes (`""`). |
-| `Content Block ID is invalid for this App Group` | This Content Block doesn't exist or is in a different company account or app group. |
+| `Content Block ID is invalid for this workspace` | This Content Block doesn't exist or is in a different company account or workspace. |
 | `Content Block has been deleted—content not available` | This Content Block, though it may have existed earlier, has been deleted. |
 | `Include Inclusion Data—error` | This parameter only accepts boolean values (true or false). Make sure the value for `include_inclusion_data` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. See [request parameters](#request-parameters) for details. |
 {: .reset-td-br-1 .reset-td-br-2}

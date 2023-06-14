@@ -457,42 +457,12 @@ page_order: 3
 {% tab Shopify Custom Attributes %}
 | Attribute Name | Description |
 | --- | --- |
-| `shopify_accepts_marketing` | This custom attribute corresponds to the email marketing opt-in status that is captured on the checkout page.<br><br>This field is now deprecated for new Shopify customers in favor of our [subscription states and group]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify#step-5-collect-email-or-sms-subscribers) feature. |
-| `shopify_sms_consent` | This custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page.<br><br>This field is now deprecated for new Shopify customers in favor of our [subscription states and group]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify#step-5-collect-email-or-sms-subscribers) feature. |
 | `shopify_tags`  | This attribute corresponds to the [customer tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Example Payload %}
 {% subtabs local %}
-{% subtab Shopify SMS Consent %}
-```json
-{
-  "attributes": [
-    {
-      "external_id": "user_id",
-      "shopify_sms_consent": {
-        "state": "subscribed",
-        "opt_in_level": "single_opt_in",
-        "collected_from": "other"
-      }
-    }
-  ]
-}
-```
-{% endsubtab %}
-{% subtab Shopify Accepts Marketing (Email) %}
-```json
-{
-  "attributes": [
-    {
-      "external_id": "user_id",
-      "shopify_accepts_marketing": true
-    }
-  ]
-}
-```
-{% endsubtab %}
 {% subtab Shopify Tags %}
 ```json
 {

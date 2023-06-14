@@ -172,7 +172,7 @@ Now let’s get a little technical. Behind the scenes, there are three main part
 - **View:** What the card looks like
 - **Controller:** How the user interacts with the card
 
-For an out-of-the-box implementation, you add the card content—the model—either from the dashboard or via APIs, and the view and controller are handled by what is called a view controller. A view controller is the "glue" between the overall application and the screen. It controls the views that it owns according to the logic of your application. Every app has one, some have more than one.
+For a default implementation, you add the card content—the model—either from the dashboard or via APIs, and the view and controller are handled by what is called a view controller. A view controller is the "glue" between the overall application and the screen. It controls the views that it owns according to the logic of your application. Every app has one, some have more than one.
 
 ## Integrating Content Cards
 

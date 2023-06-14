@@ -12,7 +12,7 @@ tool: Reports
 
 Braze's uninstall tracking provides the following details:
 
-1. Daily app-level uninstall statistics in a time series graph on the **Overview** page.
+1. Daily app-level uninstall statistics in a time series graph on the **Home** page.
 2. Campaign-level uninstall statistics in a time series graph on the **Campaign Details** page of a specific campaign. This statistic specifies the number of campaign recipients that uninstall each day.
 
 Showing aggregate uninstalls over time can help you visualize trends and anomalies so that you can monitor app uninstalls with ease. Similarly, tracking campaign-level uninstalls can reveal whether a specific campaign is driving or preventing app uninstalls.
@@ -23,7 +23,11 @@ Braze automatically collects a base level of uninstall information from your reg
 
 ## Implementation
 
-You can enable uninstall tracking in the **Settings** tab of the **Manage Settings** page for each app you are interested in tracking.
+You can enable uninstall tracking on the **App Settings** page, under **Settings**, for each app you are interested in tracking.
+
+{% alert note %}
+If you are using the older navigation, **App Settings** is **Settings** and is located under **Manage Settings**.
+{% endalert %}
 
 When uninstall tracking is enabled for an app, background push messages will be sent nightly to users who have not recorded a session or received a push in 24 hours. 
 
@@ -35,7 +39,7 @@ This time can be used to define a segment of users for win-back campaigns. Using
 
 ## App-level analysis
 
-Daily statistics on uninstalls are found on the **Overview** page. The visualization can be broken down by segment, similar to other statistics Braze provides. Set **View Statistics For** to "Usage Analytics", and then select "Uninstalls" from the dropdown to display the graph.
+Daily statistics on uninstalls are found on the **Home** page. The visualization can be broken down by segment, similar to other statistics Braze provides. Set **View Statistics For** to "Usage Analytics", and then select "Uninstalls" from the dropdown to display the graph.
 
 The graph can then be broken down by segment and app using the dropdowns.
 

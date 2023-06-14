@@ -15,10 +15,6 @@ channel:
 
 AMP makes this possible through its use of various components that can be used to help build exciting in email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more! Tools like these offer significant opportunities to increase engagement and retention. 
 
-{% alert important %}
-AMP for Email is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 ## Requirements
 
 Braze is not responsible for the customer registering with Google or meeting the necessary security requirements.
@@ -61,7 +57,7 @@ You can utilize AMP for Email using our API. When you use any of [our Messaging 
   "app_id": (required, string) see App Identifier above,
   "subject": (optional, string),
   "from": (required, valid email address in the format "Display Name <email@address.com>"),
-  "reply_to": (optional, valid email address in the format "email@address.com" - defaults to your app group's default reply to if not set),
+  "reply_to": (optional, valid email address in the format "email@address.com" - defaults to your workspace's default reply to if not set),
   "plaintext_body": (optional, valid plaintext, defaults to autogenerating plaintext from "body" when this is not set),
   "amp_body": (optional, updates the text-amp-html MIME type) the email body in AMPHTML. The MIME (Multipurpose Internet Mail Extensions) type to be referenced is "text/x-amp-html".
   "body": (required unless email_template_id is given, valid HTML),
@@ -70,7 +66,7 @@ You can utilize AMP for Email using our API. When you use any of [our Messaging 
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
   "extras": (optional, valid Key-Value Hash), extra hash - for SendGrid customers, this will be passed to SendGrid as Unique Arguments,
   "headers": (optional, valid Key-Value Hash), hash of custom extensions headers. Currently, only supported for SendGrid customers,
-  "should_inline_css": (optional, boolean), whether to inline css on the body. If not provided, falls back to the default css inlining value for the App Group,
+  "should_inline_css": (optional, boolean), whether to inline css on the body. If not provided, falls back to the default css inlining value for the workspace,
   "attachments": (optional, array), array of json objects like [{"file_name","url"}] that define the files you need attached. Your file name's extension will be detected automatically from the URL, which should return the appropriate `Content-Type` as a response header,
 }
 ```
@@ -150,8 +146,8 @@ Any component that requires authenticating the user must use [Google Access Toke
 
 For a full list of AMP Components, check out the [AMP Documentation](https://amp.dev/documentation/components/?format=email).  
 
-### Example use cases
-Below you will find a couple of example use cases for the various components discussed above.
+### Use cases
+Check out these examples of the previous components.
 
 {% tabs local %}
 {% tab Interactive Surveys %}
@@ -223,7 +219,7 @@ For your AMP email to be delivered to any Gmail account, the email must meet the
 
 If none of these conditions are causing the error, reach out to [support][support].
 
-### Frequently Asked Questions
+### Frequently asked questions
 
 {% details Should I segment with AMP Emails? %}
 We advocate not segmenting to send to all different types of users. This is because we send AMP messages in multipart, having different versions included in the original email. If you customer can't see the AMP version, it will default back to HTML. 

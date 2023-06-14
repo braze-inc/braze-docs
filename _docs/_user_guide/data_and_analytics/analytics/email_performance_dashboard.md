@@ -13,11 +13,15 @@ tool:
 
 > Channel performance dashboards allow you to view aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and SMS.
 
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), the channel performance dashboard are located under **Overview**.
+{% endalert %}
+
 ![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
 
 ## Email performance dashboard
 
-To use your email performance dashboard, go to **Overview** > **Email Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
+To use your email performance dashboard, go to **Analytics** > **Email Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
 
 ### Metrics calculations
 
@@ -41,7 +45,7 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 
 ## SMS performance dashboard
 
-To use your SMS performance dashboard, go to **Overview** > **SMS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past. 
+To use your SMS performance dashboard, go to **Analytics** > **SMS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
 
 ### Metrics calculations
 

@@ -15,6 +15,7 @@ channel:
 
 Braze provides five Content Card templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated when importing the UI layer of the Braze SDK. Then, you can tweak certain parts of the card's styling. 
 
+
 ![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]
 
 {% alert important %}
@@ -207,6 +208,7 @@ let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attrib
 
 Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/Swift/Sources/ContentCards-Custom-UI/CardsInfoViewController.swift#L77) for a complete example.
 
+
 {% endsubtab %}
 {% subtab Objective-C %}
 
@@ -360,6 +362,8 @@ attributes.cellAttributes.unviewedIndicatorColor = .red
 
 let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
 ```
+
+Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift) for a complete example.
 
 {% endsubtab %}
 {% subtab Objective-C %}

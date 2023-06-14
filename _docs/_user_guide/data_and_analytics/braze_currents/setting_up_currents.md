@@ -36,7 +36,6 @@ The following requirements are the basic, minimum requirements to integrate with
 It's important to keep your Partner Keys/Tokens and authentication details up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
 {% endalert %}
 
-
 ## Step 1: Choose your partner
 
 Braze Currents allows you to integrate through Data Storage using flat files or to our Behavioral Analytics and Customer Data partners using a batched JSON payloads to a designated endpoint.  
@@ -45,7 +44,11 @@ Before you begin your integration, it's best to decide which integration is best
 
 ## Step 2: Navigate to Currents
 
-To get started, visit the Currents page in the sidebar, in the "Integrations" section of the dashboard. You'll be taken to the Currents integration management page.
+To get started, go to **Partner Integrations** > **Data Export**. You'll be taken to the Currents integration management page.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Integrations** > **Currents**.
+{% endalert %}
 
 ![Currents page in the Braze dashboard]({% image_buster /assets/img_archive/currents-main-page.png %})
 

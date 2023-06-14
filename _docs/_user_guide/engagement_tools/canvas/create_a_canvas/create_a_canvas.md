@@ -18,7 +18,11 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 ## Step 1: Create a new Canvas 
 
-Go to the **Canvas** page, located under the **Engagement** section, then click **Create Canvas**.
+Go to **Messaging** > **Canvas**, then click **Create Canvas**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Engagement**.
+{% endalert %}
 
 ## Step 2: Use the entry wizard to set up your Canvas
 
@@ -85,7 +89,7 @@ If your Canvas has multiple variants or a Control Group, Braze will use this con
 
 ### Step 2b: Set your Canvas entry schedule
 
-You can choose one of three ways in which users can enter your Canvas.
+You can choose one of three ways in which users can enter your Canvas. 
 
 #### Entry schedule types
 
@@ -126,7 +130,7 @@ After you choose your delivery method, adjust those settings appropriately, and 
 
 ### Step 2c: Set your target entry audience
 
-You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey.
+You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey, meaning Braze evaluates the target audience for eligibility first before users enter the Canvas journey.
 
 For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
@@ -138,13 +142,19 @@ Avoid configuring an action-based campaign or Canvas with the same trigger as th
 
 After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the audience criteria.
 
-![]({% image_buster /assets/img_archive/user_lookup.png %})
+![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:50%;"}
+
+#### Adjust entry controls
+
+Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas. For example, if you set the **Maximum users to potentially enter this Canvas** field to 1,000 users, and select the **Limit everytime the Canvas is scheduled** checkbox, then the Canvas will sent to 1,000 users per day.
+
+![]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
 
 ### Step 2d: Select your send settings
 
 Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. 
 
-By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To manage your frequency capping rules, go  to your **Global Message Settings** page in your Braze account.
+By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -301,8 +311,8 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 
 [1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
 [3]: {% image_buster /assets/img_archive/choose_canvas_experience.png %}
-[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
-[6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping
+[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting
+[6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping
 [11]:{% image_buster /assets/img_archive/canvas_add_variant.gif %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
 [13]:{% image_buster /assets/img_archive/Canvas_One_Day.png %}

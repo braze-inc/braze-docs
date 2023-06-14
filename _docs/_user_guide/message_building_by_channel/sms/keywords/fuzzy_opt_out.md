@@ -27,8 +27,14 @@ For example, "Stpo" or "Please stopppp" will be deemed fuzzy and a fuzzy opt-out
 
 ## Configure fuzzy opt-out
 
-To configure fuzzy opt-out, navigate to the subscription group keyword management page. 
-1. Under **Subscription Groups**, open the **SMS** section.
+To configure fuzzy opt-out, navigate to the subscription group keyword management page.
+
+1. Go to **Audience** > **Subscriptions** and select an SMS subscription group.
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Subscription Groups** under **Users**.
+{% endalert %}
+
+{:start="2"}
 2. In **SMS Global Keywords**, find the **opt-out** category and select the pencil icon.
 3. Enable **Fuzzy Opt-Out** by toggling it on.
 4. Modify the fuzzy opt-out response as desired. 

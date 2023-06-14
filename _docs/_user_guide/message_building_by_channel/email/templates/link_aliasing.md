@@ -91,7 +91,7 @@ When composing your email message, a new column will be present in the **Link Ma
 To track link engagement metrics, make sure to precede your link with either HTTP or HTTPS.
 {% endalert %}
 
-While you can select an unlimited number of links to track, Braze only allows retargeting at a user level on the last 100 tracked links that were clicked. For example, if you track 500 links and a user clicks on all 500 of them, you'll be able to retarget or create segments based on the 100 links that were most recently clicked.
+Braze allows you to select unlimited links to track, though you may only retarget users on the most recent links they have opened. User profiles include their 100 most recently clicked links. For example, if you track 500 links and a user clicks on all 500 of them, you can retarget or create segments based on the 100 most recently clicked links.
 
 {% tabs local %}
 {% tab Drag-and-Drop Editor %}
@@ -118,7 +118,7 @@ To view all of your tracked linked aliases, go to the **Manage Settings** page u
 
 Untracking a link will not deallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until they are evicted by newer data. The following segmentation filters will continue to exist, but new segments cannot be created with that filter.
 
-For segmentation purposes, only 100 links can be tracked per app group by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again.
+For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again.
 
 When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
 

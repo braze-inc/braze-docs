@@ -10,15 +10,13 @@ description: "This article provides answers to frequently asked questions about 
 
 > On this page, you'll find answers to some frequently asked questions about Liquid.<br><br>Braze does not currently support 100% of Shopify’s Liquid, only certain portions which we have attempted to outline in our documentation. We highly recommend testing all messages using Liquid before sending them to reduce the risk of errors or using unsupported Liquid.
 
-{% raw %}
-
 ### How do I use Liquid snippets in Braze?
 
 In many cases, you can incorporate Liquid snippets by navigating to your campaigns or Canvases, and inserting Liquid in the personalization modal in areas such as the email message body or in your segments. 
 
 #### Where can I learn more?
 
-For more on Liquid, check out our guided [Dynamic Personalization with Liquid](https://learning.braze.com/path/dynamic-personalization-with-liquid) Braze Learning path! You can also reference the [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases) for inspiration and a range of personalization examples using Liquid.
+For more on Liquid, check out our guided [Dynamic Personalization with Liquid](https://learning.braze.com/path/dynamic-personalization-with-liquid) Braze Learning path! You can also reference the [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/) for inspiration and a range of personalization examples using Liquid.
 
 ### What’s the difference between using Liquid and Connected Content for personalization?
 
@@ -40,17 +38,19 @@ No.
 
 ### How can I use Liquid to send a personalized greeting?
 
-For a personalized greeting using a user's first name, you can pull the standard user profile attributes such as `{{${first_name}}}`, `{{${last_name}}}`.
+For a personalized greeting using a user's first name, you can pull the standard user profile attributes such as {% raw %} `{{${first_name}}}`, `{{${last_name}}}`.
 
-You can also use a Liquid `{% if X %}` statement to do conditional rendering based on anything, such as the day of the week or custom attributes. For more information on the supported Liquid operators that can be used in conditional statements, check out [Operators]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/operators/).
+You can also use a Liquid `{% if X %}` {% endraw %}statement to do conditional rendering based on anything, such as the day of the week or custom attributes. For more information on the supported Liquid operators that can be used in conditional statements, check out [Operators]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/operators/).
 
 ### How can I personalize a message based on a customer’s location?
 
+{% raw %}
 There is a default attribute for the user’s location: `{{${most_recent_location}}}`.
 
 ### What's the difference between {{campaign.${name}}} and {{campaign.${message_name}}}?
 
 Both `{{campaign.${name}}}` and `{{campaign.${message_name}}}` are supported Liquid personalization tags. Both tags reference campaign attributes. `{{campaign.${name}}}` denotes the name of your campaign, and `{{campaign.${message_name}}}` is the name of your message variant.
+{% endraw %}
 
 ### How do I use Liquid with nested objects?
 
@@ -60,7 +60,9 @@ For more information, check out [Multi-criteria segmentation]({{site.baseurl}}/u
 
 ### How do I use event attributes to personalize a message that an event is triggering?
 
+{% raw %}
 You can access properties of API triggered events with the `api_triggered_property` tag: `{{api_trigger_properties.${attribute_key}}}`.  
+{% endraw %}
 
 ### What is abort logic, and how can I use it?
 
@@ -74,6 +76,8 @@ In Braze, this could be used for checking items in an array custom attribute, or
 
 For example, if you wanted to search a catalog with 100 rows and include all images for a shoe company named Get Going, you could use this Liquid snippet:
 
+{% raw %}
+
 ```liquid
 {% for item in catalog %}
 {% if {{item.brand}} = "GetGoing %}
@@ -82,6 +86,6 @@ For example, if you wanted to search a catalog with 100 rows and include all ima
 {% endfor %}
 ```
 
-Once the set conditions are met, your message can proceed. Using this logic is a helpful way to save time, instead of repeating Liquid blocks for different conditions.
-
 {% endraw %}
+
+Once the set conditions are met, your message can proceed. Using this logic is a helpful way to save time, instead of repeating Liquid blocks for different conditions.

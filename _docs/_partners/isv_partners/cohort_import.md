@@ -2,6 +2,7 @@
 nav_title: Cohort Import Integration
 alias: /cohort_import/
 hidden: true
+layout: dev_guide
 ---
 
 # Partner cohort import integration
@@ -43,9 +44,9 @@ Braze will provide the Partner API Key(s) to the partner prior to the partner be
 
 ### Client data import key
 
-The client data import key identifies the client app group into which the cohort should be imported. The key should be included in the body of the request in the `client_secret` field.
+The client data import key identifies the client workspace into which the cohort should be imported. The key should be included in the body of the request in the `client_secret` field.
 
-This key is generated in the client's dashboard in the integrations settings for the partner. When setting up the integration in the partner's application, the client should be asked to specify their data import key so the integration knows which client and app group to send data to.
+This key is generated in the client's dashboard in the integrations settings for the partner. When setting up the integration in the partner's application, the client should be asked to specify their data import key so the integration knows which client and workspace to send data to.
 
 ## API endpoint specifications
 

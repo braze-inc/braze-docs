@@ -31,7 +31,7 @@ For the sake of saving you time and ensuring a smooth integration, we recommend 
 
 ## Data aggregation
 
-The Braze SDK automatically captures immense amounts of data at the user level, making it easy to see key metrics for your app and user base. You will group similar apps into a single app group on your dashboard. For example, you will group the iOS and Android versions of your app into the same app group, allowing you to see the collected data from users across both platforms. This gives you a more complete view of your users across web and mobile channels. See the article on the [Overview page][3] for more information.
+The Braze SDK automatically captures immense amounts of data at the user level, making it easy to see key metrics for your app and user base. You will group similar apps into a single workspace on your dashboard. For example, you will group the iOS and Android versions of your app into the same workspace, allowing you to see the collected data from users across both platforms. This gives you a more complete view of your users across web and mobile channels. See the article on the [Home page][3] for more information.
 
 ## In-app messaging
 
@@ -47,7 +47,7 @@ Users of your website or app need to opt-in to receive push notifications. See [
 
 ## Segmentation and delivery rules
 
-By default, a campaign containing in-app messages will be sent to all versions of the app in that app group. For example, the message will send to both web and mobile users. To send an in-app message exclusively to web or mobile, you will need to segment your campaign accordingly, which is supported by default through the Braze SDK. 
+By default, a campaign containing in-app messages will be sent to all versions of the app in that workspace. For example, the message will send to both web and mobile users. To send an in-app message exclusively to web or mobile, you will need to segment your campaign accordingly, which is supported by default through the Braze SDK. 
 
 You can create a segment of your web users by selecting only your website's app icon in the **Apps Used** section of a segment.
 

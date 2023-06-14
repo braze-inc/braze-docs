@@ -124,7 +124,7 @@ To send push to only Huawei apps, [create a new Segment][15] and select your Hua
 
 ![][8]
 
-Of course, if you want to send the same push to all Android push providers, you can choose not to specify the app which will send to all Android apps configured within the current App Group.
+Of course, if you want to send the same push to all Android push providers, you can choose not to specify the app which will send to all Android apps configured within the current workspace.
 
 ## Analytics
 

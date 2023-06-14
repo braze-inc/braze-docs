@@ -25,9 +25,9 @@ As a convenience, a summary of supported personalization tags are provided. For 
 | Canvas Step Attributes | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Card Attributes | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Geofencing Events | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
-| Event Properties <br> (These are custom to your app group.)| `{{event_properties.${your_custom_event_property}}}` |
+| Event Properties <br> (These are custom to your workspace.)| `{{event_properties.${your_custom_event_property}}}` |
 | Canvas Entry Properties| `{{canvas_entry_properties}}` |
-| Custom Attributes <br> (These are custom to your app group.) | `{{custom_attribute.${your_custom_attribute}}}` |
+| Custom Attributes <br> (These are custom to your workspace.) | `{{custom_attribute.${your_custom_attribute}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
@@ -193,10 +193,6 @@ This is a simple example of how iteration tags can be used in Braze's message co
 Syntax tags can be used to control how Liquid is rendered. You can use the `echo` tag to return an expression. This is the same as wrapping an expression using curly brackets, except you can use this tag within Liquid tags. You can also use the `liquid` tag to have a block of Liquid without any delimiters on each tag. Each tag has to be in its own line when using the `liquid` tag. Check out Shopify's documentation on [syntax tags][33] for more information and examples.
 
 With [whitespace control][49], you can remove whitespaces around your tags, helping you further control what the Liquid output looks like.
-
-## Theme tags
-
-Theme tags can assign content that is a part of your theme. Braze currently supports the `render` tag, which allows you to render a snippet or app block. For more information, check out Shopify's documentation on [`render` tags][30].
 
 ## HTTP status codes {#http-personalization}
 

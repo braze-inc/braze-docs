@@ -23,7 +23,13 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-Creating a Content Block is easy—go to **Templates & Media**, then select the **Content Blocks Library** tab. Click **Create Content Block.** Then, create your Content Block!
+Go to **Templates** > **Content Blocks**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), **Templates** is **Templates & Media**.
+{% endalert %}
+
+Click **Create Content Block**.
 
 ![][1]
 

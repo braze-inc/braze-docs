@@ -11,7 +11,11 @@ search_rank: 1
 
 ## Access support portal
 
-To contact the Braze support team, navigate to the Braze dashboard. In the dashboard, select **Get Help**, and then **Braze Support**. 
+To contact the Braze support team, navigate to the Braze dashboard. In the dashboard, select **Support** > **Get Help**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), select **Get Help** > **Support**.
+{% endalert %}
 
 Depending on your Braze permissions, and if you are a designated support contact (premium), you will either be taken to the Braze support portal where you can submit and track cases, or our standard support form. If you are unsure if you are a Braze support contact, reach out to your company's Braze administrator, Braze success manager, or account owner.
 

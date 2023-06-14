@@ -18,9 +18,11 @@ description: "This article outlines details about the Generate preference center
 
 Each preference center URL is unique to each user.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bc750ff-068e-4391-897e-6eddca2561cd {% endapiref %}
+
 ## Rate limit
 
-This endpoint has a rate limit of 1,000 requests per minute, per app group.
+This endpoint has a rate limit of 1,000 requests per minute, per workspace.
 
 ## Path parameters
 

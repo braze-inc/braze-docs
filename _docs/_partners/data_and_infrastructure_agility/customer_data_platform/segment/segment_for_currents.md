@@ -48,7 +48,7 @@ Next, select the message engagement events you would like to export. Reference t
 Lastly, select **Launch Current**.
 
 {% alert warning %}
-If you intend to create more than one of the same Currents connectors (for example, two message engagement event connectors), they must be in different app groups. Because the Braze Segment.io Currents integration cannot isolate events by different apps in a single app group, failure to do this will lead to unnecessary data deduping and lost data. 
+If you intend to create more than one of the same Currents connectors (for example, two message engagement event connectors), they must be in different workspaces. Because the Braze Segment.io Currents integration cannot isolate events by different apps in a single workspace, failure to do this will lead to unnecessary data deduping and lost data. 
 {% endalert %}
 
 To read more, visit Segment.io [documentation](https://segment.com/docs/sources/cloud-apps/appboy/).
@@ -123,6 +123,13 @@ Braze supports exporting the following data listed in the Currents [user behavio
 - Webhook (abort, send)
   - `users.messages.webhook.Abort`
   - `users.messages.webhook.Send`
+- WhatsApp (abort, delivery, failure, inbound recieve, read, send)
+  - `users.messages.whatsapp.Abort`
+  - `users.messages.whatsapp.Delivery`
+  - `users.messages.whatsapp.Failure`
+  - `users.messages.whatsapp.InboundReceive`
+  - `users.messages.whatsapp.Read`
+  - `users.messages.whatsapp.Send`
 
 [1]: {% image_buster /assets/img/segment/segment_currents1.png %}
 [2]: {% image_buster /assets/img/segment/segment_currents.png %}

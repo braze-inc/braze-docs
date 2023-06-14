@@ -2,7 +2,7 @@
 nav_title: "POST: Blocklist Emails"
 article_title: "POST: Blocklist Emails"
 search_tag: Endpoint
-page_order: 5
+page_order: 8
 layout: api_page
 page_type: reference
 description: "This article outlines the details about the Blocklist emails Braze endpoint."

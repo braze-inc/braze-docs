@@ -33,15 +33,19 @@ Braze measures the behaviors of users in your control group and users in your tr
 
 ## Create a Global Control Group
 
-### Step 1: Navigate to the Global Control Group Settings.
+### Step 1: Navigate to the Global Control Group Settings
 
-From the dashboard, go to **Global Message Settings** under **Engagement**, and select the **Global Control Group Settings** tab.
+From the dashboard, go to **Audience** > **Global Control Group**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located under **Engagement** > **Global Message Settings** > **Global Control Group Settings**.
+{% endalert %}
 
 ### Step 2: Assign a percentage of all users to this control group
 
-Input a percentage for your control group and click **Save**. Once entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be. 
+Input a percentage for your control group and click **Save**. Once entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your workspace, the more accurate this estimate will be. 
 
-The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your app group. For instance, if the number of users in your app group grows, then the number of users in your Global Control Group will also grow so that your Control Group remains a constant percentage of your app group audience. For percentage guidelines, refer to the following [best practices section](#percentage-guidelines).
+The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your workspace. For instance, if the number of users in your workspace grows, then the number of users in your Global Control Group will also grow so that your Control Group remains a constant percentage of your workspace audience. For percentage guidelines, refer to the following [best practices section](#percentage-guidelines).
 
 ![The Global Control Group Settings with the Audience Settings set to "Assign five percent of all users to the Global Control Group".][4]
 
@@ -81,8 +85,7 @@ Historical control groups are not preserved, so you can only export the members 
 
 ## Reporting
 
-Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) for information on report metrics.
-
+Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) for information on report metrics.
 
 ## Troubleshooting
 
@@ -117,7 +120,7 @@ Users in your Global Control Group are withheld from receiving any messages othe
 
 #### Global Control Group segments on the Developer Console
 
-You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the **Developer Console**. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
+You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
 
 Only one of these segments is active and can be queried using the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/), or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
 
@@ -129,7 +132,7 @@ Two main rules to keep in mind are**:
 1. Your control group should be no smaller than 1000 users.
 2. Your control group should be no more than 10% of your entire audience.
 
-If you have a total audience that's smaller than 10,000, you should increase your percentage to create a group of over 1000 users; in this case, you should not increase your percentage higher than 15%. Keep in mind that the smaller your overall app group size is, the more challenging it will be to run a statistically rigorous test.
+If you have a total audience that's smaller than 10,000, you should increase your percentage to create a group of over 1000 users; in this case, you should not increase your percentage higher than 15%. Keep in mind that the smaller your overall workspace size is, the more challenging it will be to run a statistically rigorous test.
 
 - Some trade-offs to consider when thinking about your control group size are that you need a significantly large number of customers in your control group so that any behavior analysis created is trustworthy. However, the larger your control group is, the fewer customers are getting your campaigns, which is a downside if you're using your campaigns to drive engagement and conversions.
 - The ideal percentage of your total audience will depend on how large your total audience is. The bigger your total audience is, the smaller your percentage can be. If you have a small audience, however, you will need a larger percentage for your control group.

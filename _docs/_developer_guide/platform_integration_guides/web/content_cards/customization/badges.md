@@ -21,7 +21,7 @@ You can request the number of unread cards at any time by calling:
 braze.getCachedContentCards().getUnviewedCardCount();
 ```
 
-This is often used to power badges signifying how many unread Content Cards there are. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html)for more information.
+This is often used to power badges signifying how many unread Content Cards there are. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html) for more information.
 
 {% comment %}
 Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `braze.requestContentCardsRefresh();`.

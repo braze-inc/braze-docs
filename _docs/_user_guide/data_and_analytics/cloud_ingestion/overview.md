@@ -17,7 +17,7 @@ Braze Cloud Data Ingestion for Redshift is currently in early access. Contact yo
 
 ### How it works
 
-With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
+With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
 
 When a sync runs, Braze will directly connect to your data warehouse instance, retrieve all new data from the specified table, and update the corresponding user profiles on your Braze dashboard. Each time the sync runs, any updated data will be reflected on the user profiles.
 
@@ -144,6 +144,26 @@ SELECT
             'yet_another_attribute',
             attribute_3)
     ) as PAYLOAD FROM "EXAMPLE_USER_DATA";
+```
+{% endtab %}
+{% tab BigQuery %}
+```json
+CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (attribute_1 string,
+     attribute_2 STRING,
+     attribute_3 NUMERIC,
+     my_user_id STRING);
+
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    my_user_id as EXTERNAL_ID,
+    TO_JSON(
+      STRUCT(
+        'attribute_1' AS attribute_1,
+        'attribute_2'AS attribute_2,
+        'yet_another_attribute'AS attribute_3
+      )
+    ) as PAYLOAD 
+  FROM BRAZE.EXAMPLE_USER_DATA;
 ```
 {% endtab %}
 {% endtabs %}

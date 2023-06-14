@@ -29,9 +29,7 @@ The primary conversion event is the first event added during the campaign or Can
 
 ## Step 1: Create a campaign with conversion tracking
 
-Navigate to the **Campaigns** page in your company dashboard and click **Create Campaign**, then select the type of campaign you'd like to create.
-
-After setting up your campaign's messages and schedule, you'll have the option to add up to four conversion events for tracking. 
+[Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign) for your desired messaging channel. After setting up your campaign's messages and schedule, you'll have the option to add up to four conversion events for tracking.
 
 We highly recommend using as many conversion events that you feel is necessary since the addition of a second (or third) conversion event can significantly enrich your reporting. For instance, let's say you have a campaign that targets lapsing users. In this case, adding a secondary conversion event in addition to the primary **Starts Session** conversion event can further your understanding of how effective your campaign is in ushering your users back into your application. 
 
@@ -40,10 +38,10 @@ We highly recommend using as many conversion events that you feel is necessary s
 For each conversion event you wish to track, select the event and conversion deadline.
 
 1. Select the general type of event you'd like to use:
-  - **Opens App**: A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the app group).
+  - **Opens App**: A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the workspace).
   - **Makes Purchase**: A user is counted as having converted when they purchase the product you specify (defaults to any product).
   - **Performs Custom Event**: A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).
-  - **Upgrade App**: A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the app group). Braze will perform a best-efforts numerical comparison to determine if the version change was an upgrade. For example, a user would convert if they upgrade from version 1.2.3 to 1.3.0 of the application, but Braze wouldn't register a conversion if a user downgrades from 1.2.3 to 1.2.2. However, if the app's version name contain strings, such as "1.2.3-beta2", then Braze will not be able to determine if a version change was an upgrade. In this situation, Braze will count it as a conversion when the user's most recent app version changes.<br><br>
+  - **Upgrade App**: A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the workspace). Braze will perform a best-efforts numerical comparison to determine if the version change was an upgrade. For example, a user would convert if they upgrade from version 1.2.3 to 1.3.0 of the application, but Braze wouldn't register a conversion if a user downgrades from 1.2.3 to 1.2.2. However, if the app's version name contain strings, such as "1.2.3-beta2", then Braze will not be able to determine if a version change was an upgrade. In this situation, Braze will count it as a conversion when the user's most recent app version changes.<br><br>
 2. Set your conversion deadline. This is the maximum amount of time that may pass to consider a conversion. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.  
 
 ![The "Makes Purchase" conversion event type as an example to record conversions for users who make any purchase. This has a conversion deadline of 12 hours.][2]

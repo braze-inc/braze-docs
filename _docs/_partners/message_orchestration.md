@@ -94,4 +94,11 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
 - name: Nift
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
+- name: Sendbird
+  url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/  
+- name: Regal
+  url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
+- name: Kognitiv
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
+
 ---

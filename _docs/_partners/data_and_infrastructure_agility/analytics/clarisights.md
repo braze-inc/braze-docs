@@ -22,12 +22,12 @@ The Braze and Clarisights integration allows you to import data from Braze campa
 | Clarisights account | A Clarisights workspace is required to take advantage of this partnership |
 | Braze REST API key | A Braze REST API key with the following permissions:  <br> - `campaigns.list` <br>  - `campaigns.details`<br> - `campaigns.data_series` <br> - `canvas.details`<br> - `canvas.list` <br>  - `canvas.data_series` <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
-| Braze app group name | The name of the app group associated with the Braze API key. This name will be used to identify the app group integration on Clarisights. |
+| Braze workspace name | The name of the workspace associated with the Braze API key. This name will be used to identify the workspace integration on Clarisights. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
 
-With the Braze and Clarisights integration, users can create different visualizations and tabled to gain insights from the campaigns they have created. Popular use cases include:
+With the Braze and Clarisights integration, users can create different visualizations and tables to gain insights from the campaigns they have created. Popular use cases include:
 
 {% tabs %}
 {% tab Better visibility %}
@@ -49,10 +49,10 @@ Unified dashboards for CMOs and CXOs.
 
 ## Integration
 
-To sync Braze data to Clarisights, you must build a Braze connector and connect Braze app groups.
+To sync Braze data to Clarisights, you must build a Braze connector and connect Braze workspaces.
 
 1. In Clarisights, navigate to the **Integrations** page, locate the **Braze** connector, and select **+ Connect**.<br>![A list of available connectors from the Clarisights integrations marketplace.][6]<br><br>
-2. Next, using the integration flow, connect your Clarisights account to Braze. This can be done by providing your Braze REST API key, Braze app group name, and Braze REST endpoint.<br>![Braze app group connector in the Clarisights platform. This page has fields for Braze app group name, Braze REST API key, and Braze REST endpoint.][7]<br><br>Before successful integration, users will see the connected app groups on the same page.<br>![Within "Braze Accounts" you will find a list of connected app groups.][9]<br><br>
+2. Next, using the integration flow, connect your Clarisights account to Braze. This can be done by providing your Braze REST API key, Braze workspace name, and Braze REST endpoint.<br>![Braze workspace connector in the Clarisights platform. This page has fields for Braze workspace name, Braze REST API key, and Braze REST endpoint.][7]<br><br>Before successful integration, users will see the connected workspaces on the same page.<br>![Within "Braze Accounts" you will find a list of connected workspaces.][9]<br><br>
 
 ## Using this integration
 

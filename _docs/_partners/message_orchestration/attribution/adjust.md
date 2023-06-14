@@ -68,7 +68,13 @@ If you are planning to send post-install events from Adjust into Braze, you will
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Adjust**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Adjust's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Adjust technology page. In this box, you are shown the data import key and the REST endpoint.][1]{: style="max-width:90%;"}
+In Braze, navigate to **Integrations** > **Technology Partners** and select **Adjust**. 
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
+{% endalert %}
+
+Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Adjust's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Adjust technology page. In this box, you are shown the data import key and the REST endpoint.][1]{: style="max-width:90%;"}
 
 ### Step 3: Configure Braze in Adjust
 

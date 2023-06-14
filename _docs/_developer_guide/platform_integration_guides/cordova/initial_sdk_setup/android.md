@@ -15,25 +15,25 @@ search_rank: 1
 
 > This reference article covers how to install the Braze Android SDK for Cordova. 
 
-Download the SDK from [Github][1] and run the following from the root of your project:
+Download the SDK from [GitHub][1] and run the following from the root of your project:
 
 ```
-cordova plugin add path_to_repo/appboy-cordova-sdk
+cordova plugin add path_to_repo/braze-cordova-sdk
 ```
 
 Alternatively, if you are running Cordova 6 or later, you could install directly from Github:
 
 ```
-cordova plugin add https://github.com/appboy/appboy-cordova-sdk#master
+cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#master
 ```
 
 ## Configure the plugin
 
-In your `config.xml`, add a `preference` element under the android `platform` element that contains your Braze API key with the name `com.appboy.api_key`:
+In your `config.xml`, add a `preference` element under the android `platform` element that contains your Braze API key with the name `com.braze.api_key`:
 
 ```xml
 <platform name="android">
-    <preference name="com.appboy.api_key" value="YOUR_API_KEY" />
+    <preference name="com.braze.api_key" value="YOUR_API_KEY" />
 </platform>
 ```
 
@@ -43,17 +43,17 @@ The Cordova Android SDK also allows for various other settings to be configured 
 
 ```xml
 <platform name="android">
-    <preference name="com.appboy.android_small_notification_icon" value="RESOURCE_ENTRY_NAME_FOR_ICON_DRAWABLE" />
-    <preference name="com.appboy.android_large_notification_icon" value="RESOURCE_ENTRY_NAME_FOR_ICON_DRAWABLE" />
-    <preference name="com.appboy.android_notification_accent_color" value="str_ACCENT_COLOR_INTEGER" />
-    <preference name="com.appboy.android_default_session_timeout" value="str_SESSION_TIMEOUT_INTEGER" />
-    <preference name="com.appboy.android_handle_push_deep_links_automatically" value="true"/"false" />
-    <preference name="com.appboy.android_log_level" value=LOG_LEVEL_INTEGER />
-    <preference name="com.appboy.firebase_cloud_messaging_registration_enabled" value="true"/"false" />
-    <preference name="com.appboy.android_fcm_sender_id" value="str_YOUR_FCM_SENDER_ID" />
-    <preference name="com.appboy.enable_location_collection" value="true"/"false" />
-    <preference name="com.appboy.geofences_enabled" value="true"/"false" />
-    <preference name="com.appboy.android_disable_auto_session_tracking" value="true"/"false" />
+    <preference name="com.braze.android_small_notification_icon" value="RESOURCE_ENTRY_NAME_FOR_ICON_DRAWABLE" />
+    <preference name="com.braze.android_large_notification_icon" value="RESOURCE_ENTRY_NAME_FOR_ICON_DRAWABLE" />
+    <preference name="com.braze.android_notification_accent_color" value="str_ACCENT_COLOR_INTEGER" />
+    <preference name="com.braze.android_default_session_timeout" value="str_SESSION_TIMEOUT_INTEGER" />
+    <preference name="com.braze.android_handle_push_deep_links_automatically" value="true"/"false" />
+    <preference name="com.braze.android_log_level" value=LOG_LEVEL_INTEGER />
+    <preference name="com.braze.firebase_cloud_messaging_registration_enabled" value="true"/"false" />
+    <preference name="com.braze.android_fcm_sender_id" value="str_YOUR_FCM_SENDER_ID" />
+    <preference name="com.braze.enable_location_collection" value="true"/"false" />
+    <preference name="com.braze.geofences_enabled" value="true"/"false" />
+    <preference name="com.braze.android_disable_auto_session_tracking" value="true"/"false" />
 </platform>
 ```
 
@@ -65,8 +65,8 @@ Due to how the Cordova 8.0.0+ framework handles preferences, entirely numerical 
 
 ```xml
 <platform name="android">
-    <preference name="com.appboy.firebase_cloud_messaging_registration_enabled" value="true" />
-    <preference name="com.appboy.android_fcm_sender_id" value="str_64422926741" />
+    <preference name="com.braze.firebase_cloud_messaging_registration_enabled" value="true" />
+    <preference name="com.braze.android_fcm_sender_id" value="str_64422926741" />
 </platform>
 ```
 
@@ -82,7 +82,7 @@ To remove automatic push registration on Android set the following configuration
 
 ```xml
 <platform name="android">
-    <preference name="com.appboy.firebase_cloud_messaging_registration_enabled" value="false" />
+    <preference name="com.braze.firebase_cloud_messaging_registration_enabled" value="false" />
 </platform>
 ```
 
@@ -92,25 +92,25 @@ To enable location collection and Braze Geofences, use the [`geofence-branch`][3
 
 ```xml
 <platform name="android">
-    <preference name="com.appboy.enable_location_collection" value="true" />
-    <preference name="com.appboy.geofences_enabled" value="true" />
+    <preference name="com.braze.enable_location_collection" value="true" />
+    <preference name="com.braze.geofences_enabled" value="true" />
 </platform>
 ```
 
 The geofence-branch can be added to your Cordova project with the following:
 
 ```
-cordova plugin add https://github.com/appboy/appboy-cordova-sdk#geofence-branch
+cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branch
 ```
 
 ### Delaying automatic session tracking
 
-Set `<preference name="com.appboy.android_disable_auto_session_tracking" value="true" />` in your `config.xml` to disable the Android Cordova plugin from automatically tracking sessions. To start tracking sessions, call `AppboyPlugin.startSessionTracking()`. Note that this will not retroactively track sessions and will only start tracking sessions starting from the next `Activity.onStart()`.
+Set `<preference name="com.braze.android_disable_auto_session_tracking" value="true" />` in your `config.xml` to disable the Android Cordova plugin from automatically tracking sessions. To start tracking sessions, call `BrazePlugin.startSessionTracking()`. Note that this will not retroactively track sessions and will only start tracking sessions starting from the next `Activity.onStart()`.
 
 ## Initial setup complete
 
-Once the initial setup is complete, you can access your app's `AppboyPlugin` JavaScript interface.
+Once the initial setup is complete, you can access your app's `BrazePlugin` JavaScript interface.
 
-[1]: https://github.com/Appboy/appboy-cordova-sdk
-[2]: https://github.com/Appboy/appboy-cordova-sdk/blob/master/src/android/BrazePlugin.kt
-[3]: https://github.com/Appboy/appboy-cordova-sdk/tree/geofence-branch
+[1]: https://github.com/braze-inc/braze-cordova-sdk
+[2]: https://github.com/braze-inc/braze-cordova-sdk/blob/master/src/android/BrazePlugin.kt
+[3]: https://github.com/braze-inc/braze-cordova-sdk/tree/geofence-branch

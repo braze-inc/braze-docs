@@ -48,7 +48,7 @@ Apple requires that the user initiates the Live Activity through some action in 
 
 ### How do I know if Live Activites has errors?
 
-Any Live Activity errors will be logged in the Braze dashboard under **Developer Console** > **Message Activity Log**, where you can filter by "LiveActivity Errors".
+Any Live Activity errors will be logged in the Braze dashboard in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/), where you can filter by "LiveActivity Errors".
 
 ### I am receiving an Access Denied response when I try to use the `live_activity/update` endpoint. Why?
 
@@ -56,7 +56,7 @@ The API keys you use need to be given the correct permissions to access the diff
 
 ### Does the `messages/send` endpoint share rate limits with the `messages/live_activity/update` endpoint? 
 
-The `messages/live_activity/update` endpoint has a separate rate limit from any other Braze endpoint. By default, the rate limit for the `messages/live_activity/update` endpoint is 250,000 requests per hour per app group. See the [rate limit article][5] for more information.
+The `messages/live_activity/update` endpoint has a separate rate limit from any other Braze endpoint. By default, the rate limit for the `messages/live_activity/update` endpoint is 250,000 requests per hour per workspace. See the [rate limit article][5] for more information.
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/

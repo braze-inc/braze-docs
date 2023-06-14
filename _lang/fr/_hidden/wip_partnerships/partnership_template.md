@@ -67,7 +67,7 @@ Once you have selected the [Partner] webhook template, you should see the follow
 - **HTTP Method**: POST
 - **Request Header**:
   - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
-  - **Request Body**: application/json
+  - **Content-Type**: application/json
 {% endraw %}
 #### Request body
 Include code of your webhook request body. 

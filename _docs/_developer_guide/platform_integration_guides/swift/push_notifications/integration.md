@@ -32,8 +32,12 @@ Before you can send an iOS push notification using Braze, you must provide your 
 3. Under **Key Description**, enter a unique name for the signing key.
 4. Under **Key Services**, select the **Apple Push Notification service (APNs)** checkbox, then click **Continue**. Click **Confirm**.
 5. Note the key ID. Click **Download** to generate and download the key. Make sure to save the downloaded file in a secure place, as you cannot download this more than once.
-6. Navigate to **Manage Settings > Settings** in the dashboard and upload the `.p8` file under **Apple Push Certificate**.
+6. In Braze, go to **Settings** > **App Settings** and upload the `.p8` file under **Apple Push Certificate**.
 7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/documentation/foundation/nsbundle/1418023-bundleidentifier), [key ID](https://developer.apple.com/help/account/manage-keys/get-a-key-identifier/), and [team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id). Click **Save**.<br><br>
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can upload your `.p8` file from **Manage Settings** > **Settings**.
+{% endalert %}
 
 {% endtab %}
 {% tab .p12 Certificate (Legacy) %}
@@ -61,7 +65,7 @@ You may choose to use Apple's older authentication scheme (.p12 SSL certificates
 {% endtab %}
 {% endtabs %}
 
->  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate app group or app for the development version of your app.
+>  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate workspace or app for the development version of your app.
 
 ## Step 2: Enable push capabilities
 
@@ -260,10 +264,14 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API][29]. You will need to replace the following fields with the correct values for your test case:
 
-- `YOUR_API_KEY` - available on the **Developer Console** page.
-- `YOUR_EXTERNAL_USER_ID` - available on the **User Search** page. See [assigning user IDs][32] for more information.
+- `YOUR_API_KEY` - available at **Settings** > **API Keys**.
+- `YOUR_EXTERNAL_USER_ID` - available on the **Search Users** page. See [assigning user IDs][32] for more information.
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location: <br>- **API Keys** is located at **Developer Console** > **API Settings** <br>- **Search Users** is located at **Users** > **User Search**
+{% endalert %}
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
