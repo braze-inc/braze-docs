@@ -17,16 +17,11 @@ When implementing your custom Content Cards, you can parse Braze's Content Card 
 
 To obtain Braze's Content Card data model, subscribe to Content Card updates. There are two properties to pay particular attention to:
 
-* **`idString`**: Represents the Content Card ID. This is the unique identifier used to log analytics from custom Content Cards.
+* **`id`**: Represents the Content Card ID string. This is the unique identifier used to log analytics from custom Content Cards.
 * **`extras`**: Encompasses all the key-value pairs from the Braze dashboard.
 
-All properties outside of `idString` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android][1], [iOS][2], [Web][3].
+All properties outside of `id` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android][1], [iOS][2], [Web][3].
 
-<!--This alert was taken from the Web guide. Is it applicable for Android and Swift as well? -->
-
-{% alert important %}
-Content Cards will only refresh on session start if a subscribe request is called before `openSession()`. You can always choose to [manually refresh the feed]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed) as well.
-{% endalert %}
 
 {% tabs %}
 {% tab Android %}
@@ -175,6 +170,8 @@ braze.subscribeToContentCardsUpdates(function(updates){
 braze.openSession();
 ```
 
+> Content Cards will only refresh on session start if a subscribe request is called before `openSession()`. You can always choose to [manually refresh the feed]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed) as well.
+
 {% endtab %}
 {% endtabs %}
 
@@ -182,14 +179,12 @@ braze.openSession();
 
 ## Logging events
 
-After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. Set a custom click listener to manually handle these analytics.
+Logging valuable metrics like impressions, clicks, and dismissals is quick and simple. Set a custom click listener to manually handle these analytics.
 
 <!-- JOSH TO DO: Reminder: When you remove the information from the Android guide that is duplicative with this article, move the Helper file information from Advanced Integration Guide into the Integration section --->
 
 {% tabs %}
 {% tab Android %}
-
-<!-- Android Question: What is the difference between this prescribed method and the advice given in: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/customization/handling_clicks_manually. Would that article's content be better to use? --->
 
 The [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call the Braze logging methods. Use the `ContentCardable` base class to easily reference and provide data to the `BrazeManager`. 
 
@@ -197,92 +192,42 @@ To log an impression or click on a card, call [`Card.logClick()`](https://braze-
 
 You can manually log or set a Content Card as "dismissed" to Braze for a particular card with [`setIsDismissed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissed.html). If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
+To create a custom click listener, create a class that implements [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html) and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a Content Card. Then, instruct Braze to use your Content Card click listener. 
+
 {% subtabs %}
 {% subtab Java %}
 
-### Custom objects call the logging methods
-
-Within your `ContentCardable` base class, call the `BrazeManager` directly, if appropriate. In this example, the `cardData` property will be nonnull if the object came from a Content Card. 
-```java
-@Override
-public View getView(int position, View convertView, ViewGroup parent) {
-        Tile tile = currentTiles.get(position);
-        tile.logContentCardImpression();
-        ...
-    }
-```
-
-### Retrieve the Content Card from the `ContentCardId`
-
-The `ContentCardable` base class handles the heavy lifting of calling the `BrazeManager` and passing the unique identifier from the Content Card associated with the custom object.
+For example:
 
 ```java
-    public void logContentCardImpression() {
-        if (cardData != null){
-            BrazeManager.getInstance().logContentCardImpression(cardData.getContentCardId());
-        }
-    }
-```
+BrazeContentCardsManager.getInstance().setContentCardsActionListener(new IContentCardsActionListener() {
+  @Override
+  public boolean onContentCardClicked(Context context, Card card, IAction cardAction) {
+    return false;
+  }
 
-### Call `Card` functions
+  @Override
+  public void onContentCardDismissed(Context context, Card card) {
 
-Then, the `BrazeManager` calls our logging methods.
-
-```java
-    public void logContentCardClicked(String idString) {
-        getContentCard(idString).ifPresent(Card::logClick);
-    }
-
-    public void logContentCardImpression(String idString) {
-        getContentCard(idString).ifPresent(Card::logImpression);
-    }
-
-    private Optional<Card> getContentCard(String idString) {
-        return cardList.filter(c -> c.id.equals(idString)).findAny();
-    }
+  }
+});
 ```
 
 {% endsubtab %}
 {% subtab Kotlin %}
 
-### Custom objects call the logging methods
-
-Within your `ContentCardable` base class, call the `BrazeManager` directly, if appropriate. In this example, the `cardData` property will be nonnull if the object came from a Content Card. 
+For example:
 
 ```kotlin
-override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val tile = currentTiles[position]
-        tile.logContentCardImpression()
-        ...
-    }
-```
+BrazeContentCardsManager.getInstance().contentCardsActionListener = object : IContentCardsActionListener {
+  override fun onContentCardClicked(context: Context, card: Card, cardAction: IAction): Boolean {
+    return false
+  }
 
-### Retrieve the Content Card from the `ContentCardId`
+  override fun onContentCardDismissed(context: Context, card: Card) {
 
-The `ContentCardable` base class handles the heavy lifting of calling the `BrazeManager` and passing the unique identifier from the Content Card associated with the custom object.
-
-```kotlin
-    fun logContentCardImpression() {
-        cardData?.let { BrazeManager.getInstance().logContentCardImpression(it.contentCardId) }
-    }
-```
-
-### Call `Card` functions
-
-Then, the `BrazeManager` calls our logging methods.
-
-```kotlin
-    fun logContentCardClicked(idString: String?) {
-        getContentCard(idString)?.logClick()
-    }
-
-    fun logContentCardImpression(idString: String?) {
-        getContentCard(idString)?.logImpression()
-    }
-
-    private fun getContentCard(idString: String?): Card? {
-        return cardList.find { it.id == idString }.takeIf { it != null }
-    }
+  }
+}
 ```
 
 {% endsubtab %}
