@@ -2,7 +2,11 @@
 nav_title: Customizing Feed
 article_title: Customizing the Default Content Card Feed
 page_order: 3
+description: "This article covers Content Card feed customization options."
+channel:
+  - content cards
 ---
+
 # Customizing the default Content Card feed
 
 > Content Cards are interactive, visually appealing elements that can be used to deliver personalized and engaging content to users. A Content Card feed is the sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages.
@@ -71,6 +75,7 @@ let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
   // Implement completion handler
 }];
 ```
+
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -90,6 +95,7 @@ function refresh() {
 
 {% endtab %}
 {% endtabs %}
+
 
 {% alert important %}
 The default rate limit for manually refreshing the feed is 3 calls per 10 minutes per device to prevent performance degradation and errors.

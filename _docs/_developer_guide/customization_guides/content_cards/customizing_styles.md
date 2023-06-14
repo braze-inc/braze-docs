@@ -12,7 +12,9 @@ channel:
 > Braze Content Cards come with a default look and feel. This article covers custom styling options for your Content Cards.
 
 ## Customizing styling
-Braze provides five Content Card templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Then, you can tweak certain parts of the card's styling. 
+
+Braze provides five Content Card templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated when importing the UI layer of the Braze SDK. Then, you can tweak certain parts of the card's styling. 
+
 
 ![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]
 
@@ -27,7 +29,6 @@ Content Card properties such as title, description, image, etc. are directly ava
 By default, Android and FireOS SDK Content Cards match the standard Android UI guidelines to provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml) file in the Braze SDK distribution:
 
 ```xml
-  <!-- Content Cards Example -->
   <style name="Braze.ContentCards.CaptionedImage.Description">
     <item name="android:textColor">@color/com_braze_description</item>
     <item name="android:textSize">15.0sp</item>
@@ -42,8 +43,6 @@ By default, Android and FireOS SDK Content Cards match the standard Android UI g
 ```
 
 To customize your Content Card stylings, override this default style. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The entire style must be copied over to your local `styles.xml` file for all attributes to be correctly set.
-
-<!--- To do: Is there a repo with customization examples we can link to here? --->
 
 {% subtabs local %}
 {% subtab Correct style override %}
@@ -161,8 +160,6 @@ body .ab-feed {
 }
 ```
 
-<!--- To do: Is there a repo with customization examples we can link to here? --->
-
 {% endtab %}
 {% endtabs %}
 
@@ -195,27 +192,40 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 For more information about font customization in the Android SDK, see the [font family guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization).
 {% endtab %}
 {% tab iOS %}
-
-<!--- To do: Add recipe for customizing font on iOS --->
-
 {% subtabs %}
 {% subtab Swift %}
 
-Swift content
+Customize your fonts by customizing the `Attributes` of the [`cellAttributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cellattributes/) instance property. For example:
+
+```swift
+var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
+attributes.cellAttributes.titleFont = .preferredFont(textStyle: .callout, weight: .bold)
+attributes.cellAttributes.descriptionFont = .preferredFont(textStyle: .footnote, weight: .regular)
+attributes.cellAttributes.domainFont = .preferredFont(textStyle: .footnote, weight: .medium)
+
+let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attributes: attributes)
+```
 
 {% endsubtab %}
 {% subtab Objective-C %}
 
-Objective-C content
+Customization of fonts via `Attributes` is not supported in Objective-C. 
+
+Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/ObjC/Sources/ContentCards-Custom-UI/CardsInfoViewController.m#L97) for an example of building your own UI with custom fonts.
 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% tab Web %}
 
-<!--- To do: Add recipe for customizing font through CSS --->
+Just like any other web element, you can easily customize the appearance of Content Cards through CSS. In your CSS file or inline styles, use the `font-family` property and specify the desired font name or font stack.
 
-Web content
+```css
+/* CSS selector targeting the Content Card element */
+.card-element {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+```
 
 {% endtab %}
 {% endtabs %}
@@ -229,33 +239,80 @@ When creating a Content Card, marketers have the option of pinning the card. A p
 {% tabs %}
 {% tab Android %}
 
-To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
+To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element. For example:
 
-<!--- To do: Can we add a code sample of what this looks like with some dummy src element? --->
+```xml
+  <style name="Braze.ContentCards.PinnedIcon">
+    <item name="android:src">@drawable/{my_custom_image_here}</item>
+
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_alignParentTop">true</item>
+    <item name="android:contentDescription">@null</item>
+    <item name="android:importantForAccessibility">no</item>
+  </style>
+```
 
 {% endtab %}
 {% tab iOS %}
-
-<!--- To do: Add recipe for customizing the pinned icon on iOS --->
-
 {% subtabs %}
 {% subtab Swift %}
 
-Swift content
+Customize the pin icon by modifying the `pinIndicatorColor` and `pinIndicatorImage` properties of the [`cellAttributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cellattributes/) instance property. For example:
+
+```swift
+var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
+attributes.cellAttributes.pinIndicatorColor = .red
+attributes.cellAttributes.pinIndicatorImage = UIImage(named: "my-image")
+
+let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attributes: attributes)
+```
+
+You can also use subclassing to create your own custom version of `BrazeContentCardUI.Cell`, which includes the pin indicator. For example: 
+
+```swift
+var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
+attributes.cells[BrazeContentCardUI.ClassicImageCell.identifier] = CustomClassicImageCell.self
+
+let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
+```
 
 {% endsubtab %}
 {% subtab Objective-C %}
 
-Objective-C content
+Customization of the pin indicator via `Attributes` is not supported in Objective-C.
 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% tab Web %}
 
-<!--- To do: Add recipe for customizing font through CSS --->
+The structure of the Content Card pinned icon is:
 
-Web content
+```css
+<div class="ab-pinned-indicator">
+  <i class="fa fa-star"></i>
+</div>
+```
+
+If you want to use a different FontAwesome icon, you can simply replace the class name of the `i` element with the class name of the desired icon. 
+
+If you want to swap out the icon altogether, remove the `i` element and add the custom icon as a child of `ab-pinned-indicator`. There are a few different ways you can go about it, but one simple method would be to `replaceChildren()` on the `ab-pinned-indicator` element.
+
+For example:
+
+```javascript
+// Get the parent element
+const pinnedIndicator = document.querySelector('.ab-pinned-indicator');
+
+// Create a new custom icon element
+const customIcon = document.createElement('span');
+customIcon.classList.add('customIcon');
+
+// Replace the existing icon with the custom icon
+pinnedIndicator.replaceChildren(customIcon);
+```
 
 {% endtab %}
 {% endtabs %}
@@ -325,7 +382,7 @@ Customization of only the unviewed indicator via `Attributes` is not supported i
 To change the color of the unread indicator of a card, add custom CSS to your webpage. For example, to set the color of the unviewed indicator to green:
 
 ```css
-.ab-unread-indicator { background-color: green !important; }
+.ab-unread-indicator { background-color: green; }
 ```
 
 {% endtab %}
@@ -333,22 +390,10 @@ To change the color of the unread indicator of a card, add custom CSS to your we
 
 ### Disabling unread indicator
 
-To disable the unread indicator, hide the indicator bar by setting its color to clear or none.
-
 {% tabs %}
 {% tab Android %}
 
-Hide the unread indicator bar by altering the value in `com_braze_content_cards_unread_bar_color` in your `colors.xml` file:
-
-  <!-- TO DO: What color should be used here? -->
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <!-- The color used to highlight unread Content Cards at their bottom edge -->
-  <color name="com_braze_content_cards_unread_bar_color">#1676d0</color>
-</resources>
-```
+Hide the unread indicator bar by setting [`setUnreadBarVisible`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/-content-card-view-holder/set-unread-bar-visible.html?query=fun%20setUnreadBarVisible(isVisible:%20Boolean)) on `ContentCardViewHolder` to `false`. 
 
 {% endtab %}
 {% tab iOS %}
