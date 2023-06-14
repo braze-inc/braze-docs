@@ -206,9 +206,6 @@ attributes.cellAttributes.domainFont = .preferredFont(textStyle: .footnote, weig
 let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attributes: attributes)
 ```
 
-Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/Swift/Sources/ContentCards-Custom-UI/CardsInfoViewController.swift#L77) for a complete example.
-
-
 {% endsubtab %}
 {% subtab Objective-C %}
 
