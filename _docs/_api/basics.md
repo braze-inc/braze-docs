@@ -144,9 +144,9 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Name | Description |
 |---|---|---|
-| `segments.list` | Query for a list of Segments. |
-| `segments.data_series` | Query for Segment analytics over a time range. |
-| `segments.details` | Query for details of a specific Segment. |
+| `segments.list` | Query for a list of segments. |
+| `segments.data_series` | Query for segment analytics over a time range. |
+| `segments.details` | Query for details of a specific segment. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
