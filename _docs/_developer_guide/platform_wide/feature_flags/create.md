@@ -271,15 +271,15 @@ const numberProperty = await Braze.getFeatureFlagNumberProperty("expanded_user_p
 
 ```csharp
 // Feature flag instance
-const featureFlag = braze.getFeatureFlag("expanded_user_profile");
+var featureFlag = braze.getFeatureFlag("expanded_user_profile");
 // String properties
-const stringProperty = featureFlag.getStringProperty("color");
+var stringProperty = featureFlag.getStringProperty("color");
 // Boolean properties
-const booleanProperty = featureFlag.getBooleanProperty("expanded");
+var booleanProperty = featureFlag.getBooleanProperty("expanded");
 // Number property as integer
-const numberProperty = featureFlag.getIntegerProperty("height");
+var numberProperty = featureFlag.getIntegerProperty("height");
 // Number property as double
-const numberProperty = featureFlag.getDoubleProperty("height");
+var numberProperty = featureFlag.getDoubleProperty("height");
 ```
 {% endtab %}
 {% tab Cordova %}
