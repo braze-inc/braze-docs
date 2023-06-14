@@ -5,7 +5,6 @@ page_order: 1
 description: "This article covers custom styling options for your Content Cards."
 channel:
   - content cards
-toc_headers: "h2"
 ---
 
 # Customizing Content Card styles
@@ -81,7 +80,7 @@ The Content Cards view controller allows you to customize the appearance and beh
 {% subtabs %}
 {% subtab Swift %}
 
-### Modifying `Attributes.default`
+**Modifying `Attributes.default`**
 
 Customize the look and feel of all instances of the Braze Content Card UI view controller by directly modifying the static [`Attributes.defaults`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/defaults) variable.
 
@@ -92,7 +91,7 @@ BrazeContentCardUI.ViewController.Attributes.defaults.cellAttributes.cornerRadiu
 BrazeContentCardUI.ViewController.Attributes.defaults.cellAttributes.classicImageSize = CGSize(width: 65, height: 65)
 ```
 
-### Initializing the view controller with Attributes
+**Initializing the view controller with Attributes**
 
 If you wish to modify only a specific instance of the Braze Content Card UI view controller, use the [init(braze:attributes:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/init(braze:attributes:)/) initializer to pass a custom `Attributes` struct to the view controller.
 
@@ -106,7 +105,7 @@ attributes.cellAttributes.classicImageSize = CGSize(width: 65, height: 65)
 let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
 ```
 
-### Customizing cells by subclassing
+**Customizing cells by subclassing**
 
 Alternatively, you can create custom interfaces by registering custom classes for each desired card type. To use your subclass instead of the default cell, modify the [`cells`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cells) property in the `Attributes` struct. For example:
 
@@ -271,7 +270,7 @@ attributes.cellAttributes.pinIndicatorImage = UIImage(named: "my-image")
 let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attributes: attributes)
 ```
 
-You can also use [subclassing](#customizing-cells-by-subclassing) to create your own custom version of `BrazeContentCardUI.Cell`, which includes the pin indicator. For example: 
+You can also use subclassing to create your own custom version of `BrazeContentCardUI.Cell`, which includes the pin indicator. For example: 
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
