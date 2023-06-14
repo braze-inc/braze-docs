@@ -18,13 +18,13 @@ platform:
 
 ### How can I join the feature flags beta program? {#join-beta}
 
-Braze feature flags are currently in an open beta. Please ask your Braze account team to learn more about joining the beta program.
+Braze feature flags are currently in an open beta. [Click here](https://dashboard.braze.com/engagement/feature_flags) to request beta access, or speak with your Braze account team.
 
 ### What platforms are Braze feature flags supported on? {#platforms}
 
 Braze supports Feature Flags on iOS, Android, and Web platforms with the following SDK version requirements:
 
-{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 %}
+{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 %}
 
 Do you need support on other platforms? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 

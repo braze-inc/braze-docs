@@ -23,7 +23,7 @@ Note these guidelines when creating your CSV file. The first column of the CSV f
 - Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)
 - Maximum field (column) name of 250 characters
-- Maximum CSV file size of 100&nbsp;MB
+- Maximum CSV file size of 2&nbsp;GB
 - Maximum field value (cell) of 5,000 characters
 - Maximum field value (cell) size of 0.5&nbsp;KB 
 - Only letters, numbers, hyphens, and underscores for `id` and header values
@@ -36,7 +36,13 @@ Need more space to accommodate for your CSV files? Contact your Braze account ma
 
 ## Selecting your method
 
-To start, click **Create New Catalog**, then choose to either **Upload CSV** or **Create in browser**. 
+To create a catalog, go to **Data Settings** > **Catalogs**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Catalogs** under **Data**.
+{% endalert %}
+
+Click **Create New Catalog**, then choose to either **Upload CSV** or **Create in browser**.
 
 ### Method 1: Upload CSV
 
@@ -68,10 +74,6 @@ Your CSV file can be rejected if you go above [company limitations](#limits).
 You also have the option of updating the CSV file after selecting to create a catalog in the browser. Click **Update Catalog > Upload CSV**, then select whether to update, add, or delete items in your catalog.
 
 ### Method 2: Create in browser
-
-{% alert important %}
-Creating a catalog in-browser is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
-{% endalert %}
 
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
@@ -176,7 +178,7 @@ You can leverage our [Catalogs endpoints]({{site.baseurl}}/api/endpoints/catalog
 
 You can create a catalog using the [Create catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/).
 
-As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in an app group.
+As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
 
 ### Managing catalog items
 
@@ -295,7 +297,7 @@ The following table describes the limitations that apply at a catalog level:
 ### Storage limits
 
 {% alert important %}
-To request an upgrade for catalogs storage, contact your Braze account manager.
+The package entitlement shown in the Braze dashboard is rounded to the nearest unit for visual purposes; however, you are still entitled to the full entitlement purchased. To request an upgrade for catalogs storage, contact your Braze account manager.
 {% endalert %}
 
 #### Free version

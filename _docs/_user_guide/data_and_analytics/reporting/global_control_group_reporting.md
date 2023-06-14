@@ -8,11 +8,17 @@ tool:
 
 ---
 
-# Global Control Group
+# Global Control Group Report
 
 > The Global Control Group Report allows you to compare your group against a treatment sample. Your treatment sample is a random selection of non-control users, approximately the same number of users as your control, generated using the Random Bucket Number method.
 
-To view a report for your [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) from the dashboard, navigate to **Global Control** under **Data**. Next, select the parameter you wish to run your report with (sessions or a particular custom event) and click **Run Report**.
+To view a report for your [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) from the dashboard, navigate to **Analytics** > **Global Control Group Report**. 
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page can be found under **Data**.
+{% endalert %}
+
+Next, select the parameter you wish to run your report with (sessions or a particular custom event) and click **Run Report**.
 
 ![][6]
 

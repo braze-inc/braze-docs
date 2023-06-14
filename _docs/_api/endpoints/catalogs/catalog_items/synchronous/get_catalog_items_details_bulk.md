@@ -140,8 +140,8 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
-| `invalid-cursor` | Check that your `cursor` is valid. |
 | `catalog-not-found` | Check that the catalog name is valid. |
+| `invalid-cursor` | Check that your `cursor` is valid. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

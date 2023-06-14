@@ -14,16 +14,14 @@ description: "This reference article covers using an array of objects as a data 
 ## Limitations
 
 - Arrays of objects are intended for custom attributes sent via the API. CSV uploads are not supported. This is because commas in the CSV file will be interpreted as a column separator, and commas in values will cause parsing errors. 
-- Partners do not support arrays of objects. We recommend against using this feature with app groups that have partner integrations enabled.
+- Partners do not support arrays of objects. We recommend against using this feature with workspaces that have partner integrations enabled.
 - Arrays of objects have no limit on the number of items but do have a maximum size of 50&nbsp;KB.
 
 Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
 
-## Usage Examples
+## API example
 
-### API Request Body
-
-{% tabs %}
+{% tabs local %}
 {% tab Create %}
 
 The following is a `/users/track` example with a `pets` array. To capture the properties of the pets, send an API request that lists `pets` as an array of objects. Note that each object has been assigned a unique `id` that can be referenced later when making updates.
@@ -81,7 +79,6 @@ Add another item to the array using the `$add` operator. The following example s
             "breed": "parakeet",
             "name": "Mary"
           }
-        ]
         ]
       }
     }
@@ -165,7 +162,301 @@ The following example shows removing any object in the `pets` array that has an 
 {% endtab %}
 {% endtabs %}
 
-### Liquid Templating
+## SDK example
+
+{% tabs local %}
+{% tab Android SDK %}
+
+**Create**
+```kotlin
+val json = JSONArray()
+    .put(JSONObject()
+        .put("id", 1)
+        .put("type", "dog")
+        .put("breed", "beagle")
+        .put("name", "Gus"))
+    .put(JSONObject()
+        .put("id", 2)
+        .put("type", "cat")
+        .put("breed", "calico")
+        .put("name", "Gerald")
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json)
+}
+```
+
+**Add**
+```kotlin
+val json = JSONObject()
+    .put("\$add", JSONArray()
+        .put(JSONObject()
+            .put("id", 3)
+            .put("type", "dog")
+            .put("breed", "corgi")
+            .put("name", "Doug"))
+        .put(JSONObject()
+            .put("id", 4)
+            .put("type", "fish")
+            .put("breed", "salmon")
+            .put("name", "Larry"))
+        .put(JSONObject()
+            .put("id", 5)
+            .put("type", "bird")
+            .put("breed", "parakeet")
+            .put("name", "Mary")
+        )
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json, true)
+}
+```
+
+**Update**
+```kotlin
+val json = JSONObject()
+    .put("\$update", JSONArray()
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 4)
+            .put("\$new_object", JSONObject()
+                .put("breed", "goldfish")
+            )
+        )
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 5)
+            .put("\$new_object", JSONObject()
+                .put("name", "Annette")
+            )
+        )
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json, true)
+}
+```
+
+**Delete**
+```kotlin
+val json = JSONObject()
+    .put("\$remove", JSONArray()
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 1)
+        )
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 2)
+        )
+        .put(JSONObject()
+            .put("\$identifier_key", "type")
+            .put("\$identifier_value", "dog")
+        )
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json, true)
+}
+```
+
+{% endtab %}
+{% tab Swift SDK %}
+
+**Create**
+```swift
+let json: [[String: Any?]] = [
+  [
+    "id": 1,
+    "type": "dog",
+    "breed": "beagle",
+    "name": "Gus"
+  ],
+  [
+    "id": 2,
+    "type": "cat",
+    "breed": "calico",
+    "name": "Gerald"
+  ]
+]
+
+braze.user.setCustomAttribute(key: "pets", array: json)
+```
+
+**Add**
+```swift
+let json: [String: Any?] = [
+  "$add": [
+    [
+      "id": 3,
+      "type": "dog",
+      "breed": "corgi",
+      "name": "Doug"
+    ],
+    [
+      "id": 4,
+      "type": "fish",
+      "breed": "salmon",
+      "name": "Larry"
+    ],
+    [
+      "id": 5,
+      "type": "bird",
+      "breed": "parakeet",
+      "name": "Mary"
+    ]
+  ]
+]
+
+braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
+```
+
+**Update**
+```swift
+let json: [String: Any?] = [
+  "$update": [
+    [
+      "$identifier_key": "id",
+      "$identifier_value": 4,
+      "$new_object": [
+        "breed": "goldfish"
+      ]
+    ],
+    [
+      "$identifier_key": "id",
+      "$identifier_value": 5,
+      "$new_object": [
+        "name": "Annette"
+      ]
+    ]
+  ]
+]
+
+braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
+```
+
+**Delete**
+```swift
+let json: [String: Any?] = [
+  "$remove": [
+    [
+      "$identifier_key": "id",
+      "$identifier_value": 1,
+    ],
+    [
+      "$identifier_key": "id",
+      "$identifier_value": 2,
+    ],
+    [
+      "$identifier_key": "type",
+      "$identifier_value": "dog",
+    ]
+  ]
+]
+
+braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
+```
+
+{% alert important %}
+Nested custom attributes are not supported for AppboyKit.
+{% endalert %}
+
+{% endtab %}
+{% tab Web SDK %}
+
+**Create**
+```javascript
+import * as braze from "@braze/web-sdk";
+const json = [{
+  "id": 1,
+  "type": "dog",
+  "breed": "beagle",
+  "name": "Gus"
+}, {
+  "id": 2,
+  "type": "cat",
+  "breed": "calico",
+  "name": "Gerald"
+}];
+braze.getUser().setCustomUserAttribute("pets", json);
+```
+
+**Add**
+```javascript
+import * as braze from "@braze/web-sdk";
+const json = {
+  "$add": [{
+    "id":  3,
+    "type":  "dog",
+    "breed":  "corgi",
+    "name":  "Doug",
+  }, {
+    "id":  4,
+    "type":  "fish",
+    "breed":  "salmon",
+    "name":  "Larry",
+  }, {
+    "id":  5,
+    "type":  "bird",
+    "breed":  "parakeet",
+    "name":  "Mary",
+  }]
+};
+braze.getUser().setCustomUserAttribute("pets", json, true);
+```
+
+**Update**
+```javascript
+import * as braze from "@braze/web-sdk";
+const json = {
+  "$update": [
+    {
+      "$identifier_key": "id",
+      "$identifier_value": 4,
+      "$new_object": {
+        "breed": "goldfish"
+      }
+    },
+    {
+      "$identifier_key": "id",
+      "$identifier_value": 5,
+      "$new_object": {
+        "name": "Annette"
+      }
+    }
+  ]
+};
+braze.getUser().setCustomUserAttribute("pets", json, true);
+```
+
+**Delete**
+```javascript
+import * as braze from "@braze/web-sdk";
+const json = {
+  "$remove": [
+    {
+      "$identifier_key": "id",
+      "$identifier_value": 1,
+    },
+    {
+      "$identifier_key": "id",
+      "$identifier_value": 2,
+    },
+    {
+      "$identifier_key": "type",
+      "$identifier_value": "dog",
+    }
+  ]
+};
+braze.getUser().setCustomUserAttribute("pets", json, true);
+```
+
+{% endtab %}
+{% endtabs %}
+
+## Liquid Templating
 
 You can use this `pets` array to personalize a message. The following Liquid templating example shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
 
@@ -181,7 +472,7 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 
 In this scenario, you can use Liquid to loop through the `pets` array and print out a statement for each pet. [Assign a variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) to the `pets` custom attribute and use dot notation to access properties on an object. Specify the name of the object, followed by a period `.`, followed by the property name.
 
-### Segmentation
+## Segmentation
 
 When segmenting users based on arrays of objects, a user will qualify for the segment if any object in the array matches the criteria. 
 
@@ -199,7 +490,7 @@ Or you might filter for pets that have a `type` of `dog`. Here a user has at lea
 
 ![Filter by pet type equals dog][2]
 
-#### Levels of nesting
+### Levels of nesting
 
 You can create a segment with up to one level of array nesting (array within another array). For example, given the following attributes, you can make a segment for `pets[].name` contains `Gus`, but you can't make a segment for `pets[].nicknames[]` contains `Gugu`.
 
@@ -241,7 +532,7 @@ You can create a segment with up to one level of array nesting (array within ano
 
 Data points are consumed differently depending on whether you create, update, or remove a property.
 
-{% tabs %}
+{% tabs local %}
 {% tab Create %}
 
 Creating a new array consumes one data point for each attribute in an object. This example costs eight data points—each pet object has four attributes and there are two objects.

@@ -84,7 +84,13 @@ For a full list of available fields, their types, and helpful descriptions, have
 
 ### Step 2: Create and encode an undefined payload variable
 
-Create and name a new Content Block by navigating to **Templates & Media** within the Braze dashboard. Here, you can find the **Content Block Library** tab. Select **Create Content Block** to get started.
+Create and name a new Content Block by navigating to **Templates** > **Content Blocks** within the Braze dashboard.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Engagement** > **Templates & Media** > **Content Block Library**.
+{% endalert %}
+
+Select **Create Content Block** to get started.
 
 Next, you must define your **Content Block Liquid Tag**. After saving this Content Block, this Liquid tag can be referenced when composing messages. In this example, we have assigned the Liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 
@@ -232,7 +238,7 @@ PassKit requires an `HTTP Header` for authorization that includes your PassKit A
 - **HTTP Method**: PUT
 - **Request Header**:
   - **Authorization**: Bearer `<PASSKIT_LONG_LIVED_TOKEN>`
-  - **Request Body**: application/json
+  - **Content-Type**: application/json
 {% endraw %}
 
 #### Request body

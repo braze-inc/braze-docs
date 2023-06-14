@@ -73,7 +73,11 @@ The following configures credentials that are used for:
 2. CSV exports (campaign, segment, Canvas user data export via the dashboard)
 3. Engagement reports
 
-In Braze, navigate to **Technology Partners** > **Microsoft Azure** and provide your connection string, Azure storage container name, and Azure storage prefix.
+In Braze, navigate to **Partner Integrations** > **Technology Partners** > **Microsoft Azure** and provide your connection string, Azure storage container name, and Azure storage prefix.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
+{% endalert %}
 
 Next, make sure the **Make this the default data export destination** box is checked, this will make sure your exported data is sent to Azure. Once completed, save your integration.
 
@@ -83,3 +87,9 @@ Next, make sure the **Make this the default data export destination** box is che
 It's important to keep your connection string up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
+## Export behavior
+
+Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
+
+- All API exports will not return a download URL in the response body and must be retrieved through data storage.
+- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage. 

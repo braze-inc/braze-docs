@@ -19,7 +19,11 @@ search_rank: 1
 
 ### Step 1: Navigate to the email template editor
 
-In the left navigation, click **Templates & Media**, under the **Engagement** section. This will open up the **Email Template Gallery**.
+Go to **Templates** > **Email Templates**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Email Templates**.
+{% endalert %}
 
 ### Step 2: Create or choose a template
 
@@ -35,16 +39,16 @@ Any existing custom HTML templates will need to be re-created using the Drag & D
 
 You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop Editor to customize your content. Once selected, you will be guided to the editor experience you chose. An **HTML Editor** or **Drag-and-Drop Editor** badge will appear, indicating that you are about to use this editing experience for template creation.
 
+If you do not include an unsubscribe link, Braze will prompt you to add this in your email as it's required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {%raw%}`${email_footer}`{%endraw%}, or by [customizing the footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in your email templates.
+
 {% alert important %}
-When composing your email template copy, do not switch back and forth between different editor types (HTML/Block/Classic) as that may shift the previously created HTML leading to rendering issues. 
+When composing your email template copy, do not switch back and forth between different editor types (HTML, Block, Classic) as that may shift the previously created HTML leading to rendering issues. 
 {% endalert %}
 
 ![Drag and Drop Editor badge in the Email Body section]({% image_buster /assets/img/dnd_badge_icon.png %})
 
 {% tabs %}
 {% tab HTML Editor %}
-
-Braze will add a footer with an unsubscribe link at the bottom of your HTML emails by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page. For more information, read our [custom footer documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer).
 
 To enter a subject line, click <i class="fas fa-pencil-alt"></i> **Edit Sending Info**. 
 
@@ -108,12 +112,10 @@ The **Preview & Test** section allows you to preview your email based on differe
 
 - **Random User:** Braze will randomly select a user from the database and preview the email based on their attributes/event information.
 Note: This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.<br><br>
-- **Select User:** You can select a specific user based on their email address or `external_id`. The email will preview based on that user's attributes and event information<br><br>
+- **Select User:** You can select a specific user based on their email address or external ID. The email will preview based on that user's attributes and event information<br><br>
 - **Custom User:** You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
 {% endsubtab %}
 {% endsubtabs %}
-
-Inbox Vision is currently unavailable during this testing phase and will be made available in the future.
 
 {% alert tip %}
 To read more about the different components of the drag & drop editing experience, visit our Drag & Drop Editor documentation articles [here]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). 
@@ -121,8 +123,6 @@ To read more about the different components of the drag & drop editing experienc
 
 {% endtab %}
 {% endtabs %}
-
-Braze will add a footer with an unsubscribe link at the bottom of your email by default. You can [customize this footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in the **Email Settings** tab of the **Manage Settings** page.
 
 #### Step 4a: Check for email errors
 

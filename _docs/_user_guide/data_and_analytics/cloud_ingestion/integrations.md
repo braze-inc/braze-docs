@@ -105,7 +105,7 @@ GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 After this step, you will share connection information with Braze and receive a public key to append to the user.
 
 {% alert note %}
-When connecting different app groups to the same Snowflake account, you must create a unique user for each Braze app group where you are creating an integration. Within an app group, you can reuse the same user across integrations, but integration creation will fail if a user on the same Snowflake account is duplicated across app groups.
+When connecting different workspaces to the same Snowflake account, you must create a unique user for each Braze workspace where you are creating an integration. Within a workspace, you can reuse the same user across integrations, but integration creation will fail if a user on the same Snowflake account is duplicated across workspaces.
 {% endalert %}
 
 #### Step 5: Allow Braze IPs in Snowflake network policy (optional)
@@ -171,7 +171,9 @@ These are the minimum required permissions for this user; if creating multiple C
 
 If you have a firewall or other network policies, you must give Braze network access to your Redshift instance. Allow access from the below IPs corresponding to your Braze dashboard's region. 
 
-You may also need to change your security groups to allow Braze to access your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow TCP connectivity on this port even if the inbound rules are set to "allow all". 
+{% alert important %}
+You may also need to change your security groups to allow Braze to access your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow TCP connectivity on this port even if the inbound rules are set to "allow all".
+{% endalert %}
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | For Instances `EU-01` and `EU-02` |
 |---|---|
@@ -246,7 +248,11 @@ If you have network policies in place, you must give Braze network access to you
 {% tabs %}
 {% tab Snowflake %}
 
-Navigate to the Snowflake page on Braze, under **Technology Partners**, and click **Create new import sync**.
+Go to **Partner Integrations** > **Technology Partners**. Find the Snowflake page and click **Create new import sync**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
+{% endalert %}
 
 #### Step 1: Add Snowflake connection information and source table
 
@@ -272,7 +278,11 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 {% endtab %}
 {% tab Redshift %}
 
-Navigate to the Redshift page on Braze, under **Technology Partners**, and click **Create new import sync**.
+Go to **Partner Integrations** > **Technology Partners**. Find the Redshift page and click **Create new import sync**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
+{% endalert %}
 
 #### Step 1: Add Redshift connection information and source table
 Input the information for your Redshift data warehouse and source table, then proceed to the next step.
@@ -288,7 +298,11 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% endtab %}
 {% tab BigQuery %}
 
-Navigate to the BigQuery page on Braze, under **Technology Partners**, and click **Create new import sync**.
+Go to **Partner Integrations** > **Technology Partners**. Find the BigQuery page and click **Create new import sync**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
+{% endalert %}
 
 #### Step 1: Add BigQuery connection information and source table
 Upload the JSON key and provide a name for the service account, then input the details of your source table.

@@ -57,11 +57,10 @@ Buy now! Would 5% off convince you?
 {% raw %}
 
 ```liquid
-{% if {{custom_attribute.${Game}}} == Game1 %}
+{% if {{custom_attribute.${Game}}} == 'Game1' %}
 You played our Game! We're so happy!
-{% elsif{{custom_attribute.${Game}}} == Game2 %}
-You played our other Game! Woop!
-{% else %}
+{% elsif{{custom_attribute.${Game}}} == 'Game2' %}
+You played our other Game! Woop!{% else %}
 Hey! Get in here and play this Game!
 {% endif %}
 ```

@@ -13,9 +13,15 @@ guide_top_text: "Using this set of endpoints, you can update a user's email subs
 
 guide_featured_title: ""
 guide_featured_list:
+  - name: "DELETE: Delete Subscription State by Email Address or Phone Number"
+    link: /docs/api/endpoints/email/delete_remove_subscription_state
+    fa_icon: fas fa-user-minus
   - name: "GET: List Hard Bounces"
     link: /docs/api/endpoints/email/get_list_hard_bounces/
     fa_icon: fas fa-reply-all
+  - name: "GET: List Subscription State by Email Address or Phone Number"
+    link: /docs/api/endpoints/email/get_query_by_email_or_phone
+    fa_icon: fas fa-list
   - name: "GET: Query Unsubscribed Email Addresses"
     link: /docs/api/endpoints/email/get_query_unsubscribed_email_addresses/
     fa_icon: fas fa-envelope

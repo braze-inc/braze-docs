@@ -21,7 +21,7 @@ For example, if a brand has plans to send both transactional and promotional SMS
 Subscription Groups are necessary for any SMS message sent through Braze. A subscription group is a pool of numbers for a given messaging use case (for example, marketing or transactional messages). Users in this subscription group can be subscribed or unsubscribed to the group independently and if subscribed, will receive messages sent to that group.
 
 1. **Subscription Groups**
-- A subscription group is required for each Braze app group you plan to send SMS with. 
+- A subscription group is required for each Braze workspace you plan to send SMS with. 
 - Users may unsubscribe to messaging within an SMS message or through the use of other types of unsubscribe prompts (for example, account page or in-app web flow). Your team must update the subscription status of any user who unsubscribes outside of SMS messaging.<br><br>
 2. **Managing User Updates**
 - You must add users to a subscription group via REST API.
@@ -45,7 +45,12 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 
 ### How to check a user's SMS subscription group
 
-- **User Profile**: Individual user profiles can be accessed through the Braze dashboard by selecting **User Search** from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the **Engagement** tab, you can view a user's SMS subscription groups. 
+- **User Profile**: You can access individual user profiles from **Audience** > **Search Users**. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the **Engagement** tab, you can view a user's SMS subscription groups.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page under **Users** > **User Search**.
+{% endalert %}
+
 - **Rest API Get**: Individual user profiles subscription group can be viewed by the [`/subscription/user/status` endpoint][9] or [`/subscription/status/get` endpoint][8] by using Braze's REST API. 
 
 ## Sending with a Subscription Group

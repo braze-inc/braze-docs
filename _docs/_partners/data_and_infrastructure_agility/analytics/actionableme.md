@@ -30,7 +30,7 @@ To integrate Braze and actionable.me, the actionable.me platform must be configu
 
 ### Step 1: Create your Braze API Key
 
-In Braze, navigate to **Developer Console** and select the **REST API Keys** tab. Select **Create New API Key** and ensure following permissions are added:
+In Braze, navigate to **Settings** > **API Keys**. Select **Create New API Key** and ensure following permissions are added:
 
 - `campaigns.list`
 - `campaigns.data_series`
@@ -48,6 +48,10 @@ In Braze, navigate to **Developer Console** and select the **REST API Keys** tab
 - `kpi.dau.data_series`
 - `kpi.new_users.data_series`
 - `kpi.uninstalls.data_series`
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
+{% endalert %}
 
 ### Step 2: Provide information to the actionable.me team
 

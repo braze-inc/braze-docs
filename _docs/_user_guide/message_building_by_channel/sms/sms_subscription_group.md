@@ -28,7 +28,11 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 - **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint][4] by using Braze's REST API.
 - **SDK Integration** Users can be added to an email or SMS subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287), or [Web][11].
 - **Automatically handled upon user opt-in/opt-out:** By users texting a default opt-in or opt-out [keyword][7], Braze automatically sets and updates users' subscription state.
-- **User import**: Users can be added into email or SMS subscription groups via user import. When updating subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) for more information.
+- **User import**: Users can be added into email or SMS subscription groups via **Import Users**. When updating subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) for more information.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is called **User Import** and can be found under **Users**.
+{% endalert %}
 
 ### How to check a user's SMS subscription group
 

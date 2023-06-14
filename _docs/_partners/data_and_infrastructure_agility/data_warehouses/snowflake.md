@@ -46,7 +46,7 @@ With Data Sharing, no actual data is copied or transferred between accounts. All
 
 Additionally, using Snowflake's built-in roles and permissions capabilities, access to data shared from Braze can be controlled and governed using the access controls already in place for your Snowflake account and the data therein. Access can be restricted and monitored the same way as your own data.
 
-When a client requests a data share, Braze will provision the share from the app group(s) that the share was purchased. Once the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an incoming data share. 
+When a client requests a data share, Braze will provision the share from the workspace(s) that the share was purchased. Once the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an incoming data share. 
 
 ![Inbound data share]({% image_buster /assets/img/inbound-data-share.png %})
 
@@ -87,7 +87,7 @@ When possible, breaking changes will be preceded by an announcement and a migrat
 - Changing the type or nullability of an existing column
 
 ### Snowflake regions
-Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. For users outside of those regions, Braze can provide Data Sharing to joint customers who are hosting their Snowflake infrastructure across any AWS or Azure region.
+Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. For users outside of those regions, Braze can provide Data Sharing to joint customers who are hosting their Snowflake infrastructure across any AWS, Azure, or GCP region.
 
 ### Historical data
 Braze's historical event data in Snowflake goes back to April 2019. In the first few months of Braze storing data there, product changes were made that may have resulted in some of that data looking slightly different or having some null values (as we weren't passing data into every available field at this time). It's best to assume that any results that include data before August 2019 may look slightly different from expectations.

@@ -9,7 +9,7 @@ page_type: reference
 
 # API identifier types
 
-> This reference guide touches on the different types of API identifiers that can be found within the Braze dashboard, their purpose, where you can find them, and how they are typically used. For information on REST API keys or app group API keys, refer to the [Rest API key overview]({{site.baseurl}}/api/api_key/)
+> This reference guide touches on the different types of API identifiers that can be found within the Braze dashboard, their purpose, where you can find them, and how they are typically used. For information on REST API keys or workspace API keys, refer to the [Rest API key overview]({{site.baseurl}}/api/api_key/)
 
 The following identifiers can be used to access your template, Canvas, campaign, segment, send  or card from Braze's external API. All messages should follow [UTF-8][1] encoding.
 
@@ -18,14 +18,18 @@ The following identifiers can be used to access your template, Canvas, campaign,
 
 ## The app identifier
 
-The app identifier or `app_id` is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your Android app, and an `app_id` for your web integration. At Braze, you might find that you have multiple apps for the same platform across the various platform types that Braze supports.
+The app identifier or `app_id` is a parameter associating activity with a specific app in your workspace. It designates which app within the workspace you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your Android app, and an `app_id` for your web integration. At Braze, you might find that you have multiple apps for the same platform across the various platform types that Braze supports.
 
 #### Where can I find it?
 
 There are two ways to locate your `app_id`:
 
-1. You can find this `app_id` or application identifier in the **Developer Console** under **Settings**. On this new page, under **Identification**, you will be able to see every `app_id` that exists for your apps.
-2. Go to **Manage Settings** under **Settings**. From this new page, in the **Settings** tab, midway through the page you will find an "API key for **APP NAME** on **PLATFORM**" (e.g "API Key for Ice Cream on iOS). This key is your application identifier.
+1. You can find this `app_id` or application identifier from **Settings** > **API Keys**. On this new page, under **Identification**, you will be able to see every `app_id` that exists for your apps.
+2. Go to **Settings** > **App Settings**.  Midway through the page you will find an "API key for **APP NAME** on **PLATFORM**" (e.g "API Key for Ice Cream on iOS). This key is your application identifier.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a new location:<br> - **API Keys** is located at **Developer Console** > **API Settings**<br> - **App Settings** located at **Manage Settings** > **Settings**
+{% endalert %}
 
 #### What can it be used for?
 
@@ -62,8 +66,11 @@ Templates are great for if your company contracts out your HTML designs for camp
 #### Where can I find it?
 You can find your template ID one of two ways:
 
-1. In the dashboard, open up **Templates & Media** under **Engagement** and select a pre-existing template. If the template you want does not exist yet, create one and save it. At the bottom of the individual template page, you will be able to find your template identifier.<br><br>
-2. Braze offers an **Additional API Identifiers** search, Here, you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
+1. Go to **Templates**, select a template page, then select a pre-existing template. If the template you want does not exist yet, create one and save it. At the bottom of the individual template page, you will be able to find your template identifier.<br><br>
+2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can quickly look up specific identifiers.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find API identifiers from **Developer Console** > **API Settings**.{% endalert %}
 
 #### What can it be used for?
 
@@ -81,7 +88,11 @@ A [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/) identifier or C
 Note that if you have a Canvas that has variants, there exists an overall Canvas ID as well as individual variant Canvas IDs nested under the main Canvas. 
 
 #### Where can I find it?
-You can find your Canvas ID in the dashboard. Open up **Canvas** under **Engagement** and select a pre-existing Canvas. If the Canvas you want does not exist yet, create one and save it. At the bottom of an individual Canvas page, click **Analyze Variants**. A window appears with the Canvas API identifier located at the bottom.
+You can find your Canvas ID in the dashboard. Go to **Messaging** > **Canvas** and select a pre-existing Canvas. If the Canvas you want does not exist yet, create one and save it. At the bottom of an individual Canvas page, click **Analyze Variants**. A window appears with the Canvas API identifier located at the bottom.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), **Canvas** is located under **Engagement**.
+{% endalert %}
 
 #### What can it be used for?
 - Track analytics on a specific message
@@ -103,8 +114,12 @@ Note that if you have a campaign that has variants, there is both an overall cam
 #### Where can I find it?
 You can find your campaign ID one of two ways:
 
-1. In the dashboard, open up **Campaigns** under **Engagement** and select a pre-existing campaign. If the campaign you want does not exist yet, create one and save it. At the bottom of the individual campaign page, you will be able to find your **Campaign API Identifier**.<br><br>
-2. Braze offers an **Additional API Identifiers** search, Here, you can quickly look up specific identifiers. You can find this at the bottom of the **API Settings** tab in the **Developer Console**.
+1. Go to **Messaging** > **Campaigns** and select a pre-existing campaign. If the campaign you want does not exist yet, create one and save it. At the bottom of the individual campaign page, you will be able to find your **Campaign API Identifier**.<br><br>
+2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can quickly look up specific identifiers.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location:<br> - **Campaigns** is under **Engagement**<br> - **API Keys** is located at **Developer Console** > **API Settings**
+{% endalert %}
 
 #### What can it be used for?
 - Track analytics on a specific message
@@ -125,8 +140,12 @@ A [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) identifier o
 #### Where can I find it?
 You can find your segment ID one of two ways:
 
-1. In the dashboard, open up **Segments** under **Engagement** and select a pre-existing segment. If the segment you want does not exist yet, create one and save it. At the bottom of the individual segment page, you will be able to find your segment identifier. <br><br>
-2. Braze offers an **Additional API Identifiers** search, Here, you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
+1. Go to **Audience** > **Segments** and select a pre-existing segment. If the segment you want does not exist yet, create one and save it. At the bottom of the individual segment page, you will be able to find your segment identifier. <br><br>
+2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can quickly look up specific identifiers.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location:<br> - **Segments** is under **Engagement**<br> - **API Keys** is located at **Developer Console** > **API Settings**
+{% endalert %}
 
 #### What can it be used for?
 - Get details on a specific segment
@@ -148,8 +167,12 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 #### Where can I find it?
 You can find your card ID one of two ways:
 
-1. In the dashboard, open up **News Feed** under **Engagement** and select a pre-existing News Feed. If the News Feed you want does not exist yet, create one and save it. At the bottom of the individual News Feed page, you will be able to find your unique card identifier. <br><br>
-2. Braze offers an **Additional API Identifiers** search, Here, you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
+1. Go to **Messaging** > **News Feed** and select a pre-existing News Feed. If the News Feed you want does not exist yet, create one and save it. At the bottom of the individual News Feed page, you will be able to find your unique card identifier. <br><br>
+2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can quickly look up specific identifiers.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a new location:<br> - **News Feed** is under **Engagement**<br> - **API Keys** is located at **Developer Console** > **API Settings**
+{% endalert %}
 
 #### What can it be used for?
 - Retrieve relevant information on a card

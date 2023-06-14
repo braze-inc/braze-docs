@@ -15,9 +15,15 @@ When stored in Braze, these characteristics can be used to build out audience se
 
 ## Managing custom attributes
 
-To create and manage custom attributes in the dashboard, go to **Manage Settings** > **Custom Attributes**. From this page, you can view, manage, or blocklist existing custom attributes, or create a new one. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters.
+To create and manage custom attributes in the dashboard, go to **Data Settings** > **Custom Attributes**. 
 
-If you would like to remove custom attributes from user profiles, set the value to "null" in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
+{% endalert %}
+
+From this page, you can view, manage, or blocklist existing custom attributes, or create a new one. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters.
+
+To remove custom attributes from user profiles, set the value to "null" in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
 
 ## Setting custom attributes
 
@@ -118,10 +124,10 @@ A date string such as "12-1-2021" or "12/1/2021" will be converted to a datetime
 {% alert important %}
 When segmenting using the **DOES NOT MATCH REGEX** filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.<br>
 
-More resources on regex:
-- [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
-- [Regex Debugger and Tester](https://regex101.com/)
-- [Regex Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+More resources on regular expressions:
+- [Regular expressions with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
+- [Regular expression debugger and tester](https://regex101.com/)
+- [Regular expression tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 ### Arrays {#arrays}
@@ -200,7 +206,7 @@ You can use nested custom attributes to send objects as a data type for custom a
 
 ### Arrays of objects
 
-Use an array of objects to group related attributes. For more information, refer to [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/).
+Use an array of objects to group related attributes. For more details, refer to our article on [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/).
 
 ## Purchase and revenue tracking {#purchase-revenue-tracking}
 

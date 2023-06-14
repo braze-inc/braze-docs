@@ -134,5 +134,12 @@ Braze supports exporting the following data listed in the Currents [user behavio
 - Webhook (abort, send)
   - `users.messages.webhook.Abort`
   - `users.messages.webhook.Send`
-
+- WhatsApp (abort, delivery, failure, inbound recieve, read, send)
+  - `users.messages.whatsapp.Abort`
+  - `users.messages.whatsapp.Delivery`
+  - `users.messages.whatsapp.Failure`
+  - `users.messages.whatsapp.InboundReceive`
+  - `users.messages.whatsapp.Read`
+  - `users.messages.whatsapp.Send`
+  
 [support]: {{site.baseurl}}/braze_support/

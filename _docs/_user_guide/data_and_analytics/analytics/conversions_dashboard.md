@@ -11,7 +11,7 @@ tool:
 
 # Conversions dashboard
 
-> The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods. 
+> The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods.
 
 You can specifically track these attribution methods:
 - **Open conversions:** Conversions that occurred after a user opened the message
@@ -27,7 +27,13 @@ This feature is in early access and is under active development. If you're inter
 
 ## Setting up your report
 
-1. Navigate to the **Conversions** page, under **Data**.
+1. Navigate to **Analytics** > **Conversions**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Conversions** under **Data**.
+{% endalert %}
+
+{:start="2"}
 2. Select a time period for your report, up to 365 days in the past.
 3. Select a conversion event, **Started session**, **Performed custom event**, or **Made a specific purchase**.
 4. Decide if you want your report to include [untracked events](#untracked-events) (Optional, this feature is currently being tested on a small subset of early access customers).

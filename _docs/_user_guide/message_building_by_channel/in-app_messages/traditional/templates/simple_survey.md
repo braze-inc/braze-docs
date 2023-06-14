@@ -74,6 +74,13 @@ You can then create a segment for users with `Promotions Topic = true` to make s
 When custom attribute collection is enabled, choices that share the same custom attribute name will be combined into an array.
 {% endalert %}
 
+#### Custom attribute data types
+
+The data type of your custom attributes matters depending on how you've set up your survey.
+
+- **Multiple-choice selection:** The data type of the custom attribute must be an array. If the custom attribute is set to a different data type, responses will not be logged.
+- **Single-choice selection:** The data type of the custom attribute _must not_ be an array. Responses will not be logged if the attribute is an array.
+
 #### Logging responses only
 
 Alternatively, you can choose to **Log responses only (no attributes)**. When this option is selected, survey responses are logged as button clicks, but custom attributes are not logged to a user's profile. This means you can still view the click metrics for each survey option (see [Analytics](#analytics)), but that choice won't be reflected on their user profile.

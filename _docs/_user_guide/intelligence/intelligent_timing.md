@@ -159,7 +159,7 @@ You need to choose a fallback time for the message to send to users in your audi
 
 #### Most popular app time
 
-The most popular app time is determined by the average session start time for your app group (in local time). This time is displayed in red on the [preview chart](#preview-delivery-times) (campaigns only).
+The most popular app time is determined by the average session start time for your workspace (in local time). This time is displayed in red on the [preview chart](#preview-delivery-times) (campaigns only).
 
 For campaigns, if you specified a [delivery window](#sending-within-specific-hours) and the most popular time to use your app falls outside of that window, the message will send closest to the edge of the delivery window. For example, if your delivery window is 1 pm to 8 pm and the most popular app time is 10 pm, the message will send at 8 pm.
 

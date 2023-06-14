@@ -2,7 +2,7 @@
 nav_title: "GET: Query List of Unsubscribed Email Addresses"
 article_title: "GET: Query List of Unsubscribed Email Addresses"
 search_tag: Endpoint
-page_order: 1
+page_order: 3
 layout: api_page
 page_type: reference
 description: "This article outlines the details about the Retrieve list of or query email unsubscribes Braze endpoint."

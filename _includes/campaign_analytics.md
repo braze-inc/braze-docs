@@ -1,16 +1,31 @@
 ## Campaign Analytics
 
-Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For {% if include.channel == "Content Card" %}Content Cards{% elsif include.channel == "email" %}email{% elsif include.channel == "in-app message" %}in-app messages{% elsif include.channel == "push" %}push messages{% elsif include.channel == "SMS" %}SMS messages{% elsif include.channel == "whatsapp" %}WhatsApp messages{% endif %} sent in Canvas, refer to [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/).
+Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For {% if include.channel == "Content Card" %}Content Cards {% elsif include.channel == "email" %}email {% elsif include.channel == "in-app message" %}in-app messages {% elsif include.channel == "push" %}push messages {% elsif include.channel == "SMS" %}SMS messages {% elsif include.channel == "whatsapp" %}WhatsApp messages {% elsif include.channel == "webhook" %}webhooks {% endif %}sent in Canvas, refer to [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).
 
 {% alert tip %}
-Looking for definitions for the terms and metrics listed in your report? Refer to our {% if include.channel == "email" %}[Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/){% elsif include.channel == "Content Card" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Content Cards{% elsif include.channel == "in-app message" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by in-app message{% elsif include.channel == "push" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Push{% elsif include.channel == "SMS" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by SMS{% elsif include.channel == "whatsapp" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by WhatsApp{% endif %}.
+Looking for definitions for the terms and metrics listed in your report? Refer to our 
+  {% if include.channel == "email" %}[Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
+  {% elsif include.channel == "Content Card" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Content Cards
+  {% elsif include.channel == "in-app message" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by in-app message
+  {% elsif include.channel == "push" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Push
+  {% elsif include.channel == "SMS" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by SMS
+  {% elsif include.channel == "whatsapp" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by WhatsApp
+  {% elsif include.channel == "webhook" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Webhook{% endif %}.
 {% endalert %}
 
 From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the sections below, but each has its own useful purpose.
 
 ### Campaign Details
 
-The **Campaign Details** panel shows a high-level overview of the entire performance for your {% if include.channel == "Content Card" %}Content Card.{% elsif include.channel == "email" %}email.{% elsif include.channel == "in-app message" %}in-app message.{% elsif include.channel == "push" %}push message.{% elsif include.channel == "SMS" %}SMS.{% elsif include.channel == "whatsapp" %}WhatApp messages.{% endif %}
+The **Campaign Details** panel shows a high-level overview of the entire performance for your 
+  {% if include.channel == "Content Card" %}Content Card.
+  {% elsif include.channel == "email" %}email.
+  {% elsif include.channel == "in-app message" %}in-app message.
+  {% elsif include.channel == "push" %}push message.
+  {% elsif include.channel == "SMS" %}SMS.
+  {% elsif include.channel == "whatsapp" %}WhatApp messages.
+  {% elsif include.channel == "webhook" %}webhook.
+  {% endif %}
 
 Review this panel to see overall metrics such as how many messages have been sent to how many recipients, the primary conversion rate, and the total revenue generated by this message. You can also review your general settings from this page: Delivery Settings, Audience Settings, and Conversion Settings.
 
@@ -39,6 +54,9 @@ In Canvas, you'll see in-app message performance mapped onto the Canvas you've c
 
 ![]({% image_buster /assets/img/in-app_message_canvas_reporting.png %})
 
+{% elsif include.channel == "webhook" %}
+![Campaign Details panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_webhook.png %})
+
 {% endif %}
 
 {% if include.channel == "Content Card" %}
@@ -55,9 +73,15 @@ To measure the impact of an individual SMS message, you can add a [control group
 
 {% elsif include.channel == "whatsapp" %}
 
-#### Control groups {#sms-control-group}
+#### Control groups {#whatsapp-control-group}
 
 To measure the impact of an individual WhatsApp message, you can add a [control group][2] to an A/B Test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
+
+{% elsif include.channel == "webhook" %}
+
+#### Control groups {#webhook-control-group}
+
+To measure the impact of an individual webhook message, you can add a [control group][2] to an A/B Test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
 
 {% endif %}
 <!--
@@ -68,37 +92,44 @@ The **Message Performance** panel outlines how well your message has performed a
 {% if include.channel == "Content Card" %}
 ### Message Performance
 
-The **Message Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
+The **Content Card Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![Content Card message performance analytics]({% image_buster /assets/img/cc-message-performance.png %})
 
 {% elsif include.channel == "email" %}
 ### Message Performance
 
-The **Message Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
+The **Email Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![Email message performance analytics]({% image_buster /assets/img_archive/email_message_performance.png %})
 
 {% elsif include.channel == "in-app message" %}
 ### Message Performance
 
-The **Message Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
+The **In-App Message Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![In-app message performance analytics]({% image_buster /assets/img_archive/iam_message_performance.png %})
 
 {% elsif include.channel == "push" %}
 ### Message Performance
 
-The **Message Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
+The **Push Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![Push message performance analytics]({% image_buster /assets/img_archive/push_message_performance.png %})
 
 {% elsif include.channel == "SMS" %}
 ### Message Performance
 
-The **Message Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
+The **SMS Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![SMS/MMS Performance panel that includes a table of metrics for a control group, Variant 1, and Variant 2.]({% image_buster /assets/img_archive/sms_message_performance.png %})
+
+{% elsif include.channel == "webhook" %}
+### Message Performance
+
+The **Webhook Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
+
+![Webhook performance panel that includes a table of metrics for a control group and Variant 1.]({% image_buster /assets/img/webhook_message_performance.png %})
 
 {% endif %}
 
@@ -126,7 +157,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | -- | -- |
 | Total Impressions | The total count of impressions logged for a given Content Card. This can increment multiple times for the same user. |
 | Unique Impressions | The number of users who have viewed a given card. This count doesn't increment the second time that a user views a card. |
-| Unique Recipients | The total number of viewers (unique, but only unique per day) that have viewed the particular card. Because a viewer can be a unique recippient every day, you should expect this to be higher than Unique Impressions. |
+| Unique Recipients | The total number of viewers (unique, but only unique per day) that have viewed the particular card. Because a viewer can be a unique recipient every day, you should expect this to be higher than Unique Impressions. |
 | Unique Clicks | The number of recipients who have clicked the CTA link of a Content Card at least once—excluding clicks on Braze-provided unsubscribe links. |
 Unique Dismissals | The number of users who have dismissed Content Cards from a campaign. A user dismissing a Content Card from a campaign multiple times represents one unique dismissal. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -241,6 +272,19 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | Rejections | The SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment.
 | Opt-Out | A user replied to your message with an [Opt-Out Keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was unsubscribed from your SMS program. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message.
 | Help | A user replied to your message with a [HELP Keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was dispatched a HELP auto-response. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message.
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% elsif include.channel == "webhook" %}
+
+#### Webhook metrics
+
+Here are some key webhook metrics you may see in your analytics. To see the definitions of all webhook metrics used in Braze, refer to our [Report Metrics Glossary][1].
+
+| Term | Definition |
+| --- | --- |
+| Unique Recipients | The total number of users (unique, but only unique per day) that have received the particular webhook. 
+| Sends | Sends (and Messages Sent) include all attempted sends, successful and unsuccessful. This metric counts when a webhook was processed and sent to the third party specified in that webhook, and does not signify whether or not the request was received. |
+| Errors | The total number of sends that were not successful. Errors are included in the _Sends_ count but are not included in the _Unique Recipients_ count.
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endif %}

@@ -393,7 +393,8 @@ validurls['/docs/help/best_practices/push/conversion_tracking/'] = '/docs/user_g
 validurls['/docs/help/best_practices/push/push_reporting/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/push_reporting/';
 validurls['/docs/help/best_practices/push/creating_custom_opt-in_prompts/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/';
 validurls['/docs/help/best_practices/push/message_format/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/message_format/';
-validurls['/docs/help/best_practices/spam_regulations/'] = '/docs/user_guide/onboarding_with_braze/spam_regulations/';
+validurls['/docs/help/best_practices/spam_regulations/'] = '/docs/user_guide/administrative/privacy/spam_regulations/';
+validurls['/docs/user_guide/onboarding_with_braze/spam_regulations/'] = '/docs/user_guide/administrative/privacy/spam_regulations/';
 validurls['/docs/help/best_practices/utilizing_badge_count/'] = '/docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/';
 validurls['/docs/help/best_practices/race_conditions/'] = '/docs/user_guide/engagement_tools/testing/race_conditions/';
 validurls['/docs/help/best_practices/image_and_text_specifications/#web-push-notifications'] = '/docs/user_guide/message_building_by_channel/push/about/#image-and-text-specifications';
@@ -728,4 +729,33 @@ validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingest
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/overview/';
 validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/snowflake/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/';
 validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/redshift/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/';
-validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/'] = '/docs/user_guide/administrative/company_settings/';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/'] = '/docs/user_guide/administrative/app_settings/company_settings/';
+
+validurls['/docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/overview/#create-a-preference-center-via-api';
+validurls['/docs/user_guide/message_building_by_channel/email/preference_center/preference_center/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/overview/';
+
+validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping';
+
+validurls['/docs/user_guide/onboarding_with_braze/subscription_and_usage/'] = '/docs/user_guide/administrative/app_settings/subscription_and_usage/';
+validurls['/docs/user_guide/administrative/app_settings/manage_app_group/app_group_management/'] = '/docs/user_guide/administrative/app_settings/app_group_management/';
+validurls['/docs/user_guide/administrative/app_settings/developer_console/api_settings_tab/'] = '/docs/user_guide/administrative/app_settings/api_settings_tab/';
+validurls['/docs/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/'] = '/docs/user_guide/administrative/app_settings/message_activity_log_tab/';
+validurls['/docs/user_guide/administrative/app_settings/developer_console/event_user_log_tab/'] = '/docs/user_guide/administrative/app_settings/event_user_log_tab/';
+validurls['/docs/user_guide/administrative/app_settings/developer_console/internal_groups_tab/'] = '/docs/user_guide/administrative/app_settings/internal_groups_tab/';
+validurls['/docs/user_guide/administrative/app_settings/manage_app_group/tags/'] = '/docs/user_guide/administrative/app_settings/tags/';
+validurls['/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/'] = '/docs/user_guide/administrative/app_settings/email_settings/';
+validurls['/docs/user_guide/administrative/app_settings/manage_app_group/push_ttl_settings'] = '/docs/user_guide/administrative/app_settings/push_ttl_settings/';
+validurls['/docs/user_guide/administrative/company_settings'] = '/docs/user_guide/administrative/app_settings/company_settings/';
+validurls['/docs/user_guide/administrative/manage_your_braze_users'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/';
+validurls['/docs/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/'] = '/docs/user_guide/administrative/app_settings/custom_event_and_attribute_management/';
+validurls['/docs/user_guide/administrative/company_settings/contact_information/'] = '/docs/user_guide/administrative/app_settings/company_settings/contact_information/';
+validurls['/docs/user_guide/administrative/company_settings/notification_preferences/'] = '/docs/user_guide/administrative/app_settings/company_settings/notification_preferences/';
+validurls['/docs/user_guide/administrative/company_settings/security_settings/'] = '/docs/user_guide/administrative/app_settings/company_settings/security_settings/';
+validurls['/docs/user_guide/administrative/company_settings/automated_user_provisioning'] = '/docs/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/adding_users_to_your_dashboard'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/deleting_users_from_your_account'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/user_permissions/'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/teams/'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/teams/';
+validurls['/docs/user_guide/administrative/app_settings/manage_app_group'] = '/docs/user_guide/administrative/app_settings/';
+validurls['/docs/user_guide/administrative/app_settings/developer_console'] = '/docs/user_guide/administrative/app_settings/';
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/overview/';

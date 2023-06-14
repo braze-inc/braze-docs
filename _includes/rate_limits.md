@@ -98,7 +98,7 @@ Transactional Emails are not subject to a rate limit. Depending on your chosen p
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-The daily maximum number of custom send identifiers that can be created via this endpoint is 100 for a given app group. Each `send_id` and `campaign_id` combination that you create will count towards your daily limit. The response headers for any valid request include the current rate limit status, see [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
+The daily maximum number of custom send identifiers that can be created via this endpoint is 100 for a given workspace. Each `send_id` and `campaign_id` combination that you create will count towards your daily limit. The response headers for any valid request include the current rate limit status, see [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}

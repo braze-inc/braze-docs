@@ -20,7 +20,7 @@ search_tag: Partner
 |---|---|
 | Foursquare account | A Foursquare account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze App Group and App IDs | The Braze App Group and App IDs can be found in the [developer console]({{site.baseurl}}/api/api_key/). |
+| Braze workspace and App IDs | The Braze workspace and App IDs can be found in the [developer console]({{site.baseurl}}/api/api_key/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
@@ -34,7 +34,7 @@ To correctly map fields between the two SDKs, set the same user ID in both syste
 ### Step 2: Configure Pilgrim console
 ![An image of the Pilgrim console asking for Group ID, Android App ID, and iOS App ID.][2]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Find the App Group and App IDs in the Braze developer console. Next, enter your Braze REST API Key and App IDs in the Foursquare Pilgrim Console.
+Find the workspace and App IDs in the Braze developer console. Next, enter your Braze REST API Key and App IDs in the Foursquare Pilgrim Console.
 
 Once you have configured the Pilgrim Console, the Pilgrim SDK will record location events and forward them to Braze, allowing you to retarget and segment qualified customers. See the [Foursquare developer site](https://developer.foursquare.com/) for more details.
 

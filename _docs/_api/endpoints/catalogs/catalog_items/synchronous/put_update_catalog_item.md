@@ -19,6 +19,8 @@ description: "This article outlines details about the Update catalog item Braze 
 
 If the `item_id` isn't found, this endpoint will create the item. This endpoint is synchronous.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b2871ed7-734e-4a37-b8f1-e11584e569f5 {% endapiref %}
+
 {% alert note %}
 To use this endpoint, you'll need to generate an API key with the `catalogs.replace_item` permission.
 {% endalert %}
@@ -105,22 +107,22 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
-| `request_includes_too_many_items` | Your request has too many items. The item limit per request is 50. |
-| `id_in_body` | Remove any item IDs in the request body. |
-| `ids_too_large` | Character limit for each item ID is 250 characters. |
-| `invalid_ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
-| `items_too_large` | Item values can't exceed 5,000 characters. |
-| `invalid_fields` | Confirm that the fields in the request exist in the catalog. |
-| `unable_to_coerce_value` | Item types can't be converted. |
-| `invalid_keys_in_value_object` | Item object keys can't include `.` or `$`. |
-| `too_deep_nesting_in_value_object` | Item objects can't have more than 50 levels of nesting. |
-| `already_reached_catalog_item_limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
-| `already_reached_company_item_limit` | Maximum number of items reached. Contact your Braze account manager for more information. |
-| `item_already_exists` | The item already exists in the catalog. | 
+| `already-reached-catalog-item-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
+| `already-reached-company-item-limit` | Maximum number of catalog items reached. Contact your Braze account manager for more information. |
+| `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| `catalog-not-found` | Check that the catalog name is valid. |
 | `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
-| `arbitrary_error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
-| `item_array_invalid` | `items` must be an array of objects. |
-| `catalog_not_found` | Check that the catalog name is valid. | 
+| `id-in-body` | Remove any item IDs in the request body. |
+| `ids-too-large` | Character limit for each item ID is 250 characters. |
+| `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
+| `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalalog. This is not related to the ID field mentioned in the error. |
+| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `item-already-exists` | The item already exists in the catalog. |
+| `item-array-invalid` | `items` must be an array of objects. | 
+| `items-too-large` | Character limit for each item is 5,000 characters. |
+| `request-includes-too-many-items` | You can only create one catalog item per request. |
+| `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
+| `unable-to-coerce-value` | Item types can't be converted. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

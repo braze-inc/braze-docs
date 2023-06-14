@@ -9,7 +9,9 @@ search_rank: 3
 
 # Purchase events
 
-> Purchase events are purchase actions taken by your users. These events are used to record in-app purchases and establish the Lifetime Value (LTV) for each individual user profile. These purchase events must be set up by your team. Logging purchase events gives you the option to add properties like quantity and type, helping you further target your users based on these properties.
+> Learn about purchase events and properties, their usage, segmentation, where to view relevant analytics, and more.
+
+Purchase events are purchase actions taken by your users. These events are used to record in-app purchases and establish the Lifetime Value (LTV) for each individual user profile. These purchase events must be set up by your team. Logging purchase events gives you the option to add properties like quantity and type, helping you further target your users based on these properties.
 
 After you have set up and begun logging purchase events, you can view this purchase data on a user's profile, in the [Overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#overview-tab).
 
@@ -29,7 +31,11 @@ The following lists methods across various platforms that are used to log purcha
 
 ## Blocklisting purchase events
 
-In the Braze dashboard, you can manage blocklisting from **Manage Settings** > **Products**. Check out [Custom Events and Attribute Management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) to learn more.
+In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Custom Events and Attribute Management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) to learn more.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Products** under **Manage Settings**.
+{% endalert %}
 
 ## Purchase event segmentation
 

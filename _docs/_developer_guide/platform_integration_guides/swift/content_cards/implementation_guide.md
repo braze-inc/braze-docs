@@ -72,7 +72,7 @@ This message also looks for an HTML key-value pair, but if you are working with 
 {% endtab %}
 {% endtabs %}
 
-![An interactive Content Card showing a 50 percent promotion appear in the botton left corner of the screen. Once clicked, a promotion will be applied to the cart.][4]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![An interactive Content Card showing a 50 percent promotion appear in the bottom left corner of the screen. Once clicked, a promotion will be applied to the cart.][4]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 ## Interactive Content Cards
 <br>

@@ -10,7 +10,13 @@ tool: Media
 
 # Media library
 
-> The Media Library allows you to manage your assets in a single, centralized location. To access this feature go into the **Media Library** tab in the [Templates & Media][4] section of your dashboard.
+> The Media Library allows you to manage your assets in a single, centralized location. 
+
+You can find the **Media Library** under **Templates**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located under **Templates & Media**.
+{% endalert %}
 
 You can use the **Media Library** to:
 

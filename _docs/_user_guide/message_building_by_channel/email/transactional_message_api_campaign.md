@@ -35,7 +35,7 @@ Transactional Emails differ from transactional campaigns, which can be used to t
 
 ## Create a new campaign
 
-To create a new Transaction Email campaign, navigate to the **Campaigns** page, click **Create Campaign**, and select **Transactional Email** from the dropdown.
+To create a new Transaction Email campaign, create a campaign and select **Transactional Email** as your messaging channel.
 
 ![Create Campaign dropdown with the highlighted option for transactional email.][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 

@@ -35,7 +35,13 @@ The HTTP URL to request in the webhook is different for each action you can make
 
 ### Step 2: Create your Braze webhook template
 
-To create a Lob webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to make a one-off Lob webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
+To create a Lob webhook template to use in future campaigns or Canvases, navigate to **Templates** > **Webhook Templates** in the Braze platform. 
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Engagement** > **Templates & Media** > **Webhook Templates**.
+{% endalert %}
+
+If you would like to make a one-off Lob webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
 In your new Webhook template, fill out the following fields:
 - **Webhook URL**: `<LOB_API_ENDPOINT>`

@@ -145,10 +145,16 @@ To read more about different aspects of the Lambda function, such as monitoring 
 
 #### Step 4b: Import CSV
 
-1. From the Braze platform, go to the **User Import** page listed under **Users**.
+1. From the Braze platform, go to **Audience** > **Import Users**.
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Users** > **User Import**.
+{% endalert %}
+
+{:start="2"}
 2. Upload the CSV file downloaded from Amperity.
 3. Once uploaded, confirm the default and custom attributes, assign an import name, and optionally create a group within the Braze platform from the uploaded Amperity query. 
 4. Click **Start Import**.
+
 
 [2]: {% image_buster /assets/img/amperity/amperity2.png %} 
 [3]: {% image_buster /assets/img/amperity/amperity3.png %} 

@@ -28,7 +28,11 @@ This ZIP file should be under 5 MB.
 
 ### Step 1: Navigate to the email template editor
 
-Go to the **Templates & Media** page in the **Engagement** section. This opens the **Email Templates** page.
+Go to the **Templates** > **Email Templates**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Email Templates**.
+{% endalert %}
 
 ### Step 2: Open the uploader
 

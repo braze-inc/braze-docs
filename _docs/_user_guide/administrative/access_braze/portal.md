@@ -7,11 +7,15 @@ page_type: reference
 description: "This reference article covers how to access and use the Braze Product Portal to provide feedback from the dashboard."
 ---
 
-# Product portal ![Resources menu in the Braze dashboard][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}
+# Product portal ![Resources menu in the Braze dashboard][1]{: style="float:right;max-width:33%;margin-left:15px;margin-top:15px;"}
 
 > With the product portal, you can access the Braze product roadmap and submit ideas. This provides you with insight into what we've recently released, new features that we're working on, and ideas we're considering building. In the portal, you can vote for the features you want by ranking a feature's importance to you and leave a comment with feedback or a request. 
 
-The product portal can be found at the top of the Braze dashboard, listed under **Resources** as **Product Roadmap**.
+The product portal can be found at **Community** > **Product Roadmap**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Product Roadmap** under **Resources**.
+{% endalert %}
 
 ## What's in the portal
 
