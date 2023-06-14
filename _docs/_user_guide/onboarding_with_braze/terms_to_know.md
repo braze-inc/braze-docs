@@ -63,7 +63,7 @@ glossaries:
   - name: Key-Value Pairs
     description: Two linked data items where the key is a unique identifier and the value is the content. <a href="http://www.braze.com/docs/user_guide/personalization_and_dynamic_content/key_value_pairs/">Key-value pairs</a> can be used to send extra data payloads to user devices.
   - name: Liquid
-    description: An open-source, customer-facing template language created by Shopify and written in Ruby, <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/">Liquid</a> is used to load and pull dynamic content. Liquid allows you to use objects, tags, and filters to <a href="http://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/">add personal customization</a>.
+    description: A commonly-used, customer-facing template language created by Shopify and written in Ruby, <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/">Liquid</a> is used to load and pull dynamic content. Liquid allows you to use objects, tags, and filters to <a href="http://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/">add personal customization</a>.
   - name: Messaging Channel
     description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/">Messaging channels</a> are ways you can virtually communicate with your customers–through push notifications on their phone or web browser, email, in-app messages, and so much more!
   - name: Monthly Active User (MAU)

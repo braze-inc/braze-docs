@@ -155,7 +155,7 @@ If Cloud Messaging API is disabled, click on the three dots to enable the API in
 
 Input your Cloud Messaging API (Legacy) server key and sender ID into the Braze dashboard:
 
-1. On the **Settings** page (where your API keys are located), select your Android app.
+1. Go to **Settings** > **App Settings** and select your Android app.
 2. Enter your Cloud Messaging API (Legacy) server key in the **Firebase Cloud Messaging Server Key** field, under the push notification settings section.
 3. Enter your Cloud Messaging API (Legacy) sender ID in the **Firebase Cloud Messaging Sender ID** field, under the push notification settings section.
 

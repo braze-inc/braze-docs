@@ -194,7 +194,7 @@ hide_toc: true
     textarea {
       border-radius: 0 !important;
     }
-    #doc_pm_label {
+    #doc_pm_label, #doc_verify_label {
       font-size: 12pt !important;
       font-family: Sailec W00 Regular,Arial,sans-serif;
     }
@@ -492,6 +492,14 @@ hide_toc: true
                 <div class="sublabel" style="margin-bottom:6px;">This is useful if you're a developer. Include context and make sure it's clear what code language is used.</div>
                 <textarea name="Snippet" class="form-control" id="doc_snippet" data-toggle="popover" data-trigger="focus" data-placement="top" data-content=""
                   rows="7"></textarea>
+              </div>
+              <div class="form-group" id="doc_verify_div">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Y" id="doc_verify" name="Verified">
+                <label class="form-check-label" for="doc_verify" id="doc_verify_label">
+                <span></span> I verify this information to be correct
+              </label>
+              </div>
               </div>
 
               <div class="request_info"><div class="request_info_image">
