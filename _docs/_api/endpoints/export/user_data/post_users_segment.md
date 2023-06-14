@@ -103,7 +103,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 --data-raw '{
   "segment_id" : "segment_identifier",
   "callback_endpoint" : "example_endpoint",
-  "fields_to_export" : ["first_name", "email", "purchases"],
+  "fields_to_export" : ["first_name", "email", "purchases", "custom_attributes"],
   "output_format" : "zip"
 }'
 ```
