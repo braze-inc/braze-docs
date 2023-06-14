@@ -50,6 +50,8 @@ hide_breadcrumb: false
 
     <h1> {{ page.guide_top_header }} </h1>
     <p>  {{ page.guide_top_text | markdownify }} </p>
+    <p>  {{ page.guide_top_text2 | markdownify }} </p>
+    <p>  {{ page.guide_top_text3 | markdownify }} </p>
 
 
 
@@ -77,7 +79,7 @@ hide_breadcrumb: false
         {%- endif %}
       {%- endfor -%}
     </div>
-       {{content}}
+      
     <h2 class="guide_menu_title"> {{ page.optional_guide_menu_title }} </h2>
     <h2 class="guide_menu_title"> {{ page.guide_menu_title }} </h2>
     <div id="guide_list">
@@ -126,6 +128,7 @@ hide_breadcrumb: false
         </a>
         {%- endif %}
       {%- endfor -%}
+
     </div>
     <h2 class="guide_menu_title"> {{ page.guide_menu_title3 }} </h2>
     <div id="guide_list">
@@ -150,6 +153,7 @@ hide_breadcrumb: false
         </a>
         {%- endif %}
       {%- endfor -%}
+    {{content}}
     </div>
     <h2 class="guide_menu_title"> {{ page.guide_menu_title4 }} </h2>
     <div id="guide_list">
