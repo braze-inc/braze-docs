@@ -179,7 +179,7 @@ The following table lists possible returned errors and their associated troubles
 | `field-names-not-unique` | The same field name is referenced twice. |
 | `field-names-too-large` | Character limit for a field name is 250. |
 | `id-not-first-column` | The `id` must be the first field in the array. Check that the type is a string. |
-| `invalid_catalog_name` | Catalog name can only include letters, numbers, hyphens, and underscores. |
+| `invalid-catalog-name` | Catalog name can only include letters, numbers, hyphens, and underscores. |
 | `invalid-field-names` | Fields can only include letters, numbers, hyphens, and underscores. |
 | `invalid-field-types` | Make sure the field types are valid. |
 | `invalid-fields` | `fields` is not formatted correctly. |

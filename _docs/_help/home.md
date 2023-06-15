@@ -30,18 +30,24 @@ resources_list:
     fa_icon: fa-solid fa-envelope
 
 popular_topic_list:
-  - name: Dispatch ID Behavior
-    link: /docs/help/help_articles/data/dispatch_id/
-  - name: Deleting Users via API
-    link: /docs/help/help_articles/api/delete_user/
-  - name: Common Push Error Messages
-    link: /docs/help/help_articles/push/push_error_codes/
-  - name: Changing Custom Attribute or Event Data Type
-    link: /docs/help/help_articles/data/change_custom_data_type/
+  - name: Know Before You Send
+    link: /docs/help/help_articles/campaigns_and_canvas/know_before_send/
   - name: Migrating Push Token
     link: /docs/help/help_articles/push/push_token_migration/
   - name: Logging Custom Event Properties
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
+  - name: Dispatch ID
+    link: /docs/help/help_articles/data/dispatch_id/
+  - name: Email Bounces
+    link: /docs/help/help_articles/email/email_bounces/
+  - name: Deleting Users via API
+    link: /docs/help/help_articles/api/delete_user/
+  - name: Changing Custom Data Type
+    link: /docs/help/help_articles/data/change_custom_data_type/
+  - name: In-App Messages Not Displaying
+    link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/  
+  - name: Using Event Logging
+    link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---
 
 
