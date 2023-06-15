@@ -65,7 +65,7 @@ In addition to REST API keys, there also exists a type of key called Identifier 
 
 ### REST API key permissions
 
-API key permissions are permissions you can assign a user or group to limit their access to certain API calls.
+API key permissions are permissions you can assign a user or group to limit their access to certain API calls. To view your list of API key permissions, go to **Settings** > **API Keys** under **Setup and Testing**, and select your API key. 
 
 {% tabs %}
 {% tab User Data %}
@@ -92,7 +92,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `email.hard_bounces` | Query for hard bounced email addresses. |
 | `email.bounce.remove` | Remove email addresses from your hard bounce list. |
 | `email.spam.remove` | Remove email addresses from your spam list. |
-| `email.blacklist` | Blacklist email addresses. |
+| `email.blacklist` | Blocklist email addresses. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -195,8 +195,8 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 | Name | Description |
 |---|---|---|
-| `kpi.mau.data_series` | Query for total unique active users over a 30-day rolling window over a time range. |
 | `kpi.dau.data_series` |  Query for unique active users per day over a time range. |
+| `kpi.mau.data_series` | Query for total unique active users over a 30-day rolling window over a time range. |
 | `kpi.new_users.data_series` | Query for new users per day over a time range. |
 | `kpi.uninstalls.data_series` | Query for app uninstalls per day over a time range. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -207,9 +207,9 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 | Name | Description |
 |---|---|---|
 | `templates.email.create` | Create a new email template on the dashboard. |
-| `templates.email.update` | Update an email template stored on the dashboard. |
 | `templates.email.info` | Query for information of a specific template. |
 | `templates.email.list` | Query for a list of email templates. |
+| `templates.email.update` | Update an email template stored on the dashboard. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -237,7 +237,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 |---|---|---|
 | `subscription.status.set` | Set subscription group status. |
 | `subscription.status.get` | Get subscription group status. |
-| `subscription.groups.get` | Get status of subscription groups that specific users are explicitly subscribed/unsubscribed to. |
+| `subscription.groups.get` | Get status of subscription groups that specific users are explicitly subscribed and unsubscribed to. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
