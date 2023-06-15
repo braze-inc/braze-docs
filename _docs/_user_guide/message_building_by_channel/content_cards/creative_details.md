@@ -85,7 +85,7 @@ If a user has dismissed all of their cards or you haven't pushed out any new upd
 
 | Content Cards for Android | Content Cards for iOS | Content Cards for Web |
 | --- | --- |---|
-| [Install Custom Image Library.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/gifs/) | The Swift SDK does not provide animated GIF support out of the box. Support can be added by having a developer wrap a third party or your own view in an instance of GIFViewProvider.<br>For more details on GIF support, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | Included in Integration. |
+| The Android SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to this [tutorial]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/gifs/). | The Swift SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | GIF support is included by default in the Web SDK integration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 <br><br>
