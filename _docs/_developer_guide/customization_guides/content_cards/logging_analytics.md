@@ -108,7 +108,7 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 
 To access the Content Cards data model, call `contentCards.cards` on your `braze` instance.
 
-{% subtabs %}
+{% subtabs global %}
 {% subtab Swift %}
 
 ```swift
@@ -237,7 +237,7 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 
 Implement the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol and set your delegate object as the `delegate` property of your `BrazeContentCardUI.ViewController`. This delegate will handle passing the data of your custom object back to Braze to be logged.
 
-{% subtabs %}
+{% subtabs global %}
 {% subtab Swift %}
 
 ```swift
