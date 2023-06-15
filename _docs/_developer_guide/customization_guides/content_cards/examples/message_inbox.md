@@ -1,7 +1,6 @@
 ---
 nav_title: Message Inbox
-article_title: Use Case&#58; Content Cards as a Message Inbox
-platform: Swift
+article_title: Content Cards as a Message Inbox
 page_order: 2
 description: "This reference article covers read and unread indicators and how to implement them in your Content Cards."
 channel:

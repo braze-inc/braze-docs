@@ -1,25 +1,24 @@
 ---
 nav_title: Carousel View
-article_title: Use Case&#58; Content Card Carousel View
+article_title: Content Card Carousel View
 page_order: 3
 description: "This article covers how to implement a Content Card carousel view."
 channel:
   - content cards
 ---
 
-# Use case: Content Card carousel view 
+# Content Card carousel view 
 
 ![Sample news app showing carousel of Content Cards in an article.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
+This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation&mdash;the "run" phase of the [crawl, walk, run approach][1].
 
-With this approach, you will not use Braze’s views and default logic but instead, display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
+With this approach, you will not use the default views and logic but instead, display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
 
-In terms of the level of development effort, the key differences between the default implementation and the carousel implementation include:
-
-- Building your own views
-- Logging Content Card analytics
-- Introducing additional client-side logic to dictate how many and which cards to show in the carousel
+To implement a carousel view, you will:
+1. Building your own views
+2. Manually log analytics
+3. Introduce additional client-side logic to dictate how many and which cards to show in the carousel
 
 ## Step 1: Create a custom view controller
 
@@ -55,4 +54,4 @@ For iOS-specific developer documentation on the Content Cards class, methods, an
 - The logic and implementation of the carousel view is not a default type of Content Card in Braze, and therefore the logic for achieving the use case must be supplied and supported by your development team.
 - You will need to implement client-side logic to display a specific number of cards in the carousel at any one time.
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches
+[1]: {{site.baseurl}}/developer_guide/customization_guides/customization_overview

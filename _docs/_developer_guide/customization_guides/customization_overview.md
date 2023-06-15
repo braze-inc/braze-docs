@@ -182,6 +182,3 @@ When you create completely new custom content, such as new types of Content Card
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/

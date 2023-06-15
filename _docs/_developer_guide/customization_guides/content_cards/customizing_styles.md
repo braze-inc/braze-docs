@@ -13,8 +13,7 @@ channel:
 
 ## Customizing styling
 
-Braze provides five Content Card templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated when importing the UI layer of the Braze SDK. Then, you can tweak certain parts of the card's styling. 
-
+The default Content Cards UI can be integrated when importing the UI layer of the Braze SDK. Then, you can tweak certain parts of the card's styling. 
 
 ![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]
 

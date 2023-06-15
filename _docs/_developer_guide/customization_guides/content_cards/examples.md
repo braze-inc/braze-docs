@@ -7,7 +7,7 @@ channel:
   - content cards
 guide_top_header: "Content Card Implementation Examples"
 guide_top_text: "Here are guides for implementing three common use cases for Content Cards."
-description: "This landing page demonstrates three common use cases when implementing Content Cards: banner images, a message inbox, and a carousel of images."
+description: "Customizing Content Cards and the feed in which they are located can be done during onboarding or as you continue to grow using Braze. This landing page demonstrates three common use cases when implementing Content Cards: banner images, a message inbox, and a carousel of images."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
