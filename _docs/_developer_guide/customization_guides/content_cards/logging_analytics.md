@@ -9,13 +9,13 @@ toc_headers: "h2"
 
 # Logging analytics manually
 
-> If you would like to display the Content Cards in a completely custom manner, you can implement your own Content Cards presentation UI. However, data such as impressions, clicks, and dismissals are only handled automatically when using Braze's default card models. When implementing completely custom UI, you will need to handle this data manually. To do this, populate your custom UI with data from Braze's data models and manually log analytics like impressions and clicks. 
+> If you would like to display the Content Cards in a completely custom manner, you can implement your own Content Cards presentation UI. However, data such as impressions, clicks, and dismissals are only handled automatically when using the default card models. When implementing completely custom UI, you will need to handle this data manually. To do this, populate your custom UI with data from the data models and manually log analytics like impressions and clicks. 
 
 ## Listening for card updates
 
-When implementing your custom Content Cards, you can parse Braze's Content Card objects and extract their payload data such as `title`, `cardDescription`, and `imageUrl`. Then, you can use the resulting model data to populate your custom UI. 
+When implementing your custom Content Cards, you can parse the Content Card objects and extract their payload data such as `title`, `cardDescription`, and `imageUrl`. Then, you can use the resulting model data to populate your custom UI. 
 
-To obtain Braze's Content Card data model, subscribe to Content Card updates. There are two properties to pay particular attention to:
+To obtain the Content Card data models, subscribe to Content Card updates. There are two properties to pay particular attention to:
 
 * **`id`**: Represents the Content Card ID string. This is the unique identifier used to log analytics from custom Content Cards.
 * **`extras`**: Encompasses all the key-value pairs from the Braze dashboard.
