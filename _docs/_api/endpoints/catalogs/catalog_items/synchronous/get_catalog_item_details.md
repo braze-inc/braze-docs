@@ -19,6 +19,10 @@ description: "This article outlines details about the List catalog item details 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#52c6631c-7366-48e5-9e0e-16de7b6285cc {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `catalogs.get_item` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}

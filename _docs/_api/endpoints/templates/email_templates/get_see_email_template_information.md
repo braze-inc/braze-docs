@@ -17,10 +17,14 @@ description: "This article outlines details about the See email template Braze e
 > Use this endpoint to get information on your email templates.
 
 {% alert important %}
-Templates built using the Drag & Drop Editor are not accepted.
+Templates built using the drag-and-drop editor for email are not accepted.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
+
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `templates.email.info` permission.
+{% endalert %}
 
 ## Rate limit
 

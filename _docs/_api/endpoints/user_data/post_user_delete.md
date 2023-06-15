@@ -24,6 +24,10 @@ Deleting user profiles cannot be undone. It will permanently remove users which 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `users.delete` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='users delete' %}

@@ -19,6 +19,10 @@ description: "This article outlines details about the Create catalog Braze endpo
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#af9f3e2d-b7e7-49e7-aa64-f4652892be6e {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `catalogs.create` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}

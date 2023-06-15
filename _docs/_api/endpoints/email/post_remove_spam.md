@@ -18,6 +18,10 @@ description: "This article outlines details about the Remove email addresses fro
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 
+{% alert note %}
+When creating an API key to use with this endpoint, you must set `email.spam.remove` permissions.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
