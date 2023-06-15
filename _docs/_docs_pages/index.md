@@ -37,7 +37,7 @@ doc_menu_list:
     description: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more."
 
 popular_topic_list:
-  - name: "Canvas: The Basics"
+  - name: "Canvas Basics"
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
   - name: Create a Campaign
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
