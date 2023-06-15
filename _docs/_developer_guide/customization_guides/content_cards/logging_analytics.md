@@ -3,98 +3,43 @@ nav_title: Logging Analytics
 article_title: Logging Analytics 
 page_order: 4
 description: "This article covers how to manually log clicks, events, and analytics for your customized Content Cards."
+toc_headers: "h2"
 
 ---
 
 # Logging analytics manually
 
-> If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's Content Cards models, you will need to subscribe to Content Card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
-
-Customizing Content Cards and the feed they are located in must be done during the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. 
-
-## Terms to know
-
-**Table view**: A a scrollable list often seen in mobile applications. Also known as a list view, collection view, or scroll view. Content Cards are considered custom when a table view is not used.
-
-**Payload data**: The properties of a Content Card, such as `title`, `cardDescription`, `imageUrl`, etc. 
-
-Link to payload data for web, Android, and iOS.
-
-**Parse**: Extracting the payload data from a custom Content Card to be used elsewhere (anywhere outside the default table view)
-
+> If you would like to display the Content Cards in a completely custom manner, you can implement your own Content Cards presentation UI. However, data such as impressions, clicks, and dismissals are only handled automatically when using the default card models. When implementing completely custom UI, you will need to handle this data manually. To do this, populate your custom UI with data from the Braze data models and manually log analytics like impressions and clicks. 
 
 ## Listening for card updates
 
+When implementing your custom Content Cards, you can parse the Content Card objects and extract their payload data such as `title`, `cardDescription`, and `imageUrl`. Then, you can use the resulting model data to populate your custom UI. 
+
+To obtain the Content Card data models, subscribe to Content Card updates. There are two properties to pay particular attention to:
+
+* **`id`**: Represents the Content Card ID string. This is the unique identifier used to log analytics from custom Content Cards.
+* **`extras`**: Encompasses all the key-value pairs from the Braze dashboard.
+
+All properties outside of `id` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android][1], [iOS][2], [Web][3].
 
 
 {% tabs %}
 {% tab Android %}
-
-Android content
-
-{% subtabs %}
+{% subtabs global %}
 {% subtab Java %}
 
-Java content
+### Create a private subscriber variable
 
-{% endsubtab %}
-{% subtab Kotlin %}
-
-Kotlin content
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab iOS %}
-
-iOS content
-
-{% subtabs %}
-{% subtab Swift %}
-
-Swift content
-
-{% endsubtab %}
-{% subtab Objective-C %}
-
-Objective-C content
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Web %}
-
-Web content
-
-{% endtab %}
-{% endtabs %}
-
-A callback function can be registered to subscribe for updates when cards are refreshed.
-
-{% tabs %}
-{% tab JAVA %}
-First, declare a private variable in your custom class to hold your subscriber:
+To subscribe to card updates, first declare a private variable in your custom class to hold your subscriber:
 
 ```java
 // subscriber variable
 private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscriber;
 ```
 
-{% endtab %}
-{% tab KOTLIN %}
-First, declare a private variable in your custom class to hold your subscriber:
-
-```kotlin
-private var mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
-```
-
-{% endtab %}
-{% endtabs %}
+### Subscribe to updates
 
 Next, add the following code to subscribe to Content Card updates from Braze, typically inside of your custom Content Cards activity's `Activity.onCreate()`:
-
-{% tabs %}
-{% tab JAVA %}
 
 ```java
 // Remove the previous subscriber before rebuilding a new one with our new activity.
@@ -112,8 +57,28 @@ Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSu
 Braze.getInstance(context).requestContentCardsRefresh(true);
 ```
 
-{% endtab %}
-{% tab KOTLIN %}
+### Unsubscribe
+
+We also recommend unsubscribing when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
+
+```java
+Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+```
+
+{% endsubtab %}
+{% subtab Kotlin %}
+
+### Create a private subscriber variable
+
+To subscribe to card updates, first declare a private variable in your custom class to hold your subscriber:
+
+```kotlin
+private var mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+```
+
+### Subscribe to updates
+
+Next, add the following code to subscribe to Content Card updates from Braze, typically inside of your custom Content Cards activity's `Activity.onCreate()`:
 
 ```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
@@ -128,173 +93,152 @@ Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSu
 Braze.getInstance(context).requestContentCardsRefresh(true)
 ```
 
-{% endtab %}
-{% endtabs %}
+### Unsubscribe
 
 We also recommend unsubscribing when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
-```
-
-{% endtab %}
-{% tab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 ```
 
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab iOS %}
+
+To access the Content Cards data model, call `contentCards.cards` on your `braze` instance.
+
+{% subtabs global %}
+{% subtab Swift %}
+
+```swift
+let cards: [Braze.ContentCard] = AppDelegate.braze?.contentCards.cards
+```
+
+Additionally, you can also maintain a subscription to observe for changes in your Content Cards. You can do so in one of two ways: 
+1. Maintaining a cancellable; or 
+2. Maintaining an `AsyncStream`.
+
+### Cancellable 
+
+```swift
+// This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
+// You must keep a strong reference to the cancellable to keep the subscription active.
+// The subscription is canceled either when the cancellable is deinitialized or when you call its `.cancel()` method.
+let cancellable = AppDelegate.braze?.contentCards.subscribeToUpdates { [weak self] contentCards in
+  // Implement your completion handler to respond to updates in `contentCards`.
+}
+```
+
+### AsyncStream
+
+```swift
+let stream: AsyncStream<[Braze.ContentCard]> = AppDelegate.braze?.contentCards.cardsStream
+```
+
+{% endsubtab %}
+{% subtab Objective-C %}
+
+```objc
+NSArray<BRZContentCardRaw *> *contentCards = AppDelegate.braze.contentCards.cards;
+```
+
+Additionally, if you wish to maintain a subscription to your content cards, you can call `subscribeToUpdates`:
+
+```objc
+// This subscription is maintained through Braze cancellable, which will continue to observe for changes until the subscription is cancelled.
+BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSArray<BRZContentCardRaw *> *contentCards) {
+  // Implement your completion handler to respond to updates in `contentCards`.
+}];
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Web %}
+
+Register a callback function to subscribe for updates when cards are refreshed.
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.subscribeToContentCardsUpdates(function(updates){
+  const cards = updates.cards;
+  // do something with the latest instance of `cards`
+});
+
+braze.openSession();
+```
+
+> Content Cards will only refresh on session start if a subscribe request is called before `openSession()`. You can always choose to [manually refresh the feed]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed) as well.
+
 {% endtab %}
 {% endtabs %}
+
+
 
 ## Logging events
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
 
+Logging valuable metrics like impressions, clicks, and dismissals is quick and simple. Set a custom click listener to manually handle these analytics.
 
+<!-- JOSH TO DO: Reminder: When you remove the information from the Android guide that is duplicative with this article, move the Helper file information from Advanced Integration Guide into the Integration section --->
 
 {% tabs %}
 {% tab Android %}
 
-Android content
+The [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call the Braze logging methods. Use the `ContentCardable` base class to easily reference and provide data to the `BrazeManager`. 
 
-{% subtabs %}
+To log an impression or click on a card, call [`Card.logClick()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html) or [`Card.logImpression()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html) respectively. 
+
+You can manually log or set a Content Card as "dismissed" to Braze for a particular card with [`setIsDismissed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissed.html). If a card is already marked as dismissed, it cannot be marked as dismissed again.
+
+To create a custom click listener, create a class that implements [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html) and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a Content Card. Then, instruct Braze to use your Content Card click listener. 
+
+{% subtabs global %}
 {% subtab Java %}
 
-Java content
+For example:
+
+```java
+BrazeContentCardsManager.getInstance().setContentCardsActionListener(new IContentCardsActionListener() {
+  @Override
+  public boolean onContentCardClicked(Context context, Card card, IAction cardAction) {
+    return false;
+  }
+
+  @Override
+  public void onContentCardDismissed(Context context, Card card) {
+
+  }
+});
+```
 
 {% endsubtab %}
 {% subtab Kotlin %}
 
-Kotlin content
+For example:
+
+```kotlin
+BrazeContentCardsManager.getInstance().contentCardsActionListener = object : IContentCardsActionListener {
+  override fun onContentCardClicked(context: Context, card: Card, cardAction: IAction): Boolean {
+    return false
+  }
+
+  override fun onContentCardDismissed(context: Context, card: Card) {
+
+  }
+}
+```
 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% tab iOS %}
 
-iOS content
+Implement the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol and set your delegate object as the `delegate` property of your `BrazeContentCardUI.ViewController`. This delegate will handle passing the data of your custom object back to Braze to be logged.
 
-{% subtabs %}
+{% subtabs global %}
 {% subtab Swift %}
-
-Swift content
-
-{% endsubtab %}
-{% subtab Objective-C %}
-
-Objective-C content
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Web %}
-
-Web content
-
-{% endtab %}
-{% endtabs %}
-
-### Manually dismissing a Content Card
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
-
-
-
-{% tabs %}
-{% tab Android %}
-
-Android content
-
-{% subtabs %}
-{% subtab Java %}
-
-Java content
-
-{% endsubtab %}
-{% subtab Kotlin %}
-
-Kotlin content
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab iOS %}
-
-iOS content
-
-{% subtabs %}
-{% subtab Swift %}
-
-Swift content
-
-{% endsubtab %}
-{% subtab Objective-C %}
-
-Objective-C content
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Web %}
-
-Web content
-
-{% endtab %}
-{% endtabs %}
-
-## Handling clicks manually 
-
-In cases where you are building your own Content Cards UI, you can manually handle Content Card clicks by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
-
-
-
-{% tabs %}
-{% tab Android %}
-
-Android content
-
-{% subtabs %}
-{% subtab Java %}
-
-Java content
-
-{% endsubtab %}
-{% subtab Kotlin %}
-
-Kotlin content
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab iOS %}
-
-iOS content
-
-{% subtabs %}
-{% subtab Swift %}
-
-Swift content
-
-{% endsubtab %}
-{% subtab Objective-C %}
-
-Objective-C content
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Web %}
-
-Web content
-
-{% endtab %}
-{% endtabs %}
-
-{% tabs %}
-{% tab Swift %}
-To do this, implement the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol and set your delegate object as the `delegate` property of your `BrazeContentCardUI.ViewController`. Refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example. 
 
 ```swift
 // Set the delegate when creating the Content Cards controller
@@ -310,9 +254,9 @@ func contentCard(
   return true
 }
 ```
-{% endtab %}
-{% tab Objective-C %}
-To do this, implement the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol and set your delegate object as the `delegate` property of your `BrazeContentCardUI.ViewController`. Refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example. 
+
+{% endsubtab %}
+{% subtab Objective-C %}
 
 ```objc
 // Set the delegate when creating the Content Cards controller
@@ -326,29 +270,34 @@ contentCardsController.delegate = delegate;
   return YES;
 }
 ```
+
+{% endsubtab %}
+{% endsubtabs %}
+
+Refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example. 
+
 {% endtab %}
-{% tab java %}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
-{% endtab %}
-{% tab kotlin %}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
-{% endtab %}
-{% tab javascript %}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
+{% tab Web %}
+
+Log impression events when cards are viewed by users:
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.logCardImpressions([card1, card2, card3], true);
+```
+
+Log card click events when users interact with a card:
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.logCardClick(card, true);
+```
+
 {% endtab %}
 {% endtabs %}
 
-
-
-[7]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html
-[55]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-control.html
-[57]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html#-1644350493%2FProperties%2F-1725759721
-[29]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
-[30]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html
-[31]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
-[32]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
-[41]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
-[2]: https://developer.android.com/guide/components/fragments.html
-[3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
-[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/
