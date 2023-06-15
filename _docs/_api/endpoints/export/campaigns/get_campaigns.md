@@ -20,6 +20,10 @@ The campaigns are returned in groups of 100 sorted by time of creation (oldest t
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f3b0b3ef-04fb-4a31-8570-e6ad88dacb18 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `campaigns.list` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

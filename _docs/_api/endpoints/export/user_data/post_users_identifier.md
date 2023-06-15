@@ -20,6 +20,10 @@ Up to 50 `external_ids` or `user_aliases` can be included in a single request. S
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `users.export.ids` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='users export ids' %}

@@ -16,6 +16,10 @@ description: "This article outlines details about the Export users by segment Br
 
 > Use this endpoint to export all the users within a segment. 
 
+{% alert important %}
+Beginning December 2021, the following changed for this API:<br><br>1. The `fields_to_export` field in this API request is **required**. The option to default to all fields has been removed.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
+{% endalert %}
+
 User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line). Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
 
 This endpoint is currently not supported by Google Cloud Storage.
@@ -24,8 +28,8 @@ Note that a company may run at most one export per segment using this endpoint a
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
-{% alert important %}
-Beginning December 2021, the following changed for this API:<br><br>1. The `fields_to_export` field in this API request is **required**. The option to default to all fields has been removed.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `users.export.segment` permission.
 {% endalert %}
 
 ## Rate limit
