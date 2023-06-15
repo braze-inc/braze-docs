@@ -25,7 +25,7 @@ All properties outside of `id` and `extras` are optional to parse for custom Con
 
 {% tabs %}
 {% tab Android %}
-{% subtabs %}
+{% subtabs global %}
 {% subtab Java %}
 
 ### Create a private subscriber variable
@@ -194,7 +194,7 @@ You can manually log or set a Content Card as "dismissed" to Braze for a particu
 
 To create a custom click listener, create a class that implements [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html) and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a Content Card. Then, instruct Braze to use your Content Card click listener. 
 
-{% subtabs %}
+{% subtabs global %}
 {% subtab Java %}
 
 For example:
