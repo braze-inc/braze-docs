@@ -135,7 +135,7 @@ Content Cards UI can be integrated from the `BrazeUI` library of the Swift SDK. 
 If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
 
 {% alert important %}
-The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of GIFViewProvider.
+The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of `GIFViewProvider`.
 
 For more details on GIF support, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
 {% endalert %}
