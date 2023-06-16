@@ -120,7 +120,7 @@ The **History** tab of the custom audience in the Facebook Audience Manager will
 
 ![Audience details and the History tab for a given Facebook audience that includes an Audience History table with columns for the activity, activity details, items changed, and the date and time.][9]{: style="max-width:80%;"}
 
-## Migrating to Meta Work Accounts
+## Migrating to Meta work accounts
 
 Starting in July 2023, Meta is rolling out Meta work accounts to a small set of businesses who are interested in adopting this new account type. If you have a Business Account integrated with Braze, ensure you disconnect and reconnect to the [Facebook partner page]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook) with your Business Account in order to perserve this implementation and not disrupt any active Canvases.
 
