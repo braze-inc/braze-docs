@@ -72,14 +72,17 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Permission | Description  |
 |---|---|---|
-| `users.track` | Record user attributes, custom events, and purchases  |
+| `users.track` | Record user attributes, custom events, and purchases. |
 | `users.delete` | Delete any user. |
-| `users.alias.new` | Create a new alias for an existing user.  |
-| `users.identify` | Query for user profile information by user ID.  |
-| `users.export.ids` | Query for user profile information by identifier e.g., device_id, email_address, external_id.  |
-| `users.export.segment` | Query for user profile information by segment. |
-| `users.external_ids.rename` | Rename a user's existing external ID. |
-| `users.external_ids.remove` | Remove a user's deprecated external ID. |
+| `users.alias.new` Create a new alias for an existing user. |
+| `users.identify` | Identify an alias-only user with an external ID. |
+| `users.export.ids` | Query for user profile information by user ID. |
+| `users.export.segment` | Query for user profile information by segment. | 
+| `users.merge` | Merges two existing users into each other. |
+| `users.external_ids.rename` | Change the external ID for an existing user. |
+| `users.external_ids.remove` | Remove the external ID for an existing user. |
+| `users.alias.update` | Update an alias for an existing user. |
+| `users.export.global_control_group` | Query for user profile information in the Global Control Group. |
 {: .reset-td-br-1 .reset-td-br-2}
 
  {% endtab %}
@@ -116,12 +119,14 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `campaigns.trigger.send` | Trigger the sending of an existing campaign. |
 | `campaigns.trigger.schedule.create` | Schedule a future send of a campaign with API-triggered delivery. |
 | `campaigns.trigger.schedule.update` | Update a campaign scheduled with API-triggered delivery. |
-| `campaigns.trigger.schedule.delete` | Delete a campaign scheduled with API-triggered delivery |
+| `campaigns.trigger.schedule.delete` | Delete a campaign scheduled with API-triggered delivery. |
 | `campaigns.list` | Query for a list of campaigns. |
 | `campaigns.data_series` | Query for campaign analytics over a time range. |
 | `campaigns.details` | Query for details of a specific campaign. |
 | `sends.data_series` | Query for message send analytics over a time range. |
-| `sends.id.create` | Create Send ID for message blast tracking. |
+| `sends.id.create` | Create send ID for message blast tracking. |
+| `campaigns.url_info.details` | Query for URL details of a specific message variation within a campaign. |
+| `transactional.send` | Allows for ability to send transactional messaging using the Transactional messaging endpoint. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -137,6 +142,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `canvas.data_series` | Query for Canvas analytics over a time range. |
 | `canvas.details` | Query for details of a specific Canvas. |
 | `canvas.data_summary` | Query for rollups of Canvas analytics over a time range. |
+| `canvas.url_info.details` | Query for URL details of a specific message variation within a Canvas step. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -238,6 +244,26 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 | `subscription.status.set` | Set subscription group status. |
 | `subscription.status.get` | Get subscription group status. |
 | `subscription.groups.get` | Get status of subscription groups that specific users are explicitly subscribed and unsubscribed to. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Catalogs %}
+
+| Name | Description |
+|---|---|---|
+| `catalogs.add_items` | Add multiple items to an existing catalog. |
+| `catalogs.update_items` | Update multiple items in an existing catalog. |
+| `catalogs.delete_items` | Delete multiple items from an existing catalog. |
+| `catalogs.get_item` | Get a single item from an existing catalog. |
+| `catalogs.update_item` | Update a single item in an existing catalog. |
+| `catalogs.create_item` | Create a single item in an existing catalog. |
+| `catalogs.delete_item` | Delete a single item from an existing catalog. |
+| `catalogs.replace_item` | Replace a single item from an existing catalog. |
+| `catalogs.create` | Create a catalog. |
+| `catalogs.get` | Get a list of catalogs |
+| `catalogs.delete` | Delete a catalog. |
+| `catalogs.get_items` | Get items preview from an existing catalog. |
+| `catalogs.replace_items` | Replace items in an existing catalog. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
