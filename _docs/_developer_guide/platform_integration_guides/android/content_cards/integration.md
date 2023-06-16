@@ -92,11 +92,7 @@ All `Card` data model objects offer the following analytics methods for logging 
 |`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Custom Content Cards {#fully-custom-content-card-display-for-android}
-
-If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's Content Cards models, you will need to subscribe to Content Card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
-
-### Part 1: Subscribing to Content Card updates
+## Subscribing to Content Card updates {#subscribing-to-content-card-updates}
 
 First, declare a private variable in your custom class to hold your subscriber:
 
@@ -177,19 +173,6 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 {% endtab %}
 {% endtabs %}
 
-### Part 2: Logging analytics
-
-When using custom views, you will need to log analytics manually since analytics are only handled automatically when using Braze views.
-
-To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.logImpression()`][8] respectively.
-
-For campaigns using Control Cards for A/B testing, you can use [`Card.isControl()`][55] to determine if a card will be blank, and used only for tracking purposes.
-
-### Manually dismissing a Content Card
-
-You can manually log or set a Content Card as "dismissed" to Braze for a particular card with [`setIsDismissed`][57].
-
-If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
 [7]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html
 [8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html
