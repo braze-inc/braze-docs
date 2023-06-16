@@ -171,7 +171,11 @@ To use your email for an API campaign, you need an `email_template_id`, which ca
 You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Commenting on email templates
-You can comment on email templates in the drag-and-drop editor. Click the Content Block in the email body that you’d like to comment on, then select the <i class="fas fa-comment"></i> comment icon. This opens a sidebar where you can enter your comment through the text input field by clicking **Submit**. Click **Done**, then **Save Template** to save your comment and make it visible to other users.
+You can comment on email templates in the drag-and-drop editor. Click the Content Block or row in the email body that you’d like to comment on, then select the <i class="fas fa-comment"></i> comment icon. This opens a sidebar where you can enter your comment through the text input field by clicking **Submit**. Click **Done**, then **Save Template** to save your comment and make it visible to other users.
+
+Once saved, users will see floating icons over unaddressed comments. Selecting **Resolve** will resolve these comments.
+
+![Email Template Comment Icon and Sidebar.][10]
 
 ## Frequently asked questions
 
@@ -187,3 +191,4 @@ For answers to frequently asked questions about email templates, check out our [
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [8]: {{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates
 [9]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
+[10]: {% image_buster /assets/img/email_templates/template_comment.png %}
