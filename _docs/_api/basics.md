@@ -132,7 +132,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 {% endtab %}
 {% tab Canvas %}
 
-| Permission | Endpoint | Description | 
+| Permission | Endpoint | Description |
 |---|---|---|
 | `canvas.trigger.send` | [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) | Trigger the sending of an existing Canvas. |
 | `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Schedule a future send of a Canvas with API-triggered delivery. |
