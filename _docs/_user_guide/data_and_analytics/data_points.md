@@ -34,7 +34,7 @@ To ensure you minimize data point consumption, we recommend setting up a program
 
 ## Consumption count
 
-In sum, data points are accumulated when a user's profile data is updated or when they perform specific actions. Essentially, data points are counts of each of your users `session starts`, `session ends`, `events`, and `purchases`.
+In sum, data points are accumulated when a user's profile data is updated or when they perform specific actions. Essentially, data points are counts of each of your user's `session starts`, `session ends`, `events`, and `purchases`.
 
 You can find a breakdown of how Braze accumulates data points in the following sections. If you ever have any questions about the nuances of Braze data points, your Braze account manager can answer them.
 
