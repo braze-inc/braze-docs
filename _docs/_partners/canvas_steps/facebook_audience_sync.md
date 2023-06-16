@@ -23,10 +23,6 @@ Using the Braze Audience Sync to Facebook, brands can elect to add their own use
 
 This feature gives brands the option to control what specific first-party data is shared with Facebook. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
-{% alert note %}
-If you are participating in testing Meta Work Accounts in beta, ensure you disconnect and reconnect your account to the [Facebook partner page]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook). 
-{% endalert %}
-
 ## Prerequisites
 
 You will need to ensure that you have the following items created and completed before setting up your Facebook Audience Step in Canvas. 
@@ -123,6 +119,10 @@ Once you have configured your Facebook Audience component, simply launch the Can
 The **History** tab of the custom audience in the Facebook Audience Manager will reflect the number of users sent to the audience from Braze. If a user re-enters the step, they will be sent to Facebook again.
 
 ![Audience details and the History tab for a given Facebook audience that includes an Audience History table with columns for the activity, activity details, items changed, and the date and time.][9]{: style="max-width:80%;"}
+
+## Migrating to Meta Work Accounts
+
+Starting in July 2023, Meta is rolling out Meta work accounts to a small set of businesses who are interested in adopting this new account type. If you have a Business Account integrated with Braze, please ensure you disconnect and reconnect to the [Facebook partner page]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook) with your Business Account in order to perserve this implementation and not disrupt any active Canvases.
 
 ## User syncing and rate limit considerations
  
