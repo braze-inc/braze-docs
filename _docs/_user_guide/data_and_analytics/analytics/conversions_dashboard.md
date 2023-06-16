@@ -51,7 +51,7 @@ For example, let's say you're running your report on campaign A (see the next se
 You can filter by campaign, Canvas step, or channel to narrow down your report's results. You must select a channel to run the report.
 
 - **Filter by campaign:** Select up to 10 campaigns to show conversions that occurred after receiving, opening, or clicking any of the selected campaigns.
-- **Filter by Canvas step:** Select up to 10 Canvases or 10 Canvas steps to show conversiosn that occurred after receiving, opening, or clicking any of the selected Canvases or steps.
+- **Filter by Canvas step:** Select up to 10 Canvases or 10 Canvas steps to show conversions that occurred after receiving, opening, or clicking any of the selected Canvases or steps.
 - **Filter by channel:** Select one channel (required) to show conversions that occurred after receiving, opening, or clicking any messages sent from that channel. By default, the email channel is selected.
 - **Filter by country:** Select up to 10 countries to show conversions for users with those countries in their profile.
 
@@ -100,7 +100,7 @@ This section includes the following metric tiles:
 
 ### Unique conversions
 
-The unique conversions rates and counts track the number of users who converted one or more times. This section includes the following metrics.
+The unique conversions rates and counts track the number of users who converted one or more times. This section includes the following metrics:
 
 | Metric | Calculation |
 | --- | --- | ---- |
@@ -118,7 +118,7 @@ This section shows the conversion results for each messaging channel. Due to how
 Receipt events vary from channel to channel, therefore the _unique recipients_ metric used in the denominator of total and unique conversion calculations will alter slightly from channel to channel. For example, in-app messages track impressions rather than receipts. That means for the in-app message channel, the calculations for _Total conversions_ and _Unique conversions_ use the number of impressions in the denominator.
 {% endalert %}
 
-The following table lists how each attribution method is tracked for each channel.
+The following table lists how each attribution method is tracked for each channel:
 
 <table class="tg">
 <thead>
