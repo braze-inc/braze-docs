@@ -70,109 +70,109 @@ API key permissions are permissions you can assign a user or group to limit thei
 {% tabs %}
 {% tab User Data %}
 
-| Permission | Description  |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `users.track` | Record user attributes, custom events, and purchases. |
-| `users.delete` | Delete any user. |
-| `users.alias.new` Create a new alias for an existing user. |
-| `users.identify` | Identify an alias-only user with an external ID. |
-| `users.export.ids` | Query for user profile information by user ID. |
-| `users.export.segment` | Query for user profile information by segment. | 
-| `users.merge` | Merges two existing users into each other. |
-| `users.external_ids.rename` | Change the external ID for an existing user. |
-| `users.external_ids.remove` | Remove the external ID for an existing user. |
-| `users.alias.update` | Update an alias for an existing user. |
-| `users.export.global_control_group` | Query for user profile information in the Global Control Group. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `users.track` | [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) | Record user attributes, custom events, and purchases. | 
+| `users.delete` | [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) | Delete any user. |
+| `users.alias.new` | [`/users/alias/new`]({{site.baseurl}}/api/endpoints/user_data/post_user_alias/) |Create a new alias for an existing user. |
+| `users.identify` | [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) |Identify an alias-only user with an external ID. |
+| `users.export.ids` | [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) |Query for user profile information by user ID. |
+| `users.export.segment` | [`/users/export/segment`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) |Query for user profile information by segment. | 
+| `users.merge` | [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) | Merges two existing users into each other. |
+| `users.external_ids.rename` | [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/) | Change the external ID for an existing user. |
+| `users.external_ids.remove` | [`/users/external_ids/remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/) | Remove the external ID for an existing user. |
+| `users.alias.update` | [`/users/alias/update`]({{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/) | Update an alias for an existing user. |
+| `users.export.global_control_group` | [`/users/export/global_control_group`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/) | Query for user profile information in the Global Control Group. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
  {% endtab %}
  {% tab Email %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `email.unsubscribe` | Query for unsubscribed email addresses.  |
-| `email.status` | Change email address status. |
-| `email.hard_bounces` | Query for hard bounced email addresses. |
-| `email.bounce.remove` | Remove email addresses from your hard bounce list. |
-| `email.spam.remove` | Remove email addresses from your spam list. |
-| `email.blacklist` | Blocklist email addresses. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `email.unsubscribe` | [`/email/unsubscribes`]({{site.baseurl}}/api/endpoints/email/get_query_unsubscribed_email_addresses/) | Query for unsubscribed email addresses.  |
+| `email.status` | [`/email/status`]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) | Change email address status. |
+| `email.hard_bounces` | [`/email/hard_bounces`]({{site.baseurl}}/api/endpoints/email/get_list_hard_bounces/) | Query for hard bounced email addresses. |
+| `email.bounce.remove` | [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces/) | Remove email addresses from your hard bounce list. |
+| `email.spam.remove` | [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam/) | Remove email addresses from your spam list. |
+| `email.blacklist` | [`/email/blacklist`]({{site.baseurl}}/api/endpoints/email/post_blacklist/) | Blocklist email addresses. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Messages %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `messages.send` | Send an immediate, ad-hoc message to specific users. |
-| `messages.schedule.create` | Schedule a message to be sent at a specific time. |
-| `messages.schedule.update` | Update a scheduled message. |
-| `messages.schedule.delete` | Delete a scheduled message. |
-| `messages.schedule_broadcasts` | Query all scheduled broadcast messages. |
-| `messages.live_activity.update` | Update an iOS Live Activity. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `messages.send` | [`/messages/send `]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) | Send an immediate, ad-hoc message to specific users. |
+| `messages.schedule.create` | [`/messages/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/) | Schedule a message to be sent at a specific time. |
+| `messages.schedule.update` | [`/messages/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/) | Update a scheduled message. |
+| `messages.schedule.delete` | [`/messages/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/) | Delete a scheduled message. |
+| `messages.schedule_broadcasts` | [`/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/) | Query all scheduled broadcast messages. |
+| `messages.live_activity.update` | [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update/) | Update an iOS Live Activity. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Campaigns %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `campaigns.trigger.send` | Trigger the sending of an existing campaign. |
-| `campaigns.trigger.schedule.create` | Schedule a future send of a campaign with API-triggered delivery. |
-| `campaigns.trigger.schedule.update` | Update a campaign scheduled with API-triggered delivery. |
-| `campaigns.trigger.schedule.delete` | Delete a campaign scheduled with API-triggered delivery. |
-| `campaigns.list` | Query for a list of campaigns. |
-| `campaigns.data_series` | Query for campaign analytics over a time range. |
-| `campaigns.details` | Query for details of a specific campaign. |
-| `sends.data_series` | Query for message send analytics over a time range. |
-| `sends.id.create` | Create send ID for message blast tracking. |
-| `campaigns.url_info.details` | Query for URL details of a specific message variation within a campaign. |
-| `transactional.send` | Allows for ability to send transactional messaging using the Transactional messaging endpoint. |
+| `campaigns.trigger.send` | [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) | Trigger the sending of an existing campaign. |
+| `campaigns.trigger.schedule.create` | [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/) | Schedule a future send of a campaign with API-triggered delivery. |
+| `campaigns.trigger.schedule.update` | [`/campaigns/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/) | Update a campaign scheduled with API-triggered delivery. |
+| `campaigns.trigger.schedule.delete` | [`/campaigns/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/) |Delete a campaign scheduled with API-triggered delivery. |
+| `campaigns.list` | [`/campaigns/list`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) | Query for a list of campaigns. |
+| `campaigns.data_series` | [`/campaigns/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/) | Query for campaign analytics over a time range. |
+| `campaigns.details` | [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) | Query for details of a specific campaign. |
+| `sends.data_series` | [`/sends/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_send_analytics/) | Query for message send analytics over a time range. |
+| `sends.id.create` | [`/sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) | Create send ID for message blast tracking. |
+| `campaigns.url_info.details` | [`/campaigns/url_info/details`]({{site.baseurl}}) | Query for URL details of a specific message variation within a campaign. |
+| `transactional.send` | [`/transactional/v1/campaigns/{campaign_id}/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) | Allows for ability to send transactional messaging using the Transactional messaging endpoint. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Canvas %}
 
-| Name | Description |
+| Permission | Endpoint | Description | 
 |---|---|---|
-| `canvas.trigger.send` | Trigger the sending of an existing Canvas. |
-| `canvas.trigger.schedule.create` | Schedule a future send of a Canvas with API-triggered delivery. |
-| `canvas.trigger.schedule.update` | Update a Canvas scheduled with API-triggered delivery. |
-| `canvas.trigger.schedule.delete` | Delete a Canvas scheduled with API-triggered delivery. |
-| `canvas.list` | Query for a list of Canvases. |
-| `canvas.data_series` | Query for Canvas analytics over a time range. |
-| `canvas.details` | Query for details of a specific Canvas. |
-| `canvas.data_summary` | Query for rollups of Canvas analytics over a time range. |
-| `canvas.url_info.details` | Query for URL details of a specific message variation within a Canvas step. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `canvas.trigger.send` | [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) | Trigger the sending of an existing Canvas. |
+| `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Schedule a future send of a Canvas with API-triggered delivery. |
+| `canvas.trigger.schedule.update` | [`/canvas/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/) | Update a Canvas scheduled with API-triggered delivery. |
+| `canvas.trigger.schedule.delete` | [`/canvas/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/)| Delete a Canvas scheduled with API-triggered delivery. |
+| `canvas.list` | [`/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) |  Query for a list of Canvases. |
+| `canvas.data_series` | [`/canvas/data_series`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics/) | Query for Canvas analytics over a time range. |
+| `canvas.details` | [`/canvas/details`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/) | Query for details of a specific Canvas. |
+| `canvas.data_summary` | [`/canvas/data_summary`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) | Query for rollups of Canvas analytics over a time range. |
+| `canvas.url_info.details` | [`/canvas/url_info/details`]({{site.baseurl}}/get_canvas_link_alias/) | Query for URL details of a specific message variation within a Canvas step. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Segments %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `segments.list` | Query for a list of segments. |
-| `segments.data_series` | Query for segment analytics over a time range. |
-| `segments.details` | Query for details of a specific segment. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `segments.list` | [`/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) | Query for a list of segments. |
+| `segments.data_series` | [`/segments/data_series`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_analytics/) | Query for segment analytics over a time range. |
+| `segments.details` | [`/segments/details`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_details/) | Query for details of a specific segment. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Purchases %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `purchases.product_list` | Query for a list of products purchased in your app. |
-| `purchases.revenue_series` | Query for total money spent per day in your app over a time range. |
-| `purchases.quantity_series` | Query for the total number of purchases per day in your app over a time range. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `purchases.product_list` | [`/purchases/product_list`]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/) | Query for a list of products purchased in your app. |
+| `purchases.revenue_series` | [`/purchases/revenue_series`]({{site.baseurl}}/api/endpoints/export/purchases/get_revenue_series/) | Query for total money spent per day in your app over a time range. |
+| `purchases.quantity_series` | [`/purchases/quantity_series`]({{site.baseurl}}/api/endpoints/export/purchases/get_number_of_purchases/) | Query for the total number of purchases per day in your app over a time range. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Events %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `events.list` | Query for a list of custom events. |
-| `events.data_series` | Query occurrences of a custom event over a time range. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `events.list` | [`/events/list`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events/) | Query for a list of custom events. |
+| `events.data_series` | [`/events/data_series`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events_analytics/) | Query occurrences of a custom event over a time range. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab News Feed %}
@@ -181,90 +181,111 @@ API key permissions are permissions you can assign a user or group to limit thei
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `feed.list` | Query for a list of News Feed cards. |
-| `feed.data_series` | Query for News Feed analytics over a time range. |
-| `feed.details` | Query for details of a specific News Feed. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `feed.list` | [`/feed/list`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/) | Query for a list of News Feed cards. |
+| `feed.data_series` | [`/feed/data_series`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_analytics/) | Query for News Feed analytics over a time range. |
+| `feed.details` | [`/feed/details`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_details/) | Query for details of a specific News Feed. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Sessions %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `sessions.data_series` | Query for sessions per day over a time range. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `sessions.data_series` | [`/sessions/data_series`]({{site.baseurl}}/api/endpoints/export/sessions/get_sessions_analytics/) | Query for sessions per day over a time range. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab KPIs %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `kpi.dau.data_series` |  Query for unique active users per day over a time range. |
-| `kpi.mau.data_series` | Query for total unique active users over a 30-day rolling window over a time range. |
-| `kpi.new_users.data_series` | Query for new users per day over a time range. |
-| `kpi.uninstalls.data_series` | Query for app uninstalls per day over a time range. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `kpi.dau.data_series` | [`/kpi/dau/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_dau_date/) |  Query for unique active users per day over a time range. |
+| `kpi.mau.data_series` | [`/kpi/mau/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_mau_30_days/) | Query for total unique active users over a 30-day rolling window over a time range. |
+| `kpi.new_users.data_series` | [`/kpi/new_users/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_daily_new_users_date/) | Query for new users per day over a time range. |
+| `kpi.uninstalls.data_series` | [`/kpi/uninstalls/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_uninstalls_date/) | Query for app uninstalls per day over a time range. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Templates %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `templates.email.create` | Create a new email template on the dashboard. |
-| `templates.email.info` | Query for information of a specific template. |
-| `templates.email.list` | Query for a list of email templates. |
-| `templates.email.update` | Update an email template stored on the dashboard. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `templates.email.create` | [`/templates/email/create`]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) | Create a new email template on the dashboard. |
+| `templates.email.info` | [`/templates/email/info`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information/) | Query for information of a specific template. |
+| `templates.email.list` | [`/templates/email/list`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/) | Query for a list of email templates. |
+| `templates.email.update` | [`/templates/email/update`]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) | Update an email template stored on the dashboard. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab SSO %}
 
-| Name | Description |
+| Permission | Description |
 |---|---|---|
-| `sso.saml.login` |  Setup identity provider-initiated login. Read our documentation for more info. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `sso.saml.login` | Set up identity provider-initiated login. For more information, refer to [Service Provider (SP) initiated login]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Content Blocks %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `content_blocks.info` | Query for information of a specific template. |
-| `content_blocks.list` | Query for a list of Content Blocks. |
-| `content_blocks.create` | Create a new Content Block on the dashboard. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `content_blocks.info` | [`/content_blocks/info`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information/) | Query for information of a specific template. |
+| `content_blocks.list` | [`/content_blocks/list`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/) | Query for a list of Content Blocks. |
+| `content_blocks.create` | [`/content_blocks/create`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/) | Create a new Content Block on the dashboard. |
+| `content_blocks.update` | [`/content_blocks_update`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) | Update an existing Content Block on the dashboard. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% endtab %}
+{% tab Preference Center %}
+
+| Permission | Endpoint | Description |
+|---|---|---|
+| `preference_center.get` | [`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center) | Get a preference center. |
+| `preference_center.list` | [`/preference_center/v1/list`]({{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center/) | List preference centers. |
+| `preference_center.update` | [`/preference_center/v1`]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center)<br></br>[`/preference_center/v1/{preferenceCenterExternalID}`]({{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/) | Create or update a preference center. |
+| `preference_center.user.get` | [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center) | Get a preference center link for a user. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Subscription %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `subscription.status.set` | Set subscription group status. |
-| `subscription.status.get` | Get subscription group status. |
-| `subscription.groups.get` | Get status of subscription groups that specific users are explicitly subscribed and unsubscribed to. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `subscription.status.set` | [`/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) | Set subscription group status. |
+| `subscription.status.get` | [`/subscription/status/get`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) | Get subscription group status. |
+| `subscription.groups.get` | [`/subscription/user/status`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) | Get status of subscription groups that specific users are explicitly subscribed and unsubscribed to. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% endtab %}
+{% tab SMS %}
+
+| Permission | Endpoint | Description |
+|---|---|---|
+| `sms.invalid_phone_numbers` | [`/sms/invalid_phone_numbers`]({{site.baseurl}}/api/endpoints/sms/get_query_invalid_numbers/) | Query for invalid phone numbers. |
+| `sms.invalid_phone_numbers.remove` | [`/sms/invalid_phone_numbers/remove`]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/) | Remove the invalid phone number flag from users. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Catalogs %}
 
-| Name | Description |
+| Permission | Endpoint | Description |
 |---|---|---|
-| `catalogs.add_items` | Add multiple items to an existing catalog. |
-| `catalogs.update_items` | Update multiple items in an existing catalog. |
-| `catalogs.delete_items` | Delete multiple items from an existing catalog. |
-| `catalogs.get_item` | Get a single item from an existing catalog. |
-| `catalogs.update_item` | Update a single item in an existing catalog. |
-| `catalogs.create_item` | Create a single item in an existing catalog. |
-| `catalogs.delete_item` | Delete a single item from an existing catalog. |
-| `catalogs.replace_item` | Replace a single item from an existing catalog. |
-| `catalogs.create` | Create a catalog. |
-| `catalogs.get` | Get a list of catalogs |
-| `catalogs.delete` | Delete a catalog. |
-| `catalogs.get_items` | Get items preview from an existing catalog. |
-| `catalogs.replace_items` | Replace items in an existing catalog. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `catalogs.add_items` | [`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/) | Add multiple items to an existing catalog. |
+| `catalogs.update_items` | [`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/) | Update multiple items in an existing catalog. |
+| `catalogs.delete_items` | [`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk) | Delete multiple items from an existing catalog. |
+| `catalogs.get_item` | [`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/) | Get a single item from an existing catalog. |
+| `catalogs.update_item` | [`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/) | Update a single item in an existing catalog. |
+| `catalogs.create_item` | [`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/) | Create a single item in an existing catalog. |
+| `catalogs.delete_item` | [`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/) | Delete a single item from an existing catalog. |
+| `catalogs.replace_item` | [` /catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/) | Replace a single item from an existing catalog. |
+| `catalogs.create` | [`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/) | Create a catalog. |
+| `catalogs.get` | [`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) | Get a list of catalogs |
+| `catalogs.delete` | [`/catalogs/{catalog_name}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/) | Delete a catalog. |
+| `catalogs.get_items` | [`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/) | Get items preview from an existing catalog. |
+| `catalogs.replace_items` | [`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/) | Replace items in an existing catalog. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% endtabs %}
