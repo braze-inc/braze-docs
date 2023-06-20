@@ -12,7 +12,11 @@ hidden: true
 
 The phone number capture form is a template available in the drag-and-drop editor for in-app messages. Use this template to collect users' phone numbers and grow your subscription groups.
 
-![][img1]{: style="max-width:35%"}
+![][img7]
+
+{% alert important %}
+Phone number capture form is currently in early access. Contact your Braze account manager if you’re interested in participating in the early access.
+{% endalert %}
 
 ## SDK requirements
 
@@ -28,7 +32,7 @@ If you include a link in your in-app message that redirects to a URL and the end
 
 When creating a drag-and-drop in-app message, select **Phone number capture form** for your template.
 
-![][img2]{: style="max-width:30%"}
+![][img2]
 
 This template is supported for both mobile apps and web browsers.
 
@@ -80,13 +84,15 @@ You can customize the look and feel of your message using the drag-and-drop [in-
 
 ## Reporting
 
-Once your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, refer to the subscription group page.
+Once your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, you can [create a segment][5] of users who subscribed to the subscription group by filtering for users who have received the in-app message and submitted the form.
 
+![img8]
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#drag-and-drop-in-app-message-components
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
+[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 
 [img1]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example.png %}
 [img2]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}
@@ -94,3 +100,5 @@ Once your campaign has launched, you can analyze results in real time to see how
 [img4]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %}
 [img5]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_countries.png %}
 [img6]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_custom_font.gif %}
+[img7]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example2.png %}
+[img8]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_analytics.png %}
