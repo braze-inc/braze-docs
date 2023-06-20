@@ -18,6 +18,10 @@ description: "This article outlines details about the Create a preference center
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `preference_center.update` permission.
+{% endalert %}
+
 Check out [Creating a preference center via API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/) for details on how to include this in your email campaigns.
 
 ## Rate limit

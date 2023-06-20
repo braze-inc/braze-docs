@@ -31,6 +31,10 @@ To prevent unexpected loss of data when identifying users, we highly recommend t
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `users.identify` permission.
+{% endalert %}
+
 ## Rate limit 
 
 A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API limits]({{site.baseurl}}/api/basics/#api-limits).

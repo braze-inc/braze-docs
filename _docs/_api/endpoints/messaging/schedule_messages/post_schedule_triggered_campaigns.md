@@ -22,6 +22,10 @@ Note that to send messages with this endpoint, you must have a [campaign ID]({{s
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `campaigns.trigger.schedule.create` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}

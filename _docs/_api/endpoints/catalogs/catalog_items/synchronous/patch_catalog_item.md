@@ -19,6 +19,10 @@ description: "This article outlines details about the Edit catalog item Braze en
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e35976ae-ff77-42b7-b691-a883c980d8c0 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `catalogs.update_item` permission.
+{% endalert %}
+
 ## Rate Limit
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}

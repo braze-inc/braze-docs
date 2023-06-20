@@ -18,6 +18,10 @@ description: "This article outlines details about the Export app sessions analyt
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#79efb6a9-62ec-4b8a-bf4a-e96313aa4be1 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `sessions.data_series` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
