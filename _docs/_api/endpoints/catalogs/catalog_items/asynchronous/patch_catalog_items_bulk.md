@@ -16,7 +16,7 @@ description: "This article outlines details about the Edit multiple catalog item
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> Use this endpoint to edit multiple items in your catalog. 
+> Use this endpoint to edit multiple existing items in your catalog.
 
 Each request can support up to 50 items. This endpoint is asynchronous.
 

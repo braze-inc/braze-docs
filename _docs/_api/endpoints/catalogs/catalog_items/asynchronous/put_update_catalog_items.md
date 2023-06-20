@@ -17,7 +17,7 @@ description: "This article outlines details about the Update multiple catalog it
 
 > Use this endpoint to update multiple items in your catalog. 
 
-Each request can support up to 50 catalog items. This endpoint is asynchronous.
+If a catalog item doesn't exist, this endpoint will create the item in your catalog. Each request can support up to 50 catalog items. This endpoint is asynchronous.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#ab30a4fc-60bc-4460-885c-1b92af8bc061 {% endapiref %}
 
