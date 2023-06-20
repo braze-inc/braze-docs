@@ -96,10 +96,9 @@ In order to maintain the integrity of campaign and application usage analytics, 
 
 Analytics within the Braze Services are tied to the Braze end user Identifier. Once the end user's profile has been deleted, the Braze User Identifier effectively becomes a completely anonymized identifier, as Braze is unable to tie it back to any individual end user.
 
-#### Once deletion has happened
+#### Once Deletion Has Happened
 
-You are generally expected to make reasonable efforts to notify Data Subjects when you have complied with their request to erase their Personal Data.
-A deleted end user may re-register or re-engage with your app or service at a later date and Braze will not be able to identify them as the deleted or forgotten user. The Braze Services are not able to create lists of deleted user identifiers or email addresses on behalf of customers. 
+You are generally expected to make reasonable efforts to notify Data Subjects when you have complied with their request to erase their Personal Data. A deleted end user may re-register or re-engage with your app or service at a later date, and Braze will not be able to identify them as the deleted or forgotten user. The Braze Services are not able to create lists of deleted user identifiers or email addresses on behalf of customers. 
 
 ## The Right to Restriction of Processing
 
