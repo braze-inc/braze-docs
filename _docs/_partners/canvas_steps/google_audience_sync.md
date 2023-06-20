@@ -75,7 +75,7 @@ Select the desired Google ad account. Under the **Choose a New or Existing Audie
 {% tabs %}
 {% tab Create a New Audience %}
 **Create a New Audience**<br>
-Enter a name for the new custom audience, select **Add Users to Audience**, and select which fields you would like to sync with Facebook. You can select the following fields to match to sync with Facebook:
+Enter a name for the new custom audience, select **Add Users to Audience**, and select which fields you would like to sync with Google. You can select the following fields to match to sync with Google:
 - Email 
 - Phone
 - First/Last name
