@@ -113,8 +113,6 @@ To create or edit your custom footer, go to **Settings** > **Email Preferences**
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is called **Email Settings** and is located under **Manage Settings**.
 {% endalert %}
 
-![][19]
-
 In the **Custom Footer** section, you can choose to turn on custom footers. Once turned on, you will see a window to edit your footer and send a test message.
 
 ![][20]
@@ -142,8 +140,6 @@ When creating a custom footer, Braze suggests using attributes for personalizati
 | User's Custom Subscribe URL | `{{${set_user_to_subscribed_url}}}` |
 | User's Custom Braze Preference Center URL | `{{${preference_center_url}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
-
-
 
 As a best practice, Braze recommends including both an unsubscribe link (i.e., ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e., ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
 
