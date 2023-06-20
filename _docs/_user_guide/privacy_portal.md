@@ -16,7 +16,7 @@ description: ""
 guide_featured_title: "Using Braze"
 guide_featured_list:
 - name: Data Protection Technical Assistance for Data Subject Requests
-  link: /docs/user_guide/privacy_portal/using_braze/dp-technical-assistance/
+  link: /docs/dp-technical-assistance/
   fa_icon: fas fa-cogs
 - name: Email Open Pixel and Click Tracking
   link: /docs/user_guide/data_and_analytics/tracking/email_tracking#open-pixel-and-click-tracking-overview
