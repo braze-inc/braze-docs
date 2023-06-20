@@ -5,7 +5,7 @@ article_title: Braze User Guide
 layout: user_guide
 
 user_top_header: "Braze User Guide"
-user_top_text: "This is where marketers and administrators can learn everything they need to know to get started with Braze, and how to design meaningful, data-driven customer interactions."
+user_top_text: "†estThis is where marketers and administrators can learn everything they need to know to get started with Braze, and how to design meaningful, data-driven customer interactions."
 description: "This is the User Guide landing page. Here, marketers and administrators can learn everything they need to know to get started with Braze, and how to design meaningful, data-driven customer interactions."
 
 user_menu_list:
