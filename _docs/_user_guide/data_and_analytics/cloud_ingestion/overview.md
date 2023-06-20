@@ -41,7 +41,7 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
 ```json
 {
   "external_id":"customer_1234",
-  "email":"jane@exaple.com",
+  "email":"jane@example.com",
   "attribute_1":"abcdefg",
   "attribute_2":{
         "attribute_a":"example_value_1",
@@ -55,7 +55,7 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
 ```json
 {
   "external_id":"customer_3456",
-  "email":"michael@exaple.com",
+  "email":"michael@example.com",
   "attribute_1":"abcdefg",
   "attribute_2":42,
   "attribute_3":"2019-07-16T19:20:30+1:00",
@@ -66,7 +66,7 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
 ```json
 {
   "external_id":"customer_5678",
-  "email":"bob@exaple.com",
+  "email":"bob@example.com",
   "attribute_1":"abcdefg",
   "attribute_2":42,
   "attribute_3":"2017-08-10T09:20:30+1:00",
@@ -94,7 +94,7 @@ The PAYLOAD object should not include an external id or other id type.
 
 #### Removing an attribute
 
-You can set it to' null' if you want to completely remove an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated.
+You can set it to 'null' if you want to completely remove an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated.
 
 #### Create JSON string from another table
 
@@ -246,7 +246,7 @@ To sync purchase events, event name, `product_id`, `currency`, `price`, and `tim
 | Number of rows | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column. |
 | Attributes per row | Each row should contain a single user ID and a JSON object with up to 50 attributes. Each key in the JSON object counts as one attribute (i.e., an array counts as one attribute). |
 | Data type | You can sync user attributes, events, and purchases through Cloud Data Ingestion. |
-| Braze region | This product is available in all Braze regions. Any Braze region can connect to any Snowflake region |
+| Braze region | This product is available in all Braze regions. Any Braze region can connect to any Snowflake region. |
 | Snowflake region | You can connect your Snowflake instance in any region or cloud to Braze using this product. |
 | Redshift connectivity | Only publicly-accessible Redshift clusters are supported at this time.|
 {: .reset-td-br-1 .reset-td-br-2}

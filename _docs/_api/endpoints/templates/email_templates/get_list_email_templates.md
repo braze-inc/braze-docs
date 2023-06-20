@@ -18,6 +18,10 @@ description: "This article outlines details about the List available email templ
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `templates.email.list` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

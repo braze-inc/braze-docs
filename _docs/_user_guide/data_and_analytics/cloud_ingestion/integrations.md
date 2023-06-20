@@ -19,28 +19,28 @@ New Cloud Data Ingestion integrations require some setup on the Braze side and i
 
 {% tabs %}
 {% tab Snowflake %}
-1. In your Snowflake instance, set up the table(s) or view(s) you want to sync to Braze
-2. Create a new integration in the Braze dashboard
-3. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)
-4. Test the integration and start the sync
+1. In your Snowflake instance, set up the table(s) or view(s) you want to sync to Braze.
+2. Create a new integration in the Braze dashboard.
+3. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+4. Test the integration and start the sync.
 {% endtab %}
 {% tab Redshift %}
-1. Make sure Braze access is allowed to the Redshift tables you want to sync - Braze will connect to Redshift over the internet.
-2. In your Redshift instance, set up the table(s) or view(s) you want to sync to Braze
-3. Create a new integration in the Braze dashboard
-4. Test the integration and start the sync
+1. Make sure Braze access is allowed to the Redshift tables you want to sync. Braze will connect to Redshift over the internet.
+2. In your Redshift instance, set up the table(s) or view(s) you want to sync to Braze.
+3. Create a new integration in the Braze dashboard.
+4. Test the integration and start the sync.
 {% endtab %}
 {% tab BigQuery %}
-1. Create a service account and allow access to the BigQuery project(s) and dataset(s) that contain the data you want to sync  
-2. In your BigQuery account, set up the table(s) or view(s) you want to sync to Braze   
-3. Create a new integration in the Braze dashboard  
-4. Test the integration and start the sync  
+1. Create a service account and allow access to the BigQuery project(s) and dataset(s) that contain the data you want to sync.  
+2. In your BigQuery account, set up the table(s) or view(s) you want to sync to Braze.   
+3. Create a new integration in the Braze dashboard.  
+4. Test the integration and start the sync.  
 {% endtab %}
 {% tab Databricks %}
-1. Create a service account and allow access to the Databricks project(s) and dataset(s) that contain the data you want to sync  
-2. In your Databricks account, set up the table(s) or view(s) you want to sync to Braze   
-3. Create a new integration in the Braze dashboard  
-4. Test the integration and start the sync  
+1. Create a service account and allow access to the Databricks project(s) and dataset(s) that contain the data you want to sync.  
+2. In your Databricks account, set up the table(s) or view(s) you want to sync to Braze.   
+3. Create a new integration in the Braze dashboard.  
+4. Test the integration and start the sync.  
 {% endtab %}
 {% endtabs %}
 
@@ -171,7 +171,7 @@ GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 ```
 
-These are the minimum required permissions for this user; if creating multiple CDI integrations, you may want to grant permissions to a schema or manage permissions using a group. 
+These are the minimum required permissions for this user. If creating multiple CDI integrations, you may want to grant permissions to a schema or manage permissions using a group. 
 
 #### Step 3: Allow access to Braze IPs    
 
@@ -223,10 +223,10 @@ You can name the project, dataset, and table as you'd like, but the column names
 
 Create a service account in GCP for Braze to use to connect and read data from your table(s). The service account should have the below permissions: 
 
-- BigQuery Connection User: This will allow Braze to make connections
-- BigQuery User: This will provide Braze access to run queries, read dataset metadata, and list tables.
-- BigQuery Data Viewer: This will provide Braze access to view datasets and their contents.
-- BigQuery Job User: This will provide Braze access to run jobs
+- **BigQuery Connection User:** This will allow Braze to make connections
+- **BigQuery User:** This will provide Braze access to run queries, read dataset metadata, and list tables.
+- **BigQuery Data Viewer:** This will provide Braze access to view datasets and their contents.
+- **BigQuery Job User:** This will provide Braze access to run jobs
 
 After creating the service account and granting permissions, generate a JSON key. See more information on how to do this [here](https://cloud.google.com/iam/docs/keys-create-delete). You will update this to the Braze dashboard later. 
 

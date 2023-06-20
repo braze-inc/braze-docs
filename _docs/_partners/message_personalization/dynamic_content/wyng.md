@@ -9,9 +9,9 @@ search_tag: Partner
 
 # Wyng
 
-> [Wyng][0], a zero-party data platform, makes it easy to collect, use, and integrate customer preferences and attributes via micro-experiences, customer preference portals, and an API platform.
+> [Wyng][0] makes it easy to build interactive digital experiences (ie. quizzes, preference center, promotions) that engage consumers at the right moments, collect preferences and other zero-party data, and personalize in real time.
 
-The Braze and Wyng integration allows you to leverage Wyng experiences to deliver personalization in Braze campaigns and Canvases. Wyng also includes a customer preference portal so users can control the data and preferences they share with a brand.
+The Braze and Wyng integration allows you to leverage zero-party data earned via Wyng experiences to personalize interactions in Braze Campaigns and Braze Canvas. Wyng can also power a preference center, so consumers can control the data and preferences (including communication preferences) they share with your brand.
 
 ## Prerequisites
 

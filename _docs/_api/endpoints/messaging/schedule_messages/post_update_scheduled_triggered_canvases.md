@@ -26,6 +26,10 @@ Any schedule will completely overwrite the one that you provided in the create s
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8fdf158b-ce20-41d8-80e4-a9300a6706d4 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `canvas.trigger.schedule.update` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

@@ -18,6 +18,10 @@ description: "This article outlines details about the Create Content Blocks Braz
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `content_blocks.create` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
