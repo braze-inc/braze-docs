@@ -37,6 +37,12 @@ As part of our navigation and information architecture changes, we have renamed 
 
 If you're using our updated navigation, this change will appear throughout the platform.
 
+### Quick links
+
+Easily access the Canvas, Campaigns, and Segments pages with quick links available in the sidebar.
+
+![Sidebar of Braze with quick links to the Campaigns, Canvas, and Segments pages.]({% image_buster /assets/img/navigation/quick_links.png %}){: style="max-width:70%"}
+
 ### Global header
 
 {% tabs %}
