@@ -15,7 +15,7 @@ search_rank: 3
 
 ## Integration steps
 
-First, please read and follow our standard [web push integration guide][web-push-integration]. The following steps are only required to support web push on Safari for iOS and iPadOS support.
+First, read and follow our standard [web push integration guide][web-push-integration]. The following steps are only required to support web push on Safari for iOS and iPadOS support.
 
 ### Step 1: Create a manifest file {#manifest}
 
