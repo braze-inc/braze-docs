@@ -10,15 +10,11 @@ tool: Segments
 
 # Segment Extensions
 
-> Braze segmentation allows you to target users based on custom event or purchase behavior stored for the lifetime of that user profile. Examples include finding users who have or not have performed a particular custom event since a specific time, or segmenting users based on which products they have ever purchased or how much money they have spent with your service.
+> Braze segmentation allows you to target users based on user behaviors. Our [core segmentation filters][20] enable you to create unlimited audiences that update in real-time, using data such as user attributes, events, purchase behavior, and more. Segment Extensions is additional, enhanced segmentation functionality that gives you the power to filter based on granular historical event data. In addition to accessing more historical data, you can also use Segment Extensions to define an audience [using SQL][21].
 
-Segment Extensions are audience definitions which allow you to use nested event properties or create windowed aggregations of custom event and purchase event properties in the past 2 years (730 days). By means of example, Braze segmentation allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of a specific product at least twice in the past 2 years. When creating a Segment Extension, you can also specify that the audience be static or regenerated daily.
+Segment Extensions are audience definitions which allow you to use nested event properties or create windowed aggregations of custom event and purchase event properties in the past 2 years (730 days). For example: Braze's [core segmentation][20] allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of a specific product at least twice in the past 2 years. 
 
 The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
-
-{% alert important %}
-There is a default allotment of 25 active Segment Extensions per workspace at a particular time. If you need to increase this limit, contact your Braze customer success manager to discuss your use case.
-{% endalert %}
 
 ## Step 1: Navigate to Segment Extensions
 
@@ -28,7 +24,7 @@ Go to **Audience** > **Segment Extensions**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
 {% endalert %}
 
-From the Segment Extensions table, click <i class="fas fa-plus"></i> **Create New Extension**.
+From the Segment Extensions table, click <i class="fas fa-plus"></i> **Create New Extension**. You'll be able to select between creating a classic Segment Extension or a SQL Segment. The rest of the page describes the steps for creating a classic Segment Extension; refer to the [instructions here for creating a SQL Segment][21].
 
 ## Step 2: Name your Segment Extension
 
@@ -60,20 +56,6 @@ Segment Extensions rely on long term storage of event properties and don't have 
 
 {% alert note %}
 Using event properties within Segment Extensions does not impact data point usage.
-{% endalert %}
-
-### Extension regeneration
-
-You can specify whether you want this extension to represent a single snapshot in time, or whether you want this extension to regenerate on a daily basis. Your extension will always begin processing after the initial save. If you would like the extension to be regenerated daily, select the **Regenerate Extension Daily** checkbox and the regeneration will begin processing at around midnight each day in your company's time zone.
-
-{% alert important %}
-The setting to regenerate extensions daily is automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
-
-- Not used in any active campaigns, Canvases, or segments
-- Not used in any inactive (draft, stopped, archived) campaigns, Canvases, or segments
-- Have not been modified in over 7 days
-
-Braze will notify the company contact and creator of the extension when this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
 {% endalert %}
 
 ## Step 4: Save your segment extension
@@ -116,3 +98,5 @@ Now you can proceed as usual with [creating your segment][11].
 [17]: {% image_buster /assets/img/segment/segment_extension9.png %}
 [18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
 [19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[20]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
+[21]: {{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/
