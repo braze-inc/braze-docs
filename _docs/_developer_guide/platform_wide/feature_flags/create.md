@@ -353,7 +353,7 @@ for(const feature of features) {
 ```csharp
 List<FeatureFlag> features = Appboy.AppboyBinding.GetAllFeatureFlags();
 foreach (FeatureFlag feature in features) {
-  Console.WriteLine("Feature: {0} - enabled: {1}", feature.id, feature.enabled);
+  Console.WriteLine("Feature: {0} - enabled: {1}", feature.ID, feature.Enabled);
 }
 ```
 
