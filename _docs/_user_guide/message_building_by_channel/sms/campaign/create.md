@@ -58,7 +58,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Compose your SMS
 
-Composing an SMS is easy! Just write your message using languages and personalization (Liquid, Connected Content, and Emojis) as needed. Be sure to adhere to our message copy limits to reduce your chances of overage charges.
+Write your message using languages and personalization (Liquid, Connected Content, and Emojis) as needed. Be sure to adhere to our message copy limits to reduce your chances of overage charges.
 
 {% alert important %}
 Before proceeding, read our guidelines for [SMS message segments and copy limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/). SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so it's a good idea to understand the nuances of how messages will be split.

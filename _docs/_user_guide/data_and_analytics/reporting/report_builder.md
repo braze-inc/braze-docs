@@ -20,7 +20,7 @@ Use this report to answer key engagement questions, for example:
 
 - Which were the best performing campaigns or Canvases for a specific tag or channel?
 - Which variants of multivariant campaigns had the most uplift over the control?  
-- Which seasonal promotion campaign led to a higher purchase rate — the summer sale, fall sale, or winter sale?
+- Which seasonal promotion campaign led to a higher purchase rate—the summer sale, fall sale, or winter sale?
 - Which push notifications within this Canvas had the highest open rates?
 - Which steps in this group of Canvases had the most conversions?
 - Did Version 1 of a welcome email or Version 2 of a welcome email lead to higher engagement and conversion? Did the changes work?
@@ -28,7 +28,7 @@ Use this report to answer key engagement questions, for example:
 - Have the ongoing improvements to lapsing user messages positively impacted your KPIs over time?
 
 {% alert tip %}
-Try to use the same conversion events for conversion A, B, etc across campaigns and Canvases you wish to compare, so that you can line up these conversions in your Report Builder reports.
+Try to use the same conversion events for conversion A, B, etc. across campaigns and Canvases you wish to compare, so that you can line up these conversions in your Report Builder reports.
 {% endalert %}
 
 ## Run a report
@@ -116,7 +116,7 @@ Selecting **breakdown by steps** will allow you to view step-level metrics, with
 
 ### Message
 
-Similar to a step-level breakdown, selecting **breakdown by message** shows the name of steps in each row. however, within **edit columns**, you'll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.
+Similar to a step-level breakdown, selecting **breakdown by message** shows the name of steps in each row. However, within **edit columns**, you'll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.
 
 ![Report][14]{: style="max-width:90%;"}
 

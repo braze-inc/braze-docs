@@ -26,10 +26,10 @@ In general, we encourage using your best judgment when approaching SMS sending. 
 1. **Obtain explicit consent from users before sending them SMS.** Whenever users provide consent, it's your responsibility to log, update, and maintain that information in a compliant user database. According to basic legal guidelines, the most important information you need to retain regarding consent is:
 - **The time and date the user gave consent**
 - **The type of SMS messaging they consented to**
-- **The users' phone number**
+- **The user's phone number**
 - **The language in which they opted-in**<br><br>
 
-2. **Clearly communicate the types of SMS you'll be sending**. Users should understand what messages to expect from your brand in this channel and the kinds of information or offers they'll be receiving. Explicitly state the purpose of your future campaigns, message frequency, and remind users that message/data rates apply.<br><br>
+2. **Clearly communicate the types of SMS you'll be sending**. Users should understand what messages to expect from your brand in this channel and the kinds of information or offers they'll be receiving. Explicitly state the purpose of your future campaigns, message frequency, and remind users that message and data rates apply.<br><br>
 
 3. **Keep essential information updated and visible**. Ensure that the most up-to-date version of your brand's Terms and Conditions and your SMS Marketing Privacy Policy are clearly visible and easily accessible from your SMS opt-in page.<br><br>
 
@@ -75,7 +75,7 @@ Some spam considerations are built into SMS capabilities in general (long and sh
 
 ### Content
 
-This can be a tricky one, but when in doubt, avoid topics that involve violence, sex, drugs, tobacco, or other paraphernalia. Be wise when sending messages regarding these topics - you may still be charged for messages that are blocked by various carriers.
+This can be a tricky one, but when in doubt, avoid topics that involve violence, sex, drugs, tobacco, or other paraphernalia. Be wise when sending messages regarding these topics—you may still be charged for messages that are blocked by various carriers.
 
 The [CTIA](https://www.ctia.org/) (a trade association representing the wireless communications industry in the United States) recommends that you follow **SHAFT Compliance**, which defines the following topics as generally "illegal" when messaging in the United States:
 
@@ -89,7 +89,7 @@ Read more about the [CTIA's Messaging Principles and Best Practices for 2019](ht
 
 ### Scheduling
 
-Ensure you comply with the Telephone Consumer Protection Act (TCPA), which dictates that you shouldn't send messages during late hours (see the regulation's contents for exact hours). However, you shouldn't send messages that late anyway - don't you want high engagement?
+Ensure you comply with the Telephone Consumer Protection Act (TCPA), which dictates that you shouldn't send messages during late hours (see the regulation's contents for exact hours). However, you shouldn't send messages that late anyway—don't you want high engagement?
 
 ### International
 
