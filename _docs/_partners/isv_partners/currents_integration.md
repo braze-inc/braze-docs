@@ -2,7 +2,6 @@
 nav_title: Custom Currents Connector
 alias: /currents_connector/
 hidden: true
-layout: dev_guide
 ---
 
 # Partner custom Currents connector
@@ -124,6 +123,7 @@ Here are some example event payloads for various events, as they would appear if
 ### Canvas-associated events
 
 Here are some example event payloads for various events, as they would appear if associated with a Canvas:
+
 ```
 // In-App Message Click: users.messages.inappmessage.Click
 {

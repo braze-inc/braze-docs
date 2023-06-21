@@ -11,11 +11,11 @@ tool:
 ---
 # Segment data
 
-> This reference article explains the segments section of your Braze dashboard, and includes a summary the statistics provided.
+> This reference article explains the segments section of your Braze dashboard, and includes a summary of the statistics provided.
 
 ## Accessing segment data
 
-The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and click the name of a segment to edit and view it's data. To learn how to create a segment, check out [Creating a Segment][3].
+The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and click the name of a segment to edit and view its data. To learn how to create a segment, check out [Creating a Segment][3].
 
 ![Segments page][1]
 
