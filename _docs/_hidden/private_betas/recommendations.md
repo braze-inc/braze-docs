@@ -67,7 +67,7 @@ After your recommendation finishes training, you can personalize your messages w
 3. For **Item Recommendation Name**, select the recommendation you just created.
 4. For **Number of Predicted Items**, enter how many top products you'd like to be inserted. For example, you can display the top three most purchased items.
 5. For **Information to Display**, select which fields from the catalog should be included for each item. This information corresponds to the columns in your uploaded CSV file used to generate your catalog.
-6. Click **Copy** and paste the Liquid wherever it needs to go in your message.
+6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
-[1]: {% image_buster /assets/img/most_popular_products.png %}
-[2]: {% image_buster /assets/img/most_popular_products_personalize.png %}
+[1]: {% image_buster /assets/img/item_recommendation_create.png %}
+[2]: {% image_buster /assets/img/add_personalization.png %}
