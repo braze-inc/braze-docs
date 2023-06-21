@@ -1,7 +1,6 @@
 ---
 nav_title: Data Transformation
 hidden: true
-layout: dev_guide
 ---
 
 # Braze’s Data Transformation

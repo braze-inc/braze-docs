@@ -1,7 +1,6 @@
 ---
 nav_title: Best Practices
 hidden: true
-layout: dev_guide
 ---
 
 # User lifecycle and identifiers best practices

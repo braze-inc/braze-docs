@@ -1,7 +1,6 @@
 ---
 nav_title: Snowflake Data Sharing
 hidden: true
-layout: dev_guide
 ---
 
 # Snowflake data sharing integration
