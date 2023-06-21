@@ -134,6 +134,10 @@ To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/
 
 Next, take your generated Liquid snippet and insert it into your message. Once you've finished designing and building your in-app message, go to **Preview & Test** to preview your message.
 
+#### Using the AI copywriter
+
+When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI’s GPT3 copy generation tool to generate human-like marketing copy for use in your messaging.
+
 #### Resetting styles to default
 
 Properties that you have changed from their default styling are marked with an orange dot. To quickly reset a specific property to its default style, hover over the field and select **Reset to default**.
