@@ -15,7 +15,7 @@ tool: Canvas
 As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference when using `canvas_entry_properties` and `event_properties`for the original Canvas workflow.
 {% endalert %}
 
-Though similar in name, Canvas entry properties and event properties function differently within your Canvas workflows. Properties of events or API calls that trigger a user's entry into a Canvas are known as `canvas_entry_properties`. Properties of events that occur as a user moves through a Canvas journey are known as `event_properties`. The key difference here is `canvas_entry_properties` focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
+Canvas entry properties and event properties function differently within your Canvas workflows. Properties of events or API calls that trigger a user's entry into a Canvas are known as `canvas_entry_properties`. Properties of events that occur as a user moves through a Canvas journey are known as `event_properties`. The key difference here is `canvas_entry_properties` focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
 
 {% alert important %}
 For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
@@ -23,12 +23,12 @@ For the original Canvas editor and Canvas Flow, you can't use `event_properties`
 
 Behavior can vary between workflows built with the original Canvas editor versus Canvas Flow. For example, in the original Canvas editor, you can use `event_properties` in the first full step if it's an action-based step. In Canvas Flow, full steps aren't supported, so this does not apply. 
 
-Check out this table for a summary of differences between `canvas_entry_properties` and `event_properties`.
+Refer to the following table for a summary of differences between `canvas_entry_properties` and `event_properties`.
 
 | | Canvas Entry Properties | Event Properties
 |----|----|----|
 | **Liquid** | `canvas_entry_properties` | `event_properties` |
-| **Persistence** | Can be referenced by all [Message][1] steps for the duration of a Canvas for Canvas Flow only. | - Can only be referenced once. <br> - Cannot be referenced by any subsequent Message steps. |
+| **Persistence** | Can be referenced by all [Message][1] steps for the duration of a Canvas built using Canvas Flow. | - Can only be referenced once. <br> - Cannot be referenced by any subsequent Message steps. |
 | **Original Canvas behavior** | - Must have persistent entry properties enabled. <br> - Can only reference `canvas_entry_properties` in the first full step of a Canvas. The Canvas must be action-based or API triggered. | - Can reference `event_properties` in any full step that uses action-based delivery in a Canvas. <br> - Cannot be used in scheduled full steps other than the first full step of an action-based Canvas. However, if a user is using a [Canvas component][2] in the original Canvas editor, the behavior follows the Canvas Flow rules for `event_properties`. |
 | **Canvas Flow behavior** | Can reference `canvas_entry_properties` in any step of a Canvas. | - Can reference `event_properties` in the first Message step **after** an [Action Paths][3] step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message Canvas components in between the Action Paths and Message steps. If one of these non-Message Canvas components is an Action Paths step, the user can go through that action path's Everyone Else path. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
