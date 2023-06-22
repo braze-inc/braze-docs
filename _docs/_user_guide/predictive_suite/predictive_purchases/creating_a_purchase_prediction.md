@@ -1,27 +1,27 @@
 ---
-nav_title: Creating A Purchase Prediction
-article_title: Creating A Purchase Prediction
+nav_title: Creating a Prediction
+article_title: Creating a Prediction
 page_order: 1
-description: "This article covers how to create a Purchase Prediction within the Braze dashboard."
+description: "This article covers how to create a Prediction within the Braze dashboard."
 
 ---
 
-# Creating a Purchase Prediction
+# Creating a Prediction
 
-> Learn how to create a Purchase Prediction within the Braze dashboard.
+> A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}//user_guide/predictive_suite/predictive_purchases/).
 
-In Braze, go to **Analytics** > **Predictive Purchase**.
+In Braze, go to **Analytics** > **Predictive Events**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Engagement**.
 {% endalert %}
 
-A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions and some basic info about them. Here, you can rename, archive, and create new Predictions. Archived Predictions are inactive and do not update user scores. 
+On this page, you will see a list of current active Predictions and some basic info about them. Here, you can rename, archive, and create new Predictions. Archived Predictions are inactive and do not update user scores.
 
 To create a new Prediction, choose **Create Prediction** and select a new **Purchase Prediction**.
 
 {% alert note %}
-There is a limit of five concurrently active Purchase Predictions. Before purchasing Predictive Purchases, the limit is one active Preview Purchase Prediction. A Preview Purchase Prediction will not regularly update scores or target users based on the Prediction's output. Contact your account manager for details.
+There is a limit of five concurrently active Predictions. Before purchasing Predictive Events, the limit is one active preview Prediction. A preview Prediction will not regularly update scores or target users based on the Prediction's output. Contact your account manager for details.
 {% endalert %}
 
 ## Step 1: Create a new Prediction
@@ -30,7 +30,7 @@ There is a limit of five concurrently active Purchase Predictions. Before purcha
 
 On the first page, give your new Prediction a unique name. You can also provide a description to save any relevant notes.
 
-Click **Forward** to move to the next step. Optionally, you can click **Build Now** to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the Build process. Also, you can return to any step later by clicking it in the top bar. 
+Click **Forward** to move to the next step. Optionally, you can click **Build Now** to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the build process. Also, you can return to any step later by clicking it in the top bar.
 
 ## Step 2: Specify purchase tracking
 
