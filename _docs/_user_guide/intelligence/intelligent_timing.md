@@ -152,7 +152,7 @@ In the original Canvas workflow, Intelligent Timing is set in the delay section 
 
 #### Launching the Canvas
 
-Unlike with campaigns, you don't need to worry about launching your Canvas 48 hours before the send date. This is because Intelligent Timing is set on the step level, not the Canvas level. Instead, we recommend that there is at least a 1 day delay between the user entering the Canvas and receiving the step where Intelligent Timing is used. Messages send within 24 hours of the user entering the step, at the next occurrence of their optimal time.
+Unlike with campaigns, you don't need to worry about launching your Canvas 48 hours before the send date. This is because Intelligent Timing is set on the step level, not the Canvas level. Instead, we recommend that there is at least a 1-day delay between the user entering the Canvas and receiving the step where Intelligent Timing is used.
 
 ### Fallback time {#fallback-time}
 
