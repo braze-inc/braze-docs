@@ -702,9 +702,7 @@ This event occurs when a user directly clicks on the Push notification to open t
 Push, iOS, Sends
 {% endapitags %}
 
-Please note, this event is not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk).
-
-This event is now deprecated using our [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
+This event is not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) and is now deprecated using our [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
 
 ```json
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground

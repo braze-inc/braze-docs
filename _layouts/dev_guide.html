@@ -79,9 +79,12 @@ hide_breadcrumb: false
         {%- endif %}
       {%- endfor -%}
     </div>
-      
+    {%- if page.optional_guide_menu_title -%}
     <h2 class="guide_menu_title"> {{ page.optional_guide_menu_title }} </h2>
+    {%- endif -%}
+    {%- if page.guide_menu_title -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title }} </h2>
+    {%- endif -%}
     <div id="guide_list">
 
       {%- for menu_list in page.guide_menu_list  -%}
@@ -105,6 +108,7 @@ hide_breadcrumb: false
         {%- endif %}
       {%- endfor -%}
     </div>
+    {%- if page.guide_menu_title2 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title2 }} </h2>
     <div id="guide_list">
 
@@ -130,6 +134,8 @@ hide_breadcrumb: false
       {%- endfor -%}
 
     </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title3 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title3 }} </h2>
     <div id="guide_list">
 
@@ -153,8 +159,9 @@ hide_breadcrumb: false
         </a>
         {%- endif %}
       {%- endfor -%}
-    {{content}}
     </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title4 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title4 }} </h2>
     <div id="guide_list">
 
@@ -179,6 +186,8 @@ hide_breadcrumb: false
         {%- endif %}
       {%- endfor -%}
     </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title5 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title5 }} </h2>
     <div id="guide_list">
 
@@ -203,6 +212,8 @@ hide_breadcrumb: false
         {%- endif %}
       {%- endfor -%}
     </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title6 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title6 }} </h2>
     <div id="guide_list">
 
@@ -227,6 +238,8 @@ hide_breadcrumb: false
         {%- endif %}
       {%- endfor -%}
     </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title7 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title7 }} </h2>
     <div id="guide_list">
 
@@ -251,6 +264,8 @@ hide_breadcrumb: false
         {%- endif %}
       {%- endfor -%}
     </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title8 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title8 }} </h2>
     <div id="guide_list">
 
@@ -275,6 +290,8 @@ hide_breadcrumb: false
         {%- endif %}
       {%- endfor -%}
     </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title9 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title9 }} </h2>
     <div id="guide_list">
 
@@ -299,6 +316,8 @@ hide_breadcrumb: false
         {%- endif %}
       {%- endfor -%}
     </div>
+    {%- endif -%}
+    {{content}}
     <div style="clear: left;margin-top: 5rem;"></div>
     <h1> {{ page.guide_footer_header }} </h1>
     <p>  {{ page.guide_footer_text }} </p>

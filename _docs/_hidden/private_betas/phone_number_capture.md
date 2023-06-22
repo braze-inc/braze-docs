@@ -20,7 +20,15 @@ Phone number capture form is currently in early access. Contact your Braze accou
 
 ## SDK requirements
 
-In addition to the [minimum SDK versions][1] required to receive messages built using the drag-and-drop editor, users will need to be on the following minimum SDK versions to include text links that do not dismiss the message:
+### Minimum SDK versions
+
+Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions. See the [Prerequisites][1] section of Creating an in-app message with drag-and-drop for more details and nuances to be aware of.
+
+{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
+
+### SDK versions for text links
+
+If you want to include text links that do not dismiss the message, users must be on the following minimum SDK versions:
 
 {% sdk_min_versions swift:6.2.0 android:26.0.0 %}
 
