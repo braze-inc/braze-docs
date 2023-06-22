@@ -1278,11 +1278,11 @@ The following use case checks if a web users is on iOS or Android and, if so, wi
 
 {% raw %}
 ```liquid
-{% if {{targeted_device.${os} == 'Android'}} and {{targeted_device.${platform} == 'web'}} %}
+{% if {{targeted_device.${os} == 'android'}} and {{targeted_device.${platform} == 'web'}} %}
 
 Content for Android
 
-{% elsif {{targeted_device.${os} == 'iOS'}} and {{targeted_device.${platform} == 'web'}} %}
+{% elsif {{targeted_device.${os} == 'ios'}} and {{targeted_device.${platform} == 'web'}} %}
 
 Content for iOS
 
