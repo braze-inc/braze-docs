@@ -93,8 +93,8 @@ Specify a policy name of your choice, and input the following code snippet into 
         },
         {
             "Effect": "Allow",
-            "Action": ["s3:PutObject", "s3:GetObject"],
-            "Resource": ["arn:aws:s3:::INSERTBUCKETNAME/*"]
+            "Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"],
+            "Resource": ["arn:aws:s3:::INSERTBUCKETNAME*", "arn:aws:s3:::INSERTBUCKETNAME/", "arn:aws:s3:::INSERTBUCKETNAME"]
         }
     ]
 }
@@ -211,7 +211,7 @@ Open the **JSON** tab and input the following code snippet into the **Policy Doc
         },
         {
             "Effect": "Allow",
-            "Action": ["s3:PutObject", "s3:GetObject"],
+            "Action": ["s3:PutObject", "s3:GetObject","s3:DeleteObject"],
             "Resource": ["arn:aws:s3:::INSERTBUCKETNAME/*"]
         }
     ]
