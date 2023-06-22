@@ -19,7 +19,7 @@ Your approach should depend on the strictness required by your legal team based 
 - **Channel-specific subscription groups:** Manipulate subscription groups for specific channels (push notifications, email, etc.) to manage consent. Initially, mark users as unsubscribed from these channels and only mark them as subscribed once they have consented.
 
 {% alert important %}
-Please consult your legal team to determine the appropriate approach for your organization's compliance with consent management requirements.
+Consult your legal team to determine the appropriate approach for your organization's compliance with consent management requirements.
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/

@@ -21,7 +21,7 @@ Braze is not responsible for the customer registering with Google or meeting the
 
 | Requirement   | Description |
 | --------------| ----------- |
-| AMP for Email Turned On | AMP is available for everyone. Please reach out to your Customer Success Manager and they can work with our product team to enable this feature for you. |
+| AMP for Email Turned On | AMP is available for everyone. Reach out to your Customer Success Manager and they can work with our product team to enable this feature for you. |
 | Gmail Account Enablement | See [Enabling Gmail Account](#enabling-gmail-account) Below. |
 | Google Sender Authentication | Gmail authenticates the sender of AMP emails with DKIM, SPF, and DMARC. These must be set up for your account, learn more [here](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication). <br><br>- [Domain Keys Identified Mail](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>- [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework)(SPF)<br>- [Domain-based Message Authentication, Reporting, and Conformance](https://en.wikipedia.org/wiki/DMARC)(DMARC)
 | AMP Email Elements | A compelling AMP Email includes the strategic use of various components.<br>Check out the Essentials tab in the [Components](#components) section below. |
@@ -207,7 +207,7 @@ By wrapping your content around the Raw tag, the Braze processing engine will co
 
 ## Testing and troubleshooting
 
-Please note that total clicks and unique clicks do not account for any click that happened from an AMP message (HTML and Plaintext only). AMP specific clicks are attributed to the `amp_click` metric.
+Note that total clicks and unique clicks do not account for any click that happened from an AMP message (HTML and Plaintext only). AMP specific clicks are attributed to the `amp_click` metric.
 
 Before you send your AMP email, we recommend that you test according to [Gmail's guidelines here](https://developers.google.com/gmail/ampemail/testing-dynamic-email).
 
