@@ -104,6 +104,8 @@ This section provides an overview of the three most common ways to place Content
 - [Carousel](#carousel)
 - [Banner](#banner)
 
+The logic and implementation of these placements are not a default in Braze, and therefore the work for achieving these use cases must be supplied and supported by your development team. For an overview on how to implement these placements, refer to the [creating custom Content Card article]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
+
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### Message inbox
@@ -144,8 +146,6 @@ Carousels display multiple pieces of content in a single space that your custome
 When a user is eligible for a card, it will appear in a carousel on whichever page of your app the carousel is added to. Users can swipe horizontally to view additional featured cards.
 
 Because this is a custom implementation, you’ll need to work with your developers to build your own views to display the Content Cards. The default classic, banner, and captioned image cards are not supported with this implementation.
-
-For steps on how to implement, refer to [carousel view]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/carousel_view/).
 
 ### Banner
 

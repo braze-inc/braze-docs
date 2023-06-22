@@ -12,7 +12,7 @@ platform:
   - Web
 
 guide_top_header: "Content Card Customization"
-guide_top_text: "Braze provides <a href='/docs/user_guide/message_building_by_channel/content_cards/creative_details'>five Content Card templates: banner, captioned image, classic, classic image, and control</a>. These templates can be used as a starting place for your implementations, tweaking their look and feel, the order in which cards are displayed, and how the feed is shown to your users. And when you create new, completely custom Content Card types, you can log analytics to make sure that Braze is tracking how successful your new types of cards are."
+guide_top_text: "Customizing Content Cards and the feed in which they are located can be done during onboarding or as you continue to grow using Braze. You can also create new, completely custom Content Card types and log analytics to make sure that Braze is tracking how successful your new types of cards are."
 description: "This landing page links to various ways to customize Braze SDK Content Cards for multiple platforms."
 
 guide_featured_title: "Section Articles"
@@ -29,7 +29,7 @@ guide_featured_list:
   - name: Logging Analytics
     link: /docs/developer_guide/customization_guides/content_cards/logging_analytics/
     fa_icon: fa fa-mouse-pointer
-  - name: Content Card Customization Examples
-    link: /docs/developer_guide/customization_guides/content_cards/examples
+  - name: Creating Custom Content Cards
+    link: /docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards
     fa_icon: fa fa-arrows-h
 ---
