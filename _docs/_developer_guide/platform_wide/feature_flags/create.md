@@ -271,7 +271,7 @@ const numberProperty = await Braze.getFeatureFlagNumberProperty("expanded_user_p
 
 ```csharp
 // Feature flag instance
-var featureFlag = braze.getFeatureFlag("expanded_user_profile");
+var featureFlag = Appboy.AppboyBinding.GetFeatureFlag("expanded_user_profile");
 // String properties
 var stringProperty = featureFlag.getStringProperty("color");
 // Boolean properties
