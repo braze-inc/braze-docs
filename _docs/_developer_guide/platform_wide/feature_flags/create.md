@@ -179,6 +179,16 @@ if (featureFlag.enabled) {
 }
 ```
 {% endtab %}
+{% tab Roku %}
+```brightscript
+featureFlag = m.braze.getFeatureFlag("expanded_user_profile")
+if featureFlag.enabled
+  print "expanded_user_profile is enabled"
+else
+  print "expanded_user_profile is not enabled"
+end if
+```
+{% endtab %}
 {% endtabs %}
 
 ### Accessing properties {#accessing-properties}
@@ -266,6 +276,17 @@ const booleanProperty = await BrazePlugin.getFeatureFlagBooleanProperty("my_flag
 const numberProperty = await BrazePlugin.getFeatureFlagNumberProperty("my_flag_id", "height");
 ```
 {% endtab %}
+{% tab Roku %}
+```brightscript
+
+' String properties
+color = featureFlag.getStringProperty("color")
+' Boolean properties
+expanded = featureFlag.getBooleanProperty("expanded")
+' Number properties
+height = featureFlag.getNumberProperty("height")
+```
+{% endtab %}
 {% endtabs %}
 
 You can also get a list of all enabled feature flags:
@@ -329,6 +350,14 @@ for(const feature of features) {
 }
 ```
 {% endtab %}
+{% tab Roku %}
+```brightscript
+features = m.braze.getAllFeatureFlags()
+for each feature in features
+      print "Feature: " ff.id + " enabled: " + feature.enabled.toStr()
+end for
+```
+{% endtab %}
 {% endtabs %}
 
 ### Refresh feature flags {#refreshing}
@@ -389,6 +418,11 @@ Braze.refreshFeatureFlags();
 {% tab Cordova %}
 ```javascript
 BrazePlugin.refreshFeatureFlags();
+```
+{% endtab %}
+{% tab Roku %}
+```brightscript
+m.Braze.refreshFeatureFlags()
 ```
 {% endtab %}
 {% endtabs %}
@@ -466,6 +500,12 @@ Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
 BrazePlugin.subscribeToFeatureFlagUpdates((featureFlags) => {
     console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
 });
+```
+{% endtab %}
+{% tab Roku %}
+```brightscript
+` Define a function called `onFeatureFlagChanges` to be called when feature flags are refreshed
+m.BrazeTask.ObserveField("BrazeFeatureFlags", "onFeatureFlagChanges")
 ```
 {% endtab %}
 {% endtabs %}
