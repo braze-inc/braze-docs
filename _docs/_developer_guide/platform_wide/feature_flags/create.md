@@ -279,7 +279,7 @@ var booleanProperty = featureFlag.getBooleanProperty("expanded");
 // Number property as integer
 var integerProperty = featureFlag.getIntegerProperty("height");
 // Number property as double
-var numberProperty = featureFlag.getDoubleProperty("height");
+var doubleProperty = featureFlag.getDoubleProperty("height");
 ```
 {% endtab %}
 {% tab Cordova %}
