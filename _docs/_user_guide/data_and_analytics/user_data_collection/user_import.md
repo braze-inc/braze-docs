@@ -20,7 +20,7 @@ You can use Braze's [`/users/track` endpoint][12] to record custom events, user 
 
 ## Cloud Data Ingestion
 
-You can use Braze's [Cloud Data Ingestion][14] to import and maintain user attributes. 
+You can use Braze [Cloud Data Ingestion][14] to import and maintain user attributes. 
 
 ## CSV
 
@@ -46,8 +46,8 @@ To target users who don't have an `external_id`, you can import a list of users 
 
 If you are uploading or updating user profiles that are alias only, you must have the following two columns in your CSV:
 
-- `user_alias_name`: A unique user identifier; an alternative to the `external_id`.
-- `user_alias_label`: A common label by which to group user aliases.
+- `user_alias_name`: A unique user identifier; an alternative to the `external_id`
+- `user_alias_label`: A common label by which to group user aliases
 
 | user_alias_name | user_alias_label | last_name | email | sample_attribute |
 | --- | --- | --- | --- | --- |
@@ -131,9 +131,9 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 
 {% alert note %}
 While `external_id` itself is not mandatory, you **must** include one of these fields:
-- `external_id` - A unique user identifier for your customer <br> - OR -
-- `braze_id` - A unique user identifier pulled for existing Braze users <br> - OR -
-- `user_alias_name` - A unique user identifier for an anonymous user
+- `external_id`: A unique user identifier for your customer <br> - OR -
+- `braze_id`: A unique user identifier pulled for existing Braze users <br> - OR -
+- `user_alias_name`: A unique user identifier for an anonymous user
 {% endalert %}
 
 ### Importing custom data
@@ -151,7 +151,7 @@ The following data types are accepted in User Import:
 Arrays, push tokens, and custom event data types are not supported in User Import.
 Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file.
 
-For uploading these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion][14].
+For uploading these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
 {% endalert %}
 
 ### Updating subscription group status
@@ -312,7 +312,7 @@ Braze will ban or block users with over 5 million sessions ("dummy users") and n
 [9]: {% image_buster /assets/img/subscription_group_import.png %}
 [12]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-[14]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
+[14]: {{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/
 [errors]:#common-errors
 [template]: {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}
 [template_alias]: {% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %}

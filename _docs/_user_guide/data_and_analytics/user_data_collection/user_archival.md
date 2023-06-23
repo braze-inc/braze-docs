@@ -12,12 +12,12 @@ description: "This reference article covers user archival definitions, spam bloc
 
 This process ensures that Braze provides accurate statistics regarding campaign reachable audiences. It also serves in accordance with two key concepts of [GDPR][1]:
 
-1. The storage limitation principle - personal data processed and stored should be kept for no longer than is necessary
+1. The storage limitation principle—personal data processed and stored should be kept for no longer than is necessary
 2. Having a legitimate business purpose to process personal data.
 
 That is, personal data processed and stored should be kept for no longer than is necessary and personal data should only be processed for legitimate business purposes. Archived users will also have their unsubscribe status deleted in compliance with GDPR.
 
-{% alert note %} Customers have full control over whether or not a user is Inactive or Dormant, and can prevent archiving of user profiles by recording a data point at regular intervals. Braze Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your Inactive or Dormant Users. {% endalert %}
+{% alert note %} Customers have full control over whether a user is inactive or dormant, and can prevent archiving of user profiles by recording a data point at regular intervals. Braze Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your inactive or dormant users. {% endalert %}
 
 ## User archival definitions
 
@@ -67,7 +67,7 @@ If necessary, you can delete the users via the [`/users/delete` endpoint]({{site
 
 ## Customizing your user archival policy
 
-Braze provides data orchestrations features that make it quick and easy to customize your user archival policy. Create a user archival policy that gives you the best of both worlds with the Canvas [User Update]({{site.baseurl}}/user_update/) component.
+Braze provides data orchestrations features that allow you to customize your user archival policy. Create a user archival policy that gives you the best of both worlds with the Canvas [User Update]({{site.baseurl}}/user_update/) component.
 
 This allows you to:
 

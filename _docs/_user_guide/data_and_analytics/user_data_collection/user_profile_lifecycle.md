@@ -50,7 +50,7 @@ There are two scenarios that occur when you identify anonymous users:
 
 1) **An anonymous user becomes a new identified user:** If the `external_id` does not yet exist in Braze's platform, the anonymous user becomes a new identified user and retains all of the same attributes and history of the anonymous user. 
 
-2) **An anonymous user is identified as an already existing user:** If the `external_id` already exists in Braze's platform, then this user was previously identified as a user in the system in some other way, e.g., via another device (such as on tablet) or through imported user data. As such, you already have a user profile for this user. In this instance, Braze orphans the anonymous user, removing it from your user base so we don't incorrectly inflate user counts. Campaign/Canvas analytics and device information is merged from the anonymous profile, however attributes and events will not be merged and need to be handled manually.
+2) **An anonymous user is identified as an already existing user:** If the `external_id` already exists in Braze's platform, then this user was previously identified as a user in the system in some other way, e.g., via another device (such as on tablet) or through imported user data. As such, you already have a user profile for this user. In this instance, Braze orphans the anonymous user, removing it from your user base so we don't incorrectly inflate user counts. Campaign and Canvas analytics and device information are merged from the anonymous profile, however attributes and events will not be merged and need to be handled manually.
 
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS][24], [Android][30], [Web][31]).
 
