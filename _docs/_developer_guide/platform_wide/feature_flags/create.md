@@ -277,7 +277,7 @@ var stringProperty = featureFlag.getStringProperty("color");
 // Boolean properties
 var booleanProperty = featureFlag.getBooleanProperty("expanded");
 // Number property as integer
-var numberProperty = featureFlag.getIntegerProperty("height");
+var integerProperty = featureFlag.getIntegerProperty("height");
 // Number property as double
 var numberProperty = featureFlag.getDoubleProperty("height");
 ```
