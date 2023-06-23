@@ -353,7 +353,7 @@ for(const feature of features) {
 ```brightscript
 features = m.braze.getAllFeatureFlags()
 for each feature in features
-      print "Feature: " ff.id + " enabled: " + feature.enabled.toStr()
+      print "Feature: " + feature.id + " enabled: " + feature.enabled.toStr()
 end for
 ```
 {% endtab %}
