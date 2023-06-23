@@ -26,6 +26,10 @@ If you want to see examples or test this endpoint for **SMS Subscription Groups*
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
+If you want to see examples or test this endpoint for **WhatsApp Groups**:
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
+
 {% alert note %}
 To use this endpoint, you'll need to generate an API key with the `subscription.status.get` permission.
 {% endalert %}
@@ -42,11 +46,12 @@ To use this endpoint, you'll need to generate an API key with the `subscription.
 | `external_id`  |  Required* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). <br><br>When both an `external_id` and `email`/`phone` are submitted, only the `external_id`(s) provided will be applied to the result query. |
 | `email` | Required* | String | The email address of the user. It can be passed as an array of strings with a maximum of 50.<br><br> Submitting both an email address and phone number (with no `external_id`) will result in an error. |
 | `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user. If email is not included, you must include at least one phone number (with a maximum of 50).<br><br> Submitting both an email address and phone number (with no `external_id`) will result in an error. |
+
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 *One of `external_id` or `email` or `phone` is required for each user.
 
-- For SMS subscription groups, either `external_id` or `phone` is required.  When both are submitted, only the `external_id` is used for querying and the phone number is applied to that user.
+- For SMS and WhatsApp subscription groups, either `external_id` or `phone` is required.  When both are submitted, only the `external_id` is used for querying and the phone number is applied to that user.
 - For email subscription groups, either `external_id` or `email` is required.  When both are submitted, only the `external_id` is used for the query and the email address is applied to that user.
 
 ## Example request 
@@ -59,7 +64,7 @@ https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{su
 ```
 {% endraw %}
 {% endtab %}
-{% tab SMS %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
