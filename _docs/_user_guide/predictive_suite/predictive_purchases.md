@@ -6,7 +6,7 @@ layout: featured
 alias: /predictive_purchases/
 search_rank: 1
 guide_top_header: "Predictive Events"
-guide_top_text: "Knowing which of your users is likely to make a purchase is a crucial insight for growing businesses. Without it, how do you decide which campaigns to build? Who should receive discounts and promotions? Where to spend a limited budget? Braze helps answer these questions with Predictive Events, a machine learning model that makes it easy for marketing teams to understand future behavior and focus their resources on engagement and revenue-maximizing campaigns."
+guide_top_text: "Knowing which of your users is likely to make a purchase is a crucial insight for growing businesses. Without it, how do you decide which campaigns to build? Who should receive discounts and promotions? Where to spend a limited budget? Braze helps answer these questions with Predictive Events (previously Predictive Purchases), a machine learning model that makes it easy for marketing teams to understand future behavior and focus their resources on engagement and revenue-maximizing campaigns."
 description: "This article covers Predictive Events (previously Predictive Purchases), a tool that gives marketers the ability to identify and message users based on their likelihood to perform an event. "
 
 guide_featured_title: "Topics"
