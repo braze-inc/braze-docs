@@ -278,7 +278,6 @@ const numberProperty = await BrazePlugin.getFeatureFlagNumberProperty("my_flag_i
 {% endtab %}
 {% tab Roku %}
 ```brightscript
-
 ' String properties
 color = featureFlag.getStringProperty("color")
 ' Boolean properties
@@ -504,7 +503,7 @@ BrazePlugin.subscribeToFeatureFlagUpdates((featureFlags) => {
 {% endtab %}
 {% tab Roku %}
 ```brightscript
-` Define a function called `onFeatureFlagChanges` to be called when feature flags are refreshed
+' Define a function called `onFeatureFlagChanges` to be called when feature flags are refreshed
 m.BrazeTask.ObserveField("BrazeFeatureFlags", "onFeatureFlagChanges")
 ```
 {% endtab %}
