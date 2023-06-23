@@ -14,7 +14,7 @@ description: "This page covers methods to record custom events for Roku via the 
 
 ## Add a custom event
 
-```javascript
+```brightscript
 m.Braze.logEvent("YOUR_EVENT_NAME")
 ```
 
@@ -24,6 +24,6 @@ You can add metadata about custom events by passing a properties dictionary with
 
 Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String`, or `Integer`.
 
-```javascript
+```brightscript
 m.Braze.logEvent("YOUR_EVENT_NAME", {"stringPropKey" : "stringPropValue", "intPropKey" : Integer intPropValue})
 ```
