@@ -1,7 +1,7 @@
 ---
 nav_title: Prediction Analytics
 article_title: Prediction Analytics
-description: "This reference article covers the different components included in the Predictive Purchases Analytics Page and how they can be used to make insightful driven decisions."
+description: "This reference article covers the different components included in the Predictive Events Analytics Page and how they can be used to make insightful driven decisions."
 page_order: 2
 
 ---
