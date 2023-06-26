@@ -3,6 +3,7 @@ nav_title: "DELETE: Delete Subscription State by Email Address or Phone Number"
 article_title: "DELETE: Delete Subscription State by Email Address or Phone Number"
 search_tag: Endpoint
 page_order: 0
+hidden: true
 layout: api_page
 page_type: reference
 description: "This article outlines the details about the Delete subscription state by email address or phone number Braze endpoint."
