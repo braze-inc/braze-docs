@@ -209,14 +209,6 @@ glossaries:
     description: Return emails that have unsubscribed during the time period from <code>start_date</code> to <code>end_date</code>.
     tags:
       - Email List
-  - name: <a href='/docs/api/endpoints/email/get_query_by_email_or_phone'>/users/subscription</a>
-    description: Return the subscriptipn state value based on an email address or phone number.
-    tags:
-      - Email List
-  - name: <a href='/docs/api/endpoints/email/delete_remove_subscription_state'>/users/subscription</a>
-    description: Delete the subscription state value based on an email address or phone number.
-    tags:
-      - Email List
   - name: <a href='/docs/api/endpoints/templates/email_templates/get_see_email_template_information/'>/templates/email/info</a>
     description: Get information on your email templates.
     tags:
