@@ -36,17 +36,18 @@ For **Basic Styling**, you can set your default email and content background col
 
 With custom fonts, you can manually add a web font for branding consistency across various email platforms. You can add one custom font per section. 
 
-Before adding a custom font, check that the font meet the following requirements:
+Before adding a custom font, check that the custom font file meets the following requirements:
 
-- CORS must be enabled on the server that provides the custom font file. This is usually handled by your IT team.
-- The file URL must point to a .css file (not a .woff, .otf, etc.).
-- The custom font name must match the name of the font face in the .css file.
+- CORS must be enabled on the server that provides the custom font file. This is usually managed by your IT team. 
+  - The custom font file must have the header: `Access-Control-Allow-Origin: *`
+- The file URL must point to a CSS file (not WOFF, OTF, etc.).
+- The custom font name must match the name of the font face in the CSS file.
 
 To add a custom font:
 
 1. Click **Add a custom font** below the **Default Font Name** of the styling section.
 2. For the **Font Name** field, enter the same font name that appears in your custom font source file. Ensure that the name is capitalized and spaced correctly. 
-3. Enter the corresponding **Font URL**.
+3. Enter the corresponding URL for the **Font URL** field.
 4. Check that the preview shows your custom font before saving. 
 5. Click **Save** to use the custom font as your default email font. 
 
