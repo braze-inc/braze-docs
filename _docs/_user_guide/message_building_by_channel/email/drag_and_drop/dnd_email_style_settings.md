@@ -40,8 +40,8 @@ Before adding a custom font, check that the custom font file meets the following
 
 - CORS must be enabled on the server that provides the custom font file. This is usually managed by your IT team. 
   - The custom font file must have the header: `Access-Control-Allow-Origin: *`
-- The file URL must point to a CSS file (not WOFF, OTF, etc.).
-- The custom font name must match the name of the font face in the CSS file.
+- The file URL must point to a CSS file (not WOFF, OTF, etc.)
+- The custom font name must match the name of the font face in the CSS file
 
 To add a custom font:
 
