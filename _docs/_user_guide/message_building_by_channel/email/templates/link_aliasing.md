@@ -39,7 +39,7 @@ Note that link templates can only be applied for links visible in the **Link Man
 
 New Content Blocks will have their links modified where Braze will append a `lid={{placeholder}}` to each link where applicable. This placeholder value is resolved when inserted into an email message variant.
 
-Any existing Content Blocks created before Braze enabled this feature will only have their links modified when the HTML in that Content Block is edited and the Content Block is relaunched. Rather than relaunching, we recommend duplicating the Content Block.
+To modify the links within existing Content Blocks that were created before Braze enabled link aliasing, duplicate the existing Content Blocks, then modify the links within the duplicated Content Blocks.
 
 When a Content Block without a `lid` value is inserted into a new message, the links from that Content Block are not tracked with an alias. When a new Content Block is inserted into an "old" message variant, the links from that message variant will be recognized by link aliasing. Links from the Content Block are also recognized. However, "old" Content Blocks cannot nest "new" Content Blocks.
 
