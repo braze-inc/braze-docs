@@ -10,7 +10,7 @@ tool: Segments
 
 # Segment Extensions
 
-> Braze segmentation allows you to target users based on user behaviors. Our [core segmentation filters][20] enable you to create unlimited audiences that update in real time, using data such as user attributes, events, purchase behavior, and more. Segment Extensions is additional, enhanced segmentation functionality that gives you the power to filter based on granular historical event data. In addition to accessing more historical data, you can also use Segment Extensions to define an audience [using SQL][21].
+> Braze segmentation allows you to target users based on user behaviors. Our [core segmentation filters][20] enable you to create unlimited audiences that update in real time, using data such as user attributes, events, purchase behavior, and more. Segment Extensions are additional, enhanced segmentation functionality that give you the power to filter based on granular historical event data. In addition to accessing more historical data, you can also use Segment Extensions to define an audience [using SQL][21].
 
 Segment Extensions are audience definitions which allow you to use nested event properties or create windowed aggregations of custom event and purchase event properties in the past 2 years (730 days). For example: Braze's [core segmentation][20] allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of a specific product at least twice in the past 2 years. 
 
