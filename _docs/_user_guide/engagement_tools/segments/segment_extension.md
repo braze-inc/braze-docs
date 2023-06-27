@@ -12,7 +12,7 @@ tool: Segments
 
 > Braze segmentation allows you to target users based on user behaviors. Our [core segmentation filters][20] enable you to create unlimited audiences that update in real time, using data such as user attributes, events, purchase behavior, and more. Segment Extensions are additional, enhanced segmentation functionality that give you the power to filter based on granular historical event data. In addition to accessing more historical data, you can also use Segment Extensions to define an audience [using SQL][21].
 
-Segment Extensions are audience definitions which allow you to use nested event properties or create windowed aggregations of custom event and purchase event properties in the past 2 years (730 days). For example: Braze's [core segmentation][20] allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of a specific product at least twice in the past 2 years. 
+Segment Extensions are audience definitions which allow you to use nested event properties or create windowed aggregations of custom event and purchase event properties in the past two years (730 days). For example: Braze's [core segmentation][20] allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of a specific product at least twice in the past two years. 
 
 The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real time. Nested custom attributes similarly do not require the use of Segment Extensions.
 
@@ -34,7 +34,7 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 ## Step 3: Choose your criteria
 
-Select between purchase, message engagement, or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days (2 years). Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**.
+Select between purchase, message engagement, or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days (two years). Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**.
 
 ![][3]
 
