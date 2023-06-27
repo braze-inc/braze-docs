@@ -57,6 +57,10 @@ guide_featured_list:
 
 Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your email messaging. With the drag-and-drop editor, you can now create and customize a preference center to help manage which users receive certain types of communication. See [Create an email preference center with drag-and-drop]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/) to learn more.
 
+### Saving drafts for Canvas
+
+As you create and launch Canvases, you can also make edits to an active Canvas and save it as a draft, allowing you to pilot your changes prior to another launch. If you have an active Canvas that requires large scale changes, you can use this feature to create separate drafts for these edits. See [Saving drafts for Canvas]({{site.baseurl}}/save_as_draft) to learn more.
+
 ### Winning Path with one-time entry
 
 When using [Winning Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/#one-time-entry) in a Canvas where users are allowed to enter only once, a Delay Group is now automatically included. This means you no longer need to perform a workaround for one-time entry Canvases to use Winning Paths in your Experiment Paths.
