@@ -148,10 +148,10 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "os_version": (optional, string) os version of the device used for the action,
   "device_model": (optional, string) hardware model of the device,
   "device_id": (optional, string) id of the device on which the session occurred,
-  "gender": (optional, string) gender of the user,
-  "country": (optional, string) country of the user,
-  "language": (optional, string) language of the user,
-  "sdk_version": (optional, string) version of the Braze SDK in use during the session
+  "gender": (optional, string) gender of the user (This field has been deprecated and will always return null),
+  "country": (optional, string) country of the user (This field has been deprecated and will always return null),
+  "language": (optional, string) language of the user (This field has been deprecated and will always return null),
+  "sdk_version": (optional, string) version of the Braze SDK in use during the session (This field has been deprecated and will always return null)
 }
 ```
 {% endapi %}
