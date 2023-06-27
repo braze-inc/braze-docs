@@ -169,6 +169,17 @@ if (featureFlag.enabled) {
 ```
 
 {% endtab %}
+{% tab Unity %}
+```csharp
+var featureFlag = Appboy.AppboyBinding.GetFeatureFlag("expanded_user_profile");
+if (featureFlag.Enabled) {
+  Console.WriteLine("expanded_user_profile is enabled");
+} else {
+  Console.WriteLine("expanded_user_profile is not enabled");
+}
+```
+{% endtab %}
+
 {% tab Cordova %}
 ```javascript
 const featureFlag = await BrazePlugin.getFeatureFlag("expanded_user_profile");
@@ -248,22 +259,38 @@ val numberProperty = featureFlag.getNumberProperty("height")
 
 ```javascript
 // String properties
-const stringProperty = await Braze.getFeatureFlagStringProperty("my_flag_id", "color");
+const stringProperty = await Braze.getFeatureFlagStringProperty("expanded_user_profile", "color");
 // Boolean properties
-const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag_id", "expanded");
+const booleanProperty = await Braze.getFeatureFlagBooleanProperty("expanded_user_profile", "expanded");
 // Number properties
-const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag_id", "height");
+const numberProperty = await Braze.getFeatureFlagNumberProperty("expanded_user_profile", "height");
 ```
 
 {% endtab %}
+{% tab Unity %}
+
+```csharp
+// Feature flag instance
+var featureFlag = Appboy.AppboyBinding.GetFeatureFlag("expanded_user_profile");
+// String properties
+var stringProperty = featureFlag.getStringProperty("color");
+// Boolean properties
+var booleanProperty = featureFlag.getBooleanProperty("expanded");
+// Number property as integer
+var integerProperty = featureFlag.getIntegerProperty("height");
+// Number property as double
+var doubleProperty = featureFlag.getDoubleProperty("height");
+```
+{% endtab %}
 {% tab Cordova %}
+
 ```javascript
 // String properties
-const stringProperty = await BrazePlugin.getFeatureFlagStringProperty("my_flag_id", "color");
+const stringProperty = await BrazePlugin.getFeatureFlagStringProperty("expanded_user_profile", "color");
 // Boolean properties
-const booleanProperty = await BrazePlugin.getFeatureFlagBooleanProperty("my_flag_id", "expanded");
+const booleanProperty = await BrazePlugin.getFeatureFlagBooleanProperty("expanded_user_profile", "expanded");
 // Number properties
-const numberProperty = await BrazePlugin.getFeatureFlagNumberProperty("my_flag_id", "height");
+const numberProperty = await BrazePlugin.getFeatureFlagNumberProperty("expanded_user_profile", "height");
 ```
 {% endtab %}
 {% endtabs %}
@@ -317,6 +344,16 @@ featureFlags.forEach { feature ->
 const features = await Braze.getAllFeatureFlags();
 for(const feature of features) {
   console.log(`Feature: ${feature.id}`, feature.enabled);
+}
+```
+
+{% endtab %}
+{% tab Unity %}
+
+```csharp
+List<FeatureFlag> features = Appboy.AppboyBinding.GetAllFeatureFlags();
+foreach (FeatureFlag feature in features) {
+  Console.WriteLine("Feature: {0} - enabled: {1}", feature.ID, feature.Enabled);
 }
 ```
 
@@ -383,6 +420,13 @@ braze.refreshFeatureFlags()
 
 ```javascript
 Braze.refreshFeatureFlags();
+```
+
+{% endtab %}
+{% tab Unity %}
+
+```csharp
+Appboy.AppboyBinding.RefreshFeatureFlags();
 ```
 
 {% endtab %}
@@ -458,6 +502,11 @@ Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
   console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
 });
 ```
+
+{% endtab %}
+{% tab Unity %}
+
+To listen for changes, set the values for Game Object Name and Callback Method Name under `Braze Configuration > Feature Flags` to the corresponding values in your application.
 
 {% endtab %}
 {% tab Cordova %}
