@@ -56,17 +56,27 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Add a partner, sometimes called a "Currents connector", by clicking the dropdown at the top of the screen.
 
-![Adding an integration]({% image_buster /assets/img/new_current.png %}){: style="max-width:30%;"}
-
 Each partner requires a different set of configuration steps. To enable each integration, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and follow the instructions in their respective pages.
 
-## Step 4: Configure events
+## Step 5: Configure events
 
 Choose the events you wish to pass to that partner by checking from the available options. You can find listings of these events in our [Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) libraries.
 
+![]({% image_buster /assets/img/current4.png %})
+
 If needed, you can learn more about our events in our [event delivery semantics]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/) article.
 
-## Step 5: Test your integration
+## Step 6: Field transformations
+
+Currents field transformations allow you to designate certain fields in Currens for removal (replace with an empty string) or hashing (applying an SHA-256 hashing algorithm). 
+
+Selecting a field for one of these transformations will apply that transformation to all events in which that field appears. 
+
+For example, selecting `email_address` for hashing will hash the `email_address` field in Email Send, Email Open, Email Bounce, SubscriptionGroupStateChange, etc.
+
+![Adding field transformations]({% image_buster /assets/img/current3.png %})
+
+## Step 7: Test your integration
 
 You may test your integration or take a look at the sample Currents data in our Currents examples [GitHub repository](https://github.com/Appboy/currents-examples).
 
