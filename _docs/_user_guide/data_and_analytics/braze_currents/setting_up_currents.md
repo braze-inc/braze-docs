@@ -68,7 +68,7 @@ If needed, you can learn more about our events in our [event delivery semantics]
 
 ## Step 5: Field transformations
 
-Currents field transformations allow you to designate certain fields in Currens for removal (replace with an empty string) or hashing (applying an SHA-256 hashing algorithm). 
+Currents field transformations allow you to designate certain fields in Currents for removal (replace with an empty string) or hashing (applying an SHA-256 hashing algorithm). 
 
 Selecting a field for one of these transformations will apply that transformation to all events in which that field appears. For example, selecting `email_address` for hashing will hash the `email_address` field in Email Send, Email Open, Email Bounce, Subscription Group State Change, etc.
 
