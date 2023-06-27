@@ -17,7 +17,7 @@ channel:
 
 ## How to use action buttons
 
-Each interactive button can link to a webpage, a deep link, or open the app. You can specify your push action buttons in the **On Click Behavior** section of the push message composer in the dashboard.
+Each interactive button can link to a webpage or a deep link or open the app. You can specify your push action buttons in the **On Click Behavior** section of the push message composer in the dashboard.
 
 ### iOS push action buttons {#ios}
 
