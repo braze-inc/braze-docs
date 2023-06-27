@@ -39,16 +39,19 @@ guide_featured_list:
 
 guide_menu_title: "Legal"
 guide_menu_list:
-- name: Braze Data Processing Addendum and FAQs
+- name: Data Processing Addendum and FAQs
   link: https://www.braze.com/company/legal/dpa
   fa_icon: fa-solid fa-question
-- name: Standard Contractual Clauses for Transfers from the UK and EU
+- name: Standard Contractual Clauses
   link: https://www.braze.com/company/legal/scc
   fa_icon: fa-solid fa-gavel
 - name: Braze Subprocessors
   link: https://www.braze.com/company/legal/subprocessors
   fa_icon: fa-sharp fa-solid fa-network-wired
-- name: GDPR Frequently Asked Questions
+- name: Transparency Report
+  link: https://www.braze.com/company/legal/transparency-report
+  fa_icon: fa-solid fa-magnifying-glass
+- name: GDPR FAQs
   link: https://www.braze.com/company/legal/gdpr-faq
   fa_icon: fa-solid fa-question
 - name: Acceptable Use Policy
