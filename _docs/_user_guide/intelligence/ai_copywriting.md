@@ -37,7 +37,7 @@ We filter out responses for offensive content that violates OpenAI's [content po
 
 ## How is my data used and sent to OpenAI?
 
-Braze sends your query to OpenAI in order to generate copy. We anonymize these requests so OpenAI only sees them as coming from Braze. Nothing that identifies Braze customers is sent in the request, unless you provide such information in your query. Per OpenAI's [policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI via Braze is not used to train models and is deleted after 30 days.
+Braze sends your query to OpenAI in order to generate copy. We anonymize these requests so OpenAI only sees them as coming from Braze. Nothing that identifies Braze customers is sent in the request, unless you provide such information in your query. Per OpenAI's [policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI via Braze is not used to train their models and is deleted after 30 days.
 
 ## More AI tools
 
