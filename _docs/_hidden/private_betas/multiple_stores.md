@@ -57,7 +57,7 @@ After you connect more than one store, incoming Shopify custom events will now c
 
 ### Shopify user merging and syncing
 
-If the user’s Shopify customer ID, email address, or phone number exists already within Braze using the alias, {% raw %}`shopify_customer_id_{{storefront_domain}}` `shopify_email`, or `shopify_phone`, {% endraw %} then we’ll update the existing user profile. If those aliases do not exist within Braze, we will create a new user profile. Note that it is possible for a user’s data (e.g., city) to differ across multiple Shopify stores for the same user; in such cases, Braze will always update the user profile from the store with the most recent activity. 
+If the user’s Shopify customer ID, email address, or phone number exists already within Braze using the alias, {% raw %}`shopify_customer_id_{{storefront_domain}}`, `shopify_email`, or `shopify_phone`, {% endraw %} then we’ll update the existing user profile. If those aliases do not exist within Braze, we will create a new user profile. Note that it is possible for a user’s data (e.g., city) to differ across multiple Shopify stores for the same user. In such cases, Braze will always update the user profile from the store with the most recent activity. 
 
 {% alert warning %}
 Braze will update the user profile with Shopify customer data from the store with the most recent activity. This means that any attributes, such as email, phone number, sending phone, city, etc., can be overwritten with the most recent store activity. For example, if a user has a different phone number in two different stores, Braze will update the user profile with the phone number from the store with the most recent activity.
