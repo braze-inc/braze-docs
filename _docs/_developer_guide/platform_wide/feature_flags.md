@@ -12,19 +12,19 @@ channel:
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: About Feature Flags
-  link: ./about/
+  link: /docs/developer_guide/platform_wide/feature_flags/about/
   fa_icon: fas fa-check
 - name: Create a Feature Flag
-  link: ./create/
+  link: /docs/developer_guide/platform_wide/feature_flags/create/
   fa_icon: fas fa-columns
 - name: Example Use Cases
-  link: ./use_cases/
+  link: /docs/developer_guide/platform_wide/feature_flags/use_cases/
   fa_icon: fas fa-paint-brush
 - name: Frequently Asked Questions
-  link: ./faq/
+  link: /docs/developer_guide/platform_wide/feature_flags/faq/
   fa_icon: fas fa-question
 - name: Feature Flags in Canvas
-  link: ./canvas/
+  link: /docs/developer_guide/platform_wide/feature_flags/canvas/
   fa_icon: fas fa-project-diagram 
 ---
 
