@@ -24,7 +24,7 @@ Braze feature flags are currently in an open beta. [Click here](https://dashboar
 
 Braze supports Feature Flags on iOS, Android, and Web platforms with the following SDK version requirements:
 
-{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 %}
+{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 roku:1.0.0 %}
 
 Do you need support on other platforms? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 

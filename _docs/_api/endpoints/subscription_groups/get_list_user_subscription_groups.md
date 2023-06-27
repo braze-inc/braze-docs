@@ -24,6 +24,10 @@ If you want to see examples or test this endpoint for **SMS Subscription Groups*
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
 
+If you want to see examples or test this endpoint for **WhatsApp Groups**:
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
+
 {% alert note %}
 To use this endpoint, you'll need to generate an API key with the `subscription.groups.get` permission.
 {% endalert %}
@@ -55,7 +59,7 @@ If there are multiple users (multiple `external_ids`) who share the same email a
 `https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`
 {% endraw %}
 {% endtab %}
-{% tab SMS %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&limit=100&offset=1&phone=+11112223333' \

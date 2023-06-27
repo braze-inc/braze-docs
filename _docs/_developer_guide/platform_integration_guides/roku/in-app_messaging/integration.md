@@ -24,13 +24,13 @@ In-app messages will only be sent to Roku devices running the minimum supported 
 
 To process in-app messages, you can add an observer on `BrazeTask.BrazeInAppMessage`:
 
-```
+```brightscript
 m.BrazeTask.observeField("BrazeInAppMessage", "onInAppMessageReceived")
 ```
 
 Then within your handler, you have access to the highest in-app message that your campaigns have triggered:
 
-```
+```brightscript
 sub onInAppMessageReceived()
   in_app_message = m.BrazeTask.BrazeInAppMessage
   ...
@@ -88,25 +88,25 @@ You will need to make sure certain functions are called to handle the analytics 
 ##### When a message is displayed
 
 When a message is displayed or seen, log an impression:
-```
+```brightscript
 LogInAppMessageImpression(in_app_message.id, brazetask)
 ```
 
 ##### When a user clicks on a message
 Once a user clicks on the message, log a click and then process `in_app_message.click_action`:
-```
+```brightscript
 LogInAppMessageClick(in_app_message.id, brazetask)
 ```
 
 ##### When a user clicks a button
 If the user clicks on a button, log the button click and then process `inappmessage.buttons[selected].click_action`:
 
-```
+```brightscript
 LogInAppMessageButtonClick(inappmessage.id, inappmessage.buttons[selected].id, brazetask)
 ```
 
 ##### After processing an in-app message
 After processing an in-app message, you should clear the field:
-```
+```brightscript
 m.BrazeTask.BrazeInAppMessage = invalid
 ```

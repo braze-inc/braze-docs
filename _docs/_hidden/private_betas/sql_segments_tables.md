@@ -1,5 +1,5 @@
 ---
-nav_title: "SQL Segment Extensions Tables"
+nav_title: "SQL Table Reference"
 permalink: "/sql_segments_tables/"
 hidden: true
 toc_headers: h2
@@ -11,9 +11,9 @@ table td {
 }
 </style>
 
-# SQL Segment Extensions tables
+# SQL table reference
 
-This page is a reference of tables and columns available to be queried when generating [SQL Segment Extensions]({{site.baseurl}}/sql_segments).
+This page is a reference of tables and columns available to be queried in the [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) or when generating [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
 ## Table of contents
 
@@ -38,6 +38,15 @@ Table | Description
 [USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | When a user is enrolled in the control group for a campaign
 [USERS_CAMPAIGNS_FREQUENCYCAP_SHARED](#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED) | When a user gets frequency capped for a campaign
 [USERS_CAMPAIGNS_REVENUE_SHARED](#USERS_CAMPAIGNS_REVENUE_SHARED) | When a user generates revenue with in the primary conversion period
+[USERS_CANVAS_ABORT_SHARED](#USERS_CANVAS_ABORT_SHARED) | An originally scheduled Canvas step message was aborted for some reason
+[USERS_CANVAS_CONVERSION_SHARED](#USERS_CANVAS_CONVERSION_SHARED) | When a user converts for a Canvas conversion event
+[USERS_CANVAS_ENTRY_SHARED](#USERS_CANVAS_ENTRY_SHARED) | When a user enters a Canvas
+[USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | When a user exits a Canvas because they match audience exit criteria
+[USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED](#USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED) | When a user exits a Canvas because they performed an exception event
+[USERS_CANVAS_EXPERIMENTSTEP_CONVERSION_SHARED](#USERS_CANVAS_EXPERIMENTSTEP_CONVERSION_SHARED) | When a user converts for a Canvas Experiment step
+[USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED](#USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED) | When a user enters an Experiment step path
+[USERS_CANVAS_FREQUENCYCAP_SHARED](#USERS_CANVAS_FREQUENCYCAP_SHARED) | When a user gets frequency capped for a Canvas step
+[USERS_CANVAS_REVENUE_SHARED](#USERS_CANVAS_REVENUE_SHARED) | When a user generates revenue within the primary conversion event period
 [USERS_MESSAGES_CONTENTCARD_ABORT_SHARED](#USERS_MESSAGES_CONTENTCARD_ABORT_SHARED) | An originally scheduled Content Card message was aborted for some reason.
 [USERS_MESSAGES_CONTENTCARD_CLICK_SHARED](#USERS_MESSAGES_CONTENTCARD_CLICK_SHARED) | When a user clicks a Content Card
 [USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED](#USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED) | When a user dismisses a Content Card
@@ -74,6 +83,9 @@ Table | Description
 [USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED](#USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED) | When a user clicks a Braze shortened URL included in an SMS message
 [USERS_MESSAGES_WEBHOOK_ABORT_SHARED](#USERS_MESSAGES_WEBHOOK_ABORT_SHARED) | An originally scheduled webhook message was aborted for some reason.
 [USERS_MESSAGES_WEBHOOK_SEND_SHARED](#USERS_MESSAGES_WEBHOOK_SEND_SHARED) | When we send a webhook for a user
+[USERS_RANDOMBUCKETNUMBERUPDATE_SHARED](#USERS_RANDOMBUCKETNUMBERUPDATE_SHARED) | When a user's random bucket number is changed
+[USERS_USERDELETEREQUEST_SHARED](#USERS_USERDELETEREQUEST_SHARED) | When a user is deleted by customer request
+[USERS_USERORPHAN_SHARED](#USERS_USERORPHAN_SHARED) | When a user is merged with another user's profile and the original profile is orphaned
 
 
 ## Behaviors
@@ -481,6 +493,207 @@ Field | Type | Description
 `timezone` | `null,`&nbsp;`string` | timezone of the user
 `language` | `null,`&nbsp;`string` | [PII] language of the user
 `revenue` | `long` | the amount of USD revenue in cents generated
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+## Canvas
+
+### USERS_CANVAS_ABORT_SHARED {#USERS_CANVAS_ABORT_SHARED}
+
+| Field                                  | Type                     | Description                                                                |
+| -------------------------------------- | ------------------------ | -------------------------------------------------------------------------- |
+| `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                          |
+| `user_id`                              | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                              |
+| `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                         |
+| `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous       |
+| `app_group_id`                         | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                              |
+| `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                               |
+| `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                                 |
+| `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to                |
+| `canvas_api_id`                        | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                                 |
+| `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                       |
+| `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                            |
+| `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received             |
+| `channel`                              | `string`,&nbsp;`null`    | Messaging channel this event belongs to (email, push, etc.)                |
+| `gender`                               | `string`,&nbsp;`null`    | [PII] Gender of the user                                                   |
+| `country`                              | `string`,&nbsp;`null`    | [PII] Country of the user                                                  |
+| `timezone`                             | `string`,&nbsp;`null`    | Timezone of the user                                                       |
+| `language`                             | `string`,&nbsp;`null`    | [PII] Language of the user                                                 |
+| `abort_type`                           | `string`,&nbsp;`null`    | Type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit" |
+| `abort_log`                            | `string`,&nbsp;`null`    | [PII] Log message describing abort details, maximum 128 characters         |
+| `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                              |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### USERS_CANVAS_CONVERSION_SHARED {#USERS_CANVAS_CONVERSION_SHARED}
+
+| Field                                  | Type                     | Description                                                                                                     |
+| -------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                                                               |
+| `user_id`                              | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                                                                   |
+| `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                                                              |
+| `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous                                            |
+| `app_group_id`                         | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                                                                   |
+| `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                                                                    |
+| `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                                                                      |
+| `app_api_id`                           | `string`,&nbsp;`null`    | API ID of the app on which this event occurred                                                                  |
+| `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to                                                     |
+| `canvas_api_id`                        | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                                                                      |
+| `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                                                            |
+| `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                                                                 |
+| `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received                                                  |
+| `conversion_behavior_index`            | `int`,&nbsp;`null`       | Type of conversion event the user performed where "0" is a primary conversion and "1" is a secondary conversion |
+| `gender`                               | `string`,&nbsp;`null`    | [PII] Gender of the user                                                                                        |
+| `country`                              | `string`,&nbsp;`null`    | [PII] Country of the user                                                                                       |
+| `timezone`                             | `string`,&nbsp;`null`    | Timezone of the user                                                                                            |
+| `language`                             | `string`,&nbsp;`null`    | [PII] Language of the user                                                                                      |
+| `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                                                                   |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### USERS_CANVAS_ENTRY_SHARED {#USERS_CANVAS_ENTRY_SHARED}
+
+| Field                     | Type                     | Description                                                          |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------- |
+| `id`                      | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
+| `user_id`                 | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `external_user_id`        | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
+| `device_id`               | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
+| `app_group_id`            | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `app_group_api_id`        | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                         |
+| `time`                    | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
+| `canvas_id`               | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
+| `canvas_api_id`           | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                           |
+| `canvas_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                 |
+| `canvas_step_api_id`      | `string`,&nbsp;`null`    | [Deprecated] API ID of the Canvas step this event belongs to         |
+| `gender`                  | `string`,&nbsp;`null`    | [PII] Gender of the user                                             |
+| `country`                 | `string`,&nbsp;`null`    | [PII] Country of the user                                            |
+| `timezone`                | `string`,&nbsp;`null`    | Timezone of the user                                                 |
+| `language`                | `string`,&nbsp;`null`    | [PII] Language of the user                                           |
+| `in_control_group`        | `boolean`,&nbsp;`null`   | True if the user was enrolled in the control group                   |
+| `sf_created_at`           | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                        |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED {#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED}
+
+| Field                     | Type                     | Description                                                          |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------- |
+| `id`                      | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
+| `user_id`                 | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `external_user_id`        | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
+| `device_id`               | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
+| `app_group_id`            | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `app_group_api_id`        | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                         |
+| `time`                    | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
+| `canvas_id`               | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
+| `canvas_api_id`           | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                           |
+| `canvas_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                 |
+| `canvas_step_api_id`      | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                      |
+| `sf_created_at`           | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                        |
+
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED {#USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED}
+
+| Field                     | Type                     | Description                                                          |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------- |
+| `id`                      | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
+| `user_id`                 | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `external_user_id`        | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
+| `device_id`               | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
+| `app_group_id`            | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `app_group_api_id`        | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                         |
+| `time`                    | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
+| `canvas_id`               | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
+| `canvas_api_id`           | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                           |
+| `canvas_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                 |
+| `canvas_step_api_id`      | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                      |
+| `sf_created_at`           | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                        |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### USERS_CANVAS_EXPERIMENTSTEP_CONVERSION_SHARED {#USERS_CANVAS_EXPERIMENTSTEP_CONVERSION_SHARED}
+
+| Field                       | Type                     | Description                                                                                                     |
+| --------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `id`                        | `string`,&nbsp;`null`    | Globally unique ID for this event                                                                               |
+| `user_id`                   | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                                                                   |
+| `external_user_id`          | `string`,&nbsp;`null`    | [PII] External user ID of the user                                                                              |
+| `device_id`                 | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous                                            |
+| `app_group_id`              | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                                                                   |
+| `time`                      | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                                                                      |
+| `app_api_id`                | `string`,&nbsp;`null`    | API ID of the app on which this event occurred                                                                  |
+| `canvas_id`                 | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to                                                     |
+| `canvas_api_id`             | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                                                                      |
+| `canvas_variation_api_id`   | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                                                            |
+| `canvas_step_api_id`        | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                                                                 |
+| `experiment_step_api_id`    | `string`,&nbsp;`null`    | API ID of the Experiment step this event belongs to                                                             |
+| `conversion_behavior_index` | `int`,&nbsp;`null`       | Type of conversion event the user performed where "0" is a primary conversion and "1" is a secondary conversion |
+| `sf_created_at`             | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                                                                   |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED {#USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED}
+
+| Field                     | Type                     | Description                                                          |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------- |
+| `id`                      | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
+| `user_id`                 | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `external_user_id`        | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
+| `device_id`               | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
+| `app_group_id`            | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `time`                    | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
+| `canvas_id`               | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
+| `canvas_api_id`           | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                           |
+| `canvas_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                 |
+| `canvas_step_api_id`      | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                      |
+| `experiment_step_api_id`  | `string`,&nbsp;`null`    | API ID of the Experiment step this event belongs to                  |
+| `in_control_group`        | `boolean`,&nbsp;`null`   | True if the user was enrolled in the control group                   |
+| `sf_created_at`           | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                        |
+
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### USERS_CANVAS_FREQUENCYCAP_SHARED {#USERS_CANVAS_FREQUENCYCAP_SHARED}
+
+| Field                                  | Type                     | Description                                                          |
+| -------------------------------------- | ------------------------ | -------------------------------------------------------------------- |
+| `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
+| `user_id`                              | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
+| `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
+| `app_group_id`                         | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                         |
+| `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
+| `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
+| `canvas_api_id`                        | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                           |
+| `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                 |
+| `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                      |
+| `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received       |
+| `channel`                              | `string`,&nbsp;`null`    | Messaging channel this event belongs to (email, push, etc.)          |
+| `gender`                               | `string`,&nbsp;`null`    | [PII] Gender of the user                                             |
+| `country`                              | `string`,&nbsp;`null`    | [PII] Country of the user                                            |
+| `timezone`                             | `string`,&nbsp;`null`    | Timezone of the user                                                 |
+| `language`                             | `string`,&nbsp;`null`    | [PII] Language of the user                                           |
+| `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                        |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### USERS_CANVAS_REVENUE_SHARED {#USERS_CANVAS_REVENUE_SHARED}
+
+| Field                                  | Type                     | Description                                                          |
+| -------------------------------------- | ------------------------ | -------------------------------------------------------------------- |
+| `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
+| `user_id`                              | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
+| `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
+| `app_group_id`                         | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                         |
+| `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
+| `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
+| `canvas_api_id`                        | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                           |
+| `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                 |
+| `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                      |
+| `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received       |
+| `gender`                               | `string`,&nbsp;`null`    | [PII] Gender of the user                                             |
+| `country`                              | `string`,&nbsp;`null`    | [PII] Country of the user                                            |
+| `timezone`                             | `string`,&nbsp;`null`    | Timezone of the user                                                 |
+| `language`                             | `string`,&nbsp;`null`    | [PII] Language of the user                                           |
+| `revenue`                              | `int`,&nbsp;`null`       | Amount of revenue generated in USD, displayed as cents               |
+| `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                        |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Messages
@@ -1610,4 +1823,49 @@ Field | Type | Description
 `country` | `null,`&nbsp;`string` | [PII] country of the user
 `timezone` | `null,`&nbsp;`string` | timezone of the user
 `language` | `null,`&nbsp;`string` | [PII] language of the user
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+## Users
+
+### USERS_RANDOMBUCKETNUMBERUPDATE_SHARED {#USERS_RANDOMBUCKETNUMBERUPDATE_SHARED}
+
+| Field                       | Type                     | Description                                        |
+| --------------------------- | ------------------------ | -------------------------------------------------- |
+| `id`                        | `string`,&nbsp;`null`    | Globally unique ID for this event                  |
+| `app_group_id`              | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to      |
+| `app_group_api_id`          | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to       |
+| `user_id`                   | `string`,&nbsp;`null`    | BSON ID of the user that performed this event      |
+| `external_user_id`          | `string`,&nbsp;`null`    | [PII] External user ID of the user                 |
+| `time`                      | `int`,&nbsp;`null`       | Unix timestamp at which the event happened         |
+| `random_bucket_number`      | `int`,&nbsp;`null`       | Current random bucket number assigned to the user  |
+| `prev_random_bucket_number` | `int`,&nbsp;`null`       | Previous random bucket number assigned to the user |
+| `sf_created_at`             | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe      |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### USERS_USERDELETEREQUEST_SHARED {#USERS_USERDELETEREQUEST_SHARED}
+
+| Field              | Type                     | Description                                                   |
+| ------------------ | ------------------------ | ------------------------------------------------------------- |
+| `id`               | `string`,&nbsp;`null`    | Globally unique ID for this event                             |
+| `user_id`          | `string`,&nbsp;`null`    | BSON ID of the user that was deleted                          |
+| `app_group_id`     | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                 |
+| `app_group_api_id` | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                  |
+| `time`             | `int`,&nbsp;`null`       | Unix timestamp at which the user delete request was processed |
+| `sf_created_at`    | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### USERS_USERORPHAN_SHARED {#USERS_USERORPHAN_SHARED}
+
+| Field              | Type                     | Description                                                                   |
+| ------------------ | ------------------------ | ----------------------------------------------------------------------------- |
+| `id`               | `string`,&nbsp;`null`    | Globally unique ID for this event                                             |
+| `user_id`          | `string`,&nbsp;`null`    | BSON ID of the user that was orphaned                                         |
+| `external_user_id` | `string`,&nbsp;`null`    | [PII] External user ID of the user                                            |
+| `device_id`        | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous          |
+| `app_group_id`     | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                                 |
+| `app_group_api_id` | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                                  |
+| `app_api_id`       | `string`,&nbsp;`null`    | API ID of the app the orphaned user belonged to                               |
+| `time`             | `int`,&nbsp;`null`       | Unix timestamp at which the user was orphaned                                 |
+| `orphaned_by_id`   | `string`,&nbsp;`null`    | BSON ID of the user whose profile was merged with the orphaned user's profile |
+| `sf_created_at`    | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
