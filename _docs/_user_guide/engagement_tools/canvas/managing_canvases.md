@@ -15,16 +15,22 @@ guide_featured_list:
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     fa_icon: fas fa-check-square
+  - name: Editing Canvases After Launch
+    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
+    fa_icon: fas fa-edit
+  - name: Saving Drafts for Canvas
+    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/
+    fa_icon: fa-solid fa-floppy-disk
+  - name: Canvas Version History
+    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_version_history/
+    fa_icon: fas fa-list
   - name: Cloning Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/
     fa_icon: fas fa-clone
-  - name: Archiving Canvases
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/
-    fa_icon: fas fa-archive
-  - name: Changing Your Canvas After Launch
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
-    fa_icon: fas fa-edit
   - name: Duplicating Canvases
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating_canvases/
     fa_icon: fas fa-copy
+  - name: Archiving Canvases
+    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/
+    fa_icon: fas fa-archive
 ---
