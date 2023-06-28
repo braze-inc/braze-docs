@@ -133,6 +133,8 @@ The ability to track credit usage for each query is coming soon.
 
 Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits will reset to 2,000 on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
 
-![Query Builder showing the amount of credits used in the current month.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%"}
+![Query Builder showing the amount of credits used in the current month.][1]{: style="max-width:60%;"}
 
 When you reach the credit cap, you cannot run queries, but you can create, edit, and save SQL reports. If you want to purchase more Query Builder credits, please get in touch with your account manager.
+
+[1]: {% image_buster /assets/img_archive/query_builder_credits.png %}
