@@ -54,9 +54,13 @@ Then, [subscribe to data updates]({{site.baseurl}}/developer_guide/customization
 
 When creating a custom view controller, Content Card impressions, clicks, and dismissals are not automatically logged. You must [implement each respective method][3] to ensure impressions, dismissal events, and clicks get properly logged back to Braze's dashboard analytics.
 
-## Banner
+## Content Card placements
 
-![]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+This section provides an overview of the three most common ways to place Content Cards within your app or site:
+
+![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+
+### Banner
 
 Content Cards don't have to look like "cards." For example, Content Cards can appear as a dynamic banner that persistently displays on your home page or at the top of other designated pages. 
 
@@ -67,8 +71,6 @@ TO DO: ADD MORE CONTEXT ABOUT WHAT IS NEEDED HERE
 ## Message inbox
 
 Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UX. In the following example, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
-
-![]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 ### Dashboard configuration
 
@@ -101,8 +103,6 @@ This message also looks for an HTML key-value pair, but if you are working with 
 {% endtabs %}
 
 ## Carousel
-
-![Sample news app showing carousel of Content Cards in an article.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Content Cards can be set in a carousel feed where a user can swipe horizontally to view additional featured cards. 
 
