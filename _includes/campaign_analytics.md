@@ -173,7 +173,7 @@ Unique Dismissals | The number of users who have dismissed Content Cards from a 
 Regarding how impressions are logged, there are some nuances between web, Android, and iOS. Generally speaking, Braze logs an impression once a card is seen—when a user scrolls to the specific Content Card in their feed.
 {% endalert %}
 
-{% details More on Unique Recipients versus Unique Impressions %}
+#### Unique Recipients versus Unique Impressions
 
 There are a few metrics available that cover the visibility of your message. This includes Messages Sent, Unique Recipients, and Unique Impressions. In particular, the difference between Unique Recipients and Unique Impressions can be a bit confusing. Let's use a few example scenarios to understand these metrics better.
 
@@ -186,8 +186,6 @@ As another example, suppose you see five Unique Impressions on a Content Card ca
 3. SDK recorded an impression and logged it to the server
 
 Your Messages Sent refers to Content Cards available to be seen, while Unique Recipients refers to Content Cards that were actually seen.
-
-{% enddetails %}
 
 {% elsif include.channel == "email" %}
 
