@@ -1929,23 +1929,20 @@ Subscription groups are only available for email and SMS channels at this time.
 
 #### Property details
 
-`state_change_source` will return a one or two-letter string depending on the source. Available sources and associated strings are listed below:
+`state_change_source` will return a string of the full source name. For example, the source CSV import will return the string `CSV Import`. Available sources are listed below:
 
-| Source | Letter |
+| Source | Description |
 | --- | --- |
-| SDK | s |
-| Dashboard | d |
-| Subscription page | p |
-| REST API | r |
-| Attribution provider | a |
-| CSV import | c |
-| Enhanced preference center | e |
-| Inbound SMS | i |
-| Outbound SMS | o |
-| Migration | m |
-| User merge | g |
-| Backfill | b |
-| Shopify provider | sh |
+| SDK | SDK endpoints |
+| Dashboard | When a user's subscription state is updated from the User Profile page in Dashboard |
+| Subscription Page | When a user unsubscribes through an email link that is not the preference center |
+| REST API | REST API endpoints |
+| CSV import | CSV user import |
+| Preference Center | When a user is updated from the preference center |
+| Inbound Message | When a user is updated by inbound messages from end-users through channels such as SMS |
+| Migration | When a user is updated by internal migrations or maintenance scripts |
+| User Merge | When a user is updated by the user merge process |
+| Canvas User Update Step | When a user is updated by the Canvas user update step |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
@@ -1989,23 +1986,20 @@ This event occurs when the global subscription state of the user changes.
 
 #### Property details
 
-`state_change_source` will return a one or two-letter string depending on the source. Available sources and associated strings are listed below:
+`state_change_source` will return a string of the full source name. For example, the source CSV import will return the string `CSV Import`. Available sources are listed below:
 
-| Source | Letter |
+| Source | Description |
 | --- | --- |
-| SDK | s |
-| Dashboard | d |
-| Subscription page | p |
-| REST API | r |
-| Attribution provider | a |
-| CSV import | c |
-| Enhanced preference center | e |
-| Inbound SMS | i |
-| Outbound SMS | o |
-| Migration | m |
-| User merge | g |
-| Backfill | b |
-| Shopify provider | sh |
+| SDK | SDK endpoints |
+| Dashboard | When a user's subscription state is updated from the User Profile page in Dashboard |
+| Subscription Page | When a user unsubscribes through an email link that is not the preference center |
+| REST API | REST API endpoints |
+| CSV import | CSV user import |
+| Preference Center | When a user is updated from the preference center |
+| Inbound Message | When a user is updated by inbound messages from end-users through channels such as SMS |
+| Migration | When a user is updated by internal migrations or maintenance scripts |
+| User Merge | When a user is updated by the user merge process |
+| Canvas User Update Step | When a user is updated by the Canvas user update step |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
