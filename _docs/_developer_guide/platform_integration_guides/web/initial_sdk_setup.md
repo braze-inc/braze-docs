@@ -86,12 +86,13 @@ braze.subscribeToContentCardsUpdates(function(cards){
     // cards have been updated
 });
 
-// optionally set the current user's external ID
+// optionally set the current user's external ID before starting a new session
+// you can also call `changeUser` later in the session after the user logs in
 if (isLoggedIn){
     braze.changeUser(userIdentifier);
 }
 
-// Be sure to call `openSession` after `automaticallyShowInAppMessages`
+// `openSession` should be called last - after `changeUser` and `automaticallyShowInAppMessages`
 braze.openSession();
 ```
 
