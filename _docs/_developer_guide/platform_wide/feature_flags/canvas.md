@@ -33,3 +33,16 @@ Canvas and a Feature Flag Rollout (dragging the slider) can work independently o
 The important caveat is that entry to a Canvas step will overwrite any default rollout configuration. For example, if a user does not qualify for a feature flag, a canvas step can enable the feature for that user.
 
 Similarly, if a user qualifies for a feature flag rollout with certian properties, if they also enter into the canvas step, they will receive any overwritten values from that canvas step.
+
+
+## Frequently Asked Questions
+
+1. What happens when I turn off a Canvas or delete a Feature Flag step?
+
+When a Canvas is stopped, or archived, or a step is removed, any user who had gone through that step will no longer receive the step's feature flag and its properties.
+
+The user will still be subject to the default rollout % and audience segmentation for that feature flag, and any other canvases that might still be active.
+
+2. What happens if I change properties of a Feature Flag after I launch the canvas?
+
+Properties in a Canvas step can be changed after launch, and even after a user goes through the step. Users will always receive a real-time, dynamic version of the Feature Flag, instead of the older, previously saved version.
