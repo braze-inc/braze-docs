@@ -412,7 +412,7 @@ for(const feature of features) {
 ```dart
 List<BrazeFeatureFlag> featureFlags = await braze.getAllFeatureFlags();
 featureFlags.forEach((feature) {
-  print("Feature: " + feature.id + " " + feature.enabled);
+  print("Feature: ${feature.id} ${feature.enabled}");
 });
 ```
 {% endtab %}
