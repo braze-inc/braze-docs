@@ -46,7 +46,7 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 
 ![Segment filters with the "OR" selected.][3]
 
-Choosing "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters, while "AND" means that users who do not pass that filter will not be included in your segment. This logic can be combined, so that you can segment users who pass one filter "AND" either one of two other filters.
+Choosing "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters, while "AND" means that users who do not pass that filter will not be included in your segment. This logic can be combined so that you can segment users who pass one filter "AND" either one of two other filters.
 
 Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas. Note that you will see an error appear if the segment you are referencing in one of your nested segments is archived.
 
@@ -90,15 +90,15 @@ A single user may belong to different reachable user groups. For example, a user
 
 ## Archiving segments
 
-If you no longer need or wish to retire a specific segment, you can archive it by going to the **Segments** page, clicking on the appropriate gear, then selecting "Archive" from the drop-down that appears.
+If you no longer need or wish to retire a specific segment, you can archive it by going to the **Segments** page, clicking on the gear, then selecting **Archive** from the dropdown.
 
 {% alert warning %}
 When you archive a segment, any campaigns or Canvases using it (even if the segment is only used in a single Canvas component) will also be archived. This also includes nested segments where both segments and any campaigns or Canvases using them will also be archived.
-
+<br><br>
 You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment.
 {% endalert %}
 
-You can unarchive the segment by navigating to it within Segments, then selecting **Unarchive**.
+You can unarchive the segment by navigating to it within the **Segments** page, then selecting **Unarchive**.
 
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
