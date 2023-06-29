@@ -1,29 +1,17 @@
 ---
 nav_title: Creative Details
-article_title: Creative Details
+article_title: Creative Details for Content Cards
 page_order: 1
-layout: dev_guide
-guide_top_header: "Creative Details"
-guide_top_text: "Get creative with Content Cards! But you should know some of the guidelines first! After all, you have to know the rules to break them! Check out the following individual message type's Creative Specs or the global Creative Details."
-description: "This landing article covers creative details such as image size recommendations and dismissal behavior across the three Content Card types."
-
-guide_featured_title: "Message Type Creative Specs"
-guide_featured_list:
-- name: Classic
-  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#classic
-  image: /assets/img/icon-classic-cc.png
-- name: Captioned Image
-  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image
-  image: /assets/img/captioned-cc.png
-- name: Banner
-  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#banner
-  image: /assets/img/icon-banner-cc.png
-
+description: "This article covers creative details such as image size recommendations and dismissal behavior across the three standard Content Card types."
 channel:
   - content cards
 tool: Media
 
 ---
+
+# Creative details for Content Cards
+
+Get creative with Content Cards! But you should know some of the guidelines first. After all, you have to know the rules to break them. Check out creative specifications for the following individual message types.
 
 ## Content Card types
 
@@ -31,7 +19,7 @@ tool: Media
 
 The classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
 
-![Image of a classic card with recommended details and a classic card example][1]{: height="50%" width="50%"}
+![Image of a classic card with recommended details and a classic card example][1]{: style="max-width:35%;border:0;"}
 
 | Card Capability | Details |
 | --- | ---|
@@ -45,7 +33,7 @@ The classic card is great for standard messaging and notifications or even visua
 
 The Captioned Image card is a great way to show off and attract attention to important content, like a big sale or a new app feature!
 
-![Image of a Captioned Image card with recommended details and a Captioned Image card example][2]{: height="50%" width="50%"}
+![Image of a Captioned Image card with recommended details and a Captioned Image card example][2]{: style="max-width:70%;border:0;"}
 
 | Card Capability | Details |
 | --- | ---|
@@ -57,9 +45,9 @@ The Captioned Image card is a great way to show off and attract attention to imp
 
 ### Banner
 
-If you want fancy, the banner card is for you! this is completely custom to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
+If you want fancy, the banner card is for you! This is completely custom to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
 
-![Image of a banner with recommended details and a banner example][3]{: height="50%" width="50%"}
+![Image of a banner with recommended details and a banner example][3]{: style="max-width:35%;border:0;"}
 
 | Card Capability | Details |
 | --- | ---|
@@ -67,7 +55,7 @@ If you want fancy, the banner card is for you! this is completely custom to what
 | Image | Any aspect ratio supported. <br> 600&nbsp;px minimum width.  <br> Supports high-resolution PNG, JPEG, and GIF. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Creative details {#general}
+## Global creative details {#general}
 
 Content Cards come with great functionality from the very beginning. At this time, card styling cannot be done natively in your Braze account, but you can style your Content Card by type and the Content Card feed during integration. Refer to [Customizing Content Cards][4] for more information.
 
@@ -75,11 +63,11 @@ Content Cards come with great functionality from the very beginning. At this tim
 
 For a user to dismiss a card, they can either swipe it away on mobile, or use a `close X` function, as shown in the following screenshot. The `x` will appear on hover for the Web SDK only.
 
-![Image that shows swipe or close dismissal behaviors for a card][5]{: height="70%" width="70%"}
+![Image that shows swipe or close dismissal behaviors for a card][5]
 
 If a user has dismissed all of their cards or you haven't pushed out any new updates, the user's feed will usually look something like this:
 
-![Image of an empty Content Card feed][6]{: height="50%" width="50%"}
+![Image of an empty Content Card feed][6]{: style="max-width:35%"}
 
 ### Using GIFs in Content Cards
 
@@ -90,9 +78,9 @@ If a user has dismissed all of their cards or you haven't pushed out any new upd
 
 <br><br>
 
-[1]: {% image_buster /assets/img/classic-cc.png %}
-[2]: {% image_buster /assets/img/captioned-image-cc.png %}
-[3]: {% image_buster /assets/img/banner-cc.png %}
+[1]: {% image_buster /assets/img/content_card_classic.png %}
+[2]: {% image_buster /assets/img/content_card_captioned.png %}
+[3]: {% image_buster /assets/img/content_card_banner.png %}
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/
 [5]: {% image_buster /assets/img/dismissal-cc.png %}
 [6]: {% image_buster /assets/img/empty-cc.png %}
