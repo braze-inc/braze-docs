@@ -15,11 +15,12 @@ Get creative with Content Cards! But you should know some of the guidelines firs
 
 ## Content Card types
 
-### Classic
+{% tabs %}
+{% tab Classic %}
 
 The classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
 
-![Image of a classic card with recommended details and a classic card example][1]{: style="max-width:35%;border:0;"}
+![Image of a classic card with recommended details and a classic card example]({% image_buster /assets/img/content_card_classic.png %}){: style="max-width:45%;border:0;"}
 
 | Card Capability | Details |
 | --- | ---|
@@ -29,11 +30,12 @@ The classic card is great for standard messaging and notifications or even visua
 | Image | Optional. <br> Must be 1:1 ratio. <br> We recommend an image quality of 60 x 60&nbsp;px. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Captioned image
+{% endtab %}
+{% tab Captioned Image %}
 
-The Captioned Image card is a great way to show off and attract attention to important content, like a big sale or a new app feature!
+The Captioned Image card is a great way to show off and attract attention to important content, like a big sale or a new app feature.
 
-![Image of a Captioned Image card with recommended details and a Captioned Image card example][2]{: style="max-width:70%;border:0;"}
+![Image of a Captioned Image card with recommended details and a Captioned Image card example]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
 
 | Card Capability | Details |
 | --- | ---|
@@ -43,17 +45,21 @@ The Captioned Image card is a great way to show off and attract attention to imp
 | Image | Suggested be 4:3 ratio. <br> 600&nbsp;px minimum width.  <br> Supports high-resolution PNG, JPEG, and GIF. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Banner
+{% endtab %}
+{% tab Banner %}
 
-If you want fancy, the banner card is for you! This is completely custom to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
+If you want fancy, the banner card is for you. This is completely custom to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
 
-![Image of a banner with recommended details and a banner example][3]{: style="max-width:35%;border:0;"}
+![Image of a banner with recommended details and a banner example]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 
 | Card Capability | Details |
 | --- | ---|
 | Linked Card | Optional. <br> 13&nbsp;px <br> On-click behavior link to a webpage or a deep link to within your app. |
 | Image | Any aspect ratio supported. <br> 600&nbsp;px minimum width.  <br> Supports high-resolution PNG, JPEG, and GIF. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% endtabs %}
 
 ## Global creative details {#general}
 
@@ -67,7 +73,7 @@ For a user to dismiss a card, they can either swipe it away on mobile, or use a 
 
 If a user has dismissed all of their cards or you haven't pushed out any new updates, the user's feed will usually look something like this:
 
-![Image of an empty Content Card feed][6]{: style="max-width:35%"}
+![Image of an empty Content Card feed][6]{: style="max-width:45%"}
 
 ### Using GIFs in Content Cards
 
