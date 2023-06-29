@@ -150,7 +150,7 @@ Braze should now be collecting data from your application, and your basic integr
 ### Enabling verbose logging in the Unity editor
 To enable verbose logging in the Unity Editor, do the following:
 
-1. Open the Braze Configuration Settings by navigating to **Braze > Braze Configuration**.
+1. Open the Braze Configuration Settings by navigating to **Braze** > **Braze Configuration**.
 2. Click the **Show Braze Android Settings** dropdown.
 3. In the **SDK Log Level** field, input the value "0".
 
