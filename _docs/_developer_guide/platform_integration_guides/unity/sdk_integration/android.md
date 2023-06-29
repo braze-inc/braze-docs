@@ -135,7 +135,7 @@ Braze provides a native Unity solution for automating the Unity Android integrat
 
 1. In the Unity Editor, open the Braze Configuration Settings by navigating to **Braze > Braze Configuration**.
 2. Check the **Automate Unity Android Integration** box.
-3. In the "Braze API Key" field, input your application's API key found in **Manage Settings** from the Braze dashboard.
+3. In the **Braze API Key** field, input your application's API key found in **Manage Settings** from the Braze dashboard.
 
 {% alert note %}
 This automatic integration should not be used with a manually created `braze.xml` file since the configuration values may conflict during project building. If you require a manual `braze.xml`, disable the automatic integration.
@@ -146,6 +146,13 @@ This automatic integration should not be used with a manually created `braze.xml
 Braze should now be collecting data from your application, and your basic integration should be complete. Check out the following articles for more information on integrating push ([Android][53] and [iOS][50]), [in-app messages][34], and [Content Cards][40].
 
 ## Additional advanced implementation options
+
+### Enabling verbose logging in the Unity editor
+To enable verbose logging in the Unity Editor, do the following:
+
+1. Open the Braze Configuration Settings by navigating to **Braze > Braze Configuration**.
+2. Click the **Show Braze Android Settings** dropdown.
+3. In the **SDK Log Level** field, input the value "0".
 
 ### Extending Braze's Unity player (Android) {#extending-braze-unity-player}
 
