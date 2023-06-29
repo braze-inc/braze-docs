@@ -590,9 +590,9 @@ BrazePlugin.subscribeToFeatureFlagUpdates((featureFlags) => {
 // Create stream subscription
 StreamSubscription featureFlagsStreamSubscription;
 
-featureFlagsStreamSubscription = braze.subscribeToFeatureFlagsUpdatedEvent(List<BrazeFeatureFlag> featureFlags) {
-  print("feature flags were updated")
-}
+featureFlagsStreamSubscription = braze.subscribeToFeatureFlags((featureFlags) {
+  print("Feature flags were updated");
+});
 
 // Cancel stream subscription
 featureFlagsStreamSubscription.cancel();
