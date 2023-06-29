@@ -16,7 +16,7 @@ Global search is currently in early access and is under active development. Plea
 
 ## What can you search for?
 
-During the early access, you can search for campaigns, Canvases, segments, and email templates. In the global header of Braze, select <i class="fa-solid fa-magnifying-glass"></i> **Search** (or use the keyboard shortcut <kbd>⌘</kbd> + <kbd>K</kbd>), and a dropdown search menu will open.
+During the early access, you can search for campaigns, Canvases, segments, and email templates. In the global header of Braze, select <i class="fa-solid fa-magnifying-glass"></i> **Search** (or use the [keyboard shortcut](#keyboard-shortcuts)), and a dropdown search menu will open.
 
 ## Key features
 
@@ -24,10 +24,30 @@ During the early access, you can search for campaigns, Canvases, segments, and e
 
 Navigate through search results effortlessly with keyboard shortcuts:
 
-- <kbd>⌘</kbd> + <kbd>K</kbd> = Opens the search menu
-- <kbd>⬆</kbd> / <kbd>⬇</kbd> = Move between results in the search menu
-- <kbd>Enter</kbd> = Select a search result
-- <kbd>Esc</kbd> = Closes the search menu
+<style>
+  div.small_table + table {
+    max-width: 60%;
+  }
+table th:nth-child(1),
+table th:nth-child(2),
+table td:nth-child(1),
+table td:nth-child(2), {
+    width:20%;
+}
+table td {
+    word-break: break-word;
+}
+</style>
+
+<div class="small_table"></div>
+
+| Action                      | Keyboard shortcut                                                             |
+| --------------------------- | ----------------------------------------------------------------------------- |
+| Open the search menu        | {::nomarkdown} <ul> <li> Mac: <kbd>⌘</kbd>&nbsp;+&nbsp;<kbd>K</kbd> </li> <li>Windows: <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd> </li> </ul> {:/}  |
+| Move between search results | <kbd>⬆</kbd> / <kbd>⬇</kbd>  |
+| Select a search result      | <kbd>Enter</kbd>    |
+| Close the search menu       | <kbd>Esc</kbd>  |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Content type and status tags
 
