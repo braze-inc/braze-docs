@@ -333,7 +333,7 @@ This event occurs if an email message was aborted based on Liquid aborts, quiet 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
+  "app_group_id": (optional, string) BSON ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -529,7 +529,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
   "app_group_api_id": (optional, string) API ID of the workspace this user belongs to,
   "time": (required, int) unix timestamp at which the event happened,
   "canvas_id": (required, string) ID of the Canvas if from a Canvas,
-  "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (required, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_api_id": (optional, string) BSON ID of the experiment step this event belongs to,
   "canvas_variation_api_id": (optional, string) API ID of the Canvas variation this event belongs to,
@@ -554,14 +554,14 @@ This event occurs when a user enters a Canvas experiment step path.
   "user_id": (required, string) Braze user ID of the user, 
   "external_user_id": (optional, string) External user ID of the user,
   "time": (required, int) unix timestamp at which the event happened,
-  "canvas_id": (required, string) ID of the Canvas if from a Canvas,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "experiment_step_id": (required, string) BSON ID of the experiment step this event belongs to,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
-  "experiment_split_id": (required, string) BSON ID of the experiment split the user enrolled in,
+  "experiment_split_id": (optional, string) BSON ID of the experiment split the user enrolled in,
   "experiment_split_name": (optional, string) name of the experiment split the user enrolled in,
   "in_control_group": (required, boolean) whether the user was enrolled in the control group
 }
@@ -636,7 +636,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "ad_id": (optional, string) advertising identifier,
   "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device,
-  "message_extras": (optional, object) key-value pairs sent with this event
+  "message_extras": (optional, string) key-value pairs sent with this event
 }
 ```
 
@@ -713,7 +713,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
   "app_id": (required, string) ID for the app on which the user action occurred,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
-  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "platform": (required, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "campaign_id": (optional, string) ID of the campaign if from a campaign,
   "campaign_name": (optional, string) name of the campaign,
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,
@@ -809,7 +809,7 @@ This event occurs when an email send request was successfully communicated betwe
   "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "ip_pool": (optional, string) IP pool used for message sending, 
-  "message_extras": (optional, object) key-value pairs sent with this event
+  "message_extras": (optional, string) key-value pairs sent with this event
 }
 ```
 #### Property details
@@ -1240,7 +1240,7 @@ This event occurs when a webhook was processed and sent to the third party speci
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types)
-  "message_extras": (optional, object) key-value pairs sent with this event
+  "message_extras": (optional, string) key-value pairs sent with this event
 }
 ```
 #### Property details
@@ -1279,7 +1279,7 @@ This event occurs when a Content Card gets sent to a user.
   "canvas_name": (optional, string) name of the Canvas,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
   "device_id": (optional, string) ID of the device on which the event occurred,
-  "message_extras": (optional, object) key-value pairs sent with this event
+  "message_extras": (optional, string) key-value pairs sent with this event
 }
 ```
 #### Property details
@@ -1481,7 +1481,7 @@ The [News Feed Impression]({{site.baseurl}}/user_guide/data_and_analytics/braze_
   "app_id": (required, string) ID for the app on which the user action occurred,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,  
   "timezone": (optional, string) IANA time zone of the user at the time of the event,  
-  "card_id": (optional, string) ID of the card that was clicked,
+  "card_id": (required, string) ID of the card that was clicked,
   "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (optional, string) os version of device used for the action,
   "device_model": (optional, string) hardware model of the device,
@@ -1552,7 +1552,7 @@ This event occurs when a user sends an SMS.
   "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
   "send_id": (optional, string) message send ID this message belongs to,
   "category": (optional, string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help)
-  "message_extras": (optional, object) key-value pairs sent with this event
+  "message_extras": (optional, string) key-value pairs sent with this event
 }
 ```
 #### Property details
@@ -1967,7 +1967,7 @@ This event occurs when the global subscription state of the user changes.
   "state_change_source": (optional, string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
   "subscription_status": (required, string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
   "channel": (optional, string) Channel: only email for now,
-  "time": (required, string) 10-digit UTC time of the state change event in seconds since the epoch,
+  "time": (required, int) 10-digit UTC time of the state change event in seconds since the epoch,
   "timezone": (optional, string) IANA timezone of the user at the time of the event,
   "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
   "app_id": (optional, string) ID for the app on which the user action occurred,
