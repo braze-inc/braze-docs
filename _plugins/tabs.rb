@@ -29,8 +29,7 @@ module Tags
     class TabBlock < Liquid::Block
       def initialize(tag_name, tab, tokens)
           super
-          @tab = tab.strip
-
+          @tab = tab.strip.downcase
       end
 
       def render(context)
@@ -48,7 +47,7 @@ module Tags
 
           content = indentation ? super.gsub(/^#{' |\t' * indentation}/, '') : super
           content = converter.convert(content)
-          content = content.strip # Strip again to avoid "\n"
+          content = content.strip.downcase # Strip again to avoid "\n"
           tabslug = @tab.gsub(' ', '-').gsub(/[^\w-]/, '')
 
           '<div class="ab-tab-pane ' + tabslug + '_tab " data-tab="' + @tab + '">' + content + "</div>"
@@ -86,7 +85,7 @@ module Tags
     class SubTabBlock < Liquid::Block
       def initialize(tag_name, tab, tokens)
           super
-          @tab = tab.strip
+          @tab = tab.strip.downcase
       end
 
       def render(context)
@@ -104,7 +103,7 @@ module Tags
 
           content = indentation ? super.gsub(/^#{' |\t' * indentation}/, '') : super
           content = converter.convert(content)
-          content = content.strip # Strip again to avoid "\n"
+          content = content.strip.downcase # Strip again to avoid "\n"
           tabslug = @tab.gsub(' ', '-').gsub(/[^\w-]/, '')
 
           '<div class="ab-sub_tab-pane ' + tabslug + '_sub_tab " data-sub_tab="' + @tab + '">' + content + "</div>"
