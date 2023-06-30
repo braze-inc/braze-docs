@@ -331,7 +331,7 @@ This user event occurs every time a new user is created within their workspace. 
   "app_group_id": (required, string) AppGroup API id
   "user_id": (required, string) Braze user id of the user,
   "external_user_id": (optional, string) External ID of the user,
-  "time": (optional, int) UTC time of the event in milliseconds since the epoch,
+  "time": (required, int) UTC time of the event in milliseconds since the epoch,
   "random_bucket_number": (required, int) new random bucket number
   "prev_random_bucket_number":  (optional, int) old random bucket number, optional
 }
