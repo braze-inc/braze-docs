@@ -178,6 +178,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (required, string) id for the app on which the user action occurred,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "session_id": (required, string) id of the session,
   "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (optional, string) os version of the device used for the action,
   "device_model": (optional, string) hardware model of the device,
