@@ -9,10 +9,6 @@ page_type: reference
 
 # Cloud Data Ingestion integrations
 
-{% alert important %}
-Braze Cloud Data Ingestion for BigQuery is currently in early access. Contact your Braze account manager or CSM if you are interested in participating in the early access.
-{% endalert %}
-
 ## Product setup
 
 New Cloud Data Ingestion integrations require some setup on the Braze side and in your instance. Follow these steps to set up the integration:
@@ -31,6 +27,11 @@ New Cloud Data Ingestion integrations require some setup on the Braze side and i
 4. Test the integration and start the sync.
 {% endtab %}
 {% tab BigQuery %}
+
+{% alert important %}
+Braze Cloud Data Ingestion for BigQuery is currently in early access. Contact your Braze account manager or CSM if you are interested in participating in the early access.
+{% endalert %}
+
 1. Create a service account and allow access to the BigQuery project(s) and dataset(s) that contain the data you want to sync.  
 2. In your BigQuery account, set up the table(s) or view(s) you want to sync to Braze.   
 3. Create a new integration in the Braze dashboard.  
