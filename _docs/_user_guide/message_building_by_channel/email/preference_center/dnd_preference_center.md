@@ -41,10 +41,12 @@ You can further configure the selected subscription groups by clicking on the sm
 - Adjust the order that subscription groups appear
 - Add or remove additional subscription groups
 - Include descriptions
-- Add or remove a "Subscribe to all" checkbox
-- Add or remove an "Unsubscribe from all" checkbox
+- Add or remove a **Subscribe to all** checkbox which will subscribe the user to all subscription groups shown in this block
+- Add or remove an **Unsubscribe from all** checkbox which will unsubscribe the user from all subscription groups shown in this block
 
 ![][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
+
+The **Unsubscribe from all** button at the bottom of the template is non-removable and will [globally unsubscribe]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) the user from receiving any email messages.
 
 ## Step 4: Customize the preference center using the drag-and-drop editor
 
