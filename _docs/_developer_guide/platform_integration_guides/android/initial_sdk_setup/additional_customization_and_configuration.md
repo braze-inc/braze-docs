@@ -51,6 +51,8 @@ To enable verbose logging in the `braze.xml`:
 <integer name="com_braze_logger_initial_log_level">2</integer>
 ```
 
+Note that Braze log level integer constants correspond to Android Log level integer constants as defined in [`android.util.log`][71].
+
 {% alert important %}
 Verbose logs should be enabled as early as possible in your `Application.onCreate()`, before any other calls to the SDK to guarantee as much logging as possible.
 {% endalert %}
@@ -109,3 +111,5 @@ See the [runtime configuration][69] documentation for setting an API key in code
 [54]: https://developer.android.com/reference/android/util/Log.html
 [69]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/
 [70]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.support/-braze-logger/log-level.html
+[71]: https://developer.android.com/reference/android/util/Log
+
