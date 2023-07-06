@@ -9,12 +9,14 @@ channel:
 
 # Creating custom Content Cards
 
-Braze provides [five Content Card templates: banner, captioned image, classic, classic image, and control][1]. These templates can be used as a starting place for your implementations, tweaking their look and feel, the order in which cards are displayed, and how the feed is shown to your users. You can also display Content Cards in a completely custom manner by using your own views populated with data from the Braze models&mdash;the "run" phase of the [crawl, walk, run approach][2].
+Braze provides [four Content Card templates: image, captioned image, classic, and classic image][1]. These templates can be used as a starting place for your implementations, tweaking their look and feel, the order in which cards are displayed, and how the feed is shown to your users. You can also display Content Cards in a completely custom manner by using your own views populated with data from the Braze models&mdash;the "run" phase of the [crawl, walk, run approach][2].
+
+<!---JOSH TO DO: This article is written with the assumption that the change from "banner" to "Image" has happened, but I have not populated it elsewhere--->
 
 This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases: banner images, a message inbox, and a carousel of images.
 
 {% alert note %}
-Braze offers several different Content Card subclasses, each of which inherit different properties from the generic Content Card model class. Understanding these inherited properties will be useful during customization. Refer to the `ContentCard` class documentation ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard), [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html)) for full details. 
+Each default Content Card template is a subclass which inherits different properties from the generic Content Card model class. Understanding these inherited properties will be useful during customization. Refer to the `ContentCard` class documentation ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard), [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html)) for full details. 
 {% endalert %}
 
 
@@ -22,21 +24,21 @@ Braze offers several different Content Card subclasses, each of which inherit di
 
 Depending on your use case, the exact implementation of your custom Content Card will vary a bit, but you will want to follow this basic formula:
 
-1. Build your own view controller
-2. Subscribe to your custom view controller
+1. Build your own view
+2. Subscribe to data updates
 3. Manually log analytics
 
-### Step 1: Create a custom view controller
+### Step 1: Create a custom view 
 
 {% tabs %}
 {% tab Android %}
 
-First, create your own custom view controller component. Note that you won't be able to use Braze's default [`ContentCardFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html), as it's only able to handle our default Content Card types.
+First, create your own custom fragment. The default [`ContentCardFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) is only designed to handle our default Content Card types, but is a good starting point.
 
 {% endtab %}
 {% tab iOS %}
 
-First, create your own custom view controller component. Note that you won't be able to extend or subclass [`UICollectionViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller), as it's only able to handle our default Content Card types.
+First, create your own custom view controller component. The default [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) is only designed to handle our default Content Card types, but is a good starting point.
 
 {% endtab %}
 {% tab Web %}
@@ -68,11 +70,11 @@ To achieve this, your marketers will create a campaign or Canvas step with an **
 
 TO DO: ADD MORE CONTEXT ABOUT WHAT IS NEEDED HERE
 
-## Message inbox
+### Message inbox
 
 Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UX. In the following example, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
-### Dashboard configuration
+#### Dashboard configuration
 
 Assign [key-value pairs][5] in the dashboard to the cards you intend to use for your message center. For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message.
 
@@ -102,7 +104,7 @@ This message also looks for an HTML key-value pair, but if you are working with 
 {% endtab %}
 {% endtabs %}
 
-## Carousel
+### Carousel
 
 Content Cards can be set in a carousel feed where a user can swipe horizontally to view additional featured cards. 
 
