@@ -1,6 +1,7 @@
 ---
 nav_title: User Archival
 article_title: User Archival
+permalink: /user_archival/
 page_order: 0
 page_type: reference
 description: "This reference article covers user archival definitions, spam blocking, and how to customize your user archival policy."

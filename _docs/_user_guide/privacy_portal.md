@@ -31,7 +31,7 @@ guide_featured_list:
   link: /docs/api/data_retention#data-retention-handled-by-braze-for-specific-features-of-the-braze-services
   fa_icon: fa-solid fa-database
 - name: User Archival
-  link: /docs/user_guide/data_and_analytics/user_data_collection/user_archival/
+  link: /docs/user_archival/
   fa_icon: fa-solid fa-user
 - name: Additional Privacy Resources
   link: https://www.braze.com/resources/search?section%5B%5D=articles&q=privacy

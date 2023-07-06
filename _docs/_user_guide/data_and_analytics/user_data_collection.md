@@ -11,9 +11,6 @@ description: "This landing page is home to articles on user data collection. Her
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: User Archival Definitions
-    link: /docs/user_guide/data_and_analytics/user_data_collection/user_archival/
-    fa_icon: fas fa-users
   - name: Data Collected by Default
     link: /docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/
     fa_icon: fas fa-chart-bar
