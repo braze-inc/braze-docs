@@ -22,6 +22,12 @@ Live Activities are currently in early access. Contact your Braze account manage
 
 Live Activities are currently a feature specific to iOS. The Live Activities article covers the [prerequisites][2] for managing Live Activities through the Braze Swift SDK.
 
+### Do React Native apps support Live Activities?
+
+Yes, React Native SDK 3.0.0+ supports Live Activities via the Braze Swift SDK. That is, you need to write React Native iOS code directly on top of the Braze Swift SDK. 
+
+There isn't a React Native-specific JavaScript convenience API for Live Activities because the Live Activities features provided by Apple use languages untranslatable in JavaScript (e.g., Swift concurrency, generics, SwiftUI).
+
 ### Does Braze support Live Activities as a campaign or Canvas step?
 
 No, this is not currently supported.
