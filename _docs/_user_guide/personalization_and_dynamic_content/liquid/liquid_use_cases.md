@@ -1337,7 +1337,7 @@ This use case displays different messages based on a user's time zone.
 {% if {{${time_zone}}} == 'xx' %}
 Message for time zone xx.
 {% elsif {{$time_zone}}} == 'yy' %}
-Message for timezone yy.
+Message for time zone yy.
 {% else %}
 {% abort_message("Invalid time zone") %}
 {% endif %}
@@ -1370,7 +1370,7 @@ The following example provided will display the date as YYYY-mm-dd HH:MM:SS, suc
 
 {% raw %}
 ```liquid
-{{${user_id} | default: 'You'}} received a campaign, rendered at ({{ "now" | timezone: ${time_zone} | date: "%Y-%m-%d %H:%M:%S" }})
+{{${user_id} | default: 'You'}} received a campaign, rendered at ({{ "now" | time_zone: ${time_zone} | date: "%Y-%m-%d %H:%M:%S" }})
 ```
 {% endraw %}
 
