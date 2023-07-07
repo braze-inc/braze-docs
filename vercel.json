@@ -10,10 +10,10 @@
 					"value": ".*Bytespider.*"
 				}
 			],
-			"destination": "/docs/404.html"
+			"destination": "/docs/blank.html"
 		},
 		{
-			"source": "/assets/:path*",
+			"source": "/assets/(.*)",
 			"has": [
 				{
 					"type": "header",
@@ -21,7 +21,7 @@
 					"value": ".*Bytespider.*"
 				}
 			],
-			"destination": "/docs/404.html"
+			"destination": "/docs/blank.html"
 		},
 		{
 			"source": "/docs/:path*",
