@@ -2,15 +2,7 @@
 	"trailingSlash": false,
 	"rewrites": [
 		{
-			"source": "/docs/:path*",
-			"destination": "/:path*"
-		},
-		{
-			"source": "/api/(.*)",
-			"destination": "/api/404.html"
-		},
-		{
-			"source": "*",
+			"source": "/*",
 			"has": [
 				{
 					"type": "header",
@@ -19,6 +11,25 @@
 				}
 			],
 			"destination": "/blank.html"
+		},
+		{
+			"source": "/assets/(.*)",
+			"has": [
+				{
+					"type": "header",
+					"key": "User-Agent",
+					"value": ".*Bytespider.*"
+				}
+			],
+			"destination": "/docs/blank.html"
+		},
+		{
+			"source": "/docs/:path*",
+			"destination": "/:path*"
+		},
+		{
+			"source": "/api/(.*)",
+			"destination": "/api/404.html"
 		}
 	],
 	"github": {
