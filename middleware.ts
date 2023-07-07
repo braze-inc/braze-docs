@@ -1,11 +1,9 @@
-import { rewrite } from '@vercel/edge';
+export function middleware(request: Request, response: Response, next: NextFunction) {
 
-export function middleware(request: Request) {
-
-	let isSpider:boolean = !!req.headers['user-agent'].match(/spider/i);
+	let isSpider:boolean = !!request.headers['user-agent'].match(/spider/i);
 
   if (isSpider) {
-    return rewrite(new URL('/blank.html', request.url));
+    request.url = '/blank.html';
   }
-
+	next()
 }
