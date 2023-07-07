@@ -6,6 +6,29 @@
 			"has": [
 				{
 					"type": "header",
+					"key": "x-vercel-forwarded-for",
+					"value": "156.59.198.136,156.59.198.135,136.226.81.27"
+				}
+			],
+			"destination": "/blank.html"
+		},
+		{
+			"source": "/assets/(.*)",
+			"has": [
+				{
+					"type": "header",
+					"key": "x-vercel-forwarded-for",
+					"value": "156.59.198.136,156.59.198.135,136.226.81.27"
+				}
+			],
+			"destination": "/docs/blank.html"
+		},
+
+		{
+			"source": "/:path*",
+			"has": [
+				{
+					"type": "header",
 					"key": "User-Agent",
 					"value": ".*spider.*"
 				}
