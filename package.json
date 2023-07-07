@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@vercel/edge": "^0.3.4"
+  }
+}

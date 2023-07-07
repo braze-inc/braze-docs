@@ -1,11 +1,11 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { rewrite } from '@vercel/edge';
 
-export function middleware(request: NextRequest) {
+export function middleware(request: Request) {
+
 	let isSpider:boolean = !!request.headers['user-agent'].match(/spider/i);
 
   if (isSpider) {
-		return NextResponse.rewrite(new URL('/blank.html', request.url))
+    return rewrite(new URL('/blank.html', request.url));
   }
 
 }
