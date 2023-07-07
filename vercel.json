@@ -2,6 +2,14 @@
 	"trailingSlash": false,
 	"rewrites": [
 		{
+			"source": "/docs/:path*",
+			"destination": "/:path*"
+		},
+		{
+			"source": "/api/(.*)",
+			"destination": "/api/404.html"
+		},
+		{
 			"source": "*",
 			"has": [
 				{
@@ -11,14 +19,6 @@
 				}
 			],
 			"destination": "/blank.html"
-		},
-		{
-			"source": "/docs/:path*",
-			"destination": "/:path*"
-		},
-		{
-			"source": "/api/(.*)",
-			"destination": "/api/404.html"
 		}
 	],
 	"github": {
