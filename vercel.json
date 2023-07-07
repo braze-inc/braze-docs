@@ -2,7 +2,7 @@
 	"trailingSlash": false,
 	"rewrites": [
 		{
-			"source": "/:path*",
+			"source": "/*",
 			"has": [
 				{
 					"type": "header",
@@ -10,18 +10,7 @@
 					"value": ".*spider.*"
 				}
 			],
-			"destination": "/docs/blank.html"
-		},
-		{
-			"source": "/assets/:path*",
-			"has": [
-				{
-					"type": "header",
-					"key": "User-Agent",
-					"value": ".*spider.*"
-				}
-			],
-			"destination": "/docs/blank.html"
+			"destination": "/blank.html"
 		},
 		{
 			"source": "/docs/:path*",
