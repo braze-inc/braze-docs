@@ -12,6 +12,7 @@ end
 set :port, 4000
 
 get '/' do
+  send_file File.join(settings.public_folder, 'robot.txt')
   if !(lang.nil?) && (lang != 'en')
     send_file File.join(settings.public_folder, "index_#{lang}.html")
   else
