@@ -13,6 +13,17 @@
 			"destination": "/docs/404.html"
 		},
 		{
+			"source": "/assets/:path*",
+			"has": [
+				{
+					"type": "header",
+					"key": "User-Agent",
+					"value": ".*Bytespider.*"
+				}
+			],
+			"destination": "/docs/404.html"
+		},
+		{
 			"source": "/docs/:path*",
 			"destination": "/:path*"
 		},
