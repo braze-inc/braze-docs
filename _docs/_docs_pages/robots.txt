@@ -1,3 +1,7 @@
+---
+permalink: /robot.txt
+layout: bare
+---
 User-agent: Baiduspider
 User-agent: 360Spider
 User-agent: Yisouspider
