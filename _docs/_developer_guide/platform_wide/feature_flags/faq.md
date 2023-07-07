@@ -49,7 +49,7 @@ else {
 
 Marketing teams can use feature flags to coordinate product announcements (such as product launch emails) when a feature is only enabled for a small percentage of users.
 
-<!-- TO BE ADDED ONCE CANVAS FEATURE FLAG STEP IS COMPLETE: For example, with Braze feature flags you can rollout a new Customer Loyalty program to 10% of users in your app, and send an email, push, or other messaging to that same 10% of enabled users using the Canvas Feature Flag step. -->
+For example, with Braze feature flags you can rollout a new Customer Loyalty program to 10% of users in your app, and send an email, push, or other messaging to that same 10% of enabled users using the Canvas Feature Flag step. 
 
 ### How can feature flags benefit Product teams? {#product-teams}
 
@@ -57,7 +57,7 @@ Product teams can use feature flags to perform gradual rollouts or soft launches
 
 Product teams can use [feature flag properties][properties] to remotely populate content in an app, such as deep links, text, imagery or other dynamic content.
 
-<!-- TO BE ADDED ONCE CANVAS FEATURE FLAG STEP IS COMPLETE: Using the Canvas Feature Flag step, Product teams can also run an A/B split test to measure how a new feature impacts conversion rates compared to users with the feature disabled. -->
+Using the Canvas Feature Flag step, Product teams can also run an A/B split test to measure how a new feature impacts conversion rates compared to users with the feature disabled. 
 
 ### How can feature flags benefit Engineering teams? {#engineering-teams}
 
@@ -84,6 +84,7 @@ This strategy helps ensure that users are shown a consistent experience in your 
 ### Can I create a segment of users who are currently in a feature flag? {#feature-flag-filter}
 
 This is on our product roadmap. To help prioritize this, please raise this feedback with your Braze account team, or email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
+
 
 ## Technical topics
 
