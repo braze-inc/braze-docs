@@ -314,7 +314,7 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 
 [1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
 [3]: {% image_buster /assets/img_archive/choose_canvas_experience.png %}
-[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting
+[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components
 [6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping
 [11]:{% image_buster /assets/img_archive/canvas_add_variant.gif %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
