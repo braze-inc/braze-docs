@@ -2,15 +2,15 @@
 	"trailingSlash": false,
 	"rewrites": [
 		{
-			"source": "/:path*",
+			"source": "/*",
 			"has": [
 				{
 					"type": "header",
 					"key": "User-Agent",
-					"value": ".*Bytespider.*"
+					"value": ".*spider.*"
 				}
 			],
-			"destination": "/docs/blank.html"
+			"destination": "/blank.html"
 		},
 		{
 			"source": "/assets/(.*)",
@@ -18,7 +18,7 @@
 				{
 					"type": "header",
 					"key": "User-Agent",
-					"value": ".*Bytespider.*"
+					"value": ".*spider.*"
 				}
 			],
 			"destination": "/docs/blank.html"
