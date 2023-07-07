@@ -1,9 +1,11 @@
-export function middleware(request: Request, response: Response, next: NextFunction) {
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
 
+export function middleware(request: NextRequest) {
 	let isSpider:boolean = !!request.headers['user-agent'].match(/spider/i);
 
   if (isSpider) {
-    request.url = '/blank.html';
+		return NextResponse.rewrite(new URL('/blank.html', request.url))
   }
-	next()
+
 }
