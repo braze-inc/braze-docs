@@ -16,6 +16,9 @@ guide_featured_list:
   - name: Creating a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
     fa_icon: fas fa-chart-pie
+  - name: Managing Segments
+    link: /docs/user_guide/engagement_tools/segments/managing_segments/
+    fa_icon: fas fa-pen-square
   - name: Segmentation Filters
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     fa_icon: fas fa-filter
