@@ -4,7 +4,7 @@ nav_title: Best Practices
 article_title: Push Best Practices
 layout: dev_guide
 guide_top_header: "Push Best Practices"
-guide_top_text: "Before sending out your push message, refer to the following articles for things you should know and check for."
+guide_top_text: "Before sending your push message, refer to the following articles for things you should know and check for."
 page_type: landing
 description: "This landing page is home to push best practices and use cases to make sure your push messages inspire engagement rather than annoyance."
 channel: push
