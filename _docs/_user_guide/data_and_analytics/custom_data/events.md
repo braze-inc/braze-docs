@@ -10,6 +10,14 @@ description: "Learn about the different events in Braze."
 
 > Learn about the different events in Braze.
 
+Braze leverages a few different event types to provide a comprehensive understanding of user behavior and engagement with your brand. Each type of event serves a unique purpose:
+
+- [Standard events](#standard-events): Provide a basic understanding of user engagement with your app or site.
+- [Purchase events](#purchase-events): Crucial for understanding user purchasing behavior and for tracking revenue. 
+- [Custom events](#custom-events): Provide deeper insight into user behaviors that are unique to your app or business.
+
+By tracking these different types of events, you can gain a deeper understanding of your users, which can inform your marketing strategies, help you optimize your app, and enable you to provide a more personalized user experience. Let's dive in.
+
 ## Standard events
 
 In Braze, standard events are predefined actions that users can take within your app that Braze automatically tracks after you integrate the Braze SDK. Here are a few examples of standard events:
@@ -39,6 +47,8 @@ Purchase events record the following key information about a purchase:
 You can then use this data to segment your users based on their lifetime value, purchase frequency, specific purchases, and more.
 
 Braze also supports purchases in multiple currencies. If a purchase is reported in a currency other than USD, it will be shown in the Braze dashboard in USD, based on the exchange rate at the date the purchase was reported.
+
+To learn more, visit our dedicated [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) article.
 
 {% details Sample implementation %}
 
@@ -73,6 +83,8 @@ Appboy.sharedInstance()?.logCustomEvent("completed_level")
 ```
 
 In this example, "completed_level" is the name of the custom event that gets logged when a user completes a level in a game. That custom event is then recorded on their user profile in Braze, which you can use to trigger campaigns and personalize messaging.
+
+To learn more, visit our dedicated [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) article.
 
 {% details Sample implementation %}
 
