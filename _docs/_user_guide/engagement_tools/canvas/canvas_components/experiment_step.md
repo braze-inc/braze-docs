@@ -33,11 +33,9 @@ Experiment Paths are best suited for testing delivery, cadence, message copy, an
 - **Message copy:** Similar to a standard [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/), you can test different message copy to see which wording results in a higher conversion rate.<br><br>
 - **Channel combinations:** Test the effectiveness of different message channel combinations. For example, you can compare the impact of using just an email versus an email combined with a push.
 
-## Create Experiment Paths
+## Create an experiment path
 
-To create Experiment Paths, first add a step to your Canvas. 
-
-Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Experiment Paths**. 
+To create an Experiment Paths component, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Experiment Paths**. 
 
 In the default configuration of this component, there are two default paths, **Path 1** and **Path 2**, with 50% of the audience being sent down each path. Click the component to expand the **Experiment Settings** panel, and you'll see the configuration options for the component.
 
@@ -45,7 +43,7 @@ In the default configuration of this component, there are two default paths, **P
 
 You can add up to four paths by clicking **Add Path** and an optional control group by checking **Add a Control Group**. Using the percentage boxes for each path, you can specify the percentage of the audience that should go to each path and the control group. The provided percentages must add up to 100% to proceed. If you want to quickly set all the available paths (and control) to the same percentage, click **Distribute Paths Evenly**.
 
-You can also choose whether users in the control group should continue down the Canvas or exit after the conversion tracking window for the **Control Group Behavior**. Optionally, you can add a description to explain to others what this Experiment Paths intends to test or include additional information that might be helpful to note.
+You can also choose whether users in the control group should continue down the Canvas or exit after the conversion tracking window for the **Control Group Behavior**. Optionally, you can add a description to explain to others what this experiment path intends to test or include additional information that might be helpful to note.
 
 ![Experiment Settings where you can add paths and distribute the percentage of users in each path.][1]
 
@@ -83,7 +81,7 @@ If Winning Path was turned on, your analytics view is separated into two tabs: *
 
 ### Additional settings
 
-Experiment Paths will record users who enter each step and convert while in the assigned path. This will track all conversion events specified in the Canvas setup. On the Additional Settings tab, use the input to enter how many days (between 1 and 30) you'd like this experiment to track conversions. Note that the time window you specify here will determine how long conversion events (chosen in Canvas setup) will be tracked for Experiment Paths. The per-event conversion windows specified in Canvas setup will not apply to this step's tracking and will be replaced by this Conversion Window.
+Experiment paths will record users who enter each step and convert while in the assigned path. This will track all conversion events specified in the Canvas setup. On the Additional Settings tab, use the input to enter how many days (between 1 and 30) you'd like this experiment to track conversions. Note that the time window you specify here will determine how long conversion events (chosen in Canvas setup) will be tracked for experiment paths. The per-event conversion windows specified in Canvas setup will not apply to this step's tracking and will be replaced by this Conversion Window.
 
 
 [0]: {% image_buster /assets/img/experiment_step/experiment_step.png %}
