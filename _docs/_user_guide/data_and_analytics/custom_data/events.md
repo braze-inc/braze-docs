@@ -3,12 +3,12 @@ nav_title: Events
 article_title: Events
 page_order: 0
 page_type: reference
-description: "Learn about the different events in Braze."
+description: "This article describes the different events in Braze—standard events, purchase events, and custom events—and their purpose."
 ---
 
 # Events 
 
-> Learn about the different events in Braze.
+> Learn about the different events in Braze and their purpose.
 
 Braze leverages a few different event types to provide a comprehensive understanding of user behavior and engagement with your brand. Each type of event serves a unique purpose:
 
