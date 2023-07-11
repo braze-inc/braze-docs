@@ -22,12 +22,12 @@ By tracking these different types of events, you can gain a deeper understanding
 
 In Braze, standard events are predefined actions that users can take within your app that Braze automatically tracks after you integrate the Braze SDK. Here are a few examples of standard events:
 
-- App Launch
+- App launch
 - [Purchase](#purchase-events)
-- Session Start
-- Session End
-- Clicked Push Notification
-- Opened Email
+- Session start
+- Session snd
+- Clicked push notification
+- Opened email
 
 As a marketer, you can use these standard events to understand user behavior and engagement with your app. For instance, you can see how often users are launching your app, or how many purchases are being made. This information can be invaluable when it comes to creating targeted marketing campaigns.
 
@@ -52,7 +52,7 @@ To learn more, visit our dedicated [purchase events]({{site.baseurl}}/user_guide
 
 {% details Sample implementation %}
 
-Please note that the actual implementation of purchase events will require some technical knowledge, as it involves integrating the Braze SDK with your app. Your customer success manager will walk your team through this process as part of your onboarding, but the general steps are as follows:
+Please note that the actual implementation of purchase events will require some technical knowledge as it involves integrating the Braze SDK with your app. Your customer success manager will walk your team through this process as part of your onboarding, but the general steps are as follows:
 
 1. **Integrate the Braze SDK:** Before logging any events, you'll need to integrate the Braze SDK into your app.
 2. **Log the purchase event:** Once the SDK is integrated, you can log a purchase event whenever a user makes a purchase in your app. This is typically done in the function or method called when a purchase is completed.
@@ -74,7 +74,7 @@ Remember, the exact implementation may vary depending on the platform (iOS, Andr
 
 ## Custom events
 
-Custom events are events that you define based on the specific actions you want to track within your app or site. Braze does not automatically track them—you must manually set up these events in your app's code. Custom events can be anything from a user completing a level in a game to a user updating their profile information.
+Custom events are events that you define based on the specific actions you want to track within your app or site. Braze does not automatically track them—you must manually set up these events in your Braze SDK implementation. Custom events can be anything from a user completing a level in a game to a user updating their profile information.
 
 Here's an example of how to log a custom event in an iOS app using Swift:
 
@@ -88,7 +88,7 @@ To learn more, visit our dedicated [custom events]({{site.baseurl}}/user_guide/d
 
 {% details Sample implementation %}
 
-Similar to purchase events, they require additional setup. Here's a general process for implementing custom events in Braze:
+Similar to purchase events, custom events require additional setup. Here's a general process for implementing custom events in Braze:
 
 1. **Integrate the Braze SDK:** Before you can log any events, you'll need to integrate the Braze SDK into your app.
 2. **Define your custom event:** Decide what action in your app you want to track as a custom event. This could be anything that's significant to your app, such as a user completing a level in a game, a user updating their profile, or a user making a specific type of purchase.
