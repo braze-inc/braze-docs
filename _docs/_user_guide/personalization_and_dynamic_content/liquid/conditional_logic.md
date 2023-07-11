@@ -172,7 +172,7 @@ You can also use other [basic operators](https://shopify.dev/docs/themes/liquid/
 
 #### String
 
-A [string][11] is made up of alpha-numeric characters and stores a piece of data about your user. For example, you may have `favorite_color: red` or `phone_number: 3025981329`. String values must have apostrophes around them.
+A [string][11] is made up of alphanumeric characters and stores a piece of data about your user. For example, you may have `favorite_color: red` or `phone_number: 3025981329`. String values must have apostrophes around them.
 
 {% raw %}
 

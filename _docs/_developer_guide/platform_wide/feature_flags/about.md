@@ -44,7 +44,7 @@ For example, you can use a feature flag's property values to quickly change your
 
 ### Message coordination
 
-Use feature flags to synchronize a feature's rollout and messaging. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a Campaign or Canvas that only targets that segment. 
+Use feature flags to synchronize a feature's rollout and messaging. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a campaign or Canvas that only targets that segment. 
 
 ### Feature experimentation
 

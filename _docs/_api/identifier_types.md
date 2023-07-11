@@ -98,7 +98,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), **Canvas**
 - Track analytics on a specific message
 - Grab high-level aggregate stats on Canvas performance
 - Grab details on a specific Canvas
-- With Currents to bring in user-level data for a "bigger picture" approach to canvases
+- With Currents to bring in user-level data for a "bigger picture" approach to Canvases
 - With API trigger delivery in order to collect statistics for transactional messages
 
 <br>

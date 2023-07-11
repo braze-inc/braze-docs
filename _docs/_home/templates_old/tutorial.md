@@ -40,7 +40,7 @@ noindex: true
 About this layout:
 This layout is for Quick Start guides, Product or feature walkthroughs, and Troubleshooting walkthroughs without a video. This tutorial will have a TOC which shows all header levels.
 Tutorials:
-A general walkthrough of an instructional concept. Should contain PRACTICAL KNOWLEDGE. Focuses on a single topic (like, how to create a campaign, how to create a canvas, etc.) Goal or Task-Oriented Article that walks STEP BY STEP through solving a SPECIFIC issue (How to target specific users, how to segment based on location, etc.).
+A general walkthrough of an instructional concept. Should contain PRACTICAL KNOWLEDGE. Focuses on a single topic (like, how to create a campaign, how to create a Canvas, etc.) Goal or Task-Oriented Article that walks STEP BY STEP through solving a SPECIFIC issue (How to target specific users, how to segment based on location, etc.).
 {% endcomment %}
 # How to Title This Tutorial
 

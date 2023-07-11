@@ -2,7 +2,7 @@
 nav_title: Phrase
 article_title: Phrase
 alias: /partners/phrase/
-description: "This reference article outlines the partnership between Braze and Phrase, a cloud-based software for localization. This integration allows you to translate email templates and content blocks without leaving the Braze interface."
+description: "This reference article outlines the partnership between Braze and Phrase, a cloud-based software for localization. This integration allows you to translate email templates and Content Blocks without leaving the Braze interface."
 page_type: partner
 search_tag: Partner
 
@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Phrase](https://phrase.com/) is a cloud-based software for localization management. Phrase enables automated translation workflows and supports continuous localization for agile teams.
 
-The Phrase and Braze integration allow you to translate email templates and content blocks without leaving the Braze interface. With the Phrase TMS integration for Braze, you can increase customer engagement and drive growth into new markets with seamless localization.
+The Phrase and Braze integration allow you to translate email templates and Content Blocks without leaving the Braze interface. With the Phrase TMS integration for Braze, you can increase customer engagement and drive growth into new markets with seamless localization.
 
 ## Prerequisites
 
@@ -31,9 +31,9 @@ In Phrase, navigate to **Settings > Integrations > Connectors > New**.
 
 1. Provide a name for the connection and change the type to **Braze**.<br><br>
 2. Enter the REST API key and the Braze REST endpoint. <br><br>
-3. Select how the connector should import email templates with linked content blocks. 
+3. Select how the connector should import email templates with linked Content Blocks. 
 - Selected email template only
-- Include content blocks<br><br>
+- Include Content Blocks<br><br>
 4. Select how the connector should export email template translations. 
 - Create new item
 - Original item

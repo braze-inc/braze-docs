@@ -141,7 +141,7 @@ The Braze and [Sendbird](https://www.braze.com/docs/partners/message_orchestrati
 The Braze and [Fresh Relevance](https://www.braze.com/docs/partners/message_personalization/dynamic_content/fresh_relevance/) integration allows you to include personalized content in triggered emails, such as product recommendations based on the customer’s browsed product or items within the same category, Send advanced triggered email campaigns such as price drop, back in stock, multi-stage browse, or cart abandoned messages, and more!
 
 #### Smartling - Localization
-The Braze and [Smartling](https://www.braze.com/docs/partners/message_personalization/localization/smartling/) integration allows you to translate email templates and content blocks. Smartling provides linguists with the benefit of visual context during translation, which reduces errors and maintains quality.
+The Braze and [Smartling](https://www.braze.com/docs/partners/message_personalization/localization/smartling/) integration allows you to translate email templates and Content Blocks. Smartling provides linguists with the benefit of visual context during translation, which reduces errors and maintains quality.
 
 #### SalesWings - Analytics
 The Braze and [SalesWings](https://www.braze.com/docs/partners/data_and_infrastructure_agility/analytics/saleswings#saleswings) integration allows you to sync data across the two platforms in a flexible way to qualify leads with lead scoring and lead grading capabilities.
@@ -390,7 +390,7 @@ The Braze and [Komo]({{site.baseurl}}/partners/message_personalization/dynamic_c
 
 #### Phrase - Localization
 
-The [Phrase]({{site.baseurl}}/partners/message_personalization/localization/phrase/) and Braze integration allow you to translate email templates and content blocks without leaving the Braze interface. With the Phrase TMS integration for Braze, you can increase customer engagement and drive growth into new markets with seamless localization.
+The [Phrase]({{site.baseurl}}/partners/message_personalization/localization/phrase/) and Braze integration allow you to translate email templates and Content Blocks without leaving the Braze interface. With the Phrase TMS integration for Braze, you can increase customer engagement and drive growth into new markets with seamless localization.
 
 #### Nift - Loyalty
 

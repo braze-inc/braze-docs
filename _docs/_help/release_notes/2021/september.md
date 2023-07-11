@@ -22,7 +22,7 @@ Predictive Purchases give marketers a powerful tool for identifying and messagin
 
 ## Drag & Drop Editor
 
-With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas using our new [Drag & Drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
+With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvases using our new [Drag & Drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
 
 ## User alias import
 
