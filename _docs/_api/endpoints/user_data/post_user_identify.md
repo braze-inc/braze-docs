@@ -17,6 +17,10 @@ description: "This article outlines details about the Identify users Braze endpo
 
 > Use this endpoint to identify an unidentified (alias-only) user. 
 
+{% alert important %}
+Starting August 7, 2023, this endpoint will merge data for all calls. This behavior is simlar to [`merge_behavior`](#merge).
+{% endalert %}
+
 Calling `/users/identify` combines the alias-only profile with the identified profile and removes the alias-only profile.
 
 Identifying a user requires an `external_id` to be included in the `aliases_to_identify` object. If there is no user with that `external_id`, the `external_id` will simply be added to the aliased user's record, and the user will be considered identified. You can add up to 50 user aliases per request. 
