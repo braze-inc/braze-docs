@@ -39,7 +39,7 @@ Results from each report can be generated once a day. If you run the same report
 
 ### Report timeout
 
-Reports that take longer than 6 minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelishood of timing out. If this happens, try running the report again.
+Reports that take longer than 6 minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
 
 If a report times out or runs into errors even after retrying, please contact support.
 

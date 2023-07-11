@@ -4,8 +4,8 @@ article_title: Segments
 page_order: 1
 layout: dev_guide
 guide_top_header: "Segments"
-guide_top_text: "Audience segmentation is key to strategic marketing - it can keep you from over-targeting, bothering, or missing a potential connection with a customer. Check out the following articles to learn how to segment and filter your audience to your (and their) greatest benefit!"
-descriptions: "Audience segmentation is key to strategic marketing - it can keep you from over-targeting, bothering, or missing a potential connection with a customer. Check out this landing page to learn how to segment and filter your audience to your (and their) greatest benefit!"
+guide_top_text: "Audience segmentation is key to strategic marketing—it can keep you from over-targeting, bothering, or missing a potential connection with a customer. View the following articles to learn how to segment and filter your audience to your (and their) greatest benefit."
+descriptions: "Audience segmentation is key to strategic marketing—it can keep you from over-targeting, bothering, or missing a potential connection with a customer. Check out this landing page to learn how to segment and filter your audience to your (and their) greatest benefit."
 search_rank: 4
 tool: Segments
 page_type: landing
@@ -16,6 +16,9 @@ guide_featured_list:
   - name: Creating a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
     fa_icon: fas fa-chart-pie
+  - name: Managing Segments
+    link: /docs/user_guide/engagement_tools/segments/managing_segments/
+    fa_icon: fas fa-pen-square
   - name: Segmentation Filters
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     fa_icon: fas fa-filter

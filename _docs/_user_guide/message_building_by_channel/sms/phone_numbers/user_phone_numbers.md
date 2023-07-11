@@ -55,7 +55,7 @@ A phone number is considered invalid for the following reasons:
 - **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service and releasing their number from their carrier.
 
 #### Deactivated phone numbers
-When a mobile subscriber terminates or releases their phone number, their phone number becomes deactivated and will eventually get recycled and assigned to new users. On a daily basis, Braze receives these deactivated numbers and marks them as invalid within the Braze platform. This ensures that phone numbers you believe had opted into your program now belong to a different user who has not consented to receive messages.
+When a mobile subscriber terminates or releases their phone number, their phone number becomes deactivated and will eventually get recycled and assigned to new users. On a daily basis, Braze receives these deactivated numbers and marks them as invalid within the Braze platform. This ensures that phone numbers you believe had opted into your program that now belong to a different user who has not consented to receive messages, will not continue recieving messages.
 
 These invalid phone numbers can be managed using [SMS endpoints]({{site.baseurl}}/api/endpoints/sms/). 
 

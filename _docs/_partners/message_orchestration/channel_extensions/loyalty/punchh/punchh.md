@@ -71,44 +71,44 @@ Update `external_source_id` for existing Punchh users. Punchh allows external id
 This example allows you to send external identifiers with a user profile at sign-up time. This is done by sending `external_source` as "customer_id" and `external_source_id` as "556644557788334412" as a string data type.
 
 ```json
-curl --location --request POST 'https://sandbox.punchh.com/api2/mobile/users' \
+curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
---header 'x-pch-digest: eac5b04cbf7362c5359a4c259cf8fc18941646bf2e11bfe46be0031ffaa1100b' \
+--header 'x-pch-digest: SIGNATURE' \
 --header 'Accept-Timezone: Etc/UTC' \
 --header 'Accept: application/json' \
 --header 'Accept-Language: en' \
 --data-raw '{
-    "client":"1533b61caecafea4303aa1f4bad8321d6d8e7a843593e4a0e0024ae0d30b",
+    "client":"CLIENT",
     "user" : {
-      "email": "example@braze.com",
-      "password": "p@ssw0rd",
-      "first_name":"Amit",
-      "last_name":"K",
+      "email": "test@example.com",
+      "password": "PASSWORD",
+      "first_name":"FIRST_NAME",
+      "last_name":"LAST_NAME",
       "terms_and_conditions":"true",
       "anniversary":"2014-02-02",
       "zip_code":"94497",
       "birthday":"2004-02-02",
       "external_source":"customer_id",
-      "external_source_id":"556644557788334412"
+      "external_source_id":"111111111111111111"
       }
 }'
 ```
 {% endtab %}
 {% tab User update API example %}
-This example allows you to update external identifiers with a user profile. This is done by sending `external_source` as "customer_id" and `external_source_id` as "556644557788334412" as a string data type.
+This example allows you to update external identifiers with a user profile. This is done by sending `external_source` as "customer_id" and `external_source_id` as "111111111111111111" as a string data type.
 
 ```json
-curl --location --request PUT 'https://sandbox.punchh.com/api2/mobile/users' \
+curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'Accept-Language: en' \
---header 'x-pch-digest: 953d896eebfdb5a84aacb9d1b8eaae1fa0cd710b68bcd3b2324415ac40fee99c' \
---header 'Authorization: Bearer c90b819bf962db9882eeac6993b57c0a22816ecad0e5229b27320d63' \
+--header 'x-pch-digest: SIGNATURE' \
+--header 'Authorization: Bearer ACCESS_TOKEN' \
 --data-raw '{
-    "client":"1533b61caecafea4303aa1f4bad8321d6d8e7a843593e4a0e0024ae0d30b",
+    "client":"CLIENT",
     "user": {
         "external_source":"customer_id",
-        "external_source_id":"556644557788334412"
+        "external_source_id":"111111111111111111"
     }
 }'
 ```

@@ -1,5 +1,5 @@
 ---
-page_order: 1
+page_order: 1.2
 nav_title: Segmentation Filters
 article_title: Segmentation Filters
 layout: glossary_page
@@ -182,7 +182,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Converted From Campaign
-    description: Segments your users by whether or not they have converted on a specific campaign.
+    description: Segments your users by whether or not they have converted on a specific campaign. This filter doesn't include users that are in the control group.
     tags:
       - Retargeting
   - name: Converted From Canvas

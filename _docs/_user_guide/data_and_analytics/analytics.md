@@ -4,7 +4,7 @@ article_title: Your Analytics Dashboards
 page_order: 6.5
 layout: dev_guide
 guide_top_header: "Your Analytics Dashboards"
-guide_top_text: "This section is home to articles on the analytics dashboards available within Braze."
+guide_top_text: "This section is home to articles about the analytics dashboards within Braze."
 search_rank: 1
 page_type: landing
 description: "This landing page is home to articles about the email performance dashboard, the conversions dashboard, and understanding your app usage data."
