@@ -11,6 +11,9 @@ description: "This landing page is home to articles on custom data. Here, you ca
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
+  - name: Events
+    link: /docs/user_guide/data_and_analytics/custom_data/events/
+    fa_icon: fas fa-book
   - name: Event Naming Conventions
     link: /docs/user_guide/data_and_analytics/custom_data/event_naming_conventions/
     fa_icon: fas fa-list
