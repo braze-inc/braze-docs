@@ -30,7 +30,7 @@ Optionally, you can add a description to the segment to provide more details abo
 
 ## Step 3: Choose your app or platform
 
-Choose which apps or platforms you'd like to target by selecting **Users from all apps** (default), or **Users from specific apps**. If you choose **Users from all apps**, the segment includes all users regardless of any session or app data. If you choose **Users from specific apps**, you can then select which apps or platforms you want to include in your segment. 
+Choose which apps or platforms you'd like to target by selecting **Users from all apps** (default), or **Users from specific apps**. If you choose **Users from all apps**, the segment includes all users regardless of any session or app data. If you choose **Users from specific apps**, you can then select which apps or platforms you want to include in your segment.
 
 For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device. In the list of specific apps, the option **Users from no apps** allows you to include users with no sessions and no app data (typically created via user import or REST API).
 
@@ -64,7 +64,7 @@ After adding apps and filters to your segment, you can test if your segment is s
 
 You can create single user segments (or segments of a handful of users) using unique attributes that identify users, like a user name or a user ID.
 
-However, the segmentation stats or preview may not show this individual user because segment stats are calculated based on a random sample with a 95% confidence interval that the result is within +/- 1%. The larger your user base is, the more likely it is that the size of your segment is a rough estimate. To ensure that your segment contains the single user you are targeting, click **Calculate Exact Statistics** on the **Segment Details** page. This will calculate the exact number of users in your segment, without any rounding.
+However, the segmentation stats or preview may not show this individual user because segment stats are calculated based on a random sample with a 95% confidence interval that the result is within +/- 1%. The larger your user base is, the more likely it is that the size of your segment is a rough estimate. To ensure that your segment contains the single user you are targeting, click **Calculate Exact Statistics** on the **Segment Details** page. This will calculate the exact number of users in your segment.
 
 Braze has testing filters to target specific users by user ID or email address.
 
@@ -91,7 +91,7 @@ A single user may belong to different reachable user groups. For example, a user
 #### Calculating exact statistics
 The larger your user base is, the more likely the **Reachable Users** amount is a rough estimate. This allows us to quickly provide you estimates in real-time as you add filters, rather than searching your entire user base every time.
 
-To calculate the exact amount of reachable users, click **Calculate Exact Statistics**.
+To calculate the exact amount of reachable users, click **Calculate Exact Statistics**. For large segments, it is normal to see slight variation even when calculating exact statistics. The accuracy of this feature is guaranteed to be at least 99.999%.
 
 ## Archiving segments
 
