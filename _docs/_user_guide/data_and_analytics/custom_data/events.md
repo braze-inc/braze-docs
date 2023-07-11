@@ -25,7 +25,7 @@ In Braze, standard events are predefined actions that users can take within your
 - App launch
 - [Purchase](#purchase-events)
 - Session start
-- Session snd
+- Session end
 - Clicked push notification
 - Opened email
 
