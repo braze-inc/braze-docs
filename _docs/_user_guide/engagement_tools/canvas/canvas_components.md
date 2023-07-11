@@ -34,6 +34,9 @@ guide_featured_list:
   - name: User Update Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     fa_icon: fas fa-user-check
+  - name: Feature Flags in Canvas
+    link: /docs/developer_guide/platform_wide/feature_flags/canvas/
+    fa_icon: fas fa-project-diagram
   - name: Canvas Audience Sync
     link: /docs/partners/canvas_steps/
     fa_icon: fa-solid fa-rotate

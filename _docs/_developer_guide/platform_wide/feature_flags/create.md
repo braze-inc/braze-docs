@@ -38,6 +38,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 ![A list of previously created feature flags on the Braze dashboard][1]{: style="max-width:75%"}
 
 ### Create a new feature flag
+
 To create a new feature flag, click the **Create Feature Flag** button. Then, define your feature flag's [details](#details), [properties](#properties), user [targeting](#targeting), and [rollout traffic](#rollout-traffic).
 
 ![A blank feature flag form][2]{: style="float:right;max-width:55%;margin-left:15px;"}
@@ -89,7 +90,7 @@ Use the **Add Filter** dropdown menu to filter users out of your target audience
 
 ![Two dropdown menus. The first reads Target Users by Segment. The second reads Additional Filters.][3]
 
-#### Rollout Traffic
+#### Rollout traffic
 
 Feature flags always start as turned off to allow you to separate the timing of the feature's release and activation in your users' experience. 
 
@@ -98,7 +99,6 @@ When you are ready to rollout your new feature, specify an audience and then use
 ![A slider labeled Rollout Traffic, spanning between 0 and 100.][4]
 
 {% alert tip %}
-
 Do not set your rollout traffic above 0% until you are ready for your new feature to go live. When you initially define your feature flag in the dashboard, leave this setting at 0%.
 {% endalert %}
 
@@ -539,7 +539,7 @@ Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
 {% endtab %}
 {% tab Unity %}
 
-To listen for changes, set the values for Game Object Name and Callback Method Name under `Braze Configuration > Feature Flags` to the corresponding values in your application.
+To listen for changes, set the values for **Game Object Name** and **Callback Method Name** under **Braze Configuration** > **Feature Flags** to the corresponding values in your application.
 
 {% endtab %}
 {% tab Cordova %}
@@ -585,9 +585,7 @@ Add a description to your feature flag. While this is an optional field in Braze
 
 We're all guilty of leaving features on at 100% rollout for longer than necessary.
 
-To help keep your code (and Braze dashboard) clean, remove permanent feature flags from your code base once all users have upgraded and you no longer need the option to disable the feature.
-
-This helps reduce the complexity of your development environment, but also keeps your list of feature flags tidy.
+To help keep your code (and Braze dashboard) clean, remove permanent feature flags from your code base once all users have upgraded and you no longer need the option to disable the feature. This helps reduce the complexity of your development environment, but also keeps your list of feature flags tidy.
 
 [1]: {% image_buster /assets/img/feature_flags/feature-flags-list.png %} 
 [2]: {% image_buster /assets/img/feature_flags/feature-flags-create.png %}

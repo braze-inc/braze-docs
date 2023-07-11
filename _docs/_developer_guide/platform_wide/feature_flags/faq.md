@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: Frequently Asked Questions
-page_order: 40
+page_order: 50
 description: "This page provides answers to frequently asked questions about feature flags."
 tool: Feature Flags
 platform:
@@ -59,7 +59,7 @@ Product teams can use [feature flag properties][properties] to remotely populate
 
 Using the Canvas Feature Flag step, Product teams can also run an A/B split test to measure how a new feature impacts conversion rates compared to users with the feature disabled. 
 
-### How can feature flags benefit Engineering teams? {#engineering-teams}
+### How can feature flags benefit engineering teams? {#engineering-teams}
 
 Engineering teams can use feature flags to reduce the risk inherent in launching new features, and avoid rushing to deploy code fixes in the middle of the night.
 
@@ -85,7 +85,6 @@ This strategy helps ensure that users are shown a consistent experience in your 
 
 This is on our product roadmap. To help prioritize this, please raise this feedback with your Braze account team, or email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 
-
 ## Technical topics
 
 ### Can feature flags be used to control when the Braze SDK is initialized? {#initialization}
@@ -108,7 +107,7 @@ Feature flags may be refreshed mid-session. There are scenarios where you may wa
 
 To control this, [listen for updates][listen-for-updates] to feature flags and make the determination to re-render your app or not based on which feature flags have changed. 
 
-## Questions?
+## Additional questions?
 
 Have questions or feedback? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 
