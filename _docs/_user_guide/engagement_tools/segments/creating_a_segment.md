@@ -64,7 +64,7 @@ After adding apps and filters to your segment, you can test if your segment is s
 
 You can create single user segments (or segments of a handful of users) using unique attributes that identify users, like a user name or a user ID.
 
-However, the segmentation stats or preview may not show this individual user because segment stats are calculated based on a random sample with a 95% confidence interval that the result is within +/- 1%. The larger your user base is, the more likely it is that the size of your segment is a rough estimate. To ensure that your segment contains the single user you are targeting, click **Calculate Exact Statistics** on the **Segment Details** page. This will calculate the exact number of users in your segment.
+However, the segmentation stats or preview may not show this individual user because segment stats are calculated based on a random sample with a 95% confidence interval that the result is within +/- 1%. The larger your user base is, the more likely it is that the size of your segment is a rough estimate. To ensure that your segment contains the single user you are targeting, click **Calculate Exact Statistics** on the **Segment Details** page. This will calculate the exact number of users in your segment with greater than 99.999% accuracy.
 
 Braze has testing filters to target specific users by user ID or email address.
 
@@ -91,7 +91,7 @@ A single user may belong to different reachable user groups. For example, a user
 #### Calculating exact statistics
 The larger your user base is, the more likely the **Reachable Users** amount is a rough estimate. This allows us to quickly provide you estimates in real-time as you add filters, rather than searching your entire user base every time.
 
-To calculate the exact amount of reachable users, click **Calculate Exact Statistics**. For large segments, it is normal to see slight variation even when calculating exact statistics. The accuracy of this feature is guaranteed to be at least 99.999%.
+To calculate the exact amount of reachable users, click **Calculate Exact Statistics**. For large segments, it is normal to see slight variation even when calculating exact statistics. The accuracy of this feature is expected to be 99.999% or greater.
 
 ## Archiving segments
 
