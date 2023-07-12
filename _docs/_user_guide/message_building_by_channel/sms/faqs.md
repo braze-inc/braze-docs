@@ -103,7 +103,7 @@ For a keyword to be recognized within a sentence, (e.g., "please stop texting me
 
 ### Why is the Braze dashboard warning me I may be charged for additional message segments when my message is under 160(GCM-7) or 70(UCS-2) characters?
 
-You might be charged additional message segments if you have Liquid personalization included in your message. Content block templating does not occur until the message is preparing to be sent. When you are editing an SMS with a content block, Braze does not know what the content block will contain but provides a rough estimate. We recommend that users use the test pane to preview the message to better understand what to expect.
+You might be charged additional message segments if you have Liquid personalization included in your message. Content Block templating does not occur until the message is preparing to be sent. When you are editing an SMS with a Content Block, Braze does not know what the Content Block will contain but provides a rough estimate. We recommend that users use the test pane to preview the message to better understand what to expect.
 
 ### What is an `app_id` in the SMS API object?
 

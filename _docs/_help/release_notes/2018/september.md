@@ -27,7 +27,7 @@ Customers can now create a segment out of users who are [not included in a certa
 
 ## Canvas recipient CSV exports
 
-Customers can now [export data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_canvas_data/) on the users that have entered a Canvas. The CSV generated will be similar to the Campaign CSV.
+Customers can now [export data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_canvas_data/) on the users that have entered a Canvas. The CSV generated will be similar to the campaign CSV.
 
 ## Provisionally authorized iOS 12 segment filter
 

@@ -97,7 +97,7 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 - "Exactly 0" and "Less Than" filters include users with NULL fields
   - To exclude users without a value for custom attributes, you need to include the **is not blank** filter.
 
-### Strings (alpha-numeric characters) {#strings}
+### Strings (alphanumeric characters) {#strings}
 
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 255 characters long.
 

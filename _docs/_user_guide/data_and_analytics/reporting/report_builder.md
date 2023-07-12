@@ -104,7 +104,7 @@ Within a Canvas report, you can view your Canvases broken down by variant, steps
 
 ### Variant
 
-Selecting **breakdown by variant** will allow you to see the high-level stats for your overall canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.
+Selecting **breakdown by variant** will allow you to see the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.
 
 ![Variants][12]{: style="max-width:90%;"}
 

@@ -1760,11 +1760,11 @@ Field | Type | Description
 `campaign_id` | `null,`&nbsp;`string` | BSON ID of the campaign short_url was generated for, null if not from a campaign
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign short_url was generated for, null if not from a campaign
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation short_url was generated for, null if not from a campaign
-`canvas_id` | `null,`&nbsp;`string` | BSON ID of the Canvas short_url was generated for, null if not from a canvas
-`canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas short_url was generated for, null if not from a canvas
-`canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation short_url was generated for, null if not from a canvas
-`canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step short_url was generated for, null if not from a canvas
-`canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation short_url was generated for, null if not from a canvas
+`canvas_id` | `null,`&nbsp;`string` | BSON ID of the Canvas short_url was generated for, null if not from a Canvas
+`canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas short_url was generated for, null if not from a Canvas
+`canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation short_url was generated for, null if not from a Canvas
+`canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step short_url was generated for, null if not from a Canvas
+`canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation short_url was generated for, null if not from a Canvas
 `url` | `string` | original URL contained in message that is redirected to by short_url
 `short_url` | `string` | shortened URL that was clicked
 `user_agent` | `null,`&nbsp;`string` | user agent requesting short_url

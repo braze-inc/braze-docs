@@ -200,7 +200,7 @@ Refer to the following table for details on the `Video` editor block.
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-Videos hosted by Vimeo will only work if they are set to public. All other security settings available within Vimeo (e.g., "Hide from Vimeo.com") will generate a different link format that is not supported by this content block. These types of links are altered by the builder, which prevents Braze from generating a thumbnail.
+Videos hosted by Vimeo will only work if they are set to public. All other security settings available within Vimeo (e.g., "Hide from Vimeo.com") will generate a different link format that is not supported by this Content Block. These types of links are altered by the builder, which prevents Braze from generating a thumbnail.
 {% endalert %}
 
 ### Add Liquid personalization
