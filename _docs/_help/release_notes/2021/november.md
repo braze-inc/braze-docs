@@ -38,9 +38,9 @@ This optional and advanced [implementation guide]({{site.baseurl}}/developer_gui
 
 ## New Braze partnerships
 
-### Adobe - Customer Data Platform
+### Adobe - Customer data platform
 
-Built on the Adobe Experience Platform, Adobe's Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real-time.
+Built on the Adobe Experience Platform, Adobe's real-time customer data platform (real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real-time.
 
 The Braze and [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/) CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users. 
 
