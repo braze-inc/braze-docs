@@ -56,9 +56,22 @@ Segments already using the Segment Membership Filter cannot be further included 
 
 ### Testing segments
 
-After adding apps and filters to your segment, you can test if your segment is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the segment criteria.
+After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, click **Lookup User** and search for a user’s `external_id` or `braze_id`.
 
-![]({% image_buster /assets/img_archive/user_lookup.png %})
+![User Lookup section with a "Lookup User" button.][6]{: style="max-width:50%;"}
+
+User lookup is available when:
+- Creating a segment
+- Setting up a campaign or Canvas audience
+- Setting up an Audience Paths step
+
+When a user matches the segment, filter, and app criteria, you see the following:
+
+![A user lookup of "user007" triggers an alert stating, "user007 matches all of the segments, filters, and apps.][7]{: style=" max-width:60%;"}
+
+When a user doesn’t match part or all of the segment, filter, or app criteria, the missing criteria is listed for troubleshooting purposes.
+
+![A user lookup of "user1234" triggers an alert stating, "user1234 does not match the following targeting criteria:" and displays two missing criteria: a tenure greater than one year and today being an anniversary.][8]{: style=" max-width:60%;"}
 
 ### Single-user segments
 
@@ -110,3 +123,6 @@ You can unarchive the segment by navigating to it within the **Segments** page, 
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
 [4]: {% image_buster /assets/img_archive/reachable_users.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
+[6]: {% image_buster /assets/img_archive/user_lookup.png %}
+[7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
+[8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
