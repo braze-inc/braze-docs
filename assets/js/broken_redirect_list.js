@@ -160,6 +160,7 @@ validurls['/docs/user_guide/administrative/logging_in_and_security/resetting_you
 validurls['/docs/user_guide/administrative/app_settings/app_group_management/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/app_group_management/';
 validurls['/docs/user_guide/administrative/app_settings/custom_event_and_attribute_management/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/';
 validurls['/docs/user_guide/administrative/app_settings/tags/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/tags/';
+validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/';
 validurls['/docs/user_guide/administrative/app_settings/push_ttl_settings/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/push_ttl_settings/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/okta/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile/';
