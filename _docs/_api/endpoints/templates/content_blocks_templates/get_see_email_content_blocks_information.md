@@ -30,8 +30,8 @@ To use this endpoint, you'll need to generate an API key with the `content_block
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `content_block_id`  | Required | String | The content block identifier. <br><br>You can find this by either listing content block information through an API call or going to the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page, then scrolling to the bottom and searching for your content block API identifier.|
-| `include_inclusion_data`  | Optional | Boolean | When set to `true`, the API returns back the Message Variation API identifier of campaigns and Canvases where this content block is included, to be used in subsequent calls.  The results exclude archived or deleted campaigns or Canvases. |
+| `content_block_id`  | Required | String | The Content Block identifier. <br><br>You can find this by either listing Content Block information through an API call or going to the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page, then scrolling to the bottom and searching for your Content Block API identifier.|
+| `include_inclusion_data`  | Optional | Boolean | When set to `true`, the API returns back the Message Variation API identifier of campaigns and Canvases where this Content Block is included, to be used in subsequent calls.  The results exclude archived or deleted campaigns or Canvases. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

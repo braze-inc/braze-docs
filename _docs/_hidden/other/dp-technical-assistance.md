@@ -15,7 +15,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 There are a range of data protection laws that regulate what organizations can do with personal data (“**Data Protection Laws**”), including the EU and UK General Data Protection Regulation (“**GDPR**”), the California Consumer Privacy Act (“**CCPA**”) and the Health Insurance Portability and Accountability Act (“**HIPAA**”). There are other national, state, and industry-specific Data Protection Laws and regulations that may apply to your business.
 
-These Data Protection Laws grant individuals ‘privacy rights’ over their personal data. Organizations are required to receive and respond to requests from individuals who exercise their privacy rights. The Braze platform can assist you in your compliance with these Data Protection Laws by providing features to facilitate certain actions required under such laws. This document provides technical instructions to use these features to manage privacy rights requests. It is up toyou to determine which Data Protection Laws apply to your business, and to act in compliance with them.
+These Data Protection Laws grant individuals ‘privacy rights’ over their personal data. Organizations are required to receive and respond to requests from individuals who exercise their privacy rights. The Braze platform can assist you in your compliance with these Data Protection Laws by providing features to facilitate certain actions required under such laws. This document provides technical instructions to use these features to manage privacy rights requests. It is up to you to determine which Data Protection Laws apply to your business, and to act in compliance with them.
 
 ## Legal Disclaimer
 

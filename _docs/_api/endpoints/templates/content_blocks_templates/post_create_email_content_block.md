@@ -36,7 +36,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "name": (required, string) Must be less than 100 characters,
-  "description": (optional, string) The description of the content block. Must be less than 250 character,
+  "description": (optional, string) The description of the Content Block. Must be less than 250 character,
   "content": (required, string) HTML or text content within Content Block,
   "state": (optional, string) Choose `active` or `draft`. Defaults to `active` if not specified,
   "tags": (optional, array of strings) Tags must already exist
@@ -47,8 +47,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `name` | Required | String | Name of the content block. Must be less than 100 characters. |
-| `description` | Optional | String | Description of the content block. Must be less than 250 characters. |
+| `name` | Required | String | Name of the Content Block. Must be less than 100 characters. |
+| `description` | Optional | String | Description of the Content Block. Must be less than 250 characters. |
 | `content` | Required | String | HTML or text content within the Content Block. |
 | `state` | Optional | String | Choose `active` or `draft`. Defaults to `active` if not specified. |
 | `tags` | Optional | Array of strings | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist. |
@@ -61,7 +61,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/cre
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "name": "content_block",
-  "description": "This is my content block",
+  "description": "This is my Content Block",
   "content": "HTML content within block",
   "state": "draft",
   "tags": ["marketing"]
