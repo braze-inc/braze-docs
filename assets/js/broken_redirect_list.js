@@ -352,6 +352,7 @@ validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-pre
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#html-upload-with-preview';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#supported-sdk-versions'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#supported-sdk-versions';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#upload-assets'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#asset-files';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/modal_with_css/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/#web-modal-css';
 
 validurls['/docs/services_handbook/'] = '/docs/handbooks/';
 
