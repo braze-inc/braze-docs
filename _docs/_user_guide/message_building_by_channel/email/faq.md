@@ -35,21 +35,21 @@ API-triggered campaigns will dedupe or send dupes depending on where the audienc
 
 No. Updates made to the outbound email settings do not retroactively affect existing sends. For example, changing your default display name in the email settings will not automatically replace the existing default display name in your active campaigns or Canvases. 
 
-### What is a "good" email deliverability rate?
+### What is a "good" email delivery rate?
 
-Typically, the "magic number" is around 95% messages delivered with a bounce rate no higher than 3%. If your deliverability dips below that, there is usually cause for concern.
+Typically, the "magic number" is around 95% messages delivered with a bounce rate no higher than 3%. If your delivery dips below that, there is usually cause for concern.
 
-However, a rate can be higher than 95% and still have deliverability issues. For example, if all of your bounces are coming from one particular domain, that is a clear signal that there is a reputation issue with that provider.
+However, a rate can be higher than 95% and still have delivery issues. For example, if all of your bounces are coming from one particular domain, that is a clear signal that there is a reputation issue with that provider.
 
 Additionally, messages may be getting delivered and ending up in Spam, indicating potentially serious reputation issues. It's important to monitor not just the number of messages being delivered, but also open and click rates to determine whether users are actually seeing the messages in their inboxes. Because providers usually don't report every spam instance, a spam rate of even 1% could be cause for concern and further analysis.
 
-Finally, your business and the types of emails you send may also affect deliverability. For example, someone sending mostly [transactional emails][1] should expect to see a better rate than someone sending many marketing messages.
+Finally, your business and the types of emails you send may also affect delivery. For example, someone sending mostly [transactional emails][1] should expect to see a better rate than someone sending many marketing messages.
 
-### Why are my email deliverability metrics not adding up to 100%?
+### Why are my email delivery metrics not adding up to 100%?
 
-Email deliverability metrics (deliveries, bounces, and spam rate) may not add up to 100% because of emails that are soft bounced and then not delivered after the retry period of up to 72 hours.
+Email delivery metrics (deliveries, bounces, and spam rate) may not add up to 100% because of emails that are soft bounced and then not delivered after the retry period of up to 72 hours.
 
-Soft bounces are emails that bounce due to a temporary or transient issue such as "mailbox full", "server temporarily not available", and more. If the soft bounced email is still not delivered after 72 hours, this email will not be accounted for in the campaign deliverability metrics.
+Soft bounces are emails that bounce due to a temporary or transient issue such as "mailbox full", "server temporarily not available", and more. If the soft bounced email is still not delivered after 72 hours, this email will not be accounted for in the campaign delivery metrics.
 
 ### Can Braze track unsubscribe links counted towards the "Unsubscribe" metric
 
