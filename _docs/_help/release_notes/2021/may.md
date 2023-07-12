@@ -28,11 +28,11 @@ The [Airbridge and Braze integration]({{site.baseurl}}/partners/message_orchestr
 
 [Kubit]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/) is a no-code, self-service analytics platform that delivers instant product insights. Through the seamless no-code integration with Braze, you can import user Cohort information into Braze and launch engagement campaigns to target specific Cohorts. In addition, through the use of Snowflake Secure Data Sharing, you can integrate the raw campaign and impression data from Braze with product analytics in Kubit to measure the impact of these campaigns in real-time. 
 
-### Census - Customer Data Platform
+### Census - Customer data platform
 
 [Census]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/census/) allows you to keep your customer success, sales, and marketing teams all on the same page by keeping your customer data in sync, all without ongoing help from your engineering department.
 
-### Treasure Data - Customer Data Platform
+### Treasure Data - Customer data platform
 
 [Treasure Data]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/) helps drive relevant customer experiences by harmonizing data, insights, and engagement to work in perfect unison. Armed with actionable indicators, CX Teams, including marketing, sales, and customer service can effectively optimize spend, and personalize omnichannel interactions across the entire customer journey. 
 

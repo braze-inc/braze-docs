@@ -141,7 +141,7 @@ The Braze and [Sendbird](https://www.braze.com/docs/partners/message_orchestrati
 The Braze and [Fresh Relevance](https://www.braze.com/docs/partners/message_personalization/dynamic_content/fresh_relevance/) integration allows you to include personalized content in triggered emails, such as product recommendations based on the customer’s browsed product or items within the same category, Send advanced triggered email campaigns such as price drop, back in stock, multi-stage browse, or cart abandoned messages, and more!
 
 #### Smartling - Localization
-The Braze and [Smartling](https://www.braze.com/docs/partners/message_personalization/localization/smartling/) integration allows you to translate email templates and content blocks. Smartling provides linguists with the benefit of visual context during translation, which reduces errors and maintains quality.
+The Braze and [Smartling](https://www.braze.com/docs/partners/message_personalization/localization/smartling/) integration allows you to translate email templates and Content Blocks. Smartling provides linguists with the benefit of visual context during translation, which reduces errors and maintains quality.
 
 #### SalesWings - Analytics
 The Braze and [SalesWings](https://www.braze.com/docs/partners/data_and_infrastructure_agility/analytics/saleswings#saleswings) integration allows you to sync data across the two platforms in a flexible way to qualify leads with lead scoring and lead grading capabilities.
@@ -390,7 +390,7 @@ The Braze and [Komo]({{site.baseurl}}/partners/message_personalization/dynamic_c
 
 #### Phrase - Localization
 
-The [Phrase]({{site.baseurl}}/partners/message_personalization/localization/phrase/) and Braze integration allow you to translate email templates and content blocks without leaving the Braze interface. With the Phrase TMS integration for Braze, you can increase customer engagement and drive growth into new markets with seamless localization.
+The [Phrase]({{site.baseurl}}/partners/message_personalization/localization/phrase/) and Braze integration allow you to translate email templates and Content Blocks without leaving the Braze interface. With the Phrase TMS integration for Braze, you can increase customer engagement and drive growth into new markets with seamless localization.
 
 #### Nift - Loyalty
 
@@ -583,7 +583,7 @@ You can use nested custom attributes to send objects as a new data type for cust
 - You can also now [personalize your messages using a custom attribute object and Liquid]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#personalization).
 
 ### New Video block
-A new content block for [Video]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/#video) has been added to the Drag & Drop Editor for Email.
+A new Content Block for [Video]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/#video) has been added to the Drag & Drop Editor for Email.
 
 ### Optional Identifier for Vendor collection - Swift
 In previous versions of the Braze iOS Swift SDK, the IDFV (Identifier for Vendor) field was automatically collected as the user's device ID. Beginning in Swift SDK v5.7.0, the IDFV field can optionally be disabled, and instead, Braze will set a random UUID as the device ID. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/).
@@ -612,7 +612,7 @@ The [Contentsquare]({{site.baseurl}}/partners/data_and_infrastructure_agility/an
 #### Dynamic Yield - Dynamic content
 The [Dynamic Yield]({{site.baseurl}}/partners/message_personalization/dynamic_content/dynamic_yield/) and Braze partnership allows you to leverage Dynamic Yield's recommendation and segmentation engine to create Experience Blocks that can be embedded into Braze messages. Experience blocks can be made of:
 - **Recommendations blocks**: Set algorithms and filtering to source users' personalized content that propagates when the email is opened.
-- **Dynamic Content blocks**: Target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened.
+- **Dynamic Content Blocks**: Target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened.
 
 #### Octolis - Analytics
 The [Octolis]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/contentsquare/) and Braze integration acts as middleware between your raw data sources and Braze, enabling you to retrieve and unify data from various sources, both online and offline.

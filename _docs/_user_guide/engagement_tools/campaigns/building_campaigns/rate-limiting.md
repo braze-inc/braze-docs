@@ -228,7 +228,7 @@ Consider the following campaigns and frequency capping by tag rule:
 
 **Frequency Capping by Tag Rule:**
 
-- Your user should receive no more than one push notification Campaign per week with the tag `promotional`.<br><br>
+- Your user should receive no more than one push notification campaign per week with the tag `promotional`.<br><br>
 
 | Action | Result |
 |---|---|

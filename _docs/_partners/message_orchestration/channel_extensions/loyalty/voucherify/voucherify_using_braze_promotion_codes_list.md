@@ -48,7 +48,7 @@ Confirm that the list only contains codes (not column header) and click **Start 
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_upload_csv.png %}){: style="max-width:50%;"}
 
-## Step 4: Use Code Snippet in Braze Campaign
+## Step 4: Use Code Snippet in Braze campaigns
 
 To use codes from the list in a Braze campaign, Copy Snippet and add it to the email body.
 

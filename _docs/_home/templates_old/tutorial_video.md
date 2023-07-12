@@ -44,7 +44,7 @@ About this layout:
 This layout is for Quick Start guides, Product walkthroughs, and Troubleshooting walkthroughs with a video. The video will sit on the right-hand side and stay in place. Note that the TOC will only show H2 headers, so the only steps that should be H2 should be written as such:
 "Step 1: Whatever the step is".
 Tutorials:
-A general walkthrough of an instructional concept. Should contain PRACTICAL KNOWLEDGE. Focuses on a single topic (like, how to create a campaign, how to create a canvas, etc.) Goal or Task-Oriented Article that walks STEP BY STEP through solving a SPECIFIC issue (How to target specific users, how to segment based on location, etc.).
+A general walkthrough of an instructional concept. Should contain PRACTICAL KNOWLEDGE. Focuses on a single topic (like, how to create a campaign, how to create a Canvas, etc.) Goal or Task-Oriented Article that walks STEP BY STEP through solving a SPECIFIC issue (How to target specific users, how to segment based on location, etc.).
 {% endcomment %}
 # How to Title This Video Tutorial
 

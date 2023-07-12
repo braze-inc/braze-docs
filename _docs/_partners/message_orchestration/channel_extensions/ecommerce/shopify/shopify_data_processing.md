@@ -311,6 +311,9 @@ page_order: 3
         "product_id": 6143032066239,
         "sku": null,
         "title": "Dark Denim Top",
+   "variant_id": 40094740549876,
+        "variant_title": "Small Dark Denim Top",
+
         "vendor": "partners-demo",
         "name": "Dark Denim Top",
         "properties": [],
@@ -357,6 +360,8 @@ page_order: 3
             "requires_shipping": true,
             "sku": null,
             "title": "Dark Denim Top",
+            "variant_id": 40094740549876,
+            "variant_title": "Small Dark Denim Top",
             "vendor": "partners-demo"
           }
         ]

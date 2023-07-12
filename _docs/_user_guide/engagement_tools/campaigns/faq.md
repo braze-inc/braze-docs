@@ -117,7 +117,7 @@ Changing the send time on campaigns within this time can lead to undesired behav
 
 ### What should I do if the "safe zone" has already passed?
 
-To ensure campaigns operate as desired, we recommend stopping the current campaign (this will abort any enqueued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
+To ensure campaigns operate as desired, we recommend stopping the current campaign (this will cancel any enqueued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
 
 Make sure to re-adjust campaign schedule times to allow for time zone sending.
 

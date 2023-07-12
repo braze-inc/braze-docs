@@ -45,7 +45,7 @@ When the test is complete and a Winning Path is determined, the users assigned t
 
 We don't recommend using local time delivery in Canvases with Winning Paths. This is because experiment windows begin when the first user passes through. Users who are in very early time zones may enter the step and trigger the start of the experiment window much earlier than you expect, which can result in the Experiment concluding before the bulk of your users in more typical time zones have had enough time to enter the Canvas and/or convert. 
 
-Alternatively, if you wish to use local delivery, use an experiment window of 24-48 or more hours. That way, users in early time zones enter the canvas and trigger the experiment to start, but plenty of time in the experiment window remains. Users in later time zones will still have sufficient time to enter the Canvas and the Experiment Step with Winning Paths and possibly convert before the experiment window expires.
+Alternatively, if you wish to use local delivery, use an experiment window of 24-48 or more hours. That way, users in early time zones enter the Canvas and trigger the experiment to start, but plenty of time in the experiment window remains. Users in later time zones will still have sufficient time to enter the Canvas and the Experiment Step with Winning Paths and possibly convert before the experiment window expires.
 
 [1]: {% image_buster /assets/img/experiment_step/experiment_winning_path.png %}
 [3]: {% image_buster /assets/img/experiment_step/experiment_path_distribution.png %}

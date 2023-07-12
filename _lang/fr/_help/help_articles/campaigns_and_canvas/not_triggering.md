@@ -4,7 +4,7 @@ article_title: Campagne ou Canvas non déclenché
 page_order: 5
 
 page_type: solution
-description: "Cet article d’aide décrit les étapes pour résoudre les problèmes liés aux campagnes ou aux canvas qui ne se déclenchent pas comme prévu."
+description: "Cet article d’aide décrit les étapes pour résoudre les problèmes liés aux campagnes ou aux Canvas qui ne se déclenchent pas comme prévu."
 tool: 
 - Campaigns
 - Canvas

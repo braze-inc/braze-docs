@@ -44,15 +44,11 @@ For example, you can use a feature flag's property values to quickly change your
 
 ### Message coordination
 
-Use feature flags to synchronize a feature's rollout and messaging. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a Campaign or Canvas that only targets that segment. 
+Use feature flags to synchronize a feature's rollout and messaging. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a campaign or Canvas that only targets that segment. 
 
 ### Feature experimentation
 
 Use feature flags to experiment and confirm your hypotheses around your new feature. By splitting traffic into two or more groups, you can compare the impact of a feature flag across groups, and determine the best course of action based on the results.
-
-With Canvas, you can track the impact of feature rollout on conversations. And, using [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths), you can optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
-
-<!-- For example, imagine that your ecommerce team has a new checkout page design that they believe will improve purchase conversion rates. When you release this feature, you can display the new page to 50% of your users for one month. If it performs better than the old design, you can increase the rollout traffic to 100%. If it performs poorly, you can turn it off completely and revisit the designs. In either case, you have avoided a poor experience for 50% of your users. -->
 
 [1]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %} 
 [2]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/use_cases/

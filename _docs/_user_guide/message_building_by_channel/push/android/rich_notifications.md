@@ -3,7 +3,7 @@ nav_title: "Android rich notifications"
 article_title: Rich Notifications for Android
 page_order: 3
 page_layout: tutorial
-description: "This tutorial covers how to set up Android Rich notifications for your Braze Campaigns."
+description: "This tutorial covers how to set up Android Rich notifications for your Braze campaigns."
 platform: Android
 channel:
   - Push

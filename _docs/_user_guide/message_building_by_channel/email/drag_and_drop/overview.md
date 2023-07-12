@@ -54,7 +54,7 @@ The drag-and-drop editor uses two key components to make email composition quick
 ![][10]{: style="float:right;max-width:30%;margin-left:10px;"}
 ![][9]{: style="float:right;max-width:30%;margin-left:10px;"}
 
-**Content** includes a series of tiles that represent different types of content you can use in your message. These are organized into three categories: basic, media, and advanced. Basic content blocks are the foundation of your email such as title and paragraph blocks, buttons, and spacers. Media content blocks allow you to include images, videos, social media information, and icons. With the advanced content blocks, you can insert HTML blocks or add a menu to your email.
+**Content** includes a series of tiles that represent different types of content you can use in your message. These are organized into three categories: basic, media, and advanced. Basic Content Blocks are the foundation of your email such as title and paragraph blocks, buttons, and spacers. Media Content Blocks allow you to include images, videos, social media information, and icons. With the advanced Content Blocks, you can insert HTML blocks or add a menu to your email.
 
 Simply drag one inside an existing row segment, and it will auto-adjust to the column width. Every block in **Content** has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information, see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/). 
 
