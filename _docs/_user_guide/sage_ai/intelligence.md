@@ -1,7 +1,7 @@
 ---
 nav_title: Intelligence Suite
 article_title: Intelligence Suite
-page_order: 6.5
+page_order: 10
 layout: dev_guide
 search_rank: 12
 guide_top_header: "Intelligence Suite"
@@ -31,18 +31,7 @@ guide_menu_list:
 - name: Multivariate & A/B Testing
   link: /docs/user_guide/intelligence/multivariate_testing/
   fa_icon: fas fa-vial
-- name: AI Copywriting Assistant
-  link: /docs/user_guide/intelligence/ai_copywriting/
-  fa_icon: fas fa-edit
-- name: AI Image Generator
-  link: /docs/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai
-  fa_icon: fas fa-wand-magic-sparkles
----
 
-<!---
-- name: Content QA with AI
-  link: /docs/user_guide/intelligence/ai_content_qa/
-  fa_icon: fas fa-list-check
----->
+---
 
 <br>
