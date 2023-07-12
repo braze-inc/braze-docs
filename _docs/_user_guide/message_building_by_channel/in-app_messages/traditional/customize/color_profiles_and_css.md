@@ -32,7 +32,7 @@ You can also [duplicate][6] and [archive][7] templates! Learn more about creatin
 
 ## CSS template {#in-app-message-templates}
 
-You can customize a complete CSS template for your [web modal in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/#web-modal-css).
+You can customize a complete CSS template for your [web modal in-app message](#web-modal-css).
 
 Name and tag your CSS Template, then choose whether or not it will be your default template. You can write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, and you should feel free to adjust it slightly to meet your needs.
 
