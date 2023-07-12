@@ -718,7 +718,7 @@ validurls['/docs/user_guide/message_building_by_channel/in-app_messages/dark-mod
 validurls['/docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/'] = '/docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/';
 validurls['/docs/user_guide/message_building_by_channel/email/css_inline/'] = '/docs/user_guide/message_building_by_channel/email/html_editor/css_inline/';
 validurls['/docs/user_guide/message_building_by_channel/email/gmail_promotions_tab/'] = '/docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/';
-validurls['/docs/user_guide/message_building_by_channel/email/email_private_relay_apple_sso/'] = '/docs/user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_sso/';
+validurls['/docs/user_guide/message_building_by_channel/email/email_private_relay_apple_sso/'] = '/email_relay/';
 validurls['/docs/user_guide/message_building_by_channel/email/mpp/'] = '/docs/user_guide/message_building_by_channel/email/apple_mail/mpp/';
 
 validurls['/docs/user_guide/data_and_analytics/query_builder/custom_sql/'] = '/docs/user_guide/data_and_analytics/query_builder/#custom-sql';
