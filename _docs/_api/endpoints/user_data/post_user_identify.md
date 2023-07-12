@@ -18,7 +18,7 @@ description: "This article outlines details about the Identify users Braze endpo
 > Use this endpoint to identify an unidentified (alias-only) user. 
 
 {% alert important %}
-Starting August 7, 2023, this endpoint will merge data for all calls. This behavior is simlar to [`merge_behavior`](#merge).
+Starting August 7, 2023, this endpoint will merge data for all calls. This behavior is similar to [`merge_behavior`](#merge).
 {% endalert %}
 
 Calling `/users/identify` combines the alias-only profile with the identified profile and removes the alias-only profile.
