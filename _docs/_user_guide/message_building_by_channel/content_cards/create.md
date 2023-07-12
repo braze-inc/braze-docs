@@ -172,7 +172,7 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
 
 {% alert warning %}
-After a Content Card is launched, it can't be edited. It can only be stopped from sending to new users and removed from users' feeds.
+After a Content Card is launched, it can't be edited. It can only be stopped from sending to new users and removed from users' feeds. Refer to [Updating sent cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-sent-cards) to understand how you can approach this scenario.
 {% endalert %}
 
 Next, check out [Content Card reporting]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/) to learn how you can access the results of your Content Card campaigns.
@@ -185,7 +185,7 @@ The following capabilities are not yet supported for Content Cards:
 
 - Frequency Capping
 - Re-ordering Content Cards from the Braze UI
-- Post-launch Edits
+- Post-launch edits (see [Updating sent cards](#updating-sent-cards) for options on how to handle this scenario)
 
 
 ### Sending behavior
@@ -210,11 +210,34 @@ You can specify multiple custom events and purchases that should remove a card f
 
 ### Updating sent cards
 
-If you find you need to make changes to cards that have already been sent:
+Content Cards cannot be edited after they are sent. If you find you need to make changes to cards that have already been sent, consider the following approaches.
+
+#### Option 1: Stop and relaunch
+
+If a card has re-eligibility turned on, you could chose to:
+
 1. Stop your campaign.
 2. Remove active Content Cards from users' feeds.
 3. Edit your campaign as needed.
 4. Restart your campaign.
+
+With this approach, newly eligible users will get the new card and previous recipients would get the new card when they're re-eligible. For example, if the re-eligiblity is 30 days, it could be up to 30 days before previous recipients to see the new card.
+
+**Example:** A campaign is triggered off of session start with re-eligibility set to 30 days. A user received the campaign two days ago and you want to change the copy. First stop the campaign and remove the card from feed. Then re-publish the campaign with the new copy. If the user has a session again, they will receive the new card in 28 days.
+
+##### Keeping cards in users' feeds
+
+If desired, you could skip step 2 (Remove active Content Cards from users' feeds). This means the old card would still be live, and you would only edit the new card. Depending on re-eligibility and card expiration, usrs may see the old cards for a long time.
+
+#### Option 2: Duplicating the campaign
+
+You can also chose to archive the campaign and remove the card from feeds. Then you can duplicate the campaign and launch it with new settings so that users who had the old card would either be re-eligible or not. For example:
+
+1. Create a segment with the filter `Last Received Content Card`.
+2. Select your older Content Card.
+3. To exclude users who received this specific Content Card, set the condition to `Does Not Equal`. Otherwise, to target those users, set the condition to `Equals`.
+
+If a new card is created, it will be the most recent card a user is receiving. This means the new card will be at the top of the feed rather than where the old card existed (unless you have set up a custom implementation to handle this scenario).
 
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
