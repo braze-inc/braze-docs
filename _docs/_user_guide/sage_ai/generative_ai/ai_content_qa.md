@@ -1,9 +1,8 @@
 ---
 nav_title: Content QA with AI
 article_title: Content QA with AI
-hidden: true
+page_order: 10
 description: "This reference article covers how to QA your message content with AI directly from the message composer."
-layout: dev_guide
 ---
 
 # Content QA with AI

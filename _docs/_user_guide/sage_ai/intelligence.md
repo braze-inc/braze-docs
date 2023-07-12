@@ -15,22 +15,19 @@ guide_featured_title: "Tools and Features"
 guide_featured_list:
 - name: Intelligent Timing
   link: /docs/user_guide/intelligence/intelligent_timing/
-  fa_icon: fas fa-clock
+  image: /assets/img/icons/clock.svg
 - name: Intelligent Channel
   link: /docs/user_guide/intelligence/intelligent_channel/
-  fa_icon: fas fa-envelope
+  image: /assets/img/icons/mail_open.svg
 - name: Intelligent Selection
   link: /docs/user_guide/intelligence/intelligent_selection/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/icons/loyalty_heart.svg
 
 guide_menu_title: "Additional Resources"
 guide_menu_list:
 - name: Intelligence FAQ
   link: /docs/user_guide/intelligence/faqs/
-  fa_icon: fas fa-question
-- name: Multivariate & A/B Testing
-  link: /docs/user_guide/intelligence/multivariate_testing/
-  fa_icon: fas fa-vial
+  image: /assets/img/icons/question.svg
 
 ---
 
