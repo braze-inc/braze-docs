@@ -48,9 +48,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `content_block_id`|	Required |	String | Your content block's API identifier.|
-| `name` | Optional | String | Name of the content block. Must be less than 100 characters. |
-| `description` | Optional | String | Description of the content block. Must be less than 250 characters. |
+| `content_block_id`|	Required |	String | Your Content Block's API identifier.|
+| `name` | Optional | String | Name of the Content Block. Must be less than 100 characters. |
+| `description` | Optional | String | Description of the Content Block. Must be less than 250 characters. |
 | `content` | Optional | String | HTML or text content within Content Blocks.
 | `state` | Optional | String | Choose `active` or `draft`. Defaults to `active` if not specified. |
 | `tags` | Optional | Array of strings | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist. |
