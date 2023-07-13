@@ -22,7 +22,7 @@ No, uploaded assets will not expire once added to the Media Library.
 
 ### Can I upload video assets?
 
-No, the Media Library doesn't support video files. We recommend you host these externally, or on a platform such as Youtube.
+No, the Media Library doesn't support video files. We recommend you host these externally, or on a platform such as YouTube.
 
 ### Can I crop all image types?
 
