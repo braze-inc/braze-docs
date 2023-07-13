@@ -77,6 +77,8 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 Since this is an advanced customization option, note that overriding the default Braze implementation will also nullify the logic to emit in-app message events to your JavaScript listeners. If you wish to still use `Braze.subscribeToInAppMessage` or `Braze.addListener`, you will need to handle publishing the events yourself.
 {% endalert %}
 
+### Overriding the default UI delegate
+
 By default, the [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/) is created and assigned when you initialize the `braze` instance. `BrazeInAppMessageUI` is an implementation of the [`BrazeInAppMessagePresenter`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter) protocol and comes with a `delegate` property that can be used to customize the handling of in-app messages that have been received.
 
 1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in [our iOS article here](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
@@ -108,20 +110,24 @@ For more details on these values, see our [iOS documentation](https://braze-inc.
 {% endsubtab %}
 {% endsubtabs %}
 
-3. Assign the delegate on the `brazeInAppMessagePresenter` after initializing the `braze` instance. (Note: BrazeUI can only be imported in Objective-C or Swift. If you are using Objective-C++, you will need to handle this in a separate file.)
+To use this delegate, assign it to `brazeInAppMessagePresenter.delegate` after initializing the `braze` instance. (Note: BrazeUI can only be imported in Objective-C or Swift. If you are using Objective-C++, you will need to handle this in a separate file.)
 
 {% subtabs %}
 {% subtab OBJECTIVE-C %}
 ```objc
 @import BrazeUI;
 
-BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
-Braze *braze = [BrazeReactBridge initBraze:configuration];
-((BrazeInAppMessageUI *)braze.inAppMessagePresenter).delegate = [[CustomDelegate alloc] init];
-AppDelegate.braze = braze;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
+  Braze *braze = [BrazeReactBridge initBraze:configuration];
+  ((BrazeInAppMessageUI *)braze.inAppMessagePresenter).delegate = [[CustomDelegate alloc] init];
+  AppDelegate.braze = braze;
+}
 ```
 {% endsubtab %}
 {% endsubtabs %}
+
+### Overriding the default native UI
 
 If you wish to fully customize the presentation of your in-app messages at the native iOS layer, conform to the [`BrazeInAppMessagePresenter`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter) protocol and assign your custom presenter following the sample below:
 
