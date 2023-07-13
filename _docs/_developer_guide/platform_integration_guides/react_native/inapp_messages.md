@@ -33,6 +33,7 @@ import Braze from "@braze/react-native-sdk";
 // Pass in `false` to disable the automatic display of in-app messages.
 Braze.subscribeToInAppMessage(false, (event) => {
   console.log(event.inAppMessage);
+  // Use `event.inAppMessage` to construct your own custom message UI.
 });
 
 // Option 2: Listen for the event directly via `Braze.addListener`.
