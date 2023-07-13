@@ -29,7 +29,7 @@ After selecting the drag-and-drop editor as your editing experience, you can cho
 
 ![Basic Drag-and-Drop Email Templates section that shows the option to select a blank template or a Braze template. There is also a section underneath for saved drag-and-drop email templates.][1]
 
-If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop  editor. 
+If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop editor. 
 
 You can also access all templates from the **Templates** section.
 
