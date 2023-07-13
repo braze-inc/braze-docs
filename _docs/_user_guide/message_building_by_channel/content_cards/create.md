@@ -187,7 +187,6 @@ The following capabilities are not yet supported for Content Cards:
 - Re-ordering Content Cards from the Braze UI
 - Post-launch edits (see [Updating sent cards](#updating-sent-cards) for options on how to handle this scenario)
 
-
 ### Sending behavior
 
 Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once content is pulled into the Content Card (at time of displaying), the content cannot be changed during its lifespan. This applies even if you are calling an API through Connected Content, and the data from the endpoint changes. This data will not get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only future cards that are sent will have the update.
@@ -208,7 +207,7 @@ You can specify multiple custom events and purchases that should remove a card f
 
 ![Content Card Removal Conditions panel with Content Card Removal Event option]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
-### Updating sent cards
+### Updating launched cards
 
 Content Cards cannot be edited after they are sent. If you find you need to make changes to cards that have already been sent, consider the following approaches.
 
@@ -217,14 +216,14 @@ Content Cards cannot be edited after they are sent. If you find you need to make
 One approach is to archive the campaign and remove active cards from the feed. Then you can duplicate the campaign and launch it with updates so that any eligible users would received the updated cards.
 
 * If users should never be re-eligible for a Content Card, filter for users who have not received the previous version of the Content Card by setting the filter `Received Message from Campaign` to the condition to `Has Not`.
-* If users who received the prior card would be re-eligible in X days then set the filter for `Last Received Message from specific campaign` to more than X days ago.
+* If users who received the prior card would be re-eligible in X days, then set the filter for `Last Received Message from specific campaign` to more than X days ago **OR** `Received Message from Campaign` with the `Has Not` condition.
 
 **Example:** A campaign is triggered off of session start with re-eligibility set to 30 days. A user received the campaign two days ago and you want to change the copy. First archive the campaign and remove the cards from feed. Then duplicate the campaign and re-launch with the new copy. If the user has a session again, they will receive the new card immediately.
 
 ##### Impact
 
 * **Reporting:** Each version of the card would have separate analytics.
-* **Existing Recipients:** New and existing recipients would immediately receive the updated card.
+* **Existing Recipients:** New and existing recipients would see the updated card at the next feed refresh if they are eligible.
 
 #### Option 2: Stop and relaunch
 
@@ -235,7 +234,7 @@ If a card has re-eligibility turned on, you could chose to:
 3. Edit your campaign as needed.
 4. Restart your campaign.
 
-With this approach, newly eligible users will get the new card and previous recipients would get the new card when they're re-eligible. For example, if the re-eligiblity is 30 days, it could be up to 30 days before previous recipients to see the new card.
+With this approach, newly eligible users will get the new card and previous recipients would get the new card when they're re-eligible.
 
 **Example:** A campaign is triggered off of session start with re-eligibility set to 30 days. A user received the campaign two days ago and you want to change the copy. First stop the campaign and remove the card from feed. Then re-publish the campaign with the new copy. If the user has a session again, they will receive the new card in 28 days.
 
