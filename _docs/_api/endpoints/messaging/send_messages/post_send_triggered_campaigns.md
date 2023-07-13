@@ -22,6 +22,10 @@ If you are targeting a segment, a record of your request will be stored in the [
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `campaigns.trigger.send` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
@@ -155,7 +159,7 @@ Message sending endpoint responses will include the message's `dispatch_id` for 
 
 ## Create send endpoint
 
-**Using the Attributes Object in Campaigns**
+**Using the Attributes Object in campaigns**
 
 Braze has a Messaging Object called `attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
 

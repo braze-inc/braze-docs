@@ -21,7 +21,7 @@ L’objet Destinataire vous permet de combiner l’[objet Alias utilisateur]({{s
 [{
   "user_alias": (optional, User Alias Object) User Alias of user to receive message,
   "external_user_id": (optional, string) see External User Id,
-  "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a Campaign or message; see Trigger Properties,
+  "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a campaign or message; see Trigger Properties,
   "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties
 }]
 ```

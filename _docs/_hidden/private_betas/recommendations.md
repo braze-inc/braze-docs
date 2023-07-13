@@ -3,14 +3,17 @@ nav_title: Item Recommendations
 article_title: Item Recommendations
 permalink: "/recommendations/"
 description: "This reference article covers how to create an Item Recommendation for most popular products."
+hidden: true
 ---
 
 # Item Recommendations
 
-You can use Item Recommendations to calculate the most popular products in a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those top products into your messages.
+You can use Item Recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
 
 {% alert important %}
-Item Recommendations is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
+Most popular product recommendations is currently in early access.<br>
+Personalized AI recommendations is currently in beta.<br><br>
+Contact your Braze customer success manager if you're interested in participating in the early access or beta.
 {% endalert %}
 
 ## Prerequisites
@@ -31,7 +34,10 @@ If you are using our [updated navigation]({{site.baseurl}}/navigation), you can 
 
 1. Enter a name and optional description for your recommendation.
 2. If not already populated, select the catalog for which this recommendation will calculate the most popular products.
-3. For the recommendation **Type**, select **Most popular**.
+3. Select the recommendation type:<br><br>
+   - **Most popular:** Calculates the items from the catalog that are purchased most often by users in the entire workspace.
+   - **Personalized:** Uses transformers, a new kind of deep learning, to predict each individual user's next most likely set of items to purchase. We calculate up to 30 of the next most likely items ranked from most to least likely.<br><br>
+   Both recommendation types use the last 6 months of purchase data.<br><br>
 4. Select the [Product IDs](#product-ids).
 
 ![][1]{: style="max-width:80%;"}
@@ -61,7 +67,7 @@ After your recommendation finishes training, you can personalize your messages w
 3. For **Item Recommendation Name**, select the recommendation you just created.
 4. For **Number of Predicted Items**, enter how many top products you'd like to be inserted. For example, you can display the top three most purchased items.
 5. For **Information to Display**, select which fields from the catalog should be included for each item. This information corresponds to the columns in your uploaded CSV file used to generate your catalog.
-6. Click **Copy** and paste the Liquid wherever it needs to go in your message.
+6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
-[1]: {% image_buster /assets/img/most_popular_products.png %}
-[2]: {% image_buster /assets/img/most_popular_products_personalize.png %}
+[1]: {% image_buster /assets/img/item_recommendation_create.png %}
+[2]: {% image_buster /assets/img/add_personalization.png %}

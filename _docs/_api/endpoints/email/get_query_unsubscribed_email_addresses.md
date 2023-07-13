@@ -20,6 +20,10 @@ You can use this endpoint to set up a bi-directional sync between Braze and othe
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `email.unsubscribe` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

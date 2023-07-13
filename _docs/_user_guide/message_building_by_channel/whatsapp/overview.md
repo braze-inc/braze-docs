@@ -87,7 +87,7 @@ You can check the approval status of your message template in either the **Messa
 
 ### Step 4: Create a WhatsApp campaign
 
-Once WhatsApp templates have been approved, you can move over to the dashboard to build out a [WhatsApp Canvas or campaign]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/create/). 
+Once WhatsApp templates have been approved, you can move over to the dashboard to build out a [WhatsApp Canvas or campaign]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/). 
 
 ## Next steps
 

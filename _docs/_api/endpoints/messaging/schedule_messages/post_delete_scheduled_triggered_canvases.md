@@ -9,7 +9,7 @@ description: "This article outlines details about the Delete scheduled API-trigg
 
 ---
 {% api %}
-# Delete scheduled API-triggered canvases
+# Delete scheduled API-triggered Canvases
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/trigger/schedule/delete
 {% endapimethod %}
@@ -19,6 +19,10 @@ description: "This article outlines details about the Delete scheduled API-trigg
 Scheduled messages or triggers that are deleted very close to or during the time they were supposed to be sent will be updated with best efforts, so last-second deletions could be applied to all, some, or none of your targeted users.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
+
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `canvas.trigger.schedule.delete` permission.
+{% endalert %}
 
 ## Rate limit
 

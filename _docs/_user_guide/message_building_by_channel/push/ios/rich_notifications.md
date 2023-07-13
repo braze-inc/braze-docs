@@ -3,7 +3,7 @@ nav_title: "Create iOS Rich Notifications"
 article_title: Create Rich Push Notifications
 page_order: 3
 page_type: tutorial
-description: "This tutorial covers the requirements and steps on how to create iOS Rich Notifications for your Braze Campaigns."
+description: "This tutorial covers the requirements and steps on how to create iOS Rich Notifications for your Braze campaigns."
 
 platform: iOS
 channel:

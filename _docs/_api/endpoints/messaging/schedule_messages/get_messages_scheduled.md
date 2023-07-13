@@ -20,6 +20,10 @@ Daily, recurring messages will only appear once with their next occurrence. Resu
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `messages.schedule_broadcasts` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

@@ -2,7 +2,7 @@
 nav_title: Canvas Version History
 article_title: Canvas Version History
 alias: "/canvas_version_history/"
-page_order: 1
+page_order: 2
 description: "This reference article covers how to manage your Canvas version history."
 page_type: reference
 tool: Canvas

@@ -28,6 +28,10 @@ Make sure to remove deprecated external IDs with the `/users/external_ids/remove
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `users.external_ids.rename` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}

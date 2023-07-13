@@ -25,6 +25,10 @@ This endpoint does not guarantee the sequence of `alias_updates` objects being u
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#a084b843-b3cd-43f0-bfb1-ef7bada839c5 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `users.alias.update` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='users alias update' %}

@@ -25,6 +25,10 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 
 Once you have registered your activity, pass a JSON payload with updates to the Apple Push Notification service (APNs) through this endpoint. See Apple's documentation on [updating your Live Activity with push notification payloads](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) for more information.
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `messages.live_activity.update` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

@@ -18,6 +18,10 @@ description: "This article outlines details about the Export daily app uninstall
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#59c4d592-3e77-42f8-8ff1-d5d250acbeae {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `kpi.uninstalls.data_series` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

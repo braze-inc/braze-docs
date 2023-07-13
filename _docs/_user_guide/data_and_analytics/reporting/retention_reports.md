@@ -87,7 +87,7 @@ The way to read the retention report chart for a day 3 column would be Y% or Y n
 
 As another example, referring to the table in the preceding image, on the 25th of March, a total of 38 users performed the retention event. Day 0 retention was 68.42%, meaning that 68.42% of users performed the retention event 0 or more days (on Day 0 or later) after receiving the campaign. Day 7 retention was 57.89%, meaning 57.89% of users performed the event 7 or more days (on Day 7 or later) after receiving the campaign.
 
-This information can be useful if you want to know the percentage of users who have and have not used your product 30+ days after first use. A percentage/number value in the day 30 column tells you the percentage of users who returned on day 30 or after.
+This information can be useful if you want to know the percentage of users who have and have not used your product 30+ days after first use. A percentage or number value in the day 30 column tells you the percentage of users who returned on day 30 or after.
 
 ### Range retention
 
@@ -105,10 +105,10 @@ Range Reports are some of the most intuitive reports to read. They clearly state
 - **Cohort Z Rows**: Shows the days in which the campaign or Canvas was sending messages.
 - **Day X Columns**: Days spanning between 0 and 30 days at various increments.
 - **All Users Row**: Also known as the Report Summary Row, summarizes the retention data for the entire time period. Note that if a user has received the campaign or Canvas in multiple cohorts, their results will be counted twice here. 
-- **Percentages/Numbers**: Shows the percentage/number of users who performed the event X or more days after receiving the campaign or Canvas on Z day. These percentages are the weighted average percentages. Incomplete values will be denoted by an asterisk.
+- **Percentages/Numbers**: Shows the percentage or number of users who performed the event X or more days after receiving the campaign or Canvas on Z day. These percentages are the weighted average percentages. Incomplete values will be denoted by an asterisk.
 - **Date Range**: Set on the campaign or Canvas **Details** page, the date range includes all users who received the campaign or Canvas during this window, and of those users, the data of those that performed their retention event during the date range will appear in the report.
 - **Units**: You can adjust the units between the percentage of users and the number of users in the upper right-hand corner of the chart, specific units may prove to be more significant when judging the impact of a campaign or Canvas.
-- **Color Mapping**: In your retention report, higher percentages/number of users are assigned darker shades of blue. Lower percentage/number of users are assigned lighter shades of blue. This is done to help users visualize this data.
+- **Color Mapping**: In your retention report, higher percentages or number of users are assigned darker shades of blue. Lower percentages or number of users are assigned lighter shades of blue. This is done to help users visualize this data.
 - **Retention Report Graph**: This graph summarizes the results for all cohorts for the selected date range.
 
 ### Performance by variant
@@ -146,10 +146,10 @@ Some use cases for showing performance by variant:
 
 Retention Reports are easy to generate, yet challenging to interpret and act on. To help aid marketers, we have assembled a couple of topics and questions to consider when looking at your Retention Reports.
 
-- Consider day-of-week trends for recurring campaigns (e.g Do Monday cohorts perform better than Saturday cohorts?).
-- Where does the impact start to decline? This could be a signal that a new campaign/Canvas that targets users at that point in time is needed as another boost to retention. 
+- Consider day-of-week trends for recurring campaigns (e.g. Do Monday cohorts perform better than Saturday cohorts?).
+- Where does the impact start to decline? This could be a signal that a new campaign or Canvas that targets users at that point in time is needed as another boost to retention. 
 - Are you seeing messaging fatigue?
-- Did a specific optimization you made to a campaign/Canvas X days ago have a positive impact?
+- Did a specific optimization you make to a campaign or Canvas X days ago have a positive impact?
 
 [1]: {% image_buster /assets/img/retention_1.png %}
 [2]: {% image_buster /assets/img/retention_2.png %}

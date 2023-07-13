@@ -20,6 +20,10 @@ If you want to retrieve Canvas data, refer to the [Export Canvas details]({{site
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `campaigns.details` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

@@ -18,6 +18,10 @@ description: "This article outlines the details about the Query or list hard bou
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `email.hard_bounces` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

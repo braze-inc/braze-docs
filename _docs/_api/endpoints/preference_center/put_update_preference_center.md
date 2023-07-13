@@ -18,6 +18,10 @@ description: "This article outlines details about the Update a preference center
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#bf1b43db-3f1b-461f-ad9a-2fbe35b804d7 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `preference_center.update` permission.
+{% endalert %}
+
 ## Rate limit
 
 This endpoint has a rate limit of 10 requests per minute, per workspace.

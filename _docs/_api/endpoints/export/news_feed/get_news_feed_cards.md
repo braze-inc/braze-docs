@@ -24,6 +24,10 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `feed.list` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

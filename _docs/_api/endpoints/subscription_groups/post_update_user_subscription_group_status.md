@@ -25,6 +25,10 @@ If you want to see examples or test this endpoint for **SMS Subscription Groups*
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `subscription.status.set` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}

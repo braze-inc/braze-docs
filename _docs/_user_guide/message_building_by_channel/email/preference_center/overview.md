@@ -9,7 +9,7 @@ channel:
 
 # Preference center overview
 
-> Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/).<br><br>The following article provides instructions on how to build an API-generated preference center, but you can also build a preference center using the [Drag-And-Drop Editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/).
+> Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/).<br><br>The following article provides instructions on how to build an API-generated preference center, but you can also build a preference center using the [drag-and-drop editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/).
 
 In the Braze dashboard, navigate to **Audience** > **Subscriptions** > **Email Preference Center**.
 
@@ -59,7 +59,7 @@ To place a link to the preference center in your emails, use the following Liqui
 ```
 {%endraw%}
 
-You can also use a combination of HTML that includes Liquid. For example, you can paste the following as the URL in either the HTML editor or Drag & Drop Editor. This will show the basic preference center layout that lists all of the email subscription groups automatically. 
+You can also use a combination of HTML that includes Liquid. For example, you can paste the following as the URL in either the HTML editor or drag-and-drop editor. This will show the basic preference center layout that lists all of the email subscription groups automatically. 
 
 {% raw %}
 ```html
@@ -70,7 +70,7 @@ You can also use a combination of HTML that includes Liquid. For example, you ca
 The preference center has a checkbox that will allow your users to unsubscribe from all emails. Note that you will not be able to save these preferences if sent as a test message.
 
 {% alert important %}
-The above Liquid tag will only work when launching a Campaign or Canvas. Sending a test email will not generate a valid link.
+The above Liquid tag will only work when launching a campaign or Canvas. Sending a test email will not generate a valid link.
 {% endalert %}
 
 #### Editing a preference center

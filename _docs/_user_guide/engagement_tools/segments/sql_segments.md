@@ -157,6 +157,10 @@ If you created a segment where you expect users to enter and exit regularly, man
 
 Each Braze workspace has 1,000 SQL Segment credits available per month. Credits are used whenever you refresh, or save and refresh, a SQL Segment’s membership. Credits are not used when you run previews within a SQL Segment or save or refresh a classic Segment Extension.
 
+Credit usage is correlated to the run time of your SQL query. The longer the run time is, the more credits a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
+
+To save on credits, preview your query to ensure it is correct before saving the SQL Segment Extension.
+
 Your credits will reset to 1,000 on the first of each month at 12 am UTC. You can monitor your credits usage throughout the month within the SQL credits usage panel. From the **Segment Extensions** page, click <i class="fa-solid fa-chart-column"></i> **View SQL Credit Usage**.
 
 ![SQL Credit Usage panel in the SQL Segment Extensions page][5]{: style="max-width:60%"}

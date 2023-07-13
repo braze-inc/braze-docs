@@ -71,44 +71,44 @@ Update `external_source_id` for existing Punchh users. Punchh allows external id
 This example allows you to send external identifiers with a user profile at sign-up time. This is done by sending `external_source` as "customer_id" and `external_source_id` as "556644557788334412" as a string data type.
 
 ```json
-curl --location --request POST 'https://sandbox.punchh.com/api2/mobile/users' \
+curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
---header 'x-pch-digest: eac5b04cbf7362c5359a4c259cf8fc18941646bf2e11bfe46be0031ffaa1100b' \
+--header 'x-pch-digest: SIGNATURE' \
 --header 'Accept-Timezone: Etc/UTC' \
 --header 'Accept: application/json' \
 --header 'Accept-Language: en' \
 --data-raw '{
-    "client":"1533b61caecafea4303aa1f4bad8321d6d8e7a843593e4a0e0024ae0d30b",
+    "client":"CLIENT",
     "user" : {
-      "email": "example@braze.com",
-      "password": "p@ssw0rd",
-      "first_name":"Amit",
-      "last_name":"K",
+      "email": "test@example.com",
+      "password": "PASSWORD",
+      "first_name":"FIRST_NAME",
+      "last_name":"LAST_NAME",
       "terms_and_conditions":"true",
       "anniversary":"2014-02-02",
       "zip_code":"94497",
       "birthday":"2004-02-02",
       "external_source":"customer_id",
-      "external_source_id":"556644557788334412"
+      "external_source_id":"111111111111111111"
       }
 }'
 ```
 {% endtab %}
 {% tab User update API example %}
-This example allows you to update external identifiers with a user profile. This is done by sending `external_source` as "customer_id" and `external_source_id` as "556644557788334412" as a string data type.
+This example allows you to update external identifiers with a user profile. This is done by sending `external_source` as "customer_id" and `external_source_id` as "111111111111111111" as a string data type.
 
 ```json
-curl --location --request PUT 'https://sandbox.punchh.com/api2/mobile/users' \
+curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'Accept-Language: en' \
---header 'x-pch-digest: 953d896eebfdb5a84aacb9d1b8eaae1fa0cd710b68bcd3b2324415ac40fee99c' \
---header 'Authorization: Bearer c90b819bf962db9882eeac6993b57c0a22816ecad0e5229b27320d63' \
+--header 'x-pch-digest: SIGNATURE' \
+--header 'Authorization: Bearer ACCESS_TOKEN' \
 --data-raw '{
-    "client":"1533b61caecafea4303aa1f4bad8321d6d8e7a843593e4a0e0024ae0d30b",
+    "client":"CLIENT",
     "user": {
         "external_source":"customer_id",
-        "external_source_id":"556644557788334412"
+        "external_source_id":"111111111111111111"
     }
 }'
 ```
@@ -154,7 +154,7 @@ Braze can add users to a Punchh segment through webhooks utilizing Punchh Custom
 
 2. Create a webhook campaign in Braze using the Punchh endpoint for adding a user to a custom segment as the webhook URL. Here, you can provide the `custom_segment_id` pulled from the URL and `user_id` as key-value pairs.<br><br>![][4]<br><br>
 
-3. This webhook can be set up as a singular campaign or as a step within a canvas. Alternatively, if the webhook adding users to this specific Punchh segment will be used in multiple campaigns or canvases, it can be set up as a [template]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template#creating-a-webhook-template).<br><br>
+3. This webhook can be set up as a singular campaign or as a step within a Canvas. Alternatively, if the webhook adding users to this specific Punchh segment will be used in multiple campaigns or Canvases, it can be set up as a [template]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template#creating-a-webhook-template).<br><br>
 The `user_id` key within the webhook maps to the Punchh user ID. This identifier will need to be added to all webhooks created in Braze to add users to a Punchh custom segment. The `punch_user_id` custom attribute can be dynamically populated as the value for the `user_id` key using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#pre-formatted-variables). You can insert the `punchh_user_id` custom attribute variable using the blue "plus" icon located on the top-right of any templated text field.<br><br>![][10]{: style="max-width:65%;"}<br><br>![][11]{: style="max-width:65%;"}<br><br>
 
 4. Once the webhook is saved, it can be used to sync users, as shown below. For example, 136 guests would be added to the Punch custom segment when this Braze webhook campaign is launched.<br><br>![An example of syncing users using the saved webhook due to Braze and Punchh integration.][7]

@@ -17,7 +17,7 @@ description: "This article outlines details about the Update catalog item Braze 
 
 > Use this endpoint to update an item in your catalog. 
 
-If the `item_id` isn't found, this endpoint will create the item. This endpoint is synchronous.
+If the `item_id` isn't found, this endpoint will create the item in your catalog. This endpoint is synchronous.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b2871ed7-734e-4a37-b8f1-e11584e569f5 {% endapiref %}
 

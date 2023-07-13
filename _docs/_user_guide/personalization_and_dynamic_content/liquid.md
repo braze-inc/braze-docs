@@ -83,7 +83,7 @@ These terms are reinterpreted from [**Shopify's documentation**](https://shopify
 
 | Term | Definition | Example |  
 |---|---|---|
-| Liquid | An open-source, customer-facing template language created by Shopify and written in Ruby; used to load/pull dynamic content. | `{{${first_name}}}` will insert a user's first name into a message. |
+| Liquid | An commonly-used, customer-facing template language created by Shopify and written in Ruby; used to load/pull dynamic content. | `{{${first_name}}}` will insert a user's first name into a message. |
 | Object | A denotation of a variable and location of the intended variable name that tells Liquid where to show content in the message. | `{{${city}}` will insert a user's city into a message. |
 | Conditional logic tag | Tags create logic and control the flow of message content. In Braze's cases, conditional logic tags are used to create exceptions and variations in messages based on certain, predefined criteria. | ```{% if ${language} == 'en' %}``` will trigger your message in a designated way in the event that a user has designated "English" as their language. |
 | Filters | Used to change, narrow, or reformat the output of the Liquid object. It is often used to create mathematical operations. | ```{{"Big Sale" | upcase}}``` will cause the words "Big Sale" to appear as "BIG SALE" in the message. |

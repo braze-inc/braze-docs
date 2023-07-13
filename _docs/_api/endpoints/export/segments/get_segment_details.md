@@ -18,6 +18,10 @@ description: "This article outlines details about the Export segment details Bra
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aab56ed9-0a28-476a-8b57-b79786dbb9c1 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `segments.details` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
