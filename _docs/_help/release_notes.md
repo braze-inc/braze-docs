@@ -55,7 +55,7 @@ guide_featured_list:
 
 ### Drag & Drop Email Preference Center
 
-Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your email messaging. With the Drag-and-Drop Editor, you can now create and customize a preference center to help manage which users receive certain types of communication. See [Create an email preference center with drag-and-drop]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/) to learn more.
+Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your email messaging. With the drag-and-drop editor, you can now create and customize a preference center to help manage which users receive certain types of communication. See [Create an email preference center with drag-and-drop]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/) to learn more.
 
 ### Saving drafts for Canvas
 
