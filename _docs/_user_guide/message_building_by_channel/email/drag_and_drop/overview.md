@@ -174,7 +174,7 @@ Here, you can also use the **Dark Mode Preview** toggle to preview your email in
 Background images in email messaging may sometimes cause white lines or disconnects to appear between images, so it's important to test and check the finer details of your email message.
 {% endalert %}
 
-After using the Drag-and-Drop Editor to design and create your email message, continue to [build][12] the remainder of your campaign or Canvas.
+After using the drag-and-drop editor to design and create your email message, continue to [build][12] the remainder of your campaign or Canvas.
 
 ### Updated HTML engine
 
