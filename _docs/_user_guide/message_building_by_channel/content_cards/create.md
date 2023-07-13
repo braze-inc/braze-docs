@@ -239,14 +239,14 @@ With this approach, newly eligible users will get the new card and previous reci
 
 **Example:** A campaign is triggered off of session start with re-eligibility set to 30 days. A user received the campaign two days ago and you want to change the copy. First stop the campaign and remove the card from feed. Then re-publish the campaign with the new copy. If the user has a session again, they will receive the new card in 28 days.
 
-##### Keeping cards in users' feeds
-
-If desired, you could skip step 2 (Remove active Content Cards from users' feeds). This means any existing cards would still be live, and only new cards would have the edits. Depending on re-eligibility and card expiration, users may see the old cards for a long time.
-
 ##### Impact
 
 * **Reporting:** One campaign will contain all reporting analytics for the card versions launched. Braze will not differentiate between versions launched.
 * **Existing recipients:** Users who have already received the card would not receive the updated cards until they become re-eligible. If re-eligibility is turned off, they would never receive the new card.
+
+#### Keeping cards in users' feeds
+
+If desired, you could keep active Content Cards in users' feeds and not remove them. This means any existing cards would still be live, and only new cards would have the edits. Depending on re-eligibility and card expiration, users may see the old cards for a long time.
 
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
