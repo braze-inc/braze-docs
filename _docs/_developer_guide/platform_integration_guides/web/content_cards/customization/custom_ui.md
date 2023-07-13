@@ -13,7 +13,7 @@ description: "This article covers components of creating a custom UI for your we
 
 > This article covers components of creating a custom UI for your web application.
 
-## Refreshing the feed
+## Refreshing the feed {#refresh}
 
 To refresh and sync a user's feed with Braze servers, use the [`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh) method:
 
@@ -36,9 +36,21 @@ Content Cards will only refresh on session start if `subscribeToContentCardsUpda
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.subscribeToContentCardsUpdates(function(updates){
+braze.subscribeToContentCardsUpdates((updates) => {
   const cards = updates.cards;
   // do something with the latest instance of `cards`
+  // for example:
+  cards.forEach(card => {
+    if (card.isControl) {
+      // do not display the control card, but remember to call `logContentCardImpressions([card])`
+    }
+    else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
+      // use `card.title`, `card.imageUrl`, etc.
+    }
+    else if (card instanceof braze.Banner) {
+      // use `card.imageUrl`, etc.
+    }
+  })
 });
 
 braze.openSession();
@@ -46,12 +58,18 @@ braze.openSession();
 
 ## Logging events
 
+{% alert info %}
+Make sure to handle Control cards when logging impressions. These cards are blank, and while they aren't seen by users, you should still log impressions in order to compare how they perform against non-control cards. You can check for control cards using the `card.isControl` property.
+{% endalert %}
+
+
 Log impression events when cards are viewed by users:
+
 
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.logCardImpressions([card1, card2, card3], true);
+braze.logContentCardImpressions([card1, card2, card3]);
 ```
 
 Log card click events when users interact with a card:
@@ -59,6 +77,6 @@ Log card click events when users interact with a card:
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.logCardClick(card, true);
+braze.logContentCardClick(card);
 ```
 
