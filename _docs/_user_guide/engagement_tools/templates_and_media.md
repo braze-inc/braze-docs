@@ -20,11 +20,8 @@ guide_featured_list:
   - name: Content Blocks
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
     fa_icon: fas fa-columns
-  - name: Duplicate Templates
-    link: /docs/user_guide/engagement_tools/templates_and_media/duplicate/
-    fa_icon: fas fa-copy
-  - name: Archive Templates
-    link: /docs/user_guide/engagement_tools/templates_and_media/archive/
+  - name: Managing Templates
+    link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     fa_icon: fas fa-archive
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
