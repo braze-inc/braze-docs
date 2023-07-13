@@ -2,7 +2,7 @@
 nav_title: Drag-And-Drop Email Preference Center
 article_title: Drag-And-Drop Email Preference Center
 alias: "/dnd_preference_center/"
-description: "This reference page covers how to create an email preference center with the drag-and-drop editor."
+description: "This reference page covers how to create an email preference center with the Drag-and-Drop Editor."
 page_order: 2
 ---
 
@@ -32,7 +32,7 @@ This Liquid tag can be included in any outbound email campaigns or Canvas steps 
 
 ## Step 3: Add subscription groups to the preference center
 
-Click **Launch Editor** to begin designing your preference center in the drag-and-drop editor.
+Click **Launch Editor** to begin designing your preference center in the Drag-and-Drop Editor.
 
 ### Define available subscription groups
 To determine which subscription groups should be shown in the preference center, click the **+ Add subscription groups** button to launch a modal where desired subscription groups can be selected. After selecting, click the **Add Subscription Groups** button to add them to the preference center.
@@ -48,7 +48,7 @@ You can further configure the selected subscription groups by clicking on the sm
 
 The **Unsubscribe from all** button at the bottom of the template is non-removable and will [globally unsubscribe]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) the user from receiving any email messages.
 
-## Step 4: Customize the preference center using the drag-and-drop editor
+## Step 4: Customize the preference center using the Drag-and-Drop Editor
 
 ### Set common styles
 You can set certain styles to be applied across all relevant blocks in your preference center from the **Common Styles** tab. The styles set in this section are used everywhere in your message except where you override them for a specific block. For an easier design experience, we recommend setting up page-level styles before you customize styles at the block level.
@@ -61,7 +61,7 @@ To return to the common styles, click the "X" button on individual block propert
 
 ## Drag and drop preference center components
 
-The drag-and-drop editor uses two key components to make preference center composition quick and easy: rows and blocks. All blocks must be placed in a row.
+The Drag-and-Drop Editor uses two key components to make preference center composition quick and easy: rows and blocks. All blocks must be placed in a row.
 
 {% tabs %}
 {% tab Rows %}
@@ -92,7 +92,7 @@ Every block has its own settings, such as granular control on padding. The right
 
 ## Step 5: Customize your confirmation page
 
-Don’t forget to customize the confirmation page! You can edit this page by clicking on **Confirmation Page** at the top of the drag-and-drop editor window. This page will be displayed to users after updating their preferences using the preference center. The same styling capabilities above apply to this page as well.
+Don’t forget to customize the confirmation page! You can edit this page by clicking on **Confirmation Page** at the top of the  Drag-and-Drop Editor window. This page will be displayed to users after updating their preferences using the preference center. The same styling capabilities above apply to this page as well.
 
 ![][9]{: style="max-width:65%;"}
 

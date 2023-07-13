@@ -6,7 +6,7 @@ page_order: 1
 description: "This landing page lists articles that cover how to set up and properly use the drag-and-drop editor provided by Braze."
 layout: dev_guide
 guide_top_header: "Drag-And-Drop Editor for Email"
-guide_top_text: "The drag-and-drop editor allows you to create completely custom and personalized email messages without using HTML."
+guide_top_text: "The Drag-and-Drop Editor allows you to create completely custom and personalized email messages without using HTML."
 channel: email
 tool: Media
 

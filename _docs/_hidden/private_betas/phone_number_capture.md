@@ -2,7 +2,7 @@
 nav_title: Phone Number Capture
 article_title: Phone Number Capture
 permalink: "/phone_number_capture/"
-description: "This reference page covers how to create a phone number capture form with the in-app message drag-and-drop editor."
+description: "This reference page covers how to create a phone number capture form with the in-app message Drag-and-Drop Editor."
 hidden: true
 ---
 
@@ -10,7 +10,7 @@ hidden: true
 
 > Learn how to create an in-app message to collect users' phone numbers capture form.
 
-The phone number capture form is a template available in the drag-and-drop editor for in-app messages. Use this template to collect users' phone numbers and grow your SMS and WhatsApp subscription groups.
+The phone number capture form is a template available in the Drag-and-Drop Editor for in-app messages. Use this template to collect users' phone numbers and grow your SMS and WhatsApp subscription groups.
 
 ![Three examples of in-app messages created using the phone capture form template.][img7]
 
@@ -22,7 +22,7 @@ Phone number capture form is currently in early access. Contact your Braze accou
 
 ### Minimum SDK versions
 
-Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions. See the [Prerequisites][1] section of Creating an in-app message with drag-and-drop for more details and nuances to be aware of.
+Messages created using the Drag-and-Drop Editor can only be sent to users on the following minimum SDK versions. See the [Prerequisites][1] section of Creating an in-app message with drag-and-drop for more details and nuances to be aware of.
 
 {% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 

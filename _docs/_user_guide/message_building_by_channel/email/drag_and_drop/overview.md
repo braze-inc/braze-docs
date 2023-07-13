@@ -4,15 +4,15 @@ article_title: Create a Drag-And-Drop Email
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
-description: "This article covers how to set up and properly use the drag-and-drop editor for email messages."
+description: "This article covers how to set up and properly use the Drag-and-Drop Editor for email messages."
 tool: 
   - Campaigns
   - Canvas
 ---
 
-# Drag-and-drop editor overview
+# Drag-and-Drop Editor overview
 
-> With the drag-and-drop editor, you can create completely custom and personalized email messages in either campaigns or Canvas using the drag-and-drop editing experience.
+> With the Drag-and-Drop Editor, you can create completely custom and personalized email messages in either campaigns or Canvas using the drag-and-drop editing experience.
 
 {% multi_lang_include video.html id="4dTrkxe8DLo" align="right" %}
 
@@ -22,12 +22,12 @@ Once you've selected where to build your message, let's dive into the steps to c
 
 ## Step 1: Select your template
 
-After selecting the drag-and-drop editor as your editing experience, you can choose to:
+After selecting the Drag-and-Drop Editor as your editing experience, you can choose to:
 - Start with a blank template
 - Use a Braze drag-and-drop email template 
 - Select a saved drag-and-drop email template
 
-![Basic Drag and Drop Email Templates section that shows the option to select a blank template or a Braze template. There is also a section underneath for saved drag and drop email templates.][1]
+![Basic Drag-and-Drop Email Templates section that shows the option to select a blank template or a Braze template. There is also a section underneath for saved drag-and-drop email templates.][1]
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop  editor. 
 
@@ -37,7 +37,7 @@ You can also access all templates from the **Templates** section.
 If you are using the [older navigation]({{site.baseurl}}/navigation), templates are under **Templates & Media**.
 {% endalert %}
 
-After selecting your template, you'll see an overview of your email where you can edit the sending information and email body, and view any errors or warnings to resolve before sending. Click **Edit Email Body** to begin designing your email structure in the drag-and-drop editor! 
+After selecting your template, you'll see an overview of your email where you can edit the sending information and email body, and view any errors or warnings to resolve before sending. Click **Edit Email Body** to begin designing your email structure in the Drag-and-Drop Editor. 
 
 ![][8]
 
@@ -49,7 +49,7 @@ Before building your email, it's important to understand the key components to h
 
 ### Drag and drop email components {#content}
 
-The drag-and-drop editor uses two key components to make email composition quick and easy: **Content** and **Rows**. 
+The Drag-and-Drop Editor uses two key components to make email composition quick and easy: **Content** and **Rows**. 
 
 ![][10]{: style="float:right;max-width:30%;margin-left:10px;"}
 ![][9]{: style="float:right;max-width:30%;margin-left:10px;"}
@@ -66,7 +66,7 @@ The **Settings** panel in the **Design and Build** section includes general sett
 
 ### Use email content
 
-When you first load into the drag-and-drop editor, you'll see the **Design and Build** tab in the **Content** section of the drag-and-drop editor. This is where you can leverage the [creative details](#creative-details) to the design of your email layout.
+When you first load into the Drag-and-Drop Editor, you'll see the **Design and Build** tab in the **Content** section of the Drag-and-Drop Editor. This is where you can leverage the [creative details](#creative-details) to the design of your email layout.
 
 1. Select the **Rows** panel. Drag and drop the row configurations into the main editor. This will map the layout of your email content. Note that new configurations must be dragged to the beginning or end of an existing section.
 - When you select a row configuration, the **Row Properties** settings appear for further customization for row background colors, images, and custom column sizes.
@@ -78,30 +78,30 @@ As you build your email, you can toggle between a desktop and mobile view to pre
 {% alert tip %}
 Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
-![Copywriter button, located in the Content panel next to Style Settings in the Drag and Drop Editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
+![Copywriter button, located in the Content panel next to Style Settings in the Drag-and-Drop Editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### Creative details {#creative-details}
 
 {% alert tip %}
-You can create a custom theme for your drag-and-drop editor using [global style settings]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/).
+You can create a custom theme for your Drag-and-Drop Editor using [global style settings]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/).
 {% endalert %}
 
 #### Auto width images
 
 Images added to your email will automatically be set to **Auto width**. To adjust this setting, toggle off **Auto width** and adjust the width percentage as needed. 
 
-![Auto width option in the Content tab of the drag-and-drop editor.][2]
+![Auto width option in the Content tab of the Drag-and-Drop Editor.][2]
 
 #### Color layering
 
 The Drag & Drop Editor allows you to change the color of the email background, content area, and different content components. The color ordering from front to back is content component color, content area background color, and background color. 
 
-![Example of the color layering in the drag-and-drop editor.][3]
+![Example of the color layering in the Drag-and-Drop Editor.][3]
 
 #### Content padding
 
-![Block Options for the drag-and-drop editor.][4]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Block Options for the Drag-and-Drop Editor.][4]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 To adjust padding, scroll down to **Block Options**, and toggle **More Options**. This will allow you to fine-tune your padding to get your email looking just right!
 <br>
@@ -112,9 +112,9 @@ You can add a background image to your row configuration, allowing you to incorp
 
 #### Adding Liquid 
 
-![Options for adding personalization for the drag-and-drop editor.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Options for adding personalization for the Drag-and-Drop Editor.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Basic Liquid is supported in our drag-and-drop editor. To add Liquid into your email, select **Personalization** under **Design / Build**. Here, you can add various personalization types such as standard (default) attributes, device attributes, custom attributes, and more! Next, take your generated Liquid snippet and add it to your email.
+Basic Liquid is supported in our Drag-and-Drop Editor. To add Liquid into your email, select **Personalization** under **Design / Build**. Here, you can add various personalization types such as standard (default) attributes, device attributes, custom attributes, and more! Next, take your generated Liquid snippet and add it to your email.
 
 ##### Dynamic images
 
@@ -174,11 +174,11 @@ Here, you can also use the **Dark Mode Preview** toggle to preview your email in
 Background images in email messaging may sometimes cause white lines or disconnects to appear between images, so it's important to test and check the finer details of your email message.
 {% endalert %}
 
-After using the drag-and-drop editor to design and create your email message, continue to [build][12] the remainder of your campaign or Canvas.
+After using the Drag-and-Drop Editor to design and create your email message, continue to [build][12] the remainder of your campaign or Canvas.
 
 ### Updated HTML engine
 
-The underlying engine that produces HTML from the drag-and-drop editor has been optimized and updated, resulting in benefits related to HTML file compression and rendering.
+The underlying engine that produces HTML from the  Drag-and-Drop Editor has been optimized and updated, resulting in benefits related to HTML file compression and rendering.
 
 #### File compression
 
