@@ -212,7 +212,21 @@ You can specify multiple custom events and purchases that should remove a card f
 
 Content Cards cannot be edited after they are sent. If you find you need to make changes to cards that have already been sent, consider the following approaches.
 
-#### Option 1: Stop and relaunch
+#### Option 1: Duplicating the campaign (recommended)
+
+One approach is to archive the campaign and remove active cards from the feed. Then you can duplicate the campaign and launch it with updates so that any eligible users would received the updated cards.
+
+* If users should never be re-eligible for a Content Card, filter for users who have not received the previous version of the Content Card by setting the filter `Received Message from Campaign` to the condition to `Has Not`.
+* If users who received the prior card would be re-eligible in X days then set the filter for `Last Received Message from specific campaign` to more than X days ago.
+
+**Example:** A campaign is triggered off of session start with re-eligibility set to 30 days. A user received the campaign two days ago and you want to change the copy. First archive the campaign and remove the cards from feed. Then duplicate the campaign and re-launch with the new copy. If the user has a session again, they will receive the new card immediately.
+
+##### Impact
+
+* **Reporting:** Each version of the card would have separate analytics.
+* **Existing Recipients:** New and existing recipients would immediately receive the updated card.
+
+#### Option 2: Stop and relaunch
 
 If a card has re-eligibility turned on, you could chose to:
 
@@ -229,14 +243,10 @@ With this approach, newly eligible users will get the new card and previous reci
 
 If desired, you could skip step 2 (Remove active Content Cards from users' feeds). This means any existing cards would still be live, and only new cards would have the edits. Depending on re-eligibility and card expiration, users may see the old cards for a long time.
 
-#### Option 2: Duplicating the campaign
+##### Impact
 
-You can also chose to archive the campaign and remove active cards from the feed. Then you can duplicate the campaign and launch it with updates so that any eligible users would received the updated cards.
-
-* If users should never be re-eligible for a Content Card, filter for users who have not received the previous version of the Content Card by setting the filter `Received Message from Campaign` to the condition to `Has Not`.
-* If users who received the prior card would be re-eligible in X days then set the filter for `Last Received Message from specific campaign` to more than X days ago.
-
-**Example:** A campaign is triggered off of session start with re-eligibility set to 30 days. A user received the campaign two days ago and you want to change the copy. First archive the campaign and remove the cards from feed. Then duplicate the campaign and re-launch with the new copy. If the user has a session again, they will receive the new card immediately.
+* **Reporting:** One campaign will contain all reporting analytics for the card versions launched. Braze will not differentiate between versions launched.
+* **Existing recipients:** Users who have already received the card would not receive the updated cards until they become re-eligible. If re-eligibility is turned off, they would never receive the new card.
 
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
