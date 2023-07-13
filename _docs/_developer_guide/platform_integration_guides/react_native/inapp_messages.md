@@ -50,7 +50,7 @@ Braze.addListener(Braze.Events.IN_APP_MESSAGE_RECEIVED, (event) => {
 If you want to include more advanced logic to determine whether or not to show an in-app message using the built-in UI, you should implement in-app messages through the native layer.
 
 {% alert warning %}
-Since this is an advanced customization option, note that overriding the default Braze implementation will also nullify the logic to emit in-app message events to your JavaScript listeners. If you wish to still use `Braze.subscribeToInAppMessage` or `Braze.addListener`, you will need to handle publishing the events yourself.
+Since this is an advanced customization option, note that overriding the default Braze implementation will also nullify the logic to emit in-app message events to your JavaScript listeners. If you wish to still use `Braze.subscribeToInAppMessage` or `Braze.addListener` as described in [Accessing in-app message data](#accessing-in-app-message-data), you will need to handle publishing the events yourself.
 {% endalert %}
 
 {% tabs %}
