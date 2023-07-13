@@ -58,7 +58,7 @@ braze.openSession();
 
 ## Logging events
 
-{% alert info %}
+{% alert note %}
 Make sure to handle Control cards when logging impressions. These cards are blank, and while they aren't seen by users, you should still log impressions in order to compare how they perform against non-control cards. You can check for control cards using the `card.isControl` property.
 {% endalert %}
 
