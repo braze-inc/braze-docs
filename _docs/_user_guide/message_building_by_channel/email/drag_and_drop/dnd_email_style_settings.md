@@ -104,6 +104,10 @@ As with all other styling sections, you can adjust the block styling by editing 
 
 After editing the styles in the drag-and-drop email editor, click **Save**. To further customize your email campaigns and Canvases, check out how you can incorporate [drag-and-drop editor blocks][8].
 
+## Content Block width
+
+## Email template width
+
 [1]: {% image_buster /assets/img_archive/dnd_global_style_settings.png %}
 [2]: {% image_buster /assets/img_archive/dnd_basic_styling.png %}
 [3]: {% image_buster /assets/img_archive/dnd_custom_font.png %}
