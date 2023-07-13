@@ -178,7 +178,7 @@ After using the Drag-and-Drop Editor to design and create your email message, co
 
 ### Updated HTML engine
 
-The underlying engine that produces HTML from the  Drag-and-Drop Editor has been optimized and updated, resulting in benefits related to HTML file compression and rendering.
+The underlying engine that produces HTML from the drag-and-drop editor has been optimized and updated, resulting in benefits related to HTML file compression and rendering.
 
 #### File compression
 
