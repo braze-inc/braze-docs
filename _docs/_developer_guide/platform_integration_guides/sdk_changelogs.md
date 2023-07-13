@@ -39,7 +39,7 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/roku/changelog/
     image: /assets/img/roku.png
 
-guide_menu_title: "Changelogs on Github"
+guide_menu_title: "Changelogs on GitHub"
 guide_menu_list:
   - name: Android SDK
     link: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
