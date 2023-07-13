@@ -15,7 +15,7 @@ description: "This reference article covers the AI Copywriting Assistant, featur
 To generate copy using the AI copywriting assistant, follow these steps:
 
 1. From your message composer, select <i class="fa-solid fa-wand-magic-sparkles"></i> **Launch AI Copywriter**.
-   * In the Drag-and-Drop Editor for in-app messages, select a text block and select <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> in the block's toolbar.
+   * In the drag-and-drop editor for in-app messages, select a text block and select <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> in the block's toolbar.
 2. Enter a product name or description in the input field.
 3. Select the output language. This can be different from your input language.
 4. Select an approximate output length. 
