@@ -1,13 +1,13 @@
 ---
 nav_title: Creating an In-App Message
 article_title: "Creating an in-app message with drag-and-drop"
-description: "This reference article covers creating an in-app message with the Drag-and-Drop Editor, prerequistes, creative details, and more."
+description: "This reference article covers creating an in-app message with the drag-and-drop editor, prerequistes, creative details, and more."
 alias: "/create_dnd_iam/"
 ---
 
 # Creating an in-app message with drag-and-drop
 
-> With the Drag-and-Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag-and-drop editing experience.
+> With the drag-and-drop editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag-and-drop editing experience.
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop.
 
@@ -15,7 +15,7 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 
 ## Prerequisites
 
-Messages created using the Drag-and-Drop Editor can only be sent to users on the following minimum SDK versions:
+Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions:
 
 {% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
@@ -33,13 +33,13 @@ Create a new in-app message or Canvas step, then select **Drag-And-Drop Editor**
 
 ![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:55%"}
 
-After selecting the Drag-and-Drop Editor as your editing experience, you can choose to:
+After selecting the drag-and-drop editor as your editing experience, you can choose to:
 
 - Use a Braze basic modal template
 - Use a Braze background image template
 - Start with a blank modal template
 
-Click **Build message** to begin designing your in-app message in the Drag-and-Drop Editor.
+Click **Build message** to begin designing your in-app message in the drag-and-drop editor.
 
 {% alert note %}
 You can switch between modal and fullscreen display types in the **Message styles** panel of the editor.
@@ -80,7 +80,7 @@ The message-level font will only apply to the current message and any duplicated
 
 ![]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
 
-The Drag-and-Drop Editor uses two key components to make in-app message composition quick and easy: **rows** and **blocks**. All blocks must be placed in a row.
+The drag-and-drop editor uses two key components to make in-app message composition quick and easy: **rows** and **blocks**. All blocks must be placed in a row.
 
 #### Rows
 
@@ -200,7 +200,7 @@ You can preview messages from the **Preview & Test** tab, as though you were a u
 
 #### Why are body clicks not appearing on my analytics page?
 
-Body clicks are not automatically collected for in-app messages created with the Drag-and-Drop Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
+Body clicks are not automatically collected for in-app messages created with the drag-and-drop editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
 
 #### Can I segment based on button clicks?
 
@@ -212,7 +212,7 @@ No.
 
 #### Can I save my in-app message as a template after I build it within my campaign or Canvas?
 
-No, you have to recreate the in-app message in the Drag-and-Drop Editor or duplicate an existing message in order to save.
+No, you have to recreate the in-app message in the drag-and-drop editor or duplicate an existing message in order to save.
 
 #### How can I create a slideup in-app message?
 
