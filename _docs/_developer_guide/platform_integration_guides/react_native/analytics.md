@@ -69,19 +69,7 @@ All string values such as first name, last name, country, and home city are limi
 
 ### Custom user attributes
 
-In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze custom attributes can be set with the following data types:
-
-- Strings
-- Objects
-- Arrays
-  - Includes methods to set arrays, add items to existing arrays, and delete items from existing arrays.
-- Integers
-- Booleans
-- Dates
-- Longs
-- Floats
-- 
-String values have a maximum length of 255 characters.
+To learn more about custom attribute types, [click here](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)
 
 ```javascript
 Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
