@@ -66,7 +66,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 Braze offers two editing experiences when creating an email campaign: our [drag-and-drop editor]({{site.baseurl}}/dnd/) and our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. 
 
-![Choosing between Drag-And-Drop Editor or HTML editor for your email editing experience.][3]{: style="max-width:75%" }
+![Choosing between drag-and-drop editor or HTML editor for your email editing experience.][3]{: style="max-width:75%" }
 
 Then, you can either select an existing [email template][10], [upload a template][18] from a file (HTML editor only), or use a blank template. 
 

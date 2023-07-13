@@ -104,7 +104,7 @@ As a result, the next time someone loads the app they will see the new Thanksgiv
 
 ## Messaging coordination
 
-Let's say that we're launching a new loyalty rewards program for our end users. It can be difficult for Marketing and Product teams to perfectly coordinate the timing of promotional messaging with a feature's rollout. Feature flags in Canvas let you apply sophisticated logic when it comes to enabling a feature for a select audience, and controlling the related messaging to those same users.
+Let's say that we're launching a new loyalty rewards program for our users. It can be difficult for Marketing and Product teams to perfectly coordinate the timing of promotional messaging with a feature's rollout. Feature flags in Canvas let you apply sophisticated logic when it comes to enabling a feature for a select audience, and controlling the related messaging to those same users.
 
 To effectively coordinate feature rollout and messaging, we'll create a new feature flag called `show_loyalty_program`. For our initial phased release, we'll let Canvas control when and for whom the feature flag is enabled. For now, we'll leave the rollout percentage at 0% and not select any target segments.
 

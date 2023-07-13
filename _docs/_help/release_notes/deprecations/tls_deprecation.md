@@ -24,7 +24,7 @@ More recently, the PCI Security Standards Council released encryption-related gu
 A cipher suite is a combination of algorithms that provide encryption, authentication, and communications integrity when negotiating a secure SSL or TLS connection. When it's discovered that it's possible for a given cipher to be broken—whether or not there are any current known attacks—the cipher is considered to have "weaknesses" that could enable future attacks. By excluding these TLS ciphers from PCI DSS compliance requirements, the PCI DSS Council is requiring service providers to support only best-in-class encryption standards. The PCI DSS Council has set a deadline of June 30, 2018 for compliance with the encryption requirement to drop support for TLS 1.0 and TLS 1.1.
 
 ## Braze's deprecation plan
-In order to comply with the PCI DSS Council's recommendations, Braze will be raising the minimum versions of TLS that we support on our Services. To give you a better idea about our compliance plan and its potential impact on your brand and your end users, there are two main phases to our plan to be aware of:
+In order to comply with the PCI DSS Council's recommendations, Braze will be raising the minimum versions of TLS that we support on our Services. To give you a better idea about our compliance plan and its potential impact on your brand and your users, there are two main phases to our plan to be aware of:
 
 ### Phase 1: October 1, 2017
 

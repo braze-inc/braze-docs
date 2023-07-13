@@ -12,7 +12,7 @@ channel:
 
 # Notification channels
 
-> [Notification Channels][1] are a way to organize push notifications that were added with Android O. Starting with O, all push notifications must have a Notification Channel that indicates the type of message (e.g., "chat notifications," or "follow notifications"). End users can then control aspects of their notification (e.g., snoozing, noise/vibration settings, or opting-out, etc.) based upon individual Channels.
+> [Notification Channels][1] are a way to organize push notifications that were added with Android O. Starting with O, all push notifications must have a Notification Channel that indicates the type of message (e.g., "chat notifications," or "follow notifications"). Your users can then control aspects of their notification (e.g., snoozing, noise/vibration settings, or opting-out, etc.) based upon individual Channels.
 
 ## Transitioning to Android O
 

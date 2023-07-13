@@ -80,7 +80,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 {% endtab %}
 {% tab Manual %}
 
-Download the latest `AppboyPushStory.zip` from the [Github release page](https://github.com/Appboy/appboy-ios-sdk/releases), unzip it, and add the following files to your project's `Notification Content Extension`:
+Download the latest `AppboyPushStory.zip` from the [Github release page](https://github.com/Appboy/appboy-ios-sdk/releases), extract it, and add the following files to your project's `Notification Content Extension`:
 - `Resources/ABKPageView.nib`
 - `AppboyPushStory.xcframework`
 

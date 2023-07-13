@@ -36,7 +36,7 @@ to create powerful end-to-end experiences:
 * Synchronize the in-app and CRM marketing experiences for a custom promotion.
 * Test a new onboarding experience in Apptimize, and use Braze to nurture users throughout the new flow.
 * Concurrently test product feature configurations alongside their appropriate user messaging.
-* Tailor in-app experiences and their appropriate messaging for different segments of end users.
+* Tailor in-app experiences and their appropriate messaging for different segments of users.
 
 ## How it works
 
