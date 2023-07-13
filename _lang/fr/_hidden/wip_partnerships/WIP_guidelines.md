@@ -16,7 +16,7 @@ Présentation de la documentation de partenariat
 - [Créez et ajoutez du contenu à votre page](#create_page)
 - [Mise en forme de l’image, du lien et de l’extrait de code](#image_links)
 - [Vérification et test](#testing)
-- [Engagement avec Github](#committing)
+- [Engagement avec GitHub](#committing)
 - [Processus de vérification](#review)
 <br><br>
 {% alert important %}
@@ -181,7 +181,7 @@ Votre page sera visible à l’adresse `http://localhost:4000/docs/partners/your
 
 Après avoir vérifié vos modifications, appuyez sur **Ctrl+C** dans le terminal et terminez la commande Rake.
 
-## Étape 5 : Engagement avec Github {#committing}
+## Étape 5 : Engagement avec GitHub {#committing}
 
 Une fois que vous avez apporté les modifications adéquates à votre document de partenariat, enregistrez votre document et validez vos modifications. 
 
