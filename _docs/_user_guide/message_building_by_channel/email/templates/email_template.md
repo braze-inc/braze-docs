@@ -171,7 +171,7 @@ To use your email for an API campaign, you need an `email_template_id`, which ca
 You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Commenting on email templates
-You can comment on email templates in the Drag-and-Drop Editor. Click the Content Block or row in the email body that you’d like to comment on, then select the <i class="fas fa-comment"></i> comment icon. This opens a sidebar where you can enter your comment through the text input field by clicking **Submit**. Click **Done**, then **Save Template** to save your comment and make it visible to other users.
+You can comment on email templates in the drag-and-drop editor. Click the Content Block or row in the email body that you’d like to comment on, then select the <i class="fas fa-comment"></i> comment icon. This opens a sidebar where you can enter your comment through the text input field by clicking **Submit**. Click **Done**, then **Save Template** to save your comment and make it visible to other users.
 
 Once saved, users will see floating icons over unaddressed comments. Selecting **Resolve** will resolve these comments.
 
