@@ -227,17 +227,16 @@ With this approach, newly eligible users will get the new card and previous reci
 
 ##### Keeping cards in users' feeds
 
-If desired, you could skip step 2 (Remove active Content Cards from users' feeds). This means the old card would still be live, and you would only edit the new card. Depending on re-eligibility and card expiration, usrs may see the old cards for a long time.
+If desired, you could skip step 2 (Remove active Content Cards from users' feeds). This means any existing cards would still be live, and only new cards would have the edits. Depending on re-eligibility and card expiration, users may see the old cards for a long time.
 
 #### Option 2: Duplicating the campaign
 
-You can also chose to archive the campaign and remove the card from feeds. Then you can duplicate the campaign and launch it with new settings so that users who had the old card would either be re-eligible or not. For example:
+You can also chose to archive the campaign and remove active cards from the feed. Then you can duplicate the campaign and launch it with updates so that any eligible users would received the updated cards.
 
-1. Create a segment with the filter `Last Received Content Card`.
-2. Select your older Content Card.
-3. To exclude users who received this specific Content Card, set the condition to `Does Not Equal`. Otherwise, to target those users, set the condition to `Equals`.
+* If users should never be re-eligible for a Content Card, filter for users who have not received the previous version of the Content Card by setting the filter `Received Message from Campaign` to the condition to `Has Not`.
+* If users who received the prior card would be re-eligible in X days then set the filter for `Last Received Message from specific campaign` to more than X days ago.
 
-If a new card is created, it will be the most recent card a user is receiving. This means the new card will be at the top of the feed rather than where the old card existed (unless you have set up a custom implementation to handle this scenario).
+**Example:** A campaign is triggered off of session start with re-eligibility set to 30 days. A user received the campaign two days ago and you want to change the copy. First archive the campaign and remove the cards from feed. Then duplicate the campaign and re-launch with the new copy. If the user has a session again, they will receive the new card immediately.
 
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
