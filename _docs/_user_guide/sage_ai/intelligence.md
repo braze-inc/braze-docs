@@ -14,20 +14,27 @@ Tool:
 guide_featured_title: "Tools and Features"
 guide_featured_list:
 - name: Intelligent Timing
-  link: /docs/user_guide/intelligence/intelligent_timing/
+  link: /docs/user_guide/sage_ai/intelligence/intelligent_timing/
   image: /assets/img/icons/clock.svg
 - name: Intelligent Channel
-  link: /docs/user_guide/intelligence/intelligent_channel/
+  link: /docs/user_guide/sage_ai/intelligence/intelligent_channel/
   image: /assets/img/icons/mail_open.svg
 - name: Intelligent Selection
-  link: /docs/user_guide/intelligence/intelligent_selection/
+  link: /docs/user_guide/sage_ai/intelligence/intelligent_selection/
   image: /assets/img/icons/loyalty_heart.svg
+- name: Winning Variant
+  link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
+  image: /assets/img/icons/ab_testing.svg
+- name: Winning Path
+  link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/
+  image: /assets/img/icons/strategy_playbook.svg
 
 guide_menu_title: "Additional Resources"
 guide_menu_list:
 - name: Intelligence FAQ
-  link: /docs/user_guide/intelligence/faqs/
+  link: /docs/user_guide/sage_ai/intelligence/faqs/
   image: /assets/img/icons/question.svg
+
 
 ---
 

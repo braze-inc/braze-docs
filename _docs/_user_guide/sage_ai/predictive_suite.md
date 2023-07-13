@@ -11,10 +11,10 @@ description: "This landing page is a place for all this predictive at Braze! The
 guide_featured_title: "Features"
 guide_featured_list:
 - name: Predictive Churn
-  link: /docs/user_guide/predictive_suite/predictive_churn/
+  link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/
   image: /assets/img/icons/user_thinking.svg
 - name: Predictive Events
-  link: /docs/user_guide/predictive_suite/predictive_purchases/
+  link: /docs/user_guide/sage_ai/predictive_suite/predictive_purchases/
   image: /assets/img/icons/prediction_crystal_ball.svg
 ---
 

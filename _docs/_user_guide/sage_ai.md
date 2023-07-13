@@ -23,6 +23,11 @@ guide_featured_list:
   link: /docs/user_guide/sage_ai/generative_ai/
   image: /assets/img/icons/brain.svg
 
+guide_menu_title: "Other"
+guide_menu_list:
+- name: Personalized Variant
+  link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
+  image: /assets/img/icons/ab_testing.svg
 ---
 
 
