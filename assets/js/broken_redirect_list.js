@@ -766,3 +766,16 @@ validurls['/docs/user_guide/administrative/app_settings/manage_app_group'] = '/d
 validurls['/docs/user_guide/administrative/app_settings/developer_console'] = '/docs/user_guide/administrative/app_settings/';
 
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_archival/'] = '/docs/user_archival/';
+validurls['/docs/user_guide/administrative/access_braze/resetting_your_password/'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/';
+validurls['/docs/user_guide/administrative/access_braze/getting_your_account/'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/';
+
+validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/multi_country_sms_sending/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/';
+validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/high_volume_sending/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/';
+validurls['/docs/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/';
+
+validurls['/docs/user_guide/engagement_tools/templates_and_media/duplicate/'] = '/docs/user_guide/engagement_tools/templates_and_media/managing_templates/';
+validurls['/docs/user_guide/engagement_tools/templates_and_media/archive/'] = '/docs/user_guide/engagement_tools/templates_and_media/managing_templates/';
+
+
+
+

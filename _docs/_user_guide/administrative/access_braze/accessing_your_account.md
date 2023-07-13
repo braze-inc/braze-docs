@@ -1,13 +1,13 @@
 ---
-nav_title: Getting Your Account
-article_title: Getting Your Account
+nav_title: Accessing Your Account
+article_title: Accessing Your Account
 page_order: 2
 page_type: reference
-description: "This article covers how to get your Braze account and how to log in once granted access."
+description: "This article covers how to get your Braze account, how to log in once granted access, and how to go about resetting your Braze password."
 
 ---
 
-# Getting your account
+# Accessing your account
 
 If you are your company's first Braze user and logging in for the first time, you will receive a welcome email from `@alerts.braze.com` asking you to confirm your email and log in on the first day of your contract.
 
@@ -26,3 +26,10 @@ You can either log in from the [Braze.com](https://www.braze.com) home site, or 
 * [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
 * [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
 
+## Resetting your password
+
+To reset your password, click the **Forgot your password?** link on the dashboard login page. You will then be prompted to input your email to receive a link to reset your password.
+
+![Reset Password Button][45]
+
+[45]: {% image_buster /assets/img_archive/enable_reset.png %}
