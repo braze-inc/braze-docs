@@ -51,8 +51,6 @@ To disable automatic in-app message display, make these updates in the native la
 
 2. Update your `inAppMessage(_:displayChoiceForMessage:)` delegate method to return `.discard`.
 
-For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
-
 {% endtab %}
 {% endtabs %}
 
@@ -74,7 +72,7 @@ To begin listening to the stream, use the code below to create a `StreamSubscrip
 // Create stream subscription
 StreamSubscription inAppMessageStreamSubscription;
 
-inAppMessageStreamSubscription = _braze.subscribeToInAppMessages((BrazeInAppMessage inAppMessage) {
+inAppMessageStreamSubscription = braze.subscribeToInAppMessages((BrazeInAppMessage inAppMessage) {
   // Function to handle in-app messages
 }
 
@@ -82,7 +80,7 @@ inAppMessageStreamSubscription = _braze.subscribeToInAppMessages((BrazeInAppMess
 inAppMessageStreamSubscription.cancel();
 ```
 
-For an example, see [main.dart](https://github.com/Appboy/flutter-sdk/blob/develop/braze_plugin/example/lib/main.dart) in our sample app.
+For an example, see [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) in our sample app.
 
 ### Method 2: In-app message data callback (Legacy)
 
@@ -101,8 +99,6 @@ This callback works with no additional integration required.
 1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in our iOS article on [core in-app message delegate](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
 2. Update your `willPresent` delegate implementation to call `BrazePlugin.process(inAppMessage)`.
-
-For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
 
 {% endtab %}
 {% endtabs %}

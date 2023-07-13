@@ -15,7 +15,7 @@ channel: email
 
 Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message. Email validation is performed when a user's email address has been updated or is being imported into Braze via API, CSV Upload, SDK, or modified in the dashboard. Note that your email addresses cannot include white spaces, and if send using the API, whitespaces will result in a `400` error.
 
-Email addresses targeted via the Braze servers must be validated per [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) standards, Braze does not accept certain characters and recognizes them as invalid. If an email is bounced, Braze marks the email as invalid and the subscription status is not changed. 
+Email addresses targeted via the Braze servers must be validated per [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) standards, Braze does not accept certain characters and recognizes them as invalid. For example, email addresses cannot start or end with any special characters, including apostrophes. If an email is bounced, Braze marks the email as invalid and the subscription status is not changed.  
 
 {% details Unaccepted characters outside of RFC Standards %}
 - *

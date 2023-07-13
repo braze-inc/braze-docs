@@ -117,7 +117,7 @@ valid_partner_list:
   url: /docs/partners/message_personalization/localization/transifex/
 - name: Crowdin
   url: /docs/partners/message_personalization/localization/crowdin/
-- name: Accuweather
+- name: AccuWeather
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/

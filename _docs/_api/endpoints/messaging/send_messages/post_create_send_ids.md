@@ -20,6 +20,10 @@ Using the send identifier to track and send messages is useful if you are planni
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `sends.id.create` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='sends id create' %}

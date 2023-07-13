@@ -3,6 +3,7 @@ nav_title: "GET: List Subscription State with Email Address or Phone Number"
 article_title: "GET: List Subscription State with Email Address or Phone Number"
 search_tag: Endpoint
 page_order: 2
+hidden: true
 layout: api_page
 page_type: reference
 description: "This article outlines the details about the List subscription state with an email address or phone number Braze endpoint."

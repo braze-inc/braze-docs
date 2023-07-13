@@ -16,6 +16,10 @@ description: "This article outlines details about the Export users by segment Br
 
 > Use this endpoint to export all the users within a segment. 
 
+{% alert important %}
+Beginning December 2021, the following changed for this API:<br><br>1. The `fields_to_export` field in this API request is **required**. The option to default to all fields has been removed.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
+{% endalert %}
+
 User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line). Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
 
 This endpoint is currently not supported by Google Cloud Storage.
@@ -24,8 +28,8 @@ Note that a company may run at most one export per segment using this endpoint a
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
-{% alert important %}
-Beginning December 2021, the following changed for this API:<br><br>1. The `fields_to_export` field in this API request is **required**. The option to default to all fields has been removed.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `users.export.segment` permission.
 {% endalert %}
 
 ## Rate limit
@@ -34,7 +38,7 @@ Beginning December 2021, the following changed for this API:<br><br>1. The `fiel
 
 ## Credentials-based response details
 
-If you have added your [S3][1] or [Azure][2] credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, we will create 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then unzip the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
+If you have added your [S3][1] or [Azure][2] credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, we will create 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
 
 {% details Export Pathing Breakdown for ZIP File %}
 ZIP file format:
@@ -80,21 +84,35 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-{% alert warning %}
-Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g., ['first_name', 'email', 'custom_attributes']).
-{% endalert %}
-
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 |`segment_id` | Required | String | Identifier for the segment to be exported. See [segment identifier]({{site.baseurl}}/api/identifier_types/).<br><br>The `segment_id` for a given segment can be found from the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page within your Braze account or you can use the [Segment List Endpoint]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
 |`callback_endpoint` | Optional | String | Endpoint to post a download URL to when the export is available. |
-|`fields_to_export` | Required* | Array of Strings | Name of user data fields to export, you may also export custom attributes. <br><br>*Beginning April 2021, new accounts must specify specific fields to export. |
+|`fields_to_export` | Required* | Array of strings | Name of user data fields to export. You can also export all custom attributes by including `custom_attributes` in this parameter. <br><br>*Beginning April 2021, new accounts must specify specific fields to export. |
+| `custom_attributes_to_export` | Optional | Array of strings | Name of specific custom attribute to export. Up to 500 custom attributes can be exported. Attribute names are located by navigating to **Manage Settings** > **Custom Attributes**. |
 |`output_format` | Optional | String | The output format of your file. Defaults to `zip` file format. If you are using your own S3 bucket, you can specify `zip` or `gzip`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example request
+{% alert note %}
+If `custom_attributes` is included in the `fields_to_export` parameter, all custom attributes are exported regardless of what is in `custom_attributes_to_export`. If your goal is to export specific attributes, `custom_attributes` should not be included in the `fields_to_export` parameter. Instead, use the `custom_attributes_to_export` parameter.
+{% endalert %}
+
+## Example request to export all custom attributes
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
+  "segment_id" : "segment_identifier",
+  "callback_endpoint" : "example_endpoint",
+  "fields_to_export" : ["first_name", "email", "purchases", "custom_attributes"],
+  "output_format" : "zip"
+}'
+```
+
+## Example request to export specific custom attributes
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
 --header 'Content-Type: application/json' \
@@ -103,6 +121,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
   "segment_id" : "segment_identifier",
   "callback_endpoint" : "example_endpoint",
   "fields_to_export" : ["first_name", "email", "purchases"],
+  "custom_attributes_to_export" : ["allergies", "favorite_food"],
   "output_format" : "zip"
 }'
 ```

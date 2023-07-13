@@ -44,7 +44,7 @@ Braze provides a native Unity solution for automating the Unity iOS integration.
 
 1. In the Unity Editor, open the Braze Configuration Settings by navigating to **Braze > Braze Configuration**.
 2. Check the **Automate Unity iOS Integration** box.
-3. In the "Braze API Key" field, input your application's API key found in **Manage Settings**.
+3. In the **Braze API Key** field, input your application's API key found in **Manage Settings**.
 
 ![]({% image_buster /assets/img_archive/unity-ios-appboyconfig.png %})
 
@@ -55,6 +55,13 @@ If your application is already using another `UnityAppController` subclass, you 
 Braze should now be collecting data from your application, and your basic integration should be complete. Check out the following articles for more information on integrating push ([Android][53] and [iOS][50]), [in-app messages][34], and [Content Cards][40].
 
 ## Additional advanced implementation options
+
+### Enabling verbose logging in the Unity editor
+To enable verbose logging in the Unity Editor, do the following:
+
+1. Open the Braze Configuration Settings by navigating to **Braze** > **Braze Configuration**.
+2. Click the **Show Braze iOS Settings** dropdown.
+3. In the **SDK Log Level** field, input the value "0".
 
 ### Extending the SDK (iOS)
 

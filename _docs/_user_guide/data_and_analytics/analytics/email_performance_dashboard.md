@@ -14,7 +14,7 @@ tool:
 > Channel performance dashboards allow you to view aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and SMS.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), the channel performance dashboard are located under **Overview**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), the channel performance dashboards are located under **Overview**.
 {% endalert %}
 
 ![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
@@ -51,7 +51,7 @@ To use your SMS performance dashboard, go to **Analytics** > **SMS Performance**
 
 ![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-The calculations for different metrics in the SMS performance dashboard is the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [SMS metrics]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
+The calculations for different metrics in the SMS performance dashboard are the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [SMS metrics]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
 
 Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). Each tile also shows the [comparison to the last period](#comparison-to-last-period-change-in-totals-or-rates).
 
@@ -70,9 +70,9 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 
 You can filter the data on your dashboard using the following filter options:
 
-- **Tag:** Choose one tag; once applied, your dashboard will show metrics for only your selected tag.
-- **Canvas:** Choose up to 10 Canvases; once applied, your dashboard will show metrics for only your selected Canvases. If you select a tag filter first, then your options for Canvas filters will only include Canvases that have your selected tag.
-- **Campaign:** Choose up to 10 campaigns; once applied, your dashboard will show metrics for only your selected campaigns. If you select a tag filter first, then your options for campaign filters will only include campaigns that have your selected tag.
+- **Tag:** Choose one tag. Once applied, your dashboard will show metrics for only your selected tag.
+- **Canvas:** Choose up to 10 Canvases. Once applied, your dashboard will show metrics for only your selected Canvases. If you select a tag filter first, then your options for Canvas filters will only include Canvases that have your selected tag.
+- **Campaign:** Choose up to 10 campaigns. Once applied, your dashboard will show metrics for only your selected campaigns. If you select a tag filter first, then your options for campaign filters will only include campaigns that have your selected tag.
 
 ![Filter options on the Channel Performance Dashboard where you can select a tag and list of Canvases to filter by.][3]
 

@@ -17,7 +17,7 @@ Segment Insights allows you to quickly see how one segment is performing compare
 
 ## Viewing Segment Insights
 
-Go to the **Segment Insights** page of your dashboard, under **Audience**, and click <i class="fas fa-plus"></i> **Add Segment** to view up to four different segments compared against a baseline.
+Go to the **Segment Insights** page of your dashboard, under **Analytics**, and click <i class="fas fa-plus"></i> **Add Segment** to view up to four different segments compared against a baseline.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Insights**.

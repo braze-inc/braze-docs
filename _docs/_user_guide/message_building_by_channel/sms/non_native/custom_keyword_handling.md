@@ -11,7 +11,7 @@ channel:
 
 # Custom keyword handling
 
-> Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply.<br><br>Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way. 
+> Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires your users to send a keyword to Braze to which that user will receive an automatic reply.<br><br>Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way. 
 
 ## Two-way messaging speeds
 

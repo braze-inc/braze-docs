@@ -12,7 +12,7 @@ description: "This article contains release notes for October 2018."
   Intelligent Selection Control Group Toggle
   The Intelligent Selection box now has a checkbox that allows you to [toggle the use of a control group on or off]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#including-a-control-group). When on, the control group will be 20% of the audience size and will change as the Intelligent Selection feature optimizes the per variant audience sizes.
   Canvas Entry Settings Wizard (Beta)
-  The Canvas UI will be simplified to prevent missed tasks and resulting errors. Canvas configurations, specifically, will now be displayed in a wizard, similar to the design of the Campaigns wizard. This is not currently reflected in our documentation, as it is being rolled out gradually. Check back for more on this soon!
+  The Canvas UI will be simplified to prevent missed tasks and resulting errors. Canvas configurations, specifically, will now be displayed in a wizard, similar to the design of the campaigns wizard. This is not currently reflected in our documentation, as it is being rolled out gradually. Check back for more on this soon!
   Subscription Group API (hidden)
   Braze has made a new GET call available to enable you to request based on an external ID or email address. You will then be provided all the subscription groups associated with that user.
 {% endcomment %}

@@ -28,6 +28,14 @@ If you want to see examples or test this endpoint for **SMS Subscription Groups*
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
+If you want to see examples or test this endpoint for **WhatsApp Groups**:
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
+
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `subscription.status.set` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
@@ -115,7 +123,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 '
 ```
 
-## SMS
+## SMS and WhatsApp
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \

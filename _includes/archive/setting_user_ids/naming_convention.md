@@ -8,7 +8,7 @@ Providing this information to others may allow people outside your organization 
 | Recommended | Not Recommended |
 | ------------ | ----------- |
 | 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
-| 83nmas45-eks1-083m-mk36-426655440000 | Anna@email.com |
-| Mbfjla32-937z-09es-sbv6-064026245228 | CompanyName-1-2-19 |
-| k6twn923-8234-7354-lzpd-139317000652 | jon-doe-1-2-19 |
+| 8c0b3728-7fa7-4c68-a32e-12de1d3ed2d5 | Anna@email.com |
+| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | CompanyName-1-2-19 |
+| 2d9e96a1-8f15-4eaf-bf7b-eb8c34e25962 | jon-doe-1-2-19 |
 {: .reset-td-br-1 .reset-td-br-2}

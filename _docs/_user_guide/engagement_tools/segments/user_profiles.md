@@ -91,7 +91,7 @@ The **Engagement** tab contains information about a user's interactions with the
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
-| Predictions | [Churn Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [Purchase Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
+| Predictions | [Churn Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [Event Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][3]

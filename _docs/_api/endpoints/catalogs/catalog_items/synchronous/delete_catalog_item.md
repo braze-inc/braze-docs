@@ -19,6 +19,10 @@ description: "This article outlines details about the Delete catalog item Braze 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0dcce797-1346-472f-9384-082f14541689 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `catalogs.delete_item` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}

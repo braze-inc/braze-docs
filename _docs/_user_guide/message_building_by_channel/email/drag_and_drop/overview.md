@@ -1,6 +1,6 @@
 ---
 nav_title: Overview
-article_title: Create a Drag-and-Drop Email
+article_title: Create a Drag-And-Drop Email
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
@@ -27,9 +27,9 @@ After selecting the drag-and-drop editor as your editing experience, you can cho
 - Use a Braze drag-and-drop email template 
 - Select a saved drag-and-drop email template
 
-![Basic Drag and Drop Email Templates section that shows the option to select a blank template or a Braze template. There is also a section underneath for saved drag and drop email templates.][1]
+![Basic Drag-and-Drop Email Templates section that shows the option to select a blank template or a Braze template. There is also a section underneath for saved drag-and-drop email templates.][1]
 
-If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop  editor. 
+If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop editor. 
 
 You can also access all templates from the **Templates** section.
 
@@ -37,7 +37,7 @@ You can also access all templates from the **Templates** section.
 If you are using the [older navigation]({{site.baseurl}}/navigation), templates are under **Templates & Media**.
 {% endalert %}
 
-After selecting your template, you'll see an overview of your email where you can edit the sending information and email body, and view any errors or warnings to resolve before sending. Click **Edit Email Body** to begin designing your email structure in the drag-and-drop editor! 
+After selecting your template, you'll see an overview of your email where you can edit the sending information and email body, and view any errors or warnings to resolve before sending. Click **Edit Email Body** to begin designing your email structure in the drag-and-drop editor. 
 
 ![][8]
 
@@ -54,7 +54,7 @@ The drag-and-drop editor uses two key components to make email composition quick
 ![][10]{: style="float:right;max-width:30%;margin-left:10px;"}
 ![][9]{: style="float:right;max-width:30%;margin-left:10px;"}
 
-**Content** includes a series of tiles that represent different types of content you can use in your message. These are organized into three categories: basic, media, and advanced. Basic content blocks are the foundation of your email such as title and paragraph blocks, buttons, and spacers. Media content blocks allow you to include images, videos, social media information, and icons. With the advanced content blocks, you can insert HTML blocks or add a menu to your email.
+**Content** includes a series of tiles that represent different types of content you can use in your message. These are organized into three categories: basic, media, and advanced. Basic Content Blocks are the foundation of your email such as title and paragraph blocks, buttons, and spacers. Media Content Blocks allow you to include images, videos, social media information, and icons. With the advanced Content Blocks, you can insert HTML blocks or add a menu to your email.
 
 Simply drag one inside an existing row segment, and it will auto-adjust to the column width. Every block in **Content** has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information, see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/). 
 
@@ -78,7 +78,7 @@ As you build your email, you can toggle between a desktop and mobile view to pre
 {% alert tip %}
 Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
-![Copywriter button, located in the Content panel next to Style Settings in the Drag and Drop Editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
+![Copywriter button, located in the Content panel next to Style Settings in the drag-and-drop editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### Creative details {#creative-details}
@@ -143,7 +143,7 @@ Another common use case is to flag specific links as universal links. Universal 
 The **Sending Settings** section allows you to configure your **From Display Name + Address** and **Reply-To Address** and set the subject line or preheader. Here, you can also see a preview of your message.
 
 {% alert note %}
-Advanced functionality will appear in the campaign or Canvas composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
+Advanced functionality will appear in the campaign or Canvas composer. In advanced functionality, you can modify your inline CSS setting and enter in a header or extra key-value pairs (if configured).
 {% endalert %}
 
 ## Step 4: Test your email

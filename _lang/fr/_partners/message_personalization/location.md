@@ -14,7 +14,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Localisation contextuelle"
 
 valid_partner_list:
-- name: Accuweather
+- name: AccuWeather
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/

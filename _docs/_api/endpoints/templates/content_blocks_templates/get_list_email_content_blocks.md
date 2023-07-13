@@ -18,6 +18,10 @@ description: "This article outlines details about the List available Content Blo
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `content_blocks.list` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
@@ -26,10 +30,10 @@ description: "This article outlines details about the List available Content Blo
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `modified_after`  | Optional | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | Retrieve only content blocks updated at or after the given time. |
-| `modified_before`  |  Optional | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | Retrieve only content blocks updated at or before the given time. |
-| `limit` | Optional | Positive Number | Maximum number of content blocks to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000. |
-| `offset`  |  Optional | Positive Number | Number of content blocks to skip before returning rest of the templates that fit the search criteria. |
+| `modified_after`  | Optional | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | Retrieve only Content Blocks updated at or after the given time. |
+| `modified_before`  |  Optional | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | Retrieve only Content Blocks updated at or before the given time. |
+| `limit` | Optional | Positive Number | Maximum number of Content Blocks to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000. |
+| `offset`  |  Optional | Positive Number | Number of Content Blocks to skip before returning rest of the templates that fit the search criteria. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

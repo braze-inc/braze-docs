@@ -70,6 +70,8 @@ You can manage user permissions by group or on an individual basis when editing 
 |Manage Email Settings|Allows user to save email configuration changes (**Settings** > **Email Preferences**).|
 |Manage Subscription Groups | Allows user to create and manage subscription groups. |
 |Manage Approval Settings| This setting has been removed. Only users with admin permissions can turn the [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) settings on or off for your workspace. |
+|Approve and Deny Campaigns| Allows users to approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manage if you're interested in participating in the early access. |
+| Approve and Deny Canvases| Allows users to approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/canvas_approval) must be turned on for this permission to apply. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## App-by-app user permissions

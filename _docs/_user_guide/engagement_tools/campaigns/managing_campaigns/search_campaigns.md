@@ -13,12 +13,6 @@ tool:
 
 > This article covers how you can use the search field of the campaigns list to refine your results.
 
-## Keyword search
-
-Enter the name of a campaign, or search for keywords in a campaign name, description, or message fields. For example, here we've searched for "this week", which is pulling from the title and message of this re-engagement campaign.
-
-![Campaign search for keywords "this week" with the results from the message title and body.][1]
-
 ## Search exact text
 
 To find exact matches to your search terms, wrap your search in square brackets `[ ]`.

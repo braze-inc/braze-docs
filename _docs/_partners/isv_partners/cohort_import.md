@@ -2,7 +2,6 @@
 nav_title: Cohort Import Integration
 alias: /cohort_import/
 hidden: true
-layout: dev_guide
 ---
 
 # Partner cohort import integration

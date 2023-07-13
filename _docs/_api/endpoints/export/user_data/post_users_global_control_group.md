@@ -20,13 +20,17 @@ User data is exported as multiple files of user JSON objects separated by new li
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `users.export.global_control_group` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Credentials-based response details
 
-If you have added your [S3][1] or [Azure][2] credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, we will create 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then unzip the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
+If you have added your [S3][1] or [Azure][2] credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, we will create 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
 
 {% details Export Pathing Breakdown for ZIP File %}
 ZIP file format:

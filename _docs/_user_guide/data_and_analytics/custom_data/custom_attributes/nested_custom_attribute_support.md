@@ -125,6 +125,8 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 
 ## SDK example
 
+{% sdk_min_versions android:25.0.0 ios:6.1.0 web:4.7.0 %}
+
 {% tabs local %}
 {% tab Android SDK %}
 

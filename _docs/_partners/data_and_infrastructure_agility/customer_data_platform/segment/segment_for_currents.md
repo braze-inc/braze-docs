@@ -30,8 +30,9 @@ The Braze and Segment.io integration allows you to leverage Braze Currents to ex
 ### Step 1: Obtain Segment.io write key
 
 1. In your Segment.io dashboard, select your Segment.io source. Next, go to **Settings > API keys**. Here you will find the **Segment.io Write Key**.
-2. In Braze, navigate to **Currents > + Create Currents > Create Segment.io Export**.
-3. Next, provide an integration name, contact email, Segment.io write key, and Segment.io region.
+2. In Braze, navigate to **Partner Integrations** > **Data Export**.
+3. Click **+ Create New Current** > **Segment Data Export**.
+4. Next, provide an integration name, contact email, Segment.io write key, and Segment.io region.
 
 ![The Segment.io Currents page in Braze. Here, you can find fields for integration name, contact email, segment region, and API key.][3]
 

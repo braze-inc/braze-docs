@@ -26,11 +26,11 @@ Curious about the details of purchase events at Braze? Visit our dedicated [purc
 
 ## New Braze partnerships
 
-### Nexla - Workflow Automation
+### Nexla - Workflow automation
 
 [Nexla]({{site.baseurl}}/partners/nexla) is the leader in unified data operations and a 2021 Gartner Cool Vendor. Customers that use Currents to send data to data warehouses can leverage Nexla to extract, transform, and load that data to other locations, making data easily accessible across your entire ecosystem. Nexla enables you to use Braze Currents to get data in a custom format delivered to your destination of choice by a simple point and click. 
 
-### Amperity - Customer Data Platform
+### Amperity - Customer data platform
 
 [Amperity]({{site.baseurl}}/partners/amperity/) is a comprehensive enterprise customer data platform, helping brands get to know their customers, make strategic decisions, and consistently take the right course of action to serve their consumers better. Amperity supports the Braze platform by providing a unified view of your customers across its CDP and Braze allowing you to send valuable Amperity data to Braze.
 

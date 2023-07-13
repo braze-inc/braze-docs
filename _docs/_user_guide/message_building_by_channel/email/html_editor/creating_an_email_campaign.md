@@ -33,7 +33,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 
 **Steps:**
 
-1. Go to **Messaging** > **Campaigns** and click <i class=“fas fa-plus”></i> **Create Campaign**.
+1. Go to **Messaging** > **Campaigns** and click **+ Create Campaign**.
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
 {% endalert %}
@@ -64,9 +64,9 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Select your editing experience {#step-2-choose-your-template-and-compose-your-email}
 
-Braze offers two editing experiences when creating an email campaign: our [Drag & Drop editor]({{site.baseurl}}/dnd/) and our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. 
+Braze offers two editing experiences when creating an email campaign: our [drag-and-drop editor]({{site.baseurl}}/dnd/) and our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. 
 
-![Choosing between Drag & Drop Editor or HTML editor for your email editing experience.][3]{: style="max-width:75%" }
+![Choosing between drag-and-drop editor or HTML editor for your email editing experience.][3]{: style="max-width:75%" }
 
 Then, you can either select an existing [email template][10], [upload a template][18] from a file (HTML editor only), or use a blank template. 
 
@@ -78,7 +78,7 @@ We recommend selecting one editing experience per email campaign. For example, c
 
 After you've selected your template, you'll see an overview of your email where you can quickly jump to the fullscreen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
 
-Composing your email in the Drag & Drop editor? Refer to the [Drag & Drop Editor overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/) for help composing your email. 
+Composing your email in the drag-and-drop editor? Refer to the [drag-and-drop editor overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/) for help composing your email. 
 
 ![Email Variants panel for composing your email.][14]{: style="max-width:75%" }
 
@@ -155,7 +155,7 @@ From the bottom of the overview screen, click **Preview and Test**. Here, you ca
 You can also switch between desktop, mobile, and plaintext views to get a sense of how your message will appear in different contexts.
 
 {% alert tip %}
-Curious about what your email looks like for dark mode users? Select the **Dark Mode Preview** toggle located in the **Preview and Test** section (Drag & Drop Editor only).
+Curious about what your email looks like for dark mode users? Select the **Dark Mode Preview** toggle located in the **Preview and Test** section (drag-and-drop editor only).
 {% endalert %}
 
 When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
@@ -171,7 +171,7 @@ Email clients that support preview text always pull in enough characters to fill
 ```html
 <div style="display: none; max-height: 0px; overflow: hidden;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div>
 ```
-For the Drag & Drop Editor, add only the zero-width non-joiners (‌`&zwnj;`) without the `<div>` formatting directly in the preheader in the **Sending Settings** section.
+For the drag-and-drop editor, add only the zero-width non-joiners (‌`&zwnj;`) without the `<div>` formatting directly in the preheader in the **Sending Settings** section.
 
 {% endalert %}
 

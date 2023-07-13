@@ -19,6 +19,10 @@ description: "This article outlines details about the Delete catalog Braze endpo
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c0915a86-797a-4486-8217-24cd1c689d0f {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `catalogs.delete` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}

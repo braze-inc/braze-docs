@@ -18,6 +18,10 @@ description: "This article outlines details about the Export monthly active user
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#68f45461-3bf1-425c-b918-f0bbf3f87149 {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `kpi.mau.data_series` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

@@ -4,7 +4,7 @@ article_title: Creative Details
 page_order: 4
 layout: dev_guide
 guide_top_header: "Creative Details"
-guide_top_text: "Get creative with our in-app messages! But you should know some of the guidelines, first! All in-app messages templates are designed to display varying lengths of text and sizes of images across modern devices. In order to ensure your message displays well on all phones, tablets, and computers, we recommend you follow these guidelines and always <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>test your messages</a> before launching. Check out the following individual message type's Creative Specs or the global Creative Details article."
+guide_top_text: "Before you get creative with our in-app messages, you should know some of the guidelines. All in-app messages templates are designed to display varying lengths of text and sizes of images across modern devices. To ensure your message displays well on all phones, tablets, and computers, we recommend you follow these guidelines and always <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>test your messages</a> before launching. <br><br> Check out the following message type Creative Specs or the global Creative Details article."
 description: "This landing hub covers the design and content requirements for the three types of in-app messages, modal, slideup, and fullscreen."
 
 channel:
@@ -31,13 +31,13 @@ guide_featured_list:
 
 ### Text
 
-For in-app message bodies or headers, we recommend you keep it short and sweet - one to two lines for headers; up to three for bodies. After three lines, the message will likely need to vertically scroll, and users might not engage with all of the content. The threshold that triggers the scroll can vary depending on the end user's device size, custom styling, or presence of images within messages, but three lines is usually safe!
+For in-app message bodies or headers, we recommend you keep it short and sweet—one to two lines for headers and up to three for bodies. After three lines, the message will likely need to vertically scroll, and users might not engage with all of the content. The threshold that triggers the scroll can vary depending on the end user's device size, custom styling, or presence of images within messages, but three lines is usually safe.
 
 If you are using the newest generation of in-app messages (Generation 3), you'll find that the fonts default to the Operating System default Sans Serif for iOS and Android. Web in-app messages will default to Helvetica.
 
 ### Images
 
-Our guidelines for images are more structured than those for text, as we want to ensure your messages display as-intended, and beautifully across phones, tablets, and computers of all models and sizes.
+Our guidelines for images are more structured than those for text, as we want to ensure your messages display as intended, and beautifully across phones, tablets, and computers of all models and sizes.
 
 In general, Braze recommends using images that fit into a 16:10 screen.
 

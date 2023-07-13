@@ -117,7 +117,7 @@ All User Profile data (custom events, custom attribute, custom data) is stored a
 ### Custom Attribute Data Types
 Custom attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
 
-#### Strings (Alpha-Numeric Characters)
+#### Strings (Alphanumeric Characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. Strings attributes can be up to 255 characters long.
 
 | Segmentation Options | Dropdown Filter | Input Options |
