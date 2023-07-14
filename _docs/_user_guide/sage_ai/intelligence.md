@@ -22,12 +22,6 @@ guide_featured_list:
 - name: Intelligent Selection
   link: /docs/user_guide/sage_ai/intelligence/intelligent_selection/
   image: /assets/img/icons/loyalty_heart.svg
-- name: Winning Variant
-  link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
-  image: /assets/img/icons/ab_testing.svg
-- name: Winning Path
-  link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/
-  image: /assets/img/icons/strategy_playbook.svg
 
 guide_menu_title: "Additional Resources"
 guide_menu_list:

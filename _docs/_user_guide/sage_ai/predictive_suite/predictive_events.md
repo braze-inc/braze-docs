@@ -25,7 +25,7 @@ guide_featured_list:
 
 ## Overview
 
-![Graphic titled "How Predictive Purchases Works". On the left shows user data being funneled into the machine learning model. The label reads "Train with historical data, compare the pre-purchase behaviors of previous purchases with those of potential purchases." On the right shows the results of the machine learning, where users are ranked by least likely to most likely to purchase. The label reads "Predict likelihood of future purchases, assign a Purchase Likelihood Score to users for accurate, convenient targeting."][1]
+![Graphic titled "How Predictive Events Works". On the left shows user data being funneled into the machine learning model. The label reads "Train with historical data, compare the behavior of users who did perform the event in a certain period with those who didn't." On the right shows the results of the machine learning, where users are ranked by least likely to most likely to perform the event. The label reads "Predict likelihood of future events, assign a Likelihood Score to users for accurate, convenient targeting."][1]
 
 > Predictive Events give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a Purchase Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. 
 
@@ -47,5 +47,5 @@ With the Preview, you can also edit and rebuild this one Prediction or archive i
 
 <br><br>
 
-[1]: {% image_buster /assets/img/purchasePrediction/purchasesOverview.png %}
+[1]: {% image_buster /assets/img/how_predictive_events_works.png %}
 

@@ -25,9 +25,12 @@ guide_featured_list:
 
 guide_menu_title: "Other"
 guide_menu_list:
-- name: Personalized Variant
+- name: Winning Variant and Personalized Variant
   link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
   image: /assets/img/icons/ab_testing.svg
+- name: Winning Path
+  link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/
+  image: /assets/img/icons/strategy_playbook.svg
 ---
 
 
