@@ -69,5 +69,7 @@ After your recommendation finishes training, you can personalize your messages w
 5. For **Information to Display**, select which fields from the catalog should be included for each item. This information corresponds to the columns in your uploaded CSV file used to generate your catalog.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
+This will insert the appropriate liquid for the number of items you selected. Note that each reference to items contains the next most likely items to purchase in order of likelihood, e.g. "items[0]" is the item a user is most likely to purchase. items[1] is the next most likely purchase for that user, and so on.
+
 [1]: {% image_buster /assets/img/item_recommendation_create.png %}
 [2]: {% image_buster /assets/img/add_personalization.png %}
