@@ -123,15 +123,15 @@ Results, and exports of results, are tables that can contain up to 1,000 rows. F
 
 ## Monitoring your Query Builder usage
 
-Each Braze workspace has 2,000 Query Builder credits available per month. Credits are used whenever you run a query or preview a table. Credit usage corresponds to the run time of your queries. 
+Each Braze workspace has 5 Snowflake credits available per month. A small portion of a Snowflake credit is used whenever you run a query or preview a table.
 
-Credit usage is correlated to the run time of your SQL query. The longer the run time is, the more credits a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
+Credit usage is correlated to the run time of your SQL query. The longer the run time is, the higher the portion of a Snowflake credit a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
 
 {% alert note %}
 The ability to track credit usage for each query is coming soon.
 {% endalert %}
 
-Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits will reset to 2,000 on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
+Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
 
 ![Query Builder showing the amount of credits used in the current month.][1]{: style="max-width:60%;"}
 
