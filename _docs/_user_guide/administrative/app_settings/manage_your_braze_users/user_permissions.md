@@ -88,7 +88,7 @@ Individual users can be granted different degrees of access on an app-by-app bas
 ## Permission sets
 
 {% alert note %}
-Permission sets will be in early access on July 19, 2023. Contact your account manager if you’re interested in participating in the early access.
+Permission sets are currently in early access. Contact your account manager if you’re interested in participating in the early access.
 {% endalert %}
 
 In the **Permission Sets** tab, you can create, edit, and delete custom permission assignments for your Braze dashboard users. Permission sets can be assigned by selecting an existing user or creating a new one on the **Company Users** page, and then choosing the appropriate permission set under **Workspace Level Permissions**.
