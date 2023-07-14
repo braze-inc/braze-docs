@@ -95,7 +95,7 @@ In the **Permission Sets** tab, you can create, edit, and delete custom permissi
 
 ![The Permission Sets tab opens a Manage Permissions Sets page with a table of permission set names and selected permissions.][5]
 
-Each permission set can be defined for a particular group of users, such as in the following example:
+Each permission set can be defined for a specific group of users, such as in the following example:
 
 Permission Set Name    | Permissions  
 ----------- | ---------------- 
