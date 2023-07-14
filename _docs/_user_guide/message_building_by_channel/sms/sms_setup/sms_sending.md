@@ -31,7 +31,7 @@ Regulations require that there are responses to all Opt-In, Opt-Out, and Help/In
 Want to learn how to create an SMS campaign? Check out our step-by-step guide on [Creating an SMS campaign]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/).
 {% endalert %}
 
-## Sending best practices
+## Sending best practices {#sending-best-practices}
 
 ### Multi-country SMS sending
 
