@@ -43,6 +43,7 @@ The following actions do not consume data points:
 - Using Connected Content in messaging
 - Subscription state changes globally and around subscription groups
 - Renaming your users' external IDs through [API calls]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/)
+- Blocking events, attributes, or event properties
 
 ### Special circumstances
 
