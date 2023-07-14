@@ -1,0 +1,34 @@
+---
+nav_title: SMS Setup
+article_title: SMS Onboarding Setup
+layout: dev_guide
+
+page_order: 2
+guide_top_header: "SMS Setup"
+guide_top_text: "You can use SMS in our campaigns or Canvas tools. First, you should get set up and learn about SMS with Braze."
+page_type: landing
+description: "This landing page is home to articles on SMS setup. Here, you can find resources on crafting SMS messages, SMS laws and regulations, terms to know, and more."
+channel: SMS
+
+guide_featured_title: "Section Articles"
+guide_featured_list:
+- name: Terms to Know
+  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/terms/
+  fa_icon: fas fa-bookmark
+- name: Sending Phone Numbers
+  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/
+  fa_icon: fas fa-address-card
+- name: SMS Message Sending
+  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/
+  fa_icon: fas fa-comment-alt
+- name: SMS Subscription Groups
+  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/sms_subscription_groups/
+  fa_icon: fas fa-users
+- name: Next Steps..
+  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/next_steps/
+  fa_icon: fas fa-forward
+  
+---
+<br>
+
+
