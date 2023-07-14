@@ -497,7 +497,7 @@ hide_toc: true
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="Y" id="doc_verify" name="Verified">
                 <label class="form-check-label" for="doc_verify" id="doc_verify_label">
-                <span></span> I verify this information to be correct
+                <span></span> I have verified this information with the respective product team
               </label>
               </div>
               </div>
