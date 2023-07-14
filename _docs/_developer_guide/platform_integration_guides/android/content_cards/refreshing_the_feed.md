@@ -25,14 +25,14 @@ You can queue a manual refresh of Braze Content Cards at any time by calling:
 {% tab JAVA %}
 
 ```java
-Braze.getInstance(context).requestContentCardsRefresh(false);
+Braze.getInstance(context).requestContentCardsRefresh();
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).requestContentCardsRefresh(false)
+Braze.getInstance(context).requestContentCardsRefresh()
 ```
 
 {% endtab %}
