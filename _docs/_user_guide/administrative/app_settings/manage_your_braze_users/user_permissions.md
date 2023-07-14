@@ -100,7 +100,7 @@ Each permission set can be defined for a particular group of users, such as in t
 Permission Set Name    | Permissions  
 ----------- | ---------------- 
 Developers | “Access Dev Console”
-Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers”  <br> “Manage Media Library”
+Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br> “Manage Media Library”
 User Management | “Manage Dashboard Users” <br> “Manage Teams”
 {: .reset-td-br-1 .reset-td-br-2}
 
