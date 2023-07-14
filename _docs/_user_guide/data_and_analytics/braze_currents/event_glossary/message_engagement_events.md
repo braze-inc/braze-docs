@@ -214,7 +214,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, quie
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "action": (optional, string) action taken in response to this message (e.g. Subscribed, Unsubscribed, or None),
+  "action": (optional, string) action taken in response to this message (e.g., Subscribed, Unsubscribed, or None),
   "app_group_id": (required, string) BSON id of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,

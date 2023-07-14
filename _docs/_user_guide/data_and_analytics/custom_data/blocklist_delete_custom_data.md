@@ -16,7 +16,7 @@ Blocklisting prevents a particular custom data object from being recorded by Bra
 
 ## Deleting custom data
 
-After you have blocklisted the custom data object and removed references to it from your app or website, the custom data will be deleted.
+After you have blocklisted the custom data object and removed references to it from your app or website, the custom data can be deleted. For help deleting custom data, please reach out to your customer success manager or the Braze Support team.
 
 Deleting custom data does the following:
 

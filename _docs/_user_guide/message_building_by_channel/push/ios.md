@@ -20,9 +20,6 @@ guide_featured_list:
 - name: "Customizable App Icons"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
   fa_icon: fas fa-mobile-alt
-- name: "Notification Headers"
-  link: /docs/user_guide/message_building_by_channel/push/ios/notification_headers/
-  fa_icon: fas fa-paint-brush
 - name: "Notification Options"
   link: /docs/user_guide/message_building_by_channel/push/ios/notification_options/
   fa_icon: fas fa-cog

@@ -160,6 +160,7 @@ validurls['/docs/user_guide/administrative/logging_in_and_security/resetting_you
 validurls['/docs/user_guide/administrative/app_settings/app_group_management/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/app_group_management/';
 validurls['/docs/user_guide/administrative/app_settings/custom_event_and_attribute_management/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/';
 validurls['/docs/user_guide/administrative/app_settings/tags/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/tags/';
+validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/';
 validurls['/docs/user_guide/administrative/app_settings/push_ttl_settings/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/push_ttl_settings/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/okta/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile/';
@@ -351,6 +352,7 @@ validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-pre
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#html-upload-with-preview';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#supported-sdk-versions'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#supported-sdk-versions';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#upload-assets'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#asset-files';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/modal_with_css/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/#web-modal-css';
 
 validurls['/docs/services_handbook/'] = '/docs/handbooks/';
 
@@ -387,6 +389,7 @@ validurls['/docs/help/best_practices/in-app_messages/prep_guide/'] = '/docs/user
 validurls['/docs/help/best_practices/in-app_messages/previous_in-app_message_generations/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/previous_in-app_message_generations/';
 validurls['/docs/help/best_practices/push/use_cases/'] = '/docs/user_guide/message_building_by_channel/push/about/#potential-use-cases';
 validurls['/docs/help/best_practices/push/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/';
+validurls['/docs/help/best_practices/push/ios/notification_headers'] = '/docs/user_guide/message_building_by_channel/push/creating_a_push_message/#step-4-compose-your-push-message';
 validurls['/docs/help/best_practices/push/additional_android_best_practices/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/additional_android_best_practices/';
 validurls['/docs/help/best_practices/push/detailed_push_preferences/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/detailed_push_preferences/';
 validurls['/docs/help/best_practices/push/sunset_policies/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/sunset_policies/';
@@ -783,5 +786,16 @@ validurls['/docs/user_guide/intelligence/intelligent_timing/'] = '/docs/user_gui
 validurls['/docs/user_guide/intelligence/ai_copywriting/'] = '/docs/user_guide/sage_ai/generative_ai/ai_copywriting/';
 validurls['/docs/user_guide/intelligence/faqs/'] = '/docs/user_guide/sage_ai/intelligence/faqs/';
 validurls['/docs/user_guide/intelligence/ai_content_qa'] = '/docs/user_guide/sage_ai/generative_ai/ai_content_qa/';
+validurls['/docs/user_guide/administrative/access_braze/resetting_your_password/'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/';
+validurls['/docs/user_guide/administrative/access_braze/getting_your_account/'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/';
+
+validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/multi_country_sms_sending/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/';
+validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/high_volume_sending/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/';
+validurls['/docs/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/';
+
+validurls['/docs/user_guide/engagement_tools/templates_and_media/duplicate/'] = '/docs/user_guide/engagement_tools/templates_and_media/managing_templates/';
+validurls['/docs/user_guide/engagement_tools/templates_and_media/archive/'] = '/docs/user_guide/engagement_tools/templates_and_media/managing_templates/';
+
+
 
 

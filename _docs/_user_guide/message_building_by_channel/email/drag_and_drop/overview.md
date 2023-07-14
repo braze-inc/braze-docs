@@ -27,9 +27,9 @@ After selecting the drag-and-drop editor as your editing experience, you can cho
 - Use a Braze drag-and-drop email template 
 - Select a saved drag-and-drop email template
 
-![Basic Drag and Drop Email Templates section that shows the option to select a blank template or a Braze template. There is also a section underneath for saved drag and drop email templates.][1]
+![Basic Drag-and-Drop Email Templates section that shows the option to select a blank template or a Braze template. There is also a section underneath for saved drag-and-drop email templates.][1]
 
-If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop  editor. 
+If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop editor. 
 
 You can also access all templates from the **Templates** section.
 
@@ -37,7 +37,7 @@ You can also access all templates from the **Templates** section.
 If you are using the [older navigation]({{site.baseurl}}/navigation), templates are under **Templates & Media**.
 {% endalert %}
 
-After selecting your template, you'll see an overview of your email where you can edit the sending information and email body, and view any errors or warnings to resolve before sending. Click **Edit Email Body** to begin designing your email structure in the drag-and-drop editor! 
+After selecting your template, you'll see an overview of your email where you can edit the sending information and email body, and view any errors or warnings to resolve before sending. Click **Edit Email Body** to begin designing your email structure in the drag-and-drop editor. 
 
 ![][8]
 
@@ -78,7 +78,7 @@ As you build your email, you can toggle between a desktop and mobile view to pre
 {% alert tip %}
 Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
-![Copywriter button, located in the Content panel next to Style Settings in the Drag and Drop Editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
+![Copywriter button, located in the Content panel next to Style Settings in the drag-and-drop editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### Creative details {#creative-details}

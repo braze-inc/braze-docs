@@ -38,6 +38,13 @@ The radius of the geofence in meters, measured from the geographic center. We re
 
 Users receive geofence triggered notifications after performing enter or exit transitions on individual geofences. After a transition occurs, there is a pre-defined period of time during which that user may not perform the same transition on that individual geofence again. This period of time is called the "cooldown" and is pre-defined by Braze. Its main purpose is to prevent unnecessary network requests.
 
+### Technology partners
+
+You can also leverage geofences with some of our partners, for example: 
+
+- [Radar][12]
+- [Foursquare][13]
+
 ## Frequently asked questions
 
 Visit our [Geofence FAQ][5] for answers to frequently asked questions about geofences.
@@ -45,3 +52,6 @@ Visit our [Geofence FAQ][5] for answers to frequently asked questions about geof
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html
 [5]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences
+[12]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
+[13]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
+

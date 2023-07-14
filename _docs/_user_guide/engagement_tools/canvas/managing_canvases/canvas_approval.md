@@ -1,20 +1,19 @@
 ---
-nav_title: Approving Canvases
-permalink: "/canvas_approval/"
-hidden: true
+nav_title: Canvas Approval and Permissions
+article_title: Canvas Approval and Permissions 
+page_order: 0.5
+alias: "/canvas_approval/"
+description: "This reference article covers how to approve Canvases before launch and describes related user permissions."
+tool: Canvas
 ---
 
-# Approving Canvases
+# Canvas approval and permissions
 
 Canvas approval adds a review process to your workflow before launch. Now, you can ensure that each confirmation is approved in order to launch the Canvas.
 
-{% alert important %}
-The approval workflow for Canvases is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## Turning on Canvas approval
 
-To turn on the approval workflow for Canvas, go to **Manage Settings > Approval Settings**. By default, this feature is turned off.
+To turn on the approval workflow for Canvas, go to **Settings** > **Approval Workflow** under **Workplace Settings**. By default, this feature is turned off. 
 
 ![The Approval Workflow settings where the option to use the approval workflow for campaigns and Canvases are enabled.][1]
 
@@ -24,9 +23,17 @@ Only admins and users with permission to manage approval settings will see this 
 
 ### Setting user permissions
 
-After the approval workflow for Canvas has been turned on, you can begin setting permissions for your users to determine who can approve and deny Canvases.
+After the approval workflow for Canvas has been turned on, go to **Settings** > **Company Users** and select **Approve and Deny Canvases** to allow specific users to approve and deny Canvases immediately. A user with this permission could be able to do any of the following in the Canvas workflow:
+- Approve but not launch the Canvas
+- Launch but not approve the Canvas
+- Approve and launch the Canvas
+- Neither approve or launch the Canvas
 
 ![An example of an unselected checkbox for the Approve and Deny Canvases permission, meaning this user does not have permission to approve or deny Canvases.][3]{: style="max-width:70%" }
+
+{% alert important %}
+To edit a live campaign, you will need the "Approve and Deny Campaigns" permission. A user will need to approve their changes since a draft version of campaigns is not yet available. This is not the case for Canvases as a user can make changes and save as a draft, and another user can approve and launch the Canvas.
+{% endalert %}
 
 ## Using approvals
 

@@ -92,8 +92,8 @@ Braze recommends referring to [Meta's guidelines for opt-in methods](https://dev
 #### Is double opt-in required for WhatsApp? 
 No, double opt-in is not required. 
 
-#### How do end users opt out of WhatsApp messages? 
-End-users can opt out in two ways:
+#### How do my users opt out of WhatsApp messages? 
+Your users can opt out in two ways:
 1. Set up an inbound WhatsApp message with a specific opt-out word and use a webhook to update the user subscription status.
 2. Add an opt-out quick reply within the WhatsApp template, with a corresponding webhook to update. 
 

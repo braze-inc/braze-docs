@@ -69,6 +69,9 @@ You can manage user permissions by group or on an individual basis when editing 
 |Manage Tags|Allows users to edit or delete tags (under **Tag Management**). You do not need this permission to add tags to campaigns or segments.|
 |Manage Email Settings|Allows user to save email configuration changes (**Settings** > **Email Preferences**).|
 |Manage Subscription Groups | Allows user to create and manage subscription groups. |
+|Manage Approval Settings| This setting has been removed. Only users with admin permissions can turn the [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) settings on or off for your workspace. |
+|Approve and Deny Campaigns| Allows users to approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manage if you're interested in participating in the early access. |
+| Approve and Deny Canvases| Allows users to approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/canvas_approval) must be turned on for this permission to apply. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## App-by-app user permissions
@@ -82,7 +85,27 @@ Individual users can be granted different degrees of access on an app-by-app bas
 |App Level Settings|Determines the user's level of editing access.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+## Permission sets
+
+{% alert note %}
+Permission sets are currently in early access. Contact your account manager if you’re interested in participating in the early access.
+{% endalert %}
+
+In the **Permission Sets** tab, you can create, edit, and delete custom permission assignments for your Braze dashboard users. Permission sets can be assigned by selecting an existing user or creating a new one on the **Company Users** page, and then choosing the appropriate permission set under **Workspace Level Permissions**.
+
+![The Permission Sets tab opens a Manage Permissions Sets page with a table of permission set names and selected permissions.][5]
+
+Each permission set can be defined for a specific group of users, such as in the following example:
+
+Permission Set Name    | Permissions  
+----------- | ---------------- 
+Developers | “Access Dev Console”
+Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br> “Manage Media Library”
+User Management | “Manage Dashboard Users” <br> “Manage Teams”
+{: .reset-td-br-1 .reset-td-br-2}
+
 [29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"
 [30]: {% image_buster /assets/img_archive/two_factor_authentication_manage_users_new.png %}
 [76]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/
 [89]: {% image_buster /assets/img/user_permissions_selection.png %}
+[5]: {% image_buster /assets/img/permission_sets_manage.png %}

@@ -45,7 +45,7 @@ If you do not include an unsubscribe link, Braze will prompt you to add this in 
 When composing your email template copy, do not switch back and forth between different editor types (HTML, Block, Classic) as that may shift the previously created HTML leading to rendering issues. 
 {% endalert %}
 
-![Drag and Drop Editor badge in the Email Body section]({% image_buster /assets/img/dnd_badge_icon.png %})
+![Drag-and-Drop Editor badge in the Email Body section]({% image_buster /assets/img/dnd_badge_icon.png %})
 
 {% tabs %}
 {% tab HTML Editor %}

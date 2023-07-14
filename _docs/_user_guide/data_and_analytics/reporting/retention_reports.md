@@ -146,7 +146,7 @@ Some use cases for showing performance by variant:
 
 Retention Reports are easy to generate, yet challenging to interpret and act on. To help aid marketers, we have assembled a couple of topics and questions to consider when looking at your Retention Reports.
 
-- Consider day-of-week trends for recurring campaigns (e.g. Do Monday cohorts perform better than Saturday cohorts?).
+- Consider day-of-week trends for recurring campaigns (e.g., Do Monday cohorts perform better than Saturday cohorts?).
 - Where does the impact start to decline? This could be a signal that a new campaign or Canvas that targets users at that point in time is needed as another boost to retention. 
 - Are you seeing messaging fatigue?
 - Did a specific optimization you make to a campaign or Canvas X days ago have a positive impact?
