@@ -22,7 +22,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/
   fa_icon: fas fa-comment-alt
 - name: SMS Subscription Groups
-  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/sms_subscription_groups/
+  link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   fa_icon: fas fa-users
 - name: Next Steps..
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/next_steps/
