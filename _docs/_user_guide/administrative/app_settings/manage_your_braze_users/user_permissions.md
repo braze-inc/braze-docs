@@ -85,7 +85,27 @@ Individual users can be granted different degrees of access on an app-by-app bas
 |App Level Settings|Determines the user's level of editing access.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+## Permission sets
+
+{% alert note %}
+Permission sets will be in early access on July 19, 2023. Contact your account manager if you’re interested in participating in the early access.
+{% endalert %}
+
+In the **Permission Sets** tab, you can create, edit, and delete custom permission assignments for your Braze dashboard users. Permission sets can be assigned by selecting an existing user or creating a new one on the **Company Users** page, and then choosing the appropriate permission set under **Workspace Level Permissions**.
+
+![The Permission Sets tab opens a Manage Permissions Sets page with a table of permission set names and selected permissions.][5]
+
+Each permission set can be defined for a particular group of users, such as in the following example:
+
+Permission Set Name    | Permissions  
+----------- | ---------------- 
+Developers | “Access Dev Console”
+Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers”  <br> “Manage Media Library”
+User Management | “Manage Dashboard Users” <br> “Manage Teams”
+{: .reset-td-br-1 .reset-td-br-2}
+
 [29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"
 [30]: {% image_buster /assets/img_archive/two_factor_authentication_manage_users_new.png %}
 [76]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/
 [89]: {% image_buster /assets/img/user_permissions_selection.png %}
+[5]: {% image_buster /assets/img/permission_sets_manage.png %}
