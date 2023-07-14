@@ -24,9 +24,6 @@ guide_featured_list:
 - name: SMS Subscription Groups
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   fa_icon: fas fa-users
-- name: Next Steps..
-  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/next_steps/
-  fa_icon: fas fa-forward
   
 ---
 <br>
