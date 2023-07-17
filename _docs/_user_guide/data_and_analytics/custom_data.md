@@ -27,6 +27,6 @@ guide_featured_list:
     link: /docs/user_guide/data_and_analytics/custom_data/event_naming_conventions/
     fa_icon: fas fa-list
   - name: Managing Custom Data
-    link: /docs/user_guide/data_and_analytics/managing_custom_data/pre-populating_custom_data/
+    link: /docs/user_guide/data_and_analytics/custom_data/managing_custom_data/
     fa_icon: fas fa-check
 ---
