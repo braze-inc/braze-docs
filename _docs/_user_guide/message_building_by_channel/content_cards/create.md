@@ -211,7 +211,7 @@ You can specify multiple custom events and purchases that should remove a card f
 
 Content Cards cannot be edited after they are sent. If you find you need to make changes to cards that have already been sent, consider the following approaches.
 
-#### Option 1: Duplicating the campaign (recommended)
+#### Option 1: Duplicating the campaign
 
 One approach is to archive the campaign and remove active cards from the feed. Then you can duplicate the campaign and launch it with updates so that any eligible users would received the updated cards.
 
@@ -224,6 +224,10 @@ One approach is to archive the campaign and remove active cards from the feed. T
 
 * **Reporting:** Each version of the card would have separate analytics.
 * **Existing Recipients:** New and existing recipients would see the updated card at the next feed refresh if they are eligible.
+
+{% alert tip %}
+This option is recommended for messages where you are showing latest content in the card (e.g., home page banners), changes must be shown immediately, or when re-eligibility is off.
+{% endalert %}
 
 #### Option 2: Stop and relaunch
 
@@ -243,9 +247,13 @@ With this approach, newly eligible users will get the new card and previous reci
 * **Reporting:** One campaign will contain all reporting analytics for the card versions launched. Braze will not differentiate between versions launched.
 * **Existing recipients:** Users who have already received the card would not receive the updated cards until they become re-eligible. If re-eligibility is turned off, they would never receive the new card.
 
+{% alert tip %}
+This option is recommended for unique messages in a notification center or message inbox (e.g., promotions), when it’s important for analytics to be unified, or when timeliness of the message is not a concern (i.e., existing recipients can wait for the eligibility window before seeing the updated cards).
+{% endalert %}
+
 #### Keeping cards in users' feeds
 
-If desired, you could keep active Content Cards in users' feeds and not remove them. This means any existing cards would still be live, and only new cards would have the edits. Depending on re-eligibility and card expiration, users may see the old cards for a long time.
+If desired, you could keep an active Content Card campaign in users' feeds and not remove them. When edits are made to the live campaign, it means the previous unedited version of the campaign card would still be live, and only users that meet the criteria after the edits will see the new version. However, users already exposed to the campaign may see two versions of the card.
 
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
