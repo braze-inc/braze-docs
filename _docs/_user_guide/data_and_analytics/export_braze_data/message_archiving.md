@@ -70,7 +70,7 @@ The `extras` field referred to in this payload is from the key-value pairs input
 
 ![]({% image_buster /assets/img_archive/email_extras.png %})
 
-For sending data back to Currents, please refer to [Message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
+For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
 ### SMS
 ```json
