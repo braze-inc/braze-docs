@@ -13,7 +13,7 @@ tool: Currents
 > This page outlines and describes the use cases of the data partners who you can use to integrate with Braze Currents.
 
 {% alert note %}
-Naming conventions for events that flow for one partner from Braze may not match other partners. For example, the Currents email open event in Segment.io is "Email Opened", while in Mixpanel, it is "Email Open".
+Naming conventions for events that flow for one partner from Braze may not match other partners. For example, the Currents email open event in Segment is "Email Opened", while in Mixpanel, it is "Email Open".
 {% endalert %}
 
 ## Data warehouses
