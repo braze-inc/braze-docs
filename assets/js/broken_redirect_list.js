@@ -818,6 +818,9 @@ validurls['/docs/user_guide/engagement_tools/locations_and_geofences/geofence_co
 validurls['/docs/user_guide/engagement_tools/templates_and_media/duplicate/'] = '/docs/user_guide/engagement_tools/templates_and_media/managing_templates/';
 validurls['/docs/user_guide/engagement_tools/templates_and_media/archive/'] = '/docs/user_guide/engagement_tools/templates_and_media/managing_templates/';
 
+validurls['/docs/user_guide/data_and_analytics/custom_data/pre-populating_custom_data'] = '/docs/user_guide/data_and_analytics/custom_data/managing_custom_data/';
+validurls['/docs/user_guide/data_and_analytics/custom_data/blocklist_delete_custom_data/'] = '/docs/user_guide/data_and_analytics/custom_data/managing_custom_data/#blocklisting-custom-data';
+
 
 
 
