@@ -1,9 +1,8 @@
 ---
 nav_title: Content QA with AI
 article_title: Content QA with AI
-hidden: true
+page_order: 10
 description: "This reference article covers how to QA your message content with AI directly from the message composer."
-layout: dev_guide
 ---
 
 # Content QA with AI
@@ -42,5 +41,9 @@ Consider the following tips to make the most of the Content QA with AI feature:
 - **Proofread your message:** Although the content checker can help identify errors, it is still essential to proofread your content manually. Rely on the AI-generated suggestions as a helpful guide, but use your judgment to ensure accuracy.
 - **Understand the tone analysis:** The tone analysis results are subjective and based on the AI model's understanding. While they can provide useful insights, consider your intended tone and the conversation context to make appropriate adjustments.
 - **Double-check flagged offensive language:** Offensive language detection is designed to be robust, but it may occasionally flag false positives. Review flagged sections carefully and make appropriate changes as necessary.
+
+## How is my data used and sent to OpenAI?
+
+In order to check your message content, Braze will send it to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the message content you provide. Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days.
 
 [1]: {% image_buster /assets/img/content_qa_ai.png %}

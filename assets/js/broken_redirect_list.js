@@ -779,6 +779,25 @@ validurls['/docs/user_guide/administrative/app_settings/manage_app_group'] = '/d
 validurls['/docs/user_guide/administrative/app_settings/developer_console'] = '/docs/user_guide/administrative/app_settings/';
 
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_archival/'] = '/docs/user_archival/';
+
+validurls['/docs/user_guide/predictive_suite'] = '/docs/user_guide/sage_ai/predictive_suite/';
+validurls['/docs/user_guide/predictive_suite/predictive_churn'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_churn/';
+validurls['/docs/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_churn/creating_a_churn_prediction/';
+validurls['/docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/';
+validurls['/docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/';
+validurls['/docs/user_guide/predictive_suite/predictive_churn/messaging_users/'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_churn/messaging_users/';
+validurls['/docs/user_guide/predictive_suite/predictive_churn/prediction_faq/'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_faq/';
+validurls['/docs/user_guide/predictive_suite/predictive_purchases'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_events/';
+validurls['/docs/user_guide/predictive_suite/predictive_purchases/creating_a_purchase_prediction/'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_events/creating_an_event_prediction/';
+validurls['/docs/user_guide/predictive_suite/predictive_purchases/prediction_analytics/'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_events/prediction_analytics/';
+validurls['/docs/user_guide/predictive_suite/predictive_purchases/messaging_users/'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_events/messaging_users/';
+validurls['/docs/user_guide/intelligence'] = '/docs/user_guide/sage_ai/intelligence/';
+validurls['/docs/user_guide/intelligence/intelligent_channel/'] = '/docs/user_guide/sage_ai/intelligence/intelligent_channel/';
+validurls['/docs/user_guide/intelligence/intelligent_selection/'] = '/docs/user_guide/sage_ai/intelligence/intelligent_selection/';
+validurls['/docs/user_guide/intelligence/intelligent_timing/'] = '/docs/user_guide/sage_ai/intelligence/intelligent_timing/';
+validurls['/docs/user_guide/intelligence/ai_copywriting/'] = '/docs/user_guide/sage_ai/generative_ai/ai_copywriting/';
+validurls['/docs/user_guide/intelligence/faqs/'] = '/docs/user_guide/sage_ai/intelligence/faqs/';
+validurls['/docs/user_guide/intelligence/ai_content_qa'] = '/docs/user_guide/sage_ai/generative_ai/ai_content_qa/';
 validurls['/docs/user_guide/administrative/access_braze/resetting_your_password/'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/';
 validurls['/docs/user_guide/administrative/access_braze/getting_your_account/'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/';
 

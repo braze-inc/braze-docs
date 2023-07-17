@@ -1,7 +1,7 @@
 ---
 nav_title: Intelligence Suite
 article_title: Intelligence Suite
-page_order: 6.5
+page_order: 10
 layout: dev_guide
 search_rank: 12
 guide_top_header: "Intelligence Suite"
@@ -14,35 +14,22 @@ Tool:
 guide_featured_title: "Tools and Features"
 guide_featured_list:
 - name: Intelligent Timing
-  link: /docs/user_guide/intelligence/intelligent_timing/
-  fa_icon: fas fa-clock
+  link: /docs/user_guide/sage_ai/intelligence/intelligent_timing/
+  image: /assets/img/icons/clock.svg
 - name: Intelligent Channel
-  link: /docs/user_guide/intelligence/intelligent_channel/
-  fa_icon: fas fa-envelope
+  link: /docs/user_guide/sage_ai/intelligence/intelligent_channel/
+  image: /assets/img/icons/mail_open.svg
 - name: Intelligent Selection
-  link: /docs/user_guide/intelligence/intelligent_selection/
-  fa_icon: fas fa-chart-bar
+  link: /docs/user_guide/sage_ai/intelligence/intelligent_selection/
+  image: /assets/img/icons/loyalty_heart.svg
 
 guide_menu_title: "Additional Resources"
 guide_menu_list:
 - name: Intelligence FAQ
-  link: /docs/user_guide/intelligence/faqs/
-  fa_icon: fas fa-question
-- name: Multivariate & A/B Testing
-  link: /docs/user_guide/intelligence/multivariate_testing/
-  fa_icon: fas fa-vial
-- name: AI Copywriting Assistant
-  link: /docs/user_guide/intelligence/ai_copywriting/
-  fa_icon: fas fa-edit
-- name: AI Image Generator
-  link: /docs/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai
-  fa_icon: fas fa-wand-magic-sparkles
----
+  link: /docs/user_guide/sage_ai/intelligence/faqs/
+  image: /assets/img/icons/question.svg
 
-<!---
-- name: Content QA with AI
-  link: /docs/user_guide/intelligence/ai_content_qa/
-  fa_icon: fas fa-list-check
----->
+
+---
 
 <br>
