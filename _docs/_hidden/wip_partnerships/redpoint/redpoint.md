@@ -86,6 +86,12 @@ From the **Channel Specific** tab in the channel configuration screen:
 
 ![][11]{: style="max-width:50%;"}
 
+From the **Post Execution** tab in the channel configuration screen:
+
+Check the option to call a service URL and enter the Redpoint Data Management web service url. This entry will be identical on both the Onboarding and Append channel.   
+
+![][14]{: style="max-width:75%;"}
+
 ### Setup supporting Braze components in Redpoint Data Management (RPDM)
 
 The archive containing RPDM artifacts to support the Braze integration contains a README with detailed instructions for setting up the required components. The following are the areas which are most important for setting environment specific configuration between Braze, RPI and RPDM:
@@ -108,11 +114,17 @@ The Redpoint Data Management project named **PROJ_RPI_to_Braze_Append** contains
 
 ## Using the Redpoint to Braze integration
 
-This section should describe how to use the integration in Braze. Let users know how to access the data (if any) provided to Braze through the integration and how to leverage it in Braze messaging.
+The Outbound Delivery Braze channel can now be leveraged within Redpoint Interaction workflows. Follow the standard practices for creating selection rules and audiences in RPI, and building associated workflow schedules and triggers. To enable the sync of an RPI Audience output to Braze, create an outbound delivery offer and associate it to either the **Braze Onboarding and Upsert** or the **Braze Append** channel depending on whether the intent is to create or upsert new records in Braze or to only append campaign data if the record already exists in Braze.
 
-### Step 1: Short description of step one 
+![][13]{: style="max-width:75%;"}
 
-This set of steps will walk your users through how to use this integration in Braze.
+Once the workflow has executed successfully in RPI, the orchestration and CDP data sourced from RPI can now be used to create segments in Braze:
+
+![][12]{: style="max-width:75%;"}
+
+You can view the Redpoint associated properties on the user record:
+
+![][15]{: style="max-width:75%;"}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://www.redpointglobal.com
@@ -125,3 +137,8 @@ This set of steps will walk your users through how to use this integration in Br
 [9]: {% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_general.png %}
 [10]: {% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_specific.png %}
 [11]: {% image_buster /assets/img/redpoint/rpi_to_braze_export_directory_setup.png %}
+[12]: {% image_buster /assets/img/redpoint/rpi_to_braze_build_braze_segment.png %}
+[13]: {% image_buster /assets/img/redpoint/rpi_to_braze_rpi_canvas.png %}
+[14]: {% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_post_execution.png %}
+[15]: {% image_buster /assets/img/redpoint/rpi_to_braze_record_example.png %}
+
