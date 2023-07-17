@@ -164,7 +164,7 @@ To store the property of the trigger event for a Canvas as an attribute, use the
 * Multiple attribute or event updates per object
 
 {% alert warning %}
-We recommend careful use of Connected Content Liquid personalization in User Update steps as this step type has a rate limit of 200k requests per minute. This rate limit overrides the Canvas rate limit.
+We recommend careful use of Connected Content Liquid personalization in User Update steps, as this step type has a rate limit of 200,000 requests per minute. This rate limit overrides the Canvas rate limit.
 {% endalert %}
 
 ### Increment numbers
