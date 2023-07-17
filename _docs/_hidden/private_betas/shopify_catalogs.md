@@ -2,7 +2,7 @@
 nav_title: Shopify catalogs
 article_title: Shopify catalogs
 permalink: "/shopify_catalogs/"
-description: "This reference article covers how to import your products from Shopify into Braze catalogs"
+description: "This reference article covers how to import your products from Shopify into Braze catalogs."
 hidden: true
 ---
 
