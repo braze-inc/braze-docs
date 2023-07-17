@@ -5,9 +5,9 @@ layout: dev_guide
 
 page_order: 2
 guide_top_header: "SMS Setup"
-guide_top_text: "You can use SMS in our campaigns or Canvas tools. First, you should get set up and learn about SMS with Braze."
+guide_top_text: "View the resources on this page to learn how to set up SMS with Braze."
 page_type: landing
-description: "This landing page is home to articles on SMS setup. Here, you can find resources on crafting SMS messages, SMS laws and regulations, terms to know, and more."
+description: "This landing page is home to articles on SMS setup. Here, you can find resources on crafting SMS messages, SMS laws and regulations, terms tao know, and more."
 channel: SMS
 
 guide_featured_title: "Section Articles"
