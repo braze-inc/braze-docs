@@ -53,7 +53,7 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
   "html_body": HtmlBody,
   "plaintext_body": PlainTextBody,
   "amp_body": AMPEmailBody,
-  "extras": HashOfKVP,
+  "extras": Extra hash—for SendGrid users, this will be passed to SendGrid as Unique Arguments,
   "headers": HashOfHeaders,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
@@ -65,6 +65,12 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
   "attachments": Array of JSON Objects containing 'bytes' and 'file_name', // may not be available
 }
 ```
+
+The `extras` field referred to in this payload is from the key-value pairs input in the **Email Extras** field when composing an email.
+
+![]({% image_buster /assets/img_archive/email_extras.png %})
+
+For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
 ### SMS
 ```json
