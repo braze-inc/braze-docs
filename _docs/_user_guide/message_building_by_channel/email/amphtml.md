@@ -2,7 +2,7 @@
 nav_title: AMP for Email
 article_title: AMP for Email
 alias: /amphtml/
-page_order: 9
+page_order: 11
 description: "This reference article provides an overview of AMP for Email and common use cases."
 channel:
   - email

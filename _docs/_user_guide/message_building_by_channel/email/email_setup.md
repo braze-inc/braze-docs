@@ -2,7 +2,7 @@
 nav_title: Email Setup
 article_title: Onboarding Email Setup
 layout: dev_guide
-page_order: 5
+page_order: 1
 guide_top_header: "Email Setup"
 guide_top_text: "Braze can help you start sending email campaigns. Either follow our guides or check out our <a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Email Onboarding</a> Braze Learning course."
 page_type: landing
@@ -12,28 +12,28 @@ channel: email
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "Setting Up IPs and Domains"
-  link: /docs/user_guide/onboarding_with_braze/email_setup/setting_up_ips_and_domains/
+  link: /docs/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/
   fa_icon: far fa-dot-circle
 - name: "IP Warming"
-  link: /docs/user_guide/onboarding_with_braze/email_setup/ip_warming/
+  link: /docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/
   fa_icon: fas fa-exclamation
 - name: "Email Validation"
-  link: /docs/user_guide/onboarding_with_braze/email_setup/email_validation/
+  link: /docs/user_guide/message_building_by_channel/email/email_setup/email_validation/
   fa_icon: fas fa-check-square
 - name: "Email Authentication"
-  link: /docs/user_guide/onboarding_with_braze/email_setup/authentication/
+  link: /docs/user_guide/message_building_by_channel/email/email_setup/authentication/
   fa_icon: fas fa-user-shield
 - name: "Importing Your Email List"
-  link: /docs/user_guide/onboarding_with_braze/email_setup/import_your_email_list/
+  link: /docs/user_guide/message_building_by_channel/email/email_setup/import_your_email_list/
   fa_icon: fas fa-list
 - name: "SSL Overview"
-  link: /docs/user_guide/onboarding_with_braze/email_setup/ssl/
+  link: /docs/user_guide/message_building_by_channel/email/email_setup/ssl/
   fa_icon: fas fa-mouse-pointer
 - name: "Consent and Address Collection"
-  link: /docs/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/
+  link: /docs/user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection/
   fa_icon: fas fa-address-book
 - name: "Deliverability Pitfalls and Spam Traps"
-  link: /docs/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/
+  link: /docs/user_guide/message_building_by_channel/email/email_setup/deliverability_pitfalls_and_spam_traps/
   fa_icon: fas fa-exclamation-triangle
 ---
 
@@ -55,10 +55,10 @@ Before you start sending emails, there are some things you need. Refer to the fo
 IP warming is the **most important step** in the email setup process. Though it is not your first step (it's actually the last), we're calling it out here to let you know that you must warm up your IP address, or else any emails you send will be sent to spam or be subject to other send barriers.
 {% endalert %}
 
-[IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is when you send a relatively small number of emails out in your first batch, then over time, slightly increase the volume in the following batches until you reach your typical daily volume. This is done at the very end of your email set up process.
+[IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) is when you send a relatively small number of emails out in your first batch, then over time, slightly increase the volume in the following batches until you reach your typical daily volume. This is done at the very end of your email set up process.
 
 By starting with smaller volumes of email, you are establishing a level of trust with your email provider, showing you are only sending emails to relevant users. By sending your first batch of emails to your most engaged users, this can help you gain trust faster with your provider.
 
 After you're done warming up your IP, you can [start creating and sending emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
 
-For more information on email at Braze, check out our dedicated [Email section]({{site.baseurl}}/user_guide/message_building_by_channel/email/).<br><br>
+<br><br>

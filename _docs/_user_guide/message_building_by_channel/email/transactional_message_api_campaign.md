@@ -1,7 +1,7 @@
 ---
 nav_title: Transactional Email Campaigns
 article_title: Transactional Email Campaigns
-page_order: 7
+page_order: 10
 
 description: "This reference article covers how to create and configure a new Braze Transactional Email campaign."
 page_type: reference

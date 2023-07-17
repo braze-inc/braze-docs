@@ -14,6 +14,9 @@ guide_featured_list:
 - name: About Email
   link: /docs/user_guide/message_building_by_channel/email/about/
   fa_icon: fas fa-check
+- name: Email Setup
+  link: /docs/user_guide/message_building_by_channel/email/email_setup/
+  fa_icon: fas fa-envelope
 - name: Create an Email Campaign
   link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
   fa_icon: fas fa-envelope

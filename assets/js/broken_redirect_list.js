@@ -710,6 +710,15 @@ validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/experiment
 validurls['/docs/user_guide/message_building_by_channel/content_cards/overview/'] = '/docs/user_guide/message_building_by_channel/content_cards/about/';
 validurls['/docs/user_guide/message_building_by_channel/email/docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/';
 validurls['/docs/user_guide/message_building_by_channel/overview/'] = '/docs/user_guide/message_building_by_channel';
+validurls['/docs/user_guide/onboarding_with_braze/email_setup'] = '/docs/user_guide/message_building_by_channel/email/email_setup/';
+validurls['/docs/user_guide/onboarding_with_braze/email_setup/setting_up_ips_and_domains/'] = '/docs/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/';
+validurls['/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/'] = '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/';
+validurls['/docs/user_guide/onboarding_with_braze/email_setup/authentication/'] = '/docs/user_guide/message_building_by_channel/email/email_setup/authentication/';
+validurls['/docs/user_guide/onboarding_with_braze/email_setup/email_validation/'] = '/docs/user_guide/message_building_by_channel/email/email_setup/email_validation/';
+validurls['/docs/user_guide/onboarding_with_braze/email_setup/import_your_email_list/'] = '/docs/user_guide/message_building_by_channel/email/email_setup/import_your_email_list/';
+validurls['/docs/user_guide/onboarding_with_braze/email_setup/ssl/'] = '/docs/user_guide/message_building_by_channel/email/email_setup/ssl/';
+validurls['/docs/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/'] = '/docs/user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection/';
+validurls['/docs/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps'] = '/docs/user_guide/message_building_by_channel/email/email_setup/deliverability_pitfalls_and_spam_traps/';
 validurls['/docs/user_guide/onboarding_with_braze/email_setup/overview_and_requirements/'] = '/docs/user_guide/onboarding_with_braze/email_setup';
 validurls['/docs/user_guide/onboarding_with_braze/email_setup/ssl_clicktracking/'] = '/docs/user_guide/onboarding_with_braze/email_setup/ssl/';
 validurls['/docs/most_engaged_channel/'] = '/docs/user_guide/intelligence/intelligent_channel/';

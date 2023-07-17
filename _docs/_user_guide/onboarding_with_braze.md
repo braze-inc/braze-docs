@@ -25,12 +25,6 @@ guide_featured_list:
   - name: Data Points
     link: /docs/user_guide/onboarding_with_braze/data_points/
     fa_icon: fa fa-asterisk
-  - name: Email Setup
-    link: /docs/user_guide/onboarding_with_braze/email_setup/
-    fa_icon: fas fa-envelope
-  - name: SMS Setup
-    link: /docs/user_guide/onboarding_with_braze/sms_setup/
-    fa_icon: fas fa-mobile
 
 search_rank: 4
 ---
