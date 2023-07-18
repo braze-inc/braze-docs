@@ -82,7 +82,7 @@ Well-placed cards like this are a great way to give users a "nudge" toward speci
 
 ### Dashboard configuration
 
-The dashboard configuration for interactive Content Cards is quick and straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
+The dashboard configuration for interactive Content Cards is straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
 
 ![][5]{: style="max-width:70%;"} 
 

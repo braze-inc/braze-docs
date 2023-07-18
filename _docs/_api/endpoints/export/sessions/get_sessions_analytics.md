@@ -30,7 +30,7 @@ To use this endpoint, you'll need to generate an API key with the `sessions.data
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `length` | Required | Integer | Max number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
+| `length` | Required | Integer | Maximum number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
 | `unit` | Optional | String | Unit of time between data points. Can be `day` or `hour`, defaults to `day`.  |
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 | `app_id` | Optional | String | App API identifier retrieved from the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page to limit analytics to a specific app. |

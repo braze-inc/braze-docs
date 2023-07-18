@@ -55,7 +55,7 @@ REST API rate limit increases are considered based on need for customers who are
 
 ### Batching User Track requests {#batch-user-track}
 
-Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a max of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
+Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a maximum of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
 
 Requests made to this endpoint will generally begin processing in this order: 
 

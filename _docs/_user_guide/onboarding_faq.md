@@ -488,10 +488,10 @@ If Quiet Hours is active when the conversion event happens, the same rules apply
 
 #### Example 2
 
-There is a one-step Canvas with quiet hours:
+There is a one-step Canvas with Quiet Hours:
 
 1. User enters the Canvas.
-2. First step has no delay, but is within quiet hours, so the message is suppressed.
+2. First step has no delay, but is within Quiet Hours, so the message is suppressed.
 3. User performs the conversion event.
 
 **Result:**
