@@ -67,7 +67,7 @@ Templates are great for if your company contracts out your HTML designs for camp
 You can find your template ID one of two ways:
 
 1. Go to **Templates**, select a template page, then select a pre-existing template. If the template you want does not exist yet, create one and save it. At the bottom of the individual template page, you will be able to find your template identifier.<br><br>
-2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can quickly look up specific identifiers.
+2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can look up specific identifiers.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find API identifiers from **Developer Console** > **API Settings**.{% endalert %}
@@ -115,7 +115,7 @@ Note that if you have a campaign that has variants, there is both an overall cam
 You can find your campaign ID one of two ways:
 
 1. Go to **Messaging** > **Campaigns** and select a pre-existing campaign. If the campaign you want does not exist yet, create one and save it. At the bottom of the individual campaign page, you will be able to find your **Campaign API Identifier**.<br><br>
-2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can quickly look up specific identifiers.
+2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can look up specific identifiers.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location:<br> - **Campaigns** is under **Engagement**<br> - **API Keys** is located at **Developer Console** > **API Settings**
@@ -141,7 +141,7 @@ A [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) identifier o
 You can find your segment ID one of two ways:
 
 1. Go to **Audience** > **Segments** and select a pre-existing segment. If the segment you want does not exist yet, create one and save it. At the bottom of the individual segment page, you will be able to find your segment identifier. <br><br>
-2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can quickly look up specific identifiers.
+2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can look up specific identifiers.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location:<br> - **Segments** is under **Engagement**<br> - **API Keys** is located at **Developer Console** > **API Settings**
@@ -168,7 +168,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 You can find your card ID one of two ways:
 
 1. Go to **Messaging** > **News Feed** and select a pre-existing News Feed. If the News Feed you want does not exist yet, create one and save it. At the bottom of the individual News Feed page, you will be able to find your unique card identifier. <br><br>
-2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can quickly look up specific identifiers.
+2. Go to **Settings** > **API Keys**. Here, Braze offers an **Additional API Identifiers** search where you can look up specific identifiers.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a new location:<br> - **News Feed** is under **Engagement**<br> - **API Keys** is located at **Developer Console** > **API Settings**

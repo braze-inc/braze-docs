@@ -60,7 +60,7 @@ You can find the recommendation on the **Predictions** page, where you can then 
 
 ![][2]{: style="max-width:30%;float:right;margin-left:15px;"}
 
-After your recommendation finishes training, you can personalize your messages with Liquid to insert the most popular products in that catalog. The liquid can be generated for you by the personalization window found in message composers:
+After your recommendation finishes training, you can personalize your messages with Liquid to insert the most popular products in that catalog. The Liquid can be generated for you by the personalization window found in message composers:
 
 1. In any message composers that support personalization, click <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Add personalization"></i> to open the personalization window.
 2. For **Personalization Type**, select **Item Recommendation**.

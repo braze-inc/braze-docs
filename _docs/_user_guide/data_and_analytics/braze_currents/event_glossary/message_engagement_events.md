@@ -187,7 +187,7 @@ This event occurs when an email send request was successfully communicated betwe
   "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
   "external_user_id": (optional, string) External user ID of the user,
   "from_phone_number": (optional, string) phone number used to send,
-  "message_extras": (optional, string) liquid tags related fields,
+  "message_extras": (optional, string) Liquid tags related fields,
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
   "subscription_group_id": (optional, string) ID of the sending Subscription Group,
@@ -206,7 +206,7 @@ This event occurs when an email send request was successfully communicated betwe
 WhatsApp, Abort
 {% endapitags %}
 
-This event occurs if a WhatsApp message was aborted based on Liquid aborts, quiet hours, etc.
+This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quiet Hours, etc.
 
 ```json
 // WhatsApp Abort: users.messages.whatsapp.Abort
@@ -285,7 +285,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
 Abort, Content Cards
 {% endapitags %}
 
-This event occurs if a Content Card message was aborted based on Liquid aborts, quiet hours, etc.
+This event occurs if a Content Card message was aborted based on Liquid aborts, Quiet Hours, etc.
 
 ```json
 // Content Card Abort: users.messages.contentcard.Abort
@@ -325,7 +325,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
 Abort, Email
 {% endapitags %}
 
-This event occurs if an email message was aborted based on Liquid aborts, quiet hours, etc.
+This event occurs if an email message was aborted based on Liquid aborts, Quiet Hours, etc.
 
 ```json
 // Email Abort: users.messages.email.Abort
@@ -367,7 +367,7 @@ This event occurs if an email message was aborted based on Liquid aborts, quiet 
 Abort, Push
 {% endapitags %}
 
-This event occurs if a push notification message was aborted based on Liquid aborts, quiet hours, etc.
+This event occurs if a push notification message was aborted based on Liquid aborts, Quiet Hours, etc.
 
 ```json
 // Push Notification Abort: users.messages.pushnotification.Abort
@@ -409,7 +409,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
 Abort, SMS
 {% endapitags %}
 
-This event occurs if an SMS message was aborted based on Liquid aborts, quiet hours, etc.
+This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Hours, etc.
 
 ```json
 // SMS Abort: users.messages.sms.Abort
@@ -446,7 +446,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, quiet ho
 Abort,  Webhooks
 {% endapitags %}
 
-This event occurs if a webhook message was aborted based on Liquid aborts, quiet hours, etc.
+This event occurs if a webhook message was aborted based on Liquid aborts, Quiet Hours, etc.
 
 ```json
 // Webhook Abort: users.messages.webhook.Abort
