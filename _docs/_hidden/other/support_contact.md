@@ -474,8 +474,8 @@ var ticket_lookuptable = {
             },
             'Exporting Data' : {
               'ShowSubmit': true,
-              'LinksTitle': ['Exporting Braze Data','REST API: Export Endpoints'],
-              'Links' : ['https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data','https://www.braze.com/docs/api/endpoints/export']
+              'LinksTitle': ['Exporting Braze Data','REST API: Export Endpoints', 'Export Frequently Asked Questions'],
+              'Links' : ['https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data','https://www.braze.com/docs/api/endpoints/export','https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/faqs/']
             },
             'API Campaigns' : {
               'ShowSubmit': true,
@@ -512,8 +512,8 @@ var ticket_lookuptable = {
             },
             'Email Editors' : {
               'ShowSubmit': true,
-              'LinksTitle': ['Email Drag-and Drop Editor', 'Email HTML Editor'],
-              'Links' : ['https://www.braze.com/docs/user_guide/message_building_by_channel/email/drag_and_drop','https://www.braze.com/docs/user_guide/message_building_by_channel/email/html_editor']
+              'LinksTitle': ['Email Drag-and Drop Editor', 'Email HTML Editor', 'Drag-And-Drop Editor Frequently Asked Questions'],
+              'Links' : ['https://www.braze.com/docs/user_guide/message_building_by_channel/email/drag_and_drop','https://www.braze.com/docs/user_guide/message_building_by_channel/email/html_editor','https://www.braze.com/docs/user_guide/message_building_by_channel/email/drag_and_drop/faq/']
             },
             'Deliverability' :{
               'ShowSubmit': true,
@@ -591,8 +591,8 @@ var ticket_lookuptable = {
         'Campaigns and Canvas' :{
           'SelectDefault': 'Select a type...',
           'Label': '*  My question is about...',
-          'LinksTitle': [''],
-          'Links' : [''],
+          'LinksTitle': ['Campaign Frequently Asked Questions','Canvas Frequently Asked Questions'],
+          'Links' : ['https://www.braze.com/docs/user_guide/engagement_tools/campaigns/faq/','https://www.braze.com/docs/user_guide/engagement_tools/canvas/faqs/'],
           'SelectOption': {
             'Messaging Personalization' : {
               'ShowSubmit': true,
