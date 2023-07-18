@@ -501,6 +501,9 @@ validurls['/docs/developer_guide/platform_integration_guides/flutter/preview/'] 
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/ios/sdk_integration/'] = '/docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/';
 validurls['/docs/developer_guide/platform_integration_guides/cordova/ios/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/';
 validurls['/docs/developer_guide/platform_integration_guides/unity/ios/sdk_integration/'] = '/docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/';
+validurls['/docs/developer_guide/platform_integration_guides/unity/troubleshooting'] = '/docs/developer_guide/platform_integration_guides/unity/sdk_integration/troubleshooting/';
+validurls['/docs/developer_guide/platform_integration_guides/unity/advanced_use_cases/'] = '/docs/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases/';
+
 validurls['/docs/developer_guide/platform_integration_guides/react_native/ios/sdk_integration/'] = '/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/';
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/react_native/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
