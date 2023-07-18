@@ -352,7 +352,8 @@ var ticket_lookuptable = {
           'SelectOption' : {
             'Push' : {
               'SelectDefault': 'Select a platform...',
-              'LinksTitle': [''],
+              'LinksTitle': [],
+              'Links': [],
               'Label': '* Platform',
               'SelectOption' : {
                 'Android' : {
@@ -433,7 +434,7 @@ var ticket_lookuptable = {
               }
             },
             'User Data' :{
-              'ShowSubmit': true,
+              'ShowSubmit': false,
               'LinksTitle': [''],
               'Links': [''],
                 'SelectOption' : {
@@ -835,7 +836,18 @@ $( document ).ready(function() {
     }
     return rstr;
   }
-
+  function notEmpty(listarr){
+    var empty = false;
+    if (Array.isArray(listarr) && listarr.length){
+      for (var i = 0; i < listarr.length; i++){
+        if (listarr[i]){
+          empty = true;
+          i = listarr.length;
+        }
+      }
+    }
+    return empty;    
+  }
   function showlinks(curquestion){
     if (curquestion) {
       var linklist = curquestion['Links'];
@@ -847,7 +859,7 @@ $( document ).ready(function() {
       if ('ReferenceText' in curquestion){
         resstr += curquestion['ReferenceText'] + '<br />'
       }
-      if (linklist.length && linklist.length > 0){
+      if (notEmpty(linklist) && (linklist.length > 0)){
         resmsg.html('Have you tried...')
         for (var i = 0 ; i < linklist.length; i++ ) {
           var title = '';
@@ -871,25 +883,54 @@ $( document ).ready(function() {
           }
           resstr += '<a href="' + linklist[i] + '" target="braze_reference">' + title+ '</a><br />';
         }
-      }
-      if (!linklist.length  ) {
-
-        $('#ticket_submit_option').show();
-      }
-      else if ('ShowSubmit' in curquestion) {
-        if (curquestion['ShowSubmit']) {
-          $('#ticket_submit_option').show();
+        if ('ShowSubmit' in curquestion) {
+          if (curquestion['ShowSubmit']) {
+            $('#ticket_submit_option').show();
+          }
+          else {
+            $('#ticket_submit_option').hide();
+          }
         }
         else {
           $('#ticket_submit_option').hide();
         }
+        if (resstr) {
+          resdiv.html(resstr);
+          resdiv.show();
+        }
+        else {
+          resdiv.hide();
+        }
       }
       else {
-        $('#ticket_submit_option').hide();
+        resmsg.html('');
+        if (notEmpty(linklist) ) {
+          $('#ticket_submit_option').show();
+        }
+        else {
+          resdiv.html('');
+          resdiv.hide();
+          if ('ShowSubmit' in curquestion) {
+            if (curquestion['ShowSubmit']) {
+              $('#ticket_submit_option').show();
+            }
+            else {
+              $('#ticket_submit_option').hide();
+            }
+          }
+          else {
+            $('#ticket_submit_option').hide();
+          }
+        }
+        if (resstr) {
+          resdiv.html(resstr);
+          resdiv.show();
+        }
+        else {
+          resdiv.hide();
+        }
       }
-      if (resstr) {
-        resdiv.html(resstr);
-      }
+
       /*if ('ShowSubmit' in curquestion) {
         if (curquestion['ShowSubmit']) {
           if (!$("#submit_ticket").prop("checked")) {
