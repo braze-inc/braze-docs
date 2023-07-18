@@ -24,7 +24,7 @@ You can choose to customize and export the Braze Unity package using the provide
 	```
 2. From the `braze-unity-sdk/scripts` directory, run `./generate_package.sh` to export the Unity packages. Unity should be open while running `generate_package.sh`.
 3. The packages will be exported to `braze-unity-sdk/unity-package/`.
-4. In the Unity Editor, import the desired package into your Unity project by navigating to **Assets > Import Package > Custom Package**.
+4. In the Unity Editor, import the desired package into your Unity project by navigating to **Assets** > **Import Package** > **Custom Package**.
 5. (Optional) Deselect any files you do not wish to import.
 
 You can customize the exported Unity package by editing both `generate_package.sh` and the export script located at `Assets/Editor/Build.cs`.
