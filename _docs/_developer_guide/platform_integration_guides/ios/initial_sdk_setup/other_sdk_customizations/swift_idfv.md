@@ -21,7 +21,7 @@ If you still wish to collect IDFV separately, you can still do so via the Swift 
 
 ### SDK Version
 
-When `useUUIDAsDeviceId` is enabled (default), all new users created will be assigned a random device ID. All previously existing users will maintain their same device ID value, which may have been IDFV.
+In Swift SDK v7.0.0+, when `useUUIDAsDeviceId` is enabled (default), all new users created will be assigned a random device ID. All previously existing users will maintain their same device ID value, which may have been IDFV.
 
 When this feature is not enabled, devices will continue to be assigned IDFV upon creation.
 
