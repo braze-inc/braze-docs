@@ -1,5 +1,5 @@
 ---
-page_order: 7.9
+page_order: 11
 nav_title: Best Practices
 article_title: SMS Best Practices
 layout: dev_guide

@@ -163,6 +163,10 @@ To store the property of the trigger event for a Canvas as an attribute, use the
 * Liquid logic (including [aborting messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Multiple attribute or event updates per object
 
+{% alert warning %}
+We recommend careful use of Connected Content Liquid personalization in User Update steps, as this step type has a rate limit of 200,000 requests per minute. This rate limit overrides the Canvas rate limit.
+{% endalert %}
+
 ### Increment numbers
 
 This component can also be used to track the number of times a user has performed an event in increment and decrement numbers. For example, you could track the number of classes that a user has taken in a week. Using this component, the class count can reset at the start of the week and begin tracking again. 

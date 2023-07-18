@@ -92,8 +92,8 @@ Braze recommends referring to [Meta's guidelines for opt-in methods](https://dev
 #### Is double opt-in required for WhatsApp? 
 No, double opt-in is not required. 
 
-#### How do end users opt out of WhatsApp messages? 
-End-users can opt out in two ways:
+#### How do my users opt out of WhatsApp messages? 
+Your users can opt out in two ways:
 1. Set up an inbound WhatsApp message with a specific opt-out word and use a webhook to update the user subscription status.
 2. Add an opt-out quick reply within the WhatsApp template, with a corresponding webhook to update. 
 
@@ -140,7 +140,7 @@ The approval process can take up to 24 hours, but often templates get processed 
 Your message template limit depends on your business verification status. You can check your limit on the **WhatsApp Manager > Message Templates** page. 
 
 #### How do I personalize Braze's template copy and rich media? 
-WhatsApp allows for variable parameters to be inserted into message templates. Messages cannot start or end with a variable parameter. Variable parameters can be populated with liquid logic in the Braze platform. Refer to [composing a WhatsApp message in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#step-2-compose-your-whatsapp-message) to learn more about variable parameters. 
+WhatsApp allows for variable parameters to be inserted into message templates. Messages cannot start or end with a variable parameter. Variable parameters can be populated with Liquid logic in the Braze platform. Refer to [composing a WhatsApp message in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#step-2-compose-your-whatsapp-message) to learn more about variable parameters. 
 
 #### My template got rejected. Can Braze help me get it approved? 
 The Braze team does not have visibility into template rejections. You should work directly with your WhatsApp Business manager to edit and resubmit the template. Make sure to provide a sample template where necessary. Double-check that your template follows Meta's [business](https://www.whatsapp.com/legal/business-policy/?fbclid=IwAR2qWg6yFKdyjDMxJkbNSM38FLGsxXxffC1qStY2gaHOyp-gl_8g72rZNIw) or [commerce](https://www.whatsapp.com/legal/commerce-policy/?fbclid=IwAR3bzN3LTZ-7kO-wnO7X3smtPKGy0asxaFod-U1Ub8B9JUpnrfy1_y7LpAQ) policies.

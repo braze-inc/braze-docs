@@ -27,6 +27,9 @@ guide_featured_list:
 
 guide_menu_title: "More Articles"
 guide_menu_list:
+  - name: Configuring Reporting
+    link: /docs/user_guide/data_and_analytics/reporting/configuring_reporting/
+    fa_icon: fas fa-cog
   - name: Campaign Analytics
     link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
     fa_icon: fas fa-chart-bar

@@ -80,7 +80,7 @@ It is important to review your existing Web SDK integration for the following it
 
 If the above items are not met, then the Web SDK integration via Shopify ScriptTag will not be supportable.
 
-#### What if I use a customer data platform like Segment.io or mParticle?
+#### What if I use a customer data platform like Segment or mParticle?
 
 Ensure that you disable Shopify events you may have been sending through your customer data platform.
 

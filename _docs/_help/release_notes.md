@@ -87,7 +87,7 @@ The following SDK updates have been released. Breaking updates are listed below;
 
 - [Android SDK 26.0.0–26.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2610)
 	- {% raw %}Added the ability to configure link target behavior for HTML In-App Messages through `BrazeConfig.setIsHtmlInAppMessageHtmlLinkTargetEnabled()` or via adding `<bool name="com_braze_html_in_app_message_enable_html_link_target">true</bool>` to your `braze.xml`. Defaults to enabled.{% endraw %}
-		- {% raw %}When enabled, a link in an in-app message that has the link target set (e.g. `<a HREF="https://www.braze.com" target="_blank">Please Read</a>`) will open the link in a browser, but will not close the in-app message.{% endraw %}
+		- {% raw %}When enabled, a link in an in-app message that has the link target set (e.g., `<a HREF="https://www.braze.com" target="_blank">Please Read</a>`) will open the link in a browser, but will not close the in-app message.{% endraw %}
 - [Web SDK 4.7.2–4.8.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#480)
 - [Swift SDK 6.3.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#630)
 - [Unity SDK 4.1.1](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md#411)
@@ -646,8 +646,8 @@ The following SDK updates have been released. Breaking changes are listed below;
 - [React Native SDK v1.41.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
 - [Web SDK 4.5.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
 
-#### New SDK library: Segment.io Kotlin SDK
-Segment.io has updated their library with a new Kotlin-first approach called Segment.io Kotlin. Braze has just released a new library of our own to work with this new library paradigm. Check out the [initial release on GitHub.](https://github.com/braze-inc/braze-segment-kotlin)
+#### New SDK library: Segment Kotlin SDK
+Segment has updated their library with a new Kotlin-first approach called Segment Kotlin. Braze has just released a new library of our own to work with this new library paradigm. Check out the [initial release on GitHub.](https://github.com/braze-inc/braze-segment-kotlin)
 
 
 [support]: {{site.baseurl}}/support_contact/

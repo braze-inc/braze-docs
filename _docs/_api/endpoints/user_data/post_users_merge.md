@@ -89,9 +89,7 @@ Any of the following fields found on one user to the other user:
 - Custom event and purchase event count and first date and last date timestamps
   - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days". Merged purchase events and custom events will increment. 
 
-Session data will only be merged if the app exists on both user profiles. For example, if the target user doesn't have an app summary for "ABCApp" but the original user does, the target user will have the "ABCApp" app summary on their profile after the merge since that original user profile has the app summary. Nested custom attributes are copied over if the attributes exist on `identifier_to_merge`, not `identifier_to_keep`.
-
-Note that this endpoint does not merge subscription groups or subscriptions.
+Session data will only be merged if the app exists on both user profiles. Note that this endpoint does not merge subscription groups or subscriptions.
 
 ## Example request
 

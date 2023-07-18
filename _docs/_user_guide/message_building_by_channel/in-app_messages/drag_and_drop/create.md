@@ -39,7 +39,7 @@ After selecting the drag-and-drop editor as your editing experience, you can cho
 - Use a Braze background image template
 - Start with a blank modal template
 
-Click **Build message** to begin designing your in-app message in the drag-and-drop editor!
+Click **Build message** to begin designing your in-app message in the drag-and-drop editor.
 
 {% alert note %}
 You can switch between modal and fullscreen display types in the **Message styles** panel of the editor.

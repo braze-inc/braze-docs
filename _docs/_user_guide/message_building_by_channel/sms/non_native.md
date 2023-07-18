@@ -1,7 +1,7 @@
 ---
 nav_title: Non-Native SMS
 article_title: Non-Native SMS Articles
-page_order: 7.9
+page_order: 10
 
 layout: dev_guide
 guide_top_header: "Non-Native SMS"

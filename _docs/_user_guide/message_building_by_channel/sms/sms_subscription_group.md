@@ -1,7 +1,7 @@
 ---
 nav_title: "SMS Subscription Groups"
 article_title: SMS Subscription Groups
-page_order: 2
+page_order: 4
 description: "This reference article covers SMS Subscription Groups, subscription states, and the subscription group setup process."
 page_type: reference
 channel:

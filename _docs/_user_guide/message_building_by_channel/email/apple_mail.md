@@ -1,7 +1,7 @@
 ---
 nav_title: Apple Mail
 article_title: Apple Mail
-page_order: 5
+page_order: 7
 layout: dev_guide
 guide_top_header: "Apple Mail"
 description: "This landing page includes reference articles related to Apple Mail when building Braze email campaigns."

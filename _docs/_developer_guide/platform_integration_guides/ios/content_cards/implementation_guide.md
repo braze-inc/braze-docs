@@ -536,7 +536,7 @@ Well-placed cards like this are a great way to give users a "nudge" toward speci
 <br><br><br>
 #### Dashboard configuration
 
-The dashboard configuration for interactive Content Cards is quick and straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
+The dashboard configuration for interactive Content Cards is straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
 
 ![][7]{: style="max-width:70%;"} 
 
@@ -545,7 +545,7 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 
 ## Logging impressions, clicks, and dismissals
 
-After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a `ContentCardable` protocol that references and provides data to a helper file to be logged by the Braze SDK.
+After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick. This can be done by using a `ContentCardable` protocol that references and provides data to a helper file to be logged by the Braze SDK.
 
 #### Implementation components<br><br>
 

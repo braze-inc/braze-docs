@@ -67,7 +67,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 
 #### Things to check
 - **Content Card size**: Content Card message fields are limited to 2&nbsp;KB in pre-compression size, calculated by adding the byte-size length of the following fields: title, message, image URL, link text, link URLs, and key-value pairs. Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the image URL.
-- **Updating copy post-send**: Once a card is sent, you will be unable to update the copy. Instead, you will need to remove the original card and send down a new card with any updates.
+- **Updating copy post-send**: Once a card is sent, you will be unable to update the copy on that same card. Refer to [Updating sent cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-sent-cards) to understand how you can approach this scenario.
 
 #### Things to know
 - **Active Content Card campaigns limit**: You can have up to 500 active Content Card campaigns. This count includes Content Cards sent with either [card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) option.  

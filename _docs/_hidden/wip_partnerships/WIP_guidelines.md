@@ -16,7 +16,7 @@ Partnership Documentation Overview
 - [Create and add content to your page](#create_page)
 - [Image, link, and code snippet formatting](#image_links)
 - [Reviewing and testing](#testing)
-- [Committing to Github](#committing)
+- [Committing to GitHub](#committing)
 - [Review process](#review)
 <br><br>
 {% alert important %}

@@ -190,7 +190,7 @@ optimizeDeps: {
 
 ### Prise en charge d’Electron {#electron}
 
-Electron ne prend pas officiellement en charge les notifications push Web (voir : ce [problème Github](https://github.com/electron/electron/issues/6697)). Il existe d’autres [solutions de contournement open source](https://github.com/MatthieuLemoine/electron-push-receiver) que vous pourriez essayer et qui n’ont pas été testées par Braze.
+Electron ne prend pas officiellement en charge les notifications push Web (voir : ce [problème GitHub](https://github.com/electron/electron/issues/6697)). Il existe d’autres [solutions de contournement open source](https://github.com/MatthieuLemoine/electron-push-receiver) que vous pourriez essayer et qui n’ont pas été testées par Braze.
 
 ### Chargeur de module AMD
 

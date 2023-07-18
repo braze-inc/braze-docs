@@ -27,3 +27,12 @@ guide_featured_list:
   link: /docs/user_guide/administrative/access_braze/portal/
   fa_icon: fa-solid fa-question
 ---
+## Supported browsers
+
+The Braze dashboard supports the following browsers:
+- Chrome (version 87 or newer)
+- Firefox (version 85 or newer)
+- Safari (version 15.4 or newer)
+- Edge (version 87 or newer)
+
+<br><br>

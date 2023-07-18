@@ -105,7 +105,7 @@ Additionally, for analytics tracking, any `<a>` or `<button>` elements in your H
 
 {% details HTML In App-Message Templates %}
 
-We've designed a set of HTML5 in-app messages templates to help you get started. Check out our [Github repository](https://github.com/braze-inc/in-app-message-templates) which contains detailed instructions on how to use and customize these templates for your needs.
+We've designed a set of HTML5 in-app messages templates to help you get started. Check out our [GitHub repository](https://github.com/braze-inc/in-app-message-templates) which contains detailed instructions on how to use and customize these templates for your needs.
 
 **Customizable Features**
 
