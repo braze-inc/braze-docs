@@ -73,7 +73,7 @@ For all other domains, Braze allows email addresses matching the following regex
 The local part must follow these parameters:
 - Can contain any letter, number, underscore, or dash, including Unicode letters and numbers
 - Can contain but may not start with the following characters: (.) (+) (&) (#) (/) or (")
-- Cab contain but may not end with the following characters:  (.) (&) (#) (/) or (")
+- Can contain but may not end with the following characters:  (.) (&) (#) (/) or (")
 
 {% alert important %}
 If the domain part is a Gmail address, the local part needs to be at least two characters long. This is in addition to the regex validation listed in this section.
