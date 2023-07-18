@@ -54,7 +54,7 @@ mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>(
     }
 };
 Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
-Braze.getInstance(context).requestContentCardsRefresh(true);
+Braze.getInstance(context).requestContentCardsRefresh();
 ```
 
 ### Unsubscribe
@@ -73,7 +73,7 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 To subscribe to card updates, first declare a private variable in your custom class to hold your subscriber:
 
 ```kotlin
-private var mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+private var contentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
 ```
 
 ### Subscribe to updates
@@ -82,8 +82,8 @@ Next, add the following code to subscribe to Content Card updates from Braze, ty
 
 ```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
-mContentCardsUpdatedSubscriber = IEventSubscriber { event ->
+Braze.getInstance(context).subscribeToContentCardsUpdates(contentCardsUpdatedSubscriber)
+Braze.getInstance(context).requestContentCardsRefresh()
   // List of all Content Cards
   val allCards = event.allCards
 
@@ -98,7 +98,7 @@ Braze.getInstance(context).requestContentCardsRefresh(true)
 We also recommend unsubscribing when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
 
 ```kotlin
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 ```
 
 {% endsubtab %}
@@ -162,9 +162,20 @@ Register a callback function to subscribe for updates when cards are refreshed.
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.subscribeToContentCardsUpdates(function(updates){
+braze.subscribeToContentCardsUpdates((updates) => {
   const cards = updates.cards;
-  // do something with the latest instance of `cards`
+// For example:
+  cards.forEach(card => {
+    if (card.isControl) {
+      // Do not display the control card, but remember to call `logContentCardImpressions([card])`
+    }
+    else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
+      // Use `card.title`, `card.imageUrl`, etc.
+    }
+    else if (card instanceof braze.Banner) {
+      // Use `card.imageUrl`, etc.
+    }
+  })
 });
 
 braze.openSession();
@@ -284,7 +295,7 @@ Log impression events when cards are viewed by users:
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.logCardImpressions([card1, card2, card3], true);
+braze.logContentCardImpressions([card1, card2, card3]);
 ```
 
 Log card click events when users interact with a card:
@@ -292,7 +303,7 @@ Log card click events when users interact with a card:
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.logCardClick(card, true);
+braze.logContentCardClick(card);
 ```
 
 {% endtab %}

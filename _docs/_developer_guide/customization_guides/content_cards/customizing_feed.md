@@ -32,14 +32,14 @@ Request a manual refresh of Braze Content Cards from the Android SDK at any time
 {% subtab Java %}
 
 ```java
-Braze.getInstance(context).requestContentCardsRefresh(false);
+Braze.getInstance(context).requestContentCardsRefresh();
 ```
 
 {% endsubtab %}
 {% subtab Kotlin %}
 
 ```kotlin
-Braze.getInstance(context).requestContentCardsRefresh(false)
+Braze.getInstance(context).requestContentCardsRefresh()
 ```
 
 {% endsubtab %}
