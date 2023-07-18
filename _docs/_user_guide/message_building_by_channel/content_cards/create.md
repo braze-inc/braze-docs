@@ -240,7 +240,7 @@ If a card has re-eligibility turned on, you could chose to:
 
 With this approach, newly eligible users will get the new card and previous recipients would get the new card when they're re-eligible.
 
-**Example:** A campaign is triggered off of session start with re-eligibility set to 30 days. A user received the campaign two days ago and you want to change the copy. First stop the campaign and remove the card from feed. Then re-publish the campaign with the new copy. If the user has a session again, they will receive the new card in 28 days.
+**Example:** A campaign is triggered off of session start with re-eligibility set to 30 days. A user received the campaign two days ago, and you want to change the copy. First, stop the campaign and remove the card from the feed. Then re-publish the campaign with the new copy. If the user has a session again, they will receive the new card in 28 days.
 
 ##### Impact
 
