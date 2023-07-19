@@ -91,8 +91,6 @@ Lastly, add intent filters to handle `REGISTRATION` and `RECEIVE` intents from A
     </receiver>
 ```
 
-
-
 ## Step 3: Store your ADM API key
 
 First, save your ADM API key to a file named `api_key.txt` and save it in your project's [`Assets/Plugins/Android/assets`][54] folder. Next, [obtain an ADM API Key for your app][11].
