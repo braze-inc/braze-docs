@@ -729,8 +729,8 @@ var ticket_lookuptable = {
       'SelectOption' : {
         'Tools and Use Cases' : {
           'ShowSubmit': true,
-          'LinksTitle': ['Campaign Ideas and Strategies', 'Braze Learning Course: Customer Engagement Tools and Use Cases'],
-          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/','https://learning.braze.com/braze-customer-engagement-tools-use-cases']
+          'LinksTitle': ['Campaign Ideas and Strategies', 'Canvas Ideas and Strategies','Braze Learning Course: Customer Engagement Tools and Use Cases'],
+          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/','{{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies','https://learning.braze.com/braze-customer-engagement-tools-use-cases']
         },
         'Best Practices and Frequently Asked Questions' :{
           'ShowSubmit': true,
