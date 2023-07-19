@@ -11,21 +11,23 @@ channel:
 
 # Link aliasing
  
-> Use link aliasing to create recognizable, user-generated names to identify links sent in email messages from Braze. Link aliasing gives you the ability to retarget users that have clicked specific links, allowing you to create action-based triggers when users click a specific aliased link. 
-
-Link aliasing creates user-generated names that are available for segmentation retargeting, action-based triggering, and link analytics. Link aliasing works by decorating a Braze-generated query parameter on links in the email channel.
+> Use link aliasing to create recognizable, user-generated names to identify links sent in email messages from Braze. These links are available for segmentation retargeting, action-based triggering, and link analytics. Link aliasing gives you the ability to retarget users that have clicked specific links, allowing you to create action-based triggers when users click a specific aliased link.
 
 ## Creating a link alias
 
-To create a link alias, open your email body and click the **Link Management** tab in a Braze campaign or Canvas wizard to decorate all known links in the email body. You can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
+Link aliasing works by decorating a Braze-generated query parameter on links in the email channel. To create a link alias, open your email body and click the **Link Management** tab in a Braze campaign or Canvas builder to decorate all known links in the email body. You can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
+
+![][2]
 
 Braze automatically generates unique default link aliases for each of your links. You can customize these aliases, but keep in mind that aliases must be uniquely named per email campaign variant or Canvas component. Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It's best to include a question mark (?) at the end of your link so Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
 
 ### Checking workflows
 
-Braze recommends evaluating the links within the email, adding link templates, and providing a naming convention that works for segmentation and reporting purposes. This helps you keep track of all links! 
+Braze recommends evaluating the links within the email, adding link templates, and providing a naming convention that works for segmentation and reporting purposes. This helps you keep track of all links.
 
-### Extracting Data
+When link aliasing is enabled, messages, Content Blocks, and link templates are not modified. Any existing messages using link templates or Content Blocks will be the same. However, when you update a message, link alias markup will apply to all of the links, so you'll need to reapply the link templates for the links to be visible.
+
+### Extracting data
 
 Use the [Campaign Link Alias][3] and [Canvas Link Alias][4] endpoints to extract the `alias` set in each message variant in a campaign or an email Canvas component.
 
