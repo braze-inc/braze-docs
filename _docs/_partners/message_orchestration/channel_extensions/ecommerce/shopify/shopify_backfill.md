@@ -35,6 +35,19 @@ We recommend you audit your current active campaigns and Canvases for messages t
 
 ## Setting up Shopify Historical Backfill
 
+### Prerequisites
+
+The following events need to be enabled before turning on the backfill or their data won't be imported:
+
+- `shopify_created_order`
+- Braze Purchase Event 
+
+The above events can be enabled while setting up Shopify during [event selection]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/#event-selection).
+
+{% alert important %}
+You can activate the Backfill feature only once in your integration. 
+{% endalert %}
+
 ### Step 1: Start the Shopify backfill process
 
 On the Shopify partner page, select **Start Data Backfill**. For existing Shopify customers, you will need to reauthorize access for Braze to collect all past order events before you can start data backfill.

@@ -463,6 +463,8 @@ page_order: 3
 | Attribute Name | Description |
 | --- | --- |
 | `shopify_tags`  | This attribute corresponds to the [customer tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
+| `shopify_total_spent` | This attribute tracks the total amount spent on a store and is only supported for users imported through the [Historical Backfill]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/) feature. |
+| `shopify_order_count` | This attribute tracks the total number of orders made in a store and is only supported for users imported through the Historical Backfill feature. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -474,7 +476,9 @@ page_order: 3
   "attributes": [
     {
       "external_id": "user_id",
-      "shopify_tags": "VIP_customer"
+      "shopify_tags": "VIP_customer",
+      "shopify_total_spent": "60.00",
+      "shopify_order_count": "3",
     }
   ]
 }
