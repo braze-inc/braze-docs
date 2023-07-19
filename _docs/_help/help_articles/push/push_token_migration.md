@@ -16,8 +16,10 @@ A [push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push
 
 The Braze SDK will automatically migrate the push token of a user who has previously opted into your push notifications the first time they sign into your Braze-integrated app or site. If you integrate the Braze SDKs, you will not need to migrate push tokens using the API.
 
+However, because push tokens migrate when a user first logs into your app, note that Braze will not be able to send push notifications to users who have not logged in after your SDK integration. You may still wish to manually migrate Android and iOS push tokens as a way to re-engage with these users.
+
 {% alert note %}
-Due to the nature of push tokens, every ~60 days the token expires and is reset. Anybody who does not have a session within that time period won't have an active push token, regardless of the platform you're using. Learn more about push token expiration in our [push token FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-token-expire).
+Due to the nature of web push tokens, every ~60 days the token expires and is reset. Anybody who does not have a session within that time period won't have an active web push token. Braze will not migrate expired web push tokens. These users will need to be re-engaged through [push primers]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages).
 {% endalert %}
 
 ## Manual migration via API
