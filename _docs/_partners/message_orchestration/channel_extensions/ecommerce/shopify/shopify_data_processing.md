@@ -478,7 +478,7 @@ page_order: 3
       "external_id": "user_id",
       "shopify_tags": "VIP_customer",
       "shopify_total_spent": "60.00",
-      "shopify_order_count": "3",
+      "shopify_order_count": "3"
     }
   ]
 }
