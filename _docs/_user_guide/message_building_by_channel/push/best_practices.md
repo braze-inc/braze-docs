@@ -11,7 +11,7 @@ channel: push
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-- name: Push Primer In-app Messages
+- name: Push Primer In-App Messages
   link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   fa_icon: far fa-dot-circle
 - name: Detailed Push Preferences
