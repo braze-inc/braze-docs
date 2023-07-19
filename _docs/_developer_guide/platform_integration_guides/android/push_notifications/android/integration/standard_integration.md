@@ -134,11 +134,8 @@ While we strongly recommend registering your FCM registration token in your appl
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Migrate from GCM (Optional)
 
-If you are migrating from using GCM to using Firebase with Braze, visit the [GCM migration guide][48] for instructions on switching to using Firebase in your app.
-
-### Step 4: Set Your Firebase credentials
+### Step 3: Set Your Firebase credentials
 
 {% alert warning %}
 The **Legacy** Cloud Messaging API server key is required to configure Android Push in Braze. Using the Firebase Cloud Messaging API (V1) credentials will not allow you to send push notifications.
@@ -161,7 +158,7 @@ Input your Cloud Messaging API (Legacy) server key and sender ID into the Braze 
 
 ![][16]
 
-### Step 5: Remove old permissions
+### Step 4: Remove old permissions
 
 Braze no longer requires the following permissions if using Firebase:
 
@@ -173,7 +170,7 @@ Braze no longer requires the following permissions if using Firebase:
   <uses-permission android:name="YOUR-APPLICATION-PACKAGE-NAME.permission.C2D_MESSAGE" />
   ```
 
-### Step 6: Remove automatic actions from your application class
+### Step 5: Remove automatic actions from your application class
 
 If you have a custom [application][76] subclass, ensure you do not have automatic logic that pings your servers in your class's `Application.onCreate()` lifecycle method. This will ensure that silent push notifications from Braze don't cause unnecessary requests to your servers.
 

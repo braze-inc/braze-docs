@@ -11,13 +11,13 @@ channel: push
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
+- name: Push Primer In-app Messages
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
+  fa_icon: far fa-dot-circle
 - name: Detailed Push Preferences
   link: /docs/user_guide/message_building_by_channel/push/best_practices/detailed_push_preferences/
   fa_icon: fas fa-tasks
-- name: Push Primers
-  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
-  fa_icon: far fa-dot-circle
-- name: Sunset Policies
+- name: Sunset Policies for Push
   link: /docs/user_guide/message_building_by_channel/push/best_practices/sunset_policies/
   fa_icon: fas fa-sun
 - name: Conversion Tracking
@@ -26,12 +26,9 @@ guide_featured_list:
 - name: Message Format
   link: /docs/user_guide/message_building_by_channel/push/best_practices/message_format/
   fa_icon: fas fa-envelope
-- name: Push Enablement and Subscription
-  link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
+- name: Deliverability for Chinese Android Devices
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/
   fa_icon: fas fa-user-check
-- name: "Sending Test Messages"
-  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
-  fa_icon: fas fa-envelope
 - name: "Know Before You Send"
   link: /docs/know_before_send/
   fa_icon: fa-solid fa-paper-plane
