@@ -22,8 +22,8 @@ Note these guidelines when creating your CSV file. The first column of the CSV f
 
 - Maximum of 500 fields (columns)
 - Maximum field (column) name of 250 characters
+- Maximum 100&nbsp;MB for all CSV files combined across your company (Free)
 - Maximum CSV file size of 2&nbsp;GB (Pro)
-- Maximum CSV file size of 100 MB (Free)
 - Maximum field value (cell) of 5,000 characters
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
@@ -287,7 +287,7 @@ The following table describes the limitations that apply at a catalog level:
 
 | Limitation Area | Free version | Catalogs Pro |
 |---|---|---|
-| CSV file size | Up to 100&nbsp;MB for a single CSV file | Up to 2&nbsp;GB for a single CSV file |
+| CSV file size | Up to 100&nbsp;MB for all CSV files combined across your company | Up to 2&nbsp;GB for a single CSV file |
 | Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
 | Characters limit for item column name | Up to 250 characters | Up to 250 characters |
 | Selections | Up to 10 selections per catalog | Up to 10 selections per catalog |
