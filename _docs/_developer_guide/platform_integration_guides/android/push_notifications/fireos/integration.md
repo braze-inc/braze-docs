@@ -78,13 +78,17 @@ Next, declare that your app uses the device's ADM feature and that your app is d
 Lastly, add intent filters to handle `REGISTRATION` and `RECEIVE` intents from ADM within your Braze `AndroidManifest.xml` file. Immediately after `amazon:enable-feature`, add the following elements:
 
 ```xml
-<receiver android:name="com.braze.push.BrazeAmazonDeviceMessagingReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
-  <intent-filter>
-      <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
-      <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
-      <category android:name="com.yourapp.packagename" />
-  </intent-filter>
-</receiver>
+    <receiver
+      android:name="com.braze.push.BrazeAmazonDeviceMessagingReceiver"
+      android:exported="true"
+      android:permission="com.amazon.device.messaging.permission.SEND">
+      <intent-filter>
+        <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+        <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+
+        <category android:name="${applicationId}" />
+      </intent-filter>
+    </receiver>
 ```
 
 ## Step 3: Store your ADM API key
