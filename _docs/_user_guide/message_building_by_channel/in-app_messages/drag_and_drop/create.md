@@ -3,6 +3,7 @@ nav_title: Creating an In-App Message
 article_title: "Creating an in-app message with drag-and-drop"
 description: "This reference article covers creating an in-app message with the drag-and-drop editor, prerequistes, creative details, and more."
 alias: "/create_dnd_iam/"
+page_order: 1
 ---
 
 # Creating an in-app message with drag-and-drop

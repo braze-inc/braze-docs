@@ -25,11 +25,15 @@ On the Shopify partner page, select **Begin Setup** to start the integration pro
 ### Step 2: Braze's setup wizard
 Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your Shopify store name. Make sure to enter the store name, and not your Shopify domain. Note that currently, we can only connect one store per workspace.
 
-### Step 3: Flexible event selection
+### Step 3: Flexible event selection {#event-selection}
 There will be a step explaining which events require us to implement the Braze Web SDK on your store and what to expect when this is added. Proceed to the next page to select the Shopify events you want Braze to track. Selecting any events with an * next to them will enable our Web SDK. The next step will ask you to confirm the selected events.
 
 ### Step 4: Backfill historical data
 You have the option to enable a backfill of purchasers from the last 90 days prior to your installation. By automatically syncing over past customer and purchase data, you’ll be able to immediately start targeting and engaging with your customers. Refer to [Shopify historical backfill]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/) to learn more.
+
+{% alert warning %}
+To ensure the backfill imports Order Created Events and Braze Purchase Events, you must have selected “Order Created” and “Braze Purchase Event” during event selection in Step 3.
+{% endalert %}
 
 ### Step 5: Enable in-browser message channel
 You can optionally unlock a new channel on your Shopify store for in-browser messages. This will allow you to use our basic message types like slide-up, modal, full screen, simple surveys, and custom HTML. Note that enabling this will implement our Web SDK in your store. Check out our [guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) on how you can create your first in-browser message.

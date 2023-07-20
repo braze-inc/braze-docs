@@ -113,7 +113,7 @@ Suppose a user opts-in for push, receives some push messaging, and then later de
 
 Additionally, if a user were to re-enable foreground push, it would require a session start to update this information in their user profile to begin receiving push messaging.
  
-### Under what circumstances do push tokens expire? {#push-token-expire}
+### When do push tokens expire? {#push-token-expire}
 
 Unfortunately, APNs and FCM don't really define this. Push tokens can expire when an app is updated, when users transfer their data to a new device, or when they re-install an operating system. For the most part, we don't really have insight into why push providers will expire certain push tokens.
 

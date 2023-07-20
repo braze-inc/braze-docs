@@ -3,6 +3,7 @@ nav_title: Editor Blocks
 article_title: "In-App Message Editor Blocks"
 description: "This reference article describes the editor blocks available in the drag-and-drop editor for in-app messages."
 alias: "/editor_blocks_dnd_iam/"
+page_order: 5
 ---
 
 # In-app message editor blocks

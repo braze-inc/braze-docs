@@ -11,11 +11,16 @@ guide_top_text: "The drag-and-drop editor brings ease to Braze in-app message bu
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Creating an In-App Message
-  link: /docs/create_dnd_iam/
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/
   fa_icon: fas fa-mobile-alt
 - name: Editor Blocks
-  link: /docs/editor_blocks_dnd_iam/
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/
   fa_icon: fas fa-align-left
 
+guide_menu_title: Templates
+guide_menu_list:
+- name: Phone Number Capture
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/
+  fa_icon: fas fa-phone
 ---
 <br><br>
