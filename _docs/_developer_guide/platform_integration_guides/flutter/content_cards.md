@@ -33,9 +33,9 @@ To receive Content Card data in your Flutter app, the `BrazePlugin` supports sen
 
 The `BrazeContentCard` [object](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/BrazeContentCard-class.html) supports a subset of fields available in the native model objects, including `description`, `title`, `image`, `url`, `extras`, and more.
 
-### Step 1: Listen for Content Cards in the Dart layer
+### Step 1: Listen for Content Card data in the Dart layer
 
-To receive to the content card data in the Dart layer, use the code below to create a `StreamSubscription` and call the `braze.subscribeToContentCards()`. Remember to `cancel()` the stream subscription when it is no longer needed.
+To receive to the content card data in the Dart layer, use the code below to create a `StreamSubscription` and call `braze.subscribeToContentCards()`. Remember to `cancel()` the stream subscription when it is no longer needed.
 
 ```dart
 // Create stream subscription
@@ -51,9 +51,9 @@ contentCardsStreamSubscription.cancel();
 
 For an example, see [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) in our sample app.
 
-### Step 2: Forward Content Cards from the native layer
+### Step 2: Forward Content Card data from the native layer
 
-To receive data in the Dart layer from Step 1, add the following code to forward the Content Card data from the native layers.
+To receive the data in the Dart layer from Step 1, add the following code to forward over the Content Card data from the native layers.
 
 {% tabs %}
 {% tab Android %}
@@ -71,6 +71,7 @@ For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutt
 
 {% endtab %}
 {% endtabs %}
+
 #### Replaying the callback for Content Cards
 
 To store any Content Cards triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when initializing the `BrazePlugin`:
