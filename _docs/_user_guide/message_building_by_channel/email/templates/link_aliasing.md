@@ -11,13 +11,13 @@ channel:
 
 # Link aliasing
  
-> Use link aliasing to create recognizable, user-generated names to identify links sent in email messages from Braze. Link aliasing gives you the ability to retarget users that have clicked specific links, allowing you to create action-based triggers when users click a specific aliased link. 
-
-Link aliasing creates user-generated names that are available for segmentation retargeting, action-based triggering, and link analytics. Link aliasing works by decorating a Braze-generated query parameter on links in the email channel.
+> Use link aliasing to create recognizable, user-generated names to identify links sent in email messages from Braze. These links are available for segmentation retargeting, action-based triggering, and link analytics. Link aliasing gives you the ability to retarget users that have clicked specific links, allowing you to create action-based triggers when users click a specific aliased link.
 
 ## Creating a link alias
 
-To create a link alias, open your email body and click the **Link Management** tab in a Braze campaign or Canvas wizard to decorate all known links in the email body. You can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
+Link aliasing works by decorating a Braze-generated query parameter on links in the email channel. To create a link alias, open your email body and click the **Link Management** tab in a Braze campaign or Canvas builder to decorate all known links in the email body. You can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
+
+![][2]
 
 Braze automatically generates unique default link aliases for each of your links. You can customize these aliases, but keep in mind that aliases must be uniquely named per email campaign variant or Canvas component. 
 
@@ -25,7 +25,9 @@ Link aliasing is only supported in `href` attributes within HTML anchor tags whe
 
 ### Checking workflows
 
-It's important to evaluate the links within the email, add link templates, and provide a naming convention that works for segmentation and reporting purposes. This helps you keep track of all links across your messaging! 
+Braze recommends evaluating the links within the email, adding link templates, and providing a naming convention that works for segmentation and reporting purposes. This helps you keep track of all links.
+
+When link aliasing is enabled, messages, Content Blocks, and link templates are not modified. Any existing messages using link templates or Content Blocks will be the same. However, when you update a message, link alias markup will apply to all of the links, so you'll need to reapply the link templates for the links to be visible.
 
 ### Extracting data
 
@@ -59,7 +61,7 @@ The following table provides examples of links in an email body, link aliasing r
 | https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk | Braze inserts a question mark (?) and adds the first query parameter into the URL. |
 | https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz | Braze detects other query parameters and appends `lid=` to the end of the URL. |
 | `<a href="{{custom_attribute.{product_url}}?">` | `<a href="{{custom_attribute.{product_url}}?lid=ac7a548g5kl7">` | Braze recognizes that this is a URL and already has a question mark (?) present. Then, it appends the `lid` query parameter after the question mark. |
-| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email | Braze expects the URL to use a standard structure where anchors (#) are present after a question mark (?). Because Braze reads from left to right, the question mark and `lid` value are appended before the anchor. |
+| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email | Braze expects the URL to use a standard structure where anchors (#) are present after a question mark (?). Because Braze reads from left to right, we will append the question mark and `lid` value before the anchor. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {%endraw%}
 
@@ -96,12 +98,12 @@ Braze allows you to select unlimited links to track, though you may only retarge
 {% tabs local %}
 {% tab Drag-And-Drop Editor %}
 
-![Link Management tab of the Drag-And-Drop email editor]({% image_buster /assets/img/link_management_dnd.png %})
+![Link Management tab of the Drag-and-Drop email editor.]({% image_buster /assets/img/link_management_dnd.png %})
 
 {% endtab %}
 {% tab HTML editor %}
 
-![Link Management tab of the HTML email editor]({% image_buster /assets/img/link_management_html.png %})
+![Link Management tab of the HTML email editor.]({% image_buster /assets/img/link_management_html.png %})
 
 {% endtab %}
 {% endtabs %}

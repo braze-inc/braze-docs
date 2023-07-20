@@ -112,7 +112,7 @@ private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscribe
 {% tab KOTLIN %}
 
 ```kotlin
-private var mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+private var contentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
 ```
 
 {% endtab %}
@@ -136,7 +136,7 @@ mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>(
     }
 };
 Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
-Braze.getInstance(context).requestContentCardsRefresh(true);
+Braze.getInstance(context).requestContentCardsRefresh();
 ```
 
 {% endtab %}
@@ -144,15 +144,15 @@ Braze.getInstance(context).requestContentCardsRefresh(true);
 
 ```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
-mContentCardsUpdatedSubscriber = IEventSubscriber { event ->
+Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+contentCardsUpdatedSubscriber = IEventSubscriber { event ->
   // List of all Content Cards
   val allCards = event.allCards
 
   // Your logic below
 }
-Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
-Braze.getInstance(context).requestContentCardsRefresh(true)
+Braze.getInstance(context).subscribeToContentCardsUpdates(contentCardsUpdatedSubscriber)
+Braze.getInstance(context).requestContentCardsRefresh()
 ```
 
 {% endtab %}
@@ -171,7 +171,7 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 ```
 
 {% endtab %}

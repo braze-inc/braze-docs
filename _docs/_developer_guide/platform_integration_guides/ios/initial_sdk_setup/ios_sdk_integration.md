@@ -728,7 +728,7 @@ Proceed to compile your code and run your application.<br><br>Try displaying the
 
 ## Next steps
 
-Congratulations! You've completed this best practice integration guide! An example `BrazeManager` helper file can be found on [Github](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift).
+Congratulations! You've completed this best practice integration guide! An example `BrazeManager` helper file can be found on [GitHub](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift).
 
 Now that you have decoupled any dependencies on the Braze iOS SDK from the rest of your production code, check out some of our optional advanced implementation guides:
 - [Advanced push notification implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/)

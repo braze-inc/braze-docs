@@ -22,7 +22,7 @@ You can use the **Media Library** to:
 
 * Upload multiple images at one time
 * Upload Virtual Contact Files (.vcf)
-* Upload a folder with your images (max 50 images)
+* Upload a folder with your images (maximum 50 images)
 * [Generate an image using AI](#generate-ai) and store it in the Media Library
 * Crop an existing image to create the right ratio for your messages
 * Add tags or teams to help further organize your images

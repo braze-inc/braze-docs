@@ -16,6 +16,9 @@ guide_featured_list:
 - name: "About SMS"
   link: /docs/user_guide/message_building_by_channel/sms/about_sms/
   fa_icon: fas fa-check
+- name: "SMS Setup"
+  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/
+  fa_icon: fas fa-mobile
 - name: "SMS Laws & Regulations"
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
   fa_icon: fas fa-gavel

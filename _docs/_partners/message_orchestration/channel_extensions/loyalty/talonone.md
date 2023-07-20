@@ -29,10 +29,11 @@ Talon.One **_requires_** a maximum rate limit of 5,000 messages per minute. This
 
 ## Integration
 
-1. Visit the [Talon.One documentation](https://docs.talon.one/docs/dev/technology-partners/braze/creating-coupons-braze) for guidance on how to set up your integration, how to use the Talon.One API coupon endpoint, and where to find the Connected Content templates needed for your Braze messages.
-2. To take advantage of the other features Talon.One offers such as loyalty points and referrals, visit the following articles:
+1. Visit the [Talon.One documentation](https://docs.talon.one/docs/dev/technology-partners/braze) for guidance on how to set up your integration, how to use the Talon.One API coupon endpoint, and where to find the Connected Content templates needed for your Braze messages.
+2. To take advantage of the other features Talon.One offers, such as loyalty points and referrals, visit the following articles:
   - [Add loyalty points Braze](https://docs.talon.one/docs/dev/technology-partners/braze/adding-loyalty-points-braze)
   - [Fetch a loyalty ledger in Braze](https://docs.talon.one/docs/dev/technology-partners/braze/receiving-loyalty-ledger-braze)
+  - [Create coupons via Braze](https://docs.talon.one/docs/dev/technology-partners/braze/creating-coupons-braze)
   - [Create referrals via Braze](https://docs.talon.one/docs/dev/technology-partners/braze/creating-referrals-braze)
   - [Create a birthday promotion via Braze](https://docs.talon.one/docs/dev/technology-partners/braze/bday-promotion-braze)
 

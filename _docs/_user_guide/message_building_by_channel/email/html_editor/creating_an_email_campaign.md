@@ -96,9 +96,11 @@ Braze will automatically remove HTML event handlers referenced as attributes. No
 
 To add email headers, click **Edit Sending Info** and select **Add New Header**.
 
-Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically have information about the sender, recipient, authentication protocols, and contain email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
+Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically have information about the sender, recipient, authentication protocols, and email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
 
-However, Braze does allow you the flexibility to add additional email headers as needed for advanced use cases. There are a few reserved fields that the Braze platform will overwrite during sending. 
+You can also select the **Add whitespace after preheader** checkbox to hide the text or HTML of the email body in the email preheader. 
+
+Braze allows you the flexibility to add additional email headers as needed for advanced use cases. There are a few reserved fields that the Braze platform will overwrite during sending. 
 
 Avoid using the following keys:
 

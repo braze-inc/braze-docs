@@ -1,7 +1,7 @@
 ---
 nav_title: Keyword Processing
 article_title: SMS Keyword Processing
-page_order: 6
+page_order: 8
 layout: dev_guide
 
 guide_top_header: "Keyword processing"

@@ -15,7 +15,7 @@ platform: API
 
 ## Setting up an API-triggered campaign
 
-Setting up an API-triggered campaign takes a few quick steps. First, create a new multichannel or single-channel campaign (with multivariate testing).
+Setting up an API-triggered campaign takes a few steps. First, create a new multichannel or single-channel campaign (with multivariate testing).
 
 {% alert note %}
 An API-triggered campaign is different from an [API campaign]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns).

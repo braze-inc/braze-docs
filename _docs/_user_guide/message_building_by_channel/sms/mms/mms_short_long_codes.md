@@ -19,12 +19,15 @@ MMS is currently supported for US and Canada short codes (5-6 digit numbers) and
 
 All new short code applications will include MMS by default. Typically, short codes must be explicitly requested during the short code application, but now are included by default. Some users may not implement or use this functionality but will be available if needed at a later date.
 
-For those users who got their short codes before Braze supported MMS, all existing US and Canada customers with US and Canada short codes are eligible to instantly enable MMS. Reach out to your customer success manager if this situation applies to you and you would like MMS enabled. 
+For those users who got their short codes before Braze supported MMS, all existing US and Canada customers with US and Canada short codes are eligible to instantly enable MMS. Reach out to your customer success manager if this situation applies to you and you would like MMS enabled.
+
+{% alert important %}
+When enabling MMS for short codes that previously didn't have MMS enabled, the short codes might need to be re-approved in an approval process that could take weeks. It's important to account for this timing when deciding to enable MMS.
+{% endalert %}
 
 ### MMS short code best practices
 
-- At Braze, we strongly recommend keeping transaction and promotional messaging separate, each with different short codes. Because MMS is tied to the SMS channel, and the SMS channel is highly regulated, customers may be required to pay a monetary penalty for misusing the channel and get their short code suspended (which is irreversible). Keep transaction and promotional messaging tied to different short codes safeguards their transactional messaging. 
-
+- At Braze, we strongly recommend keeping transaction and promotional messaging separate, each with different short codes. Because MMS is tied to the SMS channel, and the SMS channel is highly regulated, customers may be required to pay a monetary penalty for misusing the channel and get their short code suspended (which is irreversible). Keeping transaction and promotional messaging tied to different short codes safeguards their transactional messaging.
 - If customers already have a short code dedicated to promotional messaging, and it is MMS enabled, they do not need a separate short code for MMS.
 
 ## MMS long codes

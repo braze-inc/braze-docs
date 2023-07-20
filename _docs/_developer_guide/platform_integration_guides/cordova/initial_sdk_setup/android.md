@@ -21,7 +21,7 @@ Download the SDK from [GitHub][1] and run the following from the root of your pr
 cordova plugin add path_to_repo/braze-cordova-sdk
 ```
 
-Alternatively, if you are running Cordova 6 or later, you could install directly from Github:
+Alternatively, if you are running Cordova 6 or later, you could install directly from GitHub:
 
 ```
 cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#master

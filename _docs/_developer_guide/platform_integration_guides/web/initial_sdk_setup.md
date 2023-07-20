@@ -44,7 +44,7 @@ const braze = require("@braze/web-sdk");
 
 ### Option 2: Google tag manager {#install-gtm}
 
-The Braze Web SDK can be quickly installed from the Google Tag Manager Template Library. Two tags are supported:
+The Braze Web SDK can be installed from the Google Tag Manager Template Library. Two tags are supported:
 
 1. Initialization tag: loads the Web SDK onto your website and optionally sets the External User ID.
 2. Actions tag: used to trigger custom events, purchases, change user IDs, or toggle SDK tracking.
@@ -195,7 +195,7 @@ optimizeDeps: {
 
 ### Electron support {#electron}
 
-Electron does not officially support web push notifications (see: this [Github issue](https://github.com/electron/electron/issues/6697)). There are other [open source workarounds](https://github.com/MatthieuLemoine/electron-push-receiver) you may try that have not been tested by Braze.
+Electron does not officially support web push notifications (see: this [GitHub issue](https://github.com/electron/electron/issues/6697)). There are other [open source workarounds](https://github.com/MatthieuLemoine/electron-push-receiver) you may try that have not been tested by Braze.
 
 ### AMD module loader
 

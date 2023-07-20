@@ -102,7 +102,7 @@ The **Content** section contains the editor. There are three key components with
 - **Rows:** Rows are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.<br><br>
 - **Settings:** General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings will be used everywhere in your message, except where you use a custom setting.
 
-This is very useful to build a coherent message very quickly.
+This is very useful to build a coherent message quickly.
 {% endsubtab %}
 {% subtab Preview and Test %}
 
