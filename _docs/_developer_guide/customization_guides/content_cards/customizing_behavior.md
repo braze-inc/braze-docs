@@ -37,6 +37,10 @@ Key-value pairs are stored on <a href="https://js.appboycdn.com/web-sdk/latest/d
 {% endtab %}
 {% endtabs %}
 
+{% alert important %}
+It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g., `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs that developers build into the app logic.
+{% endalert %}
+
 ## Content Cards as supplemental content
 
 ![][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
