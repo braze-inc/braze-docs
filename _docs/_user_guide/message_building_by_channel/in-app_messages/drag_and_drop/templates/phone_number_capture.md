@@ -3,7 +3,6 @@ nav_title: Phone Number Capture
 article_title: Phone Number Capture
 alias: "/phone_number_capture/"
 description: "This reference page covers how to create a phone number capture form with the in-app message drag-and-drop editor."
-hidden: true
 ---
 
 # Phone number capture form
