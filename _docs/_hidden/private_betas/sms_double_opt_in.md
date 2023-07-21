@@ -24,7 +24,7 @@ SMS double opt-in is currently in early access. Contact your Braze customer succ
 
 Users can provide their explicit consent through outbound or inbound SMS messages.
 
-### Outbound SMS Double Opt-In
+### Outbound SMS double opt-in
 
 When a user provides their phone number, they are sent an SMS message that asks for their consent.
 
