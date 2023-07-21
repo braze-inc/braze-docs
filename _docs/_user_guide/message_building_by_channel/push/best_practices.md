@@ -77,7 +77,7 @@ In addition, by using the conversion event "opens app," you are tracking app ope
 
 Didn't find what you were looking for? Check out these additional best practices articles:
 
-- [Push message format][1]
+- [Push message and image formats][1]
 - [Push primer in-app messages][2]
 - [Deliverability for Chinese Android devices][3]
 - [Know before you send: channels][4]
