@@ -149,7 +149,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can ma
 
 Some message sends may appear in the Messaging History with blank destinations (signified by "—"). This is because some channels, such as Content Cards and webhooks, do not gather device data on message send.
 
-Content Cards sends are logged when the card is available on the user's device. Because Content Cards can be viewed on multiple devices, device data is not logged for a send. Instead, this information is logged upon impression (when the card is actually viewed). Webhook sends include all attempted sends, successful and unsuccessful. This doesn't signify whether the request was received, therefore device data may be missing.
+Content Cards sends are logged when the card is available to be viewed. Because Content Cards can be viewed on multiple devices, device data is not logged for a send. Instead, this information is logged upon impression (when the card is actually viewed). Webhook sends include all attempted sends, successful and unsuccessful. This doesn't signify whether the request was received, therefore device data may be missing.
 
 #### Note on email open event {#note-on-email-open-event}
 
