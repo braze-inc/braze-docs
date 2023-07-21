@@ -52,7 +52,7 @@ To turn on SMS double opt-in, navigate to the **SMS Global Keywords** table in t
 
 | Category   |    Fields    | Description   
 | ----------- |----------- |---------------- 
-| Opt-In Prompt | Keywords | These are the keywords that a user can text to indicate opt-in intent. `START` is a required keyword. This opt-in prompt will also be sent to the user when their subscription status is updated by sources listed in the [Subscription Sources](#subscription-sources) section.
+| Opt-In Prompt | Keywords | These are the keywords that a user can text to indicate opt-in intent. `START` is a required keyword. This opt-in prompt will also be sent to the user when their subscription status is updated by sources listed in the [Subscription sources](#subscription-sources) section.
 | | Reply Message | This is the initial response that a user will receive after texting an opt-in keyword (e.g., “Reply Y to confirm you want to receive messages from this number. Msg&Data Rates may apply.” )
 | Double Opt-In Confirmation | Keywords | These are the keywords a user can reply with to confirm their opt-in intent. At least one keyword is required. These keywords should be specified in the **Opt-In Prompt Reply Message** field.
 | | Reply Message | This is the confirmation response that a user will receive after they have explicitly confirmed their opt-in and are now messageable via SMS. The user’s Subscription Group status will be set to `Subscribed`.
