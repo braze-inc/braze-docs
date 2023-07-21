@@ -17,8 +17,7 @@ When SMS double opt-in is turned on, users are sent an SMS message that asks for
 While not an explicit requirement of the Telephone Consumer Protection Act of 1991 (TCPA), Braze recommends that you configure SMS double opt-in to ensure users are aware and consenting to be a part of your SMS program. For more information about SMS Compliance, view [SMS laws, regulations, and abuse prevention]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/).
 
 {% alert important %}
-SMS double opt-in is currently in early access.<br>
-Contact your Braze customer success manager if you're interested in participating in the early access.
+SMS double opt-in is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## SMS double opt-in workflows
