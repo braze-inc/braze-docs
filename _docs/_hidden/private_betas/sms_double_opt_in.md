@@ -30,7 +30,7 @@ When a user provides their phone number, they are sent an SMS message that asks 
 
 ![Screenshot of inbound SMS message where a user sends "JOIN" and receives the response "Reply Y to confirm you want to JOIN our SMS program. 3msg/week, text STOP at any time to STOP, then texts back "Y".][1]{:style="max-width:40%;"}
 
-### Inbound SMS Double Opt-In
+### Inbound SMS double opt-in
 
 When a user sends an SMS message that contains an opt-in keyword, they are sent an SMS message that asks for their consent.
 
