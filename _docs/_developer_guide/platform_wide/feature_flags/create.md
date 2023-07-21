@@ -601,7 +601,7 @@ featureFlagsStreamSubscription = braze.subscribeToFeatureFlags((featureFlags) {
 featureFlagsStreamSubscription.cancel();
 ```
 
-Then, make these changes in the iOS native layer as well. Note that there are no additional steps needed to implement on the Android layer.
+Then, make these changes in the iOS native layer as well. Note that there are no additional steps needed on the Android layer.
 
 1. Implement `featureFlags.subscribeToUpdates` to subscribe to feature flag updates as described in the [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/featureflags-swift.class/subscribetoupdates(_:)) documentation.
 
