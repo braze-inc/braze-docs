@@ -34,7 +34,7 @@ You could change the unsubscribe link in the custom footer from {% raw %} `{{${s
 
 Next, you could call the [`/email/status` endpoint]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) to update the user's subscription status. For more details, see our documentation on [changing email subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
 
-Note that Braze won't allow you to save the new link unless it's still the default Braze unsubscribe tag {%raw%}(``${set_user_to_unsubscribed_url}``){%endraw%} in the footer. So, in order to use a custom link, you will still need to include the default link, but "hide" it by putting the tag in a comment or a hidden `<div>` tag.
+To save this new link, the default Braze unsubscribe tag {%raw%}(``${set_user_to_unsubscribed_url}``){%endraw%} must be in the footer. This means you'll need to include the default link by "hiding" it by either placing the tag in a comment or in a hidden `<div>` tag.
 
 - **Tag in comment example:** putting tag in comment example: `<!-- ${set_user_to_unsubscribed_url} -->`
 - **Comment in hidden `<div>` tag example:**
