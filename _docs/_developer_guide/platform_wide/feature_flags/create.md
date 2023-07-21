@@ -586,6 +586,9 @@ BrazePlugin.subscribeToFeatureFlagUpdates((featureFlags) => {
 ```
 {% endtab %}
 {% tab Flutter %}
+
+In the Dart code in your app, use the following sample code:
+
 ```dart
 // Create stream subscription
 StreamSubscription featureFlagsStreamSubscription;
@@ -597,6 +600,15 @@ featureFlagsStreamSubscription = braze.subscribeToFeatureFlags((featureFlags) {
 // Cancel stream subscription
 featureFlagsStreamSubscription.cancel();
 ```
+
+Then, make these changes in the iOS native layer as well. Note that there are no additional steps needed on the Android layer.
+
+1. Implement `featureFlags.subscribeToUpdates` to subscribe to feature flag updates as described in the [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/featureflags-swift.class/subscribetoupdates(_:)) documentation.
+
+2. Your `featureFlags.subscribeToUpdates` callback implementation must call `BrazePlugin.processFeatureFlags(featureFlags)`.
+
+For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
+
 {% endtab %}
 {% tab Roku %}
 ```brightscript
