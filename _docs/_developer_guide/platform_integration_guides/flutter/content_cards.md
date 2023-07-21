@@ -53,7 +53,7 @@ For an example, see [main.dart](https://github.com/braze-inc/braze-flutter-sdk/b
 
 ### Step 2: Forward Content Card data from the native layer
 
-To receive the data in the Dart layer from Step 1, add the following code to forward over the Content Card data from the native layers.
+To receive the data in the Dart layer from step 1, add the following code to forward the Content Card data from the native layers.
 
 {% tabs %}
 {% tab Android %}
