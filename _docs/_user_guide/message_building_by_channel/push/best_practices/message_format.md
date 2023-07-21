@@ -1,6 +1,6 @@
 ---
-nav_title: Message Format
-article_title: Push Message Format
+nav_title: Message Formats
+article_title: Push Message and Image Formats
 page_order: 5
 page_type: reference
 description: "This article describes message and image formats for iOS and Android push notifications."
@@ -8,7 +8,7 @@ channel: push
 
 ---
 
-# Message format
+# Push message and image formats
 
 > This reference article describes message and image formats for iOS and Android push notifications.
 
