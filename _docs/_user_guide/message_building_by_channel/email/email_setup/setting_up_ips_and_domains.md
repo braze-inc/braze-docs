@@ -41,3 +41,17 @@ We'll check your setup and validate all information in our internal systems. The
 {% alert important %}
 If you're using the self-service email setup feature, be sure to consult with the Braze onboarding team.
 {% endalert %}
+
+This method will set up one sending and one tracking domain.
+
+1. Go to **Settings** > **Admin Settings** under **Company Settings**. 
+2. Select the **Sender Verification** tab and click the **Start setup** button.
+3. Enter a sending domain.
+4. Enter a tracking domain.
+5. Add an IP.
+
+Note that additional domains that have been added will not appear in the **Sender Verification** section. To add more domains, contact the Braze Support team.
+
+### Considerations
+
+After your sender verification is complete, we recommend IP warming to ensure your messages reach their destination inboxes at a consistently high rate.
