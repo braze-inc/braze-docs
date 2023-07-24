@@ -38,9 +38,9 @@ To save this new link, the default Braze unsubscribe tag {%raw%}(``${set_user_to
 
 - **Tag in comment example:** putting tag in comment example: `<!-- ${set_user_to_unsubscribed_url} -->`
 - **Comment in hidden `<div>` tag example:**
-```
+{%raw%}```
 <div style="display:none;max-height:0px;overflow:hidden;">${set_user_to_unsubscribed_url}</div>
-```
+```{%endraw%}
 
 ### What happens if I edit an email template that is currently being used in a campaign?
 
