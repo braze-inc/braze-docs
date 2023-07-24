@@ -37,9 +37,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "campaign_id": (required, string) see Campaign identifier,
-  "name": (required, string) The name of the resulting Campaign,
-  "description": (optional, string) The description of the resulting Campaign,
+  "campaign_id": (required, string) see campaign identifier,
+  "name": (required, string) The name of the resulting campaign,
+  "description": (optional, string) The description of the resulting campaign,
 }
 ```
 
