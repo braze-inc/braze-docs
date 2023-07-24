@@ -37,10 +37,7 @@ Next, you could call the [`/email/status` endpoint]({{site.baseurl}}/api/endpoin
 To save this new link, the default Braze unsubscribe tag {%raw%}(``${set_user_to_unsubscribed_url}``){%endraw%} must be in the footer. This means you'll need to include the default link by "hiding" it by either placing the tag in a comment or in a hidden `<div>` tag.
 
 - **Tag in comment example:** putting tag in comment example: `<!-- ${set_user_to_unsubscribed_url} -->`
-- **Comment in hidden `<div>` tag example:**
-{%raw%}```
-<div style="display:none;max-height:0px;overflow:hidden;">${set_user_to_unsubscribed_url}</div>
-```{%endraw%}
+- **Comment in hidden `<div>` tag example:** {%raw%}`<div style="display:none;max-height:0px;overflow:hidden;">${set_user_to_unsubscribed_url}</div>`{%endraw%}
 
 ### What happens if I edit an email template that is currently being used in a campaign?
 
