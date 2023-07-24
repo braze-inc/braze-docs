@@ -39,7 +39,7 @@ guide_featured_list:
 
 guide_menu_title: "Legal"
 guide_menu_list:
-- name: Data Processing Addendum
+- name: Data Processing Addendum (PDF)
   link: https://marketing-assets.braze.com/production/hero/Braze-DPA-Rev-June-2023-Final-copy.pdf?v=1685959392
   fa_icon: fa-solid fa-gavel
 - name: DPA FAQs
