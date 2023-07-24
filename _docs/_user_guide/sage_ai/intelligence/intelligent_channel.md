@@ -12,7 +12,7 @@ search_rank: 11
 
 In this case, best means the channel that has the highest likelihood of engagement, given the user's history. You can select email, sms, web push, or mobile push (including any available mobile OS or device) as a channel.
 
-![][1]{: style="float:right;max-width:50%;margin-left:10px;margin-top:10px;border:0"}
+![][1]{: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
 
 The Intelligent Channel computes the engagement rate for each user for each of the three channels by taking the ratio of message interactions (opens or clicks) to the number of messages received over the last six months of activity. The available channels are ranked according to their respective engagement ratios, and the channel with the highest ratio is the "Most Engaged" for that user. 
 
