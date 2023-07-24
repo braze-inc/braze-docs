@@ -62,3 +62,5 @@ This endpoint will return a `202` status code, and the campaign creation will oc
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns#duplicating-segments-campaigns-and-canvases
 [2]: {{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/?redirected=true#security-event-download
+
+{% endapi %}
