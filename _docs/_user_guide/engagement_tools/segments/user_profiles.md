@@ -108,7 +108,7 @@ If you have feedback on this table, or would like to see specific events, please
 
 #### Viewing and understanding events
 
-For each event in the **Messaging History** table, you can see the messaging channel, event type, timestamp the event occurred, and the associated campaign or Canvas message. To filter for specific events, click **Filters** and select events from the list.
+For each event in the **Messaging History** table, you can see the messaging channel, event type, timestamp the event occurred, the associated campaign or Canvas message, and the user's device data. To filter for specific events, click **Filters** and select events from the list.
 
 ##### Message engagement events
 
@@ -144,6 +144,12 @@ A frequency cap event occurs when a user is qualified to receive a message, but 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can manage frequency capping from **Engagement** > **Global Message Settings**.
 {% endalert %}
+
+##### Blank destinations
+
+Some message sends may appear in the Messaging History with blank destinations (signified by "—"). This is because some channels, such as Content Cards and webhooks, do not gather device data on message send.
+
+Content Cards sends are logged when the card is available to be viewed. Because Content Cards can be viewed on multiple devices, device data is not logged for a send. Instead, this information is logged upon impression (when the card is actually viewed). Webhooks are sent to a system endpoint (not a device) so device data is not applicable.
 
 #### Note on email open event {#note-on-email-open-event}
 

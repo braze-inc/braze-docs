@@ -194,18 +194,7 @@ Web platforms do not allow background or silent push.
 
 ## Best practices
 
-#### Add push subscription controls to your app
-To avoid users disabling notifications at the device-level, which removes their foreground push token completely, Braze recommends letting users control their push subscription directly within your app. See [updating push subscription states](#update-push-subscription-state) for more details.
-
-#### Prime users for push before showing the system prompt
-You only get one chance to ask a user for push permission, and once they decline, it's very hard to convince them to re-enable push in their device settings. For this reason, you should prime users for push using an in-app message before showing the system prompt. See [Push primers][push-primers] to learn more about increasing opt-ins.
-
-#### Subscription state does not always mean a user is reachable
-If a user doesn't have a valid foreground push token for an app (that is, they turn off push tokens at the device-level through settings, opting not to receive notifications), their subscription state can still be considered `subscribed` to push. However, this user would not be **Push Enabled for App** in Braze since the foreground push token is not valid. 
-
-Additionally, if a user profile doesn't have any valid or registered push token for any other apps, their Push enabled filter in segmentation will also be `false`. 
-
-Push subscription state does not guarantee that a push will be delivered. Users must also be push enabled to receive notifications. This is because a user profile has a single push subscription state but may have multiple devices with different foreground push permissions.
+Refer to our dedicated article on [Push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices) for detailed guidance on how to optimize your usage of push at Braze.
 
 [1]: {% image_buster /assets/img/push_enablement.png %}
 [2]: {% image_buster /assets/img/push_changelog.png %}
