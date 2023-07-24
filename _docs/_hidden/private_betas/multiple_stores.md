@@ -51,7 +51,7 @@ After you connect more than one store, the following attributes will be synced a
 - `shopify_order_count` (only available via Historical Backfill)
 - `shopify_total_spent` (only available via Historical Backfill)
 
-To use custom events when creating or editing a segment, select the “Nested Custom Attribute” filter and locate your nested attribute. For help identifying the specific path or field in the object, use the [Generate Schema]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support#generate-schema) tool. After you select the nested attributes, a field with a plus button will appear next to the selected attributes for you to specify the path. To learn more about nested attributes, see [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
+To use custom events when creating or editing a segment, select the **Nested Custom Attribute** filter and locate your nested attribute. For help identifying the specific path or field in the object, use the [Generate Schema]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support#generate-schema) tool. After you select the nested attributes, a field with a plus button will appear next to the selected attributes for you to specify the path. To learn more about nested attributes, see [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
 
 ![3]{:style="max-width:70%;"}
 
