@@ -5,23 +5,23 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about duplicating Campaigns via an API endpoint."
+description: "This article outlines details about the Duplicating campaigns endpoint."
 
 ---
 {% api %}
-# Duplicate Campaigns via API
+# Duplicate campaigns via API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/duplicate
 {% endapimethod %}
 
-> Use this endpoint to duplicate Campaigns. This API endpoint is akin to [duplicating Campaigns in the Braze dashboard.][1]
+> Use this endpoint to duplicate campaigns. This API endpoint is similar to [duplicating campaigns in the Braze dashboard][1].
 
 {% alert note %}
 To use this endpoint, you'll need to generate an API key with the `campaigns.duplicate` permission.
 {% endalert %}
 
 {% alert important %}
-Duplicating a Campaign by API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Duplicating a campaign via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Rate limit
@@ -47,15 +47,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`| Required | String | See [Campaign identifier]({{site.baseurl}}/api/identifier_types/). |
-|`name`| Required | String | The name of the resulting Campaign. |
-|`description`| Optional | String | The description field for the resulting Campaign. |
+|`campaign_id`| Required | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
+|`name`| Required | String | The name of the resulting campaign. |
+|`description`| Optional | String | The description field for the resulting campaign. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
 ## Response details
 
-This endpoint will return a 202 status code and the creation of the Campaign will occur asynchronously. Customers can use the [Security Event Download] to see records of when Campaigns were duplicated and by which API key.
+This endpoint will return a `202` status code, and the campaign creation will occur asynchronously. You can use the [Security Event Download] to see records of when campaigns were duplicated and by which API key.
 
 {% endapi %}
 
