@@ -10,7 +10,7 @@ channel:
 
 # Custom in-app message triggering
 
-By default, in-app messages are triggered by event types logged by the SDK. If you would like to trigger in-app messages by server-sent events, you can also achieve this.
+By default, in-app messages are triggered by event types logged by the SDK. If you want to trigger in-app messages by server-sent events, you can also achieve this.
 
 To enable this feature, you would send a silent push to the device, which allows the device to log an SDK-based event. This SDK event would subsequently trigger the user-facing in-app message.
 

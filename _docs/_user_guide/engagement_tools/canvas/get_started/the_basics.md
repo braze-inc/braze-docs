@@ -113,7 +113,7 @@ This is where we determine which messaging channels make the most sense for your
 
 > How do I build my Canvas journey after identifying the five W's?
 
-The "how" collectively summarizes how you'll create your Canvas and how you'll reach your users with your message. For example, in order for a message to be effective, you should optimize the timing of your messaging with regards to the timezones across your different users.
+The "how" collectively summarizes how you'll create your Canvas and how you'll reach your users with your message. For example, in order for a message to be effective, you should optimize the timing of your messaging with regards to the time zones across your different users.
 
 Answering "how" also determines the cadence for sending a Canvas to your audience (i.e., once a week, biweekly, etc.), and which messaging channels to leverage for each Canvas that you build as described with the "where". 
 

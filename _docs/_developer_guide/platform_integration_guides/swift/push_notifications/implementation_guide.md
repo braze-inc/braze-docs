@@ -89,7 +89,7 @@ To create a personalized push notification, you must set a custom view in your d
 1. From the **Campaigns** page, click  **Create Campaign** to start a new push notification campaign.
 2. On the **Compose** tab, toggle on **Notification Buttons**. 
 3. Enter a custom iOS category in the **iOS Notification Category** field. 
-4. In the **Settings** tab, create key-value pairs using standard Liquid. Set the appropriate user attributes you would like the message to show. These views can be personalized based on specific user attributes of a specific user profile.
+4. In the **Settings** tab, create key-value pairs using standard Liquid. Set the appropriate user attributes you want the message to show. These views can be personalized based on specific user attributes of a specific user profile.
 5. In the `.plist` of your Notification Content Extension Target, set the `UNNotificationExtensionCategory` attribute to your custom iOS category. The value given here must match what is set in the Braze dashboard under **iOS Notification Category**. 
 
 ![Four sets of key-value pairs, where "next_session_name" and "next_session_complete_date" are set as an API trigger property using Liquid, and "completed_session count" and "total_session_count" are set as a custom user attribute using Liquid.][5]{: style="max-width:60%;"}
@@ -154,7 +154,7 @@ To create an information capture push notification, you must set a custom view i
 1. From the **Campaigns** page, click  **Create Campaign** to start a new push notification campaign.
 2. On the **Compose** tab, toggle on **Notification Buttons**. 
 3. Enter a custom iOS category in the **iOS Notification Category** field. 
-4. In the **Settings** tab, create key-value pairs using standard Liquid. Set the appropriate user attributes you would like the message to show. 
+4. In the **Settings** tab, create key-value pairs using standard Liquid. Set the appropriate user attributes you want the message to show. 
 5. In the `.plist` of your Notification Content Extension Target, set the `UNNotificationExtensionCategory` attribute to your custom iOS category. The value given here must match what is set in the Braze dashboard under **iOS Notification Category**. 
 
 As seen in the example, you may also include an image in your push notification. To do this, you must integrate [rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/), set the notification style in your campaign to Rich Notification, and include a rich push image.

@@ -30,7 +30,7 @@ Additional prerequisites include:
 * The `Push Notification` entitlement must be added under **Signing & Capabilities** in your Xcode project.
 
 {% alert note %}
-Note that, whereas Live Activities function similarly to push notifications, they are controlled by different user settings. A user can opt into Live Activities but out of push notifications, and vice versa.
+Note that, whereas Live Activities function similarly to push notifications, they are controlled by different user settings. A user can opt into Live Activities but out of push notifications, and the other way around.
 {% endalert %}
 
 ## Implementing a Live Activity

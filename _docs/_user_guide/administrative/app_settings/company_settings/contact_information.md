@@ -36,5 +36,5 @@ Switching time zones can cause some data discrepancies around the point when the
 If you choose to switch your time zone, you may experience a variety of consequences, including:
 
 - While campaigns scheduled for specific times in specific locations (i.e., 9 pm Eastern Time) will run properly on schedule until edited, both campaign analytics and future campaign schedules will be affected by the change.
-- Any card scheduling that is not assigned to local time may be affected, with active cards potentially appearing as finished (or vice versa).
+- Any card scheduling that is not assigned to local time may be affected, with active cards potentially appearing as finished or the other way around.
 - Segmentation filters of the form "Has done X before/after `Date`" will have the time adjusted because the initial date will now be localized in Pacific Time.

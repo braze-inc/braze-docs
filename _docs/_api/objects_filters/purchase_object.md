@@ -59,7 +59,7 @@ This helps make products easy to identify for segmentation and triggering.
 
 ### Log purchases at the order level
 
-If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id` (e.g., Online Order or Completed Order).
+If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id` (e.g., Online Order or Completed Order).
 
 For example, to log purchases at the order level in the Web SDK: 
 ```html

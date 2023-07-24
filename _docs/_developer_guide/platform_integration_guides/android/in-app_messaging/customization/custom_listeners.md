@@ -143,7 +143,7 @@ If you want to use your own conditional logic, you can call [`enableDarkTheme`][
 
 ## Custom view factory
 
-Braze's suite of in-app message types is versatile enough to cover most custom use cases. However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible by setting a custom view factory.
+Braze's suite of in-app message types is versatile enough to cover most custom use cases. However, if you want to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible by setting a custom view factory.
 
 ### Step 1: Implement an in-app message view factory
 

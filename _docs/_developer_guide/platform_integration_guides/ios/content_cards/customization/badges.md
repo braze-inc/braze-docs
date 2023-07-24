@@ -13,7 +13,7 @@ channel:
 
 ## Requesting unread Content Card counts
 
-If you would like to display the number of unread Content Cards your user has, we suggest you request a card count and represent it with a Badge. Badges are a great way to call attention to new content awaiting your users in the Content Cards. If you'd like to add a badge to your Content Cards, the Braze SDK provides methods to query the following:
+If you want to display the number of unread Content Cards your user has, we suggest you request a card count and represent it with a Badge. Badges are a great way to call attention to new content awaiting your users in the Content Cards. If you'd like to add a badge to your Content Cards, the Braze SDK provides methods to query the following:
 
 - Unviewed Content Cards for the current user
 - Total Viewable Content Cards for the current user

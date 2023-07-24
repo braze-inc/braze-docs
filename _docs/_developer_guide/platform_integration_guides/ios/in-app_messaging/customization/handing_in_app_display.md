@@ -64,7 +64,7 @@ Check out our [sample application][36] for an implementation example.
 
 ## Overriding in-app messages before display
 
-If you would like to alter the display behavior of in-app messages, you should add any necessary display logic to your `beforeInAppMessageDisplayed:` delegate method. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
+If you want to alter the display behavior of in-app messages, you should add any necessary display logic to your `beforeInAppMessageDisplayed:` delegate method. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
 
 If the in-app message campaign is not displaying when the session has been started, make sure you have the necessary display logic added to your `beforeInAppMessageDisplayed:` delegate method. This allows the in-app message campaign to display from the top of the screen even if the keyboard is being displayed.
 
