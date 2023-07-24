@@ -85,7 +85,7 @@ The following data types can be stored as a custom attribute:
 | Booleans |  |
 | Dates | Must be stored in the [ISO 8601][19] format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Note that "T" is a time designator, not a placeholder, and should not be changed or removed. <br><br>Time attributes without a time zone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's time zone). <br><br> Events with timestamps in the future will default to the current time. <br><br> For regular custom attributes, if the year is less than 0 or greater than 3000, Braze stores these values as strings on the user. |
 | Floats |  |
-| Integers | Integer custom attributes may be incremented by positive or negative integers by assigning them an object with the field "inc" and the value by which you would like to increment them. <br><br>Example: `"my_custom_attribute_2" : {"inc" : int_value},`|
+| Integers | Integer custom attributes may be incremented by positive or negative integers by assigning them an object with the field "inc" and the value by which you want to increment them. <br><br>Example: `"my_custom_attribute_2" : {"inc" : int_value},`|
 | Strings |  |
 {: .reset-td-br-1 .reset-td-br-2}
 

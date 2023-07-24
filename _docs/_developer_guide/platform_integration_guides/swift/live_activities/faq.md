@@ -42,7 +42,7 @@ Live Activities and push notifications occupy different screen real estate and w
 
 ### If Live Activities leverage push message functionality, do push notifications need to be enabled to receive Live Activities?
 
-While Live Activities rely on push notifications for updates, they are controlled by different user settings. A user can opt into Live Activities but out of push notifications, and vice versa. 
+While Live Activities rely on push notifications for updates, they are controlled by different user settings. A user can opt into Live Activities but out of push notifications, and the other way around. 
 
 Apple requires that the user initiates the Live Activity through some action in your app, for example, by placing an order. This Live Activity token expires after eight hours. 
 

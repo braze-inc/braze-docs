@@ -16,7 +16,7 @@ description: "This reference article covers additional customization and configu
 ## Using R8/ProGuard with Braze
 [Code shrinking][50] configuration is automatically included with your Braze integration.
 
-Client apps that obfuscate Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your ProGuard file:
+Client apps that obfuscate Braze code must store release mapping files for Braze to interpret stack traces. If you want to continue to keep all Braze code, add the following to your ProGuard file:
 
 ```
 -keep class bo.app.** { *; }

@@ -191,7 +191,7 @@ class CoordinationManager() {
 
 ### Configure SharePlay button visibility
 
-It is best practice to dynamically hide or show any SharePlay indicator. Utilize the `isEligibleForGroupSession` variable to observe if the user is currently on a FaceTime call or not. If they happen to be on a FaceTime call, a button should be visible to share the video across the compatible devices in the chat. The first time the user initiates SharePlay, a prompt will appear on the original device to select the options. A subsequent prompt will then appear on the shared users' devices to engage in the content.
+It is best practice to dynamically hide or show any SharePlay indicator. Use the `isEligibleForGroupSession` variable to observe if the user is currently on a FaceTime call or not. If they happen to be on a FaceTime call, a button should be visible to share the video across the compatible devices in the chat. The first time the user initiates SharePlay, a prompt will appear on the original device to select the options. A subsequent prompt will then appear on the shared users' devices to engage in the content.
 
 {% tabs %}
 {% tab Swift %}

@@ -29,7 +29,7 @@ Download the [raw table schemas]({{site.baseurl}}/assets/download_file/data-shar
 
 Duplicates are expected, but all events have a unique identifier, the ID column. Duplicates can be removed by doing `select distinct(id)`.
 
-## Breaking vs. non-breaking changes
+## Breaking versus non-breaking changes
 
 ### Non-breaking changes
 

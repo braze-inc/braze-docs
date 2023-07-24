@@ -108,7 +108,7 @@ Ensure that your app is correctly configured to allow push notifications. Common
 
 ### "Push registered" users no longer enabled after sending messages
 
-This would likely indicate that the user had an invalid push token. This can happen for several reasons:
+This likely indicates that the user had an invalid push token. This can happen for several reasons:
 
 #### Dashboard and app certificate mismatch
 

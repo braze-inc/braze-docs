@@ -43,7 +43,7 @@ To override this value, set `com_braze_trigger_action_minimum_time_interval_seco
 
 ## Server-side event triggering
 
-By default, in-app messages are triggered by custom events logged by the SDK. If you would like to trigger in-app messages by server-sent events, you can also achieve this.
+By default, in-app messages are triggered by custom events logged by the SDK. If you want to trigger in-app messages by server-sent events, you can also achieve this.
 
 To enable this feature, a silent push is sent to the device, which allows a custom push callback to log an SDK-based event. This SDK event will subsequently trigger the user-facing in-app message.
 

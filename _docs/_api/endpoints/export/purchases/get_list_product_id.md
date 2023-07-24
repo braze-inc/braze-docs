@@ -30,7 +30,7 @@ To use this endpoint, you'll need to generate an API key with the `purchases.pro
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `page` | Optional | String | The page of your product list that you would like to view. |
+| `page` | Optional | String | The page of your product list that you want to view. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

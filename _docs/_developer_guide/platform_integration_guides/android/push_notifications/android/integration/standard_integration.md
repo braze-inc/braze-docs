@@ -327,7 +327,7 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-If you would like to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens][52] article for more information.
+If you want to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens][52] article for more information.
 
 #### Creating custom deep links
 

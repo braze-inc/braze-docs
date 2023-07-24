@@ -19,7 +19,7 @@ description: "This article outlines details about the Update existing dashboard 
 
 It allows you to update of given and family names, permissions (for setting permissions at the company, workspace, and team level) and department. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
-For security reasons, `userName` (email address) cannot be updated through this endpoint. If you would like to change the `userName` (email address) for a user, contact [Support]({{site.baseurl}}/support_contact/).
+For security reasons, `userName` (email address) cannot be updated through this endpoint. If you want to change the `userName` (email address) for a user, contact [Support]({{site.baseurl}}/support_contact/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f9a1642-988e-4011-8fb8-db4340ea1ac7 {% endapiref %}
 

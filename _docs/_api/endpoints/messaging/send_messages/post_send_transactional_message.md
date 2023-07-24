@@ -120,7 +120,7 @@ The endpoint may also return an error code and a human-readable message in some 
 | `The campaign is paused. Resume the campaign to ensure trigger requests will take effect.` | The campaign ID provided corresponds to a paused campaign. |
 | `campaign_id must be a string of the campaign api identifier` | The campaign ID provided is not a valid format. |
 | `Error authenticating credentials` | The API key provided is invalid | 
-| `Invalid whitelisted IPs `| The IP address sending the request is not on the IP whitelist (if it is being utilized) | 
+| `Invalid whitelisted IPs `| The IP address sending the request is not on the IP whitelist (if it is being used) | 
 | `You do not have permission to access this resource` | The API key used does not have permission to take this action |
 {: .reset-td-br-1 .reset-td-br-2}
 
