@@ -92,7 +92,7 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 Braze will automatically remove HTML event handlers referenced as attributes. Note that this does modify the HTML, and it is recommended to validate or re-check the email once completed. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
 {% endalert %}
 
-### Step 3a: Add email headers
+### Step 3a: Add email headers and extras
 
 To add email headers, click **Edit Sending Info** and select **Add New Header**.
 
@@ -147,6 +147,18 @@ Avoid using the following keys:
   </tr>
 </tbody>
 </table>
+
+#### Adding email extras
+
+Email extras allows you to send additional data back to other email service providers. This is only applicable for advanced use cases, so you should only use email extras if your company already has this set up.
+
+To add email extras, go to the **Sending Info** and click **Add New Extra**.
+
+{% alert warning %}
+The total key-value pairs added should not exceed 1&nbsp;kB. Otherwise, the messages will be aborted.
+{% endalert %}
+
+Email extra values are not published to Currents or Snowflake. If you're looking to send additional metadata or dynamic values to Currents or Snowflake, use [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) instead.
 
 ### Step 3b: Preview and test your message
 
