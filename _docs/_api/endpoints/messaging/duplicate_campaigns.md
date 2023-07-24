@@ -53,7 +53,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
-## Response details
+## Response
 
 This endpoint will return a `202` status code, and the campaign creation will occur asynchronously. You can use the [Security Event Download][2] to see records of when campaigns were duplicated and by which API key.
 
