@@ -247,42 +247,19 @@ The `BrazeDelegate` protocol can be used to customize the handling of URLs such 
 
 #### Universal links
 
-The default universal link integration is not compatible with Braze's push notifications, in-app messages, or News Feed. As an alternative to universal links, we recommend using [scheme-based deep links](#step-1-registering-a-scheme) with push notifications, in-app messages, and the News Feed.
+Braze supports universal links in push notifications, in-app messages, and content cards. To enable universal link support, you must set the [`configuration.forwardUniversalLinks`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks) to `true`.
 
-If you do wish to use universal links, you can customize the way Braze handles these links. Make sure you have added a registered domain to your app's capabilities and have uploaded an `apple-app-site-association` file. Then implement the method `application:continueUserActivity:restorationHandler:` in your `AppDelegate`. For example:
+When enabled, Braze will forward universal links to your app's `AppDelegate` via the [`application:continueUserActivity:restorationHandler:`][15] method. 
 
-{% tabs %}
-{% tab swift %}
+Your application also needs to be correctly setup to handle universal links. Refer to [Apple's documentation][11] for more information.
 
-```swift
-func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-  if (userActivity.activityType == NSUserActivityTypeBrowsingWeb) {
-    let url = userActivity.webpageURL
-    // Handle url
-  }
-  return true
-}
-```
+{% alert warning %}
+Universal link forwarding does not work with the simulator. See the [`forwardUniversalLinks`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks) documentation to add support for simulator builds.
+{% endalert %}
 
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-- (BOOL)application:(UIApplication *)application
-continueUserActivity:(NSUserActivity *)userActivity
-  restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler {
-  if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
-    NSURL *url = userActivity.webpageURL;
-    // Handle url
-  }
-  return YES;
-}
-```
-
-{% endtab %}
-{% endtabs %}
-
-Refer to [Apple's documentation][11] for more information.
+{% alert note %}
+The SDK does not query your domains' `apple-app-site-association` files and perform the differenciation between universal links and regular URLs by looking at the domain name only. As a result, the SDK does not respect any exclusion rule defined in the `apple-app-site-association` as per [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
+{% endalert %}
 
 ### Integration example: BrazeDelegate
 
@@ -324,10 +301,11 @@ For more information, see [`BrazeDelegate`][23].
 [4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
 [6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewcontroller
 [8]: https://developer.apple.com/documentation/swift/stringprotocol/removingpercentencoding
-[11]: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
+[11]: https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app
 [12]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14
 [13]: https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc
 [14]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35
+[15]: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623072-application
 [16]: https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14
 [19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
 [22]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
