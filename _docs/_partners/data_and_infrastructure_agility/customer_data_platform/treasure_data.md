@@ -4,7 +4,7 @@ noindex: true
 page_order: 12
 layout: dev_guide
 guide_top_header: "Treasure Data"
-guide_top_text: "Treasure Data is the only enterprise customer data platform (CDP) that drives relevant customer experiences by harmonizing data, insights, and engagement to work in perfect unison. Armed with these actionable indicators, CX teams, including marketing, sales, and customer service, can effectively optimize spending and personalize omnichannel interactions across the entire customer journey."
+guide_top_text: "Treasure Data is an enterprise customer data platform (CDP) that drives relevant customer experiences by harmonizing customer data, insights, and engagement to work in perfect unison. Armed with these actionable indicators, CX teams, including marketing, sales, and customer service, can effectively optimize spending and personalize omnichannel interactions across the entire customer journey."
 description: "This landing page is home to all things Treasure Data including integration guidance and Treasure Data for Currents."
 
 guide_featured_list:
