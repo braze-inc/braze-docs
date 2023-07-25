@@ -8,7 +8,7 @@ description: "This article covers how to create an Event Prediction within the B
 
 # Creating an Event Prediction
 
-> A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}//user_guide/predictive_suite/predictive_purchases/).
+> A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}/user_guide/sage_ai/predictive_suite/predictive_events).
 
 In Braze, go to **Analytics** > **Predictive Events**.
 

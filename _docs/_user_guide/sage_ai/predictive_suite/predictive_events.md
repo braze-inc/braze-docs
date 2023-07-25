@@ -12,13 +12,13 @@ description: "This article covers Predictive Events (previously Predictive Purch
 guide_featured_title: "Topics"
 guide_featured_list:
 - name: Creating a Prediction
-  link: /docs/user_guide/sage_ai/predictive_suite/predictive_purchases/creating_an_event_prediction/
+  link: /docs/user_guide/sage_ai/predictive_suite/predictive_events/creating_an_event_prediction/
   fa_icon: fas fa-cogs
 - name: Prediction Analytics
-  link: /docs/user_guide/sage_ai/predictive_suite/predictive_purchases/prediction_analytics/
+  link: /docs/user_guide/sage_ai/predictive_suite/predictive_events/prediction_analytics/
   fa_icon: fas fa-chart-bar
 - name: Messaging Users
-  link: /docs/user_guide/sage_ai/predictive_suite/predictive_purchases/messaging_users/
+  link: /docs/user_guide/sage_ai/predictive_suite/predictive_events/messaging_users/
   fa_icon: fas fa-arrow-right
 
 ---
