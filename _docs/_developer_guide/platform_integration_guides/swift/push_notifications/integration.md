@@ -65,7 +65,7 @@ You may choose to use Apple's older authentication scheme (.p12 SSL certificates
 {% endtab %}
 {% endtabs %}
 
->  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate workspace or app for the development version of your app.
+>  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications after your app goes live in the App Store, we recommend setting up a separate workspace or app for the development version of your app.
 
 ## Step 2: Enable push capabilities
 

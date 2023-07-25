@@ -47,7 +47,7 @@ This error may occur for several reasons:
 - Mismatched provisioning profile:
 	- This can happen if your certificate doesn't match the one that was used to get the token. If this is suspected, the next steps include:
 		- Ensuring that the push certificate being used to send push from the Braze dashboard and the provisioning profile are configured correctly.
-		- Recreating the APNS certification and then recreate the provisioning profile once the APNS certificate is configured to the `app_id`. This can sometimes solve some more visible problems.
+		- Recreating the APNS certification and then recreate the provisioning profile after the APNS certificate is configured to the `app_id`. This can sometimes solve some more visible problems.
 
 ### Push bounced: APNS feedback service removed
 

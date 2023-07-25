@@ -72,7 +72,7 @@ If you use the `UNNotification` framework and have implemented the Braze [notifi
 
 ## Push category customization
 
-In addition to providing a set of default push categories, Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send these custom notification categories to your users.
+In addition to providing a set of default push categories, Braze supports custom notification categories and actions. After you register categories in your application, you can use the Braze dashboard to send these custom notification categories to your users.
 
 These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. 
 

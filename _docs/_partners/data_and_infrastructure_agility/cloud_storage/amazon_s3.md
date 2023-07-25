@@ -26,7 +26,7 @@ The Braze and Amazon S3 integration leverages [Currents]({{site.baseurl}}/user_g
 
 #### Create a new S3 bucket
 
-To create a bucket for your app, open the [Amazon S3 console](https://console.aws.amazon.com/s3/) and follow the instructions to **Sign in** or **Create an Account with AWS**. Once signed in, select **S3** from the **Storage & Content Delivery** category. Select **Create Bucket** on the next screen. You'll be prompted to create your bucket and select a region.
+To create a bucket for your app, open the [Amazon S3 console](https://console.aws.amazon.com/s3/) and follow the instructions to **Sign in** or **Create an Account with AWS**. After signing in, select **S3** from the **Storage & Content Delivery** category. Select **Create Bucket** on the next screen. You'll be prompted to create your bucket and select a region.
 
 ## Integration
 

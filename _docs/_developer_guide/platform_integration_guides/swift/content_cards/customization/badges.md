@@ -17,7 +17,7 @@ channel:
 
 ## Displaying the number of unread Content Cards as a badge
 
-You can display the number of unread Content Cards your user has as a badge on your app's icon. The following sample uses `braze.contentCards` to request and display the number of unread Content Cards. Once the app is closed and the user's session ends, this code requests a card count, filtering the number of cards based on the `viewed` property.
+You can display the number of unread Content Cards your user has as a badge on your app's icon. The following sample uses `braze.contentCards` to request and display the number of unread Content Cards. After the app is closed and the user's session ends, this code requests a card count, filtering the number of cards based on the `viewed` property.
 
 {% tabs %}
 {% tab swift %}
