@@ -19,7 +19,7 @@ There are four sets of default push action buttons for Braze's default push cate
 
 If you want to create your own custom notification categories, see [action button customization](#push-category-customization).
 
-## Automatic integration
+## Automatic integration (recommended)
 
 When integrating push using the `configuration.push.automation` configuration option, Braze automatically registers the action buttons for Braze's default push categories and handles the push action button click analytics and URL routing.
 
