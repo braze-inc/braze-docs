@@ -21,13 +21,13 @@ If you want to create your own custom notification categories, see [action butto
 
 ## Automatic integration
 
-When integrating push via the `configuration.push.automation` configuration option, Braze will automatically registers the action buttons for the Braze's default push categories and handle the push action button click analytics and URL routing.
+When integrating push using the `configuration.push.automation` configuration option, Braze automatically registers the action buttons for Braze's default push categories and handles the push action button click analytics and URL routing.
 
 ## Manual integration
 
-To enable these push action buttons, first register for Braze's default push categories. Then, use the `didReceive(_:completionHandler:)` delegate method to enable push action buttons.
+To manually enable these push action buttons, first register for Braze's default push categories. Then, use the `didReceive(_:completionHandler:)` delegate method to enable push action buttons.
 
-#### Step 1: Adding Braze default push categories {#registering}
+### Step 1: Adding Braze default push categories {#registering}
 
 Use the following code to register for Braze's default push categories when you [register for push][36]:
 
@@ -52,7 +52,7 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 Clicking on push action buttons with background activation mode will only dismiss the notification and not open the app. The next time the user opens the app, the button click analytics for these actions will be flushed to the server.
 {% endalert %}
 
-#### Step 2: Enable interactive push handling {#enable-push-handling}
+### Step 2: Enable interactive push handling {#enable-push-handling}
 
 To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `didReceive(_:completionHandler:)` delegate method:
 

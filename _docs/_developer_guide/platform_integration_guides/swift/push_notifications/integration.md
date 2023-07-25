@@ -77,7 +77,7 @@ In Xcode, add the Push Notifications capability using the **Signing & Capabiliti
 
 ## Automatic push integration
 
-The Swift SDK provides a configuration-only approach automating the processing of remote notifications received from Braze. This approach is the simplest way to integrate push notifications and is recommended for most customers.
+The Swift SDK provides a configuration-only approach to automate the processing of remote notifications received from Braze. This approach is the simplest way to integrate push notifications and is recommended for most customers.
 
 To enable the automatic push integration, set the `automation` property of the `push` configuration to `true`:
 
@@ -101,7 +101,7 @@ configuration.push.automation = [[BRZConfigurationPushAutomation alloc] initEnab
 
 This instructs the SDK to:
 - Register your application for push notification on the system.
-- Request the push notification authorization / permission at initialization.
+- Request the push notification authorization/permission at initialization.
 - Dynamically provide implementations for the push notification related system delegate.
   methods.
 
@@ -338,7 +338,7 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 ## Subscribing to push notifications updates
 
-To access the push notification payloads processed by Braze, you can use the [`Braze.Notifications.subscribeToUpdates(internalNotifications:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(internalnotifications:_:)/) method.
+To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(internalNotifications:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(internalnotifications:_:)/) method.
 
 {% tabs %}
 {% tab swift %}
