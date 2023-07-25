@@ -247,18 +247,18 @@ The `BrazeDelegate` protocol can be used to customize the handling of URLs such 
 
 #### Universal links
 
-Braze supports universal links in push notifications, in-app messages, and content cards. To enable universal link support, you must set the [`configuration.forwardUniversalLinks`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks) to `true`.
+Braze supports universal links in push notifications, in-app messages, and Content Cards. To enable universal link support, [`configuration.forwardUniversalLinks`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks) must be set to `true`.
 
 When enabled, Braze will forward universal links to your app's `AppDelegate` via the [`application:continueUserActivity:restorationHandler:`][15] method. 
 
-Your application also needs to be correctly setup to handle universal links. Refer to [Apple's documentation][11] for more information.
+Your application also needs to be set up to handle universal links. Refer to [Apple's documentation][11] to ensure your application is configured correctly for universal links.
 
 {% alert warning %}
 Universal link forwarding does not work with the simulator. See the [`forwardUniversalLinks`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks) documentation to add support for simulator builds.
 {% endalert %}
 
 {% alert note %}
-The SDK does not query your domains' `apple-app-site-association` files and perform the differenciation between universal links and regular URLs by looking at the domain name only. As a result, the SDK does not respect any exclusion rule defined in the `apple-app-site-association` per [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
+The SDK does not query your domains' `apple-app-site-association` files. It performs the differentiation between universal links and regular URLs by looking at the domain name only. As a result, the SDK does not respect any exclusion rule defined in the `apple-app-site-association` per [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
 {% endalert %}
 
 ### Integration example: BrazeDelegate

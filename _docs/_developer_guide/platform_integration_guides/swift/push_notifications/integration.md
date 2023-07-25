@@ -102,8 +102,7 @@ configuration.push.automation = [[BRZConfigurationPushAutomation alloc] initEnab
 This instructs the SDK to:
 - Register your application for push notification on the system.
 - Request the push notification authorization/permission at initialization.
-- Dynamically provide implementations for the push notification related system delegate.
-  methods.
+- Dynamically provide implementations for the push notification related system delegate methods.
 
 {% alert note %}
 The automation steps performed by the SDK are compatible with pre-existing push notification handling integrations in your codebase. The SDK only automates the processing of remote notification received from Braze. Any system handler implemented to process your own or another third party SDK remote notifications will continue to work when `automation` is enabled.
@@ -147,7 +146,7 @@ You can skip the next section and continue to [deep linking](#deep-linking) if y
 Push notifications can also be integrated manually. This section describes the steps necessary for this integration. 
 
 {% alert note %}
-If you are relying on the manual push integration for additional behavior specific to your app, you may be able to still use the automatic push integration together with [`subscribeToUpdates(internalNotifications:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(internalnotifications:_:)) which provides a way to be notified of remote notifications processed by Braze.
+If you rely on push notifications for additional behavior specific to your app, you may still be able to use automatic push integration instead of manual push notification integration. The [`subscribeToUpdates(internalNotifications:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(internalnotifications:_:)) method provides a way to be notified of remote notifications processed by Braze.
 {% endalert %}
 
 ### Step 1: Register for push notifications with APNs
