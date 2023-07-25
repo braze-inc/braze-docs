@@ -101,7 +101,7 @@ configuration.push.automation = [[BRZConfigurationPushAutomation alloc] initEnab
 
 This instructs the SDK to:
 - Registers your application for push notification on the system.
-- Requests the push notification authorization / permission at initialization.
+- Request the push notification authorization / permission at initialization.
 - dynamically provide implementations for the push notification related system delegate
   methods.
 
