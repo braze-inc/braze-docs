@@ -77,7 +77,7 @@ In Xcode, add the Push Notifications capability using the **Signing & Capabiliti
 
 ## Automatic push integration
 
-The Swift SDK provides a configuration only approach automating the processing of remote notifications received from Braze. This approach is the simplest way to integrate push notifications and is recommended for most customers.
+The Swift SDK provides a configuration-only approach automating the processing of remote notifications received from Braze. This approach is the simplest way to integrate push notifications and is recommended for most customers.
 
 To enable the automatic push integration, set the `automation` property of the `push` configuration to `true`:
 
