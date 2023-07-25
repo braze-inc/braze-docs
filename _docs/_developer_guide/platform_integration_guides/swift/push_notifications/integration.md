@@ -109,7 +109,9 @@ This instructs the SDK to:
 The automation steps performed by the SDK are compatible with pre-existing push notification handling integrations in your codebase. The SDK only automates the processing of remote notification received from Braze. Any system handler implemented to process your own or another third party SDK remote notifications will continue to work when `automation` is enabled.
 {% endalert %}
 
-For a more granular behavior, each automation step can be enabled or disabled individually:
+### Overriding individual configurations
+
+For more granular control, each automation step can be enabled or disabled individually:
 
 {% tabs %}
 {% tab swift %}
