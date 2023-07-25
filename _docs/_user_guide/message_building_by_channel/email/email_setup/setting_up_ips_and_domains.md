@@ -38,11 +38,11 @@ We'll check your setup and validate all information in our internal systems. The
 
 ## Method 2: Self-service email setup
 
-{% alert important %}
-If you're using the self-service email setup feature, be sure to consult with the Braze onboarding team.
-{% endalert %}
-
 This method will set up one sending and one tracking domain.
+
+{% alert important %}
+This self-service email setup feature is currently in beta. Contact your Braze account manager if you're interested in participating in the beta.<br>If you're using the self-service email setup feature, be sure to also consult with the Braze Onboarding team.
+{% endalert %}
 
 ### Step 1: Begin setup
 
@@ -70,4 +70,4 @@ Note that additional domains that have been added will not appear in the **Sende
 
 ### Next steps
 
-After your sender verification is complete, we recommend IP warming to ensure your messages reach their destination inboxes at a consistently high rate. Be sure to also consult with the Braze onboarding team to check your setup.
+After your sender verification is complete, we recommend IP warming to ensure your messages reach their destination inboxes at a consistently high rate. After completing this setup, be sure to also consult with the Braze Onboarding team to confirm if your domains and IP address are working.
