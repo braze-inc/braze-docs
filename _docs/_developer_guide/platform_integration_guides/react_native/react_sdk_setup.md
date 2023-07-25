@@ -21,6 +21,16 @@ To complete the installation, you will need the [app identifier API key]({{site.
 #### React Native New Architecture Support
 * Braze React Native SDK v2.0.1+
 
+## Using Braze with the New Architecture
+
+The Braze React Native SDK is compatible with any apps using the New Architecture starting from version 2.0.1+.
+
+As of SDK version {INSERT-VERSION-HERE}, Braze has been upgraded internally to a React Native Turbo Module, which can still be used with either the [React Native New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page) or the legacy bridge architecture. Because the Turbo Module is backwards compatible, no migration steps are required other than the breaking changes mentioned in the [CHANGELOG](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md).
+
+{% alert warning %}
+If your app conforms to `RCTAppDelegate` and was following our previous `AppDelegate` setup in this documentation, or in the [Braze sample app](https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm), be sure to reference our updated samples in [Complete native setup](#step-2-complete-native-setup) to prevent any crashes from occurring when subscribing to events in the new Turbo Module.
+{% endalert %}
+
 ## Step 1: Integrate the Braze library
 
 {% tabs local %}
@@ -239,7 +249,7 @@ import BrazeKit
 In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 {% alert note %}
-Our example uses the `bundleURL` parameter to initialize the `RCTRootView` object, but note that your project is not strictly tied to this initialization method and may use other initializers such as the `initWithBridge` method instead.
+Our example assumes an implementation of [RCTAppDelegate](https://github.com/facebook/react-native/blob/e64756ae5bb5c0607a4d97a134620fafcb132b3b/packages/react-native/Libraries/AppDelegate/RCTAppDelegate.h), which provides a number of abstractions in the React Native setup. If you are using a different setup for your app, be sure to adjust your implementation as needed.
 {% endalert %}
 
 ```swift
@@ -247,29 +257,11 @@ func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
-    // Setup Braze bridge
-    let jsCodeLocation : URL = RCTBundleURLProvider.sharedSettings().jsBundleURL(
-      forBundleRoot: "index"
-    )
-    let rootView = RCTRootView(
-      bundleURL: jsCodeLocation,
-      moduleName: "<YOUR_PROJECT_NAME>",
-      initialProperties: nil,
-      launchOptions: launchOptions
-    )
-
-    // Configure views in the application
-    window = UIWindow(frame: UIScreen.main.bounds)
-    let rootViewController = UIViewController()
-    rootViewController.view = rootView
-    window?.rootViewController = rootViewController
-    window?.makeKeyAndVisible()
-
     // Setup Braze
     let configuration = Braze.Configuration(
-        apiKey: "<BRAZE_API_KEY>",
-        endpoint: "<BRAZE_ENDPOINT>")
-    // - Enable logging and customize the configuration here
+        apiKey: "{BRAZE_API_KEY}",
+        endpoint: "{BRAZE_ENDPOINT}")
+    // Enable logging and customize the configuration here.
     configuration.logger.level = .info
     let braze = BrazeReactBridge.perform(
       #selector(BrazeReactBridge.initBraze(_:)),
@@ -300,31 +292,16 @@ Import the Braze SDK at the top of the `AppDelegate.m` file:
 In the `application:didFinishLaunchingWithOptions:` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 {% alert note %}
-Our example uses the `bundleURL` parameter to initialize the `RCTRootView` object, but note that your project is not strictly tied to this initialization method and may use other initializers such as the `initWithBridge` method instead.
+Our example assumes an implementation of [RCTAppDelegate](https://github.com/facebook/react-native/blob/e64756ae5bb5c0607a4d97a134620fafcb132b3b/packages/react-native/Libraries/AppDelegate/RCTAppDelegate.h), which provides a number of abstractions in the React Native setup. If you are using a different setup for your app, be sure to adjust your implementation as needed.
 {% endalert %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Setup Braze bridge
-  NSURL *jsCodeLocation =
-      [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
-  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                      moduleName:@"<YOUR_PROJECT_NAME>"
-                                               initialProperties:nil
-                                                   launchOptions:launchOptions];
-
-  // Configure views in the application
-  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  UIViewController *rootViewController = [UIViewController new];
-  rootViewController.view = rootView;
-  self.window.rootViewController = rootViewController;
-  [self.window makeKeyAndVisible];
-
   // Setup Braze
-  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
-                                                                    endpoint:@"<BRAZE_ENDPOINT>"];
-  // - Enable logging and customize the configuration here
+  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"{BRAZE_API_KEY}"
+                                                                    endpoint:@"{BRAZE_ENDPOINT}"];
+  // Enable logging and customize the configuration here.
   configuration.logger.level = BRZLoggerLevelInfo;
   Braze *braze = [BrazeReactBridge initBraze:configuration];
   AppDelegate.braze = braze;
