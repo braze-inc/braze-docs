@@ -18,7 +18,7 @@ To support user reconciliation via your Shopify sign-up and login flow, we can i
 
 ![1]{:style="max-width:60%;"}
 
-Once this function is called, the anonymous user on the web becomes associated with the provided email address. Any other Shopify events referencing the given email address will be assigned to the same Braze user.
+Once this function is called, the anonymous user on the web becomes associated with the provided email address. Moving forward, any Shopify events that reference any of the identifiers we use (e.g., Shopify Customer ID, Email Address, Phone Number) will be assigned to the same Braze user if there is a match.
 
 {% alert important %}
 Braze isn't familiar with all the forms containing `type="email"` on a customer's Shopify site. This means there's a possibility the function could miss some input fields that should be utilized for user reconciliation or pick up incorrect fields that would set the wrong email address (e.g., Referral form) on the user profile.
