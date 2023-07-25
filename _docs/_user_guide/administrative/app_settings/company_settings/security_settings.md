@@ -51,7 +51,7 @@ Use the field shown to whitelist specific IP addresses and subnets from which us
 
 ## Two-factor authentication
 
-Two-factor authentication adds a second level of identity verification to an account log, making it more secure than just a username and password. This feature is turned on by default for all Braze accounts.
+Two-factor authentication adds a second level of identity verification to an account log, making it more secure than just a username and password.
 
 When two-factor authentication is turned on, in addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent via an authenticator app, email, or SMS.
 
