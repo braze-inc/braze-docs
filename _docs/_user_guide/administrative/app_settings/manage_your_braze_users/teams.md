@@ -13,7 +13,7 @@ description: "This reference article covers how to use Braze teams in the dashbo
 
 {% multi_lang_include video.html id="UYjKrFcL9sQ" align="right" %}
 
-Teams can be set up across customer base location, language, and custom attributes so that members and non-members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools.
+Teams can be set up across customer base location, language, and custom attributes so that team members and non-team members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools.
 
 Teams are not available on all Braze contracts. If you'd like to access this feature, reach out to your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
 
@@ -27,15 +27,15 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), **Internal
 
 Enter the **Team Name**. Use the **Define Team (Optional)** to select a custom attribute, location, or language to further define permissions.
 
-Teams can be used to filter end-users for engagement objects like campaigns, Canvases, Content Cards, segments, and more. See the section in this article on [Assigning tags and filters](#tags-and-filters) to learn more. 
+Teams can be used to filter end-users for features like campaigns, Canvases, Content Cards, segments, and more. See the section in this article on [Assigning tags and filters](#tags-and-filters) to learn more.
 
 ![Adding a new team][68]
 
 ## Assigning roles
 
-Braze admins can assign Team Roles to their dashboard users who are limited to only read or write data available to their particular Teams. Predefined Team Roles include language and location. 
+Braze admins can assign Team roles to their dashboard users who are limited to only read or write data available to their particular Teams. Predefined Team roles include language and location. 
 
-To assign a Team Role, navigate to **Settings** > **Company Users** and select a user you'd like to add to your team.
+To assign a Team role, navigate to **Settings** > **Company Users** and select a user you'd like to add to your team.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon and clicking **Manage Users**..
@@ -46,21 +46,28 @@ Then perform the following steps:
 1. Click <i class="fa fa-edit"></i> **Edit**.
 2. Set their User Role to **Limited**.
 3. Add them to the appropriate workspace. 
-4. Select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column. Note that some permissions are only granted via workspace, and these permissions will appear as "--" in the **Teams** permissions column.
+4. Select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column.
+
+Note that some permissions are only granted on the workspace level, and these permissions will appear as "--" in the **Teams** permissions column.
 
 ![Assigning Team roles][2]
 
-To see descriptions of what each user permission includes and how to use them, check out our [User Permissions section]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions).
+To see descriptions of what each user permission includes and how to use them, check out our [User Permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions) section.
 
 ## Assigning tags and filters {#tags-and-filters}
 
-Dashboard objects can be assigned to Teams. Canvases, campaigns, cards, segments, email templates, and media library assets can all be labeled with a Team filter and tag. 
+You can assign a team to Canvases, campaigns, cards, segments, email templates, and media library assets with the Team filter.
  
 ![Adding a Team tag to a campaign][3]{: style="max-width:70%;"}
 
-Based on the definitions applied to the Team created, when a Team filter is assigned, you automatically restrict user profiles that a dashboard object can include based on your team definition. For example, TeamA is defined as end-users from the US. When a TeamA Team filter is assigned to CampaignA, CampaignA will only include end-users from the USA, and only TeamA (other than dashboard admins) will be able to access CampaignA. 
+Based on the definitions applied to the Team created, when a Team filter is assigned, you automatically restrict user profiles that an engagement tool can include based on your team definition.
 
-Based on assigned permissions, members of teams will only be allowed to access dashboard engagement tools that have the team filter set. Members are also able to filter Canvases, campaigns, cards, and segments by team to identify dashboard objects relevant to them.
+For example, Team Japan is defined as end-users from Japan. When Team Japan is assigned to Campaign A:
+
+- Campaign A will only include end-users from Japan
+- Only Team Japan (other than dashboard admins) will be able to access Campaign A
+
+Based on assigned permissions, team members will only be allowed to access dashboard engagement tools that have the team filter set. Team members are also able to filter Canvases, campaigns, cards, and segments by team to identify content relevant to them.
 
 ## Archiving an existing Team
 
