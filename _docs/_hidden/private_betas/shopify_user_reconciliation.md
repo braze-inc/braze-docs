@@ -14,7 +14,7 @@ hidden: true
 This feature is currently in beta. If you’re interested, contact your customer success manager or account manager.
 {% endalert %}
 
-To support user reconciliation via your Shopify sign-up and login flow, we can implement a JavaScript function automatically to your Shopify store outside of the checkout flow. Braze will automatically implement a function wherever we see a form with a `type=”email”` on the Shopify store, as in the example below.
+To support user reconciliation via your Shopify sign-up and login flow, we can implement a JavaScript function automatically to your Shopify store outside of the checkout flow. Braze will automatically implement a function wherever we see a form with a `type="email"` on the Shopify store, as in the example below.
 
 ![1]{:style="max-width:60%;"}
 
