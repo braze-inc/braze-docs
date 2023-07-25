@@ -24,7 +24,7 @@ The Braze and Treasure Data integration allows you to seamlessly control the flo
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Treasure Data | A Treasure Data account is required to take advantage of this partnership. |
+| Treasure Data | A [Treasure Data account][0] is required to take advantage of this partnership. |
 | Currents | To export data back into Treasure Data, you need to have [Braze Currents][2] set up for your account. |
 | Treasure Data URL | This can be obtained by navigating to your Treasure Data dashboard and copying the ingestion URL.|
 {: .reset-td-br-1 .reset-td-br-2}
@@ -87,6 +87,9 @@ Keep your Treasure Data URL up to date. If your connector’s URL is incorrect, 
 }
 ```
 
+#### Example of the ingested view
+
+![4]{: style="max-width:70%;"}
 
 ## Integration details
 
@@ -95,7 +98,8 @@ Braze supports exporting all data listed in the [Currents event glossaries]({{si
 
 
 
-
+[0]: https://console.treasuredata.com/users/sign_in
 [1]: https://www.treasuredata.com/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents
 [3]: https://docs.treasuredata.com/display/public/PD/Postback+API
+[4]: {% image_buster /assets/img/treasure_data/treasure_data_ingested_view.png %}
