@@ -84,7 +84,7 @@ To enable the automatic push integration, set the `automation` property of the `
 {% tabs %}
 {% tab swift %}
 ```swift
-let configuration = Braze.Configuration(apiKey: "...", endpoint: "...")
+let configuration = Braze.Configuration(apiKey: "{YOUR-BRAZE-API-KEY}", endpoint: "{YOUR-BRAZE-API-ENDPOINT}")
 configuration.push.automation = true
 ```
 
