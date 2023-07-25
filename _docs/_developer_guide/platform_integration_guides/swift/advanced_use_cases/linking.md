@@ -254,7 +254,8 @@ When enabled, Braze will forward universal links to your app's `AppDelegate` via
 Your application also needs to be set up to handle universal links. Refer to [Apple's documentation][11] to ensure your application is configured correctly for universal links.
 
 {% alert warning %}
-Universal link forwarding does not work with the simulator. See the [`forwardUniversalLinks`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks) documentation to add support for simulator builds.
+Universal link forwarding requires access to the application entitlements. When running the application in a simulator, these entitlements are not directly available and universal links are not forwarded to the system handlers.
+To add support to simulator builds, you can add the application `.entitlements` file to the _Copy Bundle Resources_ build phase. See [`forwardUniversalLinks`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks) documentation for more details.
 {% endalert %}
 
 {% alert note %}
