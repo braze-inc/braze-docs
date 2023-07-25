@@ -12,7 +12,7 @@ guide_featured_list:
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data/
   fa_icon: fas fa-user-circle
 - name: Treasure Data for Currents
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasured_data/treasure_data_for_currents/
+  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data_for_currents/
   fa_icon: fas fa-warehouse
 ---
 <br>
