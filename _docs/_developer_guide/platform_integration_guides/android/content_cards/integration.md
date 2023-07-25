@@ -94,7 +94,7 @@ All `Card` data model objects offer the following analytics methods for logging 
 
 ## Custom Content Cards {#fully-custom-content-card-display-for-android}
 
-If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's Content Cards models, you will need to subscribe to Content Card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you want to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's Content Cards models, you need to subscribe to Content Card updates and use the resulting model data to populate your views. You also need to log analytics on the model objects as users interact with your views.
 
 ### Part 1: Subscribing to Content Card updates
 

@@ -56,7 +56,7 @@ function decode(encoded) {
 }
 
 /**
- * Returns an url-safe base64 encoded string of the input.
+ * Returns a url-safe base64 encoded string of the input.
  * Unicode inputs are accepted.
  * Converts a UTF-16 string to UTF-8 to comply with base64 encoding limitations.
  */

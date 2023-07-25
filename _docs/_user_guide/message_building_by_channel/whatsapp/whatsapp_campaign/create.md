@@ -88,7 +88,7 @@ Braze always recommends previewing and testing your message before sending it. S
 {% tabs %}
 {% tab Campaign %}
 
-Next, build the remainder of your campaign. See the following sections for further details on how to best utilize our tools to build WhatsApp messages.
+Next, build the remainder of your campaign. See the following sections for further details on how to best use our tools to build WhatsApp messages.
 
 #### Choose a delivery schedule or trigger
 

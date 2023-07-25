@@ -55,7 +55,7 @@ A REST Application Programming Interface key (REST API key) is a unique code tha
 
 Workspaces and API Keys go hand in hand at Braze. Workspaces are designed to house versions of the same application across multiple platforms. Many customers also use workspaces to contain free and premium versions of their applications on the same platform. As you may notice, these workspaces are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
 
-We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to utilize our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you will need to give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
+We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to use our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you will need to give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
 
 ![REST API keys panel on the API Settings tab of the Developer Console.][27]
 
@@ -305,7 +305,7 @@ This page displays your existing API keys. To create a new key, click **Create N
 You can then to do the following:
 
 - Give your new key a name for identification at a glance
-- Select which permissions you would like to be associated with your new key
+- Select which permissions you want to be associated with your new key
 - Specify allowlisted IP addresses and subnets for the new key
 
 Existing REST API keys can be viewed or deleted by clicking settings <i class="fas fa-gear"></i> and selecting the corresponding option.

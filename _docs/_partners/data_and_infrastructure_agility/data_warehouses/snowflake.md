@@ -69,7 +69,7 @@ Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 
 ## Important information and limitations
 
-### Breaking vs. non-breaking changes
+### Breaking versus non-breaking changes
 
 #### Non-breaking changes
 Non-breaking changes can happen at any time and generally provide additional functionality. Examples of non-breaking changes:

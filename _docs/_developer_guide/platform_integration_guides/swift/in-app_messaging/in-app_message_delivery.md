@@ -154,7 +154,7 @@ customInAppMessage.themes = @{
 
 `Braze.InAppMessage` objects may carry key-value pairs as `extras`. These are specified on the dashboard when creating a campaign. Key-value pairs can be used to send data down with an in-app message for further handling by your app.
 
-For example, consider a case where we would like to customize the presentation of an in-app message based on the contents of its extras. We could access the key-value pairs in its `extras` property and define custom logic to execute around it:
+For example, consider a case where we want to customize the presentation of an in-app message based on the contents of its extras. We could access the key-value pairs in its `extras` property and define custom logic to execute around it:
 
 {% tabs %}
 {% tab swift %}

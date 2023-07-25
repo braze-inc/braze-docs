@@ -36,7 +36,7 @@ To use the Braze Unity plugin with Prime31 plugins, edit your project's `Android
 
 ## Amazon ADM push
 
-Braze supports integrating [Amazon ADM push][10] into Unity apps. If you would like to integrate Amazon ADM push, create a file called `api_key.txt` containing your ADM API key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating Amazon ADM with Braze, visit our [ADM push integration instructions][11].
+Braze supports integrating [Amazon ADM push][10] into Unity apps. If you want to integrate Amazon ADM push, create a file called `api_key.txt` containing your ADM API key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating Amazon ADM with Braze, visit our [ADM push integration instructions][11].
 
 ## Android SDK advanced implementation options {#android-sdk-advanced}
 

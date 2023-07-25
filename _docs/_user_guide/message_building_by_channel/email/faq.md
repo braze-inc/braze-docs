@@ -51,7 +51,7 @@ Email delivery metrics (deliveries, bounces, and spam rate) may not add up to 10
 
 Soft bounces are emails that bounce due to a temporary or transient issue such as "mailbox full", "server temporarily not available", and more. If the soft bounced email is still not delivered after 72 hours, this email will not be accounted for in the campaign delivery metrics.
 
-### Can Braze track unsubscribe links counted towards the "Unsubscribe" metric
+### Can Braze track unsubscribe links counted towards the "Unsubscribe" metric?
 
 Braze does not offer this functionality as unsubscribe links are custom and clicks to an unsubscribe link does not guarantee an unsubscribe actually occurred. 
 

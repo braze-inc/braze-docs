@@ -721,7 +721,7 @@ var ticket_lookuptable = {
         }
       }
     },
-    'Strategy Question' : {
+    'Strategy Assistance' : {
       'Label': '* Category',
       'SelectDefault': 'Select a category...',
       'LinksTitle': ['Campaign Ideas and Strategies','Canvas Ideas and Strategies','Building Accessible Messages in Braze','Braze Learning Course: Create Customer Journeys with Canvas Flow'],
@@ -745,7 +745,7 @@ var ticket_lookuptable = {
       }
     },
 
-    'Account Management' : {
+    'Account Administration' : {
       'Label': '* Category',
       'SelectDefault': 'Select a category...',
       'Links': [],

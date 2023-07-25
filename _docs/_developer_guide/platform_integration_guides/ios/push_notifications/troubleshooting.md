@@ -83,7 +83,7 @@ If the application does not prompt you to register for push notifications, there
 
 #### Users no longer "push registered" after sending a push notification
 
-This would likely indicate that the user had an invalid push token. This can happen for several reasons:
+This likely indicates that the user had an invalid push token. This can happen for several reasons:
 
 ##### Dashboard and app certificate mismatch
 
