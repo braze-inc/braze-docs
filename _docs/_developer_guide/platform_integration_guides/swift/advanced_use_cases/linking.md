@@ -258,7 +258,7 @@ Universal link forwarding does not work with the simulator. See the [`forwardUni
 {% endalert %}
 
 {% alert note %}
-The SDK does not query your domains' `apple-app-site-association` files and perform the differenciation between universal links and regular URLs by looking at the domain name only. As a result, the SDK does not respect any exclusion rule defined in the `apple-app-site-association` as per [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
+The SDK does not query your domains' `apple-app-site-association` files and perform the differenciation between universal links and regular URLs by looking at the domain name only. As a result, the SDK does not respect any exclusion rule defined in the `apple-app-site-association` per [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
 {% endalert %}
 
 ### Integration example: BrazeDelegate
