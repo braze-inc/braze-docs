@@ -17,7 +17,7 @@ channel: in-app messages
 
 If you want to access the in-app message data in the JavaScript layer, call the `Braze.subscribeToInAppMessage` method to have the SDKs to publish an `inAppMessageReceived` event when an in-app message is triggered. You can pass a callback to this method to execute your own code when the in-app message is triggered and received by the listener.
 
-This method additionally takes in a parameter that tells the Braze SDK whether or not to use the built-in Braze UI to display in-app messages. If you prefer to use a custom UI, you can pass `false` to this method and use the in-app message data to construct your own message in Javascript. Note that you will need to [manually log analytics](#analytics) on your messages if you choose to disable the default UI.
+This method additionally takes in a parameter that tells the Braze SDK whether or not to use the built-in Braze UI to display in-app messages. If you prefer to use a custom UI, you can pass `false` to this method and use the in-app message data to construct your own message in JavaScript. Note that you will need to [manually log analytics](#analytics) on your messages if you choose to disable the default UI.
 
 {% alert note %}
 `Braze.subscribeToInAppMessage` is provided as a JavaScript interface method for situations where you may want to customize the default behavior further. It is recommended to use this method if you wish to disable the default UI while still receiving in-app message events from Braze, or in cases where you may not have access to customize the native iOS or Android code, such as in the Braze Expo Plugin.
