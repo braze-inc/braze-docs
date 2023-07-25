@@ -92,7 +92,7 @@ configuration.push.automation = true
 {% tab OBJECTIVE-C %}
 
 ```objc
-BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"..." endpoint:@"..."];
+BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"{YOUR-BRAZE-API-KEY}" endpoint:@"{YOUR-BRAZE-API-ENDPOINT}"];
 configuration.push.automation = [[BRZConfigurationPushAutomation alloc] initEnablingAllAutomations:YES];
 ```
 
