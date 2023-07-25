@@ -51,9 +51,31 @@ After you connect more than one store, the following attributes will be synced a
 - `shopify_order_count` (only available via Historical Backfill)
 - `shopify_total_spent` (only available via Historical Backfill)
 
+To use custom events when creating or editing a segment, select the **Nested Custom Attribute** filter and locate your nested attribute. For help identifying the specific path or field in the object, use the [Generate Schema]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support#generate-schema) tool. After you select the nested attributes, a field with a plus button will appear next to the selected attributes for you to specify the path. To learn more about nested attributes, see [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
+
+![3]{:style="max-width:70%;"}
+
+You can specify your path by typing it into the field or clicking the plus button and selecting the path.
+
+![4]{:style="max-width:60%;"}
+
 ### Shopify custom events
 
 After you connect more than one store, incoming Shopify custom events will now contain a new event property, `shopify_storefront`. Refer to [Shopify data processing]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing#supported-shopify-events) to see all custom events supported in this integration. This event property provides the Shopify store domain the event is coming from.
+
+### Action-based delivery or conversion tracking
+
+To trigger messaging to users completing actions with a specific store:
+
+1. Navigate to the **Schedule Delivery** step of your campaign.
+2. Select **Perform Custom Event** as a trigger event.
+![5]{:style="max-width:70%;"}
+3. Select a Shopify event as the trigger event, such as **shopify_created_order**, and the **Add property filters** checkbox.
+![6]{:style="max-width:70%;"}
+4. Select **Basic Property** in the **Add Filter** dropdown.
+5. Select **shopify_storefront** and enter the store’s full Shopify domain.
+![7]{:style="max-width:70%;"}
+
 
 ### Shopify user merging and syncing
 
@@ -72,3 +94,8 @@ The following features and functionalities are not currently supported; however,
 
 [1]: {% image_buster /assets/img/multiple_stores.png %}
 [2]: {% image_buster /assets/img/multiple_stores2.png %}
+[3]: {% image_buster /assets/img/shopify_nested_attributes.png %}
+[4]: {% image_buster /assets/img/shopify_tags.png %}
+[5]: {% image_buster /assets/img/shopify_add_trigger.png %}
+[6]: {% image_buster /assets/img/shopify_select_event.png %}
+[7]: {% image_buster /assets/img/shopify_enter_storefront.png %}
