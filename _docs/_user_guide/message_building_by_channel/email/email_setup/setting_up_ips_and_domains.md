@@ -44,6 +44,10 @@ This method will set up one sending and one tracking domain.
 This self-service email setup feature is currently in beta. Contact your Braze account manager if you're interested in participating in the beta.<br>If you're using the self-service email setup feature, be sure to also consult with the Braze Onboarding team.
 {% endalert %}
 
+### Prerequisites
+
+Before beginning the self-service email setup process, you will need to configure the TXT and CNAME with your DNS provider first.
+
 ### Step 1: Begin setup
 
 Go to **Settings** > **Admin Settings** under **Company Settings**. Next, select the **Sender Verification** tab and click the **Start setup** button.
