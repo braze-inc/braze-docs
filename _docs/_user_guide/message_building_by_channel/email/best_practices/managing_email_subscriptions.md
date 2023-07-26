@@ -16,7 +16,7 @@ channel: email
 
 Braze will automatically unsubscribe any user that either manually unsubscribes from your email through a [custom footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions) or marks an email as spam. These users won't be targeted by future emails.
 
-If a user unsubscribes and later changes their email, their new email will also be unsubscribed. In other words, once an external user ID is associated with an unsubscribe, future email addresses for that user ID will also be unsubscribed.
+If a user unsubscribes and later changes their email, their new email will also be unsubscribed. In other words, after an external user ID is associated with an unsubscribe, future email addresses for that user ID will also be unsubscribed.
 
 {% alert tip %}
 Refer to our [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) best practices for guidance on how to reengage your users effectively!

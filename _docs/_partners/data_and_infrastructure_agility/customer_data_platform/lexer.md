@@ -69,7 +69,7 @@ Once your activation has been confirmed as sent in Activate, you will see record
 
 In Braze, you will see your audience name in Lexer is now a value in your `lexer_audience` custom attribute. Braze has a limit of 100 values per attribute.
 
-To create your segment, navigate to **Segment > + Create Segment** and select **Custom Attribute** as the filter. Next, select `lexer_audience` as your attribute and your desired Lexer audience name. Once completed, **Save** your audience.
+To create your segment, navigate to **Segment > + Create Segment** and select **Custom Attribute** as the filter. Next, select `lexer_audience` as your attribute and your desired Lexer audience name. When completed, **Save** your audience.
 
 You can now add this newly created segment to future Braze campaigns and Canvases to target these end-users.
 

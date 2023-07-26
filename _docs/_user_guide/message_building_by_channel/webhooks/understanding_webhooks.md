@@ -32,7 +32,7 @@ Some more specific use cases include the following:
 - Send [transactional messages]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign/) to users within Facebook Messenger or Line.
 - Send direct mail to customers in response to their in-app and web activity by using webhooks to communicate with third-party services like [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob/).
 - If a gamer reaches a certain level or accrues a certain number of points, use webhooks and your existing API setup to send a character upgrade or coins directly to their account. If you send the webhook as part of a multichannel messaging campaign, you can send a push or other message to let the gamer know about the reward at the same time.
-- If you're an airline, you can use webhooks and your existing API setup to credit a customer's account with a discount once they've booked a certain number of flights.
+- If you're an airline, you can use webhooks and your existing API setup to credit a customer's account with a discount after they've booked a certain number of flights.
 - Endless "If This Then That" ([IFTTT](https://ifttt.com/about)) recipes—for instance, if a customer signs into the app via email, then that address can automatically be configured into Salesforce.
 
 ## Anatomy of a webhook

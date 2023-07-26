@@ -37,7 +37,7 @@ Any existing custom HTML templates will need to be re-created using the Drag & D
 
 ### Step 3: Customize your template
 
-You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop Editor to customize your content. Once selected, you will be guided to the editor experience you chose. An **HTML Editor** or **Drag-and-Drop Editor** badge will appear, indicating that you are about to use this editing experience for template creation.
+You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop Editor to customize your content. After selecting your editor experience, you will be guided to it. An **HTML Editor** or **Drag-and-Drop Editor** badge will appear, indicating that you are about to use this editing experience for template creation.
 
 If you do not include an unsubscribe link, Braze will prompt you to add this in your email as it's required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {%raw%}`${email_footer}`{%endraw%}, or by [customizing the footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in your email templates.
 

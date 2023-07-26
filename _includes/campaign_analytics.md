@@ -170,7 +170,7 @@ Unique Dismissals | The number of users who have dismissed Content Cards from a 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-Regarding how impressions are logged, there are some nuances between web, Android, and iOS. Generally speaking, Braze logs an impression once a card is seen—when a user scrolls to the specific Content Card in their feed.
+Regarding how impressions are logged, there are some nuances between web, Android, and iOS. Generally speaking, Braze logs an impression when a card is seen, which is after a user scrolls to the specific Content Card in their feed.
 {% endalert %}
 
 #### Unique Recipients versus Unique Impressions

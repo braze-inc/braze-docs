@@ -30,7 +30,7 @@ The following integration provides guidance on creating a user consent update wo
 
 In the OneTrust **Integrations** menu, Navigate to **Credentials** > **Add New** button to bring up the **Select System** screen. Here, find **Braze**, then click the **Next** button.
 
-Follow the prompts in the **Enter Credential Details** screen and provide the following information. Save your credentials once complete.
+Follow the prompts in the **Enter Credential Details** screen and provide the following information. Save your credentials when complete.
   - Credential name
   - Set the connector type to **Web App**
   - Hostname: `<your-braze-instance-url>`

@@ -102,7 +102,7 @@ You can preview your preference center by clicking the **Preview** tab within th
 
 You will see a preview of both the preference center and the confirmation page. Click **Save as Draft** to return to this preference center later, or if you are satisfied, click **Launch Preference Center**.
 
-When launching the preference center, you will be prompted to confirm the name, as it cannot be edited after launching. Once confirmed, the preference center will be launched and ready for use.
+When launching the preference center, you will be prompted to confirm the name, as it cannot be edited after launching. After you confirm the name, the preference center will be launched and ready for use.
 
 ## Using the preference center
 

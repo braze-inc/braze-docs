@@ -44,7 +44,7 @@ Ingestion into Treasure Data through event-collector currently doesn't happen in
 ### Step 1: Setup Treasure Data Postback API with Braze
 
 
-Instructions for creating a Postback API can be found on the [Treasure Data][3] website. Braze will directly send the updated events to Treasure Data in real-time, with the exception of ingestion through event-collector. Once completed, Treasure Data will provide a data source URL to copy for use in the next step.
+Instructions for creating a Postback API can be found on the [Treasure Data][3] website. Braze will directly send the updated events to Treasure Data in real-time, with the exception of ingestion through event-collector. When completed, Treasure Data will provide a data source URL to copy for use in the next step.
 
 
 ### Step 2: Create Current
