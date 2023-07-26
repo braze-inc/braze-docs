@@ -759,3 +759,4 @@ validurls['/docs/user_guide/administrative/manage_your_braze_users/teams/'] = '/
 validurls['/docs/user_guide/administrative/app_settings/manage_app_group'] = '/docs/user_guide/administrative/app_settings/';
 validurls['/docs/user_guide/administrative/app_settings/developer_console'] = '/docs/user_guide/administrative/app_settings/';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/overview/';
+validurls['/docs/user_guide/message_building_by_channel/content_cards/customize'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
