@@ -34,7 +34,7 @@ The amount of visible preheader text is dependent on the user's email client and
 
 Here are some best practices to keep in mind when writing your preheaders:
 
-1. Calls to action come into play once readers have opened your email.
+1. Calls to action come into play after readers have opened your email.
   - Point your readers in the right direction, whether you want them to subscribe, purchase a product or visit your website.
   - Use strong words so that the reader knows exactly what you are asking of them, but make sure it reflects your company's brand voice and that every call to action exhibits some sort of value to the consumer.
   - Preheader should be no more than 85 characters and have some sort of descriptive call to action that supports the subject line.

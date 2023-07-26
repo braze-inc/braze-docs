@@ -12,7 +12,7 @@ page_order: 1
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop.
 
-Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. Once you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message!
+Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. After you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message.
 
 ## Prerequisites
 
@@ -133,7 +133,7 @@ If you're having trouble selecting a certain block, you can use the up arrow in 
 
 To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Add Personalization** from the editor toolbar. Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more!
 
-Next, take your generated Liquid snippet and insert it into your message. Once you've finished designing and building your in-app message, go to **Preview & Test** to preview your message.
+Next, take your generated Liquid snippet and insert it into your message. After you've finished designing and building your in-app message, go to **Preview & Test** to preview your message.
 
 #### Using the AI copywriter
 

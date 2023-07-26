@@ -67,12 +67,12 @@ Open [tracking pixels]({{site.baseurl}}/user_guide/administrative/app_settings/m
 
 ### How can I check a user's email subscription group?
 
-- **User Profile:** Individual user profiles can be accessed through the Braze dashboard from the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) page. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's email subscription groups.
+- **User Profile:** Individual user profiles can be accessed through the Braze dashboard from the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) page. Here, you can look up user profiles by email address, phone number, or external user ID. When inside a user profile, under the Engagement tab, you can view a user's email subscription groups.
 - **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint][9] or [List user’s subscription group status endpoint][8] by using Braze's REST API. 
 
 ### What happens when an email campaign or Canvas is stopped?
 
-Users will be prevented from entering the Canvas and no further messages will be sent out. For email campaigns and Canvases, the stop button does not mean that send will immediately stop. This is because once the send requests are sent out, they cannot be stopped from being delivered to the user.
+Users will be prevented from entering the Canvas and no further messages will be sent out. For email campaigns and Canvases, the stop button does not mean that send will immediately stop. This is because after the send requests are sent out, they cannot be stopped from being delivered to the user.
 
 ### Why am I seeing more email clicks than opens?
 

@@ -38,7 +38,7 @@ Android 13 and up requires obtaining permission before push notifications can be
 
 ### Prime users for push
 
-You only get one chance to ask a user for push permission, and once they decline, it's very hard to convince them to re-enable push in their device settings. For this reason, you should prime users for push using an in-app message before showing the system prompt. See [Push primer in-app messages][2] to learn more about increasing opt-ins.
+You only get one chance to ask a user for push permission, and after they decline, it's very hard to convince them to re-enable push in their device settings. For this reason, you should prime users for push using an in-app message before showing the system prompt. See [Push primer in-app messages][2] to learn more about increasing opt-ins.
 
 ### Add push subscription controls
 

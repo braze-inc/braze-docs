@@ -233,7 +233,7 @@ Although user aliases are supported as an identifier in the Braze Cloud Mode (Ac
 | User alias | Cloud mode destinations |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` once one becomes available for the user. 
+The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` after one becomes available for the user. 
 
 It is also possible to engineer a workaround and use `braze_id` to send anonymous user data in cloud-mode. This requires manually including the user's `braze_id` in all your Segment API calls. You can learn more about how to set up this workaround in [Segment's documentation](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users).
 
@@ -337,7 +337,7 @@ If you use a server-to-server integration (cloud-mode), filters related to autom
 
 If you need to delete or suppress users, note that [Segment's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [`/users/delete` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). Note that verification of these deletions could take up to 30 days.
 
-You must ensure that you select a common user identifier between Braze and Segment (as in `external_id`). Once you've initiated a deletion request with Segment, you can view the status within the deletion requests tab in your Segment dashboard.
+You must ensure that you select a common user identifier between Braze and Segment (as in `external_id`). After you've initiated a deletion request with Segment, you can view the status within the deletion requests tab in your Segment dashboard.
 
 ## Segment replays
 
