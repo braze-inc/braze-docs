@@ -76,7 +76,7 @@ User Import | Users won’t be enrolled when their subscription status is set by
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Multi-language support
-For inbound messages, SMS double opt-in is supported for all languages defined in the Subscription Group. This means users can define their auto-responses in different languages and Braze will send the auto-response associated with a specific language when a matching keyword is received.
+For inbound messages, SMS double opt-in is supported for all languages defined in the Subscription Group. This means you can define your auto-responses in different languages and Braze will send the auto-response associated with a specific language when a matching keyword is received.
 
 Users who enter the SMS double opt-in workflow through subscription updates that occur outside of inbound messages (e.g., SDK, REST API, Shopify) will only be sent the English keywords.
 
