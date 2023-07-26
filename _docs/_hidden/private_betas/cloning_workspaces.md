@@ -10,6 +10,8 @@ description: "This article provides an overview of the cloning process for works
 
 > You can clone campaigns to a different workspace to keep and build off your successful strategies. 
 
+Cloning campaigns to a workspace allows you to get a jumpstart on your message composition by starting with a copy of another campaign in a different workspace.
+
 {% alert important %}
 Cloning campaigns to workspaces is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
 {% endalert %}
