@@ -50,7 +50,7 @@ First, create your custom view. <!-- Is there a web equivalent to a view control
 
 ### Step 2: Subscribe to card updates
 
-Then, [register a callback function to subscribe for data updates when cards are refreshed.][6]. 
+Then, [register a callback function to subscribe for data updates when cards are refreshed][6]. 
 
 <!-- Is the following a true statement for Android and iOS? "Content Cards will only refresh on session start if a subscribe request is called before openSession(). You can always choose to manually refresh the feed as well."-->
 
@@ -68,15 +68,13 @@ This section provides an overview of the three most common ways to place Content
 
 Content Cards don't have to look like "cards." For example, Content Cards can appear as a dynamic banner that persistently displays on your home page or at the top of other designated pages. 
 
-To achieve this, your marketers will create a campaign or Canvas step with an **Banner** type of Content Card. Then, set key-value pairs that are appropriate for using [Content Cards as supplemental content.][4].
+To achieve this, your marketers will create a campaign or Canvas step with an **Banner** type of Content Card. Then, set key-value pairs that are appropriate for using [Content Cards as supplemental content.][4]
 
 ### Message inbox
 
 Content Cards can be used to simulate a message center. In this format, each message is its own card that contains key-value pairs that power on-click UX. In the following example, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
-#### Example dashboard configuration
-
-Assign [key-value pairs][5] in the dashboard to the cards you intend to use for your message center. For these examples, you would add the key-value pair `class_type` to your dashboard configuration. The values of the key-value pairs are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an inbox message.
+Assign [key-value pairs][5] in the dashboard to the cards you intend to use for your message center. The values of the key-value pairs are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an inbox message. For example, you could add the key-value pair `class_type` to your dashboard configuration. 
 
 {% tabs local %}
 {% tab Arbitrary custom view message (full page) %}
