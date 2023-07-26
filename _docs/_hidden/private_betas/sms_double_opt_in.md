@@ -58,7 +58,7 @@ To turn on SMS double opt-in, navigate to the **SMS Global Keywords** table in t
 
 Only after the user completes the SMS double opt-in workflow does their [Subscription Group status]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) update to `Subscribed`. If the user begins the workflow but doesn’t complete it, they remain `Unsubscribed` and cannot be sent SMS messages from that Subscription Group.
 
-Users can also be entered into the SMS double opt-in workflow if they are [subscribed from other sources]({{site.baseurl}}//user_guide/message_building_by_channel/sms/sms_subscription_group#how-users-sms-subscription-groups-get-set) (e.g., REST API, SDK).
+Users can also be entered into the SMS double opt-in workflow if they are [subscribed from other sources]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group#how-users-sms-subscription-groups-get-set) (e.g., REST API, SDK).
 
 ## Subscription sources {#subscription-sources}
 
@@ -72,7 +72,13 @@ SDK | Users are automatically enrolled when subscribed via the Braze SDK.
 REST API | By default, users won’t be enrolled when their subscription status is set by `/users/track` or any of the `subscription/status/set` endpoints. Users can be enrolled by passing an optional parameter `send_double_opt_in_response` as `true` (e.g., [{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed", "send_double_opt_in_response: true}]). 
 Shopify | Users won’t be enrolled when their subscription status is set by our Shopify integration.
 User Import | Users won’t be enrolled when their subscription status is set by User Import.
+[Preference Center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center) | Users are automatically enrolled when subscribed through a preference center.
 {: .reset-td-br-1 .reset-td-br-2}
+
+## Multi-language support
+For inbound messages, SMS double opt-in is supported for all languages defined in the Subscription Group. This means users can define their auto-responses in different languages and Braze will send the auto-response associated with a specific language when a matching keyword is received.
+
+Users who enter the SMS double opt-in workflow through subscription updates that occur outside of inbound messages (e.g., SDK, REST API, Shopify) will only be sent the English keywords.
 
 [1]: {% image_buster /assets/img/double_opt_in_inbound.png %}
 [2]: {% image_buster /assets/img/double_opt_in_outbound.png %}
