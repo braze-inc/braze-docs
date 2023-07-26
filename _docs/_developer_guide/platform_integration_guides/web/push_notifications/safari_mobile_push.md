@@ -85,7 +85,7 @@ button.onclick = function(){
 
 ## Next steps
 
-Next, send yourself a [test message][test-message] to validate the integration. Once your integration is complete you can use our [no-code push primer messages][push-primer] to optimize your push opt-in rates.
+Next, send yourself a [test message][test-message] to validate the integration. After your integration is complete, you can use our [no-code push primer messages][push-primer] to optimize your push opt-in rates.
 
 [webkit-release-notes]: https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/
 [safari-release-notes]: https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes

@@ -107,6 +107,6 @@ Yes. In fact, we highly recommend running a test migration on a staging or devel
 This feature does not cost data points.
 
 **What is the recommended deprecation period?**<br>
-We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them once there is no longer a need to reference users by the deprecated ID.
+We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them after there is no longer a need to reference users by the deprecated ID.
 
 {% endapi %}

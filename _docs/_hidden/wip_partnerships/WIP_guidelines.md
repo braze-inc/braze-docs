@@ -173,7 +173,7 @@ In your terminal, you will see the command begin to work. This process may take 
 
 Next, you can check your [localhost](http://localhost:4000/docs/).
 
-Here you can navigate to the page you created using the alias you assigned earlier in the article's metadata. Once you open the localhost, append the alias to access your page.
+Here you can navigate to the page you created using the alias you assigned earlier in the article's metadata. After you open the localhost, append the alias to access your page.
 
 Example: `http://localhost:4000/docs/` + `/partners/your_partner_name/`
 

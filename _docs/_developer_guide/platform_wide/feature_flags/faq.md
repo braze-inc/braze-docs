@@ -99,7 +99,7 @@ Keep in mind that good data practices recommend not refreshing feature flags too
 
 ### Are feature flags available while a user is offline? {#offline}
 
-Yes, once feature flags are refreshed they are stored locally on the user's device and can be accessed while offline.
+Yes, after feature flags are refreshed, they are stored locally on the user's device and can be accessed while offline.
 
 ### What happens if feature flags are refreshed mid-session? {#listen-for-updates}
 

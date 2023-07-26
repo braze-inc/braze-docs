@@ -116,7 +116,7 @@ If you use [Audience Sync to Facebook]({{site.baseurl}}/partners/canvas_steps/fa
 
 ### Cloud Data Ingestion for Databricks
 
-Braze Cloud Data Ingestion for Databricks allows customers to directly sync user data (attributes, events, purchases) as well as user deletes from Databricks to Braze. Once synced to Braze, this data can be used just like any other data in the Braze platform. This feature is an extension of our [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/) product and is currently in early access.
+Braze Cloud Data Ingestion for Databricks allows customers to directly sync user data (attributes, events, purchases) as well as user deletes from Databricks to Braze. After this data is synced to Braze, it can be used just like any other data in the Braze platform. This feature is an extension of our [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/) product and is currently in early access.
 
 ### Privacy Portal
 
@@ -377,7 +377,7 @@ In the Drag & Drop Editor for in-app messages, you can now quickly reset styles 
 
 ### Custom domains for link shortening
 
-Link shortening also allows you to use your own domain to personalize the look and feel of your shortened URLs, helping portray a consistent brand image. Once configured, [custom domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#custom-domains) can be assigned to one or multiple SMS subscription groups.
+Link shortening also allows you to use your own domain to personalize the look and feel of your shortened URLs, helping portray a consistent brand image. After link shortening is configured, [custom domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#custom-domains) can be assigned to one or multiple SMS subscription groups.
 
 ### Safari mobile web push
 
@@ -407,7 +407,7 @@ You may occasionally identify custom attributes, custom events, or purchase even
 
 #### Sisu Data - Business intelligence
 
-The [Sisu Data]({{site.baseurl}}/partners/data_and_infrastructure_agility/business_intelligence/sisu_data/) and Braze integration allows you to understand across all campaigns or at a campaign level why metrics (e.g., open rate, click-through rate, conversion rate, etc.) are changing and what drives the most optimal outcomes. Once these segments are identified, Braze users can materialize the outputs in their data warehouse or send them directly from Sisu to Braze to retarget and reengage users.
+The [Sisu Data]({{site.baseurl}}/partners/data_and_infrastructure_agility/business_intelligence/sisu_data/) and Braze integration allows you to understand across all campaigns or at a campaign level why metrics (e.g., open rate, click-through rate, conversion rate, etc.) are changing and what drives the most optimal outcomes. After these segments are identified, Braze users can materialize the outputs in their data warehouse or send them directly from Sisu to Braze to retarget and reengage users.
 
 #### Loplat - Contextual location
 
@@ -443,7 +443,7 @@ The Braze and [Sageflo]({{site.baseurl}}/partners/message_orchestration/channel_
 
 #### Airbyte - Workflow automation
 
-The Braze and [Airbyte]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/airbyte/) integration allows users to create a data pipeline to collect and analyze Braze data by connecting all of your applications and databases to a central warehouse. Once data has been collected in the central warehouse, data teams can explore Braze data effectively using their preferred business intelligence tools.
+The Braze and [Airbyte]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/airbyte/) integration allows users to create a data pipeline to collect and analyze Braze data by connecting all of your applications and databases to a central warehouse. After data has been collected in the central warehouse, data teams can explore Braze data effectively using their preferred business intelligence tools.
 
 #### Flywheel - Workflow automation
 

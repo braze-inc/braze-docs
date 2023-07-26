@@ -67,7 +67,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 
 #### Things to check
 - **Content Card size**: Content Card message fields are limited to 2&nbsp;KB in pre-compression size, calculated by adding the byte-size length of the following fields: title, message, image URL, link text, link URLs, and key-value pairs. Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the image URL.
-- **Updating copy post-send**: Once a card is sent, you will be unable to update the copy on that same card. Refer to [Updating sent cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-sent-cards) to understand how you can approach this scenario.
+- **Updating copy post-send**: After a card is sent, you will be unable to update the copy on that same card. Refer to [Updating sent cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-sent-cards) to understand how you can approach this scenario.
 
 #### Things to know
 - **Active Content Card campaigns limit**: You can have up to 500 active Content Card campaigns. This count includes Content Cards sent with either [card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) option.  
@@ -75,7 +75,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 - **Content Card refresh**: By default, Braze refreshes Content Card requests as they sync at session start, on feed down swipe (mobile), and when the cards view is shown if the last refresh was over one minute ago.
 - **Caching Content Cards**: Content Card caching options can be found in our [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) and [Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards) docs. 
 - **Frequency capping**: Frequency capping does not apply to Content Cards.
-- **Impressions**: Impressions are generally logged once a card is seen. For example, if you have a full inbox of Content Cards, an impression will not be logged until the user scrolls to the specific Content Card. There are some nuances between the Web, Android, and iOS platforms.  
+- **Impressions**: Impressions are generally logged when a card is seen. For example, if you have a full inbox of Content Cards, an impression will not be logged until the user scrolls to the specific Content Card. There are some nuances between the Web, Android, and iOS platforms.  
 
 ## In-app messages
 

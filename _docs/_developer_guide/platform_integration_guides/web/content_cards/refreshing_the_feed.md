@@ -14,7 +14,7 @@ description: "This reference article describes how to queue a manual refresh of 
 > This reference article describes how to queue a manual refresh of your Content Cards for your web application.
 
 {% alert tip %}
-To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed once they are available.
+To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed after they are available.
 {% endalert %}
 
 You can queue a manual refresh of the Braze Content Cards at any time by calling [`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh). 

@@ -13,7 +13,7 @@ description: "This reference article covers how to assign and set custom attribu
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][7].
 
-To assign attributes to your users, call the `braze.getUser()` method to get a reference to the current user of your app. Once you have a reference to the current user, you can call methods to set predefined or custom attributes.
+To assign attributes to your users, call the `braze.getUser()` method to get a reference to the current user of your app. After you have a reference to the current user, you can call methods to set predefined or custom attributes.
 
 ## Assigning predefined user attributes
 

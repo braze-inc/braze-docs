@@ -34,7 +34,7 @@ Certain user data is collected automatically by our SDK—for example, First Use
 {% alert note %}
 All of our features are configurable, but it's a good idea to fully implement the default data collection model.
 
-<br>If necessary for your use case, you can [limit the collection of certain data](#blocking-data-collection) once the integration is complete. 
+<br>If necessary for your use case, you can [limit the collection of certain data](#blocking-data-collection) after the integration is complete. 
 {% endalert %}
 
 ### Device properties
