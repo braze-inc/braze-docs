@@ -55,7 +55,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can cr
 
 ### Step 2: Provide information to the actionable.me team
 
-To complete the integration, you must provide your REST API key and [REST endpoint URL][1] to your actionable.me operations team. actionable.me will then establish the connection and reach out to you once the setup is complete and be in touch to start sharing insights.
+To complete the integration, you must provide your REST API key and [REST endpoint URL][1] to your actionable.me operations team. actionable.me will then establish the connection and reach out to you after the setup is complete and be in touch to start sharing insights.
 
 ![The actionable.me "add platform" page that the actionable.me operations team will configure.][5]
 

@@ -34,7 +34,7 @@ Braze.addListener(Braze.Events.IN_APP_MESSAGE_RECEIVED, (event) => {
 
 ## Advanced customization
 
-If you would like to include more advanced logic to determine whether or not to show an in-app message using the built-in UI, you should implement in-app messages through the native layer.
+If you want to include more advanced logic to determine whether or not to show an in-app message using the built-in UI, you should implement in-app messages through the native layer.
 
 {% tabs %}
 {% tab Android %}

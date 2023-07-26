@@ -7,7 +7,7 @@ search_rank: 3
 guide_top_header: "Braze Privacy Portal"
 guide_top_text: "> Welcome to the Braze Privacy Portal.  Here you’ll find all sorts of useful information about how Braze can help you be good custodians of your customers’ data and, importantly, enable you to take measures to comply with data protection rules relevant to your business.  We have brought together information and links to documentation that may assist you in your use of the Braze Services in compliance with applicable data protection laws and regulations."
 guide_top_text2: "<h4>The role of customers</h4><br>When using Braze, Braze’s customers are the data controllers who determine what data is collected and shared with the Braze Services. With respect to the Braze Services, Braze is a data processor that processes personal data on the instructions of our customers. Our customers are responsible for using the Braze Services in accordance with the data protection laws and regulations that apply to them."
-guide_top_text3: "<h4>Your partner in compliance</h4><br>As a good partner, we stay informed of the latest developments and practices in data protection. For instance, we offer a Data Processing Addendum that covers necessary language for the EU and UK General Data Protection Regulation (“GDPR”), the California Consumer Privacy Act, as amended by the California Privacy Rights Act (“CCPA”), and other U.S. state privacy laws.<br><br>The Braze Services include features that enable our customers to manage end user consent, process “do not sell or share” requests, and action consumer rights such as deletion requests."
+guide_top_text3: "<h4>Your partner in compliance</h4><br>As a good partner, we stay informed of the latest developments and practices in data protection. For instance, we offer a Data Processing Addendum that addresses the language for ​​the EU and UK General Data Protection Regulation (“GDPR”), the California Consumer Privacy Act, as amended by the California Privacy Rights Act (“CCPA”), and other U.S. state privacy laws. <br><br> The Braze Services include features that enable our customers to manage end user consent, process “do not sell or share” requests, and action consumer rights such as deletion requests."
 
 alias: "/privacy-portal/"
 alias: "/privacy_portal/"
@@ -39,7 +39,10 @@ guide_featured_list:
 
 guide_menu_title: "Legal"
 guide_menu_list:
-- name: Data Processing Addendum and FAQs
+- name: Data Processing Addendum (PDF)
+  link: https://marketing-assets.braze.com/production/hero/Braze-DPA-Rev-June-2023-Final-copy.pdf?v=1685959392
+  fa_icon: fa-solid fa-gavel
+- name: DPA FAQs
   link: https://www.braze.com/company/legal/dpa
   fa_icon: fa-solid fa-question
 - name: Standard Contractual Clauses

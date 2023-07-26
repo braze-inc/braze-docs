@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
-The preference center name can't be edited once created.
+The preference center name can't be edited after it's created.
 {% endalert %}
 
 ### Liquid tags

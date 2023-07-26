@@ -211,8 +211,8 @@ Check out this page for these statistics:
 
 More questions you can answer with this report:
 
-- What was the session frequency for users who received my onboarding Canvas vs. those in the control group?
-- What is the difference in lifecycle length for users opted into push vs. users opted into email and against users opted into both?
+- What was the session frequency for users who received my onboarding Canvas versus those in the control group?
+- What is the difference in lifecycle length for users opted into push versus users opted into email and against users opted into both?
 
 {% endtab %}
 {% tab Custom Events %}

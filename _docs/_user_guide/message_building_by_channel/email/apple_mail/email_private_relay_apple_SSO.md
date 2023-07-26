@@ -25,7 +25,7 @@ To find the address, go to your SendGrid DNS record and copy the **UID**, **Whit
 
 ![HOST Value column in SendGrid DNS records section.]({% image_buster /assets/img/email-relay-dns-records.png %})
 
-The address should be formatted as: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`(e.g., `bounces+1234567@braze.online.docs.com`). Once added to your Apple Certificate page, emails from this domain will be delivered via the Apple Private Relay system.
+The address should be formatted as: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`(e.g., `bounces+1234567@braze.online.docs.com`). After the address is added to your Apple Certificate page, emails from this domain will be delivered via the Apple Private Relay system.
 
 {% alert important %}
 If your desired "From" address is an `abmail` address, include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`. This might not be the case for your address. Check your DNS records in SendGrid. 

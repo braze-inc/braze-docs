@@ -125,7 +125,7 @@ See our [KDoc][63] for more information. Note that any non-standard manual sessi
 
 ## Step 5: Enable location tracking
 
-If you would like to enable Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`:
+If you want to enable Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`:
 
 ```xml
 <bool name="com_braze_enable_location_collection">true</bool>

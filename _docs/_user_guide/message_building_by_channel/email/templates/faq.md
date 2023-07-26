@@ -34,6 +34,11 @@ You could change the unsubscribe link in the custom footer from {% raw %} `{{${s
 
 Next, you could call the [`/email/status` endpoint]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) to update the user's subscription status. For more details, see our documentation on [changing email subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
 
+To save this new link, the default Braze unsubscribe tag {%raw%}(``${set_user_to_unsubscribed_url}``){%endraw%} must be in the footer. This means you'll need to include the default link by "hiding" it by either placing the tag in a comment or in a hidden `<div>` tag.
+
+- **Tag in comment example:** putting tag in comment example: `<!-- ${set_user_to_unsubscribed_url} -->`
+- **Comment in hidden `<div>` tag example:** {%raw%}`<div style="display:none;max-height:0px;overflow:hidden;">${set_user_to_unsubscribed_url}</div>`{%endraw%}
+
 ### What happens if I edit an email template that is currently being used in a campaign?
 
 Edits made to an existing template won't be reflected in campaigns that were created using previous versions of that template.
@@ -46,7 +51,7 @@ Yes, you can insert as many templates as you would like in your email messages. 
 
 ### How do I preview my links with all of the tags applied?
 
-There are several ways to preview your links. Once you have applied the [link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), you can send a [test email]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/) to yourself to view all the links. 
+There are several ways to preview your links. After you have applied the [link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), you can send a [test email]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/) to yourself to view all the links. 
 
 From the preview pane in a new tab, you can also open the links to view the links. You can also hover over the links in the preview pane and see them at the bottom of your browser.
 

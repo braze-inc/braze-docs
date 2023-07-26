@@ -74,7 +74,7 @@ When you first load into the drag-and-drop editor, you'll see the **Design and B
 
 1. Select the **Rows** panel. Drag and drop the row configurations into the main editor. This will map the layout of your email content. Note that new configurations must be dragged to the beginning or end of an existing section.
 - When you select a row configuration, the **Row Properties** settings appear for further customization for row background colors, images, and custom column sizes.
-2. Select the **Content** panel. Drag abd drio the desired content tiles to the row components. 
+2. Select the **Content** panel. Drag and drop the desired content tiles to the row components. 
 - You can further refine the tile by selecting the tile and adjusting the fields in **Content Properties** and **Block Options**. This includes editing letter spacing, padding, line height, and more.
 
 As you build your email, you can toggle between a desktop and mobile view to preview how your email messaging will look for your user groups. This will ensure that your content is responsive, and you can make any necessary adjustments along the way. 

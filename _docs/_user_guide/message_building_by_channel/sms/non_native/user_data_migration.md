@@ -42,7 +42,7 @@ Before you begin composing SMS campaigns through Braze, you'll need to update yo
 
 3. **Assign your user's SMS [subscription state][subscriptionstate]** (e.g.,subscribed or unsubscribed) if you have this information.
   - Use the [`/subscription/status/set` endpoint][6] to set users as subscribed or unsubscribed from your SMS Subscription Groups.
-  - Note that once the SMS Subscription Groups have been configured in your dashboard, you'll be able to grab the necessary `subscription_group_id` which you'll need for your API request.
+  - Note that after the SMS Subscription Groups have been configured in your dashboard, you'll be able to grab the necessary `subscription_group_id` which you'll need for your API request.
 
 
 [0]: https://en.wikipedia.org/wiki/E.164

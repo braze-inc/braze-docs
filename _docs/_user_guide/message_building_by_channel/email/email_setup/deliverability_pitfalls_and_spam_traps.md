@@ -15,7 +15,7 @@ Your email deliverability can be affected by any of the following spam traps:
 | Trap Type | Description |
 |---|---|
 | Pristine Traps | Email addresses and domains that have never been used. |
-| Recycled Traps | Email addresses that were once real users, but are now dormant. |
+| Recycled Traps | Email addresses that were originally real users, but are now dormant. |
 | Typo Traps | Email addresses containing common typos. |
 | Spam Complaints | When your email is marked as spam by a customer. |
 | High Bounce Rate | When your email consistently fails to deliver because the recipient's address is invalid. |

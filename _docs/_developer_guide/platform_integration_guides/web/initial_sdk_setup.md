@@ -108,7 +108,7 @@ Additional setup is required to use Web push notifications. See [Push notificati
 
 ## Troubleshooting {#error-logging}
 
-To assist in troubleshooting, you can enable verbose logging in the SDK. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `braze.setLogger()` in your production environment.
+To assist in troubleshooting, you can enable verbose logging in the SDK. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `braze.setLogger()` in your production environment. 
 
 ```javascript
 braze.initialize("YOUR-API-KEY-HERE", {
@@ -121,7 +121,7 @@ braze.initialize("YOUR-API-KEY-HERE", {
 braze.toggleLogging()
 ```
 
-If you use a server-side rendering framework, see our additional integration steps for integration [Vite](#vite) or other [SSR frameworks](#ssr)
+If you use a server-side rendering framework, see our additional integration steps for integration [Vite](#vite) or other [SSR frameworks](#ssr). Note that verbose logging won't send any extra or new user information to Braze.
 
 
 ## Upgrading the SDK

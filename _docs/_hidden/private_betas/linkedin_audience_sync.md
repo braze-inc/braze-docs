@@ -42,7 +42,7 @@ In the Braze dashboard, go to **Technology Partners** and select **LinkedIn**. I
 
 ![LinkedIn technology page in Braze includes an Overview module and LinkedIn Audience Export module with the Connected LinkedIn button.][3]{: style="max-width:75%;"}
 
-You’ll then be redirected to the LinkedIn OAuth page to authorize Braze for the permissions related to your Audience Sync integration. Once you have selected **Confirm**, you’ll be redirected back into Braze to select which LinkedIn ad accounts you wish to sync to. 
+You’ll then be redirected to the LinkedIn OAuth page to authorize Braze for the permissions related to your Audience Sync integration. After you have selected **Confirm**, you’ll be redirected back into Braze to select which LinkedIn ad accounts you wish to sync to. 
 
 ![][7]{: style="max-width:75%;"}
 

@@ -15,7 +15,7 @@ In-app messages can also be displayed within a custom view controller, which you
 - It must be a subclass or an instance of `ABKInAppMessageViewController`.
 - The view of the returned view controller should be an instance of `ABKInAppMessageView` or its subclass.
 
-The following UI delegate method is called every time an in-app message is offered to `ABKInAppMessageViewController` to allow the app would like to pass a custom view controller to Braze for in-app message display:
+The following UI delegate method is called every time an in-app message is offered to `ABKInAppMessageViewController` to allow the app to pass a custom view controller to Braze for in-app message display:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

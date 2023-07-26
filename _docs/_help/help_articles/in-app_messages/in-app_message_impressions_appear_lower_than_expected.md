@@ -28,7 +28,7 @@ If the impression count is low compared to where it once was, make sure no one u
 
 ## Run tests
 
-A quick way to identify any obvious issues is to clone the campaign, target your own user ID or email, and launch the campaign. Once you perform the message trigger (session start, custom event, etc.), verify that you received the message correctly. Then, navigate to the dashboard, and refresh the page to see if your impression is logged correctly. If it is not, then the problem is likely within your implementation.
+A quick way to identify any obvious issues is to clone the campaign, target your own user ID or email, and launch the campaign. After you perform the message trigger (session start, custom event, etc.), verify that you received the message correctly. Then, navigate to the dashboard, and refresh the page to see if your impression is logged correctly. If it is not, then the problem is likely within your implementation.
 
 ## Event triggers
 

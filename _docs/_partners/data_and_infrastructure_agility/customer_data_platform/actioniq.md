@@ -33,7 +33,7 @@ This integration is used to sync ActionIQ audience membership to Braze by creati
 
 The standard naming convention for the custom attribute created is: `AIQ_<Audience ID>_<Split ID>`.
 
-To create a segment of these users, In Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the ActionIQ custom attribute. Once created, you can select your segment as an audience filter when creating a campaign or Canvas.
+To create a segment of these users, In Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the ActionIQ custom attribute. After the segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
 #### Requirements
 

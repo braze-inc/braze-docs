@@ -111,7 +111,7 @@ To create or edit your custom footer, go to **Settings** > **Email Preferences**
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is called **Email Settings** and is located under **Manage Settings**.
 {% endalert %}
 
-In the **Custom Footer** section, you can choose to turn on custom footers. Once turned on, you will see a window to edit your footer and send a test message.
+In the **Custom Footer** section, you can choose to turn on custom footers. When turned on, you will see a window to edit your footer and send a test message.
 
 ![][20]
 
