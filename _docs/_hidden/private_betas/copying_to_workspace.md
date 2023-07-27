@@ -8,9 +8,7 @@ description: "This article provides an overview of how to copy campaigns across 
 
 # Copying campaigns across workspaces
 
-> You can copying campaigns across different workspaces to keep and build off your messaging strategies. 
-
-Copying campaigns across a workspace allows you to get a jumpstart on your message composition by starting with a copy of a campaign in a different workspace.
+> Copying campaigns across a workspace allows you to get a jumpstart on your message composition by starting with a copy of a campaign in a different workspace. This copy will remain as a draft until you edit and launch, helping you keep and build off your successful messaging strategies.
 
 {% alert important %}
 Copying campaigns across workspaces is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
