@@ -23,7 +23,7 @@ For mutual customers, it would look something like this:
 4. Back in Braze, they send a test webhook to the copied transformation URL.
 5. Within the Braze platform, they copy and paste the transformation code template.
 6. They enable the transformation
-7. Once enabled, they can verify through the Braze user search tool that the user profile is updated based on the webhook and edit the transformation code as desired.
+7. When enabled, they can verify through the Braze user search tool that the user profile is updated based on the webhook and edit the transformation code as desired.
 
 {% alert tip %}
 When building out Transformation code examples, creating a Transformation per webhook type sent to Braze is recommended.

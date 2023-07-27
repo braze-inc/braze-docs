@@ -69,7 +69,7 @@ Hightouch models define what data to pull from your source. To set up a new mode
 
 1. In Hightouch, go to [**Models overview**](https://app.hightouch.com/models) > **Add model**, and select the source you just connected. <br><br>
 2. Next, choose a [modeling method](https://hightouch.com/docs/models/creating-models). Since all your information should be joined in one table, you can use the visual table selector to define it. Alternatively, you can write SQL to include only the columns you want or rely on your existing dbt models, Looker Looks, or Sigma workbooks.<br><br>
-3. Before continuing, preview your model to ensure it's querying the data you're interested in. By default, Braze limits the preview to the first 100 records. Once you've validated your data, click **Continue**.<br><br>
+3. Before continuing, preview your model to ensure it's querying the data you're interested in. By default, Braze limits the preview to the first 100 records. After you've validated your data, click **Continue**.<br><br>
 4. Name your model, for example, "User recommendations."<br><br>
 5. Lastly, select a primary key and click **Finish**. A primary key should be a column with unique identifiers. This is also the field you'll use to call the personalization API to retrieve a particular user's recommendations.
 

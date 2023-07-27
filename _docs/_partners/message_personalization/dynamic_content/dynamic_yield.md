@@ -60,7 +60,7 @@ The recommendations block enables you to set algorithms and filtering to source 
 Use Dynamic Content to target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened. 
 
 1. Drag a Dynamic Content Block from the editing pane into the body of your email.<br><br> 
-2. Select a template for the first variation. You can now define design and content variables. Save the variation once complete. <br>![][4]<br><br> 
+2. Select a template for the first variation. You can now define design and content variables. Save the variation when complete. <br>![][4]<br><br> 
 3. Set the audience in the Dynamic Content pane.<br>![][5]<br><br> 
 4. Add another variation to target another specific audience or all users. Repeat as needed.<br><br> 
 5. Set the priorities for your variations using the up and down arrows. <br><br> 

@@ -10,7 +10,7 @@ page_order: 3
 
 # Data processing
 
-> Once the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
+> After the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
 
 ## Supported Shopify events
 
@@ -578,7 +578,7 @@ The Shopify integration reconciles your user’s device ID and personal informat
 reconcileEmail(<email address>);
 ```
 
-This will cause the anonymous user on the web to be associated with the given email address, which you will supply. For example, if the user enters their email address into a sign-up or login field, you should ensure this is being passed. Once this function is called, any other Shopify events referencing the given email address will be assigned to the same Braze user.
+This will cause the anonymous user on the web to be associated with the given email address, which you will supply. For example, if the user enters their email address into a sign-up or login field, you should ensure this is being passed. After this function is called, any other Shopify events referencing the given email address will be assigned to the same Braze user.
 
 {% alert note %}
 Braze has a no-code solution to implement this function automatically on your Shopify store. If you’re interested in this beta feature, contact your customer success manager or account manager.

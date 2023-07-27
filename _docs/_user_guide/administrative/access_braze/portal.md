@@ -28,7 +28,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 ## How you can join the conversation
 
 | **Rank a Feature's Importance** | Rank a feature's importance by selecting **Nice to Have**, **Important**, or **Critical**. |
-| **Comment on a Feature** | Once you've ranked a feature, you can leave a comment with your feedback. |
+| **Comment on a Feature** | After you've ranked a feature, you can leave a comment with your feedback. |
 | **Answer a Product Manager's Question** | Look for the "How Customers Can Help" on a feature's card to answer questions from our product team. |
 | **Submit an Idea** | Go to the **Submit Ideas** page in the portal and select from one of ten cards to rank its importance and include your idea or request in the comments. <br><br>Once submitted, your idea will be reviewed by a member of our product team. We cannot provide updates on the status of a request. Occasionally check back to see if your idea has been added to the "Under Consideration" or "Planned Features" sections. |
 {: .reset-td-br-1 .reset-td-br-2}

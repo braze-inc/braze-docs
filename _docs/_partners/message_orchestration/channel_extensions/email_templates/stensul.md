@@ -25,7 +25,7 @@ The Braze and Stensul integration allows you to export your HTML-formatted Stens
 
 ## Integration
 
-Provide your Braze REST API key and cluster instance to your Stensul customer success team. Once provided, they will set up the initial integration for you.
+Provide your Braze REST API key and cluster instance to your Stensul customer success team. The team will then set up the initial integration for you.
 
 {% alert important %}
 This is a one-time setup and any exports in the future will automatically utilize this API key.
