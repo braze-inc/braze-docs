@@ -62,7 +62,7 @@ These are what it looks like for your users to open one of our default in-app me
 
 {% alert important %}
 
-To enable HTML in-app messages through the Web SDK, you **must** supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g., `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons. HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
+To enable HTML in-app messages, you must supply the `allowUserSuppliedJavascript` initialization option to Braze: `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons. HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 
 {% endalert %}
 

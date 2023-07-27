@@ -31,6 +31,12 @@ Each in-app message type is highly customizable across content, images, icons, c
 
 For a full list of in-app message properties and usage, refer to the [`InAppMessage` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage).
 
+{% alert important %}
+
+To enable HTML in-app messages, you must supply the `allowUserSuppliedJavascript` initialization option to Braze: `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons. HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
+
+{% endalert %}
+
 All in-app messages are enumerated types of `Braze.InAppMessage`, which defines basic behavior and traits for all in-app messages. Each type of in-app message and its corresponding details is listed in the tabs below.
 
 ### Expected behaviors by message types

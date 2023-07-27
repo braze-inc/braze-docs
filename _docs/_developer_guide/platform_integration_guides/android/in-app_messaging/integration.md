@@ -36,6 +36,12 @@ In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageIm
 
 HTML in-app messages are [`InAppMessageHtml`][92] instances, which implement [`IInAppMessageHtml`][52], another subclass of `IInAppMessage`.
 
+{% alert important %}
+
+To enable HTML in-app messages, you must supply the `allowUserSuppliedJavascript` initialization option to Braze: `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons. HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
+
+{% endalert %}
+
 ### Expected behaviors by message type
 
 These are what it looks like for your users to open one of our default in-app message types.
