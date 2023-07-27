@@ -48,7 +48,7 @@ First, create your custom view.
 
 ### Step 2: Subscribe to card updates
 
-Then, [register a callback function to subscribe for data updates when cards are refreshed][6]. 
+Then, register a callback function to [subscribe for data updates][6] when cards are refreshed. 
 
 ### Step 3: Implement analytics
 
