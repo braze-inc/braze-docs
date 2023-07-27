@@ -30,7 +30,7 @@ The WSC Sports application handles the end-to-end process, from selecting the vi
 
 ![][2]{: style="float:right;max-width:25%;margin-bottom:15px;"}
 
-Before starting the integration, make sure you have your desired campaign and user segments built in Braze. Once completed, in the WSC Sports platform, select your desired video, and in the send settings, select Braze user segment and campaign ID you would like to use. Lastly, choose the time you would like your push message sent out. 
+Before starting the integration, make sure you have your desired campaign and user segments built in Braze. When completed, in the WSC Sports platform, select your desired video, and in the send settings, select Braze user segment and campaign ID you would like to use. Lastly, choose the time you would like your push message sent out. 
 
 #### API call
 

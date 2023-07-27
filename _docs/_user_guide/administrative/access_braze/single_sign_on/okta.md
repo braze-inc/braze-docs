@@ -53,7 +53,7 @@ From your Okta Admin dashboard, you will be provided a `Target URL` (Login URL) 
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your IdP. You must copy and paste it into this field. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Select **Save Changes** at the bottom of the page once completed.
+Select **Save Changes** at the bottom of the page when completed.
 
 ## Step 2: Configure Okta
 

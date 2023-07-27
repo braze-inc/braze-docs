@@ -70,7 +70,7 @@ Manual mode is a one-time action that assigns codes to a chosen audience. Go to 
     
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_channel.png %}){: style="max-width:90%;margin-top:15px;margin-bottom:15px;"}  
     
-4.  Once completed, you can see a summary of the distribution. Click **Save and send** to deliver codes to user profiles in Braze.  
+4.  When completed, you can see a summary of the distribution. Click **Save and send** to deliver codes to user profiles in Braze.  
 
 _Note that all manual distributions are sent with a 10-minute delay._
 
@@ -80,14 +80,14 @@ _Note that all manual distributions are sent with a 10-minute delay._
 Voucherify can push codes to Braze automatically in response to the following triggers:
 
 - **Customer entered/left specific Voucherify segment**
-- **Successful code publish** – the message is sent once the code from a campaign is published (assigned) to a customer in Voucherify.
+- **Successful code publish** – the message is sent when the code from a campaign is published (assigned) to a customer in Voucherify.
 - **Order status changed** (order created, order updated, order has been paid, order canceled)
-- **Gift credits added** – the message is sent once gift card credits are added to the customer's card.
-- **Loyalty points added** – the message is sent once loyalty points are added to the customer's profile.
+- **Gift credits added** – the message is sent when gift card credits are added to the customer's card.
+- **Loyalty points added** – the message is sent when loyalty points are added to the customer's profile.
 - **Voucher redeemed** – the message is sent to customers who successfully redeemed vouchers.
 - **Voucher redemption rollback** – the message is sent to the customer whose redemption was successfully rolled back.
 - **Reward redemption** – the message is sent when a customer redeems a loyalty or referral reward.
-- **Custom event was logged for a customer** - the message is triggered once Voucherify logs a particular custom event.
+- **Custom event was logged for a customer** - the message is triggered when Voucherify logs a particular custom event.
 
 To set up an automatic workflow with Braze and Voucherify, [visit distributions tutorial](https://support.voucherify.io/article/19-how-does-the-distribution-manager-work).
 

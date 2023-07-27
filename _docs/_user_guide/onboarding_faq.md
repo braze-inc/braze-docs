@@ -104,10 +104,10 @@ If you have identified duplicate users, you will need to clean up those user pro
 1. Export the user profiles using our `/users/export/ids` endpoint.
 2. Identify correct user profile (ultimately, your team will need to decide on the correct information) and either:
     - Merge any fields that are pertinent to the actual profile that you want to keep using the `/user/track` endpoint.
-    - Delete the duplicate, non-useful profile without merging any data using the users/delete endpoint. Once you delete a user profile, **there is no way to retrieve the information**.
+    - Delete the duplicate, non-useful profile without merging any data using the users/delete endpoint. After you delete a user profile, **there is no way to retrieve the information**.
 
 {% alert important %}
-We recommend that you first import the new user profiles with the correct `external_id` and corresponding custom attributes and events. Once user profiles are deleted, they can't be retrieved, so deleting should be the very last step.
+We recommend that you first import the new user profiles with the correct `external_id` and corresponding custom attributes and events. After user profiles are deleted, they can't be retrieved, so deleting should be the very last step.
 {% endalert %}
 
 Some additional things to note:
@@ -131,7 +131,7 @@ To import your CSV file, navigate to the **User Import** page under the Users se
 
 The **Import CSV** panel contains importing directions and a button to begin your import. Click **Select CSV File** and select your file of interest. Then, before clicking **Start Import**, you have the option to let Braze know what to do with this list under "What do you want us to do with the users in this CSV".
 
-Select **Import Users in this CSV and also make it possible to retarget this specific batch of users as a group**, and then select **Automatically generate a segment from the users who are imported from this CSV**. Once you click **Start Import**, Braze will upload your file, check the column headers and the data types of each column, and create a segment.
+Select **Import Users in this CSV and also make it possible to retarget this specific batch of users as a group**, and then select **Automatically generate a segment from the users who are imported from this CSV**. After you click **Start Import**, Braze will upload your file, check the column headers and the data types of each column, and create a segment.
 
 To download a CSV template, refer to [user import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
 
@@ -222,7 +222,7 @@ Finally, after you've created an extension, you can use it as a filter when crea
 Campaigns
 {% endapitags %}
 
-To create a multichannel campaign, go to the **Campaigns** page, select **Create Campaign**, then select **Multichannel Campaign**. Once in a multichannel campaign, select **Add Messaging Channel** from the compose tab to add your desired channels. Click the channel icons that appear to toggle through different messaging composers as you build your campaign copy for the different channels.
+To create a multichannel campaign, go to the **Campaigns** page, select **Create Campaign**, then select **Multichannel Campaign**. When inside a multichannel campaign, select **Add Messaging Channel** from the compose tab to add your desired channels. Click the channel icons that appear to toggle through different messaging composers as you build your campaign copy for the different channels.
 
 {% endapi %}
 {% api %}
@@ -425,7 +425,7 @@ When you stop a Canvas, the following applies:
 
 - Users will be prevented from entering the Canvas.
 - No further messages will be sent out, despite where a user is in the flow.
-    - **Exception:** Email Canvases won't immediately stop. Once the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
+    - **Exception:** Email Canvases won't immediately stop. After the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
 
 {% alert note %}
 Stopping a Canvas will not exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they will complete the step and move onto the next component. However, if the time that the user should've progressed to the next component has passed, they will instead exit the Canvas.
