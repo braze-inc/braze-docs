@@ -26,7 +26,7 @@ If your domain or IP is blocked by an ISP, the respone codes in the Braze Develo
 
 ## IP warming schedules
 
-We strongly recommend adhering to this IP warming schedule strictly to ensure deliverability. It's also important that you don't skip days as consistent scaling improves deliverability.
+We strongly recommend adhering to this IP warming schedule strictly to ensure deliverability. It's also important that you don't skip days as consistent scaling improves delivery metrics.
 
 Day | # of Emails to be Sent
 ----|--------------------------|
@@ -49,7 +49,7 @@ Day | # of Emails to be Sent
 17 | 4,000,000
 18+ | Double Daily Until Desired Volume
 
-Once warming is complete and you've reached your desired daily volume, you should aim to maintain that volume daily. Some fluctuation is expected, but reaching the desired volume, then only doing a mass blast once a week may negatively affect your deliverability and sender reputation. 
+Once warming is complete and you've reached your desired daily volume, you should aim to maintain that volume daily. Some fluctuation is expected, but reaching the desired volume, then only doing a mass blast once a week may negatively affect your delivery metrics and sender reputation. 
 
 {% alert important %}
 Most ISPs only store reputation data for 30 days. If you go a month without sending any messages, you'll have to repeat the IP warming process.

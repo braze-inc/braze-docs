@@ -51,6 +51,7 @@ The **Unsubscribe from all** button at the bottom of the template is non-removab
 ## Step 4: Customize the preference center using the drag-and-drop editor
 
 ### Set common styles
+
 You can set certain styles to be applied across all relevant blocks in your preference center from the **Common Styles** tab. The styles set in this section are used everywhere in your message except where you override them for a specific block. For an easier design experience, we recommend setting up page-level styles before you customize styles at the block level.
 
 ![][5]{: style="max-width:45%;"}
@@ -112,7 +113,7 @@ To place a link to the preference center in your emails, copy the Liquid tag of 
 
 Add the Liquid tag to the desired place in your email, similar to how [unsubscribe URLs]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/preference_center/#custom-footer) are inserted.
 
-## Errors
+## Handling errors
 
 If an error occurs when a user clicks **Save** on a preference center, they will be presented with the following default error message, which cannot be customized or styled in the editor. However, localization of the error messages is still supported on these pages. 
 
