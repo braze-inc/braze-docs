@@ -48,7 +48,7 @@ To create a new feature flag, click the **Create Feature Flag** button. Then, de
 Give your new feature flag a **Name** and **ID**.
 
 * The **Name** field allows you to provide a human-readable title for this feature flag that will be used by marketers and administrators.
-* The **ID** field will be referenced in your code to determine whether the feature is enabled for a particular user. This must be unique and cannot be modified once created.
+* The **ID** field will be referenced in your code to determine whether the feature is enabled for a particular user. This must be unique and cannot be modified after it's created.
 * The **Description** field is an optional field that allows you to provide additional context around this feature flag.
 
 Choose an `ID` thoughtfully as it will be used as you develop your feature. Practice good naming conventions to ensure that your code is readable by your colleagues (and your future self).
@@ -56,7 +56,7 @@ Choose an `ID` thoughtfully as it will be used as you develop your feature. Prac
 For example, it's common to use a naming convention of `{verb}_{product}_{feature}`, such as `enable_rider_new_profile_page` to make it clear what enabling the feature flag does.
 
 {% alert important %} 
-To prevent breaking production app behavior, feature flag `ID`s must be unique and cannot be modified once created. 
+To prevent breaking production app behavior, feature flag `ID`s must be unique and cannot be modified after they are created. 
 
 Feature flags are shared across apps within a workspace so that different platforms (iOS/Android/Web) can share references to the same feature.
 {% endalert %}
@@ -645,7 +645,7 @@ Add a description to your feature flag. While this is an optional field in Braze
 
 We're all guilty of leaving features on at 100% rollout for longer than necessary.
 
-To help keep your code (and Braze dashboard) clean, remove permanent feature flags from your code base once all users have upgraded and you no longer need the option to disable the feature. This helps reduce the complexity of your development environment, but also keeps your list of feature flags tidy.
+To help keep your code (and Braze dashboard) clean, remove permanent feature flags from your code base after all users have upgraded and you no longer need the option to disable the feature. This helps reduce the complexity of your development environment, but also keeps your list of feature flags tidy.
 
 [1]: {% image_buster /assets/img/feature_flags/feature-flags-list.png %} 
 [2]: {% image_buster /assets/img/feature_flags/feature-flags-create.png %}

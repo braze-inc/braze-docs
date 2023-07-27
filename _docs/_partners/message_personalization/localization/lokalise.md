@@ -24,11 +24,11 @@ The Braze and Lokalise integration leverages Connected Content to allow you to e
 
 ### Create a new Lokalise project
 
-To create a new translation project, log in to Lokalise and select **New Project**. Next, name your project, choose a **Base Language** (the language you will translate from), add one or more **Target Languages**, and choose **Software Localization** project type. Once you are ready, click **Proceed**.
+To create a new translation project, log in to Lokalise and select **New Project**. Next, name your project, choose a **Base Language** (the language you will translate from), add one or more **Target Languages**, and choose **Software Localization** project type. When you are ready, click **Proceed**.
 
 ## Integration
 
-In Lokalise, you will create a translation key for each of the Connected Content variables you define in Braze. Once the translations are ready, you can generate one JSON file per language and publish it on the URLs that will serve your Connected Content.
+In Lokalise, you will create a translation key for each of the Connected Content variables you define in Braze. When the translations are ready, you can generate one JSON file per language and publish it on the URLs that will serve your Connected Content.
 
 ### Step 1: Configuring user languages
 
@@ -45,7 +45,7 @@ For example, let's create a simple translation key, `description`:
 1. Open your Lokalise project, click **Add Key**, enter "description" in the **Key** field.
 2. Type "Demo description" in the **Base Language Value** field.
 3. Add "Web" in the **Platforms** dropdown. 
-4. Once you are ready, click **Save**.
+4. When you are ready, click **Save**.
 
 ![][1]{: style="max-width:60%"}
 

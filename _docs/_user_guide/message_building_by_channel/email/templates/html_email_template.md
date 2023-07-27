@@ -16,13 +16,12 @@ channel:
 
 ## Prerequisites {#upload-requirements}
 
-Before you begin, you need to create your HTML email template. This must be a single ZIP file containing the following:
+First, you'll need to create your HTML email template. This must be a ZIP file that contains the following:
 
 * A single HTML file—the body of your email
 * A folder of images that are referenced in the HTML file
 * Less than 50 image files
-
-This ZIP file should be under 5 MB.
+* Be less than 5&nbsp;MB
 
 ## Uploading your template
 
@@ -36,7 +35,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 ### Step 2: Open the uploader
 
-Under the **Template Type** section, select **HTML Editor**. Then scroll down to the section **Start from a Basic HTML Template** and select **From File**.
+Under the **Template Type** section, select **HTML Editor** and scroll down to the section **Start from a Basic HTML Template**. Select **From File**.
 
 ### Step 3: Upload your template
 
@@ -53,7 +52,7 @@ There are several email error messages you may receive when uploading an HTML te
 |Missing HTML| Add the HTML file to your ZIP file and try uploading again.|
 |Multiple HTML| Remove one of the HTML files and try uploading again.|
 |Images over 5&nbsp;MB| Reduce the number of images and try uploading again. |
-|Extra Images| You may have additional images in your file that are not referenced in your HTML file. This will not cause a fail error, but the extra images will be discarded. If those images were supposed to be referenced in the HTML file, then check the content, correct any errors, and try uploading again.
+|Extra Images| There may be additional images in your file that are not referenced in your HTML file. This will not cause a fail error, but the extra images will be discarded. If those images were supposed to be referenced in the HTML file, then check the content, correct any errors, and try uploading again.|
 |Missing Images| If there are images referenced in your HTML file, but those images are not included in the image folder of the ZIP file, you will receive a file error. Inspect your file and correct any errors (like misspellings), or add the missing images to your ZIP file and try uploading again.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -73,7 +72,7 @@ To use your email for an API campaign, you need the `email_template_id`, which c
 
 ## Managing email templates
 
-You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Frequently asked questions
 

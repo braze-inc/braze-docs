@@ -31,7 +31,7 @@ There are two subscription states for WhatsApp users: `subscribed` and `unsubscr
 
 ### How to check a user's WhatsApp subscription group
 
-- **User Profile:** Individual user profiles can be accessed through the Braze dashboard from **Audience** > **Search Users**. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the **Engagement** tab, you can view a user’s WhatsApp subscription group and their status.
+- **User Profile:** Individual user profiles can be accessed through the Braze dashboard from **Audience** > **Search Users**. Here, you can look up user profiles by email address, phone number, or external user ID. When you're inside a user profile, under the **Engagement** tab, you can view a user’s WhatsApp subscription group and their status.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Users > **User Search**.

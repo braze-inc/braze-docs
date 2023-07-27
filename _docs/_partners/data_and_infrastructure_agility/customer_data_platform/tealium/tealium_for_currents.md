@@ -29,7 +29,7 @@ The Braze and Tealium integration allows you to seamlessly control the flow of i
 
 ### Step 1: Create a data source for Braze within Tealium
 
-Instructions for creating a data source can be found on the [Tealium](https://community.tealiumiq.com/t5/Customer-Data-Hub/Braze-Currents-Incoming-Webhook-Setup-Guide/ta-p/36303) site. Once completed, Tealium will provide a data source URL to copy, which you will use in the next step.
+Instructions for creating a data source can be found on the [Tealium](https://community.tealiumiq.com/t5/Customer-Data-Hub/Braze-Currents-Incoming-Webhook-Setup-Guide/ta-p/36303) site. When completed, Tealium will provide a data source URL to copy, which you will use in the next step.
 
 ### Step 2: Create Current
 

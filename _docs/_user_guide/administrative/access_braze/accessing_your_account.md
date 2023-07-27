@@ -3,7 +3,7 @@ nav_title: Accessing Your Account
 article_title: Accessing Your Account
 page_order: 2
 page_type: reference
-description: "This article covers how to get your Braze account, how to log in once granted access, and how to go about resetting your Braze password."
+description: "This article covers how to get your Braze account, how to log in after granted access, and how to go about resetting your Braze password."
 
 ---
 
@@ -11,7 +11,7 @@ description: "This article covers how to get your Braze account, how to log in o
 
 If you are your company's first Braze user and logging in for the first time, you will receive a welcome email from `@alerts.braze.com` asking you to confirm your email and log in on the first day of your contract.
 
-Once you have confirmed your account you can add additional users from the [Company Users]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/adding_users_to_your_dashboard/) page of your dashboard. All users will receive an email asking them to confirm their account once they have been added.
+Once you have confirmed your account you can add additional users from the [Company Users]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/adding_users_to_your_dashboard/) page of your dashboard. All users will receive an email asking them to confirm their account after they have been added.
 
 If you are not the first user on your company's Braze account, reach out to your company's Braze account administrator and ask them to create your account. You will then receive a welcome email from `@alerts.braze.com` asking you to confirm your email and log in.
 

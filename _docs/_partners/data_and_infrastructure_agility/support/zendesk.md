@@ -107,7 +107,7 @@ If you have a common identifier between Braze and Zendesk, it is recommended to 
 - Select the bearer token authentication method for the webhook and provide your [Braze API key](https://www.braze.com/docs/api/basics/#creating-and-managing-rest-api-keys).
   - Make sure that the API key you are using has the [correct permissions](https://www.braze.com/docs/api/basics/#rest-api-key-permissions) for the Braze endpoint your webhook is using.<br><br>
 5. (Recommended) Test the webhook to ensure it's working properly.<br><br>
-6. For trigger and automation webhooks, you must connect the webhook to a trigger or automation before finishing the setup. See the following step for our example of creating a trigger for the webhook. Once the trigger has been created, you can return to this page and click **Finish setup**.
+6. For trigger and automation webhooks, you must connect the webhook to a trigger or automation before finishing the setup. See the following step for our example of creating a trigger for the webhook. After the trigger has been created, you can return to this page and click **Finish setup**.
 
 ### Step 2: Create a trigger or automation
 

@@ -99,7 +99,7 @@ The in-app message data is automatically forwarded from the Android layer.
 
 #### Replaying the callback for in-app messages
 
-To store any in-app messages triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when initializing the `BrazePlugin`:
+To store any in-app messages triggered before the callback is available and replay them after it is set, add the following entry to the `customConfigs` map when initializing the `BrazePlugin`:
 ```dart
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```

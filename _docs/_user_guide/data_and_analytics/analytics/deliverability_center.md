@@ -35,7 +35,7 @@ You can also access Google Postmaster in the Braze dashboard by navigating to **
 
 To help understand the ratings for IP reputation, refer to this table:
 
-| Repuation Level | Definition |
+| Reputation Level | Definition |
 | ----- | ---------- |
 | High | Has a good track record of a very low spam rate. Complies with [Gmail's sender guidelines][2]. Emails are rarely marked by the spam filter. |
 | Medium | Known to send good email, but has occasionally sent a low volume of spam. Most of the email from this domain will have a fair deliverability rate (except when there is a notable increase in spam levels). |

@@ -16,7 +16,7 @@ channel:
 > This reference article covers how to implement Content Card refreshing in your Android or FireOS application.
 
 {% alert tip %}
-To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed once they are available.
+To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed after they are available.
 {% endalert %}
 
 You can queue a manual refresh of Braze Content Cards at any time by calling:

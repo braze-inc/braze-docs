@@ -46,7 +46,7 @@ With Data Sharing, no actual data is copied or transferred between accounts. All
 
 Additionally, using Snowflake's built-in roles and permissions capabilities, access to data shared from Braze can be controlled and governed using the access controls already in place for your Snowflake account and the data therein. Access can be restricted and monitored the same way as your own data.
 
-When a client requests a data share, Braze will provision the share from the workspace(s) that the share was purchased. Once the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an incoming data share. 
+When a client requests a data share, Braze will provision the share from the workspace(s) that the share was purchased. After the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an incoming data share. 
 
 ![Inbound data share]({% image_buster /assets/img/inbound-data-share.png %})
 

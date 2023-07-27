@@ -40,7 +40,7 @@ Note that if your initial import exceeds your [catalog limit](https://www.braze.
 
 ### Step 4: Import completed
 
-You will receive a dashboard notification and an email once the import has been completed. The Shopify partner page will also update the status under Shopify catalogs to “Syncing,” you can view your products by clicking the catalog name on the Shopify partner page.
+You will receive a dashboard notification and an email after the import has been completed. The Shopify partner page will also update the status under Shopify catalogs to “Syncing,” you can view your products by clicking the catalog name on the Shopify partner page.
 
 Refer to [Catalogs additional use cases](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases) to learn more about how to leverage catalog data to personalize your message.
 
@@ -84,6 +84,6 @@ If your Shopify catalog runs into an error during import or syncing, it could be
 | Error | Reason | Solution |
 | --- | --- | --- |
 | Server Error | This occurs if there is a server error on Shopify’s side when we attempt to import or sync your products. | [Deactivate sync](#deactivating-your-shopify-catalogs) and re-import your entire inventory of products again. |
-| Duplicate SKU Error | This occurs if you use a SKU as your catalog item ID and have products with the same SKU. Since catalog item ID has to be unique, all your products must have unique SKUs. | Audit your full list of products and variants in Shopify to ensure that there are no duplicate SKUs. If there are duplicate SKUs, update these to be unique SKUs only in your Shopify store account. Once this has been corrected, [Deactivate sync](#deactivating-your-shopify-catalogs) and re-import your entire inventory of products again. |
+| Duplicate SKU Error | This occurs if you use a SKU as your catalog item ID and have products with the same SKU. Since catalog item ID has to be unique, all your products must have unique SKUs. | Audit your full list of products and variants in Shopify to ensure that there are no duplicate SKUs. If there are duplicate SKUs, update these to be unique SKUs only in your Shopify store account. After this is corrected, [deactivate sync](#deactivating-your-shopify-catalogs) and re-import your entire inventory of products again. |
 | Catalog Limit Exceeded | This occurs if you exceed your catalog limit. Braze will be unable to finish the import or keep the syncing active due to no more storage availability. | There are two solutions to this issue:<br><br>1. Reach out to your account manager to upgrade your tier to increase your catalog limit. <br><br>2. Free up storage space by deleting any of the following:<br>- Catalog items from other catalogs<br>- Other catalogs<br>- Selections created |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}

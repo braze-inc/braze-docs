@@ -313,7 +313,7 @@ Existing REST API keys can be viewed or deleted by clicking settings <i class="f
 ![][29]
 
 {% alert important %}
-Keep in mind that once you create a new API key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you've completed your implementation, go ahead and delete the old key.
+Keep in mind that after you create a new API key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. After you've completed your implementation, go ahead and delete the old key.
 {% endalert %}
 
 ## REST API key security

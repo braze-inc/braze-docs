@@ -59,7 +59,7 @@ The integration is supported for both syncing data from [Braze to Mozart Data](#
 
 You will be redirected to the Fivetran connector page. On this page, fill out the given fields. Next, click **Continue** > **Save & Test** to complete the Fivetran connector.
 
-Fivetran will begin syncing data from your Braze account to your Snowflake data warehouse. You can access query data from Mozart Data once the connector has finished syncing. 
+Fivetran will begin syncing data from your Braze account to your Snowflake data warehouse. You can access query data from Mozart Data after the connector has finished syncing. 
 
 ### Syncing data from Mozart Data to Braze
 

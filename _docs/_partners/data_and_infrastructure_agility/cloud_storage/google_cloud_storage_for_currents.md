@@ -54,7 +54,7 @@ Next, give the service account a name and grant it access to your newly created 
 
 #### Create a key
 
-At the bottom of the page, use the **Create Key** button to create a **JSON** private key to use in Braze. Once created, this key will download onto your machine.
+At the bottom of the page, use the **Create Key** button to create a **JSON** private key to use in Braze. After the key is created, it will download onto your machine.
 
 ![][6]
 
@@ -70,7 +70,7 @@ It's important to keep your credentials file up to date; if your connector's cre
 
 ![The Google Cloud Storage Currents page in Braze. On this page exist fields for integration name, contact email, GCS JSON credential, GCS bucket name, and prefix.][7]
 
-Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you would like to export. Once completed, launch your Current.
+Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you would like to export. When completed, launch your Current.
 
 ## Export behavior
 

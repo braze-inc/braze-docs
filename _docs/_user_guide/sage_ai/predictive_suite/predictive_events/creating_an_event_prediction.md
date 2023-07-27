@@ -8,7 +8,7 @@ description: "This article covers how to create an Event Prediction within the B
 
 # Creating an Event Prediction
 
-> A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}//user_guide/predictive_suite/predictive_purchases/).
+> A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}/user_guide/sage_ai/predictive_suite/predictive_events).
 
 In Braze, go to **Analytics** > **Predictive Events**.
 
@@ -40,7 +40,7 @@ Here, you'll see if the selected method provides enough data for Braze to create
 
 #### Prediction Window
 
-Prediction Window is the time frame in which you want to predict if a user will perform the event. It can be set up to 60 days. This window is used to query historical data for training the Prediction. Additionally, once the Prediction is created and users receive scores, the Likelihood Score indicates how likely a user is to perform the event within the number of days specified by the Prediction Window.
+Prediction Window is the time frame in which you want to predict if a user will perform the event. It can be set up to 60 days. This window is used to query historical data for training the Prediction. Additionally, after the Prediction is created and users receive scores, the Likelihood Score indicates how likely a user is to perform the event within the number of days specified by the Prediction Window.
 
 ### Step 3: Filter your Prediction Audience (optional) {#audience}
 
@@ -70,7 +70,7 @@ Preview and Demo Predictions will never update users' Likelihood Scores.
 
 ### Step 5: Build Prediction
 
-Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. Once you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours, depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
+Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours, depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
 
 Once completed, the page will switch to the analytics view automatically, and you will also get an email informing you that the Prediction and results are ready. In the event of an error, the page will return to the editing mode with an explanation of what went wrong.
 

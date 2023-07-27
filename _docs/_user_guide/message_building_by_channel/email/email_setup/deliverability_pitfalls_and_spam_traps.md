@@ -15,7 +15,7 @@ Your email deliverability can be affected by any of the following spam traps:
 | Trap Type | Description |
 |---|---|
 | Pristine Traps | Email addresses and domains that have never been used. |
-| Recycled Traps | Email addresses that were once real users, but are now dormant. |
+| Recycled Traps | Email addresses that were originally real users, but are now dormant. |
 | Typo Traps | Email addresses containing common typos. |
 | Spam Complaints | When your email is marked as spam by a customer. |
 | High Bounce Rate | When your email consistently fails to deliver because the recipient's address is invalid. |
@@ -25,7 +25,7 @@ Your email deliverability can be affected by any of the following spam traps:
 
 These traps can be avoided if you set up a confirmed opt-in process. By sending an initial opt-in email and asking customers to verify that they want your messages, you're ensuring your recipients want to hear from you, and that you're sending to real, valid addresses. Here are additional ways to avoid spam traps:
 
-1. Send a doubleopt-in email. This is an email that will require users to confirm their subscription choices by clicking a link.
+1. Send a double opt-in email. This is an email that will require users to confirm their subscription choices by clicking a link.
 2. As a best practice, implement a [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
 3. **Never purchase email lists.** 
 

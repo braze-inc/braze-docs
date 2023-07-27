@@ -60,10 +60,10 @@ Legacy Shopify customers may have the old method of collecting email and SMS sub
 If you have existing campaigns or Canvases using these legacy custom attributes today, you should remove them and ensure the campaigns or Canvases are using the appropriate subscription state, group, or both."
 
 ### Step 7: Install Braze's Shopify application
-You'll then be redirected to your Shopify store to install the Braze app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard. 
+You'll then be redirected to your Shopify store to install the Braze app. When you select **Install Unlisted App**, you will be redirected to the Braze dashboard. 
 
 ### Step 8: Verify completion
-That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. Once the Braze app has been successfully installed and the webhook creation is complete, you will be notified via email and ingestion will begin. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established. If you need to support user reconciliation outside of the checkout flow, follow this [additional step]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing#user-reconciliation-outside-of-checkout-flow).
+That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. After the Braze app has been successfully installed and the webhook creation is complete, you will be notified via email and ingestion will begin. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established. If you need to support user reconciliation outside of the checkout flow, follow this [additional step]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing#user-reconciliation-outside-of-checkout-flow).
 
 ### Shopify setup within Braze
 

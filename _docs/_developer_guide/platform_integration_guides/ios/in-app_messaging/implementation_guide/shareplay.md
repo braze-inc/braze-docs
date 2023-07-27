@@ -20,7 +20,7 @@ alias: /shareplay/
 The new `GroupActivities` framework released by Apple as part of the iOS 15 update allows you to leverage FaceTime by integrating SharePlay into your applications with the help of Braze in-app messages.
 ![SharePlay][3]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
 
-When users initiate a SharePlay video in a Facetime call, an "Open" button will appear at the top of everyone's screen. Once opened, audio and video will be synced across all compatible devices, allowing users to watch videos together in real-time. Those who do not have the app downloaded will be redirected to the App Store.
+When users initiate a SharePlay video in a Facetime call, an "Open" button will appear at the top of everyone's screen. When opened, audio and video will sync across all compatible devices, allowing users to watch videos together in real-time. Those who do not have the app downloaded will be redirected to the App Store.
 
 **Synced Media Playback**<br>
 With synced media playback, if one person pauses the SharePlay video, it will be paused across all devices. <br><br>

@@ -16,7 +16,7 @@ Preview and Demo Predictions will not allow users to be targeted for messaging, 
 
 ## Implementing filters {#filters}
 
-From the individual **Predictions** page, once you've decided what range of Likelihood Score or Category you want to target, you can use the **Create Segment** or **Create Campaign** buttons to create a new segment or campaign. This segment or campaign will filter for users with the Likelihood Score or Category selected with the slider.
+From the individual **Predictions** page, after you've decided what range of Likelihood Score or Category you want to target, you can use the **Create Segment** or **Create Campaign** buttons to create a new segment or campaign. This segment or campaign will filter for users with the Likelihood Score or Category selected with the slider.
 
 ![Filters available when defining an audience include Likelihood Category and Likelihood Score.][5]
 
