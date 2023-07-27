@@ -259,7 +259,7 @@ To add support to simulator builds, you can add the application `.entitlements` 
 {% endalert %}
 
 {% alert note %}
-The SDK does not query your domains' `apple-app-site-association` files. It performs the differentiation between universal links and regular URLs by looking at the domain name only. As a result, the SDK does not respect any exclusion rule defined in the `apple-app-site-association` per [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
+The SDK does not query your domains' `apple-app-site-association` file. It performs the differentiation between universal links and regular URLs by looking at the domain name only. As a result, the SDK does not respect any exclusion rule defined in the `apple-app-site-association` per [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
 {% endalert %}
 
 ### Integration example: BrazeDelegate
