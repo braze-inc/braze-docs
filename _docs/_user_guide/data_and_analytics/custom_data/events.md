@@ -119,6 +119,8 @@ In this example, the custom event has a property called "Property Name" with a v
 
 {% enddetails %}
 
+<!--
+
 ### Using custom events instead of purchase events to track purchases
 
 You might prefer to use custom events to track purchases if you need to capture more specific or additional information about the purchase that the standard purchase event doesn't cover. Here's what you can do with custom events that you can't accomplish with purchase events:
@@ -152,6 +154,8 @@ Appboy.sharedInstance()?.logCustomEvent("Purchase", withProperties: properties)
 ```
 
 In this example, "Purchase" is the name of the custom event, and the properties dictionary contains additional information about the event. In this case, the workout plan is "10 Sessions Personal Training". Now you can segment your users based on the types of workout plans they purchase.
+
+-->
 
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
