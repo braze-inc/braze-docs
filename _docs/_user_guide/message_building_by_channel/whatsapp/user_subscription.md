@@ -23,13 +23,13 @@ There are two subscription states for WhatsApp users: `subscribed` and `unsubscr
 | Unsubscribed | User either hasn’t explicitly given consent for opt-in, or their opt-in status has been explicitly removed. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### How users' WhatsApp subscription groups get set 
+### Setting users' WhatsApp subscription groups
 
 - **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint][4] using Braze's REST API.
 - **Web SDK:** Users can be added to an email, SMS, or WhatsApp subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287), or [Web][11].
 - **User import**: Users can be added to email or SMS subscription groups via **Import Users**. When updating the subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) for more information.
 
-### How to check a user's WhatsApp subscription group
+### Checking a user's WhatsApp subscription group
 
 - **User Profile:** Individual user profiles can be accessed through the Braze dashboard from **Audience** > **Search Users**. Here, you can look up user profiles by email address, phone number, or external user ID. When you're inside a user profile, under the **Engagement** tab, you can view a user’s WhatsApp subscription group and their status.
 
@@ -43,6 +43,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Currently, users can subscribe and [opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/) to WhatsApp messaging in various ways, including [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), through a website, a WhatsApp thread, phone, or in person. Opt-in keywords are not currently supported for the WhatsApp channel, so it will be up to you to maintain a user list. WhatsApp has a retrospective approach to opt-ins and rate limits, where if users start reporting or blocking you, your rate limit will be lowered. 
 
+### Updating a user's subscription status through a WhatsApp Canvas
+
+Regardless of the opt-in and opt-out methods you use, you can update the subscription status of user profiles with the same [update methods]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#update-subscription-status).
 
 [4]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/

@@ -73,12 +73,16 @@ Note that you can build a URL or QR code to join a WhatsApp channel from within 
 
 #### SMS message
 
-In Canvas, set up a campaign that asks customers if they want to opt-in to receiving WhatsApp messages. For example:
+In Canvas, set up a campaign that asks customers if they want to opt-in to receiving WhatsApp messages using one of the following methods:
 - Customer segment: subscribed marketing group outside of the US
 - Custom keyword trigger setup
-- Update method:
-	- [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) that updates the subscription status via Rest API
-	- Update user profile via advanced JSON editor with the following template: 
+
+<a name="update-subscription-status"></a> 
+
+To update an existing user profile's subscription status, use one of the following methods:
+
+- Create a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) that updates the subscription status via REST API
+- Use the advanced JSON editor to update the user profile with the following template: 
 
 	```json
 	{
