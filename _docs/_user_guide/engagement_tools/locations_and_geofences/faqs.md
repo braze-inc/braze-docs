@@ -3,20 +3,20 @@ nav_title: FAQ
 article_title: Locations & Geofences FAQ
 page_order: 4
 page_type: FAQ
-description: "This reference article covers some frequently asked questions surrounding the use of Geofences."
+description: "This reference article covers some frequently asked questions surrounding the use of location tracking and geofences."
 tool: Location
 
 ---
 
 # Frequently asked questions
 
-> This page provides answers to frequently asked questions about localtions and geofences.
+> This page provides answers to frequently asked questions about locations and geofences.
 
-## Locations
+## Location tracking
 
 ### When does Braze collect location data?
 
-Braze only collects location when the application is open in the foreground. As a result, our `Most Recent Location` filter targets users based upon where they last opened the application (also referred to as session start). 
+Braze only collects location when the application is open in the foreground. As a result, our `Most Recent Location` filter targets users based upon where they last opened the application (also referred to as session start).
 
 You should also keep the following nuances in mind:
 
@@ -27,13 +27,19 @@ You should also keep the following nuances in mind:
 
 The `Most Recent Device Locale` comes from the user's device settings. For example, this appears for iPhone users in their device under **Settings** > **General** > **Language & Region**. This filter is used to capture language and regional formatting, such as dates and addresses, and is independent of the `Most Recent Location` filter.
 
-The `Most Recent Location` is the last known GPS location of the device. This is updated on session start.
+The `Most Recent Location` is the last known GPS location of the device. This is updated on session start and is stored on the user's profile.
 
 ### If a user opts out of location tracking, will their old location data be removed from Braze?
 
 Nope! If a user has ever had a location stored on their profile, that data will not be automatically removed if they later opt out of location tracking.
 
 ## Geofences
+
+### What's the difference between geofences and location tracking?
+
+In Braze, a geofence is a different concept from location tracking. Geofences are used as triggers for certain actions. A geofence is a virtual boundary set up around a geographical location. When a user enters or exits this boundary, it can trigger a specific action, such as sending a message.
+
+Location tracking is used to collect and store the most recent location data of a user. This data can be used to segment users based on the `Most Recent Location` filter. For example, you could use the Most Recent Location filter to target a specific region of your audience, such as sending a message to users located in New York.
 
 ### How accurate are Braze geofences?
 
@@ -47,11 +53,13 @@ Our geofencing solution uses the native geofence system service on iOS and Andro
 
 ### When are geofences active?
 
-Braze geofences work at all hours of the day, even when your app is closed.
+Braze geofences work at all hours of the day, even when your app is closed. They become active as soon as they are defined and uploaded to the Braze dashboard. However, geofences can't function if a user has disabled location tracking.
 
-### What's the difference between geofences versus segmenting on most recent location?
+For geofences to work, users must have location services enabled on their device and must have granted your app permission to access their location. If a user has disabled location tracking, your app won't be able to detect when they enter or exit a geofence.
 
-In Braze, a geofence is a different concept from segmenting based on most recent location. Geofences are only used for triggers, such as sending a message when a user enters or exits a specific area. Segments based on the `Most Recent Location` filter are used to target a specific region of your audience, such as sending a message to users located in New York.
+### Is geofence data stored in user profiles?
+
+No, Braze doesn't store geofence data on user profiles. Geofences are monitored by Apple and Google location services, and Braze only gets notified when a user triggers a geofence. At that point, we process any associated trigger campaigns.
 
 ### Can I set up a geofence within a geofence?
 
