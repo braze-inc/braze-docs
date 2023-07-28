@@ -38,15 +38,11 @@ We'll check your setup and validate all information in our internal systems. The
 
 ## Method 2: Self-service email setup
 
-This method will set up one sending and one tracking domain.
+This method will set up one sending domain, one tracking domain, and one IP. If you're planning to set up more, please consult with Braze Onboarding team (method 1).
 
 {% alert important %}
 This self-service email setup feature is currently in beta. Contact your Braze account manager if you're interested in participating in the beta.<br>If you're using the self-service email setup feature, be sure to also consult with the Braze Onboarding team.
 {% endalert %}
-
-### Prerequisites
-
-Before beginning the self-service email setup process, you will need to configure the TXT and CNAME with your DNS provider first.
 
 ### Step 1: Begin setup
 
@@ -54,21 +50,23 @@ Go to **Settings** > **Admin Settings** under **Company Settings**. Next, select
 
 ### Step 2: Add and verify a sending domain
 
-A sending domain is used in the "from" address when sending an email. Enter a sending domain and click **Submit**. Then, click **Verify**.
+A sending domain is used in the "from" address when sending an email. Enter a sending domain and click **Submit**. 
 
-{% alert note %}
-The sending domain must be a subordinate to a domain you own. 
+Next, add the TXT and CNAME records from the bottom of the page to your DNS provider. Then, return to the Braze dashboard and click **Verify**.
+
+{% alert important %}
+The sending domain must be a subordinate to a domain you own. For example, if you own "example.com", a subdomain could be "mail.example.com", which allows you to use the sending address "@mail.example.com".
 {% endalert %}
 
 ### Step 3: Add and verify a tracking domain
 
-A tracking domain is used to wrap links in your emails for click-tracking and branding purposes. This will be visible to users when they hover over or click your email links. 
+A tracking domain is used to wrap links in your emails for click-tracking and branding purposes. This will be visible to users when they hover over or click your email links. We recommend matching this to your sending domain.
 
-Enter a tracking domain and click **Submit**. We recommend matching this to your sending domain. Next, click **Verify**.
+Enter a tracking domain and click **Submit**. Next, add the CNAME records from the bottom of the page to your DNS provider. Then, return to the Braze dashboard and click **Verify**.
 
 ### Step 4: Add an IP address
 
-Add an IP address from which your emails will be sent. Your IP address with Braze is unique to your account and will not be shared with other senders. Click the **Set up rDNS** button to support deliverability. 
+Braze will generate an A record to associate your IP address with your sending subdomain in a setup called reverse DNS (rDNS). Add the A record in your DNS provider then click **Set up rDNS** to support deliverability.
 
 Note that additional domains that have been added will not appear in the **Sender Verification** section. To add more domains, contact the Braze Support team.
 
