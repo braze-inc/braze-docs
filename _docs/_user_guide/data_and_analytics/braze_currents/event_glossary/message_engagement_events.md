@@ -43,6 +43,10 @@ Certain events return a `platform` value that specifies the platform of the user
 These schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB.
 {% endalert %}
 
+{% alert update %}
+Human-readable names for objects related to Canvas Flow are coming soon to Currents. In the meantime, the IDs can be used for grouping, and translated to human-readable names via the [Canvas Details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+{% endalert %}
+
 {% api %}
 
 ## WhatsApp read events
@@ -561,12 +565,13 @@ This event occurs when a user enters a Canvas experiment step path.
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "experiment_step_id": (required, string) BSON ID of the experiment step this event belongs to,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) null,
   "experiment_split_id": (optional, string) BSON ID of the experiment split the user enrolled in,
   "experiment_split_name": (optional, string) name of the experiment split the user enrolled in,
   "in_control_group": (required, boolean) whether the user was enrolled in the control group
 }
 ```
+
 {% endapi %}
 
 {% api %}
@@ -593,7 +598,7 @@ This event occurs when a user convert for a Canvas experiment step.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) null,
   "experiment_step_id": (optional, string) BSON ID of the experiment step this event belongs to,
   "experiment_split_id": (required, string) BSON ID of the experiment split variation this user received,
   "experiment_split_name": (optional, string) name of the experiment split the user enrolled in,
