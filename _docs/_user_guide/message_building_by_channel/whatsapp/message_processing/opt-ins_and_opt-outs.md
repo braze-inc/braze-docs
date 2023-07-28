@@ -73,7 +73,7 @@ Note that you can build a URL or QR code to join a WhatsApp channel from within 
 
 #### SMS message
 
-In Canvas, set up a campaign that asks customers if they want to opt-in to receiving WhatsApp messages using one of the following methods:
+In Canvas, set up a campaign that asks customers if they want to opt-in to receiving WhatsApp messages by using one of the following methods:
 - Customer segment: subscribed marketing group outside of the US
 - Custom keyword trigger setup
 
