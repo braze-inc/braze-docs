@@ -39,7 +39,7 @@ Nope! If a user has ever had a location stored on their profile, that data will 
 
 In Braze, a geofence is a different concept from location tracking. Geofences are used as triggers for certain actions. A geofence is a virtual boundary set up around a geographical location. When a user enters or exits this boundary, it can trigger a specific action, such as sending a message.
 
-Location tracking is used to collect and store the most recent location data of a user. This data can be used to segment users based on the `Most Recent Location` filter. For example, you could use the Most Recent Location filter to target a specific region of your audience, such as sending a message to users located in New York.
+Location tracking is used to collect and store a user's most recent location data. This data can be used to segment users based on the `Most Recent Location` filter. For example, you could use the `Most Recent Location` filter to target a specific region of your audience, such as sending a message to users located in New York.
 
 ### How accurate are Braze geofences?
 
