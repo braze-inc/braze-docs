@@ -25,7 +25,7 @@ To complete the installation, you will need the [app identifier API key]({{site.
 
 The Braze React Native SDK is compatible with any apps using the New Architecture starting from version 2.0.1+.
 
-As of SDK version {INSERT-VERSION-HERE}, Braze has been upgraded internally to a React Native Turbo Module, which can still be used with either the [React Native New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page) or the legacy bridge architecture. Because the Turbo Module is backwards compatible, no migration steps are required other than the breaking changes mentioned in the [CHANGELOG](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md).
+As of SDK version 6.0.0, Braze has been upgraded internally to a React Native Turbo Module, which can still be used with either the [React Native New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page) or the legacy bridge architecture. Because the Turbo Module is backwards compatible, no migration steps are required other than the breaking changes mentioned in the [CHANGELOG](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md).
 
 {% alert warning %}
 If your app conforms to `RCTAppDelegate` and was following our previous `AppDelegate` setup in this documentation, or in the [Braze sample app](https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm), be sure to reference our updated samples in [Complete native setup](#step-2-complete-native-setup) to prevent any crashes from occurring when subscribing to events in the new Turbo Module.
