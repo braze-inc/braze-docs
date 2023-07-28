@@ -340,7 +340,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_step_id": (optional, string) ID of the Canvas step this event belongs to,
   "canvas_step_message_variation_id": (optional, string) ID of the Canvas step message variation this user received,
-  "canvas_step_name": (optional, string)name of the Canvas step this event belongs to,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
   "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
   "device_id": (optional, string) ID of the device on which the event occurred,
