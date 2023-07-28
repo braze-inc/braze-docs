@@ -14,11 +14,15 @@ description: "This article provides an overview of how to copy campaigns across 
 Copying campaigns across workspaces is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
 {% endalert %}
 
+## How to copy a campaign
+
+![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+
 To copy a campaign across a workspace, select the <i class="fas fa-cog"></i> gear icon next to the selected campaign, and click **Copy to Workspace**. After copying, we recommend reviewing and testing your campaign to ensure that all fields are working properly.
 
-![][1]
-
 When you copy a campaign to a workspace, fields such as campaign name and description, variants, delivery schedule type, and conversion behaviors are copied. For email campaigns, fields such as email body, subject, and preheader are also copied over to the destination workspace. 
+
+### Copying campaigns that contain Liquid
 
 For message bodies that include Liquid references, the references are copied over to a workspace, but they may not function as expected. For example, Content Blocks **will not** be copied. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. This applies for catalogs, preference centers, and custom attributes. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid any errors when launching a campaign.
 
