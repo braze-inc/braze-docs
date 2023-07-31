@@ -189,7 +189,7 @@ If you have another Firebase Messaging Service you would also like to use, you c
           "androidFirebaseMessagingFallbackServiceEnabled": true,
           "androidFirebaseMessagingFallbackServiceClasspath": "com.company.OurFirebaseMessagingService"
         }
-      ],
+      ]
     ]
   }
 }
