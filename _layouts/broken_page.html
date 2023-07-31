@@ -208,5 +208,12 @@ $(document).ready(function(k){
 
     {%- endunless -%}
 
+    <script>
+      window.braze.logCustomEvent("broken page", {
+        url: window.location.href
+      });
+      window.braze.requestImmediateDataFlush();
+    </script>
+
     {% include footer.html %}
 </div>
