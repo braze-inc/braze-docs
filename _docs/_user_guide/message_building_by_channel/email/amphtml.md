@@ -221,7 +221,7 @@ We advocate not segmenting to send to all different types of users. This is beca
 {% enddetails %}
 
 {% details Do you have any additional tips for building an AMP email? %}
-Check in with your engineering team to build out the AMP elements. Once these elements are set up, we encourage you to include design resources and elements you have to add an extra layer of polish.
+Check in with your engineering team to build out the AMP elements. After these elements are set up, we encourage you to include design resources and elements you have to add an extra layer of polish.
 {% enddetails %}
 
 [1]: {% image_buster /assets/img/dynamic-content.png %} "Dynamic Content"

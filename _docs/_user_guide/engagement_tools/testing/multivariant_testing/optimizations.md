@@ -20,7 +20,7 @@ Optimizations are located in the **Target Audiences** step of campaign creation,
 
 ## Winning variant
 
-Sending the winning variant is similar to a standard A/B test. Users in this group will receive the winning variant once the initial test is complete.
+Sending the winning variant is similar to a standard A/B test. Users in this group will receive the winning variant when the initial test is complete.
 
 1. Select **Winning Variant**, then specify what percentage of your campaign audience should be assigned to the winning variant group.
 2. Configure the following additional settings.
