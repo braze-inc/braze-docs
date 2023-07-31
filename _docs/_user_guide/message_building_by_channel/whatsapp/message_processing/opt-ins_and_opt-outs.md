@@ -7,6 +7,7 @@ search_tag: Partner
 page_order: 5
 channel:
   - WhatsApp
+alias: /user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
 ---
 
 # Opt-in and opt-out
