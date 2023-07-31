@@ -95,8 +95,9 @@ if (site_language && (site_language != 'en')){
     }
   }
 
-})();
 
+
+}  )();
 
 $(document).ready(function(k){
   var search_strings = removeleadingslash(window.location.pathname).split('/');
@@ -107,13 +108,6 @@ $(document).ready(function(k){
   }
   $('#help-menu_search').val(search_string)
 });
-</script>
-
-<script>
-  window.braze.logCustomEvent("broken page", {
-    url: window.location.href
-  });
-  window.braze.requestImmediateDataFlush();
 </script>
 
 {%- comment -%} Assigned variables first by page, then by layout {%- endcomment -%}
@@ -213,6 +207,13 @@ $(document).ready(function(k){
     </div>
 
     {%- endunless -%}
+
+    <script>
+      window.braze.logCustomEvent("broken page", {
+        url: window.location.href
+      });
+      window.braze.requestImmediateDataFlush();
+    </script>
 
     {% include footer.html %}
 </div>
