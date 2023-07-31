@@ -83,6 +83,10 @@ To update an existing user profile's subscription status, use one of the followi
 
 - Create a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) that updates the subscription status via REST API
 - Use the advanced JSON editor to update the user profile with the following template: 
+To update an existing user profile's subscription status, use one of the following methods:
+
+- Create a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) that updates the subscription status via REST API
+- Use the advanced JSON editor to update the user profile with the following template: 
 
 	```json
 	{

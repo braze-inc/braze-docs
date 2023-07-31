@@ -46,6 +46,9 @@ Currently, users can subscribe and [opt-in]({{site.baseurl}}/user_guide/message_
 ### Updating a user's subscription status through a WhatsApp Canvas
 
 Regardless of the opt-in and opt-out methods you use, you can update the subscription status of user profiles with the same [update methods]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#update-subscription-status).
+### Updating a user's subscription status through a WhatsApp Canvas
+
+Regardless of the opt-in and opt-out methods you use, you can update the subscription status of user profiles with the same [update methods]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#update-subscription-status).
 
 [4]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
