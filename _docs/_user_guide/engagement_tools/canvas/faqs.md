@@ -30,7 +30,7 @@ When you stop a Canvas, the following applies:
 
 - Users will be prevented from entering the Canvas.
 - No further messages will be sent out, despite where a user is in the flow.
-- **Exception:** Canvases with emails will not immediately stop. Once the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
+- **Exception:** Canvases with emails will not immediately stop. After the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
 
 #### In-app messages in Canvas 
 In-app messages send upon the next session start. This means if the user enters the Canvas step before the Canvas is stopped, they will still receive the in-app message upon their next session start, as long as the in-app message hasn't expired yet.
@@ -132,7 +132,7 @@ Yes. A Canvas built using Canvas Flow can contain up to 200 steps.
 
 Yes! Canvas Flow allows you to launch your Canvas with disconnected steps. You can also save Canvases post-launch with disconnected steps. 
 
-### Where do users go once they've reached a disconnected step?
+### Where do users go when they've reached a disconnected step?
 
 If a user is in a disconnected step of your Canvas Flow workflow, they will advance to the subsequent step if there is one, and the step's setting will dictate how the user should advance. This is intended to allow users to make changes to steps without having to directly connect them to the rest of the Canvas. This also gives you some room for testing before going live immediately, effectively allowing for saving a draft.
 

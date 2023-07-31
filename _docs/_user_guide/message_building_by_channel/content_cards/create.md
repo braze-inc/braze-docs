@@ -95,7 +95,7 @@ To add an image to your Content Card, click **Add Image** or provide an image UR
 
 #### Pin to top
 
-A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. Once a card has been sent, you cannot update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends.
+A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. After a card has been sent, you cannot update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends.
 
 ![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.][1]{:style="border:none"}
 
@@ -191,7 +191,7 @@ The following capabilities are not yet supported for Content Cards:
 
 ### Sending behavior
 
-Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once content is pulled into the Content Card (at time of displaying), the content cannot be changed during its lifespan. This applies even if you are calling an API through Connected Content, and the data from the endpoint changes. This data will not get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only future cards that are sent will have the update.
+Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. After content is pulled into the Content Card (at time of displaying), the content cannot be changed during its lifespan. This applies even if you are calling an API through Connected Content, and the data from the endpoint changes. This data will not get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only future cards that are sent will have the update.
 
 If you need to remove old cards, you must stop the campaign to do so. To stop a campaign, open your Content Card campaign and select **Stop Campaign**. Stopping the campaign will prompt you to decide how to handle users that have already received your card. If you would like to remove the Content Card from your users' feeds, select **Remove card from feed**. The card will then be hidden by the SDK on the next sync.
 
@@ -199,12 +199,12 @@ If you need to remove old cards, you must stop the campaign to do so. To stop a 
 
 ### Card removal events {#action-based-card-removal}
 
-Some Content Cards are only relevant up until a user performs some action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
+Some Content Cards are only relevant up until a user performs some action. For example, a card nudging users to activate their account shouldn't be shown after the user completes that onboarding task.
 
 Within a campaign or Canvas Message, you can optionally add a **Removal Event** to specify which custom events or purchases should cause previously sent cards to be removed from that user's feed; triggered via SDK or REST API.
 
 {% alert tip %}
-You can specify multiple custom events and purchases that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
+You can specify multiple custom events and purchases that should remove a card from a user's feed. When **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
 {% endalert %}
 
 ![Content Card Removal Conditions panel with Content Card Removal Event option]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})

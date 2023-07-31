@@ -46,7 +46,7 @@ The drag-and-drop editor is only available for Content Blocks used in email mess
 4. Click **Edit Content Block** to begin editing.
 4. In the editor, drag and drop the blocks in the **Content** tab to build out your Content Block. 
 5. Using the **Row** tab, you can adjust details such as the row or content area background colors, alignment, padding, and more.
-6. Once you've finished creating your Content Block, click **Done**.
+6. After you finish creating your Content Block, click **Done**.
 
 {% endtab %}
 {% tab HTML %}
@@ -59,7 +59,7 @@ The drag-and-drop editor is only available for Content Blocks used in email mess
 4. Click **Edit Content Block** to begin editing.
 4. In the editor, enter your HTML. 
 5. Using the **Row** tab, you can adjust details such as the row or content area background colors, alignment, padding, and more.
-6. Once you've finished creating your Content Block, click **Done**.
+6. After you finish creating your Content Block, click **Done**.
 
 {% endtab %}
 {% endtabs %}
@@ -105,7 +105,7 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 
 ### Nesting Content Blocks
 
-Content Blocks can be nested, but only once! You can nest Content Block A into Content Block B, but you will not be able to then nest Content Block B into Content Block C.
+Content Blocks can be nested, but only once. You can nest Content Block A into Content Block B, but you will not be able to then nest Content Block B into Content Block C.
 
 {% alert warning %}
 Nothing will prevent you from nesting a third level of Content Block, but you will not see the content expand in nests beyond the second. The content and the Liquid snippet are removed from the message.

@@ -58,7 +58,7 @@ In addition, triggered in-app messages still abide by in-app message delivery ru
 
 Select how long to wait before sending the campaign after the trigger criteria are met. If the delay length chosen is longer than the message's duration for sending, no users will receive the campaign. 
 
-Additionally, users who complete the trigger event after your campaign is launched will be the first to start receiving the message once the delay has passed. Users who have completed the trigger event before the campaign launches will not qualify to receive the campaign.
+Additionally, users who complete the trigger event after your campaign is launched will be the first to start receiving the message after the delay has passed. Users who have completed the trigger event before the campaign launches will not qualify to receive the campaign.
 
 ![][19]
 

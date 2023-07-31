@@ -25,7 +25,7 @@ Note that this content **only applies to the flat file event data we send to Dat
 
 As a high-throughput system, Currents guarantees "at-least-once" delivery of events, meaning that duplicate events can occasionally be written to your storage bucket. This can happen when events are reprocessed from our queue for any reason.
 
-If your use cases require exactly-once delivery, you can use the unique identifier field that is sent with every event (`id`) to deduplicate events. Since the file leaves our control once it's written to your storage bucket, we have no way to guarantee deduplication from our end.
+If your use cases require exactly-once delivery, you can use the unique identifier field that is sent with every event (`id`) to deduplicate events. Since the file leaves our control when it's written to your storage bucket, we have no way to guarantee deduplication from our end.
 
 ## Timestamps
 

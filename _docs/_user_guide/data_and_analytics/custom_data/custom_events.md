@@ -151,7 +151,7 @@ If the user has no internet connection, triggered in-app messages with templated
 
 #### Segmentation
 
-If you'd like to create segments based on event property recency and frequency, reach out to your customer success manager to enable segmentation for specific custom event properties. Once enabled, you can access additional filtering options when segmenting, such as:
+If you'd like to create segments based on event property recency and frequency, reach out to your customer success manager to enable segmentation for specific custom event properties. When enabled, you can access additional filtering options when segmenting, such as:
 
 - Has done custom event with property A with value B, X times in the last Y days
 - Has made any purchases with property A with value B, X times in the last Y days
@@ -240,7 +240,7 @@ After generating a schema, you'll be able to reference the nested data during [s
 {% tabs %}
 {% tab Music Example %}
 
-The following is a `/users/track` example with a "Created Playlist" custom event. Once a playlist has been created, to capture the properties of the playlist, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
+The following is a `/users/track` example with a "Created Playlist" custom event. After a playlist has been created, to capture the properties of the playlist, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
 
 ```
 ...
@@ -269,7 +269,7 @@ The following is a `/users/track` example with a "Created Playlist" custom event
 {% endtab %}
 {% tab Restaurant Example%}
 
-The following is a `/users/track` example with an "Ordered" custom event. Once an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
+The following is a `/users/track` example with an "Ordered" custom event. After an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
 
 ```
 ...
@@ -340,13 +340,13 @@ Triggering a campaign with nested properties from the "Ordered" event:
 
 ##### Segmentation
 
-Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Once you've generated a schema, the nested objects explorer will display in the segmentation section. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)). 
+Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. After you've generated a schema, the nested objects explorer will display in the segmentation section. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)). 
 
 ![][4]
 
 ##### Personalization
 
-Using the **Add Personalization** modal, select **Advanced Event Properties** as the personalization type. This allows the option to add a nested event properties once a schema has been generated.
+Using the **Add Personalization** modal, select **Advanced Event Properties** as the personalization type. This allows the option to add a nested event properties after a schema has been generated.
 
 ![][5]{: style="max-width:70%;"}
 

@@ -50,7 +50,7 @@ For Android, this version number is based on the [Package Long Version Code][9] 
 For iOS, this version number is based on the [Short Version String][8] for the app.
 
 {% alert tip %}
-This filter will populate values once users upgrade their apps to the supported Braze SDK Versions. Until then, the filter won't show any versions when selected.
+This filter will populate values after users upgrade their apps to the supported Braze SDK Versions. Until then, the filter won't show any versions when selected.
 {% endalert %}
 
 #### Example scenarios

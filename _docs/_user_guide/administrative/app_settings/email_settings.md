@@ -149,7 +149,7 @@ To learn more about custom footer Liquid templating, check out our documentation
 {% endtab %}
 {% tab Custom Unsubscribe Page %}
 
-Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page will appear once a user has selected to unsubscribe from the bottom of an email. Note that this page should be less than 750 KB. 
+Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page will appear after a user has selected to unsubscribe from the bottom of an email. Note that this page should be less than 750 KB. 
 
 ![]({% image_buster /assets/img/email_settings/custom_unsubscribe.png %})
 
