@@ -210,7 +210,8 @@ $(document).ready(function(k){
 
     <script>
       window.braze.logCustomEvent("broken page", {
-        url: window.location.href
+        hostname: location.hostname,
+        pathname: location.pathname,
       });
       window.braze.requestImmediateDataFlush();
     </script>
