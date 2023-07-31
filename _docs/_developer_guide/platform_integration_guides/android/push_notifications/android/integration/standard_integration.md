@@ -201,6 +201,24 @@ Braze's notification code also uses `BrazeFirebaseMessagingService` to handle op
 Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the preceding integration.
 {% endalert %}
 
+##### Using a fallback Firebase Messaging Service
+
+If you have another Firebase Messaging Service you would also like to use, you can also specify a fallback Firebase Messaging Service to call if your application receives a push that isn't from Braze.
+
+In your `braze.xml`, you can specify:
+
+```xml
+<bool name="com_braze_fallback_firebase_cloud_messaging_service_enabled">true</bool>
+<string name="com_braze_fallback_firebase_cloud_messaging_service_classpath">com.company.OurFirebaseMessagingService</string>
+```
+
+or 
+
+```java
+BrazeConfig.setFallbackFirebaseMessagingServiceEnabled(true)
+BrazeConfig.setFallbackFirebaseMessagingServiceClasspath("com.company.OurFirebaseMessagingService")
+```
+
 ##### Using your own Firebase Messaging Service
 
 If you already have a Firebase Messaging Service registered, you can pass [`RemoteMessage`][75] objects to Braze via [`BrazeFirebaseMessagingService.handleBrazeRemoteMessage()`][74]. This method will only display a notification if the [`RemoteMessage`][75] object originated from Braze and will safely ignore if not.
