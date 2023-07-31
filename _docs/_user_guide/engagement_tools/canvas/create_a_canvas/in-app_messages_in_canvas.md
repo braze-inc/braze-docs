@@ -31,7 +31,7 @@ In the in-app message composer, you can choose when the in-app message will expi
 | Option | Description | Example |
 |---|---|---|
 | Message expires after specified period | The first option allows you to expire the in-app message relative to when the step becomes available to the user. | For example, an in-app message with a two-day expiration would become available after the step's delay elapses and audience options are checked. It would then be available for 2 days (48 hours) and during those two days, users may see the in-app message if they open the app. |
-| Message expires by specified date | The second option allows you to choose a specific date and time when the in-app message will longer be available. | For example, if you have a sale that ended at a specific date and time, you might select this option so that when the sale ends, users no longer see the associated in-app message. |
+| Message expires by specified date | The second option allows you to choose a specific date and time when the in-app message will be no longer available. | For example, if you have a sale that ended at a specific date and time, you might select this option so that users no longer see the associated in-app message when the sale ends. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Use cases
