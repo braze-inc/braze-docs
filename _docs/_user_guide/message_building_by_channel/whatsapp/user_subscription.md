@@ -43,7 +43,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Currently, users can subscribe and [opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/) to WhatsApp messaging in various ways, including [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), through a website, a WhatsApp thread, phone, or in person. Opt-in keywords are not currently supported for the WhatsApp channel, so it will be up to you to maintain a user list. WhatsApp has a retrospective approach to opt-ins and rate limits, where if users start reporting or blocking you, your rate limit will be lowered. 
 
-### Updating a user's subscription status through a WhatsApp Canvas {#update-subscription-status}
+## Updating a user's subscription status through a WhatsApp Canvas {#update-subscription-status}
 
 Regardless of the opt-in and opt-out methods you use, you can update the subscription status of user profiles with one of the following update methods:
 
