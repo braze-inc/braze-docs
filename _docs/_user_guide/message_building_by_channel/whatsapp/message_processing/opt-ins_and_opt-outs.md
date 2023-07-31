@@ -77,7 +77,7 @@ In Canvas, set up a campaign that asks customers if they want to opt-in to recei
 - Customer segment: subscribed marketing group outside of the US
 - Custom keyword trigger setup
 
-Learn about updating the subscription status of user profiles by viewing [Subscription Groups][({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status)].
+Learn about updating the subscription status of user profiles by viewing [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status).
 
 #### In-app or in-browser message
 
