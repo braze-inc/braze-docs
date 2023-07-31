@@ -174,4 +174,25 @@ Starting in macOS 13, on certain devices, you can test iOS push notifications on
 
 ![A Braze push campaign showing you can add your own user ID as a test recipient to test your push notification.][1]
 
+## Optional: Foward Android push to another FirebaseMessagingService
+
+If you have another Firebase Messaging Service you would also like to use, you can also specify a fallback Firebase Messaging Service to call if your application receives a push that isn't from Braze.
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          ...
+          "androidFirebaseMessagingFallbackServiceEnabled": true,
+          "androidFirebaseMessagingFallbackServiceClasspath": "com.company.OurFirebaseMessagingService"
+        }
+      ],
+    ]
+  }
+}
+```
+
 [1]: {% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test"
