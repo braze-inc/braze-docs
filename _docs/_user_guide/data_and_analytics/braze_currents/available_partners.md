@@ -26,6 +26,7 @@ These partners can either act as warehouses (for flat file storage) or gateways 
 
 * [Microsoft Azure Blob Storage][3]
 
+
 ## Customer data
 
 These customer data platforms collect and route information from multiple sources to a variety of other locations to empower you to utilize Braze data in the best ways possible.
@@ -35,6 +36,8 @@ These customer data platforms collect and route information from multiple source
 * [Segment][7]
 
 * [Tealium][8]
+
+* [Treasure Data][10]
 
 * [RudderStack][9]
 
@@ -58,3 +61,4 @@ These partners specialize in product analytics and business intelligence and can
 [7]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/
 [8]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents#tealium-for-currents
 [9]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack_for_currents/
+[10]: {{site.baseurl}}//partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data_for_currents/
