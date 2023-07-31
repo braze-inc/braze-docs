@@ -212,7 +212,7 @@ In your `braze.xml`, you can specify:
 <string name="com_braze_fallback_firebase_cloud_messaging_service_classpath">com.company.OurFirebaseMessagingService</string>
 ```
 
-or set via [runtime configuration][65]
+or set via [runtime configuration][65]:
 
 {% tabs %}
 {% tab JAVA %}
