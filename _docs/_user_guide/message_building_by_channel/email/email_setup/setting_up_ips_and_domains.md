@@ -48,6 +48,10 @@ This self-service email setup feature is currently in beta. Contact your Braze a
 
 Go to **Settings** > **Admin Settings** under **Company Settings**. Next, select the **Sender Verification** tab and click the **Start setup** button.
 
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Sender Verification** by selecting your profile icon.
+{% endalert %}
+
 ### Step 2: Add and verify a sending domain
 
 A sending domain is used in the "from" address when sending an email. Enter a sending domain and click **Submit**. 
@@ -72,4 +76,4 @@ Note that additional domains that have been added will not appear in the **Sende
 
 ### Next steps
 
-After your sender verification is complete, we recommend IP warming to ensure your messages reach their destination inboxes at a consistently high rate. After completing this setup, be sure to also consult with the Braze Onboarding team to confirm if your domains and IP address are working.
+After your sender verification is complete, we recommend IP warming to ensure your messages reach their destination inboxes at a consistently high rate. After completing this setup, be sure to also consult with the Braze Onboarding team to confirm if your domains and [IP address]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) are working.
