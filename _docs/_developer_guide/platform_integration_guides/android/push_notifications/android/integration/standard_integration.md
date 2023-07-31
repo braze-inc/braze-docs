@@ -212,12 +212,32 @@ In your `braze.xml`, you can specify:
 <string name="com_braze_fallback_firebase_cloud_messaging_service_classpath">com.company.OurFirebaseMessagingService</string>
 ```
 
-or 
+or set via [runtime configuration][65]
+
+{% tabs %}
+{% tab JAVA %}
 
 ```java
-BrazeConfig.setFallbackFirebaseMessagingServiceEnabled(true)
-BrazeConfig.setFallbackFirebaseMessagingServiceClasspath("com.company.OurFirebaseMessagingService")
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
+        .setFallbackFirebaseMessagingServiceEnabled(true)
+        .setFallbackFirebaseMessagingServiceClasspath("com.company.OurFirebaseMessagingService")
+        .build();
+Braze.configure(this, brazeConfig);
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val brazeConfig = BrazeConfig.Builder()
+        .setFallbackFirebaseMessagingServiceEnabled(true)
+        .setFallbackFirebaseMessagingServiceClasspath("com.company.OurFirebaseMessagingService")
+        .build()
+Braze.configure(this, brazeConfig)
+```
+
+{% endtab %}
+{% endtabs %}
 
 ##### Using your own Firebase Messaging Service
 
