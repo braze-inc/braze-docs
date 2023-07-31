@@ -77,34 +77,7 @@ In Canvas, set up a campaign that asks customers if they want to opt-in to recei
 - Customer segment: subscribed marketing group outside of the US
 - Custom keyword trigger setup
 
-<a name="update-subscription-status"></a> 
-
-To update an existing user profile's subscription status, use one of the following methods:
-
-- Create a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) that updates the subscription status via REST API
-- Use the advanced JSON editor to update the user profile with the following template: 
-
-	```json
-	{
-	  "attributes": [
-	  {
-	  	"subscription_groups": [{
-	  	  "subscription_group_id": "subscription_group_identifier_1",
-	  	  "subscription_state": "unsubscribed"
-	  	   },
-	  	   {
-	  	     "subscription_group_id": "subscription_group_identifier_2",
-	  	     "subscription_state": "subscribed"
-	  	     },
-	  	     {
-	  	       "subscription_group_id": "subscription_group_identifier_3",
-	  	       "subscription_state": "subscribed"
-	  	    }
-	  	  ]
-	  	}
-	  ]
-	}
-	```
+Learn about updating the subscription status of user profiles by viewing [Subscription Groups][({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status)].
 
 #### In-app or in-browser message
 
