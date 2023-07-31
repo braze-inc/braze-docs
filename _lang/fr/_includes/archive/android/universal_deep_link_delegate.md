@@ -2,7 +2,7 @@
 
 Le SDK Android offre la possibilité de définir un objet de délégué unique pour personnaliser les liens profonds ouverts par Braze sur les cartes de contenu, les messages in-app et les notifications push.
 
-Votre objet délégué doit implémenter l’interface [`IAppboyNavigator`][udl-3] et être défini en utilisant [`AppboyNavigator.setAppboyNavigator()`][udl-2]. Dans la plupart des cas, le délégué doit être défini dans le `Application.onCreate()` de l’application.
+Votre objet délégué doit implémenter l’interface [`IBrazeDeeplinkHandler`][udl-3] et être défini en utilisant [`BrazeDeeplinkHandler.setBrazeDeeplinkHandler()`][udl-2]. Dans la plupart des cas, le délégué doit être défini dans le `Application.onCreate()` de l’application.
 
 Voici un exemple de contournement du comportement par défaut [`UriAction`][udl-1] avec des indicateurs d’intention personnalisés et un comportement personnalisé pour les URL YouTube. 
 
@@ -56,7 +56,7 @@ public class CustomNavigator implements IAppboyNavigator {
 ```kotlin
 class CustomNavigator : IAppboyNavigator {
 
-  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {
+  override fun  (context: Context, newsfeedAction: NewsfeedAction) {
     newsfeedAction.execute(context)
   }
 
@@ -93,6 +93,6 @@ class CustomNavigator : IAppboyNavigator {
 {% endtab %}
 {% endtabs %}
 
-[udl-1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.actions/-uri-action/index.html
-[udl-2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui/-appboy-navigator/set-appboy-navigator.html
-[udl-3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-i-appboy-navigator/index.html
+[udl-1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html
+[udl-2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/-companion/set-braze-deeplink-handler.html
+[udl-3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-deeplink-handler/index.html 

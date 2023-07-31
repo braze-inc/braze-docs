@@ -47,7 +47,7 @@ To delete your workspace entirely from the dashboard, click <span style="font-si
 ![Rename workspace from the Settings tab][70]
 
 {% alert warning %}
-Be careful when deleting workspaces! Once a workspace is deleted, it can't be restored.
+Be careful when deleting workspaces! After a workspace is deleted, it can't be restored.
 {% endalert %}
 
 [69]: {% image_buster /assets/img_archive/manageappgroupnavigation1.png %}

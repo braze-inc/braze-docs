@@ -37,7 +37,7 @@ Use this field to set when you want your Braze account users to reset their pass
 
 ### Session duration rules
 
-Use this field to define how long Braze will keep your session active. Once Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 10,080 (equal to 1 week) if two-factor authentication is enforced for your company, otherwise the maximum session duration will be 1,440 minutes (equal to 24 hours).
+Use this field to define how long Braze will keep your session active. After Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 10,080 (equal to 1 week) if two-factor authentication is enforced for your company, otherwise the maximum session duration will be 1,440 minutes (equal to 24 hours).
 
 ### Single sign-on (SSO) authentication
 
@@ -79,7 +79,7 @@ A reset can solve common authentication issues such as trouble with authenticato
 
 Two-factor authentication enforcement:
 
-- If two-factor authentication is not enforced at the company level, once reset, the user will log in normally and need to go to **Account Settings** to turn on and set up two-factor authentication.
+- If two-factor authentication is not enforced at the company level, when reset, the user will log in normally and need to go to **Account Settings** to turn on and set up two-factor authentication.
 - If two-factor authentication is enforced at the company level, the next time the user logs in, they’ll be asked to set up their two-factor authentication.
 
 ## Security event download

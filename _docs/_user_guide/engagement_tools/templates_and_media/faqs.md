@@ -18,7 +18,7 @@ No, there are no storage limits for images within the Media Library.
 
 ### Are there expiration dates for uploaded assets?
 
-No, uploaded assets will not expire once added to the Media Library.
+No, uploaded assets will not expire when added to the Media Library.
 
 ### Can I upload video assets?
 
@@ -34,7 +34,7 @@ You can crop an existing image by selecting the image from the Media Library and
 
 ![][2]{: height="75%" width="75%"}
 
-You'll then be redirected to a cropping composer where you can select your ratio type, and edit the name of the new image. Once you hit **Save**, your new image can be used!
+You'll then be redirected to a cropping composer where you can select your ratio type, and edit the name of the new image. When you hit **Save**, your new image can be used.
 
 ![][3]{: height="75%" width="75%"}
 

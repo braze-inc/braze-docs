@@ -67,7 +67,7 @@ When you select **Immediately Advance Audience** advancement behavior for the Da
 
 {% details Previous Canvas Advancement Behavior %}
 
-Prior to the release of Advancement Behavior, Braze advanced users through a Canvas component once they'd been sent a message from that component. For example, if a Canvas component included an email and a push, users would not advance to the next steps of the Canvas until either Braze sent the user the push or email.
+Prior to the release of Advancement Behavior, Braze advanced users through a Canvas component after they'd been sent a message from that component. For example, if a Canvas component included an email and a push, users would not advance to the next steps of the Canvas until either Braze sent the user the push or email.
 
 If the user wasn't sent the push or email, they would not advance to subsequent steps in the Canvas.
 

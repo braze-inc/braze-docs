@@ -70,9 +70,9 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 
 You can filter the data on your dashboard using the following filter options:
 
-- **Tag:** Choose one tag. Once applied, your dashboard will show metrics for only your selected tag.
-- **Canvas:** Choose up to 10 Canvases. Once applied, your dashboard will show metrics for only your selected Canvases. If you select a tag filter first, then your options for Canvas filters will only include Canvases that have your selected tag.
-- **Campaign:** Choose up to 10 campaigns. Once applied, your dashboard will show metrics for only your selected campaigns. If you select a tag filter first, then your options for campaign filters will only include campaigns that have your selected tag.
+- **Tag:** Choose one tag. When applied, your dashboard will show metrics for only your selected tag.
+- **Canvas:** Choose up to 10 Canvases. When applied, your dashboard will show metrics for only your selected Canvases. If you select a tag filter first, then your options for Canvas filters will only include Canvases that have your selected tag.
+- **Campaign:** Choose up to 10 campaigns. When applied, your dashboard will show metrics for only your selected campaigns. If you select a tag filter first, then your options for campaign filters will only include campaigns that have your selected tag.
 
 ![Filter options on the Channel Performance Dashboard where you can select a tag and list of Canvases to filter by.][3]
 

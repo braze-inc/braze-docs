@@ -50,7 +50,7 @@ For more inspiration, we highly recommend that you check out our [Content Cards 
 {% tabs %}
 {% tab Onboarding and next steps %}
 
-As new customers explore your app and website, walk them through the values and benefits of what you offer with strategically placed Content Cards. Encourage customers to opt into other communication channels with a Content Card on your homepage, and save outstanding onboarding tasks in a dedicated onboarding tab powered by Content Cards. Don’t forget to remove a card once a customer has completed the desired task!
+As new customers explore your app and website, walk them through the values and benefits of what you offer with strategically placed Content Cards. Encourage customers to opt into other communication channels with a Content Card on your homepage, and save outstanding onboarding tasks in a dedicated onboarding tab powered by Content Cards. Don’t forget to remove a card after a customer completes the desired task!
 
 <style>
   .imgDiv {
