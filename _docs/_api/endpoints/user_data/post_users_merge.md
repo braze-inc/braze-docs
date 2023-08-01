@@ -174,6 +174,6 @@ The following table lists possible error messages that may occur.
 | `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Ensure that `merge_updates` only contains the two objects `identifier_to_merge` and `identifier_to_keep`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% endapi %}
-
 [1]: {% image_buster /assets/img_archive/merge_by_email_example.png %}
+
+{% endapi %}
