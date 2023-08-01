@@ -1,12 +1,13 @@
 ---
 nav_title: Opt-Ins & Opt-Outs
-article_title: WhatsApp opt-ins and opt-outs
+article_title: WhatsApp Opt-Ins and Opt-Outs
 description: "This reference article covers different WhatsApp opt-in and opt-out methods."
 page_type: partner
 search_tag: Partner
 page_order: 5
 channel:
   - WhatsApp
+alias: /user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
 ---
 
 # Opt-in and opt-out
