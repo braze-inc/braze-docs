@@ -45,8 +45,20 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `merge_updates` | Required | Array | An object array. Each object should contain an `identifier_to_merge` object and an `identifier_to_keep` object, which should each reference a user either by `external_id` or `user_alias`. Both users (original user and target user) being merged must be identified using the same method. |
+| `merge_updates` | Required | Array | An object array. Each object should contain an `identifier_to_merge` object and an `identifier_to_keep` object, which should each reference a user by `external_id`, `user_alias`, or `email`. Both users (original user and target user) being merged must be identified using the same method. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+### Merging by email behavior
+
+You can merge users with prioritization based on email using the `identifier_to_keep` object with references a user by `email`. Prioritization works by designating which user is merged, and which user is kept. 
+
+For example, let's consider a scenario in which we have three users with the same email address. User 1 has an `external_id` (they are identified), and User 2 and User 3 do not have an `external_id` (they are not identified). Using the `identifier_to_merge` object and its parameters `email` and `prioritization`, User 2 and User 3 will be merged into User 1, so only one user profile would remain. 
+
+![Test test hello.][1]
+
+{% alert note %}
+Because this is an asynchronous endpoint, you may not know if the call is successful immediately.
+{% endalert %}
 
 ### Merge_updates behavior
 
@@ -163,3 +175,5 @@ The following table lists possible error messages that may occur.
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
+
+[1]: {% image_buster /assets/img_archive/merge_by_email_example.png %}
