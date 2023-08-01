@@ -28,5 +28,53 @@ For message bodies that include Liquid references, the references are copied ove
 
 Fields such as trigger actions and audience filters aren't copied across a workspace.
 
+### What's copied across workspaces
+
+Note the following is not a comprehensive list of what is copied across a workspace, and what is omitted. As a best practice, check the campaign details and test to ensure your campaign is working as expected.
+
+{% tabs %}
+{% tab Campaigns %}
+
+| Copied Across Workspace | Omitted |
+|---|---|
+| Description | Territories | 
+| Type | Tags | 
+| Actions (nested) | Segments | 
+| Conversion behaviors (nested) | Approvals | 
+| Quiet time configs | Trigger schedule | 
+| Frequency capping configs | Campaign summaries | 
+| Recipient subscription state |  | 
+| Reoccuring schedule |  | 
+| Is Transactional |  | 
+
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Conversion Behaviors %}
+
+| Copied Across Workspace | Omitted |
+|---|---|
+| blank | blank |
+| blank |  blank | 
+| blank |  blank | 
+| blank |  blank | 
+| blank |  blank | 
+| blank |  blank | 
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Message Variations %}
+
+| Copied Across Workspace | Omitted |
+|---|---|
+| Send percentage | API ID |
+| Type |  Seed group IDs | 
+|  |  Link template IDs | 
+|  |  Internal user group IDs | 
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% endtabs %}
+
 [1]: {% image_buster /assets/img_archive/clone_campaign.png %}
 
