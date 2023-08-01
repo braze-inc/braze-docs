@@ -87,7 +87,7 @@ Data sent by Braze to certain subprocessors may still exist in Braze's internal 
 
 Data available to Customers within the Braze dashboard is mostly aggregated. Detailed logs are kept in a separate database created by Braze (the "Data Lake", formerly known as "BI Database"). Data Lake data is used for aggregate reporting and other advanced functionality.
 
-If you use our APIs to delete user profiles or delete or amend attributes from user profiles, it may take up to two weeks for that data to be deleted from Braze's Data Lake. Deletion of data in the Data Lake will not affect segmentation or personalization but rather ensures the data is removed from all Braze systems.
+If you use our APIs to delete user profiles or delete or amend attributes from user profiles, it may take up to two weeks for that data to be deleted from Braze's Data Lake. Deletion of data in the Data Lake will not affect segmentation or personalization but rather checks that the data is removed from all Braze systems.
 
 #### Braze Backup Servers
 

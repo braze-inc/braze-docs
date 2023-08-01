@@ -47,4 +47,4 @@ Single opt-in happens when subscribers sign up via a subscription form and are i
 
 A confirmed opt-in occurs when a user checks a box asking for email communication, and a confirmation message is sent in return. This method allows users to choose the type and frequency of the content improves engagement. 
 
-To ensure you're targeting only the most engaged users, you could also use the double confirmed opt-in method. This approach adds an extra step in which the user must click a button or link in the confirmation email to be placed in the email list. 
+To cconfirm that you're targeting only the most engaged users, you could also use the double confirmed opt-in method. This approach adds an extra step in which the user must click a button or link in the confirmation email to be placed in the email list. 

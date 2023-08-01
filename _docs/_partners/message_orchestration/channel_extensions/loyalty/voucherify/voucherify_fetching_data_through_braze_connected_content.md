@@ -90,7 +90,7 @@ You can modify {% raw %}`{{source_id}}`{% endraw %} and its effect on publicatio
 | ------------- | ------ |
 | {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} | Ensures that all customers within a single send-out will use the same publication. |
 | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | Ensures that all customers within a single campaign will use the same publication. |
-| {% raw %}`{{${user_id}}}`{% endraw %} or {% raw %}`{{${braze_id}}}`{% endraw %} | Ensures that every customer will use the same publication no matter which campaign is sent (you can use {% raw %}`${user_id}`{% endraw %} which is an {% raw %}`external_id`{% endraw %} and {% raw %}`${braze_id}`{% endraw %} which is an internal id). |
+| {% raw %}`{{${user_id}}}`{% endraw %} or {% raw %}`{{${braze_id}}}`{% endraw %} | Checks that every customer will use the same publication no matter which campaign is sent (you can use {% raw %}`${user_id}`{% endraw %} which is an {% raw %}`external_id`{% endraw %} and {% raw %}`${braze_id}`{% endraw %} which is an internal id). |
 | {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} and {% raw %}`{{campaign.${user_id}}}`{% endraw %} | Each customer within a single send-out will use the same unique publication. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -99,7 +99,7 @@ You can modify {% raw %}`{{source_id}}`{% endraw %} and its effect on publicatio
 
 **Join-once**
 
-If your Voucherify campaign has a limit _Customers can join only once_, remove the publication source id from the script body. Voucherify will ensure that each Braze message to the same customer will deliver the same code published in the first place.
+If your Voucherify campaign has a limit _Customers can join only once_, remove the publication source id from the script body. Voucherify will confirm that each Braze message to the same customer will deliver the same code published in the first place.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_join_once.png %}){: style="max-width:50%;"}
 

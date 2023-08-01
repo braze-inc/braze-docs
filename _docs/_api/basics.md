@@ -327,7 +327,7 @@ A good security practice is to assign a user only as much access as is necessary
 ![API key permissions available when creating an API key.][25]
 
 {% alert warning %}
-Given that REST API keys allow access to potentially sensitive REST API endpoints, ensure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
+Given that REST API keys allow access to potentially sensitive REST API endpoints, make sure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 {% endalert %}
 
 If accidental exposure of a key occurs, it can be deleted from the Developer Console. For help with this process, open a [support ticket][support].

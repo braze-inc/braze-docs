@@ -43,7 +43,7 @@ We will stop these campaign seven days after the end date.
 
 #### How can I keep an idle campaign active?
 
-To make a campaign no longer Idle and ensure it remains active, update the campaign so it does not meet the above criteria for being Idle. Reference this table for steps to make idle campaigns active, depending on your use case.
+To keep a campaign active, update the campaign so it does not meet the above criteria for having an idle status. Reference this table for steps to make idle campaigns active, depending on your use case.
 
 | Reason for idle campaign status | Steps to make campaign active |
 | --- | --- |

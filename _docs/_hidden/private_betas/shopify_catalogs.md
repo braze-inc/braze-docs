@@ -27,7 +27,7 @@ Select what product identifier to use as the catalog ID:
 This will be the primary identifier you use to reference Braze catalog information. 
 
 {% alert note %}
-If you are selecting SKU as your catalog ID, ensure that all your products and variants in your store have a SKU set and they are unique. 
+If you are selecting SKU as your catalog ID, make sure that all your products and variants in your store have a SKU set and they are unique. 
 - If an item has a missing SKU, Braze cannot import that product into the catalog. 
 - If you have more than one product with the same SKU, this can cause unexpected behavior, such as an error in the import, or result in product information being overridden unintentionally by the duplicate SKU. 
 {% endalert %}
@@ -72,11 +72,11 @@ Modifying the Shopify catalog in any way may unintentionally interfere with real
 
 ## Changing catalog ID
 
-To change the product identifier for your Shopify catalog, you will need to deactivate the sync.   Ensure you have stopped any sends using this Shopify catalog data first. Re-run the Shopify catalog initial import and select your desired product identifier by following the [catalog sync](#setting-up-shopify-catalog-sync) steps.
+To change the product identifier for your Shopify catalog, you will need to deactivate the sync. Confirm you have stopped any sends using this Shopify catalog data first. Re-run the Shopify catalog initial import and select your desired product identifier by following the [catalog sync](#setting-up-shopify-catalog-sync) steps.
 
 ## Deactivating your Shopify catalogs
 
-Deactivating the Shopify catalog feature will delete your entire catalog and products. This can also impact any sends that may be actively using the product data from this catalog. Ensure you either update or pause these sends before deactivation, as this could result in your messaging sending missing product details. Do not delete the Shopify catalog directly on the catalogs page.
+Deactivating the Shopify catalog feature will delete your entire catalog and products. This can also impact any sends that may be actively using the product data from this catalog. Confirm that you have either updated or paused these sends before deactivation, as this could result in your messaging sending missing product details. Do not delete the Shopify catalog directly on the catalogs page.
 
 ## Troubleshooting
 If your Shopify catalog runs into an error during import or syncing, it could be a result of the following errors. Follow the instructions on how to correct the issue and resolve the sync:

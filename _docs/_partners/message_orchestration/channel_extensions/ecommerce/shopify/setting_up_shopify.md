@@ -32,7 +32,7 @@ There will be a step explaining which events require us to implement the Braze W
 You have the option to enable a backfill of purchasers from the last 90 days prior to your installation. By automatically syncing over past customer and purchase data, you’ll be able to immediately start targeting and engaging with your customers. Refer to [Shopify historical backfill]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/) to learn more.
 
 {% alert warning %}
-To ensure the backfill imports Order Created Events and Braze Purchase Events, you must have selected “Order Created” and “Braze Purchase Event” during event selection in Step 3.
+To make sure the backfill imports Order Created Events and Braze Purchase Events, you must have selected “Order Created” and “Braze Purchase Event” during event selection in Step 3.
 {% endalert %}
 
 ### Step 5: Enable in-browser message channel
@@ -47,7 +47,7 @@ At this step, select whether you want to collect email and SMS opt-ins from your
 - **Collect email subscribers**<br>If enabled, Braze will update the global email subscription state on the profile to `subscribed` so you can send emails to your users. You can also optionally add one or more [subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#subscription-groups) to automatically assign email subscribers to when they opt-in. 
 - **Collect SMS subscribers**<br>If enabled, Braze will update the selected [SMS subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) on the profile to `subscribed` so you can send messages to your users. If you are collecting SMS opt-ins, you must select one subscription group. If no subscription group exists, or you would like to create a new subscription group, reach out to your Braze representative for support. 
 
-If there is an existing global subscription state on a user profile within Braze that's different from Shopify, we recommend you enable **Override existing global subscription state for users**. This will override the Braze state to ensure it matches with Shopify.
+If there is an existing global subscription state on a user profile within Braze that's different from Shopify, we recommend you enable **Override existing global subscription state for users**. This will override the Braze state to check it matches with Shopify.
 
 {% alert important %}
 If you do not override global subscription states, existing user's states may not match those found in Shopify. This can lead to unreceived and unintended messages.
@@ -57,7 +57,7 @@ If you do not override global subscription states, existing user's states may no
 
 Legacy Shopify customers may have the old method of collecting email and SMS subscribers via the `shopify_accepts_marketing` and `shopify_sms_consent` custom attributes. If you save the settings above with override enabled, Braze will remove the custom attributes on the user profiles and sync those values over to their respective email subscription group and SMS subscription group.
 
-If you have existing campaigns or Canvases using these legacy custom attributes today, you should remove them and ensure the campaigns or Canvases are using the appropriate subscription state, group, or both."
+If you have existing campaigns or Canvases using these legacy custom attributes today, you should remove them and check the campaigns or Canvases are using the appropriate subscription state, group, or both."
 
 ### Step 7: Install Braze's Shopify application
 You'll then be redirected to your Shopify store to install the Braze app. When you select **Install Unlisted App**, you will be redirected to the Braze dashboard. 

@@ -9,7 +9,7 @@ description: "This article covers how to configure uninstall tracking for your i
 
 # Uninstall tracking for iOS
 
-> This article covers how to configure uninstall tracking for your iOS application, and how to test to ensure that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push.
+> This article covers how to configure uninstall tracking for your iOS application, and how to test so that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push.
 
 Uninstall tracking utilizes background push notifications with a Braze flag in the payload. For more information, see [uninstall tracking][6] in our user guide.
 
@@ -19,7 +19,7 @@ Make sure that you have enabled the **Remote notifications** option from the **B
 
 ## Step 2: Checking for Braze background push
 
-Braze uses background push notifications to collect uninstall tracking analytics. Ensure that your application [does not take any unwanted actions][4] upon receiving Braze's uninstall tracking notifications.
+Braze uses background push notifications to collect uninstall tracking analytics. Make sure that your application [does not take any unwanted actions][4] upon receiving Braze's uninstall tracking notifications.
 
 ## Step 3: Test from the dashboard
 

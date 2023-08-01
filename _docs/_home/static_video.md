@@ -9,7 +9,7 @@ noindex: true
 
 # User Data Collection
 
-Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
+Before completing your Braze implementation, make sure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
 This best practice guide will help you to understand exactly what Braze considers to be a custom event versus a custom attribute.
 
