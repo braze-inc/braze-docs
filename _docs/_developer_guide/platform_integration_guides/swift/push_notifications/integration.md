@@ -146,7 +146,7 @@ You can skip the next section and continue to [deep linking](#deep-linking) if y
 Push notifications can also be integrated manually. This section describes the steps necessary for this integration. 
 
 {% alert note %}
-If you rely on push notifications for additional behavior specific to your app, you may still be able to use automatic push integration instead of manual push notification integration. The [`subscribeToUpdates(internalNotifications:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(internalnotifications:_:)) method provides a way to be notified of remote notifications processed by Braze.
+If you rely on push notifications for additional behavior specific to your app, you may still be able to use automatic push integration instead of manual push notification integration. The [`subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)) method provides a way to be notified of remote notifications processed by Braze.
 {% endalert %}
 
 ### Step 1: Register for push notifications with APNs
@@ -337,7 +337,7 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 ## Subscribing to push notifications updates
 
-To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(internalNotifications:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(internalnotifications:_:)/) method.
+To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)/) method.
 
 {% tabs %}
 {% tab swift %}
@@ -364,7 +364,7 @@ BRZCancellable *cancellable = [notifications subscribeToUpdatesWithInternalNotif
 {% endtabs %}
 
 {% alert note %}
-When using the automatic push integration, `subscribeToUpdates(internalNotifications:_:)` is the only way to be notified of remote notifications processed by Braze. The `UIAppDelegate` and `UNUserNotificationCenterDelegate` system methods are not called when the notification is automatically processed by Braze.
+When using the automatic push integration, `subscribeToUpdates(_:)` is the only way to be notified of remote notifications processed by Braze. The `UIAppDelegate` and `UNUserNotificationCenterDelegate` system methods are not called when the notification is automatically processed by Braze.
 {% endalert %}
 
 ## Testing {#push-testing}
