@@ -48,18 +48,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `merge_updates` | Required | Array | An object array. Each object should contain an `identifier_to_merge` object and an `identifier_to_keep` object, which should each reference a user by `external_id`, `user_alias`, or `email`. Both users (original user and target user) being merged must be identified using the same method. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Merging by email behavior
-
-You can merge users with prioritization based on email using the `identifier_to_keep` object with references a user by `email`. Prioritization works by designating which user is merged, and which user is kept. 
-
-For example, let's consider a scenario in which we have three users with the same email address. User 1 has an `external_id` (they are identified), and User 2 and User 3 do not have an `external_id` (they are not identified). Using the `identifier_to_merge` object and its parameters `email` and `prioritization`, User 2 and User 3 will be merged into User 1, so only one user profile would remain. 
-
-![Test test hello.][1]
-
-{% alert note %}
-Because this is an asynchronous endpoint, you may not know if the call is successful immediately.
-{% endalert %}
-
 ### Merge_updates behavior
 
 {% alert important %}
@@ -102,6 +90,39 @@ Any of the following fields found on one user to the other user:
   - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days". Merged purchase events and custom events will increment. 
 
 Session data will only be merged if the app exists on both user profiles. Note that this endpoint does not merge subscription groups or subscriptions.
+
+### Merging by email behavior
+
+You can merge users with prioritization based on email using the `identifier_to_keep` object with references a user by `email`. Prioritization works by designating which user is merged, and which user is kept. 
+
+For example, let's consider a scenario in which we have three users with the same email address. User 1 has an `external_id` (they are identified), and User 2 and User 3 do not have an `external_id` (they are not identified). Using the `identifier_to_merge` object and its parameters `email` and `prioritization`, User 2 and User 3 will be merged into User 1, so only one user profile would remain. Refer to the following section for the example request.
+
+![User 1 is identified whereas User 2 and User 3 are not. User 2 and User 3 are merged into User 1, so there is only one profile after these users are merged based on email.][1]
+
+### Example request for merging by email
+
+{% alert note %}
+Because this is an asynchronous endpoint, you may not know if the call is successful immediately.
+{% endalert %}
+
+```
+curl --location --request POST 'https://rest.iad-03.braze.com/users/merge' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
+  "merge_updates": [
+    {
+      "identifier_to_merge": {
+        "email": "torchie@braze.com", 
+        "prioritization": ["unidentified", "most_recently_updated"]
+      },
+      "identifier_to_keep": {
+        "external_id": "torchie"
+      }
+    }
+  ]
+}`
+```
 
 ## Example request
 
