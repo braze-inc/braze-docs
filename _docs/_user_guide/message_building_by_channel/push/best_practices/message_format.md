@@ -14,11 +14,7 @@ channel: push
 
 For best results, refer to the following image size and message length guidelines when crafting your push messages. There may be some variance depending on the presence of an image, the notification state (iOS) and display setting of the user's device, as well as the size of the device. When in doubt, keep your copy short and sweet.
 
-## Image and text specifications
-
-For best results, refer to the following image size and message length guidelines when crafting your push messages. There may be some variance depending on the presence of an image, the notification state (iOS) and display setting of the user's device, as well as the size of the device. When in doubt, keep your copy short and sweet.
-
-### iOS and Android
+## iOS and Android push
 
 {% tabs local %}
 {% tab Images %}
@@ -88,7 +84,7 @@ Large image notifications display best when using an image of at least 600x300 p
 {% endtab %}
 {% endtabs %}
 
-### Web push notifications
+## Web push
 
 {% tabs local %}
 {% tab Images %}
