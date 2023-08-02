@@ -5,7 +5,7 @@ description: "This reference article outlines common beginner and advanced Shopi
 page_type: partner
 search_tag: Partner
 alias: "/shopify_use_cases/"
-page_order: 5
+page_order: 10
 ---
 
 # Use cases
