@@ -1,9 +1,9 @@
 ---
-nav_title: Shopify catalogs
-article_title: Shopify catalogs
-permalink: "/shopify_catalogs/"
+nav_title: Shopify Catalogs
+article_title: Shopify Catalogs
+alias: /shopify_catalogs/
+page_order: 5
 description: "This reference article covers how to import your products from Shopify into Braze catalogs."
-hidden: true
 ---
 
 # Shopify catalogs 
