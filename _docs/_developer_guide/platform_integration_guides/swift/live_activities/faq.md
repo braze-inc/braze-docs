@@ -64,6 +64,11 @@ The API keys you use need to be given the correct permissions to access the diff
 
 The `messages/live_activity/update` endpoint has a separate rate limit from any other Braze endpoint. By default, the rate limit for the `messages/live_activity/update` endpoint is 250,000 requests per hour per workspace. See the [rate limit article][5] for more information.
 
+### What other things should I watch out for during troubleshooting?
+
+- Check that you are using a `.p8` key for authentication.
+- Check that your push provisioning profile matches the environment you’re testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app will not work.
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#prerequisites
