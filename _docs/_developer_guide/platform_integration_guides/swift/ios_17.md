@@ -13,17 +13,25 @@ description: "This reference article covers iOS 17, SDK updates, and more."
 
 One of the important changes introduced at WWDC this year was the blocking UTM parameters in Safari. UTM parameters are pieces of code that are added to URLs, which are frequently used in marketing campaigns to measure the effectiveness of Email, SMS and other campaigns. 
 
-Braze email and SMS products encode links in a way that is not  impacted by this change.  
+Braze email and SMS products encode links in a way that is not impacted by this change.  
 
 ## Continued Privacy Changes
 
+### App Tracking Transparency
+
 Apple announced its commitment to further expand the scope of App Tracking Transparency (ATT), which enables users to control whether an app can access their activity across various apps and websites belonging to other companies. With this in mind, Apple announced two new key features to support this.
 
+#### Privacy Manifests
+
 The first is the introduction of privacy manifests, which allows developers to outline the privacy practices of the their app - including third party SDKs - in a standardized format. With privacy manifests, Apple also plans to offer additional privacy protection for users, by identifying and blocking iOS APIs that might be used for fingerprinting. If applications are using any one of these APIs, they will be required to list a “required reason” for using that API in the privacy manifest as well. 
+
+#### Code Signing
 
 The second feature introduced is code signing, which allows developers using a third party SDK in their application to validate within XCode that it was signed by the same developer as previous versions. 
 
 Related to privacy in gerenal, Apple has also announced that they will release a list of third party SDKs that are considered “privacy impacting” later this year - these SDKs are expected to be considered having an especially high impact on user privacy by Apple.
+
+#### Braze SDK
 
 Unlike traditional tracking SDKs that are designed to monitor users across multiple websites and applications, the Braze SDK focuses on first-party data messaging and user experiences.
 
