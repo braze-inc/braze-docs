@@ -15,26 +15,39 @@ channel: in-app messages
 
 ## Accessing in-app message data
 
-If you want to access the in-app message data in the Javascript layer, call the `Braze.subscribeToInAppMessage()` method to have the SDKs to publish an `inAppMessageReceived` event when an in-app message is triggered. You can pass a callback to this method or set a listener for this event to perform a callback when the in-app message is triggered.
+In most cases, you can use the `Braze.addListener` method to register event listeners to handle data coming from in-app messages. 
 
-This method takes in a parameter that tells the Braze SDK whether or not to use the built-in Braze UI to display in-app messages. If you prefer to use a custom UI, you can pass `false` to this method and use the in-app message data to construct your own message in Javascript.
+Additionally, you can access the in-app message data in the JavaScript layer by calling the `Braze.subscribeToInAppMessage` method to have the SDKs publish an `inAppMessageReceived` event when an in-app message is triggered. Pass a callback to this method to execute your own code when the in-app message is triggered and received by the listener.
+
+To customize the default behavior further, or if you don't have access to customize the native iOS or Android code, we recommend that you disable the default UI while still receiving in-app message events from Braze. To disable the default UI, pass `false` to the `Braze.subscribeToInAppMessage` method and use the in-app message data to construct your own message in JavaScript. Note that you will need to [manually log analytics](#analytics) on your messages if you choose to disable the default UI.
 
 ```javascript
 import Braze from "@braze/react-native-sdk";
 
-Braze.subscribeToInAppMessage(false, (event) => {
-  const inAppMessage = new Braze.BrazeInAppMessage(event.inAppMessage);
+// Option 1: Listen for the event directly via `Braze.addListener`.
+//
+// You may use this method to accomplish the same thing if you don't
+// wish to make any changes to the default Braze UI.
+Braze.addListener(Braze.Events.IN_APP_MESSAGE_RECEIVED, (event) => {
+  console.log(event.inAppMessage);
 });
 
-// You can also set a listener for the event directly
-Braze.addListener(Braze.Events.IN_APP_MESSAGE_RECEIVED, (event) => {
-  const inAppMessage = new Braze.BrazeInAppMessage(event.inAppMessage);
+// Option 2: Call `subscribeToInAppMessage`.
+//
+// Pass in `false` to disable the automatic display of in-app messages.
+Braze.subscribeToInAppMessage(false, (event) => {
+  console.log(event.inAppMessage);
+  // Use `event.inAppMessage` to construct your own custom message UI.
 });
 ```
 
 ## Advanced customization
 
-If you want to include more advanced logic to determine whether or not to show an in-app message using the built-in UI, you should implement in-app messages through the native layer.
+To include more advanced logic to determine whether or not to show an in-app message using the built-in UI, implement in-app messages through the native layer.
+
+{% alert warning %}
+Since this is an advanced customization option, note that overriding the default Braze implementation will also nullify the logic to emit in-app message events to your JavaScript listeners. If you wish to still use `Braze.subscribeToInAppMessage` or `Braze.addListener` as described in [Accessing in-app message data](#accessing-in-app-message-data), you will need to handle publishing the events yourself.
+{% endalert %}
 
 {% tabs %}
 {% tab Android %}
@@ -61,6 +74,9 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 ```
 {% endtab %}
 {% tab iOS %}
+### Overriding the default UI delegate
+
+By default, [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/) is created and assigned when you initialize the `braze` instance. `BrazeInAppMessageUI` is an implementation of the [`BrazeInAppMessagePresenter`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter) protocol and comes with a `delegate` property that can be used to customize the handling of in-app messages that have been received.
 
 1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in [our iOS article here](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
@@ -73,35 +89,61 @@ For more details on these values, see our [iOS documentation](https://braze-inc.
 ```objc
 - (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui
                             displayChoiceForMessage:(BRZInAppMessageRaw *)message {
-  // Convert message to JSON representation
-  NSData *json = [message json];
+  // Convert the message to a JavaScript representation.
+  NSData *inAppMessageData = [message json];
+  NSString *inAppMessageString = [[NSString alloc] initWithData:inAppMessageData encoding:NSUTF8StringEncoding];
   NSDictionary *arguments = @{
-    @"inAppMessage" : json
+    @"inAppMessage" : inAppMessageString
   };
 
-  // Send to JavaScript layer
-  [self.bridge.eventDispatcher
-             sendDeviceEventWithName:@"inAppMessageReceived"
-             body:arguments];
+  // Send to JavaScript.
+  [self sendEventWithName:@"inAppMessageReceived" body:arguments];
 
-  // Note: return `BRZInAppMessageUIDisplayChoiceDiscard` if you would like
+  // Note: Return `BRZInAppMessageUIDisplayChoiceDiscard` if you would like
   // to prevent the Braze SDK from displaying the message natively.
   return BRZInAppMessageUIDisplayChoiceNow;
 }
 ```
 {% endsubtab %}
 {% endsubtabs %}
+
+To use this delegate, assign it to `brazeInAppMessagePresenter.delegate` after initializing the `braze` instance. 
+
+{% alert note %}
+`BrazeUI` can only be imported in Objective-C or Swift. If you are using Objective-C++, you will need to handle this in a separate file.
+{% endalert %}
+
+{% subtabs %}
+{% subtab OBJECTIVE-C %}
+```objc
+@import BrazeUI;
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
+  Braze *braze = [BrazeReactBridge initBraze:configuration];
+  ((BrazeInAppMessageUI *)braze.inAppMessagePresenter).delegate = [[CustomDelegate alloc] init];
+  AppDelegate.braze = braze;
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+### Overriding the default native UI
+
+If you wish to fully customize the presentation of your in-app messages at the native iOS layer, conform to the [`BrazeInAppMessagePresenter`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter) protocol and assign your custom presenter following the sample below:
+
+{% subtabs %}
+{% subtab OBJECTIVE-C %}
+```objc
+BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
+Braze *braze = [BrazeReactBridge initBraze:configuration];
+braze.inAppMessagePresenter = [[MyCustomPresenter alloc] init];
+AppDelegate.braze = braze;
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
-
-### Receiving in-app message in JavaScript
-
-On the JavaScript side, this data can be used to instantiate a `BrazeInAppMessage`:
-```javascript
-Braze.addListener(Braze.Events.IN_APP_MESSAGE_RECEIVED, (event) => {
-  const inAppMessage = new Braze.BrazeInAppMessage(event.inAppMessage);
-});
-```
 
 ## Analytics
 
@@ -130,7 +172,7 @@ Follow these steps to test a sample in-app message.
 
 ![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.][6]
 
-A sample implementation can be found in BrazeProject, within the [React SDK][7]. Additional Android and iOS implementation samples can be found in the [Android][8] and [iOS][9] SDK.
+A sample implementation can be found in BrazeProject, within the [React Native SDK][7]. Additional Android and iOS implementation samples can be found in the [Android][8] and [iOS][9] SDK.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-manager-listener
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#step-1-implement-an-in-app-message-manager-listener
