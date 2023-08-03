@@ -304,7 +304,7 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 {% tab Page %}
 #### Page {#page}
 
-The [page](https://segment.com/docs/spec/page/) call lets you record whenever a user sees a page of your website, along with any optional properties about the page.
+The [Page](https://segment.com/docs/spec/page/) call lets you record whenever a user sees a page of your website, along with any optional properties about the page.
 
 This event type can be used as a trigger in the Web Mode Actions and Cloud Actions destinations to log a custom event to Braze.
 {% endtab %}
