@@ -8,10 +8,10 @@ description: "The conversions dashboard allows you to analyze conversions across
 
 # Conversions Dashboard v2
 
-The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods*.
+> The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods*.
 
 {% alert important %}
-The Conversions Dashboard V2 is in early access. If you're interested in participating in the early access, reach out to your customer success manager.
+The conversions dashboard V2 is in early access. If you're interested in participating in the early access, reach out to your customer success manager.
 {% endalert %}
 
 <p><sup>* Coming soon</sup></p>
@@ -48,7 +48,7 @@ Your report is split into three sections:
 
 ### Conversion details
 
-The conversion details table includes one column for *Unique Recipients* and another for *Conversions* (rate and total count)
+The conversion details table includes one column for *Unique Recipients* and another for *Conversions* (rate and total count).
 
 - *Unique Recipients* is defined as the number of users who received a message through the selected channel within the report's date range.
 - *Conversions* are defined by the attribution method you selected when you set up the report. See the following sections for additional details on the attribution methods.
