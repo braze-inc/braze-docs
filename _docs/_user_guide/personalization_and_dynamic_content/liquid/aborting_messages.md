@@ -12,7 +12,7 @@ description: "This reference article covers aborting Liquid messages and some ex
 
 {% alert note %}
 If a message step is aborted in a Canvas, the user won't exit the remaining steps of the Canvas and will proceed to the next step.
-{% alertend %}
+{% endalert %}
 
 ## Abort message if "Number Games Attended" = 0
 
