@@ -25,7 +25,9 @@ The second feature introduced is code signing, which allows developers using a t
 
 Related to privacy in gerenal, Apple has also announced that they will release a list of third party SDKs that are considered “privacy impacting” later this year - these SDKs are expected to be considered having an especially high impact on user privacy by Apple.
 
-Unlike traditional tracking SDKs that are designed to monitor users across multiple websites and applications, the Braze SDK solely focuses on storing first-party data and strictly refrains from sharing to different companies.
+Unlike traditional tracking SDKs that are designed to monitor users across multiple websites and applications, the Braze SDK focuses on first-party data messaging and user experiences.
+
+While we do not expect to be included in this list, we will monitor this closely and release any required updates if necessary.
 
 ## Preparing for iOS 17 {#next-steps}
 
