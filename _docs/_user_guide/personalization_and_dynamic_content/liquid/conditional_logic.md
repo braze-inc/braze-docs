@@ -92,9 +92,13 @@ The `{% endif %}`  tag signals that you've finished your conditional logic. You 
 
 {% endraw %}
 
-## Accounting for null attribute values
+## Accounting for null, nil, and blank attribute values
 
-Conditional logic is a useful way to account for null attribute values. A null value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name in Braze's database.
+Conditional logic is a useful way to account for attribute values that aren't set in user profiles.
+
+### Null and nil attribute values
+
+A null or nil value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name in Braze's database.
 
 In some circumstances, you may wish to send a completely different message to users who have a first name set and users who do not have a first name set.
 
@@ -105,11 +109,10 @@ The following tag allows you to specify a message for users with a null "first n
 {% if ${first_name} == null %}
   ....
 {% endif %}
-
 ```
-{% endraw %}
+{% endraw %} 
 
-![][36]
+![][36]{: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -123,6 +126,20 @@ Hey {{${first_name | default: 'there'}}, we're having a sale! Hurry up and get 1
 Note that a null attribute value isn't strictly associated with a value type (e.g., a "null" string is the same as a "null" array), so in the example above, the null attribute value is referencing an unset first name, which would be a string.
 
 {% endraw %}
+
+### Blank attribute values
+
+A blank value occurs when the attribute on a user profile either isn't set or is set with an empty string. Blank values should be checked before other variables.
+
+The following tag allows you to specify a message for users that don't have a set "first name" attribute or have an empty string entered.
+
+{% raw %}
+```liquid
+{% if ${first_name} == blank %}
+  ....
+{% endif %}
+```
+{% endraw %} 
 
 ## Referencing custom attributes
 
