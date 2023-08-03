@@ -11,14 +11,25 @@ description: "This refernce article covers iOS 17, SDK updates, and more."
 
 ### Link Tracking & UTM Parameter Stripping
 
-Apple's latest security measures encompass a noteworthy inclusion: the blocking of UTM parameters in Safari. UTM parameters are code fragments appended to URLs, commonly utilized in marketing to gauge the effectiveness of campaigns. Since Braze encodes all links that utilize click-tracking, we do not foresee this impacting integrations. 
+One of the important changes introduced at WWDC this year was the blocking UTM parameters in Safari. UTM parameters are pieces of code that are added to URLs, which are frequently used in marketing campaigns to measure the effectiveness of Email, SMS and other campaigns. 
 
-### Privacy Impacting SDKs
+Since Braze encodes all links that utilize click-tracking, we do not foresee this impacting integrations.  
 
-Apple will release a list of Privacy-Impacting SDKs later this fall (2023) - these are third-party SDKs that have a particularly high impact on user privacy.
+### Continued Privacy Changes
+
+Additionally, Apple announced its commitment to further expand the scope of App Tracking Transparency (ATT), which enables users to control whether an app can access their activity across various apps and websites belonging to other companies. With this in mind, Apple announced 2 new key features to support this.
+
+The first is the introduction of privacy manifests, which allows developers to outline the privacy practices of the third-party code (including third party SDKs) in their app in a standardized format. With privacy manifests, Apple also plans to offer additional privacy protection for users, by identifying applications referencing APIs that might be used for fingerprinting. If applications are using any one of these APIs, they will be required to list a “required reason” for using that API in the privacy manifest as well. 
+
+The second feature introduced is code signing, which allows developers using a third party SDK in their application to validate within XCode that it was signed by the same developer as previous versions. 
+
+Related to privacy in gerenal, Apple has also announced that they will release a list of third party SDKs that are considered “privacy impacting” later this year - these SDKs are expected to be considered having an especially high impact on user privacy by Apple.
+
+Unlike traditional tracking SDKs that are designed to monitor users across multiple websites and applications, the Braze SDK solely focuses on storing first-party data and strictly refrains from sharing to different companies.
 
 ## Preparing for iOS 17 {#next-steps}
 
 Braze is continuously monitoring any impacts that both the Link Tracking and Privacy updates will have on integrations, if any, and will keep this page up to date with any downstream impacts that either will have. 
 
-We expect that both our Swift SDK and our legacy Obj-C SDK will be compatible with both XCode 15 and iOS 17.
+We expect that both our Swift SDK and our legacy Objective-C SDK will be compatible with both iOS 17 and XCode 15.
+
