@@ -35,8 +35,8 @@ validurls['/docs/quick_wins/personalized_messaging'] = '/docs/user_guide/persona
 
 validurls['/docs/getting_started/'] = '/docs/user_guide/onboarding_with_braze/';
 validurls['/docs/getting_started#list-unsubscribe-settings'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header';
-validurls['/docs/quick_wins/optimal_send_time'] = '/docs/user_guide/intelligence/intelligent_timing/';
-validurls['/docs/scheduling_and_organizing_campaigns/#intelligent-delivery'] = '/docs/user_guide/intelligence/intelligent_timing/';
+validurls['/docs/quick_wins/optimal_send_time'] = '/docs/user_guide/sage_ai/intelligence/intelligent_timing/';
+validurls['/docs/scheduling_and_organizing_campaigns/#intelligent-delivery'] = '/docs/user_guide/sage_ai/intelligence/intelligent_timing/';
 validurls['/docs/troubleshooting_guide/'] = '/docs/help/home/';
 validurls['/docs/user_targeting/#external-user-id'] = '/docs/developer_guide/rest_api/messaging/#external-user-id';
 

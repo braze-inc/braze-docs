@@ -33,7 +33,7 @@ For WhatsApp opt-ins, you must comply with [WhatsApp's requirements](https://bus
 - An `external_id`, a [phone number]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/), and an updated subscription status for every user. This can be done by using the [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) or through the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) to update the phone number and subscription status. 
 
 {% alert note %}
-Note that Braze has recently released an improvement to the `/users/track` endpoint that allows updates to the subscription status updates. However, if you have already created opt-in protocols using the [`/v2/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), you may continue to do so there.
+Braze released an improvement to the `/users/track` endpoint that allows updates to the subscription status that you can learn about in [Subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status). However, if you have already created opt-in protocols using the [`/v2/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), you may continue to do so there.
 {% endalert %}
 
 ### External to Braze opt-in methods
@@ -50,7 +50,7 @@ If you have used WhatsApp previously, you may have already built a user list wit
 
 In your customer support channel, follow up on resolved issues with an automatic message asking if they want to opt-in to marketing messaging. The functionality here depends on the feature availability in your customer support tool of choice and where you keep user information.
 
-1. Provide a [message link] from your WhatsApp Business phone number.
+1. Provide a [message link](https://business.facebook.com/business/help/890732351439459?ref=search_new_0) from your WhatsApp Business phone number.
 2. Provide [quick reply actions]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#quick-replies) where the customer replies "Yes" to indicate opt-in
 3. Set up custom keyword trigger.
 4. For either of those ideas, you will probably need to finish the path with the following:
@@ -63,8 +63,8 @@ Have customers send an inbound message to the WhatsApp number.
 
 This can be set up as a Canvas or a campaign, depending on whether you'd like the user to receive a confirmation message on the new channel.
 
-1. Create a webhook campaign<br>**Example [webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) method:**<br>![][2]<br><br>![][3]<br><br>
-2. Create a campaign with the action-based delivery trigger of an inbound message<br>![][1]
+1. Create a campaign with the action-based delivery trigger of an inbound message.
+2. Create a webhook campaign. For an example webhook, see [Subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#update-subscription-status).
 
 {% alert tip %}
 Note that you can build a URL or QR code to join a WhatsApp channel from within the [WhatsApp manager](https://business.facebook.com/wa/manage/phone-numbers/) under **Phone Number** > **Message Links**.<br>![]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
@@ -74,34 +74,11 @@ Note that you can build a URL or QR code to join a WhatsApp channel from within 
 
 #### SMS message
 
-In Canvas, set up a campaign that asks customers if they want to opt-in to receiving WhatsApp messages. For example:
+In Canvas, set up a campaign that asks customers if they want to opt-in to receiving WhatsApp messages by using one of the following methods:
 - Customer segment: subscribed marketing group outside of the US
 - Custom keyword trigger setup
-- Update method:
-	- [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) that updates the subscription status via Rest API
-	- Update user profile via advanced JSON editor with the following template: 
 
-	```json
-	{
-	  "attributes": [
-	  {
-	  	"subscription_groups": [{
-	  	  "subscription_group_id": "subscription_group_identifier_1",
-	  	  "subscription_state": "unsubscribed"
-	  	   },
-	  	   {
-	  	     "subscription_group_id": "subscription_group_identifier_2",
-	  	     "subscription_state": "subscribed"
-	  	     },
-	  	     {
-	  	       "subscription_group_id": "subscription_group_identifier_3",
-	  	       "subscription_state": "subscribed"
-	  	    }
-	  	  ]
-	  	}
-	  ]
-	}
-	```
+Learn about updating the subscription status of user profiles by viewing [Subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status).
 
 #### In-app or in-browser message
 
@@ -125,33 +102,7 @@ When selecting keyword triggers, include words like "Stop" or "No Message". If y
 
 #### Step 2: Update the user's profile
 
-Update the user's profile by using the advanced JSON editor or creating a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks#things-to-know). 
-
-1. Using the "Update user profile" Canvas action advanced JSON editor, use the following template:
-
-	```json
-	{
-	  "attributes": [
-	  {
-	  	"subscription_groups": [{
-	  	  "subscription_group_id": "subscription_group_identifier_1",
-	  	  "subscription_state": "unsubscribed"
-	  	   },
-	  	   {
-	  	     "subscription_group_id": "subscription_group_identifier_2",
-	  	     "subscription_state": "subscribed"
-	  	     },
-	  	     {
-	  	       "subscription_group_id": "subscription_group_identifier_3",
-	  	       "subscription_state": "subscribed"
-	  	    }
-	  	  ]
-	  	}
-	  ]
-	}
-	```
-
-2. Creating a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks#things-to-know) that updates the user's subscription status to "unsubscribed". A similar example can be seen below:<br><br>![][8]<br><br>![][9]<br><br>Optionally, you can include a follow-up message that lets the user know that they've been unsubscribed from the channel. Make sure this occurs before the unsubscribe step occurs, as you will no longer be able to message the user. 
+Update the user's profile by using one of the methods described in [Subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status).
 
 ### Marketing opt-out selection
 
@@ -160,33 +111,10 @@ Within the WhatsApp message template creator, you can include the "marketing opt
 1. Create a message template with the "marketing opt-out" quick reply.<br>![][11]<br><br>![][12]<br><br>
 2. Create a Canvas that uses this message template.<br><br>
 3. Follow the steps in the preceding example but with the trigger text "STOP PROMOTIONS".<br><br>
-4. Update the user's subscription status.
-  - Create a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks#things-to-know) that updates the user's subscription status to "unsubscribed"
-  - Use the "update user profile" Canvas advanced JSON editor and use the following template:
+4. Update the user's subscription status by using one of the methods described in [Subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status).
 
-	```json
-	{
-	  "attributes": [
-	  {
-	  	"subscription_groups": [{
-	  	  "subscription_group_id": "subscription_group_identifier_1",
-	  	  "subscription_state": "unsubscribed"
-	  	   },
-	  	   {
-	  	     "subscription_group_id": "subscription_group_identifier_2",
-	  	     "subscription_state": "subscribed"
-	  	     },
-	  	     {
-	  	       "subscription_group_id": "subscription_group_identifier_3",
-	  	       "subscription_state": "subscribed"
-	  	    }
-	  	  ]
-	  	}
-	  ]
-	}
-	```
-Note that Braze has plans to automatically process these marketing opt-outs within the next year but requires a manual process to set it up. 
- 
+
+
 [1]: {% image_buster /assets/img/whatsapp/whatsapp111.png %} 
 [2]: {% image_buster /assets/img/whatsapp/whatsapp112.png %} 
 [3]: {% image_buster /assets/img/whatsapp/whatsapp113.png %} 
