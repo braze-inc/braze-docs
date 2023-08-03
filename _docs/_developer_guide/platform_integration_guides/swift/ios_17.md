@@ -7,15 +7,15 @@ platform:
 description: "This reference article covers iOS 17, SDK updates, and more."
 ---
 
-## Changes in iOS 17
+# Changes in iOS 17
 
-### Link Tracking & UTM Parameter Stripping
+## Link Tracking & UTM Parameter Stripping
 
 One of the important changes introduced at WWDC this year was the blocking UTM parameters in Safari. UTM parameters are pieces of code that are added to URLs, which are frequently used in marketing campaigns to measure the effectiveness of Email, SMS and other campaigns. 
 
 Braze email and SMS products encode links in a way that is not  impacted by this change.  
 
-### Continued Privacy Changes
+## Continued Privacy Changes
 
 Apple announced its commitment to further expand the scope of App Tracking Transparency (ATT), which enables users to control whether an app can access their activity across various apps and websites belonging to other companies. With this in mind, Apple announced two new key features to support this.
 
