@@ -15,15 +15,11 @@ channel: in-app messages
 
 ## Accessing in-app message data
 
-If you want to access the in-app message data in the JavaScript layer, call the `Braze.subscribeToInAppMessage` method to have the SDKs to publish an `inAppMessageReceived` event when an in-app message is triggered. You can pass a callback to this method to execute your own code when the in-app message is triggered and received by the listener.
+In most cases, you can use the `Braze.addListener` method to register event listeners to handle data coming from in-app messages. 
 
-This method additionally takes in a parameter that tells the Braze SDK whether or not to use the built-in Braze UI to display in-app messages. If you prefer to use a custom UI, you can pass `false` to this method and use the in-app message data to construct your own message in JavaScript. Note that you will need to [manually log analytics](#analytics) on your messages if you choose to disable the default UI.
+Additionally, you can access the in-app message data in the JavaScript layer by calling the `Braze.subscribeToInAppMessage` method to have the SDKs publish an `inAppMessageReceived` event when an in-app message is triggered. Pass a callback to this method to execute your own code when the in-app message is triggered and received by the listener.
 
-{% alert note %}
-`Braze.subscribeToInAppMessage` is provided as a JavaScript interface method for situations where you may want to customize the default behavior further. It is recommended to use this method if you wish to disable the default UI while still receiving in-app message events from Braze, or in cases where you may not have access to customize the native iOS or Android code, such as in the Braze Expo Plugin.
-
-In all other cases, calling `Braze.addListener` should be sufficient.
-{% endalert %}
+To customize the default behavior further, or if you don't have access to customize the native iOS or Android code, we recommend that you disable the default UI while still receiving in-app message events from Braze. To disable the default UI, pass `false` to the `Braze.subscribeToInAppMessage` method and use the in-app message data to construct your own message in JavaScript. Note that you will need to [manually log analytics](#analytics) on your messages if you choose to disable the default UI.
 
 ```javascript
 import Braze from "@braze/react-native-sdk";
@@ -47,7 +43,7 @@ Braze.subscribeToInAppMessage(false, (event) => {
 
 ## Advanced customization
 
-If you want to include more advanced logic to determine whether or not to show an in-app message using the built-in UI, you should implement in-app messages through the native layer.
+To include more advanced logic to determine whether or not to show an in-app message using the built-in UI, implement in-app messages through the native layer.
 
 {% alert warning %}
 Since this is an advanced customization option, note that overriding the default Braze implementation will also nullify the logic to emit in-app message events to your JavaScript listeners. If you wish to still use `Braze.subscribeToInAppMessage` or `Braze.addListener` as described in [Accessing in-app message data](#accessing-in-app-message-data), you will need to handle publishing the events yourself.
@@ -111,7 +107,11 @@ For more details on these values, see our [iOS documentation](https://braze-inc.
 {% endsubtab %}
 {% endsubtabs %}
 
-To use this delegate, assign it to `brazeInAppMessagePresenter.delegate` after initializing the `braze` instance. (Note: BrazeUI can only be imported in Objective-C or Swift. If you are using Objective-C++, you will need to handle this in a separate file.)
+To use this delegate, assign it to `brazeInAppMessagePresenter.delegate` after initializing the `braze` instance. 
+
+{% alert note %}
+`BrazeUI` can only be imported in Objective-C or Swift. If you are using Objective-C++, you will need to handle this in a separate file.
+{% endalert %}
 
 {% subtabs %}
 {% subtab OBJECTIVE-C %}
