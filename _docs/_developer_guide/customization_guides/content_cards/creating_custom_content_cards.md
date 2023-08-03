@@ -11,14 +11,14 @@ channel:
 
 > This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases: banner images, a message inbox, and a carousel of images.
 
-Braze provides four [Content Card templates][1]: banner, captioned image, classic, and classic image. These templates can be used as a starting place for your implementations, tweaking their look and feel. You can also display Content Cards in a completely custom manner by using your own presentation UI populated with data from the Braze models; parse the Content Card objects and extract payload data such as `title`, `cardDescription`, and `imageUrl`. Then, you can use the resulting model data to populate your custom UI&mdash;the "run" phase of the [crawl, walk, run approach][2].
+Braze provides four [Content Card types][1]: `banner`, `captionedImage`, `classic`, and `classicImage`. These can be used as a starting place for your implementations, tweaking their look and feel. You can also display Content Cards in a completely custom manner by using your own presentation UI populated with data from the Braze models; parse the Content Card objects and extract payload data such as `title`, `cardDescription`, and `imageUrl`. Then, you can use the resulting model data to populate your custom UI&mdash;the "run" phase of the [crawl, walk, run approach][2].
 
 {% alert note %}
-Each default Content Card template is a subclass which inherits different properties from the generic Content Card model class. Understanding these inherited properties will be useful during customization. Refer to the `ContentCard` class documentation ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard), [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html)) for full details. 
+Each default Content Card type is a subclass which inherits different properties from the generic Content Card model class. Understanding these inherited properties will be useful during customization. Refer to the `ContentCard` class documentation ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard), [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html)) for full details. 
 {% endalert %}
 
 
-## Customization basics
+## Customization overview
 
 Depending on your use case, the exact implementation of your custom Content Card will vary a bit, but you will want to follow this basic formula:
 
