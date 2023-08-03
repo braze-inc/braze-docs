@@ -49,7 +49,7 @@ Regardless of the opt-in and opt-out methods you use, you can update the subscri
 
 - Create a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) that updates the subscription status via REST API, such as in the following example:
 
-![][1]
+![][1]{: style="max-width:90%;"}
 
 - Use the advanced JSON editor to update the user profile with the following template: 
 
@@ -75,7 +75,10 @@ Regardless of the opt-in and opt-out methods you use, you can update the subscri
 	}
 	```
 
+![][2]{: style="max-width:90%;"}
+
 [1]: {% image_buster /assets/img/whatsapp/whatsapp118.png %} 
+[2]: {% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}
 [4]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
 [9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
