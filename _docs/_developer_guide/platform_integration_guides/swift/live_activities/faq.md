@@ -67,7 +67,7 @@ The `messages/live_activity/update` endpoint has a separate rate limit from any 
 ### What other things should I watch out for during troubleshooting?
 
 - Check that you are using a `.p8` key for authentication.
-- Check that your push provisioning profile matches the environment you’re testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app will not work.
+- Check that your push provisioning profile matches the environment you’re testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production Apple Push Notification service (APNs) environment. Using a development certificate for a production app or a production certificate for a development app will not work.
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
