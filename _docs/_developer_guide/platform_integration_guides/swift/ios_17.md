@@ -4,7 +4,7 @@ article_title: iOS 17 Upgrade Guide
 page_order: 7
 platform: 
   - iOS
-description: "This refernce article covers iOS 17, SDK updates, and more."
+description: "This reference article covers iOS 17, SDK updates, and more."
 ---
 
 ## Changes in iOS 17
