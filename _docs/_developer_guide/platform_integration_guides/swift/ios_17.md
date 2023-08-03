@@ -19,7 +19,7 @@ Braze email and SMS products encode links in a way that is not  impacted by this
 
 Apple announced its commitment to further expand the scope of App Tracking Transparency (ATT), which enables users to control whether an app can access their activity across various apps and websites belonging to other companies. With this in mind, Apple announced two new key features to support this.
 
-The first is the introduction of privacy manifests, which allows developers to outline the privacy practices of the third-party code (including third party SDKs) in their app in a standardized format. With privacy manifests, Apple also plans to offer additional privacy protection for users, by identifying applications referencing APIs that might be used for fingerprinting. If applications are using any one of these APIs, they will be required to list a “required reason” for using that API in the privacy manifest as well. 
+The first is the introduction of privacy manifests, which allows developers to outline the privacy practices of the their app - including third party SDKs - in a standardized format. With privacy manifests, Apple also plans to offer additional privacy protection for users, by identifying and blocking iOS APIs that might be used for fingerprinting. If applications are using any one of these APIs, they will be required to list a “required reason” for using that API in the privacy manifest as well. 
 
 The second feature introduced is code signing, which allows developers using a third party SDK in their application to validate within XCode that it was signed by the same developer as previous versions. 
 
