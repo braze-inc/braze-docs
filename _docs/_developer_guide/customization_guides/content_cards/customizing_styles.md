@@ -18,7 +18,7 @@ The default Content Cards UI is imported from the UI layer of the Braze SDK. Fro
 ![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]
 
 {% alert note %}
-Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc. are directly available on the `Braze/ContentCard` data type. Configuring these [creative details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details) through the Braze dashboard is the preferred way to customize these properties.
+Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc. are directly available on the SDK's card object. Configuring these [creative details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details) through the Braze dashboard is the preferred way to customize these properties.
 {% endalert %}
 
 

@@ -41,7 +41,7 @@ First, create your own custom view controller component. The default [`BrazeCont
 {% endtab %}
 {% tab Web %}
 
-First, create your custom view. 
+First, create your custom HTML component that will be used to render the cards. 
 
 {% endtab %}
 {% endtabs %}
@@ -52,7 +52,7 @@ Then, register a callback function to [subscribe for data updates][6] when cards
 
 ### Step 3: Implement analytics
 
-When creating a custom view, Content Card impressions, clicks, and dismissals are not automatically logged. You must [implement each respective method][3] to ensure all metrics get properly logged back to Braze's dashboard analytics.
+Content Card impressions, clicks, and dismissals are not automatically logged in your custom view. You must [implement each respective method][3] to ensure all metrics get properly logged back to Braze's dashboard analytics.
 
 ## Content Card placements
 
