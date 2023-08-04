@@ -21,7 +21,7 @@ Insérez cet objet si nécessaire pour planifier vos messages.
 
 ```json
 "schedule": {
-  "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
+  "time": (required, datetime as ISO 8601 string) time to send the message,
   "in_local_time": (optional, bool),
   "at_optimal_time": (optional, bool),
 }
