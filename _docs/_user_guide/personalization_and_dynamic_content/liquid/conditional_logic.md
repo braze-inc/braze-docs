@@ -98,7 +98,7 @@ Conditional logic is a useful way to account for attribute values that aren't se
 
 ### Null and nil attribute values
 
-A null or nil value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name in Braze's database.
+A null or nil value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name logged in Braze.
 
 In some circumstances, you may wish to send a completely different message to users who have a first name set and users who do not have a first name set.
 
