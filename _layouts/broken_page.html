@@ -17,7 +17,6 @@ hide_breadcrumb: true
     return rstr;
   }
 
-  debugger;
 var validurls = (typeof validurls === "undefined")  ? {} : validurls;
 
 // multi language broken link redirects
@@ -83,22 +82,26 @@ if (site_language && (site_language != 'en')){
       redirected = urlsearch + '&redirected=true';
     }
     if (validurls[urlpath.toLowerCase() + '/' + urlhash] ) {
-      window.location  =  redirecturl(urlpath.toLowerCase() + '/' + urlhash,urlhash,redirected);
+      location.href = redirecturl(urlpath.toLowerCase() + '/' + urlhash,urlhash,redirected);
     }
     else if (validurls[urlpath.toLowerCase() + urlhash] ) {
-      window.location  =  redirecturl(urlpath.toLowerCase() + urlhash,urlhash,redirected);
+      location.href = redirecturl(urlpath.toLowerCase() + urlhash,urlhash,redirected);
     }
     else if (validurls[urlpath.toLowerCase() + '/'] ) {
-      window.location  =  redirecturl(urlpath.toLowerCase() + '/',urlhash,redirected);
+      location.href = redirecturl(urlpath.toLowerCase() + '/',urlhash,redirected);
     }
     else if (validurls[urlpath.toLowerCase()] ) {
-      window.location  =  redirecturl(urlpath.toLowerCase(),urlhash,redirected);
+      location.href = redirecturl(urlpath.toLowerCase(),urlhash,redirected);
+    } 
+    else {
+      window.braze.logCustomEvent("broken page", {
+        hostname: location.hostname,
+        pathname: location.pathname,
+      });
+      window.braze.requestImmediateDataFlush();
     }
   }
-
-
-
-}  )();
+})();
 
 $(document).ready(function(k){
   var search_strings = removeleadingslash(window.location.pathname).split('/');
@@ -208,15 +211,6 @@ $(document).ready(function(k){
     </div>
 
     {%- endunless -%}
-
-    <script>
-      debugger;
-      window.braze.logCustomEvent("broken page", {
-        hostname: location.hostname,
-        pathname: location.pathname,
-      });
-      window.braze.requestImmediateDataFlush();
-    </script>
 
     {% include footer.html %}
 </div>
