@@ -129,9 +129,9 @@ Note that a null attribute value isn't strictly associated with a value type (e.
 
 ### Blank attribute values
 
-A blank value occurs when the attribute on a user profile either isn't set or is set with an empty string. Blank values should be checked before other variables.
+A blank value occurs when the attribute on a user profile isn't set, is set with an whitepace string (i.e., ' '), or is set as `false`. Blank values should be checked before other variables to avoid a Liquid processing error.
 
-The following tag allows you to specify a message for users that don't have a set "first name" attribute or have an empty string entered.
+The following tag allows you to specify a message for users that have a blank "first name" attribute.
 
 {% raw %}
 ```liquid
