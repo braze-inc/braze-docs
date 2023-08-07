@@ -96,7 +96,7 @@ Some messaging channels, like Content Cards and SMS, are purchasable upgrades. I
 ### Email
 
 {% alert checkpoint %}
-Before proceeding with this learning path, make sure you've already followed the articles in our [Email Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section. Remember, [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is required! We also highly recommend setting up [SSL]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/) to allow for open and click tracking, and to make sure your images appear as they should.
+Before proceeding with this learning path, make sure you've already followed the articles in our [Email Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section. Remember, [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is required! We also highly recommend setting up [SSL]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl/) to allow for open and click tracking, and to make sure your images appear as they should.
 {% endalert %}
 
 | Order | Article | What You'll Learn |
