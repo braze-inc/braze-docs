@@ -100,7 +100,7 @@ Because Michelle has the workspace-level permission of "Access Campaigns, Canvas
 
 ![]({% image_buster /assets/img_archive/team_permissions_scenario2.gif %})
 
-Similar to the first scenario, Michelle must add a team to the campaign before she can launch it.
+Similar to the first scenario, Michelle must add the Development team tag to the campaign before she can launch it.
 
 {% endtab %}
 {% endtabs %}
