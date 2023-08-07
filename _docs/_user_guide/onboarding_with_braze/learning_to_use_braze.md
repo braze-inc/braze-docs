@@ -48,7 +48,7 @@ Learn how to manage user access for your organization, best practices for dashbo
 | Order | Article | What You'll Learn |
 |---|---|---|
 | 1 | [Braze instances]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) | The URLs used to access Braze. |
-| 2 | [Security settings]({{site.baseurl}}/user_guide/administrative/company_settings/security_settings/) | The available security settings you can manage for your company users, such as authentication and IP allowlisting. |
+| 2 | [Security settings]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/) | The available security settings you can manage for your company users, such as authentication and IP allowlisting. |
 | 3 | [SAML and single-sign on]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/) | How to set up single sign-on for supported security providers. |
 | 4 | [Braze user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/) | Learn about and set Braze account user permissions for your company users. |
 | 5 | [Adding Braze users]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/adding_users_to_your_dashboard/) | Add company users to the company Braze account. |
