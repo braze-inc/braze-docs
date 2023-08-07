@@ -35,7 +35,7 @@ If an action-based Canvas is triggered by an inbound SMS message, you can refere
 
 ### Edit delivery settings
 
-The Message component also includes settings for Intelligent Delivery, Quiet Hours overrides, and delivery validation. You can enable [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) with a fallback option when a user's profile does not have enough data to calculate an optimal time. We recommend enabling Intelligent Timing and [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-frequency-capping/) as an additional check for any delays between users entering the Message step and the actual message sending.
+The Message component also includes settings for Intelligent Delivery, Quiet Hours overrides, and delivery validation. You can enable [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) with a fallback option when a user's profile does not have enough data to calculate an optimal time. We recommend enabling Intelligent Timing and [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-frequency-capping/) as an additional check for any delays between users entering the Message step and the actual message sending.
 
 Select **Using Intelligent Timing** in the **Delivery Settings** tab. Here, you can select either the most popular time or a specific fallback time. If Quiet Hours are enabled, the Message step also allows you to override this setting.
 

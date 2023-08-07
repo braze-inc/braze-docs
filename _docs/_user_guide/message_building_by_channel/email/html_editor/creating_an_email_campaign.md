@@ -274,5 +274,5 @@ Now just wait for all the data to roll in! Next, check out [Email reporting]({{s
 [18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
 [19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
 [20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
-[21]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
+[21]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
 [22]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/

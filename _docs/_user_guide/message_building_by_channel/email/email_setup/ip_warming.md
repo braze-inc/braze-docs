@@ -101,7 +101,7 @@ When conducting the IP warming process, be sure to carefully monitor your sender
 - **Sender Reputation Scores:** ReturnPath's [SenderScore][44] and Cisco's IronPort [SenderBase][45] are useful resources for checking how your reputation is progressing.
 
 {% alert tip %}
-Braze recommends against using [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) to warm your IPs. Because IP warming campaigns are some of the first campaigns you send, Braze won't have enough information on your users to calculate an optimal send time. In this case, all messages with Intelligent Timing would default to the fallback time and send at the same time anyway.
+Braze recommends against using [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) to warm your IPs. Because IP warming campaigns are some of the first campaigns you send, Braze won't have enough information on your users to calculate an optimal send time. In this case, all messages with Intelligent Timing would default to the fallback time and send at the same time anyway.
 {% endalert %}
 
 [18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
