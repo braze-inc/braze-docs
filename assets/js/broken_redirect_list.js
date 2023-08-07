@@ -51,6 +51,7 @@ validurls['/docs/enabling_message_channels/push_notifications/baidu'] = '/docs/d
 validurls['/docs/enabling_message_channels/push_notifications/ios'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/';
 
 validurls['/docs/ios/#push-notifications'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/';
+validurls['/docs/platform_integration_guides/swift/push_notifications/integrations'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/';
 validurls['/docs/partner_integrations/#adjust'] = '/docs/partners/adjust/';
 validurls['/docs/frequently_asked_questions#local-timezone-delivery'] = '/docs/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer';
 validurls['/docs/frequently_asked_questions'] = '/docs/help/faqs/';
