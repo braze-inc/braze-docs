@@ -196,21 +196,24 @@ validurls['/docs/user_guide/message_building_by_channel/sms/create/'] = '/docs/u
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/'] = '/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/';
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/'] = '/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/';
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/double_opt_in/'] = '/docs/user_guide/message_building_by_channel/sms/non_native/double_opt_in/';
-validurls['/docs/user_guide/onboarding_with_braze/sms_setup/user_phone_numbers/'] = '/docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/';
+
+validurls['/docs/user_guide/onboarding_with_braze/sms_setup/user_phone_numbers/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/user_data_migration/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/';
 validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/';
 validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/#sending-best-practices/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/about_sms/'] = '/docs/user_guide/message_building_by_channel/sms/about_sms/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/next_steps/'] = '/docs/user_guide/message_building_by_channel/sms/';
+
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/';
-validurls['/docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/sms_laws_and_regulations/';
+validurls['/docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/'] = '/docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/sms_sending/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/';
-validurls['/docs/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/sms_subscription_groups/';
+validurls['/docs/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/'] = '/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/terms/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/terms/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/user_data_migration/';
 validurls['/docs/user_guide/message_building_by_channel/sms/user_data_migration/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/user_data_migration/';
-validurls['/docs/user_guide/message_building_by_channel/sms/keywords/multi_country_sms_sending/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/multi_country_sms_sending/';
-validurls['/docs/user_guide/message_building_by_channel/sms/keywords/high_volume_sending/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/high_volume_sending/';
+validurls['/docs/user_guide/message_building_by_channel/sms/keywords/multi_country_sms_sending/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending#multi-country-sms-sending';
+validurls['/docs/user_guide/message_building_by_channel/sms/keywords/high_volume_sending/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/#high-volume-sending';
+
 validurls['/docs/user_guide/engagement_tools/segments/segment_cohorts/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/';
 validurls['/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/'] = '/docs/user_guide/personalization_and_dynamic_content/connected_content/';
 validurls['/docs/user_guide/personalization_and_dynamic_content/liquid/content_blocks/'] = '/docs/user_guide/engagement_tools/templates_and_media/content_blocks/';
