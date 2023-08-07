@@ -29,7 +29,7 @@ tool:
 
 ### Character count
 
-While we can't provide a hard and fast rule for the precise number of characters to include in a push, we [provide some guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications) to consider while designing iOS messages. There may be some variance depending on the presence of an image, the notification state and display setting of the user's device, as well as the size of the device. When in doubt, keep it short and sweet.
+While we can't provide a hard and fast rule for the precise number of characters to include in a push, we [provide some guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) to consider while designing iOS messages. There may be some variance depending on the presence of an image, the notification state and display setting of the user's device, as well as the size of the device. When in doubt, keep it short and sweet.
 
 > As a general rule of thumb, Braze recommends keeping each line of text for both the optional title and message body to approximately 30-40 characters in a mobile push notification.
 

@@ -44,7 +44,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
   fa_icon: fas fa-phone
 - name: "Sending Phone Numbers"
-  link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
+  link: /docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/
   fa_icon: fas fa-phone-square
 - name: "SMS Reporting"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
