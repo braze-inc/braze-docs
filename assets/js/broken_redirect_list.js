@@ -838,5 +838,6 @@ validurls['/docs/user_guide/data_and_analytics/configuring_reporting/'] = '/docs
 validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_purchases/creating_an_event_prediction'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_events/creating_an_event_prediction/'; 
 validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_purchases/prediction_analytics'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_events/prediction_analytics/';
 validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_purchases/messaging_users'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_events/messaging_users/';
+validurls['/docs/copying_to_workspace'] = '/docs/copying_to_workspaces/';
 
 
