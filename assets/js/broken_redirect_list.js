@@ -551,6 +551,8 @@ validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/news_
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/news_feed_integration_overview/'] = '/docs/developer_guide/platform_integration_guides/ios/news_feed/integration/';
 validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/kvp/'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs/';
 validurls['/docs/developer_guide/platform_integration_guides/web/in-app_messaging/overview/'] = '/docs/developer_guide/platform_integration_guides/web/in-app_messaging/integration/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handing_in_app_display/'] = '/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handling_in_app_display/';
+
 validurls['/docs/api/objects_filters/email_object/'] = '/docs/api/objects_filters/messaging/email_object/';
 validurls['/docs/user_guide/message_building_by_channel/push/ios/create_push_primer/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages';
 validurls['/docs/user_guide/message_building_by_channel/push/push_primer_messages'] = '/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages';
