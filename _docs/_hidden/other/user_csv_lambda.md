@@ -92,7 +92,7 @@ Follow the direct link to the [application](https://console.aws.amazon.com/lambd
 
 Click **Deploy** and let AWS create all the necessary resources.
 
-You can watch the deployment and verify that the stack (ie. all the required resources) is being created in the [CloudFormation](https://console.aws.amazon.com/cloudformation/). Find the stack named "serverlessrepo-braze-user-attribute-import". Once the **Status** turns to `CREATE_COMPLETE`, the function is ready to use. You can click on the stack and open **Resources** and watch the different resources being created.
+You can watch the deployment and verify that the stack (ie. all the required resources) is being created in the [CloudFormation](https://console.aws.amazon.com/cloudformation/). Find the stack named "serverlessrepo-braze-user-attribute-import". After the **Status** turns to `CREATE_COMPLETE`, the function is ready to use. You can click on the stack and open **Resources** and watch the different resources being created.
 
 The following resources were created:
 

@@ -31,7 +31,7 @@ description: "This reference article lists and explains the different Apple obje
    "notification_group_thread_id": (optional, string) the notification group thread ID the notification will be sent with,
    "asset_url": (optional, string) content URL for rich notifications for devices using iOS 10 or higher,
    "asset_file_type": (required if asset_url is present, string) file type of the asset - one of "aif", "gif", "jpg", "m4a", "mp3", "mp4", "png", or "wav",
-   "collapse_id": (optional, string) To update a notification on the user's device once you've issued it, send another notification with the same collapse ID you used previously
+   "collapse_id": (optional, string) To update a notification on the user's device after you've issued it, send another notification with the same collapse ID you used previously
    "mutable_content": (optional, boolean) if true, Braze will add the mutable-content flag to the payload and set it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used iOS device, rather than all eligible iOS devices,
    "category": (optional, string) the iOS notification category identifier for displaying push action buttons,

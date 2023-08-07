@@ -6,7 +6,7 @@ page_order: 1
 guide_top_header: "Email Setup"
 guide_top_text: "Braze can help you start sending email campaigns. Either follow our guides or check out our <a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Email Onboarding</a> Braze Learning course."
 page_type: landing
-description: "This landing page includes resources on getting started with email campaigns including setting up your IPS and domains, IP warming, email validation, and more."
+description: "This landing page includes resources on getting started with email campaigns including setting up your IPs and domains, IP warming, email validation, and more."
 channel: email
 
 guide_featured_title: "Section Articles"

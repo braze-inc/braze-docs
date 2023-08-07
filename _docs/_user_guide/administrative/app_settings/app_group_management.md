@@ -40,15 +40,18 @@ We recommend having multiple Braze users with admin permissions for a single wor
 
 ## Renaming or deleting your workspace
 
-To rename your workspace, click **Manage Settings** in the left sidebar. Then, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-pencil-alt" ></span>**Edit** next to your workspace's name.
+To rename your workspace, go to **Settings** > **App Settings**. Then, hover over your workspace's name and click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-pencil-alt" title="Edit"></span>.
 
-To delete your workspace entirely from the dashboard, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-cog" ></span>**Settings** on the same page and select **Delete Workspace**.
+![Rename workspace from the Settings tab][71]
 
-![Rename workspace from the Settings tab][70]
+To delete your workspace entirely from the dashboard, click **Delete workspace** from the same page.
+
+![Delete workspace from the Settings tab][70]
 
 {% alert warning %}
-Be careful when deleting workspaces! Once a workspace is deleted, it can't be restored.
+Be careful when deleting workspaces! After a workspace is deleted, it can't be restored.
 {% endalert %}
 
 [69]: {% image_buster /assets/img_archive/manageappgroupnavigation1.png %}
-[70]: {% image_buster /assets/img_archive/appsettingsview1.png %}
+[70]: {% image_buster /assets/img_archive/app_settings_react.png %}
+[71]: {% image_buster /assets/img_archive/rename_workspace.gif %}

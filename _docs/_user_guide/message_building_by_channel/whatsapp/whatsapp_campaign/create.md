@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a WhatsApp message
-article_title: Creating a WhatsApp message
+nav_title: Creating a WhatsApp Message
+article_title: Creating a WhatsApp Message
 page_order: 4
 description: "This reference article covers the steps involved in building out and creating a WhatsApp message."
 page_type: reference
@@ -63,13 +63,13 @@ If all of the messages in your campaign are similar or have the same content, co
 
 To compose your message, select an [approved WhatsApp template]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates). 
 
-![][1]
+![][1]{: style="max-width:80%;"}
 
-If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid. If you opted to include images when building your template, upload or add images from the media library. 
+If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, upload or add images from the media library.
 
-![][2]
+Note that disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. If you would like to make updates to the disabled text, you must edit your template and get it reapproved.
 
-Note that disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. If you would like to make updates to the disabled text, you must edit your template and get it reapproved. 
+![][2]{: style="max-width:80%;"}
 
 {% alert tip %}
 {% raw %}
@@ -81,7 +81,7 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 
 Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
-![][3]
+![][3]{: style="max-width:80%;"}
 
 ## Step 4: Build the remainder of your campaign or Canvas
 
@@ -126,3 +126,4 @@ Next, check out [WhatsApp reporting]({{site.baseurl}}/user_guide/message_buildin
 [1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %} 
 [2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %} 
 [3]: {% image_buster /assets/img/whatsapp/whatsapp8.png %} 
+[4]: {% image_buster /assets/img/whatsapp/whatsapp_plain_text.png %}

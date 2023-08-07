@@ -41,9 +41,9 @@ Additional benefits of using an `external_id` include the following:
 - Search for individual users using our "Testing" [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
 
 {% alert warning %}
-Do not assign an `external_id` to a user profile before you are able to uniquely identify them. Once you identify a user, you cannot revert them to anonymous.
+Do not assign an `external_id` to a user profile before you are able to uniquely identify them. After you identify a user, you cannot revert them to anonymous.
 <br><br>
-Additionally, an `external_id` is unchangeable once it has been set against a user profile. Any attempt to set a different `external_id` during a user's session will create a new user profile with the new `external_id` associated with it. No data will be passed between the two profiles.
+Additionally, an `external_id` is unchangeable after it has been set against a user profile. Any attempt to set a different `external_id` during a user's session will create a new user profile with the new `external_id` associated with it. No data will be passed between the two profiles.
 {% endalert %} 
 
 There are two scenarios that occur when you identify anonymous users:
@@ -60,7 +60,7 @@ To refer to users by other identifiers than only the Braze `external_id`, set us
 
 Each alias consists of two parts: a label, which defines the key of the alias, and a name, which defines the value. An alias name for any single label must be unique across the user base. If you attempt to update a second user profile with a pre-existing label and name combination, the user profile will not be updated.
 
-Unlike an `external_id`, an alias can be updated with a new name for a given label once set either via our [User Data endpoints][32] or by passing a new name via the SDK. The user alias will then be visible when exporting that user's data.
+Unlike an `external_id`, an alias can be updated with a new name for a given label after it is set either via our [User Data endpoints][32] or by passing a new name via the SDK. The user alias will then be visible when exporting that user's data.
 
 ![Two different user profiles for separate users with the same user alias label but different alias values][29]
 

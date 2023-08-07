@@ -41,7 +41,7 @@ If re-eligibility is off, add the filter "Entered Canvas Variation". If re-eligi
 - Update the existing Canvas to include a unique tag. For the new Canvas, add a filter "Last Received Message from Campaign or Canvas with Tag". This will prevent users from entering the Canvas twice after a specific entry date (total number of days after the last message is sent from the original Canvas plus the conversion window). 
 - **The following method will consume data points.** Update the original Canvas to include a Braze-to-Braze webhook that triggers a custom attribute date timestamp upon entry. This attribute can be used to prevent users from entering the new Canvas after the specified date (total number of days after the last message is sent from the original Canvas plus the conversion window).
 
-For API-triggered Canvases, coordinate with your engineering team to ensure that these Canvases are using the new Canvas ID once the new Canvases are ready to launch.
+For API-triggered Canvases, coordinate with your engineering team to ensure that these Canvases are using the new Canvas ID when the new Canvases are ready to launch.
 
 For more information about the differences between the original Canvas editor and Canvas Flow experience, check out [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor).
 

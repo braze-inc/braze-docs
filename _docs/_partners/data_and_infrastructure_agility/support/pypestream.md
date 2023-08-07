@@ -29,11 +29,11 @@ The Braze and Pypestream integration allows you to seamlessly orchestrate the en
 The Braze and Pypestream partnership can be used in your Canvases to achieve common use cases like:
 * **Intelligent retargeting**: Retarget users with Braze Canvas after their conversational engagement with your brand by leveraging all the rich data points collected via Pypestream.
 * **Dynamic targeting**: Reach out to existing and prospective customers based on their specific cohorts and segments, serving them with tailored conversational experiences via Pypestream.
-* **Contextual customer insights**: Once an end-user (existing or prospective customer) is engaging on your website, combine webpage tags ingested from the Pypestream Event Listener with customer data stored within Braze to provide a fully-personalized and contextual conversational interaction.
+* **Contextual customer insights**: After an end-user (existing or prospective customer) engages on your website, combine webpage tags ingested from the Pypestream Event Listener with customer data stored within Braze to provide a fully-personalized and contextual conversational interaction.
 
 ## Integration
 
-Pypestream leverages a server-less integration layer to perform custom integrations into various platforms. This layer is used to interface with services or systems to support the data requirements of the conversational flow that is being built. These integrations, referred to as Action Node Integrations, are typically written in Python and deployed using the Pypestream platform. Once an action node is instantiated, it provides the flexibility of integrating into any Braze API endpoint and allows the results to be evaluated in many ways. 
+Pypestream leverages a server-less integration layer to perform custom integrations into various platforms. This layer is used to interface with services or systems to support the data requirements of the conversational flow that is being built. These integrations, referred to as Action Node Integrations, are typically written in Python and deployed using the Pypestream platform. After an action node is instantiated, it provides the flexibility of integrating into any Braze API endpoint and allows the results to be evaluated in many ways. 
 
 {% alert note %}
 Visit this [Pypestream article](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070) for an overview and configuration steps for Pypestream action nodes. You must be a Pypestream customer to access this documentation.

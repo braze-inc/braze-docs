@@ -18,19 +18,17 @@ channel: email
 
 While most domains do not require SSL, Braze strongly recommends using SSL for these key reasons.
 
-#### General best practice
-
 Securing your website and links with SSL is a common practice even for companies that don't deal directly with sensitive customer information. Users are more trusting of links that are secured with SSL, and the additional layer of authentication helps protect your data.
 
-#### Necessary for click and open tracking
+### Necessary for click and open tracking
 
 At Braze, when we send out emails, we first transform your links using your branded link tracking subdomain to track user clicks and opens. By default, these links will begin with HTTP. This means that users with a browser or extension that restricts non-secure traffic may have difficulty passing through the redirect before landing at the destination URL, even if the URL is secure. This can lead to broken images and inaccurate click and open tracking throughout your emails. For this reason, it is a best practice to apply an SSL layer to the link tracking subdomain to ensure secure redirects in your emails. 
 
-#### Browser requirement
+### Browser requirement
 
 SSL protocols are becoming more prevalent today as major browsers like Google Chrome are starting to restrict traffic through non-secure URLs to protect their users. Companies with SSL on their website ensure to these major browsers that their content is trusted, minimizing content viewing issues like broken links and images in their emails.
 
-#### HSTS domains requirement 
+### HSTS domains requirement 
 
 Regardless of which browsers your users may be accessing your emails from, you must set up SSL if you have an HTTP Strict Transport Security (HSTS) domain and configure a CDN to send the necessary security certificates. Failure to set up SSL will cause both image and web links to break.
 
@@ -79,7 +77,7 @@ While CDN configuration, certificates, and proxy issues should be handled with y
 
 ##### Domain registry issues
 
-A dig command can tell you whether you are pointing your link tracking at the CDN. This can be done in your terminal by running `dig CNAME link_tracking_subdomain`. Once the command is run, under `ANSWER SECTION`, it should list where your CNAME is pointed to. If it pointed to your chosen email service provider (SendGrid or SparkPost) and not your CDN, try reconfiguring your domain registry to point to your CDN.
+A dig command can tell you whether you are pointing your link tracking at the CDN. This can be done in your terminal by running `dig CNAME link_tracking_subdomain`. After the command is run, under `ANSWER SECTION`, it should list where your CNAME is pointed to. If it pointed to your chosen email service provider (SendGrid or SparkPost) and not your CDN, try reconfiguring your domain registry to point to your CDN.
 
 ##### CDN issues
 
@@ -87,5 +85,5 @@ If your live email links start breaking during setup, this generally means you'v
 
 ##### SSL enablement status
 
-If you have completed your SSL setup and your links still appear as HTTP and not HTTPS, contact your Braze customer success manager to make sure SSL has been enabled by Braze. SSL can only be enabled by Braze once all aspects of your SSL setup have been completed.
+If you have completed your SSL setup and your links still appear as HTTP and not HTTPS, contact your Braze customer success manager to make sure SSL has been enabled by Braze. SSL can only be enabled by Braze after all aspects of your SSL setup have been completed.
 

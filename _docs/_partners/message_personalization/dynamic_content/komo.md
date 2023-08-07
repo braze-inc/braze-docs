@@ -49,7 +49,7 @@ Coming soon, Komo will be adding the ability to pass through market research dat
 
 ### Step 1: Publish a Komo Engagement Hub and card
 
-You will need to publish a Komo Engagement Hub with at least one card containing a data capture form. Once published, you can test the user experience end-to-end and verify the integration is working correctly.
+You will need to publish a Komo Engagement Hub with at least one card containing a data capture form. When published, you can test the user experience end-to-end and verify the integration is working correctly.
 
 ![][2]
 

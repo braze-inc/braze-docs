@@ -89,7 +89,7 @@ Movable Ink has an easy editor for you to drag and drop elements like text, imag
 
 ![The Movable Ink block editor showing the different customizable elements.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
 
-Before finishing your campaign, make sure to preview the dynamic images and test out the query parameters to see what the images will look upon view. Once complete, a dynamic URL will generate that can then be inserted into Braze!
+Before finishing your campaign, make sure to preview the dynamic images and test out the query parameters to see what the images will look upon view. When complete, a dynamic URL will generate that can then be inserted into Braze!
 
 For more information on how to use the Movable Ink Platform, visit the [Movable Ink support center][support]
 

@@ -9,7 +9,7 @@ description: "This landing page explains and lists the Braze external ID migrati
 page_type: landing
 
 guide_top_header: "External ID Migration"
-guide_top_text: "The External ID Migration API allows you to rename existing external IDs (creating a new primary ID and deprecating the existing ID) and remove deprecated IDs post-migration. <br><br> We've architected this solution to allow multiple external IDs in order to support a migration period whereby older versions of your apps still in the wild that use the previous external ID naming schema don't break. We highly recommend removing deprecated external IDs once your old naming schema is no longer in use."
+guide_top_text: "The External ID Migration API allows you to rename existing external IDs (creating a new primary ID and deprecating the existing ID) and remove deprecated IDs post-migration. <br><br> We've architected this solution to allow multiple external IDs in order to support a migration period whereby older versions of your apps still in the wild that use the previous external ID naming schema don't break. We highly recommend removing deprecated external IDs when your old naming schema is no longer in use."
 
 guide_featured_title: "External ID Migration Endpoints"
 guide_featured_list:

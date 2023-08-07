@@ -31,7 +31,7 @@ See the following list of available log levels:
 
 ### Verbose logging
 
-You can configure log level to any available value. However, setting log level to verbose, or `0`, can be very useful for debugging issues with your integration. This level is only intended for development environments and should not be set in a released application.
+You can configure log level to any available value. However, setting log level to verbose, or `0`, can be very useful for debugging issues with your integration. This level is only intended for development environments and should not be set in a released application. Verbose logging won't send any extra or new user information to Braze.
 
 ### Setting log level
 

@@ -22,7 +22,7 @@ The following guide offers an optional custom developer integration to use in ad
 
 ### Custom factories
 
-The Braze SDK allows developers to override a number of defaults through custom factory objects. These can be registered with the Braze SDK as needed to achieve the desired results. In most cases, however, if you decide to override a factory, you will need to either explicitly defer to the default or reimplement the functionality provided by the Braze default. The following code snippet illustrates how to supply custom implementations of the `IInAppMessageViewFactory` and the `IInAppMessageViewWrapperFactory` interfaces. Once you have a solid understanding of the concepts behind overriding Braze's default factories, check out our [use cases](#sample-use-cases) to get started implementing custom in-app messaging functionality.
+The Braze SDK allows developers to override a number of defaults through custom factory objects. These can be registered with the Braze SDK as needed to achieve the desired results. In most cases, however, if you decide to override a factory, you will need to either explicitly defer to the default or reimplement the functionality provided by the Braze default. The following code snippet illustrates how to supply custom implementations of the `IInAppMessageViewFactory` and the `IInAppMessageViewWrapperFactory` interfaces. After you have a solid understanding of the concepts behind overriding Braze's default factories, check out our [use cases](#sample-use-cases) to get started implementing custom in-app messaging functionality.
 
 {% tabs %}
 {% tab Kotlin %}

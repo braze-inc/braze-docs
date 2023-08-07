@@ -27,7 +27,7 @@ In the following Zapier example, we will be sending information from WordPress t
 
 ### Step 1: Create a Zapier trigger
 
-Using Zapier's terminology, a "zap" is an automated workflow that connects your apps and services. The first part of any zap is to designate a trigger. Once your zap is enabled, Zapier will automatically perform the respective actions whenever your trigger is detected.
+Using Zapier's terminology, a "zap" is an automated workflow that connects your apps and services. The first part of any zap is to designate a trigger. After your zap is enabled, Zapier will automatically perform the respective actions whenever your trigger is detected.
 
 Using our WordPress example, in the Zapier platform, we'll set up our zap to trigger when a new WordPress post gets added and select **Published** and **Posts** as **Post Status** and **Post Type**. 
 
@@ -45,7 +45,7 @@ Continuing our example, we want to send a POST request as a JSON to a Braze endp
 
 ### Step 4: Set up Braze POST
 
-When setting up your webhook, use the following settings and provide your Braze REST endpoint in the webhook URL. Once complete, select **Publish**.
+When setting up your webhook, use the following settings and provide your Braze REST endpoint in the webhook URL. When complete, select **Publish**.
 
 - **Method** : POST
 - **Webhook URL**: `https://rest.iad-01.braze.com/canvas/trigger/send`

@@ -103,7 +103,7 @@ In Braze, from **Templates & Media**, go to **Webhook Templates** and choose the
 To integrate the notifications' delivery and open status event with a campaign’s conversion metric, add a custom event on the Braze dashboard.
 
 1. From the Braze dashboard, go to **Settings > Manage Settings > Custom Events**, and click **+ Add Custom Event**.
-2. Once you’ve created a custom event, click **Manage Properties**, add a property named "status", and choose "String" as the property type.
+2. After you’ve created a custom event, click **Manage Properties**, add a property named "status", and choose "String" as the property type.
 3. When you compose a notification in campaigns or Canvases, enter the name of the custom event into the **Event Name** field.
 
 This custom event will be triggered twice for each notification, when a message is sent and when a user opens the message.

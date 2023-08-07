@@ -24,7 +24,7 @@ Campaign alerts are available for the following campaigns:
 
 ## Setting up your campaign alert
 
-Navigate to the analytics page of your campaign to start setting up your alert. Once you select **Set Up Alert**, you'll be able to specify upper and lower alert thresholds as well as the alert recipients and channels.
+Navigate to the analytics page of your campaign to start setting up your alert. When you select **Set Up Alert**, you'll be able to specify upper and lower alert thresholds as well as the alert recipients and channels.
 
 ![Campaign Monitoring dialog box with two buttons: Cancel and Save.][2]
 

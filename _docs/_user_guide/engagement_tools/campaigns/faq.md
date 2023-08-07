@@ -14,7 +14,7 @@ tool: Campaigns
 
 ### How do you create a multichannel campaign?
 
-Multichannel campaigns can be created by selecting **Create Campaign** and then **Multichannel Campaign** within the dashboard. Once in a multichannel campaign, select **Add Messaging Channel** within the **compose** tab to add your desired channels. Clicking on the channel icons that appear will allow you to toggle through different messaging composers as you build your campaign copy for the different channels.
+Multichannel campaigns can be created by selecting **Create Campaign** and then **Multichannel Campaign** within the dashboard. When in a multichannel campaign, select **Add Messaging Channel** within the **compose** tab to add your desired channels. Clicking on the channel icons that appear will allow you to toggle through different messaging composers as you build your campaign copy for the different channels.
 
 ### Can I add a control group to my multichannel campaign?
 

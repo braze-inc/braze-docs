@@ -141,7 +141,7 @@ Push notifications can capture user information inside a content app extension, 
 In the following flow, the custom view is able to respond to state changes. Those state change components are represented in each image. 
 
 1. User receives a push notification.
-2. Push is opened. Once expanded, the push prompts the user for information. In this example, the user's email address is requested, but you could request any sort of information.
+2. Push is opened. After expanded, the push prompts the user for information. In this example, the user's email address is requested, but you could request any sort of information.
 3. Information is provided, and if in the expected format, the registration button is shown.
 3. Confirmation view is displayed, and push gets dismissed. 
 

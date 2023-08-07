@@ -28,7 +28,7 @@ If you would like users to opt-in to SMS from an in-app message, see the impleme
 
 ## Option 3: Sign-up flow
 
-When a new user signs up or registers on the website or app, ask for their phone number and email. Include a checkbox to receive promotional emails and SMS. Once the user signs up, leverage the [`/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/#update-users-subscription-group-status):
+When a new user signs up or registers on the website or app, ask for their phone number and email. Include a checkbox to receive promotional emails and SMS. After the user signs up, leverage the [`/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/#update-users-subscription-group-status):
 
 ```json
 POST 'https://rest.iad-03.braze.com/subscription/status/set' \

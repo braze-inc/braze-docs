@@ -43,6 +43,10 @@ Certain events return a `platform` value that specifies the platform of the user
 These schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB.
 {% endalert %}
 
+{% alert update %}
+Human-readable names for objects related to Canvas Flow are coming soon to Currents. In the meantime, the IDs can be used for grouping, and translated to human-readable names via the [Canvas Details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+{% endalert %}
+
 {% api %}
 
 ## WhatsApp read events
@@ -340,7 +344,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_step_id": (optional, string) ID of the Canvas step this event belongs to,
   "canvas_step_message_variation_id": (optional, string) ID of the Canvas step message variation this user received,
-  "canvas_step_name": (optional, string)name of the Canvas step this event belongs to,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
   "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
   "device_id": (optional, string) ID of the device on which the event occurred,
@@ -469,7 +473,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts, Quiet
   "external_user_id": (optional, string) External user ID of the user,
   "id": (required, string) globally unique ID of this event,
   "message_variation_id": (optional, string) ID of the message variation this user received,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "message_variation_name": (optional, string) name of the message variation the user is in if from a Canvas,
   "send_id": (optional, string) message send ID this message belongs to,
   "time": (required, int) unix timestamp at which the event happened,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
@@ -561,12 +565,13 @@ This event occurs when a user enters a Canvas experiment step path.
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "experiment_step_id": (required, string) BSON ID of the experiment step this event belongs to,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) null,
   "experiment_split_id": (optional, string) BSON ID of the experiment split the user enrolled in,
   "experiment_split_name": (optional, string) name of the experiment split the user enrolled in,
   "in_control_group": (required, boolean) whether the user was enrolled in the control group
 }
 ```
+
 {% endapi %}
 
 {% api %}
@@ -593,7 +598,7 @@ This event occurs when a user convert for a Canvas experiment step.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) null,
   "experiment_step_id": (optional, string) BSON ID of the experiment step this event belongs to,
   "experiment_split_id": (required, string) BSON ID of the experiment split variation this user received,
   "experiment_split_name": (optional, string) name of the experiment split the user enrolled in,
@@ -625,7 +630,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "campaign_id": (optional, string) ID of the campaign if from a campaign,
   "campaign_name": (optional, string) name of the campaign,
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "message_variation_name": (optional, string) name of the message variation the user is in if from a Canvas,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,

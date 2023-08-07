@@ -23,7 +23,7 @@ Feature flags are currently in beta. [Click here](https://dashboard.braze.com/en
 
 For this example, let's say we've decided to add a new "Live Chat Support" link to our app for faster customer service. We could release this feature to all customers at once. However, a wide release carries risks, such as: 
 
-* Our Support team is still in training, and customers will be able to start support tickets once it's released. This doesn't give us any wiggle room in case the Support team needs more time.
+* Our Support team is still in training, and customers will be able to start support tickets after it's released. This doesn't give us any wiggle room in case the Support team needs more time.
 * We're unsure of the actual volume of new support cases we'll get, so we might not be staffed appropriately.
 * If our Support team is overwhelmed, we have no strategy to quickly to turn this feature off again.
 * There might be bugs introduced in the chat widget and we don't want customers to have a negative experience.
@@ -114,7 +114,7 @@ Then, in Canvas Flow, we'll create a Canvas Feature Flag step that enables the `
 
 ![Canvas flow showing an audience split where "high value customers" enable a "show_loyalty_program" feature flag][4]
 
-Now, users in this segment will start to see the new loyalty program, and once it has been enabled, an email and survey will automatically be sent out to help our team gather feedback.
+Now, users in this segment will start to see the new loyalty program, and after it's enabled, an email and survey will automatically be sent out to help our team gather feedback.
 
 ## Experimentation
 

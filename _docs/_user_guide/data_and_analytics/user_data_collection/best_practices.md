@@ -67,7 +67,7 @@ As your user data grows, you can merge duplicate user profiles from the Braze da
 
 You can also use the [Merge users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) to merge one user profile into another. 
 
-Note that once user profiles are merged, this action cannot be undone.
+Note that after user profiles are merged, this action cannot be undone.
 
 ## Additional resources
 - Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) for additional context.<br>

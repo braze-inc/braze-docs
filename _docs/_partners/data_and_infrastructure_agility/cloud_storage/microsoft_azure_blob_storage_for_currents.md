@@ -64,7 +64,7 @@ Next, provide your connection string, container name, and BlobStorage prefix (op
 
 ![The Microsoft Azure Blob storage Currents page in Braze. On this page exist fields for integration name, contact email, connection string, container name, and prefix.]({% image_buster /assets/img/maz.png %})
 
-Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you would like to export. Once completed, launch your Current.
+Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you would like to export. When completed, launch your Current.
 
 ### Step 5: Set up Azure data export
 
@@ -79,7 +79,7 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** > **Mic
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-Next, make sure the **Make this the default data export destination** box is checked, this will make sure your exported data is sent to Azure. Once completed, save your integration.
+Next, make sure the **Make this the default data export destination** box is checked, this will make sure your exported data is sent to Azure. When completed, save your integration.
 
 ![The Microsoft Azure data export page in Braze. On this page exist fields for connection string, container name, and prefix.]({% image_buster /assets/img/azure_data_export.png %})
 

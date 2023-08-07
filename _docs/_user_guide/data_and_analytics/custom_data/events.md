@@ -55,7 +55,7 @@ To learn more, visit our dedicated [purchase events]({{site.baseurl}}/user_guide
 Please note that the actual implementation of purchase events will require some technical knowledge as it involves integrating the Braze SDK with your app. Your customer success manager will walk your team through this process as part of your onboarding, but the general steps are as follows:
 
 1. **Integrate the Braze SDK:** Before logging any events, you'll need to integrate the Braze SDK into your app.
-2. **Log the purchase event:** Once the SDK is integrated, you can log a purchase event whenever a user makes a purchase in your app. This is typically done in the function or method called when a purchase is completed.
+2. **Log the purchase event:** After the SDK is integrated, you can log a purchase event whenever a user makes a purchase in your app. This is typically done in the function or method called when a purchase is completed.
 
 Here's an example of how to log a purchase event in an iOS app using Swift:
 
@@ -92,7 +92,7 @@ Similar to purchase events, custom events require additional setup. Here's a gen
 
 1. **Integrate the Braze SDK:** Before you can log any events, you'll need to integrate the Braze SDK into your app.
 2. **Define your custom event:** Decide what action in your app you want to track as a custom event. This could be anything that's significant to your app, such as a user completing a level in a game, a user updating their profile, or a user making a specific type of purchase.
-3. **Log the custom event:** Once you've defined your custom event, you can log it in your app's code. This is typically done in the function or method that gets called when the action occurs.
+3. **Log the custom event:** After you've defined your custom event, you can log it in your app's code. This is typically done in the function or method that gets called when the action occurs.
 
 Here's an example of how to log a custom event in an iOS app using Swift:
 
@@ -118,6 +118,8 @@ In this example, the custom event has a property called "Property Name" with a v
 5. **View the custom event in the Braze dashboard:** After the custom event is logged, you can view it in the Braze dashboard. You can use this data to analyze user behavior, segment your users, and more.
 
 {% enddetails %}
+
+<!--
 
 ### Using custom events instead of purchase events to track purchases
 
@@ -152,6 +154,8 @@ Appboy.sharedInstance()?.logCustomEvent("Purchase", withProperties: properties)
 ```
 
 In this example, "Purchase" is the name of the custom event, and the properties dictionary contains additional information about the event. In this case, the workout plan is "10 Sessions Personal Training". Now you can segment your users based on the types of workout plans they purchase.
+
+-->
 
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/

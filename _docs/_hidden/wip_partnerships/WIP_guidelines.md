@@ -173,7 +173,7 @@ In your terminal, you will see the command begin to work. This process may take 
 
 Next, you can check your [localhost](http://localhost:4000/docs/).
 
-Here you can navigate to the page you created using the alias you assigned earlier in the article's metadata. Once you open the localhost, append the alias to access your page.
+Here you can navigate to the page you created using the alias you assigned earlier in the article's metadata. After you open the localhost, append the alias to access your page.
 
 Example: `http://localhost:4000/docs/` + `/partners/your_partner_name/`
 
@@ -192,7 +192,7 @@ Within the Braze docs GitHub repository, find your branch. If your document is c
 1. Set up your branch to be merged in a similar fashion as shown in the preceding image.<br><br>
 2. Name your Pull Request as "Partnership Name - Partner Docs"<br><br>
 3. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your **Braze product manager** so we can reach out to them to get in contact with you about your changes if needed.<br><br>
-4. After you are done making changes, tag @KellieHawks and @alex-braze in a comment within the pull request, and our team will take a look.<br><br>
+4. After you are done making changes, tag @josh-mccrowell-braze and @alex-braze in a comment within the pull request, and our team will take a look.<br><br>
 
 ## Review process {#review}
 

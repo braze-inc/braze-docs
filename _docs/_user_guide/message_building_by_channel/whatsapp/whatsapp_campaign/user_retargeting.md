@@ -16,6 +16,10 @@ page_order: 4.1
 
 ## Retargeting options
 
+{% alert note %}
+When building audiences with user retargeting, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the CCPA. Marketers should implement the relevant filters for users’ eligibility within their Canvas and/or Campaign entry criteria.
+{% endalert %}
+
 ### Filter users by WhatsApp
 
 Users can be filtered by when they last received a WhatsApp or if they have received a WhatsApp from a specific WhatsApp campaign. Filters can be set in the Target Users step of the campaign builder.

@@ -36,7 +36,7 @@ Nope! MMS is now included in our SMS onboarding process. Existing customers who 
 1. Purchase MMS.
 2. Reach out to the Braze onboarding team to request the MMS feature to be flipped on. This will enable MMS and an SMS/MMS Subscription group will be created or updated for you.
 
-Next, the Braze onboarding team will make sure your short and long codes are enabled (in the US and Canada) for MMS. They will also update your subscription groups to show your current numbers that were added or enabled for MMS. Once these steps are complete, you can send MMS messages right away from our native SMS composer.
+Next, the Braze onboarding team will make sure your short and long codes are enabled (in the US and Canada) for MMS. They will also update your subscription groups to show your current numbers that were added or enabled for MMS. After these steps are complete, you can send MMS messages right away from our native SMS composer.
 
 ### Why can't I find MMS on my dashboard even though the feature is enabled?
 

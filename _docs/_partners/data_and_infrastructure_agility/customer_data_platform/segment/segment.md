@@ -220,7 +220,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 
 ### Step 4: Map methods {#methods}
 
-Braze supports the [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page), [Identify](https://segment.com/docs/spec/identify/), [Track](https://segment.com/docs/spec/track/) and [Group](https://segment.com/docs/connections/spec/group/) Segment methods. The types of identifiers used within these methods will depend on whether the data is being sent through a server-to-server (cloud-mode) or side-by-side (device-mode) integration. In the Braze Web Mode Actions and Cloud Mode Actions destinations, you can also choose to set up a mapping for a [Segment alias call](https://segment.com/docs/connections/spec/alias/). 
+Braze supports the [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page), [Identify](https://segment.com/docs/spec/identify/), and [Track](https://segment.com/docs/spec/track/) Segment methods. The types of identifiers used within these methods will depend on whether the data is being sent through a server-to-server (cloud-mode) or side-by-side (device-mode) integration. In the Braze Web Mode Actions and Cloud Mode Actions destinations, you can also choose to set up a mapping for a [Segment alias call](https://segment.com/docs/connections/spec/alias/). 
 
 {% alert note %}
 Although user aliases are supported as an identifier in the Braze Cloud Mode (Actions) destination, it should be noted that Segment's alias call is not directly related to Braze user aliases.
@@ -233,7 +233,7 @@ Although user aliases are supported as an identifier in the Braze Cloud Mode (Ac
 | User alias | Cloud mode destinations |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` once one becomes available for the user. 
+The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` after one becomes available for the user. 
 
 It is also possible to engineer a workaround and use `braze_id` to send anonymous user data in cloud-mode. This requires manually including the user's `braze_id` in all your Segment API calls. You can learn more about how to set up this workaround in [Segment's documentation](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users).
 
@@ -301,20 +301,12 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 
 {% endtab %}
 
-{% tab group %}
-#### Group
-
-The group call will record a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) with the name `ab_segment_group_<groupId>`, where `groupId` is the group's ID in the method's parameters. For example, if the group's ID is `1234`, then the custom attribute name will be `ab_segment_group_1234`. The value of the custom attribute will be set to `true`.
-
-In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile-1) and [cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the group event type is a default trigger for the update user profile action; however, this mapping can be customized. In addition, a group call can be used to trigger custom Actions. 
-
-{% endtab %}
 {% tab Page %}
 #### Page {#page}
 
-The [page](https://segment.com/docs/spec/page/) call lets you record whenever a user sees a page of your website, along with any optional properties about the page.
+The [Page](https://segment.com/docs/spec/page/) call lets you record whenever a user sees a page of your website, along with any optional properties about the page.
 
-This event type can be used as a trigger in the Web Mode Actions and Cloud Actions destinations.
+This event type can be used as a trigger in the Web Mode Actions and Cloud Actions destinations to log a custom event to Braze.
 {% endtab %}
 
 {% endtabs %}
@@ -337,7 +329,7 @@ If you use a server-to-server integration (cloud-mode), filters related to autom
 
 If you need to delete or suppress users, note that [Segment's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [`/users/delete` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). Note that verification of these deletions could take up to 30 days.
 
-You must ensure that you select a common user identifier between Braze and Segment (as in `external_id`). Once you've initiated a deletion request with Segment, you can view the status within the deletion requests tab in your Segment dashboard.
+You must ensure that you select a common user identifier between Braze and Segment (as in `external_id`). After you've initiated a deletion request with Segment, you can view the status within the deletion requests tab in your Segment dashboard.
 
 ## Segment replays
 

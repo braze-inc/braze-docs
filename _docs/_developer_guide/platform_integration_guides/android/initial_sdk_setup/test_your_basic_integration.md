@@ -19,7 +19,7 @@ At this point, you should have session tracking working in your Braze integratio
 
 ![][55]
 
-You should continue to test your integration by navigating through your application and ensuring that only one session has been logged. Then, background the app for at least 10 seconds and bring it to the foreground again. By default, a new session is created if the app is brought to the foreground after being backgrounded or closed for more than 10 seconds. Once you've done this, confirm that another session was logged.
+You should continue to test your integration by navigating through your application and ensuring that only one session has been logged. Then, background the app for at least 10 seconds and bring it to the foreground again. By default, a new session is created if the app is brought to the foreground after being backgrounded or closed for more than 10 seconds. After you've done this, confirm that another session was logged.
 
 ## Debugging session tracking
 If session tracking is behaving unexpectedly, turn on [verbose logging][56] and observe your app while you reproduce session triggering steps. Observe Braze statements in the logcat to detect where you may have missed logging `openSession` and `closeSession` calls in your activities.

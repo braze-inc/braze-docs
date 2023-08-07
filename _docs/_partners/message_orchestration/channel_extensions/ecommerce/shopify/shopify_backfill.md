@@ -67,7 +67,7 @@ To see what specific customer data is being backfilled, you can visit the [Suppo
 This feature will only sync email and SMS subscription states for new users created during the backfill. This will not sync subscription states for existing users in Braze to avoid overriding your users' current statuses.<br><br>If you have feedback on the current behavior, submit it through the product portal, listed in the **Dashboard** under **Resources** as **Product Roadmap** (If you are using our [updated navigation]({{site.baseurl}}/navigation), select **Community** > **Product Roadmap**).
 {% endalert %}
 
-Once you hit **Next**, the backfill will activate and start syncing over past data. Note that Historical Backfill can only be completed **once**, so you will not be able to run this import again once the data has finished syncing.
+Once you hit **Next**, the backfill will activate and start syncing over past data. Note that Historical Backfill can only be completed **once**, so you will not be able to run this import again after the data has finished syncing.
 
 ![][1]{: style="max-width:75%;"}
 
@@ -78,7 +78,7 @@ You will receive a dashboard notification, and your status will display as "In P
 ![][2]{: style="max-width:75%;"}
 
 ### Step 4: Backfill completed
-You will receive a dashboard notification and an email once the Shopify backfill has been completed. The Shopify partner page will also update the status under Historical Backfill to "Complete".
+You will receive a dashboard notification and an email after the Shopify backfill has been completed. The Shopify partner page will also update the status under Historical Backfill to "Complete".
 
 ## Supported Shopify customer data
 

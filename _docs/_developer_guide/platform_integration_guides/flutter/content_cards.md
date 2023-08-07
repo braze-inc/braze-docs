@@ -74,7 +74,7 @@ For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutt
 
 #### Replaying the callback for Content Cards
 
-To store any Content Cards triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when initializing the `BrazePlugin`:
+To store any Content Cards triggered before the callback is available and replay them after it is set, add the following entry to the `customConfigs` map when initializing the `BrazePlugin`:
 ```dart
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```

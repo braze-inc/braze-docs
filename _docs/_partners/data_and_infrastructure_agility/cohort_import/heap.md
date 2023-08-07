@@ -48,7 +48,7 @@ On this page, you can find your data import key and a REST endpoint. Take note o
 
 ### Step 2: Segment imported users in Braze
 
-In Braze, navigate to **Segments**, name your Heap cohort segment, and select **Heap Cohorts** as your filter. From here, you can choose which Heap cohort you wish to include. Once created, you can select your Heap cohort segment as an audience filter when creating a campaign or Canvas.
+In Braze, navigate to **Segments**, name your Heap cohort segment, and select **Heap Cohorts** as your filter. From here, you can choose which Heap cohort you wish to include. After your Heap cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
 ![In the Braze segment builder, the user attributes filter "Heap cohort" is set to "includes" and "Heap Test Cohort".][2]{: style="max-width:90%;"}
 
