@@ -37,16 +37,11 @@ Braze does not accept certain characters and recognizes them as invalid. If an e
 	- ~
 	- !
 	- ?
-	- . (only between letters other characters)
+	- . (only between letters or other characters)
 {% enddetails %}
 
 {% details Unaccepted characters %}
 - Whitespaces (ASCII and Unicode)
-- Only allowing Unicode
-	- Letters
-	- Numbers
-	- Symbols
-	- Punctuation
 {% enddetails %}
 
 This validation is not to be confused with a validation service like Briteverify. This is a check to verify that the syntax of an email address is correct. One of the main drivers to use this validation process is to support international characters (i.e., UTF-8) in the local part of the email address.
