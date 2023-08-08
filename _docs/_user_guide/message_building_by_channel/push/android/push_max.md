@@ -14,13 +14,13 @@ channel:
 
 # Push Max
 
-> Learn about Push Max and how you can use this feature to potentially improve deliverability of Android push notifications to Asia-Pacific markets.
+> Learn about Push Max and how you can use this feature to potentially improve the deliverability of Android push notifications to Asia-Pacific markets.
 
 ## What is Push Max?
 
 Push Max amplifies Android push notifications by tracking failed push notifications and resending the push when the user is more likely to receive it.
 
-Some Android devices manufactured by Chinese Original Equipment Manufactureres (OEMs), such as Xiaomi, OPPO, and Vivo, employ a very aggressive battery optimization scheme to extend battery life. This behavior may have an unintended consequence of shutting down background app processing, which reduces the deliverability of push notifications on these devices if the app is not in the foreground. This problem is most prevalent in the Asia-Pacific (APAC) markets.
+Some Android devices manufactured by Chinese Original Equipment Manufacturers (OEMs), such as Xiaomi, OPPO, and Vivo, employ a very aggressive battery optimization scheme to extend battery life. This behavior may have the unintended consequence of shutting down background app processing, which reduces the deliverability of push notifications on these devices if the app is not in the foreground. This problem is most prevalent in the Asia-Pacific (APAC) markets.
 
 ## Availability
 
@@ -66,7 +66,7 @@ The following two features, Intelligent Timing and Time to Live, can be used in 
 
 ### Intelligent Timing
 
-Push Max works best when [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) is turned on. Braze can use Intelligent Timing to calculate and send the push notification at a time when the user is most likely to be using the app and push is most likely to be delivered.
+Push Max works best when [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) is turned on. Braze can use Intelligent Timing to calculate and send the push notification at a time when the user is most likely to be using the app and the push is most likely to be delivered.
 
 ### Time to Live (TTL)
 
