@@ -19,7 +19,7 @@ You can include any link in any SMS campaign you would like. However, there are 
 
 - Links may take up much of the 160 character limit for SMS. If you include a link and text, it may result in two SMS messages instead of just one.
 - Companies often use link shorteners to limit the character count impact of a link. However, if sending a shortened link through a long code, carriers may block or deny the message, as they may be suspicious of the link redirect.
-- Using a [short code]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/) would be the most reliable number type for including links.
+- Using a [short code]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/) would be the most reliable number type for including links.
 
 Braze also has its own link-shortening feature that will shorten links and provide click-through analytics automatically. Refer to [Link Shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) for more information.
 

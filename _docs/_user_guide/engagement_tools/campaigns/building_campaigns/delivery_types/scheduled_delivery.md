@@ -60,7 +60,7 @@ Intelligent Timing campaigns work best for one-off and recurring messages where 
 
 [3]: {% image_buster /assets/img_archive/time_based.png %}
 [7]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
-[8]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
+[8]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
 [9]: {% image_buster /assets/img_archive/schedule_designated.png %}
 [10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
 [14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}

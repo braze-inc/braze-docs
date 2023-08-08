@@ -134,7 +134,7 @@ Note that this will not happen until we receive data about an attributed install
 
 #### Available data fields
 
-Assuming you configure your integration as suggested, Braze will map all organic and non-organic install data to segment filters.
+Assuming you configure your integration as suggested, Braze will map all non-organic install data to segment filters.
 
 | AppsFlyer data field | Braze segment filter |
 | -------------------- | --------------------- |

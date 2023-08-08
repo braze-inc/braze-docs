@@ -84,7 +84,7 @@ Learn about updating the subscription status of user profiles by viewing [Subscr
 
 Create an in-app message or in-browser pop-up prompting customers to opt-in to WhatsApp usage.
 
-Use [HTML in-app message](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal) with [JavaScript "bridge"]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#javascript-bridge) to interface with Braze SDK. Make sure to use the WhatsApp subscription group ID. 
+Use [HTML in-app message](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal) with [JavaScript "bridge"]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge) to interface with Braze SDK. Make sure to use the WhatsApp subscription group ID. 
 
 ## Set up opt-outs for your Braze WhatsApp channel
 

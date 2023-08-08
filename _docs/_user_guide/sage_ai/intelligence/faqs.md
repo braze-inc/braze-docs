@@ -63,7 +63,7 @@ Braze calculates the optimal time at midnight in Samoa time, one of the first ti
 
 ### Why is my Intelligent Timing campaign showing little to no sends?
 
-Braze needs a baseline number of data points to make a good estimate. If there is not enough session data or the users targeted have little to no email clicks or opens (such as new users), Intelligent Timing may default to the workspace's most popular hour on that day of the week. If there isn't enough information about the workspace, we fall back to a default time of 5 pm. You can also choose to set a specific [fallback time]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options).
+Braze needs a baseline number of data points to make a good estimate. If there is not enough session data or the users targeted have little to no email clicks or opens (such as new users), Intelligent Timing may default to the workspace's most popular hour on that day of the week. If there isn't enough information about the workspace, we fall back to a default time of 5 pm. You can also choose to set a specific [fallback time]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/#fallback-options).
 
 ### Why is my Intelligent Timing campaign sending past the scheduled date?
 

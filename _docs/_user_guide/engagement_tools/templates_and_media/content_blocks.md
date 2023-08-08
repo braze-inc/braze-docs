@@ -97,11 +97,13 @@ After creating your Content Block, you can insert it in your messages by followi
 
 If you choose to update a Content Block, it will update in all messages the Content Block is used. 
 
-If you want to update a Content Block for a single message or make a copy to use in other messages, you can copy the HTML from the original message to your new one, or edit the original Content Block (it must have been used in a message already) and save it. You will then get a prompt that allows you to save it as a new Content Block.
+If you want to update a Content Block for a single message or make a copy to use in other messages, you can copy the HTML from the original message to your new one, or edit the original Content Block (it must have been used in a message already) and save it. You will get a prompt that allows you to save it as a new Content Block.
 
-![Save Content Block dialog that reads "Select 'Save and Update' to update this Content Block. This will apply changes to messages currently using this Content Block. Select 'Save as Copy' to save your changes as a copy of this Content Block. Updates will not apply to messages currently using this Content Block" with three buttons: Cancel, Save as Copy, and Save and Update.][2]{: height="70%" width="70%"}
+After making edits to a Content Block, you can then select **Save as Draft**, or save and launch the updated Content Block by clicking **Launch Content Block**.
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) a Content Block with our Templates & Media feature. When you do this, a "draft" copy is created.
+![][2]
+
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) a Content Block. This creates a draft copy of the Content Block.
 
 ### Nesting Content Blocks
 

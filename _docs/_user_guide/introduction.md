@@ -17,7 +17,7 @@ user_menu_list:
   - name: Logging Into Braze
     image: /assets/img/new-icons/right-arrow2.svg
     bg_color: '#fce0df'
-    link: /docs/user_guide/administrative/access_braze/getting_your_account/
+    link: /docs/user_guide/administrative/access_braze/accessing_your_account/
     description: Log into our platform.
   - name: Create a Canvas
     bg_color: '#ffe1cc'

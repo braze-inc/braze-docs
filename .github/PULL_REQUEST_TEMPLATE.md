@@ -19,6 +19,7 @@ Closes #**ISSUE_NUMBER_HERE**
 - [ ] Check that all links work.
 - [ ] Ensure you have completed [our Contributors License Agreement](https://www.braze.com/docs/cla/).
 - [ ] Tag @josh-mccrowell-braze and @bre-fitzgerald as a reviewer when your work is **done and ready to be reviewed for merge**. Are you an internal product manager? Reference the internal reviewing chart to tag the appropriate reviewer.
+- [ ] If the documentation involves a 1) paid SKU, 2) a third party, 3) SMS, 4) AI, or 5) privacy, ensure that Maria Maldonado on the Legal team has signed off.
 - [ ] Tag others as reviewers as necessary.
 - [ ] If you have modified any links, be sure to add redirects to `assets` > `js` > `broken_redirect_list.js`
 
