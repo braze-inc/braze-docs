@@ -1,6 +1,6 @@
 ---
 nav_title: Overview
-article_title: Cloud Data Ingestion overview and best practices
+article_title: Cloud Data Ingestion Overview and Best Practices
 page_order: 0
 page_type: reference
 description: "This reference article provides an overview of Cloud Data Ingestion, best practices, and product limitations."
