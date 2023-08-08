@@ -14,7 +14,7 @@ channel:
 
 # Push Max
 
-> Learn about Push Max and how you can use this feature to potentially improve the deliverability of Android push notifications to Asia-Pacific markets.
+> Learn about Push Max and how you can use this feature to potentially improve the deliverability of Android push notifications to [Chinese OEM devices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/).
 
 ## What is Push Max?
 
@@ -25,7 +25,7 @@ Some Android devices manufactured by Chinese Original Equipment Manufacturers (O
 ## Availability
 
 - Available for Android push notifications only
-- Not supported for action-based or API-triggered campaigns or Canvases
+- Not supported for action-based or API-triggered messages
 
 ## Prerequisites
 
@@ -70,6 +70,8 @@ Push Max works best when [Intelligent Timing]({{site.baseurl}}/user_guide/sage_a
 
 ### Time to Live (TTL)
 
-Braze will track failed push notifications to Firebase Cloud Messaging (FCM) and retry the notification when the user is likely to receive it, for up to 28 days. You can configure this retry period for failed push notifications by changing the **Time to Live** in the **Settings** tab of the Compose step.
+Braze will track failed push notifications to Firebase Cloud Messaging (FCM) and retry the notification when the user is likely to receive it. This is known as Time to Live (TTL).
+
+By default, Time to Live is set to 28 days, which is the maximum. You can change the default TTL for all new Android push messages from **Settings** > **Workspace Settings** > **Push Time to Live (TTL)**, or you can configure this on a per message basis in the **Settings** tab when composing an Android push notification.
 
 ![Time to Live field set to 28 days.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:70%"}
