@@ -109,7 +109,7 @@ These in-app messages are accepted by both mobile apps and web applications.
       </ul>
     </td>
     <td>Enforced Device Orientation (Portrait or Landscape)</td>
-    <td>Big and bold! Use when you want to make sure users see your content, such as your most critical campaigns, important notifications, or massive promotions.</td>
+    <td>Big and bold! Use when you want to make sure users see your content, such as your most critical campaigns, important notifications, or massive promotions.<br><br>Note that on mobile devices, portrait and landscape messages won't display if the orientation of the device doesn't match the orientation of the message.</td>
   </tr>
   <tr>
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/modal'>Modal</a></td>
