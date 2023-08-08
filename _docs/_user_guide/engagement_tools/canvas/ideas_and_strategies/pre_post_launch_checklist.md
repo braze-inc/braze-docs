@@ -93,7 +93,7 @@ Additionally, check that the selected segment has users in it by reviewing the *
 Another apparent way to identify areas of adjustment for your Canvas can occur when there's a large drop-off from one Canvas step to the next. In this case, check that your audience filters and exception events don't have any misspellings or capitalization errors. And as always, check that your audience filters aren't so strict as to omit a majority of your users from entering the Canvas. 
 
 Next, it's important to identify these settings that can affect when and if messages are sent to your users:
-- [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/)
+- [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)
 - Quiet Hours
 - Delivery validations
 

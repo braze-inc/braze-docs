@@ -12,7 +12,7 @@ More to come! Check back later this month for more updates!
 
 ## Intelligence Suite
 
-Braze's [Intelligence Suite]({{site.baseurl}}/user_guide/intelligence/) helps you automate decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale. <br> <br> The Intelligence Suite comprises of three main features: [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), [Intelligent Channel]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/), and [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/).
+Braze's [Intelligence Suite]({{site.baseurl}}/user_guide/intelligence/) helps you automate decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale. <br> <br> The Intelligence Suite comprises of three main features: [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/), [Intelligent Channel]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/), and [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/).
 
 {% alert note %}
 The "Intelligence Suite" is a revision and grouping of features previously known as "Most Engaged Channel", "Intelligent Timing", and "multivariate and A/B testing".

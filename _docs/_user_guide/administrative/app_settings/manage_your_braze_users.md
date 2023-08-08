@@ -15,7 +15,7 @@ guide_featured_list:
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/
   fa_icon: fas fa-user-plus
 - name: Deleting Users
-  link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/
+  link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard//
   fa_icon: fas fa-user-times
 - name: Setting User Permissions
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/

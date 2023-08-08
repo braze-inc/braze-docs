@@ -15,7 +15,7 @@ Start [integrating Movable Ink]({{site.baseurl}}/partners/channel_extensions/cre
 
 ## Intelligent Timing
 
-When scheduling a campaign, you can use [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that an individual is most likely to engage.
+When scheduling a campaign, you can use [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that an individual is most likely to engage.
 
 Updates to this feature include:
 - **Clarification of Quiet Hours**: Quiet Hours functionality remains the same, but the UI has been adjusted for clarification.
