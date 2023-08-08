@@ -15,24 +15,43 @@ channel: email
 
 Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message. Email validation is performed when a user's email address has been updated or is being imported into Braze via API, CSV upload, or SDK, or modified in the dashboard. Note that your email addresses cannot include whitespaces. If you're using the API, whitespaces will result in a `400` error.
 
-Email addresses targeted via the Braze servers must be validated per [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) standards. Braze does not accept certain characters and recognizes them as invalid. For example, email addresses cannot start or end with any special characters, including apostrophes. If an email is bounced, Braze marks the email as invalid and the subscription status is not changed.  
+Braze does not accept certain characters and recognizes them as invalid. If an email is bounced, Braze marks the email as invalid and the subscription status is not changed.  
 
-{% details Unaccepted characters outside of RFC Standards %}
-- /
-- $
-- &#94;
-- (
-- )
-- {
-- }
-- [
-- ]
-- ,
+{% details Accepted characters %}
+- Letters (A-Z)
+- Numbers (0-9)
+- Symbols
+	- -
+	- &#94;
+	- +
+	- $
+	- '
+	- &
+	- #
+	- /
+	- %
+	- *
+	- =
+	- `
+	- |
+	- ~
+	- !
+	- ?
+	- . (only between letters other characters)
+{% enddetails %}
+
+{% details Unaccepted characters %}
+- Whitespaces (ASCII and Unicode)
+- Only allowing Unicode
+	- Letters
+	- Numbers
+	- Symbols
+	- Punctuation
 {% enddetails %}
 
 This validation is not to be confused with a validation service like Briteverify. This is a check to verify that the syntax of an email address is correct. One of the main drivers to use this validation process is to support international characters (i.e., UTF-8) in the local part of the email address.
 
-Email syntax validation looks at both the local and host part of an email address. The local part is anything before the asperand (@), and the host part is anything after the asperand. Note that this process is only validating the syntax of the email address and does not consider whether the domain has a valid MX server or if the user exists on the domain listed.
+Email syntax validation looks at both the local and host part of an email address. The local part is anything before the asperand (@), and the host part is anything after the asperand. For example, this local part of an email address may start and end with any of the allowed characters except for a period (.). Note that this process is only validating the syntax of the email address and does not consider whether the domain has a valid MX server or if the user exists on the domain listed.
 
 {% alert note %}
 If the domain part contains any non-[ASCII](https://en.wikipedia.org/wiki/ASCII) characters, it will need to be [Punycode-encoded](https://www.punycoder.com/) before being supplied to Braze.
