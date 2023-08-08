@@ -55,6 +55,27 @@ Use the following table to help monitor and understand your domain reputation le
 | Bad | Has a history of sendiing a high volume of spam. Emails from this domain will almost always be rejected at connection time or marked as spam. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+#### Authentication
+
+You can use the authentication dashboard to review the percentage of emails that have passed SPF (Sender Policy Framework), DKIM (DomainKeys Identified Mail), and DMARC (Domain-based Message Authentication, Reporting and Conformance).
+
+| Graph Type | Definition |
+| ----- | ---------- |
+| SPF | Shows the percentage of email that passed SPF versus all email from the domain that attempted SPF. This excludes any spoofed mail. |
+| DKIM | Shows the percentage of email that passed DKIM versus all email from the domain that attempted DKIM. |
+| DMARC | Shows the percentage of email that passed DMARC alignment versus all email received from the domain that passed either SPF or DKIM. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+#### Encryption
+
+Refer to this table to understand what percentage of your inbound and outbound traffic is encrypted.
+
+| Term | Definition |
+| ----- | ---------- |
+| TLS Inbound | Shows percentage of incoming mail (to Gmail) that passed TLS vs all mail received from that domain. |
+| TLS Outbound | Shows percentage of outgoing mail (from Gmail) that was accepted over TLS vs all mail sent to that domain. |
+{: .reset-td-br-1 .reset-td-br-2}
+
 For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps][6]. Be sure to also reference our [Email best practices][7] for things you should check for before sending an email campaign.
 
 [1]: https://www.gmail.com/postmaster/
