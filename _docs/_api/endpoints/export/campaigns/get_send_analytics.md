@@ -55,40 +55,47 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_serie
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-            "variation_name": (string) variation name,
-            "sent": (int) the number of sends,
-            "delivered": (int) the number of messages successfully delivered,
-            "undelivered": (int) the number of undelivered,
-            "delivery_failed": (int) the number of rejected,
-            "direct_opens": (int) the number of direct opens,
-            "total_opens": (int) the number of total opens,
-            "bounces": (int) the number of bounces,
-            "body_clicks": (int) the number of body clicks,
-            "revenue": (float) the number of dollars of revenue (USD),
-            "unique_recipients": (int) the number of unique recipients at the campaign-level,
-            "conversions": (int) the number of conversions,
-            "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
-            "conversions1": (optional, int) the number of conversions for the second conversion event,
-            "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
-            "conversions2": (optional, int) the number of conversions for the third conversion event,
-            "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
-            "conversions3": (optional, int) the number of conversions for the fourth conversion event,
-            "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
-          }
-        ]
-      },
-      "conversions_by_send_time": (optional, int),
-      "conversions1_by_send_time": (optional, int),
-      "conversions2_by_send_time": (optional, int),
-      "conversions3_by_send_time": (optional, int),
-      "conversions": (int),
-      "conversions1": (optional, int),
-      "conversions2": (optional, int),
-      "conversions3": (optional, int),
-      "unique_recipients": (int),
-      "revenue": (optional, float)
-    }
-  ],
+    "message": (required, string) the status of the export, returns 'success' when completed without errors,
+    "data" : [
+        {
+            "time": (string) the date as ISO 8601 date,
+            "messages": {
+                "ios_push" : [
+                    {
+                      "variation_name": (string) variation name,
+                      "sent": (int) the number of sends,
+                      "delivered": (int) the number of messages successfully delivered,
+                      "undelivered": (int) the number of undelivered,
+                      "delivery_failed": (int) the number of rejected,
+                      "direct_opens": (int) the number of direct opens,
+                      "total_opens": (int) the number of total opens,
+                      "bounces": (int) the number of bounces,
+                      "body_clicks": (int) the number of body clicks,
+                      "revenue": (float) the number of dollars of revenue (USD),
+                      "unique_recipients": (int) the number of unique recipients at the campaign-level,
+                      "conversions": (int) the number of conversions,
+                      "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
+                      "conversions1": (optional, int) the number of conversions for the second conversion event,
+                      "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
+                      "conversions2": (optional, int) the number of conversions for the third conversion event,
+                      "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
+                      "conversions3": (optional, int) the number of conversions for the fourth conversion event,
+                      "conversions3_by_send_time": (optional, int) the number of conversions for the fourth, conversion event attributed to the date the campaign was sent
+                      }
+                  ]
+            },
+        "conversions_by_send_time": (optional, int),
+        "conversions1_by_send_time": (optional, int),
+        "conversions2_by_send_time": (optional, int),
+        "conversions3_by_send_time": (optional, int),
+        "conversions": (int),
+        "conversions1": (optional, int),
+        "conversions2": (optional, int),
+        "conversions3": (optional, int),
+        "unique_recipients": (int),
+        "revenue": (optional, float)
+      }
+    ],
   "message": "success"
 }
 ```
