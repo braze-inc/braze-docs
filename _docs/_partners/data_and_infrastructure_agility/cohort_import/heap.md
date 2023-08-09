@@ -80,7 +80,7 @@ After configuring your integration's credentials, check all message engagement, 
 
 ![][5]{: style="max-width:90%;"}
 
-## Integration Details
+## Integration details
 
 The payload structure for exported data is the same as that of the payloads for custom HTTP connectors, which can be viewed in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).
 
