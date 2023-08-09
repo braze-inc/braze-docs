@@ -44,3 +44,5 @@ All events sent to RudderStack will include the user’s `external_user_id`. At 
 ## Integration details
 
 Braze supports exporting all data listed in the [Currents event glossaries]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) to RudderStack.
+
+The payload structure for exported data is the same as that of the payloads from custom HTTP connectors. For examples, view the [examples repo for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).
