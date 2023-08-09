@@ -654,6 +654,7 @@ validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/d
 validurls['/docs/developer_guide/platform_integration_guides/web/in_app_messaging/'] = '/docs/developer_guide/platform_integration_guides/web/in-app_messaging/integration/';
 validurls['/docs/developer_guide/platform_integration_guides/windows_universal/analytics/social_data_tracking/'] = '/docs/developer_guide/home';
 validurls['/docs/developer_guide/platform_integration_guides/windows_universal/push_notifications/integration/'] = '/docs/developer_guide/home';
+validurls['/docs/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/'] = '/docs/hidden/archive_docs/windows_universal/analytics/setting_user_ids/';
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/android_and_fireos/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/';
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/android_and_fireos/news_feed/'] = '/docs/developer_guide/platform_integration_guides/xamarin/news_feed/';
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/ios/analytics/'] = '/docs/developer_guide/platform_integration_guides/xamarin/analytics/';
