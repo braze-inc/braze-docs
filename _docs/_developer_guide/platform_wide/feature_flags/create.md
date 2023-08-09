@@ -37,6 +37,20 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ![A list of previously created feature flags on the Braze dashboard][1]{: style="max-width:75%"}
 
+### Access permissions
+
+Note that you must have the correct permissions in the Braze dashboard to view, create, or edit feature flags.
+
+To view the list of available feature flags, you must have the **Access Campaigns, Canvases, Cards, Feature Flags, ...** permission.
+
+In order to create or edit existing feature flags, you must have access to the  **Manage Feature Flags** permission.
+
+{% alert note %}
+Administrator users automatically have access to manage feature flags. For limited users, you can explicitly allow or restrict access to **Manage Feature Flags** at a workspace level. This is useful if certain users should only be able to modify feature flags for specific environments or business units.
+{% endalert %}
+
+![Manage Feature Flags permission][8]{: style="max-width:75%"}
+
 ### Create a new feature flag
 
 To create a new feature flag, click the **Create Feature Flag** button. Then, define your feature flag's [details](#details), [properties](#properties), user [targeting](#targeting), and [rollout traffic](#rollout-traffic).
@@ -647,6 +661,14 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 {% endtab %}
 {% endtabs %}
 
+## Segmenting with feature flags
+
+Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter][6]. For more information about filtering on segments, see [Creating a segment][7].
+
+{% alert note %}
+To prevent recursive segments, it is not possible to create a segment that references other feature flags.
+{% endalert %}
+
 ## Best practices
 
 ### Naming conventions
@@ -681,3 +703,6 @@ To help keep your code (and Braze dashboard) clean, remove permanent feature fla
 [3]: {% image_buster /assets/img/feature_flags/feature-flags-targeting.png %}
 [4]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.png %}
 [5]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/
+[6]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#feature-flag
+[7]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
+[8]: {% image_buster /assets/img/feature_flags/feature-flags-manage-permission.png %}
