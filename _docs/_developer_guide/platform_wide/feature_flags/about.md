@@ -85,7 +85,7 @@ With feature flags, we can let Braze power the content of our app navigation lin
 
 To remotely configure this feature, we'll create a new feature flag called `navigation_promo_link` and define the following initial properties:
 
-![Feature flag showing "link" and "text" properties pointing to a generic sales page][1]
+![Feature flag showing "link" and "text" properties pointing to a generic sales page][9]
 
 In our app, we'll use Braze's getter methods to retrieve this feature flag's properties and build the navigation links based on those values:
 
@@ -113,7 +113,7 @@ return (<>
 
 Now, the day before Thanksgiving, all we have to do is change those property values in the Braze dashboard:
 
-![Feature flag showing "link" and "text" properties pointing to a Thanksgiving sales page][2]
+![Feature flag showing "link" and "text" properties pointing to a Thanksgiving sales page][10]
 
 As a result, the next time someone loads the app they will see the new Thanksgiving deals.
 
@@ -125,7 +125,7 @@ Let's say that we're launching a new loyalty rewards program for our users. It c
 
 To effectively coordinate feature rollout and messaging, we'll create a new feature flag called `show_loyalty_program`. For our initial phased release, we'll let Canvas control when and for whom the feature flag is enabled. For now, we'll leave the rollout percentage at 0% and not select any target segments.
 
-![A feature flag named "show_loyalty_program"][3]
+![A feature flag named "show_loyalty_program"][11]
 
 Then, in Canvas Flow, we'll create a Canvas Feature Flag step that enables the `show_loyalty_program` feature flag for our "High Value Customers" segment:
 
@@ -160,7 +160,7 @@ In Canvas, we'll use an [Experiment Path][5] step and a Feature Flag step to set
 
 Now, 50% of users will see the old experience, while the other 50% see the new experience. We can then analyze the two steps to determine which checkout flow resulted in a higher conversion rate.
 
-![Canvas with an experiment path splitting traffic into two 50% groups][6]{: height="55%" width="55%"}
+![Canvas with an experiment path splitting traffic into two 50% groups][6]{: width="70%"}
 
 Once we determine our winner, we can stop this Canvas and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
 
