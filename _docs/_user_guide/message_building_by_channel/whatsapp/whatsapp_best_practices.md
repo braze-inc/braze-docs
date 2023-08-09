@@ -37,9 +37,9 @@ For information about opt-in requirements and helpful tips, see [Get Opt-in for 
 
 ### Follow messaging best practices
 
-Make your channel name reflect your brand so users recognize that the message is from you, not spam.
-Send a confirmation message to users after you collect their opt-in consent.
-Send messages during appropriate times.
+- Make your channel name reflect your brand so users recognize that the message is from you, not spam.
+- Send a confirmation message to users after you collect their opt-in consent.
+- Send messages during appropriate times.
 
 ### Give customers the option to opt-out
 
