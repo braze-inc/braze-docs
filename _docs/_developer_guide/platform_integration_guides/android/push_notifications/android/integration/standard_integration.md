@@ -201,18 +201,18 @@ Braze's notification code also uses `BrazeFirebaseMessagingService` to handle op
 Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the preceding integration.
 {% endalert %}
 
-##### Using a fallback Firebase Messaging Service
+#### Using a fallback Firebase Messaging Service
 
 If you have another Firebase Messaging Service you would also like to use, you can also specify a fallback Firebase Messaging Service to call if your application receives a push that isn't from Braze.
 
-In your `braze.xml`, you can specify:
+In your `braze.xml`, specify:
 
 ```xml
 <bool name="com_braze_fallback_firebase_cloud_messaging_service_enabled">true</bool>
 <string name="com_braze_fallback_firebase_cloud_messaging_service_classpath">com.company.OurFirebaseMessagingService</string>
 ```
 
-or set via [runtime configuration][65]:
+or set via [runtime configuration:][65]
 
 {% tabs %}
 {% tab JAVA %}
@@ -239,7 +239,7 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-##### Using your own Firebase Messaging Service
+#### Using your own Firebase Messaging Service
 
 If you already have a Firebase Messaging Service registered, you can pass [`RemoteMessage`][75] objects to Braze via [`BrazeFirebaseMessagingService.handleBrazeRemoteMessage()`][74]. This method will only display a notification if the [`RemoteMessage`][75] object originated from Braze and will safely ignore if not.
 
@@ -480,11 +480,9 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 
 This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint][66].
 
-## Customizing your integration
+## Customizing notification display
 
-### Custom displaying notifications
-
-#### Step 1: Create your custom notification factory
+### Step 1: Create your custom notification factory
 
 In some scenarios, you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IBrazeNotificationFactory`][6] to create notification objects for display by Braze.
 
@@ -530,7 +528,7 @@ You can return `null` from your custom `createNotification()` method to not show
 For documentation on Braze push data keys, refer to the [Android SDK](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html).
 {% endalert %}
 
-#### Step 2: Set your custom notification factory
+### Step 2: Set your custom notification factory
 
 To instruct Braze to use your custom notification factory, use the `setCustomBrazeNotificationFactory` method to set your [`IBrazeNotificationFactory`][6]:
 
