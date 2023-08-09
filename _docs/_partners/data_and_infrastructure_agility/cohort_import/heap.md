@@ -60,7 +60,7 @@ To use your Heap segment, create a Braze campaign or Canvas and select the segme
 
 ## Data export integration
 
-Use Braze Currents to automatically send engagement events (e.g email sent, push sent) from Braze to Heap for analysis. 
+Use Braze Currents to automatically send engagement events (e.g., email sent, push sent) from Braze to Heap for analysis.
 
 ### Step 1: Get Heap credentials
 
