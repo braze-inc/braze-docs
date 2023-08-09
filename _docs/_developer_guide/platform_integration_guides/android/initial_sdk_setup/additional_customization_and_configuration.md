@@ -16,7 +16,7 @@ description: "This reference article covers additional customization and configu
 ## Using R8/ProGuard with Braze
 [Code shrinking][50] configuration is automatically included with your Braze integration.
 
-Client apps that obfuscate Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your ProGuard file:
+Client apps that obfuscate Braze code must store release mapping files for Braze to interpret stack traces. If you want to continue to keep all Braze code, add the following to your ProGuard file:
 
 ```
 -keep class bo.app.** { *; }
@@ -25,7 +25,9 @@ Client apps that obfuscate Braze code must store release mapping files for Braze
 
 ## Enabling verbose logging {#android-verbose-logging}
 
-Verbose logs from the Braze SDK are essential to a fast turnaround on support issues. These logs should not be modified for clarity; long log files are preferred. Verbose logging is only intended for development environments and should not be enabled in a released application. Logs sent to our support team should begin as soon as the application is launched and end well after the observed issue occurs.
+Verbose logs from the Braze SDK are essential to a fast turnaround on support issues. These logs should not be modified for clarity; long log files are preferred. Verbose logging is only intended for development environments and should not be enabled in a released application. Verbose logging won't send any extra or new user information to Braze.
+
+Logs sent to our support team should begin as soon as the application is launched and end well after the observed issue occurs.
 
 To enable verbose logging on the Braze Android SDK:
 
@@ -50,6 +52,8 @@ To enable verbose logging in the `braze.xml`:
 ```
 <integer name="com_braze_logger_initial_log_level">2</integer>
 ```
+
+Note that Braze log level integer constants correspond to Android log level integer constants as defined in [`android.util.log`][71].
 
 {% alert important %}
 Verbose logs should be enabled as early as possible in your `Application.onCreate()`, before any other calls to the SDK to guarantee as much logging as possible.
@@ -109,3 +113,4 @@ See the [runtime configuration][69] documentation for setting an API key in code
 [54]: https://developer.android.com/reference/android/util/Log.html
 [69]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/
 [70]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.support/-braze-logger/log-level.html
+[71]: https://developer.android.com/reference/android/util/Log

@@ -4,7 +4,7 @@ article_title: Filter Options Changed
 page_order: 0
 
 page_type: solution
-description: "This help article covers what it means when your filter options for your Custom Attributes have changed."
+description: "This help article covers what it means when your filter options for your custom attributes have changed."
 tool: Segments
 ---
 

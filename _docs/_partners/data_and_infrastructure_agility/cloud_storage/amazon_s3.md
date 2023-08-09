@@ -26,7 +26,7 @@ The Braze and Amazon S3 integration leverages [Currents]({{site.baseurl}}/user_g
 
 #### Create a new S3 bucket
 
-To create a bucket for your app, open the [Amazon S3 console](https://console.aws.amazon.com/s3/) and follow the instructions to **Sign in** or **Create an Account with AWS**. Once signed in, select **S3** from the **Storage & Content Delivery** category. Select **Create Bucket** on the next screen. You'll be prompted to create your bucket and select a region.
+To create a bucket for your app, open the [Amazon S3 console](https://console.aws.amazon.com/s3/) and follow the instructions to **Sign in** or **Create an Account with AWS**. After signing in, select **S3** from the **Storage & Content Delivery** category. Select **Create Bucket** on the next screen. You'll be prompted to create your bucket and select a region.
 
 ## Integration
 
@@ -147,7 +147,7 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and cli
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-On the AWS Credentials page, make sure the **AWS Secret Access Key** radio button is selected, then input your AWS access ID, AWS secret access key, and AWS S3 bucket name in the designated fields. When inputting your secret key, click **Test Credentials** first to ensure your credentials work, then click **Save** once successful.
+On the AWS Credentials page, make sure the **AWS Secret Access Key** radio button is selected, then input your AWS access ID, AWS secret access key, and AWS S3 bucket name in the designated fields. When inputting your secret key, click **Test Credentials** first to ensure your credentials work, then click **Save** when successful.
 
 ![]({{site.baseurl}}/assets/img/s3_tech_partners.png)
 
@@ -298,7 +298,7 @@ In Braze, navigate to the **Technology Partners** page under **Integrations** an
 
 ![]({{site.baseurl}}/assets/img/data-export-role-arn.png)
 
-On the **AWS Credentials** page, make sure the **AWS Role ARN** radio button is selected, then input your role ARN and AWS S3 bucket name in the designated fields. Click **Test Credentials** first to ensure your credentials work properly, then click **Save** once successful.
+On the **AWS Credentials** page, make sure the **AWS Role ARN** radio button is selected, then input your role ARN and AWS S3 bucket name in the designated fields. Click **Test Credentials** first to ensure your credentials work properly, then click **Save** when successful.
 
 {% alert tip %}
 You can always retrieve new credentials by navigating to your user, and clicking **Create Access Key** on the **Security Credentials** tab within the AWS Console.

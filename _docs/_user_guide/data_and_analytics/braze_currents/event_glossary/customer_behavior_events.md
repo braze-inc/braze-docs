@@ -40,7 +40,7 @@ Certain events return a `platform` value that specifies the platform of the user
 {% enddetails %}
 
 {% alert important %}
-Note that these schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage), and are not available for Segment.io connectors. For schema that apply to other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB. 
+Note that these schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage), and are not available for Segment connectors. For schema that apply to other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB. 
 
 {% endalert %}
 {% api %}
@@ -148,10 +148,10 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "os_version": (optional, string) os version of the device used for the action,
   "device_model": (optional, string) hardware model of the device,
   "device_id": (optional, string) id of the device on which the session occurred,
-  "gender": (optional, string) gender of the user,
-  "country": (optional, string) country of the user,
-  "language": (optional, string) language of the user,
-  "sdk_version": (optional, string) version of the Braze SDK in use during the session
+  "gender": (optional, string) gender of the user (This field has been deprecated and will always return null),
+  "country": (optional, string) country of the user (This field has been deprecated and will always return null),
+  "language": (optional, string) language of the user (This field has been deprecated and will always return null),
+  "sdk_version": (optional, string) version of the Braze SDK in use during the session (This field has been deprecated and will always return null)
 }
 ```
 {% endapi %}
@@ -178,6 +178,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (required, string) id for the app on which the user action occurred,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "session_id": (required, string) id of the session,
   "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (optional, string) os version of the device used for the action,
   "device_model": (optional, string) hardware model of the device,
@@ -330,7 +331,7 @@ This user event occurs every time a new user is created within their workspace. 
   "app_group_id": (required, string) AppGroup API id
   "user_id": (required, string) Braze user id of the user,
   "external_user_id": (optional, string) External ID of the user,
-  "time": (optional, int) UTC time of the event in milliseconds since the epoch,
+  "time": (required, int) UTC time of the event in milliseconds since the epoch,
   "random_bucket_number": (required, int) new random bucket number
   "prev_random_bucket_number":  (optional, int) old random bucket number, optional
 }

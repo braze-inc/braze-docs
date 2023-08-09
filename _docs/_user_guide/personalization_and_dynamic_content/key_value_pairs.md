@@ -134,7 +134,7 @@ Android push notifications can be further customized with FCM message options. T
 
 A silent push notification is a push notification containing no alert message or sound, used to update your app's interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power Braze's [uninstall tracking][4].
 
-Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. Once you compose your [iOS][2] or [Android][13] silent push notification, ensure that you only target a test user by filtering on [external user ID][14] or [email address][15].
+Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. After you compose your [iOS][2] or [Android][13] silent push notification, ensure that you only target a test user by filtering on [external user ID][14] or [email address][15].
 
 Upon campaign launch, you should check that you have not received any visible push notification on your test device.
 

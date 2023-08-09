@@ -31,7 +31,7 @@ Add a reference to `BrazeSDK.brs` in your main scene using the following `script
 
 Within `main.brs`, set the Braze configuration on the global node:
 
-```
+```brightscript
 globalNode = screen.getGlobalNode()
 config = {}
 config_fields = BrazeConstants().BRAZE_CONFIG_FIELDS
@@ -48,7 +48,7 @@ You can find your [SDK endpoint]({{site.baseurl}}/user_guide/administrative/acce
 
 Initialize the Braze instance:
 
-```
+```brightscript
 m.BrazeTask = createObject("roSGNode", "BrazeTask")
 m.Braze = getBrazeInstance(m.BrazeTask)
 ```

@@ -448,7 +448,7 @@ hide_toc: true
 
                 <label for="doc_email" id="doc_email_label">Email address</label>
                 <div class="input-group">
-                  <input type="email" class="form-control email-input" id="doc_email" maxlength="80" name="Email" placeholder="e.g. firstname.lastname@braze.com" required="required" value="" />
+                  <input type="email" class="form-control email-input" id="doc_email" maxlength="80" name="Email" placeholder="e.g., firstname.lastname@braze.com" required="required" value="" />
                   <i class="fa-solid fa-envelope email-icon"></i>
                   </div>
               </div>
@@ -475,7 +475,7 @@ hide_toc: true
 
               <div class="form-group" id="doc_request_url">
                 <label for="doc_request" id="doc_request_url_label">URL</label>
-                <input type="url" name="Request_Url" id="doc_request_url" maxlength="180" required="required" value="" placeholder="e.g. https://www.braze.com/docs/" class="form-control" />
+                <input type="url" name="Request_Url" id="doc_request_url" maxlength="180" required="required" value="" placeholder="e.g., https://www.braze.com/docs/" class="form-control" />
               </div>
 
               <div class="form-group">
@@ -497,7 +497,7 @@ hide_toc: true
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="Y" id="doc_verify" name="Verified">
                 <label class="form-check-label" for="doc_verify" id="doc_verify_label">
-                <span></span> I verify this information to be correct
+                <span></span> I have verified this information with the respective product team
               </label>
               </div>
               </div>

@@ -94,7 +94,7 @@ All `Card` data model objects offer the following analytics methods for logging 
 
 ## Custom Content Cards {#fully-custom-content-card-display-for-android}
 
-If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's Content Cards models, you will need to subscribe to Content Card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you want to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's Content Cards models, you need to subscribe to Content Card updates and use the resulting model data to populate your views. You also need to log analytics on the model objects as users interact with your views.
 
 ### Part 1: Subscribing to Content Card updates
 
@@ -112,7 +112,7 @@ private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscribe
 {% tab KOTLIN %}
 
 ```kotlin
-private var mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+private var contentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
 ```
 
 {% endtab %}
@@ -136,7 +136,7 @@ mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>(
     }
 };
 Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
-Braze.getInstance(context).requestContentCardsRefresh(true);
+Braze.getInstance(context).requestContentCardsRefresh();
 ```
 
 {% endtab %}
@@ -144,15 +144,15 @@ Braze.getInstance(context).requestContentCardsRefresh(true);
 
 ```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
-mContentCardsUpdatedSubscriber = IEventSubscriber { event ->
+Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+contentCardsUpdatedSubscriber = IEventSubscriber { event ->
   // List of all Content Cards
   val allCards = event.allCards
 
   // Your logic below
 }
-Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
-Braze.getInstance(context).requestContentCardsRefresh(true)
+Braze.getInstance(context).subscribeToContentCardsUpdates(contentCardsUpdatedSubscriber)
+Braze.getInstance(context).requestContentCardsRefresh()
 ```
 
 {% endtab %}
@@ -171,7 +171,7 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 ```
 
 {% endtab %}

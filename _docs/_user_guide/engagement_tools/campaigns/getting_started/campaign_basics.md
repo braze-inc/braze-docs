@@ -34,7 +34,7 @@ Never underestimate the power of the name. Braze is built for collaboration, so 
 
 Users can enter your campaign in three ways: at a set date and time (scheduled), when they perform a specific action (action-based), or when they do something that triggers an API call (API-triggered). 
 
-Scheduled delivery involves adjusting your campaigns to send at a specific time, and optionally, for a specified cadence. Action-based campaigns respond to specific customer behaviors as they happen in real-time. This can include making a purchase or interacting with another campaign. API-triggered campaigns can be set up to determine key customer actions on your platform that, once achieved, will trigger an API call to Braze and send your campaigns.
+Scheduled delivery involves adjusting your campaigns to send at a specific time, and optionally, for a specified cadence. Action-based campaigns respond to specific customer behaviors as they happen in real-time. This can include making a purchase or interacting with another campaign. API-triggered campaigns can be set up to determine key customer actions on your platform that, when achieved, will trigger an API call to Braze and send your campaigns.
 
 ### The "who": Select an entry audience
 

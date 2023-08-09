@@ -55,7 +55,7 @@ Using a control group when determining winner by Opens or Clicks is not recommen
 
 #### Control groups with Intelligent Selection
 
-The size of the control group for a campaign with [Intelligent Selection][1] is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20% and the variants are split evenly across the remaining 80%. However, if you have enough variants that each variant is sent to less than 20% of users, then the control group must become smaller. Once Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
+The size of the control group for a campaign with [Intelligent Selection][1] is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20% and the variants are split evenly across the remaining 80%. However, if you have enough variants that each variant is sent to less than 20% of users, then the control group must become smaller. When Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
 
 ## Step 5: Designate a conversion event (optional)
 

@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: Frequently Asked Questions
-page_order: 40
+page_order: 50
 description: "This page provides answers to frequently asked questions about feature flags."
 tool: Feature Flags
 platform:
@@ -24,7 +24,7 @@ Braze feature flags are currently in an open beta. [Click here](https://dashboar
 
 Braze supports Feature Flags on iOS, Android, and Web platforms with the following SDK version requirements:
 
-{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 %}
+{% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
 Do you need support on other platforms? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 
@@ -49,7 +49,7 @@ else {
 
 Marketing teams can use feature flags to coordinate product announcements (such as product launch emails) when a feature is only enabled for a small percentage of users.
 
-<!-- TO BE ADDED ONCE CANVAS FEATURE FLAG STEP IS COMPLETE: For example, with Braze feature flags you can rollout a new Customer Loyalty program to 10% of users in your app, and send an email, push, or other messaging to that same 10% of enabled users using the Canvas Feature Flag step. -->
+For example, with Braze feature flags you can rollout a new Customer Loyalty program to 10% of users in your app, and send an email, push, or other messaging to that same 10% of enabled users using the Canvas Feature Flag step. 
 
 ### How can feature flags benefit Product teams? {#product-teams}
 
@@ -57,9 +57,9 @@ Product teams can use feature flags to perform gradual rollouts or soft launches
 
 Product teams can use [feature flag properties][properties] to remotely populate content in an app, such as deep links, text, imagery or other dynamic content.
 
-<!-- TO BE ADDED ONCE CANVAS FEATURE FLAG STEP IS COMPLETE: Using the Canvas Feature Flag step, Product teams can also run an A/B split test to measure how a new feature impacts conversion rates compared to users with the feature disabled. -->
+Using the Canvas Feature Flag step, Product teams can also run an A/B split test to measure how a new feature impacts conversion rates compared to users with the feature disabled. 
 
-### How can feature flags benefit Engineering teams? {#engineering-teams}
+### How can feature flags benefit engineering teams? {#engineering-teams}
 
 Engineering teams can use feature flags to reduce the risk inherent in launching new features, and avoid rushing to deploy code fixes in the middle of the night.
 
@@ -99,7 +99,7 @@ Keep in mind that good data practices recommend not refreshing feature flags too
 
 ### Are feature flags available while a user is offline? {#offline}
 
-Yes, once feature flags are refreshed they are stored locally on the user's device and can be accessed while offline.
+Yes, after feature flags are refreshed, they are stored locally on the user's device and can be accessed while offline.
 
 ### What happens if feature flags are refreshed mid-session? {#listen-for-updates}
 
@@ -107,7 +107,7 @@ Feature flags may be refreshed mid-session. There are scenarios where you may wa
 
 To control this, [listen for updates][listen-for-updates] to feature flags and make the determination to re-render your app or not based on which feature flags have changed. 
 
-## Questions?
+## Additional questions?
 
 Have questions or feedback? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 

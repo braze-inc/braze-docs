@@ -22,6 +22,12 @@ Live Activities are currently in early access. Contact your Braze account manage
 
 Live Activities are currently a feature specific to iOS. The Live Activities article covers the [prerequisites][2] for managing Live Activities through the Braze Swift SDK.
 
+### Do React Native apps support Live Activities?
+
+Yes, React Native SDK 3.0.0+ supports Live Activities via the Braze Swift SDK. That is, you need to write React Native iOS code directly on top of the Braze Swift SDK. 
+
+There isn't a React Native-specific JavaScript convenience API for Live Activities because the Live Activities features provided by Apple use languages untranslatable in JavaScript (e.g., Swift concurrency, generics, SwiftUI).
+
 ### Does Braze support Live Activities as a campaign or Canvas step?
 
 No, this is not currently supported.
@@ -36,7 +42,7 @@ Live Activities and push notifications occupy different screen real estate and w
 
 ### If Live Activities leverage push message functionality, do push notifications need to be enabled to receive Live Activities?
 
-While Live Activities rely on push notifications for updates, they are controlled by different user settings. A user can opt into Live Activities but out of push notifications, and vice versa. 
+While Live Activities rely on push notifications for updates, they are controlled by different user settings. A user can opt into Live Activities but out of push notifications, and the other way around. 
 
 Apple requires that the user initiates the Live Activity through some action in your app, for example, by placing an order. This Live Activity token expires after eight hours. 
 
@@ -57,6 +63,11 @@ The API keys you use need to be given the correct permissions to access the diff
 ### Does the `messages/send` endpoint share rate limits with the `messages/live_activity/update` endpoint? 
 
 The `messages/live_activity/update` endpoint has a separate rate limit from any other Braze endpoint. By default, the rate limit for the `messages/live_activity/update` endpoint is 250,000 requests per hour per workspace. See the [rate limit article][5] for more information.
+
+### What other things should I watch out for during troubleshooting?
+
+- Check that you are using a `.p8` key for authentication.
+- Check that your push provisioning profile matches the environment you’re testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production Apple Push Notification service (APNs) environment. Using a development certificate for a production app or a production certificate for a development app will not work.
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/

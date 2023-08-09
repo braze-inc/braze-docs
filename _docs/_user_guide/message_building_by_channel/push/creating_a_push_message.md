@@ -25,7 +25,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 
 **Steps:**
 
-1. Go to **Messaging** > **Campaigns** and click <i class=“fas fa-plus”></i> **Create Campaign**.
+1. Go to **Messaging** > **Campaigns** and click **Create Campaign**.
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
 {% endalert %}
@@ -92,7 +92,9 @@ Add copy in multiple languages using the **Add Languages** button. We recommend 
 
 #### Title and body
 
-Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text. To make your push personalized and targeted, you can include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
+Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text. To add a headline to an iOS push notification, use the **Title** field.
+
+To make your push personalized and targeted, you can include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
 
 {% alert tip %}
 Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.

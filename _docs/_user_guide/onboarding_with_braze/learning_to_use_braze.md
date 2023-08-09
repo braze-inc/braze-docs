@@ -16,7 +16,7 @@ Braze is a complex tool that can allow you to send an amazing range of campaigns
 Because of Braze's beautiful complexity, we recommend the several reading paths that will enable you to best utilize our platform to your advantage. There's no need to follow these exactly—cater them to your needs! These reading paths assume that you've already completed your integration and set up for your messaging channels, so the readings in the [Onboarding with Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/) section aren't included.
 
 {% alert tip %}
-Don't forget that you can always access and take [Braze Learning courses](https://learning.braze.com) once you have access to the Braze platform. We highly recommend this in conjunction with these reading paths.
+Don't forget that you can always access and take [Braze Learning courses](https://learning.braze.com) after you have access to the Braze platform. We highly recommend this in conjunction with these reading paths.
 {% endalert %}
 
 Choose from the following paths to fit your needs and get reading!
@@ -48,7 +48,7 @@ Learn how to manage user access for your organization, best practices for dashbo
 | Order | Article | What You'll Learn |
 |---|---|---|
 | 1 | [Braze instances]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) | The URLs used to access Braze. |
-| 2 | [Security settings]({{site.baseurl}}/user_guide/administrative/company_settings/security_settings/) | The available security settings you can manage for your company users, such as authentication and IP allowlisting. |
+| 2 | [Security settings]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/) | The available security settings you can manage for your company users, such as authentication and IP allowlisting. |
 | 3 | [SAML and single-sign on]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/) | How to set up single sign-on for supported security providers. |
 | 4 | [Braze user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/) | Learn about and set Braze account user permissions for your company users. |
 | 5 | [Adding Braze users]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/adding_users_to_your_dashboard/) | Add company users to the company Braze account. |
@@ -96,7 +96,7 @@ Some messaging channels, like Content Cards and SMS, are purchasable upgrades. I
 ### Email
 
 {% alert checkpoint %}
-Before proceeding with this learning path, make sure you've already followed the articles in our [Email Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section. Remember, [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is required! We also highly recommend setting up [SSL]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/) to allow for open and click tracking, and to make sure your images appear as they should.
+Before proceeding with this learning path, make sure you've already followed the articles in our [Email Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section. Remember, [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is required! We also highly recommend setting up [SSL]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl/) to allow for open and click tracking, and to make sure your images appear as they should.
 {% endalert %}
 
 | Order | Article | What You'll Learn |

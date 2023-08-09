@@ -39,7 +39,7 @@ Results from each report can be generated once a day. If you run the same report
 
 ### Report timeout
 
-Reports that take longer than 6 minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelishood of timing out. If this happens, try running the report again.
+Reports that take longer than 6 minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
 
 If a report times out or runs into errors even after retrying, please contact support.
 
@@ -123,16 +123,18 @@ Results, and exports of results, are tables that can contain up to 1,000 rows. F
 
 ## Monitoring your Query Builder usage
 
-Each Braze workspace has 2,000 Query Builder credits available per month. Credits are used whenever you run a query or preview a table. Credit usage corresponds to the run time of your queries. 
+Each Braze workspace has 5 Snowflake credits available per month. A small portion of a Snowflake credit is used whenever you run a query or preview a table.
 
-Credit usage is correlated to the run time of your SQL query. The longer the run time is, the more credits a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
+Credit usage is correlated to the run time of your SQL query. The longer the run time is, the higher the portion of a Snowflake credit a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
 
 {% alert note %}
 The ability to track credit usage for each query is coming soon.
 {% endalert %}
 
-Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits will reset to 2,000 on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
+Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
 
-![Query Builder showing the amount of credits used in the current month.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%"}
+![Query Builder showing the amount of credits used in the current month.][1]{: style="max-width:60%;"}
 
 When you reach the credit cap, you cannot run queries, but you can create, edit, and save SQL reports. If you want to purchase more Query Builder credits, please get in touch with your account manager.
+
+[1]: {% image_buster /assets/img_archive/query_builder_credits.png %}

@@ -22,7 +22,7 @@ You can use the **Media Library** to:
 
 * Upload multiple images at one time
 * Upload Virtual Contact Files (.vcf)
-* Upload a folder with your images (max 50 images)
+* Upload a folder with your images (maximum 50 images)
 * [Generate an image using AI](#generate-ai) and store it in the Media Library
 * Crop an existing image to create the right ratio for your messages
 * Add tags or teams to help further organize your images
@@ -148,7 +148,7 @@ You can generate images for your Media Library using [DALL·E 2](https://openai.
 
 ![AI image generator modal in the Media Library.][6]{: style="max-width:75%"}
 
-Between you and Braze, any images generated using DALL·E 2 is your intellectual property. Braze will not assert any claims of copyright ownership on such images and makes no warranty of any kind with respect to any AI-generated content or images.
+Between you and Braze, any images generated using DALL·E 2 is your intellectual property. Braze will not assert any claims of copyright ownership on such images and makes no warranty of any kind with respect to any AI-generated content or images. In order to generate images, Braze will send your query to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days.
 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}
 [1.5]: {% image_buster /assets/img_archive/media_library_composers.png %}

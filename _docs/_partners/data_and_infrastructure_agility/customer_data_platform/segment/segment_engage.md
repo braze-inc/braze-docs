@@ -1,29 +1,29 @@
 ---
-nav_title: Segment.io Engage
-article_title: Segment.io Engage
+nav_title: Segment Engage
+article_title: Segment Engage
 page_order: 1.3
 alias: /partners/segment_personas/
 alias: /partners/segment_engage/
 alias: /partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/
 
-description: "This reference article outlines the partnership between Braze and Segment.io, a customer data platform that collects and routes information between sources in your marketing stack."
+description: "This reference article outlines the partnership between Braze and Segment, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
 search_tag: Partner
 
 ---
 
-# Segment.io Engage
+# Segment Engage
 
-> [Segment.io](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. This reference article will give an overview of the connection between [Braze and Segment.io Engage](https://segment.com/docs/destinations/braze/#Engage), as well as describe requirements and processes for proper implementation and usage.
+> [Segment](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. This reference article will give an overview of the connection between [Braze and Segment Engage](https://segment.com/docs/destinations/braze/#Engage), as well as describe requirements and processes for proper implementation and usage.
 
-The Braze and Segment.io integration allows you to use [Engage](https://segment.com/docs/engage/), Segment.io’s built-in audience builder, to create segments of users based on data you have already collected across various sources. These audiences will then be synced to Braze as a cohort, or denoted on the user profile through [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) or [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) that can be used to create Braze segments to use in campaign and Canvas retargeting.
+The Braze and Segment integration allows you to use [Engage](https://segment.com/docs/engage/), Segment’s built-in audience builder, to create segments of users based on data you have already collected across various sources. These audiences will then be synced to Braze as a cohort, or denoted on the user profile through [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) or [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) that can be used to create Braze segments to use in campaign and Canvas retargeting.
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Segment.io account | A [Segment.io account](https://app.segment.com/login) is required to take advantage of this partnership. |
-| Braze Cloud destination | You must have already [set up Braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) in your Segment.io integration.<br><br>This includes providing the correct Braze data center and REST API key in your [connection settings]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
+| Segment account | A [Segment account](https://app.segment.com/login) is required to take advantage of this partnership. |
+| Braze Cloud destination | You must have already [set up Braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) in your Segment integration.<br><br>This includes providing the correct Braze data center and REST API key in your [connection settings]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
 | Braze data import key | To sync Engage audiences to Braze as cohorts, you must generate a Data Import key.<br><br>Cohort import is in early access, contact your Braze customer success manager to get access to this feature. |
 
 {: .reset-td-br-1 .reset-td-br-2}
@@ -35,10 +35,10 @@ The Cohorts Destination is currently in early access. To get access to this feat
 {% endalert %}
 
 ### Step 1: Create an Engage audience
-1. In Segment.io, navigate to the **Audiences** tab in Engage, and click **New**.
+1. In Segment, navigate to the **Audiences** tab in Engage, and click **New**.
 2. Create your audience. A lightning bolt in the top corner of the page will indicate if the audience updates in real-time.
 3. Next, select Braze as your destination.
-4. Preview your audience by clicking **Review & Create**. By default, Segment.io queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck **Historical Backfill**.
+4. Preview your audience by clicking **Review & Create**. By default, Segment queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck **Historical Backfill**.
 
 ### Step 2: Capture your cohort data import key
 
@@ -48,24 +48,24 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and sel
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-Here, you will find your REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.
+Here, you will find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.
 
 ### Step 3: Connect the Braze Cohorts Destination
 Follow [Segment’s instructions](https://segment.com/docs/connections/destinations/catalog/actions-braze-cohorts/#getting-started) on setting up the Cohorts Destination to sync your Engage audiences as cohorts to Braze.
 
 ### Step 4: Create a Braze segment from the Engage audience
-In Braze, navigate to **Segments**, create a new segment, and select **Segment Cohorts** as your filter. From here, you can choose which Segment cohort you wish to include. Once created, you can select your Segment cohort segment as an audience filter when creating a campaign or Canvas.
+In Braze, navigate to **Segments**, create a new segment, and select **Segment Cohorts** as your filter. From here, you can choose which Segment cohort you wish to include. After the Segment cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
 ![][1]
 
 ## Cloud Mode integration
 
-### Step 1: Create a Segment.io computed trait or audience
+### Step 1: Create a Segment computed trait or audience
 
-1. In Segment.io, navigate to the **Computed Traits** or **Audiences** tab in **Engage**, and click **New**.
+1. In Segment, navigate to the **Computed Traits** or **Audiences** tab in **Engage**, and click **New**.
 2. Create your computed trait or audience. A lightning bolt in the top corner of the page will indicate if the computation updates in real-time.
 3. Next, select **Braze** as your destination. 
-4. Preview your audience by clicking  **Review & Create**. By default, Segment.io queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck **Historical Backfill**.
+4. Preview your audience by clicking  **Review & Create**. By default, Segment queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck **Historical Backfill**.
 5. In the computed trait or audience settings, adjust the connection settings based on how you would like your data sent to Braze.
 
 #### Computed traits and audiences
@@ -101,9 +101,9 @@ Continuing the previous example, if a user has a computed trait for "Last Produc
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Segment.io users in Braze
+### Step 2: Segment users in Braze
 
-In Braze, to create a segment of these users, navigate to **Segment.ios** under **Engagement**, create a new segment, and name your segment. Next, based on which call you used:
+In Braze, to create a segment of these users, navigate to **Segments** under **Engagement**, create a new segment, and name your segment. Next, based on which call you used:
 - **Identify**: Select **custom attribute** as the filter and locate your custom attribute. Next, use the "matches regex" option (trait) or the "equals" option (audience) and input the appropriate variable.
 - **Track**: Select **custom event** as the filter and locate your custom event. Next, use the "more than", "less than", or "exactly" option, and insert your desired value. This will depend on how you want to define your segment.
 
@@ -111,11 +111,11 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 ## Sync time
 
-Though the default setting for the Braze to Segment.io Engage connection is `Realtime`, there are some filters that will disqualify the persona from syncing in real-time, including some time-based filters which restrict your audience's size at the time of message send.
+Though the default setting for the Braze to Segment Engage connection is `Realtime`, there are some filters that will disqualify the persona from syncing in real-time, including some time-based filters which restrict your audience's size at the time of message send.
 
-## Segment.io debugger testing
+## Segment debugger testing
 
-Segment.io's dashboard provides a "Debugger" feature that allows customers to test whether data from a "Source" is transferring to a "Destination" as expected.
+Segment's dashboard provides a "Debugger" feature that allows customers to test whether data from a "Source" is transferring to a "Destination" as expected.
 
 This feature connects to Braze's [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), meaning that it can only be used for identified users (users who already have a user ID for their Braze user profile).
 

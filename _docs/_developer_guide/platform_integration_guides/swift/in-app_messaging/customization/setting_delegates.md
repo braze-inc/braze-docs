@@ -109,7 +109,7 @@ Note that the device orientation must also be supported by the in-app message's 
 ![Supported orientations in Xcode.]({% image_buster /assets/img/supported_interface_orientations_xcode.png %})
 
 {% alert note %}
-The orientation is applied only for the presentation of the message. Once the device changes orientation, the message view adopts one of the orientation it’s support. On smaller devices (iPhones, iPod Touch), setting a landscape orientation for a modal or full in-app message may lead to truncated content.
+The orientation is applied only for the presentation of the message. After the device changes orientation, the message view adopts one of the orientations it supports. On smaller devices (iPhones, iPod Touch), setting a landscape orientation for a modal or full in-app message may lead to truncated content.
 {% endalert %}
 
 ### Modifying message orientations

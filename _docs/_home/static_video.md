@@ -11,7 +11,7 @@ noindex: true
 
 Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
-This best practice guide will help you to understand exactly what Braze considers to be a custom event vs. a custom attribute.
+This best practice guide will help you to understand exactly what Braze considers to be a custom event versus a custom attribute.
 
 ## Automatically Collected Data
 
@@ -117,7 +117,7 @@ All User Profile data (custom events, custom attribute, custom data) is stored a
 ### Custom Attribute Data Types
 Custom attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
 
-#### Strings (Alpha-Numeric Characters)
+#### Strings (Alphanumeric Characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. Strings attributes can be up to 255 characters long.
 
 | Segmentation Options | Dropdown Filter | Input Options |

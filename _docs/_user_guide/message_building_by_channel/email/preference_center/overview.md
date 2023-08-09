@@ -70,7 +70,7 @@ You can also use a combination of HTML that includes Liquid. For example, you ca
 The preference center has a checkbox that will allow your users to unsubscribe from all emails. Note that you will not be able to save these preferences if sent as a test message.
 
 {% alert important %}
-The above Liquid tag will only work when launching a Campaign or Canvas. Sending a test email will not generate a valid link.
+The above Liquid tag will only work when launching a campaign or Canvas. Sending a test email will not generate a valid link.
 {% endalert %}
 
 #### Editing a preference center

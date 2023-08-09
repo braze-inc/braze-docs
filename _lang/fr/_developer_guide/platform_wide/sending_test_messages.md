@@ -143,7 +143,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 
 ## Limites des messages test
 
-Dans quelques rares situations, les messages test ne sont pas dotés d’une parité complète de fonctionnalités lors du lancement d’une campagne ou de canvas à un ensemble d’utilisateurs réels. Dans ces situations, pour valider ce comportement, vous devez lancer la campagne ou le canvas à un ensemble limité d’utilisateurs.
+Dans quelques rares situations, les messages test ne sont pas dotés d’une parité complète de fonctionnalités lors du lancement d’une campagne ou de Canvas à un ensemble d’utilisateurs réels. Dans ces situations, pour valider ce comportement, vous devez lancer la campagne ou le Canvas à un ensemble limité d’utilisateurs.
 
 - Consulter le [Preference center (Centre de préférence)][16] de Braze depuis **Test Messages (Messages test)** a pour effet de griser le bouton soumettre
 - L’en-tête de désabonnement de la liste n’est pas incluse dans les courriels envoyés par la fonctionnalité de message test

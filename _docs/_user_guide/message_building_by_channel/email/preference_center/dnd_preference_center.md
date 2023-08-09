@@ -41,14 +41,17 @@ You can further configure the selected subscription groups by clicking on the sm
 - Adjust the order that subscription groups appear
 - Add or remove additional subscription groups
 - Include descriptions
-- Add or remove a "Subscribe to all" checkbox
-- Add or remove an "Unsubscribe from all" checkbox
+- Add or remove a **Subscribe to all** checkbox which will subscribe the user to all subscription groups shown in this block
+- Add or remove an **Unsubscribe from all** checkbox which will unsubscribe the user from all subscription groups shown in this block
 
 ![][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
+
+The **Unsubscribe from all** button at the bottom of the template is non-removable and will [globally unsubscribe]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) the user from receiving any email messages.
 
 ## Step 4: Customize the preference center using the drag-and-drop editor
 
 ### Set common styles
+
 You can set certain styles to be applied across all relevant blocks in your preference center from the **Common Styles** tab. The styles set in this section are used everywhere in your message except where you override them for a specific block. For an easier design experience, we recommend setting up page-level styles before you customize styles at the block level.
 
 ![][5]{: style="max-width:45%;"}
@@ -100,7 +103,7 @@ You can preview your preference center by clicking the **Preview** tab within th
 
 You will see a preview of both the preference center and the confirmation page. Click **Save as Draft** to return to this preference center later, or if you are satisfied, click **Launch Preference Center**.
 
-When launching the preference center, you will be prompted to confirm the name, as it cannot be edited after launching. Once confirmed, the preference center will be launched and ready for use.
+When launching the preference center, you will be prompted to confirm the name, as it cannot be edited after launching. After you confirm the name, the preference center will be launched and ready for use.
 
 ## Using the preference center
 
@@ -110,7 +113,7 @@ To place a link to the preference center in your emails, copy the Liquid tag of 
 
 Add the Liquid tag to the desired place in your email, similar to how [unsubscribe URLs]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/preference_center/#custom-footer) are inserted.
 
-## Errors
+## Handling errors
 
 If an error occurs when a user clicks **Save** on a preference center, they will be presented with the following default error message, which cannot be customized or styled in the editor. However, localization of the error messages is still supported on these pages. 
 

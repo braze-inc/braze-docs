@@ -103,7 +103,7 @@ Custom interfaces can be provided by registering custom classes for each desired
 ![A captioned image Content Card. A captioned Content Card shows a Braze image with the caption overlayed across the bottom "Thanks for downloading Braze Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
 ![A classic Content Card. A classic Content Card shows an image in the center of the card with the words "Thanks for downloading Braze Demo" underneath.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
-Braze provides three Content Card templates (banner, captioned image, and classic). Alternatively, if you would like to provide your own custom interfaces, reference the following code snippets:
+Braze provides three Content Card templates (banner, captioned image, and classic). Alternatively, if you want to provide your own custom interfaces, reference the following code snippets:
 
 {% tabs %}
 {% tab Objective-C %}

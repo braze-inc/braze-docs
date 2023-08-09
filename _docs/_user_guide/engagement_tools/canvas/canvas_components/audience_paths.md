@@ -27,11 +27,11 @@ With Audience Paths, you can:
 - Precisely target users on a large scale.
   - Create up to 8 audience groups (2 default and 6 additional groups) per component, but users may want to connect multiple Audience Paths Steps to further sort their users. 
 
-## Create Audience Paths
+## Create an audience path
 
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-To create Audience Paths, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Audience Paths**.
+To create an Audience Paths component, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Audience Paths**.
 
 In the default Audience Paths component show to the right, there are already two default audience groups, **Group 1** and **Everybody Else**. The Everybody Else group includes any user who does not fall into a defined audience group. This group will always be ranked last.
 <br><br><br>

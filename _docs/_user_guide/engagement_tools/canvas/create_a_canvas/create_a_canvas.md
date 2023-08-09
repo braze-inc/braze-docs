@@ -112,7 +112,7 @@ You can choose one of three ways in which users can enter your Canvas.
 
   {% endtab %}
   {% tab API-Triggered Delivery %}
-    With API-triggered delivery, users will enter your Canvas and begin receiving messages once they have been added using the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via the API. In the dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). 
+    With API-triggered delivery, users will enter your Canvas and begin receiving messages after they have been added using the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via the API. In the dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). 
 
     ![An example of API-triggered delivery with a Canvas ID and an example of a cURL request.]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
 
@@ -244,7 +244,7 @@ The Message component manages the messages sent to users. You can select your **
 
 ![]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
 
-Click **Done** once you've finished configuring your Canvas component.
+Click **Done** after you've finished configuring your Canvas component.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
@@ -301,7 +301,7 @@ For this reason, Intelligent Selection works best on Canvases that have new user
 
 ## Step 5: Save and launch your Canvas
 
-Once you're done creating your Canvas, click **Launch Canvas** to save and launch your Canvas. Once you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page. 
+Once you're done creating your Canvas, click **Launch Canvas** to save and launch your Canvas. After you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page. 
 
 You can also save your Canvas as a draft if you need to come back to it.
 
@@ -314,7 +314,7 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 
 [1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
 [3]: {% image_buster /assets/img_archive/choose_canvas_experience.png %}
-[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting
+[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components
 [6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping
 [11]:{% image_buster /assets/img_archive/canvas_add_variant.gif %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}

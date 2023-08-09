@@ -59,7 +59,7 @@ Add your `google-services.json` file path to your `app.json`. This file is requi
 Follow the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/). If you prefer not to request push permission upon launching the app, you should omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate and follow the step below.
 
 ### Generating a new push key
-If you do not have an existing push key or certificate from Apple or want to generate a new one, follow [step 1 of the iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-1-configure-push-notifications) to generate a new push key and upload it to the Braze dashboard.
+If you do not have an existing push key or certificate from Apple or want to generate a new one, follow [step 1 of the iOS integration instructions]({{site.baseurl}}/platform_integration_guides/swift/push_notifications/integration/#step-1-configure-push-notifications) to generate a new push key and upload it to the Braze dashboard.
 
 ### Migrating a push key from expo-notifications
 If you were previously using `expo-notifications` to manage your push key, run `expo fetch:ios:certs` from your application's root folder. This will download your push key (a .p8 file), which can then be uploaded to the Braze dashboard.
@@ -173,5 +173,26 @@ Starting in macOS 13, on certain devices, you can test iOS push notifications on
 3. Compose your test notification and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should receive the notification on your device shortly.
 
 ![A Braze push campaign showing you can add your own user ID as a test recipient to test your push notification.][1]
+
+## Optional: Forward Android push to another FirebaseMessagingService
+
+If you have another Firebase Messaging Service you would also like to use, you can also specify a fallback Firebase Messaging Service to call if your application receives a push that isn't from Braze.
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          ...
+          "androidFirebaseMessagingFallbackServiceEnabled": true,
+          "androidFirebaseMessagingFallbackServiceClasspath": "com.company.OurFirebaseMessagingService"
+        }
+      ]
+    ]
+  }
+}
+```
 
 [1]: {% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test"

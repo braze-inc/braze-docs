@@ -9,7 +9,7 @@ description: "The following article will help clarify different methods and best
 
 # Collection best practices
 
-> Knowing when and how to collect user data for known and unknown users can be challenging to navigate when envisioning the user profile lifecycle of your customers. The following article will help clarify different methods and best practices for collecting new and existing user data.
+> Knowing when and how to collect user data for known and unknown users can be challenging when envisioning the user profile lifecycle of your customers. The following article will help clarify different methods and best practices for collecting new and existing user data.
 
 ## Overview
 
@@ -35,7 +35,7 @@ When a user enters content through a web form, check if a user with that email a
   ```
 
 {% alert important %}
-It is not recommended to heavily leverage this endpoint when querying a single user; we apply a rate limit of 2,500 requests per minute to this endpoint. For more information on endpoint rate limits, refer to [Rate limits by request type]({{site.baseurl}}/api/api_limits/#rate-limits-by-request-type).
+It is not recommended to heavily leverage this endpoint when querying a single user. We apply a rate limit of 2,500 requests per minute to this endpoint. For more information on endpoint rate limits, refer to [Rate limits by request type]({{site.baseurl}}/api/api_limits/#rate-limits-by-request-type).
 {% endalert %}
 
 ### Step 2: Log or update user
@@ -67,7 +67,7 @@ As your user data grows, you can merge duplicate user profiles from the Braze da
 
 You can also use the [Merge users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) to merge one user profile into another. 
 
-Note that once user profiles are merged, this action cannot be undone.
+Note that after user profiles are merged, this action cannot be undone.
 
 ## Additional resources
 - Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) for additional context.<br>

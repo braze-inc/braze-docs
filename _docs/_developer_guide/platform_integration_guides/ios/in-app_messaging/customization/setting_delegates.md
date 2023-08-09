@@ -40,7 +40,7 @@ Check out our in-app message [sample app][35] for an example implementation. Not
 
 ## Core in-app message delegate
 
-If you are not including Braze's UI library in your project and would like to receive triggered in-app message payloads for further processing or custom display in your app, implement the [`ABKInAppMessageControllerDelegate`][1] protocol.
+If you are not including Braze's UI library in your project and want to receive triggered in-app message payloads for further processing or custom display in your app, implement the [`ABKInAppMessageControllerDelegate`][1] protocol.
 
 Set your `ABKInAppMessageControllerDelegate` delegate object on the Braze instance by calling:
 

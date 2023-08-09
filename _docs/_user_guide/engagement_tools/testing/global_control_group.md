@@ -19,7 +19,7 @@ By comparing the behaviors of users that receive messaging to those that don't, 
 
 ## How the Global Control Group works
 
-With the Global Control Group, you can set a percentage of all users as a control group. Once saved, users in the group will not receive any campaigns or Canvases. 
+With the Global Control Group, you can set a percentage of all users as a control group. When saved, users in the group will not receive any campaigns or Canvases. 
 
 Your Global Control Group is applied to all channels, campaigns, and Canvases, with the exception of [API campaigns]({{site.baseurl}}/api/api_campaigns#api-campaigns) and News Feed Cards (deprecating). Users in your control group will still receive API campaigns and News Feed Cards. This exception doesn't extend to Content Cards—if you're using Content Cards, users in your control group won't receive them.
 
@@ -43,7 +43,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 ### Step 2: Assign a percentage of all users to this control group
 
-Input a percentage for your control group and click **Save**. Once entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your workspace, the more accurate this estimate will be. 
+Input a percentage for your control group and click **Save**. When entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your workspace, the more accurate this estimate will be. 
 
 The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your workspace. For instance, if the number of users in your workspace grows, then the number of users in your Global Control Group will also grow so that your Control Group remains a constant percentage of your workspace audience. For percentage guidelines, refer to the following [best practices section](#percentage-guidelines).
 
@@ -61,15 +61,15 @@ You may want to add exclusion settings if you have transactional messages that s
 
 ### Step 4: Save your control group
 
-At this point, Braze generates a randomly selected group of users to comprise the selected percentage of your total user base. Once saved, all currently active and future campaigns and Canvases no longer send to users in this group, except for campaigns or Canvases that contain any of the tags in your exclusion settings.
+At this point, Braze generates a randomly selected group of users to comprise the selected percentage of your total user base. When saved, all currently active and future campaigns and Canvases no longer send to users in this group, except for campaigns or Canvases that contain any of the tags in your exclusion settings.
 
 ## Disable your Global Control Group
 
 You can disable your Global Control Group at any time from the **Global Control Group Settings** tab, but keep in mind that doing so will result in users in this group immediately becoming eligible for campaigns and Canvases.
 
-Before disabling your Control Group, we recommend [exporting](#export-group-members) a CSV of users in that group in case you need to reference it at a later point. Once you disable a control group, there is no way for Braze to restore the group or identify which users were in this group.
+Before disabling your Control Group, we recommend [exporting](#export-group-members) a CSV of users in that group in case you need to reference it at a later point. When you disable a control group, there is no way for Braze to restore the group or identify which users were in this group.
 
-After disabling your Control Group, you can save a new one. Once you enter a percentage and save it, Braze generates a new randomly selected group of users. If you enter the same percentage as before, Braze still generates a new group of users for your control and treatment groups.
+After disabling your Control Group, you can save a new one. When you enter a percentage and save it, Braze generates a new randomly selected group of users. If you enter the same percentage as before, Braze still generates a new group of users for your control and treatment groups.
 
 ![A dialog box titled "You are making changes to Global Messaging Settings" with the following text: "Once your Global Control Group is disabled, it will no longer be excluded from any new or currently active campaigns or Canvases. User in this group will immediately become eligible to receive messages. Are you sure you want to proceed?" with two buttons: Cancel and Proceed.][2]{: style="max-width:50%" }
 
@@ -153,11 +153,11 @@ The longer you hold the same control group out the more they diverge from the tr
 
 #### Try to limit ending experiments prematurely
 
-You should decide how long to run your experiment before beginning it, and then you should only end your experiment and gather final results once you've reached this pre-determined point. Ending your experiment early, or whenever you see promising data, will introduce bias.
+You should decide how long to run your experiment before beginning it, and then you should only end your experiment and gather final results after you reach this pre-determined point. Ending your experiment early, or whenever you see promising data, will introduce bias.
 
 #### Think about valuable metrics
 
-Consider any baseline behaviors for the metrics you're most interested in. Are you interested in purchase rates for subscription plans that are renewed only on an annual basis? Or do customers have a weekly habit for the event you'd like to measure? Think about how long it takes users to potentially alter their behaviors due to your messaging. Once you decide how long your experiment should run, be sure to not end your experiment or record final results early, or your findings may be biased.
+Consider any baseline behaviors for the metrics you're most interested in. Are you interested in purchase rates for subscription plans that are renewed only on an annual basis? Or do customers have a weekly habit for the event you'd like to measure? Think about how long it takes users to potentially alter their behaviors due to your messaging. After you decide how long your experiment should run, be sure to not end your experiment or record final results early, or your findings may be biased.
 
 [2]: {% image_buster /assets/img/control_group/control_group2.png %}
 [4]: {% image_buster /assets/img/control_group/control_group4.png %}

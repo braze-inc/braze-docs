@@ -57,7 +57,7 @@ url -X POST \
 -H 'Content-Type:application/json' \
 -d '{
       "api_key": "a valid rest api key",
-      "canvas_id": "the ID of your canvas",
+      "canvas_id": "the ID of your Canvas",
          "canvas_entry_properties": {
             "food_allergies": "none"
           },

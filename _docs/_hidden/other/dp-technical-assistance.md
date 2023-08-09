@@ -3,7 +3,8 @@ nav_title: Data Protection Technical Assistance
 article_title: Data Protection Technical Assistance
 page_order: 1
 description: "This page provides technical instructions to enable you to manage, through the Braze Platform, requests from individuals in relation to their personal data rights."
-alias: /dp-technical-assistance/
+alias: /help/dp-technical-assistance/
+permalink: /dp-technical-assistance/
 hide_toc: true
 ---
 
@@ -13,9 +14,9 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Data Protection Technical Assistance
 
-There are a range of data protection laws that regulate what organizations can do with personal data (“**Data Protection Laws**”), including the EU and UK General Data Protection Regulation (“**GDPR**”), the California Consumer Privacy Act as amended by the California Privacy Rights Act (“**CCPA**”) and the Health Insurance Portability and Accountability Act (“**HIPAA**”). There are other national, state, and industry-specific Data Protection Laws and regulations that may apply to your business.
+There are a range of data protection laws that regulate what organizations can do with personal data (“**Data Protection Laws**”), including the EU and UK General Data Protection Regulation (“**GDPR**”), the California Consumer Privacy Act (“**CCPA**”) and the Health Insurance Portability and Accountability Act (“**HIPAA**”). There are other national, state, and industry-specific Data Protection Laws and regulations that may apply to your business.
 
-These Data Protection Laws grant individuals ‘privacy rights’ over their personal data. Organizations are required to receive and respond to requests from individuals who exercise their privacy rights. The Braze platform can assist you in your compliance with these Data Protection Laws by providing features to facilitate certain actions required under such laws. This document provides technical instructions to use these features to manage privacy rights requests. It is up toyou to determine which Data Protection Laws apply to your business, and to act in compliance with them.
+These Data Protection Laws grant individuals ‘privacy rights’ over their personal data. Organizations are required to receive and respond to requests from individuals who exercise their privacy rights. The Braze platform can assist you in your compliance with these Data Protection Laws by providing features to facilitate certain actions required under such laws. This document provides technical instructions to use these features to manage privacy rights requests. It is up to you to determine which Data Protection Laws apply to your business, and to act in compliance with them.
 
 ## Legal Disclaimer
 
@@ -93,7 +94,7 @@ Note that the email address or phone number associated with the end user’s pro
 
 In order to maintain the integrity of campaign and application usage analytics, anonymous aggregated data will not be modified when an end user is deleted. For example, Braze will not decrement an app’s total number of sessions when an end user is deleted. The session(s) when such end user visited the app will still be included in the total number of visits to that app, but that data will not be connected in any way to the profile of the forgotten end user, ensuring that this anonymized and aggregated data cannot be tied back to an individual end user.
 
-Analytics within the Braze Services are tied to the Braze end user Identifier. Once the end user’s profile has been deleted, the Braze User Identifier effectively becomes a completely anonymized identifier, as Braze is unable to tie it back to any individual end user.
+Analytics within the Braze Services are tied to the Braze end user Identifier. After the end user’s profile has been deleted, the Braze User Identifier effectively becomes a completely anonymized identifier, as Braze is unable to tie it back to any individual end user.
 
 #### Once Deletion has Happened
 

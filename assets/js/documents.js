@@ -81,7 +81,17 @@ var custom_word_mapping = {
   'Platform Wide': 'Platform Wide Features & Behaviors',
   'lab': 'LAB',
 };
-
+// Track Specific tabs to remember on reload
+var tab_track = {
+  'swift': 'tb_ios',
+  'objective-c': 'tb_ios',
+  'java': 'tb_android',
+  'kotlin': 'tb_android',
+  'snowflake': 'tb_data',
+  'redshift': 'tb_data',
+  'bigquery': 'tb_data',
+  'databricks': 'tb_data',
+}
 // Set cookie to auto expire after 30 days of inactivity
 Cookies.set('__algolia_user', algolia_user, { expires: 30 });
 
@@ -112,9 +122,12 @@ String.prototype.sanitize = function() {
   return this.replace(/\+/g, ' ').replace(/\%20/g, ' ').replace(/\_/g, ' ').replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,'').replace(/\'/g,'').replace(/\"/g,'');
 };
 
-function replaceParams(qs = '', pr = {}) {
+function replaceParams(qs = '', pr = {}, replace_blank = false) {
 	var queryString = qs.replace(/^\?/,'').split('&');
 	var params = {};
+  if (replace_blank){
+    params = pr;
+  }
 	queryString.forEach((e) => {
 		let param = e.split('=');
 		if (param.length >1){
@@ -124,6 +137,7 @@ function replaceParams(qs = '', pr = {}) {
       }
 		}
 	});
+
 
   var queryStringParam = [];
   for (const k in params) {
@@ -272,7 +286,7 @@ $(document).ready(function() {
           window.history.replaceState(null, null, window.location.pathname + '/' + query_str);
         }
         else {
-          window.history.replaceState(null, null, '.' + query_str);
+          window.history.replaceState(null, null, window.location.pathname + query_str);
         }
       }
     }
@@ -280,6 +294,22 @@ $(document).ready(function() {
   };
   scrollHandler();
   $(window).scroll(scrollHandler);
+
+  function setTabState(curtab, query_name = 'tab'){
+    let tab_norm = curtab.toLowerCase();
+    let tab_replace = {};
+    tab_replace[query_name] = encodeURIComponent(tab_norm);
+    let query_str = replaceParams(window.location.search, tab_replace, true);
+    if (window.location.pathname.substr(-1) != '/')  {
+      window.history.replaceState(null, null, window.location.pathname + '/' + query_str);
+    }
+    else {
+      window.history.replaceState(null, null,  window.location.pathname + query_str);
+    }
+    if (tab_track[tab_norm]){
+      Cookies.set(tab_track[tab_norm],tab_norm, { expires: 365 });
+    }
+  }
 
   // see if a details tag should be auto-opened
   var details_list = $('details');
@@ -369,16 +399,26 @@ $(document).ready(function() {
   if (Cookies.get('ln')) {
     $('#sidebar_toggle').trigger('click');
   }
+
+  function setTabClass(prefix, postfix, curtab){
+    $('.' + prefix +'tab_toggle_ul.ab-' + prefix +'nav-' + prefix +'tabs li').removeClass(prefix + 'active');
+    $('.' + prefix +'tab_toggle_ul.ab-' + prefix +'nav-' + prefix +'tabs li.' + curtab).addClass(prefix + 'active');
+    $('div.' + prefix +'tab_toggle_div div.ab-' + prefix + 'tab-pane').removeClass(prefix + 'active');
+    $('div.' + prefix +'tab_toggle_div div.' + curtab + postfix).addClass(prefix + 'active');
+  }
+  function setTabOnlyClass(prefix, postfix, partab, curtab){
+      $('#' + partab + '_nav li').removeClass(prefix + 'active');
+      $('#' + partab + '_nav li.' + curtab).addClass(prefix + 'active');
+      $('#' + partab + ' div.ab-' + prefix + 'tab-pane').removeClass(prefix + 'active');
+      $('#' + partab + ' div.' + curtab + postfix).addClass(prefix + 'active');
+  }
   // Updated Tab switcher
   $('.tab_toggle').click(function(e){
     e.preventDefault();
     var $this = $(this);
     var curtab = $this.attr('data-tab');
-
-    $('.tab_toggle_ul.ab-nav-tabs li').removeClass('active');
-    $('.tab_toggle_ul.ab-nav-tabs li.' + curtab).addClass('active');
-    $('div.tab_toggle_div div.ab-tab-pane').removeClass('active');
-    $('div.tab_toggle_div div.' + curtab + '_tab').addClass('active');
+    setTabClass('', '_tab', curtab)
+    setTabState($this.text(), 'tab');
   });
   $('.tab_toggle_only').click(function(e){
     e.preventDefault();
@@ -386,12 +426,8 @@ $(document).ready(function() {
     var $this = $(this);
     var curtab = $this.attr('data-tab');
     var partab = $this.attr('data-tab-target');
-
-    $('#' + partab + '_nav li').removeClass('active');
-    $('#' + partab + '_nav li.' + curtab).addClass('active');
-    $('#' + partab + ' div.ab-tab-pane').removeClass('active');
-
-    $('#' + partab + ' div.' + curtab + '_tab').addClass('active');
+    setTabOnlyClass('','_tab', partab, curtab)
+    setTabState($this.text(), 'tab');
   });
   $('.ab-tab-content .ab-tab-pane:first-child').addClass('active');
 
@@ -399,11 +435,8 @@ $(document).ready(function() {
     e.preventDefault();
     var $this = $(this);
     var curtab = $this.attr('data-sub_tab');
-
-    $('.sub_tab_toggle_ul.ab-sub_nav-sub_tabs li').removeClass('sub_active');
-    $('.sub_tab_toggle_ul.ab-sub_nav-sub_tabs li.' + curtab).addClass('sub_active');
-    $('div.sub_tab_toggle_div div.ab-sub_tab-pane').removeClass('sub_active');
-    $('div.sub_tab_toggle_div div.' + curtab).addClass('sub_active');
+    setTabClass('sub_', '', curtab)
+    setTabState($this.text(), 'subtab');
   });
 
   $('.sub_tab_toggle_only').click(function(e){
@@ -413,13 +446,78 @@ $(document).ready(function() {
     var curtab = $this.attr('data-sub_tab');
     var partab = $this.attr('data-sub_tab-target');
 
-    $('#' + partab + '_nav li').removeClass('sub_active');
-    $('#' + partab + '_nav li.' + curtab).addClass('sub_active');
-    $('#' + partab + ' div.ab-sub_tab-pane').removeClass('sub_active');
-
-    $('#' + partab + ' div.' + curtab).addClass('sub_active');
+    setTabOnlyClass('sub_','', partab, curtab)
+    setTabState($this.text(), 'subtab');
   });
   $('.ab-sub_tab-content .ab-sub_tab-pane:first-child').addClass('sub_active');
+
+
+  let tab_query = (new URLSearchParams(window.location.search).get('tab') || '').replace('_sub_tab','');
+  let sub_tab_query = (new URLSearchParams(window.location.search).get('subtab') || '').replace('_sub_tab','');
+
+  // if tab is set via param or cookied, activate tab
+  $('.tab_toggle').each(function(e,v){
+    var $this = $(v);
+    var curtab = $this.attr('data-tab');
+    var curtab_name = $this.text().toLowerCase();
+    if (tab_query && (tab_query == curtab_name)){
+      setTabClass('', '_tab', curtab)
+    }
+    else if (tab_track[curtab_name]){
+      let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
+      if (tab_cookie && (curtab_name == tab_cookie))
+      setTabClass('', '_tab', curtab)
+    }
+  });
+
+  $('.tab_toggle_only').each(function(e,v){
+    var $this = $(v);
+    var curtab = $this.attr('data-tab');
+    var partab = $this.attr('data-tab-target');
+    var curtab_name = $this.text().toLowerCase();
+    if (tab_query && (tab_query == curtab_name)){
+      setTabOnlyClass('', '_tab', partab, curtab)
+    }
+    else if (tab_track[curtab_name]){
+      let tab_cookie = Cookies.get(tab_track[curtab]) || '';
+      if (tab_cookie && (curtab_name == tab_cookie))
+      setTabOnlyClass('', '_tab', partab, curtab)
+    }
+  });
+  $('.sub_tab_toggle').each(function(e,v){
+    var $this = $(v);
+    var curtab = $this.attr('data-sub_tab');
+    var curtab_name = $this.text().toLowerCase();
+    if ((tab_query && (tab_query == curtab_name)) ||
+      (sub_tab_query && (sub_tab_query == curtab_name))
+      ){
+
+      setTabClass('sub_','', curtab)
+    }
+    else if (tab_track[curtab_name]){
+      let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
+      if (tab_cookie && (curtab_name == tab_cookie))
+      setTabClass('sub_','', curtab)
+    }
+  });
+
+  $('.sub_tab_toggle_only').each(function(e,v){
+    var $this = $(v);
+    var curtab = $this.attr('data-sub_tab');
+    var partab = $this.attr('data-sub_tab-target');
+    var curtab_name = $this.text().toLowerCase();
+    if ((tab_query && (tab_query == curtab_name)) ||
+      (sub_tab_query && (sub_tab_query == curtab_name))
+      ){
+      setTabOnlyClass('sub_','', partab, curtab)
+    }
+    else if (tab_track[curtab_name]){
+      let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
+      if (tab_cookie && (curtab_name == tab_cookie))
+      setTabOnlyClass('sub_','', partab, curtab)
+    }
+  });
+
 
   String.prototype.upCaseWord = function() {
     return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });

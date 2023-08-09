@@ -91,7 +91,7 @@ USERS_BEHAVIORS_CUSTOMEVENT_SHARED: when a user makes a performs a custom event
 	AD_TRACKING_ENABLED (BOOLEAN)
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED: When a user triggers a geofenced area (e.g. when they enter/exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
+USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED: When a user triggers a geofenced area (e.g., when they enter/exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -109,7 +109,7 @@ USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED: When a user triggers a geofenced area
 	GEOFENCE_ID (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED: When a user triggers a geofenced area (e.g. when they enter/exit a geofence). This event was received through the dedicated Geofence endpoint, and is therefore received in real-time as soon as a users device detects that it has triggered a geofence. In addition, due to rate-limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
+USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED: When a user triggers a geofenced area (e.g., when they enter/exit a geofence). This event was received through the dedicated Geofence endpoint, and is therefore received in real-time as soon as a users device detects that it has triggered a geofence. In addition, due to rate-limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -364,7 +364,7 @@ USERS_CAMPAIGNS_REVENUE_SHARED: when a user generates revenue with in the primar
 	REVENUE (NUMBER(38,0))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_ABORT_SHARED: An originally scheduled canvas step message was aborted for some reason.
+USERS_CANVAS_ABORT_SHARED: An originally scheduled Canvas step message was aborted for some reason.
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -386,7 +386,7 @@ USERS_CANVAS_ABORT_SHARED: An originally scheduled canvas step message was abort
 	ABORT_LOG (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_CONVERSION_SHARED: when a user converts for a canvas
+USERS_CANVAS_CONVERSION_SHARED: when a user converts for a Canvas
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -407,7 +407,7 @@ USERS_CANVAS_CONVERSION_SHARED: when a user converts for a canvas
 	LANGUAGE (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_ENTRY_SHARED: when a user enters a canvas
+USERS_CANVAS_ENTRY_SHARED: when a user enters a Canvas
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -426,7 +426,7 @@ USERS_CANVAS_ENTRY_SHARED: when a user enters a canvas
 	IN_CONTROL_GROUP (BOOLEAN)
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED: when a user exited a canvas because of performing an event
+USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED: when a user exited a Canvas because of performing an event
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -439,7 +439,7 @@ USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED: when a user exited a canvas because of 
 	CANVAS_STEP_API_ID (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED: when a user exited a canvas because of matching an audience
+USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED: when a user exited a Canvas because of matching an audience
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -483,7 +483,7 @@ USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED: when a user enters an experiment 
 	IN_CONTROL_GROUP (BOOLEAN)
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_FREQUENCYCAP_SHARED: when a user gets frequency capped for a canvas step
+USERS_CANVAS_FREQUENCYCAP_SHARED: when a user gets frequency capped for a Canvas step
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))

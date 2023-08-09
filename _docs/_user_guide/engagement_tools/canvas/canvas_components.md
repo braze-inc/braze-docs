@@ -5,7 +5,7 @@ page_order: 2
 alias: "/user_guide/engagement_tools/canvas/canvas_components/about/"
 layout: dev_guide
 guide_top_header: "Canvas Components"
-guide_top_text: "Enhance your Canvas journey with Canvas components! Canvas components can be used to simplify the process of determining the effectiveness of your Canvas by replacing excessive full steps with just one. Components in Canvas refer to the personalized user journey in your Canvas branches."
+guide_top_text: "Enhance your Canvas journey with Canvas components. Canvas components can be used to simplify the process of determining the effectiveness of your Canvas by replacing excessive full steps with just one. Components in Canvas refer to the personalized user journey in your Canvas branches."
 
 page_type: landing
 description: "This landing page is home to Canvas component articles that will help you create more advanced Canvases. Some of these components include the message step, delay step, decision split step, and more."
@@ -34,6 +34,9 @@ guide_featured_list:
   - name: User Update Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     fa_icon: fas fa-user-check
+  - name: Feature Flags in Canvas
+    link: /docs/developer_guide/platform_wide/feature_flags/canvas/
+    fa_icon: fas fa-project-diagram
   - name: Canvas Audience Sync
     link: /docs/partners/canvas_steps/
     fa_icon: fa-solid fa-rotate

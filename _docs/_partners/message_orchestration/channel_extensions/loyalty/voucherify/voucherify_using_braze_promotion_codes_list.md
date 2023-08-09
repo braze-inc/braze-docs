@@ -30,7 +30,7 @@ You can use the Voucherify campaign name to name the list and ensure data consis
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_code_list.png %}){: style="max-width:50%;"}
 
-Next, add the code snippet that refers to the codes from the list; it will be populated with a unique code once the message is sent.
+Next, add the code snippet that refers to the codes from the list; it will be populated with a unique code when the message is sent.
 
 ### Additional settings
 
@@ -48,7 +48,7 @@ Confirm that the list only contains codes (not column header) and click **Start 
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_upload_csv.png %}){: style="max-width:50%;"}
 
-## Step 4: Use Code Snippet in Braze Campaign
+## Step 4: Use Code Snippet in Braze campaigns
 
 To use codes from the list in a Braze campaign, Copy Snippet and add it to the email body.
 

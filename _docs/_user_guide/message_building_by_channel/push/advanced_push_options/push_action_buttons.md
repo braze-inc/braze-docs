@@ -17,7 +17,7 @@ channel:
 
 ## How to use action buttons
 
-Each interactive button can link to a webpage, a deep link, open the app, or dismiss the notification. You can specify your push action buttons in the **On Click Behavior** section of the push message composer in the dashboard.
+Each interactive button can link to a webpage or a deep link or open the app. You can specify your push action buttons in the **On Click Behavior** section of the push message composer in the dashboard.
 
 ### iOS push action buttons {#ios}
 
@@ -44,7 +44,6 @@ Then click <i class="fas fa-plus-circle"></i> **Add Button** and specify your bu
 - Open App
 - Redirect to Web URL
 - [Deep Link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) into Application
-- Dismiss Notification
 
 ![]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
 

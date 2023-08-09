@@ -50,7 +50,7 @@ let braze = Braze(configuration: configuration)
 ```objc
 BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:self.APIKey
                                                                   endpoint:self.apiEndpoint];
-// Enable logging of general SDK information (e.g. user changes, etc.)
+// Enable logging of general SDK information (e.g., user changes, etc.)
 [configuration.logger setLevel:BRZLoggerLevelInfo];
 Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 ```

@@ -107,7 +107,7 @@ From the Tealium home page, select **Audiences** under **AudienceStream** from t
 
 First, name your audience, and then consider what attributes would apply to the type of audience you are trying to create. For example, to create an audience of VIP users, you could create an audience of visitors who have the **VIP badge**.
 
-Make sure to **Save / Publish** your audience once finished.
+Make sure to **Save / Publish** your audience when finished.
 
 ### Step 3: Create an event connector
 
@@ -115,7 +115,7 @@ A connector is an integration between Tealium and another vendor used to transmi
 
 1. From the sidebar in Tealium under **Server-Side**, navigate to **AudienceStream > Audience Connectors**.
 2. Select the blue **+ Add Connector** button to look through the connector marketplace. In the new dialogue box that appears, use the spotlight search to find the **Braze** connector.
-3. To add this connector, click the **Braze** connector tile. Once clicked, you can view the connection summary and a list of the required information, supported actions, and configuration instructions. The configuration comprises three steps: source, configuration, and action.
+3. To add this connector, click the **Braze** connector tile. When clicked, you can view the connection summary and a list of the required information, supported actions, and configuration instructions. The configuration comprises three steps: source, configuration, and action.
 
 #### Source
 
@@ -199,7 +199,7 @@ View the summary of the connector you created. If you would like to modify your 
 
 Your connector is now displayed in the list of connectors on your Tealium home page.
 
-Make sure to **Save / Publish** your connector once finished. The actions you configured will now fire when the trigger connections are met. 
+Make sure to **Save / Publish** your connector when finished. The actions you configured will now fire when the trigger connections are met. 
 
 ### Step 4: Test your Tealium connector
 
@@ -232,7 +232,7 @@ If you have multiple EventStreams that target the same event feed, **all actions
 **Solution**: <br>Set up a separate event specification or feed to track each action. <br>**OR**<br> Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
 
 #### Initializing Braze too early
-Users integrating with Tealium using the Braze Web SDK tag may see a dramatic increase in their MAU. **If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.** Some may want to only track user behavior once users have completed some action, such as "Signed In" or "Watched Video", to lower their MAU count. <br><br>
+Users integrating with Tealium using the Braze Web SDK tag may see a dramatic increase in their MAU. **If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.** Some may want to only track user behavior when users have completed some action, such as "Signed In" or "Watched Video", to lower their MAU count. <br><br>
 **Solution**: <br>Set up load rules to determine exactly when and where a tag loads on your site. You can learn more about load rules and how to set them up in the [Tealium learning center](https://community.tealiumiq.com/t5/Customer-Data-Hub/Building-an-Audience/ta-p/11881).
 
 [1]: https://community.tealiumiq.com/t5/Getting-Started-with/Attributes/ta-p/25785

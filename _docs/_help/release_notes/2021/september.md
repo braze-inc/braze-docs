@@ -22,7 +22,7 @@ Predictive Purchases give marketers a powerful tool for identifying and messagin
 
 ## Drag & Drop Editor
 
-With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas using our new [Drag & Drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
+With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvases using our new [Drag & Drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
 
 ## User alias import
 
@@ -44,7 +44,7 @@ All customers who currently have and/or use US long codes to send to US customer
 
 ## Two-factor authentication reset
 
-Users experiencing issues logging in via two-factor authentication can reach out to their company admins to [reset their two-factor authentication]({{site.baseurl}}/user_guide/administrative/company_settings/security_settings/#user-authetication-reset).
+Users experiencing issues logging in via two-factor authentication can reach out to their company admins to [reset their two-factor authentication]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#user-authetication-reset).
 
 ## New Braze partnerships
 

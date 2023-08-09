@@ -90,46 +90,53 @@ To measure the impact of an individual webhook message, you can add a [control g
 The **Message Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 -->
 {% if include.channel == "Content Card" %}
-### Message Performance
+### Content Card Performance
 
 The **Content Card Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![Content Card message performance analytics]({% image_buster /assets/img/cc-message-performance.png %})
 
 {% elsif include.channel == "email" %}
-### Message Performance
+### Email Performance
 
 The **Email Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![Email message performance analytics]({% image_buster /assets/img_archive/email_message_performance.png %})
 
 {% elsif include.channel == "in-app message" %}
-### Message Performance
+### In-App Message Performance
 
 The **In-App Message Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![In-app message performance analytics]({% image_buster /assets/img_archive/iam_message_performance.png %})
 
 {% elsif include.channel == "push" %}
-### Message Performance
+### Push Performance
 
 The **Push Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![Push message performance analytics]({% image_buster /assets/img_archive/push_message_performance.png %})
 
 {% elsif include.channel == "SMS" %}
-### Message Performance
+### SMS Performance
 
 The **SMS Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![SMS/MMS Performance panel that includes a table of metrics for a control group, Variant 1, and Variant 2.]({% image_buster /assets/img_archive/sms_message_performance.png %})
 
 {% elsif include.channel == "webhook" %}
-### Message Performance
+### Webhook Performance
 
 The **Webhook Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![Webhook performance panel that includes a table of metrics for a control group and Variant 1.]({% image_buster /assets/img/webhook_message_performance.png %})
+
+{% elsif include.channel == "whatsapp" %}
+### WhatsApp Performance
+
+The **WhatsApp Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
+
+![WhatsApp performance panel that includes a table of metrics for Variant 1.]({% image_buster /assets/img/whatsapp_message_performance.png %})
 
 {% endif %}
 
@@ -163,10 +170,10 @@ Unique Dismissals | The number of users who have dismissed Content Cards from a 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-Regarding how impressions are logged, there are some nuances between web, Android, and iOS. Generally speaking, Braze logs an impression once a card is seen—when a user scrolls to the specific Content Card in their feed.
+Regarding how impressions are logged, there are some nuances between web, Android, and iOS. Generally speaking, Braze logs an impression when a card is seen, which is after a user scrolls to the specific Content Card in their feed.
 {% endalert %}
 
-{% details More on Unique Recipients versus Unique Impressions %}
+#### Unique Recipients versus Unique Impressions
 
 There are a few metrics available that cover the visibility of your message. This includes Messages Sent, Unique Recipients, and Unique Impressions. In particular, the difference between Unique Recipients and Unique Impressions can be a bit confusing. Let's use a few example scenarios to understand these metrics better.
 
@@ -179,8 +186,6 @@ As another example, suppose you see five Unique Impressions on a Content Card ca
 3. SDK recorded an impression and logged it to the server
 
 Your Messages Sent refers to Content Cards available to be seen, while Unique Recipients refers to Content Cards that were actually seen.
-
-{% enddetails %}
 
 {% elsif include.channel == "email" %}
 
@@ -285,6 +290,20 @@ Here are some key webhook metrics you may see in your analytics. To see the defi
 | Unique Recipients | The total number of users (unique, but only unique per day) that have received the particular webhook. 
 | Sends | Sends (and Messages Sent) include all attempted sends, successful and unsuccessful. This metric counts when a webhook was processed and sent to the third party specified in that webhook, and does not signify whether or not the request was received. |
 | Errors | The total number of sends that were not successful. Errors are included in the _Sends_ count but are not included in the _Unique Recipients_ count.
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% elsif include.channel == "whatsapp" %}
+
+#### WhatsApp metrics
+
+Here are some key WhatsApp metrics you may see in your analytics. To see the definitions of all WhatsApp metrics used in Braze, refer to our [Report Metrics Glossary][1].
+
+| Term | Definition |
+| --- | --- |
+| Sends | The total number of sends successfully communicated between Braze and WhatsApp. However, this does not necessarily mean the message was received by the end user. |
+| Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. |
+| Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be “On” for Braze to track reads. |
+| Failures | The total number of sends that were not successful because the Internet Service Provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure. Failures are included in the _Sends_ count but are not included in the _Deliveries_ count.
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endif %}

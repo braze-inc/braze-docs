@@ -9,7 +9,7 @@ description: "This reference article covers the Targeting options found in the t
 
 # Targeting users
 
-> Once you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Users** step. 
+> After you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Users** step. 
 
 ## Targeting options
 

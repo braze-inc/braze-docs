@@ -18,8 +18,8 @@ Visit the following [iOS](https://developer.apple.com/library/ios/documentation/
 For companies with customers in many countries, handling localization early in your Braze journey can save your companies time and resources. The following article lists the benefits of different orchestration approaches across campaigns and Canvases and also lists different ways users can handle personalization in their messaging.
 
 - **Orchestration options**
-  - [Campaign](#campaign) (one template for all vs. one template per country)
-  - [Canvas](#canvas) (one journey for all vs. one journey per country)<br><br>
+  - [Campaign](#campaign) (one template for all versus one template per country)
+  - [Canvas](#canvas) (one journey for all versus one journey per country)<br><br>
 - **Personalization options**
   - [Manual entry](#option-1-manual-entry)
   - [Content Blocks](#option-2-content-blocks)

@@ -66,7 +66,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 Braze offers two editing experiences when creating an email campaign: our [drag-and-drop editor]({{site.baseurl}}/dnd/) and our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. 
 
-![Choosing between Drag-And-Drop Editor or HTML editor for your email editing experience.][3]{: style="max-width:75%" }
+![Choosing between drag-and-drop editor or HTML editor for your email editing experience.][3]{: style="max-width:75%" }
 
 Then, you can either select an existing [email template][10], [upload a template][18] from a file (HTML editor only), or use a blank template. 
 
@@ -89,16 +89,18 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 {% endalert %}
 
 {% alert important %}
-Braze will automatically remove HTML event handlers referenced as attributes. Note that this does modify the HTML, and it is recommended to validate or re-check the email once completed. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
+Braze will automatically remove HTML event handlers referenced as attributes. Note that this does modify the HTML, and it is recommended to validate or re-check the email after it's completed. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
 {% endalert %}
 
-### Step 3a: Add email headers
+### Step 3a: Add email headers and extras
 
 To add email headers, click **Edit Sending Info** and select **Add New Header**.
 
-Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically have information about the sender, recipient, authentication protocols, and contain email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
+Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically have information about the sender, recipient, authentication protocols, and email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
 
-However, Braze does allow you the flexibility to add additional email headers as needed for advanced use cases. There are a few reserved fields that the Braze platform will overwrite during sending. 
+You can also select the **Add whitespace after preheader** checkbox to hide the text or HTML of the email body in the email preheader. 
+
+Braze allows you the flexibility to add additional email headers as needed for advanced use cases. There are a few reserved fields that the Braze platform will overwrite during sending. 
 
 Avoid using the following keys:
 
@@ -145,6 +147,18 @@ Avoid using the following keys:
   </tr>
 </tbody>
 </table>
+
+#### Adding email extras
+
+Email extras allows you to send additional data back to other email service providers. This is only applicable for advanced use cases, so you should only use email extras if your company already has this set up.
+
+To add email extras, go to the **Sending Info** and click **Add New Extra**.
+
+{% alert warning %}
+The total key-value pairs added should not exceed 1&nbsp;kB. Otherwise, the messages will be aborted.
+{% endalert %}
+
+Email extra values are not published to Currents or Snowflake. If you're looking to send additional metadata or dynamic values to Currents or Snowflake, use [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) instead.
 
 ### Step 3b: Preview and test your message
 
@@ -260,5 +274,5 @@ Now just wait for all the data to roll in! Next, check out [Email reporting]({{s
 [18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
 [19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
 [20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
-[21]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
+[21]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
 [22]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/

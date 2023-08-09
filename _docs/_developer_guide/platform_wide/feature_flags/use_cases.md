@@ -1,7 +1,7 @@
 ---
-nav_title: Example Use Cases
-article_title: Example Use Cases
-page_order: 30
+nav_title: Use Cases
+article_title: Use Cases
+page_order: 40
 description: "This reference article covers example feature flag use cases including gradual rollouts, remote configuration, message coordination, and experimentation."
 tool: Feature Flags
 platform:
@@ -11,7 +11,7 @@ platform:
 
 ---
 
-# Example use cases
+# Use cases
 
 > This article describes specific examples of using feature flags to improve your user experience. Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags][8].
 
@@ -23,7 +23,7 @@ Feature flags are currently in beta. [Click here](https://dashboard.braze.com/en
 
 For this example, let's say we've decided to add a new "Live Chat Support" link to our app for faster customer service. We could release this feature to all customers at once. However, a wide release carries risks, such as: 
 
-* Our Support team is still in training, and customers will be able to start support tickets once it's released. This doesn't give us any wiggle room in case the Support team needs more time.
+* Our Support team is still in training, and customers will be able to start support tickets after it's released. This doesn't give us any wiggle room in case the Support team needs more time.
 * We're unsure of the actual volume of new support cases we'll get, so we might not be staffed appropriately.
 * If our Support team is overwhelmed, we have no strategy to quickly to turn this feature off again.
 * There might be bugs introduced in the chat widget and we don't want customers to have a negative experience.
@@ -64,7 +64,7 @@ return (<>
 
 ## Remote configuration
 
-Let's say that our Marketing team wants to list our current sales and promotions in our app's navigation. Normally, our engineers require one week lead time for any changes and three days for an app store review. But with Thanksgiving, Black Friday, Cyber Monday, Hanukah, Christmas, and New Years all within a two month period, we won't be able to make these tight deadlines .
+Let's say that our marketing team wants to list our current sales and promotions in our app's navigation. Normally, our engineers require one week lead time for any changes and three days for an app store review. But with Thanksgiving, Black Friday, Cyber Monday, Hanukah, Christmas, and New Years all within a two month period, we won't be able to make these tight deadlines .
 
 With feature flags, we can let Braze power the content of our app navigation link, letting our marketing manager make changes in minutes rather than days.
 
@@ -102,10 +102,9 @@ Now, the day before Thanksgiving, all we have to do is change those property val
 
 As a result, the next time someone loads the app they will see the new Thanksgiving deals.
 
-
 ## Messaging coordination
 
-Let's say that we're launching a new loyalty rewards program for our end users. It can be difficult for Marketing and Product teams to perfectly coordinate the timing of promotional messaging with a feature's rollout. Feature flags in Canvas let you apply sophisticated logic when it comes to enabling a feature for a select audience, and controlling the related messaging to those same users.
+Let's say that we're launching a new loyalty rewards program for our users. It can be difficult for Marketing and Product teams to perfectly coordinate the timing of promotional messaging with a feature's rollout. Feature flags in Canvas let you apply sophisticated logic when it comes to enabling a feature for a select audience, and controlling the related messaging to those same users.
 
 To effectively coordinate feature rollout and messaging, we'll create a new feature flag called `show_loyalty_program`. For our initial phased release, we'll let Canvas control when and for whom the feature flag is enabled. For now, we'll leave the rollout percentage at 0% and not select any target segments.
 
@@ -115,8 +114,7 @@ Then, in Canvas Flow, we'll create a Canvas Feature Flag step that enables the `
 
 ![Canvas flow showing an audience split where "high value customers" enable a "show_loyalty_program" feature flag][4]
 
-Now, users in this segment will start to see the new loyalty program, and once it has been enabled, an email and survey will automatically be sent out to help our team gather feedback.
-
+Now, users in this segment will start to see the new loyalty program, and after it's enabled, an email and survey will automatically be sent out to help our team gather feedback.
 
 ## Experimentation
 
@@ -139,13 +137,13 @@ if (featureFlag.enabled) {
 }
 ```
 
-In Canvas, we'll use an [Experiment Path][5] and a Feature Flag step to set up our A/B test.
+In Canvas, we'll use an [Experiment Path][5] step and a Feature Flag step to set up our A/B test.
 
 Now, 50% of users will see the old experience, while the other 50% see the new experience. We can then analyze the two steps to determine which checkout flow resulted in a higher conversion rate.
 
-![Canvas with an Experiment Path splitting traffic into two 50% groups][6]
+![Canvas with an experiment path splitting traffic into two 50% groups][6]
 
-Once we determine our winner, we can stop this Canvas, and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
+Once we determine our winner, we can stop this Canvas and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
 
 [1]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %}
 [2]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %}

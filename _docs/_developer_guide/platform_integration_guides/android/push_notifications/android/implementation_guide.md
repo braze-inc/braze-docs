@@ -33,7 +33,7 @@ Push notifications can display user-specific information inside a custom view hi
 
 #### Dashboard configuration
 
-To set up a personalized push in the dashboard, you must register the specific category you would like to be displayed. Set the appropriate user attributes you would like the message to show within the key-value pairs using standard Liquid. These views can be personalized based on specific user attributes of a specific user profile.
+To set up a personalized push in the dashboard, you must register the specific category you want to be displayed. Set the appropriate user attributes you want the message to show within the key-value pairs using standard Liquid. These views can be personalized based on specific user attributes of a specific user profile.
 
 ![Personalized Push dashboard Example][2]{: style="max-width:60%;"}
 

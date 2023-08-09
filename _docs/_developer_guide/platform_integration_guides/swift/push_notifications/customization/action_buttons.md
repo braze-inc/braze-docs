@@ -17,11 +17,17 @@ There are four sets of default push action buttons for Braze's default push cate
 
 ![A GIF of a push message being pulled down to display two customizable action buttons.][13]{: style="max-width:60%"}
 
-To enable these push action buttons, first register for Braze's default push categories. Then, use the `didReceive(_:completionHandler:)` delegate method to enable push action buttons.
-
 If you want to create your own custom notification categories, see [action button customization](#push-category-customization).
 
-## Step 1: Adding Braze default push categories {#registering}
+## Automatic integration (recommended)
+
+When integrating push using the `configuration.push.automation` configuration option, Braze automatically registers the action buttons for Braze's default push categories and handles the push action button click analytics and URL routing.
+
+## Manual integration
+
+To manually enable these push action buttons, first register for Braze's default push categories. Then, use the `didReceive(_:completionHandler:)` delegate method to enable push action buttons.
+
+### Step 1: Adding Braze default push categories {#registering}
 
 Use the following code to register for Braze's default push categories when you [register for push][36]:
 
@@ -46,7 +52,7 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 Clicking on push action buttons with background activation mode will only dismiss the notification and not open the app. The next time the user opens the app, the button click analytics for these actions will be flushed to the server.
 {% endalert %}
 
-## Step 2: Enable interactive push handling {#enable-push-handling}
+### Step 2: Enable interactive push handling {#enable-push-handling}
 
 To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `didReceive(_:completionHandler:)` delegate method:
 
@@ -72,7 +78,7 @@ If you use the `UNNotification` framework and have implemented the Braze [notifi
 
 ## Push category customization
 
-In addition to providing a set of default push categories, Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send these custom notification categories to your users.
+In addition to providing a set of default push categories, Braze supports custom notification categories and actions. After you register categories in your application, you can use the Braze dashboard to send these custom notification categories to your users.
 
 These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. 
 

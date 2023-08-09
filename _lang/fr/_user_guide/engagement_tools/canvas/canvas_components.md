@@ -8,7 +8,7 @@ guide_top_header: "Composants Canvas"
 guide_top_text: "Améliorez votre parcours Canvas avec des composants Canvas ! Les composants Canvas peuvent être utilisés pour simplifier le processus d’évaluation de l’efficacité de votre Canvas en remplaçant les étapes superflues par une seule étape. Les composants du Canvas font référence au parcours utilisateur personnalisé dans les branches du Canvas."
 
 page_type: landing
-description: "Cette page d’accueil contient les articles de composant Canvas qui vous permettront de créer des canvas optimisés. Certains de ces composants comprennent l’étape de message, de délai, de la décision de séparation, etc."
+description: "Cette page d’accueil contient les articles de composant Canvas qui vous permettront de créer des Canvas optimisés. Certains de ces composants comprennent l’étape de message, de délai, de la décision de séparation, etc."
 tool: Canvas
 
 guide_featured_title: "Section Articles"

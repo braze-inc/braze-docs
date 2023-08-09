@@ -66,7 +66,7 @@ If you do want to add more customization to the Braze Web SDK implementation via
 
 From the event selector within the Shopify setup wizard, the events denoted with an asterisk (&#42;) are supported by the Web SDK. If you select these events or include in-browser messaging, Braze will determine that the Web SDK implementation via Shopify ScriptTag will be added to your Shopify store as part of your setup.
 
-After you install Braze's Shopify app, you'll be redirected back into Braze. Once successfully installed, you'll then see the Shopify configuration page.
+After you install Braze's Shopify app, you'll be redirected back into Braze. After the app is successfully installed, you'll see the Shopify configuration page.
 
 #### What if I already have the Web SDK or Google Tag Manager enabled on my Shopify store? {#existing}
 
@@ -80,7 +80,7 @@ It is important to review your existing Web SDK integration for the following it
 
 If the above items are not met, then the Web SDK integration via Shopify ScriptTag will not be supportable.
 
-#### What if I use a customer data platform like Segment.io or mParticle?
+#### What if I use a customer data platform like Segment or mParticle?
 
 Ensure that you disable Shopify events you may have been sending through your customer data platform.
 

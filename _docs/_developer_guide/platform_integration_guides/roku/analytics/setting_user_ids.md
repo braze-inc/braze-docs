@@ -16,7 +16,7 @@ description: "This reference article covers methods to identify and set user IDs
 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user ID:
 
-```
+```brightscript
 m.Braze.setUserId(YOUR_USER_ID_STRING)
 ```
 

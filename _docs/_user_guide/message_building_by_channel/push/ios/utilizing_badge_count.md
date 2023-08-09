@@ -35,7 +35,7 @@ Set the badge count to 0 or "" to remove the badge count from the app's icon. Br
 In order to optimize the re-engagement power of badging, it is crucial that you configure your badge settings in a way that most simplifies the user's experience.
 
 ### Keep the badge count low
-Research shows that once the badge count increases past double digits, users generally lose interest in the updates and often stop using the app altogether.
+Research shows that after the badge count increases past double digits, users generally lose interest in the updates and often stop using the app altogether.
 
 > There can be exceptions to this rule depending on the nature of your app (e.g., email and group messaging apps).
 

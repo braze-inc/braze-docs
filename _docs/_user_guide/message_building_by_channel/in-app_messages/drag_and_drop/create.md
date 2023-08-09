@@ -3,6 +3,7 @@ nav_title: Creating an In-App Message
 article_title: "Creating an in-app message with drag-and-drop"
 description: "This reference article covers creating an in-app message with the drag-and-drop editor, prerequistes, creative details, and more."
 alias: "/create_dnd_iam/"
+page_order: 1
 ---
 
 # Creating an in-app message with drag-and-drop
@@ -11,7 +12,7 @@ alias: "/create_dnd_iam/"
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop.
 
-Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. Once you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message!
+Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. After you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message.
 
 ## Prerequisites
 
@@ -39,7 +40,7 @@ After selecting the drag-and-drop editor as your editing experience, you can cho
 - Use a Braze background image template
 - Start with a blank modal template
 
-Click **Build message** to begin designing your in-app message in the drag-and-drop editor!
+Click **Build message** to begin designing your in-app message in the drag-and-drop editor.
 
 {% alert note %}
 You can switch between modal and fullscreen display types in the **Message styles** panel of the editor.
@@ -132,11 +133,17 @@ If you're having trouble selecting a certain block, you can use the up arrow in 
 
 To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Add Personalization** from the editor toolbar. Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more!
 
-Next, take your generated Liquid snippet and insert it into your message. Once you've finished designing and building your in-app message, go to **Preview & Test** to preview your message.
+Next, take your generated Liquid snippet and insert it into your message. After you've finished designing and building your in-app message, go to **Preview & Test** to preview your message.
 
 #### Using the AI copywriter
 
 When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI’s GPT3 copy generation tool to generate human-like marketing copy for use in your messaging.
+
+{% alert tip %}
+You can save a few clicks by highlighting text inside the block before clicking the icon. The highlighted text will be added to the tool and copy will be generated immediately.
+{% endalert %}
+
+![]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
 
 #### Resetting styles to default
 

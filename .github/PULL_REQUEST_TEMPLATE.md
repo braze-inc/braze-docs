@@ -18,7 +18,8 @@ Closes #**ISSUE_NUMBER_HERE**
 - [ ] Check that you haven't removed any images (replacing an image with an updated one of the same name is fine), as this breaks the French site
 - [ ] Check that all links work.
 - [ ] Ensure you have completed [our Contributors License Agreement](https://www.braze.com/docs/cla/).
-- [ ] Tag @josh-mccrowell-braze and @KellieHawks as a reviewer when your work is **done and ready to be reviewed for merge**. Are you an internal product manager? Reference the internal reviewing chart to tag the appropriate reviewer.
+- [ ] Tag @josh-mccrowell-braze and @bre-fitzgerald as a reviewer when your work is **done and ready to be reviewed for merge**. Are you an internal product manager? Reference the internal reviewing chart to tag the appropriate reviewer.
+- [ ] If the documentation involves a 1) paid SKU, 2) a third party, 3) SMS, 4) AI, or 5) privacy, ensure that Maria Maldonado on the Legal team has signed off.
 - [ ] Tag others as reviewers as necessary.
 - [ ] If you have modified any links, be sure to add redirects to `assets` > `js` > `broken_redirect_list.js`
 
@@ -46,7 +47,7 @@ Closes #**ISSUE_NUMBER_HERE**
 <details>
 <summary>❗ ATTN: Internal Reviewing Chart </summary>
 <br>
-<b>Work at Braze and not sure who to tag for review?</b> <br>Before tagging @josh-mccrowell-braze or @KellieHawks for a general review, reference the following chart to see if a specific product vertical/reviewer applies to your pull request.
+<b>Work at Braze and not sure who to tag for review?</b> <br>Before tagging @josh-mccrowell-braze or @bre-fitzgerald for a general review, reference the following chart to see if a specific product vertical/reviewer applies to your pull request.
 <br><br>
 <table>
 <tr>
@@ -55,19 +56,19 @@ Closes #**ISSUE_NUMBER_HERE**
   </tr>
   <tr>
     <td>@josh-mccrowell-braze</td>
-    <td>Monolith Deployments<br>Quality Infrastructure<br>Platform Infrastructure<br>Datalake<br>SDKs</td>
-  </tr>
-  <tr>
-    <td>@kelliehawks</td>
-    <td>Currents<br>Internal Tools<br>Product Partnerships<br>SMS<br>Customer Lifecycle, Identity and Permissions</td>
+    <td>Monolith Deployments<br>Quality Infrastructure<br>Platform Infrastructure<br>Datalake<br>SDKs<br>Currents</td>
   </tr>
   <tr>
     <td>@bre-fitzgerald</td>
-    <td>Reporting<br>Intelligence<br>User Targeting<br>IAM<br>Channels<br>FIX</td>
+    <td>Intelligence<br>In-App Messages<br>Channels<br>FIX</td>
   </tr>
   <tr>
     <td>@lydia-xie</td>
-    <td>Ingestion<br>Core Objects<br>Core Messaging<br>Messaging and Automation<br>Email (Composition and Infrastructure)</td>
+    <td>Ingestion<br>Core Objects<br>Core Messaging<br>Messaging Experience<br>Message Components<br>Email (Composition and Infrastructure)</td>
+  </tr>
+  <tr>
+    <td>@rachel-feinberg</td>
+    <td>Customer Lifecycle, Identity and Permissions<br>SMS<br>User Targeting<br>Reporting</td>
   </tr>
 </table>
 </details>

@@ -41,11 +41,11 @@ You can also add as many drag-and-drop Content Blocks as needed to build out you
 
 ## Using a Content Block
 
-There are two ways to add the Content Block to your email. 
+There are two ways to add the Content Block to your email. You can add the Content Block using the editor or via Liquid.
 
 ### Rows
 
-First, go to the the **Rows** tab the editor and select **Content Blocks**. Locate your Content Block, and drag and drop the Content Block into the email editor. 
+First, go to the the **Rows** tab in the editor and select **Content Blocks**. Locate your Content Block, and drag and drop the Content Block into the email editor. 
 
 Once the Content Block is added into the email editor via drag and drop, you can make edits to the Content Block that will not affect the original Content Block you previously created in **Templates & Media**. This means a Content Block added via drag and drop isn't linked to the original Content Block, so to view any changes to this Content Block, add the Content Block into the email editor again. 
 
@@ -67,7 +67,7 @@ When a Content Block is added into the email editor via Liquid, this Content Blo
 
 ## Updating Content Blocks
 
-To update an existing Content Block, you can either edit the original Content Block from the **Content Blocks** page, or copy the HTML from the original message to your new one. If you update a Content Block template, it will update in all email messages where the Content Block is added via Liquid.
+To update an existing Content Block, you can either edit the original Content Block from the **Content Blocks** page, or copy the HTML from the original message to your new one. For updates to a Content Block template, it will update in all email messages where the Content Block is added via Liquid.
 
 To archive a Content Block, go to **Templates** > **Content Blocks**, select the <i class="fas fa-cog"></i> gear icon next to the selected Content Block, and click **Archive**. When you archive a Content Block, your messages will still include the content in the archived block.
 

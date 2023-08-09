@@ -33,7 +33,7 @@ With the Braze and Storyly integration, app owners can show stories to all segme
 Some common use cases include:
 
 __Target Braze segments in Storyly__<br>After the integration is finished, you can create an Storyly audience based on your Braze segments. This could be a demographic or behavioral segment. For example, target users who live in a specific location, those who take a specific action on your app, or those interested in specific products with specific stories to increase conversion.<br>
-__Personalized stories with user attributes__<br>Braze user attributes are also usable in Storyly to generate dynamic stories. This could include a user's name, products in a basket, or even favorited products, providing end users unique personalized stories. Personalization helps increase conversion rates on stories and the overall story engagement rate.
+__Personalized stories with user attributes__<br>Braze user attributes are also usable in Storyly to generate dynamic stories. This could include a user's name, products in a basket, or even favorited products, providing users unique personalized stories. Personalization helps increase conversion rates on stories and the overall story engagement rate.
 
 ## Data export integration
 

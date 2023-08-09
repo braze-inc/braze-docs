@@ -30,7 +30,7 @@ User attributes will be assigned to the currently active user. The following def
 
 **Implementation Example**<br>This is what setting a first name would look like in code:
 
-```javascript
+```brightscript
 m.Braze.setFirstName("User's First Name")
 ```
 
@@ -41,35 +41,35 @@ Beyond the default user attributes, Braze also allows you to define custom attri
 ### Settings custom attribute values
 {% tabs %}
 {% tab Boolean %}
-```javascript
+```brightscript
 m.Braze.setCustomAttribute("boolAttribute", true)
 ```
 {% endtab %}
 {% tab Integer %}
-```javascript
+```brightscript
 m.Braze.setCustomAttribute("intAttribute", 5)
 ```
 {% endtab %}
 {% tab Float/Double %}
-```javascript
+```brightscript
 m.Braze.setCustomAttribute("floatAttribute", 3.5)
 ```
 Braze treats FLOAT and DOUBLE values exactly the same within our database.
 {% endtab %}
 {% tab String %}
-```javascript
+```brightscript
 m.Braze.setCustomAttribute("stringAttribute", "stringValue")
 ```
 {% endtab %}
 {% tab Date %}
-```javascript
+```brightscript
 dateAttribute = CreateObject("roDateTime")
 dateAttribute.fromISO8601String("1992-11-29 00:00:00.000")
 m.Braze.setCustomAttribute("dateAttribute", dateAttribute)
 ```
 {% endtab %}
 {% tab Array %}
-```javascript
+```brightscript
 stringArray = createObject("roArray", 3, true)
 stringArray.Push("string1")
 stringArray.Push("string2")
@@ -83,7 +83,7 @@ m.Braze.setCustomAttribute("arrayAttribute", stringArray)
 
 This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer value.
 
-```javascript
+```brightscript
 m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 ```
 
@@ -91,7 +91,7 @@ m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 
 Custom attributes can also be unset using the following method:
 
-```javascript
+```brightscript
 m.Braze.unsetCustomAttribute("attributeName")
 ```
 
@@ -119,7 +119,7 @@ You can set the following email subscription statuses for your users programmati
 The method for setting email subscription status is `setEmailSubscriptionState()`. Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. For more details, visit [Managing user subscriptions][10].
 
 Example usage:
-```javascript
+```brightscript
 m.Braze.setEmailSubscriptionState(BrazeConstants().SUBSCRIPTION_STATES.OPTED_IN)
 ```
 

@@ -64,7 +64,7 @@ Canvas reports work similarly to a manual campaign report in that Canvas selecti
 
 ### Step 2: Choose your metrics
 
-Once you've created your report, you'll find a blank table containing campaigns in each row. The table will populate once you select **Edit Columns** and choose the metrics you'd like to add. From here, click **Run Report** to generate your metrics.
+Once you've created your report, you'll find a blank table containing campaigns in each row. The table will populate after you select **Edit Columns** and choose the metrics you'd like to add. From here, click **Run Report** to generate your metrics.
 
 ![Campaign Options][15]{: style="max-width:80%;"}
 
@@ -104,7 +104,7 @@ Within a Canvas report, you can view your Canvases broken down by variant, steps
 
 ### Variant
 
-Selecting **breakdown by variant** will allow you to see the high-level stats for your overall canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.
+Selecting **breakdown by variant** will allow you to see the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.
 
 ![Variants][12]{: style="max-width:90%;"}
 
