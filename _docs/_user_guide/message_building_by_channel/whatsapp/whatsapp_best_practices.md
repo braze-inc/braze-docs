@@ -31,7 +31,6 @@ To avoid high instances of blocks and reports, Braze suggests the following best
 Make sure all users have actively consented to receive WhatsApp messages before you start communicating with them on WhatsApp. When asking users to opt-in, users should be told that they are specifically agreeing to receive messages from your business over WhatsApp.
 
 {% alert note %}
-
 For information about opt-in requirements and helpful tips, see [Get Opt-in for WhatsApp](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/).
 {% endalert %}
 
