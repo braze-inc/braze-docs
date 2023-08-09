@@ -26,7 +26,7 @@ If a user doesn't have enough engagement data for Braze to calculate the optimal
 
 ## Using Intelligent Timing
 
-This section describes how to configure Intelligent Timing for your campaigns and Canvases.
+This section describes how to configure Intelligent Timing for your campaigns and Canvases. 
 
 ### Campaigns
 
@@ -152,7 +152,7 @@ In the original Canvas workflow, Intelligent Timing is set in the delay section 
 
 #### Launching the Canvas
 
-Unlike with campaigns, you don't need to worry about launching your Canvas 48 hours before the send date. This is because Intelligent Timing is set on the step level, not the Canvas level. Instead, we recommend that there is at least a 48 hour delay between the user entering the Canvas and receiving the step where Intelligent Timing is used.
+Unlike with campaigns, you don't need to worry about launching your Canvas 48 hours before the send date. This is because Intelligent Timing is set on the step level, not the Canvas level. Instead, we recommend that there is at least a 48-hour delay between the user entering the Canvas and receiving the step where Intelligent Timing is used.
 
 ### Fallback time {#fallback-time}
 
@@ -174,12 +174,13 @@ It's important to be aware of the limitations of using Intelligent Timing early 
 
 #### Custom fallback time
 
-Use custom fallback time to choose a different time to send the message. Similar to the most popular app time, the message will send at the fallback time in the user's local time zone. If the user's local time zone is unknown, it will send in your company time zone.
+Use the custom fallback time to choose a different time to send the message. Similar to the most popular app time, the message will send at the fallback time in the user's local time zone. If the user's local time zone is unknown, it will send in your company time zone.
 
-For campaigns with a custom fallback time is specified, if you launch the campaign within 24 hours of the send date, users whose optimal times have already passed will receive the campaign at the custom fallback time. If the custom fallback time has already passed in their time zone, the message will send immediately.
+For campaigns with a custom fallback time specified, if you launch the campaign within 24 hours of the send date, users whose optimal times have already passed will receive the campaign at the custom fallback time. If the custom fallback time has already passed in their time zone, the message will send immediately.
 
 ## Limitations
 
+- In-app messages, Content Cards, and webhooks are delivered immediately and not given optimal times.
 - Intelligent Timing is not available for action-based or API-triggered campaigns.
 - Intelligent Timing should not be used in the following scenarios:
     - **Quiet hours:** Using both Quiet Hours and Intelligent Timing is counterproductive, as Quiet Hours are based on a top-down assumption about user behavior, such as not messaging someone in the middle of the night, whereas Intelligent Timing is based on user activity. Maybe Sam checks her app notifications at 3 am a lot. We don't judge.
