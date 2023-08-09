@@ -39,11 +39,11 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ### Access permissions
 
-Note that you must have the correct permissions in the Braze dashboard to view, create, or edit feature flags.
+Note that you must have the correct [permissions][9] in the Braze dashboard to view, create, or edit feature flags.
 
-To view the list of available feature flags, you must have the **Access Campaigns, Canvases, Cards, Feature Flags, ...** permission.
+To view the list of available feature flags, you must have the **Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library** permission.
 
-In order to create or edit existing feature flags, you must have access to the  **Manage Feature Flags** permission.
+In order to create or edit existing feature flags, you must have access to the **Manage Feature Flags** permission.
 
 {% alert note %}
 Administrator users automatically have access to manage feature flags. For limited users, you can explicitly allow or restrict access to **Manage Feature Flags** at a workspace level. This is useful if certain users should only be able to modify feature flags for specific environments or business units.
@@ -706,3 +706,4 @@ To help keep your code (and Braze dashboard) clean, remove permanent feature fla
 [6]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#feature-flag
 [7]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 [8]: {% image_buster /assets/img/feature_flags/feature-flags-manage-permission.png %}
+[9]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
