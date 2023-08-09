@@ -31,6 +31,8 @@ Refer to the following table for a summary of differences between `canvas_entry_
 | **Canvas Flow behavior** | Can reference `canvas_entry_properties` in any step of a Canvas. | - Can reference `event_properties` in the first Message step **after** an [Action Paths][3] step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message Canvas components in between the Action Paths and Message steps. If one of these non-Message components is an Action Paths step, the user can go through that action path's Everyone Else path. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects) instead.
+
 {% alert note %}
 For in-app message channels, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) enabled in the original editor as part of the previous early access. However, `event_properties` cannot be used for in-app message channels.
 {% endalert %}
