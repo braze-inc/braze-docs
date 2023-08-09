@@ -26,7 +26,7 @@ If a user doesn't have enough engagement data for Braze to calculate the optimal
 
 ## Using Intelligent Timing
 
-This section describes how to configure Intelligent Timing for your campaigns and Canvases. 
+This section describes how to configure Intelligent Timing for your campaigns and Canvases.
 
 ### Campaigns
 
