@@ -616,6 +616,35 @@ For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutt
 m.BrazeTask.ObserveField("BrazeFeatureFlags", "onFeatureFlagChanges")
 ```
 {% endtab %}
+
+{% tab React Hook %}
+```typescript
+import { useEffect, useState } from "react";
+import {
+  FeatureFlag,
+  getFeatureFlag,
+  removeSubscription,
+  subscribeToFeatureFlagsUpdates,
+} from "@braze/web-sdk";
+
+export const useFeatureFlag = (id: string): FeatureFlag => {
+  const [featureFlag, setFeatureFlag] = useState<FeatureFlag>(
+    getFeatureFlag(id)
+  );
+
+  useEffect(() => {
+    const listener = subscribeToFeatureFlagsUpdates(() => {
+      setFeatureFlag(getFeatureFlag(id));
+    });
+    return () => {
+      removeSubscription(listener);
+    };
+  }, [id]);
+
+  return featureFlag;
+};
+```
+{% endtab %}
 {% endtabs %}
 
 ## Best practices
