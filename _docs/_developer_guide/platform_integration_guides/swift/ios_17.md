@@ -41,4 +41,4 @@ Apple has also announced that they will release a list of third-party SDKs that 
 
 Unlike traditional tracking SDKs that are designed to monitor users across multiple websites and applications, the Braze SDK focuses on first-party data messaging and user experiences.
 
-While we do not expect to be included in this list, we will monitor this closely and release any necessary updates.
+While we do not expect the Braze SDK to be included in this list, we will monitor this situation closely and release any necessary updates.
