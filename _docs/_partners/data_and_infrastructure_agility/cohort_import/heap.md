@@ -82,7 +82,7 @@ After configuring your integration's credentials, check all message engagement, 
 
 ## Integration Details
 
-The payload structure for exported data is the same as that of the payloads from custom HTTP connectors, which can be viewed in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).
+The payload structure for exported data is the same as that of the payloads for custom HTTP connectors, which can be viewed in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: {% image_buster /assets/img/heap/heap1.png %} 
