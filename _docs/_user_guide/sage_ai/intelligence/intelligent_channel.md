@@ -21,7 +21,7 @@ Every time a message is sent to a user, or a user interacts with a message, the 
 To enable the Intelligent Channel filter, select the **Intelligent Channel** filter on the **Target Users** page when creating a email, web push, or mobile push campaign.
 
 {% alert important %}
-To compute the engagement rate of the SMS channel, you need to be using [SMS link shortening][3] with advanced tracking and the click tracking feature turned on.
+To compute the engagement rate of the SMS channel, turn on [SMS link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#overview/) with advanced tracking and click tracking.
 {% endalert %}
 
 ## The "Not enough data" option
@@ -61,4 +61,3 @@ Intelligent Channel allows you to selectively target in advance the fraction of 
 
 [1]: {% image_buster /assets/img/intelligent_channel_filter.png %} "Intelligent Channel Filter"
 [2]: {% image_buster /assets/img/intelligent_example.png %}
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#overview/
