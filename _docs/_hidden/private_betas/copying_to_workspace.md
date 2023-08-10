@@ -24,7 +24,9 @@ When you copy a campaign to a workspace, fields such as campaign name and descri
 
 ### Copying campaigns that contain Liquid
 
-For message bodies that include Liquid references, the references are copied over to a workspace, but they may not function as expected. Note the following Liquid references with dependencies when copying campaigns across workspaces:
+For message bodies that include Liquid references, the references are copied over to a workspace, but they may not function as expected. This means if a campaign from Workspace A is copied to Workspace B, then Workspace B can't reference Workspace A's details, including Liquid references. For example, fields such as trigger actions and audience filters aren't copied across workspaces.
+
+Note the following Liquid references with dependencies when copying campaigns across workspaces:
 - Catalog item tags
 - Connected Content tags
 - Content Blocks
@@ -34,9 +36,7 @@ For message bodies that include Liquid references, the references are copied ove
 - Subscription state tags
 - Voucher and promotion tags
 
-For example, Content Blocks **will not** be copied. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid any errors when launching a campaign.
-
-Fields such as trigger actions and audience filters aren't copied across a workspace.
+When you copy a campaign across a workspace, Content Blocks won't be copied along with it. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid any errors when launching a campaign.
 
 ### What's copied across workspaces
 
