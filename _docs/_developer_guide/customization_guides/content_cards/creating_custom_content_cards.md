@@ -66,7 +66,7 @@ Content Cards can be used to simulate a message center. In this format, each mes
 
 Here is an example dashboard configuration you might use to create two message cards: one message is a call to action for a user to add their preferences to receive targeted reading recommendations, and one provides a coupon code to a segment of new subscribers. 
 
-![]({% image_buster /assets/img/content_cards/content-card-message-inbox-with-kvps.png %}){: style="max-width:50%;"}
+![]({% image_buster /assets/img/content_cards/content-card-message-inbox-with-kvps.png %}){: style="max-width:20%;float:right;margin-left:15px;border:0px;"}
 
 Example key-value pairs for the reading recommendation card could be:
 
