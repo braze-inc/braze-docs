@@ -713,6 +713,7 @@ validurls['/docs/partners/technology_partners/data_augmentation/contextual_locat
 validurls['/docs/partners/technology_partners/data_augmentation/recommendation/certona/'] = '/docs/partners/message_personalization/dynamic_content/certona/';
 validurls['/docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/';
 validurls['/docs/partners/technology_partners/insights/crash_analytics/apteligent/'] = '/docs/partners/data_and_infrastructure_agility/crash_analytics/apteligent/';
+validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/'] = '/docs/partners/data_and_infrastructure_agility';
 validurls['/docs/scim/post_create_user_account/'] = '/docs/api/endpoints/scim/post_create_user_account/';
 validurls['/docs/user_guide/administrative/company_settings/about/'] = '/docs/user_guide/administrative/company_settings';
 validurls['/docs/user_guide/administrative/manage_your_users/managing_user_subscriptions/'] = '/docs/user_guide/administrative/manage_your_braze_users/user_permissions/';
