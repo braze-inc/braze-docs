@@ -50,14 +50,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Merging users by email (early access)
 {% alert important %}
-Merging users by email and /users/merged with mismatched identifiers are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Merging users by email and /users/merge with mismatched identifiers are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 If `email` is specified as an identifier, an additional `prioritization` value is required in the identifier. `prioritization` should be an array specifying which user to merge if there are multiple users found.
 
 `prioritization` is an ordered array, so if more than one user matches from a prioritization then no merge will happen.
 
-The allowed values for the array are: `identified`, `unidentified`, `most_recently_updated`, and `least_recently_updated`
+The allowed values for the array are: `identified`, `unidentified`, `most_recently_updated`.
 
 - `most_recently_updated` refers to prioritizing the most recently updated user
 
@@ -110,7 +110,7 @@ This would merge the most recently updated unidentified user with email address 
   }
 }
 ```
-In this case, there are two unidentified users with email address "john.smith@braze.com". The above request will not merge any users since there are two unidentified users with that email address. The above update would work if there was only one unidentified user with email address "john.smith@braze.com".
+In this case, if there are two unidentified users with email address "john.smith@braze.com", the above request will not merge any users since there are two unidentified users with that email address. The above request would work if there was only one unidentified user with email address "john.smith@braze.com".
 
 
 ### Merge_updates behavior
