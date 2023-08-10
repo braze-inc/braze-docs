@@ -21,35 +21,156 @@ Looking for steps on how to create a feature flag in Braze? Refer to [Creating f
 Feature flags are currently in beta. [Click here](https://dashboard.braze.com/engagement/feature_flags) to learn more about joining the beta program.
 {% endalert %}
 
+<!-- When feature flags GAs, do not forget to update https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions with the additional permissions to use feature flags -->
+
 ## Prerequisites
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
 
 {% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
-## Use cases
-Feature flags have a few different strategic uses, outlined below. To learn how you would implement these example use cases, see the [feature flag use cases][2] article.
-
 ### Gradual rollouts
 Use feature flags to gradually enable features to a sample population. For example, you can soft launch a new feature to your VIP users first. This strategy helps mitigate risks associated with shipping new features to everyone at once and helps catch bugs early. 
 
 ![Moving image of rollout traffic slider going from 0% to 100%.][1]
 
-For example, imagine that you have an ecommerce product that now comes in multiple colors and you want to implement a new color selector so users can specify which color to purchase. You can release this new feature but only enable it for 5% of your users in Braze. If all goes well, you can gradually increase to 20%, 50%, and eventually 100%. If a critical bug is discovered, you can roll back feature enablement to 0% without requiring an additional code release. 
+For example, let's say we've decided to add a new "Live Chat Support" link to our app for faster customer service. We could release this feature to all customers at once. However, a wide release carries risks, such as: 
+
+* Our Support team is still in training, and customers can start support tickets after it's released. This doesn't give us any leeway in case the Support team needs more time.
+* We're unsure of the actual volume of new support cases we'll get, so we might not be staffed appropriately.
+* If our Support team is overwhelmed, we have no strategy to quickly turn this feature off again.
+* There might be bugs introduced in the chat widget, and we don't want customers to have a negative experience.
+
+With Braze feature flags, we can instead gradually roll out the feature and mitigate all of these risks:
+
+* We will turn on the "Live Chat Support" feature when the Support team says they're ready.
+* We will enable this new feature for only 10% of users to determine if we're staffed appropriately.
+* If there are any bugs, we can quickly disable the feature instead of rushing to ship a new release.
+
+To gradually roll out this feature, we can [create]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) a feature flag named "Live Chat Widget."
+
+![Feature flag details for an example named Live Chat Widget. The ID is enable_live_chat. This feature flag description reads that the live chat widget will show on the support page.][7]
+
+In our app code, we will only show the **Start Live Chat** button when the Braze feature flag is enabled:
+
+```javascript
+import {useState} from "react";
+import * as braze from "@braze/web-sdk";
+
+// Get the initial value from the Braze SDK
+const featureFlag = braze.getFeatureFlag("enable_live_chat");
+const [liveChatEnabled, setLiveChatEnabled] = useState(featureFlag.enabled);
+
+// Listen for updates from the Braze SDK
+braze.subscribeToFeatureFlagsUpdates(() => {
+    const newValue = braze.getFeatureFlag("enable_live_chat").enabled;
+    setLiveChatEnabled(newValue);
+});
+
+// Only show the Live Chat if the Braze SDK determines it is enabled
+return (<>
+  Need help? <button>Email Our Team</button>
+  {liveChatEnabled && <button>Start Live Chat</button>}
+</>)
+
+```
 
 ### Remotely control app variables 
 Use feature flags to modify your app's functionality in production. This can be particularly important for mobile apps, where app store approvals prevent rolling out changes quickly to all users.
 
-For example, you can use a feature flag's property values to quickly change your app's homepage links or text. You can even dynamically personalize this content using Braze profile attributes.
+For example, let's say that our marketing team wants to list our current sales and promotions in our app's navigation. Normally, our engineers require one week's lead time for any changes and three days for an app store review. But with Thanksgiving, Black Friday, Cyber Monday, Hanukah, Christmas, and New Year's Day all within two months, we won't be able to meet these tight deadlines.
+
+With feature flags, we can let Braze power the content of our app navigation link, letting our marketing manager make changes in minutes rather than days.
+
+To remotely configure this feature, we'll create a new feature flag called `navigation_promo_link` and define the following initial properties:
+
+![Feature flag with link and text properties directing to a generic sales page.][9]
+
+In our app, we'll use getter methods by Braze to retrieve this feature flag's properties and build the navigation links based on those values:
+
+```javascript
+import * as braze from "@braze/web-sdk";
+import {useState} from "react";
+
+const featureFlag = braze.getFeatureFlag("navigation_promo_link");
+// Check if the feature flag is enabled
+const [promoEnabled, setPromoEnabled] = useState(featureFlag.enabled);
+// Read the "link" property
+const [promoLink, setPromoLink] = useState(featureFlag.getStringProperty("link"));
+// Read the "text" property
+const [promoText, setPromoText] = useState(featureFlag.getStringProperty("text"));
+
+return (<>
+  <div>
+    <a href="/">Home</a>
+    { promoEnabled && <a href={promoLink}>{promoText}</a> }
+    <a href="/products">Products</a>
+    <a href="/categories">Categories
+  </div>
+</>)
+```
+
+Now, the day before Thanksgiving, we only have to change those property values in the Braze dashboard.
+
+![Feature flag with link and text properties directing to a Thanksgiving sales page.][10]
+
+As a result, the next time someone loads the app, they will see the new Thanksgiving deals.
 
 ### Message coordination
 
 Use feature flags to synchronize a feature's rollout and messaging. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a campaign or Canvas that only targets that segment. 
 
+Let's say that we're launching a new loyalty rewards program for our users. It can be difficult for Marketing and Product teams to perfectly coordinate the timing of promotional messaging with a feature's rollout. Feature flags in Canvas let you apply sophisticated logic when it comes to enabling a feature for a select audience and controlling the related messaging to those same users.
+
+To effectively coordinate feature rollout and messaging, we'll create a new feature flag called `show_loyalty_program`. For our initial phased release, we'll let Canvas control when and for whom the feature flag is enabled. For now, we'll leave the rollout percentage at 0% and not select any target segments.
+
+![A feature flag with the name Loyalty Rewards Program. The ID is show_loyalty_program, and the description that this shows the new loyalty rewards program on the home screen and profile page.][11]
+
+Then, in Canvas Flow, we'll create a [Feature Flag step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) that enables the `show_loyalty_program` feature flag for our "High Value Customers" segment:
+
+![An example of a Canvas with an Audience Split step where the high-value customers segment turns on the show_loyalty_program feature flag.][4]
+
+Now, users in this segment will start to see the new loyalty program, and after it's enabled, an email and survey will be sent out automatically to help our team gather feedback.
+
 ### Feature experimentation
 
 Use feature flags to experiment and confirm your hypotheses around your new feature. By splitting traffic into two or more groups, you can compare the impact of a feature flag across groups, and determine the best course of action based on the results.
 
+An [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) is a powerful tool that compares users' responses to multiple versions of a variable.
+
+In this example, our team has built a new checkout flow for our e-commerce app. Even though we're confident it's improving the user experience, we want to run an A/B test to measure its impact on our app's revenue.
+
+To begin, we'll create a new feature flag called `enable_checkout_v2`. We won't add an audience or rollout percentage. Instead, we'll use Canvas to split traffic, enable the feature, and measure the outcome.
+
+In our app, we'll check if the feature flag is enabled or not and swap out the checkout flow based on the response:
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+const featureFlag = braze.getFeatureFlag("enable_checkout_v2");
+if (featureFlag.enabled) {
+  return <NewCheckoutFlow />
+} else {
+  return <OldCheckoutFlow />
+}
+```
+
+In Canvas, we'll use an [Experiment Path step][5] and a Feature Flag step to set up our A/B test.
+
+Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two steps to determine which checkout flow resulted in a higher conversion rate.
+
+![A Canvas with an experiment path splitting traffic into two 50 percent groups.][6]{: width="70%"}
+
+Once we determine our winner, we can stop this Canvas and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
+
 [1]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %} 
 [2]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/use_cases/
 [3]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/
+[4]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %}
+[5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step
+[6]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-experiment-step.png %}
+[7]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %}
+[8]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/
+[9]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %}
+[10]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %}
+[11]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %}
