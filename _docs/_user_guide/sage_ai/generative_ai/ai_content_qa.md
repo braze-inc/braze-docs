@@ -24,11 +24,15 @@ Content QA with AI offers the following key features to enhance the quality of y
 
 To access the content checker, follow these steps:
 
-1. After composing a message, navigate to the **Test** tab.
+1. After composing a push or SMS message, navigate to the **Test** tab.
 2. Locate the **Content QA with AI** section.
 3. Click **Test Content**.
 
 ![Content QA with AI section of the Test tab.][1]{: style="max-width:60%"}
+
+{% alert note %}
+Content QA with AI is only available for push and SMS channels at this time.
+{% endalert %}
 
 ## Tips for effective use
 
