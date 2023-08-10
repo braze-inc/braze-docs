@@ -28,7 +28,7 @@ The plain text view removes your ```WYSIWYG``` (what you see is what you get) ed
 Emails render differently depending on browsers and email clients, so take note of which browsers and email clients you're experiencing issues with.
 
 - Preview your emails using [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision/) to see what your emails look like in different browsers and email clients.
-- Once you've identified which browsers or email clients are causing issues, let your developer team know that they'll need to modify their HTML and make edits to accommodate those browsers or email clients.
+- After you've identified which browsers or email clients are causing issues, let your developer team know that they'll need to modify their HTML and make edits to accommodate those browsers or email clients.
 
 ### CSS inlining
 

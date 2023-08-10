@@ -2,7 +2,7 @@
 nav_title: Taxi for Email
 article_title: Taxi for Email
 alias: /partners/taxi_for_email
-description: "This reference article outlines the partnership between Braze and Taxi for Email, an online email marketing tool that allows Braze customers to create intelligent email templates using their drag and drop interface and simple yet powerful syntax."
+description: "This reference article outlines the partnership between Braze and Taxi for Email, an online email marketing tool that allows Braze customers to create intelligent email templates using their drag-and-drop interface and simple yet powerful syntax."
 page_type: partner
 search_tag: Partner
 
@@ -27,7 +27,7 @@ The Braze and Taxi integration leverages Taxi's simple yet powerful syntax to cr
 
 ### Step 1: Create a Taxi email template
 
-Create a Taxi template on the Taxi platform. Once created, navigate to your **Organization Settings** and select the **ESP Connectors** tab.
+Create a Taxi template on the Taxi platform. After the template is created, navigate to your **Organization Settings** and select the **ESP Connectors** tab.
 
 ### Step 2: Create Braze connector
 
@@ -35,7 +35,7 @@ Create a Taxi template on the Taxi platform. Once created, navigate to your **Or
 2. Click **Braze** to edit the Braze connector settings.
 3. Enter your Braze endpoint and your Braze API key.
 
-Your connector field will change colors once details with correct permissions are provided. If this field does not change, check that your fields align with the requirements listed.
+Your connector field will change colors after details with correct permissions are provided. If this field does not change, check that your fields align with the requirements listed.
 
 ## Usage
 

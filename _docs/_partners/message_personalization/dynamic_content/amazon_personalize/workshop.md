@@ -53,7 +53,7 @@ Before you can provide personalized product recommendations, you first need to t
 3. If you don't see the **RetailDemoStore** notebook instance, make sure you are in the same region where you deployed the project in step 1.
 4. To access the notebook instance, choose **Open Jupyter** or **Open JupyterLab**.
 5. When the Jupyter web interface has loaded for the notebook instance, choose the `workshop/1-Personalization/1.1-Personalize.ipynb` notebook. You may have to choose the `workshop` folder to see the notebook subdirectories.
-6. Once you have the `1.1-Personalize` notebook open, step through the workshop by executing each cell. You can choose **Run** from the Jupyter toolbar to sequentially execute the code in the cells. The notebook takes approximately two hours to complete.
+6. When you have the `1.1-Personalize` notebook open, step through the workshop by executing each cell. You can choose **Run** from the Jupyter toolbar to sequentially execute the code in the cells. The notebook takes approximately two hours to complete.
 
 ### Step 3: Send personalized emails from Braze
 

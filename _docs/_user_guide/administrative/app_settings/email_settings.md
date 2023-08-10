@@ -30,7 +30,7 @@ When configuring your email settings, your outbound email settings identify whic
 {% tabs local %}
 {% tab Display Name Address %}
 
-In this section, you can add the names and email addresses that can be used when Braze sends emails to your users. The display names and email addresses will be available in the **Edit Sending Info** options as you compose your email campaign.
+In this section, you can add the names and email addresses that can be used when Braze sends emails to your users. The display names and email addresses will be available in the **Edit Sending Info** options as you compose your email campaign. Note that updates made to the outbound email settings do not retroactively affect existing sends. 
 
 ![]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
@@ -149,7 +149,7 @@ To learn more about custom footer Liquid templating, check out our documentation
 {% endtab %}
 {% tab Custom Unsubscribe Page %}
 
-Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page will appear once a user has selected to unsubscribe from the bottom of an email. Note that this page should be less than 750 KB. 
+Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page will appear after a user has selected to unsubscribe from the bottom of an email. Note that this page should be less than 750 KB. 
 
 ![]({% image_buster /assets/img/email_settings/custom_unsubscribe.png %})
 

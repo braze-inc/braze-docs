@@ -39,10 +39,10 @@ These default limits can be increased upon request. Reach out to your customer s
 | [`/subscription/status/set`][19] | 5,000 requests per minute. |
 | [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1,000 requests per minute, per workspace. |
 | [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | 10 requests per minute, per workspace. |
-| [`DELETE: /catalogs/{catalog_name}`][31]<br>[`GET: /catalogs`][32]<br>[`POST: /catalogs`][33] | 5 requests per minute shared between the endpoints. |
-| [`DELETE: /catalogs/{catalog_name}/items`][34]<br>[`PATCH: /catalogs/{catalog_name}/items`][35]<br>[`POST: /catalogs/{catalog_name}/items`][36] | 100 requests per minute shared between the endpoints. |
-| [`DELETE: /catalogs/{catalog_name}/items/{item_id}`][37]<br>[`GET: /catalogs/{catalog_name}/items/{item_id}`][38]<br>[`GET: /catalogs/{catalog_name}/items`][39]<br>[`PATCH: /catalogs/{catalog_name}/items/{item_id}`][40]<br>[`POST: /catalogs/{catalog_name}/items/{item_id}`][41] | 50 requests per minute shared between the endpoints. |
-| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22]<br>[`GET: /scim/v2/Users?filter=userName eq "user@test.com"`][43]<br>[`PUT: /scim/v2/Users/YOUR_ID_HERE`][25]<br>[`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24]<br>[`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
+| [`/catalogs/{catalog_name}`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 5 requests per minute shared between the endpoints. |
+| [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36] | 100 requests per minute shared between the endpoints. |
+| [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 requests per minute shared between the endpoints. |
+| [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Batching API requests
@@ -55,7 +55,7 @@ REST API rate limit increases are considered based on need for customers who are
 
 ### Batching User Track requests {#batch-user-track}
 
-Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a max of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
+Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a maximum of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
 
 Requests made to this endpoint will generally begin processing in this order: 
 
@@ -94,7 +94,7 @@ We recommend that you allow for a 5-minute delay between consecutive endpoint ca
 
 Understanding the optimal delay between endpoints is crucial when making consecutive calls to the Braze API. Problems arise when endpoints depend on the successful processing of other endpoints, and if called too soon, could raise errors. For example, if you're assigning users an alias via our `/user/alias/new` endpoint, and then hitting that alias to send a custom event via our `/users/track` endpoint, how long should you wait?
 
-Under normal conditions, the time for our data eventual consistency to occur is 10–100ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that you allow for a 5-minute delay between making subsequent calls to minimize the probability of error.
+Under normal conditions, the time for our data eventual consistency to occur is 10–100ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur, so we recommend that you allow for a 5-minute delay between making subsequent calls to minimize the probability of error.
 
 [1]: {{site.baseurl}}/api/endpoints/messaging/
 [2]: {{site.baseurl}}/api/objects_filters/connected_audience/

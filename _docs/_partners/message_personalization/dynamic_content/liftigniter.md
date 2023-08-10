@@ -24,7 +24,7 @@ The LiftIgniter and Braze integration leverage Connected Content to allow you to
 
 ## Integration
 
-Use [LiftIgniter's REST API](https://documenter.getpostman.com/view/2166502/liftigniter/7TFGvSV#9bdf75da-edd6-45ec-9c28-a0edefad1389) to insert personalized content into your messages. Once you have your LiftIgniter account and LiftIgniter is integrated into your app, add the following template into your message composer to call content into your messages, replacing information as needed (`x-api-key`, `theapikey`, etc.).
+Use [LiftIgniter's REST API](https://documenter.getpostman.com/view/2166502/liftigniter/7TFGvSV#9bdf75da-edd6-45ec-9c28-a0edefad1389) to insert personalized content into your messages. After you have your LiftIgniter account and LiftIgniter is integrated into your app, add the following template into your message composer to call content into your messages, replacing information as needed (`x-api-key`, `theapikey`, etc.).
 
 {% raw %}
 ```

@@ -18,11 +18,15 @@ tool:
 
 ## Notification ID {#notification-id}
 
-A **"Notification ID"** is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a Notification ID allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones.
+A notification ID is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a notification ID allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones.
 
-## Time to live (TTL) {#ttl}
+To assign a notification ID, navigate to the composition page of the push you'd like to add the ID to select the **Settings** tab. Enter an integer in the **Notification ID** section. To update this notification after you've issued it, send another notification with the same ID that you used previously.
 
-The **"Time to Live"** (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. 
+![]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:80%;" }
+
+## Time-to-live (TTL) {#ttl}
+
+The time-to-live (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time-to-live are 4 weeks for Firebase Cloud Messaging (FCM) and 31 days for Amazon Device Messaging (ADM).
 
 For example, suppose your app is a game and you offer your users an in-game currency bonus if they maintain a streak of playing the game daily. You could send a push alerting a user that that streak is in danger of being broken if they've exceeded a certain number of days. However, if a user was to reconnect their device to the game app 4 weeks later with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
 

@@ -45,9 +45,9 @@ To learn more about the pros and cons of each method, refer to the following [Te
 Tealium offers both batch and non-batch connector actions. The non-batch connector should be used when real-time requests are important to the use case and there are no concerns about hitting Braze's API rate limit specifications. Contact Braze Support or your CSM if you have any questions.<br><br>
 
 For batch connectors, requests are queued until one of the following thresholds is met:
-- Max number of requests: 75
-- Max time since oldest request: 10 minutes
-- Max size of requests: 1 MB
+- Maximum number of requests: 75
+- Maximum time since oldest request: 10 minutes
+- Maximum size of requests: 1 MB
 
 Tealium does not batch consent events (subscription preferences) or user deletion events by default.
 {% endalert %}
@@ -82,7 +82,7 @@ Tealium offers two ways to integrate Mobile Remote Command, there is no loss of 
 
 | Mobile remote command method | Pros | Cons |
 | --- | --- | --- |
-| **Remote command tag** | Easily modify the mappings and data sent to the remote command using the Tealium iQ UI.<br><br>This allows us to send additional data or events to a 3rd party SDK once the app is already in the app store, without the client having to update the app. | The Tag Management module in the app relies on a hidden webview to process JavaScript. |
+| **Remote command tag** | Easily modify the mappings and data sent to the remote command using the Tealium iQ UI.<br><br>This allows us to send additional data or events to a 3rd party SDK after the app is already in the app store, without the client having to update the app. | The Tag Management module in the app relies on a hidden webview to process JavaScript. |
 | **JSON configuration file**<br>([Recommended](https://docs.tealium.com/platforms/remote-commands/integrations/braze/#how-it-works)) | Using the JSON method eliminates the need to have a hidden webview in the app and greatly reduces memory consumption.<br><br>The JSON file can be hosted remotely or locally within the customer's app. | At the moment, there is no UI to manage this, so it requires a bit of extra effort.<br><br>Note: Tealium is working on adding a management UI that will solve this issue and bring the same level of flexibility to JSON remote commands as they have with the iQ Tag management version |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -145,7 +145,7 @@ Tealium requires that you first set up a valid data source for your connector to
 1. From the sidebar in Tealium under **Server-Side**, navigate to **Sources > Data Sources > + Add Data Source**.
 2. Locate your desired platform within the available categories, and name your source, this is a required field.<br>![][6]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
 3. From the **Event Specifications** options, choose the [event specs](https://community.tealiumiq.com/t5/Customer-Data-Hub/Event-Specifications/ta-p/19329) you would like to include. Event specifications help you identify the event names and required attributes to track in your installation. These specifications will be applied to incoming events.<br>![][7]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>Take some time to think about what data is most valuable to you and which specifications seem most appropriate for your use case. [Custom event specifications][19] are also available. <br>
-4. The next dialogue advances to the **Get Code** step. The base code and event tracking code provided here serve as your installation guide. Download the provided PDF if you wish to share these instructions with your team. Select **Save & Continue** once finished.<br>
+4. The next dialogue advances to the **Get Code** step. The base code and event tracking code provided here serve as your installation guide. Download the provided PDF if you wish to share these instructions with your team. Select **Save & Continue** when finished.<br>
 5. You will now be able to view your saved source as well as add or remove event specs. <br>![][18]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>From the detailed data source view you can perform the following actions:
 - View and copy the data source key
 - View installation instructions
@@ -163,7 +163,7 @@ A connector is an integration between Tealium and another vendor used to transmi
 
 1. From the sidebar in Tealium under **Server-Side**, navigate to **EventStream > Event Connectors**.
 2. Select the blue **+ Add Connector** button to look through the connector marketplace. In the new dialogue box that appears, use the spotlight search to find the **Braze** connector.
-3. To add this connector, click the **Braze** connector tile. Once clicked, you can view the connection summary and a list of the required information, supported actions, and configuration instructions. Configuration comprises three steps: source, configuration, and action.
+3. To add this connector, click the **Braze** connector tile. When clicked, you can view the connection summary and a list of the required information, supported actions, and configuration instructions. Configuration comprises three steps: source, configuration, and action.
 
 #### Source
 
@@ -230,7 +230,7 @@ Select **Continue**.
 
 Your connector now displays in the list of connectors on your Tealium home page. <br>![][13]{: style="max-width:80%;"}
 
-Make sure to **Save / Publish** your connector once finished. The actions you configured will now fire when the trigger connections are met. 
+Make sure to **Save / Publish** your connector when finished. The actions you configured will now fire when the trigger connections are met. 
 
 ### Step 3: Test your Tealium connector
 
@@ -264,7 +264,7 @@ If you have multiple EventStreams that target the same event feed, **all actions
 **Solution**: <br>Set up a separate event specification or feed to track each action. <br>**OR**<br> Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
 
 #### Initializing Braze too early
-Users integrating with Tealium using the Braze Web SDK tag may see a dramatic increase in their MAU. **If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.** Some may want to only track user behavior once users have completed some action, such as "Signed In" or "Watched Video", to lower their MAU count. <br><br>
+Users integrating with Tealium using the Braze Web SDK tag may see a dramatic increase in their MAU. **If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.** Some may want to only track user behavior when users have completed some action, such as "Signed In" or "Watched Video", to lower their MAU count. <br><br>
 **Solution**: <br>Set up load rules to determine exactly when and where a tag loads on your site. You can learn more about load rules and how to set them up in the [Tealium learning center](https://community.tealiumiq.com/t5/Customer-Data-Hub/Building-an-Audience/ta-p/11881).
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/

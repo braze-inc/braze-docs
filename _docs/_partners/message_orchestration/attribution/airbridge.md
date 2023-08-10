@@ -20,7 +20,7 @@ The Braze and Airbridge integration lets you pass all non-organic install attrib
 |---|---|
 | Airbridge account | An Airbridge account is required to take advantage of this partnership. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. |
-| Airbridge SDK | In addition to the required Braze SDK, you must install the Airbridge [Android](https://developers.airbridge.io/v1.1-en/docs/android-sdk) or [iOS](https://developers.airbridge.io/v1.1-en/docs/ios-sdk) SDK. |
+| Airbridge SDK | In addition to the required Braze SDK, you must install the Airbridge [Android](https://help.airbridge.io/en/developers/android-sdk) or [iOS](https://help.airbridge.io/en/developers/ios-sdk) SDK. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -194,7 +194,7 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and sel
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
+Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
 
 ![][1]
 
@@ -208,7 +208,7 @@ Here, you will find the REST endpoint and generate your Braze data import key. O
 The attribution data for campaigns that led to deeplink open events are updated on the device-level. For example, if two users use a single device and one user performs a deeplink open event, the attribution data of this event is also reflected to the other user's data.
 {% endalert %}
 
-For more detailed instructions, visit [Airbridge](https://help.airbridge.io/hc/en-us/articles/900004368546-Braze).
+For more detailed instructions, visit [Airbridge](https://help.airbridge.io/en/guides/braze).
 
 ### Step 4: Confirm the integration
 
@@ -241,7 +241,7 @@ Attribution data for Meta Business campaigns is not available through our partne
 
 Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
 
-To get started with Airbridge click tracking links, visit [Airbridge](https://help.airbridge.io/hc/en-us/articles/900001037886-Tracking-Link-Generation/). Once set up, you can directly insert the Airbridge click tracking links into your Braze campaigns. Airbridge will then use its [probabilistic attribution methodologies](https://help.airbridge.io/hc/en-us/articles/900003300526-Airbridge-Identity-Matching-Logic) to attribute the user that has clicked on the link. We recommend appending your Airbridge tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. This will deterministically attribute the user that has clicked on the link.
+To get started with Airbridge click tracking links, visit [Airbridge](https://help.airbridge.io/en/guides/creating-a-new-tracking-link). After set up is completed, you can directly insert the Airbridge click tracking links into your Braze campaigns. Airbridge will then use its [probabilistic attribution methodologies](https://help.airbridge.io/en/guides/identity-matching) to attribute the user that has clicked on the link. We recommend appending your Airbridge tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. This will deterministically attribute the user that has clicked on the link.
 
 {% tabs %}
 {% tab Android %}

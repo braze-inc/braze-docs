@@ -20,9 +20,6 @@ guide_featured_list:
   - name: Mobile Integrations
     link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
     fa_icon: fas fa-mobile
-  - name: Geofence Configuration
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/
-    fa_icon: fas fa-cog
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
     fa_icon: fas fa-question

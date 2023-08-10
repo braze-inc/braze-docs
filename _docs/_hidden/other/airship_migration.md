@@ -3,7 +3,6 @@ nav_title: SDK Migration from Airship to Braze
 permalink: /sdk_migration_guide_airship/
 hidden: true
 page_type: reference
-layout: dev_guide
 ---
 
 # Migrating SDKs from Airship to Braze (iOS)
@@ -30,7 +29,7 @@ If your user profiles and push tokens happen to be stored in separate locations,
 - We recommend migrating users via API but if there is a need to import a static list of users, it can be done via CSV. Note that **push tokens cannot be imported via CSV** because the "push_token" object cannot be specified in the CSV. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
 
 {% alert note %}
-Push tokens may show up as `subscribed` in the Braze dashboard, but will change to `opted-in` once users start a session with the Braze SDK.
+Push tokens may show up as `subscribed` in the Braze dashboard, but will change to `opted-in` after users start a session with the Braze SDK.
 {% endalert %}
 
 #### Multiple push tokens

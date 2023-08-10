@@ -1,7 +1,7 @@
 ---
 nav_title: Templates
 article_title: Email Templates
-page_order: 3
+page_order: 5
 layout: dev_guide
 guide_top_header: "Email Templates"
 guide_top_text: "Refine your email outreach by creating responsive, customized, on-brand email templates in Braze. Check out these articles to learn about how to create or upload email templates, and how to take advantage of email link templates and link aliasing."

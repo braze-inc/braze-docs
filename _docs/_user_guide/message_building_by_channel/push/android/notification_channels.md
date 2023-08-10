@@ -12,7 +12,7 @@ channel:
 
 # Notification channels
 
-> [Notification Channels][1] are a way to organize push notifications that were added with Android O. Starting with O, all push notifications must have a Notification Channel that indicates the type of message (e.g., "chat notifications," or "follow notifications"). End users can then control aspects of their notification (e.g., snoozing, noise/vibration settings, or opting-out, etc.) based upon individual Channels.
+> [Notification Channels][1] are a way to organize push notifications that were added with Android O. Starting with O, all push notifications must have a Notification Channel that indicates the type of message (e.g., "chat notifications," or "follow notifications"). Your users can then control aspects of their notification (e.g., snoozing, noise/vibration settings, or opting-out, etc.) based upon individual Channels.
 
 ## Transitioning to Android O
 
@@ -71,7 +71,13 @@ To better understand the expected behavior for channels, refer to the following 
 
 1. Open any campaign or Canvas that includes an Android push and click **Edit Campaign**.
 2. Navigate to the Android push message composer.
-3. Click **Manage Notification Channels**. Any channels added here will be available globally for all campaigns and Canvases. You must have "manage apps" permissions for your workspace to manage channels.<br><br>Note that when you select a notification channel from the dropdown, you will see the Android push reachable users tally change to reflect the number of users who are opted in to receive push notifications on that particular channel. These are the only users who will receive the message, and your campaign analytics will be measured based on this audience.<br><br>![][6]<br><br>
+3. Click **Manage Notification Channels**. Any channels added here will be available globally for all campaigns and Canvases. You must have "manage apps" permissions for your workspace to manage channels.
+
+Note that when you select a notification channel from the dropdown, you will see the Android push reachable users tally change to reflect the number of users who are opted in to receive push notifications on that particular channel. These are the only users who will receive the message, and your campaign analytics will be measured based on this audience.
+
+![][6]
+
+{:start="4"}
 4. Click **Add Notification Channel**.
 5. Enter the name and ID of the notification channel you want to add.<br><br>![][8]<br><br>
 6. Repeat steps 4 and 5 for each notification channel that you'd like to add.

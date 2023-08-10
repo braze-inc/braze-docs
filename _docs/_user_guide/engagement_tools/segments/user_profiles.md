@@ -91,7 +91,7 @@ The **Engagement** tab contains information about a user's interactions with the
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
-| Predictions | [Churn Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [Purchase Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
+| Predictions | [Churn Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [Event Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][3]
@@ -108,7 +108,7 @@ If you have feedback on this table, or would like to see specific events, please
 
 #### Viewing and understanding events
 
-For each event in the **Messaging History** table, you can see the messaging channel, event type, timestamp the event occurred, and the associated campaign or Canvas message. To filter for specific events, click **Filters** and select events from the list.
+For each event in the **Messaging History** table, you can see the messaging channel, event type, timestamp the event occurred, the associated campaign or Canvas message, and the user's device data. To filter for specific events, click **Filters** and select events from the list.
 
 ##### Message engagement events
 
@@ -144,6 +144,12 @@ A frequency cap event occurs when a user is qualified to receive a message, but 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can manage frequency capping from **Engagement** > **Global Message Settings**.
 {% endalert %}
+
+##### Blank destinations
+
+Some message sends may appear in the Messaging History with blank destinations (signified by "—"). This is because some channels, such as Content Cards and webhooks, do not gather device data on message send.
+
+Content Cards sends are logged when the card is available to be viewed. Because Content Cards can be viewed on multiple devices, device data is not logged for a send. Instead, this information is logged upon impression (when the card is actually viewed). Webhooks are sent to a system endpoint (not a device) so device data is not applicable.
 
 #### Note on email open event {#note-on-email-open-event}
 

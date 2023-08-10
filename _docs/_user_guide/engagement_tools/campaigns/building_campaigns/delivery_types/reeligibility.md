@@ -14,11 +14,11 @@ tool:
 
 > Whenever you schedule a recurring or triggered campaign or Canvas, you have the option of allowing users to become re-eligible for it. By default, Braze sends a message to a user only once, even if they re-qualify. 
 
-If you enable re-eligibility, you are overriding this default behavior and allowing qualified members to receive messages again once they've received the first instance of the campaign or Canvas. You can state the timeline on which users would ultimately become re-eligible.
+If you enable re-eligibility, you are overriding this default behavior and allowing qualified members to receive messages again after they've received the first instance of the campaign or Canvas. You can state the timeline on which users would ultimately become re-eligible.
 
 ## Canvas
 
-To enable re-elibility for a canvas, check **allow users to re-enter this canvas** in the **entry controls** section of step 3. You can choose between allowing users to re-enter after the maximum duration of the canvas, or after a specified window.
+To enable re-elibility for a Canvas, check **Allow users to re-enter this Canvas** in the **Entry Controls** section. You can choose between allowing users to re-enter after the maximum duration of the Canvas, or after a specified window.
 
 ![Entry Controls][2]
 
@@ -30,7 +30,7 @@ If re-eligibility for a Canvas is set to shorter than the duration of the Canvas
 
 ## Campaigns
 
-To enable re-eligibility for a campaign, select the **Allow users to become re-eligible to receive campaign** checkbox in the **Delivery Controls** section.
+To enable re-eligibility for a campaign, select the **Allow users to become re-eligible to receive campaign** checkbox in the **Delivery Controls** section. The maximum time for re-eligibility for a campaign is 720 days.
 
 ![][1]
 
@@ -56,5 +56,4 @@ With regards to multivariate testing, Braze determines variant re-eligibility fo
 
 [1]: {% image_buster /assets/img_archive/reeligibility_controls_campaign.png %}
 [2]: {% image_buster /assets/img_archive/reeligibility_controls_canvas.png %}
-
 [24]: {% image_buster /assets/img_archive/ReEligible.png %}

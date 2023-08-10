@@ -31,16 +31,28 @@ Follow these steps to integrate with Google Postmaster and set up your Deliverab
 
 You can also access Google Postmaster in the Braze dashboard by navigating to **Partner Integrations** > **Technology Partners** > **Google Postmaster**. After integrating, Braze pulls reputation and error data for the last 30 days. The data may not be immediately available and could take several minutes to populate.
 
-#### About IP reputation
+#### IP reputation
 
 To help understand the ratings for IP reputation, refer to this table:
 
-| Repuation Level | Definition |
+| Reputation Level | Definition |
 | ----- | ---------- |
 | High | Has a good track record of a very low spam rate. Complies with [Gmail's sender guidelines][2]. Emails are rarely marked by the spam filter. |
-| Medium | Known to send good email, but has occasionally sent a low volume of spam. Most of the email from this domain will have a fair deliverability rate (except when there is a notable increase in spam levels). |
-| Low | Known to send a considerable volume of spam regularly and mail from this sender will likely be marked as spam. |
+| Medium/Fair | Known to send good emails, but has occassionally sent a low volume of spam. Most of the emails from this domain will have a fair deliverability rate (except when there is a notable increase in spam levels). |
+| Low | Known to send a considerable volume of spam regularly. Emails from this sender will likely be marked as spam. |
 | Bad | Has a history of sending a high volume of spam. Emails coming from this domain will almost always be rejected at connection time or marked as spam. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+#### Domain reputation
+
+Use the following table to help monitor and understand your domain reputation levels to help avoid being filtered into a spam folder.
+
+| Reputation Level | Definition |
+| ----- | ---------- |
+| High | Has a good track record of a very low spam rate. Complies with [Gmail's sender guidelines][2]. Emails are rarely marked by the spam filter. |
+| Medium/Fair | Known to send good emails, but has occassionally sent a low volume of spam. Most of the emails from this domain will have a fair deliverability rate (except when there is a notable increase in spam levels). |
+| Low | Known to send a considerable volume of spam regularly. Emails from this sender will likely be marked as spam. |
+| Bad | Has a history of sendiing a high volume of spam. Emails from this domain will almost always be rejected at connection time or marked as spam. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps][6]. Be sure to also reference our [Email best practices][7] for things you should check for before sending an email campaign.

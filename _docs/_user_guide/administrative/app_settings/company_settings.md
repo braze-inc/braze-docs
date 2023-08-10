@@ -4,7 +4,7 @@ article_title: Admin Settings
 page_order: 20
 layout: dev_guide
 guide_top_header: "Admin Settings"
-guide_top_text: "Most features within Admin Settings are only available to Braze account administrators. If you don't have access but feel that you should, reach out to your company's Braze account administrator. This page is located at <b>Settings</b> > <b>Admin Settings</b>. You can then select the respective tab to navigate to the settings you want to manage."
+guide_top_text: "This page is located at <b>Settings</b> > <b>Admin Settings</b>. You can then select the respective tab to navigate to the settings you want to manage. <br> <br> Most features within Admin Settings are only available to Braze account administrators. If you don't have access but feel that you should, reach out to your company's Braze account administrator."
 
 page_type: landing
 description: "This landing page lists articles on admin settings. Here, you can find help on configuring contact information, notification preferences, and security settings."

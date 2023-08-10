@@ -29,7 +29,7 @@ The Braze and Tealium integration allows you to seamlessly control the flow of i
 
 ### Step 1: Create a data source for Braze within Tealium
 
-Instructions for creating a data source can be found on the [Tealium](https://community.tealiumiq.com/t5/Customer-Data-Hub/Braze-Currents-Incoming-Webhook-Setup-Guide/ta-p/36303) site. Once completed, Tealium will provide a data source URL to copy, which you will use in the next step.
+Instructions for creating a data source can be found on the [Tealium](https://community.tealiumiq.com/t5/Customer-Data-Hub/Braze-Currents-Incoming-Webhook-Setup-Guide/ta-p/36303) site. When completed, Tealium will provide a data source URL to copy, which you will use in the next step.
 
 ### Step 2: Create Current
 
@@ -44,3 +44,5 @@ It's important to keep your Tealium URL up to date. If your connector's URL is i
 ## Integration details
 
 Braze supports exporting all data listed in the [Currents event glossaries]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) (including all properties in both [message engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) and [customer behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) events) to Tealium.
+
+The payload structure for exported data is the same as the payload structure for custom HTTP connectors, which can be viewed in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).

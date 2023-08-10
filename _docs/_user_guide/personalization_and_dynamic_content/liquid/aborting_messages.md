@@ -10,15 +10,19 @@ description: "This reference article covers aborting Liquid messages and some ex
 
 > Optionally, you can abort Liquid messages within conditionals. This reference article lists some examples of how this feature can be used in marketing campaigns.
 
+{% alert note %}
+If a message step is aborted in a Canvas, the user won't exit the Canvas and will proceed to the next step.
+{% endalert %}
+
 ## Abort message if "Number Games Attended" = 0
 
 For example, let's say that you did not want to send a message to customers who have not attended a game:
 
 {% raw %}
 ```liquid
-{% if customer_attribute.${Number_Game_Attended} == 1 %}
+{% if custom_attribute.${Number_Game_Attended} == 1 %}
 Loved the game? Get 10% off your second one with code SAVE10.
-{% elsif customer_attribute.${Number_Game Attended} > 1 %}
+{% elsif custom_attribute.${Number_Game Attended} > 1 %}
 Love the games? Get 10% off your next one with code SAVE10.
 {% else %}
 {% abort_message() %}

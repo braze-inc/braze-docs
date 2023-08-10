@@ -37,22 +37,22 @@ doc_menu_list:
     description: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more."
 
 popular_topic_list:
-  - name: "Canvas: The Basics"
+  - name: "Canvas Basics"
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
   - name: Create a Campaign
-    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
-  - name: Locations and Geofences
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/
+    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
   - name: Personalized Messaging
     link: /docs/user_guide/personalization_and_dynamic_content/overview/
-  - name: Braze REST API
-    link: /docs/developer_guide/rest_api/basics/
-  - name: Custom Attributes
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
-  - name: Custom Events
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
-  - name: Create a Segment
-    link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
+  - name: Braze API Dictionary
+    link: /docs/api/home/
+  - name: Custom Events and Attributes
+    link: /docs/user_guide/data_and_analytics/custom_data/
+  - name: User Import
+    link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
+  - name: Create a Catalog
+    link: /docs/user_guide/personalization_and_dynamic_content/catalogs
+  - name: Braze Currents
+    link: /docs/user_guide/data_and_analytics/braze_currents
 
 helpful_resources_list:
   - name: Innovation Statement

@@ -37,7 +37,7 @@ Before you can send an iOS push notification using Braze, you must provide your 
   {% tab .p8 File (Recommended) %}
 **Using a .p8 file (authentication token)**
 
-As described on the Apple [developer documentation](https://help.apple.com/developer-account/#/devcdfbb56a3):
+As described on the Apple [developer documentation](https://developer.apple.com/documentation/usernotifications):
 
 1. In your developer account, go to [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate).
 2. Under **Keys**, select **All** and click the **Add button** (+) in the upper-right corner.
@@ -45,7 +45,7 @@ As described on the Apple [developer documentation](https://help.apple.com/devel
 4. Under **Key Services**, select the **APNs checkbox**, then click **Continue**. Click **Confirm**.
 5. Note the key ID. Click **Download** to generate and download the key. Make sure to save the downloaded file in a secure place, as you cannot download this more than once.
 6. In Braze, navigate to **Settings > App Settings** and upload the .p8 file under **Apple Push Certificate**.
-7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/account/ios/identifier/bundle/), [key ID](https://developer.apple.com/account/ios/authkey), and [team ID](https://developer.apple.com/account/#/membership). Click **Save**.<br><br>
+7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/account/ios/identifier/bundle/), [key ID](https://developer.apple.com/account/ios/authkey), and [team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id/). Click **Save**.<br><br>
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), upload the .p8 file at **Manage Settings** > **Settings**.
@@ -59,7 +59,7 @@ Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL cer
 
 **Step 1: Generate Certificate Signing Request**
 
-1. Navigate to the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
+1. Navigate to the **iOS Provisioning Portal**.
 2. Select **Identifiers > App IDs** in the sidebar.
 3. Select your application.
 4. If push notifications are not enabled, click **Edit** to update the app settings.<br>![]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
@@ -78,7 +78,7 @@ Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL cer
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can upload the `.p12` file from **Manage Settings** > **Settings**.
 {% endalert %}
 
->  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate workspace or app for the development version of your app.
+>  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications after your app goes live in the App Store, we recommend setting up a separate workspace or app for the development version of your app.
 
 {% endtab %}
 {% endtabs %}
@@ -86,7 +86,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can up
 
 ## Step 2: Enable push capabilities
 
-In your project settings, ensure that under the **Capabilities** tab, your **Push Notifications** capability is [toggled on](https://help.apple.com/developer-account/#/devcdfbb56a3).
+In your project settings, ensure that under the **Capabilities** tab, your **Push Notifications** capability is toggled on.
 
 ![][24]
 

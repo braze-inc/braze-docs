@@ -135,7 +135,7 @@ Braze provides a native Unity solution for automating the Unity Android integrat
 
 1. In the Unity Editor, open the Braze Configuration Settings by navigating to **Braze > Braze Configuration**.
 2. Check the **Automate Unity Android Integration** box.
-3. In the "Braze API Key" field, input your application's API key found in **Manage Settings** from the Braze dashboard.
+3. In the **Braze API Key** field, input your application's API key found in **Manage Settings** from the Braze dashboard.
 
 {% alert note %}
 This automatic integration should not be used with a manually created `braze.xml` file since the configuration values may conflict during project building. If you require a manual `braze.xml`, disable the automatic integration.
@@ -143,21 +143,9 @@ This automatic integration should not be used with a manually created `braze.xml
 
 ## Basic SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. Check out the following articles for more information on integrating push ([Android][53] and [iOS][50]), [in-app messages][34], and [Content Cards][40].
+Braze should now be collecting data from your application, and your basic integration should be complete. For more information on integration push, check out the following articles: [Android][53] and [iOS][50], [in-app messages][34], and [Content Cards][40].
 
-## Additional advanced implementation options
-
-### Extending Braze's Unity player (Android) {#extending-braze-unity-player}
-
-The example `AndroidManifest.xml` file provided has one Activity class registered, [`BrazeUnityPlayerActivity`](https://github.com/braze-inc/braze-android-sdk/blob/e804cb3a10ae68364b354b52abf1bef8a0d1a9dc/android-sdk-unity/src/main/java/com/braze/unity/BrazeUnityPlayerActivity.kt). This class is integrated with the Braze SDK and extends `UnityPlayerActivity` with session handling, in-app message registration, push notification analytics logging, and more. See [Unity](https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html) for more information on extending the `UnityPlayerActivity` class.
-
-If you are creating your own custom `UnityPlayerActivity` in a library or plugin project, you will need to extend Braze's `BrazeUnityPlayerActivity` to integrate your custom functionality with Braze. Before beginning work on extending `BrazeUnityPlayerActivity`, follow our instructions for integrating Braze into your Unity project.
-1. Add the Braze Android SDK as a dependency to your library or plugin project as described in the [Braze Android SDK integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
-2. Integrate our Unity `.aar`, which contains Braze's Unity-specific functionality, to your Android library project you are building for Unity. The `appboy-unity.aar` is available from our [public repo](https://github.com/braze-inc/braze-unity-sdk/tree/master/Assets/Plugins/Android). Once our Unity library is successfully integrated, modify your `UnityPlayerActivity` to extend `BrazeUnityPlayerActivity`.
-3. Export your library or plugin project and drop it into `/<your-project>/Assets/Plugins/Android` as normal. Do not include any Braze source code in your library or plugin as they will already be present in `/<your-project>/Assets/Plugins/Android`.
-4. Edit your `/<your-project>/Assets/Plugins/Android/AndroidManifest.xml` to specify your `BrazeUnityPlayerActivity` subclass as the main activity.
-
-You should now be able to package an `.apk` from the Unity IDE that is fully integrated with Braze and contains your custom `UnityPlayerActivity` functionality.
+To learn about advanced SDK integration options, check out [Advanced Implementation][54].
 
 [5]: #transitioning-from-manual-to-automated-integration
 [34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/
@@ -167,6 +155,7 @@ You should now be able to package an `.apk` from the Unity IDE that is fully int
 [42]: https://github.com/Appboy/appboy-unity-sdk/releases
 [50]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/
 [53]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/android/
+[54]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases/#android-sdk-advanced
 [unity-1]: https://github.com/SDWebImage/SDWebImage
 [unity-2]: https://firebase.google.com/docs/unity/setup
 [unity-3]: https://developer.android.com/jetpack/androidx

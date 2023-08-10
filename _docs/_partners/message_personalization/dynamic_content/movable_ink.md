@@ -34,7 +34,7 @@ Expand Braze's creative capabilities by leveraging Movable Ink's Intelligent Cre
 
 Intelligent Creative has many offerings that Braze users can take advantage of. The following list shows what capabilities are supported. 
 
-| Movable Ink Capability | Feature | Rich Push Notification | In-App Messaging / Content Cards | Details |
+| Movable Ink Capability | Feature | Rich Push Notification | In-App Messaging / Content Cards / Email | Details |
 | ---------------------- |---| ---------------------- | -------------------------------- | ------- |
 | Creative Optimizer | Display A/B Contents | ✗ | ✔ | |
 || Optimize | ✗ | ✔* | * Must Use Branch's Deeplinking solution |
@@ -89,7 +89,7 @@ Movable Ink has an easy editor for you to drag and drop elements like text, imag
 
 ![The Movable Ink block editor showing the different customizable elements.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
 
-Before finishing your campaign, make sure to preview the dynamic images and test out the query parameters to see what the images will look upon view. Once complete, a dynamic URL will generate that can then be inserted into Braze!
+Before finishing your campaign, make sure to preview the dynamic images and test out the query parameters to see what the images will look upon view. When complete, a dynamic URL will generate that can then be inserted into Braze!
 
 For more information on how to use the Movable Ink Platform, visit the [Movable Ink support center][support]
 
@@ -106,6 +106,10 @@ Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate
 ### Step 4: Braze experience
 
 {% tabs local %}
+{% tab Email %}
+In the Braze platform, paste your creative tag into your email body.![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
+
+{% endtab %}
 {% tab Push notification %}
 
 1. In the Braze Platform:

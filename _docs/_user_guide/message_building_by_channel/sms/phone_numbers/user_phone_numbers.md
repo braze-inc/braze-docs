@@ -11,7 +11,7 @@ channel:
 
 # User phone numbers
 
-> This article will discuss different topics around your users' or customers' phone numbers. If you're looking for information about your own numbers, go to our article on [short and long codes]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
+> This article will discuss different topics around your users' or customers' phone numbers. If you're looking for information about your own numbers, go to our article on [sending phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/).
 
 Phone numbers are shown in the user profile in local formats, but will not be in the format you use to import the number (`(724) 123 4567`).
 
@@ -46,16 +46,13 @@ For a customer to receive an SMS message, they must have a valid phone number an
 
 ### Handling invalid phone numbers
 
-When a phone number is deemed unreachable or invalid, Braze will mark the user's phone number as invalid and will not attempt to send further communications to that phone number. An invalid phone number is marked in the **Engagement Tab** of a user profile.
+When a phone number is deemed invalid, Braze will mark the user's phone number as invalid and will not attempt to send further communications to that phone number. An invalid phone number is marked in the **Engagement Tab** of a user profile.
 
 ![][picture2]{: style="max-width:50%;border: 0;"}
 
 A phone number is considered invalid for the following reasons:
-- **Provider Error**: a permanent error was received from the SMS provider. This indicates that phone number supplied is incorrectly formatted or permanently unable to receive SMS messages.
-- **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service and releasing their number from their carrier.
-
-#### Deactivated phone numbers
-When a mobile subscriber terminates or releases their phone number, their phone number becomes deactivated and will eventually get recycled and assigned to new users. On a daily basis, Braze receives these deactivated numbers and marks them as invalid within the Braze platform. This ensures that phone numbers you believe had opted into your program now belong to a different user who has not consented to receive messages.
+- **Provider Error**: a permanent error was received from the SMS provider. This indicates that the phone number supplied is incorrectly formatted or permanently unable to receive SMS messages.
+- **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service and releasing their number from their carrier (and may eventually be recycled and assigned to a new user).
 
 These invalid phone numbers can be managed using [SMS endpoints]({{site.baseurl}}/api/endpoints/sms/). 
 

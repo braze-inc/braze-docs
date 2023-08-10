@@ -15,7 +15,7 @@ tool: Canvas
 
 ![][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-## Create a Message component
+## Create a message
 
 To create a Message component, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Message**. 
 
@@ -35,7 +35,7 @@ If an action-based Canvas is triggered by an inbound SMS message, you can refere
 
 ### Edit delivery settings
 
-The Message component also includes settings for Intelligent Delivery, Quiet Hours overrides, and delivery validation. You can enable [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) with a fallback option when a user's profile does not have enough data to calculate an optimal time. We recommend enabling Intelligent Timing and [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-frequency-capping/) as an additional check for any delays between users entering the Message step and the actual message sending.
+The Message component also includes settings for Intelligent Delivery, Quiet Hours overrides, and delivery validation. You can enable [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) with a fallback option when a user's profile does not have enough data to calculate an optimal time. We recommend enabling Intelligent Timing and [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-frequency-capping/) as an additional check for any delays between users entering the Message step and the actual message sending.
 
 Select **Using Intelligent Timing** in the **Delivery Settings** tab. Here, you can select either the most popular time or a specific fallback time. If Quiet Hours are enabled, the Message step also allows you to override this setting.
 
@@ -51,10 +51,6 @@ Canvas entry properties are configured in the Entry Schedule step of creating a 
 For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
 {% endalert %}
 
-#### Original workflow
-
-For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
-
 #### Canvas Flow
 
 For Canvas Flow messaging, entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Events must be custom events or purchase events to be used this way.
@@ -67,13 +63,13 @@ For example, consider the following request: `\"canvas_entry_properties\" : {\"p
 
 You can also leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) in any Message step to guide your users through personalized steps throughout your Canvas workflow.
 
+#### Original workflow
+
+For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
+
 ### Event properties
 
 Event properties refer to the properties that you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases. 
-
-#### Original workflow
-
-`event_properties` can be used in the first full step in an action-based Canvas using the original workflow, even if the full step is scheduled. 
 
 #### Canvas Flow
 
@@ -85,11 +81,16 @@ In Canvas Flow, custom event and purchase event properties can be used in Liquid
 
 In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you'll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step.
 
+#### Original workflow
+
+`event_properties` can be used in the first full step in an action-based Canvas using the original workflow, even if the full step is scheduled. 
+
 {% alert important %}
-For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event before the Message step that includes `event_properties`.
+For Canvas Flow and the original editor, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event before the Message step that includes `event_properties`.
 {% endalert %}
 
 For more information and examples, check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/).
+
 
 ## Analytics
 

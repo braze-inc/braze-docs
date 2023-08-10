@@ -16,9 +16,9 @@ Supposons par exemple que vous ne souhaitiez pas envoyer un message aux clients 
 
 {% raw %}
 ```liquid
-{% if customer_attribute.${Number_Game_Attended} == 1 %}
+{% if custom_attribute.${Number_Game_Attended} == 1 %}
 Loved the game? Get 10% off your second one with code SAVE10.
-{% elsif customer_attribute.${Number_Game Attended} > 1 %}
+{% elsif custom_attribute.${Number_Game Attended} > 1 %}
 Love the games? Get 10% off your next one with code SAVE10.
 {% else %}
 {% abort_message() %}

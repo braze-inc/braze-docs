@@ -27,7 +27,7 @@ You can turn on the new navigation at any time by selecting **Switch to new nav*
 
 ## What to expect next
 
-You will still be able to switch back and forth between the new and old navigation until **November 2023**.
+You will still be able to switch back and forth between the new and old navigation until **January 2024**.
 
 ## What's changed
 
@@ -36,6 +36,12 @@ You will still be able to switch back and forth between the new and old navigati
 As part of our navigation and information architecture changes, we have renamed "app group" to "workspace". We recognize that the language "workspace" doesn't reflect the way many users onboard, approach, and use the Braze platform. To better reflect the many use cases of Braze, "app group" is now "workspace".
 
 If you're using our updated navigation, this change will appear throughout the platform.
+
+### Quick links
+
+Easily access the **Canvas**, **Campaigns**, and **Segments** pages with quick links available in the sidebar.
+
+![Sidebar of Braze with quick links to the Campaigns, Canvas, and Segments pages.]({% image_buster /assets/img/navigation/quick_links.png %}){: style="max-width:70%"}
 
 ### Global header
 

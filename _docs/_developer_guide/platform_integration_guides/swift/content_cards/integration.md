@@ -88,7 +88,7 @@ For more details, refer to the [`Context` class documentation](https://braze-inc
 ## Refreshing Content Cards
 
 {% alert tip %}
-To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed once they are available.
+To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed after they are available.
 {% endalert %}
 
 You can manually request Braze to refresh the user's Content Cards using the `requestRefresh` method on the `Braze` instance:
@@ -137,6 +137,12 @@ A view controller is the "glue" between the overall application and the screen. 
 {% endalert %}
 
 The `BrazeUI` library of the Swift SDK provides two default view controller contexts: navigation or modal. This means you can integrate Content Cards in these contexts by adding a few lines of code to your app or site. You can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options. 
+
+{% alert important %}
+The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of `GIFViewProvider`.
+
+For more details on GIF support, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
+{% endalert %}
 
 ### Navigation context
 

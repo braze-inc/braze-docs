@@ -72,7 +72,7 @@ Daily Sessions is the number of sessions recorded on a given day. Comparing this
 
 ### Daily sessions per MAU
 
-Daily Sessions per MAU is the ratio of Daily Sessions to MAU on a given day. What this statistic can tell you is how many sessions per day you can expect to have logged per MAU. On aggregate, this can give you an idea of the relative frequency of when your users use your app. That is, if your Daily Sessions per MAU were on average 0.5, then you could expect each MAU to record a session about every 2 days.  
+Daily Sessions per MAU is the ratio of Daily Sessions to MAU on a given day. This statistic tells you how many sessions per day you can expect to have logged per MAU. On aggregate, this can give you an idea of the relative frequency of when your users use your app. That is, if your Daily Sessions per MAU were on average 0.5, then you could expect each MAU to record a session about every 2 days.  
 
 [1]: {% image_buster /assets/img_archive/Usage_Page.png %}
 [2]: {% image_buster /assets/img_archive/Breakdown.png %}

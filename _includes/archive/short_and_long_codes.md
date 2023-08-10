@@ -1,5 +1,5 @@
 
-# Short and long codes
+# Sending Phone Numbers
 
 Short and long codes are the phone number from which you send messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Each type of code offers specific benefits and all factors should be considered before choosing whether you want a short code, what type of short code you might want, in addition to the long code you will already be assigned.
 
@@ -88,7 +88,7 @@ A short code is a memorable 5-6 digit sequence that allows senders to send messa
 
 | Cons |
 | ---- |
-| **Short codes are not available everywhere**<br> Short codes are currently available in only the US, UK, and Canada.<br><br>**Long application process**<br> A 8-12 week application process where use cases must be outlined in great detail is required. This involved process is necessary to ensure deliverability because after granted a short code, carriers will audit short codes but will **not** filter messages allowing for higher sending rates.<br><br>**Higher cost**<br> Short codes cost more than long codes and take longer to get approved for. However, once you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the sending process, as you will have gone through all of the checks during your application for the short code. |
+| **Short codes are not available everywhere**<br> Short codes are currently available in only the US, UK, and Canada.<br><br>**Long application process**<br> A 8-12 week application process where use cases must be outlined in great detail is required. This involved process is necessary to ensure deliverability because after granted a short code, carriers will audit short codes but will **not** filter messages allowing for higher sending rates.<br><br>**Higher cost**<br> Short codes cost more than long codes and take longer to get approved for. However, after you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the sending process, as you will have gone through all of the checks during your application for the short code. |
 {: .reset-td-br-1}
 
 {% endtab %}
@@ -125,7 +125,7 @@ A vanity short code is a 5-6 digit phone number that is specifically selected by
 
 | Cons |
 | ---- |
-| **Short codes are not available everywhere**<br> Short codes are currently available in only the **US and Canada**.<br><br>**Long application process**<br> A 8-12 week application process where use cases must be outlined in great detail is required. This involved process is necessary to ensure deliverability because after granted a short code, carriers will audit short codes but will **not** filter messages allowing for higher sending rates.<br><br>**Higher cost**<br> Short codes cost more than long codes and take longer to get approved for. However, once you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the sending process, as you will have gone through all of the checks during your application for the short code. |
+| **Short codes are not available everywhere**<br> Short codes are currently available in only the **US and Canada**.<br><br>**Long application process**<br> A 8-12 week application process where use cases must be outlined in great detail is required. This involved process is necessary to ensure deliverability because after granted a short code, carriers will audit short codes but will **not** filter messages allowing for higher sending rates.<br><br>**Higher cost**<br> Short codes cost more than long codes and take longer to get approved for. However, after you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the sending process, as you will have gone through all of the checks during your application for the short code. |
 {: .reset-td-br-1}
 
 {% endtab %}

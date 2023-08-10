@@ -83,7 +83,7 @@ If the application does not prompt you to register for push notifications, there
 
 #### Users no longer "push registered" after sending a push notification
 
-This would likely indicate that the user had an invalid push token. This can happen for several reasons:
+This likely indicates that the user had an invalid push token. This can happen for several reasons:
 
 ##### Dashboard and app certificate mismatch
 
@@ -105,7 +105,7 @@ On iOS versions that do not integrate push via the `UserNotifications` framework
 
 ##### Test notification scheduled incorrectly
 
-Check the schedule you set for your test message. If it is set to local time zone delivery or [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), you may have just not received the message yet (or had the app in the foreground when it was received).
+Check the schedule you set for your test message. If it is set to local time zone delivery or [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/), you may have just not received the message yet (or had the app in the foreground when it was received).
 
 #### User not "push registered" for the app being tested
 

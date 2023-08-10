@@ -19,15 +19,11 @@ channel:
 
 Link shortening and click tracking can be enabled at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 
 
-{% alert important %}
-Shortened links with advanced tracking are currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
-{% endalert %}
-
 The length of the URL will be determined by the type of tracking that is enabled:
 - **Basic tracking** enables campaign-level click tracking. Basic links will have a length of between 20-21 characters.
 - **Advanced tracking** enables campaign-level and user-level click tracking. Links with advanced tracking are longer by up to 7 characters and allow you to create segments of users who have clicked on URLs. Advanced links will have a length of between 27-28 characters.
 
-Links will be shortened using Braze's shared short domain ([brz.ai](http://brz.ai)). An example URL may look something like this: `https://brz.ai/8jshX` (basic) or `https://brz.ai/8jshX/2dj8d` (advanced). Refer to the [Testing](#testing) for more information.
+Links will be shortened using Braze's shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic) or `https://brz.ai/8jshX/2dj8d` (advanced). Refer to the [Testing](#testing) for more information.
 
 Shortened URLs will be valid for one year from the date they were created.
 
@@ -117,7 +113,7 @@ Not yet, though we plan to provide more customization options in the future.
 
 #### Do I know which individual users are clicking on a URL?
 
-Not yet. This will be part of a future user-level click tracking release.
+Not yet. This will be part of a future user-level click tracking release. If you use Currents, you can leverage [SMS click events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#sms-click-events) (`users.messages.sms.ShortLinkClick`) to send this data to your data warehouse.
 
 #### Can I add UTM parameters to a URL before it is shortened?
 

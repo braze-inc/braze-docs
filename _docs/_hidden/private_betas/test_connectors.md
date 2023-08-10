@@ -2,7 +2,6 @@
 nav_title: "Test Currents Connectors"
 permalink: "/test_currents_connectors/"
 hidden: true
-layout: dev_guide
 ---
 
 # Braze Currents
@@ -19,7 +18,7 @@ Looking for more Currents guidance and examples? Refer to our [Currents document
 
 Test Currents connectors are free versions of our existing connectors that can be used for testing and trying out different destinations. Test Currents have:
 - No limit to the number of Test Currents connectors you may build.
-- An aggregate max of 10,000 events per 30-day rolling period. This event total is updated hourly on the dashboard.
+- An aggregate maximum of 10,000 events per 30-day rolling period. This event total is updated hourly on the dashboard.
 
 After your Test Currents connectors reach the sending limit, your connector will not send events until the next 30-day period.
 

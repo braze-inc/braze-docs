@@ -20,7 +20,7 @@ Before implementation, be sure to review examples of the segmentation options af
 
 To use this feature, add this method call after a successful purchase in your app:
 
-```javascript
+```brightscript
 m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantity)
 ```
 
@@ -30,12 +30,12 @@ You can add metadata about purchases by passing a properties dictionary with you
 
 Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String` or `Integer`.
 
-```javascript
+```brightscript
 m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantity, {"stringPropKey" : "stringPropValue", "intPropKey" : Integer intPropValue})
 ```
 
 ### Log purchases at the order level
-If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
+If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ### REST API
 

@@ -37,7 +37,7 @@ Any existing custom HTML templates will need to be re-created using the Drag & D
 
 ### Step 3: Customize your template
 
-You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop Editor to customize your content. Once selected, you will be guided to the editor experience you chose. An **HTML Editor** or **Drag-and-Drop Editor** badge will appear, indicating that you are about to use this editing experience for template creation.
+You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop Editor to customize your content. After selecting your editor experience, you will be guided to it. An **HTML Editor** or **Drag-and-Drop Editor** badge will appear, indicating that you are about to use this editing experience for template creation.
 
 If you do not include an unsubscribe link, Braze will prompt you to add this in your email as it's required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {%raw%}`${email_footer}`{%endraw%}, or by [customizing the footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in your email templates.
 
@@ -45,7 +45,7 @@ If you do not include an unsubscribe link, Braze will prompt you to add this in 
 When composing your email template copy, do not switch back and forth between different editor types (HTML, Block, Classic) as that may shift the previously created HTML leading to rendering issues. 
 {% endalert %}
 
-![Drag and Drop Editor badge in the Email Body section]({% image_buster /assets/img/dnd_badge_icon.png %})
+![Drag-and-Drop Editor badge in the Email Body section]({% image_buster /assets/img/dnd_badge_icon.png %})
 
 {% tabs %}
 {% tab HTML Editor %}
@@ -102,7 +102,7 @@ The **Content** section contains the editor. There are three key components with
 - **Rows:** Rows are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.<br><br>
 - **Settings:** General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings will be used everywhere in your message, except where you use a custom setting.
 
-This is very useful to build a coherent message very quickly.
+This is very useful to build a coherent message quickly.
 {% endsubtab %}
 {% subtab Preview and Test %}
 
@@ -170,6 +170,13 @@ To use your email for an API campaign, you need an `email_template_id`, which ca
 
 You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
+## Commenting on email templates
+You can comment on email templates in the drag-and-drop editor. Click the Content Block or row in the email body that you’d like to comment on, then select the <i class="fas fa-comment"></i> comment icon. This opens a sidebar where you can enter your comment through the text input field by clicking **Submit**. Click **Done**, then **Save Template** to save your comment and make it visible to other users.
+
+Once saved, users will see floating icons over unaddressed comments. Selecting **Resolve** will resolve these comments.
+
+![Email Template Comment Icon and Sidebar.][10]
+
 ## Frequently asked questions
 
 For answers to frequently asked questions about email templates, check out our [Templates FAQ][9].
@@ -184,3 +191,4 @@ For answers to frequently asked questions about email templates, check out our [
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [8]: {{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates
 [9]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
+[10]: {% image_buster /assets/img/email_templates/template_comment.png %}

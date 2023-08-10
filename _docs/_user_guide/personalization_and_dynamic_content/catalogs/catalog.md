@@ -20,12 +20,11 @@ Before creating a catalog, be sure to have your CSV file ready first if your pre
 
 Note these guidelines when creating your CSV file. The first column of the CSV file must be a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
 
-- Maximum of 5,000 items (rows)
-- Maximum of 30 fields (columns)
+- Maximum of 500 fields (columns)
 - Maximum field (column) name of 250 characters
-- Maximum CSV file size of 2&nbsp;GB
+- Maximum 100&nbsp;MB for all CSV files combined across your company (Free)
+- Maximum CSV file size of 2&nbsp;GB (Pro)
 - Maximum field value (cell) of 5,000 characters
-- Maximum field value (cell) size of 0.5&nbsp;KB 
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
 Ensure that you are encoding your CSV file using the UTF-8 format in order to successfully upload your CSV file in the next step. We also recommend that you format all text in your CSV files as lowercase.
@@ -132,7 +131,7 @@ Next, we'll name this catalog "games_catalog" and click the **Process Catalog** 
 
 ![][11]{: style="max-width:85%;"}
 
-Note that you won't be able to edit this name once the catalog is created. You can delete a catalog and reupload an updated version using the same catalog name. 
+Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and reupload an updated version using the same catalog name. 
 
 ## Using catalogs in a message
 
@@ -288,7 +287,7 @@ The following table describes the limitations that apply at a catalog level:
 
 | Limitation Area | Free version | Catalogs Pro |
 |---|---|---|
-| CSV file size | Up to 100&nbsp;MB for a single CSV file | Up to 2&nbsp;GB for a single CSV file |
+| CSV file size | Up to 100&nbsp;MB for all CSV files combined across your company | Up to 2&nbsp;GB for a single CSV file |
 | Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
 | Characters limit for item column name | Up to 250 characters | Up to 250 characters |
 | Selections | Up to 10 selections per catalog | Up to 10 selections per catalog |
@@ -306,7 +305,7 @@ The storage limit for the free version of catalogs is 100&nbsp;MB. You can have 
 
 #### Catalogs Pro
 
-At a company level, the storage limit for Catalogs Pro will be based on the size of catalog data: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB.
+At a company level, the storage limit for Catalogs Pro will be based on the size of catalog data: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB. Note that the free version's storage (100&nbsp;MB) is included in each of these plans.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}

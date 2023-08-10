@@ -29,7 +29,7 @@ Most US and Canadian carriers support receiving and displaying multimedia assets
 
 ### Subscription groups
 
-A [Subscription Group][1] is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. Your subscription group requires a phone number that is enabled for MMS. A whitelisting provisioning process is required to enable your short-code for MMS sending capabilities. Speak with your Braze account manager regarding enabling this feature.
+A [Subscription Group][1] is a collection of sending phone numbers (short codes, long codes, and alphanumeric sender IDs) that are used for a specific type of messaging purpose. Your subscription group requires a phone number that is enabled for MMS. Speak with your Braze account manager regarding enabling this feature.
 
 ### MMS message limits and throughput
 
@@ -39,11 +39,11 @@ MMS throughput is one segment per second via a long code.
 
 ### Inbound MMS
 
-When a user sends an inbound message that contains a media item, Braze will expose the URL for the media item in Currents as well as liquid through the liquid tag {%raw%}`{{sms.${inbound_media_url}}}`{%endraw%}
+When a user sends an inbound message that contains a media item, Braze will expose the URL for the media item in Currents as well as Liquid through the Liquid tag {%raw%}`{{sms.${inbound_media_url}}}`{%endraw%}
 
 ### Accepted file types
 
-Braze accepts JPG, GIF, PNG, and VCF files and allows you to attach a single multimedia asset to your MMS message. Future iterations of MMS at Braze will allow customers to attach up to 10 different assets as well as support a wider range of file types.
+Braze accepts JPG, GIF, PNG, and VCF files and allows you to attach a single multimedia asset to your MMS message.
 
 
 [picture]: {% image_buster /assets/img/sms/MMS.png %}

@@ -39,7 +39,7 @@ Apps using location permissions should follow Android's [best practices](https:/
 
 ### Allow once permissions
 
-Users can now grant permissions, such as location collection, on a one-time basis (see the [Android Docs](https://developer.android.com/preview/privacy/location#one-time-access) for more information). Once an app is closed or in the background for long enough, that permission will be revoked automatically. The app would need to re-request this permission when needed in the future. Apps that already follow the recommended flow for requesting location permissions will support one-time permissions.
+Users can now grant permissions, such as location collection, on a one-time basis (see the [Android Docs](https://developer.android.com/preview/privacy/location#one-time-access) for more information). After an app is closed or in the background for long enough, that permission will be revoked automatically. The app would need to re-request this permission when needed in the future. Apps that already follow the recommended flow for requesting location permissions will support one-time permissions.
 
 ![][3]{: height="230px" }
 

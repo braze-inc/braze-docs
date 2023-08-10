@@ -47,12 +47,12 @@ Because there isn't a way for push providers (APNs/FCM) to distinguish between m
 Platforms deal with push token registration and push permissions in different ways:
 
 - **Android**:
-  - **Android 13**:<br>Push permission must be asked of and granted by the user. Receives a token once permission is granted by the user. Your app can manually request permission from the user at opportune times, but if not, users will be prompted automatically once your app creates a [notification channel](https://developer.android.com/reference/android/app/NotificationChannel).
+  - **Android 13**:<br>Push permission must be asked of and granted by the user. Receives a token after permission is granted by the user. Your app can manually request permission from the user at opportune times, but if not, users will be prompted automatically after your app creates a [notification channel](https://developer.android.com/reference/android/app/NotificationChannel).
   - **Android 12 and earlier**:<br>All users are considered `Subscribed` upon their first session when Braze automatically requests a push token. At this point, the user is **push enabled** with a valid push token for that device and a default subscription state of `Subscribed`.<br><br>
 - **iOS**: Not automatically registered for push.
-    - **iOS 12 (with Provisional Authorization)**: <br>Your app can request [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) or authorized push. Authorized push requires explicit permission from a user before sending any notifications (receives a token once permission is granted by user), whereas [provisional push][provisional-blog] lets you send notifications __quietly__, directly to the notification center without any sound or alert.
-    - **iOS 11 and later & iOS 12 (without Provisional Authorization)**: <br>All users must explicitly opt-in to receive push notifications. Will receive a token once opted-in.<br><br>
-- **Web:** You must request explicit opt-in from users via the native browser permission dialog, will receive a token once opt-ed in.  Unlike iOS and Android, which let your app show the permission prompt at any time, some modern browsers will only show the prompt if triggered by a "user gesture" (mouse click or keystroke). If your site tries to request push notification permission on page load, it will likely be ignored or silenced by the browser.
+    - **iOS 12 (with Provisional Authorization)**: <br>Your app can request [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) or authorized push. Authorized push requires explicit permission from a user before sending any notifications (receives a token after permission is granted by user), whereas [provisional push][provisional-blog] lets you send notifications __quietly__, directly to the notification center without any sound or alert.
+    - **iOS 11 and later & iOS 12 (without Provisional Authorization)**: <br>All users must explicitly opt-in to receive push notifications. Will receive a token after users opted-in.<br><br>
+- **Web:** You must request explicit opt-in from users via the native browser permission dialog. Will receive a token after users opt-ed in.  Unlike iOS and Android, which let your app show the permission prompt at any time, some modern browsers will only show the prompt if triggered by a "user gesture" (mouse click or keystroke). If your site tries to request push notification permission on page load, it will likely be ignored or silenced by the browser.
 
 | Get a push token | Send a push token |
 | ---------------- | ----------------- |
@@ -94,7 +94,7 @@ Check out the following chart for actions that lead to push tokens changes or re
 
 ### What does this look like on a broader scale?
 
-When a user opens a new application and grants push access from a push prompt, a call is made from the Braze SDK to the push providers. When that call is made, the push provider runs a check to see if everything is set up correctly. If so, a push token gets passed into your device. When that token arrives, the SDK communicates this to Braze. Once Braze has received the token from the push provider, we update or create a new user profile. These users are now considered registered.
+When a user opens a new application and grants push access from a push prompt, a call is made from the Braze SDK to the push providers. When that call is made, the push provider runs a check to see if everything is set up correctly. If so, a push token gets passed into your device. When that token arrives, the SDK communicates this to Braze. After Braze has received the token from the push provider, we update or create a new user profile. These users are now considered registered.
 
 If we want to launch a campaign, we create a campaign in Braze that generates a push payload to send to the push provider. From there, the provider delivers the push payload to the user's device and the SDK passes the messaging state to Braze.
 
@@ -113,7 +113,7 @@ Suppose a user opts-in for push, receives some push messaging, and then later de
 
 Additionally, if a user were to re-enable foreground push, it would require a session start to update this information in their user profile to begin receiving push messaging.
  
-### Under what circumstances do push tokens expire? {#push-token-expire}
+### When do push tokens expire? {#push-token-expire}
 
 Unfortunately, APNs and FCM don't really define this. Push tokens can expire when an app is updated, when users transfer their data to a new device, or when they re-install an operating system. For the most part, we don't really have insight into why push providers will expire certain push tokens.
 

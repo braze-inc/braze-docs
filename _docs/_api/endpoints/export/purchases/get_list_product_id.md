@@ -18,6 +18,10 @@ description: "This article outlines details about the Export product IDs Braze e
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `purchases.product_list` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='purchases product list' %}
@@ -26,7 +30,7 @@ description: "This article outlines details about the Export product IDs Braze e
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `page` | Optional | String | The page of your product list that you would like to view. |
+| `page` | Optional | String | The page of your product list that you want to view. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

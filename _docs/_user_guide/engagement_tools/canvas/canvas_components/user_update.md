@@ -69,7 +69,7 @@ Using the JSON composer, you can also log custom events. Note that this requires
   "events": [
     {
       "name": "logged_user_event",
-      "time": "timestamp"
+      "time": "{{timestamp}}"
     }
   ]
 }
@@ -84,7 +84,7 @@ This next example links an event to a specific app using a custom event with opt
     {
       "app_id": "insert_app_id",
       "name": "rented_movie",
-      "time": "timestamp",
+      "time": "{{timestamp}}",
       "properties": {
         "release": {
           "studio": "FilmStudio",
@@ -162,6 +162,10 @@ To store the property of the trigger event for a Canvas as an attribute, use the
 * [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
 * Liquid logic (including [aborting messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Multiple attribute or event updates per object
+
+{% alert warning %}
+We recommend careful use of Connected Content Liquid personalization in User Update steps, as this step type has a rate limit of 200,000 requests per minute. This rate limit overrides the Canvas rate limit.
+{% endalert %}
 
 ### Increment numbers
 

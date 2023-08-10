@@ -22,6 +22,10 @@ You can set the email subscription state for an email address that is not yet as
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#be852462-0cda-4a48-b68b-85bd8a9f2147 {% endapiref %}
 
+{% alert note %}
+When creating an API key to use with this endpoint, you must set `email.status` permissions.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

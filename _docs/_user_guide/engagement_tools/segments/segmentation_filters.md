@@ -1,5 +1,5 @@
 ---
-page_order: 1
+page_order: 1.2
 nav_title: Segmentation Filters
 article_title: Segmentation Filters
 layout: glossary_page
@@ -57,7 +57,11 @@ glossaries:
     description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Time zone&#58;<br>This filter adjusts for whatever time zones the user is in.
     tags:
       - Custom Data
-  - name: First Made Purchase
+- name: Feature Flag
+    description: The segment of your users that have a particular <a href="/docs/developer_guide/platform_wide/feature_flags/about">feature flag</a> currently enabled.
+    tags:
+      - User Activity
+- name: First Made Purchase
     description: Segments your users by the earliest recorded time that they have made a purchase in your app. (24-hour period)<br><br>Time zone:<br>UTC
     tags:
       - User Activity
@@ -182,7 +186,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Converted From Campaign
-    description: Segments your users by whether or not they have converted on a specific campaign.
+    description: Segments your users by whether or not they have converted on a specific campaign. This filter doesn't include users that are in the control group.
     tags:
       - Retargeting
   - name: Converted From Canvas

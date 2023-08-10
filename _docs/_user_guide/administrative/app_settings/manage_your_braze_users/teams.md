@@ -9,15 +9,15 @@ description: "This reference article covers how to use Braze teams in the dashbo
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dive-into-braze-teams/869939){: style="float:right;width:120px;border:0;" class="noimgborder"}Teams
 
-> Braze admins can group their dashboard users into Teams with varying user roles and permissions.
+> Braze admins can group their dashboard users into teams with varying user roles and permissions.
 
 {% multi_lang_include video.html id="UYjKrFcL9sQ" align="right" %}
 
-Teams can be set up across customer base location, language, and custom attributes so that members and non-members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools.
+Teams can be set up across customer base location, language, and custom attributes so that team members and non-team members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools.
 
 Teams are not available on all Braze contracts. If you'd like to access this feature, reach out to your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
 
-## Creating Teams
+## Creating teams
 
 Go to **Settings** > **Internal Teams** and click <i class="fas fa-plus"></i> **Add Team**.
 
@@ -25,17 +25,17 @@ Go to **Settings** > **Internal Teams** and click <i class="fas fa-plus"></i> **
 If you are using the [older navigation]({{site.baseurl}}/navigation), **Internal Teams** is located under **Manage Settings** > **Manage Teams**.
 {% endalert %}
 
-Enter the **Team Name**. Use the **Define Team (Optional)** to select a custom attribute, location, or language to further define permissions.
-
-Teams can be used to filter end-users for engagement objects like campaigns, Canvases, Content Cards, segments, and more. See the section in this article on [Assigning tags and filters](#tags-and-filters) to learn more. 
-
 ![Adding a new team][68]
 
-## Assigning roles
+Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data that team has access to. For example, a possible use case is to perform [testing with teams](#testing-with-teams) by creating a development team that only has access to test users, identified by a custom attribute.
 
-Braze admins can assign Team Roles to their dashboard users who are limited to only read or write data available to their particular Teams. Predefined Team Roles include language and location. 
+If a team is defined by a custom attribute, language, or country, you can then use the team to filter end-users for features like campaigns, Canvases, Content Cards, segments, and more. For more, see [Assigning team tags](#tags-and-filters).
 
-To assign a Team Role, navigate to **Settings** > **Company Users** and select a user you'd like to add to your team.
+## Assigning users to teams
+
+Braze administrators and limited users with the company-level permission "Can Manage Company Settings" can assign team-level permissions to a dashboard user with limited access. When assigned to a team, dashboard users are limited to only read or write data available to their particular teams, such as user language, location, or custom attribute, as defined when the team was created.
+
+To assign a user to a team, navigate to **Settings** > **Company Users** and select a user you'd like to add to your team.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon and clicking **Manage Users**..
@@ -46,27 +46,88 @@ Then perform the following steps:
 1. Click <i class="fa fa-edit"></i> **Edit**.
 2. Set their User Role to **Limited**.
 3. Add them to the appropriate workspace. 
-4. Select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column. Note that some permissions are only granted via workspace, and these permissions will appear as "--" in the **Teams** permissions column.
+4. Select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column.
 
-![Assigning Team roles][2]
+![][2]
 
-To see descriptions of what each user permission includes and how to use them, check out our [User Permissions section]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions).
+### Available team-level permissions
 
-## Assigning tags and filters {#tags-and-filters}
+The following are all available permissions you can assign at the team level. Any permissions not listed here are only granted on the workspace level, and these permissions will appear as "--" in the **Teams** permissions column.
 
-Dashboard objects can be assigned to Teams. Canvases, campaigns, cards, segments, email templates, and media library assets can all be labeled with a Team filter and tag. 
+- Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, and Preference Centers
+- Send Campaigns, Canvases
+- Publish Cards
+- Edit Segments
+- Export User Data
+- View User Profiles PII Compliant
+- Manage Dashboard Users
+- Manage Media Library
+
+To see descriptions of what each user permission includes and how to use them, check out our [User Permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions) section.
+
+## Assigning team tags {#tags-and-filters}
+
+You can assign a team to Canvases, campaigns, cards, segments, email templates, and media library assets with the **Add Team** filter.
  
 ![Adding a Team tag to a campaign][3]{: style="max-width:70%;"}
 
-Based on the definitions applied to the Team created, when a Team filter is assigned, you automatically restrict user profiles that a dashboard object can include based on your team definition. For example, TeamA is defined as end-users from the US. When a TeamA Team filter is assigned to CampaignA, CampaignA will only include end-users from the USA, and only TeamA (other than dashboard admins) will be able to access CampaignA. 
+- Based on the *definitions* applied when the team was created, when a team filter is assigned, that engagement tool's audience is restricted to user profiles that match the definition.
+- Based on assigned *permissions*, team members will only be allowed to access dashboard engagement tools that have their team filter set. If they have limited or no workspace permissions, they must add a team filter to certain objects before they can save or launch them. Team members are also able to filter Canvases, campaigns, cards, and segments by team to identify content relevant to them.
 
-Based on assigned permissions, members of teams will only be allowed to access dashboard engagement tools that have the team filter set. Members are also able to filter Canvases, campaigns, cards, and segments by team to identify dashboard objects relevant to them.
+### Example
+
+Consider the following two scenarios for a marketer in Braze named Michelle. Michelle is a member of a team called "Development". She has access to all of the team-level permissions for the Development team.
+
+{% tabs %}
+{% tab Scenario 1: Only team permissions %}
+
+In this scenario, Michelle is a limited user that has no workspace-level permissions. Her permissions look something like this:
+
+![]({% image_buster /assets/img_archive/scenario1.png %})
+
+Based on Michelle's assigned permissions, whenever she creates a campaign, she can only assign the "Development" team to that campaign. She can't launch the campaign unless the team is assigned, and she can't view or access any other team tags.
+
+![]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
+
+{% endtab %}
+{% tab Scenario 2: Team permissions and workspace permissions %}
+
+In this scenario, Michelle is still a member of the Development team, but she also has an additional workspace-level permission.
+
+![]({% image_buster /assets/img_archive/scenario2.png %})
+
+Because Michelle has the workspace-level permission of "Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, and Preference Centers", she can view and assign other team filters to the campaign she creates.
+
+![]({% image_buster /assets/img_archive/team_permissions_scenario2.gif %})
+
+Similar to the first scenario, Michelle must add the Development team tag to the campaign before she can launch it.
+
+{% endtab %}
+{% endtabs %}
+
+## Testing with teams
+
+One possible use case for teams is to create a teams-based approval system for testing and launching content in a production environment.
+
+To do so, create a "Development" team that only has access to test users. You can limit a team to only access test users if your test users are identifiable by a custom attribute. Then, add the custom attribute as a definition when creating or editing the team (see the preceeding section [Creating teams](#creating-teams)). Your approvers should have access to all users.
+
+The general process would be as follows:
+
+1. Development team creates a campaign and adds the "Development" team tag.
+2. Development team launches the campaign to test users.
+3. Approver team validates the local campaign design, promotes, and launches. To launch, the Approver team changes the team tag from "Development" to "[All Teams]" and relaunches the campaign.
+
+For changes to active campaigns:
+
+1. Development team clones the running campaign, adds the "Development" team tag, and saves.
+2. Development team makes edits and shares with the Approver team.
+3. Approver team removes the "Development" team tag, pauses the previous campaign, and launches the new campaign.
 
 ## Archiving an existing Team
 
-You can archive Teams from the **Internal Teams** page. 
+You can archive teams from the **Internal Teams** page.
 
-Select one or many teams to archive. If the Team is not associated with any object within Braze, the Team will be archived immediately. If the Team is associated with an object, you will be presented with an option to remove the Team after the archive process or replace the Team.
+Select one or many teams to archive. If the team is not associated with any object within Braze, the team will be archived immediately. If the team is associated with an object, you will be presented with an option to remove the team after the archive process or replace the team.
 
 ![Archiving a Team that is associated with an object in Braze][86]{: style="max-width:70%;"}
 

@@ -44,7 +44,7 @@ const braze = require("@braze/web-sdk");
 
 ### Option 2: Google tag manager {#install-gtm}
 
-The Braze Web SDK can be quickly installed from the Google Tag Manager Template Library. Two tags are supported:
+The Braze Web SDK can be installed from the Google Tag Manager Template Library. Two tags are supported:
 
 1. Initialization tag: loads the Web SDK onto your website and optionally sets the External User ID.
 2. Actions tag: used to trigger custom events, purchases, change user IDs, or toggle SDK tracking.
@@ -86,12 +86,13 @@ braze.subscribeToContentCardsUpdates(function(cards){
     // cards have been updated
 });
 
-// optionally set the current user's external ID
+// optionally set the current user's external ID before starting a new session
+// you can also call `changeUser` later in the session after the user logs in
 if (isLoggedIn){
     braze.changeUser(userIdentifier);
 }
 
-// Be sure to call `openSession` after `automaticallyShowInAppMessages`
+// `openSession` should be called last - after `changeUser` and `automaticallyShowInAppMessages`
 braze.openSession();
 ```
 
@@ -107,7 +108,7 @@ Additional setup is required to use Web push notifications. See [Push notificati
 
 ## Troubleshooting {#error-logging}
 
-To assist in troubleshooting, you can enable verbose logging in the SDK. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `braze.setLogger()` in your production environment.
+To assist in troubleshooting, you can enable verbose logging in the SDK. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `braze.setLogger()` in your production environment. 
 
 ```javascript
 braze.initialize("YOUR-API-KEY-HERE", {
@@ -120,7 +121,7 @@ braze.initialize("YOUR-API-KEY-HERE", {
 braze.toggleLogging()
 ```
 
-If you use a server-side rendering framework, see our additional integration steps for integration [Vite](#vite) or other [SSR frameworks](#ssr)
+If you use a server-side rendering framework, see our additional integration steps for integration [Vite](#vite) or other [SSR frameworks](#ssr). Note that verbose logging won't send any extra or new user information to Braze.
 
 
 ## Upgrading the SDK
@@ -194,7 +195,7 @@ optimizeDeps: {
 
 ### Electron support {#electron}
 
-Electron does not officially support web push notifications (see: this [Github issue](https://github.com/electron/electron/issues/6697)). There are other [open source workarounds](https://github.com/MatthieuLemoine/electron-push-receiver) you may try that have not been tested by Braze.
+Electron does not officially support web push notifications (see: this [GitHub issue](https://github.com/electron/electron/issues/6697)). There are other [open source workarounds](https://github.com/MatthieuLemoine/electron-push-receiver) you may try that have not been tested by Braze.
 
 ### AMD module loader
 

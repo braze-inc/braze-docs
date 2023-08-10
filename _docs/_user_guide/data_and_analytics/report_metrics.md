@@ -72,13 +72,14 @@ glossaries:
       - Android Push
       - Webhook
       - SMS
+      - WhatsApp
   - name: Sends to Carrier
     description: This stat is the sum of Confirmed Deliveries, Rejections, and Sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
     calculation: Count
     tags:
       - SMS
   - name: Deliveries
-    description: The total number of message requests that are accepted by the receiving email server.
+    description: The total number of message requests that are accepted by the receiving server.
     calculation: Count
     tags:
       - All Push
@@ -86,6 +87,7 @@ glossaries:
       - Web Push
       - iOS Push
       - Android Push
+      - WhatsApp
   - name: Confirmed Deliveries
     description: The carrier has confirmed that the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment.
     calculation: Count
@@ -109,6 +111,14 @@ glossaries:
     calculation: (Sends) - (Sends to Carrier)
     tags:
       - SMS
+  - name: Failures
+    description: The WhatsApp message could not send because the Internet Service Provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure.
+    tags:
+     - WhatsApp
+  - name: Reads
+    description: When a WhatsApp message is read by the end user. The end user's read receipts must be “On” for Braze to track reads.
+    tags:
+     - WhatsApp
   - name: Spam
     description: The total number of emails delivered that were marked as "spam."
     calculation: (Marked as Spam) / (Sends)
@@ -157,7 +167,7 @@ glossaries:
       - Email
       - Content Cards
   - name: Body Clicks
-    description: Occurs when someone clicks on a slide-up, modal, or fullscreen in-app message that has no buttons.
+    description: Occurs when someone clicks on any of the following in-app message types:<br>- Slide-up <br>- Modal <br>- Fullscreen that has no buttons
     calculation: (Body Clicks) / (Impressions)
     tags:
       - In-App Message

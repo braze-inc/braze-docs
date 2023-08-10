@@ -26,7 +26,7 @@ The Braze and Nexla integration allows customers that use [Currents]({{site.base
 
 ## Use cases
 
-Nexla's data-as-a-product, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), make it easy to work with data of any format without worrying about metadata. When you set up your data flows to or from Braze with Nexla, no-code tools make it easy and available in minutes. Once the data flow is set to a destination, Nexla will monitor your flow and scale to any amount of data.
+Nexla's data-as-a-product, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), make it easy to work with data of any format without worrying about metadata. When you set up your data flows to or from Braze with Nexla, no-code tools make it easy and available in minutes. After the data flow is set to a destination, Nexla will monitor your flow and scale to any amount of data.
 
 ## Integration
 

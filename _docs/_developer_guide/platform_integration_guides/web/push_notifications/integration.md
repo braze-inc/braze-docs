@@ -77,7 +77,7 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 
 ## Safari Mobile push {#safari-mobile}
 
-Safari 16.4+ on iOS and iPadOS supports web push for apps that have been [added to the homescreen][add-to-homescreen] and have a [Web Application Manifest][manifest-file] file. Once you have completed the steps to integrate web push notifications, you can provide support for mobile push for Safari as well. 
+Safari 16.4+ on iOS and iPadOS supports web push for apps that have been [added to the homescreen][add-to-homescreen] and have a [Web Application Manifest][manifest-file] file. After you have completed the steps to integrate web push notifications, you can provide support for mobile push for Safari as well. 
 
 To support mobile Safari web push, follow our [guide here][safari-mobile-push-guide].
 

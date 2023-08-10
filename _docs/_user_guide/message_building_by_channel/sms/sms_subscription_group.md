@@ -1,7 +1,7 @@
 ---
 nav_title: "SMS Subscription Groups"
 article_title: SMS Subscription Groups
-page_order: 2
+page_order: 4
 description: "This reference article covers SMS Subscription Groups, subscription states, and the subscription group setup process."
 page_type: reference
 channel:
@@ -19,7 +19,7 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 
 | State | Definition |
 | --------- | ---------- |
-| Subscribed | User has explicitly confirmed that they want to receive SMS from a specific Subscription Group. A user can be subscribed either by having their subscription state updated through the Braze subscription API or by texting an opt-in keyword response. A user must be subscribed to an SMS Subscription Group in order to receive an SMS |
+| Subscribed | User has explicitly confirmed that they want to receive SMS from a specific Subscription Group. A user can be subscribed either by having their subscription state updated through the Braze subscription API or by texting an opt-in keyword response. A user must be subscribed to an SMS Subscription Group in order to receive an SMS. |
 | Unsubscribed | User has explicitly opt-ed out of messaging from your SMS Subscription group and the sending-phone numbers inside the Subscription Group. They can unsubscribe by texting an opt-out keyword response or a brand can unsubscribed users through the [Braze subscription API][4]. Users unsubscribed from an SMS subscription Group will no longer receive any SMS from sending phone numbers that belong to the Subscription Group.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -36,18 +36,18 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 ### How to check a user's SMS subscription group
 
-- **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's SMS subscription groups. 
+- **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. When inside a user profile, under the Engagement tab, you can view a user's SMS subscription groups. 
 - **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint][9] or [List user’s subscription group status endpoint][8] by using Braze's REST API. 
 
 ## Sending with a subscription group
 
-To launch an SMS campaign through Braze, a Subscription Group must be selected in the dropdown, as shown in the following image. Once selected, an audience filter will be added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected Subscription Group are in the target audience. To adhere to international [telecommunication compliance and guidelines][3], Braze will never send SMS to users that have not subscribed to the selected Subscription Group.  
+To launch an SMS campaign through Braze, a Subscription Group must be selected in the dropdown, as shown in the following image. After it's selected, an audience filter will be added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected Subscription Group are in the target audience. To adhere to international [telecommunication compliance and guidelines][3], Braze will never send SMS to users that have not subscribed to the selected Subscription Group.  
 
 ![SMS composer with the Subscription Group dropdown open and "Messaging Service A for SMS" highlighted by the user.][6]
 
 ## Setup process
 
-During your SMS onboarding process, a Braze onboarding manager will setup Subscription Groups for your dashboard account. They will work with you to determine how many Subscription Groups you need and add the appropriate sending phone numbers to your Subscription Groups. Timelines for setting up a Subscription Group will depend on the type of phone numbers you're adding. For example, short code applications can take anywhere between 8-12 weeks, while long codes can be set up within a day. If you have questions about your Braze dashboard setup, reach out to your Braze representative for support.  
+During your SMS onboarding process, a Braze onboarding manager will set up Subscription Groups for your dashboard account. They will work with you to determine how many Subscription Groups you need and add the appropriate sending phone numbers to your Subscription Groups. Timelines for setting up a Subscription Group will depend on the type of phone numbers you're adding. For example, short code applications can take anywhere between 8-12 weeks, while long codes can be set up within a day. If you have questions about your Braze dashboard setup, reach out to your Braze representative for support.  
 
 ## Subscription group MMS enablement
 

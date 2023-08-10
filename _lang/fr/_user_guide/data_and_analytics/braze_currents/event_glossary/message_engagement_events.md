@@ -99,8 +99,8 @@ Cet événement se produit si un message Canvas a été abandonné en raison d�
   "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_step_id": (string) id of the canvas step this event belongs to,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received,
+  "canvas_step_id": (string) id of the Canvas step this event belongs to,
+  "canvas_step_message_variation_id": (string) id of the Canvas step message variation this user received,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "canvas_variation_id": (string) Canvas variation ID of the variation this event belongs to,
   "canvas_variation_name": (string) name of the Canvas variation this event belongs to,
@@ -131,9 +131,9 @@ Cet événement se produit si un message Carte de contenu a été abandonné en 
   "campaign_name": (string) name of the campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_step_id": (string) id of the canvas step this event belongs to,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received,
-  "canvas_step_name": (string)name of the canvas step this event belongs to,
+  "canvas_step_id": (string) id of the Canvas step this event belongs to,
+  "canvas_step_message_variation_id": (string) id of the Canvas step message variation this user received,
+  "canvas_step_name": (string)name of the Canvas step this event belongs to,
   "canvas_variation_id": (string) Canvas variation ID of the variation this event belongs to,
   "canvas_variation_name": (string) name of the Canvas variation this event belongs to,
   "device_id": (string) id of the device on which the event occurred,
@@ -171,9 +171,9 @@ Cet événement se produit si un message e-mail a été abandonné en raison d�
   "campaign_name": (string) name of the campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_step_id": (string) id of the canvas step this event belongs to,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received,
-  "canvas_step_name": (string)name of the canvas step this event belongs to,
+  "canvas_step_id": (string) id of the Canvas step this event belongs to,
+  "canvas_step_message_variation_id": (string) id of the Canvas step message variation this user received,
+  "canvas_step_name": (string)name of the Canvas step this event belongs to,
   "canvas_variation_id": (string) Canvas variation ID of the variation this event belongs to,
   "canvas_variation_name": (string) name of the Canvas variation this event belongs to,
   "device_id": (string) id of the device on which the event occurred,
@@ -218,9 +218,9 @@ Cet événement se produit si un message in-app a été abandonné en raison d�
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received
-  "canvas_step_name": (string) API id of the canvas step this event belongs to,
-  "canvas_variation_id": (string) id of the canvas variation this event belongs to,
+  "canvas_step_message_variation_id": (string) id of the Canvas step message variation this user received
+  "canvas_step_name": (string) API id of the Canvas step this event belongs to,
+  "canvas_variation_id": (string) id of the Canvas variation this event belongs to,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "card_id": (string) BSON id of the card this in app message comes from,
   "carrier:" (string) carrier of the device,
@@ -263,7 +263,7 @@ Cet événement se produit si un message de Carte de fil d’actualité a été 
   "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (string) name of the campaign,
   "canvas_name": (string) name of the Canvas,
-  "canvas_step_name": (string) API id of the canvas step this event belongs to,
+  "canvas_step_name": (string) API id of the Canvas step this event belongs to,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "card_id": (string) BSON id of the card this in app message comes from,
   "carrier:" (string) carrier of the device,
@@ -305,9 +305,9 @@ Cet événement se produit si un message de notification push a été abandonné
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received
-  "canvas_step_name": (string) API id of the canvas step this event belongs to,
-  "canvas_variation_id": (string) id of the canvas variation this event belongs to,
+  "canvas_step_message_variation_id": (string) id of the Canvas step message variation this user received
+  "canvas_step_name": (string) API id of the Canvas step this event belongs to,
+  "canvas_variation_id": (string) id of the Canvas variation this event belongs to,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "dispatch_id" (string) ID of the dispatch this message belongs to,
   "external_user_id": (string) External user ID of the user,
@@ -344,9 +344,9 @@ Cet événement se produit si un message SMS a été abandonné en raison d’he
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received
-  "canvas_step_name": (string) API id of the canvas step this event belongs to,
-  "canvas_variation_id": (string) id of the canvas variation this event belongs to,
+  "canvas_step_message_variation_id": (string) id of the Canvas step message variation this user received
+  "canvas_step_name": (string) API id of the Canvas step this event belongs to,
+  "canvas_variation_id": (string) id of the Canvas variation this event belongs to,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "external_user_id": (string) External user ID of the user,
   "id": (string) globally unique ID of this event,
@@ -382,9 +382,9 @@ Cet événement se produit si un message Webhook a été abandonné en raison d�
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received
-  "canvas_step_name": (string) API id of the canvas step this event belongs to,
-  "canvas_variation_id": (string) id of the canvas variation this event belongs to,
+  "canvas_step_message_variation_id": (string) id of the Canvas step message variation this user received
+  "canvas_step_name": (string) API id of the Canvas step this event belongs to,
+  "canvas_variation_id": (string) id of the Canvas variation this event belongs to,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "device_id": (string) id of the device on which the event occurred,
   "dispatch_id" (string) ID of the dispatch this message belongs to,
@@ -423,8 +423,8 @@ Cet événement ce produit lorsqu’un utilisateur quitte un Canvas en effectuan
   "time": (int) unix timestamp at which the event happened,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
-  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the Canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the Canvas step this event belongs to,
 }
 ```
 {% endapi %}
@@ -453,8 +453,8 @@ Cet événement ce produit lorsqu’un utilisateur quitte un Canvas en correspon
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
-  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the Canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the Canvas step this event belongs to,
 }
 ```
 {% endapi %}
@@ -1833,7 +1833,7 @@ Les groupes d’abonnement sont disponibles uniquement pour les canaux e-mail et
   "app_id": (optional, string) id for the app on which the user action occurred,
   "campaign_id": (optional, string) id of the campaign if from a campaign,
   "message_variation_id": (optional, string) id of the message variation if from a campaign,
-  "canvas_id": (optional, string) id of the Canvas if from a canvas,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
   "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
   "subscription_group_id": (required, string) id of the subscription group,
@@ -1900,7 +1900,7 @@ Cet événement se produit lorsque le statut global d’abonnement de l’utilis
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (optional, string) id of the canvas step this event belongs to,
+  "canvas_step_id": (optional, string) id of the Canvas step this event belongs to,
   "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
   "send_id": (optional, string) Message send id this subscription state change action originated from
 }

@@ -28,6 +28,10 @@ Make sure to remove deprecated external IDs with the `/users/external_ids/remove
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
 
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `users.external_ids.rename` permission.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
@@ -103,6 +107,6 @@ Yes. In fact, we highly recommend running a test migration on a staging or devel
 This feature does not cost data points.
 
 **What is the recommended deprecation period?**<br>
-We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them once there is no longer a need to reference users by the deprecated ID.
+We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them after there is no longer a need to reference users by the deprecated ID.
 
 {% endapi %}

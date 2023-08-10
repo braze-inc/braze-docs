@@ -9,7 +9,7 @@ description: "This article outlines details about the Update scheduled API-trigg
 
 ---
 {% api %}
-# Update scheduled API-triggered canvases
+# Update scheduled API-triggered Canvases
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/trigger/schedule/update
 {% endapimethod %}
@@ -25,6 +25,10 @@ Any schedule will completely overwrite the one that you provided in the create s
   - Scheduled triggers that are updated very close to or during the time they were supposed to be sent will be updated with best efforts, so last-second changes could be applied to all, some, or none of your targeted users.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8fdf158b-ce20-41d8-80e4-a9300a6706d4 {% endapiref %}
+
+{% alert note %}
+To use this endpoint, you'll need to generate an API key with the `canvas.trigger.schedule.update` permission.
+{% endalert %}
 
 ## Rate limit
 

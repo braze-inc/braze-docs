@@ -33,30 +33,21 @@ By default, if the results of the test aren't enough to determine a statisticall
 
 ## Using Winning Paths with one-time entry {#one-time-entry}
 
-Because the winner is chosen after a period of time you choose, Winning Path is best for Canvases where users enter on a recurring or triggered basis. A Canvas with one-time entry can't send users down a Winning Path at a later time because all users go through paths simultaneously. 
+When using Winning Paths in a Canvas where users are allowed to enter only once, a Delay Group is automatically included. During the duration of the experiment, a percentage of users will be held in the Delay Group while the remaining users enter your Experiment Paths. 
 
-However, you can accomplish this use case by adding a preliminary additional Experiment Path step, which delays your desired portion of users until the experiment is complete.
+![Experiment Step with a Delay Group for Winning Path][4]{: style="max-width:75%"}
 
-![A draft Canvas demonstrating how to use the Winning Path functionality in a Canvas with one-time entry.][2]{: style="max-width:80%"}
+When the test is complete and a Winning Path is determined, the users assigned to the Delay Group will be directed to the chosen path, and continue through the Canvas.
 
-### Steps
-
-1. Add an initial Experiment Path step (with Winning Path off) to split users between the final send group and the test group that will go through the step with Winning Paths enabled. 
-2. Add a delay step to the final send group path. 
-3. Add a second Experiment Path step to the test group (with Winning Path on). This step functions as normal, with users equally distributed between however many paths you'd like to test.
-
-The duration of the delay step should be slightly longer than the experiment window to ensure the experiment has been completed once the users advance after the delay. After the step with Winning Paths enabled selects a winner, it will set 100% of future users to the winning path. The users waiting in the Delay step will be released and flow through to the winning path.
-
-{% alert note %}
-If you'd like this functionality to be built into Winning Path, please let the Braze product team know by [voting for it on the Braze Product Portal](https://portal.productboard.com/ko5rgqefrdssb5wesynqswxp/c/206-winning-path-for-one-time-sends?utm_medium=social&utm_source=portal_share).
-{% endalert %}
+![Experiment Step with a Delay Group sent down the Winning Path][5]{: style="max-width:75%"}
 
 ## Using Winning Paths with local time delivery 
 
 We don't recommend using local time delivery in Canvases with Winning Paths. This is because experiment windows begin when the first user passes through. Users who are in very early time zones may enter the step and trigger the start of the experiment window much earlier than you expect, which can result in the Experiment concluding before the bulk of your users in more typical time zones have had enough time to enter the Canvas and/or convert. 
 
-Alternatively, if you wish to use local delivery, use an experiment window of 24-48 or more hours. That way, users in early time zones enter the canvas and trigger the experiment to start, but plenty of time in the experiment window remains. Users in later time zones will still have sufficient time to enter the Canvas and the Experiment Step with Winning Paths and possibly convert before the experiment window expires.
+Alternatively, if you wish to use local delivery, use an experiment window of 24-48 or more hours. That way, users in early time zones enter the Canvas and trigger the experiment to start, but plenty of time in the experiment window remains. Users in later time zones will still have sufficient time to enter the Canvas and the Experiment Step with Winning Paths and possibly convert before the experiment window expires.
 
 [1]: {% image_buster /assets/img/experiment_step/experiment_winning_path.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_onetime_workaround.png %}
 [3]: {% image_buster /assets/img/experiment_step/experiment_path_distribution.png %}
+[4]: {% image_buster /assets/img/experiment_step/experiment_one_time.png %}
+[5]: {% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}

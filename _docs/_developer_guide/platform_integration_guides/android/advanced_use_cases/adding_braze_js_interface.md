@@ -13,7 +13,7 @@ description: "This reference article shows how to add the Braze JavaScript Inter
 
 > This reference article shows how to add the Braze JavaScript Interface to WebViews.
 
-Using Braze functionality from a WebView in your app can be done by adding the Braze JavaScript interface to your WebView. Once the interface has been added, the same API available for [HTML in-app messages][1] will be available within your custom WebView.
+Using Braze functionality from a WebView in your app can be done by adding the Braze JavaScript interface to your WebView. After the interface has been added, the same API available for [HTML in-app messages][1] will be available within your custom WebView.
 
 {% tabs %}
 {% tab JAVA %}
@@ -22,7 +22,7 @@ Using Braze functionality from a WebView in your app can be done by adding the B
 String javascriptString = BrazeFileUtils.getAssetFileStringContents(context.getAssets(), "appboy-html-in-app-message-javascript-component.js");
 myWebView.loadUrl("javascript:" + javascriptString);
 
-final InAppMessageHtmlJavascriptInterface javascriptInterface = new InAppMessageHtmlJavascriptInterface(context, inAppMessage);
+final InAppMessageJavascriptInterface javascriptInterface = new InAppMessageJavascriptInterface(context, inAppMessage);
 myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge");
 ```
 
@@ -33,7 +33,7 @@ myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge");
 val javascriptString = BrazeFileUtils.getAssetFileStringContents(context.getAssets(), "appboy-html-in-app-message-javascript-component.js")
 myWebView.loadUrl("javascript:" + javascriptString!!)
 
-val javascriptInterface = InAppMessageHtmlJavascriptInterface(context, inAppMessage)
+val javascriptInterface = InAppMessageJavascriptInterface(context, inAppMessage)
 myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge")
 ```
 

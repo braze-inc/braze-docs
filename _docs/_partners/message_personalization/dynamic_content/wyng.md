@@ -9,9 +9,9 @@ search_tag: Partner
 
 # Wyng
 
-> [Wyng][0], a zero-party data platform, makes it easy to collect, use, and integrate customer preferences and attributes via micro-experiences, customer preference portals, and an API platform.
+> [Wyng][0] makes it easy to build interactive digital experiences (ie. quizzes, preference center, promotions) that engage consumers at the right moments, collect preferences and other zero-party data, and personalize in real time.
 
-The Braze and Wyng integration allows you to leverage Wyng experiences to deliver personalization in Braze campaigns and Canvases. Wyng also includes a customer preference portal so users can control the data and preferences they share with a brand.
+The Braze and Wyng integration allows you to leverage zero-party data earned via Wyng experiences to personalize interactions in Braze Campaigns and Braze Canvas. Wyng can also power a preference center, so consumers can control the data and preferences (including communication preferences) they share with your brand.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ To subscribe users to subscription groups, click **Add Subscription** and add yo
 Click **Add custom property** to add attribute and event object pairs to send to the `/users/track` endpoint. Use this to add hardcoded attribute values for each data transaction sent for the integration. To add multiple properties, click the **Add custom property** button again.<br>![An image prompting you to add attribute custom properties.][9]{: style="max-width:80%;"}<br><br>
 - **Send custom event**<br>
 Optionally, you can enable **Sending custom event**. If enabled, you should include the event name and corresponding app ID.<br>![An image prompting you to send custom events, if needed.][10]{: style="max-width:80%;"}<br><br>
-4. Lastly, you must map Wyng fields to Braze API fields based on your use case. Click **Select a field** to choose fields to map, and afterwards, **Save** your integration. Once saved, these mapped fields can be found under **Integrations > Manage**.
+4. Lastly, you must map Wyng fields to Braze API fields based on your use case. Click **Select a field** to choose fields to map, and afterwards, **Save** your integration. When saved, these mapped fields can be found under **Integrations > Manage**.
 ![An example of the different Wyng fields you can map to certain Braze fields.][11]{: style="max-width:80%;"}
 ![A list of available sync fields.][12]{: style="max-width:80%;margin-top:2px"}
 

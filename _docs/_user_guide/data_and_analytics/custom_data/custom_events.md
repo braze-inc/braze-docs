@@ -93,7 +93,7 @@ Note that Segments created with custom event data cannot show previous historic 
 
 ## Custom event properties
 
-With custom event properties, you can set properties on custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, track conversions, and generating more sophisticated analytics through raw data export.
+Custom event properties are custom event metadata or attributes that describe a specific occurrence of an event. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, tracking conversions, and generating more sophisticated analytics through raw data export. Custom event properties are not stored on the Braze profile and therefore do not consume data points (see [Data points](#data-points) below for exceptions).
 
 {% alert important %}
 Each custom event or purchase can have up to 256 distinct custom event properties. If a custom event or purchase is logged with more than 256 properties, only the first 256 will be captured and available for use.
@@ -122,6 +122,8 @@ You can change the data type of your custom event property, but be aware of the 
 
 ### Using custom event properties
 
+Custom event properties can be used to qualify campaign triggers, track conversions, and personalize messaging.
+
 #### Trigger messages
 
 You can use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you could improve your target audience and allow for increased campaign personalization by adding a custom event property of `cart value`.
@@ -145,9 +147,18 @@ If the user has no internet connection, triggered in-app messages with templated
 #### Considerations with filters
 
 - **API calls:** When making API calls and using the "is blank" filter, a custom event property is considered "blank" if excluded from the call. For example, if you were to include `"event_property": ""`, then your users would be considered "not blank".
-- **Integers:** When filtering for a number custom event property and the number is very large, don't use the "exactly" filter. If a number is too large, it may be rounded at a certain length, so your filter won't work as expected. 
- 
-#### Data points
+- **Integers:** When filtering for a number custom event property and the number is very large, don't use the "exactly" filter. If a number is too large, it may be rounded at a certain length, so your filter won't work as expected.
+
+#### Segmentation
+
+If you'd like to create segments based on event property recency and frequency, reach out to your customer success manager to enable segmentation for specific custom event properties. When enabled, you can access additional filtering options when segmenting, such as:
+
+- Has done custom event with property A with value B, X times in the last Y days
+- Has made any purchases with property A with value B, X times in the last Y days
+
+Data is only logged for a given event property after it has been enabled by your customer success manager—event properties are only available from that date moving forward.
+
+##### Data points
 
 In regards to subscription usage, custom event properties enabled for segmentation with the following filters are all counted as separate data points in addition to the data point counted by the custom event itself:
 
@@ -229,7 +240,7 @@ After generating a schema, you'll be able to reference the nested data during [s
 {% tabs %}
 {% tab Music Example %}
 
-The following is a `/users/track` example with a "Created Playlist" custom event. Once a playlist has been created, to capture the properties of the playlist, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
+The following is a `/users/track` example with a "Created Playlist" custom event. After a playlist has been created, to capture the properties of the playlist, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
 
 ```
 ...
@@ -258,7 +269,7 @@ The following is a `/users/track` example with a "Created Playlist" custom event
 {% endtab %}
 {% tab Restaurant Example%}
 
-The following is a `/users/track` example with an "Ordered" custom event. Once an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
+The following is a `/users/track` example with an "Ordered" custom event. After an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
 
 ```
 ...
@@ -329,13 +340,13 @@ Triggering a campaign with nested properties from the "Ordered" event:
 
 ##### Segmentation
 
-Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Once you've generated a schema, the nested objects explorer will display in the segmentation section. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)). 
+Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. After you've generated a schema, the nested objects explorer will display in the segmentation section. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)). 
 
 ![][4]
 
 ##### Personalization
 
-Using the **Add Personalization** modal, select **Advanced Event Properties** as the personalization type. This allows the option to add a nested event properties once a schema has been generated.
+Using the **Add Personalization** modal, select **Advanced Event Properties** as the personalization type. This allows the option to add a nested event properties after a schema has been generated.
 
 ![][5]{: style="max-width:70%;"}
 

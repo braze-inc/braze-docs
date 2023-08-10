@@ -24,14 +24,14 @@ You can customize [when your message will expire](#in-app-message-expiration) an
 
 ## In-app message expiration
 
-In the in-app message composer, you can choose when the in-app message will expire. During this time, the in-app message will sit and wait to be viewed until it has reached the expiry date. Once sent, the in-app message can be viewed one time.
+In the in-app message composer, you can choose when the in-app message will expire. During this time, the in-app message will sit and wait to be viewed until it has reached the expiry date. After the in-app message is sent, it can be viewed one time.
 
 ![][1]
 
 | Option | Description | Example |
 |---|---|---|
 | Message expires after specified period | The first option allows you to expire the in-app message relative to when the step becomes available to the user. | For example, an in-app message with a two-day expiration would become available after the step's delay elapses and audience options are checked. It would then be available for 2 days (48 hours) and during those two days, users may see the in-app message if they open the app. |
-| Message expires by specified date | The second option allows you to choose a specific date and time when the in-app message will longer be available. | For example, if you have a sale that ended at a specific date and time, you might select this option so that once the sale ends users no longer see the associated in-app message. |
+| Message expires by specified date | The second option allows you to choose a specific date and time when the in-app message will be no longer available. | For example, if you have a sale that ended at a specific date and time, you might select this option so that users no longer see the associated in-app message when the sale ends. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Use cases
@@ -203,6 +203,10 @@ Navigate to the **Send Settings** of the Canvas section to prioritize in-app mes
 By default, Canvas component priority is set to medium, with the most recently created steps having the highest relative priority. Canvas and campaign-level priorities also default to medium, with the highest relative priority defaulting to the most recently created items.
 
 ![]({% image_buster /assets/img_archive/canvas_priority.png %}){: style="max-width:85%"}
+
+### Drafts of an active Canvas
+
+When editing a draft of an active Canvas, changes to the in-app message priority within **Send Settings** are not saved with a draft. These changes are applied directly to the active Canvas when the priority sorter modal is closed. However, in a Message step, the priority sorter will be updated when a user launches the draft since step settings apply at a step level.
 
 ## Custom event properties in a Canvas
 

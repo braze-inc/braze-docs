@@ -80,19 +80,19 @@ All of the following error codes indicate that no messages will be sent.
 | `400 Invalid Message Variant` | You provided a valid campaign ID, but the message variation ID doesn't match any of that campaign's messages.|
 | `400 Mismatched Message Type` | You provided a message variation of the wrong message type for at least one of your messages.|
 | `400 Invalid Extra Push Payload` | You provide the `extra` key for either `apple_push` or `android_push` but it is not a dictionary.|
-| `400 Max Input Length Exceeded` | Caused by calling more than 75 external ids when hitting the User Track endpoint.|
-| `400 The max number of external_ids and aliases per request was exceeded` | Caused by calling more than 50 external ids.|
+| `400 Max Input Length Exceeded` | Caused by calling more than 75 external IDs when hitting the `/users/track` endpoint.|
+| `400 The max number of external_ids and aliases per request was exceeded` | Caused by calling more than 50 external IDs.|
 | `400 The max number of ids per request was exceeded` | Caused by calling more than 50 external ids.|
 | `400 No message to send` | No payload is specified for the message.|
 | `400 Slideup Message Length Exceeded` | Slideup message contains more than 140 characters.|
-| `400 Apple Push Length Exceeded` | JSON payload is more than 1912 bytes.|
-| `400 Android Push Length Exceeded` | JSON payload is more than 4000 bytes.|
+| `400 Apple Push Length Exceeded` | JSON payload is more than 1,912 bytes.|
+| `400 Android Push Length Exceeded` | JSON payload is more than 4,000 bytes.|
 | `400 Bad Request` | Cannot parse send_at datetime.|
 | `400 Bad Request` | In your request, `in_local_time` is true but `time` has passed in your company’s time zone.|
-| `401 Unauthorized` | Invalid API Key.|
+| `401 Unauthorized` | Invalid API key.|
 | `403 Forbidden` | Rate plan doesn't support or account is otherwise inactivated.|
-| `403 Access Denied` | The REST API Key you are using does not have sufficient permissions, check the API key permissions in the Braze Developer Console.|
-| `404 Not Found` | Unknown REST API Key.|
+| `403 Access Denied` | The REST API key you are using does not have sufficient permissions, check the API key permissions in the Braze Developer Console.|
+| `404 Not Found` | Unknown REST API key.|
 | `429 Rate Limited` | Over rate limit.|
 {: .reset-td-br-1 .reset-td-br-2}
 

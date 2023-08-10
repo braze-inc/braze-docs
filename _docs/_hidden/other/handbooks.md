@@ -1,7 +1,6 @@
 ---
 nav_title: Support & Success Services Handbook
 permalink: /handbooks/
-layout: dev_guide
 ---
 
 # Support & Success Services Handbook

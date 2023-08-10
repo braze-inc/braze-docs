@@ -16,7 +16,7 @@ Présentation de la documentation de partenariat
 - [Créez et ajoutez du contenu à votre page](#create_page)
 - [Mise en forme de l’image, du lien et de l’extrait de code](#image_links)
 - [Vérification et test](#testing)
-- [Engagement avec Github](#committing)
+- [Engagement avec GitHub](#committing)
 - [Processus de vérification](#review)
 <br><br>
 {% alert important %}
@@ -181,7 +181,7 @@ Votre page sera visible à l’adresse `http://localhost:4000/docs/partners/your
 
 Après avoir vérifié vos modifications, appuyez sur **Ctrl+C** dans le terminal et terminez la commande Rake.
 
-## Étape 5 : Engagement avec Github {#committing}
+## Étape 5 : Engagement avec GitHub {#committing}
 
 Une fois que vous avez apporté les modifications adéquates à votre document de partenariat, enregistrez votre document et validez vos modifications. 
 
@@ -192,7 +192,7 @@ Dans le référentiel de documents GitHub de Braze, trouvez votre branche. Si vo
 1. Configurez votre branche à fusionner de la même manière que celle illustrée dans l’image précédente.<br><br>
 2. Nommez votre demande de tirage de la façon suivante : « Nom du partenariat -Documents partenaires »<br><br>
 3. Fournissez toute information pertinente qui peut aider l’équipe de documentation de Braze à confirmer vos changements, et indiquez votre **chef de produit Braze** pour le contacter. Si nécessaire, nous vous recontacterons par la suite.<br><br>
-4. Une fois que vous avez fait des changements, mentionnez @KellieHawks et @josh-mccrowell-braze dans un commentaire dans la requête d’extraction, et notre équipe prendra le relais.<br><br>
+4. Une fois que vous avez fait des changements, mentionnez @bre-fitzgerald et @josh-mccrowell-braze dans un commentaire dans la requête d’extraction, et notre équipe prendra le relais.<br><br>
 
 ## Processus de vérification {#review}
 

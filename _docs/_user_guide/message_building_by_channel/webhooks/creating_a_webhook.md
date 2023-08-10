@@ -12,7 +12,7 @@ search_rank: 2
 
 > Creating a webhook campaign or including a webhook in a multichannel campaign allows you to trigger non-app actions. More specifically, [webhooks][14] can be used to provide other systems and applications with real-time information. 
 
-You can use webhooks to send information to systems such as Salesforce or Marketo. You can also use webhooks to send information to your backend systems. For example, you might want to credit your customers' accounts with a promotion once they've performed a custom event a certain number of times.
+You can use webhooks to send information to systems such as Salesforce or Marketo. You can also use webhooks to send information to your backend systems. For example, you might want to credit your customers' accounts with a promotion after they've performed a custom event a certain number of times.
 
 If you want to learn more about what webhooks are and how you can use them in Braze, check out [About webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) before proceeding.
 
@@ -94,11 +94,21 @@ The raw text option gives you the flexibility to write a request for an endpoint
 
 ![Request body set to raw text][22]
 
+If you set the `Content-Type` [request header](#request-headers-optional) to `application/x-www-form-url-encoded`, the request body must be formatted as a URL-encoded string. For example:
+
+{% raw %}
+```
+to={{custom_attribute.${example}}}&text=Your+order+just+arrived
+```
+{% endraw %}
+
+![Request body with URL-encoded string.][23]
+
 ## Step 3: Configure additional settings
 
 #### Request headers (optional)
 
-Certain endpoints may require that you include headers in your request. In the **Settings** section of the composer, you can add as many headers as you'd like. Common request headers are content-type specifications (which describe what type of data to expect in the body, such as XML or JSON) and authorization headers that contain your credentials with your vendor or system. 
+Certain endpoints may require that you include headers in your request. In the **Settings** section of the composer, you can add as many headers as you'd like. Common request headers are `Content-Type` specifications (which describe what type of data to expect in the body, such as XML or JSON) and authorization headers that contain your credentials with your vendor or system. 
 
 Content type specifications must use the key `Content-Type`. Common values are `application/json` or `application/x-www-form-urlencoded`.
 
@@ -268,6 +278,7 @@ Check out:
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
 [21]: {% image_buster /assets/img/webhook_json_1.png %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
+[23]: {% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %}
 [26]: {% image_buster /assets/img_archive/webhook_request_header.png %}
 [42]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/
 [43]: {% image_buster /assets/img_archive/webhook-error.png %}

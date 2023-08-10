@@ -21,21 +21,27 @@ Both tags can be added to your workspace from [Google's community gallery][15] o
 
 Use the Initialization Tag to add the Braze Web SDK to your website.
 
-### Step 1: Select the Initialization Tag
+### Step 1: Push setup (optional)
+
+Optionally, if you want to be able to send push through the Google Tag Manager, first follow the [push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/) guidelines to:
+1. Configure your site's service worker, placing it in the root directory of your site
+2. Set up browser registration - After the service worker is configured, you must set the `braze.requestPushPermission()` method either natively in their app or through a custom HTML tag (via the GTM dashboard). You will also need to make sure that the tag is fired after the SDK has been initalized.
+
+### Step 2: Select the Initialization Tag
 
 Search for Braze in the community template gallery, and select the **Braze Initialization Tag**.
 
 ![A dialog box showing the Braze Initialization Tag configuration settings. Settings included are "tag type", "API key", "API endpoint", "SDK version", "external user ID", and "Safari web push ID".][gtm-initialization-tag]
 
-### Step 2. Configure settings
+### Step 3: Configure settings
 
 Enter your Braze API app identifier key and SDK endpoint, which can be found in your dashboard's **Manage Settings** page. Enter the Web SDK's most recent `major.minor` version. For example, if the latest version is `4.1.2`, enter `4.1`. You can view a list of SDK versions in our [changelog][changelog].
 
-### Step 3. Choose initialization options
+### Step 4: Choose initialization options
 
 Choose from the optional set of additional initialization options described in the [Initial setup][7] guide.
 
-### Step 4: Verify and QA
+### Step 5: Verify and QA
 
 Once you've deployed this tag, there are two ways you can verify a proper integration:
 
@@ -106,7 +112,7 @@ Use the **Add Row** button to add purchase properties.
 
 Sometimes, you might be required to disable or re-enable Braze tracking on your website, for example, after a user indicates they've opted out of web tracking for privacy reasons.
 
-Use the **Disable Tracking** or **Resume Tracking** tag type to disable or re-enable web tracking, respectively.
+Use the **Disable Tracking** or **Resume Tracking** tag type to disable or re-enable web tracking, respectively. These two options call [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) and [`enableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk).
 
 ### Custom user attributes {#custom-attributes}
 

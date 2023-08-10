@@ -29,8 +29,7 @@ module Tags
     class TabBlock < Liquid::Block
       def initialize(tag_name, tab, tokens)
           super
-          @tab = tab.strip
-
+          @tab = tab.strip.downcase
       end
 
       def render(context)
@@ -86,7 +85,7 @@ module Tags
     class SubTabBlock < Liquid::Block
       def initialize(tag_name, tab, tokens)
           super
-          @tab = tab.strip
+          @tab = tab.strip.downcase
       end
 
       def render(context)

@@ -1,10 +1,10 @@
 ---
-page_order: 7.9
+page_order: 11
 nav_title: Best Practices
 article_title: SMS Best Practices
 layout: dev_guide
 guide_top_header: "SMS Best Practices"
-guide_top_text: "Before sending out your SMS messages, refer to the following articles for things you should know and check for."
+guide_top_text: "Before sending your SMS messages, refer to the following articles for things you should know and check for."
 
 page_type: landing
 description: "This landing page is home to best practices that highlight things that you should know and check for prior to message send."

@@ -9,32 +9,39 @@ page_type: reference
 
 # Cloud Data Ingestion integrations
 
-{% alert important %}
-Braze Cloud Data Ingestion for BigQuery is currently in early access. Contact your Braze account manager or CSM if you are interested in participating in the early access.
-{% endalert %}
-
 ## Product setup
 
 New Cloud Data Ingestion integrations require some setup on the Braze side and in your instance. Follow these steps to set up the integration:
 
 {% tabs %}
 {% tab Snowflake %}
-1. In your Snowflake instance, set up the table(s) or view(s) you want to sync to Braze
-2. Create a new integration in the Braze dashboard
-3. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)
-4. Test the integration and start the sync
+1. In your Snowflake instance, set up the table(s) or view(s) you want to sync to Braze.
+2. Create a new integration in the Braze dashboard.
+3. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+4. Test the integration and start the sync.
 {% endtab %}
 {% tab Redshift %}
-1. Make sure Braze access is allowed to the Redshift tables you want to sync - Braze will connect to Redshift over the internet.
-2. In your Redshift instance, set up the table(s) or view(s) you want to sync to Braze
-3. Create a new integration in the Braze dashboard
-4. Test the integration and start the sync
+1. Make sure Braze access is allowed to the Redshift tables you want to sync. Braze will connect to Redshift over the internet.
+2. In your Redshift instance, set up the table(s) or view(s) you want to sync to Braze.
+3. Create a new integration in the Braze dashboard.
+4. Test the integration and start the sync.
 {% endtab %}
 {% tab BigQuery %}
-1. Create a service account and allow access to the BigQuery project(s) and dataset(s) that contain the data you want to sync  
-2. In your BigQuery account, set up the table(s) or view(s) you want to sync to Braze   
-3. Create a new integration in the Braze dashboard  
-4. Test the integration and start the sync  
+
+{% alert important %}
+Braze Cloud Data Ingestion for BigQuery is currently in early access. Contact your Braze account manager or CSM if you are interested in participating in the early access.
+{% endalert %}
+
+1. Create a service account and allow access to the BigQuery project(s) and dataset(s) that contain the data you want to sync.  
+2. In your BigQuery account, set up the table(s) or view(s) you want to sync to Braze.   
+3. Create a new integration in the Braze dashboard.  
+4. Test the integration and start the sync.  
+{% endtab %}
+{% tab Databricks %}
+1. Create a service account and allow access to the Databricks project(s) and dataset(s) that contain the data you want to sync.  
+2. In your Databricks account, set up the table(s) or view(s) you want to sync to Braze.   
+3. Create a new integration in the Braze dashboard.  
+4. Test the integration and start the sync.  
 {% endtab %}
 {% endtabs %}
 
@@ -165,14 +172,14 @@ GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 ```
 
-These are the minimum required permissions for this user; if creating multiple CDI integrations, you may want to grant permissions to a schema or manage permissions using a group. 
+These are the minimum required permissions for this user. If creating multiple CDI integrations, you may want to grant permissions to a schema or manage permissions using a group. 
 
 #### Step 3: Allow access to Braze IPs    
 
 If you have a firewall or other network policies, you must give Braze network access to your Redshift instance. Allow access from the below IPs corresponding to your Braze dashboard's region. 
 
 {% alert important %}
-You may also need to change your security groups to allow Braze to access your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow TCP connectivity on this port even if the inbound rules are set to "allow all".
+You may also need to change your security groups to allow Braze to access your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow Redshift TCP connectivity on this port even if the inbound rules are set to "allow all". In addition, it is important that the endpoint for the Redshift cluster be publicly accessible in order for Braze to connect to your cluster.
 {% endalert %}
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | For Instances `EU-01` and `EU-02` |
@@ -217,16 +224,16 @@ You can name the project, dataset, and table as you'd like, but the column names
 
 Create a service account in GCP for Braze to use to connect and read data from your table(s). The service account should have the below permissions: 
 
-- BigQuery Connection User: This will allow Braze to make connections
-- BigQuery User: This will provide Braze access to run queries, read dataset metadata, and list tables.
-- BigQuery Data Viewer: This will provide Braze access to view datasets and their contents.
-- BigQuery Job User: This will provide Braze access to run jobs
+- **BigQuery Connection User:** This will allow Braze to make connections
+- **BigQuery User:** This will provide Braze access to run queries, read dataset metadata, and list tables.
+- **BigQuery Data Viewer:** This will provide Braze access to view datasets and their contents.
+- **BigQuery Job User:** This will provide Braze access to run jobs
 
 After creating the service account and granting permissions, generate a JSON key. See more information on how to do this [here](https://cloud.google.com/iam/docs/keys-create-delete). You will update this to the Braze dashboard later. 
 
 #### Step 3: Allow access to Braze IPs    
 
-If you have network policies in place, you must give Braze network access to your Redshift instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
+If you have network policies in place, you must give Braze network access to your Big Query instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | For Instances `EU-01` and `EU-02` |
 |---|---|
@@ -241,6 +248,62 @@ If you have network policies in place, you must give Braze network access to you
 |   | `3.70.107.88`
 
 {% endtab %}
+{% tab Databricks %}
+
+#### Step 1: Set up the table 
+
+Optionally, set up a new Project or Dataset to hold your source table.
+
+Create one or more tables to use for your CDI integration with the following fields:
+
+| Field Name | Type | Mode |
+|---|---|---|
+| `UPDATED_AT`| TIMESTAMP | REQUIRED |
+| `PAYLOAD`| STRING or STRUCT | REQUIRED |
+| `EXTERNAL_ID`| STRING | NULLABLE |
+| `ALIAS_NAME`| STRING | NULLABLE |
+| `ALIAS_LABEL`| STRING | NULLABLE |
+| `BRAZE_ID`| STRING | NULLABLE |
+
+You can name the schema and table as you'd like, but the column names should match the preceding definition.
+
+- `UPDATED_AT` - The time this row was updated in or added to the table. We will only sync rows that have been added or updated since the last sync.
+- User identifier columns. Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, or `braze_id`). A source table may have columns for one, two, or all three identifier types. 
+    - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
+    - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
+    - `BRAZE_ID` - The Braze user identifier. This is generated by the Braze SDK, and new users cannot be created using a Braze ID through Cloud Data Ingestion. To create new users, specify an external user ID or user alias. 
+- `PAYLOAD` - This is a string or struct of the fields you want to sync to the user in Braze.
+
+#### Step 2: Create a Access Token  
+
+In order for Braze to access Databricks, a personal access token needs to be created.
+
+1. In your Databricks workspace, click your Databricks username in the top bar, and then select **User Settings** from the drop-down.
+2. On the Access tokens tab, click **Generate new token**.
+3. Enter a comment that helps you to identify this token, such as "Braze CDI", and change the token’s lifetime to no lifetime by leaving the Lifetime (days) box empty (blank).
+4. Click **Generate**.
+5. Copy the displayed token, and then click **Done**.
+
+Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
+
+#### Step 3: Allow access to Braze IPs    
+
+If you have network policies in place, you must give Braze network access to your Databricks instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
+
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | For Instances `EU-01` and `EU-02` |
+|---|---|
+| `23.21.118.191`| `52.58.142.242`
+| `34.206.23.173`| `52.29.193.121`
+| `50.16.249.9`| `35.158.29.228`
+| `52.4.160.214`| `18.157.135.97`
+| `54.87.8.34`| `3.123.166.46`
+| `54.156.35.251`| `3.64.27.36`
+| `52.54.89.238`| `3.65.88.25`
+| `18.205.178.15`| `3.68.144.188`
+|   | `3.70.107.88`
+
+{% endtab %}
+
 {% endtabs %}
 
 ### Step 2: Create a new integration in the Braze dashboard
@@ -317,6 +380,27 @@ Next, choose a name for your sync and input contact emails. We'll use this conta
 You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, Purchase Events, and User Deletes. The data type for a sync cannot be changed after creation. 
 
 {% endtab %}
+{% tab Databricks %}
+
+Go to **Partner Integrations** > **Technology Partners**. Find the Databricks page and click **Create new import sync**.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
+{% endalert %}
+
+#### Step 1: Add Databricks connection information and source table
+Input the information for your Databricks data warehouse and source table, then proceed to the next step.
+
+![]({% image_buster /assets/img/cloud_ingestion/ingestion_16.png %})
+
+#### Step 2: Configure sync details
+Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
+
+![]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
+
+You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are custom attributes, custom events, purchase events, and user deletes. The data type for a sync cannot be changed after creation. 
+
+{% endtab %}
 {% endtabs %}
 
 ### Step 3: Test connection
@@ -334,6 +418,13 @@ Return to the Braze dashboard and click **Test connection**. If successful, you'
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
 {% endtab %}
 {% tab BigQuery %}
+
+Once all configuration details for your sync are entered, click **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
+
+![]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
+
+{% endtab %}
+{% tab Databricks %}
 
 Once all configuration details for your sync are entered, click **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
@@ -372,6 +463,15 @@ You may set up multiple integrations with Braze, but each integration should be 
 If you reuse the same user across integrations, you cannot delete the user in the Braze dashboard until it's removed from all active syncs.
 
 {% endtab %}
+{% tab Databricks %}
+
+You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the same Databricks account.
+
+![]({% image_buster /assets/img/cloud_ingestion/ingestion_17.png %})
+
+If you reuse the same user across integrations, you cannot delete the user in the Braze dashboard until it's removed from all active syncs.
+
+{% endtab %}
 {% endtabs %}
 
 ## Running the sync
@@ -380,18 +480,27 @@ If you reuse the same user across integrations, you cannot delete the user in th
 {% tab Snowflake %}
 Once activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
+![]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
+
 {% endtab %}
 {% tab Redshift %}
 Once activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
+![]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
+
 {% endtab %}
 {% tab BigQuery %}
 
 Once activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_15.png %})
+
+{% endtab %}
+{% tab Databricks %}
+
+Once activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.
+
+![]({% image_buster /assets/img/cloud_ingestion/ingestion_18.png %})
 
 {% endtab %}
 {% endtabs %}

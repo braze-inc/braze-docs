@@ -65,12 +65,14 @@
         }
       }
     }
-    > h1:first-of-type {
-      &::before {
-        height: ($calc_offset_top - 40px);
+    &.has_breadcrumb {
+      > h1:first-of-type  {
+        &::before {
+          height: ($calc_offset_top - 40px);
+        }
       }
     }
-
+    
     $content_transition_time: 0.2s;
 
       *,
@@ -171,7 +173,7 @@
           }
         }
       }
-      @for $oli from 1 through 5 {
+      @for $oli from 1 through 9 {
         ol[start="#{$oli}"] {
           counter-reset: li #{$oli - 1};
         }
@@ -222,6 +224,7 @@
         }
       }
   }
+
 
   details {
     summary {

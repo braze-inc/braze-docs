@@ -100,7 +100,7 @@ Just because your emails have successfully sent doesn't mean that they have nece
 
 ### Email {#spam-email}
 
-The quality of your email list is especially important.  A handful of bad emails on your list can ruin your delivery for a million good users. Collecting a list of bad emails generates bounces, blacklisting, spam trap hits, and tanks your response rates. Culling emails that have no activity on a regular basis, and removing obvious bounces are the first step. Whether you implement a opt-in (check the box), opt-out (uncheck the box), confirm opt-in (an email that says thanks for signing up, and gives an unsubscribe link), or double opt-in (an email that that requires a click to confirm), what you want to think about is list quality.
+The quality of your email list is especially important.  A handful of bad emails on your list can ruin your delivery for a million good users. Collecting a list of bad emails generates bounces, blocklisting, spam trap hits, and tanks your response rates. Culling emails that have no activity on a regular basis, and removing obvious bounces are the first step. Whether you implement a opt-in (check the box), opt-out (uncheck the box), confirm opt-in (an email that says thanks for signing up, and gives an unsubscribe link), or double opt-in (an email that that requires a click to confirm), what you want to think about is list quality.
 
 ### iOS {#spam-ios-windows}
 

@@ -163,7 +163,7 @@ For example, if the user selects "Too Expensive", that will set `upgrade_reason 
 
 **Goal:** Understand which features customers enjoy using.
 
-For this use case, use multiple-choice selection with each choice being an app feature. Each choice has the custom attribute `favorite_features` set to the user's selection. Because this use case involves multiple choice, once the user has completed the survey, their profile will be updated with the `favorite_features` attribute set to an array of all selected options.
+For this use case, use multiple-choice selection with each choice being an app feature. Each choice has the custom attribute `favorite_features` set to the user's selection. Because this use case involves multiple choice, after the user has completed the survey, their profile will be updated with the `favorite_features` attribute set to an array of all selected options.
 
 ![][10]
 

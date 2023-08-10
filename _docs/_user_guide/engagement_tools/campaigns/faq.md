@@ -14,7 +14,7 @@ tool: Campaigns
 
 ### How do you create a multichannel campaign?
 
-Multichannel campaigns can be created by selecting **Create Campaign** and then **Multichannel Campaign** within the dashboard. Once in a multichannel campaign, select **Add Messaging Channel** within the **compose** tab to add your desired channels. Clicking on the channel icons that appear will allow you to toggle through different messaging composers as you build your campaign copy for the different channels.
+Multichannel campaigns can be created by selecting **Create Campaign** and then **Multichannel Campaign** within the dashboard. When in a multichannel campaign, select **Add Messaging Channel** within the **compose** tab to add your desired channels. Clicking on the channel icons that appear will allow you to toggle through different messaging composers as you build your campaign copy for the different channels.
 
 ### Can I add a control group to my multichannel campaign?
 
@@ -117,7 +117,7 @@ Changing the send time on campaigns within this time can lead to undesired behav
 
 ### What should I do if the "safe zone" has already passed?
 
-To ensure campaigns operate as desired, we recommend stopping the current campaign (this will abort any enqueued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
+To ensure campaigns operate as desired, we recommend stopping the current campaign (this will cancel any enqueued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
 
 Make sure to re-adjust campaign schedule times to allow for time zone sending.
 

@@ -18,6 +18,15 @@ guide_featured_list:
 - name: Currents Integration
   link: /docs/partners/isv_partners/currents_integration
   fa_icon: fas fa-swimmer
+- name: Snowflake Data Sharing
+  link: /docs/partners/isv_partners/snowflake_datasharing
+  fa_icon: fa-solid fa-snowflake
+- name: Data Transformation
+  link: /docs/partners/isv_partners/data_transformation
+  fa_icon: fa-solid fa-database
+- name: Best Practices
+  link: /docs/partners/isv_partners/best_practices
+  fa_icon: fa-solid fa-thumbs-up
 
 ---
 <br><br>

@@ -27,8 +27,11 @@ guide_featured_list:
   link: /docs/shopify_data/
   fa_icon: fas fa-cogs
 - name: Shopify Backfill
-  link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopfiy/shopify_backfill/
+  link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/
   fa_icon: fa-solid fa-database
+- name: Shopify Catalogs
+  link: /docs/shopify_catalogs/
+  fa_icon: fas fa-list
 - name: Use Cases
   link: /docs/shopify_use_cases/
   fa_icon: fa fa-users

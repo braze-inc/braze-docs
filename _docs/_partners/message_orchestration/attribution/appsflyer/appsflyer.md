@@ -113,7 +113,7 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and sel
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![The "Data Import for Install Attribution" box available on the AppsFlyer Technology page. Included in this box is the data import key and the REST endpoint.][4]{: style="max-width:70%;"}
+Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![The "Data Import for Install Attribution" box available on the AppsFlyer Technology page. Included in this box is the data import key and the REST endpoint.][4]{: style="max-width:70%;"}
 
 ### Step 3: Configure Braze in AppsFlyer's dashboard
 
@@ -134,7 +134,7 @@ Note that this will not happen until we receive data about an attributed install
 
 #### Available data fields
 
-Assuming you configure your integration as suggested, Braze will map all organic and non-organic install data to segment filters.
+Assuming you configure your integration as suggested, Braze will map all non-organic install data to segment filters.
 
 | AppsFlyer data field | Braze segment filter |
 | -------------------- | --------------------- |

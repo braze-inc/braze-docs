@@ -4,7 +4,7 @@ article_title: Create a Campaign
 layout: dev_guide
 page_order: 0
 guide_top_header: "Create a Campaign"
-guide_top_text: "Now that you understand the basics of campaigns at Braze, check out the different <a href='/docs/user_guide/message_building_by_channel/'>messaging channels</a> available to help decide what kind of messages you'd like to send! Select a messaging channel from the following list to learn how to create and compose a single channel messaging campaign of that type, or combine types by creating a multichannel campaign.<br><br>We also highly recommend you check out our <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> Braze Learning course!"
+guide_top_text: "Now that you understand the basics of campaigns at Braze, check out the different <a href='/docs/user_guide/message_building_by_channel/'>messaging channels</a> available to help decide what kind of messages you'd like to send. Select a messaging channel from the following list to learn how to create and compose a single channel messaging campaign of that type, or combine types by creating a multichannel campaign.<br><br>We also highly recommend you check out our <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> Braze Learning course!"
 page_type: landing
 description: "This landing page includes links to articles on how to create campaigns for different Braze messaging channels."
 
@@ -15,7 +15,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/content_cards/create/
   image: /assets/img/cc_icon.png
 - name: Email Campaign
-  link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
+  link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
   image: /assets/img/email_icon.png
 - name: In-App Message Campaign
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
