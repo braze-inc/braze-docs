@@ -64,30 +64,32 @@ This section provides an overview of the three most common ways to place Content
 
 Content Cards can be used to simulate a message center. In this format, each message is its own card that contains [key-value pairs][5] that power on-click events. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an inbox message. The values of the key-value pairs are arbitrary but should be distinguishable between class types. 
 
-Here is an example dashboard configuration you might use to create two message cards: one message directs you to an arbitrary custom view and one message opens a web view that displays custom HTML. 
+Here is an example dashboard configuration you might use to create two message cards: one message directs you to an arbitrary custom view and one provides a coupon code to a segment of new subscribers. 
 
 {% tabs local %}
 {% tab Arbitrary custom view message (full page) %}
 
 Example key-value pairs for this use case could be:
 
-- `class_type` set as `message_full_page`
-- `message_header` set as `Full Page`
+- class_type: message_full_page
+- message_header: full_page
 
 ![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
 
 {% endtab %}
-{% tab Webview message (HTML) %}
+{% tab New subscriber offer %}
 
 Example key-value pairs for this use case could be:
 
-- `class_type` set as `message_webview`
-- `message_header` set as `HTML`
-- `message_title` set as a string with your content.
+- title: Subscribe for unlimited games
+- body: End of Summer Special - Enjoy 10% off Politer games
+- buttonText: Subscribe Now
+- style: promo
+- placement: notification_center
+- card_priority: 2
+- terms: new_subscribers_only
 
-This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.
-
-![]({% image_buster /assets/img/cc_implementation/html_webview.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img/content_cards/content-card-message-inbox-with-kvps %}){: style="max-width:50%;"}
 
 {% endtab %}
 {% endtabs %}
