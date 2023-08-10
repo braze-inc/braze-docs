@@ -56,7 +56,7 @@ Add your `google-services.json` file path to your `app.json`. This file is requi
 {% endtab %}
 {% tab iOS %}
 
-Follow the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/) to implement in Swift, or refer to [Push notifications integration]({{site.base.url}}/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c) for instructions to implement in Swift or Objective-C. If you prefer not to request push permission upon launching the app, you should omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate and follow the step below.
+Follow the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/) to implement in Swift, or refer to [Push notifications integration]({{site.base.url}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c) for instructions to implement in Swift or Objective-C. If you prefer not to request push permission upon launching the app, you should omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate and follow the step below.
 
 ### Generating a new push key
 If you do not have an existing push key or certificate from Apple or want to generate a new one, follow [step 1 of the iOS integration instructions]({{site.baseurl}}/platform_integration_guides/swift/push_notifications/integration/#step-1-configure-push-notifications) to generate a new push key and upload it to the Braze dashboard.
