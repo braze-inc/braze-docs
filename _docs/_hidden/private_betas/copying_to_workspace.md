@@ -24,9 +24,132 @@ When you copy a campaign to a workspace, fields such as campaign name and descri
 
 ### Copying campaigns that contain Liquid
 
-For message bodies that include Liquid references, the references are copied over to a workspace, but they may not function as expected. For example, Content Blocks **will not** be copied. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. This applies for catalogs, preference centers, and custom attributes. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid any errors when launching a campaign.
+For message bodies that include Liquid references, the references are copied over to a workspace, but they may not function as expected. This means if a campaign from Workspace A is copied to Workspace B, then Workspace B can't reference Workspace A's details, including Liquid references. For example, fields such as trigger actions and audience filters aren't copied across workspaces.
 
-Fields such as trigger actions and audience filters aren't copied across a workspace.
+Note the following Liquid references with dependencies when copying campaigns across workspaces:
+- Catalog item tags
+- Connected Content tags
+- Content Blocks
+- Custom attributes
+- Preference centers
+- Product recommendations
+- Subscription state tags
+- Voucher and promotion tags
+
+When you copy a campaign across a workspace, Content Blocks won't be copied along with it. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid any errors when launching a campaign.
+
+### What's copied across workspaces
+
+Note the following is not a comprehensive list of what is copied across a workspace, and what is omitted. As a best practice, check the campaign details and test to ensure your campaign is working as expected.
+
+{% tabs %}
+{% tab Campaigns %}
+
+| Copied | Omitted |
+|---|---|
+| Description | Territories | 
+| Type | Tags | 
+| Actions (nested) | Segments | 
+| Conversion behaviors (nested) | Approvals | 
+| Quiet time confgurations | Trigger schedule | 
+| Frequency capping confgurations | Campaign summaries | 
+| Recipient subscription state |  | 
+| Reoccuring schedule |  | 
+| Is Transactional |  | 
+
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Conversion Behaviors %}
+
+| Copied | Omitted |
+|---|---|
+| Type behavior | Workspace IDs |
+| Campaign interaction |  Campaign ID | 
+| Custom event name |  | 
+| Product name |  | 
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Actions %}
+
+| Copied | Omitted |
+|---|---|
+| Action types | Send count |
+| Message variations |  |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Message Variations %}
+
+| Copied | Omitted |
+|---|---|
+| Send percentage | API ID |
+| Type |  Seed group IDs | 
+|  |  Link template IDs | 
+|  |  Internal user group IDs | 
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Email Message Variation %}
+
+| Copied | Omitted |
+|---|---|
+| Body | From address |
+| Message extras |  Reply to | 
+| Title |  BCC | 
+| Subject |  Link template | 
+|  |  Link aliasing |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Email Body %}
+
+| Copied | Omitted |
+|---|---|
+| Plain text | Link aliasing |
+| HTML |  | 
+| Preheader |  | 
+| Inline CSS |  | 
+| AMP HTML |  |
+| Drag-and-drop JSON |  |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Email Templates %}
+
+| Copied | Omitted |
+|---|---|
+| Body | API IDs |
+| Description | Image IDs | 
+| Subject | Territories | 
+| Headers | Tags | 
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Content Block %}
+
+| Copied | Omitted |
+|---|---|
+| Name | Link aliasing |
+| Description | API keys | 
+| Content | Territories | 
+| Drag-and-drop JSON | Tags | 
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab SMS Message Variation %}
+
+| Copied | Omitted |
+|---|---|
+| Body | Messaging service |
+| Link shortening |  | 
+| Click tracking |  | 
+| Media items (excluding VCF) |  | 
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% endtabs %}
 
 [1]: {% image_buster /assets/img_archive/clone_campaign.png %}
 

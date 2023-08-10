@@ -60,7 +60,7 @@ To use your Heap segment, create a Braze campaign or Canvas and select the segme
 
 ## Data export integration
 
-Use Braze Currents to automatically send engagement events (e.g email sent, push sent) from Braze to Heap for analysis.
+Use Braze Currents to automatically send engagement events (e.g., email sent, push sent) from Braze to Heap for analysis.
 
 ### Step 1: Get Heap credentials
 
@@ -79,6 +79,10 @@ Give your export a name, and then proceed to the **Current Details** page. On th
 After configuring your integration's credentials, check all message engagement, customer behavior, and user events you would like to export to Heap, and click **Launch Current**.
 
 ![][5]{: style="max-width:90%;"}
+
+## Integration details
+
+The payload structure for exported data is the same as the payload structure for custom HTTP connectors, which can be viewed in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: {% image_buster /assets/img/heap/heap1.png %} 

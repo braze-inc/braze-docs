@@ -13,6 +13,8 @@ tool: Segments
 
 > You can generate a Segment Extension using Snowflake SQL queries of [Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
 
+Similar to standard Segment Extensions, you can query events from up to the past 2 years (730 days) in your SQL Segment Extension.
+
 ## Types of SQL Segment Extensions
 
 There are two types of SQL editors to choose from when creating your SQL Segment Extension: the SQL Editor, and the Incremental SQL Editor.

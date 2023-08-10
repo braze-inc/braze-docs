@@ -20,9 +20,6 @@ guide_featured_list:
 - name: Feature Flags in Canvas
   link: /docs/developer_guide/platform_wide/feature_flags/canvas/
   fa_icon: fas fa-project-diagram
-- name: Use Cases
-  link: /docs/developer_guide/platform_wide/feature_flags/use_cases/
-  fa_icon: fas fa-paint-brush
 - name: Frequently Asked Questions
   link: /docs/developer_guide/platform_wide/feature_flags/faq/
   fa_icon: fas fa-question
