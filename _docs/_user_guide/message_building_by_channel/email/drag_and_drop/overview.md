@@ -208,5 +208,5 @@ HTML rendering has improved based on these following updates that minimize the n
 [9]: {% image_buster /assets/img/dnd/dnd_content.png %}
 [10]: {% image_buster /assets/img/dnd/dnd_rows.png %}
 [11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
-[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
+[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
