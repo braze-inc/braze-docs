@@ -66,7 +66,7 @@ Now, you can receive consolidated data for every campaign and every Canvas in tw
 > As noted in our [September 2017 release notes]({{site.baseurl}}/help/release_notes/2017/august/#september-2017), you can now aggregate data from a specific period of time as well as schedule exports to run on a recurring basis.
 
 
-[59]: {{site.baseurl}}/user_guide/data_and_analytics/engagement_reports/#creating-a-new-report
+[59]: {{site.baseurl}}/docs/user_guide/data_and_analytics/reporting/engagement_reports/#creating-a-new-report
 [60]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [61]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [62]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters

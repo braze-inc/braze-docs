@@ -66,7 +66,7 @@ Maintenant, vous pouvez recevoir des données consolidées pour chaque campagne 
 > Comme indiqué dans nos [Notes de version de septembre 2017]({{site.baseurl}}/help/release_notes/2017/august/#september-2017), vous pouvez maintenant regrouper les données d’une période spécifique, et programmer des exportations récurrentes.
 
 
-[59]: {{site.baseurl}}/user_guide/data_and_analytics/engagement_reports/#creating-a-new-report
+[59]: {{site.baseurl}}/docs/user_guide/data_and_analytics/reporting/engagement_reports/#creating-a-new-report
 [60]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [61]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [62]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters
