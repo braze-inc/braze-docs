@@ -106,7 +106,7 @@ If you're implementing a carousel as a secondary Content Cards feed, refer to [C
 
 ### Banner
 
-Content Cards don't have to look like "cards." For example, Content Cards can appear as a dynamic banner that persistently displays on your home page or at the top of other designated pages. 
+Content Cards don't have to look like "cards." For example, Content Cards can appear as a dynamic banner that persistently displays on your home page or at the top of other designated pages.
 
 To achieve this, your marketers will create a campaign or Canvas step with a **Banner** type of Content Card. Then, set key-value pairs that are appropriate for using [Content Cards as supplemental content][4].
 
