@@ -717,6 +717,7 @@ validurls['/docs/user_guide/data_and_analytics/cloud_data_ingestion/'] = '/docs/
 validurls['/docs/user_guide/data_and_analytics/your_reports/device_and_carriers/'] = '/docs/device_and_carriers/';
 validurls['/docs/user_guide/data_and_analytics/reporting/device_and_carriers/'] = '/docs/device_and_carriers/';
 validurls['/docs/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data'] = '/docs/user_guide/data_and_analytics/reporting/reports_overview/';
+validurls['/docs/user_guide/data_and_analytics/your_reports/reports_overview'] = '/docs/user_guide/data_and_analytics/reporting/reports_overview/';
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/getting_high_ratings/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/#high-ratings';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#rate-limiting-and-frequency-capping';
