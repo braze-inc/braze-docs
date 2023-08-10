@@ -64,22 +64,18 @@ This section provides an overview of the three most common ways to place Content
 
 Content Cards can be used to simulate a message center. In this format, each message is its own card that contains [key-value pairs][5] that power on-click events. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an inbox message. The values of the key-value pairs are arbitrary but should be distinguishable between class types. 
 
-Here is an example dashboard configuration you might use to create two message cards: one message directs you to an arbitrary custom view and one provides a coupon code to a segment of new subscribers. 
+Here is an example dashboard configuration you might use to create two message cards: one message is a call to action for a user to add their preferences to receive targeted reading recommendations, and one provides a coupon code to a segment of new subscribers. 
 
-{% tabs local %}
-{% tab Arbitrary custom view message (full page) %}
+![]({% image_buster /assets/img/content_cards/content-card-message-inbox-with-kvps %}){: style="max-width:50%;"}
 
-Example key-value pairs for this use case could be:
+Example key-value pairs for the reading recommendation card could be:
 
-- class_type: message_full_page
-- message_header: full_page
+- body: Add your interests to your Politer Weekly profile for personal reading recommendations.
+- style: info
+- placement: notification_center
+- card_priority: 1
 
-![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
-
-{% endtab %}
-{% tab New subscriber offer %}
-
-Example key-value pairs for this use case could be:
+Example key-value pairs for a new subscriber coupon could be:
 
 - title: Subscribe for unlimited games
 - body: End of Summer Special - Enjoy 10% off Politer games
@@ -89,10 +85,9 @@ Example key-value pairs for this use case could be:
 - card_priority: 2
 - terms: new_subscribers_only
 
-![]({% image_buster /assets/img/content_cards/content-card-message-inbox-with-kvps %}){: style="max-width:50%;"}
+Your marketers could make this Content Card available only for a segment of new users. 
 
-{% endtab %}
-{% endtabs %}
+You would handle each of the values. Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. You would decide how to render `style` and `placement` on your app or site. 
 
 ### Carousel
 
