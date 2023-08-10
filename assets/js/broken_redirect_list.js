@@ -716,6 +716,9 @@ validurls['/docs/partners/technology_partners/data_augmentation/contextual_locat
 validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/gimbal/'] = '/docs/partners/message_personalization/location/gimbal/';
 validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/neura/'] = '/docs/partners/data_and_infrastructure_agility/analytics/neura_insights/';
 validurls['/docs/partners/technology_partners/data_augmentation/recommendation/certona/'] = '/docs/partners/message_personalization/dynamic_content/certona/';
+validurls['/docs/partners/message_personalization/playable'] = '/docs/partners/message_personalization/dynamic_content/playable/';
+
+
 validurls['/docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/';
 validurls['/docs/partners/technology_partners/insights/crash_analytics/apteligent/'] = '/docs/partners/data_and_infrastructure_agility/crash_analytics/apteligent/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/'] = '/docs/partners/data_and_infrastructure_agility';
