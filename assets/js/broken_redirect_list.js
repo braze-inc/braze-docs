@@ -127,7 +127,6 @@ validurls['/docs/okta/'] = '/docs/user_guide/administrative/logging_in_and_secur
 validurls['/docs/email_spam_testing/'] = '/docs/user_guide/message_building_by_channel/email/inbox_vision/#spam-testing';
 validurls['/docs/link_templates/'] = '/docs/user_guide/message_building_by_channel/email/templates/link_templates/';
 validurls['/docs/user_guide/message_building_by_channel/email/link_templates/'] = '/docs/user_guide/message_building_by_channel/email/templates/link_template/';
-validurls['/docs/message_building_by_channel/'] = '/docs/user_guide/message_building_by_channel';
 
 validurls['/docs/app_settings/'] = '/docs/user_guide/administrative/app_settings/developer_console/api_settings_tab/#api-settings-tab';
 validurls['/docs/best_practices/'] = '/docs/help/home/';
@@ -523,7 +522,6 @@ validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/unity/'] 
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/cordova/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/neura_insights/#neura-insights'] = '/docs/partners/neura/';
 validurls['/docs/partners/message_personalization/location/neura_actions/#neura-actions'] = '/docs/partners/neura/';
-validurls['/docs/partners/message_personalization/peak'] = '/docs/partners/message_personalization/dynamic_content/peak/';
 validurls['/docs/api/basics/#api-limits'] = '/docs/api/api_limits/';
 validurls['/docs/user_guide/engagement_tools/locations_and_geofences/about/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/';
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/read_unread_indicators/'] = '/docs/developer_guide/platform_integration_guides/android/content_cards/customization/read_and_unread/';
