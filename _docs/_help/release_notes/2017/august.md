@@ -63,10 +63,10 @@ We've added support of special UTF-8 characters in email display names, so you c
 
 Now, you can receive consolidated data for every campaign and every Canvas in two separate files regardless of how many campaigns or Canvases are selected, allowing you to have all the data you need, when you need it. Learn more about [Engagement Reports][59].
 
-> As noted in our [September 2017 release notes]({{site.baseurl}}/help/release_notes/2017/august/#september-2017), you can now aggregate data from a specific period of time as well as schedule exports to run on a recurring basis.
+> As noted in our [September 2017 release notes]({{site.baseurl}}/help/release_notes/2017/september/), you can now aggregate data from a specific period of time as well as schedule exports to run on a recurring basis.
 
 
-[59]: {{site.baseurl}}/docs/user_guide/data_and_analytics/reporting/engagement_reports/#creating-a-new-report
+[59]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/
 [60]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [61]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [62]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters
