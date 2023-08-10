@@ -63,4 +63,4 @@ These partners specialize in product analytics and business intelligence and can
 [8]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents#tealium-for-currents
 [9]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack_for_currents/
 [10]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data_for_currents/
-[11]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/#prerequisites
+[11]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/
