@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
 {% endalert %}
 
-This endpoint will merge any of the following fields found exclusively on the original user to the target user:
+This endpoint will merge any of the following fields if they are not found on the target user:
 - First name
 - Last name
 - Email
