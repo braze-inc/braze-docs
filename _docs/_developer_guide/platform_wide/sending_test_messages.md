@@ -57,13 +57,12 @@ If you're only testing email messages, you do not necessarily have to set up a t
 ![A Braze campaign with the Test Send tab selected][5]
 
 {% alert tip %} 
-You can also enable or disable [TEST (or SEED)][14] being appended on your test messages.
+You can also enable or disable [TEST (or SEED)]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#test-and-seed-subject-lines) being appended on your test messages.
 {% endalert %}
-
 
 ## Testing from the command line
 
-Alternatively, if you'd like to test push notifications via the command-line you can follow the following examples for each platform.
+Alternatively, if you'd like to test push notifications via the command line you can follow the following examples for each platform.
 
 ### Testing push with iOS apps via cURL
 
