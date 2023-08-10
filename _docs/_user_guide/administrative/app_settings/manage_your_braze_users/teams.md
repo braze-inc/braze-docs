@@ -125,7 +125,7 @@ For changes to active campaigns:
 
 ## Archiving an existing Team
 
-You can archive Teams from the **Internal Teams** page.
+You can archive teams from the **Internal Teams** page.
 
 Select one or many teams to archive. If the Team is not associated with any object within Braze, the Team will be archived immediately. If the Team is associated with an object, you will be presented with an option to remove the Team after the archive process or replace the Team.
 
