@@ -9,7 +9,7 @@ description: "This reference article covers how to QA your message content with 
 
 > Learn how to QA your message content with AI directly from the message composer.
 
-Content QA with AI uses the capabilities of ChatGPT and OpenAI to perform checks on the content of your message, ensuring it adheres to quality standards by identifying ineffective elements such as spelling errors, grammar issues, inappropriate tone, and offensive language. You can access this feature from the **Test** tab when composing a message in a campaign or Canvas.
+Content QA with AI uses the capabilities of ChatGPT and OpenAI to perform checks on the content of your message, ensuring it adheres to quality standards by identifying ineffective elements such as spelling errors, grammar issues, inappropriate tone, and offensive language. You can access this feature from the **Test** tab when composing a push or SMS message in a campaign or Canvas.
 
 ## Key features
 
