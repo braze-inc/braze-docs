@@ -388,7 +388,7 @@ validurls['/docs/help/webinars/email_101/'] = '/docs/help/home/';
 validurls['/docs/help/webinars/importing_user_profiles/'] = '/docs/help/home/';
 validurls['/docs/help/webinars/measuring_success_with_braze_data/'] = '/docs/help/home/';
 validurls['/docs/help/webinars/personalization_and_liquid/'] = '/docs/help/home/';
-validurls['/docs/help/webinars/sending_test_messages/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/sending_test_messages/'] = '/docs/developer_guide/platform_wide/sending_test_messages/';
 validurls['/docs/help/webinars/troubleshooting_bootcamp/'] = '/docs/help/home/';
 
 validurls['/docs/user_guide/message_building_by_channel/email/creating_an_email_template/'] = '/docs/user_guide/message_building_by_channel/email/templates/email_template/';
@@ -729,6 +729,8 @@ validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/gett
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#rate-limiting-and-frequency-capping';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
+validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/'] = '/docs/developer_guide/platform_wide/sending_test_messages/';
+validurls['/docs/user_guide/messaging/channels/test_messaging'] = '/docs/developer_guide/platform_wide/sending_test_messages/';
 validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_paths/'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/';
 validurls['/docs/user_guide/message_building_by_channel/content_cards/overview/'] = '/docs/user_guide/message_building_by_channel/content_cards/about/';
 validurls['/docs/user_guide/message_building_by_channel/email/docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/';
