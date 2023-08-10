@@ -48,6 +48,37 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `merge_updates` | Required | Array | An object array. Each object should contain an `identifier_to_merge` object and an `identifier_to_keep` object, which should each reference a user either by `external_id`,  `user_alias` or `email`. Both users (original user and target user) being merged must be identified using the same method. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
+### Merging users by email
+If `email` is specified as an identifier, an additional `prioritization` value is required in the identifier. `prioritization` should be an array specifying which user to merge if there are multiple users found.
+
+The allowed values for the array are: `identified`, `unidentified`, `most_recently_updated`, and `least_recently_updated`
+
+Only one of the following options may present in the prioritization array at a time:
+- `identified` refers to prioritizing a user with an external_id
+- `unidentified` refers to prioritizing a user without an external_id
+
+Only one of the following options may present in the prioritization array at a time:
+- `most_recently_updated` refers to prioritizing the most recently updated user
+- `least_recently_updated` refers to the least recently updated user
+
+
+Example Request
+```json
+{
+  "merge_updates": {
+    "identifier_to_merge": {
+      "email": "john.smith@braze.com", 
+      "prioritization": ["unidentified", "most_recently_updated"]
+    },
+    "identifier_to_keep": {
+      "email": "jane.doe@braze.com",
+      "prioritization": ["identified", "least_recently_updated"]
+    },
+  }
+}
+```
+This will merge the most recently updated user without an external id, with the email `john.smith@braze.com` into the least recently updated user with an external ID, that has the email `jane.doe@braze.com`.
+
 ### Merge_updates behavior
 
 {% alert important %}
