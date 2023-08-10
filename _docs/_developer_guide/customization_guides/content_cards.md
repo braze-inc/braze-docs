@@ -12,7 +12,7 @@ platform:
   - Web
 
 guide_top_header: "Content Card Customization"
-guide_top_text: "Customizing Content Cards and the feed in which they are located can be done during onboarding or as you continue to grow using Braze. Before customizing, Engineering and Marketing teams should work together to determine what customization approach works best for your brand needs."
+guide_top_text: "Customizing Content Cards and the feed in which they are located can be done during onboarding or as you continue to grow using Braze. You can also create new, completely custom Content Card types and log analytics to make sure that Braze is tracking how successful your new types of cards are."
 description: "This landing page links to various ways to customize Braze SDK Content Cards for multiple platforms."
 
 guide_featured_title: "Section Articles"
@@ -29,7 +29,7 @@ guide_featured_list:
   - name: Logging Analytics
     link: /docs/developer_guide/customization_guides/content_cards/logging_analytics/
     fa_icon: fa fa-mouse-pointer
-  - name: Content Card Customization Examples
-    link: /docs/developer_guide/customization_guides/content_cards/examples
+  - name: Creating Custom Content Cards
+    link: /docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards
     fa_icon: fa fa-arrows-h
 ---

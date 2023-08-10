@@ -13,13 +13,12 @@ channel:
 
 ## Customizing styling
 
-Braze provides five Content Card templates: banner, captioned image, classic, classic image, and control. The default Content Cards UI can be integrated when importing the UI layer of the Braze SDK. Then, you can tweak certain parts of the card's styling. 
-
+The default Content Cards UI is imported from the UI layer of the Braze SDK. From there, you can tweak certain parts of the card's styling, the order in which cards are displayed, and how the feed is shown to your users.
 
 ![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]
 
-{% alert important %}
-Content Card properties such as title, description, image, etc. are directly available on the Braze/ContentCard data type. Configuring these [content cards properties]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details) through the Braze dashboard is the preferred way to customize these properties.
+{% alert note %}
+Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc. are directly available on the SDK's card object. Configuring these [creative details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details) through the Braze dashboard is the preferred way to customize these properties.
 {% endalert %}
 
 
