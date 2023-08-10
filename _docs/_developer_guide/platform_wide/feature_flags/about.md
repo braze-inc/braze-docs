@@ -29,9 +29,6 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 
 {% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
-## Use cases
-Feature flags have a few different strategic uses, outlined below. To learn how you would implement these example use cases, see the [feature flag use cases][2] article.
-
 ### Gradual rollouts
 Use feature flags to gradually enable features to a sample population. For example, you can soft launch a new feature to your VIP users first. This strategy helps mitigate risks associated with shipping new features to everyone at once and helps catch bugs early. 
 
