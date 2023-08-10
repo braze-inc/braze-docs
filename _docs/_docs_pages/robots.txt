@@ -1,5 +1,5 @@
 ---
-permalink: /robot.txt
+permalink: /robots.txt
 layout: bare
 ---
 User-agent: Baiduspider
