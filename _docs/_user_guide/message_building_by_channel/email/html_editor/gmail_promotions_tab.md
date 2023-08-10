@@ -94,7 +94,7 @@ Gmail determines when and who to display the card to, so there isn't a guarantee
 [4]: {% image_buster /assets/img/promocardmap.png %}
 [5]: https://developers.google.com/gmail/promotab/overview#preview_your_annotations
 [6]: {% image_buster /assets/img/gmail_preview.png %}
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
 [8]: https://developers.google.com/gmail/promotab/best-practices
 [9]: {% image_buster /assets/img_archive/product_carousel.png %}
 [10]: {% image_buster /assets/img_archive/gmail_promo_discount.png %}

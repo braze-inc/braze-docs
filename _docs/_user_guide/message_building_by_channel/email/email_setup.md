@@ -59,6 +59,6 @@ IP warming is the **most important step** in the email setup process. Though it 
 
 By starting with smaller volumes of email, you are establishing a level of trust with your email provider, showing you are only sending emails to relevant users. By sending your first batch of emails to your most engaged users, this can help you gain trust faster with your provider.
 
-After you're done warming up your IP, you can [start creating and sending emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
+After you're done warming up your IP, you can [start creating and sending emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)!
 
 <br><br>
