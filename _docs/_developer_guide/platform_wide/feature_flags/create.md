@@ -39,7 +39,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ### Access permissions
 
-Note that you must have the correct [permissions][9] in the Braze dashboard to view, create, or edit feature flags.
+Note that you must have [user permissions][9] in the Braze dashboard to view, create, or edit feature flags.
 
 To view the list of available feature flags, you must have the **Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library** permission.
 
