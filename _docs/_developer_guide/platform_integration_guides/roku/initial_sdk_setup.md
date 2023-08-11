@@ -35,9 +35,9 @@ Within `main.brs`, set the Braze configuration on the global node:
 globalNode = screen.getGlobalNode()
 config = {}
 config_fields = BrazeConstants().BRAZE_CONFIG_FIELDS
-config[config_fields.API_KEY] = "YOUR_API_KEY_HERE"
+config[config_fields.API_KEY] = "YOUR_API_KEY"
 ' example endpoint: "https://sdk.iad-01.braze.com/"
-config[config_fields.ENDPOINT] = "YOUR_ENDPOINT_HERE"
+config[config_fields.ENDPOINT] = "YOUR_ENDPOINT"
 config[config_fields.HEARTBEAT_FREQ_IN_SECONDS] = 5
 globalNode.addFields({brazeConfig: config})
 ```
