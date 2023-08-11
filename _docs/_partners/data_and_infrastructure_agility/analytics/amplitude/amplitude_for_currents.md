@@ -27,6 +27,10 @@ The Braze and Amplitude bi-directional integration allows you to [sync your Ampl
 
 A full list of the events and event properties that can be exported from Braze to Amplitude can be found in the following sections. All events sent to Amplitude will include the user's `external_user_id` as the Amplitude user ID. Braze-specific event properties will be sent under the `event_properties` key in the data sent to Amplitude.
 
+{% alert important %}
+To use this functionality, your Amplitude user ID must match the Braze external ID.
+{% endalert %}
+
 Braze will only send event data for users who have their `external_user_id` set or anonymous users who have their `device_id` set. For the anonymous users, you will need to sync your Amplitude device ID with the Braze device ID in the SDK. For example:
 ```java
 amplitude.setDeviceId(Apppboy.getInstance(context).getDeviceId();)
