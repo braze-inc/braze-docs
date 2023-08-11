@@ -104,7 +104,7 @@ This section provides an overview of the three most common ways to place Content
 - [Carousel](#carousel)
 - [Banner](#banner)
 
-The logic and implementation of these placements are not a default in Braze, and therefore the work for achieving these use cases must be supplied and supported by your development team. For an overview on how to implement these placements, refer to the [creating custom Content Card article]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
+The logic and implementation of these placements are not a default in Braze, and therefore the work for achieving these use cases must be supplied and supported by your engineering team. For an overview on how to implement these placements, refer to the [creating custom Content Card article]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
 
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
