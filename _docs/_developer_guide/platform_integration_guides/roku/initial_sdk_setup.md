@@ -14,7 +14,7 @@ search_rank: 1
 
 ## Step 1: Add files
 
-Braze SDK files can be found in the `sdk_files` directory in the [Braze Roku SDK repo][1].
+Braze SDK files can be found in the `sdk_files` directory in the [Braze Roku SDK repository][1].
 
 1. Add `BrazeSDK.brs` to your app in the `source` directory.
 2. Add `BrazeTask.brs` and `BrazeTask.xml` to your app in the `components` directory.
@@ -35,9 +35,9 @@ Within `main.brs`, set the Braze configuration on the global node:
 globalNode = screen.getGlobalNode()
 config = {}
 config_fields = BrazeConstants().BRAZE_CONFIG_FIELDS
-config[config_fields.API_KEY] = "YOUR_API_KEY"
+config[config_fields.API_KEY] = {YOUR_API_KEY}
 ' example endpoint: "https://sdk.iad-01.braze.com/"
-config[config_fields.ENDPOINT] = "YOUR_ENDPOINT"
+config[config_fields.ENDPOINT] = {YOUR_ENDPOINT}
 config[config_fields.HEARTBEAT_FREQ_IN_SECONDS] = 5
 globalNode.addFields({brazeConfig: config})
 ```
