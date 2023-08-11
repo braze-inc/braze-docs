@@ -81,7 +81,7 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 Since mParticle does not directly maintain segments in Braze, it will not delete segments when the corresponding mParticle audience connection is deleted or deactivated. When this happens, mParticle will not update the audience user attributes in Braze to remove the audience from each user.
 
-To remove the audience from a Braze user before deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. This ensures the audience membership updates in Braze to `false` for the single attribute option or removes the audience ID from the array format.
+To remove the audience from a Braze user before deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. Then, the audience membership will update in Braze to `false` for the single attribute option or removes the audience ID from the array format.
 
 ## Data mapping
 

@@ -88,8 +88,8 @@ You can modify {% raw %}`{{source_id}}`{% endraw %} and its effect on publicatio
 
 | Configuration | Effect |
 | ------------- | ------ |
-| {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} | Ensures that all customers within a single send-out will use the same publication. |
-| {% raw %}`{{campaign.${api_id}}}`{% endraw %} | Ensures that all customers within a single campaign will use the same publication. |
+| {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} | Customers within a single send-out will use the same publication. |
+| {% raw %}`{{campaign.${api_id}}}`{% endraw %} | All customers within a single campaign will use the same publication. |
 | {% raw %}`{{${user_id}}}`{% endraw %} or {% raw %}`{{${braze_id}}}`{% endraw %} | Checks that every customer will use the same publication no matter which campaign is sent (you can use {% raw %}`${user_id}`{% endraw %} which is an {% raw %}`external_id`{% endraw %} and {% raw %}`${braze_id}`{% endraw %} which is an internal id). |
 | {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} and {% raw %}`{{campaign.${user_id}}}`{% endraw %} | Each customer within a single send-out will use the same unique publication. |
 {: .reset-td-br-1 .reset-td-br-2}

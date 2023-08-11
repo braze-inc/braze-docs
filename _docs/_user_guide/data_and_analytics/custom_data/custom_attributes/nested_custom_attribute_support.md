@@ -102,7 +102,7 @@ After this request is received, the custom attribute object will now look like t
 ```
 
 {% alert warning %}
-You must set `_merge_objects` to true, or your objects will be overwritten. `_merge_objects` is false by default.
+You must set `_merge_objects` to `true`, or your objects will be overwritten. `_merge_objects` is `false` by default.
 {% endalert %}
 
 {% endtab %}

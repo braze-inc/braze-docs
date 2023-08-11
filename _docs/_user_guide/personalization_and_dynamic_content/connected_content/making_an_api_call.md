@@ -156,7 +156,7 @@ When a message using Connected Content is sent from Braze, the Braze servers aut
 
 Braze will send Connected Content requests from the following IP ranges. The listed ranges are automatically and dynamically added to any API keys that have been opted-in for whitelisting. 
 
-Braze has a reserved set of IPs used for all services, not all of which are active at a given time.  This ensures that if Braze needs to send from a different data center or do maintenance, Braze can do so without impacting customers. Braze may use one, a subset, or all of the following IPs listed when making Connected Content requests.
+Braze has a reserved set of IPs used for all services, not all of which are active at a given time. This is designed for Braze to send from a different data center or do maintenance, if necessary without impacting customers. Braze may use one, a subset, or all of the following IPs listed when making Connected Content requests.
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`: |
 |---|
