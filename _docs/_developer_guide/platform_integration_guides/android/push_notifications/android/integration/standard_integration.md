@@ -452,10 +452,10 @@ For issues related to push analytics, see our [troubleshooting guide][57].
 
 #### Testing from command line
 
-If you'd like to test in-app and push notifications via the command-line, you can send a single notification through the terminal via cURL and the [messaging API][22]. You will need to replace the following fields with the correct values for your test case:
+If you'd like to test in-app and push notifications via the command-line interface, you can send a single notification through the terminal via cURL and the [messaging API][22]. You will need to replace the following fields with the correct values for your test case:
 
-- `YOUR_API_KEY` - available at **Settings** > **API Keys**
-- `YOUR_EXTERNAL_USER_ID` - available by searching for a profile on the **Search Users** page
+- `YOUR_API_KEY` (Go to **Settings** > **API Keys**.)
+- `YOUR_EXTERNAL_USER_ID` (Search for a profile on the **Search Users** page.)
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 

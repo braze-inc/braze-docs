@@ -27,7 +27,7 @@ This example uses the `/email/hard_bounces` endpoint.
 
 **Before: API Key in Request Body**
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?api_key=YOUR-REST-API-KEY&start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
+curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?api_key={YOUR_REST_API_KEY}&start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
 ```
 **Now: API Key in Header**
 ```
@@ -59,7 +59,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
 	"attributes": [ 
  	{
