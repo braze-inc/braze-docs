@@ -156,7 +156,7 @@ DEPENDENCIES
   uglifier
 
 RUBY VERSION
-   ruby 2.7.4p191
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.1.4
