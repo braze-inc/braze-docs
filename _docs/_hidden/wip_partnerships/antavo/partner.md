@@ -3,7 +3,7 @@ nav_title: Antavo Loyalty Cloud
 article_title: Antavo Loyalty Cloud
 page_order: 1
 
-description: "This is the Google Search and SEO description that will appear; try to make this informative and concise, yet brief."
+description: "Next-gen loyalty programs that go beyond rewarding purchases: learn more about why to use Antavo Loyalty Cloud and Braze together."
 alias: /partners/antavo/
 
 page_type: partner
