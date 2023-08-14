@@ -20,7 +20,7 @@ channel:
 
 Push Max amplifies Android push notifications by tracking failed push notifications and resending the push when the user is more likely to receive it.
 
-Some Android devices manufactured by Chinese Original Equipment Manufacturers (OEMs), such as Xiaomi, OPPO, and Vivo, employ a very aggressive battery optimization scheme to extend battery life. This behavior may have the unintended consequence of shutting down background app processing, which reduces the deliverability of push notifications on these devices if the app is not in the foreground. This problem is most prevalent in the Asia-Pacific (APAC) markets.
+Some Android devices manufactured by Chinese Original Equipment Manufacturers (OEMs), such as Xiaomi, OPPO, and Vivo, employ a robust battery optimization scheme to extend battery life. This behavior may have the unintended consequence of shutting down background app processing, which reduces the deliverability of push notifications on these devices if the app is not in the foreground. This circumstance occurs most often in the Asia-Pacific (APAC) markets.
 
 ## Availability
 
@@ -31,7 +31,7 @@ Some Android devices manufactured by Chinese Original Equipment Manufacturers (O
 
 Push notifications sent using Push Max will only be delivered to devices that have at least the following [minimum SDK version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
-{% sdk_min_versions android:26.3.1 %}
+{% sdk_min_versions android:26.3.2 %}
 
 ## Using Push Max
 
@@ -62,16 +62,16 @@ To use Push Max in your Canvas:
 {% endtab %}
 {% endtabs %}
 
-The following two features, Intelligent Timing and Time to Live, can be used in tandem with Push Max to increase the deliverability of your Android push notifications.
+The following two features, Intelligent Timing and Time to Live, can be used in tandem with Push Max to potentially increase the deliverability of your Android push notifications.
 
 ### Intelligent Timing
 
-Push Max works best when [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) is turned on. Braze can use Intelligent Timing to calculate and send the push notification at a time when the user is most likely to be using the app and the push is most likely to be delivered.
+Push Max works best when [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) is turned on. Intelligent Timing can calculate and send the push notification at a time when the user is most likely to be using the app and the push is most likely to be delivered.
 
 ### Time to Live (TTL)
 
-Braze will track failed push notifications to Firebase Cloud Messaging (FCM) and retry the notification when the user is likely to receive it. This is known as Time to Live (TTL).
+Time to Live (TTL) can track failed push notifications to Firebase Cloud Messaging (FCM) and retry the notification when the user is likely to receive it.
 
-By default, Time to Live is set to 28 days, which is the maximum. You can change the default TTL for all new Android push messages from **Settings** > **Workspace Settings** > **Push Time to Live (TTL)**, or you can configure this on a per message basis in the **Settings** tab when composing an Android push notification.
+By default, Time to Live is set to 28 days, which is the maximum. You can decrease the default TTL for all new Android push messages from **Settings** > **Workspace Settings** > **Push Time to Live (TTL)**, or you can configure the number of days on a per message basis in the **Settings** tab when composing an Android push notification.
 
 ![Time to Live field set to 28 days.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:70%"}
