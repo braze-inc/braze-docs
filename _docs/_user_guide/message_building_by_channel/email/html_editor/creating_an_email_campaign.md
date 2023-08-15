@@ -249,7 +249,7 @@ Braze allows you to track how often users perform specific actions, [conversion 
 - Performs specific custom event
 - Opens email
 
-You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of Braze's [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/) feature.
+You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of Braze's [Intelligent Selection]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/) feature.
 {% endtab %}
 
 {% tab Canvas %}
@@ -267,7 +267,7 @@ Now just wait for all the data to roll in! Next, check out [Email reporting]({{s
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[13]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
+[13]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
 [14]: {% image_buster /assets/img/email.png %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
 [16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size

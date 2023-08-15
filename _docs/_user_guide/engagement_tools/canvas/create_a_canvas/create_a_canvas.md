@@ -322,7 +322,7 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 [14]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %}
 [15]:{% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %}
 [17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %}
-[18a]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
+[18a]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
 [50]: {% image_buster /assets/img/quiet_hours.png %}

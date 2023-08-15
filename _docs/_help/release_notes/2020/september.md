@@ -14,11 +14,11 @@ Funnel Reporting offers a visual report that allows you to analyze the journeys 
 
 ## iOS 14 upgrade guide
 
-In accordance with the changes announced in Apple's new iOS 14, there are some Braze-related changes and action items required for Braze iOS SDK integrations. For more information, take a look at this [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/).
+In accordance with the changes announced in Apple's new iOS 14, there are some Braze-related changes and action items required for Braze iOS SDK integrations. For more information, take a look at this [upgrade guide]({{site.baseurl}}/ios_14/).
 
 ## Changes to IDFA and IDFV for iOS 14
 
-In iOS 14, users must decide if they want to opt-in to ad tracking and let apps and ad networks read their IDFA when visiting an app. As a result, Braze's strategy is to instead use the "identifier for vendors" (i.e., IDFV) so you can continue to track users across different devices. For more information, take a look at the [iOS 14 upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa).
+In iOS 14, users must decide if they want to opt-in to ad tracking and let apps and ad networks read their IDFA when visiting an app. As a result, Braze's strategy is to instead use the "identifier for vendors" (i.e., IDFV) so you can continue to track users across different devices. For more information, take a look at the [iOS 14 upgrade guide]({{site.baseurl}}/ios_14/).
 
 ## Email validation
 
