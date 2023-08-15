@@ -26,7 +26,7 @@ Audience Sync to LinkedIn is currently in beta. Contact your Braze account manag
 
 ## Prerequisites
 
-You must make sure that you have the following items created, completed, and/or accepted before setting up your LinkedIn Audience Sync step in Canvas.
+You must make sure that you have the following items created, completed, or accepted before setting up your LinkedIn Audience Sync step in Canvas.
 
 | Requirement | Origin | Description |
 | --- | --- | --- |
