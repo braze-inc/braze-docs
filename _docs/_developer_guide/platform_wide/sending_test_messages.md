@@ -57,7 +57,7 @@ If you're only testing email messages, you do not necessarily have to set up a t
 ![A Braze campaign with the Test Send tab selected][5]
 
 {% alert tip %} 
-You can also enable or disable [TEST (or SEED)]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#test-and-seed-subject-lines) being appended on your test messages.
+You can also enable or disable [TEST (or SEED)]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#append-email-subject-lines) being appended on your test messages.
 {% endalert %}
 
 ## Testing from the command line
@@ -161,4 +161,4 @@ There are a few situations where test messages don't have complete feature parit
 [13]: {{site.baseurl}}/api/endpoints/messaging/
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups
-[14]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#test-and-seed-subject-lines
+[14]: {{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#append-email-subject-lines
