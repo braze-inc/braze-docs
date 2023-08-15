@@ -117,7 +117,7 @@ The endpoint may also return an error code and a human-readable message in some 
 | `The external reference has been queued.  Please retry to obtain send_id.` | The external_send_id has been created recently, try a new external_send_id if you are intending to send a new message. |
 | `Campaign does not exist` | The campaign ID provided does not correspond to an existing campaign. |
 | `The campaign is archived. Unarchive the campaign in order for trigger requests to take effect.` | The campaign ID provided corresponds to an archived campaign. |
-| `The campaign is paused. Resume the campaign in order for trigger requests will take effect.` | The campaign ID provided corresponds to a paused campaign. |
+| `The campaign is paused. Resume the campaign in order for trigger requests to take effect.` | The campaign ID provided corresponds to a paused campaign. |
 | `campaign_id must be a string of the campaign api identifier` | The campaign ID provided is not a valid format. |
 | `Error authenticating credentials` | The API key provided is invalid | 
 | `Invalid whitelisted IPs `| The IP address sending the request is not on the IP whitelist (if it is being used) | 
