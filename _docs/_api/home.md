@@ -118,7 +118,7 @@ glossaries:
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/'>/campaigns/trigger/schedule/create</a>
-    description: Send dashboard created campaign messages (up to 90 days in advance) via API-triggered delivery.
+    description: Send dashboard created campaign messages via API-triggered delivery.
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/'>/campaigns/trigger/schedule/delete</a>
@@ -134,7 +134,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/'>/canvas/trigger/schedule/create</a>
-    description: Schedule Canvas messages (up to 90 days in advance) via API-triggered delivery.
+    description: Schedule Canvas messages via API-triggered delivery.
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/'>/messages/schedule/update</a>
@@ -146,7 +146,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/'>/messages/schedule/create</a>
-    description: Schedule a campaign, Canvas, or other message to be sent at a designated time (up to 90 days in the future).
+    description: Schedule a campaign, Canvas, or other message to be sent at a designated time.
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canvas/trigger/schedule/update</a>
