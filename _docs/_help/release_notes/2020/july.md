@@ -31,4 +31,4 @@ The [BCC Address setting][5] allows you to add and manage BCC address that can b
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
 [3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#content-card-click-events
-[5]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/
+[5]: {{site.baseurl}}/user_guide/administrative/app_settings/email_settings/
