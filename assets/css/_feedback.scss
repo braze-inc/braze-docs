@@ -19,26 +19,24 @@
         height: 6rem;
         width: 100%;
     }
-    #feedback_helpful_yes {
-        color: $black-shark;
-        &:hover {
-            color: $green-grass;
+    .rating-list{
+      display: flex;
+      flex-direction: row-reverse;
+      list-style: none;
+      margin: 0 20px;
+      line-height: 1;
+      li {
+        float: right;
+        color: #ddd;
+        padding: 10px 5px;
+        &:hover, &:hover ~ li {
+          color: #000000;
         }
+      }
     }
-    #feedback_helpful_but {
-        color: $black-shark;
-        &:hover {
-            color: $navy-bay;
-        }
-    }
-    #feedback_helpful_no {
-        color: $black-shark;
-        &:hover {
-            color: $red-rose;
-        }
-    }
+
     a {
-        margin-left: 36px;
+        margin-left: 12px;
         @media (max-width: $window-mobile-px) {
             margin-left: 16px;
         }

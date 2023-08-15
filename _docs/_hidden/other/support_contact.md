@@ -1105,9 +1105,7 @@ $( document ).ready(function() {
 
   $('#ticket_form').submit(function(e){
     e.preventDefault();
-
     var mform = $(this);
-    var sf_submit = new iframeform('https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8');
     var sels = mform.find('select');
     var user_name = $('#ticket_name').val();
     var user_email = $('#ticket_email').val();
@@ -1129,7 +1127,7 @@ $( document ).ready(function() {
     // else {
     //   userinfo += 'No'
     // }
-
+    var sf_submit = new iframeform('https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8');
 
     sf_submit.addParameter('orgid','00Dd0000000e3l4');
     sf_submit.addParameter('retURL','https://braze.com');
@@ -1155,20 +1153,20 @@ $( document ).ready(function() {
 
     sf_submit.addParameter('external','1');
     sf_submit.send();
-    var gs_submit = new iframeform('https://docs.google.com/forms/u/0/d/e/1FAIpQLScJ7eoZEY-FLTBSL5r92k6Y-iUpskG9SffRHv0GylQzgSMH-w/formResponse');
-    gs_submit.addParameter('entry.1850709480', user_name);
-    gs_submit.addParameter('entry.1269583593', user_email);
-    gs_submit.addParameter('entry.83902596', user_subject);
+    var gs_submit = new iframeform('https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/support_request');
+    gs_submit.addParameter('Name', user_name);
+    gs_submit.addParameter('Email', user_email);
+    gs_submit.addParameter('Subject', user_subject);
     if (user_ccemail) {
-      gs_submit.addParameter('entry.2143316233',user_ccemail);
+      gs_submit.addParameter('CC_Email',user_ccemail);
     }
-    gs_submit.addBodyText('entry.353828619', userinfo);
+    gs_submit.addBodyText('Question', userinfo);
     var gs_mapping = {
-      "00N0V000009G0MG" : "entry.657215056", // Topic
-      "00N0V000009G0MB" : "entry.716293339",  // Category
-      "00N0V000009G0ML" : "entry.1633602955", // Subcategory
-      "00N0V000009G0MQ" : "entry.1959649079", // Type
-      "priority" : "entry.631884783", // Priority
+      "00N0V000009G0MG" : "Topic", // Topic
+      "00N0V000009G0MB" : "Category",  // Category
+      "00N0V000009G0ML" : "Subcategory", // Subcategory
+      "00N0V000009G0MQ" : "Type", // Type
+      "priority" : "Priority", // Priority
     }
 
     $.each(sels,function(k,v){
@@ -1427,10 +1425,10 @@ $( document ).ready(function() {
 
                           <textarea name="ticket_issue" class="form-control" id="ticket_issue" data-toggle="popover" data-trigger="focus" data-placement="top"
                           data-content="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, relevant user IDs, and steps to reproduce your issue.   "
-                          placeholder="Include information helpful for investigation and troubleshooting, such as your: 
+                          placeholder="Include information helpful for investigation and troubleshooting, such as your:
 - Platform
 - SDK version
-- REST API endpoints, 
+- REST API endpoints,
 - Links to segments or campaigns
 - Relevant user IDs
 - Steps to reproduce your issue  " rows="7"></textarea>
