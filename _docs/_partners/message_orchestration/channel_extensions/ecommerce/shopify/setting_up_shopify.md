@@ -47,7 +47,7 @@ At this step, select whether you want to collect email and SMS opt-ins from your
 - **Collect email subscribers**<br>If enabled, Braze will update the global email subscription state on the profile to `subscribed` so you can send emails to your users. You can also optionally add one or more [subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#subscription-groups) to automatically assign email subscribers to when they opt-in. 
 - **Collect SMS subscribers**<br>If enabled, Braze will update the selected [SMS subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) on the profile to `subscribed` so you can send messages to your users. If you are collecting SMS opt-ins, you must select one subscription group. If no subscription group exists, or you would like to create a new subscription group, reach out to your Braze representative for support. 
 
-If there is an existing global subscription state on a user profile within Braze that's different from Shopify, we recommend you enable **Override existing global subscription state for users**. This will override the Braze state to check it matches with Shopify.
+If there is an existing global subscription state on a user profile within Braze that's different from Shopify, we recommend you enable **Override existing global subscription state for users**. This will override the Braze state to check if it matches with Shopify.
 
 {% alert important %}
 If you do not override global subscription states, existing user's states may not match those found in Shopify. This can lead to unreceived and unintended messages.
