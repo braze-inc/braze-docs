@@ -36,7 +36,7 @@ There can be user targeting situations where using the `OR` operator should be a
 
 ![][1]
 
-However, if your goal is to segment users who belong to the "foodies" segment and are not in either of the "non-foodies" and "candy-lovers" segments, then use the `AND` operator. This ensures that users who receive the campaign or Canvas are in the intended segment ("foodies") and not in the other segments ("non-foodies" and "candy-lovers") at the same time. 
+However, if your goal is to segment users who belong to the "foodies" segment and are not in either of the "non-foodies" and "candy-lovers" segments, then use the `AND` operator. This way, users who receive the campaign or Canvas are in the intended segment ("foodies") and not in the other segments ("non-foodies" and "candy-lovers") at the same time. 
 
 The following negative targeting criteria should not be used with the `OR` operator when two or more filters are referencing the same attribute:
 

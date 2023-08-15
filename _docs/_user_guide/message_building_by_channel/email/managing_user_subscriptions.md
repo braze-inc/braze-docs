@@ -65,7 +65,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 ![Fields to create a subscription group.][26]{: height="50%" width="50%"}
 
-When creating your segments, set the subscription group name as a filter. This will ensure users who have opted into your group will receive your emails. This is great for monthly newsletters, coupons, membership tiers, and more.
+When creating your segments, set the subscription group name as a filter. This will confirm that users who have opted into your group will receive your emails. This is great for monthly newsletters, coupons, membership tiers, and more.
 
 ![GIF of a user setting a subscription group name as a filter.][27]{: style="max-width:80%"}
 

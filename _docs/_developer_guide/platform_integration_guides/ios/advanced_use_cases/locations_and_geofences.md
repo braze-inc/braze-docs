@@ -91,7 +91,7 @@ locationManager.requestAlwaysAuthorization()
 
 iOS only allows up to 20 geofences to be stored for a given app. Braze's locations product will use up some of these 20 available geofence slots. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard.
 
-For Braze's Locations product to work correctly, you should also ensure that your app is not using all available geofence spots.
+For Braze's Locations product to work correctly, you should also confirm that your app is not using all available geofence spots.
 
 ### Enable geofences from the locations page:
 

@@ -22,11 +22,11 @@ Securing your website and links with SSL is a common practice even for companies
 
 ### Necessary for click and open tracking
 
-At Braze, when we send out emails, we first transform your links using your branded link tracking subdomain to track user clicks and opens. By default, these links will begin with HTTP. This means that users with a browser or extension that restricts non-secure traffic may have difficulty passing through the redirect before landing at the destination URL, even if the URL is secure. This can lead to broken images and inaccurate click and open tracking throughout your emails. For this reason, it is a best practice to apply an SSL layer to the link tracking subdomain to ensure secure redirects in your emails. 
+At Braze, when we send out emails, we first transform your links using your branded link tracking subdomain to track user clicks and opens. By default, these links will begin with HTTP. This means that users with a browser or extension that restricts non-secure traffic may have difficulty passing through the redirect before landing at the destination URL, even if the URL is secure. This can lead to broken images and inaccurate click and open tracking throughout your emails. For this reason, it is a best practice to apply an SSL layer to the link tracking subdomain to confirm secure redirects in your emails. 
 
 ### Browser requirement
 
-SSL protocols are becoming more prevalent today as major browsers like Google Chrome are starting to restrict traffic through non-secure URLs to protect their users. Companies with SSL on their website ensure to these major browsers that their content is trusted, minimizing content viewing issues like broken links and images in their emails.
+SSL protocols are becoming more prevalent today as major browsers like Google Chrome are starting to restrict traffic through non-secure URLs to protect their users. Companies with SSL on their website confirm with these major browsers that their content is trusted, minimizing content viewing issues like broken links and images in their emails.
 
 ### HSTS domains requirement 
 

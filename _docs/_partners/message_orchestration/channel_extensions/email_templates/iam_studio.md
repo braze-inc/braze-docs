@@ -60,7 +60,7 @@ Once all editing has been completed, export the template by clicking **Export**.
 
 ### Step 4: Use code in Braze 
 
-Navigate to Braze, and in your in-app message, paste the custom code in the **HTML Input** box. Make sure to test your message to ensure it is displaying correctly.
+Navigate to Braze, and in your in-app message, paste the custom code in the **HTML Input** box. Make sure to test your message to check it is displaying correctly.
 
 ![][3]{: style="max-width:85%;"}
 

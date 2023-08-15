@@ -82,10 +82,10 @@ The following table lists event mapping options concerning the Snowplow event as
 
 | Mapping option | Description |
 | --------- | ----------- |
-| Include self describing event | Enabled by default, this indicates if the Snowplow self-describing event data will be included in the event's properties objects sent to Braze. |
+| Include self describing event | Turned on by default. Indicates if the Snowplow self-describing event data will be included in the event's properties objects sent to Braze. |
 | Snowplow event context rules | Describes how the Braze tag will use the context entities attached to a Snowplow event. |
 | Extract entity from array if single element | Snowplow entities are always in arrays, as multiple of the same entity can be attached to an event. This option will pick the single element from the array if the array only contains a single element. |
-| Include all entities in the event object | Enabled by default, this ensures that all entities on an event will be included within the Braze event's properties object. Disable this option to select individual entities for inclusion. |
+| Include all entities in the event object | Turned on by default. Includes all entities on an event within the Braze event's properties object. Disable this option to select individual entities for inclusion. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Advanced event mapping
