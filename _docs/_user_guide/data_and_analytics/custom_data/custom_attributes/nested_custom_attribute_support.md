@@ -18,7 +18,7 @@ For example, let's say you want to define a custom attribute on the user profile
   "title": "The Hobbit",
   "author": "J.R.R. Tolkien",
   "publishing_date": "1937"
-  }
+}
 ```
 
 This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
@@ -102,7 +102,7 @@ After this request is received, the custom attribute object will now look like t
 ```
 
 {% alert warning %}
-You must set `_merge_objects` to true, or your objects will be overwritten. `_merge_objects` is false by default.
+You must set `_merge_objects` to `true`, or your objects will be overwritten. `_merge_objects` is `false` by default.
 {% endalert %}
 
 {% endtab %}

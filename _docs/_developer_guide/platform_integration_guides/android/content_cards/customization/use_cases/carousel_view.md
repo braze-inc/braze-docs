@@ -33,7 +33,7 @@ To create the Content Cards carousel, create your own custom views and [subscrib
 
 ### Step 2: Implement analytics
 
-When creating a fully custom view controller, Content Card impressions, clicks, and dismissals are not automatically logged. You must implement the respective analytics methods to ensure impressions, dismissal events, and clicks get properly logged back to Braze's dashboard analytics.
+When creating a fully custom view controller, Content Card impressions, clicks, and dismissals are not automatically logged. You must implement the respective analytics methods for impressions, dismissal events, and clicks to be properly logged back to Braze's dashboard analytics.
 
 For information on the analytics methods, refer to [Card analytics methods]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/#card-methods).
 
@@ -46,7 +46,7 @@ The same page also details the different properties inherited from our generic C
 Follow the steps for [Using multiple Content Card feeds]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/) to set key-value pairs on cards and create a Content Card update handler.
 
 {% alert important %}
-It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g., `feed_type = brand_homepage`), as any key-value pairs used must match the key-value pairs that the developers build into the app logic.
+It's important to make sure your marketing and developer teams coordinate on which key-value pairs will be used (e.g., `feed_type = brand_homepage`), as any key-value pairs used must match the key-value pairs that the developers build into the app logic.
 {% endalert %}
 
 For Android-specific developer documentation on the Content Cards class, methods, and attributes in Kotlin, refer to the Android [com.braze.ui.contentcards.view](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/index.html) documentation.

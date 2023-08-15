@@ -133,7 +133,7 @@ When connecting a React Native Segment Source to Braze, you must set up a source
 
 Within your app codebase, conditionally initialize the Segment SDK by device type, using the respective source write key associated with each app.
 
-When a push token is registered from a device and sent to Braze, it is associated with the app identifier used when initializing the SDK. The device-type conditional initialization ensures that any push tokens sent to Braze are associated with the relevant app.
+When a push token is registered from a device and sent to Braze, it is associated with the app identifier used when initializing the SDK. The device-type conditional initialization helps confirm that any push tokens sent to Braze are associated with the relevant app.
 
 {% alert important %}
 If the React Native app initializes Braze with the same Braze app identifier for all devices, then all React Native users will be considered Android or iOS users in Braze, and all push tokens will be associated with that operating system.

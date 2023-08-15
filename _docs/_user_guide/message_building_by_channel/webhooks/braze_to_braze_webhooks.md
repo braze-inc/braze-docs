@@ -112,7 +112,7 @@ Follow the general steps for creating a Braze to Braze webhook, and refer to the
 Braze requires an HTTP header for authorization that includes your API key and another that declares your `content-type`.
 
 - **Request Header:**
-  - **Authorization:** Bearer `YOUR_API_KEY`
+  - **Authorization:** Bearer {YOUR_API_KEY}
   - **Content-Type:** application/json
 - **HTTP Method:** POST
 

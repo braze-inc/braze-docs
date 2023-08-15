@@ -129,7 +129,7 @@ In this case, there are two options that may work better than setting a default 
    {% endif %}
    ```
 
-In this example, a user with a blank or null first name will get the message "Thanks for downloading". You should include a [default value][47] for first name to ensure that your customer does not see Liquid in the event of a mistake.
+In this example, a user with a blank or null first name will get the message "Thanks for downloading". You should include a [default value][47] for first name to make sure that your customer does not see Liquid in the event of a mistake.
 
 {% endraw %}
 

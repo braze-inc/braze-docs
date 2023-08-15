@@ -47,7 +47,7 @@ Next, declare permissions required to support ADM by adding `<>permission</>` an
     android:versionCode="1"
     android:versionName="1.0">
 
-  <!-- This permission ensures that no other application can intercept your ADM messages. -->
+  <!-- This permission verifies that no other application can intercept your ADM messages. -->
   <permission
     android:name="[YOUR PACKAGE NAME].permission.RECEIVE_ADM_MESSAGE"
     android:protectionLevel="signature" />

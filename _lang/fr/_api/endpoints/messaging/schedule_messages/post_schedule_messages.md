@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Créer des mes
 /messages/schedule/create
 {% endapimethod %}
 
-> Utilisez cet endpoint pour planifier une campagne, un Canvas ou un autre message à envoyer à un moment donné (jusqu’à 90 jours à l’avance) et obtenir un identifiant permettant de référencer ce message pour les mises à jour. 
+> Utilisez cet endpoint pour planifier une campagne, un Canvas ou un autre message à envoyer à un moment donné et obtenir un identifiant permettant de référencer ce message pour les mises à jour. 
 
 Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la [console du développeur (Developer Console)](https://dashboard.braze.com/app_settings/developer_console/activitylog/) après l’envoi de tous les messages planifiés.
 
@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,
   "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
   "schedule": { 
-    "time": (required, datetime as ISO 8601 string) time to send the message, (up to 90 days in the future),
+    "time": (required, datetime as ISO 8601 string) time to send the message,
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   },
