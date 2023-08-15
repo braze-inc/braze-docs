@@ -150,17 +150,17 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 |`filterFunction` | A filter or sort function for cards displayed in this view. Invoked with the array of `Card` objects, sorted by `{pinned, date}`. Expected to return an array of sorted `Card` objects to render for this user. If omitted, all cards will be displayed. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-[See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards) for more information on Content Card toggling.
+[See the SDK reference docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards) for more information on Content Card toggling.
 
 ## Control group 
 
 If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
 
-If you use a custom integration for Content Cards, your integration needs to log impressions when a Control Card would have been seen - even for "control" cards within an A/B test.
+If you use a custom integration for Content Cards, you need need [log impressions]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics/) when a Control Card would have been seen. As part of this effort, make sure to handle Control cards when logging impressions in an A/B test. These cards are blank, and while they aren’t seen by users, you should still log impressions in order to compare how they perform against non-Control cards.
 
-To determine if a Content Card is in the "control" group for an A/B test, you can check the `card.isControl` property (Web SDK v4.5.0+) or check if the card is a ControlCard instance (`card instanceof braze.ControlCard`).
+To determine if a Content Card is in the Control group for an A/B test, check the `card.isControl` property (Web SDK v4.5.0+) or check if the card is a `ControlCard` instance (`card instanceof braze.ControlCard`).
 
 {% alert note %}
-Visit the following customization articles for documentation on adding [custom UI]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/), [custom styling]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling), [key-value pairs]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs), [read and unread indicators]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/), and [requesting unviewed Content Card counts]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/badges).
+Visit the following customization articles for documentation on adding [custom styling]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles/), [custom behavior]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/), [multiple card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/), and [completely custom UI]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards/).
 {% endalert %}
 

@@ -188,6 +188,7 @@ braze.openSession();
 
 
 
+
 ## Logging events
 
 Logging valuable metrics like impressions, clicks, and dismissals is quick and simple. Set a custom click listener to manually handle these analytics.

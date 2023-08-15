@@ -82,7 +82,7 @@ A hybrid approach to implementation, the Walk approach involves both marketing a
 
 During the implementation process, developers write custom code to update a message channel's look and feel to more closely match your brand. This includes changing font type, font size, rounded corners, and colors. This approach still uses the default options, just with programmatic template styling.
 
-Marketers still maintain control of the audience, content, on-click behavior, expiration, and pinning directly in the Braze dashboard.
+Marketers still maintain control of the audience, content, on-click behavior, and expiration directly in the Braze dashboard.
 
 <table>
 <thead>

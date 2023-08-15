@@ -74,6 +74,10 @@ If a user has dismissed all of their cards or you haven't pushed out any new upd
 
 ![Image of an empty Content Card feed][6]{: style="max-width:45%"}
 
+{% alert tip %}
+Keep Content Cards relevant by setting them to dismiss when a user takes relevant actions. For example, set promotional Content Cards to be dismissed as soon as users make a purchase so they don't continue to see an offer for something they already bought.
+{% endalert %}
+
 ### Using GIFs in Content Cards
 
 | Content Cards for Android | Content Cards for iOS | Content Cards for Web |

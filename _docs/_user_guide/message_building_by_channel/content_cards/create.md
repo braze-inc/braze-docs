@@ -127,7 +127,7 @@ Each user is eligible to receive up to 100 non-expired and non-dismissed Content
 
 ## Step 4: Configure additional settings (optional)
 
-You can use [key-value pairs][19] to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/multiple_feeds/), and customize how Cards are sorted.
+You can use [key-value pairs][19] to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/multiple_feeds/)) and customize how Cards are sorted.
 
 To add key-value pairs to your message, switch to the **Settings** tab and click **Add New Pair**.
 
@@ -179,15 +179,17 @@ After a Content Card is launched, it can't be edited. It can only be stopped fro
 
 Next, check out [Content Card reporting]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/) to learn how you can access the results of your Content Card campaigns.
 
+{% alert tip %}
+Do you want to have Content Cards that seem to last longer than the 30-day max? One way to accomplish this is to:
+
+1. Set the duration of the Content Card for 30 days.
+2. Set the campaign re-eligibility to 30 days.
+3. Set the campaign to trigger on "Session Start."
+
+Voila!
+{% endalert %}
+
 ## Things to know
-
-### Capabilities not yet supported
-
-The following capabilities are not yet supported for Content Cards:
-
-- Frequency Capping
-- Re-ordering Content Cards from the Braze UI
-- Post-launch edits (see [Updating sent cards](#updating-sent-cards) for options on how to handle this scenario)
 
 ### Sending behavior
 
