@@ -22,7 +22,7 @@ Your SPF record will be set up when Braze configures your IPs and domains - beyo
 
 ### Domain Keys Identified Mail (DKIM)
 
-This method confirms that your Braze email-sending domain is authorized to send mail on your behalf. This method is designed to validate the sender's authenticity and ensure the integrity of the message is preserved. It also uses individual cryptographic digital signatures so ISPs can be sure the mail they're delivering is the same as the mail you sent.
+This method confirms that your Braze email-sending domain is authorized to send mail on your behalf. This method is designed to validate the sender's authenticity and validates the integrity of the message is preserved. It also uses individual cryptographic digital signatures so ISPs can be sure the mail they're delivering is the same as the mail you sent.
 
 Braze signs the mail with your secret private key. The ISPs verify the signature against your public key, which is stored in your custom DNS record. No two signatures are exactly alike, and only your public key can successfully verify your private key signature.
 

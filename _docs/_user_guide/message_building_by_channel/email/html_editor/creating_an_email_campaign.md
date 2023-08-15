@@ -234,7 +234,7 @@ For multichannel campaigns targeting both email and push channels, you may want 
 - **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
 - **User C** is opted-in to email and is push enabled. This user will receive both the email and the push.
 
-To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
+To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will check that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
 
 {% alert important %}
 With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).

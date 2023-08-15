@@ -135,7 +135,7 @@ class CustomSlideUpInAppMessageViewWrapper extends DefaultInAppMessageViewWrappe
 {% tabs %}
 {% tab Kotlin %} 
 **Supply a custom factory to return your custom wrapper**<br>
-In order to ensure that the Braze SDK uses your custom wrapper, you also need to supply a custom `IInAppMessageViewWrapperFactory` implementation that returns your custom wrapper. You can either implement the `IInAppMessageViewWrapperFactory` directly, or subclass `BrazeInAppMessageViewWrapperFactory` and only override the `createInAppMessageViewWrapper` method:
+In order for the Braze SDK to use your custom wrapper, you also need to supply a custom `IInAppMessageViewWrapperFactory` implementation that returns your custom wrapper. You can either implement the `IInAppMessageViewWrapperFactory` directly, or subclass `BrazeInAppMessageViewWrapperFactory` and only override the `createInAppMessageViewWrapper` method:
 
 ```kotlin
 class CustomInAppMessageViewWrapperFactory : BrazeInAppMessageViewWrapperFactory() {
@@ -176,7 +176,7 @@ class CustomInAppMessageViewWrapperFactory : BrazeInAppMessageViewWrapperFactory
 {% endtab %}
 {% tab Java %}
 **Supply a custom factory to return your custom wrapper**<br>
-In order to ensure that the Braze SDK uses your custom wrapper, you also need to supply a custom `IInAppMessageViewWrapperFactory` implementation that returns your custom wrapper. You can either implement the `IInAppMessageViewWrapperFactory` directly, or subclass `BrazeInAppMessageViewWrapperFactory` and only override the `createInAppMessageViewWrapper` method:
+In order for the Braze SDK to use your custom wrapper, you need to supply a custom `IInAppMessageViewWrapperFactory` implementation that returns your custom wrapper. You can either implement the `IInAppMessageViewWrapperFactory` directly, or subclass `BrazeInAppMessageViewWrapperFactory` and only override the `createInAppMessageViewWrapper` method:
 
 ```java
 class CustomInAppMessageViewWrapperFactory extends BrazeInAppMessageViewWrapperFactory {

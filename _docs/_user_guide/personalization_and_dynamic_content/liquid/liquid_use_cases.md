@@ -842,7 +842,7 @@ Miscellaneous
 
 ### Avoid sending emails to customers that have blocked marketing emails {#misc-avoid-blocked-emails}
 
-This use case takes a list of blocked users saved in a Content Block and ensures those blocked users are not communicated to or targeted in upcoming campaigns or Canvases.
+This use case takes a list of blocked users saved in a Content Block and checks those blocked users are not communicated to or targeted in upcoming campaigns or Canvases.
 
 {% alert important %}
 To use this Liquid, first save the list of blocked emails within a Content Block. The list should have no additional spaces or characters inserted between email addresses (e.g., `test@braze.com,abc@braze.com`).
@@ -932,7 +932,7 @@ This 'Event Listener' can be used to split out users into different journeys bas
 {% endcomment %}
 
 {% comment %}
-When testing, ensure the Campaign ID, Campaign API Endpoint, Canvas ID, Canvas API Endpoint are entered correctly. In this example, Canvas ID and Canvas API endpoint have been set up for sharing with the client; in practice, this can be testing using a Campaign ID and Campaign API endpoint.
+When testing, make sure the campaign ID, campaign API endpoint, Canvas ID, Canvas API endpoint are entered correctly. In this example, the Canvas ID and Canvas API endpoint have been set up for sharing with the client. In practice, this can be testing using a campaign ID and Campaign API endpoint.
 {% endcomment %}
 
 {% comment %}

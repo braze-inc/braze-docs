@@ -63,7 +63,7 @@ Implementation of these methods is not required. They are merely provided to tra
 Once your `IInAppMessageManagerListener` is created, call `BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` to instruct `BrazeInAppMessageManager`
 to use your custom `IInAppMessageManagerListener` instead of the default listener.
 
-We recommend setting your `IInAppMessageManagerListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom listener is set before any in-app message is displayed.
+We recommend setting your `IInAppMessageManagerListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will set the custom listener before any in-app message is displayed.
 
 #### Altering in-app messages before display
 
@@ -200,7 +200,7 @@ Once your `IInAppMessageViewFactory` is created, call `BrazeInAppMessageManager.
 to use your custom `IInAppMessageViewFactory` instead of the default view factory.
 
 {% alert tip %}
-We recommend setting your `IInAppMessageViewFactory` in your `Application.onCreate()` before any other calls to Braze. This will ensure that the custom view factory is set before any in-app message is displayed.
+We recommend setting your `IInAppMessageViewFactory` in your `Application.onCreate()` before any other calls to Braze. This will set the custom view factory before any in-app message is displayed.
 {% endalert %}
 
 #### Implementing a Braze view interface
@@ -266,7 +266,7 @@ class CustomInAppMessageAnimationFactory : IInAppMessageAnimationFactory {
 Once your `IInAppMessageAnimationFactory` is created, call `BrazeInAppMessageManager.getInstance().setCustomInAppMessageAnimationFactory()` to instruct `BrazeInAppMessageManager`
 to use your custom `IInAppMessageAnimationFactory` instead of the default animation factory.
 
-We recommend setting your `IInAppMessageAnimationFactory` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom animation factory is set before any in-app message is displayed.
+We recommend setting your `IInAppMessageAnimationFactory` in your [`Application.onCreate()`][82] before any other calls to Braze. This will set the custom animation factory before any in-app message is displayed.
 
 ## Custom HTML in-app message action listener
 
@@ -354,7 +354,7 @@ class CustomHtmlInAppMessageActionListener(private val mContext: Context) : IHtm
 
 Once your `IHtmlInAppMessageActionListener` is created, call `BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener()` to instruct `BrazeInAppMessageManager` to use your custom `IHtmlInAppMessageActionListener` instead of the default action listener.
 
-We recommend setting your `IHtmlInAppMessageActionListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom action listener is set before any in-app message is displayed:
+We recommend setting your `IHtmlInAppMessageActionListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will set the custom action listener before any in-app message is displayed:
 
 {% tabs %}
 {% tab JAVA %}
@@ -446,7 +446,7 @@ class CustomInAppMessageViewWrapper(inAppMessageView: View,
 
 Once your [`IInAppMessageViewWrapper`][90] is created, call [`BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory()`][91] to instruct `BrazeInAppMessageManager` to use your custom [`IInAppMessageViewWrapperFactory`][88] instead of the default view wrapper factory.
 
-We recommend setting your [`IInAppMessageViewWrapperFactory`][88] in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom view wrapper factory is set before any in-app message is displayed:
+We recommend setting your [`IInAppMessageViewWrapperFactory`][88] in your [`Application.onCreate()`][82] before any other calls to Braze. This will set the custom view wrapper factory before any in-app message is displayed:
 
 {% tabs %}
 {% tab JAVA %}
