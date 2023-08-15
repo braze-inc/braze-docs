@@ -25,7 +25,7 @@ All properties outside of `id` and `extras` are optional to parse for custom Con
 
 {% tabs %}
 {% tab Android %}
-{% subtabs global %}
+{% subtabs local %}
 {% subtab Java %}
 
 ### Create a private subscriber variable
@@ -108,7 +108,7 @@ Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscribe
 
 To access the Content Cards data model, call `contentCards.cards` on your `braze` instance.
 
-{% subtabs global %}
+{% subtabs local %}
 {% subtab Swift %}
 
 ```swift
@@ -205,7 +205,7 @@ You can manually log or set a Content Card as "dismissed" to Braze for a particu
 
 To create a custom click listener, create a class that implements [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html) and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a Content Card. Then, instruct Braze to use your Content Card click listener. 
 
-{% subtabs global %}
+{% subtabs local %}
 {% subtab Java %}
 
 For example:
@@ -248,7 +248,7 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 
 Implement the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol and set your delegate object as the `delegate` property of your `BrazeContentCardUI.ViewController`. This delegate will handle passing the data of your custom object back to Braze to be logged.
 
-{% subtabs global %}
+{% subtabs local %}
 {% subtab Swift %}
 
 ```swift
