@@ -28,6 +28,8 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 Only admins and users with permission to manage approval settings will see this page.
 {% endalert %}
 
+Depending on your team-level permissions, you'll be able to view all or selected campaigns. You'll still be able to save and launch your campaign, but note that the team tag must be set.
+
 ## Using approvals
 
 In the **Review Summary** step of the campaign building workflow, there is an approval option to approve or deny your campaign's key components: **Messages**, **Delivery**, **Target Population**, and **Conversion Events**. The default state for campaign approval is **Pending Approval**. 

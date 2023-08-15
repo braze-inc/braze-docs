@@ -35,6 +35,8 @@ After the approval workflow for Canvas has been turned on, go to **Settings** > 
 To edit a live campaign, you will need the "Approve and Deny Campaigns" permission. A user will need to approve their changes since a draft version of campaigns is not yet available. This is not the case for Canvases as a user can make changes and save as a draft, and another user can approve and launch the Canvas.
 {% endalert %}
 
+Depending on your team-level permissions, you'll be able to view all or selected Canvases. You'll still be able to save and launch your Canvas, but note that the team tag must be set.
+
 ## Using approvals
 
 When the approval workflow is enabled, you'll have access to the **Summary** step of the Canvas builder. This page provides a summary of the key Canvas details with the option to approve or deny these details, including conversion events, entry schedule, and the type and amount of components in your Canvas. Note the default state for Canvas approval is **Pending Approval**.
