@@ -18,7 +18,7 @@ For example, let's say you want to define a custom attribute on the user profile
   "title": "The Hobbit",
   "author": "J.R.R. Tolkien",
   "publishing_date": "1937"
-  }
+}
 ```
 
 This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
