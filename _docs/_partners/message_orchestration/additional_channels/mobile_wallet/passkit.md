@@ -165,7 +165,7 @@ You may notice there are two variables left undefined in the example Content Blo
 {% raw %}`{{passData}}`{% endraw %} - Your JSON pass data payload defined in [step 1](#passkit-integrations) <br>
 {% raw %}`{{projectUrl}}`{% endraw %} - Your project or program's URL which you find on the distribution tab of your Passkit project.
 
-This decision was purposeful and ensures the reusability of the Content Block. Because these variables are only referenced, not created within the Content Block, these variables can change without remaking the Content Block. 
+This decision is purposeful and supports the reusability of the Content Block. Because these variables are only referenced, not created within the Content Block, these variables can change without remaking the Content Block. 
 
 For example, maybe you want to change the introductory offer to include more initial points in your loyalty program, or perhaps you want to create a secondary member card or coupon. These scenarios would require different Passkit `projectURLs` or different pass payloads, which you would define per campaign in Braze.  
 

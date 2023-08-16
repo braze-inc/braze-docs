@@ -26,11 +26,11 @@ Audience Sync to LinkedIn is currently in beta. Contact your Braze account manag
 
 ## Prerequisites
 
-You must ensure that you have the following items created, completed, and/or accepted before setting up your LinkedIn Audience Sync step in Canvas.
+You must make sure that you have the following items created, completed, or accepted before setting up your LinkedIn Audience Sync step in Canvas.
 
 | Requirement | Origin | Description |
 | --- | --- | --- |
-| LinkedIn ad account | [LinkedIn](https://www.linkedin.com/campaignmanager) | An active LinkedIn ad account tied to your brand.<br><br>Ensure that you have accepted any relevant LinkedIn terms and conditions to access and use that account and that your LinkedIn admin has granted you the appropriate permissions to manage Audiences. |
+| LinkedIn ad account | [LinkedIn](https://www.linkedin.com/campaignmanager) | An active LinkedIn ad account tied to your brand.<br><br>Make sure that you have accepted any relevant LinkedIn terms and conditions to access and use that account and that your LinkedIn admin has granted you the appropriate permissions to manage Audiences. |
 | LinkedIn Terms & Policies | LinkedIn | Agree to comply with any of LinkedIn’s required terms, policies, guidelines, and documentation related to your use of the LinkedIn Audience Sync, including any terms, policies, guidelines, and documentation incorporated by reference therein, which may include LinkedIn’s: Services Terms, Ads Agreement, Data Processing Agreement, and Professional Community Guidelines. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -105,7 +105,7 @@ When you launch a Canvas with a new audience, Braze syncs users in near real-tim
 {% tab Sync with an Existing Audience %}
 
 **Sync with an Existing Audience**<br>
-Braze also offers the ability to add users to existing LinkedIn audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then add users in near real-time as they enter the Audience Sync component.
+Braze also offers the ability to add users to existing LinkedIn audiences to confirm that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then add users in near real-time as they enter the Audience Sync component.
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired ad account and existing audience are selected.]({% image_buster /assets/img/linkedin/linkedin17.png %})
 
@@ -164,11 +164,11 @@ The audience must include at least 300 members to populate the audience size wit
 {% enddetails %}
 
 {% details What should I do next if I receive an invalid token error? %}
-You can disconnect and reconnect your LinkedIn account on the LinkedIn partner page. Ensure with your LinkedIn admin that you have the appropriate permissions to the ad account you wish to sync with.
+You can disconnect and reconnect your LinkedIn account on the LinkedIn partner page. Confirm with your LinkedIn admin that you have the appropriate permissions to the ad account you wish to sync with.
 {% enddetails %}
 
 {% details Why is my Canvas not allowed to launch? %}
-Please ensure your LinkedIn ad account has successfully connected to Braze on the LinkedIn partner page.
+Please confirm your LinkedIn ad account has successfully connected to Braze on the LinkedIn partner page.
 Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match.
 {% enddetails %}
 

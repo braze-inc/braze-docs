@@ -34,7 +34,7 @@ If you are uploading a mix of users with an `external_id` and users without, you
 
 ### Importing with external ID
 
-When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about Braze's [user profile lifecycle][13].
+When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and is designed for each customer to have a single user profile within Braze across their devices. Read more about Braze's [user profile lifecycle][13].
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 

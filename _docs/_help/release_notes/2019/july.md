@@ -74,15 +74,13 @@ Look at [multiple campaigns at one time to compare their relative performance]({
 
 ## Template dispatch ID into messages with Liquid
 
-{% alert update %}
-Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [`dispatch_id` behavior in Canvas and campaigns]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-
-_Update noted in August 2019._
+{% alert note %}
+Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [`dispatch_id` behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/) in Canvases and campaigns.
 {% endalert %}
 
-If you want to track the dispatch of a message from within the message (in a URL, for example), you can template in the `dispatch_id`. You can find the formatting for this in our list of Supported Personalization Tags, under [Canvas Attributes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+If you want to track the dispatch of a message from within the message (in a URL, for example), you can template in the `dispatch_id`. You can find the formatting for this in our list of supported personalization tags, under [Canvas Attributes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
-This behaves just like `api_id`, in that since the `api_id` isn't available at campaign creation, it is templated in as a placeholder and will preview as `dispatch_id_for_unsent_campaign`. The id is generated before the message is sent, and will be included in as send time.
+This behaves just like `api_id`, in that since the `api_id` isn't available at campaign creation, it is templated in as a placeholder and will preview as `dispatch_id_for_unsent_campaign`. The ID is generated before the message is sent, and will be included in as send time.
 
 {% alert warning %}
 Liquid templating of `dispatch_id_for_unsent_campaign` does not work with in-app messages, since in-app messages don't have a `dispatch_id`.
@@ -90,7 +88,7 @@ Liquid templating of `dispatch_id_for_unsent_campaign` does not work with in-app
 
 ## "Show Only Mine" setting persists
 
-The "Show Only Mine" filter on the campaign grid will remain "on" any time you visit the **Campaigns** page.
+The "Show Only Mine" filter on the campaign grid will remain on any time you visit the **Campaigns** page.
 
 ## A/B testing updates
 

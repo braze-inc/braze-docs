@@ -71,4 +71,4 @@ Conversion events allow you to attribute user action back to a point of engageme
 [2]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
 [3]: {% image_buster /assets/img_archive/conversion_event_details.png %}
 [4]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing
-[5]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/#intelligent-selection
+[5]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/

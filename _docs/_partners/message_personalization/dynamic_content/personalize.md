@@ -53,7 +53,7 @@ Once your data has been exported, Personalize.AI will continue to pass data to B
 
 Personalize.AI exports identifiers used for personalized targeting into Braze. These custom attributes indicate timing, content, treatment, and offers for each customer. Depending on the integration, fields can be passed as an event or pulled into the [Connected Content APIs][2] instead of stored on the customer's profile. Personalzie.AI supports the use of `external_id` as an identifier.
 
-The data attributes imported into Braze are intuitively named for use in Canvases, following consistent terminology. For example, the attribute `C402_Target_Variant` in Personalize.AI would be exported to Braze as `"P.AI_Model_Treatment"`. The attributes exported from Personalize.AI are designed to not interfere with any existing attributes or tracking your use. These attributes are validated continuously to ensure that you can reference them confidently. 
+The data attributes imported into Braze are intuitively named for use in Canvases, following consistent terminology. For example, the attribute `C402_Target_Variant` in Personalize.AI would be exported to Braze as `"P.AI_Model_Treatment"`. The attributes exported from Personalize.AI are designed to not interfere with any existing attributes or tracking your use. These attributes are validated continuously to confirm that you can reference them confidently. 
 
 For example, here is a set of customer attributes as they relate to an example churn-focused Canvas.
 

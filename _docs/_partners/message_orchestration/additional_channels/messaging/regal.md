@@ -37,7 +37,7 @@ Build a Canvas or campaign that webhooks out to Regal every time a new contact i
 
 2. Set the trigger logic as **Custom Event** and select the event that is fired when a contact with a phone number is created. Regal also recommends adding an extra filter on the phone field that ensures it's set.
 
-3. In your new Webhook template, fill out the following fields:
+3. In your new webhook template, fill out the following fields:
    - **Webhook URL**: <https://events.regalvoice.com/events>
    - **Request Body**: Raw Text
 

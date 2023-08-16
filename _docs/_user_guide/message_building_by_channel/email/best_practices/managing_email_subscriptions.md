@@ -28,7 +28,7 @@ Hard bounces can happen if the email is invalid or doesn't exist. In this case, 
 
 ## Duplicate emails
 
-Braze automatically checks for and removes duplicate email addresses when an email campaign is sent. This way an email is only sent once and is "deduped" which ensures that it doesn't hit the same email multiple times even if multiple user profiles share a common address. 
+Braze automatically checks for and removes duplicate email addresses when an email campaign is sent. This way an email is only sent once and is "deduped" which checks that it doesn't hit the same email multiple times even if multiple user profiles share a common address. 
 
 Because deduplication occurs when targeted users are included in the same dispatch, triggered campaigns (excluding API-triggered campaigns) may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. 
 

@@ -51,7 +51,7 @@ To enable this feature, a silent push is sent to the device, which allows a cust
 
 Register your custom push callback to listen for a specific silent push notification. For more information, take a look at [Braze's push documentation][78].
 
-Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom push callback. To ensure the same event is not duplicated, the event logged from within your push callback should follow a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done, segmentation and user data may be affected by duplicate events being logged for a single user action.
+Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom push callback. To make sure the same event is not duplicated, the event logged from within your push callback should follow a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done, segmentation and user data may be affected by duplicate events being logged for a single user action.
 
 {% tabs %}
 {% tab JAVA %}

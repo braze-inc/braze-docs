@@ -62,7 +62,7 @@ layout="nodisplay"
 id="amp-web-push"
 helper-iframe-url="FILE_PATH_TO_YOUR_HELPER_IFRAME"
 permission-dialog-url="FILE_PATH_TO_YOUR_PERMISSION_DIALOG"
-service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey=YOUR_API_KEY&baseUrl=YOUR_BASE_URL"
+service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey={YOUR_API_KEY}&baseUrl={YOUR_BASE_URL}"
 >
 ```
 
