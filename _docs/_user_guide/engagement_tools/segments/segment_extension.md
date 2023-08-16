@@ -40,7 +40,7 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 Select between purchase, message engagement, or custom event criteria for targeting. After you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days (2 years). Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**.
 
-![][3]
+![The Select a Extension Criterion dropdown has Performed a Custom Event selected][3]
 
 ### Event property segmentation
 
