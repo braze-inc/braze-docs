@@ -3,14 +3,14 @@
 $(document).ready(function(){
   if ( $('#feedback').length && (typeof(feedback_site ) != 'undefined')) {
     var feedback_config = {
-      dest: 'https://script.google.com/macros/s/AKfycbyeErceUoe9xIdSmmfgDsFncY9Fm_dg92MGSs_9FOYKoMLiSms/exec',
+      dest: 'https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/feedback',
       site: feedback_site,
       params: null,
       helpful: '',
       postdate: null,
       ID: null
     };
-    $('#feedback_helpful_yes, #feedback_helpful_but, #feedback_helpful_no').on('click', function(e){
+    $('#feedback_answer li.inline-star i').on('click', function(e){
       e.preventDefault();
       var feedback_cookie_name = '_site_feedback';
       var last_feedback = Cookies.get(feedback_cookie_name);
@@ -30,7 +30,7 @@ $(document).ready(function(){
 
       if (process_submit) {
         var $this = $(this);
-        var helpful = $this.attr('data-value');
+        var helpful = $this.closest('i').attr('data-value');
         feedback_config.helpful = helpful;
 
         $('#feedback_answer').fadeOut("slow");
@@ -53,13 +53,11 @@ $(document).ready(function(){
             feedback_config['helpful'] = dt['helpful'];
             feedback_config['postdate'] = dt['postdate'];
             feedback_config['params'] = dt['params'];
-            // if ((res_helpful == 'Yes But') || (res_helpful == 'No') ){
-            // $('#feedback_comment_div').fadeIn('slow');
-            // }
-            // else {
-            $('#feedback_msg').html('Thanks for your response.<a href="#" onclick="$(\'#feedback_comment_div\').fadeIn(\'slow\');$(\'#feedback_msg\').fadeOut(\'slow\');return false;">Leave Feedback</a>');
+            if ((res_helpful == 'Very Helpful') ){
+              $('#feedback_comment').attr('placeholder','Your opinion matters! Tell us what you think about the documentation.');
+            }
+            $('#feedback_msg').html('Thanks for your response.<a href="#" onclick="$(\'#feedback_comment_div\').fadeIn(\'slow\');$(\'#feedback_msg\').fadeOut(\'slow\');return false;">Leave feedback</a>');
             $('#feedback_msg').fadeIn("slow");
-            // }
           }
           else {
             $('#feedback_msg').html('Error. Please try again at a later time.');
@@ -83,7 +81,7 @@ $(document).ready(function(){
         appboy.logCustomEvent("Documentations Feedback Comment", {"Feedback": feedback_config['helpful'],"URL": feedback_config['site'],"Comment": $('#feedback_comment').val()});
       }
       var jqxhr = $.ajax({
-        url: feedback_config['dest'],
+        url: feedback_config['dest'] + '/comment',
         method: "GET",
         dataType: "json",
         data: submit_data

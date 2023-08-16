@@ -8,20 +8,21 @@
     {%- if include.title -%}
     <div id="feedback_title">{{ include.title | upcase }} </div>
     {%- else -%}
-    <div id="feedback_title"> {{ site.data.i18n[site.language]['helpful'] | default: "WAS THIS PAGE HELPFUL?" }} </div>
+    <div id="feedback_title"> {{ site.data.i18n[site.language]['helpful'] | default: "HOW HELPFUL WAS THIS PAGE?" }} </div>
     {%- endif -%}
 
     <div id="feedback_answer">
-        <a href="#" id="feedback_helpful_yes" data-value="Yes">
-            <i class="fas fa-thumbs-up"></i>Yes</a>
-        <a href="#" id="feedback_helpful_no" data-value="No">
-            <i class="fas fa-thumbs-down"></i> No
-        </a>
+      <ul class="list-inline rating-list">
+        <li class="inline-star"><i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i></li>
+        <li class="inline-star"><i class="fas fa-star" data-value="Helpful" title="Helpful"></i></li>
+        <li class="inline-star"><i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i></li>
+        <li class="inline-star"><i class="fas fa-star" data-value="Unhelpful" title="Unhelpful"></i></li>
+        <li class="inline-star"><i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i></li>
+      </ul>
     </div>
     <div id="feedback_comment_div">
         <div>
-            <textarea id="feedback_comment" placeholder="Tell us how we can improve this page...">
-</textarea>
+            <textarea id="feedback_comment" placeholder="How can we improve this page?"></textarea>
         </div>
         <button type="submit" name="submit_feedback" value="SUBMIT FEEDBACK" class="btn btn-black" id="feedback_submit_button" role="button"> SUBMIT FEEDBACK </button>
 

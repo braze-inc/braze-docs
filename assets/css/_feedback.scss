@@ -18,35 +18,42 @@
     #feedback_comment {
         height: 6rem;
         width: 100%;
+        padding: 10px;
     }
-    #feedback_helpful_yes {
-        color: $black-shark;
-        &:hover {
-            color: $green-grass;
+    .rating-list{
+      display: flex;
+      flex-direction: row-reverse;
+      list-style: none;
+      margin: 0 20px;
+      line-height: 1;
+      li {
+        float: right;
+        color: #ddd;
+        padding: 10px 5px;
+        &:hover, &:hover ~ li {
+          color: #000000;
         }
+      }
     }
-    #feedback_helpful_but {
-        color: $black-shark;
-        &:hover {
-            color: $navy-bay;
-        }
-    }
-    #feedback_helpful_no {
-        color: $black-shark;
-        &:hover {
-            color: $red-rose;
-        }
-    }
+
     a {
-        margin-left: 36px;
+        margin-left: 12px;
         @media (max-width: $window-mobile-px) {
             margin-left: 16px;
         }
-        font-family: $braze-regular;
         color: $black-shark;
+        font-family: $braze-black;
+        border-bottom-width: 2px;
+        border-color: $braze-link-color;
+        text-decoration: none;
+        transition: all ease 0.2s;
+        -webkit-transition:  all ease 0.2s;
+        -moz-transition:  all ease 0.2s;
         &:hover {
-            color: $black-shark;
-            text-decoration: none;
+          background-color: $braze-link-color;
+          img {
+            background-color: transparent;
+          }
         }
     }
     button[type=submit] {

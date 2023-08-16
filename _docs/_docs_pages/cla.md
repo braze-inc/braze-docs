@@ -47,16 +47,16 @@ Select one of the options below and sign as indicated. By signing, You accept an
 <input type="radio" name="type" value="personal" id="type_personal" checked="checked" /> <label for="type_personal">I have sole ownership of intellectual property rights to my Submissions and I am not making Submissions in the course of work for my employer. </label><br />
 <input type="radio" name="type" value="employer" id="type_employer" /> <label for="type_employer" >I am making Submissions in the course of work for my employer (or my employer has intellectual property rights in my Submissions by contract or applicable law). I have permission from my employer to make Submissions and enter into this Agreement on behalf of my employer. By signing below, the defined term "You" includes me and my employer. </label><br />
 <br /><br />
-<label for="input_name"> Name ("You"):</label> <input type="text" value="" name="name" id="input_name" class="form-control"  /> <br />
-<label for="input_signature"> Signature:</label> <input type="text" value="" name="signature" id="input_signature" class="form-control" /> <br />
-<label for="input_username"> GitHub Username:</label> <input type="text" value="" name="username" id="input_username" class="form-control" /> <br />
-<label for="input_email"> Email:</label> <input type="email" value="" name="email" id="input_email" class="form-control" /> <br />
+<label for="input_name"> Name ("You"):</label> <input type="text" value="" name="name" id="input_name" class="form-control" required="required" /> <br />
+<label for="input_signature"> Signature:</label> <input type="text" value="" name="signature" id="input_signature" class="form-control" required="required" /> <br />
+<label for="input_username"> GitHub Username:</label> <input type="text" value="" name="username" id="input_username" class="form-control" required="required" /> <br />
+<label for="input_email"> Email:</label> <input type="email" value="" name="email" id="input_email" class="form-control" required="required" /> <br />
 <label for="input_address"> Address:</label> <input type="text" value="" name="address" id="input_address" class="form-control" /> <br />
 
 <span id="company_span">
 <label for="input_company_name"> Company Name:</label> <input type="text" value="" name="company_name" id="input_company_name" class="form-control" /> <br />
 <label for="input_by"> By:</label> <input type="text" value="" name="by" id="input_by" class="form-control"  /> <br />
-<label for="input_title">Title:</label> <input type="text" value="" name="title" id="input_title" class="form-control"  /> <br />
+<label for="input_title">Title:</label> <input type="text" value="" name="title" id="input_title" class="form-control" /> <br />
 </span>
 <button type="submit" name="Agree" value="Agree" class="btn btn-black" id="cla_agree" role="button"> Agree </button>
 </form>
@@ -169,8 +169,8 @@ Select one of the options below and sign as indicated. By signing, You accept an
 </style>
 <script type="text/javascript">
   $(document).ready(function() {
-    var sub_url = '{{ site.cla_url }}'
-    var sub_key = 'N3cTZyz2ecLrAWfBJOzwJHOv47KD0PBX'
+    var sub_url = '{{ site.cla_url }}';
+    var sub_key = 'N3cTZyz2ecLrAWfBJOzwJHOv47KD0PBX';
     $('#cla_form').submit(function(e) {
       var mform = $(this);
       e.preventDefault();
