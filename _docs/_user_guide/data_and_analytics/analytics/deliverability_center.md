@@ -73,7 +73,7 @@ Refer to this table to understand what percentage of your inbound and outbound t
 | Term | Definition |
 | ----- | ---------- |
 | TLS Inbound | Shows percentage of incoming mail (to Gmail) that passed TLS vs all mail received from that domain. |
-| TLS Outbound | Shows percentage of outgoing mail (from Gmail) that was accepted over TLS vs all mail sent to that domain. |
+| TLS Outbound | Shows percentage of outgoing mail (from Gmail) that was accepted over TLS versus all mail sent to that domain. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps][6]. Be sure to also reference our [Email best practices][7] for things you should check for before sending an email campaign.
