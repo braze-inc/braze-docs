@@ -143,9 +143,9 @@ Note the following is not a comprehensive list of what is copied across a worksp
 | Copied | Omitted |
 |---|---|
 | Body | Messaging service |
-| Link shortening |  | 
+| Link shortening | VCF media items | 
 | Click tracking |  | 
-| Media items (excluding VCF) |  | 
+| Media items |  | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
