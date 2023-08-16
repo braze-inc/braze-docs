@@ -8,7 +8,7 @@
     {%- if include.title -%}
     <div id="feedback_title">{{ include.title | upcase }} </div>
     {%- else -%}
-    <div id="feedback_title"> {{ site.data.i18n[site.language]['helpful'] | default: "WAS THIS PAGE HELPFUL?" }} </div>
+    <div id="feedback_title"> {{ site.data.i18n[site.language]['helpful'] | default: "HOW HELPFUL WAS THIS PAGE?" }} </div>
     {%- endif -%}
 
     <div id="feedback_answer">
@@ -22,8 +22,7 @@
     </div>
     <div id="feedback_comment_div">
         <div>
-            <textarea id="feedback_comment" placeholder="Tell us how we can improve this page...">
-</textarea>
+            <textarea id="feedback_comment" placeholder="How can we improve this page?"></textarea>
         </div>
         <button type="submit" name="submit_feedback" value="SUBMIT FEEDBACK" class="btn btn-black" id="feedback_submit_button" role="button"> SUBMIT FEEDBACK </button>
 
