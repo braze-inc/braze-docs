@@ -67,6 +67,10 @@ You can reach this page anytime through **Modules > Braze.**
 
 When any value of the configured fields changes in Antavo, not only the synchronization of that single value is triggered, but every field added to the field mapping is included in the request.
 
+{% alert important %}
+To ensure you minimize data point consumption, we recommend only mapping the fields that will be actioned on within Braze.
+{% endalert %}
+
 The integration supports all the Braze custom attribute [data types](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage), namely: number (integer, float), string, array, boolean, object, array of objects, and date.
 
 ![topic_name][3]
@@ -75,7 +79,7 @@ The data fields are populated based on the configured field mapping.
 
 ## Triggers
 
-In addition to configuring field mapping, the integration provides further capabilities through features built into Antavo’s [Workflows](/wiki/spaces/AUM/pages/581402629) tool. All the Braze custom attribute [data types](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage) can be synchronized through workflows as well.
+In addition to configuring field mapping, the integration provides further capabilities through features built into Antavo’s [Workflows](/wiki/spaces/AUM/pages/581402629) tool. All the Braze custom attribute [data types](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage) and custom event property [data types](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events#expected-format) can be synchronized through workflows as well.
 
 - **Synchronizing loyalty data occasionally**  
   Use this option if the data is not stored in loyalty fields in Antavo or if the data is not added to the list of mapped fields. The synchronization of requested data is triggered when the configured workflow criteria are met.
