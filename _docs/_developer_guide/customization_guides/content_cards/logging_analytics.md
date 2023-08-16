@@ -7,7 +7,7 @@ toc_headers: "h2"
 
 ---
 
-# Logging analytics manually
+# Logging analytics 
 
 > If you would like to display the Content Cards in a completely custom manner, you can implement your own Content Cards presentation UI. However, data such as impressions, clicks, and dismissals are only handled automatically when using the default card models. When implementing completely custom UI, you will need to handle this data manually. To do this, populate your custom UI with data from the Braze data models and manually log analytics like impressions and clicks. 
 

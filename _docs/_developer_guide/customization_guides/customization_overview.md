@@ -8,13 +8,13 @@ description: "This reference article covers the essential concepts of customizin
 
 # Customization overview
 
-> Almost everything at Braze is fully customizable! The articles in this Customization Guide show you how to approach refining your Braze experience through a mixture of configuration and customization. During this process, Marketing and Engineering teams should work closely together to coordinate exactly how to customize Braze's messaging channels.
+> Almost everything at Braze is fully customizable! The articles in this Customization Guide show you how to approach refining your Braze experience through a mixture of configuration and customization. During this process, marketing and engineering teams should work closely together to coordinate exactly how to customize Braze's messaging channels.
 
 {% alert note %}
 The Braze SDK is a powerful toolkit, but at a high level it provides two important pieces of functionality: it helps collect and sync user data across platforms to a consolidated user profile, and also handles messaging channels like in-app messages, push notifications, and Content Cards. The articles in the Customization Guide assume you've already gone through the [SDK implementation process]({{site.baseurl}}/developer_guide/home).
 {% endalert %}
 
-All Braze components are crafted to be accessible, adaptive, and customizable. As such, we recommend starting with the default `BrazeUI` components and customizing them to suit your brand needs and use case. At Braze, we break down customization into three different approaches based on the associated effort and level of flexibility provided. These approaches are referred to as "crawl", "walk", or "run."
+All Braze components are crafted to be accessible, adaptive, and customizable. As such, we recommend starting with the default `BrazeUI` components and customizing them to suit your brand needs and use case. At Braze, we break down customization into three different approaches based on the associated effort and level of flexibility provided. These approaches are referred to as "crawl," "walk," or "run."
 
 - **Crawl:** Take advantage of Braze's basic styling options for a quick, low-effort implementation.
 - **Walk:** Add some custom styling to the default templates to better match your brand experience.
@@ -124,7 +124,7 @@ Marketers still maintain control of the audience, content, on-click behavior, an
 
 ![Sample finance app showing custom Content Cards with email capture]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-With the Run approach, developers take the lead with full control of the user experience. Custom code dictates what the messages will look like, how they behave, and how they interact with other messaging channels (e.g., triggering a Content Card based on a push notification).
+With the Run approach, developers take the lead with full control of the user experience. Custom code dictates what the messages will look like, how they behave, and how they interact with other messaging channels (for example, triggering a Content Card based on a push notification).
 
 When you create completely new custom content, such as new types of Content Cards or in-app messages with bespoke UI, the Braze SDK won’t automatically [track analytics]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/). You must be programmatically handle analytics so marketers continue to have access to metrics like impressions, clicks, and dismissals in the Braze dashboard. Call the Braze SDK’s analytics methods to have the SDK pass this data back to Braze. Each messaging channel has an analytics article to help facilitate this.
 
@@ -166,5 +166,5 @@ When you create completely new custom content, such as new types of Content Card
 {% endtabs %}
 
 {% alert tip %}
-When developers and implementers create custom content for Braze, there's an opportunity for cross-functional collaboration with marketers. For example, if you develop a new UI or new functionality for a particular component, set your team up for success by documenting that behavior. 
+When developers and implementers create custom content for Braze, there's an opportunity for cross-functional collaboration with marketers. For example, if you develop a new UI or new functionality for a particular component, set your team up for success by documenting the new behavior and how it integrates with your backend. 
 {% endalert %}

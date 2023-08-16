@@ -5,6 +5,11 @@ page_order: 5
 description: "This article covers components of creating a custom Content Card UI"
 channel:
   - content cards
+platform:
+  - Android
+  - FireOS
+  - Swift
+  - Web
 ---
 
 # Creating custom Content Cards

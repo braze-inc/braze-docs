@@ -5,6 +5,11 @@ page_order: 3
 description: "This article covers Content Card feed customization options."
 channel:
   - content cards
+platform:
+  - Android
+  - FireOS
+  - Swift
+  - Web
 ---
 
 # Customizing the default Content Card feed

@@ -5,6 +5,11 @@ page_order: 2
 description: "This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations."
 channel:
   - content cards
+platform:
+  - Android
+  - FireOS
+  - Swift
+  - Web
 ---
 
 # Customizing Content Card behavior

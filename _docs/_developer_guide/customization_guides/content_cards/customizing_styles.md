@@ -2,14 +2,19 @@
 nav_title: Customizing Card Styles
 article_title: Customizing Content Card Styles
 page_order: 1
-description: "This article covers custom styling options for your Content Cards."
+description: "This article covers styling options for your Content Cards."
 channel:
   - content cards
+platform:
+  - Android
+  - FireOS
+  - Swift
+  - Web
 ---
 
 # Customizing Content Card styles
 
-> Braze Content Cards come with a default look and feel. This article covers custom styling options for your Content Cards.
+> Braze Content Cards come with a default look and feel. This article covers styling options for your Content Cards to help you match your brand identity.
 
 ## Customizing styling
 
@@ -18,7 +23,7 @@ The default Content Cards UI is imported from the UI layer of the Braze SDK. Fro
 ![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]
 
 {% alert note %}
-Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc. are directly available on the SDK's card object. Configuring these [creative details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details) through the Braze dashboard is the preferred way to customize these properties.
+Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc., are directly editable through the [dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details), which is the preferred method for changing these details.
 {% endalert %}
 
 
@@ -75,7 +80,9 @@ To customize your Content Card stylings, override this default style. To overrid
 
 The Content Cards view controller allows you to customize the appearance and behavior of all cells via the [`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct) struct. Configuring Content Cards using `Attributes` is an easy option, allowing you to launch your Content Cards UI with minimal setup. 
 
-> Customization via `Attributes` is only available in Swift.
+{% alert important %}
+Customization via `Attributes` is only available in Swift.
+{% endalert %}
 
 {% subtabs %}
 {% subtab Swift %}
