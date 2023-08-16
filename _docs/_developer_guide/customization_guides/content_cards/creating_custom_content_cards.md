@@ -69,7 +69,7 @@ Content Cards can be used in many different ways. Three common implementations a
 
 ### Message inbox
 
-Content Cards can be used to simulate a message center. In this format, each message is its own card that contains [key-value pairs][5] that power on-click events. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an inbox message. The values of the key-value pairs are arbitrary but should be distinguishable between class types. 
+Content Cards can be used to simulate a message center. In this format, each message is its own card that contains [key-value pairs][5] that power on-click events. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an inbox message. The values of the key-value pairs are arbitrary. 
 
 Here is an example dashboard configuration you might use to create two message cards: one message is a call to action for a user to add their preferences to receive targeted reading recommendations, and one provides a coupon code to a segment of new subscribers. 
 
@@ -79,7 +79,7 @@ Example key-value pairs for the reading recommendation card could be:
 
 - body: Add your interests to your Politer Weekly profile for personal reading recommendations.
 - style: info
-- placement: notification_center
+- class_type: notification_center
 - card_priority: 1
 
 Example key-value pairs for a new subscriber coupon could be:
@@ -88,30 +88,29 @@ Example key-value pairs for a new subscriber coupon could be:
 - body: End of Summer Special - Enjoy 10% off Politer games
 - buttonText: Subscribe Now
 - style: promo
-- placement: notification_center
+- class_type: notification_center
 - card_priority: 2
 - terms: new_subscribers_only
 
 Your marketers could make this Content Card available only for a segment of new users. 
 
-You would handle each of the values. Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. You would decide how to render `style` and `placement` on your app or site. 
+You would handle each of the values. Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. You would decide how to render `style` and `class_type` on your app or site. 
 
 {% details Further explanation for Android %}
 
-In the Android and FireOS SDK, the message center logic is driven by the `class_type` that is provided by the key-value pairs from Braze. Using the `createContentCardable` method from our example, you can filter and identify these class types.
+In the Android and FireOS SDK, the message center logic is driven by the `class_type` value that is provided by the key-value pairs from Braze. Using the [`createContentCardable`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide) method, you can filter and identify these class types.
 
 {% tabs %}
 {% tab Kotlin %}
 **Using `class_type` for on click behavior**<br>
-When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to
-store the data.
+When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to store the data.
 
 ```kotlin
  private fun createContentCardable(metadata: Map<String, Any>, type: ContentCardClass?): ContentCardable?{
         return when(type){
             ContentCardClass.AD -> Ad(metadata)
             ContentCardClass.MESSAGE_WEB_VIEW -> WebViewMessage(metadata)
-            ContentCardClass.MESSAGE_FULL_PAGE -> FullPageMessage(metadata)
+            ContentCardClass.NOTIFICATION_CENTER -> FullPageMessage(metadata)
             ContentCardClass.ITEM_GROUP -> Group(metadata)
             ContentCardClass.ITEM_TILE -> Tile(metadata)
             ContentCardClass.COUPON -> Coupon(metadata)
@@ -163,7 +162,7 @@ private ContentCardable createContentCardable(Map<String, ?> metadata,  ContentC
         case ContentCardClass.MESSAGE_WEB_VIEW:{
             return new WebViewMessage(metadata);
         }
-        case ContentCardClass.MESSAGE_FULL_PAGE:{
+        case ContentCardClass.NOTIFICATION_CENTER:{
             return new FullPageMessage(metadata);
         }
         case ContentCardClass.ITEM_GROUP:{

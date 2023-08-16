@@ -8,14 +8,13 @@ channel:
   - content cards
 
 ---
-<br>
-{% alert important %}
-Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
-{% endalert %}
-
 # Advanced implementation guide (optional)
 
 > This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app)! Note that this implementation guide is centered around a Kotlin implementation, but Java snippets are provided for those interested.
+
+{% alert important %}
+Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
+{% endalert %}
 
 ## Code considerations
 
@@ -457,6 +456,10 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 
 Additional relevant resources on this topic are available in this article on [Android Data Binding](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
 
+## Card dismissal
+
+Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.isDismissibleByUser()`][9] method. Cards can be intercepted before display using the [`ContentCardsFragment.setContentCardUpdateHandler()`][8] method.
+
 ## Dark theme customization
 
 By default, Content Card views will automatically respond to Dark Theme changes on the device with a set of themed colors and layout changes. 
@@ -792,6 +795,8 @@ public static final String DISMISSABLE = "dismissable";
 [5]: {% image_buster /assets/img/cc_implementation/html_webview.png %}
 [6]: {% image_buster /assets/img/cc_implementation/android_discount2.png %}
 [7]: {% image_buster /assets/img/cc_implementation/discount.png %}
+[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
+[9]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissible-by-user.html
 [36]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
 [42]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
