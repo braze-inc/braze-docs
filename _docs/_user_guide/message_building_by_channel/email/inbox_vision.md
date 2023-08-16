@@ -23,7 +23,7 @@ Braze then sends an HTML version of your email to various email clients used acr
 Select a tile to view the preview in more detail. Your email must include a subject line and a valid sending domain in order to see these previews. Be mindful of how your email can render different on the desktop versus on mobile devices. As you view these previews, you can review your content and ensure that your email is displaying as intended.
 
 {% alert tip %}
-Use Inbox Vision to test for differences across dark and light modes to ensure you get your emails just right!
+Use Inbox Vision to test for differences across dark and light modes to confirm you get your emails just right!
 {% endalert %}
 
 ![Overview of Inbox Vision for the HTML editor.][1]
@@ -56,7 +56,7 @@ After reviewing these results and making any adjustments to your email campaign,
 
 ## Test accuracy
 
-All of our tests are run through actual email clients. Braze works hard to ensure that all renderings are as accurate as possible. If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).
+All of our tests are run through actual email clients. Braze works hard to check that all renderings are as accurate as possible. If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).
 
 [1]: {% image_buster /assets/img_archive/inboxvision1.png %}
 [2]: {% image_buster /assets/img_archive/inboxvision2.png %}

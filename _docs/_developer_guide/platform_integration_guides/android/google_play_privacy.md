@@ -187,7 +187,7 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td>Device or other IDs</td>
             <td>Device or other IDs</td>
-            <td>Braze generates a device ID to differentiate users' devices, and ensure messages are sent to the correct intended device.</td>
+            <td>Braze generates a device ID to differentiate users' devices, and checks if messages are sent to the correct intended device.</td>
         </tr>
     </tbody>
 </table>

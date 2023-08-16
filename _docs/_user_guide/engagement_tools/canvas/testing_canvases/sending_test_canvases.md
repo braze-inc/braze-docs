@@ -51,7 +51,7 @@ Verify that your test users are receiving the intended messages from your Canvas
 - Aborted messages
 - Push tokens associated with different users
 
-Continue to iterate Canvas testing to ensure your Canvas performs as intended.
+Continue to iterate Canvas testing to make sure your Canvas performs as intended.
 
 ## General tips
 

@@ -12,7 +12,7 @@ channel:
 
 > CSS inlining is a form of email preprocessing that moves styles in a CSS style sheet into the body of an HTML email. The term "inlining" refers to the fact that styles are applied "inline" to individual HTML elements.
 
-For some email clients, CSS inlining can improve the way that emails render and help ensure that your emails look the way you expect.
+For some email clients, CSS inlining can improve the way that emails render and help confirm that your emails look the way you expect.
 
 ## Using CSS inlining
 
@@ -22,7 +22,7 @@ You can control whether CSS inlining is turned on or off for any email message t
 
 ### Default inlining state
 
-You can set a default on or off state globally from **Settings** > **Email Preferences**. Locate the setting for **CSS Inlining**. This setting ensures that all new email messages start with the desired default value. Note that changing this setting will not affect any of your existing email messages. You can also override this default at any time while composing email messages.
+You can set a default on or off state globally from **Settings** > **Email Preferences**. Locate the setting for **CSS Inlining**. This setting determines the desired default value that all new email messages start with. Note that changing this setting will not affect any of your existing email messages. You can also override this default at any time while composing email messages.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Manage Settings** > **Email Settings**.

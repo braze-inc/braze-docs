@@ -14,7 +14,7 @@ page_order: 1
 
 ## Prerequisites
 
-Ensure with your development team that the following is supported within your Shopify store setup. If any of the following is not supported in your Shopify store, the Braze Web SDK via Shopify ScriptTag cannot be supported.
+Confirm with your development team that the following is supported within your Shopify store setup. If any of the following is not supported in your Shopify store, the Braze Web SDK via Shopify ScriptTag cannot be supported.
 
 | Requirement | Description |
 | ----------- | ----------- |
@@ -72,7 +72,7 @@ After you install Braze's Shopify app, you'll be redirected back into Braze. Aft
 
 If you already have the Web SDK installed on your Shopify store, you can still proceed with setting up the Shopify ScriptTag within the onboarding process. During the installation process, Braze will check if there are instances of the Web SDK already available on your Shopify store. 
 
-We'll then add the necessary scripts to ensure you can track the selected events or enable in-browser messaging. 
+We'll then add the necessary scripts to make sure you can track the selected events or enable in-browser messaging. 
 
 It is important to review your existing Web SDK integration for the following items:
 - Web SDK version should be v4.0+
@@ -82,5 +82,5 @@ If the above items are not met, then the Web SDK integration via Shopify ScriptT
 
 #### What if I use a customer data platform like Segment or mParticle?
 
-Ensure that you disable Shopify events you may have been sending through your customer data platform.
+Confirm that you have disabled Shopify events you may have been sending through your customer data platform.
 

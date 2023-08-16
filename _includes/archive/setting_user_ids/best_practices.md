@@ -17,5 +17,5 @@ Please note the following:
   - When you request the user switch, the current session for the previous user is automatically closed and a new session is started. Furthermore, Braze will automatically make a data refresh request for in-app messages and other Braze resources for the new user.
 
 {% alert tip %}
-If you opt to use a hash of a unique identifier as your user ID take care to ensure that you're normalizing the input to your hashing function. For example, if you're going to use a hash of an email address, ensure that you're stripping leading and trailing whitespace from the input, and taking localization into account.
+If you opt to use a hash of a unique identifier as your user ID, be sure that you're normalizing the input to your hashing function. For example, if you're going to use a hash of an email address, confirm that you're stripping leading and trailing whitespace from the input, and taking localization into account.
 {% endalert %}
