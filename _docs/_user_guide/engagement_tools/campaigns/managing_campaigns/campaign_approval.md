@@ -24,11 +24,7 @@ By default, the campaign approval setting is turned off. To enable this feature,
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Manage Settings** > **Approval Workflow**.
 {% endalert %}
 
-{% alert note %}
-Only admins and users with permission to manage approval settings will see this page.
-{% endalert %}
-
-Depending on your team-level permissions, you'll be able to view all or selected campaigns. You'll still be able to save and launch your campaign, but note that the team tag must be set.
+The **Approve and Deny Campaigns** permission can also be applied to workspaces or [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/), or added to a [permission set]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets).
 
 ## Using approvals
 
