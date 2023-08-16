@@ -22,7 +22,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## Step 2: Name your segment
 
-Click <i class="fas fa-plus"></i> **Create Segment** to begin building your segment. Name your segment by describing the type of user you intend to filter for. This will ensure that this segment can accurately be the target of multiple campaigns or Canvases to come. Vague segment titles can cause confusion down the line.
+Click <i class="fas fa-plus"></i> **Create Segment** to begin building your segment. Name your segment by describing the type of user you intend to filter for. This will ensure that this segment can accurately be the target of multiple campaigns or Canvases to come. Vague segment titles can cause confusion down the line. 
 
 Optionally, you can add a description to the segment to provide more details about the intention of this audience and leave notes for other team members to refer back to.
 
