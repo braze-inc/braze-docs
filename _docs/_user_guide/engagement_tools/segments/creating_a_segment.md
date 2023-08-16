@@ -77,6 +77,8 @@ When a user doesn’t match part or all of the segment, filter, or app criteria,
 
 You can create single user segments (or segments of a handful of users) using unique attributes that identify users, like a user name or a user ID.
 
+<!-- Test -->
+
 However, the segmentation stats or preview may not show this individual user because segment stats are calculated based on a random sample with a 95% confidence interval that the result is within +/- 1%. The larger your user base is, the more likely it is that the size of your segment is a rough estimate. To ensure that your segment contains the single user you are targeting, click **Calculate Exact Statistics** on the **Segment Details** page. This will calculate the exact number of users in your segment with greater than 99.999% accuracy.
 
 Braze has testing filters to target specific users by user ID or email address.
