@@ -80,7 +80,7 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% subtab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE);
+Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_INT_VALUE);
 // Integer attributes may also be incremented using code like the following:
 Braze.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE);
 ```
@@ -89,7 +89,7 @@ Braze.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_a
 {% subtab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE)
+Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_INT_VALUE)
 // Integer attributes may also be incremented using code like the following:
 Braze.getInstance(context).currentUser?.incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE)
 ```
