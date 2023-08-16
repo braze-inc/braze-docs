@@ -16,7 +16,9 @@ platform:
 
 > This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases: banner images, a message inbox, and a carousel of images.
 
-Braze provides four [Content Card types][1]: `banner`, `captionedImage`, `classic`, and `classicImage`. These can be used as a starting place for your implementations, tweaking their look and feel. You can also display Content Cards in a completely custom manner by using your own presentation UI populated with data from the Braze models; parse the Content Card objects and extract payload data such as `title`, `cardDescription`, and `imageUrl`. Then, you can use the resulting model data to populate your custom UI&mdash;the "run" phase of the [crawl, walk, run approach][2].
+Braze provides different [Content Card types][1]: `banner`, `captionedImage`, `classic`, `classicImage`, and `control`. These can be used as a starting place for your implementations, tweaking their look and feel. 
+
+You can also display Content Cards in a completely custom manner by creating your own presentation UI populated with data from the Braze models. Parse the Content Card objects and extract their payload data. Then, use the resulting model data to populate your custom UI&mdash;the "run" phase of the [crawl, walk, run approach][2].
 
 {% alert note %}
 Each default Content Card type is a subclass which inherits different properties from the generic Content Card model class. Understanding these inherited properties will be useful during customization. Refer to the Card class documentation for full details ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard), [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html)). 
@@ -61,7 +63,7 @@ Content Card impressions, clicks, and dismissals are not automatically logged in
 
 ## Content Card placements
 
-This section provides an overview of the three most common ways to place Content Cards within your app or site. For each of these placements, you will assign [key-value pairs][7] (the `extras` property in the data model) to your Content Cards, and based on the values, dynamically adjust the card's behavior, appearance, or functionality during runtime. 
+Content Cards can be used in many different ways. Three common implementations are to use them as a message center, a banner ad, or an image carousel. For each of these placements, you will assign [key-value pairs][7] (the `extras` property in the data model) to your Content Cards, and based on the values, dynamically adjust the card's behavior, appearance, or functionality during runtime. 
 
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -94,6 +96,130 @@ Your marketers could make this Content Card available only for a segment of new 
 
 You would handle each of the values. Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. You would decide how to render `style` and `placement` on your app or site. 
 
+{% details Further explanation for Android %}
+
+In the Android and FireOS SDK, the message center logic is driven by the `class_type` that is provided by the key-value pairs from Braze. Using the `createContentCardable` method from our example, you can filter and identify these class types.
+
+{% tabs %}
+{% tab Kotlin %}
+**Using `class_type` for on click behavior**<br>
+When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to
+store the data.
+
+```kotlin
+ private fun createContentCardable(metadata: Map<String, Any>, type: ContentCardClass?): ContentCardable?{
+        return when(type){
+            ContentCardClass.AD -> Ad(metadata)
+            ContentCardClass.MESSAGE_WEB_VIEW -> WebViewMessage(metadata)
+            ContentCardClass.MESSAGE_FULL_PAGE -> FullPageMessage(metadata)
+            ContentCardClass.ITEM_GROUP -> Group(metadata)
+            ContentCardClass.ITEM_TILE -> Tile(metadata)
+            ContentCardClass.COUPON -> Coupon(metadata)
+            else -> null
+        }
+    }
+```
+
+Then, when handling the user interaction with the message list, we can use the message's type to determine which view to display to the user.
+
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //...
+        listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+           when (val card = dataProvider[position]){
+                is WebViewMessage -> {
+                    val intent = Intent(this, WebViewActivity::class.java)
+                    val bundle = Bundle()
+                    bundle.putString(WebViewActivity.INTENT_PAYLOAD, card.contentString)
+                    intent.putExtras(bundle)
+                    startActivity(intent)
+                }
+                is FullPageMessage -> {
+                    val intent = Intent(this, FullPageContentCard::class.java)
+                    val bundle = Bundle()
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_IMAGE, card.icon)
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_TITLE, card.messageTitle)
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_DESCRIPTION, card.cardDescription)
+                    intent.putExtras(bundle)
+                    startActivity(intent)
+                }
+            }
+
+        }
+    }
+```
+{% endtab %}
+{% tab Java %}
+**Using `class_type` for on click behavior**<br>
+When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to store the data.
+
+```java
+private ContentCardable createContentCardable(Map<String, ?> metadata,  ContentCardClass type){
+    switch(type){
+        case ContentCardClass.AD:{
+            return new Ad(metadata);
+        }
+        case ContentCardClass.MESSAGE_WEB_VIEW:{
+            return new WebViewMessage(metadata);
+        }
+        case ContentCardClass.MESSAGE_FULL_PAGE:{
+            return new FullPageMessage(metadata);
+        }
+        case ContentCardClass.ITEM_GROUP:{
+            return new Group(metadata);
+        }
+        case ContentCardClass.ITEM_TILE:{
+            return new Tile(metadata);
+        }
+        case ContentCardClass.COUPON:{
+            return new Coupon(metadata);
+        }
+        default:{
+            return null;
+        }
+    }
+}
+
+```
+
+Then, when handling the user interaction with the message list, we can use the message's type to determine which view to display to the user.
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState)
+        //...
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+               ContentCardable card = dataProvider.get(position);
+               if (card instanceof WebViewMessage){
+                    Bundle intent = new Intent(this, WebViewActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString(WebViewActivity.INTENT_PAYLOAD, card.getContentString());
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+                else if (card instanceof FullPageMessage){
+                    Intent intent = new Intent(this, FullPageContentCard.class);
+                    Bundle bundle = Bundle();
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_IMAGE, card.getIcon());
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_TITLE, card.getMessageTitle());
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_DESCRIPTION, card.getCardDescription());
+                    intent.putExtras(bundle)
+                    startActivity(intent)
+                }
+            }
+
+        });
+    }
+```
+
+{% endtab %}
+{% endtabs %}
+{% enddetails %}
+
 ### Carousel
 
 Content Cards can be set in a carousel feed where a user can swipe horizontally to view additional featured cards. 
@@ -106,7 +232,7 @@ If you're implementing a carousel as a secondary Content Cards feed, refer to [C
 
 ### Banner
 
-Content Cards don't have to look like "cards." For example, Content Cards can appear as a dynamic banner that persistently displays on your home page or at the top of other designated pages.
+Content Cards don't have to look like "cards." For example, Content Cards can appear as a dynamic banner that persistently displays on your home page or at the top of designated pages.
 
 To achieve this, your marketers will create a campaign or Canvas step with a **Banner** type of Content Card. Then, set key-value pairs that are appropriate for using [Content Cards as supplemental content][4].
 

@@ -106,7 +106,7 @@ Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscribe
 {% endtab %}
 {% tab iOS %}
 
-To access the Content Cards data model, call `contentCards.cards` on your `braze` instance.
+To access the Content Cards data model, call [`contentCards.cards`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/cards) on your `braze` instance.
 
 {% subtabs local %}
 {% subtab Swift %}
@@ -143,7 +143,7 @@ let stream: AsyncStream<[Braze.ContentCard]> = AppDelegate.braze?.contentCards.c
 NSArray<BRZContentCardRaw *> *contentCards = AppDelegate.braze.contentCards.cards;
 ```
 
-Additionally, if you wish to maintain a subscription to your content cards, you can call `subscribeToUpdates`:
+Additionally, if you wish to maintain a subscription to your content cards, you can call [`subscribeToUpdates`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)):
 
 ```objc
 // This subscription is maintained through Braze cancellable, which will continue to observe for changes until the subscription is cancelled.
@@ -181,7 +181,9 @@ braze.subscribeToContentCardsUpdates((updates) => {
 braze.openSession();
 ```
 
-> Content Cards will only refresh on session start if a subscribe request is called before `openSession()`. You can always choose to [manually refresh the feed]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed) as well.
+{% alert note %}
+Content Cards will only refresh on session start if a subscribe request is called before `openSession()`. You can always choose to [manually refresh the feed]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed) as well.
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -193,8 +195,6 @@ braze.openSession();
 
 Logging valuable metrics like impressions, clicks, and dismissals is quick and simple. Set a custom click listener to manually handle these analytics.
 
-<!-- JOSH TO DO: Reminder: When you remove the information from the Android guide that is duplicative with this article, move the Helper file information from Advanced Integration Guide into the Integration section --->
-
 {% tabs %}
 {% tab Android %}
 
@@ -202,9 +202,9 @@ The [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-de
 
 To log an impression or click on a card, call [`Card.logClick()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html) or [`Card.logImpression()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html) respectively. 
 
-You can manually log or set a Content Card as "dismissed" to Braze for a particular card with [`setIsDismissed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissed.html). If a card is already marked as dismissed, it cannot be marked as dismissed again.
+You can manually log or set a Content Card as "dismissed" to Braze for a particular card with [`isDismissed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissed.html). If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
-To create a custom click listener, create a class that implements [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html) and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a Content Card. Then, instruct Braze to use your Content Card click listener. 
+To create a custom click listener, create a class that implements [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html) and register it with `BrazeContentCardsManager`. Implement the [`onContentCardClicked()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/on-content-card-clicked.html) method, which will be called when the user clicks a Content Card. Then, instruct Braze to use your Content Card click listener. 
 
 {% subtabs local %}
 {% subtab Java %}

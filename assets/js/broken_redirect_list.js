@@ -865,7 +865,7 @@ validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_purchases/predic
 validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_purchases/messaging_users'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_events/messaging_users/';
 validurls['/docs/copying_to_workspace'] = '/docs/copying_to_workspaces/';
 validurls['/docs/developer_guide/platform_wide/feature_flags/use_cases/'] = '/docs/developer_guide/platform_wide/feature_flags/about/';
-validurls['/docs/user_guide/message_building_by_channel/content_cards/customize/'] = '/docs/developer_guide/customization_guides/content_cards/';
+validurls['/docs/user_guide/message_building_by_channel/content_cards/customize/'] = '/docs/developer_guide/customization_guides/customization_overview';
 
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/mparticle/'] = '/docs/partners/mparticle/';
 validurls['/docs/partners/message_personalization/yotpo/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/';
@@ -879,4 +879,11 @@ validurls['/docs/user_guide/onboarding_with_braze/overview'] = '/docs/user_guide
 validurls['/docs/api/objects_filters/user_attributes/object/'] = '/docs/api/objects_filters/user_attributes_object/';
 validurls['/docs/user_guide/administrative/access_braze/resetting_your_password/'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/#resetting-your-password/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/ios_14/'] = '/docs/ios_14/';
+
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/refreshing_the_feed'] = '/docs/developer_guide/customization_guides/content_cards/customizing_feed/#refreshing-the-feed';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/default_feed/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_feed/';
+validurls['docs/developer_guide/platform_integration_guides/android/content_cards/customization'] = '/docs/developer_guide/customization_guides/customization_overview/';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_styles/';
+
 

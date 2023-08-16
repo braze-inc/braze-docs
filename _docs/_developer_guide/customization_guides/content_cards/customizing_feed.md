@@ -14,7 +14,7 @@ platform:
 
 # Customizing the default Content Card feed
 
-> Content Cards are interactive, visually appealing elements that can be used to deliver personalized and engaging content to users. A Content Card feed is the sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages.
+> A Content Card feed is the sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages.
 
 ## Refreshing the feed
 
@@ -52,7 +52,7 @@ Braze.getInstance(context).requestContentCardsRefresh()
 {% endtab %}
 {% tab iOS %}
 
-Request a manual refresh of Braze Content Cards from the Swift SDK at any time by calling the `requestRefresh` method on the [`Braze.ContentCards`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class) class:
+Request a manual refresh of Braze Content Cards from the Swift SDK at any time by calling the [`requestRefresh`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/requestrefresh(_:)) method on the [`Braze.ContentCards`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class) class:
 
 {% subtabs local %}
 {% subtab Swift %}
@@ -113,9 +113,7 @@ You can change the order in which your Content Cards are displayed. This allows 
 {% tabs %}
 {% tab Android %}
 
-The [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) relies on a [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html) on your [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html).
-
-Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html) and performing any logic you'd like in the update handler.
+The [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) relies on a [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html) on your `ContentCardsFragment`.
 
 The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customizations:
 
@@ -261,7 +259,7 @@ The `ContentCardsFragment` source can be found on [GitHub](https://github.com/br
 {% subtabs %}
 {% subtab Swift %}
 
-Customize the card feed order by directly modifying the static `Attributes.defaults` variable.
+Customize the card feed order by directly modifying the static [`Attributes.defaults`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/defaults) variable.
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -335,7 +333,7 @@ For more information on customizing Content Card style elements, see [Customizin
 {% subtabs local %}
 {% subtab Swift %}
 
-Customize the view controller empty state by setting the related Attributes.
+Customize the view controller empty state by setting the related [`Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/defaults).
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -365,26 +363,26 @@ The Web SDK does not support replacing the "empty feed" language programmaticall
 
 ## Multiple feeds
 
-Content Cards can be filtered on your app so that only specific cards are displayed, enabling you to have multiple Content Card feeds for different use cases. For example, you can maintain both a transactional feed and a marketing feed.
+Content Cards can be filtered on your app so that only specific cards are displayed, enabling you to have multiple Content Card feeds for different use cases. For example, you can maintain both a transactional feed and a marketing feed. To accomplish this, create different categories of Content Cards by setting key-value pairs in the Braze dashboard. Then, create feeds in your app or site that treat these types of Content Cards differently, filtering out some types and displaying others.
 
 ### Step 1: Set key-value pairs on cards
 
-When creating a Content Card campaign, set [key-value pair data]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/) on each card. Our filtering logic will use this key-value pair to categorize cards. 
+When creating a Content Card campaign, set [key-value pair data]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/) on each card. You will use this key-value pair to categorize cards. Key-value pairs are stored in the `extras` property in the card's data model.
 
 For this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be, such as `home_screen` or `marketing`.
 
 ### Step 2: Filter Content Cards
 
-Once key-value pairs have been assigned, create a feed with logic that will display the cards you wish to display and filter cards of other types. In this example, we will only display cards with a matching key-value pair of `feed_type: "Transactional"` in the `extras` dictionary.
+Once key-value pairs have been assigned, create a feed with logic that will display the cards you wish to display and filter cards of other types. In this example, we will only display cards with a matching key-value pair of `feed_type: "Transactional"`.
 
 {% tabs %}
 {% tab Android %}
 
-Your Content Card feed is displayed in a [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html).
+Filtering out Content Cards can be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html) and filtering (or performing any other logic you'd like) using a custom update handler.
 
-The default `IContentCardsUpdateHandler` takes a [`ContentCardsUpdatedEvent`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html) from the Braze SDK and returns a list of cards to display, but only sorts cards and doesn't perform any removals or filtering on its own.
+To elaborate, your Content Card feed is displayed in a [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html). The default `IContentCardsUpdateHandler` takes a [`ContentCardsUpdatedEvent`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html) from the Braze SDK and returns a list of cards to display, but only sorts cards and doesn't perform any removals or filtering on its own.
 
-To perform filtering on a `ContentCardsFragment`, create a custom [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html). Modify this `IContentCardsUpdateHandler` to remove any cards from the list that don't match our desired value for the `feed_type` that we set earlier. For example:
+To allow a `ContentCardsFragment` to filter, create a custom [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html). Modify this `IContentCardsUpdateHandler` to remove any cards from the list that don't match our desired value for the `feed_type` that we set earlier. For example:
 
 {% subtabs local %}
 {% subtab Java %}
@@ -507,7 +505,7 @@ The following example will show the Content Cards feed for `Transactional` type 
 let transactionalCards = cards.filter { $0.extras["feed_type"] as? String == "Transactional" }
 ```
 
-To take it a step further with Content Cards UI, you can access the `transform` property on your `Attributes` struct to display only the cards filtered by your criteria.
+To take it a step further, the cards presented in the view controller can be filtered by setting the `transform` property on your `Attributes` struct to display only the cards filtered by your criteria.
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -565,8 +563,5 @@ For more information, see the [SDK method documentation](https://js.appboycdn.co
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Set key-value pairs in your campaign 
-
-When creating a Content Card campaign, your marketers will set a key-value pair where `feed_type` is the key and `Transactional` is the value.
 
 [1]: {% image_buster/assets/img/content_cards/content-card-customization-empty.png %}

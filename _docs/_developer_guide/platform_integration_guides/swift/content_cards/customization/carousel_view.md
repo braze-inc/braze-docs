@@ -44,7 +44,7 @@ Implement logic that observes for [changes in your Content Cards]({{site.baseurl
 
 With that said, you could order and apply additional display logic in a variety of ways. For example, you could select the first five Content Card objects from the array or introduce key-value pairs (the `extras` property in the data model) to build conditional logic around.
 
-If you're implementing a carousel as a secondary Content Cards feed, refer to [Using multiple Content Card feeds]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/multiple_feeds/) to ensure you sort cards into the correct feed based on key-value pairs.
+If you're implementing a carousel as a secondary Content Cards feed, refer to [Customizing the default Content Card feed]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/multiple_feeds/) to ensure you sort cards into the correct feed based on key-value pairs.
 
 {% alert important %}
 It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g., `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs that the developers build into the app logic.
