@@ -161,6 +161,5 @@ If you use a custom integration for Content Cards, you need need [log impression
 To determine if a Content Card is in the Control group for an A/B test, check the `card.isControl` property (Web SDK v4.5.0+) or check if the card is a `ControlCard` instance (`card instanceof braze.ControlCard`).
 
 {% alert note %}
-Visit the following customization articles for documentation on adding [custom styling]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles/), [custom behavior]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/), [multiple card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/), and [completely custom UI]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards/).
+Ready to go further? Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/docs/developer_guide/customization_guides/content_cards) to get started with customization.
 {% endalert %}
-

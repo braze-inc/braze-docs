@@ -209,3 +209,7 @@ func presentModalViewController() {
 {% endtabs %}
 
 For example usage of `BrazeUI` view controllers, check out the corresponding Content Cards UI samples in our [Examples app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
+
+{% alert note %}
+Ready to go further? Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/docs/developer_guide/customization_guides/content_cards) to get started with customization.
+{% endalert %}

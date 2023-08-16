@@ -19,11 +19,9 @@ In Android, the Content Cards feed is implemented as a [fragment][2] available i
 
 The [`ContentCardsFragment`][4] class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's `ContentCards` are created on the Braze dashboard.
 
-## Content Cards data model
+## Content Card data model {#card-types-for-android}
 
-The Content Cards data model is available in the Android SDK.
-
-## Content Card model {#card-types-for-android}
+The Content Cards data model is available in the Android SDK. For a full reference of the Content Card data model, see the [SDK reference documentation][1].
 
 Braze has three unique Content Cards card types that share a base model: banner, captioned image, and classic. Each type inherits common properties from a base model and has the following additional properties.
 
@@ -92,90 +90,14 @@ All `Card` data model objects offer the following analytics methods for logging 
 |`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Subscribing to Content Card updates {#subscribing-to-content-card-updates}
+{% alert note %}
+Ready to go further? Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/docs/developer_guide/customization_guides/content_cards) to get started with customization.
+{% endalert %}
 
-If you want to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's Content Cards models, you need to subscribe to Content Card updates and use the resulting model data to populate your views. You also need to log analytics on the model objects as users interact with your views.
-
-First, declare a private variable in your custom class to hold your subscriber:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-// subscriber variable
-private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscriber;
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-private var contentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
-```
-
-{% endtab %}
-{% endtabs %}
-
-Next, add the following code to subscribe to Content Card updates from Braze, typically inside of your custom Content Cards activity's `Activity.onCreate()`:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-// Remove the previous subscriber before rebuilding a new one with our new activity.
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
-mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
-    @Override
-    public void trigger(ContentCardsUpdatedEvent event) {
-        // List of all Content Cards
-        List<Card> allCards = event.getAllCards();
-
-        // Your logic below
-    }
-};
-Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
-Braze.getInstance(context).requestContentCardsRefresh();
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-// Remove the previous subscriber before rebuilding a new one with our new activity.
-Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
-contentCardsUpdatedSubscriber = IEventSubscriber { event ->
-  // List of all Content Cards
-  val allCards = event.allCards
-
-  // Your logic below
-}
-Braze.getInstance(context).subscribeToContentCardsUpdates(contentCardsUpdatedSubscriber)
-Braze.getInstance(context).requestContentCardsRefresh()
-```
-
-{% endtab %}
-{% endtabs %}
-
-We also recommend unsubscribing when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
-```
-
-{% endtab %}
-{% endtabs %}
-
-
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html
+[2]: https://developer.android.com/guide/components/fragments.html
+[3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
 [7]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html
 [8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html
 [55]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-control.html
@@ -185,6 +107,3 @@ Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscribe
 [31]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
 [32]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
 [41]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
-[2]: https://developer.android.com/guide/components/fragments.html
-[3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
-[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
