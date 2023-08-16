@@ -18,7 +18,7 @@ platform:
 
 ## Key-value pairs
 
-Braze enables you to send extra data payloads to user devices using key-value pairs. These can help you track internal metrics, update app content, and customize properties. [Add key-value pairs using the dashboard][9]. 
+Braze enables you to send extra data payloads via Content Cards to user devices using key-value pairs. These can help you track internal metrics, update app content, and customize properties. [Add key-value pairs using the dashboard][9]. 
  
 {% alert note %}
 We do not recommend sending nested JSON values as key-value pairs. Instead, flatten the JSON before sending it. 
@@ -42,8 +42,8 @@ Key-value pairs are stored on <a href="https://js.appboycdn.com/web-sdk/latest/d
 {% endtab %}
 {% endtabs %}
 
-{% alert important %}
-It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g., `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs that developers build into the app logic.
+{% alert tip %}
+It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (for example, `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs that developers build into the app logic.
 {% endalert %}
 
 ## Content Cards as supplemental content
@@ -69,7 +69,7 @@ The key-value pairs for this use case include a `discount_percentage` set as the
 <br>
 <br>
 
-![][5]{: style="max-width:70%;"} 
+![][5]{: style="max-width:80%;"} 
 
 ## Content card badges
 
@@ -169,4 +169,4 @@ You can then use this information to display a badge signifying how many unread 
 [6]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/#content-cards
 [7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/
 [8]: {% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create#step-3-compose-a-content-card
+[9]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create#step-3-compose-a-content-card/#step-4-configure-additional-settings-optional
