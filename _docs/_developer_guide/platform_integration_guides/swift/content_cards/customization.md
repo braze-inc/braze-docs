@@ -13,6 +13,9 @@ description: "This landing page covers the Braze iOS Swift SDK Content Card cust
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
+  - name: Custom Styling
+    link: /docs/developer_guide/platform_integration_guides/swift/content_cards/customization/custom_styling/
+    fa_icon: fa fa-paint-brush
   - name: Customizing Feed
     link: /docs/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/
     fa_icon: fa fa-cog
