@@ -36,11 +36,17 @@ To get start, log into your [Ketch instance](https://app.ketch.com)
 
 
 ### Step 2: Configuring Subscription Preferences
-1. To configure Subscriptions in Ketch, go to **Policy Center > Subsriptions**. If you do not see the subscriptions tab under policy center, please make sure you have purchased the marketing preference center and verify that you have the correct account permissions to access this portion of the product.<br><br> 
+1. To configure Subscriptions in Ketch, go to **Policy Center > Subsriptions**. If you do not see the subscriptions tab under Policy Center, please make sure you have purchased the marketing preference center and verify that you have the correct account permissions to access this portion of the product.<br><br> 
 2. The subscriptions tab displays the available subscriptions. Each subscription represents a specific marketing category, while the channels under each topic represent the medium by which your users will be contacted on those topics. There is also the Global Control tab which controls the universal opt-outs from your user.<br><br> 
 3. To create a topic, you can click the create new subscription button. Each subscription will have a name and a code, the code will be how each subscription gets referred to when referenced by the API. You can also add language translations for each of your topics in case this marketing preference center is deployed to sites supporting multiple languages. Next, you will want to add the channels which you send the subscription topics through. For each channel that you enable, that option will show up in the marketing preference center for your users.<br><br>
 4. Under each channel that you enable, you can also add the details of how you want the Ketch preference center to orchestrate the signals of that particular opt-in or opt-out.<br><br>
-5. For the integration with Braze, select the Braze connection you would like to orchestrate the opt-in and opt-out signals.<br><br>
+5. For the integration with Braze, select the Braze connection you would like to orchestrate the opt-in and opt-out signals, and then fill in the `subscription_group_id` for the particular subscription group you want to propagate the user preferences to in Braze.<br><br>
+
+{% raw %}
+```
+![Braze Subscription Group ID][1]
+```
+{% endraw %}
 
 
 {% alert note %}
@@ -55,4 +61,8 @@ The ability for an end user to see marketing preference center is gated behind w
 3. Head over to the **Experience Server > Properties** and edit the desired property. Under the data layer for that property, make sure you enable custom identity space and then configure how the marketing preference identity that you have configured earlier is captured on this site.<br><br>
 4. Once you have the identity space configured, you can then open the preference center on the site where the ketch tag has been deployed, and test to see if the preference center shows up.<br><br>
 
-
+{% raw %}
+```
+[1]: {% image_buster /assets/img/ketch/ketch1.png %}
+```
+{% endraw %}
