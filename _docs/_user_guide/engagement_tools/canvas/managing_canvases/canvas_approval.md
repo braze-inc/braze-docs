@@ -23,7 +23,9 @@ Be sure to check that you have the proper [user permissions]({{site.baseurl}}/us
 
 ### Setting user permissions
 
-After the approval workflow for Canvas has been turned on, go to **Settings** > **Company Users** and select **Approve and Deny Canvases** to allow specific users to approve and deny Canvases immediately. A user with this permission can do any of the following actions in the Canvas workflow:
+After the approval workflow for Canvas has been turned on, go to **Settings** > **Company Users** and select **Approve and Deny Canvases** to allow specific users to approve and deny Canvases immediately. This permission can also be applied to workspaces or [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/), or added to a [permission set]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets).
+
+A user with this permission can do any of the following actions in the Canvas workflow:
 - Approve but not launch the Canvas
 - Launch but not approve the Canvas
 - Approve and launch the Canvas
@@ -36,8 +38,6 @@ To edit a live campaign, you will need the "Approve and Deny Campaigns" permissi
 {% endalert %}
 
 ## Using approvals
-
-To use the approval workflow, you must have the **Approve and Deny Canvases** permission. This permission controls who can update the approval status of a Canvas. This permission can also be applied to workspaces or [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/), or added to a [permission set]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets).
 
 When you have the **Approve and Deny Canvases** permission, you'll have access to the **Summary** step of the Canvas builder. This page provides a summary of the key Canvas details with the option to approve or deny these details, including conversion events, entry schedule, and the type and amount of components in your Canvas. Note the default state for Canvas approval is **Pending Approval**.
 
