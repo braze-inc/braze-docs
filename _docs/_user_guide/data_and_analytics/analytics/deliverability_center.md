@@ -57,7 +57,7 @@ Use the following table to help monitor and understand your domain reputation le
 
 #### Authentication
 
-You can use the authentication dashboard to review the percentage of emails that have passed SPF (Sender Policy Framework), DKIM (DomainKeys Identified Mail), and DMARC (Domain-based Message Authentication, Reporting and Conformance).
+You can use the authentication dashboard to review the percentage of emails that have passed Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting and Conformance (DMARC).
 
 | Graph Type | Definition |
 | ----- | ---------- |
