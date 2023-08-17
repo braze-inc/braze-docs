@@ -1114,19 +1114,7 @@ $( document ).ready(function() {
     var user_subject = $('#ticket_subject').val();
 
     var user_issue = $('#ticket_issue').val();
-    //var user_comments = mform.find('#ticket_comment').val();
 
-
-    var userinfo = '';
-
-    userinfo += "Question:\n" + user_issue ; //+  "\n\nComments: " + user_comments;
-    // userinfo += "\n\nAllow dashboard Access: ";
-    // if($("#all_dashboard").is(':checked')) {
-    //   userinfo += 'Yes'
-    // }
-    // else {
-    //   userinfo += 'No'
-    // }
     var sf_submit = new iframeform('https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8');
 
     sf_submit.addParameter('orgid','00Dd0000000e3l4');
@@ -1137,7 +1125,7 @@ $( document ).ready(function() {
     if (user_ccemail) {
       sf_submit.addParameter('00N0V000008wX0Y',user_ccemail);
     }
-    sf_submit.addBodyText('description',userinfo);
+    sf_submit.addBodyText('description',user_issue);
     $.each(sels,function(k,v){
       var selopt = $(this);
       var selval = selopt.find(':selected');
@@ -1160,7 +1148,7 @@ $( document ).ready(function() {
     if (user_ccemail) {
       gs_submit.addParameter('CC_Email',user_ccemail);
     }
-    gs_submit.addBodyText('Question', userinfo);
+    gs_submit.addBodyText('Question', user_issue);
     var gs_mapping = {
       "00N0V000009G0MG" : "Topic", // Topic
       "00N0V000009G0MB" : "Category",  // Category
