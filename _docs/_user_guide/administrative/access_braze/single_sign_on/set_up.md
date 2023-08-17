@@ -47,7 +47,7 @@ If you plan on using Okta as your identity provider, make sure to use the pre-bu
 Braze only requires `email` in the SAML Assertion.
 {% endalert %}
 
-### Step 2. Configure Braze
+### Step 2: Configure Braze
 
 When you finish setting up Braze in your IdP, your IdP will provide you with a Target URL and `x.509` certificate to input into your Braze account. 
 
