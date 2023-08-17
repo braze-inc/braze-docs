@@ -76,7 +76,7 @@ Make sure that your `x.509` certificate follows this format when adding it to th
 
 ![Opening Security Settings and adding SAML SSO details]({% image_buster /assets/img/samlsso.gif %})
 
-### Step 3. Sign into Braze
+### Step 3: Sign into Braze
 
 Save your Security Settings and log out, then sign back in with your IdP.
 
