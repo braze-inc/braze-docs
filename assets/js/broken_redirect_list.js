@@ -899,4 +899,4 @@ validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/c
 validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling/'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
 validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_behavior/';
 validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_styles/';
-
+validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/'] = '/docs/developer_guide/customization_guides/content_cards/';
