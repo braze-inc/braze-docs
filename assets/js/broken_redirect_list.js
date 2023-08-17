@@ -900,3 +900,10 @@ validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/c
 validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_behavior/';
 validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_styles/';
 validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/'] = '/docs/developer_guide/customization_guides/content_cards/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/'] = '/docs/developer_guide/customization_guides/content_cards/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_styles/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/handling_clicks_manually/'] = '/docs/developer_guide/customization_guides/content_cards/logging_analytics/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/read_unread_indicators/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_styles/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/badges/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_behavior/#content-card-badges';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/carousel_view/'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/implementation_guide/'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
