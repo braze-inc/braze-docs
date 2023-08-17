@@ -120,7 +120,7 @@ Check the appropriate box for the object create notifications, as well as the AR
 
 ### Configuring auto-ingest Snowpipes {#auto-ingest-snowpipes}
 
-To make sure the AWS SQS queues configuration produces the correct tables, you must define the structure of the incoming data properly by using the following examples and schemas determined in our Currents documentation for [Message Engagement or Messaging Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), [User or Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/), or both.
+To make sure the AWS SQS configuration produces the correct tables, you must define the structure of the incoming data properly by using the following examples and schemas determined in our Currents documentation for [Message Engagement or Messaging Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), [User or Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/), or both.
 
 It is critical to structure your tables in accordance with the Braze Currents schemas, as Braze Currents will continuously load data into them via specific fields with specific data types. For example, a `user_id` will be loaded as a string and called a `user_id` in Currents data.
 
