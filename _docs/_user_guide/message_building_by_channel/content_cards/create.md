@@ -127,7 +127,7 @@ Each user is eligible to receive up to 100 non-expired and non-dismissed Content
 
 ## Step 4: Configure additional settings (optional)
 
-You can use [key-value pairs][19] to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/docs/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) and customize how cards are sorted.
+You can use [key-value pairs][19] to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) and customize how cards are sorted.
 
 To add key-value pairs to your message, switch to the **Settings** tab and click **Add New Pair**.
 
