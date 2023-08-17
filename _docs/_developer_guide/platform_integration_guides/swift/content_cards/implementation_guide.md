@@ -19,7 +19,7 @@ Each use case offers a explanation and a look into how Content Card variables ma
 - [Interactive Content Cards](#interactive-content-cards)
 
 {% alert important %}
-Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/).
+Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/).<br><br>More information on customizing Content Cards can be found in the [Customization Guide.]({{site.baseurl}}/developer_guide/customization_guides/content_cards)
 {% endalert %}
 
 ## Content Cards as supplemental content
