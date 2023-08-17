@@ -23,7 +23,9 @@ The [`ContentCardsFragment`][4] class will automatically refresh and display the
 
 The Content Cards data model is available in the Android SDK. For a full reference of the Content Card data model, see the [SDK reference documentation][1].
 
-Braze has three unique Content Cards card types that share a base model: banner, captioned image, and classic. Each type inherits common properties from a base model and has the following additional properties.
+Braze has four unique Content Cards card types that share a base model: [banner][30], [captioned image][31], [classic (text announcement)][32], and [classic (short news)][41]. Each type inherits common properties from a base model and has the following additional properties.
+
+See [Logging analytics]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics) for information on subscribing to card data.
 
 ### Base Content Card model properties {#base-card-for-android}
 
@@ -55,7 +57,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 ### Captioned image card properties {#captioned-image-card-for-android}
 
-[Captioned image cards][31] are clickable full-sized images with accompanying descriptive text.
+[Captioned image cards][31] are clickable, full-sized images with accompanying descriptive text.
 
 |Property | Description |
 |---|---|
@@ -81,7 +83,7 @@ A classic card without an image included will result in a [text announcement car
 
 ## Card methods
 
-All `Card` data model objects offer the following analytics methods for logging user events to Braze servers.
+All [`Card`][1] data model objects offer the following analytics methods for logging user events to Braze servers.
 
 |Method | Description |
 |---|---|
@@ -91,7 +93,7 @@ All `Card` data model objects offer the following analytics methods for logging 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-Ready to go further? Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/docs/developer_guide/customization_guides/content_cards) to get started with customization.
+Ready to go further? Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards) to get started with customization.
 {% endalert %}
 
 [1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html
