@@ -29,7 +29,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## SAML SSO setup
 
-### Step 1. Configure your identity provider
+### Step 1: Configure your identity provider
 
 Set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the following information. In addition, set up SAML attribute mapping.
 
