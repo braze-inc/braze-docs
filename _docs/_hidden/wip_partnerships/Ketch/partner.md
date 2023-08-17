@@ -40,7 +40,7 @@ To get start, log into your [Ketch instance](https://app.ketch.com)
 2. The subscriptions tab displays the available subscriptions. Each subscription represents a specific marketing category, while the channels under each topic represent the medium by which your users will be contacted on those topics. There is also the Global Control tab which controls the universal opt-outs from your user.<br><br> 
 3. To create a topic, you can click the create new subscription button. Each subscription will have a name and a code, the code will be how each subscription gets referred to when referenced by the API. You can also add language translations for each of your topics in case this marketing preference center is deployed to sites supporting multiple languages. Next, you will want to add the channels which you send the subscription topics through. For each channel that you enable, that option will show up in the marketing preference center for your users.<br><br>
 4. Under each channel that you enable, you can also add the details of how you want the Ketch preference center to orchestrate the signals of that particular opt-in or opt-out.<br><br>
-5. For the integration with Braze, select the Braze connection you would like to orchestrate the opt-in and opt-out signals, and then fill in the `subscription_group_id` for the particular subscription group you want to propagate the user preferences to in Braze. Ketch will subsequently use the `user.track` and `subscriptions` REST API endpoints in Braze to orchestrate user preference signals.<br><br>
+5. For the integration with Braze, select the Braze connection you would like to orchestrate the opt-in and opt-out signals, and then fill in the `subscription_group_id` for the particular subscription group you want to propagate the user preferences to in Braze. Ketch will subsequently use the `user.track`, `subscriptions`, and `email` REST API endpoints in Braze to orchestrate user preference signals. Ketch will also occasionally use the `users` endpoint to validate propagated signals.<br><br>
 
 {% raw %}
 ```
@@ -50,7 +50,7 @@ To get start, log into your [Ketch instance](https://app.ketch.com)
 
 
 {% alert note %}
-In order for Subscription Preferences to collect and orchestrate user opt-in and opt-out signals, identities must be properly configured. We recommend configuring email as the identity to orchestrate user preference signals for this integration
+In order for Subscription Preferences to collect and orchestrate user opt-in and opt-out signals, identities must be properly configured. We recommend configuring email as the identity to orchestrate user preference signals for this integration.
 {% endalert %}
 
 ### Step 3: Configuring Identities
