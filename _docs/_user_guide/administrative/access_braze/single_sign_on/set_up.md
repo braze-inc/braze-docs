@@ -29,12 +29,12 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## SAML SSO setup
 
-### Configure your identity provider
+### Step 1. Configure your identity provider
 
-First, you must set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the following information. In addition, you'll need to set up SAML attribute mapping.
+Set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the following information. In addition, set up SAML attribute mapping.
 
 {% alert important %}
-If you plan on using Okta as your identity provider, make sure to use the pre-built integration found on the [Okta site](https://www.okta.com/integrations/braze/).
+If you plan on using Okta as your IdP, make sure to use the pre-built integration found on the [Okta site](https://www.okta.com/integrations/braze/).
 {% endalert %}
 
 | SAML Attribute | Required? | Accepted SAML Attributes |
@@ -47,26 +47,26 @@ If you plan on using Okta as your identity provider, make sure to use the pre-bu
 Braze only requires `email` in the SAML Assertion.
 {% endalert %}
 
-### Configure Braze
+### Step 2. Configure Braze
 
-Once you have set up Braze within your IdP, they will provide a Target URL and `x.509` certificate which you will input into your Braze account.
+When you finish setting up Braze in your IdP, your IdP will provide you with a Target URL and `x.509` certificate to input into your Braze account. 
 
-After your account manager has enabled SAML SSO for your account, go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**
+After your account manager enables SAML SSO for your account, go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**. 
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), select your account icon and go to **Company Settings** > **Security Settings** to find the SAML SSO section.
 {% endalert %}
 
-On this page, input the following:
+On the same page, input the following:
 
 | Requirement | Details |
 |---|---|
 | `SAML Name` | This will appear as the button text on the login screen.<br>This is typically your IdP name, like "Okta." |
 | `Target URL` | This is provided after setting up Braze within your IdP.<br> Some IdPs reference this as the SSO URL or SAML 2.0 Endpoint. |
-| `Certificate` | The `x.509` certificate is provided by your IdP.|
+| `Certificate` | The `x.509` certificate that is provided by your IdP.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-Make sure that your certificate follows this format when adding it to the dashboard:
+Make sure that your `x.509` certificate follows this format when adding it to the dashboard:
 
 ```
 -----BEGIN CERTIFICATE-----
@@ -76,7 +76,9 @@ Make sure that your certificate follows this format when adding it to the dashbo
 
 ![Opening Security Settings and adding SAML SSO details]({% image_buster /assets/img/samlsso.gif %})
 
-When you save your Security Settings and log out, you should now be able to sign in with your IdP.
+### Step 3. Sign into Braze
+
+Save your Security Settings and log out, then sign back in with your IdP.
 
 ![Dashboard login screen with SSO enabled]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
 
@@ -86,8 +88,8 @@ Members who opt to use SSO will no longer be able to use their password as they 
 
 ## Restriction
 
-You can also choose to restrict the members of your organization to sign-in with either Google SSO or SAML SSO. In order to enable, go to **Security Settings** and select either **Enforce Google SSO only login** or **Enforce custom SAML SSO only login**.
+You can restrict the members of your organization to sign-in with either Google SSO or SAML SSO. To turn on restrictions, go to **Security Settings** and select either **Enforce Google SSO only login** or **Enforce custom SAML SSO only login**.
 
 ![Authentication Rules section of Security Settings page]({% image_buster /assets/img/sso3.png %})
 
-By enabling this option, your company's Braze users will no longer be able to log in using a password, even if they have logged in with a password before.
+By turning on restrictions, your company's Braze users will no longer be able to log in using a password, even if they have logged in with a password before.
