@@ -379,6 +379,10 @@ Scenarios where data will not pass as expected:
 1. Nested custom attributes
   - Although [nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze via a cloud-mode destination, the **entire payload** will be sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent. You can also set up custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) in Segment to incur a subset of data points when the payload sends.
 
+  {% alert note %}
+  Custom destination functions are controlled within Segment, and Braze has limited insight into functions that have been configured externally.
+  {% endalert %}
+
 2. Passing anonymous data server-to-server.
   - Customers may use Segment's server-to-server libraries to funnel anonymous data to other systems. See the map methods section to learn more about sending users without an `external_id` to Braze via a server-to-server (cloud-mode) integration.
 
