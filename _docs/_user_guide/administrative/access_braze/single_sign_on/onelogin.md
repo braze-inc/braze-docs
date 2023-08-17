@@ -25,7 +25,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API keys under **Settings** at **Developer Console** > **API Settings**.
 {% endalert %}
 
-## Idp-initiated login within OneLogin
+## IdP-initiated login within OneLogin
 
 ### Step 1: Configure the Braze app
 
@@ -38,7 +38,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ### Step 2: Configure OneLogin within Braze
 
-Once you have set up Braze within your OneLogin, they will provide a Target URL (`SAML 2.0 Endpoint (HTTP)`) and `x.509` certificate which you will input into your Braze account.
+Once you have set up Braze within your OneLogin, they will provide a target URL (`SAML 2.0 Endpoint (HTTP)`) and `x.509` certificate which you will input into your Braze account.
 
 After your account manager has enabled SAML SSO for your account, go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**
 
@@ -50,12 +50,12 @@ On this page, input the following:
 
 | Requirement | Details |
 |---|---|
-| `SAML Name` | This will appear as the button text on the login screen. This is typically your IdP name, like "OneLogin". |
+| `SAML Name` | This will appear as the button text on the login screen. This is typically your identity provider's name, like "OneLogin". |
 | `Target URL` | This is the `SAML 2.0 Endpoint (HTTP)` URL provided by OneLogin.|
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your OneLogin. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Opening Security Settings in Braze and adding SAML SSO details]({% image_buster /assets/img/samlsso.gif %})
+![Opening Security Settings in Braze and adding SAML SSO details.]({% image_buster /assets/img/samlsso.gif %})
 
 {% alert tip %}
 If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) from the **Company Settings** page.
