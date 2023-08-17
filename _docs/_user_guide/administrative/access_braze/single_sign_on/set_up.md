@@ -78,7 +78,7 @@ Make sure that your `x.509` certificate follows this format when adding it to th
 
 ### Step 3: Sign into Braze
 
-Save your Security Settings and log out, then sign back in with your IdP.
+Save your security settings and log out. Then, sign back in with your identity provider.
 
 ![Dashboard login screen with SSO enabled]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
 
