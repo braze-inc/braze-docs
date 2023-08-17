@@ -36,11 +36,11 @@ Note the following Liquid references with dependencies when copying campaigns ac
 - Subscription state tags
 - Voucher and promotion tags
 
-When you copy a campaign across a workspace, Content Blocks won't be copied along with it. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid any errors when launching a campaign.
+When you copy a campaign across a workspace, Content Blocks won't be copied. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid errors when launching a campaign.
 
 ### What's copied across workspaces
 
-Note the following is not a comprehensive list of what is copied across a workspace, and what is omitted. As a best practice, check the campaign details and test to ensure your campaign is working as expected.
+Note the following is not a comprehensive list of what is copied across a workspace and what is omitted. As a best practice, check the campaign details and test to ensure your campaign works as expected.
 
 {% tabs %}
 {% tab Campaigns %}
@@ -51,8 +51,8 @@ Note the following is not a comprehensive list of what is copied across a worksp
 | Type | Tags | 
 | Actions (nested) | Segments | 
 | Conversion behaviors (nested) | Approvals | 
-| Quiet time confgurations | Trigger schedule | 
-| Frequency capping confgurations | Campaign summaries | 
+| Quiet time configurations | Trigger schedule | 
+| Frequency capping configurations | Campaign summaries | 
 | Recipient subscription state |  | 
 | Reoccuring schedule |  | 
 | Is Transactional |  | 
@@ -127,7 +127,7 @@ Note the following is not a comprehensive list of what is copied across a worksp
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Content Block %}
+{% tab Content Blocks %}
 
 | Copied | Omitted |
 |---|---|
@@ -143,9 +143,9 @@ Note the following is not a comprehensive list of what is copied across a worksp
 | Copied | Omitted |
 |---|---|
 | Body | Messaging service |
-| Link shortening |  | 
+| Link shortening | VCF media items | 
 | Click tracking |  | 
-| Media items (excluding VCF) |  | 
+| Media items |  | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}

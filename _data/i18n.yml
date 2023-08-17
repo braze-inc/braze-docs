@@ -7,7 +7,7 @@ en:
   braze_status_check: Checking Braze Status
   edit_github: Edit this page on GitHub
   page_nav_title: On this page
-  helpful: "WAS THIS PAGE HELPFUL?"
+  helpful: "HOW HELPFUL WAS THIS PAGE?"
 fr:
   next: SUIVANTE
   previous: PRÉCÉDENTE
@@ -17,6 +17,6 @@ fr:
   braze_status_check: Vérification du statut Braze
   edit_github: Modifier cette page sur GitHub
   page_nav_title: Sur cette page
-  helpful: "CETTE PAGE VOUS A ÉTÉ UTILE?"
+  helpful: "CETTE PAGE A-T-ELLE ÉTÉ UTILE?"
 
 
