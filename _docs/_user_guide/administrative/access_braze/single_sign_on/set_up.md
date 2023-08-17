@@ -34,7 +34,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 Set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the following information. In addition, set up SAML attribute mapping.
 
 {% alert important %}
-If you plan on using Okta as your IdP, make sure to use the pre-built integration found on the [Okta site](https://www.okta.com/integrations/braze/).
+If you plan on using Okta as your identity provider, make sure to use the pre-built integration found on the [Okta site](https://www.okta.com/integrations/braze/).
 {% endalert %}
 
 | SAML Attribute | Required? | Accepted SAML Attributes |
