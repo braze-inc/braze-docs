@@ -265,5 +265,7 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/tangerine/
 - name: Stylitics
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
+- name: Antavo
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/
   
 ---
