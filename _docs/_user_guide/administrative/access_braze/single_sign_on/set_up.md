@@ -63,7 +63,7 @@ On the same page, input the following:
 |---|---|
 | `SAML Name` | This will appear as the button text on the login screen.<br>This is typically your IdP name, like "Okta." |
 | `Target URL` | This is provided after setting up Braze within your IdP.<br> Some IdPs reference this as the SSO URL or SAML 2.0 Endpoint. |
-| `Certificate` | The `x.509` certificate that is provided by your IdP.|
+| `Certificate` | The `x.509` certificate that is provided by your identity provider.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 Make sure that your `x.509` certificate follows this format when adding it to the dashboard:
