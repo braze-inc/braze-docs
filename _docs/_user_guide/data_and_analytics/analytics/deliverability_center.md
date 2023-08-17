@@ -12,7 +12,7 @@ channel:
 
 > The Deliverability Center provides more insight for your email performance by supporting the use of [Gmail Postmaster Tools][1] to track data on emails sent and gather data about your sending domain.
 
-Email deliverability is at the core when it comes to measuring the success of a messaging campaign. Using the Deliverability Center in the Braze dashboard, you can view your domains by **IP Reputation** or **Delivery Errors** to discover and troubleshoot any potential issues with email deliverability. 
+Email deliverability is the core of campaign success. Using the Deliverability Center in the Braze dashboard, you can view your domains by **IP Reputation** or **Delivery Errors** to discover and troubleshoot any potential issues with email deliverability. 
 
 {% alert important %}
 The Deliverability Center is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
