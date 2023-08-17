@@ -88,7 +88,7 @@ Members who opt to use SSO will no longer be able to use their password as they 
 
 ## Restriction
 
-You can restrict the members of your organization to sign-in with either Google SSO or SAML SSO. To turn on restrictions, go to **Security Settings** and select either **Enforce Google SSO only login** or **Enforce custom SAML SSO only login**.
+You can restrict the members of your organization to only sign in with either Google SSO or SAML SSO. To turn on restrictions, go to **Security Settings** and select either **Enforce Google SSO only login** or **Enforce custom SAML SSO only login**.
 
 ![Authentication Rules section of Security Settings page]({% image_buster /assets/img/sso3.png %})
 
