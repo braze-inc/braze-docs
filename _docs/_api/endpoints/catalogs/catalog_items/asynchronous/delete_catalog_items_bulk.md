@@ -17,7 +17,7 @@ description: "This article outlines details about the Delete multiple catalog it
 
 > Use this endpoint to delete multiple items in your catalog. 
 
-Each request can support up to 16,000 items. This endpoint is asynchronous.
+Each request can support up to 50 items. This endpoint is asynchronous.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#647c82e8-8b38-4df2-bde2-b1d8e19fd332 {% endapiref %}
 
