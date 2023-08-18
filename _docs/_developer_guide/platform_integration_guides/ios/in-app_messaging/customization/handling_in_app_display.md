@@ -120,6 +120,31 @@ func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 {% endtab %}
 {% endtabs %}
 
+## Disabling Dark Mode
+
+To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, use the `ABKInAppMessage.enableDarkTheme` property. From within either the `ABKInAppMessageControllerDelegate.beforeInAppMessageDisplayed:` or `ABKInAppMessageUIDelegate.beforeInAppMessageDisplayed:` method, set the `enableDarkTheme` property of the method's `inAppMessage` parameter to `NO`.
+
+```objc
+// ABKInAppMessageControllerDelegate
+- (ABKInAppMessageDisplayChoice)beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
+  ...
+  inAppMessage.enableDarkTheme = NO;
+  ...
+  return ABKDisplayInAppMessageNow;
+}
+
+// ABKInAppMessageUIDelegate
+- (ABKInAppMessageDisplayChoice)beforeInAppMesssageDisplayed:(ABKInAppMessage *)inAppMessage
+                                            withKeyboardIsUp:(BOOL)keyboardIsUp {
+  ...
+  inAppMessage.enableDarkTheme = NO;
+  ...
+  return ABKDisplayInAppMessageNow;
+}
+```
+
+This will set the `enableDarkTheme` property of each `ABKInAppMessage` which is to be presented to `NO` before it is presented.
+
 ## Method declarations
 
 For additional information, see the following header files:
