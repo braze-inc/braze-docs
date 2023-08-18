@@ -132,7 +132,7 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 
 {% if include.endpoint == "asynchronous catalog item" %}
 
-This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+This endpoint has a shared rate limit of 16,000 requests per minute between all asynchronous catalog item endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 {% endif %}
 
@@ -144,7 +144,7 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 
 {% if include.endpoint == "synchronous catalog" %}
 
-This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 {% endif %}
 
