@@ -91,7 +91,7 @@ To prevent in-app messages from adopting dark mode styling when the user device 
 }
 ```
 
-This will set the `enableDarkTheme` property of each `ABKInAppMessage` which is to be presented to `NO` before it is presented.
+This will set the `enableDarkTheme` property of each `ABKInAppMessage` which is to be displayed to `NO` before it is displayed.
 
 ## Hiding the status bar during display
 
