@@ -68,6 +68,31 @@ If you want to alter the display behavior of in-app messages, you should add any
 
 If the in-app message campaign is not displaying when the session has been started, make sure you have the necessary display logic added to your `beforeInAppMessageDisplayed:` delegate method. This allows the in-app message campaign to display from the top of the screen even if the keyboard is being displayed.
 
+## Disabling Dark Mode
+
+To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, use the `ABKInAppMessage.enableDarkTheme` property. From within either the `ABKInAppMessageControllerDelegate.beforeInAppMessageDisplayed:` or `ABKInAppMessageUIDelegate.beforeInAppMessageDisplayed:` method, set the `enableDarkTheme` property of the method's `inAppMessage` parameter to `NO`.
+
+```objc
+// ABKInAppMessageControllerDelegate
+- (ABKInAppMessageDisplayChoice)beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
+  ...
+  inAppMessage.enableDarkTheme = NO;
+  ...
+  return ABKDisplayInAppMessageNow;
+}
+
+// ABKInAppMessageUIDelegate
+- (ABKInAppMessageDisplayChoice)beforeInAppMesssageDisplayed:(ABKInAppMessage *)inAppMessage
+                                            withKeyboardIsUp:(BOOL)keyboardIsUp {
+  ...
+  inAppMessage.enableDarkTheme = NO;
+  ...
+  return ABKDisplayInAppMessageNow;
+}
+```
+
+This will set the `enableDarkTheme` property of each `ABKInAppMessage` which is to be presented to `NO` before it is presented.
+
 ## Hiding the status bar during display
 
 For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases, the status bar may still appear on top of the in-app message. As of version [3.21.1](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211) of the iOS SDK, you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within the `appboyOptions` passed to `startWithApiKey:`.
@@ -119,31 +144,6 @@ func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 
 {% endtab %}
 {% endtabs %}
-
-## Disabling Dark Mode
-
-To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, use the `ABKInAppMessage.enableDarkTheme` property. From within either the `ABKInAppMessageControllerDelegate.beforeInAppMessageDisplayed:` or `ABKInAppMessageUIDelegate.beforeInAppMessageDisplayed:` method, set the `enableDarkTheme` property of the method's `inAppMessage` parameter to `NO`.
-
-```objc
-// ABKInAppMessageControllerDelegate
-- (ABKInAppMessageDisplayChoice)beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
-  ...
-  inAppMessage.enableDarkTheme = NO;
-  ...
-  return ABKDisplayInAppMessageNow;
-}
-
-// ABKInAppMessageUIDelegate
-- (ABKInAppMessageDisplayChoice)beforeInAppMesssageDisplayed:(ABKInAppMessage *)inAppMessage
-                                            withKeyboardIsUp:(BOOL)keyboardIsUp {
-  ...
-  inAppMessage.enableDarkTheme = NO;
-  ...
-  return ABKDisplayInAppMessageNow;
-}
-```
-
-This will set the `enableDarkTheme` property of each `ABKInAppMessage` which is to be presented to `NO` before it is presented.
 
 ## Method declarations
 
