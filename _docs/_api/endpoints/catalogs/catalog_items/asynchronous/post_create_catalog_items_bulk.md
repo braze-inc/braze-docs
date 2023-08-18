@@ -17,7 +17,7 @@ description: "This article outlines details about the Create multiple catalog it
 
 > Use this endpoint to create multiple items in your catalog. 
 
-Each request can support up to 50 items. This endpoint is asynchronous.
+Each request can support up to 16,000 items. This endpoint is asynchronous.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cea18bb3-b83a-4160-81fe-8cd42aa6e7cc {% endapiref %}
 
