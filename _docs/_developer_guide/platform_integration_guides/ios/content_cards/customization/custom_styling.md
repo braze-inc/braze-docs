@@ -27,4 +27,24 @@ Because Content Cards have a maximum size of 2 KB for content you enter in the d
 Overriding default images is currently not supported in our Xamarin iOS integration.
 {% endalert %}
 
+## Disabling Dark Mode
+
+To prevent the Content Card UI from adopting dark mode styling when the user device has dark mode enabled, set the `ABKContentCardsTableViewController.enableDarkTheme` property. You can access the `enableDarkMode` property directly on an `ABKContentCardsTableViewController` instance or via the `ABKContentCardsViewController.contentCardsViewController` property depending on how you are constructing your UI.
+
+```objc
+- (IBAction)presntModalContentCards:(id)sender {
+  ABKContentCardsViewController *contentCardsVC = [ABKContentCardsViewController new];
+  contentCardsVC.contentCardsViewController.enableDarkTheme = NO;
+  ...
+  [self.navigationController presentViewController:contentCardsVC animated:YES completion:nil];
+}
+
+- (IBAction)presentNavigationContentCards:(id)sender {
+  ABKContentCardsTableViewController *contentCards = [[ABKContentCardsTableViewController alloc] init];
+  contentCards.enableDarkTheme = NO;
+  ...
+  [self.navigationController pushViewController:contentCards animated:YES];
+}
+```
+
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches
