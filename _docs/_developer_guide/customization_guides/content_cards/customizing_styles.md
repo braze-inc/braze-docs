@@ -100,7 +100,7 @@ BrazeContentCardUI.ViewController.Attributes.defaults.cellAttributes.classicImag
 
 **Initializing the view controller with Attributes**
 
-If you wish to modify only a specific instance of the Braze Content Card UI view controller, use the [init(braze:attributes:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/init(braze:attributes:)/) initializer to pass a custom `Attributes` struct to the view controller.
+If you wish to modify only a specific instance of the Braze Content Card UI view controller, use the [`init(braze:attributes:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/init(braze:attributes:)/) initializer to pass a custom `Attributes` struct to the view controller.
 
 For example, you can change the image size and corner radius for a specific instance of the view controller:
 
