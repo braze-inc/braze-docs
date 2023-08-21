@@ -91,8 +91,6 @@ To prevent in-app messages from adopting dark mode styling when the user device 
 }
 ```
 
-This will set the `enableDarkTheme` property of each `ABKInAppMessage` which is to be presented to `NO` before it is presented.
-
 ## Hiding the status bar during display
 
 For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases, the status bar may still appear on top of the in-app message. As of version [3.21.1](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211) of the iOS SDK, you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within the `appboyOptions` passed to `startWithApiKey:`.

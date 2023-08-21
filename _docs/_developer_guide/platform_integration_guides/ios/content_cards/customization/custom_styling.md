@@ -42,10 +42,10 @@ To prevent the Content Card UI from adopting dark mode styling when the user dev
 
 // Accessing enableDarkMode directly.
 - (IBAction)presentNavigationContentCards:(id)sender {
-  ABKContentCardsTableViewController *contentCards = [[ABKContentCardsTableViewController alloc] init];
-  contentCards.enableDarkTheme = NO;
+  ABKContentCardsTableViewController *contentCardsTableVC = [[ABKContentCardsTableViewController alloc] init];
+  contentCardsTableVC.enableDarkTheme = NO;
   ...
-  [self.navigationController pushViewController:contentCards animated:YES];
+  [self.navigationController pushViewController:contentCardsTableVC animated:YES];
 }
 ```
 
