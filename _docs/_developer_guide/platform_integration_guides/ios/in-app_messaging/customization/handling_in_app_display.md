@@ -98,7 +98,21 @@ To prevent in-app messages from adopting dark mode styling when the user device 
 {% tab swift %}
 
 ```swift
+// ABKInAppMessageControllerDelegate
+func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMessageDisplayChoice {
+  ...
+  inAppMessage.enableDarkTheme = false
+  ...
+  return ABKInAppMessageDisplayChoice.displayInAppMessageNow
+}
 
+// ABKInAppMessageUIDelegate
+func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage, withKeyboardIsUp keyboardIsUp: Bool) -> ABKInAppMessageDisplayChoice {
+  ...
+  inAppMessage.enableDarkTheme = false
+  ...
+  return ABKInAppMessageDisplayChoice.displayInAppMessageNow
+}
 ```
 
 {% endtab %}
