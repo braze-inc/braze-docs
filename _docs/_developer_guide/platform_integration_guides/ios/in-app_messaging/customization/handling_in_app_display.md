@@ -70,7 +70,7 @@ If the in-app message campaign is not displaying when the session has been start
 
 ## Disabling Dark Mode
 
-To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, use the `ABKInAppMessage.enableDarkTheme` property. From within either the `ABKInAppMessageControllerDelegate.beforeInAppMessageDisplayed:` or `ABKInAppMessageUIDelegate.beforeInAppMessageDisplayed:` method, set the `enableDarkTheme` property of the method's `inAppMessage` parameter to `NO`.
+To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, use the [`ABKInAppMessage.enableDarkTheme`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message.html#ae89df6090bed623099ab0ecc0a74ad5d) property. From within either the `ABKInAppMessageControllerDelegate.beforeInAppMessageDisplayed:` or `ABKInAppMessageUIDelegate.beforeInAppMessageDisplayed:` method, set the `enableDarkTheme` property of the method's `inAppMessage` parameter to `NO`.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
