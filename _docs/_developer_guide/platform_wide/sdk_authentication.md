@@ -33,7 +33,7 @@ There are four high-level steps to get started:
 
 ### Generate a public/private key-pair {#generate-keys}
 
-Generate an RSA public/private key-pair. The public key will eventually be added to the Braze dashboard, while the private key should be stored securely on your server.
+Generate an RSA256 public/private key-pair. The public key will eventually be added to the Braze dashboard, while the private key should be stored securely on your server.
 
 We recommend an RSA Key with 2048 bits for use with the RS256 JWT algorithm.
 
