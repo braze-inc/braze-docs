@@ -32,18 +32,20 @@ Create a new in-app message or Canvas step, then select **Drag-And-Drop Editor**
 
 ## Step 2: Select your template
 
-![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:55%"}
-
 After selecting the drag-and-drop editor as your editing experience, you can choose to:
 
-- Use a Braze basic modal template
-- Use a Braze background image template
 - Start with a blank modal template
+- Use a Braze drag-and-drop in-app message template
+- Select a saved drag-and-drop in-app message template (early access)
 
 Click **Build message** to begin designing your in-app message in the drag-and-drop editor.
 
-{% alert note %}
-You can switch between modal and fullscreen display types in the **Message styles** panel of the editor.
+![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+
+You can also access all templates from the **Templates** section of the dashboard.
+
+{% alert important %}
+The ability to save custom templates is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Step 3: Build and design your in-app message
@@ -211,10 +213,14 @@ Yes, you can segment based on button clicks for up to two buttons in your messag
 
 No.
 
-#### Can I save my in-app message as a template after I build it within my campaign or Canvas?
-
-No, you have to recreate the in-app message in the drag-and-drop editor or duplicate an existing message in order to save.
-
 #### How can I create a slideup in-app message?
 
 Currently the editor is limited to modal and fullscreen messages only. You can switch between display types in the **Message container** section of the **Message styles** panel.
+
+#### Can I save my in-app message as a template after I build it within my campaign or Canvas?
+
+Yes. For any in-app message you want to re-use in a future campaign or Canvas step, you can save it as a custom template using the **Save as template** button, available after you exit the editor. Before you can save it as a template, you must first launch the campaign OR save it as a draft.
+
+![]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+
+You can also create and save in-app message templates by navigating to **Templates** > **In-App Messag Templates**.
