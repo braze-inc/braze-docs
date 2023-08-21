@@ -27,7 +27,7 @@ The Swift SDK does not provide animated GIF support by default. Support can be a
 For more details on GIF support, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
 {% endalert %}
 
-### Navigation context
+## Navigation context
 
 A navigation controller is a view controller that manages one or more child view controllers in a navigation interface. Here is an example of pushing a `BrazeContentCardUI.ViewController` instance into a navigation controller:
 
@@ -59,7 +59,7 @@ func pushViewController() {
 {% endtab %}
 {% endtabs %}
 
-### Modal context
+## Modal context
 
 Use modal presentations to create temporary interruptions in your app’s workflow, such as prompting the user for important information. This model view has a navigation bar on top and a **Done** button on the side of the bar. Here is an example of pushing a `BrazeContentCard.ViewController` instance into a modal controller:
 

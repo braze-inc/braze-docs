@@ -28,7 +28,7 @@ All properties outside of `id` and `extras` are optional to parse for custom Con
 {% subtabs local %}
 {% subtab Java %}
 
-### Create a private subscriber variable
+### Step 1: Create a private subscriber variable
 
 To subscribe to card updates, first declare a private variable in your custom class to hold your subscriber:
 
@@ -37,7 +37,7 @@ To subscribe to card updates, first declare a private variable in your custom cl
 private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscriber;
 ```
 
-### Subscribe to updates
+### Step 2: Subscribe to updates
 
 Next, add the following code to subscribe to Content Card updates from Braze, typically inside of your custom Content Cards activity's `Activity.onCreate()`:
 
@@ -57,7 +57,7 @@ Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSu
 Braze.getInstance(context).requestContentCardsRefresh();
 ```
 
-### Unsubscribe
+### Step 3: Unsubscribe
 
 We also recommend unsubscribing when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
 
@@ -68,7 +68,7 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 {% endsubtab %}
 {% subtab Kotlin %}
 
-### Create a private subscriber variable
+### Step 1: Create a private subscriber variable
 
 To subscribe to card updates, first declare a private variable in your custom class to hold your subscriber:
 
@@ -76,7 +76,7 @@ To subscribe to card updates, first declare a private variable in your custom cl
 private var contentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
 ```
 
-### Subscribe to updates
+### Step 2: Subscribe to updates
 
 Next, add the following code to subscribe to Content Card updates from Braze, typically inside of your custom Content Cards activity's `Activity.onCreate()`:
 
@@ -93,7 +93,7 @@ Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSu
 Braze.getInstance(context).requestContentCardsRefresh(true)
 ```
 
-### Unsubscribe
+### Step 3: Unsubscribe
 
 We also recommend unsubscribing when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
 
@@ -291,7 +291,7 @@ Refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift
 {% endtab %}
 {% tab Web %}
 
-Log impression events when cards are viewed by users:
+Log impression events when cards are viewed by users using [`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions):
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -299,7 +299,7 @@ import * as braze from "@braze/web-sdk";
 braze.logContentCardImpressions([card1, card2, card3]);
 ```
 
-Log card click events when users interact with a card:
+Log card click events when users interact with a card using [`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick):
 
 ```javascript
 import * as braze from "@braze/web-sdk";

@@ -169,4 +169,4 @@ You can then use this information to display a badge signifying how many unread 
 [6]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/#content-cards
 [7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/
 [8]: {% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create#step-3-compose-a-content-card/#step-4-configure-additional-settings-optional
+[9]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create#step-4-configure-additional-settings-optional
