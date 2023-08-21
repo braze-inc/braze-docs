@@ -71,7 +71,7 @@ The key-value pairs for this use case include a `discount_percentage` set as the
 
 ![][5]{: style="max-width:80%;"} 
 
-## Content card badges
+## Content Card badges
 
 ![An iPhone home screen showing a Braze sample app named Swifty with a red badge displaying the number 7][8]{: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
