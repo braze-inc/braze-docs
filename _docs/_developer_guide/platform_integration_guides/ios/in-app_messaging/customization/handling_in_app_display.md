@@ -72,6 +72,9 @@ If the in-app message campaign is not displaying when the session has been start
 
 To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, use the `ABKInAppMessage.enableDarkTheme` property. From within either the `ABKInAppMessageControllerDelegate.beforeInAppMessageDisplayed:` or `ABKInAppMessageUIDelegate.beforeInAppMessageDisplayed:` method, set the `enableDarkTheme` property of the method's `inAppMessage` parameter to `NO`.
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 // ABKInAppMessageControllerDelegate
 - (ABKInAppMessageDisplayChoice)beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
@@ -90,6 +93,16 @@ To prevent in-app messages from adopting dark mode styling when the user device 
   return ABKDisplayInAppMessageNow;
 }
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Hiding the status bar during display
 
