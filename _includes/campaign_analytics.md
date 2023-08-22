@@ -204,9 +204,13 @@ Here are some key email-specific metrics that you won't see in other channels. T
 | Unsubs | The percentage of recipients that clicked the "Unsubscribe" link in your email. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-##### Estimated real open rate (early access) {#estimated-real-open-rate}
+##### Estimated real open rate {#estimated-real-open-rate}
 
-This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the open rate of the campaign. Click data is used to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms including Apple’s MPP. The displayed statistic is generated 36 hours after email sending has begun. It is only calculated once at that time.
+This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's open rate. Click data is used to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP. The displayed statistic is generated 36 hours after email sending has begun. It is only calculated once at that time.
+
+{% alert important %}
+Estimated real open rate is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
 
 {% elsif include.channel == "in-app message" %}
 
