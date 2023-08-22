@@ -11,128 +11,15 @@ channel:
 
 # Content Card integration
 
-## Content Cards data model
+> This reference article covers the Content Card integration and the different data models and card-specific properties available for your Swift application.
 
-The Content Cards data model is available in the `BrazeKit` module of the iOS Swift SDK.
+The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Create the Content Cards view controller using the `braze` instance. If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
 
-### Getting the data
-
-To access the Content Cards data model, call `contentCards.cards` on your `braze` instance.
-
-{% tabs local %}
-{% tab swift %}
-```swift
-let cards: [Braze.ContentCard] = AppDelegate.braze?.contentCards.cards
-```
-
-Additionally, you can also maintain a subscription to observe for changes in your Content Cards. You can do so in one of two ways: 
-1. Maintaining a cancellable; or 
-2. Maintaining an `AsyncStream`.
-
-{% subtabs local %}
-{% subtab CANCELLABLE %}
-```swift
-// This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
-// You must keep a strong reference to the cancellable to keep the subscription active.
-// The subscription is canceled either when the cancellable is deinitialized or when you call its `.cancel()` method.
-let cancellable = AppDelegate.braze?.contentCards.subscribeToUpdates { [weak self] contentCards in
-  // Implement your completion handler to respond to updates in `contentCards`.
-}
-```
-{% endsubtab %}
-{% subtab ASYNC STREAM %}
-```swift
-let stream: AsyncStream<[Braze.ContentCard]> = AppDelegate.braze?.contentCards.cardsStream
-```
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab OBJECTIVE-C %}
-```objc
-NSArray<BRZContentCardRaw *> *contentCards = AppDelegate.braze.contentCards.cards;
-```
-
-Additionally, if you wish to maintain a subscription to your content cards, you can call `subscribeToUpdates`:
-
-```objc
-// This subscription is maintained through Braze cancellable, which will continue to observe for changes until the subscription is cancelled.
-BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSArray<BRZContentCardRaw *> *contentCards) {
-  // Implement your completion handler to respond to updates in `contentCards`.
-}];
-```
-{% endtab %}
-{% endtabs %}
-
-## Content Card model
-
-Braze offers five Content Card types: banner, captioned image, classic, classic image, and control. Each type is an implementation of the `Braze.ContentCard` type. Note that BrazeKit offers an alternative [`ContentCardRaw`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw) class for Objective-C compatibility.
-
-For a full list of Content Card properties, as well as details about using Content Cards, refer to the [`ContentCard` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard).
-
-## Card methods
-
-Each card is initialized with a `Context` object, which contains various methods for managing your card's state. Call these methods when you want to modify the corresponding state property on a particular card object.
-
-| Method                               | Description                                                                                                                              |
-|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `card.context?.logImpression()`      | Log the content card impression event.                                                                                                   |
-| `card.context?.logClick()`           | Log the content card click event.                                                                                                        |
-| `card.context?.processClickAction()` | Process a given [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/clickaction) input. |
-| `card.context?.logDismissed()`       | Log the content card dismissed event.                                                                                                    |
-| `card.context?.logError()`           | Log an error related to the content card.                                                                                                |
-| `card.context?.loadImage()`          | Load a given content card image from a URL. This method can be nil when the content card does not have an image.                         |
-{: .reset-td-br-1 .reset-td-br-2}
-
-For more details, refer to the [`Context` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw/context-swift.class)
-
-## Refreshing Content Cards
-
-{% alert tip %}
-To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed after they are available.
+{% alert note %}
+For more information about iOS view controller options, refer to the [Apple developer documentation](https://developer.apple.com/documentation/uikit/view_controllers/showing_and_hiding_view_controllers).
 {% endalert %}
 
-You can manually request Braze to refresh the user's Content Cards using the `requestRefresh` method on the `Braze` instance:
-{% tabs local %}
-{% tab Swift %}
-
-In Swift, Content Cards can be refreshed either with an optional completion handler or with an asynchronous return using the native Swift concurrency APIs.
-
-{% subtabs local %}
-{% subtab Completion Handler %}
-```swift
-AppDelegate.braze?.contentCards.requestRefresh { result in
-  // Implement completion handler
-}
-```
-{% endsubtab %}
-{% subtab Async/Await %}
-```swift
-let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
-```
-{% endsubtab %}
-{% endsubtabs %}
-
-{% endtab %}
-{% tab Objective-C %}
-
-```objc
-[AppDelegate.braze.contentCards requestRefreshWithCompletion:^(NSArray<BRZContentCardRaw *> * contentCards, NSError * error) {
-  // Implement completion handler
-}];
-```
-
-{% endtab %}
-{% endtabs %}
-
-{% alert important %}
-The default rate limit for calling `requestRefresh` is 3 calls per 10 minutes per device to prevent performance degradation and errors.
-{% endalert %}
-
-## Content Cards UI integration
-
-Content Cards UI can be integrated from the `BrazeUI` library of the Swift SDK. This library provides two view controller contexts: navigation or modal. For more information about iOS navigation options, refer to the [Apple developer documentation](https://developer.apple.com/documentation/uikit/view_controllers/showing_and_hiding_view_controllers).
-
-If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
+The `BrazeUI` library of the Swift SDK provides two default view controller contexts: navigation or modal. This means you can integrate Content Cards in these contexts by adding a few lines of code to your app or site. You can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options. Refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example. 
 
 {% alert important %}
 The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of `GIFViewProvider`.
@@ -140,9 +27,9 @@ The Swift SDK does not provide animated GIF support by default. Support can be a
 For more details on GIF support, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
 {% endalert %}
 
-### Navigation context
+## Navigation context
 
-Example of pushing a `BrazeContentCardUI.ViewController` instance into a navigation controller:
+A navigation controller is a view controller that manages one or more child view controllers in a navigation interface. Here is an example of pushing a `BrazeContentCardUI.ViewController` instance into a navigation controller:
 
 {% tabs %}
 {% tab swift %}
@@ -172,9 +59,9 @@ func pushViewController() {
 {% endtab %}
 {% endtabs %}
 
-### Modal context
+## Modal context
 
-This modal is used to present the view controller in a modal view, with a navigation bar on top and a **Done** button on the side of the bar.
+Use modal presentations to create temporary interruptions in your app’s workflow, such as prompting the user for important information. This model view has a navigation bar on top and a **Done** button on the side of the bar. Here is an example of pushing a `BrazeContentCard.ViewController` instance into a modal controller:
 
 {% tabs %}
 {% tab swift %}
@@ -204,4 +91,35 @@ func presentModalViewController() {
 {% endtab %}
 {% endtabs %}
 
-For example usage of BrazeUI view controllers, check out the corresponding Content Cards UI samples in our [Examples app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
+For example usage of `BrazeUI` view controllers, check out the corresponding Content Cards UI samples in our [Examples app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
+
+## Content Cards data model
+
+The Content Cards data model is available in the `BrazeKit` module of the iOS Swift SDK.
+
+Braze offers five Content Card types: banner, captioned image, classic, classic image, and control. Each type is an implementation of the `Braze.ContentCard` type. Note that `BrazeKit` offers an alternative [`ContentCardRaw`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw) class for Objective-C compatibility.
+
+For a full list of Content Card properties, as well as details about using Content Cards, refer to the [`ContentCard` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard).
+
+To access the Content Cards data model, call `contentCards.cards` on your `braze` instance. See [Logging analytics]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics) for more information on subscribing to card data.
+
+## Card methods
+
+Each card is initialized with a `Context` object, which contains various methods for managing your card's state. Call these methods when you want to modify the corresponding state property on a particular card object.
+
+| Method                               | Description                                                                                                                              |
+|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| `card.context?.logImpression()`      | Log the content card impression event.                                                                                                   |
+| `card.context?.logClick()`           | Log the content card click event.                                                                                                        |
+| `card.context?.processClickAction()` | Process a given [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/clickaction) input. |
+| `card.context?.logDismissed()`       | Log the content card dismissed event.                                                                                                    |
+| `card.context?.logError()`           | Log an error related to the content card.                                                                                                |
+| `card.context?.loadImage()`          | Load a given content card image from a URL. This method can be nil when the content card does not have an image.                         |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For more details, refer to the [`Context` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw/context-swift.class)
+
+
+{% alert note %}
+Ready to go further? Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards) to get started with customization.
+{% endalert %}

@@ -9,9 +9,8 @@ tool: Media
 
 ---
 
-# Creative details for Content Cards
+> Customizing Content Cards and the feed they are located in can't be done during the campaign creation process—you must work with your engineers and developers to build and customize your cards. For technical details, visit our [developer documentation][7].
 
-Get creative with Content Cards! But you should know some of the guidelines first. After all, you have to know the rules to break them. Check out creative specifications for the following individual message types.
 
 ## Content Card types
 
@@ -75,6 +74,10 @@ If a user has dismissed all of their cards or you haven't pushed out any new upd
 
 ![Image of an empty Content Card feed][6]{: style="max-width:45%"}
 
+{% alert tip %}
+Keep Content Cards relevant by setting them to dismiss when a user takes relevant actions. For example, set promotional Content Cards to be dismissed as soon as users make a purchase so they don't continue to see an offer for something they already bought.
+{% endalert %}
+
 ### Using GIFs in Content Cards
 
 | Content Cards for Android | Content Cards for iOS | Content Cards for Web |
@@ -87,6 +90,7 @@ If a user has dismissed all of their cards or you haven't pushed out any new upd
 [1]: {% image_buster /assets/img/content_card_classic.png %}
 [2]: {% image_buster /assets/img/content_card_captioned.png %}
 [3]: {% image_buster /assets/img/content_card_banner.png %}
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/
+[4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
 [5]: {% image_buster /assets/img/dismissal-cc.png %}
 [6]: {% image_buster /assets/img/empty-cc.png %}
+[7]: {{site.baseurl}}/developer_guide/customization_guides/customization_overview

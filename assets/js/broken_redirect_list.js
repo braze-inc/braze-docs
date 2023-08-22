@@ -824,7 +824,8 @@ validurls['/docs/user_guide/administrative/manage_your_braze_users/user_permissi
 validurls['/docs/user_guide/administrative/manage_your_braze_users/teams/'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/teams/';
 validurls['/docs/user_guide/administrative/app_settings/manage_app_group'] = '/docs/user_guide/administrative/app_settings/';
 validurls['/docs/user_guide/administrative/app_settings/developer_console'] = '/docs/user_guide/administrative/app_settings/';
-
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/overview/';
+validurls['/docs/user_guide/message_building_by_channel/content_cards/customize'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_archival/'] = '/docs/user_archival/';
 
 validurls['/docs/user_guide/predictive_suite'] = '/docs/user_guide/sage_ai/predictive_suite/';
@@ -864,6 +865,7 @@ validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_purchases/predic
 validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_purchases/messaging_users'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_events/messaging_users/';
 validurls['/docs/copying_to_workspace'] = '/docs/copying_to_workspaces/';
 validurls['/docs/developer_guide/platform_wide/feature_flags/use_cases/'] = '/docs/developer_guide/platform_wide/feature_flags/about/';
+validurls['/docs/user_guide/message_building_by_channel/content_cards/customize/'] = '/docs/developer_guide/customization_guides/customization_overview';
 
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/mparticle/'] = '/docs/partners/mparticle/';
 validurls['/docs/partners/message_personalization/yotpo/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/';
@@ -878,3 +880,30 @@ validurls['/docs/api/objects_filters/user_attributes/object/'] = '/docs/api/obje
 validurls['/docs/user_guide/administrative/access_braze/resetting_your_password/'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/#resetting-your-password/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/ios_14/'] = '/docs/ios_14/';
 
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/refreshing_the_feed'] = '/docs/developer_guide/customization_guides/content_cards/customizing_feed/#refreshing-the-feed';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/default_feed/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_feed/';
+validurls['docs/developer_guide/platform_integration_guides/android/content_cards/customization'] = '/docs/developer_guide/customization_guides/customization_overview/';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_styles/';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/handling_clicks_manually/'] = '/docs/developer_guide/customization_guides/content_cards/logging_analytics/';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/key_value_pairs/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_behavior/';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/read_and_unread/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_styles/';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/badges/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_behavior/#content-card-badges';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/swipe_to_dismiss/'] = '/docs/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/GIFs/'] = '/docs/developer_guide/platform_integration_guides/android/content_cards/GIFs/';
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/use_cases/carousel_view/'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
+validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_feed/';
+validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/refreshing_the_feed/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_feed/';
+validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/badges/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_behavior/#content-card-badges/';
+validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_styles/';
+validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling/'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
+validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_behavior/';
+validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_styles/';
+validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/customization/'] = '/docs/developer_guide/customization_guides/content_cards/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/'] = '/docs/developer_guide/customization_guides/content_cards/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_styles/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/handling_clicks_manually/'] = '/docs/developer_guide/customization_guides/content_cards/logging_analytics/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/read_unread_indicators/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_styles/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/badges/'] = '/docs/developer_guide/customization_guides/content_cards/customizing_behavior/#content-card-badges';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/carousel_view/'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/implementation_guide/'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
