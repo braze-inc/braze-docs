@@ -53,10 +53,6 @@ guide_featured_list:
 
 ## August 22, 2023 release
 
-### Customization guides 
-
-We're excited to introduce a reorganization of the Developer Portal. Now, customization options for our SDKs, starting with Content Cards, are consolidated into dedicated Customization Guides. This change streamlines your access to detailed instructions, making it easier tailor experience to your specific needs.
-
 ## Shopify catalogs 
 
 Shopify catalogs allow you to import your products from your Shopify store into a Braze catalog, making it easier and automated to bring in product data for deeper personalization of your messages. You can enrich your abandoned cart, order confirmation, and more with the most up-to-date product details and information.
@@ -76,6 +72,10 @@ Before sending your WhatsApp messages, you can reference suggested [best practic
 ### Domain reputation
 
 In the Deliverability Center, you can now view and monitor your [domain reputation]({{site.baseurl}}/user_guide/data_and_analytics/analytics/deliverability_center#domain-reputation) to help avoid being filtered into a spam folder.
+
+### Customization guides 
+
+We're excited to introduce a reorganization of the Developer Portal. Now, customization options for our SDKs, starting with [Content Cards]({{site.baseurl}}/developer_guide/customization_guides/content_cards), are consolidated into dedicated customization guides. This change streamlines your access to detailed instructions, making it easier tailor experience to your specific needs.
 
 ### Card creation in Canvas
 
