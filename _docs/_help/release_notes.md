@@ -55,7 +55,7 @@ guide_featured_list:
 
 ## Shopify catalogs 
 
-Shopify catalogs allow you to import your products from your Shopify store into a Braze catalog, making it easier and automated to bring in product data for deeper personalization of your messages. You can enrich your abandoned cart, order confirmation, and more with the most up-to-date product details and information.
+Shopify catalogs allow you to import your products from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages. You can enrich your abandoned cart, order confirmation, and more with the most up-to-date product details and information.
 
 ### Merging users by email
 
