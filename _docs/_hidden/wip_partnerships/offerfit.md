@@ -113,7 +113,7 @@ In addition to orchestrating activation events in Braze, OfferFit provides data 
 
 ## Using this integration
 
-After OfferFit is configured, the automated experimentation platform will automatically send 1:1 personalized activation events to Braze for each user in your target audience. These activation events will be triggered through the Braze campaigns or Canvases you configured in [step 2](#step-2-configure-an-api-triggered-braze-campaign-or-canvas-and-create-campaign-assets-eg-html-templates-images).
+After OfferFit is configured, the automated experimentation platform will automatically send 1:1 personalized activation events to Braze for each user in your target audience. These activation events will be triggered through the Braze campaigns or Canvases you configured in [step 2](#step-2).
 
 In addition to the analytics data available in Braze, OfferFit provides a comprehensive reporting layer that allows marketers to explore the customer insights discovered by OfferFit through its self-learning AI capabilities.
 
