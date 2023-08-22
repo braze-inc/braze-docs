@@ -99,11 +99,9 @@ Define your target audience by creating at least one segment in Braze. This segm
 
 ### Step 2: Configure an API-triggered Braze campaign or Canvas and create campaign assets (e.g., HTML templates, images) {#step-2}
 
-First, create a campaign or Canvas in Braze. OfferFit will use this campaign or Canvas to send 1:1 personalized activation events to the right users from your defined audience. 
-
-Next, disable the Braze Control Group. This allows the OfferFit Control Group to be the only active one.
-
-Finally, depending on your dimensions, you can configure Liquid tags in your creative content to dynamically populate your campaign or Canvas with OfferFit recommendations. OfferFit will pass customer-specific content to the Liquid tags in your templates via the Braze API.
+1. Create a campaign or Canvas in Braze. OfferFit will use this campaign or Canvas to send 1:1 personalized activation events to the right users from your defined audience. 
+2. Do not include a Braze [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign#including-a-control-group) in your campaign or Canvas. This allows the OfferFit control group to be the only active one.
+3. Depending on your dimensions, you can configure Liquid tags in your creative content to dynamically populate your campaign or Canvas with OfferFit recommendations. OfferFit will pass customer-specific content to the Liquid tags in your templates via the Braze API.
 
 ### Step 3: Update your OfferFit use case configuration to orchestrate Braze activation events
 
