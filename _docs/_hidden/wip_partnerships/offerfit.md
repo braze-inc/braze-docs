@@ -30,6 +30,10 @@ The OfferFit and Braze integration allows you to automatically discover the righ
 | Braze REST API endpoint | [Your REST API endpoint URL][1]. Your endpoint depends on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
+{% endalert %}
+
 ### Braze REST API endpoints
 
 Your OfferFit license and use case will determine the Braze REST API endpoints you use. Below are various API endpoints you might use.
@@ -55,12 +59,6 @@ Your OfferFit license and use case will determine the Braze REST API endpoints y
 | [GET /templates/email/info](https://www.braze.com/docs/api/endpoints/templates/email_templates/get_see_email_template_information/) | Retrieve the details of a specific Braze HTML email template. |
 | [GET /templates/email/list](https://www.braze.com/docs/api/endpoints/templates/email_templates/get_list_email_templates/) | Retrieve the list of all the Braze HTML email templates configured in Braze and their `subject line` and `HTML content`. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
-
 
 ## Use cases
 
