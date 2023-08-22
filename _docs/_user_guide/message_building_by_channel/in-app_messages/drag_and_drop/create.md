@@ -223,4 +223,4 @@ Yes. For any in-app message you want to re-use in a future campaign or Canvas st
 
 ![]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
-You can also create and save in-app message templates by navigating to **Templates** > **In-App Messag Templates**.
+You can also create and save in-app message templates by navigating to **Templates** > **In-App Message Templates**.
