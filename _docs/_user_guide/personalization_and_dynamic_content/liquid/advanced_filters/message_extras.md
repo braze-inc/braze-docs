@@ -52,5 +52,9 @@ Any other input that doesn't match the aforementioned tag standard may fail to p
 
 A `dispatch_id` is generated and provided in your send events, which can be used as a unique identifier to tie to specific click, open or delivered events. You will be able to utilize and query this field in Currents or Snowflake. Learn more about [`dispatch_id` behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
+#### Can I use message_extras with in-app messages?
+
+The `message_extras` tag is supported for all message types with a send event. In-app messages do not have send events, so `message_extras` are not available for in-app messages.
+
 [1]: {% image_buster /assets/img_archive/message_extras1.png %}
 [2]: {% image_buster /assets/img_archive/message_extras2.png %}

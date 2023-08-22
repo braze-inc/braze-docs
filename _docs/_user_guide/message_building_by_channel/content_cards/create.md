@@ -127,7 +127,7 @@ Each user is eligible to receive up to 100 non-expired and non-dismissed Content
 
 ## Step 4: Configure additional settings (optional)
 
-You can use [key-value pairs][19] to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/multiple_feeds/), and customize how Cards are sorted.
+You can use [key-value pairs][19] to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) and customize how cards are sorted.
 
 To add key-value pairs to your message, switch to the **Settings** tab and click **Add New Pair**.
 
@@ -174,20 +174,12 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
 
 {% alert warning %}
-After a Content Card is launched, it can't be edited. It can only be stopped from sending to new users and removed from users' feeds. Refer to [Updating sent cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-sent-cards) to understand how you can approach this scenario.
+After a Content Card is launched, it can't be edited. It can only be stopped from sending to new users and removed from users' feeds. Refer to [Updating sent cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-launched-cards) to understand how you can approach this scenario.
 {% endalert %}
 
 Next, check out [Content Card reporting]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/) to learn how you can access the results of your Content Card campaigns.
 
 ## Things to know
-
-### Capabilities not yet supported
-
-The following capabilities are not yet supported for Content Cards:
-
-- Frequency Capping
-- Re-ordering Content Cards from the Braze UI
-- Post-launch edits (see [Updating sent cards](#updating-sent-cards) for options on how to handle this scenario)
 
 ### Sending behavior
 
@@ -196,6 +188,16 @@ Once Content Cards have been sent, similar to emails, they sit waiting in an "in
 If you need to remove old cards, you must stop the campaign to do so. To stop a campaign, open your Content Card campaign and select **Stop Campaign**. Stopping the campaign will prompt you to decide how to handle users that have already received your card. If you would like to remove the Content Card from your users' feeds, select **Remove card from feed**. The card will then be hidden by the SDK on the next sync.
 
 ![Dialog for confirming Content Card deactivation][25]{: style="max-width:75%" }
+
+{% alert tip %}
+Do you want to have Content Cards that seem to last longer than the 30-day max? One way to accomplish this is to:
+
+1. Set the duration of the Content Card for 30 days.
+2. Set the campaign re-eligibility to 30 days.
+3. Set the campaign to trigger on "Session Start."
+
+Voila!
+{% endalert %}
 
 ### Card removal events {#action-based-card-removal}
 
