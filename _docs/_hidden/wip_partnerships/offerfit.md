@@ -17,7 +17,9 @@ layout: dev_guide
 
 # OfferFit
 
-[OfferFit](https://www.offerfit.ai/) is a self-learning platform that automates the experimentation process that is traditionally done through A/B testing. This allows you to automatically discover the right message, channel, and timing for every customer based on your customer data. You can optimize your campaigns to existing identified customers, with business goals such as cross-sell, upsell, repurchase, retention, renewal, referral, and winback.
+> [OfferFit](https://www.offerfit.ai/) is a self-learning platform that automates the experimentation process that is traditionally done through A/B testing. 
+
+The OfferFit and Braze integration allows you to automatically discover the right message, channel, and timing for every customer based on your customer data. You can optimize your campaigns to existing identified customers, with business goals such as cross-sell, upsell, repurchase, retention, renewal, referral, and winback.
 
 ## Prerequisites
 
