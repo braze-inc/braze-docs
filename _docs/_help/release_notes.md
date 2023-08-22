@@ -51,6 +51,76 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## August 22, 2023 release
+
+### Customization guides 
+
+We're excited to introduce a reorganization of the Developer Portal. Now, customization options for our SDKs, starting with Content Cards, are consolidated into dedicated Customization Guides. This change streamlines your access to detailed instructions, making it easier tailor experience to your specific needs.
+
+## Shopify catalogs 
+
+Shopify catalogs allow you to import your products from your Shopify store into a Braze catalog, making it easier and automated to bring in product data for deeper personalization of your messages. You can enrich your abandoned cart, order confirmation, and more with the most up-to-date product details and information.
+
+### Merging users by email
+
+You can now [merge users by email]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merging-users-by-email) using the `/users/merge` endpoint. 
+
+{% alert important %}
+Merging users by email and using `/users/merge` with mismatched identifiers are currently in early access. Contact your Braze account manager if you’re interested in participating in the early access.
+{% endalert %}
+
+## Best practices for WhatsApp
+
+Before sending your WhatsApp messages, you can reference suggested [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/) to maintain a high phone quality rating, avoid blocks and reports, and opt-in and out-out users.
+
+### Domain reputation
+
+In the Deliverability Center, you can now view and monitor your [domain reputation]({{site.baseurl}}/user_guide/data_and_analytics/analytics/deliverability_center#domain-reputation) to help avoid being filtered into a spam folder.
+
+### Card creation in Canvas
+
+You can choose when Braze evaluates audience eligibility and personalization for new Content Card campaigns and Canvas steps by specifying when the card is created.
+
+{% alert important %}
+Control over card creation in Canvas steps is in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
+### Copying to workspaces
+
+[Copying campaigns across a workspace]({{site.baseurl}}/copying_to_workspaces/) allows you to get a jumpstart on your message composition by starting with a copy of a campaign in a different workspace. This copy will remain as a draft until you edit and launch, helping you keep and build off your successful messaging strategies.
+
+{% alert important %}
+Copying campaigns across workspaces is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
+{% endalert %}
+
+### Push Max
+
+[Push Max]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/push_max/) amplifies Android push notifications by tracking failed push notifications and resending the push when the user is more likely to receive it. Learn about Push Max and how you can use this feature to potentially improve the deliverability of Android push notifications to [Chinese OEM devices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/).
+
+{% alert important %}
+Push Max is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Xamarin SDK 2.0.0–2.0.1](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md)
+    - Updated the Android binding to use Braze Android SDK 26.3.2
+- [Flutter SDK 6.0.1](https://pub.dev/packages/braze_plugin/changelog)
+    - Updated the native Android bridge from Braze Android SDK 26.1.0 to 26.1.1.
+- [Android SDK 27.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
+- [Swift SDK 6.5.0–6.6.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
+    - Fixed an issue in HTML in-app messages where custom event and purchase properties would always convert values for `1` and `0` to become `true` and `false`, respectively. These property values will now respect their original form in the HTML.
+- [React Native SDK 6.0.0–6.0.2](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
+    - Updated the native Android bridge from Braze Android SDK 26.3.1 to 26.3.2.
+- [Cordova SDK 6.0.0-6.0.1](https://github.com/braze-inc/braze-cordova-sdk/blob/master/CHANGELOG.md)
+    - Updated the native Android version from Braze Android SDK 26.3.1 to 26.3.2
+- [Expo Plugin 1.1.2](https://github.com/braze-inc/braze-expo-plugin/blob/1.1.2/CHANGELOG.md)
+- [Unity 4.3.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md)
+- [Segment Kotlin 1.4.1](https://github.com/braze-inc/braze-segment-kotlin/blob/main/CHANGELOG.md)
+- [Segment-Android 15.0.1](https://github.com/Appboy/appboy-segment-android/blob/master/CHANGELOG.md)
+
 ## July 25, 2023 release
 
 ### Canvas approval 
@@ -557,46 +627,6 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Cordova SDK 2.33.0](https://github.com/Appboy/appboy-cordova-sdk/blob/2.33.0/CHANGELOG.md#2330)
   - Migrated the iOS plugin to use the new Braze Swift SDK (5.8.1).
   - News Feed UI is no longer supported on iOS.
-
-## January 10, 2023 release
-
-### User Update component for Canvas Flow
-
-The [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) component allows you to update a user's attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
-
-### Setting subscription groups via API
-
-When creating new users via the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
-
-### Conversions dashboard early access
-
-The [conversions dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard/) allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods. You can specifically track these attribution methods:
-
-- **Open conversions:** Conversions that occurred after a user opened the message
-- **Click conversions:** Conversions that occurred after a user clicked the message
-- **Received conversions:** Conversions that occurred after a user received the message
-- **Last-click conversions:** Conversions that occurred after a user clicked the message if the message was the most recent one the user clicked (This feature is currently being tested on a small subset of early access customers)
-
-This feature is currently in early access. If you're interested in participating in the early access, reach out to your customer success manager.
-
-### Canvas exit events for Braze Currents
-
-You can now track when your users exit a Canvas by either performing an event or by matching an audience. Check out the [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) section in the Currents Event Glossary for more information.
-
-### SDK updates
-
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
-
-- [Web SDK 4.5.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
-- [AppboyKit iOS SDK 4.5.2](https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.5.2)
-- [Swift SDK 5.8.0-5.8.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#580)
-  - Renames the `BrazeLocation` class to `BrazeLocationProvider` to avoid shadowing the module of the same name.
-- [Flutter SDK 3.0.1](https://pub.dev/packages/braze_plugin/changelog)
-- [Android SDK 24.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
-  - Location and geofence functionality has moved to a new module called `com.braze:android-sdk-location`.
-  - Appboy classes and files have been wholesale moved to Braze.
-  - Changed the default behavior of `DefaultContentCardsUpdateHandler` to use the creation time instead of the last update time when sorting Content Cards.
-  - Removed BrazeUser.setFacebookData() and BrazeUser.setTwitterData().
 
 
 [support]: {{site.baseurl}}/support_contact/
