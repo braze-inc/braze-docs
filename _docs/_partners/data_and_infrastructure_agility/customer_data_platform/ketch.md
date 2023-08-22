@@ -1,7 +1,7 @@
 ---
 title: Ketch
 nav_title: Ketch
-description: "This reference article covers the Braze and Ketch integration. Ketch is a enterprise Customer Data platform for marketers, analysts, and technologists. This integration allows brands to sync and map their ActionIQ data directly to Braze."
+description: "This reference article covers the Braze and Ketch integration. Ketch provides simplified privacy operations and complete, dynamic data control and intelligence."
 alias: /partners/ketch
 page_type: partner
 search_tag: Ketch
