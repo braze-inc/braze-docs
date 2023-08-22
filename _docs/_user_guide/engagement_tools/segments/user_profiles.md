@@ -21,6 +21,7 @@ To access a user's profile, go to the **Search Users** page and search for a use
 - Email
 - Phone number
 - Push token
+- User alias with the format "[user_alias]:[alias_name]", such as "amplitude_id:user_123"
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), **Search Users** is **User Search** and can be found under **Users**.
