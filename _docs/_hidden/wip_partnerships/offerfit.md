@@ -95,7 +95,7 @@ The OfferFit AI will learn from every customer interaction and apply those insig
 
 Define your target audience by creating at least one segment in Braze. This segment will be used to send your campaign or Canvas to the right users.
 
-### Step 2: Configure an API-triggered Braze campaign or Canvas and create campaign assets (e.g., HTML templates, images)
+### Step 2: Configure an API-triggered Braze campaign or Canvas and create campaign assets (e.g., HTML templates, images) {#step-2}
 
 First, create a campaign or Canvas in Braze. OfferFit will use this campaign or Canvas to send 1:1 personalized activation events to the right users from your defined audience. 
 
