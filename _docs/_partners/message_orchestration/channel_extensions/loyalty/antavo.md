@@ -64,7 +64,7 @@ When any value of the configured fields changes in Antavo, not only the synchron
 ![Sync Fields page in Antavo.][2]
 
 {% alert important %}
-To ensure you minimize data point consumption, we recommend only mapping the fields that will be actioned on within Braze.
+To minimize data point consumption, we recommend only mapping the fields that will be actioned on within Braze.
 {% endalert %}
 
 #### Supported data types
