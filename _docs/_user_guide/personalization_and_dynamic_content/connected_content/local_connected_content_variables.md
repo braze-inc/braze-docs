@@ -174,6 +174,8 @@ This key will only be automatically added to the Connected Content object if the
 
 ## Configurable caching {#configurable-caching}
 
+Connected Content responses can be cached across different campaigns or messages (within the same workspace) to optimize send speeds.
+
 ### Cache size limit
 The Connected Content response body must not exceed 1&nbsp;MB, or it will not cache.
 
