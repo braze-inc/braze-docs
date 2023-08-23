@@ -27,4 +27,53 @@ Because Content Cards have a maximum size of 2 KB for content you enter in the d
 Overriding default images is currently not supported in our Xamarin iOS integration.
 {% endalert %}
 
+## Disabling Dark Mode
+
+To prevent the Content Card UI from adopting dark mode styling when the user device has dark mode enabled, set the `ABKContentCardsTableViewController.enableDarkTheme` property. You can access the `enableDarkTheme` property directly on an `ABKContentCardsTableViewController` instance or via the `ABKContentCardsViewController.contentCardsViewController` property to best suit your own UI.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+// Accessing enableDarkTheme via ABKContentCardsViewController.contentCardsViewController.
+- (IBAction)presentModalContentCards:(id)sender {
+  ABKContentCardsViewController *contentCardsVC = [ABKContentCardsViewController new];
+  contentCardsVC.contentCardsViewController.enableDarkTheme = NO;
+  ...
+  [self.navigationController presentViewController:contentCardsVC animated:YES completion:nil];
+}
+
+// Accessing enableDarkTheme directly.
+- (IBAction)presentNavigationContentCards:(id)sender {
+  ABKContentCardsTableViewController *contentCardsTableVC = [[ABKContentCardsTableViewController alloc] init];
+  contentCardsTableVC.enableDarkTheme = NO;
+  ...
+  [self.navigationController pushViewController:contentCardsTableVC animated:YES];
+}
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+// Accessing enableDarkTheme via ABKContentCardsViewController.contentCardsViewController.
+@IBAction func presentModalContentCards(_ sender: Any) {
+  let contentCardsVC = ABKContentCardsViewController()
+  contentCardsVC.contentCardsViewController.enableDarkTheme = false
+  ...
+  self.navigationController?.present(contentCardsVC, animated: true, completion: nil)
+}
+
+// Accessing enableDarkTheme directly.
+@IBAction func presentNavigationContentCards(_ sender: Any) {
+  let contentCardsTableVC = ABKContentCardsTableViewController()
+  contentCardsTableVC.enableDarkTheme = false
+  ...
+  self.navigationController?.present(contentCardsTableVC, animated: true, completion: nil)
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches
