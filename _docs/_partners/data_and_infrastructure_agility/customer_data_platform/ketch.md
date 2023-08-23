@@ -1,7 +1,7 @@
 ---
 title: Ketch
 nav_title: Ketch
-description: "This reference article covers the Braze and Ketch integration. Ketch provides simplified privacy operations and complete, dynamic data control and intelligence."
+description: "This reference article covers the Braze and Ketch integration. Ketch provides simplified privacy operations and complete, dynamic data control, and intelligence."
 alias: /partners/ketch
 page_type: partner
 search_tag: Ketch
@@ -10,9 +10,13 @@ page_order: 4.3
 
 # Ketch
 
-> [Ketch](https://www.ketch.com) enables businesses to be responsible stewards of their data. Ketch provides simplified privacy operations and complete, dynamic data control and intelligence.
+> [Ketch](https://www.ketch.com) enables businesses to be responsible stewards of their data. Ketch provides simplified privacy operations and complete, dynamic data control and intelligence. 
 
-The Braze and Ketch integration allows you to control customer communication preferences within the Ketch preference center to be automatically propagated to Braze in order to manage customer communication and privacy preferences. 
+The Braze and Ketch integration allows you to control customer communication preferences within the Ketch preference center and automatically propagate these changes to Braze. 
+
+{% alert note %}
+Looking for guidance on creating subscription groups? Check out our articles for <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group//'>SMS subscription groups</a> and <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>email subscription groups</a>.
+{% endalert %}
 
 ## Prerequisites
 
@@ -27,29 +31,30 @@ The Braze and Ketch integration allows you to control customer communication pre
 ### Step 1: Set up the Braze connection
 
 1. In your [Ketch instance](https://app.ketch.com), navigate to **Data Systems**, and select **Braze**. Then, click **New Connection**.
-2. Give your Braze connection an identifiable name. Note that a code will also be created for that connection, this code should be unique across all connections and will be used to refer to this connection in API based processes.
-3. Confirm the identity mapping of the users. By default, Ketch will map user identities by a user's email address, or by the `external_id` in Braze.
-4. Next, add the Braze API key, and provide the API endpoint. Note this [API endpoint](https://www.braze.com/docs/api/basics/#endpoints) is based on which Braze instance your organization is using.
+2. Give your Braze connection an identifiable name, which will be used to refer to this connection in API-based processes. Note that a code will also be created for that connection. This code should be unique across all connections.
+3. Confirm the identity mapping of your users. By default, Ketch will map user identities by a user's email address, or by the `external_id` in Braze.
+4. Add the Braze API key and provide the API endpoint. Note this [API endpoint](https://www.braze.com/docs/api/basics/#endpoints) is based on which Braze instance your organization is using.
 
 ### Step 2: Configure subscription preferences
 
-1. Go to **Policy Center > Subsriptions**. If you do not see the subscriptions tab under **Policy Center**, make sure you have access to the marketing preference center, and verify that you have the correct account permissions to access this portion of the product.
-2. To create a topic, click **Create New Subscription**. Each subscription will have a name and a code, which is how each subscription is referred to when referenced by the API.
-3. Next, add the channels for sending your subscription topics. Each channel will show in the marketing preference center for your users. You can also add the details of how you want the Ketch preference center to orchestrate the signals of that particular opt-in or opt-out.
-4. For the integration with Braze, select the Braze connection you would like to orchestrate the opt-in and opt-out signals.
-5. Enter the `subscription_group_id` for the subscription group you want to fill the user preferences to in Braze.
+1. Go to **Policy Center > Subscriptions**. If you do not see the subscriptions tab under **Policy Center**, make sure you have access to the marketing preference center, and verify that you have the correct account permissions to access this portion of the product.
+2. Click **Create New Subscription** to create a new topic. Each subscription will have a name and a code.
+3. Add the channels for sending your subscription topics. Each channel will show in the marketing preference center for your users. You can also add the details of how you want the Ketch preference center to orchestrate a particular opt-in or opt-out signal.
+4. Select the Braze connection you would like to use to orchestrate the opt-in and opt-out signals.
+5. Enter the Braze `subscription_group_id` for the subscription group to which you want to send the Ketch user preferences.
 
 ![Braze Subscription Group ID.][1]
 
 {% alert note %}
-In order for subscription preferences to collect and orchestrate user opt-in and opt-out signals, identities must be properly configured. Ketch recommends configuring email as the identity to orchestrate user preference signals for this integration.
+In order to collect and orchestrate user opt-in and opt-out signals, identities must be properly configured. Ketch recommends configuring email as the identifier to orchestrate user preference signals for this integration.
 {% endalert %}
+
 
 ### Step 3: Configure identities
 
-The ability for a user to see marketing preference center is gated behind whether Ketch can capture a proper marketing preference identity for that user. If Ketch cannot capture the user identity properly, then the marketing preferences page will not show since Ketch would be unable to orchestrate any user preferences without knowing how they are identified.
+A user can only see the marketing preference center when Ketch can confirm that user's identity. If Ketch cannot capture the user's identity properly, then the marketing preferences page will not display to that user since Ketch is be unable to manage their user preferences.
 
-1. In order to configure the marketing preference identity, go to the **Settings** page in Ketch, and click  **Identity space**. You will need to either create a new identity space or edit an existing identity space to assign that identity space as the marketing preference identity. Check that the Ketch tag deployed on the property properly captures that identity space.
+1. To configure the marketing preference identity, go to the **Settings** page in Ketch, and click  **Identity space**. You will need to either create a new identity space or edit an existing identity space to assign that identity space as the marketing preference identity. Check that the Ketch tag deployed on the property properly captures that identity space.
 2. Go to **Experience Server** > **Properties**, and edit the desired property. Under the data layer for that property, make sure to enable the custom identity space. Then, configure how the marketing preference identity is captured on this site.
 3. Once you have the identity space configured, test to see if the preference center appears by opening the preference center on the website where the Ketch tag has been deployed.
 
