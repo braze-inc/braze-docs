@@ -80,3 +80,11 @@ Time to Live (TTL) can track failed push notifications to Firebase Cloud Messagi
 By default, Time to Live is set to 28 days, which is the maximum. You can decrease the default TTL for all new Android push messages from **Settings** > **Workspace Settings** > **Push Time to Live (TTL)**, or you can configure the number of days on a per message basis in the **Settings** tab when composing an Android push notification.
 
 ![Time to Live field set to 28 days.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:70%"}
+
+## Things to know
+
+### Push Max and promotion codes
+
+We recommend that you don't use [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) in messages where Push Max is turned on. 
+
+This is because promotion codes are unique. If a push notification that contains a promotion code fails to deliver, when that notification is resent due to Push Max, a new promotion code will be sent. This can result in you consuming promotion codes faster than expected.
