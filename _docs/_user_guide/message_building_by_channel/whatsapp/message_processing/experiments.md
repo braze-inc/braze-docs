@@ -45,4 +45,3 @@ There is no fixed time for this experiment. As such, a consumer may continue to 
 
 We recommend using other Braze channels, such as email, SMS, push notifications, or in-app messages to send a message with similar content to your intended users.
 
-> Something about importing via CSV which Lexie Haggerty can add directly and Suzanne Frush to add technical language per comment.
