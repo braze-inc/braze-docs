@@ -40,7 +40,7 @@ From the **Company Users** page, you can edit a specific user's permissions, eit
 
 When you switch a user's permissions from **Administrator** to **Limited**, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear under the Edit User box.
 
-## Limited and team role permissions
+## Managing limited and team role permissions
 
 You can manage user permissions by group or on an individual basis when editing or adding a user from the **Company Users** page.
 
@@ -99,6 +99,10 @@ Developers | “Access Dev Console”
 Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br> “Manage Media Library”
 User Management | “Manage Dashboard Users” <br> “Manage Teams”
 {: .reset-td-br-1 .reset-td-br-2}
+
+## Exporting user permissions
+
+You can download a CSV of your dashboard users and their associated permissions by clicking **Export Users** on the **Company Users** page. A CSV will be sent to the email address associated with your Braze account.
 
 [29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"
 [30]: {% image_buster /assets/img_archive/two_factor_authentication_manage_users_new.png %}
