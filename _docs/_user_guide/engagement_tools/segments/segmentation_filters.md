@@ -209,10 +209,6 @@ glossaries:
     description: Segments your users by whether or not they were in the control group for a specific Canvas.
     tags:
       - Retargeting
-  - name: Is Not In Segment
-    description: Segments your users by whether or not they are included in an already existing segment.
-    tags:
-      - Retargeting
   - name: Last Received Campaign or Canvas With Tag
     description: Segments your users by when they received a specific campaign or Canvas with a specific tag. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
@@ -342,11 +338,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Opened Email
-    description: Segments your users by whether or not they have opened a specific email This includes both user and machine opens. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    description: Segments your users by whether or not they have opened a specific email. This includes both user and machine opens. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
     tags:
       - Retargeting
   - name: Opened Email (Other Opens)
-    description: Segments your users by whether or not they have opened a specific email. This includes email opens that haven't been identified as "Machine opens". For example, when a user opens an email on another platform (i.e. Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    description: Segments your users by whether or not they have opened a specific email. This includes email opens that haven't been identified as "Machine opens". For example, when a user opens an email on another platform (i.e., Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
     tags:
       - Retargeting
   - name: Opened Email (Machine Opens)
@@ -486,7 +482,7 @@ glossaries:
     tags:
       - Testing
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign. Note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
+    description: Allows you to filter based on segment membership anywhere that filters are used (i.e., segments, campaigns, etc.) and target multiple different segments within one campaign. Note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
     tags:
       - Other
   - name: Provisionally Authorized on iOS
