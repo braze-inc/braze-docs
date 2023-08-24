@@ -69,7 +69,7 @@ Each subscription source has a different enrollment behavior, as described in th
 Source    | Double Opt-In Enrollment Behavior   
 ----------- | -----------
 SDK | Users are automatically enrolled when subscribed via the Braze SDK.
-REST API | By default, users won’t be enrolled when their subscription status is set by `/users/track` or any of the `subscription/status/set` endpoints. Users can be enrolled by passing an optional parameter `send_double_opt_in_response` as `true` (e.g., [{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed", "send_double_opt_in_response: true}]). 
+REST API | By default, users won’t be enrolled when their subscription status is set by `/users/track` or any of the `subscription/status/set` endpoints. Users can be enrolled by passing an optional parameter `use_double_opt_in_logic` as `true` (e.g., [{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed", "use_double_opt_in_logic": true}]). 
 Shopify | Users won’t be enrolled when their subscription status is set by our Shopify integration.
 User Import | Users won’t be enrolled when their subscription status is set by User Import.
 [Preference Center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center) | Users are automatically enrolled when subscribed through a preference center.
