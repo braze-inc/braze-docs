@@ -1,17 +1,11 @@
 ---
-nav_title: OfferFit
+nav_title: "OfferFit"
 article_title: OfferFit
-page_order: 1
-
-
-description: "OfferFit’s Automated Experimentation Platform is a fast and scalable way to accelerate testing and learning. Automatically discover the right message, creative, incentive, channel, and timing for every customer to unlock the full value of your customer data."
 alias: /partners/offerfit/
-
-
+description: "OfferFit’s Automated Experimentation Platform is a fast and scalable way to accelerate testing and learning. Automatically discover the right message, creative, incentive, channel, and timing for every customer to unlock the full value of your customer data."
 page_type: partner
 search_tag: OfferFit
-hidden: true
-layout: dev_guide
+
 ---
 
 
