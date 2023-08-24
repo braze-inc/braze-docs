@@ -14,7 +14,7 @@ layout: dev_guide
 
 # Simon Data
 
-> [Simon Data][1]is a customer data platform (CDP) friendly to marketers and trusted by data teams. By transforming your data warehouse into a marketing powerhouse, Simon drives business results and a superior customer experience.
+> [Simon Data][1] is a customer data platform (CDP) friendly to marketers and trusted by data teams. By transforming your data warehouse into a marketing powerhouse, Simon drives business results and a superior customer experience.
 >
 > Use the Braze and Simon Data integration to create and sync sophisticated audiences to Braze for orchestration, in real-time and without code. 
 >
