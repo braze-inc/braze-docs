@@ -71,9 +71,9 @@ To better understand the expected behavior for channels, refer to the following 
 
 1. Open any campaign or Canvas that includes an Android push and click **Edit Campaign**.
 2. Navigate to the Android push message composer.
-3. Click **Manage Notification Channels**. Any channels added here will be available globally for all campaigns and Canvases. You must have "manage apps" permissions for your workspace to manage channels.
+3. Click **Manage Notification Channels**. Any channels added here will be available globally for all campaigns and Canvases. You must have "Manage Apps" [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for your workspace to manage channels.
 
-Note that when you select a notification channel from the dropdown, you will see the Android push reachable users tally change to reflect the number of users who are opted in to receive push notifications on that particular channel. These are the only users who will receive the message, and your campaign analytics will be measured based on this audience.
+When you apply a notification channel to a specific campaign or Canvas step, your **Reachable Users** tally (located in the Target Audience step) for Android Push will not appear to change. However, only users subscribed to the selected notification channel will see the message, and your campaign analytics (like clicks) will be measured based on this audience.
 
 ![][6]
 
@@ -85,7 +85,7 @@ Note that when you select a notification channel from the dropdown, you will see
 
 ## Specifying your fallback channel
 
-Your fallback channel is the channel that Braze will attempt to send your android message with if you have not selected a channel for the message. The only campaigns and Canvases that will have android messages without a channel selection are campaigns and Canvases that were created before your team added channels to the Braze dashboard. If you change your fallback channel, the change will be applied globally to all campaigns and Canvases without an explicit channel selection.
+Your fallback channel is the channel that Braze will attempt to send your Android message with if you have not selected a channel for the message. The only campaigns and Canvases that will have Android messages without a channel selection are campaigns and Canvases that were created before your team added channels to the Braze dashboard. If you change your fallback channel, the change will be applied globally to all campaigns and Canvases without an explicit channel selection.
 
 1. Open any existing campaign or Canvas.
 2. Navigate to the Android push composer.
