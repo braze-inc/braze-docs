@@ -14,6 +14,8 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Loyalty"
 
 valid_partner_list:
+- name: Antavo
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/
 - name: Talon.One
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/talonone/
 - name: Voucherify
