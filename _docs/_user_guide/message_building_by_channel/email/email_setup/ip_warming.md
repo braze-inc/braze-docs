@@ -10,7 +10,7 @@ channel: email
 
 # IP warming
 
-> IP warming is the practice of getting email inbox providers used to receiving messaging from your dedicated IP addresses. It's an extremely important part of email sending with any email service provider (ESP) and standard practice at Braze to ensure your messages reach their destination inboxes at a consistently high rate.
+> IP warming is the practice of getting email inbox providers used to receiving messaging from your dedicated IP addresses. It's an extremely important part of email sending with any email service provider (ESP) and standard practice at Braze to confirm your messages reach their destination inboxes at a consistently high rate.
 
 IP warming is designed to help you establish a positive reputation with internet service providers (ISPs). Every time a new IP address is used to send an email, ISPs programmatically monitor those emails to verify that it isn't being used to send spam to users.
 
@@ -26,7 +26,7 @@ If your domain or IP is blocked by an ISP, the respone codes in the Braze Develo
 
 ## IP warming schedules
 
-We strongly recommend adhering to this IP warming schedule strictly to ensure deliverability. It's also important that you don't skip days as consistent scaling improves delivery metrics.
+We strongly recommend adhering to this IP warming schedule strictly to support deliverability. It's also important that you don't skip days as consistent scaling improves delivery metrics.
 
 Day | # of Emails to be Sent
 ----|--------------------------|
@@ -57,7 +57,7 @@ Most ISPs only store reputation data for 30 days. If you go a month without send
 
 ## How to limit sends during warming
 
-Braze's built-in user limiting feature serves as a useful tool to help you with warming your IP address. After choosing your desired messaging segments during campaign creation, on the [Target Users]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-5-choose-your-target-segment) step, select the **Advanced Options** dropdown to limit your users. As your warming schedule continues, you can gradually raise this limit to increase the volume of emails you send.
+Braze's built-in user limiting feature serves as a useful tool to help you with warming your IP address. After choosing your desired messaging segments during campaign creation, on the [Target Users]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) step, select the **Advanced Options** dropdown to limit your users. As your warming schedule continues, you can gradually raise this limit to increase the volume of emails you send.
 
 ![][18]
 
@@ -66,7 +66,7 @@ Braze's built-in user limiting feature serves as a useful tool to help you with 
 Many ISPs and email access providers no longer only filter by IP address reputation. These filtering technologies now also account for domain-based reputation. This means that filters will look at all data associated with the sender's domain and not just single out the IP address. For this reason, in addition to warming up your email IP, we also recommend having separate domains or subdomains for marketing, transactional, and corporate mail. 
 
 {% alert important %}
-Subdomain segmentation is especially important for large-volume senders. These senders should work with a Braze representative when setting up their account to ensure they adhere to this practice.
+Subdomain segmentation is especially important for large-volume senders. These senders should work with a Braze representative when setting up their account to confirm they adhere to this practice.
 {% endalert %}
 
 We recommend segmenting your domains so that corporate mail is sent through your top-level domain, and marketing and transactional mail are sent through different domains or subdomains.
@@ -81,7 +81,7 @@ Increase the amount you send each day as gradually as possible. Abrupt, high-vol
 
 ### Have engaging introductory content
 
-Ensure that your first content is highly engaging and maximizes the likelihood that users click, open, and engage with your email. Always prefer well-targeted emails to indiscriminate blasts when warming IPs.
+Confirm that your first content is highly engaging and maximizes the likelihood that users click, open, and engage with your email. Always prefer well-targeted emails to indiscriminate blasts when warming IPs.
 
 ### Set a consistent sending cadence
 
@@ -91,13 +91,13 @@ Refer to our [IP warming schedule](#ip-warming-schedules) to spread your send ac
 
 ### Clean your email lists
 
-Ensure that your email list is clean and doesn't have old or unverified emails. Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.
+Confirm that your email list is clean and doesn't have old or unverified emails. Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.
 
 ### Monitor your sender reputation
 
 When conducting the IP warming process, be sure to carefully monitor your sender reputation while you conduct the IP warming process. These specific metrics are important to watch:
 - **Bounce Rates:** If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our [Keep It Clean: The Importance of Email List Hygiene][43] article. Additionally, you should consider implementing a [sunset policy][46] to stop emailing unengaged or dormant email addresses.
-- **Spam Reports:** If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, ensure that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
+- **Spam Reports:** If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, check that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
 - **Sender Reputation Scores:** ReturnPath's [SenderScore][44] and Cisco's IronPort [SenderBase][45] are useful resources for checking how your reputation is progressing.
 
 {% alert tip %}

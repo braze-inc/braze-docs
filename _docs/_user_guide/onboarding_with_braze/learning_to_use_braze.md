@@ -103,7 +103,7 @@ Before proceeding with this learning path, make sure you've already followed the
 |---|---|---|
 | 1 | [About email]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/) | A brief overview of email at Braze, such as how you can customize emails and some example use cases. |
 | 2 | [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) | What email subscription statuses are and how to target them in your campaigns. |
-| 3 | [Creating an email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/) | How to create and send an email campaign. |
+| 3 | [Creating an email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) | How to create and send an email campaign. |
 | 4 | [Email guidelines and tips]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/) | Technical, styling, and content-specific guidelines for email. |
 | 5 | [Email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) | Create reusable email templates. |
 | 6 | [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/) | How to access and interpret your email campaign reporting. |

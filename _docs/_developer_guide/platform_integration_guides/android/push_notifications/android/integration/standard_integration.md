@@ -283,7 +283,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Ensure small icons conform to design guidelines
+### Step 2: Conform small icons to design guidelines
 
 For general information about Android notification icons, visit the [Notifications overview][37].
 
@@ -452,10 +452,10 @@ For issues related to push analytics, see our [troubleshooting guide][57].
 
 #### Testing from command line
 
-If you'd like to test in-app and push notifications via the command-line, you can send a single notification through the terminal via cURL and the [messaging API][22]. You will need to replace the following fields with the correct values for your test case:
+If you'd like to test in-app and push notifications via the command-line interface, you can send a single notification through the terminal via cURL and the [messaging API][22]. You will need to replace the following fields with the correct values for your test case:
 
-- `YOUR_API_KEY` - available at **Settings** > **API Keys**
-- `YOUR_EXTERNAL_USER_ID` - available by searching for a profile on the **Search Users** page
+- `YOUR_API_KEY` (Go to **Settings** > **API Keys**.)
+- `YOUR_EXTERNAL_USER_ID` (Search for a profile on the **Search Users** page.)
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
@@ -553,7 +553,7 @@ setCustomBrazeNotificationFactory(brazeNotificationFactory: IBrazeNotificationFa
 The recommended place to set your custom `IBrazeNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity). This will allow the notification factory to be set correctly whenever your app process is active.
 
 {% alert important %}
-Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and a deep understanding of Braze's push functionality. For example, you must ensure your notification logs push opens correctly.
+Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and a deep understanding of Braze's push functionality. For example, you must make sure your notification logs push opens correctly.
 {% endalert %}
 
 To unset your custom [`IBrazeNotificationFactory`][6] and return to default Braze handling for push, pass in `null` to our custom notification factory setter:

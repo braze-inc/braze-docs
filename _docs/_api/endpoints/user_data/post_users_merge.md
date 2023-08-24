@@ -48,13 +48,82 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `merge_updates` | Required | Array | An object array. Each object should contain an `identifier_to_merge` object and an `identifier_to_keep` object, which should each reference a user either by `external_id`,  `user_alias` or `email`. Both users (original user and target user) being merged must be identified using the same method. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
+### Merging users by email
+
+{% alert important %}
+Merging users by email and using `/users/merge` with mismatched identifiers are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
+If an `email` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` should be an array specifying which user to merge if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then merging will not occur.
+
+The allowed values for the array are: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` refers to prioritizing the most recently updated user.
+
+Only one of the following options may exist in the prioritization array at a time:
+- `identified` refers to prioritizing a user with an `external_id`
+- `unidentified` refers to prioritizing a user without an `external_id`
+
+#### Example requests
+
+##### Merging unidentified user
+
+The following request would merge the most recently updated unidentified user with email address "john.smith@braze.com" into the user with `external_id` "john". Using `most_recently_updated` filters the query to just one unidentified user. So, if there were two unidentified users with this email address, only one would get merged into the user with `external_id` "john".
+
+```json
+{
+  "merge_updates": {
+    "identifier_to_merge": {
+      "email": "john.smith@braze.com", 
+      "prioritization": ["unidentified", "most_recently_updated"]
+    },
+    "identifier_to_keep": {
+      "external_id": "john"
+    },
+  }
+}
+```
+
+##### Merging unidentified user into identified user
+
+This next example merges the most recently updated unidentified user with email address "john.smith@braze.com" into the most recently updated identified user with email address "john.smith@braze.com". Using `most_recently_updated` filters the queries to just one user (one unidentified user for `identifier_to_merge`, and one identified user for the `identifier_to_keep`).
+
+```json
+{
+  "merge_updates": {
+    "identifier_to_merge": {
+      "email": "john.smith@braze.com", 
+      "prioritization": ["unidentified", "most_recently_updated"]
+    },
+    "identifier_to_keep": {
+      "email": "john.smith@braze.com", 
+      "prioritization": ["identified", "most_recently_updated"]
+    },
+  }
+```
+
+##### Merging an unidentified user without including the most_recently_updated prioritization
+
+If there are two unidentified users with email address "john.smith@braze.com", this example request doesn't merge any users since there are two unidentified users with that email address. This request only works if there is only one unidentified user with email address "john.smith@braze.com".
+```json
+{
+  "merge_updates": {
+    "identifier_to_merge": {
+      "email": "john.smith@braze.com", 
+      "prioritization": ["unidentified"]
+    },
+    "identifier_to_keep": {
+      "external_id": "john"
+    },
+  }
+}
+```
+
 ### Merge_updates behavior
 
 {% alert important %}
 The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
 {% endalert %}
 
-This endpoint will merge any of the following fields found exclusively on the original user to the target user:
+This endpoint will merge any of the following fields if they are not found on the target user:
 - First name
 - Last name
 - Email
@@ -163,11 +232,11 @@ The following table lists possible error messages that may occur.
 
 | Error | Troubleshooting |
 | --- |
-| `'merge_updates' must be an array of objects` | Ensure that `merge_updates` is an array of objects. |
+| `'merge_updates' must be an array of objects` | Check that `merge_updates` is an array of objects. |
 | `a single request may not contain more than 50 merge updates` | You can only specify up to 50 merge updates in a single request. |
 | `identifiers must be objects with an 'external_id' property that is a string, or 'user_alias' property that is an object` | Check the identifiers in your request. |
-| `identifiers must be objects of the same type` | Ensure that the identifier object types match. |
-| `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Ensure that `merge_updates` only contains the two objects `identifier_to_merge` and `identifier_to_keep`. |
+| `identifiers must be objects of the same type` | Check that the identifier object types match. |
+| `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Check that `merge_updates` only contains the two objects `identifier_to_merge` and `identifier_to_keep`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

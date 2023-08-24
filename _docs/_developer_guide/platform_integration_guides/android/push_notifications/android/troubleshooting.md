@@ -17,7 +17,7 @@ channel:
 The Firebase Cloud Messaging (FCM) service is Google's infrastructure for push notifications sent to Android applications. Here is the simplified structure of how push notifications are enabled for your users' devices and how Braze can send push notifications to them:
 
 ### Step 1: Configuring your Google Cloud API key
-In developing your app, you'll need to provide the Braze Android SDK with your Firebase sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key to send messages to your devices. You will also need to ensure that FCM service is enabled in Google Developer's console. 
+In developing your app, you'll need to provide the Braze Android SDK with your Firebase sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key to send messages to your devices. You will also need to check that FCM service is enabled in Google Developer's console. 
 
 {% alert note %}
 A common mistake during this step is using the app identifier API key instead of the REST API key.
@@ -44,11 +44,11 @@ Braze provides push notification errors within the message activity log. This er
 
 ### No "push registered" users showing in the Braze dashboard (prior to sending messages)
 
-Ensure that your app is correctly configured to allow push notifications. Common failure points to check include:
+Confirm that your app is correctly configured to allow push notifications. Common failure points to check include:
 
 #### Incorrect sender ID
 
-Ensure that the correct FCM sender ID is included in the `braze.xml` file. An incorrect sender ID will lead to `MismatchSenderID` errors reported in the dashboard's message activity log.
+Check that the correct FCM sender ID is included in the `braze.xml` file. An incorrect sender ID will lead to `MismatchSenderID` errors reported in the dashboard's message activity log.
 
 #### Braze registration not occurring
 
@@ -57,7 +57,7 @@ Since FCM registration is handled outside of Braze, failure to register can only
 1. During registration with FCM
 2. When passing the FCM-generated push token to Braze
 
-We recommend setting a breakpoint or logging to ensure that the FCM-generated push token is being sent to Braze. If a token is not generated correctly or at all, we recommend consulting the [FCM documentation][1].
+We recommend setting a breakpoint or logging to confirm that the FCM-generated push token is being sent to Braze. If a token is not generated correctly or at all, we recommend consulting the [FCM documentation][1].
 
 #### Google Play Services not present
 
@@ -67,7 +67,7 @@ For FCM push to work, Google Play Services must be present on the device. If Goo
 
 #### Device not connected to the internet
 
-Ensure your device has good internet connectivity and isn't sending network traffic through a proxy.
+Check that your device has good internet connectivity and isn't sending network traffic through a proxy.
 
 ### Tapping push notification doesn't open the app
 
@@ -81,7 +81,7 @@ If a push notification isn't delivered, make sure it didn't bounce by looking in
 
 #### Error: MismatchSenderID
 
-`MismatchSenderID` indicates an authentication failure. Ensure your Firebase sender ID and FCM API key are correct.
+`MismatchSenderID` indicates an authentication failure. Confirm your Firebase sender ID and FCM API key are correct.
 
 #### Error: InvalidRegistration
 
@@ -118,7 +118,7 @@ The BrazeFirebaseMessagingService must be properly registered in `AndroidManifes
 
 #### Firewall is blocking push
 
-If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Ensure that ports `5228`, `5229`, and `5230` are open. Additionally, since FCM doesn't specify its IPs, you must also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in Google's ASN of `15169`.
+If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Confirm that ports `5228`, `5229`, and `5230` are open. Additionally, since FCM doesn't specify its IPs, you must also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in Google's ASN of `15169`.
 
 #### Custom notification factory returning null
 

@@ -77,7 +77,7 @@ When you first load into the drag-and-drop editor, you'll see the **Design and B
 2. Select the **Content** panel. Drag and drop the desired content tiles to the row components. 
 - You can further refine the tile by selecting the tile and adjusting the fields in **Content Properties** and **Block Options**. This includes editing letter spacing, padding, line height, and more.
 
-As you build your email, you can toggle between a desktop and mobile view to preview how your email messaging will look for your user groups. This will ensure that your content is responsive, and you can make any necessary adjustments along the way. 
+As you build your email, you can toggle between a desktop and mobile view to preview how your email messaging will look for your user groups. This will check that your content is responsive, and you can make any necessary adjustments along the way. 
 
 {% alert tip %}
 Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
@@ -208,5 +208,5 @@ HTML rendering has improved based on these following updates that minimize the n
 [9]: {% image_buster /assets/img/dnd/dnd_content.png %}
 [10]: {% image_buster /assets/img/dnd/dnd_rows.png %}
 [11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
-[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
+[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/

@@ -112,7 +112,7 @@ Use the **Add Row** button to add purchase properties.
 
 Sometimes, you might be required to disable or re-enable Braze tracking on your website, for example, after a user indicates they've opted out of web tracking for privacy reasons.
 
-Use the **Disable Tracking** or **Resume Tracking** tag type to disable or re-enable web tracking, respectively.
+Use the **Disable Tracking** or **Resume Tracking** tag type to disable or re-enable web tracking, respectively. These two options call [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) and [`enableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk).
 
 ### Custom user attributes {#custom-attributes}
 

@@ -22,7 +22,7 @@ For easy reference, this information is reflected on the user profile in the ema
 
 ![Email open and click tracking pixel fields on the Engagement tab of a user's profile][1]{: style="max-width:60%;"}
 
-[open_tracking]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel
+[open_tracking]: {{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#changing-location-of-tracking-pixel
 [api_doc]: {{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields
 [csv_doc]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv
 [1]: {% image_buster /assets/img_archive/open_click_user_profile.png %}

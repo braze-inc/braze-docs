@@ -398,7 +398,7 @@ hide_toc: true
 
         e.preventDefault();
         var mform = $(this);
-        var url = 'https://script.google.com/macros/s/AKfycbzDu2Q-VK18apU8-UAMEQFGteT-MuD5b648QWiE-MvmN99XfyBm/exec';
+        var url = 'https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/request';
 
         var jqxhr = $.ajax({
           url: url,

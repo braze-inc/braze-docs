@@ -27,6 +27,10 @@ Links will be shortened using Braze's shared short domain (`brz.ai`). An example
 
 Shortened URLs will be valid for one year from the date they were created.
 
+{% alert note %}
+If you plan to use the Sage AI [Intelligent Channel filter]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_channel/) and want the SMS channel to be selectable, turn on SMS link shortening with advanced tracking and [click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#click-tracking).
+{% endalert %}
+
 ### Enabling link shortening
 
 To enable link shortening, ensure the link shortening toggle in the message composer is enabled. From there, choose whether to use Basic or Advanced by selecting the respective radial button. 

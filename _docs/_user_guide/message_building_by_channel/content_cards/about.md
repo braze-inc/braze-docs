@@ -104,6 +104,8 @@ This section provides an overview of the three most common ways to place Content
 - [Carousel](#carousel)
 - [Banner](#banner)
 
+The logic and implementation of these placements are not a default in Braze, and therefore the work for achieving these use cases must be supplied and supported by your engineering team. For an overview on how to implement these placements, refer to the [creating custom Content Card article]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
+
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### Message inbox
@@ -145,8 +147,6 @@ When a user is eligible for a card, it will appear in a carousel on whichever pa
 
 Because this is a custom implementation, you’ll need to work with your developers to build your own views to display the Content Cards. The default classic, banner, and captioned image cards are not supported with this implementation.
 
-For steps on how to implement, refer to [carousel view]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/carousel_view/).
-
 ### Banner
 
 ![]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
@@ -172,13 +172,7 @@ Now let’s get a little technical. Behind the scenes, there are three main part
 - **View:** What the card looks like
 - **Controller:** How the user interacts with the card
 
-For an out-of-the-box implementation, you add the card content—the model—either from the dashboard or via APIs, and the view and controller are handled by what is called a view controller.
-
-### View controller
-
-A view controller is the “glue” between the overall application and the screen. It controls the views that it owns according to the logic of your application. Every app has one, some have more than one.
-
-Braze Content Cards have their own view controller provided, meaning you can integrate Content Cards by adding a few lines of code to your app or site. Your developers can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options.
+For a default implementation, you add the card content—the model—either from the dashboard or via APIs, and the view and controller are handled by what is called a view controller. A view controller is the "glue" between the overall application and the screen.
 
 ## Integrating Content Cards
 

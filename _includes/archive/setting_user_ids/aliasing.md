@@ -46,7 +46,7 @@ Braze.getInstance(context).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% elsif include.platform == "Web" %}
 
 ```javascript
-appboy.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 ```
 
 {% elsif include.platform == "REST" %}

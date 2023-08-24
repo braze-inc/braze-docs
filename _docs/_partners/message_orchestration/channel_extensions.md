@@ -14,6 +14,8 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Channel Extensions"
 
 valid_partner_list:
+- name: Antavo
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/
 - name: Dyspatch.io
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/dyspatch/
 - name: Stensul

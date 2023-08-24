@@ -336,7 +336,7 @@ In addition, you can also use Braze's breadth of purchase filter to create segme
 ![Searching for a specific product ID as a segmentation filter.][14]
 
 {% alert note %}
-If you are looking to segment by custom event properties, ensure that you work with your customer success manager or Braze [support]({{site.baseurl}}/braze_support/) to enable filtering for all relevant event properties that you'd like to use within segmentation and Liquid.
+If you are looking to segment by custom event properties, make sure that you work with your customer success manager or Braze [support]({{site.baseurl}}/braze_support/) to enable filtering for all relevant event properties that you'd like to use within segmentation and Liquid.
 {% endalert %} 
 
 ## Campaign and Canvas triggering 

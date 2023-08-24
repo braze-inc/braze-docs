@@ -6,7 +6,7 @@ The {{include.platform}} Braze SDK should be installed or updated using [CocoaPo
 
 ### Step 1: Install CocoaPods
 
-Installing the SDK via the {{include.platform}} [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process please ensure that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater. Don't worry, knowledge of Ruby syntax isn't necessary to install this SDK.
+Installing the SDK via the {{include.platform}} [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, check that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater. Note that knowledge of Ruby syntax isn't necessary to install this SDK.
 
 Simply run the following command to get started:
 
