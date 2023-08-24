@@ -265,6 +265,9 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/tangerine/
 - name: Stylitics
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
+- name: Ketch
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/ketch/
 - name: Antavo
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/  
+
 ---
