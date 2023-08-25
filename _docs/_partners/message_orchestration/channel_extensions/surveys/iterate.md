@@ -27,7 +27,7 @@ With the Braze SDK installed in your app or website, you can use the segmentatio
 
 ## Use cases
 
-With Iterate, you can collect nearly any type of data. Ranging from personal info (name, age, email), performance data (NPS, customer satisfaction, star ratings), preferences (preferred device, preferred frequency of communication), or personality (favorite book, dog, or cat person). What you ask is entirely up to you, and what kind of data you want to collect or audiences you want to build.
+With Iterate, you can collect nearly any type of data. Ranging from personal information (name, age, email), performance data (NPS, customer satisfaction, star ratings), preferences (preferred device, preferred frequency of communication), or personality (favorite book, dog, or cat person). What you ask is entirely up to you, and what kind of data you want to collect or audiences you want to build.
 
 ## Integration
 

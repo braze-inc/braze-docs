@@ -18,9 +18,9 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 | Requirement | Details |
 |---|---|
 | Sign-On URL | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> For the subdomain, use the coordinating subdomain listed in your [Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
-| Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br> For some IdPs, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
+| Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br> For some identity providers, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
 | Entity ID | `braze_dashboard`|
-| RelayState API key | To enable IdP login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |
+| RelayState API key | To enable identity provider login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -61,7 +61,7 @@ From there, click the edit icon to open the **Basic SAML Configuration** dialog.
 
 ![Azure portal editing basic SAML configuration.]({% image_buster /assets/img/azure_7.png %})
 
-###### Configure application in Idp-initiated mode (required)
+###### Configure application in IdP-initiated mode (required)
 
 To configure the application in IdP-initiated mode, enter a URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 
@@ -144,7 +144,7 @@ Go to the **Set up Braze** section and copy the appropriate URLs for use in the 
 
 ### Step 3: Configure Azure AD within Braze
 
-Once you have set up Braze within your Azure AD, they will provide a Target URL (Login URL) and **x.509** certificate which you will input into your Braze account.
+Once you have set up Braze within your Azure AD, they will provide a target URL (login URL) and **x.509** certificate which you will input into your Braze account.
 
 After your account manager has enabled SAML SSO for your account, go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**
 
@@ -156,9 +156,9 @@ On this page, you will add the following:
 
 | Requirement | Details |
 |---|---|
-| `SAML Name` | This will appear as the button text on the login screen. This is typically your IdP name, like "Azure AD." |
-| `Target URL` | This is the Login URL provided by Azure AD.|
-| `Certificate` | The `x.509` PEM encoded certificate is provided by your IdP. |
+| `SAML Name` | This will appear as the button text on the login screen. This is typically your identity provider's name, like "Azure AD." |
+| `Target URL` | This is the login URL provided by Azure AD.|
+| `Certificate` | The `x.509` PEM encoded certificate is provided by your identity provider. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Opening Security Settings and adding SAML SSO details.]({% image_buster /assets/img/samlsso.gif %})

@@ -16,7 +16,7 @@ To understand the difference between blocklisting an deleting attributes in Braz
 
 ## Which should I do?
 
-To accomplish blocklisting, Braze will have to send the blocklisting info down to each user's device, and it will be a data-intensive operation, which we ideally try to avoid. Also, if the list is too large (> 100 attributes, events, or purchases), your app can begin to slow down. 
+To accomplish blocklisting, Braze will have to send the blocklisting information down to each user's device, and it will be a data-intensive operation, which we ideally try to avoid. Also, if the list is too large (> 100 attributes, events, or purchases), your app can begin to slow down. 
 
 If you aren't planning to send attributes to Braze anymore, the deletion route would be the recommended approach.
 

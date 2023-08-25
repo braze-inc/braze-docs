@@ -8,14 +8,13 @@ channel:
   - content cards
 
 ---
-<br>
-{% alert important %}
-Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
-{% endalert %}
-
 # Advanced implementation guide (optional)
 
 > This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app)! Note that this implementation guide is centered around a Kotlin implementation, but Java snippets are provided for those interested.
+
+{% alert important %}
+Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).<br><br>More information on customizing Content Cards can be found in the [Customization Guide.]({{site.baseurl}}/developer_guide/customization_guides/content_cards)
+{% endalert %}
 
 ## Code considerations
 
@@ -253,208 +252,219 @@ enum ContentCardClass {
 {% endtab %}
 {% endtabs %}
 
-## Sample use cases
+## Custom card rendering {#customizing-card-rendering-for-android}
 
-There are three sample customer use cases provided. Each use case offers a detailed explanation, relevant code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
-- [Content Cards as supplemental content](#content-cards-as-supplemental-content)
-- [Content Cards in a message center](#content-cards-in-a-message-center)
-- [Interactive Content Cards](#interactive-content-cards)
-
-### Content Cards as supplemental content
-
-![][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
-
-You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
-
-The example to the right shows a `ListView` with a hybrid list of items populated via local data and Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content.
-
-#### Dashboard configuration
-
-This Content Card is delivered by an API-triggered campaign with API-triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
-
-![The key-value pairs for the supplemental Content Cards use case. In this example, different aspects of the card such as "tile_id", "tile_deeplink", and "tile_title" are set using Liquid.][2]{: style="max-width:60%;"}
-
-##### Ready to log analytics?
-Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
-
-### Content Cards in a message center
-<br>
-Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the following example, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
-
-![][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
-
-#### Dashboard configuration
-
-For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message. 
-
-{% tabs local %}
-{% tab Arbitrary custom view message (full page) %}
-
-The key-value pairs for this use case include:
-
-- `message_header` set as `Full Page`
-- `class_type` set as `message_full_page`
-
-![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
-
-{% endtab %}
-{% tab Webview message (HTML) %}
-
-The key-value pairs for this use case include:
-
-- `message_header` set as `HTML`
-- `class_type` set as `message_webview`
-- `message_title`
-
-This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.
-
-![]({% image_buster /assets/img/cc_implementation/html_webview.png %}){: style="max-width:60%;"}
-
-{% endtab %}
-{% endtabs %}
-
-#### Further explanation
-
-The message center logic is driven by the `class_type` that is provided by the key-value pairs from Braze. Using the `createContentCardable` method from our example, you can filter and identify these class types.
+The following lists information on how to change how any card is rendered in the `recyclerView`. The `IContentCardsViewBindingHandler` interface defines how all Content Cards get rendered. You can customize this to change anything you want:
 
 {% tabs %}
-{% tab Kotlin %}
-**Using `class_type` for on click behavior**<br>
-When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to
-store the data.
-
-```kotlin
- private fun createContentCardable(metadata: Map<String, Any>, type: ContentCardClass?): ContentCardable?{
-        return when(type){
-            ContentCardClass.AD -> Ad(metadata)
-            ContentCardClass.MESSAGE_WEB_VIEW -> WebViewMessage(metadata)
-            ContentCardClass.MESSAGE_FULL_PAGE -> FullPageMessage(metadata)
-            ContentCardClass.ITEM_GROUP -> Group(metadata)
-            ContentCardClass.ITEM_TILE -> Tile(metadata)
-            ContentCardClass.COUPON -> Coupon(metadata)
-            else -> null
-        }
-    }
-```
-
-Then, when handling the user interaction with the message list, we can use the message's type to determine which view to display to the user.
-
-```kotlin
-override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        //...
-        listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-           when (val card = dataProvider[position]){
-                is WebViewMessage -> {
-                    val intent = Intent(this, WebViewActivity::class.java)
-                    val bundle = Bundle()
-                    bundle.putString(WebViewActivity.INTENT_PAYLOAD, card.contentString)
-                    intent.putExtras(bundle)
-                    startActivity(intent)
-                }
-                is FullPageMessage -> {
-                    val intent = Intent(this, FullPageContentCard::class.java)
-                    val bundle = Bundle()
-                    bundle.putString(FullPageContentCard.CONTENT_CARD_IMAGE, card.icon)
-                    bundle.putString(FullPageContentCard.CONTENT_CARD_TITLE, card.messageTitle)
-                    bundle.putString(FullPageContentCard.CONTENT_CARD_DESCRIPTION, card.cardDescription)
-                    intent.putExtras(bundle)
-                    startActivity(intent)
-                }
-            }
-
-        }
-    }
-```
-{% endtab %}
-{% tab Java %}
-**Using `class_type` for on click behavior**<br>
-When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to store the data.
+{% tab JAVA %}
 
 ```java
-private ContentCardable createContentCardable(Map<String, ?> metadata,  ContentCardClass type){
-    switch(type){
-        case ContentCardClass.AD:{
-            return new Ad(metadata);
-        }
-        case ContentCardClass.MESSAGE_WEB_VIEW:{
-            return new WebViewMessage(metadata);
-        }
-        case ContentCardClass.MESSAGE_FULL_PAGE:{
-            return new FullPageMessage(metadata);
-        }
-        case ContentCardClass.ITEM_GROUP:{
-            return new Group(metadata);
-        }
-        case ContentCardClass.ITEM_TILE:{
-            return new Tile(metadata);
-        }
-        case ContentCardClass.COUPON:{
-            return new Coupon(metadata);
-        }
-        default:{
-            return null;
-        }
+public class DefaultContentCardsViewBindingHandler implements IContentCardsViewBindingHandler {
+  // Interface that must be implemented and provided as a public CREATOR
+  // field that generates instances of your Parcelable class from a Parcel.
+  public static final Parcelable.Creator<DefaultContentCardsViewBindingHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsViewBindingHandler>() {
+    public DefaultContentCardsViewBindingHandler createFromParcel(Parcel in) {
+      return new DefaultContentCardsViewBindingHandler();
     }
+
+    public DefaultContentCardsViewBindingHandler[] newArray(int size) {
+      return new DefaultContentCardsViewBindingHandler[size];
+    }
+  };
+
+  /**
+   * A cache for the views used in binding the items in the {@link android.support.v7.widget.RecyclerView}.
+   */
+  private final Map<CardType, BaseContentCardView> mContentCardViewCache = new HashMap<CardType, BaseContentCardView>();
+
+  @Override
+  public ContentCardViewHolder onCreateViewHolder(Context context, List<? extends Card> cards, ViewGroup viewGroup, int viewType) {
+    CardType cardType = CardType.fromValue(viewType);
+    return getContentCardsViewFromCache(context, cardType).createViewHolder(viewGroup);
+  }
+
+  @Override
+  public void onBindViewHolder(Context context, List<? extends Card> cards, ContentCardViewHolder viewHolder, int adapterPosition) {
+    Card cardAtPosition = cards.get(adapterPosition);
+    BaseContentCardView contentCardView = getContentCardsViewFromCache(context, cardAtPosition.getCardType());
+    contentCardView.bindViewHolder(viewHolder, cardAtPosition);
+  }
+
+  @Override
+  public int getItemViewType(Context context, List<? extends Card> cards, int adapterPosition) {
+    Card card = cards.get(adapterPosition);
+    return card.getCardType().getValue();
+  }
+
+  /**
+   * Gets a cached instance of a {@link BaseContentCardView} for view creation/binding for a given {@link CardType}.
+   * If the {@link CardType} is not found in the cache, then a view binding implementation for that {@link CardType}
+   * is created and added to the cache.
+   */
+  @VisibleForTesting
+  BaseContentCardView getContentCardsViewFromCache(Context context, CardType cardType) {
+    if (!mContentCardViewCache.containsKey(cardType)) {
+      // Create the view here
+      BaseContentCardView contentCardView;
+      switch (cardType) {
+        case BANNER:
+          contentCardView = new BannerImageContentCardView(context);
+          break;
+        case CAPTIONED_IMAGE:
+          contentCardView = new CaptionedImageContentCardView(context);
+          break;
+        case SHORT_NEWS:
+          contentCardView = new ShortNewsContentCardView(context);
+          break;
+        case TEXT_ANNOUNCEMENT:
+          contentCardView = new TextAnnouncementContentCardView(context);
+          break;
+        default:
+          contentCardView = new DefaultContentCardView(context);
+          break;
+      }
+      mContentCardViewCache.put(cardType, contentCardView);
+    }
+    return mContentCardViewCache.get(cardType);
+  }
+
+  // Parcelable interface method
+  @Override
+  public int describeContents() {
+    return 0;
+  }
+
+  // Parcelable interface method
+  @Override
+  public void writeToParcel(Parcel dest, int flags) {
+    // Retaining views across a transition could lead to a
+    // resource leak so the parcel is left unmodified
+  }
 }
-
 ```
 
-Then, when handling the user interaction with the message list, we can use the message's type to determine which view to display to the user.
+{% endtab %}
+{% tab KOTLIN %}
 
-```java
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState)
-        //...
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-               ContentCardable card = dataProvider.get(position);
-               if (card instanceof WebViewMessage){
-                    Bundle intent = new Intent(this, WebViewActivity.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putString(WebViewActivity.INTENT_PAYLOAD, card.getContentString());
-                    intent.putExtras(bundle);
-                    startActivity(intent);
-                }
-                else if (card instanceof FullPageMessage){
-                    Intent intent = new Intent(this, FullPageContentCard.class);
-                    Bundle bundle = Bundle();
-                    bundle.putString(FullPageContentCard.CONTENT_CARD_IMAGE, card.getIcon());
-                    bundle.putString(FullPageContentCard.CONTENT_CARD_TITLE, card.getMessageTitle());
-                    bundle.putString(FullPageContentCard.CONTENT_CARD_DESCRIPTION, card.getCardDescription());
-                    intent.putExtras(bundle)
-                    startActivity(intent)
-                }
-            }
-
-        });
+```kotlin
+class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
+  // Interface that must be implemented and provided as a public CREATOR
+  // field that generates instances of your Parcelable class from a Parcel.
+  val CREATOR: Parcelable.Creator<DefaultContentCardsViewBindingHandler?> = object : Parcelable.Creator<DefaultContentCardsViewBindingHandler?> {
+    override fun createFromParcel(`in`: Parcel): DefaultContentCardsViewBindingHandler? {
+      return DefaultContentCardsViewBindingHandler()
     }
+
+    override fun newArray(size: Int): Array<DefaultContentCardsViewBindingHandler?> {
+      return arrayOfNulls(size)
+    }
+  }
+
+  /**
+    * A cache for the views used in binding the items in the [RecyclerView].
+    */
+  private val mContentCardViewCache: MutableMap<CardType, BaseContentCardView<*>?> = HashMap()
+
+  override fun onCreateViewHolder(context: Context?, cards: List<Card?>?, viewGroup: ViewGroup?, viewType: Int): ContentCardViewHolder? {
+    val cardType = CardType.fromValue(viewType)
+    return getContentCardsViewFromCache(context, cardType)!!.createViewHolder(viewGroup)
+  }
+
+  override fun onBindViewHolder(context: Context?, cards: List<Card>, viewHolder: ContentCardViewHolder?, adapterPosition: Int) {
+    if (adapterPosition < 0 || adapterPosition >= cards.size) {
+      return
+    }
+    val cardAtPosition = cards[adapterPosition]
+    val contentCardView = getContentCardsViewFromCache(context, cardAtPosition.cardType)
+    if (viewHolder != null) {
+      contentCardView!!.bindViewHolder(viewHolder, cardAtPosition)
+    }
+  }
+
+  override fun getItemViewType(context: Context?, cards: List<Card>, adapterPosition: Int): Int {
+    if (adapterPosition < 0 || adapterPosition >= cards.size) {
+      return -1
+    }
+    val card = cards[adapterPosition]
+    return card.cardType.value
+  }
+
+  /**
+    * Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
+    * If the [CardType] is not found in the cache, then a view binding implementation for that [CardType]
+    * is created and added to the cache.
+    */
+  @VisibleForTesting
+  fun getContentCardsViewFromCache(context: Context?, cardType: CardType): BaseContentCardView<Card>? {
+    if (!mContentCardViewCache.containsKey(cardType)) {
+      // Create the view here
+      val contentCardView: BaseContentCardView<*> = when (cardType) {
+        CardType.BANNER -> BannerImageContentCardView(context)
+        CardType.CAPTIONED_IMAGE -> CaptionedImageContentCardView(context)
+        CardType.SHORT_NEWS -> ShortNewsContentCardView(context)
+        CardType.TEXT_ANNOUNCEMENT -> TextAnnouncementContentCardView(context)
+        else -> DefaultContentCardView(context)
+      }
+      mContentCardViewCache[cardType] = contentCardView
+    }
+    return mContentCardViewCache[cardType] as BaseContentCardView<Card>?
+  }
+
+  // Parcelable interface method
+  override fun describeContents(): Int {
+    return 0
+  }
+
+  // Parcelable interface method
+  override fun writeToParcel(dest: Parcel?, flags: Int) {
+    // Retaining views across a transition could lead to a
+    // resource leak so the parcel is left unmodified
+  }
+}
 ```
 
 {% endtab %}
 {% endtabs %}
 
-##### Ready to log analytics?
-Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
+This code can also be found here [`DefaultContentCardsViewBindingHandler`][56].
 
-![An interactive Content Card showing a 50% promotion appear in the botton left corner of the screen. Once clicked, a promotion will be applied to the cart.][6]{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+And here's how to use this class:
 
-### Interactive Content Cards
-<br>
-Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout, providing users with last-minute promotions. 
+{% tabs %}
+{% tab JAVA %}
 
-Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
-<br><br><br>
-#### Dashboard configuration
+```java
+IContentCardsViewBindingHandler viewBindingHandler = new DefaultContentCardsViewBindingHandler();
 
-The dashboard configuration for interactive Content Cards is straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and a `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
+ContentCardsFragment fragment = getMyCustomFragment();
+fragment.setContentCardsViewBindingHandler(viewBindingHandler);
+```
 
-![][7]{: style="max-width:70%;"} 
+{% endtab %}
+{% tab KOTLIN %}
 
-##### Ready to log analytics?
-Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
+```kotlin
+val viewBindingHandler = DefaultContentCardsViewBindingHandler()
+
+val fragment = getMyCustomFragment()
+fragment.setContentCardsViewBindingHandler(viewBindingHandler)
+```
+
+{% endtab %}
+{% endtabs %}
+
+Additional relevant resources on this topic are available in this article on [Android Data Binding](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
+
+## Card dismissal
+
+Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.isDismissibleByUser()`][9] method. Cards can be intercepted before display using the [`ContentCardsFragment.setContentCardUpdateHandler()`][8] method.
+
+## Dark theme customization
+
+By default, Content Card views will automatically respond to Dark Theme changes on the device with a set of themed colors and layout changes. 
+
+To override this behavior, override the `values-night` values in `android-sdk-ui/src/main/res/values-night/colors.xml` and `android-sdk-ui/src/main/res/values-night/dimens.xml`.
 
 ## Logging impressions, clicks, and dismissals
 
@@ -581,3 +591,13 @@ public static final String DISMISSABLE = "dismissable";
 [5]: {% image_buster /assets/img/cc_implementation/html_webview.png %}
 [6]: {% image_buster /assets/img/cc_implementation/android_discount2.png %}
 [7]: {% image_buster /assets/img/cc_implementation/discount.png %}
+[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
+[9]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissible-by-user.html
+[36]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html
+[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
+[42]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
+[44]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
+[45]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
+[46]: https://github.com/braze-inc/braze-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
+[49]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
+[56]: https://github.com/braze-inc/braze-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsViewBindingHandler.java

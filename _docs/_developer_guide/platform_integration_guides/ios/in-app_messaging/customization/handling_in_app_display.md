@@ -68,6 +68,56 @@ If you want to alter the display behavior of in-app messages, you should add any
 
 If the in-app message campaign is not displaying when the session has been started, make sure you have the necessary display logic added to your `beforeInAppMessageDisplayed:` delegate method. This allows the in-app message campaign to display from the top of the screen even if the keyboard is being displayed.
 
+## Disabling Dark Mode
+
+To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, use the [`ABKInAppMessage.enableDarkTheme`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message.html#ae89df6090bed623099ab0ecc0a74ad5d) property. From within either the `ABKInAppMessageControllerDelegate.beforeInAppMessageDisplayed:` or `ABKInAppMessageUIDelegate.beforeInAppMessageDisplayed:` method, set the `enableDarkTheme` property of the method's `inAppMessage` parameter to `NO`.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+// ABKInAppMessageControllerDelegate
+- (ABKInAppMessageDisplayChoice)beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
+  ...
+  inAppMessage.enableDarkTheme = NO;
+  ...
+  return ABKDisplayInAppMessageNow;
+}
+
+// ABKInAppMessageUIDelegate
+- (ABKInAppMessageDisplayChoice)beforeInAppMesssageDisplayed:(ABKInAppMessage *)inAppMessage
+                                            withKeyboardIsUp:(BOOL)keyboardIsUp {
+  ...
+  inAppMessage.enableDarkTheme = NO;
+  ...
+  return ABKDisplayInAppMessageNow;
+}
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+// ABKInAppMessageControllerDelegate
+func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMessageDisplayChoice {
+  ...
+  inAppMessage.enableDarkTheme = false
+  ...
+  return ABKInAppMessageDisplayChoice.displayInAppMessageNow
+}
+
+// ABKInAppMessageUIDelegate
+func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage, withKeyboardIsUp keyboardIsUp: Bool) -> ABKInAppMessageDisplayChoice {
+  ...
+  inAppMessage.enableDarkTheme = false
+  ...
+  return ABKInAppMessageDisplayChoice.displayInAppMessageNow
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
 ## Hiding the status bar during display
 
 For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases, the status bar may still appear on top of the in-app message. As of version [3.21.1](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211) of the iOS SDK, you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within the `appboyOptions` passed to `startWithApiKey:`.
