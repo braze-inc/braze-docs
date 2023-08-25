@@ -17,7 +17,7 @@ The following example comprises an email collection use case, but the logic appl
 
 Once a user provides information for you to log, we recommend you verify if the data already exists in your database and create a user alias profile or update the existing user profile, as necessary. 
 
-If an unknown user were to view your site and then, at a later date, create an account or identify themselves via email sign-up, profile merging must be handled carefully. Based on the method in which you merge, alias-only user info or anonymous data may be overwritten.
+If an unknown user were to view your site and then, at a later date, create an account or identify themselves via email sign-up, profile merging must be handled carefully. Based on the method in which you merge, alias-only user information or anonymous data may be overwritten.
 
 ## Capturing user data through a web form
 
@@ -57,7 +57,7 @@ To check if a user is alias-only, [check if the user exists](#step-1-check-if-us
 - If the [`/users/export/id` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) returns an `external_id`, you can call the `/users/identify/` endpoint.
 - If the endpoint returns nothing, a `/users/identify/` call should not be made.
 
-## Capturing user data when alias-only user info is already present
+## Capturing user data when alias-only user information is already present
 
 When a user creates an account or identifies themselves via email sign-up, you can merging the profiles. For a list of fields that can be merged, refer to [Merge updates behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
 

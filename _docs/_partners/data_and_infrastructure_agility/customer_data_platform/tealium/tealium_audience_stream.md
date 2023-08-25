@@ -103,7 +103,7 @@ You may create badges that help you classify and target your users by certain at
 
 ### Step 2: Create an audience
 
-From the Tealium home page, select **Audiences** under **AudienceStream** from the sidebar navigation. Here, you can create an audience of users with common attributes. A user's entry into or exit from this audience will be the trigger for the Connector Action, set up in the next step, that passes this info to the user profile in Braze. 
+From the Tealium home page, select **Audiences** under **AudienceStream** from the sidebar navigation. Here, you can create an audience of users with common attributes. A user's entry into or exit from this audience will be the trigger for the Connector Action, set up in the next step, that passes this information to the user profile in Braze. 
 
 First, name your audience, and then consider what attributes would apply to the type of audience you are trying to create. For example, to create an audience of VIP users, you could create an audience of visitors who have the **VIP badge**.
 
