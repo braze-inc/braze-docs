@@ -1,15 +1,11 @@
 ---
 nav_title: Simon Data
 article_title: Simon Data
-page_order: 1
-
+page_order: 70
 description: "Use the Braze and Simon Data integration to create and sync sophisticated audiences to Braze for orchestration, in real-time and without code."
 alias: /partners/simon_data/
-
 page_type: partner
 search_tag: Partner
-hidden: true
-layout: dev_guide
 ---
 
 # Simon Data
@@ -88,7 +84,7 @@ After Contact Traits is activated by your account manager:
 
 On the first sync, all Traits and Contact Properties are updated. For all syncs after, only the traits you selected here that have changed will re-sync when your pipe refreshes. If you don't choose any traits, Simon sends all Traits and Contact Properties that have changed by default. In both cases, unchanged traits will not be sent.
 
-<br><br>
+
 
 [1]: https://www.simondata.com
 [2]: {{site.baseurl}}/api/basics/#creating-and-managing-rest-api-keys
