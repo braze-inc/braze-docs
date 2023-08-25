@@ -119,7 +119,7 @@ The following tag allows you to specify a message for users with a null "first n
 {% if ${first_name} == null %}
 We're having a sale! Hurry up and get 10% off all items today only!
 {% else %}
-Hey {{${first_name | default: 'there'}}, we're having a sale! Hurry up and get 10% off all items today only!
+Hey {{${first_name} | default: 'there'}}, we're having a sale! Hurry up and get 10% off all items today only!
 {% endif %}
 ```
 
