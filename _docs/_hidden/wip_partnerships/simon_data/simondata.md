@@ -15,89 +15,87 @@ layout: dev_guide
 # Simon Data
 
 > [Simon Data][1] is a customer data platform (CDP) friendly to marketers and trusted by data teams. By transforming your data warehouse into a marketing powerhouse, Simon drives business results and a superior customer experience.
->
-> Use the Braze and Simon Data integration to create and sync sophisticated audiences to Braze for orchestration, in real-time and without code. 
->
-> With this integration you can leverage the best of Simon's campaign prioritization capabilities, Identity matching capabilities, complex aggregate support and more to elevate your Braze campaigns downstream. 
+
+Use the Braze and Simon Data integration to create and sync sophisticated audiences to Braze for orchestration, in real-time and without code. With this integration you can leverage the best of Simon's campaign prioritization and Identity matching capabilities, complex aggregate support, and more to elevate your Braze campaigns downstream.
 
 ## Prerequisites
 
-To get started, you need to authenticate your Braze account within your Simon Data account. 
+To get started, you need to authenticate your Braze account within your Simon Data account.
 
 | Requirement         | Description                                                                                                                                                               |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Simon Data          | You must have an existing Simon Data account to leverage the Braze integration from within Simon Data.                                                                    |
-| Braze REST API key  | A Braze REST API key with `users.track`, `campaigns.trigger.schedule.create`, and `campaigns.trigger.send` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key  | A Braze REST API key with `users.track`, `campaigns.trigger.schedule.create`, and `campaigns.trigger.send` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze Dashboard URL | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance.                                                                                |
-
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
 
-- Trigger a canvas or email  
-- Pass and Maintain Segment Properties 
-- Sync Traits and Contact Properties 
+- Trigger a Braze Canvas or email  
+- Pass and maintain Segment Properties
+- Sync Traits and Contact Properties
 
 {% alert note %}  
-When using the Simon and Braze integration, Simon only sends the changing data on each sync to Braze avoiding costs for irrelevant data. You choose which traits you want to sync, then only the values that have changed for those traits are sent during your pipe refresh; see **Sync Traits and Contact Properties** below.
+Simon only sends the changing data on each sync to Braze to minimize costs for unchanging data. You choose which traits you want to sync, and only the values that have changed for those traits are sent during your pipe refresh. See [Sync Traits and Contact Properties](#sync-traits-and-contact-properties) for more.
 {% endalert %}
 
 ## Integration
 
 ### Authenticate your Braze account in Simon
 
-To use the Braze integration first authenticate your Braze account in Simon:
+To use the Braze integration, first authenticate your Braze account in Simon:
 
 1. From the left navigation, click **Integrations** then scroll to Braze.
-2. Enter your Braze [REST API Key][2] and your [Dashboard URL][3].
-3. Click **Save Changes**. A successful connection displays **Connected** in the window.
+2. Enter your Braze [REST API key][2] and your [dashboard URL][3].
+3. Click **Save Changes**.
 
-![step_one][8]
+A successful connection displays **Connected** in the window.
 
-### Trigger a canvas or email and/or Pass and Maintain Segment Properties
+![Integration screen in Simon Data][8]{: style="max-width:70%"}
 
-Once you've authenticated your Braze account in Simon you can add Braze actions to [Flows][4] and [Journeys][5]. Three actions are available:
+### Add Braze actions to Flows or Journeys in Simon
 
-![BrazeAuthentication][9]
+After you've authenticated your Braze account in Simon you can add Braze actions to [Flows][4] and [Journeys][5].
 
-- **Sync Simon Segment Attribute**: sync your segment details with a new or existing custom attribute in Braze.
-- **Trigger a Braze Canvas**: trigger a Braze canvas that leverages your Simon segment data.
-- **Send a Braze Campaign**: launch an entire Braze campaign from Simon.
+Three actions are available:
 
-Note, some actions are available for only specific Flow types or Journeys alone. Learn more at [docs.simondata.com][6].
+- **Sync Simon segment attribute**: Sync your segment details with a new or existing custom attribute in Braze.
+- **Trigger a Braze Canvas**: Trigger a Braze Canvas that leverages your Simon segment data.
+- **Send a Braze campaign**: Launch an entire Braze campaign from Simon.
 
-### Sync Traits and Contact Properties
+![Dropdown showing list of available Braze actions in Simon Data.][9]{: style="max-width:60%"}
 
-Choose specific traits to sync by default so you're only sending relevant data points to Braze and avoid charges for the fields you don't need updated (rather than updating every field for every customer in a segment every time, even if just one of their data points changed). 
+Some actions are only available for specific Flow types or Journeys alone. Learn more at [docs.simondata.com][6].
 
-To get started with trait syncing, submit a request in the [Simon Support Center][7]. Your account manager will let you know when you can proceed with the following steps. 
+### Sync traits and contact properties
 
-Once Contact Traits is activated by your account manager:
+To minimize data consumption, you can choose specific traits to sync by default, rather than updating every field for all customers in a segment.
 
-1. From the left navigation expand Admin Center then click **Sync Contact Traits**.
+{% alert note %}
+To get started with trait syncing, submit a request in the [Simon Support Center](https://docs.simondata.com/docs/support-center). Your account manager will let you know when you can proceed with the following steps.
+{% endalert %}
+
+After Contact Traits is activated by your account manager:
+
+1. In Simon, expand **Admin Center** in the left navigation and select **Sync Contact Traits**.
 2. Choose **Braze**. Contact properties are displayed here, nested by dataset.
-3. Check any fields you want synced when you use the Simon and Braze integration:
-   1. **Number or traits** indicates how many traits are available to choose from in that dataset. You can choose all, or just individual fields.
+3. Select any fields you want synced when you use the Simon and Braze integration:
+   1. **Number or traits** indicates how many traits are available to choose from in that dataset. You can choose all or expand the row to select individual fields.
    2. Edit the **Downstream name** if you want the field names to appear differently when they arrive in Braze.
-   3. Click **Backfill all contacts** if this is your first time integrating with Braze from Simon. Backfilling sends all the data points to Braze the first time you use an action in a flow or journey (step three below) to be sure all your data is fully in sync, then on subsequent syncs only the traits you choose in this screen are sent to Braze (ensure you're only charged for the data you need).
+   3. If this is your first time integrating with Braze from Simon, click **Backfill all contacts**. Backfilling sends all the data points to Braze the first time you use an action in a flow or journey to be sure all your data is fully in sync. Then on subsequent syncs, only the traits you choose in this screen are sent to Braze. This helps to make sure you're only charged for the data you need.
 
-All Traits and Contact Properties sync the first time. After the first pipe sync, only values that changed will re-sync when your pipe refreshes based on your selections here. If you don't choose any traits, Simon sends all the Traits and Contact Properties by default (but only the values that changed).
+![Selecting sync traits in Simon Data.][10]
 
-![SyncTraits][10]
+On the first sync, all Traits and Contact Properties are updated. For all syncs after, only the traits you selected here that have changed will re-sync when your pipe refreshes. If you don't choose any traits, Simon sends all Traits and Contact Properties that have changed by default. In both cases, unchanged traits will not be sent.
 
+<br><br>
 
 [1]: https://www.simondata.com
-
-[2]: https://www.braze.com/docs/api/home?redirected=true#creating-and-managing-rest-api-keys
-
-[3]: https://www.braze.com/docs/api/basics#api-definitions
-
+[2]: {{site.baseurl}}/api/basics/#creating-and-managing-rest-api-keys
+[3]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
 [4]: https://docs.simondata.com/docs/campaigns-flows
-
 [5]: https://docs.simondata.com/docs/campaigns-journeys-two
-
 [6]: https://docs.simondata.com
-
 [7]: https://docs.simondata.com/docs/support-center
 
 [8]: {% image_buster /assets/img/simon_data/ConnecttoBraze.png %}  
