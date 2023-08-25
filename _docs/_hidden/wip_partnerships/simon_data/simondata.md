@@ -81,7 +81,7 @@ Once Contact Traits is activated by your account manager:
    2. Edit the **Downstream name** if you want the field names to appear differently when they arrive in Braze.
    3. Click **Backfill all contacts** if this is your first time integrating with Braze from Simon. Backfilling sends all the data points to Braze the first time you use an action in a flow or journey (step three below) to be sure all your data is fully in sync, then on subsequent syncs only the traits you choose in this screen are sent to Braze (ensure you're only charged for the data you need).
 
-Traits and Contact Properties will re-sync every time the pipe refreshes, based on your selections here. If you don't choose any traits, Simon sends all the data points by default.
+All Traits and Contact Properties sync the first time. After the first pipe sync, only values that changed will re-sync when your pipe refreshes based on your selections here. If you don't choose any traits, Simon sends all the Traits and Contact Properties by default (but only the values that changed).
 
 ![SyncTraits][10]
 
