@@ -31,7 +31,7 @@ Use Inbox Vision to test for differences across dark and light modes to confirm 
 Once you make changes to a template, click **Re-run Test** to see the updated previews.
 
 {% alert important %} 
-In general, your email will not work with Inbox Vision if your email content relies on templating info such as user profile information. This is because Braze templates in an empty user when we send emails using this feature. 
+In general, your email will not work with Inbox Vision if your email content relies on templating information such as user profile information. This is because Braze templates in an empty user when we send emails using this feature. 
 {% endalert %}
 
 ## Code analysis
