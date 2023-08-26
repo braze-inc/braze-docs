@@ -9,17 +9,17 @@ description: "This help article covers dispatch ID behavior, including its usage
 
 # Dispatch ID behavior
 
-A `dispatch_id` is the ID of the message dispatch—a unique ID for each "transmission" sent from Braze. Users who are sent a scheduled message receive the same `dispatch_id`, while action-based or API-triggered messages will receive a unique `dispatch_id` per user.
+A `dispatch_id` is the ID of the message dispatch—a unique ID for each "transmission" sent from Braze. Users who are sent a scheduled message receive the same `dispatch_id`. Typically, action-based or API-triggered messages will receive a unique `dispatch_id` per user, but messages sent within close proximity to another may share the same `dispatch_id` across multiple users.
 
 {% alert important %}
 Note that dispatch IDs are per user, per campaign for triggered (action-based or API-triggered) messages.
 {% endalert %}
 
-This can result in two different users having different dispatch IDs for a single campaign if messages were sent at two different times. This is often because the API requests were made separately. If both users were in the same campaign audience in a single send, their dispatch IDs would be the same.
+This can result in two different users having different dispatch IDs for a single campaign if messages were sent at two different times. This is often because the API requests were made separately. If both users were in the same campaign audience in a single scheduled send, their dispatch IDs would be the same.
 
 ## Dispatch ID behavior in campaigns
 
-Scheduled campaign messages get the same `dispatch_id`. Action-based or API-triggered campaign messages will get a unique `dispatch_id` per user. For example, two users in your scheduled campaign audience will have the same `dispatch_id`. However, two users in the audience of an API-triggered campaign will have different dispatch IDs.
+Scheduled campaign messages get the same `dispatch_id`. Action-based or API-triggered campaign messages may get a unique `dispatch_id` per user, or the `dispatch_id` may be the same for multiple users when sent within close proximity, as described above. For example, two users in your scheduled campaign audience will have the same `dispatch_id`. However, two users in the audience of an API-triggered campaign may have different dispatch IDs.
 
 Multichannel campaigns will have the same behavior as described for their delivery type.
 
