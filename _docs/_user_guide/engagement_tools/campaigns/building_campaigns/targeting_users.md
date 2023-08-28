@@ -43,7 +43,7 @@ To target users without adding a segment, you can use a series of filters. This 
 
 After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the audience criteria.
 
-![]({% image_buster /assets/img_archive/user_lookup.png %})
+![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
 
 ## Audience summary
 
