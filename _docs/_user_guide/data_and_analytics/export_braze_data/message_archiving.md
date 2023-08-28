@@ -64,7 +64,7 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
   "message_variation_id": MessageVariationId, // may not be available,
   "attachments": Array of JSON Objects containing 'bytes' and 'file_name', // may not be available
   "user_id": String,
-  "campaign_name": String, // will only be available if the message is from a Campaign
+  "campaign_name": String, // will only be available if the message is from a campaign
   "canvas_name": String, // will only be available if the message is a from Canvas
   "canvas_step_name": String // will only be available if the message is from a Canvas
 }
@@ -93,7 +93,7 @@ For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/us
   "canvas_variation_id" : CanvasVariationId, // may not be available
   "message_variation_id": MessagVariationId, // may not be available
   "user_id": String,
-  "campaign_name": String, // will only be available if the message is from a Campaign
+  "campaign_name": String, // will only be available if the message is from a campaign
   "canvas_name": String, // will only be available if the message is a from Canvas
   "canvas_step_name": String // will only be available if the message is from a Canvas
 }
@@ -115,7 +115,7 @@ For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/us
   "canvas_variation_id" : CanvasVariationId, // may not be available
   "message_variation_id": MessagVariationId, // may not be available
   "user_id": String,
-  "campaign_name": String, // will only be available if the message is from a Campaign
+  "campaign_name": String, // will only be available if the message is from a campaign
   "canvas_name": String, // will only be available if the message is a from Canvas
   "canvas_step_name": String // will only be available if the message is from a Canvas
 }
