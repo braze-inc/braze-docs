@@ -71,24 +71,6 @@ You can template in the following attributes for the user's most recent device a
 Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any Liquid that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device.
 
 
-## Targeted app information
-
-For in-app messages, you can use the following app attributes within Liquid. The values are based on which SDK API key your apps use to request messaging.
-
-|Tag | Description |
-|------------------|---|
-| `{{app.${api_id}}}` | The API key of the app requesting the message. For example, you use this key in conjunction with `abort_message()` Liquid to avoid sending in-app messages to certain apps, such as TV platforms or development builds that use a separate SDK API key.|
-| `{{app.${name}}}` | The name of the app (as defined in the Braze dashbaord) requesting the message|
-
-For example, this Liquid code will abort a message if the requesting apps are not one of the three API keys in the list:
-
-```liquid
-{% assign allowed_api_keys = "sdk_api_key_1", "sdk_api_key_2", "sdk_api_key_3" %}
-{% unless allowed_api_keys contains {{app.${api_id}}} %}
-{% abort_message("App not in allows list") %}
-```
-
-
 ## Targeted device information
 
 For push notification and in-app message channels, you can template in the following attributes for the device to which a message is being sent. That is, a push notification or in-app message can include device attributes of the device on which the message is being read. Note that these attributes will not work for Content Cards. 
