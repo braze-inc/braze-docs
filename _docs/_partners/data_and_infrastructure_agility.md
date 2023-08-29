@@ -117,6 +117,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
 - name: OneTrust
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/onetrust/
+- name: Simon Data
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata/
 - name: Ketch
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/ketch/
 ---

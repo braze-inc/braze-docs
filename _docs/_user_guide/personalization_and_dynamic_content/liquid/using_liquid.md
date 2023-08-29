@@ -10,7 +10,7 @@ search_rank: 2
 
 {% raw %}
 
-> There are a variety of user attributes that you can use to dynamically insert personal info into your messaging.
+> There are a variety of user attributes that you can use to dynamically insert personal information into your messaging.
 
 If you include the following text in your message: `{{${first_name}}}`, the user's first name (pulled from the user's profile) will be substituted when the message is sent. If you would like to use the value of a custom attribute, you must add the namespace "custom_attribute" to the variable. For example, to use a custom attribute named "zip code", you would include `{{custom_attribute.${zip code}}}` in your message.
 

@@ -16,7 +16,7 @@ In Braze, go to **Analytics** > **Predictive Events**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Engagement**.
 {% endalert %}
 
-On this page, you will see a list of current active Event Predictions and some basic info about them. Here, you can rename, archive, and create new Predictions. Archived Predictions are inactive and do not update user scores.
+On this page, you will see a list of current active Event Predictions and some basic information about them. Here, you can rename, archive, and create new Predictions. Archived Predictions are inactive and do not update user scores.
 
 ## Step 1: Create a new Prediction
 
