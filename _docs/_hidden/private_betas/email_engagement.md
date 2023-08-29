@@ -26,6 +26,6 @@ The **Engagement by Mailbox Provider** graph shows the number of clicks and open
 
 With the **Time of Engagement** graph, you can view when users are engaging with their emails. This can help answer questions such as which weekday or what time sees the highest engagement from your customers. Note that these times are based on your workspace's timezone.
 
-For more information on analytics for your emails, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/)
+For more information on analytics for your emails, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
 [1]: {% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %} 
