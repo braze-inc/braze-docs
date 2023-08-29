@@ -70,6 +70,15 @@ You can template in the following attributes for the user's most recent device a
 
 Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any Liquid that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device.
 
+
+## Targeted app information
+
+For in-app messages, you can use the following app attributes within liquid. The values will be based on which SDK API Key is used to request messaging by your apps.
+
+|Tag | Description |
+|------------------|---|
+| `{{app.${app_id}}}` | The API Key of the app requesting the message. For example, you use this in conjunction with `abort_message()` liquid to avoid sending in-app messages to certain apps, like TV platforms, or development builds that use a separate SDK API key.|
+
 ## Targeted device information
 
 For push notification and in-app message channels, you can template in the following attributes for the device to which a message is being sent. That is, a push notification or in-app message can include device attributes of the device on which the message is being read. Note that these attributes will not work for Content Cards. 
