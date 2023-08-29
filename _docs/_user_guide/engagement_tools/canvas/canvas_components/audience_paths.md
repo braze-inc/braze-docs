@@ -21,7 +21,7 @@ Audience Paths are similar to sorting funnels with ranking criteria. Users are e
 
 With Audience Paths, you can:
 
-- Send users down different paths based on audience criteria.
+- Send users down different Canvas paths based on audience criteria.
 - Assign priority to different audience groups, so your messages get to the correct users. 
   - Previously, if users met the criteria of two potential full steps, they would be randomly assigned. 
 - Precisely target users on a large scale.
