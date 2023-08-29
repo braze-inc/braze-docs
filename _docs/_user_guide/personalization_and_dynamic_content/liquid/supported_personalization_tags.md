@@ -79,6 +79,15 @@ For in-app messages, you can use the following app attributes within liquid. The
 |------------------|---|
 | `{{app.${app_id}}}` | The API Key of the app requesting the message. For example, you use this in conjunction with `abort_message()` liquid to avoid sending in-app messages to certain apps, like TV platforms, or development builds that use a separate SDK API key.|
 
+For example, this liquid code will abort a message if the requesting apps are not one of the three API keys in the list:
+
+```liquid
+{% assign allowed_api_keys = "sdk_api_key_1", "sdk_api_key_2", "sdk_api_key_3" %}
+{% unless allowed_api_keys contains {{app.${app_id}}} %}
+{% abort_message("App not in allows list") %}
+```
+
+
 ## Targeted device information
 
 For push notification and in-app message channels, you can template in the following attributes for the device to which a message is being sent. That is, a push notification or in-app message can include device attributes of the device on which the message is being read. Note that these attributes will not work for Content Cards. 
