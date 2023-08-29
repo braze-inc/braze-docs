@@ -15,13 +15,16 @@ tool: Media
 
 ## Creating a Content Block
 
-To create a Content Block, go to **Templates** > **Content Blocks** and click <i class="fas fa-plus"></i> **Create Content Block**.
+To create a Content Block, do the following:
+
+1. Go to **Templates** > **Content Blocks** and click <i class="fas fa-plus"></i> **Create Content Block**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Content Block Library**.
 {% endalert %}
 
-Enter a **Content Block Name** and an optional description.
+{:start="2"}
+2. Enter a **Content Block Name** and an optional description.
 
 ![][1]
 
@@ -29,15 +32,16 @@ Enter a **Content Block Name** and an optional description.
 Drag-and-drop Content Blocks are only available for use in email campaigns and email messages in Canvas. 
 {% endalert %}
 
-Next, select **Drag-And-Drop Editor** as the Content Block type. Click **Edit Content Block** in the **Content Block Preview** panel to begin editing your Content Block. 
-
-Here, we'll make use of the [drag-and-drop editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) to build a drag-and-drop Content Block. First, drag and drop a format block from the **Rows** tab the editor. This will determine the layout of your Content Block. 
+{:start="3"}
+3. Select **Drag-And-Drop Editor** as the Content Block type.
+4. Click **Edit Content Block** in the **Content Block Preview** panel to begin editing your Content Block.
+5. Drag and drop the [editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) to build a drag-and-drop Content Block. 
+6. Drag and drop a format block from the **Rows** tab into the editor to create the layout of your Content Block. 
+7. Add drag-and-drop Content Blocks as needed to build out your email campaigns.
 
 {% alert important %}
 Each drag-and-drop Content Block is limited to one row. However, you can use drag-and-drop editor blocks to build and customize the Content Block to suit your email messaging.
 {% endalert %}
-
-You can also add as many drag-and-drop Content Blocks as needed to build out your email campaigns.
 
 ## Using a Content Block
 
