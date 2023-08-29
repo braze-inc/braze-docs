@@ -14,7 +14,7 @@ To help track and better understand your email engagement metrics, you can refer
 These graphs for the email engagement dashboard are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
-Engagement data may include machine opens and machine clicks, and these metrics are not separately or excluded from the reports. However, Braze plans to provide such support if and when this feature generally available.
+Engagement data may include machine opens and machine clicks, and these metrics are not separated or excluded from the reports. However, Braze plans to provide such support if and when this feature is generally available.
 
 ![][1]{: style="max-width:80%;"}
 
