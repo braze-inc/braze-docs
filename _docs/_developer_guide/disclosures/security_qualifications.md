@@ -8,7 +8,7 @@ description: "This reference article lists and describes Braze's security qualif
 ---
 
 <!--
-Warning! Don't make any changes to this document without approval from the legal department.
+Warning! Other than routine updates to the ISO certification or SOC 2 examination dates and links, don't make any changes to this document without approval from the legal department.
 -->
 
 # Security qualifications
