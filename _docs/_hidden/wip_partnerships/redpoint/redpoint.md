@@ -71,6 +71,10 @@ Create a second export template for append-only operations named **Braze Append*
 
 ![][8]{: style="max-width:75%;"}
 
+On both export templates, navigate to the **Options** tab and set the **Date Format** to the value of **Custom Format** and then declare the format as **yyyy-MM-dd** as shown below.
+
+![][16]{: style="max-width:75%;"}
+
 #### RPI setup step 2: create Outbound Delivery channels for upsert and append-only operations
 
 Create two new RPI channels of type **Outbound Delivery** and name them **Braze Append** and **Braze Onboarding and Upsert**:
@@ -141,4 +145,5 @@ You can view the Redpoint associated properties on the user record:
 [13]: {% image_buster /assets/img/redpoint/rpi_to_braze_rpi_canvas.png %}
 [14]: {% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_post_execution.png %}
 [15]: {% image_buster /assets/img/redpoint/rpi_to_braze_record_example.png %}
+[16]: {% image_buster /assets/img/redpoint/rpi_to_braze_export_format_config.png %}
 
