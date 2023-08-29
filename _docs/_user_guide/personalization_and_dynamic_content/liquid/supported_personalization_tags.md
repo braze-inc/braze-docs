@@ -78,6 +78,7 @@ For in-app messages, you can use the following app attributes within liquid. The
 |Tag | Description |
 |------------------|---|
 | `{{app.${app_id}}}` | The API Key of the app requesting the message. For example, you use this in conjunction with `abort_message()` liquid to avoid sending in-app messages to certain apps, like TV platforms, or development builds that use a separate SDK API key.|
+| `{{app.${name}}}` | The name of the app (as defined in the Braze dashbaord) requesting the message|
 
 For example, this liquid code will abort a message if the requesting apps are not one of the three API keys in the list:
 
