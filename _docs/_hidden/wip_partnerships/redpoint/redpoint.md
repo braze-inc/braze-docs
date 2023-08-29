@@ -22,7 +22,7 @@ The Redpoint to Braze integration allows you to onboard and enrich Braze user pr
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Braze REST API key | A Braze REST API key. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions.  <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 | Redpoint Data Management Braze artifacts | The Braze integration is supported by a set of Redpoint Data Management artifacts. Contact [Redpoint Support][3] to request the artifacts for your version of Redpoint Data Management |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -44,6 +44,10 @@ The following custom attributes can be created on the Braze user record:
 * **rpi_channel_exec_ids** - channel execution IDs where the user is targeted in a Redpoint Outbound Delivery Braze channel execution
 
 ![][4]{: style="max-width:75%;"}
+
+{% alert note %}
+Redpoint provides two export templates and channels for passing data to Braze. The **Braze Onboarding and Upsert** channel and export template are intended to be used for onboarding or updating user records when data has changed. After the intial onboarding of CDP records to Braze, please ensure that subsequent Redpoint Interaction workflows which use this channel are designed to select only records that have changed since the initial onboarding sync.
+{% endalert %}
 
 ## Integration
 
