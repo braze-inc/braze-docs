@@ -16,13 +16,35 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 
 ## Prerequisites
 
-Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions:
+### SDK requirements
 
-{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
+| Minimum SDK version                                                          | Recommended SDK version                                                       |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| {::nomarkdown}{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}{:/} | {::nomarkdown}{% sdk_min_versions swift:6.5.0 android:26.0.0 web:4.8.1 %}{:/} |
+{: .reset-td-br-1 .reset-td-br-2}
 
-If a user hasn't updated their application (that is, they're on an older SDK version), they will not receive the in-app message.
+{% details More information on minimum SDKs %}
 
-**Additional prerequisites**<br>
+Messages created using the drag-and-drop editor can only be sent to users on the minimum SDK versions (see table above). If a user hasn’t updated their application (that is, they’re on an older SDK version), they will not receive the in-app message.
+
+To take advantage of all features available in the drag-and-drop editor, update your SDKs to the recommended SDK versions. This allows you to take advantage of the following additional features:
+
+- Text links that do not dismiss the message
+- Button action to request push primer
+
+The following outlines the individual minimum SDK requirements for these features:
+
+| Text links*                                                         | Request push primer                                                           |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| {::nomarkdown}{% sdk_min_versions swift:6.2.0 android:26.0.0 %}{:/} | {::nomarkdown}{% sdk_min_versions web:4.8.1 swift:6.5.0 android:26.0.0 %}{:/} |
+{: .reset-td-br-1 .reset-td-br-2}
+
+*If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, clicking on the link will close the message and the user will not be able to return to the message to submit the form.
+
+{% enddetails %}
+
+### Additional prerequisites
+
 - For the web SDK, the initialization option [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) must be set to `true`. The `enableHtmlInAppMessages` option will also allow these messages to function, but is deprecated and should be updated to `allowUserSuppliedJavascript`.
 - If you are using Google Tag Manager, you must enable "Allow HTML In-App Messages" in the GTM configuration.
 
@@ -169,10 +191,10 @@ After making changes to the styling of an element, you can copy and paste those 
 
 You can also use keyboard shortcuts to copy and paste styles:
 
-| Action | Mac | Windows |
-| --- | --- | --- |
-| Copy styles | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> |
-| Paste styles | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> 
+| Action       | Mac                                            | Windows                                           |
+| ------------ | ---------------------------------------------- | ------------------------------------------------- |
+| Copy styles  | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> |
+| Paste styles | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Step 4: Test your in-app message
