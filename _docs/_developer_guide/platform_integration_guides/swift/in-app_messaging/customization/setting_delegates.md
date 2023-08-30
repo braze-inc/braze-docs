@@ -173,7 +173,7 @@ func inAppMessage(
 }
 ```
 
-Now, when the user device has dark mode enabled and the `InAppMessage`'s `dark` theme is applied, the `InAppMessage` will still have all the properties of its `light` theme applied to its appearance. You can implement the delegate method to only disable dark mode on a subset of `InAppMessage` types if you wish by removing the corresponding switch statement cases.
+Now, when the user device has dark mode enabled and the `InAppMessage`'s `dark` theme is applied, the `InAppMessage` will still have all the properties of its `light` theme applied to its appearance. You can implement the delegate method to only disable dark mode on a subset of `InAppMessage` types by removing the corresponding switch statement cases.
 
 
 ## Hiding the status bar during display
