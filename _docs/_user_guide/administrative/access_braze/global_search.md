@@ -14,6 +14,8 @@ Global search is a powerful feature that helps you locate campaigns, Canvases, s
 Global search is currently in early access and is under active development. Please share your thoughts, suggestions, and any issues you encounter using the feedback option at the bottom-right of the search dropdown. If you are interested in participating in the early access, please get in touch with your customer success manager.
 {% endalert %}
 
+![][1]
+
 ## What can you search for?
 
 During the early access, you can search for campaigns, Canvases, segments, and email templates. In the global header of Braze, select <i class="fa-solid fa-magnifying-glass"></i> **Search** (or use the [keyboard shortcut](#keyboard-shortcuts)), and a dropdown search menu will open.
@@ -60,3 +62,5 @@ You can easily revisit recently accessed content from the search menu. The searc
 ### Explore more results
 
 If your search returns too many results, scroll to continue viewing more items. As you scroll through the search results dropdown, more items will dynamically load, ensuring you have access to all relevant content.
+
+[1]: {% image_buster /assets/img_archive/global_search.png %}
