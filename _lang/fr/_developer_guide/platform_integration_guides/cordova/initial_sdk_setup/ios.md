@@ -28,11 +28,11 @@ cordova plugin add https://github.com/appboy/appboy-cordova-sdk#master
 
 ## Configurer le plug-in
 
-Dans votre `config.xml`, ajouter un élément `preference` sous l’élément iOS `platform` contenant votre clé API Braze avec le nom `com.appboy.api_key` :
+Dans votre `config.xml`, ajouter un élément `preference` sous l’élément iOS `platform` contenant votre clé API Braze avec le nom `com.braze.api_key` :
 
 ```xml
 <platform name="ios">
-    <preference name="com.appboy.api_key" value="YOUR_API_KEY" />
+    <preference name="com.braze.api_key" value="YOUR_API_KEY" />
 </platform>
 ```
 
@@ -44,7 +44,7 @@ Si vous souhaitez désactiver l’enregistrement de notification push automatiqu
 
 ```xml
 <platform name="ios">
-    <preference name="com.appboy.ios_disable_automatic_push_registration" value="YES" />
+    <preference name="com.braze.ios_disable_automatic_push_registration" value="YES" />
     ...
 </platform>
 ```
@@ -55,7 +55,7 @@ Pour activer la collection automatique de l’[IDFA iOS][3], définissez les pr�
 
 ```xml
 <platform name="ios">
-    <preference name="com.appboy.ios_enable_idfa_automatic_collection" value="YES" />
+    <preference name="com.braze.ios_enable_idfa_automatic_collection" value="YES" />
 </platform>
 ```
 
@@ -65,8 +65,8 @@ Pour activer la collecte des positions et les geofences Braze, utilisez [`geofen
 
 ```xml
 <platform name="ios">
-    <preference name="com.appboy.enable_location_collection" value="true" />
-    <preference name="com.appboy.geofences_enabled" value="true" />
+    <preference name="com.braze.enable_location_collection" value="true" />
+    <preference name="com.braze.geofences_enabled" value="true" />
 </platform>
 ```
 

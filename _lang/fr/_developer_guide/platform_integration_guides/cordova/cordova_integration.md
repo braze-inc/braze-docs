@@ -23,14 +23,14 @@ Un endpoint API personnalisé peut être configuré via `config.xml`. Par exempl
 ```
 <platform name="android">
     ...
-    <preference name="com.appboy.android_api_endpoint" value="sdk.fra-01.braze.eu" />
+    <preference name="com.braze.android_api_endpoint" value="sdk.fra-01.braze.eu" />
 </platform>
 ```
 #### iOS
 ```
 <platform name="ios">
     ...
-    <preference name="com.appboy.ios_api_endpoint" value="sdk.fra-01.braze.eu" />
+    <preference name="com.braze.ios_api_endpoint" value="sdk.fra-01.braze.eu" />
 </platform>
 ```
 
