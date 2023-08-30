@@ -2,7 +2,7 @@
 nav_title: Redpoint
 article_title: Redpoint 
 page_order: 7.1
-description: "The Redpoint to Braze integration allows you to onboard and enrich Braze user profiles with your first-party Redpoint CDP and orchestration data."
+description: "The Redpoint to Braze integration allows you to onboard and enrich Braze user profiles with your first-party data."
 alias: /partners/redpoint/
 page_type: partner
 search_tag: Partner
@@ -11,95 +11,133 @@ layout: dev_guide
 
 # Redpoint
 
-> The [Redpoint][2] technology platform drives personalized omnichannel and real-time experiences at scale.
+> This integration allows you to onboard and enrich Braze user profiles with your first-party data from the [Redpoint][2] CDP.
 
-The Redpoint to Braze integration allows you to onboard and enrich Braze user profiles with your first-party Redpoint CDP and orchestration data. Redpoint's CDP golden record attributes can be exposed selectively in Braze user records. The integration supports an onboarding mode which merges user records in Braze and also an append mode which will only update a user if the record exists already in Braze. 
+Using the Redpoint to Braze integration, you can create Braze segments based on your Redpoint CDP data. Leverage Redpoint's advanced segmentation, scheduling, and automation capabilities to control how and when CDP data is imported to Braze. 
+
+Redpoint provides two modes for passing data to Braze: 
+
+1. The **Braze Onboarding and Upsert** mode upserts a user profile from Redpoint into Braze. This is intended to be used for onboarding or updating user records when data has changed. 
+2. The **Braze Append** mode will update a user profile if that user already exists in Braze. 
+
+You will configure both an export template and outbound channel for each mode.
+
+{% alert note %}
+"Upsert" is a combination of the words "update" and "insert." It is used when you want to insert a new record into a database table if it doesn't already exist or update the record if it does exist. In essence, "upsert" checks whether a particular record is present in the database, and if it is, it updates it; if it's not, it inserts it as a new record.
+{% endalert %}
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Braze REST API key | A Braze REST API key with `users.track` permissions.  <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
-| Redpoint Data Management Braze artifacts | The Braze integration is supported by a set of Redpoint Data Management artifacts. Contact [Redpoint Support][3] to request the artifacts for your version of Redpoint Data Management |
+| Redpoint Data Management artifacts | The Braze integration is supported by a set of Redpoint Data Management artifacts. Contact [Redpoint Support][3] to request the artifacts for your version of Redpoint Data Management. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
 {% endalert %}
 
-## Use cases
+## Redpoint CDP custom attributes
 
-Create Braze segments based on your first-party Redpoint CDP and orchestration data. Leverage Redpoint's advanced segmentation, scheduling and automation capabilities to control how and when CDP data is imported to Braze. 
+The following custom attributes can be added to a Braze user profile from Redpoint:
 
-The following custom attributes can be created on the Braze user record:
-
-* **rpi_cdp_attributes** - Redpoint CDP profile attributes
-* **rpi_audience_outputs** - audience output tags where the user is targeted in a Redpoint Outbound Delivery Braze channel execution
-* **rpi_offers** - offer tags where the user is targeted in a Redpoint Outbound Delivery Braze channel execution
-* **rpi_contact_ids** - offer history contact IDs where the user is targeted in a Redpoint Outbound Delivery Braze channel execution
-* **rpi_channel_exec_ids** - channel execution IDs where the user is targeted in a Redpoint Outbound Delivery Braze channel execution
+| Field               | Description                                                                                                       |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `rpi_cdp_attributes` | Redpoint CDP profile attributes                                                                                  |
+| `rpi_audience_outputs`| Array of audience output tags where the user is targeted in a Redpoint Outbound Delivery Braze channel execution         |
+| `rpi_offers`         | Array of offer tags where the user is targeted in a Redpoint Outbound Delivery Braze channel execution                   |
+| `rpi_contact_ids`    | Array of offer history contact IDs where the user is targeted in a Redpoint Outbound Delivery Braze channel execution     |
+| `rpi_channel_exec_ids`| Array of channel execution IDs where the user is targeted in a Redpoint Outbound Delivery Braze channel execution       |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ![][4]{: style="max-width:75%;"}
 
-{% alert note %}
-Redpoint provides two export templates and channels for passing data to Braze. The **Braze Onboarding and Merge** channel and export template are intended to be used for onboarding or updating user records when data has changed. After the initial onboarding of CDP records to Braze, please ensure that subsequent Redpoint Interaction workflows which use this channel are designed to select only records that have changed since the initial onboarding sync.
-{% endalert %}
-
 ## Integration
 
-### Setup Outbound Delivery Braze channels in Redpoint Interaction (RPI)
+You will create your outbound channels and templates in Redpoint Interaction (RPI). 
 
-#### RPI setup step 1: Create export templates 
+### Create the Braze Onboarding and Upsert template
 
-Create a new export template and name it **Braze Onboarding and Merge**. This template defines the core mappings between the Redpoint CDP and the Braze user record, along with any additional custom RPI attributes you want to expose on the Braze record. Drag Redpoint CDP attributes into the **Attribute** column corresponding to the following Braze user properties and be sure to label them accordingly in the **Header Row Value** column:
+In RPI, create a new export template and name it **Braze Onboarding and Upsert**. This template defines the core mappings between the Redpoint CDP and the Braze user profile, along with any additional custom attributes you want to add to your user profiles in Braze. 
 
-* `external_id`
-* `first_name`
-* `last_name`
-* `email`
-* `country`
-* `dob`
-* `gender`
-* `home_city`
-* `phone`
+Drag Redpoint CDP attributes into the **Attribute** column. Set the **Header Row Value** to the corresponding to the following Braze user properties. 
 
-In addition, add the **Output Name** attribute from the Offer History table and any additional custom Redpoint attributes you want to add to the Braze record. The image below shows a sample export template configured for merge operations, with the additional attributes Education, Income, and Marital Status:
+Here is a list of Redpoint CDP attributes and their corresponding Braze attributes:
+
+| Redpoint Attribute | Header Row Value |
+|--------------------|------------------|
+| PID                | `external_id`    |
+| Fist Name          | `first_name`     |
+| Last Name          | `last_name`      |
+| Primary Email      | `email`          |
+| Primary Country    | `country`        |
+| DOB                | `dob`            |
+| Gender             | `gender`         |
+| Primary City       | `home_city`      |
+| Primary Phone      | `phone`          |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Add the **Output Name** attribute from the Offer History table.
+
+Lastly, add any additional custom Redpoint attributes you want to merge into Braze. 
+
+For example, here is sample export template configured for merge operations, with the additional attributes Education, Income, and Marital Status:
 
 ![][7]{: style="max-width:75%;"}
 
-Create a second export template for append-only operations named **Braze Append**. This template should only include the attributes for **external_id** and Offer History **Output Name**:
+#### Create the Braze Append template
 
-![][8]{: style="max-width:75%;"}
+Create a second export template for append-only operations named **Braze Append**. 
 
-On both export templates, navigate to the **Options** tab and set the **Date Format** to the value of **Custom Format** and then declare the format as **yyyy-MM-dd** as shown below.
+You will set only two attributes for this template. Set **PID** to the **Header Row** of `external_id`. Set **Output Name** to the **Header Row** of `output_name`. 
 
-![][16]{: style="max-width:75%;"}
+![A sample export template with the `external_id` and output name attributes.][8]{: style="max-width:75%;"}
 
-#### RPI setup step 2: Create RPI channels
+#### Set date format
 
-Create two new RPI channels of type **Outbound Delivery** and name them **Braze Append** and **Braze Onboarding and Merge**:
+On both export templates, navigate to the **Options** tab and set the **Date Format** to the value of **Custom Format**. Declare the format as **yyyy-MM-dd**.
+
+![The options tab showing date format set to yyyy-MM-dd.][16]{: style="max-width:75%;"}
+
+### Create outbound channels
+
+In RPI, create two new channels. Set both channels to **Outbound Delivery**. Name one channel **Braze Onboarding and Upsert** and the other **Braze Append**.
 
 ![][9]{: style="max-width:75%;"}
 
-From the **Channel Specific** tab in the channel configuration screen:
+{% alert note %}
+After the initial onboarding of your CDP records to Braze, please ensure that subsequent Redpoint Interaction workflows which use the Braze Onboarding and Upsert channel are designed to select only records that have changed since the initial onboarding sync.
+{% endalert %}
 
-* Associate the export templates create above to their respective channel
-* Define an **Export path format** on both channels that point to a shared network, ftp or external content provider location which is accessible to both Redpoint Interaction and Redpoint Data Management. The export directory format on both channels will be identical and should end with \\[Channel]\\[Offer]\\[Workflow ID]
+### Configure the channels
+
+#### Set template and export path format
+
+Navigate to the **General** tab in the Channels **Configuration** screen. 
+
+Set the appropriate export template to each respective channel. 
+
+Then, define an **Export path format** on both channels that point to a shared network, ftp, or external content provider location which is accessible to both Redpoint Interaction and Redpoint Data Management. 
 
 ![][10]{: style="max-width:75%;"}
 
+The export directory format on both channels will be identical and should end with \\[Channel]\\[Offer]\\[Workflow ID].
+
 ![][11]{: style="max-width:50%;"}
 
-From the **Post Execution** tab in the channel configuration screen:
+#### Configure post execution
 
-Check the option to call a service URL and enter the Redpoint Data Management web service URL. This entry will be identical on both the Onboarding and Append channel.   
+Navigate to the **Post Execution** tab in the Channels **Configuration** screen. 
+
+Check the **Post-execution** checkbox to call a service URL after channel execution. Enter your Redpoint Data Management web service URL. This entry will be identical on both your Onboarding and Append channel.   
 
 ![][14]{: style="max-width:75%;"}
 
-### Setup supporting Braze components in Redpoint Data Management (RPDM)
+### Set up supporting Braze components in Redpoint Data Management 
 
-The archive containing RPDM artifacts to support the Braze integration contains a README with detailed instructions for setting up the required components. The following are the areas which are most important for setting environment specific configuration between Braze, RPI and RPDM:
+The archive containing Redpoint Data Management (RPDM) artifacts to support the Braze integration contains a README with detailed instructions for setting up the required components. The following are the areas which are most important for setting environment specific configuration between Braze, RPI, and RPDM:
 
 #### Update the RPI to Braze automation with your Braze REST endpoint and base RPI output directory 
 
@@ -119,7 +157,7 @@ The Redpoint Data Management project named **PROJ_RPI_to_Braze_Append** contains
 
 ## Using the Redpoint to Braze integration
 
-The Outbound Delivery Braze channel can now be leveraged within Redpoint Interaction workflows. Follow the standard practices for creating selection rules and audiences in RPI, and building associated workflow schedules and triggers. To enable the sync of an RPI Audience output to Braze, create an outbound delivery offer and associate it to either the **Braze Onboarding and Merge** or the **Braze Append** channel depending on whether the intent is to create or merge new records in Braze or to only append campaign data if the record already exists in Braze.
+The Outbound Delivery Braze channel can now be leveraged within Redpoint Interaction workflows. Follow the standard practices for creating selection rules and audiences in RPI, and building associated workflow schedules and triggers. To enable the sync of an RPI Audience output to Braze, create an outbound delivery offer and associate it to either the **Braze Onboarding and Upsert** or the **Braze Append** channel depending on whether the intent is to create or merge new records in Braze or to only append campaign data if the record already exists in Braze.
 
 ![][13]{: style="max-width:75%;"}
 
