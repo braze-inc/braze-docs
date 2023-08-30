@@ -151,6 +151,9 @@ inAppMessage.orientation = BRZInAppMessageRawOrientationLandscape;
 
 To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, implement the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog). The `PresentationContext` passed to the method retains the `InAppMessage` which is about to be presented. Each `InAppMessage` has a `themes` property containing a `dark` and `light` mode theme. You can effectively overwrite the `dark` theme by setting it to the message's `light` theme in the delegate method.
 
+{% tabs %}
+{% tab swift %}
+
 ```swift
 func inAppMessage(
   _ ui: BrazeInAppMessageUI,
@@ -173,8 +176,15 @@ func inAppMessage(
 }
 ```
 
-Now, when the user device has dark mode enabled and the `InAppMessage`'s `dark` theme is applied, the `InAppMessage` will still have all the properties of its `light` theme applied to its appearance. You can implement the delegate method to only disable dark mode on a subset of `InAppMessage` types by removing the corresponding switch statement cases.
+{% endtab %}
+{% tab OBJECTIVE-C %}
 
+The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
+
+{% endtab %}
+{% endtabs %}
+
+Now, when the user device has dark mode enabled and the `InAppMessage`'s `dark` theme is applied, the `InAppMessage` will still have all the properties of its `light` theme applied to its appearance. You can implement the delegate method to only disable dark mode on a subset of `InAppMessage` types by removing the corresponding switch statement cases.
 
 ## Hiding the status bar during display
 
