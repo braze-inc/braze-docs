@@ -114,6 +114,10 @@ Additional setup is required to use Web push notifications. See [Push notificati
 
 To assist in troubleshooting, you can enable verbose logging in the SDK. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `braze.setLogger()` in your production environment. 
 
+To enable verbose logs, use the `enableLogging` initialization option, or `toggleLogging()` any point after the SDK is already initialized.
+
+You can also add `?brazeLogging=true` as a URL parameter to the website to enable verbose logs.
+
 ```javascript
 braze.initialize("YOUR-API-KEY-HERE", {
     baseUrl: "YOUR-API-ENDPOINT",
