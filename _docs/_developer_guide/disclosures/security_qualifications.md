@@ -31,7 +31,7 @@ Any third party wishing to independently verify the status of Braze's certificat
 
 ![SOC 2 examination graphic][2]{: height="25%" width="25%" style="border:0px;"}
 
-_Last Review Date/Period: July 1, 2021 to June 30, 2022_
+_Last Review Date/Period: July 1, 2022 to June 30, 2023_
 
 Braze has successfully completed the Type 2 SOC 2 examination for _Security_ and availability, performed by independent CPA firm [Schellman & Company, LLC][8].
 
