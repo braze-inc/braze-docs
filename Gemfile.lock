@@ -35,14 +35,11 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
-    eventmachine (1.2.7-x64-mingw32)
     execjs (2.8.1)
     ffi (1.15.5)
-    ffi (1.15.5-x64-mingw32)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
     google-protobuf (3.22.2)
-    google-protobuf (3.22.2-x64-mingw32)
     google-protobuf (3.22.2-x86_64-linux)
     http_parser.rb (0.8.0)
     httpclient (2.8.3)
@@ -84,11 +81,9 @@ GEM
     mini_portile2 (2.8.1)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    nio4r (2.5.8)
+    nio4r (2.5.9)
     nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
-      racc (~> 1.4)
-    nokogiri (1.14.3-x64-mingw32)
       racc (~> 1.4)
     nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
@@ -96,7 +91,7 @@ GEM
       forwardable-extended (~> 2.6)
     progressbar (1.13.0)
     public_suffix (5.0.1)
-    puma (6.1.1)
+    puma (6.3.1)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.6.4)
@@ -122,11 +117,7 @@ GEM
     sass-embedded (1.54.6)
       google-protobuf (~> 3.19)
       rake (>= 10.0.0)
-    sass-embedded (1.54.6-x64-mingw32)
-      google-protobuf (~> 3.19)
     sassc (2.4.0)
-      ffi (~> 1.9)
-    sassc (2.4.0-x64-mingw32)
       ffi (~> 1.9)
     sinatra (3.0.5)
       mustermann (~> 3.0)
@@ -144,7 +135,6 @@ GEM
 
 PLATFORMS
   ruby
-  x64-mingw32
   x86_64-linux
 
 DEPENDENCIES
