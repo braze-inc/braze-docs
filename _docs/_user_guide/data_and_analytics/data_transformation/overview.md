@@ -1,12 +1,12 @@
 ---
-nav_title: Data Transformation
-article_title: Data Transformation
+nav_title: Overview
+article_title: Data Transformation Overview
 page_order: 0
 page_type: reference
 description: "This reference article provides an overview of data transformation, frequently asked questions, and product limitations."
 ---
 
-# Braze data transformation
+# Data transformation overview
 
 > Data transformation allows you to build and manage webhook integrations to automate data flow from external platforms into Braze user profiles. This integrated user data can then power even more sophisticated marketing use cases.
 
@@ -28,20 +28,21 @@ For example, a survey platform can send a webhook to a destination of your choic
 
 ## Limitations
 
-The following table describes the usage limitations that apply the free and Pro versions of data transformation.
-| Limitation Area | Free Version | Pro Version |
+The following table describes the usage limitations that apply for each version of data transformation.
+
+| Limitation Area | Free Version | Data Transformation Pro |
 |----|----|----|
 | **Active transformations** | Up to 5 per company | Up to 55 per company |
 | **Monthly incoming requests** | 300,000 incoming requests per minute | 10,300,000 incoming requests per minute |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
-To request an upgrade for Data Transformation Pro, contact your Braze account manager or select the **Request Upgrade** button in the Braze dashboard.
+To request an upgrade to Data Transformation Pro, contact your Braze account manager or select the **Request Upgrade** button in the Braze dashboard.
 {% endalert %}
 
 ### Rate limits
 
-The rate limit for data transformation is 1,000 incoming requests per minute. If you have the Pro version and need a higher rate limit, contact your Braze account manager.
+The rate limit for data transformation is 1,000 incoming requests per minute. If you have Data Transformation Pro and need a higher rate limit, contact your Braze account manager.
 
 ## Frequently asked questions
 
@@ -50,30 +51,25 @@ Any data the external platform makes available in a webhook can be synced to Bra
 {% enddetails %}
 
 {% details I’m a marketer. Do I need developer resources to use data transformation? %}
-While we would love for developers to use this feature as well, you don’t need to be one to use this! We’ve seen marketers successfully set up transformations without developer resources.
+While we would love for developers to use this feature as well, you don’t need to be one to use this! Marketers can also successfully set up transformations without developer resources.
 {% enddetails %}
 
-{% details Can I still use data transformation if my external platform only gives an email address as an identifier and no Braze ID or Braze external ID? %}
-Yes. Data transformation early access users will also be granted early access to this new [`/users/track` feature]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address) to update a user profile by email address.
+{% details Can I still use data transformation if my external platform only gives an email address as an identifier? %}
+Yes. Data transformation early access users will also be granted early access to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address) to update a user profile by email address.
 
-Simply use `email` as your identifier property in the transformation code instead of “external_id” or `braze_id`. For example, our example [Transformation code](#example-transformation-code) uses this new `/users/track` functionality.
+Use `email` as your identifier property in the transformation code instead of `external_id` or `braze_id`. The example [transformation code](#example-transformation-code) uses this functionality.
 
 {% alert note %}
 Data transformation early access users who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function has been deprecated.
 {% endalert %}
 {% enddetails %}
 
-{% details Are there rate limits with data transformation? %}
-The rate limit for incoming webhooks is 250 requests per minute across your entire company. If you need a higher rate limit, ask us at [data-transformation@braze.com](mailto:data-transformation@braze.com).
-{% enddetails %}
-
 {% details Does data transformation consume data points? %}
-In most cases, yes. Data transformation eventually creates a `/users/track` call that writes the attributes, events, and purchases you want. These will consume data points in the same way as if the `/users/track` call was made independently.
-You have control over how many data points will be written based on how you write your transformation.
+In most cases, yes. Data transformation eventually creates a `/users/track` call that writes the attributes, events, and purchases you want. These will consume data points in the same way as if the `/users/track` call was made independently. You have control over how many data points will be written based on how you write your transformation.
 {% enddetails %}
 
 {% details How can I get help setting up my use case or with my transformation code? %}
-Send us your questions with a link to your transformation at [data-transformation@braze.com](mailto:data-transformation@braze.com).
+Contact your Braze account manager for additional assistance.
 {% enddetails %}
 
 [1]: {% image_buster /assets/img_archive/data_transformation1.png %}

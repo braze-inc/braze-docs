@@ -8,31 +8,35 @@ description: "This reference article provides use cases for data transformation.
 
 # Use cases
 
-The following example use cases are possible with a combination of webhooks from the external platform and Braze data transformation:
+> Consider the following use cases with Braze data transformation and a combination of webhooks from the external platforms.
 
-**Typeform**<br>You host a lead generation Typeform form on your website. When new users fill out this form, you can:
-- Create new users in Braze
-- Add them to one of your Braze email lists
+## Generating leads
+
+You host a lead generation Typeform form on your website. When new users fill out this form, you can:
+- Create new users in Braze.
+- Add them to one of your Braze email lists.
 - Sync some of their responses as custom attributes in Braze, as their answers are valuable first-party data that can power personalized messaging experiences for future use.
 
-**Zendesk**<br>When customers open customer service tickets, you can:
-- Write a custom event in Braze when a Zendesk ticket is created
-- Write a custom event with event properties in Braze when a negative CSAT rating is provided to Zendesk
+## Opening service tickets
 
-**Iterate**<br>Braze has an [integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) available with Iterate, a customer insights and survey platform. With Data Transformation, you can:
-- Save multiple survey responses under one nested custom attribute, as opposed to the existing integration that saves multiple custom attributes
+When customers open customer service tickets on a platform like Zendesk, you can:
+- Write a custom event in Braze when a Zendesk ticket is created.
+- Write a custom event with event properties in Braze when a negative CSAT rating is provided to Zendesk.
+
+## Integrating with Braze
+
+Braze has an [integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) available with Iterate, a customer insights and survey platform. With data transformation, you can save multiple survey responses under one nested custom attribute, instead of to the existing integration that saves multiple custom attributes.
 
 ## Example transformation code
 
-Consider this sample payload from the survey platform Typeform, which sends whenever a survey response is received.
+Consider this sample payload from Tyepform, a survey platform, which sends whenever a survey response is received.
 
 ![][1]
 
 {% tabs local %}
 {% tab Basic transformation %}
 
-
-This simple use case takes some of those answers as attributes and writes an event to indicate that the survey was completed:
+This use case takes survey answers as attributes and writes an event to indicate that the survey was completed:
 
 ```
 return {
@@ -61,7 +65,7 @@ return {
 {% endtab %}
 {% tab Advanced transformation %}
 
-This intermediate use case builds on the simple use case by introducing an if statement on one of the answers to categorize the user.
+This advanced use case builds on the basic use case by introducing an `if` statement to categorize the user in one of the answers.
 
 ```
 let nps_category;
