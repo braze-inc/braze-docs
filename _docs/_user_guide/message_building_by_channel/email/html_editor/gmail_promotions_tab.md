@@ -14,31 +14,33 @@ channel:
 
 ## Prerequisite
 
-First, forward your domains and subdomains to Google’s Promotions Tab outreach team at <a href="mailto:p-promo-outreach@google.com">p-promo-outreach@google.com</a> to be added to Gmail’s allowlist in order to use any feature that shows rich imagery, such as the product carousel for the Gmail Promotions tab.
+First, forward your domains and subdomains to Google’s Promotions Tab outreach team at <a href="mailto:p-promo-outreach@google.com">p-promo-outreach@google.com</a> to be added to Gmail’s allowlist. This allows you to use any feature that shows rich imagery, such as the product carousel for the Gmail Promotions tab.
 
 ## Building the card with Braze
 
-Follow these steps to build a Gmail promotion card for an email campaign. Note that navigating away from the **Content Library** section in the editor will reset the fields and information in the **Gmail Promotion Setup** tab. Complete the setup of your promotion card, and copy the HTML generated in order to not lose your HTML code.
+Follow these steps to build a Gmail promotion card for an email campaign. Note that navigating away from the **Content** section in the editor will reset the fields and information in the **Gmail Promotion** tab. Complete the setup of your promotion card, and copy the HTML generated so you don't lose your HTML code.
 
 1. [Create your email campaign][7] as you usually would. 
-2. Go to the **Content Library** section and select the **Gmail Promotion Setup** tab.
-3. Fill out the fields under **Basic Information**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.][2]
-4. Choose whether to include only a discount offer, promotion cards, or both for your Gmail Promotion card. <br> ![][10]
+2. Go to the **Content** section in the editor and select the **Gmail Promotion** tab.
+3. Fill out the fields under **Basic Information**, then click **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.][2]
+4. Choose whether to include only a discount offer, promotion cards, or both for your Gmail Promotion card. <br> ![Options to include a discount offer and promotion cards.][10]{: style="max-width:50%;"}
 5. Copy and paste the script into the `<head>` element of your email's HTML.
 
 {% alert warning %}
-The Promotions script will only appear if your email lands in the Gmail Promotions tab. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm would be ignored, and your email will automatically land in the Promotions tab moving forward.
+The Promotions script only appears if your email lands in the Gmail Promotions tab. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm will be ignored, and your email will automatically land in the Promotions tab moving forward.
 {% endalert %}
 
-### Include a discount offer
+### Including a discount offer
 
-Setting up a discount offer allows you to specify the valid dates for a discount. After determining your discount offer, select a start date and time. You'll have the option of ending your discount offer at a specific time, or selecting to never end it.
+Setting up a discount offer allows you to specify the valid dates for a discount. After determining your discount offer, select a start date and time. You have the option of ending your discount offer at a specific time, or selecting to never end it.
 
-### Customize your product carousel
+![Options to specify the offer value, code, and start date and time for a discount offer.][11]{: style="max-width:50%;"}
 
-Promotion cards in your product carousel are helpful to provide images to your offer. You can also customize variables in your product carousel and include up to 10 image previews, where each image is unique.
+### Customizing your product carousel
 
-![An example of a product carousel from a company named Motto with the email heading "Our best selling socks are on sale", with three images of socks and their discounted prices.][9]{: style="max-width:75%;"}
+Promotion cards in your product carousel are helpful to provide images to your offer. You can also customize variables in your product carousel and include up to ten image previews, where each image is unique.
+
+![An example of a product carousel from a company named Motto with the email heading "Our best selling socks are on sale", with three images of socks and their discounted prices.][9]{: style="max-width:40%;"}
 
 | Customizable Variable | Description |
 |---|---|
@@ -64,7 +66,7 @@ While you can use Liquid within this script, we strongly suggest that you test y
 
 #### Incorporating images
 
-Gmail has seen better results with strong imagery related to the email message. Gmail does not recommend using a text-only design, as this space was designed to bring that visual language, vital to email marketing, to the preview. Don't use images with cut-off text or repeat images in multiple campaigns.
+Gmail has seen better results with strong imagery related to the email message. Gmail does not recommend using a text-only design, as this space was designed to bring visual language, which is vital to email marketing, to the preview. Don't use images with cut-off text or repeat images in multiple campaigns.
 
 #### Describing offers
 
@@ -98,3 +100,4 @@ Gmail determines when and who to display the card to, so there isn't a guarantee
 [8]: https://developers.google.com/gmail/promotab/best-practices
 [9]: {% image_buster /assets/img_archive/product_carousel.png %}
 [10]: {% image_buster /assets/img_archive/gmail_promo_discount.png %}
+[11]: {% image_buster /assets/img/gmail_promo_discount_details.png %}
