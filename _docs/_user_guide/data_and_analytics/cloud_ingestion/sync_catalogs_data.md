@@ -10,7 +10,7 @@ description: "This reference article provides an overview of how to sync catalog
 # Sync Catalogs data
 
 {% alert important %}
-Braze Cloud Data Ingestion support for Catalogs is currently in early access, and is available for Snowflake, Redshift, and BigQuery sources. Contact your Braze account manager or CSM if you are interested in participating in the early access.
+Braze Cloud Data Ingestion support for catalogs is currently in early access, and is available for Snowflake, Redshift, and BigQuery sources. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
  
 ## Step 1: Create a new catalog
