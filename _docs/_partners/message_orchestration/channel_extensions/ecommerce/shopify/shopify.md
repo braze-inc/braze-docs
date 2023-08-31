@@ -24,7 +24,7 @@ This integration will create alias user profiles if we are unable to match Shopi
 | ----------- | ----------- |
 | Shopify store | You must have an active [Shopify](https://www.shopify.com) store.<br><br>Note that at this time, you are only able to connect one Shopify store per workspace. |
 | Event property segmentation enabled | To confirm you can segment your Shopify events properties, you must work with your customer success manager or [Braze support]({{site.baseurl}}/braze_support/) to confirm that you have event property segmentation enabled for your dashboard. |
-| User permissions | You have to be either a:<br>• Store owner<br> • Staff<br>• Member with all **General** and **Online Store** settings, as well as these additional admin permissions selected:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Manage settings<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• View apps developed by staff and collaborators<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Manage and install apps and channels |
+| User permissions | You have to be either a:<br>• Store owner<br> • Staff<br>• Member with all **General** and **Online Store** settings, as well as these additional admin permissions selected:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Orders<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• View Products<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Customers<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Manage settings<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• View apps developed by staff and collaborators<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Manage and install apps and channels |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
