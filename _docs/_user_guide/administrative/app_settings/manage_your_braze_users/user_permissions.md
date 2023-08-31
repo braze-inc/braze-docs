@@ -48,29 +48,28 @@ You can manage user permissions by group or on an individual basis when editing 
 
 |Permission Name|Definition/Parameters|
 |---|---|
-|Admin|Has access to all available features, default setting for all new users. Can update company settings (company name and time zone), which limited users are unable to do.|
+|Admin|Has access to all available features. This is the default setting for all new users. Can update company settings (company name and time zone), which limited users cannot do.|
 |Access Campaigns, Canvases, Cards, Segments, Media Library| User can view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of News Feed, segments, templates and media, create templates, upload media, view engagement reports, and be granted global message settings in the dashboard. However, users with this permission cannot pause or edit existing live content. |
-|Send Campaigns, Canvases| Allows user to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. To launch existing Content Blocks, **Send campaigns, Canvases** permission is required. |
-|Publish Cards| This permission is only visible if your account is enabled for News Feed, which is being deprecated. This does not affect Content Cards.<br><br>Allows user to create and edit News Feed cards. You can still view News Feed cards without this permission. If your account is enabled for News Feed and a user should be able to launch existing Content Blocks, they need both **Publish Cards** and **Send campaigns, Canvases** permissions. |
-|Edit Segments| Allows user to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
-|Export User Data| Allows user to export your user data from segments, campaigns and Canvases. |
-|View PII | Allows user to view the personally identifiable information fields as defined by your company within the dashboard. This also allows you to edit the subscription status of a user, and their subscription group opt-in/opt-out rules.|
+|Send Campaigns, Canvases| Allows users to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. To launch existing Content Blocks, **Send campaigns, Canvases** permission is required. |
+|Publish Cards| This permission is only visible if your account is enabled for News Feed, which is being deprecated. This does not affect Content Cards.<br><br>Allows users to create and edit News Feed cards. You can still view News Feed cards without this permission. If your account is enabled for News Feed and a user should be able to launch existing Content Blocks, they need both **Publish Cards** and **Send campaigns, Canvases** permissions. |
+|Edit Segments| Allows users to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
+|Export User Data| Allows users to export their user data from segments, campaigns, and Canvases. |
+|View PII | Allows users to view the personally identifiable information fields as defined by your company within the dashboard. This also allows you to edit the subscription status of a user and their subscription group opt-in/opt-out rules.|
 |View User Profiles PII Compliant| Allows users to view user profiles but redacts fields your company has defined as personally identifiable information (PII). |
-|Manage Dashboard Users| Allows user to view, edit, and manage the **Company Users** page. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level.|
-|Manage Media Library| Allows user to upload images to library. You can still upload pictures/audio etc. directly to a campaign without this permission.|
-|View Usage Data| Allows user to view app usage.|
-|Import and Update User Data| Allows user to import CSV and update files of app users as well as view the User Import page.|
-|View Billing Details| Allows user to view subscriptions and billing. |
+|Manage Dashboard Users| Allows users to view, edit, and manage the **Company Users** page. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level.|
+|Manage Media Library| Allows users to upload images to the library. You can still upload pictures and audio directly to a campaign without this permission.|
+|View Usage Data| Allows users to view app usage.|
+|Import and Update User Data| Allows users to import CSV and update files of app users as well as view the User Import page.|
+|View Billing Details| Allows users to view subscriptions and billing. |
 |Access Dev Console| Allows access to Developer Console (where you can view API keys, API campaign activity log, event user log, and internal groups for testing messages).|
 |Manage External Integrations| Allows access to all tabs under **Technology Partners** and the ability to sync Braze with other platforms.|
-|Manage Apps| Allows user to edit **App Settings**.|
-|Manage Teams|Allows user to manage **Internal Teams**. The ability to select this permission depends on your contract with Braze.|
-|Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**. If you are enabling this for a non-admin Braze user, **Access Campaigns, Canvases, Cards, Segments, Media Library** permissions must also be granted. |
+|Manage Apps| Allows users to edit **App Settings**.|
+|Manage Teams|Allows users to manage **Internal Teams**. The ability to select this permission depends on your contract with Braze.|
+|Manage Events, Attributes, Purchases|Allows users to edit custom attributes (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**. If you turn this on for a non-admin Braze user, **Access Campaigns, Canvases, Cards, Segments, Media Library** permissions must also be granted. |
 |Manage Tags|Allows users to edit or delete tags (under **Tag Management**). You do not need this permission to add tags to campaigns or segments.|
 |Manage Email Settings|Allows user to save email configuration changes (**Settings** > **Email Preferences**).|
-|Manage Subscription Groups | Allows user to create and manage subscription groups. |
-|Manage Approval Settings| This setting has been removed. Only users with admin permissions can turn the [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) settings on or off for your workspace. |
-|Approve and Deny Campaigns| Allows users to approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manage if you're interested in participating in the early access. |
+|Manage Subscription Groups | Allows users to create and manage subscription groups. |
+|Approve and Deny Campaigns| Allows users to approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you're interested in participating in the early access. |
 | Approve and Deny Canvases| Allows users to approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/canvas_approval) must be turned on for this permission to apply. |
 {: .reset-td-br-1 .reset-td-br-2}
 

@@ -32,7 +32,7 @@ Vous pouvez personnaliser le package Unity exporté en modifiant à la fois `gen
 ## Compatibilité Prime 31
 
 Pour utiliser le plug-in Unity de Braze avec les plug-ins Prime31, modifiez le `AndroidManifest.xml` de votre projet pour utiliser les classes d’activité compatibles Prime31. Modifier toutes les références de
-`com.appboy.unity.AppboyUnityPlayerActivity` vers `com.appboy.unity.prime31compatible.AppboyUnityPlayerActivity`
+`com.braze.unity.BrazeUnityPlayerActivity` vers `com.braze.unity.prime31compatible.BrazeUnityPlayerActivity`
 
 ## Notification push Amazon ADM
 

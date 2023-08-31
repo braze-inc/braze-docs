@@ -63,6 +63,10 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
   "canvas_variation_id" : CanvasVariationId, // may not be available
   "message_variation_id": MessageVariationId, // may not be available,
   "attachments": Array of JSON Objects containing 'bytes' and 'file_name', // may not be available
+  "user_id": String,
+  "campaign_name": String, // will only be available if the message is from a campaign
+  "canvas_name": String, // will only be available if the message is a from Canvas
+  "canvas_step_name": String // will only be available if the message is from a Canvas
 }
 ```
 
@@ -88,6 +92,10 @@ For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/us
   "canvas_step_id": CanvasStepID, // may not be available
   "canvas_variation_id" : CanvasVariationId, // may not be available
   "message_variation_id": MessagVariationId, // may not be available
+  "user_id": String,
+  "campaign_name": String, // will only be available if the message is from a campaign
+  "canvas_name": String, // will only be available if the message is a from Canvas
+  "canvas_step_name": String // will only be available if the message is from a Canvas
 }
 ```
 
@@ -106,6 +114,10 @@ For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/us
   "canvas_step_id": CanvasStepID, // may not be available
   "canvas_variation_id" : CanvasVariationId, // may not be available
   "message_variation_id": MessagVariationId, // may not be available
+  "user_id": String,
+  "campaign_name": String, // will only be available if the message is from a campaign
+  "canvas_name": String, // will only be available if the message is a from Canvas
+  "canvas_step_name": String // will only be available if the message is from a Canvas
 }
 ```
 
@@ -120,7 +132,7 @@ Modifications done after the message leaves Braze will not be reflected in the f
 When a message is sent outside of a campaign or Canvas, the CampaignId in the file name will be "unassociated". This will happen when you send test messages from the dashboard, when Braze sends SMS auto-responses, or when messages sent through the API do not specify a campaign ID.
 
 ### How do I find more information about this send? 
-Using the dispatch ID, you can cross-reference the templated message with our Currents data to find more information like the external user ID of who received it, the timestamp it was delivered, whether or not the user opened or clicked the message, and more. 
+Using the `dispatch_id` and `user_id`, you can cross-reference the templated message with our Currents data to find more information like the external user ID of who received it, the timestamp it was delivered, whether or not the user opened or clicked the message, and more. 
 
 ### How are retries handled? 
 Should your S3 bucket be unreachable, Braze will retry up to three times with a [backoff jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/#Jitter). S3 rate limit retries are automatically handled by Braze.
