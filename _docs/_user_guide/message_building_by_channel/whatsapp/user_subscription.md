@@ -51,6 +51,8 @@ Regardless of the opt-in and opt-out methods you use, you can update the subscri
 
 ![][1]{: style="max-width:90%;"}
 
+To avoid race conditions, any follow-up messaging after the webhook should be contained in a second Canvas that is triggered by outcomes from the first Canvas (i.e., user has entered a Canvas variation and is in a WhatsApp subscription group).
+
 - Use the advanced JSON editor to update the user profile with the following template: 
 
 	```json
@@ -76,6 +78,10 @@ Regardless of the opt-in and opt-out methods you use, you can update the subscri
 	```
 
 ![][2]{: style="max-width:90%;"}
+
+{% alert note %}
+Updates to a user's subscription status may take up to 60 seconds.
+{% endalert %}
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp118.png %} 
 [2]: {% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}
