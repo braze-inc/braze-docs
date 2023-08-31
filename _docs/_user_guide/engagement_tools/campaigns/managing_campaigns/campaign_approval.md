@@ -26,7 +26,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## Using approvals
 
-Before using the approval workflow, you must have the **Approve and Deny Campaigns** permission. This permission controls who can update the approval status of a campaign. This permission can also be applied to workspaces or [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/), or added to a [permission set]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets).
+Before using the approval workflow, you must have the "Approve and Deny Campaigns" permission. This permission controls who can update the approval status of a campaign. This permission can also be applied to workspaces or [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/), or added to a [permission set]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets).
 
 In the **Review Summary** step of the campaign building workflow, use the approval option to approve or deny your campaign's key components: **Messages**, **Delivery**, **Target Population**, and **Conversion Events**. The default state for campaign approval is **Pending Approval**. 
 
