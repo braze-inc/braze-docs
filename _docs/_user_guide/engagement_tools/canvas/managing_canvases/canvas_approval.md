@@ -18,7 +18,7 @@ To turn on the approval workflow for Canvas, go to **Settings** > **Approval Wor
 ![The Approval Workflow settings where the option to use the approval workflow for campaigns and Canvases are enabled.][1]
 
 {% alert tip %}
-Be sure to check that you have the proper [user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/) to approve Canvases.
+Be sure to check that you have the proper [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions) to approve Canvases.
 {% endalert %}
 
 ### Setting user permissions
