@@ -1,14 +1,14 @@
 ---
-nav_title: Creating a Data Transformation
-article_title: Creating a Data Transformation
+nav_title: Creating a Transformation
+article_title: Creating a Transformation
 page_order: 1
 page_type: reference
-description: "This reference article provides steps on how to create a data transformation in the Braze dashboard."
+description: "This reference article provides steps on how to create a transformation using Braze Data Transformation."
 ---
 
-# Creating a data transformation
+# Creating a transformation
 
-> Data transformation allows you to build and manage webhook integrations to automate data flow from external platforms into Braze user profiles. This integrated user data can then power even more sophisticated marketing use cases.
+> Braze Data Transformation allows you to build and manage webhook integrations to automate data flow from external platforms into Braze user profiles. This integrated user data can then power even more sophisticated marketing use cases.
 
 ## Prerequisites 
 
@@ -52,7 +52,7 @@ This step is optional, but we recommend sending a test webhook from your source 
 Here’s what it looks like for Typeform:<br>![][12]
 
 {% alert note %}
-Data transformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) if you're interested in using this type of platform with data transformation.
+Braze Data Dransformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) if you're interested in using this type of platform with Braze Data Transformation.
 {% endalert %}
 
 ## Step 4: Write transformation code
@@ -62,7 +62,7 @@ If you have little to no experience with JavaScript code or would like more deta
 If you're a developer or have significant experience with JavaScript code, follow the **Advanced** tab for high-level instructions on writing your transformation code.
 
 {% alert tip %}
-Data transformation has an AI copilot that asks ChatGPT to help you write your code, instead of using the default template. Access the AI copilot by clicking <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transfornmation code**. In order to use this, a webhook must be sent to your transformation.
+Braze Data Transformation has an AI copilot that asks ChatGPT to help you write your code, instead of using the default template. Access the AI copilot by clicking <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transfornmation code**. In order to use this, a webhook must be sent to your transformation.
 
 ![]({% image_buster /assets/img/data_transformation/data_transformation3.png %})
 {% endalert %}
@@ -127,7 +127,7 @@ Here, you will write transformation code to define how you’d like to map vario
 Your webhook integration is now complete!
 
 {% alert important %}
-Accepting email as an identifier is possible as data transformation early access users will also be granted early access to this new `/users/track` feature to update a user profile by email address.<br><br>Data transformation Early access users who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function is deprecated.
+Accepting email as an identifier is possible as Braze Data Transformation early access users will also be granted early access to this new `/users/track` feature to update a user profile by email address.<br><br>early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function is deprecated.
 {% endalert %}
 
 {% endtab %}
@@ -156,7 +156,7 @@ After activating your transformation, refer to the analytics on the **Transforma
 
 **Incoming Requests:** This is the number of webhooks received at this transformation’s URL. If incoming requests are 0, your source platform hasn’t sent over any webhooks, or the connection cannot be made.
 
-**Deliveries:** After receiving incoming requests, data transformation applies your transformation code to create a Braze `/users/track` request.
+**Deliveries:** After receiving incoming requests, Data Transformation applies your transformation code to create a Braze `/users/track` request.
 
 The number of deliveries will never be greater than the number of incoming requests. However, it is a good goal to have 100% of incoming requests leading to deliveries.
 

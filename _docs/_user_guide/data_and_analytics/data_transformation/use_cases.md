@@ -1,14 +1,14 @@
 ---
 nav_title: Data Transformation Use Cases
-article_title: Data Transformation Use Cases
+article_title: Braze Data Transformation Use Cases
 page_order: 2
 page_type: reference
-description: "This reference article provides use cases for data transformation."
+description: "This reference article provides some use cases for Braze Data Transformation."
 ---
 
 # Use cases
 
-> Consider the following use cases with Braze data transformation and a combination of webhooks from the external platforms.
+> Consider the following possible use cases with Braze Data Transformation and a combination of webhooks from the external platforms.
 
 ## Generating leads
 
@@ -25,7 +25,7 @@ When customers open customer service tickets on a platform like Zendesk, you can
 
 ## Integrating with Braze
 
-Braze has an [integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) available with Iterate, a customer insights and survey platform. With data transformation, you can save multiple survey responses under one nested custom attribute, instead of to the existing integration that saves multiple custom attributes.
+Braze has an [integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) available with Iterate, a customer insights and survey platform. With Braze Data Transformation, you can save multiple survey responses under one nested custom attribute, instead of to the existing integration that saves multiple custom attributes.
 
 ## Example transformation code
 
