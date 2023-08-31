@@ -12,9 +12,7 @@ search_tag: Redpoint
 
 > [Redpoint][2] is a technology platform that provides marketers with a fully integrated campaign orchestration platform. Leverage Redpoint's segmentation, scheduling, and automation capabilities to control how and when CDP data is imported to Braze.
 
-The Braze and Redpoint integration allows you to create Braze segments based on your Redpoint CDP data.
-
-Redpoint provides two modes for passing data to Braze: 
+The Braze and Redpoint integration allows you to create Braze segments based on your Redpoint CDP data. Redpoint provides two modes for passing data to Braze: 
 
 1. **Braze Onboarding and Upsert** mode: "Upserts" a user profile from Redpoint into Braze. This is intended to be used for onboarding or updating user records when data has changed. 
 2. **Braze Append** mode: Updates a user profile if that user already exists in Braze. 
