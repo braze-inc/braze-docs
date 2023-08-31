@@ -1,7 +1,7 @@
 ---
 nav_title: "About SMS"
 article_title: About SMS
-page_order: 0
+page_order: 1
 description: "This reference article covers general use cases of the SMS channel and requirements needed to get SMS up and running."
 page_type: reference
 channel:
@@ -44,6 +44,9 @@ Before you start sending SMS, there are some things you need. Refer to the follo
 - **Message segment and character limits:** A message segment refers to how many segments your initial SMS message will be split into. Each message has a character limit that if exceeded, will cause the message to be broken into segments. Based on what encoding standards you use (UTF-2 or GSM-7), there are varying character limits. Reference our [message copy limits][2] for more information on messaging segmentation and message character limits.<br><br>
 - **Common SMS campaign metrics:** <br>`Sent`, `Sent to Carrier`, `Delivery Failures`, `Confirmed Delivery`, `Rejections`, `Opt-Out`, and `Help`. <br>For information on these metrics, refer to [SMS reporting][1].
 
+<br><br>
+
+For a full list of terms, visit our SMS [Terms to Know]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/terms/).
 
 [picture]: {% image_buster /assets/img/sms/sms_about.png %}
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/

@@ -54,4 +54,4 @@ After creating a sample within the **Sample Manger**, you will now be able to cl
 
 ![NPAW sample manager]({% image_buster /assets/img/npaw_sample_manager.png %})
 
-Now, once you send your users to Braze, you can take action and focus campaigns on user segments to re-engage inactive users, contact your most loyal users or any action on any user segment!
+Now, after you send your users to Braze, you can take action and focus campaigns on user segments to re-engage inactive users, contact your most loyal users or any action on any user segment!

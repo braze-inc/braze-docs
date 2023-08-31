@@ -26,7 +26,7 @@ Learn more about how the Braze SDK can be integrated to allow for flexible data 
 
 ## SSL overview
 
-Learn more about SSL at Braze, why SSL is important, and how you can acquire an SSL certificate in our new [SSL Overview]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/) article.
+Learn more about SSL at Braze, why SSL is important, and how you can acquire an SSL certificate in our new [SSL Overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl/) article.
 
 ## Amplitude user profile API endpoints
 

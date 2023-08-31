@@ -33,9 +33,9 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and sel
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-Here, you will find your REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.<br><br>![][6]{: style="max-width:90%;"} 
+Here, you will find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.<br><br>![][6]{: style="max-width:90%;"} 
 
-To complete the integration, you will need to provide the data import key and REST endpoint to your Tinyclues data operations team. Tinyclues will then establish the connection and reach out to you once the setup is complete.
+To complete the integration, you will need to provide the data import key and REST endpoint to your Tinyclues data operations team. Tinyclues will then establish the connection and reach out to you after the setup is complete.
 
 ### Step 2: Export a campaign from the Tinyclues platform
 
@@ -47,7 +47,7 @@ In Tinyclues, select the campaign(s) you want to export and click **Export Campa
 
 ### Step 3: Create a segment from the Tinyclues custom audience
 
-In Braze, navigate to **Segments**, name your Tinyclues cohort segment, and select **Tinyclues Cohorts** as your filter. From here, you can choose which Tinyclues cohort you wish to include. Once created, you can select your Tinyclues cohort segment as an audience filter when creating a campaign or Canvas.
+In Braze, navigate to **Segments**, name your Tinyclues cohort segment, and select **Tinyclues Cohorts** as your filter. From here, you can choose which Tinyclues cohort you wish to include. After your Tinyclues cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
 ![][3]{: style="max-width:90%;"}<br><br>
 ![In the Braze segment builder, the user attributes filter "Tinyclues cohort" is set to "includes" and "Primary cohort".][4]{: style="max-width:90%;"}

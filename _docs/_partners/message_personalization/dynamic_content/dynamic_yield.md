@@ -14,7 +14,7 @@ search_tag: Partner
 
 The Braze and Dynamic Yield partnership allows you to leverage Dynamic Yield's recommendation and segmentation engine to create Experience Blocks that can be embedded into Braze messages. Experience blocks can be made of:
 - **Recommendations blocks**: Set algorithms and filtering to source users' personalized content that propagates when the email is opened. 
-- **Dynamic Content blocks**: Target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened. 
+- **Dynamic Content Blocks**: Target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened. 
 
 ## Prerequisites
 
@@ -56,11 +56,11 @@ The recommendations block enables you to set algorithms and filtering to source 
 4. You can add a [custom filer rule](https://support.dynamicyield.com/hc/en-us/articles/4404013832465-Experience-Email#h_01FAZP4ZWZX1JJ2SH61MB3HVXD) to pin specific products to slots, or include and exclude products by product properties. For example, do not show products that code less than $5 or only products from the shorts category.<br><br>
 5. Lastly, configure the recommendation block design. To do this, select an item template, set the number of items to display, and in how many rows. 
 
-### Configure a Dynamic Content block
+### Configure a Dynamic Content Block
 Use Dynamic Content to target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened. 
 
-1. Drag a Dynamic Content block from the editing pane into the body of your email.<br><br> 
-2. Select a template for the first variation. You can now define design and content variables. Save the variation once complete. <br>![][4]<br><br> 
+1. Drag a Dynamic Content Block from the editing pane into the body of your email.<br><br> 
+2. Select a template for the first variation. You can now define design and content variables. Save the variation when complete. <br>![][4]<br><br> 
 3. Set the audience in the Dynamic Content pane.<br>![][5]<br><br> 
 4. Add another variation to target another specific audience or all users. Repeat as needed.<br><br> 
 5. Set the priorities for your variations using the up and down arrows. <br><br> 

@@ -26,7 +26,7 @@ The Braze and Jebbit integration lets you pass user emails and attributes from y
 
 ## Integration
 
-When requesting integrating with Jebbit, communicate if any hard deadlines need to be met. Additionally, ensure that you have the attributes mapped to your Jebbit experience(s) that you would like passed to Braze.
+When requesting integrating with Jebbit, communicate if any hard deadlines need to be met. Additionally, make sure that you have the attributes mapped to your Jebbit experience(s) that you would like passed to Braze.
 
 ### Step 1: Provide API credentials
 

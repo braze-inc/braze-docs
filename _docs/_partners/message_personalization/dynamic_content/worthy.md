@@ -10,11 +10,11 @@ search_tag: Partner
 
 # Worthy
 
-> The [Worthy](https://worthy.ai/) and Braze integration allows you to easily create personalized, rich in-app experiences using Worthy's drag and drop editor and deliver them through Braze. Additionally, Worthy will automatically do the following:
+> The [Worthy](https://worthy.ai/) and Braze integration allows you to easily create personalized, rich in-app experiences using Worthy's drag-and-drop editor and deliver them through Braze. Additionally, Worthy will automatically do the following:
 
 - Create a Connected Content server and secured API for your messaging.
 - Construct your in-app messages with analytics and click-tracking that will appear directly in Braze.
-- Automatically export HTML via Worthy's drag and drop editor to use in **Custom Code** in-app message campaigns in Braze, complete with the required API connections and dynamic content you configure.
+- Automatically export HTML via Worthy's drag-and-drop editor to use in **Custom Code** in-app message campaigns in Braze, complete with the required API connections and dynamic content you configure.
 
 ## Use cases
 

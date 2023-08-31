@@ -44,7 +44,7 @@ From there, select [Create Color Profile][2] from the dropdown. Create a Color P
 
 ## Compatibility
 
-- End users must be on iOS devices version 13 or higher, or Android devices version 10 or higher.
+- Your users must be on iOS devices version 13 or higher, or Android devices version 10 or higher.
 - Braze iOS SDK v3.21.0+ Braze Android SDK v3.8.0+ is required.
 
 {% alert note %}

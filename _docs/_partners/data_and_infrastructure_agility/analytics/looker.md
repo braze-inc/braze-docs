@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Looker](https://looker.com/), a business intelligence and big-data analytics platform, enables you to explore, analyze, and share real-time business analytics seamlessly.
 
-The Braze and Looker integration allows Braze users to leverage first-party [Looker Blocks](#looker-blocks) and [Looker Actions](#looker-actions) user flagging via the REST API. Once flagged, these users can be added to segments to [target](#segment-users) future Braze campaigns or Canvases. To use Looker with Braze, we recommend sending your Braze data to a [data warehouse using Braze currents][6], then use Braze's Looker Blocks to quickly model and visualize your Braze data in Looker.
+The Braze and Looker integration allows Braze users to leverage first-party [Looker Blocks](#looker-blocks) and [Looker Actions](#looker-actions) user flagging via the REST API. These flagged users can be added to segments to [target](#segment-users) future Braze campaigns or Canvases. To use Looker with Braze, we recommend sending your Braze data to a [data warehouse using Braze currents][6], then use Braze's Looker Blocks to quickly model and visualize your Braze data in Looker.
 
 ## Prerequisites
 
@@ -54,8 +54,8 @@ Be aware of different naming conventions! Custom names can cause incongruences i
 
 | Block | Description |
 |---|---|
-| Message engagement analytics block | This block includes data around push, email, in-app messages, webhook, newsfeed, conversion, Canvas entry, and campaign control group enrollment events. <br><br>Learn more about this [Looker Block](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), or check out the [Github code](https://github.com/llooker/braze_message_engagement_block). |
-| User behavior analytics block | This block includes data around custom events, purchases, sessions, location events, and uninstalls.<br><br>Learn more about this [Looker Block](https://looker.com/platform/blocks/source/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), or check out the [Github code](https://github.com/llooker/braze_retention_block). |
+| Message engagement analytics block | This block includes data around push, email, in-app messages, webhook, newsfeed, conversion, Canvas entry, and campaign control group enrollment events. <br><br>Learn more about this [Looker Block](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), or check out the [GitHub code](https://github.com/llooker/braze_message_engagement_block). |
+| User behavior analytics block | This block includes data around custom events, purchases, sessions, location events, and uninstalls.<br><br>Learn more about this [Looker Block](https://looker.com/platform/blocks/source/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), or check out the [GitHub code](https://github.com/llooker/braze_retention_block). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Looker Actions
@@ -98,7 +98,7 @@ Note the following limitations:
 - Attribute names are case-sensitive.
 - Standard attributes can also be set as long as they match the [standard user profile]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields) names exactly.
 - The full tag should be formatted within quotes. For example, `tags: ["braze[first_name]"]`. Other tags can also be assigned but will be ignored.
-- Additional information can be found on [Github](https://github.com/looker/actions/tree/master/src/actions/braze).
+- Additional information can be found on [GitHub](https://github.com/looker/actions/tree/master/src/actions/braze).
 
 #### Step 4: Send the Looker action
 

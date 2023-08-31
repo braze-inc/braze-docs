@@ -2580,7 +2580,7 @@
           "Messaging"
         ],
         "summary": "Send API-Triggered Delivery Canvas Example",
-        "description": "Example of sending a canvas set up in the dashboard with API-Triggered Delivery. This example specifies a single user in the request with some properties that can be templated into the message using Liquid (e.g. {{api_trigger_properties.${some_property}}} will populate the value of \"some_property\" into the message). Uses the /canvas/trigger/send endpoint. Either \"external_user_id\" OR \"user_aliases\" is required, requests must only specify one. The recipient array may contain up to 75 objects, with each one containing a single \"external_user_id\" string and \"canvas_entry_properties\" object.",
+        "description": "Example of sending a Canvas set up in the dashboard with API-Triggered Delivery. This example specifies a single user in the request with some properties that can be templated into the message using Liquid (e.g. {{api_trigger_properties.${some_property}}} will populate the value of \"some_property\" into the message). Uses the /canvas/trigger/send endpoint. Either \"external_user_id\" OR \"user_aliases\" is required, requests must only specify one. The recipient array may contain up to 75 objects, with each one containing a single \"external_user_id\" string and \"canvas_entry_properties\" object.",
         "operationId": "SendApiTriggeredDeliveryCanvasExample",
         "requestBody": {
           "description": "The send endpoint allows you to send immediate, ad-hoc messages to designated users.",
@@ -2618,7 +2618,7 @@
           "Messaging"
         ],
         "summary": "Create Scheduled API-Triggered Canvas Example",
-        "description": "Example of scheduling a future send of a canvas set up in the dashboard with API-Triggered Delivery.The paramter \"canvas_id\" is required. You can pass in canvas_entry_properties that will be templated into the messages sent by the first steps of the Canvas. When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a “broadcast” to a large group of users by including a “broadcast” boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include “broadcast: true” in your API call. If the “broadcast” flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including “broadcast: true” and providing a recipient list will return an error. The “broadcast” flag is required in order to protect against accidental sends to large groups of users.",
+        "description": "Example of scheduling a future send of a Canvas set up in the dashboard with API-Triggered Delivery.The paramter \"canvas_id\" is required. You can pass in canvas_entry_properties that will be templated into the messages sent by the first steps of the Canvas. When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a “broadcast” to a large group of users by including a “broadcast” boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include “broadcast: true” in your API call. If the “broadcast” flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including “broadcast: true” and providing a recipient list will return an error. The “broadcast” flag is required in order to protect against accidental sends to large groups of users.",
         "operationId": "CreateScheduledApiTriggeredCanvasExample",
         "requestBody": {
           "description": "Use this endpoint to send messages directly from the API.",
@@ -3312,7 +3312,7 @@
         "canvas_id": {
           "type": "string",
           "format": "int64",
-          "example": "insert canvas id here"
+          "example": "insert Canvas id here"
         },
         "recipients": {
           "type": "array",
@@ -3331,7 +3331,7 @@
         "canvas_id": {
           "type": "string",
           "format": "int64",
-          "example": "insert your canvas id here"
+          "example": "insert your Canvas id here"
         },
         "schedule": {
           "type": "object",
@@ -3367,7 +3367,7 @@
         "canvas_id": {
           "type": "string",
           "format": "int64",
-          "example": "insert your canvas id here"
+          "example": "insert your Canvas id here"
         },
         "schedule_id": {
           "type": "string",

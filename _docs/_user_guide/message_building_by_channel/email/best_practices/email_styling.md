@@ -34,7 +34,7 @@ The amount of visible preheader text is dependent on the user's email client and
 
 Here are some best practices to keep in mind when writing your preheaders:
 
-1. Calls to action come into play once readers have opened your email.
+1. Calls to action come into play after readers have opened your email.
   - Point your readers in the right direction, whether you want them to subscribe, purchase a product or visit your website.
   - Use strong words so that the reader knows exactly what you are asking of them, but make sure it reflects your company's brand voice and that every call to action exhibits some sort of value to the consumer.
   - Preheader should be no more than 85 characters and have some sort of descriptive call to action that supports the subject line.
@@ -90,7 +90,7 @@ Make sure to limit your email size. Email bodies larger than 102&nbsp;KB are not
 
 Refer to the following table for recommended text lengths.
 
-| **Text Specifications** | **Recommended Properties** |
+| Text Specifications | Recommended Properties |
 | --- | --- |
 | Subject Line Length | 35 characters maximum (for optimal mobile display) (6 to 10 words) |
 | Sender Name Length | 25 characters maximum (for optimal mobile display) |
@@ -108,9 +108,8 @@ Refer to the following table for recommended image sizes. Smaller, high-quality 
 
 ## Deep linking
 
-A high percentage of emails are read on mobile devices. Utilizing [deep linking]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) is a great practice for engaging with these mobile email recipients. With push notifications and in-app messages, a deep link takes the user directly to a specified destination within an app. 
+A high percentage of emails are read on mobile devices. Using [deep linking]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) is a great practice for engaging with these mobile email recipients. With push notifications and in-app messages, a deep link takes the user directly to a specified destination within an app. 
 
 However, emails don't provide the clarity of knowing whether recipients have the app installed. So, avoiding deep linking helps prevent error messages for these email recipients who do not have the app.
 
-[25]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
 [61]: {% image_buster /assets/img_archive/preheader_example.png %}

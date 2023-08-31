@@ -8,7 +8,7 @@ channel: push
 
 layout: glossary_page
 glossary_top_header: "Types of push notifications"
-glossary_top_text: "There are many types of push notifications you can use to interact with your customers. These can be narrowed by channel and used to meet the needs of many different users. You can configure most of these settings in your Push Campaigns, but there are notes in the following descriptions that will indicate whether any backend configurations are needed and what those might be."
+glossary_top_text: "There are many types of push notifications you can use to interact with your customers. These can be narrowed by channel and used to meet the needs of many different users. You can configure most of these settings in your Push campaigns, but there are notes in the following descriptions that will indicate whether any backend configurations are needed and what those might be."
 
 glossary_tag_name: Channels
 glossary_filter_text: "Select any of the following channels to narrow Push Type options."
@@ -21,7 +21,7 @@ glossary_tags:
 
 glossaries:
   - name: "Regular Push"
-    description: "The all-encompassing Push Message. These appear on your user's device with a notification sound and message which slides in or appears in a notification bar or stack."
+    description: "The all-encompassing Push message. These appear on your user's device with a notification sound and message which slides in or appears in a notification bar or stack."
     tags:
       - iOS
       - Android

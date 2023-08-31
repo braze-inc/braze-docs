@@ -106,7 +106,7 @@ This option gives you the flexibility to choose how frequently you would like to
 
 ## Open report  
 
-You will receive an email with links to your reports. When you click on the provided links you will automatically download a ZIP file containing your CSV files-one for all Campaigns.
+You will receive an email with links to your reports. When you click on the provided links you will automatically download a ZIP file containing your CSV files-one for all campaigns.
 
 The report, when opened, will contain all the statistics selected in the [Add Stats](#add-statistics-to-your-reports) section of the setup process.
 

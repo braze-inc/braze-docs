@@ -21,7 +21,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 - [**Necessary frequency capping overrides**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping): There are some campaigns, like transactional messages, that you will want to always reach the user, even if you have already reached their frequency cap (for example, a delivery notification). If you want a particular campaign to override frequency capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling frequency capping off.
 
 #### Things to know
-- [**Global control groups**]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group#global-control-group): If you are using a global control group, a percentage of users will not receive any campaigns or Canvases. (you can create exceptions with [exclusion settings]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#step-3-assign-exclusion-settings)). If you would like to see a list of these users, export them via CSV or [API]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
+- [**Global control groups**]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group#global-control-group): If you are using a global control group, a percentage of users will not receive any campaigns or Canvases. (you can create exceptions with [exclusion settings]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#step-3-assign-exclusion-settings)). To see a list of these users, export them via CSV or [API]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
 - [**Canvas rate limits**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting): In a Canvas, the rate limit applies across the entire Canvas, not the individual steps. For example, if you were to set a 10,000 message per minute rate limit on a Canvas with multiple steps, it will still be limited to 10,000 messages because the limit will have been reached at the first step.
 - **Frequency capping**: 
   - Frequency capping rules will be applied to push, email, SMS, and webhooks, but not to in-app messages and Content Cards.
@@ -53,7 +53,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 ## SMS
 
 #### Things to check
-- **Allotments and throughput**: Understand what SMS allotments are currently attached to your account (short code, long code, etc.) and [how much throughput that provides you]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/) to ensure you have enough throughput to send in your desired time.
+- **Allotments and throughput**: Understand what SMS allotments are currently attached to your account (short code, long code, etc.) and [how much throughput that provides you]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/) to ensure you have enough throughput to send in your desired time.
 - **Estimate segment from SMS copy**: Test your SMS copy in the [SMS segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#things-to-keep-in-mind-as-you-create-your-copy). Keep in mind that the number of SMS segments should be taken into account with your throughput capabilities. (Audience * SMS segments = Throughput needed). Refer to SMS FAQ on [avoiding overages]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/#how-can-i-avoid-overages).
 - **SMS laws and regulations**: [Review SMS laws, regulations, and abuse prevention]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) to ensure that you are using the SMS services in compliance with all applicable laws. Make sure you should seek the advice of your legal counsel before sending.
 
@@ -63,11 +63,17 @@ While we provide an extensive list of resources for customers to reference pre-s
 - **Updated throughput in the US**: Throughput has changed in the US with US [A2P 10DLC registration](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US). Note that we do not commit to any sending speed SLAs contractually due to multiple factors such as traffic congestion and carrier issues that may impact the actual delivery rates.
 - **Subscription group**: To launch an SMS campaign through Braze, a subscription group must be selected. As well, to adhere to international [telecommunication compliance and guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/), Braze will never send SMS to users that have not [subscribed to the selected subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#how-to-check-a-users-sms-subscription-group).
 
+## WhatsApp
+
+#### Things to know
+
+- [**Best practices**]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/): Review our suggested WhatsApp best practices.
+
 ## Content Cards
 
 #### Things to check
 - **Content Card size**: Content Card message fields are limited to 2&nbsp;KB in pre-compression size, calculated by adding the byte-size length of the following fields: title, message, image URL, link text, link URLs, and key-value pairs. Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the image URL.
-- **Updating copy post-send**: Once a card is sent, you will be unable to update the copy. Instead, you will need to remove the original card and send down a new card with any updates.
+- **Updating copy post-send**: After a card is sent, you will be unable to update the copy on that same card. Refer to [Updating sent cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-sent-cards) to understand how you can approach this scenario.
 
 #### Things to know
 - **Active Content Card campaigns limit**: You can have up to 500 active Content Card campaigns. This count includes Content Cards sent with either [card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) option.  
@@ -75,12 +81,12 @@ While we provide an extensive list of resources for customers to reference pre-s
 - **Content Card refresh**: By default, Braze refreshes Content Card requests as they sync at session start, on feed down swipe (mobile), and when the cards view is shown if the last refresh was over one minute ago.
 - **Caching Content Cards**: Content Card caching options can be found in our [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) and [Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards) docs. 
 - **Frequency capping**: Frequency capping does not apply to Content Cards.
-- **Impressions**: Impressions are generally logged once a card is seen. For example, if you have a full inbox of Content Cards, an impression will not be logged until the user scrolls to the specific Content Card. There are some nuances between the Web, Android, and iOS platforms.  
+- **Impressions**: Impressions are generally logged when a card is seen. For example, if you have a full inbox of Content Cards, an impression will not be logged until the user scrolls to the specific Content Card. There are some nuances between the Web, Android, and iOS platforms.  
 
 ## In-app messages
 
 #### Things to know
 - **In-app message triggering**: At the session start, the SDK requests that all eligible in-app messages be sent to the device along with its triggers, so if they perform the event during the session, they can receive the in-app message quickly and reliably. Due to this, in-app messages cannot be triggered by custom events in Canvas.
 - **Sent vs. impressions**: For in-app messages, the concept of "sent" differs from the other available channels. To see an in-app message, a user has to start a session, be in the eligible audience, and perform the trigger. Because of this, we track "impressions" as it is more clear.
-- **Triggering**: By default, in-app messages are triggered by events logged by the SDK. If you would like to trigger in-app messages by server-sent events, you can also achieve this through these guides for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization).
+- **Triggering**: By default, in-app messages are triggered by events logged by the SDK. If you want to trigger in-app messages by server-sent events, you can also achieve this through these guides for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization).
 - [**Canvas in-app messages**]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): These messages appear the first time that your user opens the app (triggered by the start session) after the scheduled message in the Canvas component has been sent to them.

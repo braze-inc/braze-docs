@@ -37,7 +37,7 @@ Check **Integrate Push With Braze** to automatically register users for push not
 
 ### (Optional): Enable background push
 
-Check **Enable Background Push** if you would like to enable `background mode` for push notifications. This allows the system to wake your application from the `suspended` state when a push notification arrives, enabling your application to download content in response to push notifications. Checking this option is required for Braze's uninstall tracking functionality.
+Check **Enable Background Push** if you want to enable `background mode` for push notifications. This allows the system to wake your application from the `suspended` state when a push notification arrives, enabling your application to download content in response to push notifications. Checking this option is required for Braze's uninstall tracking functionality.
 
 ![The Unity editor shows the Braze configuration options. In this editor, the "Automate Unity iOS integration", "Integrate push with braze", and "Enable background push" are enabled.][29]
 

@@ -11,49 +11,67 @@ layout: dev_guide
 
 Welcome, Braze Partners, and thank you for contributing to our customer knowledge base. Creating and adding partner pages to the Braze docs repository can be quick and simple with the right tools and setup.
 
-Partnership Documentation Overview
+## Who is this guide for?
+
+This partnership guide is for NEW Braze partners that **do not have existing documentation** already hosted on our site. If you are an existing partner updating your documentation, navigate to your partner page located at `braze-docs` > `_docs` > `_partners` and update your pages as you normally would.
+
+## Overview
+
 - [Set up your local environment](#setup_env)
 - [Create and add content to your page](#create_page)
 - [Image, link, and code snippet formatting](#image_links)
 - [Reviewing and testing](#testing)
-- [Committing to Github](#committing)
+- [Committing to GitHub](#committing)
 - [Review process](#review)
-<br><br>
-{% alert important %}
-This partnership guide is for NEW Braze partners that **do not have existing documentation** already hosted on our site. If you are an existing partner updating your documentation, navigate to your partner page located at `braze-docs` > `_docs` > `_partners` and update your pages as you normally would. 
-{% endalert %}
 
-## Step 1: Set up your local environment {#setup_env}
+## Steps
 
-To contribute to Braze docs, you must have a GitHub account to commit changes and edits. 
+To contribute to Braze docs, you must have a GitHub account to commit changes and edits.
+
+### Step 1: Set up your local environment {#setup_env}
 
 We recommend first [forking](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) our GitHub repository, and then creating a local clone of your fork:
-1. Navigate to the main [braze-docs repo](https://github.com/Appboy/braze-docs), and click **Fork**. <br><br>
-2. Next, within this newly forked repo, click the **Clone or download** button. From the dialogue that appears, click **Use SSH**, and **save the repository link provided** for step 3. <br><br>
-3. Lastly, follow our GitHub Wiki Guide on setting up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) **omitting step 3 of the guide**, and instead, **using the repository link saved,** to clone your forked repo.
 
-After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement), _this step is required_.
+1. Navigate to the main [braze-docs repo](https://github.com/Appboy/braze-docs), and click **Fork**. Follow the steps provided to fork the repository.<br>![][3]
 
-## Step 2: Create and add content to your page {#create_page}
+{: start="2"}
+2. Next, within this newly forked repo, click the **Clone, open or download** button.
+3. Select the **Local** tab, then select **SSH**.<br>![][4]{: style="max-width:50%"}
 
-To create your partner page, open the braze-docs repository and navigate to the `wip_partnerships` folder within the repo. <br>This folder can be found by following the file path: `braze-docs` > `_docs` > `_hidden` > `wip_partnerships`. Here, you will find a [partnership template]({{site.baseurl}}/partners/your_partner_name/).
+{: start="4"}
+4. Copy and save the SSH link. You'll need this for the next step.
+5. Lastly, follow our GitHub Wiki Guide on setting up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo), but omit step 3 of the guide. Instead, use the SSH link you saved to clone your forked repo.
+
+### Step 2: Sign the Braze CLA
+
+After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement). The GitHub username provided in the CLA must match the GitHub username for the user who commits the changes to the `braze-docs` repository. This step is required.
+
+{% alert note %}
+We cannot merge any pull requests into our repository unless you have signed our CLA. If the CLA is not signed when your changes are submitted for review, this may result in a delay in getting your documentation published.
+{% endalert %}
+
+### Step 3: Create and add content to your page {#create_page}
+
+To create your partner page, open the `braze-docs` repository and navigate to the `wip_partnerships` folder within the repo. This folder can be found by following the file path: `braze-docs` > `_docs` > `_hidden` > `wip_partnerships`. Here, you will find a [partnership template]({{site.baseurl}}/partners/your_partner_name/).
 
 Next, create a folder, name it your partner name, copy this template into your folder, and get to work!
 
 > Your file pathing should now look like this: <br>`braze-docs` > `_docs` > `_hidden` > `wip_partnerships` > `partner_name` (folder) > `partner.md`.
-### Useful Resources
 
-Useful links to reference as you write:
+#### Useful resources
+
+Here are some useful links to reference as you write:
+
 - [Braze writing style guide and best practices](https://docs.google.com/document/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub): A quick skim of our writing style guide and best practices help align your documentation with our voice.<br>
 - [Braze docs styling test page](https://www.braze.com/docs/home/styling_test_page/) and [special formatting](https://github.com/braze-inc/braze-docs/wiki/Special-Formatting): See something cool in our docs that you want to include in your page? Want to know how to add charts, tabs, downloadable files, and more? Check out our styling test page and special formatting pages to get started.
 
-### Template Components
+#### Template components
 
 Your [partnership template]({{site.baseurl}}/partners/your_partner_name/) is composed of three main components, the metadata, the content, and the references. 
 
 {% tabs %}
-{% tab Meta data %}
-This information helps our Braze search find, label, and categorize your docs page properly. 
+{% tab Metadata %}
+This information helps our search algorithm to find, label, and categorize your docs page properly.
 ```
 ---
 nav_title: Your Partner Page
@@ -107,13 +125,13 @@ This last section is located at the very end of your document. Here, you will li
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Image, link, and code snippet formatting {#image_links}
+### Step 4: Image, link, and code snippet formatting {#image_links}
 
 Links and images are a necessary part of any integration document. They help supplement your instructions with helpful pictures, communicate information to users that might be hard or unnecessary to explain in words. 
 
-### Images
+#### Images
 
-The higher quality of the images you can provide, the better. Images should not include important information such as API keys or employee names; we recommend burring information such as this out. Images should also be tightly cropped to display only useful information. When in doubt, include screenshots, as they can always be removed in the approval process.
+The higher quality of the images you can provide, the better. Images should not include important information such as API keys or employee names—we recommend blurring information such as this out. Images should also be tightly cropped to display only useful information. When in doubt, include screenshots, as they can always be removed in the approval process.
 
 To add images to your partner doc, you must place them in our repository's `img` folder. This folder can be found by following the file path: `braze-docs` > `assets` > `img`.
 
@@ -121,7 +139,7 @@ Within this new folder, create a folder to keep your partnership images in. Name
 
 ![Braze partner folder][1]{: style="max-width:70%"}
 
-To reference your images in your document, use the following format listed: 
+To reference your images in your document, use the following format listed:
 
 {% raw %}
 ```
@@ -140,6 +158,7 @@ And at the end of your document, link out to your image.
 ### Links
 
 To add links to your document, you must follow this format:
+
 {% raw %}
 ```
 For more information, check out [this website or page][1].
@@ -153,9 +172,9 @@ And at the end of your document, add your link.
 ```
 {% endraw %}
 
-### Liquid
+#### Liquid
 
-Partner integrations often leverage our Liquid capabilities within the dashboard. If you plan on including Liquid code snippets, they must be wrapped between {&#37; raw &#37;} and {&#37; endraw &#37;} or you'll get a Liquid warning in markdown.
+Partner integrations often leverage our Liquid capabilities within the dashboard. If you plan on including Liquid code snippets, they must be wrapped between <code>{&#37; raw &#37;}</code> and <code>{&#37; endraw &#37;}</code> or you'll get a Liquid warning in markdown.
 
 {% raw %}
 
@@ -165,34 +184,37 @@ Partner integrations often leverage our Liquid capabilities within the dashboard
 
 {% endraw %}
 
-## Step 4: Reviewing and testing {#testing}
+### Step 5: Reviewing and testing {#testing}
 
 One of the most important things you can do before committing your changes is to test that everything looks and functions as it should. This can be done by running a `rake` command in your terminal.
 
-In your terminal, you will see the command begin to work. This process may take several minutes. You will know when the command is done when you see "done in x seconds, press ctrl-c to stop" appear in the terminal.
+1. Run the `rake` command in your terminal. You will see the command begin to work. This process may take several minutes. You will know when the command is done when you see `Done in x seconds, press ctrl-c to stop` appear in the terminal.
 
-Next, you can check your [localhost](http://localhost:4000/docs/).
+{:start="2"}
 
-Here you can navigate to the page you created using the alias you assigned earlier in the article's metadata. Once you open the localhost, append the alias to access your page.
+2. Check your [localhost](http://localhost:4000/docs/). Here you can navigate to the page you created using the alias you assigned earlier in the article's metadata. After you open the localhost, append the alias to access your page.
 
-Example: `http://localhost:4000/docs/` + `/partners/your_partner_name/`
+> **Example:** `http://localhost:4000/docs/` + `partners/your_partner_name/` <br>
+> Your page will be viewable at `http://localhost:4000/docs/partners/your_partner_name/`
 
-Your page will be viewable at `http://localhost:4000/docs/partners/your_partner_name/`
+{:start="3"}
 
-After reviewing your edits, press **Ctrl-C** in the terminal and end the rake command.
+3. After reviewing your edits, press **Ctrl-C** in the terminal to end the rake command.
 
-## Step 5: Committing to GitHub {#committing}
+### Step 6: Committing to GitHub {#committing}
 
-Once you have made the adequate changes to your partnership doc, save your document, and commit your changes. 
+Once you have made the adequate changes to your partnership doc, save your document, and commit your changes.
 
-Within the Braze docs GitHub repository, find your branch. If your document is completed and ready to review, navigate to your forked repo in GitHub and select `New Pull Request`. Next, select how you would like your forked branch to be merged, name your request your partnership name and provide any relevant information that we can use to reference when reviewing your content. 
+Within the Braze docs GitHub repository, find your branch. If your document is completed and ready to review, navigate to your forked repo in GitHub and select **New Pull Request**. Next, select how you would like your forked branch to be merged, name your request your partnership name and provide any relevant information that we can use to reference when reviewing your content.
+
+1. Set up your branch to be merged in a similar fashion as shown in the following image.
 
 ![Merge Branches][2]
 
-1. Set up your branch to be merged in a similar fashion as shown in the preceding image.<br><br>
-2. Name your Pull Request as "Partnership Name - Partner Docs"<br><br>
-3. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your **Braze product manager** so we can reach out to them to get in contact with you about your changes if needed.<br><br>
-4. After you are done making changes, tag @KellieHawks and @alex-braze in a comment within the pull request, and our team will take a look.<br><br>
+{:start="2"}
+2. Name your pull request as "Partnership Name - Partner Docs".
+3. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your **Braze product manager** so we can reach out to them to get in contact with you about your changes if needed.
+4. After you are done making changes, tag @josh-mccrowell-braze and @alex-braze in a comment within the pull request, and our team will take a look.
 
 ## Review process {#review}
 
@@ -204,3 +226,5 @@ And you are done! Thanks for contributing to Braze docs!
 
 [1]: {% image_buster /assets/img/partner_template/partner_folder.png %}
 [2]: {% image_buster /assets/img/partner_template/partner_merge.png %}
+[3]: {% image_buster /assets/img/partner_template/partnership_fork.png %}
+[4]: {% image_buster /assets/img/partner_template/partnership_clone.png %}

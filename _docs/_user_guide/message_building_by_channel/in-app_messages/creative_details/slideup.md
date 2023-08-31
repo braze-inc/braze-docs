@@ -12,7 +12,7 @@ description: "This reference article covers the message and design requirements 
 
 # Slideup in-app messages
 
-> Our slideups typically appear at the top or bottom of the app screen (you can set this when you create your message). These are great for alerting your users about new terms of service, cookies, and other snippets of information. These are non-obtrusive and allow your end users to continue to interact with your app while the message displays.
+> Our slideups typically appear at the top or bottom of the app screen (you can set this when you create your message). These are great for alerting your users about new terms of service, cookies, and other snippets of information. These are non-obtrusive and allow your users to continue to interact with your app while the message displays.
 
 ![Two slide-up in-app messages, one appearing from the top of the screen and the other from the bottom, detailing the image and text recommendations. See following sections for details.][2a]{: style="max-width: 40%; border: none;"}
 
@@ -31,7 +31,7 @@ Slideup messages can contain up to three lines of copy before truncation with el
 | Image + Text | 1:1 aspect ratio<br>High-res 150 x 150&nbsp;px<br> Minimum 50 x 50&nbsp;px | Images of various aspect ratios will fit into a square image container, without cropping. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-You should always [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
+You should always [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected. Note that when previewing your message on the composer, the actual rendering on devices may differ.
 
 ## Mobile devices
 

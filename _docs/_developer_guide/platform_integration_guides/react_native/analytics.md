@@ -69,8 +69,7 @@ All string values such as first name, last name, country, and home city are limi
 
 ### Custom user attributes
 
-Beyond the default user attributes, Braze also allows you to define custom attributes for your users. Supported data types for values include `Date`, `Array`, `boolean`, `string`, `number`, and `float`.
-String values have a maximum length of 255 characters.
+In addition to our predefined user attribute methods, Braze also provides [custom attributes](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) to track data from your applications. 
 
 ```javascript
 Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
@@ -123,7 +122,7 @@ If you pass in a value of `10 USD` and a quantity of `3`, this will log three pu
 {% endalert %}
 
 ### Log purchases at the order level
-If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
+If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ### Reserved keys
 

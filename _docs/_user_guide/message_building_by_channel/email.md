@@ -14,6 +14,12 @@ guide_featured_list:
 - name: About Email
   link: /docs/user_guide/message_building_by_channel/email/about/
   fa_icon: fas fa-check
+- name: Managing User Subscriptions
+  link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
+  fa_icon: fas fa-users
+- name: Link Aliasing
+  link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
+  fa_icon: fas fa-link
 - name: Create an Email Campaign
   link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
   fa_icon: fas fa-envelope
@@ -23,12 +29,15 @@ guide_featured_list:
 - name: Templates
   link: /docs/user_guide/message_building_by_channel/email/templates/
   fa_icon: fas fa-table
-- name: Managing User Subscriptions
-  link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
-  fa_icon: fas fa-users
+- name: Email Reporting
+  link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
+  fa_icon: fas fa-chart-bar
 
 guide_menu_title: "More Articles"
 guide_menu_list:
+- name: Email Setup
+  link: /docs/user_guide/message_building_by_channel/email/email_setup/
+  fa_icon: fas fa-envelope
 - name: Preference Center
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
   fa_icon: fa-solid fa-list-check
@@ -50,12 +59,6 @@ guide_menu_list:
 - name: Apple Mail Privacy Protection
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/mpp/
   fa_icon: fab fa-apple
-- name: AMP for Email
-  link: /docs/user_guide/message_building_by_channel/email/amphtml/
-  fa_icon: fas fa-bolt
-- name: Email Reporting
-  link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
-  fa_icon: fas fa-chart-bar
 - name: Email Analytics Glossary
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/
   fa_icon: fas fa-chart-pie

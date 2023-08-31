@@ -17,6 +17,10 @@ description: "This article outlines details about the Identify users Braze endpo
 
 > Use this endpoint to identify an unidentified (alias-only) user. 
 
+{% alert important %}
+Starting August 7, 2023, this endpoint will merge data for all calls. This means [`merge_behavior`](#merge) will be set to `merge` for all calls.
+{% endalert %}
+
 Calling `/users/identify` combines the alias-only profile with the identified profile and removes the alias-only profile.
 
 Identifying a user requires an `external_id` to be included in the `aliases_to_identify` object. If there is no user with that `external_id`, the `external_id` will simply be added to the aliased user's record, and the user will be considered identified. You can add up to 50 user aliases per request. 
@@ -26,7 +30,7 @@ Subsequently, you can associate multiple additional user aliases with a single `
 - When associations are made with the `merge_behavior` field set to `merge`, this endpoint will merge [specific fields](#merge) found on the anonymous user to the identified user.
 
 {% alert tip %}
-To prevent unexpected loss of data when identifying users, we highly recommend that you first refer to [data collection best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) to learn about capturing user data when alias-only user info is already present.
+To prevent unexpected loss of data when identifying users, we highly recommend that you first refer to [data collection best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) to learn about capturing user data when alias-only user information is already present.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}

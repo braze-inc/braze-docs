@@ -25,7 +25,7 @@ Alternatively, if you would like to include special custom handling, instead of 
 
 First, you must create a "Prime for Push" in-app messaging campaign in the Braze dashboard:
 
-1. Create a **Modal** in-app message and give it whatever text and styling you would like. 
+1. Create a **Modal** in-app message with the text and styling you want. 
 2. Next, set the on-click behavior to **Close Message**. This behavior will be customized later.
 3. Add a key-value pair to the message where the key is `msg-id`, and the value is `push-primer`.
 4. Assign a custom event trigger action (i.e., "prime-for-push") to the message. You can create the custom event manually from the dashboard if needed.

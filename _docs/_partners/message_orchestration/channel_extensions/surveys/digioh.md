@@ -28,7 +28,7 @@ The Braze and Digioh integration allows you to use their flexible drag-and-drop 
 
 ## Integration 
 
-To integrate Digioh, you must first configure the Braze connector. Once completed, you will need to apply the integration to a lightbox (widget). Visit [Digioh](https://help.digioh.com/knowledgebase/digioh-integration-basics/) to read more about integration basics.
+To integrate Digioh, you must first configure the Braze connector. When completed, you will need to apply the integration to a lightbox (widget). Visit [Digioh](https://help.digioh.com/knowledgebase/digioh-integration-basics/) to read more about integration basics.
 
 ### Step 1: Create Digioh integration 
 
@@ -38,7 +38,7 @@ In Digioh, click the **Integrations** tab and then the **New Integration** butto
 
 Next, enter the Braze REST API key and your Braze API `/users/track/` endpoint. 
 
-Lastly, use the map fields section to map additional custom fields beyond email and name. The following code snippet shows an example payload. Once completed, select **Create Integration**.
+Lastly, use the map fields section to map additional custom fields beyond email and name. The following code snippet shows an example payload. When completed, select **Create Integration**.
 
 ```json
 {

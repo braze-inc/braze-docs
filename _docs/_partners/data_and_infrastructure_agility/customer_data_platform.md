@@ -46,6 +46,9 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
 - name: Redpoint
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/redpoint/
-
+- name: Simon Data
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata/
+- name: Ketch
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/ketch/
 
 ---

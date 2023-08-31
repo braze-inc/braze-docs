@@ -1,7 +1,7 @@
 ---
 nav_title: HTML Editor
 article_title: HTML Editor for Email
-page_order: 2
+page_order: 4
 layout: dev_guide
 guide_top_header: "HTML Editor for Email"
 guide_top_text: "This landing page is home to articles related to the HTML editor for email."

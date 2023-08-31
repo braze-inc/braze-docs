@@ -30,7 +30,7 @@ If these campaigns have been triggered, but not yet sent (for example, an Action
 
 ## Scheduled campaigns
 
-If you need to make changes to a campaign post-launch, take note of the following items when editing your campaign to ensure your changes have the desired effects.
+If you need to make changes to a campaign post-launch, take note of the following items when editing your campaign to check that your changes have the desired effects.
 
 ### Message content
 

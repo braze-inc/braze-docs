@@ -4,7 +4,7 @@ article_title: Message Personalization Partners
 page_order: 1
 
 page_type: landing
-description: "This landing page lists Braze partners (Alloys) who allow you to add additional personalization to your Braze Campaigns and Canvases."
+description: "This landing page lists Braze partners (Alloys) who allow you to add additional personalization to your Braze campaigns and Canvases."
 layout: partner_page
 search_tag: Partner
 
@@ -16,6 +16,8 @@ partner_top_header: "Message Personalization"
 valid_partner_list:
 - name: AWS Personalize
   url: /docs/partners/message_personalization/dynamic_content/amazon_personalize/
+- name: OfferFit
+  url: /docs/partners/message_personalization/dynamic_content/offerfit/
 - name: Worthy
   url: /docs/partners/message_orchestration/dynamic_content/worthy/
 - name: Certona

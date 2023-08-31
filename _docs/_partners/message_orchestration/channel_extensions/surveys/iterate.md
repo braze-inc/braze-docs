@@ -27,7 +27,7 @@ With the Braze SDK installed in your app or website, you can use the segmentatio
 
 ## Use cases
 
-With Iterate, you can collect nearly any type of data. Ranging from personal info (name, age, email), performance data (NPS, customer satisfaction, star ratings), preferences (preferred device, preferred frequency of communication), or personality (favorite book, dog, or cat person). What you ask is entirely up to you, and what kind of data you want to collect or audiences you want to build.
+With Iterate, you can collect nearly any type of data. Ranging from personal information (name, age, email), performance data (NPS, customer satisfaction, star ratings), preferences (preferred device, preferred frequency of communication), or personality (favorite book, dog, or cat person). What you ask is entirely up to you, and what kind of data you want to collect or audiences you want to build.
 
 ## Integration
 
@@ -55,7 +55,7 @@ Continue setting up your campaign as you would any other in-app messaging campai
 
 #### Step 1: Create your survey
 
-Create a new email or link survey in Iterate and add relevant survey questions. Once the questions have been written and you've customized the design, select **Send survey > Integrations > Braze**.
+Create a new email or link survey in Iterate and add relevant survey questions. After the questions have been written and you've customized the design, select **Send survey > Integrations > Braze**.
 
 You'll then see the configuration options to send responses to Braze. Toggle on the integration to enable sending responses for that survey into Braze. 
 

@@ -64,14 +64,6 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
       </intent-filter>
     </activity>
 
-    <!-- BroadcastReceiver used to forward certain Braze push notification events to Unity -->
-    <receiver android:name="com.appboy.unity.AppboyUnityPushBroadcastReceiver" android:exported="false" >
-      <intent-filter>
-        <action android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_RECEIVED" />
-        <action android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_NOTIFICATION_OPENED" />
-        <action android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_DELETED" />
-      </intent-filter>
-    </receiver>
     <receiver android:name="com.braze.push.BrazeAmazonDeviceMessagingReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
       <intent-filter>
           <action android:name="com.amazon.device.messaging.intent.RECEIVE" />

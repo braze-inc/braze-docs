@@ -54,7 +54,6 @@ Use the email Template REST APIs to programmatically manager the email templates
 
 The response from this endpoint includes a field for `email_template_id`, which can be used to update the template in subsequent API calls.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/ {% endapiref %}
 {% apiref postman %}https://www.getpostman.com/ {% endapiref %}
 
 #### REQUEST BODY
@@ -104,7 +103,6 @@ Get,Email,Template,List,REST
 
 Use the following endpoints to get a list of available templates.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/ {% endapiref %}
 {% apiref postman %}https://www.getpostman.com/ {% endapiref %}
 
 #### REQUEST BODY
@@ -154,7 +152,6 @@ GET https://YOUR_REST_API_URL/templates/email/list
 
 API-Triggered Delivery allows you to house message content inside of the Braze dashboard, while dictating when a message is sent, and to whom via your API. 
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/ {% endapiref %}
 {% apiref postman %}https://www.getpostman.com/ {% endapiref %}
 
 #### REQUEST BODY
@@ -223,7 +220,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 This endpoint can be used to record custom events, user attributes, and purchases for users. You can include up to 75 Attributes, Event, and Purchase Objects per request. That is, you can only post attributes for up to 75 users at a time, but in the same API call you can also provide up to 75 events and up to 75 purchases.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/ {% endapiref %}
 {% apiref postman %}https://www.getpostman.com/ {% endapiref %}
 
 #### REQUEST BODY

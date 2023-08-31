@@ -34,7 +34,7 @@ Examples of data to share from PassKit includes:
 - **Pass updates**: when a pass is updated.
 - **Pass delete**: when a customer deletes the pass from their wallet app.
 
-Once the data is passed into Braze, you can build audiences, personalize content via Liquid, and trigger campaigns or Canvases once these actions have been performed.
+Once the data is passed into Braze, you can build audiences, personalize content via Liquid, and trigger campaigns or Canvases after these actions have been performed.
 
 ## Connect Passkit to Braze
 
@@ -165,7 +165,7 @@ You may notice there are two variables left undefined in the example Content Blo
 {% raw %}`{{passData}}`{% endraw %} - Your JSON pass data payload defined in [step 1](#passkit-integrations) <br>
 {% raw %}`{{projectUrl}}`{% endraw %} - Your project or program's URL which you find on the distribution tab of your Passkit project.
 
-This decision was purposeful and ensures the reusability of the Content Block. Because these variables are only referenced, not created within the Content Block, these variables can change without remaking the Content Block. 
+This decision is purposeful and supports the reusability of the Content Block. Because these variables are only referenced, not created within the Content Block, these variables can change without remaking the Content Block. 
 
 For example, maybe you want to change the introductory offer to include more initial points in your loyalty program, or perhaps you want to create a secondary member card or coupon. These scenarios would require different Passkit `projectURLs` or different pass payloads, which you would define per campaign in Braze.  
 
@@ -216,7 +216,7 @@ Before you get started, here are the common JSON payload parameters that you can
 
 | Data | Type | Description |
 | ---- | ---- | ----------- |
-| `externalId` | String | Allows a unique Id to be added to the pass record to provide compatibility with an existing system using unique customer identifiers (e.g., membership numbers). You can retrieve pass data by using this endpoint via `userDefinedId` and `campaignName` instead of pass ID. This value must be unique within a campaign, and once this value is set, it cannot be changed.<br><br>For the Braze integration, we would recommend using the Braze external ID: {% raw %}`{{${user_id}}}`{% endraw %} |
+| `externalId` | String | Allows a unique Id to be added to the pass record to provide compatibility with an existing system using unique customer identifiers (e.g., membership numbers). You can retrieve pass data by using this endpoint via `userDefinedId` and `campaignName` instead of pass ID. This value must be unique within a campaign, and after this value is set, it cannot be changed.<br><br>For the Braze integration, we would recommend using the Braze external ID: {% raw %}`{{${user_id}}}`{% endraw %} |
 | `campaignId` (coupon) <br><br> `programId` (membership) | String | The ID for the campaign or program template you created in PassKit. To find this, head to the **Settings** tab in your PassKit pass project. |
 | `expiryDate` | IO8601 datetime | The pass expiry date. After the expiry date, the pass is automatically voided (see `isVoided`). This value will override the template and campaign end date value. |
 | `status` | String | The current status of a coupon, such as `REDEEMED` or `UNREDEEMED`. |

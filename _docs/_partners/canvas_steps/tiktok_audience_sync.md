@@ -50,7 +50,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ![TikTok technology page in Braze includes an Overview module and TikTok Audience Export module with the Connected TikTok button.][1]{: style="max-width:75%;"}
 
-You'll then be redirected to the TikTok OAuth page to authorize Braze for ad account management and Audience Management. Once you have selected **Confirm**, you'll be redirected back into Braze to select which TikTok ad accounts you wish to sync to. 
+You'll then be redirected to the TikTok OAuth page to authorize Braze for ad account management and Audience Management. After you have selected **Confirm**, you'll be redirected back into Braze to select which TikTok ad accounts you wish to sync to. 
 
 ![][2]{: style="max-width:75%;"}
 

@@ -20,7 +20,7 @@ alias: /shareplay/
 The new `GroupActivities` framework released by Apple as part of the iOS 15 update allows you to leverage FaceTime by integrating SharePlay into your applications with the help of Braze in-app messages.
 ![SharePlay][3]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
 
-When users initiate a SharePlay video in a Facetime call, an "Open" button will appear at the top of everyone's screen. Once opened, audio and video will be synced across all compatible devices, allowing users to watch videos together in real-time. Those who do not have the app downloaded will be redirected to the App Store.
+When users initiate a SharePlay video in a Facetime call, an "Open" button will appear at the top of everyone's screen. When opened, audio and video will sync across all compatible devices, allowing users to watch videos together in real-time. Those who do not have the app downloaded will be redirected to the App Store.
 
 **Synced Media Playback**<br>
 With synced media playback, if one person pauses the SharePlay video, it will be paused across all devices. <br><br>
@@ -191,7 +191,7 @@ class CoordinationManager() {
 
 ### Configure SharePlay button visibility
 
-It is best practice to dynamically hide or show any SharePlay indicator. Utilize the `isEligibleForGroupSession` variable to observe if the user is currently on a FaceTime call or not. If they happen to be on a FaceTime call, a button should be visible to share the video across the compatible devices in the chat. The first time the user initiates SharePlay, a prompt will appear on the original device to select the options. A subsequent prompt will then appear on the shared users' devices to engage in the content.
+It is best practice to dynamically hide or show any SharePlay indicator. Use the `isEligibleForGroupSession` variable to observe if the user is currently on a FaceTime call or not. If they happen to be on a FaceTime call, a button should be visible to share the video across the compatible devices in the chat. The first time the user initiates SharePlay, a prompt will appear on the original device to select the options. A subsequent prompt will then appear on the shared users' devices to engage in the content.
 
 {% tabs %}
 {% tab Swift %}

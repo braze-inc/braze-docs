@@ -16,7 +16,7 @@ description: "This reference article covers additional customization and configu
 ## Using R8/ProGuard with Braze
 [Code shrinking][50] configuration is automatically included with your Braze integration.
 
-Client apps that obfuscate Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your ProGuard file:
+Client apps that obfuscate Braze code must store release mapping files for Braze to interpret stack traces. If you want to continue to keep all Braze code, add the following to your ProGuard file:
 
 ```
 -keep class bo.app.** { *; }
@@ -25,7 +25,9 @@ Client apps that obfuscate Braze code must store release mapping files for Braze
 
 ## Enabling verbose logging {#android-verbose-logging}
 
-Verbose logs from the Braze SDK are essential to a fast turnaround on support issues. These logs should not be modified for clarity; long log files are preferred. Verbose logging is only intended for development environments and should not be enabled in a released application. Logs sent to our support team should begin as soon as the application is launched and end well after the observed issue occurs.
+Verbose logs from the Braze SDK are essential to a fast turnaround on support issues. These logs should not be modified for clarity; long log files are preferred. Verbose logging is only intended for development environments and should not be enabled in a released application. Verbose logging won't send any extra or new user information to Braze.
+
+Logs sent to our support team should begin as soon as the application is launched and end well after the observed issue occurs.
 
 To enable verbose logging on the Braze Android SDK:
 

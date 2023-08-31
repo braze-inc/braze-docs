@@ -22,4 +22,4 @@ To take advantage of these updates, you will need to edit your Currents connecto
 
 ## Subscription groups archiving
 
-You can now [archive Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#archiving-groups)! Archived Subscription Groups cannot be edited and will no longer appear in Segment Filters.  If you attempt to archive a group which is being used as a Segment Filter in any email, campaign, or canvas, you will receive an error message that will prevent you from archiving the Group until you remove all usages of it.
+You can now [archive Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#archiving-groups)! Archived Subscription Groups cannot be edited and will no longer appear in Segment Filters.  If you attempt to archive a group which is being used as a Segment Filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the Group until you remove all usages of it.

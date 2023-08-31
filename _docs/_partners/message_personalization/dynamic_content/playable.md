@@ -30,7 +30,7 @@ In the Playable platform, upload video files or add videos by providing a URL of
 
 ### Step 2: Copy the embed code from Playable
 
-Once uploaded, Playable will generate a code that, when inserted into your Braze campaign, will embed the video in your email to auto-play once opened. Once your email is opened, the Playable servers will deliver the best possible version of your video depending on the email client, device, screen size, and network conditions.
+Once uploaded, Playable will generate a code that, when inserted into your Braze campaign, will embed the video in your email to auto-play when opened. When your email is opened, the Playable servers will deliver the best possible version of your video depending on the email client, device, screen size, and network conditions.
 
 {% alert tip %}
 Videos will autoplay in over 98% of inboxes, including iPhone Mail, Gmail, Apple Mail, Outlook for iOS, Outlook for Android, Outlook for Mac, and newer versions of Outlook 365 for Windows. Users of legacy Outlook for Windows will see a static image instead.

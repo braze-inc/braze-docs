@@ -58,7 +58,7 @@ In addition, triggered in-app messages still abide by in-app message delivery ru
 
 Select how long to wait before sending the campaign after the trigger criteria are met. If the delay length chosen is longer than the message's duration for sending, no users will receive the campaign. 
 
-Additionally, users who complete the trigger event after your campaign is launched will be the first to start receiving the message once the delay has passed. Users who have completed the trigger event before the campaign launches will not qualify to receive the campaign.
+Additionally, users who complete the trigger event after your campaign is launched will be the first to start receiving the message after the delay has passed. Users who have completed the trigger event before the campaign launches will not qualify to receive the campaign.
 
 ![][19]
 
@@ -138,7 +138,7 @@ Additionally, if a campaign is action-based and has a delay, you can check the o
 ![][51]
 
 [5]: #local-time-zone-campaigns
-[8]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
+[8]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
 [17]: {% image_buster /assets/img_archive/schedule_triggered1.png %}
 [18]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [19]: {% image_buster /assets/img_archive/schedule_triggered22.png %}
@@ -149,7 +149,6 @@ Additionally, if a campaign is action-based and has a delay, you can check the o
 [27]: {% image_buster /assets/img_archive/schedule_triggered5.png %}
 [28]: {% image_buster /assets/img_archive/schedule_triggered6.png %}
 [29]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/in-app_message_behavior/#in-app-message-delivery-rules
-[30]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
 [31]: {% image_buster /assets/img_archive/schedule_triggered_next_available.png %}
 [32]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector

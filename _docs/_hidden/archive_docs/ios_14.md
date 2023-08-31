@@ -25,7 +25,7 @@ As of iOS 14.5, **IDFA** collection and [certain data sharing](https://developer
 - Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission.
 - Use of the "Last Known Location" targeting features will require an upgrade to Braze iOS SDK v3.26.1+ for compatibility with _approximate location_ permission. Note that if you are using XCode 12, you will need to upgrade to at least v3.27.0.
 - As of iOS 14.5, IDFA collection and [certain data sharing][5] require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt.
-- If you use the "Ad Tracking Enabled" field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users' opt-in status.
+- If you use the "Ad Tracking Enabled" field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report users' opt-in status.
 
 ## Upgrade summary
 
@@ -43,9 +43,9 @@ table td {
 
 |If Your App Uses:|Upgrade Recommendation|Description|
 |------|--------|---|
-|Xcode 12|**Upgrade to iOS SDK v3.27 or later**|Customers using Xcode 12 must use v3.27.0+ for compatibility. If you experience any issues or questions related to our iOS 14 compatibility, open a new [Github Issue][2].|
-|Most Recent Location| **Upgrade to iOS SDK v3.26.1 or later**|If you use the Most Recent Location targeting feature and are still using XCode 11, you should upgrade to at least iOS SDK v3.26.1 which supports the new  _Approximate Location_ feature. Older SDKs will not be able to reliably collect location when a user upgrades to iOS 14 _and_ choose Approximate Location.<br><br>Even though your app might not target iOS 14, your end users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.|
-|IDFA Ad Tracking ID| **Upgrade to Xcode 12 and iOS SDK v3.27 may be required**|Sometime in 2021, Apple will begin to require a permission prompt for the collection of the IDFA. At that time, apps must upgrade to Xcode 12 and use the new `AppTrackingTransparency` framework in order to continue collecting IDFA. If you pass IDFA to the Braze SDK you must also upgrade to v3.27.0+ at that time.<br><br>Apps that do not use the new iOS 14 APIs will be unable to collect IDFA, and will instead collect a blank ID (`00000000-0000-0000-0000-000000000000`) once Apple begins to enforce this change in 2021. For more information on whether or not this applies to your app, see [IDFA details](#idfa).|
+|Xcode 12|**Upgrade to iOS SDK v3.27 or later**|Customers using Xcode 12 must use v3.27.0+ for compatibility. If you experience any issues or questions related to our iOS 14 compatibility, open a new [GitHub issue][2].|
+|Most Recent Location| **Upgrade to iOS SDK v3.26.1 or later**|If you use the Most Recent Location targeting feature and are still using XCode 11, you should upgrade to at least iOS SDK v3.26.1 which supports the new  _Approximate Location_ feature. Older SDKs will not be able to reliably collect location when a user upgrades to iOS 14 _and_ choose Approximate Location.<br><br>Even though your app might not target iOS 14, your users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.|
+|IDFA Ad Tracking ID| **Upgrade to Xcode 12 and iOS SDK v3.27 may be required**|Sometime in 2021, Apple will begin to require a permission prompt for the collection of the IDFA. At that time, apps must upgrade to Xcode 12 and use the new `AppTrackingTransparency` framework in order to continue collecting IDFA. If you pass IDFA to the Braze SDK you must also upgrade to v3.27.0+ at that time.<br><br>Apps that do not use the new iOS 14 APIs will be unable to collect IDFA, and will instead collect a blank ID (`00000000-0000-0000-0000-000000000000`) after Apple begins to enforce this change in 2021. For more information on whether or not this applies to your app, see [IDFA details](#idfa).|
 
 
 ## iOS 14 behavior changes
@@ -85,7 +85,7 @@ Starting in iOS 14.5, a new permission prompt (launched by the new `AppTrackingT
 If a user does not accept the prompt, or if you do not upgrade to Xcode 12's `AppTrackingTransparency` framework, then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
 
 {% alert important %}
-These IDFA updates will take effect once end-users upgrade their device to iOS 14.5. Ensure your app uses the new `AppTransparencyFramework` with Xcode 12 if you plan to collect IDFA.
+These IDFA updates will take effect after end-users upgrade their device to iOS 14.5. Ensure your app uses the new `AppTransparencyFramework` with Xcode 12 if you plan to collect IDFA.
 {% endalert %}
 
 #### Changes to Braze IDFA collection
@@ -95,7 +95,7 @@ These IDFA updates will take effect once end-users upgrade their device to iOS 1
 
 2. The `ABK_ENABLE_IDFA_COLLECTION` compilation macro, which would conditionally compile in optional automatic IDFA collection, will no longer function in iOS 14 and has been removed in 3.27.0. 
 
-3. If you use the "Ad Tracking Enabled" field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users' opt-in status. The reason for this change is that in iOS 14, the old [`advertisingTrackingEnabled`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/1614148-advertisingtrackingenabled) field will always return No.
+3. If you use the "Ad Tracking Enabled" field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report your users' opt-in status. The reason for this change is that in iOS 14, the old [`advertisingTrackingEnabled`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/1614148-advertisingtrackingenabled) field will always return No.
 
 4. If your app has used IDFA or IDFV as your Braze external ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating external IDs, see our [External ID migration API endpoints]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/).
 

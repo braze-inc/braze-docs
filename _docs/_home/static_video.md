@@ -9,9 +9,9 @@ noindex: true
 
 # User Data Collection
 
-Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
+Before completing your Braze implementation, make sure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
-This best practice guide will help you to understand exactly what Braze considers to be a custom event vs. a custom attribute.
+This best practice guide will help you to understand exactly what Braze considers to be a custom event versus a custom attribute.
 
 ## Automatically Collected Data
 
@@ -117,7 +117,7 @@ All User Profile data (custom events, custom attribute, custom data) is stored a
 ### Custom Attribute Data Types
 Custom attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
 
-#### Strings (Alpha-Numeric Characters)
+#### Strings (Alphanumeric Characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. Strings attributes can be up to 255 characters long.
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -325,7 +325,7 @@ Imagine you're a marketer who begins using Braze a year or two after implementat
   - Example: `usr_ctry` may be fine as a variable name for a user's country within a piece of code, but the custom attribute ought be sent to Braze as `user_country` at very least to lend some clarity to a marketer using the dashboard down the line.
 
 #### Only log attributes when they change
-We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and ensures a smoother experience by avoiding unnecessary API calls.
+We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and provides a smoother experience by avoiding unnecessary API calls.
 
 #### Avoid programmatically generating event names
 If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You should generally capture generic events ("Watched a Video" or "Read an Article") instead of highly specific events such as ("Watched Gangnam Style" or "Read Article: Best 10 Lunch Spots in Midtown Manhattan"). The specific data about the event should be included as an event property, not as part of the event name.

@@ -93,7 +93,7 @@ In Braze, from **Templates & Media**, go to **Webhook Templates** and choose the
 
 1. From a new or existing Canvas, add a **Message** component. 
 2. Open the component and select **Webhook** from the **Messaging Channels**.
-3. Select the webhook template you created above. It's highly recommended you use the Real-time endpoint for canvases.
+3. Select the webhook template you created above. It's highly recommended you use the Real-time endpoint for Canvases.
 4. Customize the template by editing its variables in the **Compose** tab.
 
 ## Customization
@@ -103,8 +103,8 @@ In Braze, from **Templates & Media**, go to **Webhook Templates** and choose the
 To integrate the notifications' delivery and open status event with a campaign’s conversion metric, add a custom event on the Braze dashboard.
 
 1. From the Braze dashboard, go to **Settings > Manage Settings > Custom Events**, and click **+ Add Custom Event**.
-2. Once you’ve created a custom event, click **Manage Properties**, add a property named "status", and choose "String" as the property type.
-3. When you compose a notification in campaigns or canvases, enter the name of the custom event into the **Event Name** field.
+2. After you’ve created a custom event, click **Manage Properties**, add a property named "status", and choose "String" as the property type.
+3. When you compose a notification in campaigns or Canvases, enter the name of the custom event into the **Event Name** field.
 
 This custom event will be triggered twice for each notification, when a message is sent and when a user opens the message.
 - When a message is sent, a custom event is triggered with `SENT` status.

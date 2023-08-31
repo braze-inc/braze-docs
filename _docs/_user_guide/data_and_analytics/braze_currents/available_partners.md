@@ -13,7 +13,7 @@ tool: Currents
 > This page outlines and describes the use cases of the data partners who you can use to integrate with Braze Currents.
 
 {% alert note %}
-Naming conventions for events that flow for one partner from Braze may not match other partners. For example, the Currents email open event in Segment.io is "Email Opened", while in Mixpanel, it is "Email Open".
+Naming conventions for events that flow for one partner from Braze may not match other partners. For example, the Currents email open event in Segment is "Email Opened", while in Mixpanel, it is "Email Open".
 {% endalert %}
 
 ## Data warehouses
@@ -36,6 +36,8 @@ These customer data platforms collect and route information from multiple source
 
 * [Tealium][8]
 
+* [Treasure Data][10]
+
 * [RudderStack][9]
 
 
@@ -46,6 +48,8 @@ These partners specialize in product analytics and business intelligence and can
 * [Amplitude][4]
 
 * [Mixpanel][5]
+
+* [Heap][11]
 
 
 
@@ -58,3 +62,5 @@ These partners specialize in product analytics and business intelligence and can
 [7]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/
 [8]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents#tealium-for-currents
 [9]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack_for_currents/
+[10]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data_for_currents/
+[11]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/

@@ -10,7 +10,7 @@ page_order: 5
 
 # Persistent entry properties
 
-> When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas in your Canvas workflow. 
+> When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step in your Canvas workflow. 
 
 Prior to this feature, the entry properties could only be used in the first step of Canvas. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
 
@@ -21,11 +21,9 @@ Entry properties can be used in action-based and API-triggered Canvases. These e
 - [Event properties object]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
 
-Properties passed in from these objects can be referenced by using the `canvas_entry_properties` Liquid tag.
+Properties passed in from these objects can be referenced by using the `canvas_entry_properties` Liquid tag. For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word "shoes" to a message by adding the Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word "shoes" to a message by adding the Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
-
-When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user's journey in the Canvas and deleted once the user exits the Canvas.
+When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user's journey in the Canvas and deleted once the user exits the Canvas. Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects) instead.
 
 {% alert note %}
 The Canvas entry properties object has a maximum size limit of 50 KB. 
@@ -37,7 +35,7 @@ If an active Canvas that previously did not include any messages that use `canva
 
 For example, if you initially launched a Canvas that did not use any entry properties on November 3, then added a new property `product_name` to the Canvas on November 11, values for `product_name` would only be saved for users that entered the Canvas on November 11 onward.
 
-In the case that a Canvas entry property is null or blank, you can abort messages using conditionals. The following code snippet is an example of how you may use Liquid to abort a message.
+In the case that a Canvas entry property is null or blank, you can abort messages using conditionals. The following code snippet is an example of how you could use Liquid to abort a message.
 {%raw%}
 ```
 {% if canvas_entry_properties.${product_name} == blank %}
@@ -52,13 +50,14 @@ To read more about aborting messages with Liquid, check out our [Liquid document
 
 With `canvas_entry_properties`, you can set global properties that apply to all users or user-specific properties that only apply to the specified user. The user-specific property will supersede the global property for that user.
 
-Example API request using global Canvas entry properties:
+### Example
+
 ```
 url -X POST \
 -H 'Content-Type:application/json' \
 -d '{
       "api_key": "a valid rest api key",
-      "canvas_id": "the ID of your canvas",
+      "canvas_id": "the ID of your Canvas",
          "canvas_entry_properties": {
             "food_allergies": "none"
           },

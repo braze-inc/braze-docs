@@ -42,7 +42,7 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 
-Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct value from your **Manage Settings** page. Check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) for more information on where to find your app identifier API key.
+Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct value from your **App Settings** page. Check out our [API identifier types]({{site.baseurl}}/api/identifier_types/?tab=app%20ids) for more information on where to find your app identifier API key.
 
 {% endtab %}
 {% tab OBJECTIVE-C %}

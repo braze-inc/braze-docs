@@ -34,7 +34,7 @@ For example, you can target users when their email or push subscription status c
 
 Use the `Update Subscription Group Status` trigger to target users when their subscription group status for Email, SMS or WhatsApp is updated. 
 
-For example, you can target users with a welcome SMS message once they opt in to your program. You can also specify the source of the update to have finer control over when a message fires. 
+For example, you can target users with a welcome SMS message when they opt in to your program. You can also specify the source of the update to have finer control over when a message fires. 
 
 Available update sources vary per channel:
 - CSV Import

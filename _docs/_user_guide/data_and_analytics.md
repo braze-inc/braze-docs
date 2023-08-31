@@ -19,9 +19,6 @@ guide_featured_list:
   - name: Cloud Data Ingestion
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/
     fa_icon: fa-solid fa-cloud
-  - name: Configuring Reporting
-    link: /docs/user_guide/data_and_analytics/configuring_reporting/
-    fa_icon: fas fa-cog
   - name: Creating a Formula
     link: /docs/user_guide/data_and_analytics/creating_a_formula/
     fa_icon: fas fa-flask

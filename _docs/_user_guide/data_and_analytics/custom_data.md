@@ -11,15 +11,9 @@ description: "This landing page is home to articles on custom data. Here, you ca
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Event Naming Conventions
-    link: /docs/user_guide/data_and_analytics/custom_data/event_naming_conventions/
-    fa_icon: fas fa-list
-  - name: Pre-Populating Custom Data
-    link: /docs/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/
-    fa_icon: fas fa-table
-  - name: Blocklisting or Deleting Custom Data
-    link: /docs/user_guide/data_and_analytics/custom_data/blocklist_delete_custom_data/
-    fa_icon: fas fa-trash
+  - name: Events
+    link: /docs/user_guide/data_and_analytics/custom_data/events/
+    fa_icon: fas fa-book
   - name: Purchase Events
     link: /docs/user_guide/data_and_analytics/custom_data/purchase_events/
     fa_icon: fas fa-shopping-cart
@@ -29,4 +23,10 @@ guide_featured_list:
   - name: Custom Attributes
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
     fa_icon: fas fa-table
+  - name: Event Naming Conventions
+    link: /docs/user_guide/data_and_analytics/custom_data/event_naming_conventions/
+    fa_icon: fas fa-list
+  - name: Managing Custom Data
+    link: /docs/user_guide/data_and_analytics/custom_data/managing_custom_data/
+    fa_icon: fas fa-check
 ---

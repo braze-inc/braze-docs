@@ -1,7 +1,7 @@
 ---
 nav_title: Smartling
 article_title: Smartling
-description: "This reference article outlines the partnership between Braze and Smartling, a cloud-based software for localization. This integration allows you to translate email templates and content blocks in Braze."
+description: "This reference article outlines the partnership between Braze and Smartling, a cloud-based software for localization. This integration allows you to translate email templates and Content Blocks in Braze."
 alias: /partners/smartling/
 page_type: partner
 search_tag: Partner
@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Smartling][2] is an end-to-end cloud translation management software for customers looking to automate the translation of websites, applications, and customer experiences.
 
-The Braze and Smartling integration allows you to translate email templates and content blocks. Smartling provides linguists with the benefit of visual context during translation, which reduces errors and maintains quality.
+The Braze and Smartling integration allows you to translate email templates and Content Blocks. Smartling provides linguists with the benefit of visual context during translation, which reduces errors and maintains quality.
 
 ## Prerequisites
 

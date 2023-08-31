@@ -118,7 +118,7 @@ glossaries:
     tags:
       - Envoyer les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/'>/campaigns/trigger/schedule/create</a>
-    description: Envoyer des messages de campagne créés par le tableau de bord (jusqu’à 90 jours à l’avance) via la livraison déclenchée par API.
+    description: Envoyer des messages de campagne créés par le tableau de bord via la livraison déclenchée par API.
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/'>/campaigns/trigger/schedule/delete</a>
@@ -134,7 +134,7 @@ glossaries:
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/'>/canvas/trigger/schedule/create</a>
-    description: Planifier des messages Canvas (jusqu’à 90 jours à l’avance) via la livraison déclenchée par API.
+    description: Planifier des messages Canvas via la livraison déclenchée par API.
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/'>/messages/schedule/update</a>
@@ -146,7 +146,7 @@ glossaries:
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/'>/messages/schedule/create</a>
-    description: Planifier une campagne, un Canvas ou un autre message pour qu’il soit envoyé à la date définie (jusqu’à 90 jours dans l’avenir).
+    description: Planifier une campagne, un Canvas ou un autre message pour qu’il soit envoyé à la date définie.
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canvas/trigger/schedule/update</a>

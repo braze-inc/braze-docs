@@ -17,7 +17,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/
   fa_icon: fas fa-code
 - name: "Web Modal with CSS"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/modal_with_css/
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/#web-modal-css
   fa_icon: fa-brands fa-css3-alt
 - name: "Email Capture Form"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/
@@ -33,7 +33,7 @@ local_redirect: # Local hash url redirect list
   custom-html-messages: '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/'
   web-modal-css: '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/modal_with_css'
   email-capture-form: '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/'
-  reusable-color-profiles: '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/'
+  reusable-color-profiles: '/docs/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/#web-modal-css'
   video: '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/video'
 ---
 <br><br>

@@ -14,7 +14,7 @@ description: "This article outlines details about the Schedule API-triggered cam
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
-> Use this endpoint to send dashboard created campaign messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. 
+> Use this endpoint to send dashboard created campaign messages via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. 
 
 You can pass in `trigger_properties` that will be templated into the message itself.
 
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
   "trigger_properties": (optional, object) personalization key-value pairs for all users in this send; see trigger properties,
   "schedule": {
-    "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
+    "time": (required, datetime as ISO 8601 string) time to send the message,
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   }

@@ -64,7 +64,7 @@ Customers have full control over whether or not a user is Inactive or Dormant an
 
 **What is it?** Canvas Interactions are data related to End Users' interactions with a Canvas or Canvas step. They are used for retargeting filters and to determine Canvas re-eligibility.
 
-**When is it deleted?** Braze automatically deletes from the Customer's workspaces the Canvas Interactions for Canvases that have not sent any messages in 25 calendar months and are not used for retargeting by any Active Campaigns or Canvases.
+**When is it deleted?** Braze automatically deletes from the Customer's workspaces the Canvas Interactions for Canvases that have not sent any messages in 25 calendar months and are not used for retargeting by any active campaigns or Canvases.
 
 **What happens after deletion?**
 - Canvases with no Canvas Interactions cannot be used in retargeting filters for campaigns, Canvases, and Segments.

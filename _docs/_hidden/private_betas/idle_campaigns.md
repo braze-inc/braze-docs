@@ -43,7 +43,7 @@ We will stop these campaign seven days after the end date.
 
 #### How can I keep an idle campaign active?
 
-To make a campaign no longer Idle and ensure it remains active, update the campaign so it does not meet the above criteria for being Idle. Reference this table for steps to make idle campaigns active, depending on your use case.
+To keep a campaign active, update the campaign so it does not meet the above criteria for having an idle status. Reference this table for steps to make idle campaigns active, depending on your use case.
 
 | Reason for idle campaign status | Steps to make campaign active |
 | --- | --- |
@@ -53,7 +53,7 @@ To make a campaign no longer Idle and ensure it remains active, update the campa
 | Action-based campaigns (without end dates) that have not sent messages in one year | Send one message or make any edit to the campaign | 
 | Scheduled campaigns (without end dates) that have not sent messages in one year | Send one message or make any edit to the campaign | 
 | API-triggered campaigns that have not sent messages in one year | Send one message or make any edit to the campaign |
-| Campaigns will be stopped at the later of the idle status criteria and 1 day after their last-occurring conversion deadline | Update the criteria above or extend the conversion deadline, depdending on which occurs later |
+| Campaigns will be stopped at the later of the idle status criteria and 1 day after their last-occurring conversion deadline | Update the criteria above or extend the conversion deadline, depending on which occurs later |
 | Sends as the result of a winning or personalized variant are treated as scheduled sends and disabled seven days after the winning or personalized variant is sent | Update when the variant will send to a later date |
 {: .reset-td-br-1 .reset-td-br-2}
 

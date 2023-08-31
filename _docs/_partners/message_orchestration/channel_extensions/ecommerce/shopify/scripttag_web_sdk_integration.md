@@ -14,7 +14,7 @@ page_order: 1
 
 ## Prerequisites
 
-Ensure with your development team that the following is supported within your Shopify store setup. If any of the following is not supported in your Shopify store, the Braze Web SDK via Shopify ScriptTag cannot be supported.
+Confirm with your development team that the following is supported within your Shopify store setup. If any of the following is not supported in your Shopify store, the Braze Web SDK via Shopify ScriptTag cannot be supported.
 
 | Requirement | Description |
 | ----------- | ----------- |
@@ -66,13 +66,13 @@ If you do want to add more customization to the Braze Web SDK implementation via
 
 From the event selector within the Shopify setup wizard, the events denoted with an asterisk (&#42;) are supported by the Web SDK. If you select these events or include in-browser messaging, Braze will determine that the Web SDK implementation via Shopify ScriptTag will be added to your Shopify store as part of your setup.
 
-After you install Braze's Shopify app, you'll be redirected back into Braze. Once successfully installed, you'll then see the Shopify configuration page.
+After you install Braze's Shopify app, you'll be redirected back into Braze. After the app is successfully installed, you'll see the Shopify configuration page.
 
 #### What if I already have the Web SDK or Google Tag Manager enabled on my Shopify store? {#existing}
 
 If you already have the Web SDK installed on your Shopify store, you can still proceed with setting up the Shopify ScriptTag within the onboarding process. During the installation process, Braze will check if there are instances of the Web SDK already available on your Shopify store. 
 
-We'll then add the necessary scripts to ensure you can track the selected events or enable in-browser messaging. 
+We'll then add the necessary scripts to make sure you can track the selected events or enable in-browser messaging. 
 
 It is important to review your existing Web SDK integration for the following items:
 - Web SDK version should be v4.0+
@@ -80,7 +80,7 @@ It is important to review your existing Web SDK integration for the following it
 
 If the above items are not met, then the Web SDK integration via Shopify ScriptTag will not be supportable.
 
-#### What if I use a customer data platform like Segment.io or mParticle?
+#### What if I use a customer data platform like Segment or mParticle?
 
-Ensure that you disable Shopify events you may have been sending through your customer data platform.
+Confirm that you have disabled Shopify events you may have been sending through your customer data platform.
 

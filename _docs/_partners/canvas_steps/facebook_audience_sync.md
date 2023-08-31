@@ -25,12 +25,12 @@ This feature gives brands the option to control what specific first-party data i
 
 ## Prerequisites
 
-You will need to ensure that you have the following items created and completed before setting up your Facebook Audience Step in Canvas. 
+You will need to confirm that you have the following items created and completed before setting up your Facebook Audience Step in Canvas. 
 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
 | Facebook Business Manager | [Facebook][1] | A centralized tool to manage your brand's Facebook assets (e.g., ad accounts, pages, apps). |
-| Facebook Ad Account | [Facebook][2] | An active Facebook ad account tied to your brand's business manager.<br><br>Ensure that your Facebook business manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze and that you have accepted your ad account terms and conditions. |
+| Facebook Ad Account | [Facebook][2] | An active Facebook ad account tied to your brand's business manager.<br><br>Ensure that your Facebook business manager admin has granted you either "Manage Campaigns" or "Manage ad accounts" permissions to the Facebook ad accounts you plan to use with Braze. Also ensure that you have accepted your ad account terms and conditions. |
 | Facebook Custom Audiences Terms | [Facebook][3] | Accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -103,7 +103,7 @@ When you launch a Canvas with a new audience, Braze will create the new custom a
 {% endtab %}
 {% tab Sync with an Existing Audience %}
 **Sync with an Existing Audience**<br>
-Braze also offers the ability to either add or remove users from existing Facebook custom audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and choose whether you want to **Add to the Audience** or **Remove from the Audience**. Braze will then either add or remove users in near real-time as they enter the Facebook Audience step. 
+Braze also offers the ability to either add or remove users from existing Facebook custom audiences to confirm that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and choose whether you want to **Add to the Audience** or **Remove from the Audience**. Braze will then either add or remove users in near real-time as they enter the Facebook Audience step. 
 
 ![]({% image_buster /assets/img/audience_sync/fb_sync3.png %})
 
@@ -122,7 +122,7 @@ The **History** tab of the custom audience in the Facebook Audience Manager will
 
 ## Migrating to Meta work accounts
 
-Starting in July 2023, Meta is rolling out Meta work accounts to a small set of businesses who are interested in adopting this new account type. If you have a Business Account integrated with Braze, ensure you disconnect and reconnect to the [Facebook partner page]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook) with your Business Account in order to perserve this implementation and not disrupt any active Canvases.
+Starting in July 2023, Meta is rolling out Meta work accounts to a small set of businesses who are interested in adopting this new account type. If you have a Business Account integrated with Braze, make sure you disconnect and reconnect to the [Facebook partner page]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook) with your Business Account in order to perserve this implementation and not disrupt any active Canvases.
 
 ## User syncing and rate limit considerations
  
@@ -152,7 +152,7 @@ Remember that there will be a delay in reporting for users synced and users erro
 ## Troubleshooting
 
 {% details What should I do next if I receive an invalid token error? %}
-You can simply disconnect and reconnect your Facebook account on the Facebook partner page. Ensure with your Facebook Business Manager Admin that you have the appropriate permissions to the ad account you wish to sync with.
+You can simply disconnect and reconnect your Facebook account on the Facebook partner page. Confirm with your Facebook Business Manager Admin that you have the appropriate permissions to the ad account you wish to sync with.
 {% enddetails %}
 
 {% details Why is my Canvas not allowed to launch? %}

@@ -31,10 +31,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "content_block_id" : (required, string) Content block's API identifier.
+  "content_block_id" : (required, string) Content Block's API identifier.
   "name": (required, string) Must be less than 100 characters,
-  "description": (optional, string) The description of the content block. Must be less than 250 character,
-  "content": (required, string) HTML or text content within content block,
+  "description": (optional, string) The description of the Content Block. Must be less than 250 character,
+  "content": (required, string) HTML or text content within Content Block,
   "state": (optional, string) Choose `active` or `draft`. Defaults to `active` if not specified,
   "tags": (optional, array of strings) Tags must already exist
 }
@@ -60,7 +60,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 --data-raw '{
   "content_block_id" :"content_block_id", 
   "name": "content_block",
-  "description": "This is my content block",
+  "description": "This is my Content Block",
   "content": "HTML or text content within block",
   "state": "draft",
   "tags": ["marketing"]

@@ -11,7 +11,7 @@ channel:
 
 # Frequently asked questions
 
-> On this page, we'll attempt to answer your most stringent questions about MMS!
+> On this page, we'll attempt to answer your most stringent questions about MMS.
 
 ### Are there any changes to Currents data when sending an MMS?
 
@@ -36,8 +36,10 @@ Nope! MMS is now included in our SMS onboarding process. Existing customers who 
 1. Purchase MMS.
 2. Reach out to the Braze onboarding team to request the MMS feature to be flipped on. This will enable MMS and an SMS/MMS Subscription group will be created or updated for you.
 
-Next, the Braze onboarding team will make sure your short and long codes are enabled (in the US and Canada) for MMS. They will also update your subscription groups to show your current numbers that were added or enabled for MMS. Once these steps are complete, you can send MMS messages right away from our native SMS composer.
+Next, the Braze onboarding team will make sure your short and long codes are enabled (in the US and Canada) for MMS. They will also update your subscription groups to show your current numbers that were added or enabled for MMS. After these steps are complete, you can send MMS messages right away from our native SMS composer.
 
 ### Why can't I find MMS on my dashboard even though the feature is enabled?
 
 MMS is only displayed on the Braze dashboard when a subscription group is considered "MMS enabled". This is reflected by an MMS tag when selecting the subscription group on the composer of an SMS/MMS message. This means that at least one number in the subscription group is capable of sending an MMS message.
+
+Additionally, certain situations will require Twilio to re-approve the enablement of short codes that originally didn't have MMS enabled. This approval process could take weeks.

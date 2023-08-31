@@ -47,7 +47,7 @@ The Braze SDK can automatically handle push registration with the Firebase Cloud
 
 ## Step 4: Set push listeners
 
-If you would like to pass push notification payloads to Unity or take additional steps when a user receives a push notification, Braze provides the option of setting push notification listeners.
+If you want to pass push notification payloads to Unity or take additional steps when a user receives a push notification, Braze provides the option of setting push notification listeners.
 
 In Braze, select your Android app on the **App Settings** page under **Manage Settings**. Next, enter your Firebase Server Key in the **Push Notification Settings** field and Firebase Sender ID in the **Push Notification Settings** ID field.
 

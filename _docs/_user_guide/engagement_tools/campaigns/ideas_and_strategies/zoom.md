@@ -29,7 +29,7 @@ For more information, refer to the Zoom [Add webinar registrant endpoint](https:
 {% tabs %}
 {% tab Email %}
 
-Create an email campaign with a call-to-action button within the message body. Once a user clicks the button, redirect them to the webinar landing page (with appropriate parameters included in the redirect link). 
+Create an email campaign with a call-to-action button within the message body. When a user clicks the button, redirect them to the webinar landing page (with appropriate parameters included in the redirect link). 
 
 Using the parameters in the URL to pass user data, build an API call to fire when the page loads to add the user to the webinar.
 

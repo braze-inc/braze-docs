@@ -112,7 +112,7 @@ You can choose one of three ways in which users can enter your Canvas.
 
   {% endtab %}
   {% tab API-Triggered Delivery %}
-    With API-triggered delivery, users will enter your Canvas and begin receiving messages once they have been added using the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via the API. In the dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). 
+    With API-triggered delivery, users will enter your Canvas and begin receiving messages after they have been added using the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via the API. In the dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). 
 
     ![An example of API-triggered delivery with a Canvas ID and an example of a cURL request.]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
 
@@ -135,7 +135,7 @@ After you choose your delivery method, adjust those settings appropriately, and 
 
 ### Step 2c: Set your target entry audience
 
-You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey, meaning Braze evaluates the target audience for eligibility first before users enter the Canvas journey.
+You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey, meaning Braze evaluates the target audience for eligibility first before users enter the Canvas journey. For scheduled canvases, we limit the specified number of users every time the Canvas is scheduled to run. However, for trigger-based Canvases, this limit occurs at every UTC hour.
 
 For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
@@ -244,12 +244,12 @@ The Message component manages the messages sent to users. You can select your **
 
 ![]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
 
-Click **Done** once you've finished configuring your Canvas component.
+Click **Done** after you've finished configuring your Canvas component.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
 
-The `canvas_entry_properties` are configured in the Entry Schedule step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
+The `canvas_entry_properties` are configured in the Entry Schedule step of creating a Canvas and indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object has a maximum size of 50 KB. 
 
 For Canvas Flow, entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Events must be custom events or purchase events to be used this way.
 
@@ -301,7 +301,7 @@ For this reason, Intelligent Selection works best on Canvases that have new user
 
 ## Step 5: Save and launch your Canvas
 
-Once you're done creating your Canvas, click **Launch Canvas** to save and launch your Canvas. Once you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page. 
+Once you're done creating your Canvas, click **Launch Canvas** to save and launch your Canvas. After you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page. 
 
 You can also save your Canvas as a draft if you need to come back to it.
 
@@ -322,7 +322,7 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 [14]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %}
 [15]:{% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %}
 [17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %}
-[18a]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
+[18a]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
 [50]: {% image_buster /assets/img/quiet_hours.png %}

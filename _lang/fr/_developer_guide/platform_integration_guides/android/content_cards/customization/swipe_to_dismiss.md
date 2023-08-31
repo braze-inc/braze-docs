@@ -18,4 +18,4 @@ channel:
 La désactivation de la fonctionnalité « glisser pour fermer » est effectuée sur la base d’une seule carte via la méthode [`card.setIsDismissibleByUser()`][48]. Les cartes peuvent être interceptées avant l’affichage en utilisant la méthode [`ContentCardsFragment.setContentCardUpdateHandler()`][45].
 
 [45]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
-[48]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.appboy.enums/-card-key/index.html#285743463%2FClasslikes%2F-1725759721
+[48]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissible-by-user.html

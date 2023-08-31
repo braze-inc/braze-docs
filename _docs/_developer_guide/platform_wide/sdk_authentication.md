@@ -33,7 +33,7 @@ There are four high-level steps to get started:
 
 ### Generate a public/private key-pair {#generate-keys}
 
-Generate an RSA public/private key-pair. The public key will eventually be added to the Braze dashboard, while the private key should be stored securely on your server.
+Generate an RSA256 public/private key-pair. The public key will eventually be added to the Braze dashboard, while the private key should be stored securely on your server.
 
 We recommend an RSA Key with 2048 bits for use with the RS256 JWT algorithm.
 
@@ -146,7 +146,7 @@ AppDelegate.braze = braze
 ```
 {% endtab %}
 {% tab Dart %}
-Currently, SDK Authentication must be enabled as part of initializing the SDK in native iOS and Android code. To enable SDK Authentication in the Flutter SDK, follow the integrations for iOS and Android from the other tabs. Once SDK Authentication is enabled, the rest of the feature can be integrated in Dart.
+Currently, SDK Authentication must be enabled as part of initializing the SDK in native iOS and Android code. To enable SDK Authentication in the Flutter SDK, follow the integrations for iOS and Android from the other tabs. After SDK Authentication is enabled, the rest of the feature can be integrated in Dart.
 {% endtab %}
 {% endtabs %}
 
@@ -420,7 +420,7 @@ No, this feature can be enabled for specific apps and doesn't need to be used on
 
 #### What happens to users who are still on older versions of my app? {#faq-sdk-backward-compatibility}
 
-When you begin to enforce this feature, requests made by older app versions will be rejected by Braze and retried by the SDK. Once users upgrade their app to a supported version, those enqueued requests will begin to be accepted again.
+When you begin to enforce this feature, requests made by older app versions will be rejected by Braze and retried by the SDK. After users upgrade their app to a supported version, those enqueued requests will begin to be accepted again.
 
 If possible, you should push users to upgrade as you would for any other mandatory upgrade. Alternatively, you can keep the feature [Optional][6] until you see that an acceptable percentage of users have upgraded.
 

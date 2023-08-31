@@ -60,6 +60,7 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
 | Item Price | `{{event_properties.${line_items}[0].price}}` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 {% endraw %}
 {% endtab %}
 
@@ -84,6 +85,8 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
 | Item Price | `{{event_properties.${line_items}[0].price}}` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 
 {% endtab %}
@@ -113,6 +116,8 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item Price | `{{event_properties.${line_items}[0].price}}` |
 | Shipping Title | `{{event_properties.${shipping}[0].title}}` |
 | Shipping Price | `{{event_properties.${shipping}[0].price}}` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 
 {% endtab %}
@@ -128,6 +133,8 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item Title  | `{{event_properties.${line_items}[0].title}}` |
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 
 {% endtab %}
@@ -156,6 +163,8 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item Price | `{{event_properties.${line_items}[0].price}}` |
 | Shipping Title | `{{event_properties.${shipping}[0].title}}` |
 | Shipping Price | `{{event_properties.${shipping}[0].price}}` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 {% endtab %}
 
@@ -200,7 +209,9 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Fulfillment Shipping | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` | 
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 {% endtab %}
 
@@ -245,7 +256,9 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Fulfillment Shipping | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` | 
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 {% endtab %}
 
@@ -277,6 +290,8 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Fulfillment Status | `{{event_properties.${line_items}[0].fulfillment_status}}` |
 | Shipping Title | `{{event_properties.${shipping}[0].title}}` |
 | Shipping Price | `{{event_properties.${shipping}[0].price}}` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 {% endtab %}
 
@@ -298,6 +313,8 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item Name | `{{event_properties.${line_items}[0].name}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
 | Item Price | `{{event_properties.${line_items}[0].price}}` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 {% endtab %}
 {% endtabs %}
@@ -319,7 +336,7 @@ In addition, you can also use Braze's breadth of purchase filter to create segme
 ![Searching for a specific product ID as a segmentation filter.][14]
 
 {% alert note %}
-If you are looking to segment by custom event properties, ensure that you work with your customer success manager or Braze [support]({{site.baseurl}}/braze_support/) to enable filtering for all relevant event properties that you'd like to use within segmentation and Liquid.
+If you are looking to segment by custom event properties, make sure that you work with your customer success manager or Braze [support]({{site.baseurl}}/braze_support/) to enable filtering for all relevant event properties that you'd like to use within segmentation and Liquid.
 {% endalert %} 
 
 ## Campaign and Canvas triggering 

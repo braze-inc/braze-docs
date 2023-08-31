@@ -3,6 +3,7 @@ nav_title: Creating an In-App Message
 article_title: "Creating an in-app message with drag-and-drop"
 description: "This reference article covers creating an in-app message with the drag-and-drop editor, prerequistes, creative details, and more."
 alias: "/create_dnd_iam/"
+page_order: 1
 ---
 
 # Creating an in-app message with drag-and-drop
@@ -11,17 +12,39 @@ alias: "/create_dnd_iam/"
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop.
 
-Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. Once you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message!
+Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. After you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message.
 
 ## Prerequisites
 
-Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions:
+### SDK requirements
 
-{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
+| Minimum SDK version                                                          | Recommended SDK version                                                       |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| {::nomarkdown}{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}{:/} | {::nomarkdown}{% sdk_min_versions swift:6.5.0 android:26.0.0 web:4.8.1 %}{:/} |
+{: .reset-td-br-1 .reset-td-br-2}
 
-If a user hasn't updated their application (that is, they're on an older SDK version), they will not receive the in-app message.
+{% details More information on minimum SDKs %}
 
-**Additional prerequisites**<br>
+Messages created using the drag-and-drop editor can only be sent to users on the minimum SDK versions (see table above). If a user hasn’t updated their application (that is, they’re on an older SDK version), they will not receive the in-app message.
+
+To take advantage of all features available in the drag-and-drop editor, update your SDKs to the recommended SDK versions. This allows you to take advantage of the following additional features:
+
+- Text links that do not dismiss the message
+- Button action to request push primer
+
+The following outlines the individual minimum SDK requirements for these features:
+
+| Text links*                                                         | Request push primer                                                           |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| {::nomarkdown}{% sdk_min_versions swift:6.2.0 android:26.0.0 %}{:/} | {::nomarkdown}{% sdk_min_versions web:4.8.1 swift:6.5.0 android:26.0.0 %}{:/} |
+{: .reset-td-br-1 .reset-td-br-2}
+
+*If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, clicking on the link will close the message and the user will not be able to return to the message to submit the form.
+
+{% enddetails %}
+
+### Additional prerequisites
+
 - For the web SDK, the initialization option [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) must be set to `true`. The `enableHtmlInAppMessages` option will also allow these messages to function, but is deprecated and should be updated to `allowUserSuppliedJavascript`.
 - If you are using Google Tag Manager, you must enable "Allow HTML In-App Messages" in the GTM configuration.
 
@@ -31,18 +54,20 @@ Create a new in-app message or Canvas step, then select **Drag-And-Drop Editor**
 
 ## Step 2: Select your template
 
-![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:55%"}
-
 After selecting the drag-and-drop editor as your editing experience, you can choose to:
 
-- Use a Braze basic modal template
-- Use a Braze background image template
 - Start with a blank modal template
+- Use a Braze drag-and-drop in-app message template
+- Select a saved drag-and-drop in-app message template (early access)
 
-Click **Build message** to begin designing your in-app message in the drag-and-drop editor!
+Click **Build message** to begin designing your in-app message in the drag-and-drop editor.
 
-{% alert note %}
-You can switch between modal and fullscreen display types in the **Message styles** panel of the editor.
+![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+
+You can also access all templates from the **Templates** section of the dashboard.
+
+{% alert important %}
+The ability to save custom templates is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Step 3: Build and design your in-app message
@@ -132,7 +157,7 @@ If you're having trouble selecting a certain block, you can use the up arrow in 
 
 To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Add Personalization** from the editor toolbar. Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more!
 
-Next, take your generated Liquid snippet and insert it into your message. Once you've finished designing and building your in-app message, go to **Preview & Test** to preview your message.
+Next, take your generated Liquid snippet and insert it into your message. After you've finished designing and building your in-app message, go to **Preview & Test** to preview your message.
 
 #### Using the AI copywriter
 
@@ -166,10 +191,10 @@ After making changes to the styling of an element, you can copy and paste those 
 
 You can also use keyboard shortcuts to copy and paste styles:
 
-| Action | Mac | Windows |
-| --- | --- | --- |
-| Copy styles | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> |
-| Paste styles | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> 
+| Action       | Mac                                            | Windows                                           |
+| ------------ | ---------------------------------------------- | ------------------------------------------------- |
+| Copy styles  | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> |
+| Paste styles | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Step 4: Test your in-app message
@@ -210,10 +235,14 @@ Yes, you can segment based on button clicks for up to two buttons in your messag
 
 No.
 
-#### Can I save my in-app message as a template after I build it within my campaign or Canvas?
-
-No, you have to recreate the in-app message in the drag-and-drop editor or duplicate an existing message in order to save.
-
 #### How can I create a slideup in-app message?
 
 Currently the editor is limited to modal and fullscreen messages only. You can switch between display types in the **Message container** section of the **Message styles** panel.
+
+#### Can I save my in-app message as a template after I build it within my campaign or Canvas?
+
+Yes. For any in-app message you want to re-use in a future campaign or Canvas step, you can save it as a custom template using the **Save as template** button, available after you exit the editor. Before you can save it as a template, you must first launch the campaign OR save it as a draft.
+
+![]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+
+You can also create and save in-app message templates by navigating to **Templates** > **In-App Message Templates**.
