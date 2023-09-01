@@ -16,12 +16,12 @@ tool: Dashboard
 }
 </style>
 
-> Braze's user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin or limited permission. The creator of the workspace will automatically be granted administrator access.
+> The user permissions feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin or limited permissions. The creator of the workspace will automatically be granted administrator access.
 
 These settings can be found at **Settings** > **Company Users**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), **Company Users** is called **Manage Users** and is located under your account icon.
+If you're using the [older navigation]({{site.baseurl}}/navigation), **Company Users** is called **Manage Users** and is located under your account icon.
 {% endalert %}
 
 ![Account users list on the Manage Settings page][30]
@@ -29,16 +29,20 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), **Company 
 |Level of Access|Permissions|
 |---|---|
 |Administrator|Administrators have access to all available features.|
-|Limited|Limited users are completely customized at several levels, outlined in the following sections. When you switch a user's permissions from admin to limited, that user no longer has access to any portion of the Braze dashboard until you deem it so using the checkboxes that appear under the Edit User box.|
+|Limited|Limited users are completely customized at several levels, outlined in the following sections. When you switch a user's permissions from **Administrator** to **Limited**, that user no longer has access to any portion of the Braze dashboard until you deem it so using the checkboxes that appear under the **Edit User** section.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Editing user permissions
 
-From the **Company Users** page, you can edit a specific user's permissions, either by allowing them to remain as the default administrator role, or changing them to a limited role. To change their role, click the edit icon in the user's row and select **Limited** from the **User Role** dropdown.
+To edit a specific user's permissions, either by allowing them to remain as the default **Administrator** role or changing them to a **Limited** role, do the following:
+
+1. Go to the **Company Users** page. 
+2. Click the edit icon in the user's row.
+3. Select **Limited** in the **User Role** dropdown.
 
 ![Selecting Administrator or Limited when editing a user][29]{: style="border:none"}
 
-When you switch a user's permissions from **Administrator** to **Limited**, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear under the Edit User box.
+When you switch a user's permissions from **Administrator** to **Limited**, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear under the **Edit User** section.
 
 ## Managing limited and team role permissions
 
@@ -48,9 +52,9 @@ You can manage user permissions by group or on an individual basis when editing 
 
 |Permission Name|Definition/Parameters|
 |---|---|
-|Admin|Has access to all available features. This is the default setting for all new users. Can update company settings (company name and time zone), which limited users cannot do.|
-|Access Campaigns, Canvases, Cards, Segments, Media Library| User can view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of News Feed, segments, templates and media, create templates, upload media, view engagement reports, and be granted global message settings in the dashboard. However, users with this permission cannot pause or edit existing live content. |
-|Send Campaigns, Canvases| Allows users to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. To launch existing Content Blocks, **Send campaigns, Canvases** permission is required. |
+|Admin|Allows users to access all available features. This is the default setting for all new users. Can update company settings (company name and time zone), which limited users cannot do.|
+|Access Campaigns, Canvases, Cards, Segments, Media Library| Allows users to view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of News Feed, segments, templates and media, create templates, upload media, view engagement reports, and be granted global message settings in the dashboard. <br><br>However, users with this permission cannot pause or edit existing live content. |
+|Send Campaigns, Canvases| Allows users to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. To launch existing Content Blocks, the **Send campaigns, Canvases** permission is required. |
 |Publish Cards| This permission is only visible if your account is enabled for News Feed, which is being deprecated. This does not affect Content Cards.<br><br>Allows users to create and edit News Feed cards. You can still view News Feed cards without this permission. If your account is enabled for News Feed and a user should be able to launch existing Content Blocks, they need both **Publish Cards** and **Send campaigns, Canvases** permissions. |
 |Edit Segments| Allows users to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
 |Export User Data| Allows users to export their user data from segments, campaigns, and Canvases. |
@@ -86,7 +90,9 @@ Individual users can be granted different degrees of access on an app-by-app bas
 
 ## Permission sets
 
-On the **Permission Sets** page found at **Settings** > **Permission Settings**, you can create, edit, and delete custom permission assignments for your Braze dashboard users. Permission sets can be assigned by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate permission set under **Workspace Level Permissions**.
+On the **Permission Sets** page found at **Settings** > **Permission Settings**, you can create, edit, and delete custom permission assignments for your Braze dashboard users. 
+
+Permission sets can be assigned by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate permission set under **Workspace Level Permissions**.
 
 ![The Permission Sets tab opens a Manage Permissions Sets page with a table of permission set names and selected permissions.][5]
 
