@@ -102,7 +102,7 @@ Braze sends data to the SDK at the beginning of a session based on which segment
 
 ### Session length and data flushing
 
-Tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Amet mauris commodo quis imperdiet massa. Blandit cursus risus at ultrices mi tempus. Vivamus at augue eget arcu dictum varius. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
+Tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Amet mauris commodo quis imperdiet massa. Blandit cursus risus at ultrices mi tempus. Vivamus at augue eget arcu dictum varius. 
 
 ### Session timeout customization 
 
