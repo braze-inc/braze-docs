@@ -106,7 +106,7 @@ By default, all admins have their **View PII** permission enabled in [user permi
 
 ### Defining PII
 
-Braze allows you to define which fields are designated as PII in your dashboard. To do this, navigate to **Company Settings > Security Settings**.
+You can define which fields are designated as PII in the dashboard. To do this, navigate to **Company Settings** > **Security Settings**.
 
 The following fields can be hidden from Braze users who don't have **View PII** permissions.
 
