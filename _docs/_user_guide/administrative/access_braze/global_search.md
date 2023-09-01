@@ -59,8 +59,5 @@ Each search result is paired with tags that indicate the result's content type (
 
 You can easily revisit recently accessed content from the search menu. The search interface displays your recently opened results below the search bar, including items interacted with throughout the entire Braze platform. This lets you quickly return to previously viewed campaigns, Canvases, segments, or email templates so you can pick up right where you left off with fewer clicks.
 
-### Explore more results
-
-If your search returns too many results, scroll to continue viewing more items. As you scroll through the search results dropdown, more items will dynamically load, ensuring you have access to all relevant content.
 
 [1]: {% image_buster /assets/img_archive/global_search.png %}
