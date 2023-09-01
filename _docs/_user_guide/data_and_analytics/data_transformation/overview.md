@@ -10,15 +10,17 @@ description: "This reference article provides an overview of Braze Data Transfor
 
 > Data transformation allows you to build and manage webhook integrations to automate data flow from external platforms into Braze user profiles. This integrated user data can then power even more sophisticated marketing use cases.
 
-Braze Data Transformation is a low-code solution, and you can be up and running in minutes, even if you have very little coding experience. This feature can help expedite your data integration and replace your team’s dependency on manual API calls, third-party integration tools, or even customer data platforms.
+Braze Data Transformation is a low-code solution, even if you have very little coding experience. This feature can help replace your team’s dependency on manual API calls, third-party integration tools, or even customer data platforms.
 
 ## How it works
 
-Many modern-day platforms can send webhooks, real-time notifications, when something happens. Braze Data Transformation builds on these external webhooks by providing a Braze address to send those webhooks to.
+Many modern-day platforms have “webhooks,” or real-time API notifications, to send information about a new event or new data from one platform to another. Data Transformation provides:
 
-To do this, you will have to write transformation code to map the contents of those incoming webhooks and create an output that matches Braze’s `/users/track` schema. You have full flexibility in what you want to use from the webhook, and how you want the data represented as Braze user attributes, events, and purchases. 
+- A Braze address to receive such webhooks.
+- Capabilities to transform the webhook’s payload with JavaScript code, so you can create a valid Braze `/users/track` call. You can choose what information to use from the webhook, and how you want the data represented on Braze user profiles as user attributes, events, or purchases.
+- Capabilities to send the compiled `/users/track` call.
 
-Lastly, you must enable your transformation and send webhooks from your external platform. Your transformation will apply to every webhook we receive, and your integration is complete.
+The end result is a webhook integration that connects a source platform of your choice, by turning their webhooks into Braze user profile updates.
 
 {% details More on webhooks %}
 Webhooks are real-time notifications sent via an HTTP POST request to a specific destination. Webhooks are often used to send data from one point to another, in which the webhook can pass through data about an action that has occurred and who is involved in that action.
