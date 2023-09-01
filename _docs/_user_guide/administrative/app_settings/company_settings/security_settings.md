@@ -25,11 +25,15 @@ The default minimum length is eight characters.
 
 ### Password complexity
 
-Require passwords to include at least one of each of the following: an uppercase letter, lowercase letter, number, and special character.
+Require passwords to include at least one of each of the following: 
+- Uppercase letter
+- Lowercase letter
+- Number
+- Special character
 
 ### Password reusability
 
-Determines the minimum number of new passwords that must be set before a user can reuse a password. The default is 3.
+Determines the minimum number of new passwords that must be set before a user can reuse a password. The default is three.
 
 ### Password expiration rules
 
@@ -37,13 +41,13 @@ Use this field to set when you want your Braze account users to reset their pass
 
 ### Session duration rules
 
-Use this field to define how long Braze will keep your session active. After Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 10,080 (equal to 1 week) if two-factor authentication is enforced for your company, otherwise the maximum session duration will be 1,440 minutes (equal to 24 hours).
+Use this field to define how long Braze will keep your session active. After Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 10,080 (equal to one week) if two-factor authentication is enforced for your company, otherwise the maximum session duration will be 1,440 minutes (equal to 24 hours).
 
 ### Single sign-on (SSO) authentication
 
 You can restrict your users from logging in using a password or SSO.
 
-For [SAML SSO][15], customers will need to set up their SAML settings prior to enforcing. If customers use Google SSO, they will simply have to enforce the security settings page with no additional lift.
+For [SAML SSO][15], customers need to set up their SAML settings prior to enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
 
 ## Dashboard IP whitelisting
 
@@ -55,46 +59,54 @@ Two-factor authentication adds a second level of identity verification to an acc
 
 When two-factor authentication is turned on, in addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent via an authenticator app, email, or SMS.
 
-Two-factor authentication can be optional for Admins, and enabled for non-Admin users by default. However, when turned on, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
+Two-factor authentication can be optional for admins, and enabled for non-admin users by default. However, when turned on, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
 
 ### Remember me
 
 ![Remember this account for 30 days checkbox][04]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Upon toggling on two-factor authentication for your company, the **Remember Me** checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication once over the course of 30 days.
+After toggling on two-factor authentication for your company, the **Remember Me** checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication once over the course of 30 days.
 
-Customers with multiple accounts under a dashboard Company may experience issues using this feature due to the cookie being tied to a specific device. If users use the same device to log in to multiple accounts, the cookie will be replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account, not one device for multiple accounts.
+Customers with multiple accounts under a dashboard company may experience issues using this feature due to the cookie being tied to a specific device. If users use the same device to log in to multiple accounts, the cookie will be replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account, not one device for multiple accounts.
 
 Be sure to save your changes before leaving the page!
 
-### User authentication reset
+### Resetting user authentication
 
 Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin perform the following steps:
 
 1. Navigate to **Manage Users**.
-2. Select the user from the provided list
-3. Select **Reset** under **Two-Factor Authentication**.
+2. Select the user from the provided list.
+3. Select **Reset** under **Two Factor Authentication**.
 
-A reset can solve common authentication issues such as trouble with authenticator apps, email verification not being sent, login failure due to SMS outages or user error, and more.
+A reset can solve common authentication issues such as trouble with authenticator apps, email verification not sending, login failure due to SMS outages or user error, and more.
 
-Two-factor authentication enforcement:
+#### Two-factor authentication enforcement
 
 - If two-factor authentication is not enforced at the company level, when reset, the user will log in normally and need to go to **Account Settings** to turn on and set up two-factor authentication.
 - If two-factor authentication is enforced at the company level, the next time the user logs in, they’ll be asked to set up their two-factor authentication.
 
-## Security event download
+## Downloading a security event report
 
-The Security Event report is a CSV report of security events such as account invitations, account removals, failed and successful login attempts, and other activities. To download this report, click your user profile in the top right of your Braze dashboard, select **Company Settings**, and then select the **Security Settings** tab. Scroll down and select **Download report** in the **Security Event Download** section. This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
+The Security Event report is a CSV report of security events such as account invitations, account removals, failed and successful login attempts, and other activities. 
 
-## View PII
+To download this report, do the following:
 
-This section covers a permission only accessible to a few select Braze users. For the existing team permission capabilities, see [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
+1. Go to your user profile and select **Company Settings**.
+2. Select the **Security Settings** tab and go to the **Security Event Download** section.
+2. Select **Download report**. 
 
-By default, all admins will have their **View PII** permission enabled. This means they can see the following standard and custom attributes throughout the dashboard. When this permission is disabled for users in [user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions), those users will not be able to see this information.
+This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
 
-### Define PII
+## Viewing personally identifiable information (PII)
 
-Braze allows you to define which fields are designated as personally identifiable information (PII) in your dashboard. To do this, navigate to **Company Settings > Security Settings**.
+The **View PII** permission is only accessible to a few select Braze users. For the existing team permission capabilities, see [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
+
+By default, all admins have their **View PII** permission enabled in [user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions). This means they can see the following standard and custom attributes throughout the dashboard. When this permission is disabled for users, those users will not be able to see this information.
+
+### Defining PII
+
+You can define which fields are designated as PII in the dashboard. To do this, navigate to **Company Settings** > **Security Settings**.
 
 The following fields can be hidden from Braze users who don't have **View PII** permissions.
 
@@ -105,7 +117,7 @@ The following fields can be hidden from Braze users who don't have **View PII** 
 
 ### Limited areas
 
-The following assumes all fields are set as PII and that the users mentioned are those that use the Braze platform.
+The following assumes that all fields are set as PII and the users mentioned are those that use the Braze platform.
 
 | Dashboard Navigation | Result | Notes |
 | -------------------- | ------ | ----- |
