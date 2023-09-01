@@ -52,7 +52,7 @@ You can manage user permissions by group or on an individual basis when editing 
 
 |Permission Name|Definition/Parameters|
 |---|---|
-|Admin|Allows users to access all available features. This is the default setting for all new users. Can update company settings (company name and time zone), which **Limited** users cannot do.|
+|Admin|Allows users to access all available features. This is the default setting for all new users. Can update company settings (company name and time zone), which limited users cannot do.|
 |Access Campaigns, Canvases, Cards, Segments, Media Library| Allows users to view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of News Feed, segments, templates and media, create templates, upload media, view engagement reports, and be granted global message settings in the dashboard. <br><br>However, users with this permission cannot pause or edit existing live content. |
 |Send Campaigns, Canvases| Allows users to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. To launch existing Content Blocks, the **Send campaigns, Canvases** permission is required. |
 |Publish Cards| This permission is only visible if your account is enabled for News Feed, which is being deprecated. This does not affect Content Cards.<br><br>Allows users to create and edit News Feed cards. You can still view News Feed cards without this permission. If your account is enabled for News Feed and a user should be able to launch existing Content Blocks, they need both **Publish Cards** and **Send campaigns, Canvases** permissions. |
