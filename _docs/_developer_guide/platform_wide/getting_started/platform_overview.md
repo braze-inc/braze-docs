@@ -1,6 +1,6 @@
 ---
-nav_title: Platform Features
-article_title: Platform Features
+nav_title: Platform Overview
+article_title: Getting Started&#58; Platform Overview
 page_order: 0
 description: "This reference article covers specific platform features including SDK sizes, dashboard UI, data API, multichannel messaging, and more."
 platform:
@@ -10,7 +10,7 @@ platform:
   
 ---
 
-# Platform features
+# Getting started: Platform overview
 
 > Braze provides a comprehensive user engagement solution for your mobile and web applications. The Braze platform has three primary components - the SDK, the dashboard, and the data API.
 

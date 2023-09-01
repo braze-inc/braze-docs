@@ -1,7 +1,7 @@
 ---
 nav_title: Workspace Configuration
 article_title: Workspace Configuration
-page_order: 1
+page_order: 5
 description: "This reference article covers single and multi-workspace configuration, how to create your workspace, and how to target and relaunch your app."
 
 ---
