@@ -12,8 +12,11 @@ description: "This landing page is home to articles on accessing your Braze acco
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Navigation
-  link: /docs/user_guide/administrative/access_braze/navigation
+  link: /docs/user_guide/administrative/access_braze/navigation/
   fa_icon: fas fa-list
+- name: Global Search
+  link: /docs/user_guide/administrative/access_braze/global_search/
+  fa_icon: fas fa-search
 - name: API and SDK Endpoints
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
   fa_icon: fas fa-location-arrow
