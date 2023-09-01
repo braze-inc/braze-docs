@@ -2,12 +2,22 @@
 	"trailingSlash": false,
 	"rewrites": [
 		{
+			"source": "/docs/en/:path*",
+			"destination": "/:path*"
+		},
+		{
 			"source": "/docs/:path*",
 			"destination": "/:path*"
 		},
 		{
 			"source": "/api/(.*)",
 			"destination": "/api/404.html"
+		}
+	],
+	"redirects": [
+		{
+			"source": "/docs/ja/:path*",
+			"destination": "/docs/:path*?wovn=ja"
 		}
 	],
 	"github": {
