@@ -23,7 +23,7 @@ Many modern-day platforms have “webhooks,” or real-time API notifications, t
 The end result is a webhook integration that connects a source platform of your choice, by turning their webhooks into Braze user profile updates.
 
 {% details More on webhooks %}
-Webhooks are real-time notifications sent via an HTTP POST request to a specific destination. Webhooks are often used to send data from one point to another, in which the webhook can pass through data about an action that has occurred and who is involved in that action.
+Webhooks are real-time notifications sent via an HTTP POST request to a specific destination. Webhooks are often used to send data from one point to another, in which the webhook can pass through data about an action that has occurred and who was involved in that action.
 
 For example, a survey platform can send a webhook to a destination of your choice whenever a survey response to an online form is received. Or, a customer service platform can send a webhook to a destination of its choice whenever a customer service ticket is created.
 {% enddetails %}
