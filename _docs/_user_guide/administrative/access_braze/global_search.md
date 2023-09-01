@@ -8,7 +8,7 @@ description: "Learn about global search in Braze."
 
 # Global search
 
-Global search is a powerful feature that helps you locate campaigns, Canvases, segments, and email templates within Braze with greater ease. Use the global search to find what you're looking for without the hassle of scrolling and navigating through menus.
+Global search is a powerful feature that helps you locate campaigns, Canvases, segments, and email templates within Braze with greater ease. Use the global search to find what you're looking for quickly and easily from anywhere in the Braze platform.
 
 {% alert important %}
 Global search is currently in early access and is under active development. Please share your thoughts, suggestions, and any issues you encounter using the feedback option at the bottom-right of the search dropdown. If you are interested in participating in the early access, please get in touch with your customer success manager.
