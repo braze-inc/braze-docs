@@ -8,7 +8,7 @@ description: "This reference article provides steps on how to create a transform
 
 # Creating a transformation
 
-> Braze Data Transformation allows you to build and manage webhook integrations to automate data flow from external platforms into Braze user profiles. This integrated user data can then power even more sophisticated marketing use cases.
+> Braze Data Transformation enables you to build and manage webhook integrations to automate data flow from external platforms into Braze user profiles. This integrated user data can then power even more sophisticated marketing use cases.
 
 ## Prerequisites 
 
