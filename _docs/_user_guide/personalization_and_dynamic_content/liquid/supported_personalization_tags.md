@@ -70,6 +70,25 @@ You can template in the following attributes for the user's most recent device a
 
 Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any Liquid that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device.
 
+## Targeted app information
+
+For in-app messages, you can use the following app attributes within Liquid. The values are based on which SDK API key your apps use to request messaging.
+
+|Tag | Description |
+|------------------|---|
+| `{{app.${api_id}}}` | The API key of the app requesting the message. For example, you use this key in conjunction with `abort_message()` Liquid to avoid sending in-app messages to certain apps, such as TV platforms or development builds that use a separate SDK API key.|
+| `{{app.${name}}}` | The name of the app (as defined in the Braze dashbaord) requesting the message|
+
+For example, this Liquid code will abort a message if the requesting apps are not one of the two API keys in the list:
+
+```liquid
+{% assign allowed_api_keys = sdk_api_key_1,sdk_api_key_2' | split: ',' %}
+{% if allowed_api_keys contains {{app.${api_id}}} %}
+User is in list of apps
+{% else %}
+{% abort_message("User not in list of apps") %}
+{% endif %}
+```
 
 ## Targeted device information
 
