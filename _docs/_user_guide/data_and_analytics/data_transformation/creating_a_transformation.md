@@ -15,14 +15,14 @@ description: "This reference article provides steps on how to create a transform
 | Requirement | Description |
 | --- | --- |
 | 2FA or SSO | You must have 2FA or SSO enabled for your account. |
-| Correct permissions | You must be either an account admin or a workspace admin, or have user permissions for **Manage Transformations**. |
+| Correct permissions | You must be either an account admin or a workspace admin, or have "Manage Transformations" user permissions. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Step 1: Identify a source platform
 
 Identify an external platform you want to connect to Braze and check that the platform supports webhooks. Sometimes, these settings are referred to as "API notifications" or "web service requests".
 
-The following is an [example Typeform webhook](https://www.typeform.com/help/a/webhooks-360029573471/), which are configurable by logging into their platform:
+The following is an example [Typeform webhook](https://www.typeform.com/help/a/webhooks-360029573471/), which is configurable by logging into their platform:
 
 ![][9]
 
@@ -34,7 +34,7 @@ Navigate to the Braze dashboard, and go to **Data Settings** > **Data Transforma
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Transformations** under **Data**.
 {% endalert %}
 
-Create and name your new transformation. This will open a detailed view, showing your most recent webhook this transformation has received, and room to write your own transformation. 
+Create and name your new transformation. This will open a detailed view, showing your most recent webhook this transformation has received, and a space to write your own transformation. 
 
 ![][11]
 
@@ -44,9 +44,9 @@ This step is optional, but we recommend sending a test webhook from your source 
 
 1. Copy the URL from your transformation.
 2. In your source platform, find a “Send Test” capability to have it generate a sample webhook to send over to this URL. 
-- If your source platform prompts for a request type, choose **POST**
-- If your source platform provides authentication options, choose **no authentication**
-- If your source platform asks for secrets, choose **no secrets**
+- If your source platform prompts for a request type, select **POST**.
+- If your source platform provides authentication options, select **No authentication**.
+- If your source platform asks for secrets, select **No secrets**.
 3. Refresh your page in Braze to see if the webhook has been received. If it was received, you should see a webhook payload under “Most recent webhook”.
 
 Here’s what it looks like for Typeform:<br>![][12]
@@ -57,7 +57,7 @@ Braze Data Dransformation may not yet support external platforms that require sp
 
 ## Step 4: Write transformation code
 
-If you have little to no experience with JavaScript code or would like more detailed instructions, follow the **Beginner** tab for writing your transformation code.
+If you have little to no experience with JavaScript code or prefer more detailed instructions, follow the **Beginner** tab for writing your transformation code.
 
 If you're a developer or have significant experience with JavaScript code, follow the **Advanced** tab for high-level instructions on writing your transformation code.
 
