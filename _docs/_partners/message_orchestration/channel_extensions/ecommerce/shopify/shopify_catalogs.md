@@ -24,6 +24,8 @@ Select what product identifier to use as the catalog ID:
 - Shopify Variant ID
 - SKU
 
+The ID and header values for the product identifier you choose can only include letters, numbers, hyphens, and underscores, or the catalog sync will raise an error.
+
 This will be the primary identifier you use to reference Braze catalog information. 
 
 {% alert note %}
