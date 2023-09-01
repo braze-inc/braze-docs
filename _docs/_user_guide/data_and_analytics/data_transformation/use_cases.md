@@ -1,12 +1,12 @@
 ---
-nav_title: Data Transformation Use Cases
+nav_title: Use Cases
 article_title: Braze Data Transformation Use Cases
 page_order: 2
 page_type: reference
 description: "This reference article provides some use cases for Braze Data Transformation."
 ---
 
-# Use cases
+# Data Transformation use cases
 
 > Consider the following possible use cases with Braze Data Transformation and a combination of webhooks from the external platforms.
 
