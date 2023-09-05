@@ -57,11 +57,11 @@ Any data the external platform makes available in a webhook can be synced to Bra
 
 While we would love for developers to use this feature as well, you don’t need to be one to use this! Marketers can also successfully set up transformations without developer resources.
 
-### Can I still use Braze Data Transformation if my external platform only gives an email address as an identifier?
+### Can I still use Braze Data Transformation if my external platform only gives an email address or phone number as an identifier?
 
-Yes. Early access users of Braze Data Transformation will also be granted early access to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address) to update a user profile by email address.
+Yes. You can have your transformations updating the `/users/track` endpoint with the [email address or phone number as an identifier]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address). Note this `/users/track` functionality is in early access. If you're interested in participating in this early access, reach out to [data-transformation@braze.com](mailto:data-transformation@braze.com).
 
-Use `email` as your identifier property in the transformation code instead of `external_id` or `braze_id`. The example [transformation code](#example-transformation-code) uses this functionality.
+This works by using `email` or `phone` as your identifier property in the transformation code instead of `external_id` or `braze_id`. The example [transformation code]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/#example-transformation-code) uses this functionality.
 
 {% alert note %}
 Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function has been deprecated.
