@@ -1,6 +1,7 @@
 ---
 nav_title: Overview
 article_title: Braze Data Transformation Overview
+alias: /data_transformation/
 page_order: 0
 page_type: reference
 description: "This reference article provides an overview of Braze Data Transformation, frequently asked questions, and product limitations."
