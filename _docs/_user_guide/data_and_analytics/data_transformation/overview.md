@@ -49,15 +49,16 @@ The rate limit for Braze Data Transformation is 1,000 incoming requests per minu
 
 ## Frequently asked questions
 
-{% details What gets synced with Braze Data Transformation? %}
+### What gets synced with Braze Data Transformation?
+
 Any data the external platform makes available in a webhook can be synced to Braze. The more an external platform sends via webhooks, the more options for choosing what gets synced.
-{% enddetails %}
 
-{% details I’m a marketer. Do I need developer resources to use Braze Data Transformation? %}
+### I’m a marketer. Do I need developer resources to use Braze Data Transformation?
+
 While we would love for developers to use this feature as well, you don’t need to be one to use this! Marketers can also successfully set up transformations without developer resources.
-{% enddetails %}
 
-{% details Can I still use Braze Data Transformation if my external platform only gives an email address as an identifier? %}
+### Can I still use Braze Data Transformation if my external platform only gives an email address as an identifier?
+
 Yes. Early access users of Braze Data Transformation will also be granted early access to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address) to update a user profile by email address.
 
 Use `email` as your identifier property in the transformation code instead of `external_id` or `braze_id`. The example [transformation code](#example-transformation-code) uses this functionality.
@@ -65,15 +66,15 @@ Use `email` as your identifier property in the transformation code instead of `e
 {% alert note %}
 Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function has been deprecated.
 {% endalert %}
-{% enddetails %}
 
-{% details Does Braze Data Transformation consume data points? %}
+### Does Braze Data Transformation consume data points?
+
 In most cases, yes. Braze Data Transformation eventually creates a `/users/track` call that writes the attributes, events, and purchases you want. These will consume data points in the same way as if the `/users/track` call was made independently. You have control over how many data points will be written based on how you write your transformation.
-{% enddetails %}
 
-{% details How can I get help setting up my use case or with my transformation code? %}
+### How can I get help setting up my use case or with my transformation code?
+
 Contact your Braze account manager for additional assistance.
-{% enddetails %}
+
 
 [1]: {% image_buster /assets/img_archive/data_transformation1.png %}
 [2]: {% image_buster /assets/img/data_transformation/data_transformation1.jpg %}
