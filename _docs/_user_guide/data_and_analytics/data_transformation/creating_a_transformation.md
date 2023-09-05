@@ -118,7 +118,7 @@ Here, you will write transformation code to define how you’d like to map vario
     ```
 
 2. If you’d like all three (custom attributes, custom events, and purchases) in your transformation calls, skip to step 3. Otherwise, delete the sections that you don't need.<br><br>
-3. Each attribute, event, and purchase object requires a user identifier, either an `external_id`, `user_alias`, email, or `braze_id`. Find the user identifier in the incoming webhook’s payload and template in that value in your transformation code via a payload line. Use dot notation to access payload object properties.<br>Template in the email address from the incoming webhook and use `email` as your identifier in the transformation code. Our example transformation code page uses this `/users/track` functionality.<br><br>
+3. Each attribute, event, and purchase object requires a user identifier, either an `external_id`, `user_alias`, `braze_id`, `email`, or `phone`. Find the user identifier in the incoming webhook's payload, and template in that value in your transformation code via a payload line. Use dot notation to access payload object properties. <br><br> Note that using `email` or `phone` as your identifier requires early access to this functionality. Reach out to us at [data-transformation@braze.com](mailto:data-transformation@braze.com) for access. The example [transformation code]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/#example-transformation-code) uses this functionality.<br><br>
 4. Find the webhook values you’d like to represent as attributes, events, or purchases, and template those values in your transformation code via a payload line. Use dot notation to access payload object properties.<br><br>
 5. For each attribute, event, and purchase object, examine the `_update_existing_only` value. Set this to `false` if you want the transformation to create a new user that may not exist. Leave this as `true` to only update existing profiles.<br><br>
 6. Click **Validate** to return a preview of your code’s output and to check if it is an acceptable `/users/track` request.<br><br>
@@ -128,7 +128,7 @@ Here, you will write transformation code to define how you’d like to map vario
 Your webhook integration is now complete!
 
 {% alert important %}
-Accepting email as an identifier is possible as Braze Data Transformation early access users will also be granted early access to this new `/users/track` feature to update a user profile by email address.<br><br>Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function is deprecated.
+Accepting an email or phone number as an identifier is possible because Braze Data Transformation users can be granted early access to the `/users/track` feature. If you're interested in participating in this early access, reach out to [data-transformation@braze.com](mailto:data-transformation@braze.com).<br><br>Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function is deprecated.
 {% endalert %}
 
 {% endtab %}
@@ -144,11 +144,16 @@ In this step, you will transform the webhook payload from the source platform to
   - Subscription group updates
   - Email address as an identifier
 
-Click **Validate** to return a preview of your code’s output and to check if it's an acceptable `/users/track` request.
+Click **Validate** to return a preview of your code's output and to check if it's an acceptable `/users/track` request.
 
 {% alert note %}
 External network requests, third-party libraries, and non-JSON webhooks are not currently supported.
 {% endalert %}
+
+{% alert important %}
+Accepting an email or phone number as an identifier is possible because Braze Data Transformation users can be granted early access to the `/users/track` feature. If you're interested in participating in this early access, reach out to [data-transformation@braze.com](mailto:data-transformation@braze.com).<br><br>Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function is deprecated.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
