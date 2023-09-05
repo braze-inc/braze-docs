@@ -37,9 +37,9 @@ guide_featured_list:
   - name: Exporting Braze Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/
     fa_icon: fas fa-file-export
-  - name: Cloud Data Ingestion
-    link: /docs/user_guide/data_and_analytics/cloud_ingestion/
-    fa_icon: fa-solid fa-cloud
+  - name: Data Transformation
+    link: /docs/user_guide/data_and_analytics/data_transformation/
+    fa_icon: fa-solid fa-database
   - name: Your Analytics Dashboard
     link: /docs/user_guide/data_and_analytics/analytics/
     fa_icon: fa-solid fa-chart-simple

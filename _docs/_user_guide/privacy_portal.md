@@ -63,6 +63,9 @@ guide_menu_list:
 - name: Innovation Statement
   link: /docs/developer_guide/disclosures/innovation_statement
   fa_icon: fa-regular fa-lightbulb
+- name: Data Privacy Framework Notice
+  link: https://www.braze.com/company/legal/data-privacy-framework-notice
+  fa_icon: fa-solid fa-book
 
 guide_menu_title2: "Security"
 guide_menu_list2:
