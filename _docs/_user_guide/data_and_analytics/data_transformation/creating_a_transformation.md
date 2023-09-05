@@ -14,7 +14,7 @@ description: "This reference article provides steps on how to create a transform
 
 | Requirement | Description |
 | --- | --- |
-| 2FA or SSO | You must have 2FA or SSO enabled for your account. |
+| Two-factor authentication or SSO | You must have [two-factor authentication]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#two-factor-authentication) (2FA) or [single sign-on]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#single-sign-on-sso-authentication) (SSO) enabled for your account. |
 | Correct permissions | You must be either an account admin or a workspace admin, or have "Manage Transformations" user permissions. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -120,14 +120,14 @@ Here, you will write transformation code to define how you’d like to map vario
 3. Each attribute, event, and purchase object requires a user identifier, either an `external_id`, `user_alias`, email, or `braze_id`. Find the user identifier in the incoming webhook’s payload and template in that value in your transformation code via a payload line. Use dot notation to access payload object properties.<br>Template in the email address from the incoming webhook and use `email` as your identifier in the transformation code. Our example transformation code page uses this `/users/track` functionality.<br><br>
 4. Find the webhook values you’d like to represent as attributes, events, or purchases, and template those values in your transformation code via a payload line. Use dot notation to access payload object properties.<br><br>
 5. For each attribute, event, and purchase object, examine the `_update_existing_only` value. Set this to `false` if you want the transformation to create a new user that may not exist. Leave this as `true` to only update existing profiles.<br><br>
-6. Click **Validate** to return a preview of your code’s output and to check if it is an acceptable `/users/track` request.
+6. Click **Validate** to return a preview of your code’s output and to check if it is an acceptable `/users/track` request.<br><br>
 7. Activate your transformation. For additional help with your code before activating it, contact your Braze account manager.<br><br>
 7. Have your source platform begin sending webhooks. Your transformation code will run for each incoming webhook, and user profiles will begin updating. 
 
 Your webhook integration is now complete!
 
 {% alert important %}
-Accepting email as an identifier is possible as Braze Data Transformation early access users will also be granted early access to this new `/users/track` feature to update a user profile by email address.<br><br>early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function is deprecated.
+Accepting email as an identifier is possible as Braze Data Transformation early access users will also be granted early access to this new `/users/track` feature to update a user profile by email address.<br><br>Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function is deprecated.
 {% endalert %}
 
 {% endtab %}
@@ -135,14 +135,15 @@ Accepting email as an identifier is possible as Braze Data Transformation early 
 
 In this step, you will transform the webhook payload from the source platform to a JavaScript object return value. This return value must adhere to Braze’s `/users/track` request body format:
 
-- Transformation code is accepted in the JavaScript programming language. Any standard JavaScript control flow, such as if/else logic is supported.
+- Transformation code is accepted in the JavaScript programming language. Any standard JavaScript control flow, such as if/else logic, is supported.
 - Transformation code accesses the webhook request body via the `payload` variable. This variable is an object populated by parsing the request body JSON.
 - Any feature supported in our `/users/track` endpoint is supported, including:
   - User attributes objects, event objects, and purchase objects
   - Nested attributes and nested custom event properties
   - Subscription group updates
   - Email address as an identifier
-- Click **Validate** to return a preview of your code’s output and to check if it's an acceptable `/users/track` request.
+
+Click **Validate** to return a preview of your code’s output and to check if it's an acceptable `/users/track` request.
 
 {% alert note %}
 External network requests, third-party libraries, and non-JSON webhooks are not currently supported.
@@ -154,11 +155,12 @@ External network requests, third-party libraries, and non-JSON webhooks are not 
 
 After activating your transformation, refer to the analytics on the **Transformations** page to monitor its performance.
 
-**Incoming Requests:** This is the number of webhooks received at this transformation’s URL. If incoming requests are 0, your source platform hasn’t sent over any webhooks, or the connection cannot be made.
-
-**Deliveries:** After receiving incoming requests, Data Transformation applies your transformation code to create a Braze `/users/track` request.
+- **Incoming Requests:** This is the number of webhooks received at this transformation’s URL. If incoming requests are 0, your source platform hasn’t sent over any webhooks, or the connection cannot be made.
+- **Deliveries:** After receiving incoming requests, Data Transformation applies your transformation code to create a Braze `/users/track` request.
 
 The number of deliveries will never be greater than the number of incoming requests. However, it is a good goal to have 100% of incoming requests leading to deliveries.
+
+### Troubleshooting
 
 - If deliveries are 0, check your transformation code to ensure there are no syntax errors and that it compiles. Then, check whether the output is a valid `/users/track` request.
 - If deliveries are less than the number of incoming requests, that indicates that at least some webhooks are delivered successfully transformed to `/users/track`. Your transformation code doesn't account for 100% of the webhooks received.
