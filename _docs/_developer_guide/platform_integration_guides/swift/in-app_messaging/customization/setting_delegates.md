@@ -149,7 +149,9 @@ inAppMessage.orientation = BRZInAppMessageRawOrientationLandscape;
 
 ## Disabling Dark Mode
 
-To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, implement the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog). The `PresentationContext` passed to the method retains the `InAppMessage` which is about to be presented. Each `InAppMessage` has a `themes` property containing a `dark` and `light` mode theme. You can effectively overwrite the `dark` theme by setting it to the message's `light` theme in the delegate method.
+To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, implement the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog). The `PresentationContext` passed to the method retains the `InAppMessage` which is about to be presented. Each `InAppMessage` has a `themes` property containing a `dark` and `light` mode theme. If you set the `themes.dark` property to `nil`, BrazeUI will automatically present the in-app message using its light theme.
+
+In-app message buttons, retained in an array as the `buttons` property of their associated content card, have their own themes separate from `InAppMessage.themes`. Preventing buttons from adopting dark mode styling requires creating a new array of buttons for each type of content card which supports buttons. You can use [`map(_:)`](https://developer.apple.com/documentation/swift/array/map(_:)-87c4d) to create a new array containing a copy of each button except with its `dark` theme set as the original button's `light` theme.
 
 {% tabs %}
 {% tab swift %}
@@ -160,16 +162,70 @@ func inAppMessage(
   prepareWith context: inout BrazeInAppMessageUI.PresentationContext
 ) {
   switch context.message {
-    case let .slideup(message):
-      context.message.slideup?.themes.dark = message.themes.light
-    case let .modal(message):
-      context.message.modal?.themes.dark = message.themes.light
-    case let .modalImage(message):
-      context.message.modalImage?.themes.dark = message.themes.light
-    case let .full(message):
-      context.message.full?.themes.dark = message.themes.light
-    case let .fullImage(message):
-      context.message.fullImage?.themes.dark = message.themes.light
+    case .slideup:
+      guard var slideup = context.message.slideup else {
+        return
+      }
+
+      slideup.themes.dark = nil
+    
+      context.message.slideup = slideup
+    case .modal:
+      guard var modal = context.message.modal else {
+        return
+      }
+
+      modal.themes.dark = nil
+    
+      modal.buttons = modal.buttons.map {
+        var newButton = $0
+        newButton.themes = .init(themes: ["light": $0.themes.light, "dark": $0.themes.light])
+        return newButton
+      }
+    
+      context.message.modal = modal
+    case .modalImage:
+      guard var modalImage = context.message.modalImage else {
+        return
+      }
+
+      modalImage.themes.dark = nil
+    
+      modalImage.buttons = modalImage.buttons.map {
+        var newButton = $0
+        newButton.themes = .init(themes: ["light": $0.themes.light, "dark": $0.themes.light])
+        return newButton
+      }
+    
+      context.message.modalImage = modalImage
+    case .full:
+      guard var full = context.message.full else {
+        return
+      }
+
+      full.themes.dark = nil
+    
+      full.buttons = full.buttons.map {
+        var newButton = $0
+        newButton.themes = .init(themes: ["light": $0.themes.light, "dark": $0.themes.light])
+        return newButton
+      }
+    
+      context.message.full = full
+    case .fullImage:
+      guard var fullImage = context.message.fullImage else {
+        return
+      }
+
+      fullImage.themes.dark = nil
+    
+      fullImage.buttons = fullImage.buttons.map {
+        var newButton = $0
+        newButton.themes = .init(themes: ["light": $0.themes.light, "dark": $0.themes.light])
+        return newButton
+      }
+    
+      context.message.fullImage = fullImage
     default:
       break
   }
@@ -183,8 +239,6 @@ The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
 
 {% endtab %}
 {% endtabs %}
-
-Now, when the user device has dark mode enabled and the `InAppMessage`'s `dark` theme is applied, the `InAppMessage` will still have all the properties of its `light` theme applied to its appearance. You can implement the delegate method to only disable dark mode on a subset of `InAppMessage` types by removing the corresponding switch statement cases.
 
 ## Hiding the status bar during display
 
