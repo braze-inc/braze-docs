@@ -116,6 +116,7 @@ Here, you will write transformation code to define how you’d like to map vario
     // After the/users/track request is assigned to brazecall, you will want to explicitly return brazecall to create an output
     return brazecall;
     ```
+
 2. If you’d like all three (custom attributes, custom events, and purchases) in your transformation calls, skip to step 3. Otherwise, delete the sections that you don't need.<br><br>
 3. Each attribute, event, and purchase object requires a user identifier, either an `external_id`, `user_alias`, email, or `braze_id`. Find the user identifier in the incoming webhook’s payload and template in that value in your transformation code via a payload line. Use dot notation to access payload object properties.<br>Template in the email address from the incoming webhook and use `email` as your identifier in the transformation code. Our example transformation code page uses this `/users/track` functionality.<br><br>
 4. Find the webhook values you’d like to represent as attributes, events, or purchases, and template those values in your transformation code via a payload line. Use dot notation to access payload object properties.<br><br>
