@@ -83,7 +83,7 @@ For in-app messages, you can use the following app attributes within Liquid. The
 For example, this Liquid code will abort a message if the requesting apps are not one of the two API keys in the list:
 
 ```liquid
-{% assign allowed_api_keys = sdk_api_key_1,sdk_api_key_2 | split: ',' %}
+{% assign allowed_api_keys = 'sdk_api_key_1,sdk_api_key_2' | split: ',' %}
 {% if allowed_api_keys contains {{app.${api_id}}} %}
 User is in list of apps
 {% else %}
