@@ -24,7 +24,7 @@ To clone your Canvas, do the following:
 ![][1]{: style="max-width:25%;"}
 
 {: start="4"}
-4. Next, enter the name for your new Canvas and click **Clone to Canvas Flow**. 
+4. Enter the name for your new Canvas and click **Clone to Canvas Flow**. 
 
 ![][2]{: style="max-width:70%;"}
 
