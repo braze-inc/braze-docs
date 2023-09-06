@@ -151,7 +151,7 @@ inAppMessage.orientation = BRZInAppMessageRawOrientationLandscape;
 
 To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, implement the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog). The `PresentationContext` passed to the method retains the `InAppMessage` which is about to be presented. Each `InAppMessage` has a `themes` property containing a `dark` and `light` mode theme. If you set the `themes.dark` property to `nil`, BrazeUI will automatically present the in-app message using its light theme.
 
-In-app message buttons, retained in an array as the `buttons` property of their associated content card, have their own themes separate from `InAppMessage.themes`. Preventing buttons from adopting dark mode styling requires creating a new array of buttons for each type of content card which supports buttons. You can use [`map(_:)`](https://developer.apple.com/documentation/swift/array/map(_:)-87c4d) to create a new array containing a copy of each button except with its `dark` theme set as the original button's `light` theme.
+In-app message buttons, retained in an array as the `buttons` property of their associated content card, have their own themes separate from `InAppMessage.themes`. Preventing buttons from adopting dark mode styling requires creating a new array of buttons for each type of content card which supports buttons. You can use [`map(_:)`](https://developer.apple.com/documentation/swift/array/map(_:)-87c4d) to create a new array containing a copy of each button except with only the original button's `light` theme and no `dark` theme.
 
 {% tabs %}
 {% tab swift %}
@@ -163,69 +163,50 @@ func inAppMessage(
 ) {
   switch context.message {
     case .slideup:
-      guard var slideup = context.message.slideup else {
-        return
-      }
-
+      guard var slideup = context.message.slideup else { return }
       slideup.themes.dark = nil
-    
       context.message.slideup = slideup
-    case .modal:
-      guard var modal = context.message.modal else {
-        return
-      }
-
-      modal.themes.dark = nil
     
+    case .modal:
+      guard var modal = context.message.modal else { return }
+      modal.themes.dark = nil
       modal.buttons = modal.buttons.map {
         var newButton = $0
-        newButton.themes = .init(themes: ["light": $0.themes.light, "dark": $0.themes.light])
+        newButton.themes = .init(themes: ["light": $0.themes.light])
         return newButton
       }
-    
       context.message.modal = modal
-    case .modalImage:
-      guard var modalImage = context.message.modalImage else {
-        return
-      }
-
-      modalImage.themes.dark = nil
     
+    case .modalImage:
+      guard var modalImage = context.message.modalImage else { return }
+      modalImage.themes.dark = nil
       modalImage.buttons = modalImage.buttons.map {
         var newButton = $0
-        newButton.themes = .init(themes: ["light": $0.themes.light, "dark": $0.themes.light])
+        newButton.themes = .init(themes: ["light": $0.themes.light])
         return newButton
       }
-    
       context.message.modalImage = modalImage
-    case .full:
-      guard var full = context.message.full else {
-        return
-      }
-
-      full.themes.dark = nil
     
+    case .full:
+      guard var full = context.message.full else { return }
+      full.themes.dark = nil
       full.buttons = full.buttons.map {
         var newButton = $0
-        newButton.themes = .init(themes: ["light": $0.themes.light, "dark": $0.themes.light])
+        newButton.themes = .init(themes: ["light": $0.themes.light])
         return newButton
       }
-    
       context.message.full = full
-    case .fullImage:
-      guard var fullImage = context.message.fullImage else {
-        return
-      }
-
-      fullImage.themes.dark = nil
     
+    case .fullImage:
+      guard var fullImage = context.message.fullImage else { return }
+      fullImage.themes.dark = nil
       fullImage.buttons = fullImage.buttons.map {
         var newButton = $0
-        newButton.themes = .init(themes: ["light": $0.themes.light, "dark": $0.themes.light])
+        newButton.themes = .init(themes: ["light": $0.themes.light])
         return newButton
       }
-    
       context.message.fullImage = fullImage
+    
     default:
       break
   }
