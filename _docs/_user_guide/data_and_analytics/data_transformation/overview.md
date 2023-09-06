@@ -18,10 +18,10 @@ Braze Data Transformation can expedite your data integration, even if you have v
 Many modern-day platforms have “webhooks,” or real-time API notifications, to send information about a new event or new data from one platform to another. Data Transformation provides:
 
 - A Braze address to receive such webhooks.
-- Capabilities to transform the webhook’s payload with JavaScript code, so you can create a valid Braze `/users/track` call. You can choose what information to use from the webhook, and how you want the data represented on Braze user profiles as user attributes, events, or purchases.
+- Capabilities to transform the webhook’s payload with JavaScript code so you can create a valid Braze `/users/track` call. You can choose what information to use from the webhook and how you want the data represented on Braze user profiles as user attributes, events, or purchases.
 - Capabilities to send the compiled `/users/track` call.
 
-The end result is a webhook integration that connects a source platform of your choice, by turning their webhooks into Braze user profile updates.
+The end result is a webhook integration that connects a source platform of your choice by turning their webhooks into Braze user profile updates.
 
 {% details More on webhooks %}
 Webhooks are real-time notifications sent via an HTTP POST request to a specific destination. Webhooks are often used to send data from one point to another, in which the webhook can pass through data about an action that has occurred and who was involved in that action.
@@ -31,12 +31,12 @@ For example, a survey platform can send a webhook to a destination of your choic
 
 ## Limitations
 
-The following table describes the usage limitations that apply for each version of Data Transformation.
+The following table describes the usage limitations of each version of Data Transformation.
 
 | Limitation Area | Free Version | Data Transformation Pro |
 |----|----|----|
 | **Active transformations** | Up to 5 per company | Up to 55 per company |
-| **Monthly incoming requests** | 300,000 incoming requests per minute | 10,300,000 incoming requests per minute |
+| **Per month** | 300,000 incoming requests per minute | 10,300,000 incoming requests per minute |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
