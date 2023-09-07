@@ -154,7 +154,7 @@ For more usage details, refer to [Storage]({{site.baseurl}}/developer_guide/plat
 
 You can use the dashboard to see the SDK version of a particular app by visiting **Settings > App Settings**. The **Live SDK Version** lists the highest Braze SDK version used by your most recent live application for at least 5% of your users.
 
-![An app named Swifty in a workspace. The Live SDK version is 6.6.0.][2]{: style="max-width:40%"} 
+![An app named Swifty in a workspace. The Live SDK version is 6.6.0.][2]{: style="max-width:80%"} 
 
 {% alert tip %}
 If you have an iOS app, you can confirm that you are using the [Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) instead of the legacy [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview) if your **Live SDK Version** is equal to or higher than 5.0.0, which was the first released version of the Swift SDK.
