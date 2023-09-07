@@ -711,11 +711,13 @@ var ticket_lookuptable = {
           'SelectDefault': 'Select a type...',
           'Label': 'My question is about... *',
           'LinksTitle': ['System Status'],
+          'ShowSubmit': true,
           'Links' : ['https://braze.statuspage.io/'],
         },
         'Other' :{
           'SelectDefault': 'Select a type...',
           'Label': 'My question is about... *',
+          'ShowSubmit': true,
           'LinksTitle': ['System Status','SDK Changelogs'],
           'Links' : ['https://braze.statuspage.io/','{{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs'],
         }
