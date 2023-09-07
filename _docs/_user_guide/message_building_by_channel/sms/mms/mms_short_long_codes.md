@@ -13,13 +13,13 @@ channel:
 
 > MMS and SMS are both tied to the Braze SMS channel. To access MMS on your account requires the purchase of SMS for those who have not yet purchased access. Existing SMS customers can access MMS after they purchase it. 
 
-MMS is currently supported for US and Canada short codes (5-6 digit numbers) and long codes (10-digit numbers), as well as US and Canada customer numbers. Sending numbers to numbers outside of the US/Canada is possible, but MMS messages will be converted into an SMS message with a link to the media asset. To read more, refer to [Short and long codes]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/).
+MMS is currently supported for US short codes (5-6 digit numbers) and US and CA long codes (10-digit numbers), as well as US and Canada customer numbers. Sending numbers to numbers outside of the US/Canada is possible, but MMS messages will be converted into an SMS message with a link to the media asset. To read more, refer to [Short and long codes]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/).
 
 ## MMS short codes
 
-All new short code applications will include MMS by default. Typically, short codes must be explicitly requested during the short code application, but now are included by default. Some users may not implement or use this functionality but will be available if needed at a later date.
+Some users may not implement or use MMS short codes, but they will be available if needed at a later date.
 
-For those users who got their short codes before Braze supported MMS, all existing US and Canada customers with US and Canada short codes are eligible to instantly enable MMS. Reach out to your customer success manager if this situation applies to you and you would like MMS enabled.
+For users who got their short codes before Braze supported MMS, all existing customers with US short codes are eligible to instantly enable MMS. Reach out to your customer success manager if this situation applies to you and you would like MMS enabled.
 
 {% alert important %}
 When enabling MMS for short codes that previously didn't have MMS enabled, the short codes might need to be re-approved in an approval process that could take weeks. It's important to account for this timing when deciding to enable MMS.
