@@ -95,19 +95,17 @@ In addition to the three default keyword categories (Opt-in, Opt-out, and Help),
 
 These custom keywords operate in an "always-on" capacity, meaning that any user subscribed to your message service can text keywords and receive a response at any point. In addition to this behavior, you also have the option to define specific keywords that can only be sent to at [certain points]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#lifecycle-specific-keywords) of your user's lifecycle. 
 
-![Keywords for a "Promotions" category. If a user texts "DEALS", "PROMOS", or "PROMOTIONS", they receive the message "Check out our specialized promos just for you at example.com/promos".][12]
+![Keywords for a "Doubleoptin" category. If a user texts "Y", they receive the message "Thank you for confirming your enrollment in Hair Cuttery SMS."][12]
 
 ### Creating a custom category
-
-![][13]{: style="float:right;max-width:40%;margin-left:10px;"}
 
 To create a custom keyword category, do the following:
 
 1. Edit the appropriate subscription group.
-2. Click **Add Custom Keyword Category**.
+2. Click **Add custom keyword**. ![][13]{: style="max-width:90%;"}
 3. Provide a keyword category name and define which keywords a user can text in to receive the reply message.
 
-Once created, this keyword category will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) against in your campaigns and Canvases.
+After this keyword category is created, it will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) against in your campaigns and Canvases.
 
 Keywords created in custom keyword categories adhere to all of the rules and validations for the creation of new keywords. 
 
@@ -119,11 +117,11 @@ This trigger supports filtering on the specific inbound message using is or is n
 
 #### Canvas
 
-![Action-based Canvas step with the trigger Send inbound SMS to subscription group "Marketing Message Service A" within keyword category "Other" where the message body matches the regular expression "caret symbol skip."][14]{: style="max-width:80%;"}
+![Action-based Canvas step with the trigger Send inbound SMS to subscription group "Messaging Service" within keyword category "Other" where the message body matches the regular expression "caret symbol skip."][14]{: style="max-width:90%;"}
 
 #### Campaign
 
-![Action-based campaign with the trigger Send inbound SMS to subscription group "Marketing Message Service A" within keyword category "Other" where the message body is "Keyword1" or is "Keyword2" or is not "Keyword A".][15]{: style="max-width:80%;"}
+![Action-based campaign with the trigger Send inbound SMS to subscription group "Marketing Message Service A" within keyword category "Other" where the message body is "Keyword1" or is "Keyword2" or is not "Keyword A".][15]{: style="max-width:90%;"}
 
 ### Dealing with unknown keywords
 
