@@ -22,7 +22,7 @@ This editing experience is best for the following use cases:
 
 ## What's different
 
-Overall, the process for creating your push message is the same. However, if you select multiple platforms or devices, your composer will be a bit different from normal.
+Overall, the process for creating your push message is the same. However, if you select multiple platforms or devices, your composer will look slightly different from usual.
 
 ![Options to select multiple platforms for a push campaign, such as Mobile, Web, and Kindle, and multiple devices, such as iOS and Android.][1]
 
