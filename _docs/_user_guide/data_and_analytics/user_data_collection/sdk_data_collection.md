@@ -7,43 +7,17 @@ description: "This reference article addresses the data that is collected by the
 
 ---
 
-# SDK data collection
+# SDK Data Collection
 
 Braze is designed to allow for flexible data collection via our SDKs and APIs. The Braze SDK can be integrated in three ways:
-- **Personalized Integration:** Integrators have the flexibility to collect data in addition to Automatically Collected Data.
-- **Automatically Collected Integration:** Integrators can benefit from automatically captured data (this includes all the Minimum Integration data) without integrating additional data.
-- **Minimum Integration:** Integrators can disable Automatically Collected Data to only receive data that is strictly necessary to enable communication with the Braze services. 
 
-## Personalized integration 
+- **Minimum Integration:** Data that is strictly necessary to enable communication with the Braze services.
+- **Optional Data Collected By Default** Integrators can benefit from automatically captured data (this includes all the Minimum Integration data) without integrating additional data.
+- **Personalized Integration:** Integrators have the flexibility to collect data in addition to Optionally Collected Data.
 
-To make the most out of the Braze platform functionality, integrators most commonly implement the Braze SDKs and log [Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes), [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#logging-custom-events) and [Purchase Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#logging-purchase-events) that are pertinent to their business on top of Automatically Collected Data (including Minimum Integration). 
+## Minimum Integration
 
-A personalized integration allows for customized communication that is relevant to the user experience. 
-
-## Automatically collected integration
-
-The following lists the automatically captured data generated and received by Braze when an integrator initializes the SDK, including properties found in the Minimum Integration table:
-
-| Attribute | Platform | Description | Why it's Collected |
-| --------- | -------- | ----------- | ------------------ |
-| Browser Name | Web | Name of the browser | Used to ensure messages are only sent to compatible browsers. It can also be used for browser-based segmentation. |
-| Time Zone | Android, iOS, Web | Device/browser time zone | Used to ensure messages are sent at the appropriate time, according to each user's local time zone. |
-| Resolution | Android, iOS, Web | Device/browser resolution | Optionally used for device-based message targeting. |
-| Language | Android, iOS, Web | Device/browser language | Used to translate messages to a user's preferred language. |
-| User Agent | Web | [User agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | Used to ensure messages are only sent to compatible devices. It can also be used within segmentation. |
-| Device Locale | Android, iOS | The default locale of the device | Used to translate messages to a user's preferred language. |
-| Device Model | Android, iOS | The specific hardware of the device | Used to ensure messages are only sent to compatible devices. It can also be used within segmentation. |
-| Device Wireless Carrier | Android, iOS | The mobile carrier | Optionally used for message targeting. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-All these fields can be disabled to allow for a Minimum Integration: 
-- Android: [device-level fields][1], [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation")
-- iOS: [device-level fields](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181 "iOS device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation")
-- Web: [device-level fields](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.deviceproperties.html "Web device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation")
-
-## Minimum integration
-
-The following lists the strictly necessary data generated and received by Braze when an integrator chooses to initialize the SDK for communication and disable automatically captured data. These elements are non-configurable and are essential in core platform functions. 
+The following lists the strictly necessary data generated and received by Braze when an integrator chooses to initialize the SDK for communication and disable all optionally collected data. These elements are non-configurable and are essential in core platform functions. 
 
 | Attribute | Platform | Description | Why it's Collected |
 | --------- | -------- | ----------- | ------------------ |
@@ -65,5 +39,34 @@ If you are interested in the Minimum Integration only, and you integrate with mP
 - **Web**: Braze integration must be done natively to allow for Minimum Integration configuration. Tag managers do not offer a way to do this through their platform. 
 
 {% endalert %} 
+
+## Optional data collected by default
+
+In addition to the Minimum Integration data, the following attributes are automatically captured by Braze when an integrator initializes the SDK. You can opt-out of collecting these attributes.
+
+| Attribute | Platform | Description | Why it's Collected |
+| --------- | -------- | ----------- | ------------------ |
+| Browser Name | Web | Name of the browser | Used to ensure messages are only sent to compatible browsers. It can also be used for browser-based segmentation. |
+| Time Zone | Android, iOS, Web | Device/browser time zone | Used to ensure messages are sent at the appropriate time, according to each user's local time zone. |
+| Resolution | Android, iOS, Web | Device/browser resolution | Optionally used for device-based message targeting. |
+| Language | Android, iOS, Web | Device/browser language | Used to translate messages to a user's preferred language. |
+| User Agent | Web | [User agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | Used to ensure messages are only sent to compatible devices. It can also be used within segmentation. |
+| Device Locale | Android, iOS | The default locale of the device | Used to translate messages to a user's preferred language. |
+| Device Model | Android, iOS | The specific hardware of the device | Used to ensure messages are only sent to compatible devices. It can also be used within segmentation. |
+| Device Wireless Carrier | Android, iOS | The mobile carrier | Optionally used for message targeting. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+All these fields can be disabled to allow for a Minimum Integration: 
+- Android: [device-level fields][1], [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation")
+- iOS: [device-level fields](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181 "iOS device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation")
+- Web: [device-level fields](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.deviceproperties.html "Web device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation")
+
+## Personalized integration 
+
+To make the most out of the Braze platform functionality, integrators most commonly implement the Braze SDKs and log [Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes), [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#logging-custom-events) and [Purchase Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#logging-purchase-events) that are pertinent to their business on top of Automatically Collected Data (including Minimum Integration). 
+
+A personalized integration allows for customized communication that is relevant to the user experience. 
+
+
 
 [1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html "Android device-level fields"
