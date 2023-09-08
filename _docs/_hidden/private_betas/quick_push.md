@@ -27,7 +27,7 @@ Overall, the process for creating your push message is the same. However, if you
 ![Options to select multiple platforms for a push campaign, such as Mobile, Web, and Kindle, and multiple devices, such as iOS and Android.][1]
 
 {% alert note %}
-After you click **Next**, you will not be able to change your selected platforms or devices.
+After clicking **Next**, you will be unable to change your selected platforms or devices.
 {% endalert %}
 
 On the **Compose** tab, you can specify one title, message, and on-click behavior for all of your chosen platforms and devices. 
