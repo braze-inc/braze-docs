@@ -42,6 +42,10 @@ The `inAppMessageClickActionType` can be set to one of the following values:
 | `ABKInAppMessageNoneClickAction` | The message will be dismissed when clicked. Note that the `uri` parameter will be ignored, and the `uri` property on the `ABKInAppMessage` will be set to nil. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert important %}
+For in-app messages containing buttons, the message `ClickAction` will also be included in the final payload if the click action is added prior to adding the button text.
+{% endalert %}
+
 ## Customizing in-app message body clicks
 
 The following [`ABKInAppMessageUIDelegate`][34] delegate method is called when an in-app message is clicked:
