@@ -17,7 +17,7 @@ search_tag: Partner
 | Requirement | Description |
 |---|---|
 | AccuWeather API Key | Contact your AccuWeather account manager for compatible API keys to use in your request URLs.<br><br>Further instructions can be found on the [AccuWeather Enterprise API][57] page. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Available AccuWeather APIs
 
@@ -42,9 +42,9 @@ The following example shows a Connected Content call displaying two different ty
 {% raw %}
 
 ```liquid
-{% connected_content http://api.accuweather.com/locations/v1/postalcodes/{{${country}}}/search?q={{custom_attribute.${Zip Code}}}&apikey={your API key} :save location_info %}
+{% connected_content http:///dataservice.accuweather.com/locations/v1/postalcodes/{{${country}}}/search?q={{custom_attribute.${Zip Code}}}&apikey={your API key} :save location_info %}
 
-{% connected_content http://api.accuweather.com/currentconditions/v1/{{location_info[0].Key}}?apikey={your API key} :save local_weather %}
+{% connected_content http://dataservice.accuweather.com/currentconditions/v1/{{location_info[0].Key}}?apikey={your API key} :save local_weather %}
 
 {% if {{local_weather[0].WeatherText}} == 'Cloudy' %}
 No sunscreen needed :)
