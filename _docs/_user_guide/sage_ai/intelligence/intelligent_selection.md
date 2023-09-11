@@ -25,7 +25,7 @@ Intelligent Selection is ideal for campaigns that are scheduled to send multiple
 ## How do I add Intelligent Selection to my campaigns?
 
 ### Campaign Intelligent Selection
-Intelligent Selection can be added to any multi-send campaign in the **Target Audiences** step of the Braze campaign wizard. Campaigns that send only once are unable to leverage this feature.
+Intelligent Selection can be added to any multi-send campaign in the **Target Audiences** step of the Braze campaign composer. Campaigns that send only once are unable to leverage this feature.
 
 ### Canvas Intelligent Selection
 When adding variants into your Canvas, click on one of the variant percentages. This allows you to edit the variant distribution and turn on Intelligent Selection.
