@@ -4,12 +4,12 @@ article_title: Targeting Users
 page_order: 4
 tool: Campaigns
 page_type: reference
-description: "This reference article covers the Targeting options found in the targeting users step of campaign creation."
+description: "This reference article covers the Targeting Options found in the Target Audiences step of campaign creation."
 ---
 
 # Targeting users
 
-> After you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Users** step. 
+> After you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Audiences** step. 
 
 ## Targeting options
 
