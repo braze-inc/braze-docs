@@ -16,7 +16,7 @@ Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for
 
 ## Automatically collected data
 
-The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as custom events or custom attributes. See our [SDK primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/) article to whitelist processes that block the default collection of certain data items (not suggested).
+The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as custom events or custom attributes. See our [SDK primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/) article to allowlist processes that block the default collection of certain data items (not suggested).
 
 #### Usage information
 - First Used App (Time)
