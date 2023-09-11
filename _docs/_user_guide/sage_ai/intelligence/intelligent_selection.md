@@ -18,7 +18,7 @@ Intelligent Selection will:
 - Repeatedly look at performance data and shift campaign traffic toward winning variants gradually.
 - Check that more users receive your best-performing variant without sacrificing statistical confidence.
 - Rule out underperforming variants and identify high-performing variants faster than a [traditional A/B test][1].
-- Allow you to test more frequently and with greater confidence that your users will see your best message. 
+- Test more frequently and with greater confidence that your users will see your best message. 
 
 Intelligent Selection is ideal for campaigns that are scheduled to send multiple times. Initial results are needed to begin adjusting your campaign; therefore, a campaign that sends only once will not benefit. For those campaigns, an [A/B test][1] would be more effective.
 
