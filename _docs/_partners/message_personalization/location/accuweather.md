@@ -68,7 +68,7 @@ A breakdown of the two Connected Content calls can be found in the following exa
 Within the first `connected_content` tag, a GET request is made to the [Locations API](https://apidev.accuweather.com/developers/locationsAPIguide). For this example, you can alternatively leverage the user's `{{${city}}}` if you do not have a zip code custom attribute.
 
 ```
-{% connected_content http://api.accuweather.com/locations/v1/postalcodes/{{${country}}}/search?q={{custom_attribute.${Zip Code}}}&apikey={your API key} :save location_info %}
+{% connected_content http://dataservice.accuweather.com/locations/v1/postalcodes/{{${country}}}/search?q={{custom_attribute.${Zip Code}}}&apikey={your API key} :save location_info %}
 ```
 {% endraw %}
 
@@ -161,7 +161,7 @@ For the second `connected_content` tag, a GET request is made to the [Current Co
 
 {% raw %}
 ```
-{% connected_content http://api.accuweather.com/currentconditions/v1/{{location_info[0].Key}}?apikey={your API key} :save local_weather %}
+{% connected_content http://dataservice.accuweather.com/currentconditions/v1/{{location_info[0].Key}}?apikey={your API key} :save local_weather %}
 ```
 
 Here is the returned JSON object:
