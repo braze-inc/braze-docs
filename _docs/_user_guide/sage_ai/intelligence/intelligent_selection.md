@@ -40,7 +40,7 @@ We do not allow the use of intelligent selection with campaigns with re-eligibil
 
 ## For how long will it run?
 
-For campaigns and Canvases, Intelligent Selection will run until it gathers enough evidence about the "true" conversion rates of the variants. "Enough" is determined by a special metric called "regret". You can think of it as similar to Confidence: when there's enough data to know which variant is best, Intelligent Selection will turn itself off. 
+For campaigns and Canvases, Intelligent Selection will run until it gathers enough evidence about the "true" conversion rates of the variants. "Enough" is determined by a special metric called "regret." You can think of it as similar to Confidence: Intelligent Selection will turn itself off when there's enough data to know which variant is best. 
 
 In most cases, Intelligent Selection will choose one of the variants as the winning variant. This variant will be given 100% of the audience for future sends.
 
