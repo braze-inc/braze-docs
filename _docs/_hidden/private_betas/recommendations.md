@@ -50,17 +50,21 @@ If you choose **Custom Event**, select your event from the list.
 
 ![][2]
 
-### Step 3: Choose the corresponding purchase ID {#product-ids}
+### Step 3: Choose the corresponding product ID {#product-ids}
 
-To create a recommendation, you need to tell Braze where to find the purchase IDs in your event. The unique values in the `id` field of the catalog must also be in the `product_id` field of the purchase events, or in the top-level fields of the `properties` of those events. 
+To create a recommendation, you need to tell Braze where to find the unique identifier in your event that matches the `id` field of the catalog. We refer to this as the **Product ID**.
 
-The **Purchase IDs** field will be pre-populated with those fields sent through the SDK to Braze. Select the one that corresponds to the product IDs.
+The **Product IDs** field will be pre-populated with a list of fields sent through the SDK to Braze. If enough data is provided, these IDs will also be ranked in order of probability to be the correct product ID. Select the one that corresponds to the product IDs.
+
+#### Requirements
+
+There are some requirements for selecting your product IDs:
+
+- Must map to the `id` field of your selected catalog.
+- **If you selected Purchase Object:** Must be the `product_id` or a top-level field of your purchase event's `properties`.
+- **If you selected Custom Event:** Must be a field of your custom event's `properties`. This field can be nested.
 
 ![][3]
-
-{% alert important %}
-The product IDs must be in a top-level field of the properties of the purchase event. No nested properties are supported at this time.
-{% endalert %}
 
 ### Step 4: Train the recommendation
 
