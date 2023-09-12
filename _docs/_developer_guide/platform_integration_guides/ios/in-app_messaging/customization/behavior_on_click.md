@@ -43,7 +43,7 @@ The `inAppMessageClickActionType` can be set to one of the following values:
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
-For in-app messages containing buttons, the message `ClickAction` will also be included in the final payload if the click action is added prior to adding the button text.
+For in-app messages containing buttons, the message `clickAction` will also be included in the final payload if the click action is added prior to adding the button text.
 {% endalert %}
 
 ## Customizing in-app message body clicks
