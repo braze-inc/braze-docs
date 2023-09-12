@@ -43,7 +43,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ### Adding test users
 
-After you create your Internal Group, you can add test users as members of that group. From your Internal Group's management page, click **Add Test User** and either add them in bulk as identified users or as anonymous users.
+After you create your Internal Group, you can add test users as members of that group. From your Internal Group's management page, click **Add Test User** and either add them as identified or anonymous users in bulk.
 
 ![Internal Group Settings when creating a new Internal Group][8]
 
@@ -54,51 +54,51 @@ After you create your Internal Group, you can add test users as members of that 
 |Bulk Add Users|Copy and paste a list of email addresses or external IDs into the provided section. You can only add users that are already known in the dashboard. For more information, refer to [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Content test groups
+### Content Test Groups
 
-Similar to sending a preview test of a message, the Content Test group saves you time and allows you to launch tests to a pre-defined list of Braze users simultaneously. This functionality is available for push, in-app message, SMS, email, and Content Cards within Braze.
+Similar to sending a preview test of a message, the Content Test Group saves you time and allows you to launch tests to a pre-defined list of Braze users simultaneously. This functionality is available for push, in-app messages, SMS, email, and Content Cards within Braze.
 
 {% alert note %}
 [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) test messages can only be sent to valid phone numbers in the database.
 {% endalert %}
 
-You can select individual Braze users or as many Internal Groups to send the message to as you want. If your message includes any Liquid or other dynamic personalization, Braze will use the attributes available for each individual user to personalize the message contents. For users who have no attributes, Braze will use the default value set.
+You can select individual Braze users or as many Internal Groups to send the message to. If your message includes any Liquid or other dynamic personalization, Braze will use the attributes available for each user to personalize the message contents. For users who have no attributes, Braze will use the default value set.
 
-Additionally, if you preview the message as a random user, custom user, or existing user, you can send that previewed version instead. Clearing the checkbox allows you to send based on each users' attributes versus the previewed version.
+Additionally, if you preview the message as a random user, custom user, or existing user, you can send that previewed version instead. Clearing the checkbox allows you to send based on each user's attributes versus the previewed version.
 
-Lastly, if you use an IP pool to send out email, you can select which IP pool you would like the email to be sent from by selecting the pool from the dropdown available.
+Lastly, if you use an IP pool to send out an email, you can select which IP pool you would like the email to be sent from by selecting the pool from the dropdown available.
 
-Only groups that are tagged as Content Test Groups will be available on the preview section of a message.
+Only groups tagged as Content Test Groups will be available in the preview section of a message.
 
 ![Test send to Content Test Groups][9]{: style="max-width:50%" }
 
-### Seed groups
+### Seed Groups
 
-Seed Groups are only meant for the email channel and allow you to send a copy of each email variant message to members of that group. Seed Groups are not available for API campaigns, although you can include Seed Groups via an API-triggered entry in campaign. This feature is typically used with partners such as Return Path or 250OK to measure deliverability metrics. It can be used to keep a record of the email content for historical and archival purposes. 
+Seed Groups are only meant for the email channel and allow you to send a copy of each email variant message to members of that group. Seed Groups are not available for API campaigns, although you can include Seed Groups via an API-triggered entry in the campaign. This feature is typically used with partners such as Return Path or 250OK to measure deliverability metrics. It can be used to keep a record of the email content for historical and archival purposes. 
 
-Once you have created an Internal Group and tagged it to be used as a Seed Group, you can select it from the **Target Users** step of the campaign composer, or on the **Send Settings** step in a Canvas. Seed emails will have the identifier `[SEED]`, appended to the start of the email subject line. Note that Seed emails sent don't increment sends in dashboard analytics, and they don't update a user profile's **Campaign Received** list.
+Once you have created an Internal Group and tagged it to be used as a Seed Group, you can select it from the **Target Users** step of the campaign composer or on the **Send Settings** step in a Canvas. Seed emails will have the identifier `[SEED]` appended to the start of the email subject line. Note that Seed emails sent don't increment sends in dashboard analytics, and they don't update a user profile's **Campaign Received** list.
 
 {% alert tip %}
-If your Seed Group members report not seeing the message in their inbox, ensure that they are listed in the Internal Group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their SPAM folders.
+If your Seed Group members report not seeing the message in their inbox, ensure they are listed in the Internal Group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their SPAM folders.
 {% endalert %}
 
 #### For campaigns
 
 Seed Groups can be edited from the **Targeting** page when composing an email campaign.
 
-Seed Groups send to each email variant once and are delivered the first time your user receives that particular variant. For scheduled messages this typically is the first time the campaign launches. For action-based or API-triggered campaigns, this will be the time the first user is sent a message.
+Seed Groups send to each email variant once and are delivered the first time your user receives that particular variant. For scheduled messages, this typically is the first time the campaign launches. For action-based or API-triggered campaigns, this will be the time the first user is sent a message.
 
-If your campaign is multivariate and your variant has a 0% send percentage, it will not be sent to seed groups. Additionally, if the variant has already been sent and has not been updated to resend in **Edit Seed Groups** on the **Target** step, it will not send again by default.
+If your campaign is multivariate and your variant has a 0% send percentage, it will not be sent to seed groups. Additionally, if the variant has already been sent and has not been updated to resend in **Edit Seed Groups** on the **Target** step, it will not be sent again by default.
 
 {% alert note %}
-If there is a recurring campaign and an update is conducted on any one of the variants, you have the option of re-sending to only the updated variants, all variants, or to turn off seed group sending upon update.
+If there is a recurring campaign and an update is conducted on any one of the variants, you have the option of re-sending to only the updated variants, all variants, or turning off Seed Group sending upon update.
 {% endalert %}
 
 ![Seed groups preview for a campaign][11]
 
 #### For Canvas
 
-Seed groups in Canvas work in a similar fashion to that of any triggered campaign. Braze automatically detects all steps that contain an email message and will send to these when your user first reaches that particular email step.
+Seed groups in Canvas work similarly to that of any triggered campaign. Braze automatically detects all steps that contain an email message and will send to these when your user first reaches that particular email step.
 
 If an email step was updated after the Seed Group was mailed, the option to only send to updated steps, all steps, or turn off seeds will be presented.
 

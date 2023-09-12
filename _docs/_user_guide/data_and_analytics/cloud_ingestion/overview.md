@@ -79,6 +79,10 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
 
 Each attribute sent for a user will consume one data point. It's up to you to only send the required data. Data point tracking for Cloud Data Ingestion is equivalent to tracking through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
 
+{% alert important %}
+Braze Cloud Data Ingestion counts towards the available rate limit, so if you're sending data using another method, the rate limit is combined between the Braze API and Cloud Data Ingestion.
+{% endalert %}
+
 ## Data setup recommendations
 
 #### Only write new or updated attributes to minimize consumption

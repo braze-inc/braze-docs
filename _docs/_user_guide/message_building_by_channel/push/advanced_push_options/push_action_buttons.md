@@ -13,45 +13,47 @@ channel:
 
 ![An iOS push notification with two push action buttons: Accept and Decline.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-> Push action buttons enable you to set content and actions for buttons when utilizing Braze's iOS and Android push notifications. With action buttons, your users can interact directly with your app from a notification without needing to click into an app experience to take action.
+> Push action buttons allow you to set content and actions for buttons when using Braze's iOS and Android push notifications. With action buttons, your users can interact directly with your app from a notification without needing to click into an app experience.
 
-## How to use action buttons
+## Creating action buttons
 
 Each interactive button can link to a webpage or a deep link or open the app. You can specify your push action buttons in the **On Click Behavior** section of the push message composer in the dashboard.
 
-### iOS push action buttons {#ios}
+### Creating iOS push action buttons {#ios}
 
-To use action buttons in your iOS push messages, create a [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and enable action buttons in the **Compose** tab.
+To use action buttons in your iOS push messages, do the following:
 
-Then select your **Notification Category**. You can select from the following available button combinations:
-
-- Accept / Decline
-- Yes / No
-- Confirm / Cancel
-- More
-- Pre-registered Custom Category
+1. Create a [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and enable action buttons in the **Compose** tab.
+2. Select your **iOS Notification Category** from the following available button combinations:
+ - Accept / Decline
+ - Yes / No
+ - Confirm / Cancel
+ - More
+ - Pre-registered custom iOS Category
 
 ![iOS Notification Category dropdown menu.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
->  Due to iOS's handling of buttons, you will need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/). In particular, you will need to either configure iOS Categories or will need to select from certain default button options. For Android integrations, these buttons will work automatically.
+{% alert note %}
+Due to iOS's handling of buttons, you need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/). In particular, you need to either configure iOS Categories or select from certain default button options. For Android integrations, these buttons will work automatically.
+{% endalert %}
 
-### Android push action buttons {#android}
+### Creating Android push action buttons {#android}
 
-To use action buttons in your Android push messages, create a [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and enable notification buttons in the **Compose** tab.
+To use action buttons in your Android push messages, do the following:
 
-Then click <i class="fas fa-plus-circle"></i> **Add Button** and specify your button text and **On-Click Behavior**. You can select from the following available actions:
-
-- Open App
-- Redirect to Web URL
-- [Deep Link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) into Application
+1. Create a [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and enable notification buttons in the **Compose** tab.
+2. Click <i class="fas fa-plus-circle"></i> **Add Button** and specify your button text and **On-Click Behavior**. You can select from the following available actions:
+  - Open App
+  - Redirect to Web URL
+  - [Deep Link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) Into Application
 
 ![]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
 
 You can add up to three buttons in your push.
 
-#### Character limits
+#### Android character limits
 
-Unlike iOS buttons, which are stacked, Android buttons are displayed side-by-side in a row. This means that the more buttons you add (up to three), the less space you have for your button copy. 
+Unlike iOS buttons, which are stacked, Android buttons are displayed side-by-side in a row. This means that the more buttons you add (up to three), the less space you have for button copy. 
 
 ![Android push action buttons with truncated text.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%" }
 
