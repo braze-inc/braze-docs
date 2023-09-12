@@ -118,13 +118,15 @@ This use case shows how to send messages during the holiday period while avoidin
 {% raw %}
 ```liquid
 {% assign today = 'now' | date: '%Y-%m-%d' %}
-{% if today == "2021-12-24" or today == "2021-12-25" or today == "2021-12-26" %}
+{% if today == "2023-12-24" or today == "2023-12-25" or today == "2023-12-26" %}
 {% abort_message %}
+{% else %}
+Message if today isn't one of the provided holidays.
 {% endif %}
 ```
 {% endraw %}
 
-**Explanation:** Here we assign the term `today` to the reserved variable `now` (the current date and time), using the filters `%Y` (year, i.e., "2021"), `%m` (month, i.e., "12"), and `%d` (day, i.e., "25") to format the date. We then run our conditional statement to say that if the variable `today` matches the holiday days of your choice, then the message will be aborted. 
+**Explanation:** Here we assign the term `today` to the reserved variable `now` (the current date and time), using the filters `%Y` (year, i.e., "2023"), `%m` (month, i.e., "12"), and `%d` (day, i.e., "25") to format the date. We then run our conditional statement to say that if the variable `today` matches the holiday days of your choice, then the message will be aborted. 
 
 The example provided uses Christmas Eve, Christmas Day, and Boxing Day (the day after Christmas).
 
@@ -236,11 +238,11 @@ Countdowns
 
 ### Add x days to today's date {#countdown-add-x-days}
 
-This use case adds a specific number of days to the current date to reference and add in messages. For example, you may want to send a mid-week message that shows events in the area for the weekend, like "Here are the movies we're showing in 3 days!"
+This use case adds a specific number of days to the current date to reference and add in messages. For example, you may want to send a mid-week message that shows events in the area for the weekend.
 
 {% raw %}
 ```liquid
-{{ "now" | date:'%s' | plus:259200 | date:"%F" }}
+Here are the movies we're showing on {{ "now" | date:'%s' | plus:259200 | date:"%F" }}!
 ```
 {% endraw %}
 
@@ -256,7 +258,7 @@ This use case calculates the difference in days between a specific date and the 
 
 {% raw %}
 ```liquid
-{% assign event_date = '2020-08-19' | date: "%s" %}
+{% assign event_date = '2023-12-31' | date: "%s" %}
 {% assign today = 'now' | date: "%s" %}
 {% assign difference = event_date | minus: today %}
 {% assign difference_days = difference | divided_by: 86400 %}
@@ -360,12 +362,11 @@ This use case calculates the difference between the current date and future even
 
 {% raw %}
 ```liquid
-{% assign event_date = '2019-02-19' | date: "%s" %}
+{% assign event_date = '2024-01-15' | date: "%s" %}
 {% assign today = 'now' | date: "%s" %}
 {% assign difference = event_date | minus: today %}
 {% assign difference_days = difference | divided_by: 86400 %}
-There are {{difference_days}} until your birthday!
-{% endif %}
+There are {{difference_days}} days until your birthday!
 ```
 {% endraw %}
 
