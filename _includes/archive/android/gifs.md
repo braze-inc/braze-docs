@@ -1,5 +1,5 @@
 {% if include.channel=="in-app messages" %}
-Braze supports displaying animated GIFs and SVG images by default for HTML in-app messages. A custom image library is not required, but it is supported.
+Braze supports displaying animated GIFs and SVG images by default for HTML in-app messages. For all other in-app messages, a custom image library is required.
 {% else %}
 Braze requires an external image library to display animated GIFs with {{ include.channel }}.
 {% endif %}
