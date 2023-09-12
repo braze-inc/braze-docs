@@ -35,7 +35,7 @@ All in-app messages implement the [`IInAppMessage`][3] interface, which defines 
 In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageImmersive`][8], which adds click action and analytics enabled [buttons][50], as well as header text and a close button.
 
 {% alert important %}
-For in-app messages containing buttons, the message `click_action` will also be included in the final payload if the click action is added prior to adding the button text.
+For in-app messages containing buttons, the message `clickAction` will also be included in the final payload if the click action is added prior to adding the button text.
 {% endalert %}
 
 [`InAppMessageImmersiveBase`][28] is an abstract class that implements `IInAppMessageImmersive` and provides the foundational `immersive` in-app message implementation. `Modal` in-app messages are a subclass of `InAppMessageImmersiveBase`.
