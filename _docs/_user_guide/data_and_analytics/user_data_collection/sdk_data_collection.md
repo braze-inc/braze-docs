@@ -19,7 +19,7 @@ Braze is designed to allow for flexible data collection. The Braze SDK can be in
 
 ## Minimum integration
 
-The following lists the strictly-necessary data generated and received by Braze when an integrator chooses to initialize the SDK. These elements are non-configurable and are essential in core platform functions. 
+The following lists the strictly-necessary data generated and received by Braze when an integrator chooses to initialize the SDK. These elements are non-configurable and are essential in core platform functions. With the exception of session start and end, all other automatically tracked data does not count toward your data point allotment.
 
 | Attribute | Platform | Description | Why it's Collected |
 | --------- | -------- | ----------- | ------------------ |
