@@ -14,7 +14,7 @@ tool: Canvas
 
 To add exit criteria, click the dropdown to select your exception event, then click **Add Trigger**. 
 
-By adding [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events) directly to your Canvas entry rules, you can exit users as soon as the event happens at the end of the step. This helps achieve a more targeted approach to Canvas messaging with your audience. You can also include segments and filters in the exit criteria, meaning users who match the segment or filter will exit the Canvas and will not receive any further messaging. 
+By adding [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events) directly to your Canvas entry rules, you can exit users as soon as the event happens at the end of the step. This helps achieve a more targeted approach to Canvas messaging with your audience. You can also include segments and filters in the exit criteria, meaning users who match the segment or filter will exit the Canvas and will not receive any further messaging.
 
 To target users who haven't made any purchases yet, click the dropdown to select **Make Purchase** as the exception event. Next, click **Add Trigger**. When your Canvas launches, your audience now excludes users who have made any purchases with the following Exit Criteria settings. In the following example, this exit criteria is also applied to the "Used in last day" segment for any user who has made exactly one purchase.
 
