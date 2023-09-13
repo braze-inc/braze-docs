@@ -5,6 +5,7 @@ $(document).ready(function () {
   var exclusion_list = [
     "parent_nav_top_platformintegrationguides_sdkprimer",
     "parent_nav_top_platformintegrationguides_sdkchangelogs",
+    "TV and OTT Integrations",
   ];
 
   var url_selected = (location.pathname.split("/")[4] || "").replace(/_/g, "");
