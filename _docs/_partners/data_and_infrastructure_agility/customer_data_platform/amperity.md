@@ -17,150 +17,200 @@ page_order: 2
 
 The Braze and Amperity integration offers a unified view of your customers across the two platforms. This integration allows you to:
 - **Sync Amperity users**: Sync user lists to map Amperity user data to Braze user accounts.
+- **Receive lists of active customers**: Build segments that can send lists of active customers and their associated custom attributes to Braze.
+- **Manage data updates**: Control the frequency of sending updates for custom attributes to Braze.
 - **Unify data**: Unify data across various Amperity-supported platforms and Braze.
-- **Send Amperity data via AWS S3 buckets to Braze**: Use a serverless Lambda function to upload Amperity user lists to your AWS S3 bucket that will post user attribute data to Braze.
-- **Manually upload Amperity data to Braze**: Manually upload user CSV lists to the Braze platform through the dashboard.
+- **Sync Braze data to Amazon S3**: Use Braze Currents to integrate engagement data from Braze campaigns, allowing you to sync data to Amazon S3 in Apache Avro format.
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
 | Amperity account | An [Amperity account](https://amperity.com/request-a-demo) is required to take advantage of this partnership. |
+| Braze REST API key | A Braze REST API key with `users.track`, `users.export.segment`, and `segments.list` permissions. <br> This can be created within the Braze Dashboard by navigating to **Developer Console** > **Rest API Key** > **Create New API Key**. |
+| Braze instance | Your Braze instance can be obtained from your Braze onboarding manager, or be found on the [API overview page]({{site.baseurl}}/api/basics#endpoints). |
+| Braze REST endpoint | Your Braze endpoint URL. Your endpoint will depend on your Braze instance. |
+| (Optional) Currents connector | The S3 Currents connector. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+## Data mapping
+
+Both standard and custom attributes can be sent from Amperity to Braze, allowing you to enrich customer profiles in Braze with data from various sources through Amperity. The specific attributes you can send will depend on the data in your Amperity system and the attributes that you've set up in Braze.
+
+Read below to learn about these attributes.
+
+### Standard attributes 
+
+[Profile attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields) describe who your customers are. They are often associated with the identity of the customer, such as:
+Names
+Birthdates
+Email addresses
+Phone numbers
+
+### Custom attributes 
+
+[Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) in Braze are fields that are determined by your brand. If you want Amperity to manage custom attributes that already exist in Braze, align the output that is sent from Amperity with the names already in your Braze workspace. This can include the following:
+- Purchase histories
+- Loyalty status
+- Value tiers
+- Recent engagement data
+
+Verify the names of custom attributes that will be sent to Braze from Amperity. Amperity will add a custom attribute whenever there isn’t a matching name.
+
+Custom attributes will be updated only for those users that have a matching `external_id` or `braze_id` within Braze.
+
+### Amperity Audiences
+
+Audiences synced from Amperity to Braze will be logged to user profiles as custom attributes. These can then be used to target those users in Braze.
+
+![Dropdown list of filters with Custom Attributes displaying in the Custom Data category.][1]{: style="max-width:60%;"}
+
+![Dropdown list of custom attributes such as "l12m_frequency" and "l12m_monetary".][2]{: style="max-width:40%;"}
+
+### Data types
+
+Supported data types include:
+- Boolean
+- Date
+- Datetime
+- Decimal
+- Float
+- Integer
+- String
+- Varchar
+
+The data type used depends on the nature of the attribute. For example, an email address would be a string, while a customer's age might be an integer.
+
+### Duplication of attributes
+
+Avoid sending custom attributes that duplicate default user profile fields. For example, birthdates should be sent to Braze as a user profile field named "dob" to match Braze’s standard attribute. If they are sent as "birthday", "Birthdate", or any other string, a custom attribute will be created, and the values in the "dob" field will not be updated.
+
+### Data points
+
+By default, all attributes included in the audience or orchestration will be exported to Braze on each sync. Update custom attributes only for customers with whom your brand is currently engaged and only as often as needed for your messaging use cases. 
 
 ## Integration
 
-### Step 1: Create an Amperity user list
+### Step 1: Capture your configuration details
 
-To upload Amperity user data to Braze, you must configure a destination that enables sending query results to Braze, create a query that returns a list of users, and send the results of that query to Braze using orchestration.
+#### Capture configuration details for Braze
 
-1. Add a [Braze destination](https://docs.amperity.com/datagrid/destination_braze.html) for your tenant.
-2. Navigate to the **Queries** tab within the Amperity dashboard. 
-3. Click **Create**, and then **Select SQL Query** to define the SQL query that returns a list of users. For example:
-``` sql
-SELECT
- amperity_id
- ,external_id AS external_id
- ,email AS email
- ,given_name AS first_name
- ,surname AS last_name
- -- add more attributes, as desired
-FROM Merged_Customers
-```
-4. Click **Run** to validate your query. When finished, click **Activate**. <br>![A summary of an Amperity query that has successfully created a list of users to be sent to Braze.][9] <br><br>
-5. Add this query to an orchestration that is configured to [send a list of users to Braze](https://docs.amperity.com/amp360/sendto_braze.html).<br>![A summary of activating your Braze query, and then adding it to an orchestration that is configured for Braze.][10]
+1. Create a segment in Braze for users whose attributes are managed by Amperity. We recommend you create a segment of “All Users” so Amperity can update attributes for all new and existing users in Braze.
+2. Create a Braze REST API key for your Braze workspace with the following permissions under User Data:
+- `users.track`: This endpoint syncs the Amperity Audience to Braze as a custom attribute.
+- `users.export.segment`: This endpoint triggers a download of the specified segment into the S3 bucket that Amperity can access. This export is used to determine:
+  - What new Braze users should be added to the Amperity Audience.
+  - What users are currently in the Amperity Audience and should remain.
+  - What users are currently in the Amperity Audience and should be removed.
+`segments.list`: This endpoint exports a list of all segments in your Braze workspace. The “Segment Name” you input when setting up the Braze Destination settings within Amperity’s dashboard will be checked against this list.
+3. Determine the [REST API endpoint]({{site.baseurl}}/api/basics#endpoints) for your Braze instance. For example, if your Braze URL is `https://dashboard-03.braze.com`, your REST API endpoint is `https://rest.iad-03.braze.com` and your instance is “US-03”.
+4. Determine a list of [user profile fields]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields) and [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) that may be sent to Braze from Amperity.
 
-### Step 2: Select upload method
+#### Capture configuration details for Amperity
+Amperity requires access to an Amazon S3 bucket, which is used to synchronize attribute updates that are sent from Amperity to Braze. Only the following fields will be exported:
+- `custom_attributes`
+- `email`
+- `braze_id`
+- `external_id`
 
-Once the query has run, you can either:
-- [Set up automatic upload](#automatic-upload) - **recommended**
-  - Set up a destination workflow to automatically upload Amperity user attribute data to Braze via an AWS S3 Bucket.
-- [Set up manual upload](#manual-upload)
-  - Manually upload user CSV lists to the Braze platform through the dashboard. 
-
-### Automatic upload via AWS S3 bucket {#automatic-upload}
-
-#### Prerequisites
-
-| Requirement | Description |
-| ----------- | ----------- |
-| AWS account | An AWS account is required to use the S3 and Lambda services. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
-| CSV file | Check out the [CSV formatting specifications](#csv), and use step 1 of the Amperity integration to obtain a CSV with user external IDs and attributes to update. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-#### Step 4a: Send data via AWS S3 bucket
-
-##### Lambda function 
-
-The following [Lambda function](https://github.com/braze-inc/growth-shares-lambda-user-csv-import) is a serverless application that allows you to easily post user attribute data from an Amperity CSV file directly to Braze through the Braze `users/track/` endpoint. This process launches immediately upon uploading a CSV file to a configured AWS S3 bucket. To read more, visit our [dedicated Lambda function article]({{site.baseurl}}/user_csv_lambda/).
-
-The Lambda function can handle large files and uploads, but the function will stop execution after 10 minutes due to Lambda's time limits. This process will then launch another Lambda instance to finish processing the remaining part of the file.
-
-##### CSV formatting and processing {#csv}
-
-###### CSV user attributes
-
-User attributes to be updated must be in the following `.csv` format:
-
-```
-external_id,attr_1,...,attr_n
-userID,value_1,...,value_n
-```
-
-The first column must specify the external ID of the user to be updated, and the following columns must specify attribute names and values. The number of attributes you specify can vary. If the CSV file to be processed does not follow this format, the function will fail.  
-
-CSV file example:
-
-```
-external_id,Loyalty Points,Last Brand Purchased
-abc123,1982,Solomon
-def456,578,Hunter-Hayes
-```
-
-###### CSV processing
-
-Any values in an array (ex. `"['Value1', 'Value2']"`) will be automatically destructured and sent to the API in an array rather than a string representation of an array.
-
-##### Usage instructions
-
-1. Deploy Braze's publicly available CSV processing Lambda from the AWS Serverless Application Repository.
-2. Drop a CSV file with user attributes in the newly created S3 bucket.
-3. The users will be automatically imported to Braze.
-
-###### Deploy
-
-To start processing your user attribute CSV files, we need to deploy the serverless application to handle the processing for you. This application will create the following resources automatically to deploy successfully:
-- Lambda function
-- S3 Bucket for your CSV files that the Lambda process can read from. This Lambda function will only receive notifications for CSV extension files.
-- Role allowing for the creation of the S3 Bucket
-- Policy to allow Lambda to receive S3 upload event in the new bucket
-
-Follow the direct link to the [application](https://console.aws.amazon.com/lambda/home?region=us-east-1#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:585170621372:applications/braze-user-attribute-import) or open the [AWS Serverless Application Repository](https://serverlessrepo.aws.amazon.com/applications) and search for **braze-user-attribute-import**. You must check the **Show apps that create custom IAM roles and resource policies** checkbox to see this application. The application creates a policy for the Lambda to read from the newly created S3 bucket.
-
-Click **Deploy** and let AWS create all the necessary resources.
-
-You can watch the deployment and verify that the stack (i.e., all the required resources) is being created in the [CloudFormation](https://console.aws.amazon.com/cloudformation/). Find the stack named **serverlessrepo-braze-user-attribute-import**. After the **Status** turns to `CREATE_COMPLETE`, the function is ready to use. You can click on the stack, open **Resources**, and watch the different resources being created.
-
-The following resources are created:
-
-- [S3 bucket](https://s3.console.aws.amazon.com/s3/) - a bucket named `braze-user-csv-import-aaa123` where `aaa123` is a randomly generated string
-- [Lambda function](https://console.aws.amazon.com/lambda/) - a Lambda function named `braze-user-attribute-import`
-- [IAM role](https://console.aws.amazon.com/iam/) - policy named `braze-user-csv-import-BrazeUserCSVImportRole` to allow Lambda to read from S3 and to log function output
-
-###### Run
-
-To run the function, drop a user attribute CSV file in the newly created S3 bucket.
+The S3 bucket requires the following configuration settings:
+- An AWS Identity and Access Management (IAM) access key and secret key
 
 {% alert important %}
-To read more about different aspects of the Lambda function, such as monitoring and logging, updating an existing function, fatal errors, and more, visit our [dedicated Lambda function article]({{site.baseurl}}/user_csv_lambda/). 
+This connector uses the Amperity Amazon S3 connector as part of the Braze configuration. The Amazon S3 connector allows the use of a Role ARN; however, the Braze connector does not. Leave the **IAM Role ARN** setting empty.
 {% endalert %}
 
-### Manual upload via CSV {#manual-upload}
+- The name of the Amazon S3 bucket
+- The name of the folder in the Amazon S3 bucket into which Amperity exports the data
 
-#### Step 3b: Create Amperity CSV
+### Step 2: Set up Braze as a destination—DataGrid Operator
 
-1. After you've run and activated your query, you can download a CSV file of your query by clicking **Download**. This is the file you will upload to Braze.<br>![A summary of an Amperity query that has successfully created a list of users to be sent to Braze.][9] 
+#### Step 2a: Build the customer profiles table
 
-#### Step 4b: Import CSV
+Create a new table named "Braze Customer Attributes" within your Customer 360 database in Amperity. This table should contain all the attributes from Braze that your brand wants to manage from Amperity, including both default user profile fields required by Braze and any custom attributes. Use SQL to define the structure of this table as shown in [the Amperity documentation](https://docs.amperity.com/datagrid/destination_braze.html#customer-profiles-table).
 
-1. From the Braze platform, go to **Audience** > **Import Users**.
+#### Step 2b: Name, validate, and save the table
+
+Name the table "Braze Customer Attributes" and save it. Verify that the table is accessible to the **Segment Editor** and the **Edit Attributes** editor within campaigns.
+
+#### Step 2c: Add Braze as a destination
+
+In the Amperity platform, navigate to the **Destinations** tab. Look for the option to add a new destination. From the available options, select **Braze**.
+
+#### Step 2d: Configure destination details
+
+Under **Braze settings**, provide the Braze credentials and destination settings, as shown in [the Amperity documentation](https://docs.amperity.com/datagrid/destination_braze.html#add-destination). Input the configuration details collected in the last step and define the Braze identifier. Available identifiers to match are:
+- `braze_id`: An automatically assigned Braze identifier that is unchangeable and associated with a particular user when they are created in Braze.
+- `external_id`: A customer-assigned identifier, typically a UUID. 
+
+#### Step 2e: Add a data template
+
+In the **Destinations** tab, open the menu for the Braze destination and select **Add data template**. Enter a name and description for the template (e.g., "Braze" and "Send custom attributes to Braze"), verify business user access, and check all configuration settings. 
+
+If any required settings weren’t configured as part of the destination, configure them as part of the data template. Save the data template.
+
+#### Step 2f: Save the configuration 
+
+After you fill in the necessary details, save the configuration. Now that Braze is configured as a destination, Amp360 and AmpIQ users can sync data to Braze.
+
+### Step 3: Sync data to Braze
+
+Make sure Braze is enabled for your Amperity tenant. If it isn’t, contact your DataGrid Operator or Amperity representative for assistance.
+
+Then, follow the syncing instructions for Amp360 or AmpIQ as applicable to your company.
+
+#### Syncing option 1: Send query results to Braze via Amp360
+
+Amp360 users can use SQL to write free-form queries, and then configure a schedule that sends the results to Braze.
+
+##### Step 1: Create a query in Amperity
+
+Navigate to the query function in Amperity and construct a SQL query that will yield the desired set of customer data. The results should include the specific attributes you want to send to Braze. See this example Amperity query for returning a list of users with their purchase histories.
+
+##### Step 2: Add a new orchestration in Amperity
+
+1. Go to the **Orchestration** section and click the option to add a new orchestration. 
+2. Specify what the orchestration should do. This usually involves specifying the SQL query that should be executed and where the results should be sent. In this case, select the SQL query you created to generate the list of active customers and specify Braze as the destination for the results.
+3. Define when and how often the orchestration should run. For example, you might run the orchestration daily at a specific time.
+4. Save the orchestration after configuring it to your liking. It will be added to your list of orchestrations in Amperity.
+5. Test the orchestration to make sure it works as expected. You can do this by manually triggering the orchestration and checking the results in Braze.
+
+##### Step 3: Run the orchestration 
+
+Run the orchestration to execute the query and send the results to Braze. This can be done manually or on the schedule you set up in the orchestration settings.
+
+#### Syncing option 2: Send audiences to Braze via AmpIQ
+
+AmpIQ users can create segments in Amperity via a non-SQL interface and sync these to downstream destinations such as Braze. Users can select destinations and then configure a list of attributes to be sent to each destination.
+
+##### Step 1: Create a segment in Amperity 
+
+Create a segment in Amperity that returns a list of customers. This segment should be associated with the custom attributes you want to update in Braze.
+
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Users** > **User Import**.
+Check out Amperity’s documentation for examples of different segment types you might want to send to Braze.
 {% endalert %}
 
-{:start="2"}
-2. Upload the CSV file downloaded from Amperity.
-3. After the file is uploaded, confirm the default and custom attributes, assign an import name, and optionally create a group within the Braze platform from the uploaded Amperity query. 
-4. Click **Start Import**.
+##### Step 2: Build a campaign in Amperity
+
+1. Go to the **Campaign** section and click the option to create a new campaign.
+2. Give your campaign a descriptive and unique name that will help you identify it later, especially if you have multiple campaigns.
+3. Select the segment of customers that you want to target with this campaign. This should be the segment you created earlier.
+4. Choose the data you want to send as part of the campaign. This can include a range of customer attributes.
+5. Select **Braze** as the destination where the campaign data will be sent.
+6. Choose when and how often you want the campaign to run. This can be a one-time event or a recurring schedule.
+7. Save your campaign, and run a test to make sure it works as expected.
+
+##### Step 3: Run the Campaign
+
+Run the campaign to send the segment to Braze. This can be done manually or based on the schedule you set up in the campaign settings.
 
 
-[2]: {% image_buster /assets/img/amperity/amperity2.png %} 
-[3]: {% image_buster /assets/img/amperity/amperity3.png %} 
-[4]: {% image_buster /assets/img/amperity/amperity4.png %} 
-[5]: {% image_buster /assets/img/amperity/amperity5.png %} 
-[7]: {% image_buster /assets/img/amperity/activate2.png %} 
-[8]: {% image_buster /assets/img/amperity/destinationconfiguration.png %} 
-[9]: {% image_buster /assets/img/amperity/amperity6.png %} 
-[10]: {% image_buster /assets/img/amperity/amperity7.png %} 
+### Using Amperity with Braze Currents
+To send Braze Currents data into Amperity:
+[Set up a Braze Current]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/) to send data to an Amazon S3 bucket.
+Configure Amperity to [read Apache Avro files from that Amazon S3 bucket](https://docs.amperity.com/datagrid/source_amazon_s3.html).
+Configure feeds and automate data loads using standard workflows.
+
+[1]: {% image_buster /assets/img/amperity/custom_attributes_filters.png %}
+[2]: {% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}
