@@ -5,7 +5,6 @@ $(document).ready(function () {
   var exclusion_list = [
     "parent_nav_top_platformintegrationguides_sdkprimer",
     "parent_nav_top_platformintegrationguides_sdkchangelogs",
-    "TV and OTT Integrations",
   ];
 
   var url_selected = (location.pathname.split("/")[4] || "").replace(/_/g, "");
@@ -43,7 +42,7 @@ $(document).ready(function () {
   });
 
   // if no platform is selected, or in the discolure menu, show all platforms
-  if ( !dev_selected && !url_selected || (location.pathname.indexOf('disclosures') > -1) ||(location.pathname.indexOf('customization_guides') > -1) || (location.pathname.indexOf('platform_wide') > -1) ) {
+  if ( !dev_selected && !url_selected || (location.pathname.indexOf('disclosures') > -1) ||(location.pathname.indexOf('customization_guides') > -1) ||(location.pathname.indexOf('tv_and_ott') > -1) || (location.pathname.indexOf('platform_wide') > -1) ) {
     platform_objects.each(function (nav_index,nav_item) {
       // var id = $(this).attr('id');
       var cur_nav = $(nav_item);
