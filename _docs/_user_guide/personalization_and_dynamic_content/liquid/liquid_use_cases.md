@@ -1079,6 +1079,7 @@ This use case checks if a custom attribute array contains a specific string, and
 ```liquid
 {% if custom_attribute.${PartnershipProgramsNotLinked} contains 'Hertz' %}
 Link your Hertz account to use Hertz Fast Lane.
+{% endif %}
 ```
 {% endraw %}
 
