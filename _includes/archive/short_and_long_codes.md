@@ -49,8 +49,8 @@ Short and long codes are the phone number from which you send messages to your u
   </tr>
   <tr>
     <td class="leftHeader">Throughput</td>
-    <td class="tg-0pky">100 messages per second</td>
-    <td class="tg-0pky">1 message per second (US)<br>10 messages per second (International)</td>
+    <td class="tg-0pky">100 messages per second or more</td>
+    <td class="tg-0pky">1 message per second or more depending on 10DLC trust score (US)<br>10 messages per second (International)</td>
     <td class="tg-0pky">100 messages per second</td>
     <td class="tg-0pky">10 messages per second</td>
     <td class="tg-0pky">1 message per second</td>
