@@ -29,12 +29,28 @@ Braze does not count subscription state changes against your data points, global
 
 ### Updating email subscription states
 
-There are four ways a user's email subscription state can be updated:
+There are four ways to update a user's email subscription state:
 
-1. **SDK integration**<br>Use the Braze SDK to update a user's subscription state.<br><br>
-2. **REST API**<br>Use the [`/users/track` endpoint][users-track] to update the [`email_subscribe`][user_attributes_object] attribute for a given user.<br><br>
-3. **User profile**<br>To manually change the subscription status, first find the user through **Search Users**. Next, under the **Engagement** tab, click the **Unsubscribed**, **Subscribed**, or **Opted In** buttons to change that user's subscription status. If available, the user profile also displays a timestamp for when the user's subscription was last changed.<br><br>
-4. **Preference center**<br>[Preference center](#email-preference-center) Liquid can be included at the bottom of your emails, allowing users to opt-in or opt-out of emails. Braze manages the subscription state updates from the preference center.
+#### SDK integration
+
+Use the Braze SDK to update a user's subscription state.
+
+#### REST API
+
+Use the [`/users/track` endpoint][users-track] to update the [`email_subscribe`][user_attributes_object] attribute for a given user.
+
+#### User profile
+
+To manually change the subscription status, do the following:
+
+1. On the **[Search Users][5]** page, find the user profile.
+2. Select the **Engagement** tab and click the **Unsubscribed**, **Subscribed**, or **Opted In** buttons to change that user's subscription status.
+
+If available, the user profile also displays a timestamp for when the user's subscription was last changed.
+
+#### Preference center
+
+[Preference center](#email-preference-center) Liquid can be included at the bottom of your emails, allowing users to opt-in or opt-out of emails. Braze manages the subscription state updates from the preference center.
 
 ### Checking email subscription state
 
@@ -42,8 +58,14 @@ There are four ways a user's email subscription state can be updated:
 
 There are two ways you can check a user's email subscription state with Braze:
 
-1. **User Profile:** You can access individual user profiles through the Braze dashboard on the **[Search Users][5]** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
-2. **Rest API Export:** You can export individual user profiles in JSON format using the [Export users by segment][segment] or [Export users by identifier][identifier] endpoints. 
+#### User Profile
+
+1. On the **[Search Users][5]** page, find the user's profile. 
+2. Select the **Engagement** tab to view and manually adjust a user's subscription state.
+
+#### Rest API Export
+
+You can export individual user profiles in JSON format using the [Export users by segment][segment] or [Export users by identifier][identifier] endpoints. 
 
 ## Subscription groups
 
@@ -55,29 +77,37 @@ Alternatively, you could use subscription groups to let your customers choose ho
 
 Use the [Subscription Group REST APIs][25] to programmatically manage the subscription groups that you have stored on the Braze dashboard to the **Subscription Group** page.
 
-### Create a group
+### Creating a subscription group
 
-To create a subscription group, go to **Audience** > **Subscriptions** and select **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your preference center.
+1. Go to **Audience** > **Subscriptions**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups**.
 {% endalert %}
 
+{: start="2"}
+2. Select **+ Create Email Subscription Group**. 
+3. Give your subscription group a name and description, and click **Save**. 
+
+All subscription groups are automatically added to your preference center.
+
 ![Fields to create a subscription group.][26]{: height="50%" width="50%"}
+
+### Segmenting with a subscription group
 
 When creating your segments, set the subscription group name as a filter. This will confirm that users who have opted into your group will receive your emails. This is great for monthly newsletters, coupons, membership tiers, and more.
 
 ![GIF of a user setting a subscription group name as a filter.][27]{: style="max-width:80%"}
 
-### Archiving groups
+### Archiving subscription groups
 
-Archived subscription groups cannot be edited and will no longer appear in segment filters or in your preference center.  If you attempt to archive a group that is being used as a segment filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the group until you remove all usages of it.
+Archived subscription groups cannot be edited and will no longer appear in segment filters or in your preference center. If you attempt to archive a group that is being used as a segment filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the group until you remove all usages of it.
 
 You can archive your group from the **Subscription Groups** page. Find your group in the list, then click the gear and select **Archive** from the dropdown menu.
 
-Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is considered `subscribed` to it, they will remain "`subscribed`" to this group, even if they clicks an unsubscribe link (this shouldn't matter to Susie, "Subscription Group A" is archived and you can't send any messages using it).
+Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is `subscribed` to it, they will remain "`subscribed`" to this group, even if they clicks an unsubscribe link (this shouldn't matter to Susie because "Subscription Group A" is archived and you can't send any messages using it).
 
-#### See subscription groups in campaign analytics
+#### Viewing subscription groups in campaign analytics
 
 You can see the number of users who changed their subscription state (subscribed or unsubscribed) from a specific email campaign on that campaign's analytics page.
 
@@ -91,9 +121,9 @@ The email preference center is an easy way to manage which users receive certain
 
 ## Changing email subscriptions {#changing-email-subscriptions}
 
-In most cases, your users will manage their email subscription through subscription links that are included in the emails they receive. You must insert a legally-compliant footer with an unsubscribe link at the bottom of every email you send. When users click on the unsubscribe URL in your footer, they should be unsubscribed and taken to a landing page that confirms the change to their subscription.
+In most cases, your users will manage their email subscription through subscription links that are included in the emails they receive. You must insert a legally-compliant footer with an unsubscribe link at the bottom of every email you send. When users click the unsubscribe URL in your footer, they should be unsubscribed and taken to a landing page that confirms the change to their subscription.
 
-### Custom footers {#custom-footer}
+### Creating custom footers {#custom-footer}
 
 {% raw %}
 Braze provides the ability to set a workspace-wide custom email footer which you can template into every email using the ``{{${email_footer}}}`` Liquid attribute.
@@ -105,28 +135,31 @@ This way, you don't have to create a new footer for every email template or emai
 It is your responsibility to make sure that your custom footer meets the aforementioned requirements.
 {% endalert %}
 
-To create or edit your custom footer, go to **Settings** > **Email Preferences**.
+To create or edit your custom footer, do the following:
+
+1. Go to **Settings** > **Email Preferences**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is called **Email Settings** and is located under **Manage Settings**.
 {% endalert %}
 
-In the **Custom Footer** section, you can choose to turn on custom footers. When turned on, you will see a window to edit your footer and send a test message.
+{: start="2"}
+2. Go to the **Custom Footer** section and turn on custom footers.
+3. Edit your footer in the **Compose** section and send a test message. <br><br>{% raw %}The default footer uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute and Braze's physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include ``{{${set_user_to_unsubscribed_url}}}``. You won't be able to save a custom footer without this attribute. <br><br> ![][20] <br><br> If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**. <b><br>![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
 
-![][20]
 
-{% raw %}
-You will see the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute and Braze's physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include ``{{${set_user_to_unsubscribed_url}}}``. You won't be able to save a custom footer without this attribute.
-
-If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**.
-
-![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
-
-![Example email composed without a footer.][21]
 
 > Be very careful to use a template with the custom footer ``{{${email_footer}}}`` or ``{{${set_user_to_unsubscribed_url}}}``when composing an email campaign. A warning will pop up, but it'll be your choice to either send an email with or without an unsubscribe link.
 
+![Example email composed without a footer.][21]
+
 ![No-footer campaign composition.][22]
+
+#### Best practices for custom footers
+
+Braze suggests the following best practices when creating and using custom footers.
+
+##### Personalizing with attributes
 
 When creating a custom footer, Braze suggests using attributes for personalization. The full set of default and custom attributes are available, but here are a few you may find useful:
 
@@ -139,7 +172,11 @@ When creating a custom footer, Braze suggests using attributes for personalizati
 | User's Custom Braze Preference Center URL | `{{${preference_center_url}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 
+##### Including an unsubscribe link and opt-in link
+
 As a best practice, Braze recommends including both an unsubscribe link (i.e., ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e., ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
+
+##### Setting custom footers for plaintext emails
 
 You can also choose to set a custom footer for plaintext emails from the **Email Settings** tab, which follows the same rules as the custom footer for HTML emails. If you don't include a plaintext footer, Braze will automatically build one from the HTML footer. When your custom footers are to your liking, click **Save** at the bottom of the page.
 
