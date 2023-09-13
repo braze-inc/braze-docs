@@ -86,6 +86,8 @@ Now that we've reviewed these key components, let's use these blocks to build ou
 - You can also drag any of the **Content** tiles into the main editor. This creates a row for the tile.
 - You can further refine the tile by selecting the tile and adjusting the fields in **Content Properties** and **Block Options**. This includes editing letter spacing, padding, line height, and more.
 
+Check out [More creative details](#creative-details) for other ways to further customize your drag-and-drop email.
+
 As you build your email, you can toggle between a desktop and mobile view to preview how your email messaging will look for your user groups. This will check that your content is responsive, and you can make any necessary adjustments along the way.
 
 {% alert tip %}
@@ -115,7 +117,9 @@ Advanced functionality will appear in the campaign or Canvas composer. In advanc
 
 ## Step 4: Test your email
 
-After adding your sending information, it's time to finally test your email. Go to the **Preview and Test** section. Here, you have the option of previewing your email as a user, or sending a test message to view in an inbox. This section also includes Inbox Vision, which allows you to check that your email has rendered correctly across different mobile and web clients.
+After adding your sending information, it's time to finally test your email. 
+
+Go to the **Preview and Test** section. Here, you have the option of previewing your email as a user, or sending a test message. This section also includes [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/), which allows you to check that your email has rendered correctly across different mobile and web clients.
 
 {% alert tip %}
 You can also use the **Dark Mode Preview** toggle in the preview panel to view your email body in dark mode and adjust your email as needed. 
@@ -137,9 +141,7 @@ The random user may or may not be part of your segmentation criteria. Segmentati
 
 ### Use Inbox Vision
 
-[Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/) allows you to view your email campaigns from the perspective of email clients and mobile devices. 
-
-To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and click **Run Inbox Vision**.
+Inbox Vision allows you to view your email campaigns from the perspective of email clients and mobile devices. To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and click **Run Inbox Vision**.
 
 {% alert tip %}
 Background images in email messaging may sometimes cause white lines or disconnects to appear between images, so it's important to test and check the finer details of your email message.
@@ -183,11 +185,11 @@ Using color layering, you can change the color of the email background, content 
 
 ![Block Options for the drag-and-drop editor.][4]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-To adjust padding, scroll down to **Block Options**, and toggle **More Options**. This will allow you to fine-tune your padding to get your email looking just right!
+To adjust padding, scroll down to **Block Options**, and toggle **More Options**. You can fine-tune your padding to get your email looking just right.
 
 ### Content background
 
-You can add a background image to your row configuration, allowing you to incorporate more design and content in your email campaign.
+You can add a background image to your row configuration, allowing you to incorporate more design and visual content in your email campaign.
 
 ### Add personalization
 
