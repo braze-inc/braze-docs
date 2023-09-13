@@ -47,6 +47,10 @@ The `clickAction` property on your `Braze.InAppMessage` defaults to `.none` but 
 | `.none` | The message will be dismissed when clicked. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert important %}
+For in-app messages containing buttons, the message `clickAction` will also be included in the final payload if the click action is added prior to adding the button text.
+{% endalert %}
+
 ## Customizing in-app message and button clicks
 
 The following [`BrazeInAppMessageUIDelegate`][34] delegate method is called when an in-app message is clicked. For clicks on in-app message buttons and HTML in-app message buttons (links), a button ID is provided as an optional parameter.
