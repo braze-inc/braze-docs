@@ -16,43 +16,9 @@ Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for
 
 ## Automatically collected data
 
-The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as custom events or custom attributes. See our [SDK primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/) article to whitelist processes that block the default collection of certain data items (not suggested).
+Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and end, all other automatically tracked data does not count toward your data point allotment.
 
-#### Usage information
-- First Used App (Time)
-- Last Used App (Time)
-- Total Session Count (Number)
-- Number of Feedback Items (Number)
-- Number of Sessions in the Last Y Days (Number and Time)
-- Email Available (Boolean)
-
-#### Campaign retargeting
-- Last Received Any Message (Time)
-- Last Received Email Campaign (Time)
-- Last Received Push Campaign (Time)
-- Clicked Card (Number)
-- Received Message from Campaign
-  - This filter allows you to target users based on their having (not) received a previous campaign.
-- Received Message from Campaign with Tag
-  - This filter allows you to target users based on their having (not) received a campaign that currently has a tag.
-- Retarget Campaign
-  - This filter allows you to target users based on whether or not they have opened, or clicked on a specific email, push, or in-app message in the past.
-
-#### Device information
-- Location Available (Boolean)
-- Most Recent Location (if location permission is granted to your app)
-- Push Enabled (Boolean)
-- Device Locale
-- Language (taken from Device Locale)
-- Country (first taken from IP Address. If this is not available, taken from Device Locale)
-- Most Recent App Version
-- Device Model
-- Device OS Version
-- Device Resolution
-- Device Wireless Carrier
-- Device Time Zone
-- Device Identifier
-- Uninstalled (Time and Boolean)
+See our [SDK primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/) article to allowlist processes that block the default collection of certain data items.
 
 ## Custom events
 

@@ -11,7 +11,7 @@ description: "This landing page is home to articles on user data collection. Her
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Data Collected by Default
+  - name: SDK Data Collection
     link: /docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/
     fa_icon: fas fa-chart-bar
   - name: User Profile Lifecycle
