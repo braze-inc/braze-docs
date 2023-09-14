@@ -35,16 +35,8 @@ There are four ways to update a user's email subscription state:
 
 Use the Braze SDK to update a user's subscription state.
 
-#### REST API
-
-Use the [`/users/track` endpoint][users-track] to update the [`email_subscribe`][user_attributes_object] attribute for a given user.
-
-#### User profile
-
-To manually change the subscription status, do the following:
-
-1. On the **[Search Users][5]** page, find the user profile.
-2. Select the **Engagement** tab and click the **Unsubscribed**, **Subscribed**, or **Opted In** buttons to change that user's subscription status.
+1. **REST API export:** Use the [Export users by segment][segment] or [Export users by identifier][identifier] endpoints to export individual user profiles in JSON format.
+2. **User profile:** Find the user's profile on the [Search Users][5] page, then select the **Engagement** tab to view and manually update a user's subscription state.
 
 If available, the user profile also displays a timestamp for when the user's subscription was last changed.
 
@@ -238,7 +230,7 @@ For example, this can be useful if you want to target users who have neither opt
 [22]: {% image_buster /assets/img_archive/no_footer_test.png %}
 [23]: {% image_buster /assets/img_archive/custom_footer_save_changes.png %}
 [24]: {% image_buster /assets/img_archive/email_unsub_protocol.png %}
-[25]: {{site.baseurl}}/developer_guide/rest_api/subscription_group_api/
+[25]: {{site.baseurl}}/api/endpoints/subscription_groups
 [26]: {% image_buster /assets/img/sub_group_create.png %}
 [27]: {% image_buster /assets/img/sub_group_use.gif %}
 [28]: {{site.baseurl}}/api/endpoints/preference_center/
