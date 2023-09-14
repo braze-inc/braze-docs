@@ -210,7 +210,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Setting | Description |
 | ------- | ----------- |
 | App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | 
-| REST API key | This can be found in your Braze dashboard under **Developer Console > API Settings**. | 
+| REST API key | This can be found in your Braze dashboard under **Settings** > **API Keys**. | 
 | Custom REST API endpoint | Your Braze REST endpoint that corresponds to your instance (i.e., rest.iad-01.braze.com) | 
 | Update existing users only | **Classic Destination Cloud-Mode (Maintenance) Only**<br><br>Segment recommends migrating to the Cloud Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>Determines whether to update existing users only. |
 {: .reset-td-br-1 .reset-td-br-2}
