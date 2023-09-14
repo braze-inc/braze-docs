@@ -35,8 +35,14 @@ There are four ways to update a user's email subscription state:
 
 Use the Braze SDK to update a user's subscription state.
 
-1. **REST API export:** Use the [Export users by segment][segment] or [Export users by identifier][identifier] endpoints to export individual user profiles in JSON format.
-2. **User profile:** Find the user's profile on the [Search Users][5] page, then select the **Engagement** tab to view and manually update a user's subscription state.
+#### REST API
+
+Use the [`/users/track` endpoint][users-track] to update the [`email_subscribe`][user_attributes_object] attribute for a given user.
+
+#### User profile
+
+1. Find the user through **Search Users**. 
+2. Under the **Engagement** tab, click the **Unsubscribed**, **Subscribed**, or **Opted In** buttons to change that user's subscription status. 
 
 If available, the user profile also displays a timestamp for when the user's subscription was last changed.
 
@@ -50,12 +56,8 @@ If available, the user profile also displays a timestamp for when the user's sub
 
 There are two ways you can check a user's email subscription state with Braze:
 
-#### User Profile
-
-1. On the **[Search Users][5]** page, find the user's profile. 
-2. Select the **Engagement** tab to view and manually adjust a user's subscription state.
-
-#### Rest API Export
+1. **REST API export:** Use the [Export users by segment][segment] or [Export users by identifier][identifier] endpoints to export individual user profiles in JSON format.
+2. **User profile:** Find the user's profile on the [Search Users][5] page, then select the **Engagement** tab to view and manually update a user's subscription state.
 
 You can export individual user profiles in JSON format using the [Export users by segment][segment] or [Export users by identifier][identifier] endpoints. 
 
