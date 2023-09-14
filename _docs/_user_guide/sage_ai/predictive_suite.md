@@ -18,4 +18,8 @@ guide_featured_list:
   image: /assets/img/icons/prediction_crystal_ball.svg
 ---
 
+{% alert tip %}
+Generating predictions and targeting your users based on those predictions doesn't consume any data points.
+{% endalert %}
+
 <br><br>

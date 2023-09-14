@@ -11,9 +11,11 @@ tool: Media
 
 # Editor blocks
 
-> Editor blocks are the various blocks available in the drag-and-drop editor under the **Content** section. This section includes a series of tiles that represent the different kinds of content you can use in your message.
+> This reference article lists the types of editor blocks and their customizable properties. These blocks are available in the drag-and-drop editor under the **Content** section.
 
-To use them, drag an editor block inside a column. It will auto-adjust to the column width. Each editor block has its owns settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
+To use an editor block, drag an editor block inside a column in the drag-and-drop editor. It will auto-adjust to the column width. Each editor block has its owns settings, such as granular control on padding.
+
+For more information on how to use and customize these editor blocks in your email, check out the [More creative details]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details) section.
 
 {% alert tip %}
 You can also [add custom attributes]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details/) to any URL within the `Image`, `Button`, or `Text` editor blocks.

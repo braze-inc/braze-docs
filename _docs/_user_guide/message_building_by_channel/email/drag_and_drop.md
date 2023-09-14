@@ -12,7 +12,7 @@ tool: Media
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-- name: Overview
+- name: Creating a Drag-and-Drop Email
   link: /docs/dnd/overview/
   fa_icon: fas fa-paint-brush
 - name: Creating an Email Template

@@ -24,7 +24,7 @@ The Braze and Komo integration allows you to gather first and zero-party data th
 | Requirement | Description |
 | ----------- | ----------- |
 | Komo account | You will need an active Komo account to take advantage of this partnership. Visit [Komo][7] to start a trial now. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance.<br><br>For example, it should look something like: https://rest.iad-03.braze.com |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

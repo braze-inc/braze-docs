@@ -27,7 +27,7 @@ The **Billing** page includes the following tabs:
 
 ## Subscriptions and Usage
 
-The **Subscriptions and Usage** page includes usage graphs and your contract details.
+The **Subscriptions and Usage** tab includes usage graphs and your contract details.
 
 ### Usage graphs
 
@@ -43,7 +43,7 @@ Contract details list the start and end date of your current contract with Braze
 
 ## Most used events and attributes by app
 
-The **Most Used Events and Attributes By App** page is a useful tool to understand the drivers of your attribute and custom event data point consumption. For each app, you can find an estimated count of each specific custom attribute, profile attribute, and custom event for the selected time period as well as the percentage of that app's attribute and event updates that were driven by that attribute or event. 
+The **Most Used Events and Attributes By App** tab is a useful tool to understand the drivers of your attribute and custom event data point consumption. For each app, you can find an estimated count of each specific custom attribute, profile attribute, and custom event for the selected time period as well as the percentage of that app's attribute and event updates that were driven by that attribute or event. 
 
 Data breakdowns like these can help you understand what specific data points are taking up large percentages of your allotment. We recommend that you monitor this information from time to time to make sure you aren't spending data points in accidental and unnecessary ways. Your customer success manager can provide guidance to get the most out of your current plan or provide options for greater flexibility. 
 
@@ -51,7 +51,7 @@ Data breakdowns like these can help you understand what specific data points are
 
 ## Total data points dashboard
 
-The **Total Data Points Usage** page provides an in-depth look at your data point consumption. You can view all data in this section aggregated by either weeks or months. Click **Update** to apply any changes.
+The **Total Data Points Usage** tab provides an in-depth look at your data point consumption. You can view all data in this section aggregated by either weeks or months. Click **Update** to apply any changes.
 
 ![Filtering Data Point Usage by weeks][2]
 

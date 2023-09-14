@@ -21,9 +21,9 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 | Requirement | Description |
 |---|---|
 | Radar account | A Radar account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key** |
-| Group identifier | Your group identifier can be found can be found within the **Braze Dashboard > Developer Console** page. |
-| iOS API key<br>Android API key | These API keys can be found within the **Braze Dashboard > Manage Settings** page. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| App identifier | Your [app identifier]({{site.baseurl}}/api/identifier_types/?tab=app%20ids) can be found can be found within the Braze dashboard from **Settings** > **API Keys**. |
+| iOS API key<br>Android API key | These API keys can be found within the Braze dashboard from **Settings** > **App Settings**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
@@ -33,7 +33,7 @@ To map data between the Braze and Radar SDKs, you must set the same user IDs in 
 To enable the integration on the [Radar integration page](https://radar.com/documentation/integrations) under Braze:
   - Set **Enabled** to **Yes**
   - Set your Braze endpoint
-  - Paste in your group identifier and API keys
+  - Paste in your app identifier and API keys
   - Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing
 
 {% alert note %}
