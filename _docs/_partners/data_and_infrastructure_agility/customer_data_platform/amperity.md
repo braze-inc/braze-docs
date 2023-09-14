@@ -58,6 +58,14 @@ Phone numbers
 Verify the names of custom attributes that will be sent to Braze from Amperity. Amperity will add a custom attribute whenever there isn’t a matching name.
 
 Custom attributes will be updated only for those users that have a matching `external_id` or `braze_id` within Braze.
+=======
+| Requirement | Description |
+| ----------- | ----------- |
+| AWS account | An AWS account is required to use the S3 and Lambda services. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
+| CSV file | Check out the [CSV formatting specifications](#csv), and use step 1 of the Amperity integration to obtain a CSV with user external IDs and attributes to update. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Amperity Audiences
 

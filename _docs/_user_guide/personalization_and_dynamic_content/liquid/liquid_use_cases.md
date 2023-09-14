@@ -649,7 +649,8 @@ Did you forget something in your shopping cart?
 ```
 {% endraw %}
 
-{% alert important %} You must have an event property of the custom event count or use a webhook to your Braze endpoint. This is to increment a custom attribute (`example_event_count`) every time the user performs the event. This example uses a cadence of three (1, 4, 7, 10, etc.).{% endalert %}
+{% alert important %} You must have an event property of the custom event count or use a webhook to your Braze endpoint. This is to increment a custom attribute (`example_event_count`) every time the user performs the event. This example uses a cadence of three (1, 4, 7, 10, etc.). To start the cadence from zero (0, 3, 6, 9, etc.), remove `minus: 1`.
+{% endalert %}
 
 ### Send a message to users who have only purchased from one category {#event-purchased-one-category}
 
@@ -1078,12 +1079,6 @@ This use case checks if a custom attribute array contains a specific string, and
 ```liquid
 {% if custom_attribute.${PartnershipProgramsNotLinked} contains 'Hertz' %}
 Link your Hertz account to use Hertz Fast Lane.
-
-{% elsif custom_attribute.${airportCompleted} == false %}
-Clear helps you breeze through airport security. Complete your one-time in-person setup next time you are at the airport. It only takes about 5 minutes.
-
-{% else %}
-Your account is all setup
 {% endif %}
 ```
 {% endraw %}

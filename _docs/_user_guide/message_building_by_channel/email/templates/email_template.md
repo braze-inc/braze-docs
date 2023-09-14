@@ -15,9 +15,7 @@ search_rank: 1
 
 > The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
 
-## Creating your template
-
-### Step 1: Navigate to the email template editor
+## Step 1: Navigate to the email template editor
 
 Go to **Templates** > **Email Templates**.
 
@@ -25,7 +23,7 @@ Go to **Templates** > **Email Templates**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Email Templates**.
 {% endalert %}
 
-### Step 2: Create or choose a template
+## Step 2: Create or choose a template
 
 Now, you can create a new template or edit an existing template (plain or [mobile responsive][8]) using the drag & drop editing experience or standard HTML experience. If you'd like to create a new template, you can choose from Braze's predesigned templates or create a new layout.
 
@@ -35,7 +33,7 @@ Now, you can create a new template or edit an existing template (plain or [mobil
 Any existing custom HTML templates will need to be re-created using the Drag & Drop Editor.
 {% endalert %}
 
-### Step 3: Customize your template
+## Step 3: Customize your template
 
 You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop Editor to customize your content. After selecting your editor experience, you will be guided to it. An **HTML Editor** or **Drag-and-Drop Editor** badge will appear, indicating that you are about to use this editing experience for template creation.
 
@@ -83,7 +81,7 @@ The drag & drop editing experience is divided into three sections: **Sending Set
 {% subtabs %}
 {% subtab Send Settings %}
 
-#### Sending settings
+### Sending settings
 
 The **Sending Settings** section allows you to configure your from and reply-to address as well as set the subject line or pre-header. 
 
@@ -94,7 +92,7 @@ Advanced functionality will appear in the campaign or Canvas composer. In advanc
 {% endsubtab %}
 {% subtab Content %}
 
-#### Content
+### Content
 
 The **Content** section contains the editor. There are three key components within this section.
 
@@ -106,7 +104,7 @@ This is very useful to build a coherent message quickly.
 {% endsubtab %}
 {% subtab Preview and Test %}
 
-#### Preview & Test
+### Preview & Test
 
 The **Preview & Test** section allows you to preview your email based on different users.
 
@@ -124,7 +122,7 @@ To read more about the different components of the drag & drop editing experienc
 {% endtab %}
 {% endtabs %}
 
-#### Step 4a: Check for email errors
+### Step 4a: Check for email errors
 
 Email errors are presented on the **Compose** tab of the message workflow. Errors prevent you from progressing forward. "Warnings" indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
 
@@ -138,7 +136,7 @@ Here's a list of errors that are accounted for in our editor:
 - Emails with a blank **Body** or **Subject**
 - Emails with no unsubscribe link
 
-#### Step 4b: Preview and test your message
+### Step 4b: Preview and test your message
 
 After you finish composing your template, you can test it before sending it out.
 
@@ -152,7 +150,7 @@ When you're ready for a final check, select **Test Send** and send a test messag
 
 If you see any issues with your template or want to make any changes, click **Edit Email** to return to the editor.
 
-### Step 5: Save your template
+## Step 5: Save your template
 
 Be sure to save your template by clicking **Save Template**. You're now ready to use this template in any campaign or Canvas component you choose. To access your template, select the editing experience you built it with, and then select it from the list of available templates.
 
@@ -160,27 +158,31 @@ Be sure to save your template by clicking **Save Template**. You're now ready to
 If you make any edits to an existing template, those changes will not be reflected in campaigns created using previous versions of that template.
 {% endalert %}
 
-## Using your templates in API campaigns
+### Using your templates in API campaigns
 
 To use your email for an API campaign, you need an `email_template_id`, which can be found at the bottom of any email template created in Braze.
 
-![Example Template API Identifier.][5]
+![][5]
 
-## Managing email templates
+### Managing your templates
 
 You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
-## Commenting on email templates
-You can comment on email templates in the drag-and-drop editor. Click the Content Block or row in the email body that you’d like to comment on, then select the <i class="fas fa-comment"></i> comment icon. This opens a sidebar where you can enter your comment through the text input field by clicking **Submit**. Click **Done**, then **Save Template** to save your comment and make it visible to other users.
+### Commenting on email templates
 
-Once saved, users will see floating icons over unaddressed comments. Selecting **Resolve** will resolve these comments.
+You can comment on email templates in the drag-and-drop editor. 
 
-![Email Template Comment Icon and Sidebar.][10]
+1. Click the Content Block or row in the email body that you’d like to comment on.
+2. Select the <i class="fas fa-comment"></i> comment icon. 
+3. Enter your comment in the sidebar, then click **Submit**.
+4. After entering your comments, click **Done**.
+5. Click **Save Template** to save your comments.
 
-## Frequently asked questions
+After your template is saved, users can see floating icons over unaddressed comments. Select **Resolve** to resolve these comments.
+
+![An exampel of an email template comment that reads "Looks good to me".][10]
 
 For answers to frequently asked questions about email templates, check out our [Templates FAQ][9].
-
 
 [1]: {% image_buster /assets/img/dnd_compose_error.png %}
 [2]: {% image_buster /assets/img/email_templates/template2.png %}
