@@ -50,7 +50,7 @@ If available, the user profile also displays a timestamp for when the user's sub
 
 #### Preference center
 
-[Preference center](#email-preference-center) Liquid can be included at the bottom of your emails, allowing users to opt-in or opt-out of emails. Braze manages the subscription state updates from the preference center.
+[Preference center](#email-preference-center) Liquid can be included at the bottom of your emails, allowing users to opt in or out of emails. Braze manages the subscription state updates from the preference center.
 
 ### Checking email subscription state
 
