@@ -1,7 +1,7 @@
 ---
-nav_title: Content Cards In Canvas
+nav_title: Content Cards
 article_title: Content Cards in Canvas
-page_order: 7
+page_order: 1
 page_type: reference
 description: "This reference article describes features and nuances specific to using Content Cards as a messaging channel within Canvas."
 tool: Canvas

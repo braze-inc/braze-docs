@@ -1,5 +1,5 @@
 ---
-nav_title: Time-Based Functionalities for Canvas
+nav_title: Time-Based Functionalities
 article_title: Time-Based Functionalities for Canvas
 page_order: 1
 tools: Canvas
