@@ -28,13 +28,13 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
     fa_icon: fas fa-user-check
   - name: Persistent Entry Properties
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/
     fa_icon: fas fa-project-diagram
   - name: In-App Messages in Canvas
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/
     fa_icon: fas fa-mobile
   - name: Content Cards in Canvas
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/
     fa_icon: fas fa-columns
   - name: Advancement Behaviors
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/

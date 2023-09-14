@@ -1,5 +1,5 @@
 ---
-nav_title: In-App Messages in Canvas
+nav_title: In-App Messages
 article_title: In-App Messages in Canvas
 alias: "/canvas_in-app_messages/"
 page_order: 7
