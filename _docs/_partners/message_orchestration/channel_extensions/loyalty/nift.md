@@ -19,7 +19,7 @@ The Braze and Nift integration allows you to automatically trigger "thank-yous" 
 | Requirement | Description |
 |---|---|
 | Nift account | A Nift account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with all user data permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with all user data permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 

@@ -25,7 +25,7 @@ The Braze and Octolis integration acts as middleware between your raw data sourc
 | Requirement | Description |
 | ----------- | ----------- |
 | Octolis account | An Octolis account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with [**users.track**][1] permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with [**users.track**][1] permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
 | Braze app key | Your app identifier key. This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -55,7 +55,7 @@ Next, to set Braze as a new destination, select **+ Add more** at the top of you
 
 Once selected, provide the following:
 
-- Your Braze's API key: This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
+- Your Braze's API key: This can be created in the Braze dashboard from **Settings** > **API Keys**.
 - Time window: Octolis will apply the rate limiting in the given period.
 - Request volume: Number of requests you can make within this time frame.
 - Custom attributes: Specify here the new fields you will send to Braze, their format (string, integer, float), and tick the **Required for syncs** if you want one of them to be mandatory for a sync.

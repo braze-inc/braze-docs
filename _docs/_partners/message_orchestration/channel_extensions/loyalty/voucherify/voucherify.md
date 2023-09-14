@@ -26,7 +26,7 @@ The Braze and Voucherify integration allows you to grow your promotional campaig
 | Requirement | Description |
 | ----------- | ----------- |
 |Voucherify account | A Voucherify account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
