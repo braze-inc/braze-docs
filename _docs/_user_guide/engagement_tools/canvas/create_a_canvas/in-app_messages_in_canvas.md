@@ -1,8 +1,8 @@
 ---
-nav_title: In-App Messages In Canvas
+nav_title: In-App Messages in Canvas
 article_title: In-App Messages in Canvas
 alias: "/canvas_in-app_messages/"
-page_order: 6
+page_order: 7
 page_type: reference
 description: "This reference article describes features and nuances specific to Canvas In-App Messages, which you can add to your Canvas to show rich messaging."
 tool: Canvas

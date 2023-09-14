@@ -1,18 +1,16 @@
 ---
-nav_title: Commenting in Canvas
+nav_title: Commenting
 article_title: Commenting in Canvas
-permalink: "/canvas_comments/"
-hidden: true
+alias: "/canvas_comments/"
+page_order: 0.5
+page_type: reference
 description: "This reference article covers how to create and manage comments in your Canvases."
+tool: Canvas
 ---
 
 # Commenting in Canvas
 
-Comments in Canvases can be a great collaborative space for your marketing team to identify, discuss, and review the finer details for your Canvases. As you build out a Canvas, you can make and manage comments to identify these areas that may require additional feedback from your colleagues. 
-
-{% alert important %}
-Commenting in Canvas is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
-{% endalert %} 
+> Comments in Canvases can be a great collaborative space for your marketing team to identify, discuss, and review the finer details for your Canvases. As you build out a Canvas, you can make and manage comments to identify these areas that may require additional feedback from your colleagues.
 
 ![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
 
@@ -21,13 +19,12 @@ Commenting in Canvas is currently in early access. Contact your Braze account ma
 Some benefits of commenting in your Canvas include:
 - Keeping all details and discussions about a Canvas within a Canvas
 - Reviewing edits to a Canvas and encouraging a sign-off process on these changes
+- Collaborating in realtime by tagging and responding to other users 
 - Identifying granular details of a Canvas, such as specific segmentation, including properties and attributes that are unique to a Canvas
 
 ## How to comment
 
-In order to leave a comment in a Canvas, you must save a step first. So, when creating a new Canvas, you must first save the Canvas as a draft. Or, as you're adding steps to an existing Canvas, save or update the Canvas to begin commenting.
-
-By default, the sidebar will show open comments. You can toggle to view open comments, resolved comments, and all comments by using the <i class="fa-solid fa-sliders"></i> filter icon.
+By default, the sidebar will show open comments. You can toggle to view open comments, resolved comments, and all comments by using the <i class="fa-solid fa-sliders"></i> filter icon. You can also toggle to view comments “For you,” which will show threads you are tagged in.
 
 To leave a comment, click the <i class="fas fa-comment"></i> comment icon at the top of the Canvas. This turns your cursor into a comment icon. Click the step you want to comment on. To revert your cursor, press the **Esc** key or click the comment icon again. 
 
@@ -47,6 +44,19 @@ To view an existing comment, open the sidebar or select the <i class="fas fa-com
 
 You can delete comments and threads you have created by clicking the <i class="fa-solid fa-ellipsis-vertical"></i> menu icon in your comment. If a red circle appears next to a comment, this indicates the comment is unread.
 
-You won't be able to delete another user's comments or threads. However, anyone can resolve a comment by selecting **Resolve Thread**. Note that tagging users in comments and notifications for comments are not currently supported. 
+You won't be able to delete another user's comments or threads. However, anyone can resolve a comment by selecting **Resolve Thread**.
+
+## Managing notifications
+
+To manage email notifications for a Canvas, open the sidebar and click <i class="fa-solid fa-bell"></i> **Notifications**. Here, you can select your notification preferences.
+
+Selecting **All New Comments** notifies you about new threads started on a Canvas, which also includes when comments are resolved or re-opened. Selecting **Mentions or Replies** notifies you about new comments you're tagged in or threads you're participating in.
+
+To turn off comments notifications for a Canvas, select **None**. 
+
+{% alert note %}
+By default, the creator of a Canvas is opted-in to be notified of all new comments, and other users are opted-in to be notified of mentions or replies.
+{% endalert %}
+
 
 [1]: {% image_buster /assets/img_archive/canvas_comments.png %}
