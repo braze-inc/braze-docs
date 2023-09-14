@@ -31,7 +31,11 @@ Check with your developers which event properties are being tracked. Keep in min
 
 ### Verify log
 
-To confirm that the event properties are successfully tracked, you can view all event properties by navigating to the **Manage Settings > Custom Events** tab **> **Manage Properties**. This will show you the names of the properties associated with an event.
+To confirm that the event properties are successfully tracked, you can view all event properties from the **Custom Events** page.
+
+1. Navigating to **Data Settings** > **Custom Events**.
+2. Locate your custom event from the list.
+3. For your event, click **Manage Properties**. This will show you the names of the properties associated with an event.
 
 ### Verify values
 

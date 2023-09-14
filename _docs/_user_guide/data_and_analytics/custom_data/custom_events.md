@@ -361,7 +361,7 @@ These segmentation filters include:
 - Has made any purchases with property Y with value V X times in the last Y days.
 - Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
 
-Event properties with custom events are updated in real time for any segment that uses them. You can manage properties under **Manage Settings > Custom Events > Mangage Properties**. Custom event properties used in certain segment filters have a maximum look back history of 30 days. Reach out to your Braze customer success manager to discuss using event property segmentation for your custom events.
+Event properties with custom events are updated in real time for any segment that uses them. You can manage properties from the **Data Settings** > **Custom Events** page by clicking **Manage Properties** for your custom event. Custom event properties used in certain segment filters have a maximum look back history of 30 days. Reach out to your Braze customer success manager to discuss using event property segmentation for your custom events.
 
 #### Frequently asked questions
 
