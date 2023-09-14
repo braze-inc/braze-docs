@@ -20,7 +20,7 @@ The Braze and Toovio partnership provides near real-time message triggering, the
 | Requirement | Description |
 | ----------- | ----------- |
 | Toovio account | A Toovio account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze Currents | Braze Currents allows Braze clients to stream event or behavior data to a Braze data partner (AWS S3, Google Cloud Storage, or Microsoft Azure Blob Storage) for processing external to the Braze platform. |
 {: .reset-td-br-1 .reset-td-br-2}
 

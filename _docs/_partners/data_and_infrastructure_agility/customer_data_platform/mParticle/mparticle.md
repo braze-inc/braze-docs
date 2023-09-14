@@ -58,7 +58,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 - **API key operating system**: Select which operating system your Braze API key corresponds to. This selection will limit the types of push tokens forwarded on an audience update.
 - **Send segments as**: The method of sending audiences to Braze: Single Attribute, One Attribute Per Segment, or Both. 
-- **Workspace REST API key**:  Braze REST API key with full permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
+- **Workspace REST API key**:  Braze REST API key with full permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**.
 - **External identity type**: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
 - **Email identity type**: The mParticle user identity type to forward as the email to Braze.
 - **Braze instance**: Specify which cluster your Braze data will be forwarded to.
@@ -95,7 +95,7 @@ In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze
 
 | Setting name | Description |
 | ------------ | ----------- |
-| Braze app identifier key | Your Braze app identifier key can be found in the **Braze Developer Console** under **Settings**. Note that API keys will differ for each platform (iOS, Android, and Web). |
+| Braze app identifier key | Your Braze app identifier key can be found in the Braze dashboard from **Settings** > **API Keys**. Note that API keys will differ for each platform (iOS, Android, and Web). |
 | External identity type | The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID |
 | Email identity type | The mParticle user identity type to forward as an email to Braze. We recommend leaving this to the default value, Email, |
 | Braze instance | The cluster your Braze data will be forwarded to; this should be the same cluster your dashboard is on. |

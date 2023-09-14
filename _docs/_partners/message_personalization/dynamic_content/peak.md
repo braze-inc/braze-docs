@@ -22,7 +22,7 @@ As a starting point, a Peak tenant must host the integration between Peak and Br
 | ----------- | ----------- |
 | Peak tenant | An instance of the Peak platform, known as a tenant, is required to host and orchestrate the integration. |
 | Decision intelligence solution | Integration between Peak and Braze is based on AI-driven outputs and thus requires a Peak or Customer deployed solution within your tenant. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br>This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 
 ## Integration
 
