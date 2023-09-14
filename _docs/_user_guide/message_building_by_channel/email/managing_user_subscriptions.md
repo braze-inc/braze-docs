@@ -178,31 +178,33 @@ As a best practice, Braze recommends including both an unsubscribe link (i.e., `
 
 ##### Setting custom footers for plaintext emails
 
-You can also choose to set a custom footer for plaintext emails from the **Email Settings** tab, which follows the same rules as the custom footer for HTML emails. If you don't include a plaintext footer, Braze will automatically build one from the HTML footer. When your custom footers are to your liking, click **Save** at the bottom of the page.
+You can also choose to set a custom footer for plaintext emails from the **Subscription Pages and Footers** tab on the **Email Preferences** page, which follows the same rules as the custom footer for HTML emails. If you don't include a plaintext footer, Braze will automatically build one from the HTML footer. When your custom footers are to your liking, click **Save** at the bottom of the page.
 
 ![Email with Set Custom Plaintext Footer option selected.][23]{: style="max-width:70%" }
 
-### Custom unsubscribe page
+### Creating a custom unsubscribe page
 
-When a user clicks on an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
+When users click an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
 
-Optionally, you may provide HTML for your custom landing page that users will be directed to (instead of the default page) upon unsubscribing in the **Subscription Pages and Footers** tab of the **Email Settings** page. We recommend including a resubscribe link (i.e., `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
+To create a custom landing page that users will be directed to (instead of the default page) upon subscribing, go to **Email Preferences** > **Subscription Pages and Footers** and provide the HTML for your custom landing page. We recommend including a resubscribe link (i.e., `{{${set_user_to_subscribed_url}}}` ) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
 
 ![Custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
 
 {% endraw %}
 
-### Custom opt-in page
+### Creating a custom opt-in page
 
-Instead of immediately subscribing a user to your email campaigns, creating a custom opt-in page can give your users the opportunity to acknowledge and control their notification preferences. This additional communication can also help your email campaigns stay out of the spam folder since your users will have chosen to be opted-in. Go to **Manage Settings > Email Settings > Subscription Pages and Footers**, and customize the styling in the **Custom Opt-In Page** section to see how that indicates to your users that they've been subscribed.
+Instead of immediately subscribing a user to your email campaigns, creating a custom opt-in page can give your users the opportunity to acknowledge and control their notification preferences. This additional communication can also help your email campaigns stay out of the spam folder since your users will have chosen to be opted-in. 
+
+Go to **Email Preferences > Subscription Pages and Footers**, and customize the styling in the **Custom Opt-In Page** section to see how that indicates to your users that they've been subscribed.
 
 {% alert tip %}
-Braze recommends using a double opt-in process to help your email outreach. This process involves sending an additional confirmation email where a user would confirm their notification preferences again via a link in the email. At this point, the user would be considered opted-in.
+Braze recommends using a double opt-in process to help your email outreach. This process sends an additional confirmation email where a user would confirm their notification preferences again via a link in the email. At this point, the user is considered opted-in.
 {% endalert %}
 
 ## Subscriptions and campaign targeting {#subscriptions-and-campaign-targeting}
 
-Campaigns with push or email messages are targeted at users who are subscribed or opted-in by default. You can change this targeting preference when editing a campaign by going to the **Target Users** step and clicking **Advanced Options**.
+Campaigns with push or email messages are targeted at users who are subscribed or opted-in by default. You can change this targeting preference when editing a campaign by going to the **Target Audience** step and clicking the dropdown next to **Send to these users:**.
 
 Braze supports three targeting states:
 
@@ -214,7 +216,7 @@ Braze supports three targeting states:
 It is your responsibility to comply with any applicable [spam laws]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations) when using these targeting settings.
 {% endalert %}
 
-![Audience targeting example for users who are subscribed or opted in the Advanced Options of the Target Users step.][17]
+![Audience targeting example for users who are subscribed or opted in the Targeting Options section of the Target Audience step.][17]
 
 ## Segmenting by user subscriptions {#segmenting-by-user-subscriptions}
 
