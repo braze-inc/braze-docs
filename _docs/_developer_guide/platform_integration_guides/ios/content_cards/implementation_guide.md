@@ -543,6 +543,12 @@ The dashboard configuration for interactive Content Cards is straightforward. Th
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
+## Dark theme customization
+
+By default, Content Card views will automatically respond to Dark Theme changes on the device with a set of themed colors and layout changes. 
+
+This behavior can be overriden as detailed in our [custom styling guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/custom_styling#disabling-dark-mode).
+
 ## Logging impressions, clicks, and dismissals
 
 After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick. This can be done by using a `ContentCardable` protocol that references and provides data to a helper file to be logged by the Braze SDK.
