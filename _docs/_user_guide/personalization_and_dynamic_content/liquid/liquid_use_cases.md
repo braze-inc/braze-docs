@@ -1611,7 +1611,7 @@ This use case checks the current day of the week, and depending on the day, will
 {% raw %}
 ```liquid
 {% assign today = 'now' | date: "%A" %}
-{% case 'today' %}
+{% case today %}
 {% when 'Monday' %}
 Monday copy
 
