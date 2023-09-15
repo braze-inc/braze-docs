@@ -58,12 +58,12 @@ You can manage user permissions by group or on an individual basis when editing 
 |Publish Cards| This permission is only visible if your account is enabled for News Feed, which is being deprecated. This does not affect Content Cards.<br><br>Allows users to create and edit News Feed cards. You can still view News Feed cards without this permission. If your account is enabled for News Feed and a user should be able to launch existing Content Blocks, they need both **Publish Cards** and **Send campaigns, Canvases** permissions. |
 |Edit Segments| Allows users to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
 |Export User Data| Allows users to export their user data from segments, campaigns, and Canvases. |
-|View PII | Allows users to view the personally identifiable information fields as defined by your company within the dashboard. This also allows you to edit the subscription status of a user and their subscription group opt-in/opt-out rules.|
+|View PII | Allows users to view the personally identifiable information fields as defined by your company within the dashboard. |
 |View User Profiles PII Compliant| Allows users to view user profiles but redacts fields your company has defined as personally identifiable information (PII). |
 |Manage Dashboard Users| Allows users to view, edit, and manage the **Company Users** page. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level.|
 |Manage Media Library| Allows users to upload images to the library. You can still upload pictures and audio directly to a campaign without this permission.|
 |View Usage Data| Allows users to view app usage.|
-|Import and Update User Data| Allows users to import CSV and update files of app users as well as view the User Import page.|
+|Import and Update User Data| Allows users to import CSV and update files of app users as well as view the User Import page. This also allows you to edit the subscription status of a user and their subscription group opt-in/opt-out rules. |
 |View Billing Details| Allows users to view subscriptions and billing. |
 |Access Dev Console| Allows access to Developer Console (where you can view API keys, API campaign activity log, event user log, and internal groups for testing messages).|
 |Manage External Integrations| Allows access to all tabs under **Technology Partners** and the ability to sync Braze with other platforms.|
