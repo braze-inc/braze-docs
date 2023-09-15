@@ -94,19 +94,19 @@ Array filters are used to change the output of arrays.
 
 Math filters allow you to perform mathematical operations. Remember—if you use multiple filters on one output, they are applied from left to right.
 
-| Filter            | Definition                                                                                                                         | Supported |
-| :---------------- | :--------------------------------------------------------------------------------------------------------------------------------- | :-------- |
-| [abs][4.1]        | Returns the absolute value of a number.                                                                                            | ✅  Yes   |
-| [at_most][4.2]    | Limits a number to a maximum value.                                                                                                | ✅  Yes   |
-| [at_least][4.3]   | Limits a number to a minimum value.                                                                                                | ✅  Yes   |
-| [ceil][4.4]       | Rounds an output up to the nearest integer.                                                                                        | ✅  Yes   |
+| Filter  | Definition      | Supported |
+| :------ |:----------------| :-------- |
+| [abs][4.1]        | Returns the absolute value of a number.     | ✅  Yes   |
+| [at_most][4.2]    | Limits a number to a maximum value.   | ✅  Yes   |
+| [at_least][4.3]   | Limits a number to a minimum value.   | ✅  Yes   |
+| [ceil][4.4]       | Rounds an output up to the nearest integer.  | ✅  Yes   |
 | [divided_by][4.5] | Divides an output by a number. The output is rounded down to the nearest integer. Check out the following tip to prevent rounding. | ✅  Yes   |
-| [floor][4.6]      | Rounds an output down to the nearest integer.                                                                                      | ✅  Yes   |
-| [minus][4.7]      | Subtracts a number from an output.                                                                                                 | ✅  Yes   |
-| [plus][4.8]       | Adds a number to an output.                                                                                                        | ✅  Yes   |
-| [round][4.9]      | Rounds the output to the nearest integer or specified number of decimals.                                                          | ✅  Yes   |
-| [times][4.10]     | Multiplies an output by a number.                                                                                                  | ✅  Yes   |
-| [modulo][4.11]    | Divides an output by a number and returns the remainder.                                                                           | ✅  Yes   |
+| [floor][4.6]      | Rounds an output down to the nearest integer.        | ✅  Yes   |
+| [minus][4.7]      | Subtracts a number from an output.          | ✅  Yes   |
+| [plus][4.8]       | Adds a number to an output.     | ✅  Yes   |
+| [round][4.9]      | Rounds the output to the nearest integer or specified number of decimals.  | ✅  Yes   |
+| [times][4.10]     | Multiplies an output by a number.       | ✅  Yes   |
+| [modulo][4.11]    | Divides an output by a number and returns the remainder.   | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
@@ -161,12 +161,12 @@ You have $35 to spend!
 
 If you're updating a user on their purchase, an account balance, or anything regarding money, you should use money filters. Money filters ensure that your decimals are in the proper place and that no piece of your update is lost (like that pesky `0` at the end).
 
-| Filter                              | Definition                                                                                                                                                                 | Supported |
-| :---------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------- |
-| [money][5.1]                        | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.                                                     | ✅  Yes   |
-| [money_with_currency][5.2]          | Formats numbers with the currency symbol.                                                                                                                                  | ⛔  No    |
-| [money_without_trailing_zeros][5.3] | Formats numbers to exclude the decimal separator (either `.` or `,`) and trailing zeros. If there are no trailing zeros, this filter behaves like the `money` filter. | ✅  Yes   |
-| [money_without_currency][5.4]       | Formats numbers without the currency symbol.                                                                                                                               | ⛔  No    |
+| Filter         | Definition          | Supported |
+| :--------------- | :--------------- | :-------- |
+| [money][5.1]      | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.         | ✅  Yes   |
+| [money_with_currency][5.2]    | Formats numbers with the currency symbol.     | ⛔  No    |
+| [money_without_trailing_zeros][5.3] | Formats numbers to exclude the decimal separator (either `.` or `,`) and trailing zeros. If there are no trailing zeros, this filter behaves like the `money` filter. <br><br> Note that this filter formats numbers based on the **HTML without currency** setting for your Shopify store. For more information, check out Shopify [currency formatting](https://help.shopify.com/en/manual/payments/currency-formatting?shpxid=9a22bd0c-507D-4B0C-FD32-77196565637F). | ✅  Yes   |
+| [money_without_currency][5.4]     | Formats numbers without the currency symbol.      | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Shopify money filter versus Braze money filter
@@ -235,35 +235,35 @@ String filters are used to manipulate the outputs and variables of strings. Stri
 Straight quotes are different from curly quotes in Liquid. Be careful when copying and pasting Liquid from a text editor into Braze, as curly quotes will cause errors with your Liquid. If you are writing your Liquid directly into Braze, straight quotes will be applied automatically.
 {% endalert %}
 
-| Filter                                           | Description                                                                                                                                                                                     | Supported |
-| :----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| [append][6.1]                                    | Appends characters to a string.                                                                                                                                                                 | ✅  Yes   |
-| [camelcase][6.2]                                 | Converts a string into CamelCase.                                                                                                                                                               | ⛔  No    |
-| [capitalize][6.3]                                | Capitalizes the first word in a string.                                                                                                                                                         | ✅  Yes   |
-| [downcase][6.4]                                  | Converts a string into lowercase.                                                                                                                                                               | ✅  Yes   |
-| [escape][6.5]                                    | Escapes a string.                                                                                                                                                                               | ✅  Yes   |
-| [handle/handleize][6.6]                          | Formats a string into a handle.                                                                                                                                                                 | ⛔  No    |
-| [md5][6.7]                                       | Converts a string into an MD5 hash. Refer to [Encoding Filters][3] for more.                                                                                                                    | ✅  Yes   |
-| [sha1][6.8]                                      | Converts a string into a SHA-1 hash. Refer to [Encoding Filters][3] for more.                                                                                                                   | ✅  Yes   |
+| Filter          | Description     | Supported |
+| :--------------- | ------------- | --------- |
+| [append][6.1]     | Appends characters to a string.           | ✅  Yes   |
+| [camelcase][6.2]     | Converts a string into CamelCase.             | ⛔  No    |
+| [capitalize][6.3]     | Capitalizes the first word in a string.         | ✅  Yes   |
+| [downcase][6.4]      | Converts a string into lowercase.         | ✅  Yes   |
+| [escape][6.5]    | Escapes a string.             | ✅  Yes   |
+| [handle/handleize][6.6]        | Formats a string into a handle.        | ⛔  No    |
+| [md5][6.7]    | Converts a string into an MD5 hash. Refer to [Encoding Filters][3] for more.   | ✅  Yes   |
+| [sha1][6.8]    | Converts a string into a SHA-1 hash. Refer to [Encoding Filters][3] for more.  | ✅  Yes   |
 | hmac_sha1_hex<br>(previously [hmac_sha_1][6.10]) | Converts a string into a SHA-1 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. Refer to [Encoding Filters][3] for more. | ✅  Yes   |
-| [hmac_sha256][6.11]                              | Converts a string into a SHA-256 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter.                                        | ✅  Yes   |
-| [newline_to_br][6.12]                            | Inserts a `<br>` line break HTML tag in front of each line break in a string.                                                                                                                   | ✅  Yes   |
-| [pluralize][6.13]                                | Outputs the singular or plural version of an English string based on the value of a number.                                                                                                     | ⛔  No    |
-| [prepend][6.14]                                  | Prepends characters to a string.                                                                                                                                                                | ✅  Yes   |
-| [remove][6.15]                                   | Removes all occurrences of a substring from a string.                                                                                                                                           | ✅  Yes   |
-| [remove_first][6.16]                             | Removes only the first occurrence of a substring from a string.                                                                                                                                 | ✅  Yes   |
-| [replace][6.17]                                  | Replaces all occurrences of a string with a substring.                                                                                                                                          | ✅  Yes   |
-| [replace_first][6.18]                            | Replaces the first occurrence of a string with a substring.                                                                                                                                     | ✅  Yes   |
-| [slice][6.19]                                    | The slice filter returns a substring, starting at the specified index.                                                                                                                          | ✅  Yes   |
-| [split][6.20]                                    | The split filter takes on a substring as a parameter. The substring is used as a delimiter to divide a string into an array.                                                                    | ✅  Yes   |
-| [strip][6.21]                                    | Strips tabs, spaces, and newlines (all whitespace) from the left and right side of a string.                                                                                                    | ✅  Yes   |
-| [lstrip][6.22]                                   | Strips tabs, spaces, and newlines (all whitespace) from the left side of a string.                                                                                                              | ⛔  No    |
-| [rstrip][6.23]                                   | Strips tabs, spaces, and newlines (all whitespace) from the right side of a string.                                                                                                             | ⛔  No    |
-| [strip_html][6.24]                               | Strips all HTML tags from a string.                                                                                                                                                             | ✅  Yes   |
-| [strip_newlines][6.25]                           | Removes any line breaks/newlines from a string.                                                                                                                                                 | ✅  Yes   |
-| [truncate][6.26]                                 | Truncates a string down to the number of characters passed as the first parameter. An ellipsis (...) is appended to the truncated string and is included in the character count.                | ✅  Yes   |
-| [truncatewords][6.27]                            | Truncates a string down to the number of words passed as the first parameter. An ellipsis (...) is appended to the truncated string.                                                            | ✅  Yes   |
-| [upcase][6.28]                                   | Converts a string into uppercase.                                                                                                                                                               | ✅  Yes   |
+| [hmac_sha256][6.11]    | Converts a string into a SHA-256 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter.       | ✅  Yes   |
+| [newline_to_br][6.12]     | Inserts a `<br>` line break HTML tag in front of each line break in a string.        | ✅  Yes   |
+| [pluralize][6.13]   | Outputs the singular or plural version of an English string based on the value of a number.      | ⛔  No    |
+| [prepend][6.14]     | Prepends characters to a string.      | ✅  Yes   |
+| [remove][6.15]      | Removes all occurrences of a substring from a string.       | ✅  Yes   |
+| [remove_first][6.16]    | Removes only the first occurrence of a substring from a string.      | ✅  Yes   |
+| [replace][6.17]        | Replaces all occurrences of a string with a substring.   | ✅  Yes   |
+| [replace_first][6.18]        | Replaces the first occurrence of a string with a substring.      | ✅  Yes   |
+| [slice][6.19]       | The slice filter returns a substring, starting at the specified index.       | ✅  Yes   |
+| [split][6.20]  | The split filter takes on a substring as a parameter. The substring is used as a delimiter to divide a string into an array.            | ✅  Yes   |
+| [strip][6.21]   | Strips tabs, spaces, and newlines (all whitespace) from the left and right side of a string.                                                                                                    | ✅  Yes   |
+| [lstrip][6.22]     | Strips tabs, spaces, and newlines (all whitespace) from the left side of a string.    | ⛔  No    |
+| [rstrip][6.23]             | Strips tabs, spaces, and newlines (all whitespace) from the right side of a string.          | ⛔  No    |
+| [strip_html][6.24]         | Strips all HTML tags from a string.        | ✅  Yes   |
+| [strip_newlines][6.25]  | Removes any line breaks/newlines from a string.        | ✅  Yes   |
+| [truncate][6.26]    | Truncates a string down to the number of characters passed as the first parameter. An ellipsis (...) is appended to the truncated string and is included in the character count.    | ✅  Yes   |
+| [truncatewords][6.27]   | Truncates a string down to the number of words passed as the first parameter. An ellipsis (...) is appended to the truncated string.    | ✅  Yes   |
+| [upcase][6.28]   | Converts a string into uppercase.      | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Additional filters
@@ -272,11 +272,11 @@ The following general filters serve many different purposes, including formattin
 
 | Filter                | Description                                                                                                                      | Supported |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- | :-------- |
-| [date][7.1]           | Converts a timestamp into another date format. Refer to [Date Filter](#date-filter) for more.                                    | ✅  Yes   |
-| [default][7.2]        | Sets a default value for any variable with no assigned value. Can be used with strings, arrays, and hashes.                      | ✅  Yes   |
-| [format_address][7.3] | Formats an address to print the elements of the address in order according to their locale.                                      | ⛔  No    |
+| [date][7.1]           | Converts a timestamp into another date format. Refer to [Date Filter](#date-filter) for more.         | ✅  Yes   |
+| [default][7.2]        | Sets a default value for any variable with no assigned value. Can be used with strings, arrays, and hashes.      | ✅  Yes   |
+| [format_address][7.3] | Formats an address to print the elements of the address in order according to their locale.        | ⛔  No    |
 | [highlight][7.4]      | Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search terms. | ⛔  No    |
-| time_zone             | Refer to [Time Zone Filter](#time-zone-filter) for more.                                                                         | ✅  Yes   |
+| `time_zone`             | Refer to [Time Zone Filter](#time-zone-filter) for more.     | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 You can find more supported filters, such as encoding and URL filters, on our [Advanced Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/) page.
