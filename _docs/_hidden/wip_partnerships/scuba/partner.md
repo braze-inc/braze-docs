@@ -12,7 +12,7 @@ layout: dev_guide
 
 # Scuba Analytics
 
->[Scuba Analytics][1] is a full-stack ML-powered data collaboration platform designed for high-velocity time-series data. It redefines how organizations handle first-party and high-velocity time-series data, offering insights into customers and real-time competition tracking. The platform ingests and queries vast amounts of event data from various customer touchpoints in real-time. It provides real-time cross-channel measurement, hyper-personalization, privacy-focused no-code data science, and self-service analytics, ensuring speed, precision, and scalability. SCUBA prioritizes data purity and privacy, ensuring GDPR compliance. The platform's features include SCUBACONNECT for schemaless edge ingestion, enabling seamless data source connection, real-time analysis, and activation for agile data management and product development.
+>[Scuba Analytics][1] is a full-stack ML-powered data collaboration platform designed for high-velocity time-series data. It redefines how organizations handle first-party and high-velocity time-series data, offering insights into customers and real-time competition tracking. The platform ingests and queries vast amounts of event data from various customer touch points in real-time. It provides real-time cross-channel measurement, hyper-personalization, privacy-focused no-code data science, and self-service analytics, ensuring speed, precision, and scalability. SCUBA prioritizes data purity and privacy, ensuring GDPR compliance. The platform's features include SCUBACONNECT for schemaless edge ingestion, enabling seamless data source connection, real-time analysis, and activation for agile data management and product development.
 
 ## Prerequisites
 
@@ -44,11 +44,9 @@ This integration is invoked via a single REST API call to Scuba, wherein you pro
 
 To use this integration, you can make a single webhook request to Scuba. In this HTTP request, you will provide your credentials along with the details of your target segments and behaviors in Scuba. Ensure you have gathered all the requirements mentioned above before we format the example request.
 
-
-
 ### Step 2: Create an invoke the HTTP Request to load your data
 
-To perform the data load, make an **HTTP POST** request to our connector url **https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation** and include the required inputs in the request's JSON body. Include a header indicating content-type: application/json.
+To perform the data load, make an **HTTP POST** request to the connector url **https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation** and include the required inputs in the request's JSON body. Include a header indicating content-type: application/json.
 
 ```
 curl -X POST "https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation" \
@@ -89,8 +87,6 @@ Utilizing the behavioral actor properties of users we've imported to Braze, we c
 [4]: https://docs.scuba.io/glossary/actor-property
 [5]: https://docs.scuba.io/glossary/actor
 [6]: https://docs.scuba.io/guides/bql-syntax-and-usage
-
-
 [501]: {% image_buster /assets/img/scuba/1_segment_name.png %}
 [502]: {% image_buster /assets/img/scuba/2_filter_attribute.png %}
 [503]: {% image_buster /assets/img/scuba/3_select_property.png %}
