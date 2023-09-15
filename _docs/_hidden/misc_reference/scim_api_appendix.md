@@ -52,22 +52,13 @@ A valid workspace permissions set object is a JSON object with the following key
 | `appGroupPermissionSetID` | Required if `appGroupPermissionSetName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace permission set assigned to the user for this workspace. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-A valid team permission object is a JSON object with the following key-value pairs:
-
-| Key | Required | Data type | Description |
-| --- | --- | --- | --- |
-| `teamName` | Optional | String | Name of the team, which can be used to specify which team the permissions within this object are for. |
-| `teamId` | Required if `teamName` is missing | String | ID of the team, serving as an alternative method of specifying the team. |
-| `teamPermissions` | Required | Array | Array of team-level permission strings from the [team permission strings](#team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
 ### Team permissions object
 
 A valid team permission object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
-| `teamName` | Optional | String | Name of the team. Used to specify which team the permissions contained within this object are for. |
+| `teamName` | Optional | String | Name of the team, which can be used to specify which team the permissions within this object are for. |
 | `teamId` | Required if `teamName` is missing | String | ID of the team, serving as an alternative method of specifying the team. |
 | `teamPermissions` | Required | Array | Array of team-level permission strings from the [team permission strings](#team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
