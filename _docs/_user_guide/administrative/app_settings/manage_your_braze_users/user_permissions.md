@@ -71,8 +71,10 @@ You can manage user permissions by group or on an individual basis when editing 
 |Manage Teams|Allows users to manage **Internal Teams**. The ability to select this permission depends on your contract with Braze.|
 |Manage Events, Attributes, Purchases|Allows users to edit custom attributes (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**. If you turn this on for a non-admin Braze user, **Access Campaigns, Canvases, Cards, Segments, Media Library** permissions must also be granted. |
 |Manage Tags|Allows users to edit or delete tags (under **Tag Management**). You do not need this permission to add tags to campaigns or segments.|
-|Manage Email Settings|Allows user to save email configuration changes (**Settings** > **Email Preferences**).|
-|Manage Subscription Groups | Allows users to create and manage subscription groups. |
+|Manage Email Settings|Allows users to save email configuration changes (**Settings** > **Email Preferences**).|
+|Manage Subscription Groups| Allows users to create and manage subscription groups. |
+|View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
+|Manage Transformations|Allows users to create and manage Data Transformations. |
 |Approve and Deny Campaigns| Allows users to approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you're interested in participating in the early access. |
 | Approve and Deny Canvases| Allows users to approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/canvas_approval) must be turned on for this permission to apply. |
 {: .reset-td-br-1 .reset-td-br-2}
