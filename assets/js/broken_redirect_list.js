@@ -909,3 +909,7 @@ validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards
 validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/carousel_view/'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
 validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/implementation_guide/'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
 validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration?tab=objective-c#automatic-push-integration';
+
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/';

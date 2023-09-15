@@ -12,31 +12,64 @@ channel:
 
 # Web push
 
-> Web push is another great way to engage with users of your web application. Customers visiting your website via Chrome, Safari, Firefox, and Opera can opt-in to receive web push from your web application whether or not the web page is loaded. This feature is also supported on Android Chrome and Firefox Mobile on Android allowing for mobile web notifications. 
+> Learn about web push notifications at Braze and find resources for creating your own.
+
+Web push is another great way to engage with users of your web application. Customers visiting your website from [supported browsers](#supported-browsers) can opt-in to receive web push from your web application whether or not the web page is loaded.
+
+## Overview
+
+Web push notifications deliver urgent, actionable updates that drive quick conversions. With web push, you can:
+
+- Trigger messages right when important data changes, like a price decreases
+- Drive people back to your website with simple call-to-action buttons
+- Personalize your push with product and customer information to make your message relevant
 
 Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification][11].
 
-![Web push example with the same push message displayed on a laptop and phone.][12]
+![Web push example with the same push message displayed on a laptop and phone.][12]{: style="border:none"}
 
-Users of your web application need to opt-in to receive web push. 
+## Potential use cases
 
-![An opt-in web push example for Safari with two buttons: Don't Allow and Allow.][13]
+Here are some examples of common web push message use cases.
+
+| Use case | Description |
+| --- | --- | 
+| Free trial | Encourage new visitors on your website to sign up for free trials. By hooking users with the chance to experience what makes you special, you can make it more likely they become a paying customer. |
+| App download | Draw web users to your mobile app to help them get even more value out of your products. Consider leveraging personalization to highlight app benefits based on their current engagement patterns. |
+| Discounts and sales | Increase customer awareness of time-sensitive events and promotions. Message across multiple channels, including web push, to increase awareness of your brand's promotions. |
+| Cart abandonment | Send automated reminders to users who haven't finished their transactions to bring them back to the checkout flow. <br><br>Research conducted by Braze found that web push is 53% more effective than email and 23% more impactful than mobile push at getting recipients to come back and complete a purchase. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Prerequisites to use web push
+
+Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website. For detailed steps, refer to our [Web push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/).
+
+### Push permission
+
+Any brand can integrate and use web push notifications on their website. The notifications can reach both current and previous web visitors as long as they have a web browser open, but visitors must [opt in to receive notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-permission)—just like with traditional mobile app push.
+
+{% alert tip %}
+Consider using an in-browser message to prime users to opt in for web push, also known as a [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+{% endalert %}
+
+## Supported browsers
+
+The following browsers support web push notifications. However, private browsing windows do not currently support web push.
+
+- Chrome (and Chrome for Android mobile)
+- Safari
+- Firefox (and Firefox for Android mobile)
+- Opera
+- Edge
 
 For more information on the push protocol standards and browser support, you can review resources based on your browser:
 
-- [Safari (desktop)][3]
-- [Safari (mobile)][3.1]
-- [Mozilla Firefox][1]
-- [Microsoft Edge][2]
+- [Safari (desktop)](https://developer.apple.com/notifications/safari-push-notifications/)
+- [Safari (mobile)]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/)
+- [Mozilla Firefox](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)
+- [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/)
 
-{% alert important %}
-Private browsing windows do not currently support web push.
-{% endalert %}
 
-[1]: https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility
-[2]: https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/
-[3]: https://developer.apple.com/notifications/safari-push-notifications/
-[3.1]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/
 [11]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [12]: {% image_buster /assets/img_archive/Macbook_Push.png %}
 [13]: {% image_buster /assets/img_archive/WebPush_Prompt.png %}
