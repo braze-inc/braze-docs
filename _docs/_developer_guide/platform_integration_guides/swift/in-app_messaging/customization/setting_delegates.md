@@ -147,9 +147,9 @@ inAppMessage.orientation = BRZInAppMessageRawOrientationLandscape;
 {% endtab %}
 {% endtabs %}
 
-## Disabling Dark Mode
+## Disabling dark mode
 
-To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, implement the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog). The `PresentationContext` passed to the method contains a reference to the `InAppMessage` object to be presented. Each `InAppMessage` has a `themes` property containing a `dark` and `light` mode theme. If you set the `themes.dark` property to `nil`, BrazeUI will automatically present the in-app message using its light theme.
+To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, implement the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) method. The `PresentationContext` passed to the method contains a reference to the `InAppMessage` object to be presented. Each `InAppMessage` has a `themes` property containing a `dark` and `light` mode theme. If you set the `themes.dark` property to `nil`, Braze will automatically present the in-app message using its light theme.
 
 In-app message types with buttons have an additional `themes` object on their `buttons` property. Preventing buttons from adopting dark mode styling requires creating a new array of buttons for each type of content card which supports buttons. You can use [`map(_:)`](https://developer.apple.com/documentation/swift/array/map(_:)-87c4d) to create a new array containing a copy of each button except with only the original button's `light` theme and no `dark` theme.
 
