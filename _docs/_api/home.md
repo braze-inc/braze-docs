@@ -53,6 +53,7 @@ glossary_tags:
   - name: Subscription Groups
   - name: User Data
   - name: Live Activity
+  - name: Cloud Data Ingestion
 
 glossaries:
   - name: <a href='/docs/api/endpoints/user_data/post_user_alias/'>/users/alias/new</a>
@@ -429,4 +430,16 @@ glossaries:
     description: Look up an existing dashboard user account by specifying their email.
     tags:
       - SCIM
+  - name: <a href='/docs/api/endpoints/cdi/get_integration_list/'>/cdi/integrations</a>
+    description: Retrieve a list of existing integrations.
+    tags:
+      - Cloud Data Ingestion
+  - name: <a href='/docs/api/endpoints/cdi/job_sync/'>/cdi/integrations/{integration_id}/sync</a>
+    description: Trigger a sync for a given integration.
+    tags:
+      - Cloud Data Ingestion
+  - name: <a href='/docs/api/endpoints/cdi/job_sync_status/'>/cdi/integrations/{integration_id}/job_sync_status</a>
+    description: Retrieve a list of past sync status.
+    tags:
+      - Cloud Data Ingestion
 ---

@@ -43,6 +43,9 @@ These default limits can be increased upon request. Reach out to your customer s
 | [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36] | 16,000 requests per minute shared between the endpoints. |
 | [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 requests per minute shared between the endpoints. |
 | [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
+| [`/cdi/integrations`][46] | 50 requests per minute. |
+| [`/cdi/integrations/{integration_id}/sync`][47] | 20 requests per minute. |
+| [`/cdi/integrations/{integration_id}/job_sync_status`][48] | 100 requests per minute. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Batching API requests
@@ -136,3 +139,6 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [43]: {{site.baseurl}}/get_search_existing_dashboard_user_email/
 [44]: {{site.baseurl}}/api/endpoints/user_data/post_users_merge/
 [45]: {{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/
+[46]: {{site.baseurl}}/api/endpoints/cdi/get_integration_list/
+[47]: {{site.baseurl}}/api/endpoints/cdi/job_sync/
+[48]: {{site.baseurl}}/api/endpoints/cdi/job_sync_status/
