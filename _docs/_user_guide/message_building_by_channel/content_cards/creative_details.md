@@ -9,8 +9,9 @@ tool: Media
 
 ---
 
-> Customizing Content Cards and the feed they are located in can't be done during the campaign creation process—you must work with your engineers and developers to build and customize your cards. For technical details, visit our [developer documentation][7].
+# Creative details for Content Cards
 
+> Customizing Content Cards and the feed they are located in can't be done during the campaign creation process—you must work with your engineers and developers to build and customize your cards. For technical details, visit our [developer documentation][7].
 
 ## Content Card types
 
