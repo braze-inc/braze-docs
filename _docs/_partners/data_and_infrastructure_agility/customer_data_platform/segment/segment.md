@@ -290,7 +290,7 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 |---|---|---|
 | [Track](https://segment.com/docs/spec/track/) | Logged as a [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events). | Segment: `analytics.track("played_game");` <br>Braze: `Braze.logCustomEvent("played_game");`|
 | [Track with properties](https://segment.com/docs/spec/track/) | Logged as [Event Property]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties). | Segment: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` <br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
-| [Track with product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | Segment: `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` <br>Braze: `Braze.logPurchase("ab12", 19);` |
+| [Track with product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});` <br>Braze: `Braze.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ##### Order completed {#order-completed}
