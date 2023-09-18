@@ -19,7 +19,7 @@ We anticipate that both our Swift SDK and our legacy Objective-C SDK will be com
 
 One of the important changes in iOS 17 is blocking UTM parameters in Safari. UTM parameters are pieces of code that are added to URLs, which are frequently used in marketing campaigns to measure the effectiveness of email, SMS, and other messaging channels. 
 
-Braze email click tracking and SMS link shortening encodes links in a way that is not impacted by this change.
+Braze email click tracking and SMS link shortening encodes are not impacted by this change.
 
 ### App Tracking Transparency
 
