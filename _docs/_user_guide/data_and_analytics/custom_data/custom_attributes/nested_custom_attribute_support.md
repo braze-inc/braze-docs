@@ -35,7 +35,7 @@ Custom attribute objects can contain [data types][1], such as:
 
 ## Limitations
 
-- Nested custom attributes are intended for custom attributes sent via the Braze SDK or API. 
+- The use of nested custom attributes is currently supported exclusively through the Braze API and is not available through the SDK. Please note that it is on our roadmap for future implementation via the SDK. 
 - Partners do not support arrays of objects. We recommend against using this feature with workspaces that have partner integrations enabled.
 - Objects have a maximum size of 50&nbsp;KB.
 - Key names and string values have a size limit of 255 characters.
