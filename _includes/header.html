@@ -291,22 +291,8 @@
               </div>
             </div>
           </li>
-					<!-- Language Select -->
 
         </ul>
-				<ul class="navbar-nav " id="braze_header_lang">
-					<li class="nav-item nav-item-lang-li">
-						<div id="nav-item-lang">
-						<label for="lang_select"><i class="fa-solid fa-globe"></i>
-						</label>
-						<select class="lang-select" id="lang_select">
-							<option value="en">EN</option>
-							<option value="fr">FR</option>
-							<option value="ja">JP</option>
-						</select>
-						</div>
-					</li>
-				</ul>
 				</div>
         <ul class="navbar-nav" id="braze_header_alt">
           <li class="nav-item">
@@ -376,16 +362,29 @@
                   {%- assign active_url = nav_url -%}
                   {%- assign active_title = cl.title -%}
                 {%- endif -%}
-              <li class="nav-item {{isactive}} ">
+              <li class="nav-item {{isactive}}">
                   <a class="nav-link" href="{{nav_url}}"><div>{{cl.title}}</div></a>
               </li>
 
             {%- endunless -%}
           {%- endif -%}
         {%- endfor -%}
-
+				<li>
+					<ul id="braze_header_lang">
+						<li class="nav-item nav-item-lang-li">
+							<div id="nav-item-lang">
+							<label for="lang_select"><i class="fa-solid fa-globe"></i>
+							</label>
+							<select class="lang-select" id="lang_select">
+								<option value="en">EN</option>
+								<option value="fr">FR</option>
+								<option value="ja">JP</option>
+							</select>
+							</div>
+						</li>
+					</ul>
+				</li>
       </ul>
-
     </div>
 
 
@@ -441,7 +440,6 @@
            </div>
          </li>
       </ul>
-
     </div>
     </div>
 
