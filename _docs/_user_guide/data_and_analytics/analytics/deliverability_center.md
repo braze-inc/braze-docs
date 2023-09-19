@@ -23,12 +23,34 @@ Follow these steps to integrate with Google Postmaster and set up your Deliverab
 1. Go to **Analytics** > **Email Performance**.
 2. Select the **Deliverability Center** tab. <br>![][3]
 3. Click **Connect with Google Postmaster**. 
-4. Select your Google Account, and click the **Allow** button to allow Braze to view email traffic metrics for the domains registered with the Postmaster Tools.
-5. Your verified domains will be displayed in the Deliverability Center. <br>![][5]
+4. Select your Google Account, and click **Allow** to allow Braze to view email traffic metrics for the domains registered with the Postmaster Tools. 
+
+Your verified domains will display in the Deliverability Center. 
+
+![][5]
 
 You can also access Google Postmaster in the Braze dashboard by navigating to **Partner Integrations** > **Technology Partners** > **Google Postmaster**. After integrating, Braze pulls reputation and error data for the last 30 days. The data may not be immediately available and could take several minutes to populate.
 
-#### IP reputation 
+## Integrating with Microsoft Smart Network Data Servies (SNDS)
+
+{% alert important %}
+Integrating with Microsoft SNDS in the Deliverability Center is currently in early access. Contact your account manager if you're interested in participating in this early access.
+{% endalert %}
+
+If Microsoft is your main mailbox provider, you can use this integration to access and view your Microsoft reputation data. This way, you can monitor the health of your IPs to help determine how your emails are being received.
+
+1. Go to **Analytics** > **Email Performance**.
+2. Select the **Deliverability Center** tab.
+3. Click **Connect with Microsoft SNDS**. 
+4. Select your Microsoft account, and click **Allow** to allow Braze to view email traffic metrics for the domains registered.
+
+Your verified domains will display in the Deliverability Center.
+
+![][8]
+
+## Metrics and definitions
+
+### IP reputation 
 
 To help understand the ratings for IP reputation, refer to this table:
 
@@ -40,7 +62,7 @@ To help understand the ratings for IP reputation, refer to this table:
 | Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Domain reputation 
+### Domain reputation 
 
 Use the following table to help monitor and understand your domain reputation ratings to help avoid being filtered into a spam folder.
 
@@ -52,7 +74,7 @@ Use the following table to help monitor and understand your domain reputation ra
 | Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Authentication
+### Authentication
 
 You can use the authentication dashboard to review the percentage of emails that have passed Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting and Conformance (DMARC).
 
@@ -63,7 +85,7 @@ You can use the authentication dashboard to review the percentage of emails that
 | DMARC | Shows the percentage of emails that passed DMARC alignment versus all emails received from the domain that passed either SPF or DKIM. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Encryption
+### Encryption
 
 Refer to this table to understand what percentage of your inbound and outbound traffic is encrypted.
 
@@ -82,3 +104,4 @@ For more ideas on improving deliverability, read [Deliverability pitfalls and sp
 [5]: {% image_buster /assets/img_archive/deliverability_center2.png %}
 [6]: {{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
+[8]: {% image_buster /assets/img_archive/deliverability_center_msnds.png %}
