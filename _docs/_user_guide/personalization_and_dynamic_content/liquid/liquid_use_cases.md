@@ -683,7 +683,7 @@ This use case calculates the number of times a custom event has been logged betw
 
 {% connected_content YOUR_BRAZE_ENDPOINT/users/export/ids
  :method post
-  :headers { "Authorization": "Bearer <<api_key>>" }
+  :headers { "Authorization": "Bearer YOUR_API_KEY" }
   :body {{body}}
  :content_type application/json
  :save response
