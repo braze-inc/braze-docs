@@ -34,7 +34,7 @@ validurls['/docs/quick_wins/personalized_messaging#conditionals'] = '/docs/user_
 validurls['/docs/quick_wins/personalized_messaging'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/';
 
 validurls['/docs/getting_started/'] = '/docs/user_guide/onboarding_with_braze/';
-validurls['/docs/getting_started#list-unsubscribe-settings'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header';
+validurls['/docs/getting_started#list-unsubscribe-settings'] = '/docs/user_guide/administrative/app_settings/email_settings/#include-a-list-unsubscribe-header';
 validurls['/docs/quick_wins/optimal_send_time'] = '/docs/user_guide/sage_ai/intelligence/intelligent_timing/';
 validurls['/docs/scheduling_and_organizing_campaigns/#intelligent-delivery'] = '/docs/user_guide/sage_ai/intelligence/intelligent_timing/';
 validurls['/docs/troubleshooting_guide/'] = '/docs/help/home/';
@@ -459,9 +459,9 @@ validurls['/docs/developer_guide/platform_integration_guides/fireos/content_card
 
 validurls['/docs/user_guide/personalization_and_dynamic_content/liquid/filters/#e-commerce/'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/filters/#money-filters/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/amerpity/#amperity/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/';
-validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#overview/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
-validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#benefits-of-the-list-unsubscribe-header/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
-validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#how-the-list-unsubscribe-header-works/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#overview/'] = '/docs/user_guide/administrative/app_settings/email_settings/#include-a-list-unsubscribe-header';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#benefits-of-the-list-unsubscribe-header/'] = '/docs/user_guide/administrative/app_settings/email_settings/#include-a-list-unsubscribe-header';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#how-the-list-unsubscribe-header-works/'] = '/docs/user_guide/administrative/app_settings/email_settings/#include-a-list-unsubscribe-header';
 
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/understanding_campaign_status/'] = '/docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/';
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/';
