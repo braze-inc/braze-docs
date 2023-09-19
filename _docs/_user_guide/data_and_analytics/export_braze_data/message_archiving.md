@@ -35,7 +35,7 @@ Enabling this feature will impact the delivery speed of your messages as the S3 
 
 {% alert note %}
 **Having trouble finding your push tokens in your S3 buckets?**<br>
-Braze .downcase the push tokens **before** md5 hashing. This would result in the token `Test_Push_Token12345` to be the S3 folder `45a61753adab78677ad9e6585b59e328`.
+Braze downcases your push tokens before we hash them. This results in the push token `Test_Push_Token12345` being downcased to `test_push_token12345` in the S3 folder with the hash `32b802170652af2b5624b695f34de089`.
 {% endalert %}
 
 ## File references
