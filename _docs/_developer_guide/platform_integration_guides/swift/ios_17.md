@@ -20,7 +20,7 @@ The Braze Swift SDK and Objective-C SDK are both backward compatible with Xcode 
 
 One of the important changes in iOS 17 is blocking UTM parameters in Safari. UTM parameters are pieces of code that are added to URLs, which are frequently used in marketing campaigns to measure the effectiveness of email, SMS, and other messaging channels. 
 
-Braze email and SMS channels encode links in a way that are not impacted by this change.  
+Braze email click tracking and SMS link shortening sends are not impacted by this change.
 
 ### App Tracking Transparency
 
