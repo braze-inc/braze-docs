@@ -12,7 +12,7 @@ platform:
 
 # Getting started: Platform overview
 
-> Braze provides a comprehensive user engagement solution for your mobile and web applications. The Braze platform has three primary components - the SDK, the dashboard, and the REST API.
+> Braze is a customer engagement platform. This simply means that Braze helps you listen to your users, understand your users’ actions and behaviors, and then act on them. The Braze platform has three primary components - the SDK, the dashboard, and the REST API.
 
 ## SDK
 
