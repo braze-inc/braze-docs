@@ -76,7 +76,7 @@ You can manage user permissions by group or on an individual basis when editing 
 |View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
 |Manage Transformations|Allows users to create and manage Data Transformations. |
 |Manage Feature Flags| Allows users to create or edit [feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/).|
-| Launch and Manage Content Blocks| Allows users to launch, edit, archive, and unarchive a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/). |
+| Launch and Manage Content Blocks| Allows users to launch Content Blocks, and edit, archive, and unarchive launched [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/). |
 |Launch Preference Centers| Allows users to launch [preference centers]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Approve and Deny Campaigns| Allows users to approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you're interested in participating in the early access. |
 | Approve and Deny Canvases| Allows users to approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/canvas_approval) must be turned on for this permission to apply. |
