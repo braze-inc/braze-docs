@@ -691,7 +691,7 @@ This use case calculates the number of times a custom event has been logged betw
 
 {% for custom_event in response.users[0].custom_events %}
 {% assign ce_name = custom_event.name %}
-{% comment %} The following Custom Event name will need to be amended for the target Custom Event. {% endcomment %}
+{% comment %} The following custom event name will need to be amended for the target custom event. {% endcomment %}
 
 {% if ce_name == "Project Exported" %}
 {% comment %}{{custom_event.name}}: {{custom_event.count}}{% endcomment %}
