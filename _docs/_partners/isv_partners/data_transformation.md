@@ -7,9 +7,6 @@ hidden: true
 
 > Braze’s [Data Transformation]({{site.baseurl}}/data_transformation/) tool can ingest a webhook from a partner platform and allow a customer to define a mapping to convert that webhook's payload to the desired user data, such as attributes, events, or purchases on Braze user profiles.
 
-{% alert note %}
-Data transformation is currently in early access. Customers wanting to use a partner integration that utilizes Data Transformation will need to contact their customer success manager to get access to the tool.
-{% endalert %}
 
 ## What a Data Transformation based integration would look like
 
