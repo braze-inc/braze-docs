@@ -14,7 +14,7 @@ glossaries:
     description: Braze defines an <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/">active user</a> for a given period as any user who has a session at that time.
   - name: A/B Multivariate Testing
     description: A type of testing where one or more variables are changed and tested to see which changes perform best. <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate--ab-testing">A/B Testing</a> can be done within dashboard campaigns.
-  - name: App instances
+  - name: App Instances
     description: The different sites and apps that are collected within a workspace.
   - name: Alloys
     description: Alloys are Braze's <a href="https://www.braze.com/docs/partners/home/">Technology Partners</a>.
