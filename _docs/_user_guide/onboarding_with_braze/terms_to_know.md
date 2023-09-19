@@ -1,11 +1,11 @@
 ---
 page_order: 0
 nav_title: Terms to Know
-article_title: Onboarding Terms to Know
+article_title: Braze Terms to Know
 
 layout: glossary_page
 glossary_top_header: "Terms to Know"
-glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze! Give this a read before you begin your onboarding."
+glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze. Give this a read before you begin your onboarding."
 page_type: glossary
 description: "This glossary covers important terms to know as you go through the Braze onboarding process."
 
@@ -14,6 +14,8 @@ glossaries:
     description: Braze defines an <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/">active user</a> for a given period as any user who has a session at that time.
   - name: A/B Multivariate Testing
     description: A type of testing where one or more variables are changed and tested to see which changes perform best. <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate--ab-testing">A/B Testing</a> can be done within dashboard campaigns.
+  - name: App instances
+    description: The different sites and apps that are collected within a workspace.
   - name: Alloys
     description: Alloys are Braze's <a href="https://www.braze.com/docs/partners/home/">Technology Partners</a>.
   - name: Anonymous Users
