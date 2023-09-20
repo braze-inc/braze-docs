@@ -41,7 +41,7 @@ For instructions and details about blocklisting custom data, refer to [Custom ev
 
 ### Deleting custom data
 
-After you blocklist the custom data object and remove references to it from your app or website, the custom data can be deleted. For help deleting custom data, please reach out to your customer success manager or the Braze support team.
+The custom data can be deleted after you blocklist the custom data object and remove references from your app or website. For help deleting custom data, contact your customer success manager or the Support team.
 
 Deleting custom data does the following:
 
