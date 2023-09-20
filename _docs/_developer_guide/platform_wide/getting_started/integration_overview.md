@@ -155,6 +155,7 @@ Make sure your production and testing environments are set up before beginning Q
 
 ### QA data ingestion
 You'll QA the way data is ingested, stored, and exported. 
+
 * Run tests to confirm data is stored properly.
 * Ensure session data is correctly attributed to the intended workspace within Braze.
 * Ensure session starts and ends are being recorded.
@@ -164,7 +165,8 @@ You'll QA the way data is ingested, stored, and exported.
 * Ensure that anonymous user profiles become known user profiles when the `changeUser()` method is called.
 
 ### QA messaging
-You'll ensure that your messages are being sent to your users and everything looks excellent. 
+You'll ensure that your messages are being sent correctly to your users and everything looks excellent. 
+
 * Create segments of users.
 * Launch campaigns and Canvases successfully.
 * Ensure the correct campaigns are being shown to the correct user segments.
