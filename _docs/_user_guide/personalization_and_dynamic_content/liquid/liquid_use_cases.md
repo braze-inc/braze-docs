@@ -272,18 +272,16 @@ This use case captures different shipping options, calculates the length of time
 
 {% raw %}
 ```liquid
-{% assign standard_shipping_start = "2019-12-10T00:00-05:00" | date: "%s" %}
-{% assign standard_shipping_end = "2019-12-20T13:00-05:00" | date: "%s" %}
-{% assign express_shipping_end = "2019-12-22T24:00-05:00" | date: "%s" %}
-{% assign overnight_shipping_end = "2019-12-23T24:00-05:00" | date: "%s" %}
+{% assign standard_shipping_start = "2023-12-10T00:00-05:00" | date: "%s" %}
+{% assign standard_shipping_end = "2023-12-20T13:00-05:00" | date: "%s" %}
+{% assign express_shipping_end = "2023-12-22T24:00-05:00" | date: "%s" %}
+{% assign overnight_shipping_end = "2023-12-23T24:00-05:00" | date: "%s" %}
 {% assign today = 'now' | date: "%s" %}
 
 {% assign difference_s = standard_shipping_end | minus: today %}
 {% assign difference_s_days = difference_s | divided_by: 86400.00 | round %}
-difference s days: {{difference_s_days}}
 {% assign difference_e = express_shipping_end | minus: today %}
 {% assign difference_e_days = difference_e | divided_by: 86400.00 | round %}
-difference e days: {{difference_e_days}}
 {% assign difference_o = overnight_shipping_end | minus: today %}
 {% assign difference_o_days = difference | divided_by: 86400.00 | round %}
 
@@ -674,9 +672,26 @@ This use case calculates the number of times a custom event has been logged betw
 
 {% raw %}
 ```liquid
+
+{% capture body %}
+{
+ "braze_id": "{{${braze_id}}}",
+ "fields_to_export": ["custom_events"]
+}
+
+{% endcapture %}
+
+{% connected_content YOUR_BRAZE_ENDPOINT/users/export/ids
+ :method post
+  :headers { "Authorization": "Bearer YOUR_API_KEY" }
+  :body {{body}}
+ :content_type application/json
+ :save response
+  :retry %}
+
 {% for custom_event in response.users[0].custom_events %}
 {% assign ce_name = custom_event.name %}
-{% comment %} The following Custom Event name will need to be amended for the target Custom Event. {% endcomment %}
+{% comment %} The following custom event name will need to be amended for the target custom event. {% endcomment %}
 
 {% if ce_name == "Project Exported" %}
 {% comment %}{{custom_event.name}}: {{custom_event.count}}{% endcomment %}
@@ -686,7 +701,7 @@ This use case calculates the number of times a custom event has been logged betw
 
 {% assign prev_month_count = {{custom_attribute.${projects_exported_prev_month}}} %}
 {% assign latest_count = current_count | minus: prev_month_count %}
-{% assign now = '"now" | date: "%s" %}
+{% assign now = "now" | date: "%s" %}
 {% assign yesterday = {{now}} | minus: 86400 %}
 {% assign previous_month = {{yesterday}} | date: "%B" %}
 {% assign previous_year = {{yesterday}} | date: "%y" %}
@@ -979,7 +994,7 @@ The following step checks if the time_to_reminder is less than 26 days away but 
 Users are scheduled to enter the journey on day 13.
 {% endcomment %}
 
-{% elsif 1123200 < {{time_to_reminder}} and {{time_to_reminder}} < 2246399 %}
+{% elsif 1123200 > {{time_to_reminder}} and {{time_to_reminder}} < 2246399 %}
 {% assign time_to_first_message = reminder_start_date | plus: 1123200 %}
 
 {
@@ -998,7 +1013,7 @@ Users are scheduled to enter the journey on day 13.
 },
 
 "schedule": {
-"time": "2021-03-24T20:04:00+0000"
+"time": "{{ time_to_first_message | date: '%Y-%m-%dT%H:%M:%S+0000' }}"
 }
 }
 
@@ -1007,7 +1022,7 @@ The following step checks if the time_to_reminder is less than 13 days away but 
 Users are scheduled to enter the journey on day 7.
 {% endcomment %}
 
-{% elsif 604800 < {{time_to_reminder}} and {{time_to_reminder}} < 1123199 %}
+{% elsif 604800 > {{time_to_reminder}} and {{time_to_reminder}} < 1123199 %}
 {% assign time_to_first_message = reminder_start_date | plus: 604800 %}
 
 {
