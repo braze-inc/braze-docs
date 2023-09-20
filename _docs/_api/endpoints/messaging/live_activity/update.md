@@ -15,10 +15,6 @@ description: "This article outlines details about the Update Live Activity endpo
 /messages/live_activity/update
 {% endapimethod %}
 
-{% alert important %} 
-Live Activities are currently in early access. Contact your Braze account manager if you're interested in participating. 
-{% endalert %}
-
 Use this endpoint to update and end [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) displayed by your iOS app. This endpoint requires additional setup.
 
 Before using this endpoint, you must register an activity with the Braze Swift SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method. Required request parameters will be defined during this step. Refer to [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) for more information on registration.
