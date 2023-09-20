@@ -167,6 +167,16 @@ body .ab-feed {
 ```
 
 {% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
+
+{% endtab %}
 {% endtabs %}
 
 ## Customization recipes 
@@ -232,6 +242,16 @@ Just like any other web element, you can easily customize the appearance of Cont
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 ```
+
+{% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
 
 {% endtab %}
 {% endtabs %}
@@ -321,6 +341,16 @@ pinnedIndicator.replaceChildren(customIcon);
 ```
 
 {% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
+
+{% endtab %}
 {% endtabs %}
 
 ### Changing the unread indicator color
@@ -392,6 +422,16 @@ To change the color of the unread indicator of a card, add custom CSS to your we
 ```
 
 {% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
+
+{% endtab %}
 {% endtabs %}
 
 ### Disabling unread indicator
@@ -423,6 +463,16 @@ Hide the unread indicator bar by adding the following style to your `css`:
 ```css
 .ab-unread-indicator { display: none; }
 ```
+
+{% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
 
 {% endtab %}
 {% endtabs %}

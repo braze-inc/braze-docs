@@ -186,6 +186,16 @@ Content Cards will only refresh on session start if a subscribe request is calle
 {% endalert %}
 
 {% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
+
+{% endtab %}
 {% endtabs %}
 
 
@@ -306,6 +316,16 @@ import * as braze from "@braze/web-sdk";
 
 braze.logContentCardClick(card);
 ```
+
+{% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
 
 {% endtab %}
 {% endtabs %}

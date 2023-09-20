@@ -99,6 +99,16 @@ function refresh() {
 ```
 
 {% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
+
+{% endtab %}
 {% endtabs %}
 
 
@@ -296,6 +306,16 @@ braze.showContentCards(null, (cards) => {
 ```
 
 {% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
+
+{% endtab %}
 {% endtabs %}
 
 ## Change "empty feed" language
@@ -357,6 +377,16 @@ If you want to update this message in different locale languages, find the corre
 {% tab Web %}
 
 The Web SDK does not support replacing the "empty feed" language programmatically. You can opt to replace it each time the feed is shown, but this is not recommended because the feed may take some time to refresh and the empty feed text won't display immediately. 
+
+{% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
 
 {% endtab %}
 {% endtabs %}
@@ -559,6 +589,16 @@ document.getElementById("show-transactional-feed").onclick = function() {
 ```
 
 For more information, see the [SDK method documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards).
+
+{% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
 
 {% endtab %}
 {% endtabs %}

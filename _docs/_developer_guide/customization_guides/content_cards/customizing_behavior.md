@@ -40,6 +40,16 @@ Key-value pairs are stored on <a href="https://braze-inc.github.io/braze-swift-s
 Key-value pairs are stored on <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call `card.extras` to access these values.
 
 {% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
+
+{% endtab %}
 {% endtabs %}
 
 {% alert tip %}
@@ -156,6 +166,16 @@ braze.getCachedContentCards().getUnviewedCardCount();
 ```
 
 You can then use this information to display a badge signifying how many unread Content Cards there are. See the <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">SDK reference docs</a> for more information.
+
+{% endtab %}
+{% tab iOS legacy %}
+
+TBD
+
+{% endtab %}
+{% tab Unity %}
+
+TBD
 
 {% endtab %}
 {% endtabs %}
