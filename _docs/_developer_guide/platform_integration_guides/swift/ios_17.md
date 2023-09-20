@@ -11,7 +11,7 @@ description: "This article covers Braze's insights into the iOS 17 release to he
 
 > Curious about how Braze is preparing for the upcoming iOS release? This article summarizes our insights into the iOS 17 release to help you create a seamless experience for you and your users.
 
-## iOS 17 & XCode 15 Compatibility
+## iOS 17 and Xcode 15 compatibility
 The Braze Swift SDK and Objective-C SDK are both backward compatible with Xcode 14 and Xcode 15, and compatible with iOS 17 devices.
 
 ## Changes in iOS 17
@@ -20,7 +20,7 @@ The Braze Swift SDK and Objective-C SDK are both backward compatible with Xcode 
 
 One of the important changes in iOS 17 is blocking UTM parameters in Safari. UTM parameters are pieces of code that are added to URLs, which are frequently used in marketing campaigns to measure the effectiveness of email, SMS, and other messaging channels. 
 
-Braze email click tracking and SMS link shortening sends are not impacted by this change.
+This change does not impact Braze email click tracking and SMS link shortening sends.
 
 ### App Tracking Transparency
 
@@ -28,11 +28,11 @@ Apple announced its commitment to expand the scope of App Tracking Transparency 
 
 #### Privacy manifests
 
-Privacy manifests allow developers to outline the privacy practices of their app&#8212;including third party SDKs&#8212;in a standardized format. As part of this effort, Apple plans to identify and block iOS APIs that might be used for fingerprinting. If applications are using such APIs, they will be obliged to list a "required reason" for using that API in the privacy manifest. 
+Privacy manifests allow developers to outline the privacy practices of their app&#8212;including third-party SDKs&#8212;in a standardized format. As part of this effort, Apple plans to identify and block iOS APIs that might be used for fingerprinting. If applications use such APIs, they will be obliged to list a "required reason" for using that API in the privacy manifest. 
 
 #### Code signing
 
-Code signing allows developers using a third party SDK in their application to validate that it was signed by the same developer as previous versions in XCode. 
+Code signing allows developers who use a third-party SDK in their application to validate that the same developer signed it as previous versions in XCode. 
 
 ### Braze SDK and privacy
 
