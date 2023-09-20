@@ -1298,7 +1298,7 @@ Content for iOS.
 Content for Android.
 
 {% else %}
-abort
+{% abort_message %} 
 {% endif %}
 ```
 {% endraw %}
