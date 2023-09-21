@@ -22,11 +22,12 @@ This page describes early access updates to the Conversions dashboard. If you're
 2. Select a **Date Range** for your report, up to a 90-day window.
 3. Select the campaigns or Canvases (or both) that you would like to analyze. 
    - If you would like to filter campaigns and Canvases by tag, select a **Tag**.  
-4. Select a **Channel** that you would like to analyze for your messages. For now, you can select a single channel. 
+4. Select which **Channel(s)** you would like to analyze for your messages.
 5. (Optional) If desired, select a **Breakdown** layer. This allows you to view different dimensions of data, such as by variant, Canvas step, country, or language.
 6. (Optional) If you are interested in calculating conversions of an event that was not set up as a conversion event on the campaign or Canvas, turn on [Use custom events](#using-custom-events).
-7. Select an [Attribution Method](#attribution-methods) through which to analyze the selected messages. We are working to add additional attribution methods.
-8. Click **Create** to run the report.
+7. Select an [Attribution Method](#attribution-methods) through which to analyze the selected messages.
+   - Note: if you are analyzing conversions for multiple channels, you will only be able to use Last Touch Attribution.
+9. Click **Create** to run the report.
 
 After the page has loaded, select a **Conversion Event** to filter the report for conversion data. The available selections will include the events that were pre-configured on the Canvases and campaigns. If you selected a custom event when setting up your report (step 6), this option is not available.
 
@@ -54,8 +55,13 @@ Your report is split into three sections:
 
 The conversion details table includes one column for *Unique Recipients* and another for *Conversions* (rate and total count).
 
-- *Unique Recipients* is defined as the number of users who received a message through the selected channel within the report's date range.
+- *Recipients* is defined as the number of users who received a message through the selected channel within the report's date range.
 - *Conversions* are defined by the attribution method you selected when you set up the report. See the following sections for additional details on the [attribution methods](#attribution-methods).
+- *Conversion Rate (Recipients)* Calculated as: (Number of conversions) / (Number of recipients)
+- *Touches* are defined as the number of physical interactions or touchpoints with a message. Touches can include: Email Open and Email Click, Push Open, Content Card Click, In-App Message Click, SMS Delivery.
+- *Conversion Rate (Last Touch)* Conversions that give all credit to the last-touched or clicked message during the conversion window. Calculated as: (Number of conversions) / (Number of Touches)
+
+
 
 ![]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="max-width:70%"}
 
@@ -68,6 +74,10 @@ This bar graph shows the absolute counts for each [engagement event]({{site.base
 By default, all selected campaigns and Canvases are shown. To deselect a campaign or Canvas, click on the name of the campaign or Canvas that you'd like to exclude. For additional details on the engagement event, you can hover over each bar.
 
 To download the time series data, click and select your download option. Available options are PNG, JPEG, PDF, SVG, or CSV.
+
+{% alert note %}
+This graph only shows data for a single channel at a time, please use the **Channel** dropdown on the chart to select a single channel.
+{% endalert %}
 
 ![]({% image_buster /assets/img_archive/conversions2_funnel.png %}){: style="max-width:70%"}
 
@@ -110,6 +120,11 @@ To download the time series data, click <i class="fas fa-bars"></i> and select y
     <td class="leftHeader">Upon Click</td>
     <td class="tg-0pky">Total number of conversions that occurred message email click.</td>
     <td class="tg-0pky">Calculated as (Unique Click Conversions) / (Unique Recipients)</td>
+  </tr>
+     <tr>
+    <td class="leftHeader">Last Touch Attribution</td>
+    <td class="tg-0pky">Conversions that give all credit to the last-touched or clicked message during the conversion window.</td>
+    <td class="tg-0pky">Calculated as (Number of Touches) / (Unique Recipients)</td>
   </tr>
 </tbody>
 </table>
