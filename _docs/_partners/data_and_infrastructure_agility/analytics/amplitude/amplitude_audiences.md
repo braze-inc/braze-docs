@@ -108,9 +108,9 @@ Refer to Amplitude's documentation to learn more about [syncing properties, reco
 
 #### How to sync user properties and computations
 
-In Amplitude Audiences, select **New > Sync**.
+In Amplitude Audiences, select **Syncs > Create Sync**.
 
-![]({% image_buster /assets/img/amplitude5.png %})
+![]({% image_buster /assets/img/amplitude11.png %})
 
 Next, choose to sync a user property, computation, cohort, or recommendation. 
 

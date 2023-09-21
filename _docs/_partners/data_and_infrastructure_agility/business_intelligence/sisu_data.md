@@ -18,8 +18,6 @@ The Sisu Data and Braze integration allows you to understand across all campaign
 | Requirement | Description |
 | ----------- | ----------- |
 | Sisu account | A [Sisu][3] account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 | Cloud warehouse | This integration assumes your Braze data is stored in a cloud warehouse (e.g., Snowflake, BigQuery). To streamline this integration process, we recommend utilizing Braze's native functionality via [Currents][4]. |
 {: .reset-td-br-1 .reset-td-br-2}
 
