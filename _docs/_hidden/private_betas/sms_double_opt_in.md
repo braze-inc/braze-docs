@@ -68,7 +68,7 @@ Each subscription source has a different enrollment behavior, as described in th
 
 Source    | Double Opt-In Enrollment Behavior   
 ----------- | -----------
-SDK | Users will automatically enter into the SMS double opt-in workflow when subscribed via the Braze SDK.
+SDK | Users will automatically enter the SMS double opt-in workflow when subscribed via the Braze SDK.
 REST API | Users can be entered into the workflow when the subscription status is set via `/subscription/status/set`, `/v2/subscription/status/set` or `/users/track` and the optional parameter `use_double_opt_in_logic` is passed as `true` (for example, [{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed", "use_double_opt_in_logic": true}]). If this parameter is omitted, users will not be entered into the SMS double opt-in workflow.
 Shopify | Users will not be entered into the SMS double opt-in workflow when their subscription status is set by our Shopify integration.
 User Import | Users will not be entered into the SMS double opt-in workflow when their subscription status is set by User Import.
