@@ -71,7 +71,7 @@ In Braze, Facebook audience export is accessible through the **Segments** page.
 2. Click **Export as Facebook Audience**. <br><br>![A list of Braze segments. For the first segment, the setting symbol is selected and the "Export as Facebook Audience" button is shown.][11]
 
 {: start="3"}
-3. If you haven't already activated Facebook within Braze, you will be prompted to go to the Facebook Technology Partners page in the dashboard. If you already activated Facebook through **Technology Partners > Facebook**, you will be able to select the user field to export, and a dropdown to select your Facebook ad account will show. <br><br> There are three possible user fields you can export:  
+3. If you haven't already activated Facebook within Braze, you will be prompted to go to the Facebook Technology Partners page in the dashboard. If you already activated Facebook through **Technology Partners** > **Facebook**, you will be able to select the user field to export, and a dropdown to select your Facebook ad account will show. <br><br> There are three possible user fields you can export:  
 - Email
 - Device IDFA
 - Phone number
