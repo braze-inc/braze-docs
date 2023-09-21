@@ -21,7 +21,7 @@ Common use cases for exporting Facebook Custom Audiences include:
 
 {% alert note %}
 The Facebook audience export uses the **User Access Token** to authorize requests.<br><br>
-If you are using this feature alongside the [Audience Sync to Facebook]({{site.baseurl}}/audience_sync_facebook/) feature (currently in beta), Braze will default to using the more reliable **System User Token** that you have already generated, to authorize requests.
+If you are using this feature alongside the [Audience Sync to Facebook]({{site.baseurl}}/audience_sync_facebook/) feature, Braze will default to using the more reliable **System User Token** that you have already generated, to authorize requests.
 {% endalert %}
 
 {% alert note %}
