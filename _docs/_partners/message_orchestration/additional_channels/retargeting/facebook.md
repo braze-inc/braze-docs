@@ -65,7 +65,7 @@ For customers that have previously undergone the Facebook app review process for
 
 ### Step 2: Export your users into Facebook
 
-Braze's Facebook audience export is accessible through the **Segments** page. 
+In Braze, Facebook audience export is accessible through the **Segments** page. 
 
 1. On the **Segments** page, click the gear next to the segment you'd like to export.
 2. Click **Export as Facebook Audience**. <br><br>![A list of Braze segments. For the first segment, the setting symbol is selected and the "Export as Facebook Audience" button is shown.][11]
