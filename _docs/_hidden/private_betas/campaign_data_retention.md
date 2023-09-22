@@ -1,34 +1,32 @@
 ---
-nav_title: "Campaign Interaction Data Retention"
-article_title: "Campaign Interaction Data Retention"
+nav_title: "Message Interaction Data Availability"
+article_title: "Message Interaction Data Availability"
 permalink: "/campaign_data_retention/"
 hidden: true
 ---
 
-# Campaign Interaction Data Retention
+# Message Interaction Data Availability
 
-> This article covers the new Braze data retention for campaign interactions. <br><br> Data stored in Braze is retained and usable for segmentation, personalization, and targeting for the lifetime of the Customer’s account. This means data such as user profile attributes, custom attributes, custom events, and purchases are stored indefinitely for active users unless removed by the Customer, for the duration of the contract.
+> This article covers the new Braze message data availability policy for campaign interaction data as well as the early access release of a feature related thereto. <br><br> Data stored in Braze is retained and usable for segmentation, personalization, and targeting for the lifetime of the Customer’s account. This means data such as user profile attributes, custom attributes, custom events, and purchases are stored indefinitely for active users unless removed by the Customer, for the duration of the contract.
 
-The Braze Messaging & Automation team is planning to provide indefinite data retention for customers who use retargeting. This new feature will allow customers to continue accessing the data they need, while also allowing Braze to move the data to a more scalable storage option. "Data" in this case refers to "interaction data", which are interactions to a campaign. For example, when a user opens a campaign A, or a user receives variant A. The main use case for interaction data is [retargeting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/) users based on messages they’ve received.
+The Braze Product team is releasing a feature that allows you to move interaction data between real-time and long-term storage. This enables access to interaction data for retargeting the moment customers need it. 
+
+“Interaction data” refers to how a user interacts with a campaign it has received (for example, when a user opens campaign A or a user receives variant A). The main use case for interaction data is [retargeting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/) users via filters based on messages they’ve received, such as “Filter by users who last received campaign A after a specific date.”
 
 {% alert important %}
-Campaign Interaction Data Retention is currently in early access. Contact your account manager if you're interested in participating in the early access.
+The Message Interaction Data Availability feature is currently in early access and only available for use with campaigns. Contact your customer success manager if you're interested in participating in the early access. <br><br> Message Interaction Data Availability for Canvas will be coming soon.
 {% endalert %}
 
-#### What is it?
+### When is message interaction data available?
 
-Campaign interactions are data related to End Users' interactions with a campaign. They are used for retargeting filters and to determine campaign re-eligibility. 
+For active campaigns, interaction data is always available in real-time.
 
-#### When is it expired?
+If a campaign is “stopped”, it will be marked as “expired” after three months, unless it’s used in retargeting filters. When expired, data will be moved to long-term storage with limited availability. However, this is temporary since you can restore the data to become available by using its interaction data for retargeting. 
 
-Campaign interaction data will expire for campaigns that have been stopped for over three months, unless they're used in retargeting.
- 
-#### What happens after expiration?
+To restore your campaign, go to the expired campaign and click **Restore interaction data** in the banner that appears at the top of the campaign landing page. 
 
-When your campaign has expired, you can restore it to continue using its data for retargeting. 
+![][1]
 
-With this new policy, it's possible for a campaign's previous interaction data to expire if the campaign wasn't used in a retargeting filter before its expiration date. Based on [Braze Data Retention Information]({{site.baseurl}}/api/data_retention/), it's possible for a campaign's previous interaction data to be permanently deleted if the campaign was not used in a retargeting filter before its permanent deletion date. 
-
-
+[1]: {% image_buster /assets/img/restore_interaction_data.png %}
 
 
