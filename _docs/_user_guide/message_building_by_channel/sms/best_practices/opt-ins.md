@@ -23,7 +23,7 @@ To allow users to opt into SMS from an in-app message, use the [phone number cap
 
 ![][3]{: style="max-width:30%;"}
 
-Braze recommends that you also use the Braze [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/) feature. This feature automatically works in conjunction with the in-app message phone number capture form, prompting users to confirm their intent after submitting their phone number via the form.
+Braze recommends that you also use the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/) feature. This feature automatically works with the in-app message phone number capture form, prompting users to confirm their intent after submitting their phone number via the form.
 
 ## Option 3: Sign-up flow
 
