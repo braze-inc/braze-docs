@@ -14,16 +14,19 @@ The Braze Product team is releasing a feature that allows you to move interactio
 “Interaction data” refers to how a user interacts with a campaign it has received (for example, when a user opens campaign A or a user receives variant A). The main use case for interaction data is [retargeting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/) users via filters based on messages they’ve received, such as “Filter by users who last received campaign A after a specific date.”
 
 {% alert important %}
-The Message Interaction Data Availability feature is currently in early access and only available for use with campaigns. Contact your customer success manager if you're interested in participating in the early access. <br><br> Message Interaction Data Availability for Canvas will be coming soon.
+Message interaction data availability is currently in early access and only available for use with campaigns. Contact your customer success manager if you're interested in participating in the early access. <br><br> Support for message interaction data availability for use with Canvases will be coming soon.
 {% endalert %}
 
 ### When is message interaction data available?
 
-For active campaigns, interaction data is always available in real-time.
+For active campaigns, interaction data is always available in real-time. If a campaign is “stopped,” it's marked as “expired” after three months, unless it’s used in retargeting filters. When expired, the campaign data will be moved to long-term storage with limited availability. 
 
-If a campaign is “stopped”, it will be marked as “expired” after three months, unless it’s used in retargeting filters. When expired, data will be moved to long-term storage with limited availability. However, this is temporary since you can restore the data to become available by using its interaction data for retargeting. 
+However, this is temporary since you can restore this data by using its interaction data for retargeting. 
 
-To restore your campaign, go to the expired campaign and click **Restore interaction data** in the banner that appears at the top of the campaign landing page. 
+To restore your campaign, follow these steps:
+
+1. Go to the expired campaign.
+2. At the top of this campaign's landing page, click **Restore interaction data** in the banner.
 
 ![][1]
 
