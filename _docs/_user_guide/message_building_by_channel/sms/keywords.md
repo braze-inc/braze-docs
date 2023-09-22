@@ -16,7 +16,7 @@ guide_featured_list:
 - name: SMS Double Opt-In
   link: /docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/
   fa_icon: fas fa-mobile-alt
-- name: Custom keyword handing
+- name: Custom Keyword Handing
   link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
   fa_icon: fas fa-mobile-alt
 - name: Handling unknown phone numbers
