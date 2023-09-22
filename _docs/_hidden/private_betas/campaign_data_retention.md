@@ -5,7 +5,7 @@ permalink: "/campaign_data_retention/"
 hidden: true
 ---
 
-# Message Interaction Data Availability
+# Message interaction data availability
 
 > This article covers the new Braze message data availability policy for campaign interaction data as well as the early access release of a feature related thereto. <br><br> Data stored in Braze is retained and usable for segmentation, personalization, and targeting for the lifetime of the Customer’s account. This means data such as user profile attributes, custom attributes, custom events, and purchases are stored indefinitely for active users unless removed by the Customer, for the duration of the contract.
 
