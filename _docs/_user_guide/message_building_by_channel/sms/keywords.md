@@ -13,7 +13,7 @@ guide_featured_list:
 - name: Default opt-in/opt-out
   link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/
   fa_icon: fas fa-commenting
-- name: SMS double opt-in
+- name: SMS Double Opt-In
   link: /docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/
   fa_icon: fas fa-mobile-alt
 - name: Custom keyword handing
