@@ -11,7 +11,7 @@ hidden: true
 
 Braze is releasing a feature that allows you to move interaction data between real-time and long-term storage. This enables access to interaction data for retargeting the moment customers need it. 
 
-“Interaction data” refers to how a user interacts with a campaign it has received (for example, when a user opens campaign A or a user receives variant A). The main use case for interaction data is [retargeting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/) users via filters based on messages they’ve received, such as “Filter by users who last received campaign A after a specific date.”
+“Interaction data” refers to how a user interacts with a campaign they received (for example, when a user opens campaign A or a user receives variant A).
 
 {% alert important %}
 Message interaction data availability is currently in early access and only available for use with campaigns. Contact your customer success manager if you're interested in participating in the early access. <br><br> Support for message interaction data availability for use with Canvases will be coming soon.
