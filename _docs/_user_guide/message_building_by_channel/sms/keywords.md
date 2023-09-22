@@ -10,7 +10,7 @@ description: "This landing page includes articles relating to SMS keyword proces
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Default opt-in/opt-out
+- name: Default Opt-In/Opt-Out
   link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/
   fa_icon: fas fa-commenting
 - name: SMS Double Opt-In
