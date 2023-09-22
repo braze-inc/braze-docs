@@ -10,10 +10,13 @@ description: "This landing page includes articles relating to SMS keyword proces
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Default opt-in/opt-out
+- name: Default Opt-In/Opt-Out
   link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/
   fa_icon: fas fa-commenting
-- name: Custom keyword handing
+- name: SMS Double Opt-In
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/
+  fa_icon: fas fa-mobile-alt
+- name: Custom Keyword Handing
   link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
   fa_icon: fas fa-mobile-alt
 - name: Handling unknown phone numbers
