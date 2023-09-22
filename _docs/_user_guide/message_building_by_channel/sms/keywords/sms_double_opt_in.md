@@ -1,11 +1,11 @@
 ---
 nav_title: SMS Double Opt-In
 article_title: SMS Double Opt-In
-permalink: /sms_double_opt_in/
 description: "This reference article covers the SMS double opt-in feature, and explains how to enable the feature, select opt-in keywords and reply messages, and enter users into the SMS double opt-in workflow through subscription updates that occur in REST API, SDK, and preference center updates."
-Tool:
+page_type: reference
+page_order: 2
+channel:
   - SMS
-hidden: true
 ---
 
 # SMS double opt-in

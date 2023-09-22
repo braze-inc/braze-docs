@@ -197,6 +197,7 @@ validurls['/docs/user_guide/message_building_by_channel/sms/create/'] = '/docs/u
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/'] = '/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/';
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/'] = '/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/';
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/double_opt_in/'] = '/docs/user_guide/message_building_by_channel/sms/non_native/double_opt_in/';
+validurls['/docs/sms_double_opt_in/'] = '/docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/';
 
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/user_phone_numbers/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/user_data_migration/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/';
