@@ -31,6 +31,57 @@ Your verified domains will display in the Deliverability Center.
 
 You can also access Google Postmaster in the Braze dashboard by navigating to **Partner Integrations** > **Technology Partners** > **Google Postmaster**. After integrating, Braze pulls reputation and error data for the last 30 days. The data may not be immediately available and could take several minutes to populate.
 
+### Metrics and definitions
+
+The following metrics and definitions apply to Google Postmaster Tools.
+
+#### IP reputation 
+
+To help understand the ratings for IP reputation, refer to this table:
+
+| Reputation Rating | Definition |
+| ----- | ---------- |
+| High | Has a good track record of generating low spam complaints (i.e., users clicking the "spam" button). |
+| Medium/Fair | Known to generate positive engagement but occasionally receives spam complaints. Most of the emails from this domain will be sent to the inbox, except when spam complaints increase. |
+| Low | Known to receive elevated rates of spam complaints regularly. Emails from this sender will likely be filtered to the spam folder. |
+| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+#### Domain reputation 
+
+Use the following table to help monitor and understand your domain reputation ratings to help avoid being filtered into a spam folder.
+
+| Reputation Rating | Definition |
+| ----- | ---------- |
+| High | Has a good track record of very low spam complaints. Complies with Gmail’s sender guidelines. Emails are rarely filtered to the spam folder. Has a good track record of a very low spam rate. Complies with [Gmail's sender guidelines][2]. |
+| Medium/Fair | Known to generate positive engagement but has occasionally received a low volume of spam complaints. Most of the emails from this domain will reach the inbox (except when there is a notable increase in spam levels). |
+| Low | Known to receive spam complaints regularly. Emails from this sender will likely be filtered to the spam folder. |
+| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+#### Authentication
+
+You can use the authentication dashboard to review the percentage of emails that have passed Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting and Conformance (DMARC).
+
+| Graph Type | Definition |
+| ----- | ---------- |
+| SPF | Shows the percentage of emails that passed SPF versus all emails from the domain that attempted SPF. This excludes any spoofed mail. |
+| DKIM | Shows the percentage of emails that passed DKIM versus all emails from the domain that attempted DKIM. |
+| DMARC | Shows the percentage of emails that passed DMARC alignment versus all emails received from the domain that passed either SPF or DKIM. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+#### Encryption
+
+Refer to this table to understand what percentage of your inbound and outbound traffic is encrypted.
+
+| Term | Definition |
+| ----- | ---------- |
+| TLS Inbound | Shows the percentage of incoming mail (to Gmail) that passed TLS versus all mail received from that domain. |
+| TLS Outbound | Shows the percentage of outgoing mail (from Gmail) accepted over TLS versus all mail sent to that domain. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps][6]. Be sure to reference our [Email best practices][7] for things you should check for before sending an email campaign.
+
 ## Integrating with Microsoft Smart Network Data Servies (SNDS)
 
 {% alert important %}
@@ -48,54 +99,24 @@ Your verified domains will display in the Deliverability Center.
 
 ![][8]
 
-## Metrics and definitions
+### Metrics and definitions
 
-### IP reputation 
+The following metrics apply to Microsoft SNDS.
 
-To help understand the ratings for IP reputation, refer to this table:
+#### Recipients
 
-| Reputation Rating | Definition |
-| ----- | ---------- |
-| High | Has a good track record of generating low spam complaints (i.e., users clicking the "spam" button). |
-| Medium/Fair | Known to generate positive engagement but occasionally receives spam complaints. Most of the emails from this domain will be sent to the inbox, except when spam complaints increase. |
-| Low | Known to receive elevated rates of spam complaints regularly. Emails from this sender will likely be filtered to the spam folder. |
-| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |
-{: .reset-td-br-1 .reset-td-br-2}
+#### Data commands
 
-### Domain reputation 
 
-Use the following table to help monitor and understand your domain reputation ratings to help avoid being filtered into a spam folder.
+#### Filter results
 
-| Reputation Rating | Definition |
-| ----- | ---------- |
-| High | Has a good track record of very low spam complaints. Complies with Gmail’s sender guidelines. Emails are rarely filtered to the spam folder. Has a good track record of a very low spam rate. Complies with [Gmail's sender guidelines][2]. |
-| Medium/Fair | Known to generate positive engagement but has occasionally received a low volume of spam complaints. Most of the emails from this domain will reach the inbox (except when there is a notable increase in spam levels). |
-| Low | Known to receive spam complaints regularly. Emails from this sender will likely be filtered to the spam folder. |
-| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |
-{: .reset-td-br-1 .reset-td-br-2}
 
-### Authentication
+#### Complaint rate
 
-You can use the authentication dashboard to review the percentage of emails that have passed Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting and Conformance (DMARC).
 
-| Graph Type | Definition |
-| ----- | ---------- |
-| SPF | Shows the percentage of emails that passed SPF versus all emails from the domain that attempted SPF. This excludes any spoofed mail. |
-| DKIM | Shows the percentage of emails that passed DKIM versus all emails from the domain that attempted DKIM. |
-| DMARC | Shows the percentage of emails that passed DMARC alignment versus all emails received from the domain that passed either SPF or DKIM. |
-{: .reset-td-br-1 .reset-td-br-2}
+#### Spam trap hits
 
-### Encryption
 
-Refer to this table to understand what percentage of your inbound and outbound traffic is encrypted.
-
-| Term | Definition |
-| ----- | ---------- |
-| TLS Inbound | Shows the percentage of incoming mail (to Gmail) that passed TLS versus all mail received from that domain. |
-| TLS Outbound | Shows the percentage of outgoing mail (from Gmail) accepted over TLS versus all mail sent to that domain. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps][6]. Be sure to reference our [Email best practices][7] for things you should check for before sending an email campaign.
 
 [1]: https://www.gmail.com/postmaster/
 [2]: https://developers.google.com/gmail/markup/registering-with-google
