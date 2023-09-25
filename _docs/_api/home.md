@@ -431,15 +431,15 @@ glossaries:
     tags:
       - SCIM
   - name: <a href='/docs/api/endpoints/cdi/get_integration_list/'>/cdi/integrations</a>
-    description: Retrieve a list of existing integrations.
+    description: Return a list of existing integrations.
     tags:
       - Cloud Data Ingestion
-  - name: <a href='/docs/api/endpoints/cdi/job_sync/'>/cdi/integrations/{integration_id}/sync</a>
+  - name: <a href='/docs/api/endpoints/cdi/post_job_sync/'>/cdi/integrations/{integration_id}/sync</a>
     description: Trigger a sync for a given integration.
     tags:
       - Cloud Data Ingestion
-  - name: <a href='/docs/api/endpoints/cdi/job_sync_status/'>/cdi/integrations/{integration_id}/job_sync_status</a>
-    description: Retrieve a list of past sync status.
+  - name: <a href='/docs/api/endpoints/cdi/get_job_sync_status/'>/cdi/integrations/{integration_id}/job_sync_status</a>
+    description: Return a list of sync statuses.
     tags:
       - Cloud Data Ingestion
 ---

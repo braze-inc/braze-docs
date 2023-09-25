@@ -1,21 +1,20 @@
 ---
-nav_title: "GET: Job Sync Status"
-article_title: "GET: Job Sync Status"
+nav_title: "GET: List Job Sync Status"
+article_title: "GET: List Job Sync Status"
 search_tag: Endpoint
 page_order: 1
-
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Job Sync Status Braze endpoint."
+description: "This article outlines details about the List job sync status Braze endpoint."
 
 ---
 {% api %}
-# Job sync status
+# List job sync status
 {% apimethod get %}
 /cdi/integrations/{integration_id}/job_sync_status
 {% endapimethod %}
 
-> Use this endpoint to return a list of past sync status for a given integration
+> Use this endpoint to return a list of past sync statuses for a given integration
 
 {% alert note %}
 To use this endpoint, you'll need to generate an API key with the `cdi.integration_job_status` permission.
@@ -34,7 +33,7 @@ To use this endpoint, you'll need to generate an API key with the `cdi.integrati
 
 ## Query parameters
 
-Note that each call to this endpoint will return 10 items. For an integration with more than 10 syncs, use the `Link` header to retrieve the data on the next page as shown in the following example response.
+Each call to this endpoint will return 10 items. For an integration with more than 10 syncs, use the `Link` header to retrieve the data on the next page as shown in the following example response.
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|

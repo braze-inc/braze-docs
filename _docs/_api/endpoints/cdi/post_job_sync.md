@@ -3,19 +3,18 @@ nav_title: "POST: Trigger Sync"
 article_title: "POST: Trigger Sync"
 search_tag: Endpoint
 page_order: 2
-
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Trigger Sync Braze endpoint."
+description: "This article outlines details about the Trigger sync Braze endpoint."
 
 ---
 {% api %}
-# Trigger sync
+# Trigger a sync
 {% apimethod post %}
 /cdi/integrations/{integration_id}/sync
 {% endapimethod %}
 
-> Use this endpoint to trigger a sync job for a given integration
+> Use this endpoint to trigger a sync for a given integration.
 
 {% alert note %}
 To use this endpoint, you'll need to generate an API key with the `cdi.integration_sync` permission.
@@ -52,15 +51,15 @@ The status code `202` could return the following response body:
 }
 ```
 
-## Troubleshooting 
+## Troubleshooting
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
 | Error | Troubleshooting |
 | --- | --- |
 | `400 Invalid integration ID` | Check that your `integration_id` is valid. |
-| `404 Integration not found` | No integration exists for the given integration ID. |
-| `429 Another job is in progress` | There is a sync currently running for this integration. |
+| `404 Integration not found` | No integration exists for the given integration ID. Make sure that your integration ID is valid. |
+| `429 Another job is in progress` | There is a sync currently running for this integration. Try again after the sync has completed. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For additional status codes and associated error messages, please refer to [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).

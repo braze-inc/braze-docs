@@ -3,10 +3,9 @@ nav_title: "GET: List Integrations"
 article_title: "GET: List Integrations"
 search_tag: Endpoint
 page_order: 1
-
 layout: api_page
 page_type: reference
-description: "This article outlines details about the List Integrations Braze endpoint."
+description: "This article outlines details about the List integrations Braze endpoint."
 
 ---
 {% api %}
@@ -15,7 +14,7 @@ description: "This article outlines details about the List Integrations Braze en
 /cdi/integrations
 {% endapimethod %}
 
-> Use this endpoint to return a list of existing integration configurations.
+> Use this endpoint to return a list of existing integrations.
 
 {% alert note %}
 To use this endpoint, you'll need to generate an API key with the `cdi.integration_list` permission.
@@ -27,7 +26,7 @@ To use this endpoint, you'll need to generate an API key with the `cdi.integrati
 
 ## Query parameters
 
-Note that each call to this endpoint will return 10 items. For a list with more than 10 integrations, use the `Link` header to retrieve the data on the next page as shown in the following example response.
+Each call to this endpoint will return 10 items. For a list with more than 10 integrations, use the `Link` header to retrieve the data on the next page as shown in the example response.
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -96,6 +95,6 @@ The following table lists possible returned errors and their associated troubles
 | `400 Invalid cursor` | Check that your `cursor` is valid. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For additional status codes and associated error messages, please refer to [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
+For additional status codes and associated error messages, refer to [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}
