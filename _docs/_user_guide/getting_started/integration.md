@@ -1,7 +1,7 @@
 ---
 nav_title: Integration
 article_title: Onboarding Integration Overview
-page_order: 1
+page_order: 8
 page_type: reference
 description: "This reference article briefly covers the integration steps required from your engineers or developers."
 

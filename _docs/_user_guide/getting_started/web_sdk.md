@@ -1,7 +1,7 @@
 ---
 nav_title: SDK Overview for Marketers
 article_title: SDK Overview for Marketers
-page_order: 3
+page_order: 9
 page_type: reference
 description: "This onboarding reference article covers the basics of the Braze SDK."
 

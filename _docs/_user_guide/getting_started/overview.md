@@ -27,15 +27,15 @@ Braze is a customer engagement platform that helps brands of all sizes create pe
 
 Users are your customers—the people receiving the messages you send using Braze. All the data you gather about a user and ingest into Braze is stored in their user profile, such as their demographics, personal information, preferences, and behaviors. This information powers your messaging and is how you can tailor your messages to the right user.
 
-> img
+![][1]
 
 Segments divide your customer base into smaller groups that you can then target with specific messaging. You can use many different variables to create segments, ranging from characteristics such as gender, location, and age to behaviors like interaction patterns with previous campaigns or where they are in the customer journey.
 
 Segments are dynamic—users can move in and out of segments in real time based on their behavior and where they are in relation to your brand. This ensures that your customers receive only the messaging most relevant to them at any given time. You can create as many segments as needed for your targeting and messaging purposes.
 
-> img
+![][2]
 
-For more, check out: Getting Started: Users and segments.
+For more, check out: [Getting Started: Users and segments]({{site.baseurl}}/user_guide/getting_started/users_segments/).
 
 ## Campaigns and Canvases
 
@@ -45,11 +45,11 @@ Campaigns are best for single messages sent to a specific audience segment acros
 
 Canvases are advanced campaign workflows that allow you to automate and orchestrate personalized customer journeys across multiple channels. Within a Canvas, you can set up branching logic, delays, decision points, and conversion events to guide customers through a series of interactions. Canvases help ensure consistent and seamless communication across different touchpoints, increasing the chances of customer engagement and conversion. 
 
-For more, check out: Getting Started: Campaigns and Canvases.
+For more, check out: [Getting Started: Campaigns and Canvases]({{site.baseurl}}/user_guide/getting_started/campaigns_canvases/).
 
 ## Workspaces
 
-Workspaces group your data—users, segments, campaigns, and Canvases—into one location. Information isn't shared between workspaces, so keep that in mind when adding apps to your workspaces. As a best practice, we suggest only putting different versions of the same or very similar apps together under one workspace.
+Workspaces group your data—users, segments, campaigns, and Canvases—into one location. Information isn't shared between workspaces, so keep that in mind when adding websites and apps to your workspaces. As a best practice, we suggest only putting different versions of the same or very similar apps together under one workspace.
 
 Example uses for workspaces include:
 
@@ -58,11 +58,13 @@ Example uses for workspaces include:
 - Separate businesses
 - Testing environment
 
-For more, check out: Getting Started: Workspaces.
+For more, check out: [Getting Started: Workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces/).
 
 ## Integrating Braze
 
 Braze is designed to get up and running quickly and easily. Our average time-to-value is six weeks across our customer base of hundreds of brands.
+
+![][3]
 
 Here's the Braze framework for estimating the length of your integration based on four components you can work on in parallel. The typical range is 30 to 180 days, with most accounts completing their integration within 45 to 60 days.
 
@@ -76,4 +78,8 @@ Need help with your migration? Our [certified Braze partners](https://www.braze.
 - **Organizational complexity:** Our onboarding process can adapt to your business needs. Whether you're a single business unit, have a Center of Excellence, multiple independent units, or use agencies to augment your teams, Braze has experience working in all scenarios.
 - **Data infrastructure sophistication:** If you're only implementing the Braze SDK or already have a Customer Data Platform (CDP), it's possible to get everything set up in just 30 days. Using a modern CDP can speed up the process. But if you have many backend systems, tools, or databases to connect with Braze, it might take longer and need more dedicated resources to get it done.
 
-For more, check out: Getting Started: Integration overview.
+For more, check out: [Getting Started: Integration overview]({{site.baseurl}}/user_guide/getting_started/integration/).
+
+[1]: {% image_buster /assets/img/getting_started/user_profile.png %}
+[2]: {% image_buster /assets/img/getting_started/segment.png %}
+[3]: {% image_buster /assets/img/getting_started/timetovalue.png %}
