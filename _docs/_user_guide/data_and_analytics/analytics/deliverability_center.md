@@ -109,7 +109,7 @@ This metric refers to the number of recipients on messages transmitted by the IP
 
 #### DATA commands
 
-This metric tracks the number of DATA commands sent by the IP. DATA commands DATA commands are part of the SMTP protocol used to send mail.
+This metric tracks the number of DATA commands sent by the IP. DATA commands are part of the SMTP protocol used to send mail.
 
 #### Filter results
 
@@ -119,12 +119,12 @@ Refer to this table to understand the filter results
 | ----- | ---------- |
 | Green | Judged to be spam by Microsoft’s spam filter up to 10% of the given time frame. |
 | Yellow | Judged to be spam by Microsoft’s spam filter between 10% and 90% of the given time frame. |
-| Red | Judged to be spam by Microsoft’s spam filter by more than 90% of the given time frame.| 
+| Red | Judged to be spam by Microsoft’s spam filter up to more than 90% of the given time frame.| 
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Complaint rate
 
-This is the fraction of the time that a message received from the IP is complained about by a Hotmail or Windows Live user during the activity period.  Users have the option of reporting almost all messages as junk via the web user interface. 
+This is the fraction of the time that a message received from the IP is complained about by a Hotmail or Windows Live user during the activity period. Users have the option of reporting almost all messages as junk via the web user interface. 
 
 To calculate the complaint rate, divide the number of complaints by the number of message recipients.  
 
@@ -137,7 +137,7 @@ To calculate the complaint rate, divide the number of complaints by the number o
 
 #### Spam trap hits
 
-Spam trap hits are the number of messages sent to "trap accounts," which are accounts maintained by Outlook.com that don't solicit any mail. It's likely that any messages sent to these trap accounts are considered spam, so it's important to monitor this metric to ensure that it's low, which means the messages aren't sent to these accounts and being sent to actual accounts instead.
+Spam trap hits are the number of messages sent to "trap accounts," which are accounts maintained by Outlook.com that don't solicit any mail. It's likely that any messages sent to these trap accounts are considered spam, so it's important to monitor this metric to make sure that it's low, which means the messages aren't sent to these accounts and are being sent to actual accounts instead.
 
 
 [1]: https://www.gmail.com/postmaster/
