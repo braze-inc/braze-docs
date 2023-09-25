@@ -43,10 +43,13 @@ These default limits can be increased upon request. Reach out to your customer s
 | [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36] | 16,000 requests per minute shared between the endpoints. |
 | [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 requests per minute shared between the endpoints. |
 | [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+<!-- Add during CDI endpoints GA
 | [`/cdi/integrations`][46] | 50 requests per minute. |
 | [`/cdi/integrations/{integration_id}/sync`][47] | 20 requests per minute. |
 | [`/cdi/integrations/{integration_id}/job_sync_status`][48] | 100 requests per minute. |
-{: .reset-td-br-1 .reset-td-br-2}
+-->
 
 ## Batching API requests
 

@@ -103,17 +103,19 @@ The daily maximum number of custom send identifiers that can be created via this
 {% elsif include.endpoint == "subscription status set" %}
 For customers who onboarded with Braze on or after January 6, 2022, we apply a rate limit of 5,000 requests per minute shared across the `/subscription/status/set` and `/v2/subscription/status/set` endpoint as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
+<!-- Add this phrase back ", as documented in [API rate limits]({{site.baseurl}}/api/api_limits/)" to CDI endpoints for GA -->
+
 <!---GET /cdi/integrations--->
 {% elsif include.endpoint == "cdi list integrations" %}
-This endpoint has a rate limit of 50 requests per minute, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+This endpoint has a rate limit of 50 requests per minute.
 
 <!---POST /cdi/integrations/{integration_id}/sync--->
 {% elsif include.endpoint == "cdi job sync" %}
-This endpoint has a rate limit of 20 requests per minute, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+This endpoint has a rate limit of 20 requests per minute.
 
 <!---POST /cdi/integrations/{integration_id}/job_sync_status--->
 {% elsif include.endpoint == "cdi job sync status" %}
-This endpoint has a rate limit of 100 requests per minute, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+This endpoint has a rate limit of 100 requests per minute.
 
 {% endif %}
 

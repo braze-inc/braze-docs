@@ -4,6 +4,8 @@ article_title: Cloud Data Ingestion Endpoints
 search_tag: Endpoint
 page_order: 0.5
 layout: dev_guide
+hidden: true
+permalink: /api/cdi/
 
 description: "This landing page lists the Braze Cloud Data Ingestion endpoints."
 page_type: landing
@@ -14,13 +16,13 @@ guide_top_text: "Use the Braze Cloud Data Ingestion endpoints to manage your dat
 guide_featured_title: ""
 guide_featured_list:
   - name: "GET: List Integrations"
-    link: /docs/api/endpoints/cdi/get_integration_list/
+    link: https://www.braze.com/docs/api/cdi/get_integration_list/
     fa_icon: fas fa-list-ul
   - name: "GET: List Job Sync Status"
-    link: /docs/api/endpoints/cdi/get_job_sync_status/
+    link: https://www.braze.com/docs/api/cdi/get_job_sync/
     fa_icon: fas fa-list-ul
   - name: "POST: Trigger Sync"
-    link: /docs/api/endpoints/cdi/post_job_sync/
+    link: https://www.braze.com/docs/api/cdi/post_trigger_sync/
     fa_icon: fas fa-play
 
 ---

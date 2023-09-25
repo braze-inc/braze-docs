@@ -3,6 +3,8 @@ nav_title: "POST: Trigger Sync"
 article_title: "POST: Trigger Sync"
 search_tag: Endpoint
 page_order: 2
+hidden: true
+permalink: /api/cdi/post_trigger_sync/
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Trigger sync Braze endpoint."
