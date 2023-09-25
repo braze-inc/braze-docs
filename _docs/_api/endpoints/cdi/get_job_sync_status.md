@@ -16,6 +16,10 @@ description: "This article outlines details about the List job sync status Braze
 
 > Use this endpoint to return a list of past sync statuses for a given integration
 
+{% alert important %}
+This endpoint is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
+
 {% alert note %}
 To use this endpoint, you'll need to generate an API key with the `cdi.integration_job_status` permission.
 {% endalert %}

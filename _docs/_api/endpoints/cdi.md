@@ -9,7 +9,7 @@ description: "This landing page lists the Braze Cloud Data Ingestion endpoints."
 page_type: landing
 
 guide_top_header: "Cloud Data Ingestion Endpoints"
-guide_top_text: "Use the Braze Cloud Data Ingestion Endpoints to manage your data warehouse integrations and syncs."
+guide_top_text: "Use the Braze Cloud Data Ingestion endpoints to manage your data warehouse integrations and syncs."
 
 guide_featured_title: ""
 guide_featured_list:
@@ -24,3 +24,7 @@ guide_featured_list:
     fa_icon: fas fa-play
 
 ---
+
+{% alert important %}
+The Braze Cloud Data Ingestion endpoints are currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}

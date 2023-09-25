@@ -16,6 +16,10 @@ description: "This article outlines details about the Trigger sync Braze endpoin
 
 > Use this endpoint to trigger a sync for a given integration.
 
+{% alert important %}
+This endpoint is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
+
 {% alert note %}
 To use this endpoint, you'll need to generate an API key with the `cdi.integration_sync` permission.
 {% endalert %}
