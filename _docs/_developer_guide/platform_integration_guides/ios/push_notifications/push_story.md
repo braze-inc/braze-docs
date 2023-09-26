@@ -55,7 +55,7 @@ You also need to add `Capability App Groups`. If you haven't had any app group i
 `App Groups` in this context refer to Apple's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) and not your Braze workspace (previously app group) ID.
 {% endalert %}
 
-Note: If you do not add your app to an App Group, your app may fail to populate certain fields from the push payload and will not work fully as expected.
+If you do not add your app to an App Group, your app may fail to populate certain fields from the push payload and will not work fully as expected.
 
 ## Step 4: Adding the Push Story framework to your app
 
