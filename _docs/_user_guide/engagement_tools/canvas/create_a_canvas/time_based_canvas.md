@@ -77,6 +77,11 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 
 ![][6]
 
+{% alert note %}
+If you have the proper [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions) to approve Canvases, you'll see a [**Summary** step]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/#using-approvals) in the workflow.
+{% endalert %}
+
+
 [1]: {% image_buster /assets/img_archive/schedule_delay_immediately.png %}
 [2]: {% image_buster /assets/img_archive/schedule_delay_after.png %}
 [3]: {% image_buster /assets/img_archive/schedule_delay_next.png %}
