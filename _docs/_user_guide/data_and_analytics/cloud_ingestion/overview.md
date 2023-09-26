@@ -183,7 +183,7 @@ We use the `UPDATED_AT` timestamp to track what data has been synced successfull
 We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
 
 #### Sample data formatting   
-Any operations that are possible through the Braze `/users/track` endpoint are supported through Cloud Data Ingestion, including updating nested custom attributes, adding subscription status, and syncing custom events or purcahses. 
+Any operations that are possible through the Braze `/users/track` endpoint are supported through Cloud Data Ingestion, including updating nested custom attributes, adding subscription status, and syncing custom events or purchases. 
 
 {% tabs local %}
 {% tab Nested Custom Attributes %}

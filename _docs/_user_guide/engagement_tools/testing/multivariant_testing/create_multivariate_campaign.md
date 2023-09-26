@@ -108,7 +108,7 @@ Additionally, when choosing which segment to run your test on, be sure to consid
 As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator](https://www.optimizely.com/resources/sample-size-calculator/).
 {% endalert %}
 
-### Control and test group assigments and bias
+### Control and test group assignments and bias
 
 A common question with control and test group assignments is wondering if they can introduce bias to your testing.
 

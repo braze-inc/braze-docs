@@ -29,7 +29,7 @@ Braze has an [integration]({{site.baseurl}}/partners/message_orchestration/chann
 
 ## Example transformation code
 
-Consider this sample payload from Tyepform, a survey platform, which sends whenever a survey response is received.
+Consider this sample payload from Typeform, a survey platform, which sends whenever a survey response is received.
 
 ![][1]
 

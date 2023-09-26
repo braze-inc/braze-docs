@@ -759,7 +759,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
-  "app_id": (requried, string) ID for the app on which the bounce occurred,
+  "app_id": (required, string) ID for the app on which the bounce occurred,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
   "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
@@ -838,7 +838,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
 ```json
 // Email Delivery: users.messages.email.Delivery
 {
-  "id": (requried, string) unique ID of this event,
+  "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "external_user_id": (optional, string) External ID of the user,
@@ -890,7 +890,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "campaign_name": (optional, string) name of the campaign,
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,
   "message_variation_name": (optional, string) the name of the message variation if from a campaign,
-  "email_address": (requied, string) email address for this event,
+  "email_address": (required, string) email address for this event,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,

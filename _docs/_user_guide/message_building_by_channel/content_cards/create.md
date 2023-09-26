@@ -52,7 +52,7 @@ If all of the messages in your campaign are going to be similar or have the same
 2. After you've set up your Canvas, add a Message step in the Canvas builder. Name your step something clear and meaningful.
 3. Select **Content Cards** as your messaging channel.
 4. Choose when Braze calculates audience eligibility and personalization for the Content Card. This can be at step entry or at first impression (recommended). Steps containing Content Cards can be scheduled or action-based.
-5. Choose whether to remove Content Cards when users compelte a purchase or perform a custom event.
+5. Choose whether to remove Content Cards when users complete a purchase or perform a custom event.
 6. Set an expiration for the Contnt Card (time in feed). This can be after a duration of time or at a specific time.
 7. Filter your audience for this step as necessary in the **Delivery Settings**. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
 8. Choose any other messaging channels that you would like to pair with your message.
