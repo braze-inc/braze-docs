@@ -47,11 +47,15 @@ The Push Story feature requires the background mode in the **Capabilities** sect
 
 ![][3]
 
+### Adding an App Group
+
 You also need to add `Capability App Groups`. If you haven't had any app group in your app, go to the **Capability** of the main app target, turn on the `App Groups`, and click the **+** button. Use your app's bundle ID to create the app group. For example, if your app's bundle ID is `com.company.appname`, you can name your app group `group.com.company.appname.xyz`. You need to turn on the `App Groups` for both the main app and content extension targets.
 
 {% alert important %}
 `App Groups` in this context refer to Apple's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) and not your Braze workspace (previously app group) ID.
 {% endalert %}
+
+Note: If you do not add your app to an App Group, your app may fail to populate certain fields from the push payload and will not work fully as expected.
 
 ## Step 4: Adding the Push Story framework to your app
 
