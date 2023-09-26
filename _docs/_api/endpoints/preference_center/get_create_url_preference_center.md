@@ -16,7 +16,7 @@ description: "This article outlines details about the Generate preference center
 
 > Use this endpoint to generate a URL for a preference center. 
 
-Each preference center URL is unique to each user.
+Each preference center URL is unique to each user. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bc750ff-068e-4391-897e-6eddca2561cd {% endapiref %}
 
@@ -59,3 +59,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 ```
 
 {% endapi %}
+
+{% alert note %}
+This endpoint only generates URLs for the new preference center (i.e., preference centers created via API or the drag-and-drop editor).
+{% endalert %}
