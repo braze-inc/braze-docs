@@ -46,6 +46,7 @@ POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 '
 ```
 
+{: start="2"}
 2. Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to subscribe the user to SMS.
 
 ```json
