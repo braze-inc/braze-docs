@@ -60,13 +60,13 @@ Your report is split into three sections:
 
 The conversion details table will always show one column for *Recipients* and another for *Conversions* (rate and total). The remaining two table columns that appear depend on the options you selected when setting up your report. The following table describes possible metrics.
 
-| Column in table | Metric shown | Description |
-| --- | --- | --- |
-| 1 | Recipients | The number of users who received a message through the selected channel within the report's date range |
-| 2 | Conversion Rate (Recipients) | Calculated as: (Number of conversions) / (Number of recipients) |
-| 3 | Attribution method | Defined by the [attribution method](#attribution-methods) you selected when you set up the report. For Last Touch attribution or if multiple channels are selected, this appears as [Touches](#terms-to-know). |
-| 4 | Conversion Rate (Attribution method) | Defined by the [attribution method](#attribution-methods) you selected when you set up the report. If multiple channels are selected, this defaults to last-touch attribution. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Metric shown | Description |
+ | --- | --- |
+| Recipients | The number of users who received a message through the selected channel within the report's date range |
+| Conversion Rate (Recipients) | Calculated as: (Number of conversions) / (Number of recipients) |
+| Attribution method | Defined by the [attribution method](#attribution-methods) you selected when you set up the report. For Last Touch attribution or if multiple channels are selected, this appears as [Touches](#terms-to-know). |
+| Conversion Rate (Attribution method) | Defined by the [attribution method](#attribution-methods) you selected when you set up the report. If multiple channels are selected, this defaults to last-touch attribution. |
+{: .reset-td-br-1 .reset-td-br-2 }
 
 ![]({% image_buster /assets/img_archive/conversions2_details.png %})
 
