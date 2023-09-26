@@ -18,7 +18,7 @@ If you enable re-eligibility, you are overriding this default behavior and allow
 
 ## Canvas
 
-To enable re-elibility for a Canvas, check **Allow users to re-enter this Canvas** in the **Entry Controls** section. You can choose between allowing users to re-enter after the maximum duration of the Canvas, or after a specified window.
+To enable re-eligibility for a Canvas, check **Allow users to re-enter this Canvas** in the **Entry Controls** section. You can choose between allowing users to re-enter after the maximum duration of the Canvas, or after a specified window.
 
 ![Entry Controls][2]
 

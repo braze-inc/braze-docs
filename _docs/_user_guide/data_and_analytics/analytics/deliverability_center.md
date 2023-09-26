@@ -82,7 +82,7 @@ Refer to this table to understand what percentage of your inbound and outbound t
 
 For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps][6]. Be sure to reference our [Email best practices][7] for things you should check for before sending an email campaign.
 
-## Integrating with Microsoft Smart Network Data Servies (SNDS)
+## Integrating with Microsoft Smart Network Data Services (SNDS)
 
 {% alert important %}
 Integrating with Microsoft SNDS in the Deliverability Center is currently in early access. Contact your account manager if you're interested in participating in this early access.

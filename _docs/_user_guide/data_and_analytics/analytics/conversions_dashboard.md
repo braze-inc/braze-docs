@@ -16,7 +16,7 @@ tool:
 You can specifically track these attribution methods:
 - **Open conversions:** Conversions that occurred after a user opened the message
 - **Click conversions:** Conversions that occurred after a user clicked the message
-- **Received conversions:** Conversions that occurred after a user receved the message
+- **Received conversions:** Conversions that occurred after a user received the message
 - **Last-click conversions:** Conversions that occurred after a user clicked the message if the message was the most recent one the user clicked (This feature is currently being tested on a small subset of early access customers)
 
 When measuring your conversions, you can specify the time frame, conversion event, and conversion window.
@@ -42,7 +42,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ### Untracked events
 
-Untracked events are events that were not originally assigned as conversion events for the campaigns and Canvases in your report. If unselected, then your report will only include conversion metrics for events that were originally included as conversion events, and any other occurences of that event during the time frame are not counted in your report.
+Untracked events are events that were not originally assigned as conversion events for the campaigns and Canvases in your report. If unselected, then your report will only include conversion metrics for events that were originally included as conversion events, and any other occurrences of that event during the time frame are not counted in your report.
 
 For example, let's say you're running your report on campaign A (see the next section, [Filtering your report](#filtering-your-report), for how to filter reports to a specific campaign). You're interested in seeing the conversion rate for users who received campaign A and performed custom event X, but custom event X was not one of the four conversion events tracked for this campaign. If you choose to not include untracked events, then your report will show 0 conversions. However, if you do include untracked events, then Braze will generate a report of users who performed custom event X after receiving, opening, or clicking campaign A.
 
