@@ -22,7 +22,7 @@ To set up your conversions dashboard report:
 2. Select a **Date Range** for your report, up to a 90-day window.
 3. Select the campaigns or Canvases (or both) that you would like to analyze. 
    - If you would like to filter campaigns and Canvases by tag, select a **Tag**.  
-4. Select which **Channel(s)** you would like to analyze for your messages.
+4. Select the **Channel(s)** you would like to analyze for your messages.
 5. (Optional) If desired, select a **Breakdown** layer. This allows you to view different dimensions of data, such as by variant, Canvas step, country, or language.
 6. (Optional) If you are interested in calculating conversions of an event that was not set up as a conversion event on the campaign or Canvas, turn on [Use custom events](#using-custom-events).
 7. Select an [Attribution Method](#attribution-methods) through which to analyze the selected messages.
@@ -81,7 +81,7 @@ By default, all selected campaigns and Canvases are shown. To deselect a campaig
 To download the time series data, click and select your download option. Available options are PNG, JPEG, PDF, SVG, or CSV.
 
 {% alert note %}
-This graph only shows data for a single channel at a time, please use the **Channel** dropdown on the chart to select a single channel.
+This graph only shows data for a single channel at a time. Use the **Channel** dropdown on the chart to select a single channel.
 {% endalert %}
 
 ![]({% image_buster /assets/img_archive/conversions2_funnel.png %}){: style="max-width:70%"}
