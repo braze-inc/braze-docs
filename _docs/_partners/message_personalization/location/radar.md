@@ -28,19 +28,25 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 
 ## Integration
 
-To map data between the Braze and Radar SDKs, you must set the same user IDs in both systems. This can be done using the `changeUser()` method in the Braze SDK and the `setUserId()` method in the Radar SDK.
+To map data between the Braze and Radar SDKs, you must set the same user IDs or user aliases in both systems. This can be done using the `changeUser()` method in the Braze SDK and the `setUserId()` method in the Radar SDK.
 
-To enable the integration on the [Radar integration page](https://radar.com/documentation/integrations) under Braze:
-  - Set **Enabled** to **Yes**
-  - Set your Braze endpoint
-  - Paste in your app identifier and API keys
-  - Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing
+To enable the integration:
+
+1. In Radar on the [Integrations]((https://radar.com/documentation/integrations) page, locate Braze.
+1. Set **Enabled** to **Yes**.
+3. Paste in your app identifier and API keys.
 
 {% alert note %}
-You can set separate API keys for the test and live environments.
+You can set separate API keys for test and live environments.
 {% endalert %}
 
-Whenever Radar events are generated, Radar will send custom events and user attributes to Braze. Events from iOS devices will be sent using your iOS API keys; events and user attributes from Android devices will be sent using your Android API keys.
+{:start="4"}
+4. Select your Braze endpoint.
+5. Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing. Whenever Radar events are generated, Radar will send custom events and user attributes to Braze. Events from iOS devices will be sent using your iOS API keys; events and user attributes from Android devices will be sent using your Android API keys.
+
+{% alert note %}
+By default, Radar `userId` maps to Braze `external_id` for logged in users. However, you can track logged out users or specify custom mappings by setting Radar `metadata.brazeAlias` or `metadata.brazeExternalId`. If you set `metadata.brazeAlias`, you must also add a matching alias in Braze with label `radarAlias`.
+{% endalert %}
 
 ## Event and attribute-based use cases
 
