@@ -60,7 +60,7 @@ Check out these additional resources to learn more about Canvas Flow:
 
 Messaging channels are the various communication channels through which you can engage with your customers and deliver targeted messages. 
 
-![][1]{: style="border:none"}
+![][1]
 
 The following table outlines our supported channels.
 
