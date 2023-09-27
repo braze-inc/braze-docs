@@ -11,7 +11,7 @@ description: "This reference article covers aborting Liquid messages and some ex
 > Optionally, you can abort Liquid messages within conditionals. This reference article lists some examples of how this feature can be used in marketing campaigns.
 
 {% alert note %}
-If a message step is aborted in a Canvas, the user won't exit the Canvas and will proceed to the next step.
+If a message step is aborted in a Canvas, the user **will not** exit the Canvas and **will** proceed to the next step.
 {% endalert %}
 
 ## Abort message if "Number Games Attended" = 0
