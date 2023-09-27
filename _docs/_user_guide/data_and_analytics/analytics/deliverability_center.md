@@ -82,20 +82,17 @@ Refer to this table to understand what percentage of your inbound and outbound t
 
 For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps][6]. Be sure to reference our [Email best practices][7] for things you should check for before sending an email campaign.
 
-## Integrating with Microsoft Smart Network Data Services (SNDS)
+## Set up Microsoft Smart Network Data Services (SNDS)
 
 {% alert important %}
-Integrating with Microsoft SNDS in the Deliverability Center is currently in early access. Contact your account manager if you're interested in participating in this early access.
+Microsoft SNDS in the Deliverability Center is currently in early access. Contact your account manager if you're interested in participating in this early access.
 {% endalert %}
 
 If Microsoft is your main mailbox provider, you can use this integration to access and view your Microsoft reputation data. This way, you can monitor the health of your IPs to help determine how your emails are being received.
 
-1. Go to **Analytics** > **Email Performance**.
-2. Select the **Deliverability Center** tab.
-3. Click **Connect with Microsoft SNDS**. 
-4. Select your Microsoft account, and click **Allow** to allow Braze to view email traffic metrics for the domains registered.
-
-Your verified domains will display in the Deliverability Center.
+{% alert important %}
+If you don't see your data in the Deliverability Center, contact [Support]({{site.baseurl}}/help/support/) with a list of your IP addresses.
+{% endalert %}
 
 ![][8]
 
