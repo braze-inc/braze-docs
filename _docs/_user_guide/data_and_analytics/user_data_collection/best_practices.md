@@ -52,6 +52,10 @@ It is not recommended to heavily leverage this endpoint when querying a single u
 
 Using the `/users/track` endpoint, you can also update a user profile by [email address]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address) or [phone number]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-phone-number).
 
+## Capturing user emails through an email capture form
+
+Using an email capture form, you can prompt users to submit their email address, which will be added to their user profile. For more information on how to set up this form, check out [Email capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/).
+ 
 ## Identifying alias-only users
 
 When identifying users upon account creation, alias-only users can be identified and assigned an external ID through the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) by merging the alias-only user with the known profile. 

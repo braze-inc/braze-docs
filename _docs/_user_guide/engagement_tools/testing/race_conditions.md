@@ -23,7 +23,7 @@ In Braze, one of the most common race conditions occurs with messages that targe
 1. A user gets created;
 2. The same user is immediately targeted for a message, performs a custom event, or logs a custom attribute.
 
-However, in some cases, the second event will trigger first. This means that a message is attempting to be sent to a user that has not been created yet, and as a result, the user never receives it. The same applies for events or attributes, where the event or atribute is attempting to be logged to a user profile that doesn't exist yet.
+However, in some cases, the second event will trigger first. This means that a message is attempting to be sent to a user that has not been created yet, and as a result, the user never receives it. The same applies for events or attributes, where the event or attribute is attempting to be logged to a user profile that doesn't exist yet.
 
 ## Using multiple API endpoints
 

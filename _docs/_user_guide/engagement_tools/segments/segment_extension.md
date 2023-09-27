@@ -14,7 +14,7 @@ tool: Segments
 
 Segment Extensions are audience definitions which allow you to use nested event properties or create windowed aggregations of custom event and purchase event properties in the past 2 years (730 days). For example, Braze segmentation allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of a specific product at least twice in the past 2 years. When creating a Segment Extension, you can also specify that the audience be static or regenerated daily.
 
-The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
+The use of nested event properties for [action-based delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
 
 {% alert important %}
 There is a default allotment of 25 active Segment Extensions per workspace at a particular time. If you need to increase this limit, contact your Braze customer success manager to discuss your use case.
@@ -122,4 +122,4 @@ Now you can proceed as usual with [creating your segment][11].
 [16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
 [17]: {% image_buster /assets/img/segment/segment_extension9.png %}
 [18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
