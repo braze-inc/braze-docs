@@ -23,19 +23,20 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 Looking for more ways to get revenue data? Try adding purchase behavior (as well as purchase of a product) to campaigns or Canvases as [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
 {% endalert %}
 
-To export your revenue data, click <i class="fas fa-bars" title="Chart context menu"></i> in the **Detailed Statistics** graph and select your export option.
+To export your revenue data, click <i class="fas fa-bars" title="Chart context menu"></i> in the **Performance Over Time** graph and select your export option.
 
-## Detailed statistics graph
+## Performance Over Time graph
 
-The following data can be accessed via the **Detailed Statistics** graph:
+The following data can be accessed via the **Performance Over Time** graph:
 
-- Purchases by Date
-    - (Optional) Purchases for Different Products
-- Revenue by Date
-    - (Optional) Revenue for Different Segments
-    - (Optional) Revenue for Different Products
-- Revenue by Hour
-    - (Optional) Hourly Revenue for Different Segments
+- KPI Formulas
+- Purchases
+    - (Optional) Purchases By Product
+- Revenue
+    - (Optional) Revenue By Segment
+    - (Optional) Revenue By Product
+- Revenue per Hour
+    - (Optional) Revenue per Hour By Segment
 - Revenue per User
 
 ![Revenue graph][9]
