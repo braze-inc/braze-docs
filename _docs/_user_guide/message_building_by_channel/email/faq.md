@@ -60,6 +60,12 @@ You may be seeing more clicks than opens for any of the following reasons:
 - Users click on some email links within the preview pane of their phones. In this case, Braze logs this email as being clicked but not opened.
 - Users reopen an email that they previewed earlier.
 
+### What are the potential risks of triggering server clicks?
+
+Certain elements of an email message, such as overly long messages or too many exclamation marks, have the potential to trigger email security responses. These responses can impact reporting, IP reputation, and can result in many users unsubscribing.
+
+- Something here for tips to avoid triggering server clicks (third-party tools that click on every link in your messaging could make your metrics inaccurate)
+
 ### How can I check a user's email subscription group?
 
 - **User Profile:** Individual user profiles can be accessed through the Braze dashboard from the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) page. Here, you can look up user profiles by email address, phone number, or external user ID. When inside a user profile, under the Engagement tab, you can view a user's email subscription groups.
