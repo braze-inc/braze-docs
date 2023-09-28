@@ -34,7 +34,6 @@ See [Branch's documentation](https://docs.branch.io/pages/integrations/braze/) t
 Depending on your ESP, additional customization may be required to support click-tracked universal links:
 
 - [SendGrid][7]
-- [Mailjet][8]
 - [SparkPost][9]
 
 [1]: https://branch.io/
@@ -44,5 +43,4 @@ Depending on your ESP, additional customization may be required to support click
 [5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization
 [7]: https://help.branch.io/using-branch/page/braze-sendgrid
-[8]: https://help.branch.io/using-branch/page/braze-mailjet
 [9]: https://help.branch.io/using-branch/page/braze-sparkpost

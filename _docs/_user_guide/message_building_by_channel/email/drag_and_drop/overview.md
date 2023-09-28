@@ -222,6 +222,8 @@ Another common use case is to flag specific links as universal links, which are 
 * **SendGrid:** `universal = "true"`
 * **SparkPost:** `data-msys-sublink = "open-in-app"`, a [custom sub-path](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) must be configured.
 
+To set up universal links, we recommend integrating with [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking).
+
 [1]: {% image_buster /assets/img/dnd/dnd_template1.png %}
 [2]: {% image_buster /assets/img/dnd/dnd1.png %}
 [3]: {% image_buster /assets/img/dnd/dnd2.png %}
