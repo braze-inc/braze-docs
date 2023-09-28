@@ -35,7 +35,7 @@ Do not change the push certificate environment (development versus production). 
 When users open your app, they will be prompted to accept push notifications. If they accept this prompt, APNs will generate a push token for that particular device. The iOS SDK will immediately and asynchronously send up the push token for apps using the default [automatic flush policy][40]. After we have a push token associated with a user, they will show as "Push Registered" in the dashboard on their user profile under the **Engagement** tab and will be eligible to receive push notifications from Braze campaigns.
 
 {% alert note %}
-This does not work with the iOS Simulator. You cannot test push notifications with the iOS Simulator as a result.
+As of Xcode 14, you can test remote push notifications on an iOS simulator.
 {% endalert %}
 
 #### Step 3: Launching a Braze push campaign
