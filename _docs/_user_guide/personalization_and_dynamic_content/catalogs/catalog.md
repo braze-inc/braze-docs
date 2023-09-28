@@ -27,7 +27,7 @@ Note these guidelines when creating your CSV file. The first column of the CSV f
 - Maximum field value (cell) of 5,000 characters
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
-Ensure that you are encoding your CSV file using the UTF-8 format in order to successfully upload your CSV file in the next step. We also recommend that you format all text in your CSV files as lowercase.
+Make sure that you are encoding your CSV file using the UTF-8 format in order to successfully upload your CSV file in the next step. We also recommend that you format all text in your CSV files as lowercase.
 
 {% alert note %}
 Need more space to accommodate for your CSV files? Contact your Braze account manager for more information about upgrading your catalogs.
@@ -52,7 +52,7 @@ Click **Create New Catalog**, then choose to either **Upload CSV** or **Create i
 - Must be unique
 - Maximum of 250 characters
 - Can only include numbers, letters, hyphens, and underscores<br><br>
-4. (optional) Add a description for the catalog.<br><br>
+4. (optional) Add a description for the catalog.
 5. Click **Process Catalog** to create the catalog.
 
 {% alert note %}
@@ -78,10 +78,10 @@ You also have the option of updating the CSV file after selecting to create a ca
 - Must be unique
 - Maximum of 250 characters
 - Can only include numbers, letters, hyphens, and underscores <br> ![][14]{: style="max-width:80%;"} <br><br>
-2. (optional) Type a description for your catalog.<br><br>
-3. Select the catalog you've just created from the list **Catalogs** page to update your catalog.<br><br>
-4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use to dropdown to select the data type. Repeat as needed.<br> ![][12]{: style="max-width:50%;"} <br><br>
-5. Next, click **Update Catalog > Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, click **Save Item** or **Save and Add Another** to continue adding your items. <br> ![][13]{: style="max-width:50%;"}
+2. (optional) Type a description for your catalog.
+3. Select the catalog you've just created from the list **Catalogs** page to update your catalog.
+4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use to dropdown to select the data type. Repeat as needed.<br> ![][12]{: style="max-width:50%;"}<br><br>
+5. Click **Update Catalog > Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, click **Save Item** or **Save and Add Another** to continue adding your items. <br> ![][13]{: style="max-width:50%;"}
 
 You also have the option of uploading a CSV file after selecting to create a catalog in the browser. 
 
@@ -127,7 +127,7 @@ This data type cannot be edited after you set up your catalog.
 
 ![][9]{: style="max-width:85%;"}
 
-Next, we'll name this catalog "games_catalog" and click the **Process Catalog** button. Then, Braze will check your catalog for any errors before catalog creation.
+Next, we'll name this catalog "games_catalog" and click the **Process Catalog** button. Then, Braze will check the catalog for any errors before catalog creation.
 
 ![][11]{: style="max-width:85%;"}
 
@@ -139,7 +139,7 @@ You can use catalogs in all of your messaging channels, including anywhere in th
 
 ### Step 1: Add personalization type {#step-one-personalization}
 
-In the message composer of your choice, click the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalogs Items** for the **Personalization Type**. Then, select your **Catalog Name**. Using our previous example, we'll select the Games catalog.
+In the message composer of your choice, click the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalogs Items** for the **Personalization Type**. Then, select your **Catalog Name**. Using our previous example, we'll select the "Games" catalog.
 
 ![][2]
 

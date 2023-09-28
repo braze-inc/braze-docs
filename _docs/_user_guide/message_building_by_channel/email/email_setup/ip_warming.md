@@ -22,7 +22,7 @@ ISPs throttle email delivery when suspicion of spam arises so that they can prot
 
 If engagement is moderate, they may continue to throttle your email to collect more engagement data to determine whether or not the mail is spam with more certainty. If the email has very high engagement metrics, they may cease to throttle this email entirely. They use that data to create an email reputation that will eventually determine whether or not your emails are filtered to spam automatically.
 
-If your domain or IP is blocked by an ISP, the respone codes in the Braze Developer Console will contain information about what websites to visit to appeal to these ISPs and to get off those lists.
+If your domain or IP is blocked by an ISP, the message logs in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) will contain information about what websites to visit to appeal to these ISPs and to get off those lists.
 
 ## IP warming schedules
 
@@ -48,6 +48,8 @@ Day | # of Emails to be Sent
 16 | 2,000,000
 17 | 4,000,000
 18+ | Double Daily Until Desired Volume
+
+We suggest warming up to your peak sending. That is to say, if you normally send 2 million emails a day but plan to send 7 million for a seasonal period, that "peak" sending is what you should warm up to.
 
 Once warming is complete and you've reached your desired daily volume, you should aim to maintain that volume daily. Some fluctuation is expected, but reaching the desired volume, then only doing a mass blast once a week may negatively affect your delivery metrics and sender reputation. 
 
