@@ -11,7 +11,7 @@ tool:
 
 # Export revenue and total revenue data
 
-> On the **Revenue** page of the dashboard you can view data on revenue over specific periods of time, a specific product revenue, and your app's total revenue.
+> On the [Revenue Report]({{site.baseurl}}/user_guide/data_and_analytics/reporting/revenue_report/) page of the dashboard you can view data on revenue over specific periods of time, a specific product revenue, and your app's total revenue.
 
 You can find the **Revenue Report** under **Analytics**.
 
