@@ -77,7 +77,7 @@ The **Add Stats** step shows you statistics for the types of campaigns or Canvas
 
 ### Step 4: Complete report setup
 
-Give your report a name, choose how your report will be formatted, and select your recipients. By default, Engagement Reports are sent as a ZIP file where data is comma-delimited (each piece of data is separated by a comma).
+Give your report a name, choose how your report will be formatted, and select your recipients. By default, Engagement Reports are sent as a ZIP file where data is comma-delimited (where each piece of data is separated by a comma).
 
 You can select from the following compression and delimiter options:
 
