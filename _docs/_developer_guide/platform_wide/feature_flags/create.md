@@ -23,10 +23,6 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 
 {% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
-{% alert important %} 
-Feature flags are currently in beta. [Click here](https://dashboard.braze.com/engagement/feature_flags) to learn more about joining the beta program.
-{% endalert %}
-
 ## Implement feature flags in the dashboard
 
 Create, edit, and archive feature flags from **Messaging** > **Feature Flags**. This page displays a list of existing feature flags for this workspace.

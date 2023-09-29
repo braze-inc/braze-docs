@@ -17,10 +17,6 @@ platform:
 
 Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags][3].
 
-{% alert important %} 
-Feature flags are currently in beta. [Click here](https://dashboard.braze.com/engagement/feature_flags) to learn more about joining the beta program.
-{% endalert %}
-
 <!-- When feature flags GAs, do not forget to update https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions with the additional permissions to use feature flags -->
 
 ## Prerequisites
