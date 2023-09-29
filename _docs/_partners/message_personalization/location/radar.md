@@ -32,7 +32,7 @@ To map data between the Braze and Radar SDKs, you must set the same user IDs or 
 
 To enable the integration:
 
-1. In Radar on the [Integrations]((https://radar.com/documentation/integrations) page, locate Braze.
+1. In Radar on the [Integrations](https://radar.com/documentation/integrations) page, locate Braze.
 1. Set **Enabled** to **Yes**.
 3. Paste in your app identifier and API keys.
 
