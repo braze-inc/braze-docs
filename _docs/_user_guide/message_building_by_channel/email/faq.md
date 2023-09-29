@@ -19,7 +19,7 @@ Note that this deduplication occurs if the users targeted are included in the sa
 
 #### Exception: API-triggered campaigns
 
-API-triggered campaigns will deduplicate or send dudulicates depending on where the audience is defined. In short, the duplicate emails must be directly targeted as separate `user_ids` within the API call in order to receive multiple details. Here are three possible scenarios for API-triggered campaigns:
+API-triggered campaigns will deduplicate or send deduplicates depending on where the audience is defined. In short, the duplicate emails must be directly targeted as separate `user_ids` within the API call in order to receive multiple details. Here are three possible scenarios for API-triggered campaigns:
 
 - **Scenario 1: Duplicate emails in target segment:** If the same email appears in multiple user profiles that are grouped together in dashboard's audience filters for an API-triggered campaign, only one of the profiles will receive the email.
 - **Scenario 2: Duplicate emails in different `user_ids` within recipients object:** If the same email appears within multiple `External_user_IDs` referenced by the `recipients`` object, the email will be sent twice.
