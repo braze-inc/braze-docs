@@ -23,7 +23,16 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 
 {% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
-## Gradual rollouts
+## Using feature flags
+
+Use feature flags to:
+
+- [Introduce gradual rollouts](#gradual-rollouts)
+- [Remotely control app variables](#remotely-control-app-variables)
+- [Synchronize feature rollout and messaging](#message-coordination)
+- [Experiment with new features](#feature-experimentation)
+
+### Gradual rollouts
 
 Use feature flags to gradually enable features to a sample population. For example, you can soft launch a new feature to your VIP users first. This strategy helps mitigate risks associated with shipping new features to everyone at once and helps catch bugs early.
 
@@ -70,7 +79,7 @@ return (<>
 
 ```
 
-## Remotely control app variables
+### Remotely control app variables
 
 Use feature flags to modify your app's functionality in production. This can be particularly important for mobile apps, where app store approvals prevent rolling out changes quickly to all users.
 
@@ -112,7 +121,7 @@ Now, the day before Thanksgiving, we only have to change those property values i
 
 As a result, the next time someone loads the app, they will see the new Thanksgiving deals.
 
-## Message coordination
+### Message coordination
 
 Use feature flags to synchronize a feature's rollout and messaging. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a campaign or Canvas that only targets that segment. 
 
@@ -128,7 +137,7 @@ Then, in Canvas Flow, we'll create a [Feature Flag step]({{site.baseurl}}/user_g
 
 Now, users in this segment will start to see the new loyalty program, and after it's enabled, an email and survey will be sent out automatically to help our team gather feedback.
 
-## Feature experimentation
+### Feature experimentation
 
 Use feature flags to experiment and confirm your hypotheses around your new feature. By splitting traffic into two or more groups, you can compare the impact of a feature flag across groups, and determine the best course of action based on the results.
 
@@ -158,6 +167,19 @@ Now, 50% of users will see the old experience, while the other 50% will see the 
 ![A Canvas with an experiment path splitting traffic into two 50 percent groups.][6]{: width="70%"}
 
 Once we determine our winner, we can stop this Canvas and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
+
+## Limitations
+
+The following table describes the limitations that apply at a feature flag level. To purchase the paid version of feature flags, contact your Braze account manager.
+
+| Limitation area                                                                                                   | Free version | Paid version |
+| :---------------------------------------------------------------------------------------------------------------- | :----------- | ------------ |
+| Active feature flags*                                                                                             | 10           | 110          |
+| Active campaign experiments                                                                                       | 1            | 100          |
+| [Feature Flag Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Unlimited    | Unlimited    |
+{: .reset-td-br-1 .reset-td-br-2}
+
+**Active feature flags are feature flags that are used in any capacity, including rolling it out to a percentage of your audience, using it in an active campaign, or employing it in an active Canvas.*
 
 [1]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %} 
 [2]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/use_cases/
