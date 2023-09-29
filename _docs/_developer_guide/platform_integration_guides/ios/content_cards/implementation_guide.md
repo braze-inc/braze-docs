@@ -543,7 +543,7 @@ The dashboard configuration for interactive Content Cards is straightforward. Th
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
-## Dark theme customization
+## Dark Mode customization
 
 By default, Content Card views will automatically respond to Dark Mode changes on the device with a set of themed colors.
 
