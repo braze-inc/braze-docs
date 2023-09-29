@@ -17,16 +17,15 @@ platform:
 
 Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags][3].
 
-<!-- When feature flags GAs, do not forget to update https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions with the additional permissions to use feature flags -->
-
 ## Prerequisites
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
 
 {% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
-### Gradual rollouts
-Use feature flags to gradually enable features to a sample population. For example, you can soft launch a new feature to your VIP users first. This strategy helps mitigate risks associated with shipping new features to everyone at once and helps catch bugs early. 
+## Gradual rollouts
+
+Use feature flags to gradually enable features to a sample population. For example, you can soft launch a new feature to your VIP users first. This strategy helps mitigate risks associated with shipping new features to everyone at once and helps catch bugs early.
 
 ![Moving image of rollout traffic slider going from 0% to 100%.][1]
 
@@ -71,7 +70,8 @@ return (<>
 
 ```
 
-### Remotely control app variables 
+## Remotely control app variables
+
 Use feature flags to modify your app's functionality in production. This can be particularly important for mobile apps, where app store approvals prevent rolling out changes quickly to all users.
 
 For example, let's say that our marketing team wants to list our current sales and promotions in our app's navigation. Normally, our engineers require one week's lead time for any changes and three days for an app store review. But with Thanksgiving, Black Friday, Cyber Monday, Hanukah, Christmas, and New Year's Day all within two months, we won't be able to meet these tight deadlines.
@@ -112,7 +112,7 @@ Now, the day before Thanksgiving, we only have to change those property values i
 
 As a result, the next time someone loads the app, they will see the new Thanksgiving deals.
 
-### Message coordination
+## Message coordination
 
 Use feature flags to synchronize a feature's rollout and messaging. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a campaign or Canvas that only targets that segment. 
 
@@ -128,7 +128,7 @@ Then, in Canvas Flow, we'll create a [Feature Flag step]({{site.baseurl}}/user_g
 
 Now, users in this segment will start to see the new loyalty program, and after it's enabled, an email and survey will be sent out automatically to help our team gather feedback.
 
-### Feature experimentation
+## Feature experimentation
 
 Use feature flags to experiment and confirm your hypotheses around your new feature. By splitting traffic into two or more groups, you can compare the impact of a feature flag across groups, and determine the best course of action based on the results.
 
