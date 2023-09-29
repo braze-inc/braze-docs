@@ -1,14 +1,14 @@
 ---
 nav_title: HTML Rendering in Test Emails
 article_title: HTML Rendering in Test Emails
-page_order: 1
+page_order: 2
 
 page_type: solution
 description: "This help article walks you through how to troubleshoot issues with HTML rendering in test emails."
 channel: email
 ---
 
-# HTML rendering in test emails
+# Troubleshooting HTML rendering in test emails
 
 If your [test email][37] looks off, we recommend first checking your HTML setup. Next, you can check for these issues:
 * [Extension conflicts](#check-conflicts)
