@@ -77,6 +77,9 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 {% endraw %}
 {% endalert %}
 
+### Including dynamic links 
+Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. At this time, neither of these links can be shortened. 
+
 ## Step 3: Preview and test your message
 
 Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
