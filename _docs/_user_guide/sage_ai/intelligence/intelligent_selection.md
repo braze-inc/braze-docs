@@ -45,7 +45,7 @@ For campaigns and Canvases, Intelligent Selection will run until it gathers enou
 In most cases, Intelligent Selection will choose one of the variants as the winning variant. This variant will be given 100% of the audience for future sends.
 
 {% alert note %}
-It's possible for Intelligent Selection to stop optimizing without picking a single clear winner. Intelligent Selection stops optimizing when it has a 95% confidence that continuing the experiment won't improve the conversion rate by more than 1% of its current rate.
+It's possible for Intelligent Selection to stop optimizing without picking a single clear winner. Intelligent Selection stops optimizing when it has a 95% confidence that continuing the experiment won't improve the conversion rate by more than 1% of its present rate.
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/

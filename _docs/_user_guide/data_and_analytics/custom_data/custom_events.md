@@ -81,7 +81,11 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
 
-![Custom event counts graph on the Custom Events page in the dashboard showing trends for two different custom events][8]
+![Custom event counts graph on the Custom Events page in the dashboard showing trends for a custom event][8]
+
+You can also use **Filters** to breakdown your custom events by hour, monthly average users (MAU), segments, or KPI formulas. 
+
+![Custom event graph filters][9]{: style="max-width:40%;"}
 
 {% alert tip %}
 [Incrementing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time series. User actions that do not need to be analyzed in time series should be recorded using this method.
@@ -392,6 +396,7 @@ Contact your Braze customer success manager for recommendations on the best appr
 [5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
 [6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
+[9]: {% image_buster /assets/img/custom_events_report_filters.png %}
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
 [19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/

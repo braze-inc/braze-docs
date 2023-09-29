@@ -241,20 +241,19 @@ Use the [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_da
 
 Check out this page for these statistics:
 
-- Revenue by Date
-- Revenue for Different Segments
-- Revenue for Different Products
-- Purchases by Date
-- Purchases for Different Products
-- Revenue by Hour
-- Hourly Revenue for Different Segments
-- Revenue per User
+- KPI formula results
+- Number of product purchases
+- Revenue for different segments
+- Revenue for different products
+- Revenue per hour
+- Hourly revenue for different segments
+- Revenue per user
 
 {% endtab %}
 {% tab Global Control Group Report %}
 **Global Control Group Report**
 
-After you have set up a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#create-a-global-control-group), use the [Global Control Report]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#viewing-reporting) to evaluate the impact of your Braze marketing as a whole. This report lets you compare the behaviors of users who receive messaging with the behaviors of users who don't, providing a better understanding of how your campaigns and Canvases are contributing to your business goals.
+After you have set up a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/), use the [Global Control Report]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) to evaluate the impact of your Braze marketing as a whole. This report lets you compare the behaviors of users who receive messaging with the behaviors of users who don't, providing a better understanding of how your campaigns and Canvases are contributing to your business goals.
 
 Check out this page to:
 

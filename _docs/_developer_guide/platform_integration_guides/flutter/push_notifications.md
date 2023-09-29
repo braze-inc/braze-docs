@@ -23,8 +23,8 @@ Braze does not support using the Flutter wrapper layer for sending push notifica
 
 Once you've configured push notifications in the native layer, follow these steps to test your push integration.
 
-{% alert important %}
-You can't test push notification related app behavior on an iOS simulator because simulators don't support the device tokens required to send and receive a push notification.
+{% alert note %}
+As of Xcode 14, you can test remote push notifications on an iOS simulator.
 {% endalert %}
 
 1. Set an active user in the Flutter application. To do so, initialize your plugin by calling `braze.changeUser('your-user-id')`.

@@ -212,15 +212,17 @@ You can choose to include dynamic images into your email messaging by including 
 
 With attributes, you can easily append additional information to HTML tags in emails. These attributes can be applied to links, both in text blocks and buttons, and images. This can be especially useful for message personalization, segmentation, and styling.
 
-A common use case is to insert an attribute into your anchor tag to disable click tracking when sending through Braze:
+A common use case is to insert an attribute into your anchor tag to disable click tracking when sending through Braze.
 
 * **SendGrid:** `clicktracking = "off"`
 * **SparkPost:** `data-msys-clicktrack = "0"`
 
-Another common use case is to flag specific links as universal links, which are links that redirect to your app.
+Another common use case is to flag specific links as universal links. Universal links are links that redirect to your app, giving your users an integrated experience.
 
 * **SendGrid:** `universal = "true"`
-* **SparkPost:** `data-msys-sublink = "open-in-app"`, a [custom sub-path](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) must be configured.
+* **SparkPost:** `data-msys-sublink = "open-in-app"` (a [custom sub-path](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) must be configured)
+
+To set up universal links, we recommend integrating with [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking).
 
 [1]: {% image_buster /assets/img/dnd/dnd_template1.png %}
 [2]: {% image_buster /assets/img/dnd/dnd1.png %}
