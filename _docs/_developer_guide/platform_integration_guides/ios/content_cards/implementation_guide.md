@@ -545,7 +545,7 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 
 ## Dark theme customization
 
-By default, Content Card views will automatically respond to Dark Theme changes on the device with a set of themed colors and layout changes. 
+By default, Content Card views will automatically respond to dark mode changes on the device with a set of themed colors.
 
 This behavior can be overridden as detailed in our [custom styling guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/custom_styling#disabling-dark-mode).
 
