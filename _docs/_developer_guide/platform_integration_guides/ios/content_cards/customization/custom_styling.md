@@ -29,7 +29,7 @@ Overriding default images is currently not supported in our Xamarin iOS integrat
 
 ## Disabling Dark Mode
 
-To prevent the Content Card UI from adopting Dark Mode styling when the user device has Dark Mode enabled, set the `ABKContentCardsTableViewController.enableDarkTheme` property. You can access the `enableDarkTheme` property directly on an `ABKContentCardsTableViewController` instance or via the `ABKContentCardsViewController.contentCardsViewController` property to best suit your own UI.
+To prevent the Content Card UI from adopting dark theme styling when the user device has Dark Mode enabled, set the `ABKContentCardsTableViewController.enableDarkTheme` property. You can access the `enableDarkTheme` property directly on an `ABKContentCardsTableViewController` instance or via the `ABKContentCardsViewController.contentCardsViewController` property to best suit your own UI.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
