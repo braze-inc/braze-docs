@@ -94,7 +94,7 @@ Use `LogButtonClicked(int buttonID)` on [`IInAppMessageImmersive`][12] to log bu
 
 ## Custom action listeners
 
-If you require more control over how a user interacts with in-app messages, use a `BrazeInAppMessageListener` and assign it to `Appboy.AppboyBinding.inAppMessageListener`. For any delegates you don't want to use, you can simply leave them as null.
+If you require more control over how a user interacts with in-app messages, use a `BrazeInAppMessageListener` and assign it to `Appboy.AppboyBinding.inAppMessageListener`. For any delegates you don't want to use, you can simply leave them as `null`.
 
 ```csharp
 BrazeInAppMessageListener listener = new BrazeInAppMessageListener() {
@@ -107,23 +107,23 @@ BrazeInAppMessageListener listener = new BrazeInAppMessageListener() {
 Appboy.AppboyBinding.inAppMessageListener = listener;
 
 public void BeforeInAppMessageDisplayed(IInAppMessage inAppMessage) {
-  // executed before an in-app message is displayed.
+  // Executed before an in-app message is displayed.
 }
 
 public void OnInAppMessageButtonClicked(IInAppMessage inAppMessage, InAppMessageButton inAppMessageButton) {
-  // executed whenever an in-app message button is clicked.
+  // Executed whenever an in-app message button is clicked.
 }
 
 public void OnInAppMessageClicked(IInAppMessage inAppMessage) {
-  // executed whenever an in-app message is clicked.
+  // Executed whenever an in-app message is clicked.
 }
 
 public void OnInAppMessageHTMLClicked(IInAppMessage inAppMessage, Uri uri) {
-  // executed whenever an HTML in-app message is clicked.
+  // Executed whenever an HTML in-app message is clicked.
 }
 
 public void OnInAppMessageDismissed(IInAppMessage inAppMessage) {
-  // executed whenever an in-app message is dismissed without a click.
+  // Executed whenever an in-app message is dismissed without a click.
 }
 ```
 
