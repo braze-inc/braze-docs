@@ -161,7 +161,7 @@ If you already use WhatsApp as a customer support channel, we recommend you keep
 #### How can I “bridge the gap” between my customer support messaging and my marketing messaging via Braze? 
 You can use WhatsApp Liquid properties to forward inbound WhatsApp message content (including message body and media URLs) from Braze to other platforms, including any customer support tool. For details, see our [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/). 
 
-To send information into Braze, for example, to indicate that a user is in an active support conversation, you can send in a custom attribute (e.g. "has existing support chat = true/false") and use that as segmentation criteria in their marketing campaigns. You can also deep link between two chat threads to direct users to the support thread from the marketing thread and visa versa. 
+To send information into Braze, for example, to indicate that a user is in an active support conversation, you can log a custom attribute (such as a boolean "has existing support chat = true/false") and use that as segmentation criteria in their marketing campaigns. You can also deep link between two chat threads to direct users to the support thread from the marketing thread and the reverse. 
 
 #### Does Braze store end-user responses? 
 Yes. Inbound and outbound messaging is available in the Messaging History tab of a user’s profile. 
