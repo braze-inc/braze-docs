@@ -130,7 +130,7 @@ Next, check out [WhatsApp reporting]({{site.baseurl}}/user_guide/message_buildin
 
 Braze supports the following WhatsApp messaging features.
 
-### Outbound message features
+### Outbound messages
 
 You can send users the following in your WhatsApp messages:
 
@@ -141,10 +141,12 @@ Text | Supports variable parameters
 Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
 Body text | Supports variable parameters
 Footer text | Supports variable parameters 
-CTAs | See [Supported CTAs](#ctas).
+CTAs | See [Calls to actions](#ctas).
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Supported CTAs {#ctas}
+#### Calls to actions {#ctas}
+
+You can add the following calls to action in your WhatsApp messages:
 
 CTA type    | Details
 ----------- |---------------- 
@@ -154,7 +156,7 @@ Custom quick reply buttons | Three buttons maximum.
 Marketing opt-out button | This option does not automatically update subscription statuses. <br><br>For setup instructions, see [Opt-ins & Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection).
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Inbound message features
+### Inbound messages
 
 Users can send you the following in their WhatsApp messages:
 
@@ -164,7 +166,7 @@ Text |
 Images (JPEG and PNG)| Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
 Audio| audio/aac<br>audio/mp4<br>audio/mpeg<br>audio/amr<br>audio/ogg (only Opus Codecs, base audio/ogg is not supported)
 Documents | text/plain<br>application/pdf<br>application/vnd.ms-powerpoint<br>application/msword<br>application/vnd.ms-excel<br>application/vnd.openxmlformats-officedocument.wordprocessingml.document<br>application/vnd.openxmlformats-officedocument.presentationml.presentation<br>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-CTAs | See [Supported CTAs](#ctas).
+CTAs | See [Calls to actions](#ctas).
 Video | video/mp4, video/3gp<br><br>Only H.264 video codec and AAC audio codec are supported. We support videos with a single audio stream or no audio stream.
 {: .reset-td-br-1 .reset-td-br-2}
 
