@@ -61,7 +61,7 @@ glossaries:
       - In-App Message
       - Content Cards
   - name: Sends
-    description: The total number of messages sent in a campaign. This number is received from Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
+    description: The total number of messages sent in a campaign. This number is received from Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless if they have been sent out yet due to rate limiting. This does not mean the message was received or delivered to a device, only that the message was sent.
     calculation: Count
     tags:
       - Content Cards
@@ -79,7 +79,7 @@ glossaries:
     tags:
       - SMS
   - name: Deliveries
-    description: The total number of message requests that are accepted by the receiving server.
+    description: The total number of message requests that are accepted by the receiving server. This does not mean the message was delivered to a device, only that the message was accepted by the server.
     calculation: Count
     tags:
       - All Push
