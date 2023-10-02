@@ -151,7 +151,7 @@ CTA type    | Details
 Visit website | Available for message templates only. <br>One button maximum (including variable parameters).
 Call phone number | Available for message templates only. <br>One button maximum.
 Custom quick reply buttons | Three buttons maximum. 
-Marketing opt-out button | This option does not automatically update subscription statuses. <br>For setup instructions, see [Opt-ins & Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection).
+Marketing opt-out button | This option does not automatically update subscription statuses. <br><br>For setup instructions, see [Opt-ins & Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection).
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Inbound message features
