@@ -92,7 +92,7 @@ Use `LogClicked()` and `LogImpression()` on [`IInAppMessage`][13] to log clicks 
 
 Use `LogButtonClicked(int buttonID)` on [`IInAppMessageImmersive`][12] to log button clicks. Note that buttons are represented as lists of[`InAppMessageButton`][8] instances, each of which contains a `ButtonID`.
 
-## Custom Action Listeners
+## Custom action listeners
 
 If you require more control over how a user interacts with in-app messages, use a `BrazeInAppMessageListener` and assign it to `Appboy.AppboyBinding.inAppMessageListener`. For any delegates you don't want to use, you can simply leave them as null.
 
