@@ -167,7 +167,7 @@ To send information into Braze, for example, to indicate that a user is in an ac
 Yes. Inbound and outbound messaging is available in the Messaging History tab of a user’s profile. 
 
 #### How do end-user phone numbers need to be stored in Braze? 
-End-user phone numbers need to be stored in e164 format. Technical details can be found in [User Docs - User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/faqs/#miscellaneous). 
+User phone numbers need to be stored in [E.164 format]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/#formatting).
 
 #### What kind of rich media is supported in WhatsApp templates? 
 You can add images, calls to action (URL or phone number), and quick reply buttons to WhatsApp templates. You can add these elements when you build templates directly in WhatsApp. 
