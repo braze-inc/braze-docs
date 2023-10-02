@@ -15,6 +15,9 @@ guide_featured_list:
   - name: Approving Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval
     fa_icon: fas fa-check-square
+  - name: Copying Across Workspaces
+    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace
+    fa_icon: fas fa-copy
   - name: Changing Your Campaign After Launch
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/
     fa_icon: fas fa-edit
@@ -23,7 +26,7 @@ guide_featured_list:
     fa_icon: fas fa-archive
   - name: Duplicating Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/
-    fa_icon: fas fa-copy
+    fa_icon: fas fa-clone
   - name: Campaign Alerts
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/
     fa_icon: fas fa-bell
