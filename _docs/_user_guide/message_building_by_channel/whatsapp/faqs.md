@@ -164,7 +164,7 @@ You can use WhatsApp Liquid properties to forward inbound WhatsApp message conte
 To send information into Braze, for example, to indicate that a user is in an active support conversation, you can log a custom attribute (such as a boolean "has existing support chat = true/false") and use that as segmentation criteria in their marketing campaigns. You can also deep link between two chat threads to direct users to the support thread from the marketing thread and the reverse. 
 
 #### Does Braze store end-user responses? 
-Yes. Inbound and outbound messaging is available in the Messaging History tab of a user’s profile. 
+Yes. Inbound and outbound messaging is available in the [Messaging History tab]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab)of a user’s profile. 
 
 #### How do end-user phone numbers need to be stored in Braze? 
 User phone numbers need to be stored in [E.164 format]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/#formatting).
