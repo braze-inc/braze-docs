@@ -130,51 +130,43 @@ Next, check out [WhatsApp reporting]({{site.baseurl}}/user_guide/message_buildin
 
 Braze supports the following WhatsApp messaging features.
 
-### Supported features for outbound messages
+### Outbound message features
 
 You can send users the following in your WhatsApp messages:
 
-- Headers
-- Text (including variable parameters)
-- Images (JPEG and PNG)
-  - Must be 8-bit, RGB or RGBA, and up to 5 MB for any type
-- Body text (including variable parameters)
-- Footer text (including variable parameters)
-- CTAs 
-  - Visit Website (available for message templates only) 
-    - One button maximum (including variable parameters)
-  - Call phone number (available for message templates only) 
-    - One button maximum
-  - Custom quick reply buttons
-    - Three buttons maximum
-  - Marketing opt-out button 
-    - This option does not automatically update subscription statuses. For set up directions, see [Opt-ins & Opt-Outs]({{site.basesurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection). 
+Message feature    | Details
+----------- |---------------- 
+Headers | 
+Text | Supports variable parameters
+Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
+Body text | Supports variable parameters
+Footer text | Supports variable parameters 
+CTAs | See [Supported CTAs](#ctas).
+{: .reset-td-br-1 .reset-td-br-2}
 
-### Supported features for inbound messages
+#### Supported CTAs {#ctas}
+
+CTA type    | Details
+----------- |---------------- 
+Visit website | Available for message templates only. <br>One button maximum (including variable parameters).
+Call phone number | Available for message templates only. <br>One button maximum.
+Custom quick reply buttons | Three buttons maximum. 
+Marketing opt-out button | This option does not automatically update subscription statuses. For setup instructions, see [Opt-ins & Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection).
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Inbound message features
 
 Users can send you the following in their WhatsApp messages:
 
-- Text
-- Images (JPEG and PNG)
-  - Must be 8-bit, RGB or RGBA, and up to 5 MB for any type
-- Audio 
-  - audio/aac
-  - audio/mp4
-  - audio/mpeg
-  - audio/amr
-  - audio/ogg (only Opus Codecs, base audio/ogg is not supported)
-- Documents
-  - text/plain
-  - application/pdf
-  - application/vnd.ms-powerpoint
-  - application/msword
-  - application/vnd.ms-excel
-  - application/vnd.openxmlformats-officedocument.wordprocessingml.document
-  - application/vnd.openxmlformats-officedocument.presentationml.presentation
-  - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-- Video
-  - video/mp4, video/3gp
-  - Only H.264 video codec and AAC audio codec is supported. We support videos with a single audio stream or no audio stream.
+Message feature    | Details
+----------- |---------------- 
+Text | 
+Images (JPEG and PNG)| Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
+Audio| audio/aac<br>audio/mp4<br>audio/mpeg<br>audio/amr<br>audio/ogg (only Opus Codecs, base audio/ogg is not supported)
+Documents | text/plain<br>application/pdf<br>application/vnd.ms-powerpoint<br>application/msword<br>application/vnd.ms-excel<br>application/vnd.openxmlformats-officedocument.wordprocessingml.document<br>application/vnd.openxmlformats-officedocument.presentationml.presentation<br>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+CTAs | See [Supported CTAs](#ctas).
+Video | video/mp4, video/3gp<br><br>Only H.264 video codec and AAC audio codec are supported. We support videos with a single audio stream or no audio stream.
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 
