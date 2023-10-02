@@ -66,6 +66,29 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 5. Save your Segment Extension.
 
 {% endtab %}
+
+{% tab AI SQL Generator %}
+
+{% alert note %}
+The AI SQL generator is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
+
+The AI SQL generator leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your SQL segment. Learn about how your data is used and sent to OpenAI [here](https://www.braze.com/docs/user_guide/sage_ai/generative_ai/ai_copywriting#what-is-gpt).
+
+To use the AI SQL generator, do the following:
+
+1. Click **Launch AI SQL Generator** after creating a SQL segment using either full or incremental refresh.
+2. Type in your prompt and click **Generate** to translate your prompt into SQL.
+3. Review the generated SQL to make sure it looks correct, and then save your segment.
+
+### Example prompts
+- Users who received an email in the last month
+- Users who made less than five purchases in the last year
+
+### Tips
+- Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
+- Familiarize yourself with the [SQL writing rules]({{site.baseurl}}//user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
+{% endtab %}
 {% endtabs %}
 
 {% alert note %}
