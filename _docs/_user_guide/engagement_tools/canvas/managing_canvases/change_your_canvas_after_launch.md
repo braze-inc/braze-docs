@@ -106,7 +106,7 @@ If the variant percentages change, users may be redistributed to other variants.
 
 #### Control groups
 
-Control groups remain consistent if the variant percentage is unchanged. In an instance where a control group's percentage is decreased or increased, users who previously received messages wouldn't be able to enter the control group on a later send, nor could any user in the control group ever receive a message.
+Control groups remain consistent if the variant percentage is unchanged. In an instance where a control group's percentage is decreased or increased, users who previously received messages wouldn't be able to enter the control group on a later send, nor would any user in the control group ever receive a message.
 
 ### Local send time
 
