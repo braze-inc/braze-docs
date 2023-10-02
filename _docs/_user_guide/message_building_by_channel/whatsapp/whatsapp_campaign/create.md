@@ -126,6 +126,58 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 Next, check out [WhatsApp reporting]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/) to learn how you can access the results of your WhatsApp campaigns.
 
+## Supported WhatsApp features
+
+Braze supports the following WhatsApp messaging features.
+
+### Supported features for outbound messages
+
+You can send users the following in your WhatsApp messages:
+
+- Headers
+- Text (including variable parameters)
+- Images (JPEG and PNG)
+  - Must be 8-bit, RGB or RGBA, and up to 5 MB for any type
+- Body text (including variable parameters)
+- Footer text (including variable parameters)
+- CTAs 
+  - Visit Website (available for message templates only) 
+    - One button maximum (including variable parameters)
+  - Call phone number (available for message templates only) 
+    - One button maximum
+  - Custom quick reply buttons
+    - Three buttons maximum
+  - Marketing opt-out button 
+    - This option does not automatically update subscription statuses. For set up directions, see [Opt-ins & Opt-Outs]({{site.basesurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection). 
+
+### Supported features for inbound messages
+
+Users can send you the following in their WhatsApp messages:
+
+- Text
+- Images (JPEG and PNG)
+  - Must be 8-bit, RGB or RGBA, and up to 5 MB for any type
+- Audio 
+  - audio/aac
+  - audio/mp4
+  - audio/mpeg
+  - audio/amr
+  - audio/ogg (only Opus Codecs, base audio/ogg is not supported)
+- Documents
+  - text/plain
+  - application/pdf
+  - application/vnd.ms-powerpoint
+  - application/msword
+  - application/vnd.ms-excel
+  - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+  - application/vnd.openxmlformats-officedocument.presentationml.presentation
+  - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+- Video
+  - video/mp4, video/3gp
+  - Only H.264 video codec and AAC audio codec is supported. We support videos with a single audio stream or no audio stream.
+
+
+
 [1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %} 
 [2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %} 
 [3]: {% image_buster /assets/img/whatsapp/whatsapp8.png %} 
