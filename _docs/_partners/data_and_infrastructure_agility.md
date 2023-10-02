@@ -123,4 +123,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata/
 - name: Ketch
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/ketch/
+- name: Lytics
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lytics/
 ---

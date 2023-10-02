@@ -274,5 +274,7 @@ valid_partner_list:
 - name: Ketch
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/ketch/
 - name: Antavo
-  url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/  
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/
+- name: Lytics
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lytics/  
 ---
