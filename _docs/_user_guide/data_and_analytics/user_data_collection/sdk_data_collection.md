@@ -76,7 +76,7 @@ In addition to the minimum integration data, the following attributes are automa
 | Device IDFA      | iOS                | Device identifier for advertisers                     | Optionally used to track data. |
 | Device locale    | Android, iOS       | The default locale of the device                      | This attribute is used to translate messages to a user's preferred language. |
 | Device model     | Android, iOS       | The specific hardware of the device                   | This attribute is used to ensure messages are only sent to compatible devices. It can also be used within segmentation. |
-| Device brand     | Android       | The brand of device (i.e. Samsung)                   | This attribute is used to ensure messages are only sent to compatible devices. |
+| Device brand     | Android       | The brand of device (for example, Samsung)                   | This attribute is used to ensure messages are only sent to compatible devices. |
 | Device wireless carrier | Android, iOS | The mobile carrier                                     | This attribute is optionally used for message targeting.              |
 | Language         | Android, iOS, Web  | Device/browser language                               | This attribute is used to translate messages to a user's preferred language. |
 | Notification settings | Android, iOS, Web  | Whether this app has push notifications enabled. | This attribute is used to enable push notifications. |
