@@ -27,7 +27,7 @@ Learn more about how Braze collects data:
         2. If a profile with this email address already exists within Braze, it will be updated to include any data sent within the request.
         3. In a use case with more than one profile with this email address, the most recently updated profile will be prioritized.
     - Note that if an email-only user profile exists and then an identified profile with the same email address is created (i.e., another profile with the same email address AND an external ID), Braze will create a second profile. Subsequent updates will go to the profile with the external ID.
-        - Braze is working on adding a new API endpoint to allow customers to identify an email-only profile and merge data from the email-only profile into the identified profile.
+        - The two profiles can be merged using the Braze [/merge/users]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) endpoint
 
 ## Handling anonymous users
 

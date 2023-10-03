@@ -1,29 +1,25 @@
 ---
-nav_title: "Message Interaction Data Availability"
-article_title: "Message Interaction Data Availability"
+nav_title: "Campaign Interaction Data"
+article_title: "Campaign Interaction Data"
 permalink: "/campaign_data_retention/"
 hidden: true
 ---
 
-# Message interaction data availability
+# About campaign interaction data availability
 
-> This article covers the new Braze message data availability policy for campaign interaction data as well as the early access release of a feature related thereto. <br><br> Data stored in Braze is retained and usable for segmentation, personalization, and targeting for the lifetime of the Customer’s account. This means data such as user profile attributes, custom attributes, custom events, and purchases are stored indefinitely for active users unless removed by the Customer, for the duration of the contract.
+> This article covers information about campaign interaction data and its availability.
 
-Braze is releasing a feature that allows you to move interaction data between real-time and long-term storage. This enables access to interaction data for retargeting the moment customers need it. 
-
-“Interaction data” refers to how a user interacts with a campaign they received (for example, when a user opens campaign A or a user receives variant A).
+Campaign interaction data refers to how a user interacts with a campaign they received (for example, when a user opens campaign A or a user receives variant A). This data can be accessed for retargeting the moment you need it.
 
 {% alert important %}
-Message interaction data availability is currently in early access and only available for use with campaigns. Contact your customer success manager if you're interested in participating in the early access. <br><br> Support for message interaction data availability for use with Canvases will be coming soon.
+Campaign interaction data availability is currently in early access. Contact your customer success manager if you're interested in participating in the early access. <br><br> Support for Canvas interaction data will be coming soon.
 {% endalert %}
 
-### When is message interaction data available?
+### When is campaign interaction data available?
 
-For active campaigns, interaction data is always available in real-time. If a campaign is “stopped,” it's marked as “expired” after three months, unless it’s used in retargeting filters. When expired, the campaign data will be moved to long-term storage with limited availability. 
+For active campaigns, interaction data is always available in real-time. If a campaign is “stopped,” it will be marked as “expired” after three months, unless it's used in retargeting filters. When expired, the campaign data will be moved to long-term storage with limited availability. 
 
-However, this is temporary because you can restore this data by using its interaction data for retargeting. 
-
-To restore your campaign, follow these steps:
+However, this is temporary because you can restore this data by using its interaction data for retargeting. To restore your campaign, follow these steps:
 
 1. Go to the expired campaign.
 2. At the top of this campaign's landing page, click **Restore interaction data** in the banner.

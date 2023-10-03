@@ -2,7 +2,7 @@
 nav_title: Overview
 article_title: WhatsApp Overview
 alias: /partners/whatsapp/
-description: "This article provides an overview of the Braze WhatsApp channel, prerequisties, guidance on getting the integration started."
+description: "This article provides an overview of the Braze WhatsApp channel, prerequisites, guidance on getting the integration started."
 page_type: partner
 search_tag: Partner
 page_order: 0
