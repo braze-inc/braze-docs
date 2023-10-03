@@ -244,15 +244,17 @@ To sync purchase events, event name, `product_id`, `currency`, `price`, and `tim
 
 ## Product limitations
 
-| Limitations | Description |
-| --- | --- |
-| Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.
-| Number of rows | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column. |
-| Attributes per row | Each row should contain a single user ID and a JSON object with up to 50 attributes. Each key in the JSON object counts as one attribute (i.e., an array counts as one attribute). |
-| Data type | You can sync user attributes, events, and purchases through Cloud Data Ingestion. |
-| Braze region | This product is available in all Braze regions. Any Braze region can connect to any Snowflake region. |
-| Snowflake region | You can connect your Snowflake instance in any region or cloud to Braze using this product. |
-| Redshift connectivity | Only publicly-accessible Redshift clusters are supported at this time.|
+| Limitations            | Description                                                                                                                                                                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.                                             |
+| Number of rows         | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column.                                                            |
+| Attributes per row     | Each row should contain a single user ID and a JSON object with up to 50 attributes. Each key in the JSON object counts as one attribute (i.e., an array counts as one attribute). |
+| Payload size           | Each row can contain a payload of size upto 1 MB. Payloads greater than 1 MB will be rejected.                                                                                     |
+| Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
+| Braze region           | This product is available in all Braze regions. Any Braze region can connect to any Snowflake region.                                                                              |
+| Snowflake region       | You can connect your Snowflake instance in any region or cloud to Braze using this product.                                                                                        |
+| Redshift connectivity  | Only publicly-accessible Redshift clusters are supported at this time.                                                                                                             |
+
 {: .reset-td-br-1 .reset-td-br-2}
 
 <br><br>
