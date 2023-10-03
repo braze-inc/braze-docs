@@ -84,7 +84,7 @@ Braze offers three Content Card types: banner, captioned image, and classic. Eac
 | `extras`| An optional `NSDictionary` of `NSString` values.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Banner Content Card properties - ABKBannerContentCard
+### Banner Content Card properties - ABKImageOnlyContentCard
 
 |Property|Description|
 |---|---|
