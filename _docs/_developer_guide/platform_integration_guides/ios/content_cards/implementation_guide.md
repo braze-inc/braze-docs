@@ -312,7 +312,7 @@ func convertContentCards(_ cards: [ABKContentCard], for classTypes: [ContentCard
     var metaData: [ContentCardKey: Any] = [:]
     switch card {
     case let imageOnly as ABKImageOnlyContentCard:
-      metaData[.image] =imageOnly.image
+      metaData[.image] = imageOnly.image
     case let captioned as ABKCaptionedImageContentCard:
       metaData[.title] = captioned.title
       metaData[.cardDescription] = captioned.cardDescription
