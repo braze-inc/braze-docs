@@ -124,7 +124,7 @@ override func registerTableViewCellClasses() {
      
   // Remplacer les enregistrements de classe par défaut par des classes personnalisées
   tableView.register(CustomCaptionedImageContentCardCell.self, forCellReuseIdentifier: "ABKCaptionedImageContentCardCell")
-  tableView.register(CustomImageOnlyContentCardCell.self, forCellReuseIdentifier: "ABKImageOnlyContentCardCell")
+  tableView.register(CustomBannerContentCardCell.self, forCellReuseIdentifier: "ABKBannerContentCardCell")
   tableView.register(CustomClassicImageContentCardCell.self, forCellReuseIdentifier: "ABKClassicImageCardCell")
   tableView.register(CustomClassicContentCardCell.self, forCellReuseIdentifier: "ABKClassicCardCell")
 }

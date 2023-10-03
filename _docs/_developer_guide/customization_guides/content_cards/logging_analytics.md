@@ -172,7 +172,7 @@ braze.subscribeToContentCardsUpdates((updates) => {
     else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
       // Use `card.title`, `card.imageUrl`, etc.
     }
-    else if (card instanceof braze.ImageOnly) {
+    else if (card instanceof braze.Banner) {
       // Use `card.imageUrl`, etc.
     }
   })

@@ -99,11 +99,11 @@ override func setUpUI() {
 
 Custom interfaces can be provided by registering custom classes for each desired card type. 
 
-![An image only Content Card. An image only Content Card shows an image to the left of a banner with the text "Thanks for downloading Braze Demo!".]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
+![A banner Content Card. A banner Content Card shows an image to the right of the banner with the text "Thanks for downloading Braze Demo!".]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
 ![A captioned image Content Card. A captioned Content Card shows a Braze image with the caption overlayed across the bottom "Thanks for downloading Braze Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
 ![A classic Content Card. A classic Content Card shows an image in the center of the card with the words "Thanks for downloading Braze Demo" underneath.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
-Braze provides three Content Card templates (image only, captioned image, and classic). Alternatively, if you want to provide your own custom interfaces, reference the following code snippets:
+Braze provides three Content Card templates (banner, captioned image, and classic). Alternatively, if you want to provide your own custom interfaces, reference the following code snippets:
 
 {% tabs %}
 {% tab Objective-C %}
@@ -124,7 +124,7 @@ override func registerTableViewCellClasses() {
      
   // Replace the default class registrations with custom classes
   tableView.register(CustomCaptionedImageContentCardCell.self, forCellReuseIdentifier: "ABKCaptionedImageContentCardCell")
-  tableView.register(CustomImageOnlyContentCardCell.self, forCellReuseIdentifier: "ABKImageOnlyContentCardCell")
+  tableView.register(CustomBannerContentCardCell.self, forCellReuseIdentifier: "ABKBannerContentCardCell")
   tableView.register(CustomClassicImageContentCardCell.self, forCellReuseIdentifier: "ABKClassicImageCardCell")
   tableView.register(CustomClassicContentCardCell.self, forCellReuseIdentifier: "ABKClassicCardCell")
 }

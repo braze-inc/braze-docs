@@ -66,7 +66,7 @@ If you want to change the card data after it's been sent by Braze, we recommend 
 
 ## Content Card model
 
-Braze offers three Content Card types: image only, captioned image, and classic. Each type inherits common properties from a base `ABKContentCard` class and has the following additional properties.
+Braze offers three Content Card types: banner, captioned image, and classic. Each type inherits common properties from a base `ABKContentCard` class and has the following additional properties.
 
 ### Base Content Card model properties - ABKContentCard
 
@@ -84,7 +84,7 @@ Braze offers three Content Card types: image only, captioned image, and classic.
 | `extras`| An optional `NSDictionary` of `NSString` values.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Image only Content Card properties - ABKImageOnlyContentCard
+### Banner Content Card properties - ABKBannerContentCard
 
 |Property|Description|
 |---|---|

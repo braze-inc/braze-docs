@@ -311,8 +311,8 @@ func convertContentCards(_ cards: [ABKContentCard], for classTypes: [ContentCard
        
     var metaData: [ContentCardKey: Any] = [:]
     switch card {
-    case let imageOnly as ABKImageOnlyContentCard:
-      metaData[.image] = imageOnly.image
+    case let banner as ABKBannerContentCard:
+      metaData[.image] = banner.image
     case let captioned as ABKCaptionedImageContentCard:
       metaData[.title] = captioned.title
       metaData[.cardDescription] = captioned.cardDescription
@@ -369,9 +369,9 @@ Loops through the array of Content Cards and only parses the cards with a matchi
     if (cardClassType != classType) { continue; }
      
     NSMutableDictionary *metaData = [[NSMutableDictionary alloc] init];
-    if ([card isKindOfClass:[ABKImageOnlyContentCard class]]) {
-      ABKImageOnlyContentCard *imageOnly = (ABKImageOnlyContentCard *)card;
-      metaData[ContentCardKeyImage] = imageOnly.image;
+    if ([card isKindOfClass:[ABKBannerContentCard class]]) {
+      ABKBannerContentCard  banner = (ABKBannerContentCard *)card;
+      metaData[ContentCardKeyImage] = banner.image;
     } else if ([card isKindOfClass:[ABKCaptionedImageContentCard class]]) {
       ABKCaptionedImageContentCard *captioned = (ABKCaptionedImageContentCard *)card;
       metaData[ContentCardKeyTitle] = captioned.title;

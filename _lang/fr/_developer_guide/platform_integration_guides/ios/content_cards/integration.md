@@ -84,7 +84,7 @@ Braze propose trois types de cartes de contenu : bannière, image légendée et
 | `extras`| Un `NSDictionary` facultatif de valeurs `NSString`.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Propriétés de la Content Card de la bannière - ABKImageOnlyContentCard
+### Propriétés de la Content Card de la bannière - ABKBannerContentCard
 
 |Propriété|Description|
 |---|---|
