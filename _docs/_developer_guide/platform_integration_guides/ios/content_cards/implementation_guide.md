@@ -370,7 +370,7 @@ Loops through the array of Content Cards and only parses the cards with a matchi
      
     NSMutableDictionary *metaData = [[NSMutableDictionary alloc] init];
     if ([card isKindOfClass:[ABKBannerContentCard class]]) {
-      ABKBannerContentCard  banner = (ABKBannerContentCard *)card;
+      ABKBannerContentCard *banner = (ABKBannerContentCard *)card;
       metaData[ContentCardKeyImage] = banner.image;
     } else if ([card isKindOfClass:[ABKCaptionedImageContentCard class]]) {
       ABKCaptionedImageContentCard *captioned = (ABKCaptionedImageContentCard *)card;
