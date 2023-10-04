@@ -28,7 +28,7 @@ You can do a manual full refresh on all SQL Segments created in either SQL edito
 
 ## Creating SQL Segment Extensions
 
-{% tabs %}
+{% tabs local %}
 {% tab SQL Editor %}
 
 To create a full refresh SQL Segment Extension:
