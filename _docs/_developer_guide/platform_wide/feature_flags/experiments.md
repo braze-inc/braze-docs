@@ -38,7 +38,6 @@ if (featureFlag?.enabled) {
 2. Select **Feature Flag Experiment**.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams][1] and [Tags][2] as needed.
-    - Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder][3], you can filter by particular tags.
 
 ## Step 2: Add experiment variants
 
