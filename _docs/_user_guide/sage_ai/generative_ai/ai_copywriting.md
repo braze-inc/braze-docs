@@ -22,8 +22,6 @@ To generate copy using the AI copywriting assistant, follow these steps:
 
 The response will be fetched from OpenAI and provided to you. Feel free to experiment and try variations to your heart's content. 
 
-Braze makes no warranty of any kind with respect to any AI-generated content.
-
 ![AI copywriting assistant modal showing the input "Braze Marketing Automation", which generated the output: "Looking to take your marketing to the next level? Braze Marketing Automation is the solution for you! With our powerful tools, you'll be able to create, send, and track your marketing campaigns with ease. So why wait? Sign up today and see the results yourself!"][1]
 
 All we do behind the scenes is instruct GPT to generate a creative ad for your product name or description in the desired format. No other customization is performed. The rest is the magic of GPT! 
@@ -38,7 +36,7 @@ We filter out responses for offensive content that violates OpenAI's [content po
 
 ## How is my data used and sent to OpenAI?
 
-In order to generate copy, Braze will send your query to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days.
+In order to generate copy, Braze will send your query to OpenAI's API. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. As detailed in [OpenAI’s Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI's policies relevant to you, including the [Usage Policy](https://openai.com/policies/usage-policies). Braze makes no warranty of any kind with respect to any AI-generated content. 
 
 ## More AI tools
 
