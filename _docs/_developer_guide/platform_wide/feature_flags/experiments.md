@@ -82,4 +82,4 @@ After you’ve finished building the last of your experiment, review its details
 [5]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
 [6]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions
 
-[image1]: {% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %} 
+[image1]: {% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %} 
