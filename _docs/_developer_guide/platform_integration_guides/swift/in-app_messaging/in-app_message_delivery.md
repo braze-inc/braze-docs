@@ -105,7 +105,7 @@ A triggered in-app message can be returned to the stack in the following situati
 
 - The in-app message is triggered when the app is in the background.
 - Another in-app message is currently visible.
-- The `inAppMessage(_:displayChoiceForMessage:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) returned `.later`.
+- The `inAppMessage(_:displayChoiceForMessage:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) returned `.reEnqueue`.
 
 ### Discarding in-app messages
 

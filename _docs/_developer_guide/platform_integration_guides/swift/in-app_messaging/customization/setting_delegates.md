@@ -261,7 +261,7 @@ Configure `BrazeInAppMessageUI.DisplayChoice` to return one of the following val
 | Display Choice                      | Behavior                                                                              |
 | ----------------------------------- | ------------------------------------------------------------------------------------- |
 | `.now`                              | The message will be displayed immediately. This is the default value.                 |
-| `.later`                            | The message will be not be displayed and will be placed back on the top of the stack. |
+| `.reEnqueue`                        | The message will be not be displayed and will be placed back on the top of the stack. |
 | `.discard`                          | The message will be discarded and will not be displayed.                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
