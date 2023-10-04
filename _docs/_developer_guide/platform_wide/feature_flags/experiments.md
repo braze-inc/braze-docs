@@ -19,7 +19,7 @@ platform:
 
 Before you can track user data in the experiment, your app needs to record when a user interacts with a feature flag. This is called a feature flag impression. Make sure to log a feature flag impression whenever a user sees or could have seen the feature you're testing, even if they're in the control group.
 
-To learn more about logging impressions, [see this guide](link).
+To learn more, see [Logging a feature flag impression][6].
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
@@ -78,7 +78,8 @@ After you’ve finished building the last of your experiment, review its details
 [1]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/
 [2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
-[4]: https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
-[5]: https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
+[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
+[5]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
+[6]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions
 
 [image1]: {% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %} 
