@@ -218,17 +218,76 @@ Estimated real open rate is currently in early access. Contact your Braze accoun
 
 Here are some key in-app message metrics you may see in your analytics. To see the definitions of all in-app message metrics used in Braze, refer to our [Report Metrics Glossary][1].
 
-| Term | Definition |
-| --- | --- |
-| Body clicks* | Occurs when a user clicks on the message itself, and not one of the buttons. Only applies to messages created with the traditional editor.
-| Button 1 and Button 2 clicks | The percentage of recipients that pressed that specific button. 
-| Unique impressions | The total number of people who actually received and viewed the in-app message. If a user receives the message twice, they are only counted as one user. Unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. |
-| Impressions | The number of users whose devices reported that the message has been delivered. If a user receives the message twice, they are counted twice.
+| Term                   | Definition                                                                                                         |
+|------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Body clicks*           | Occurs when a user clicks on the message itself and not one of the buttons. This only applies to messages created with the traditional editor. |
+| Button 1 and Button 2 clicks | The percentage of recipients that pressed that specific button.                                                |
+| Unique impressions     | The total number of people who actually received and viewed the in-app message. If a user receives the message twice within 24 hours, only one impression is counted that day. <br><br> **If re-eligibility is on:** {::nomarkdown}<ul><li>Unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action again.</li><li>For in-app messages, *Unique Impressions* = *Unique Recipients* since impressions and recipients both increment after 24 hours.</li></ul>{:/} |
+| Impressions            | The number of users whose devices reported that the message had been delivered. If a user receives the message twice, they are counted twice. <br><br> **If there are multiple devices:** {::nomarkdown}<ul><li>If re-eligibility is off, the user should only see the in-app message once. Even if the user uses multiple devices, they will only see it on the first device that is targeted. This assumes that the profile has consolidated devices and a user has one user ID that they are logged into across devices. </li></ul>{:/} **If re-eligibility is on:** {::nomarkdown}<ul><li>An impression is logged for every time that user sees the in-app message.</li></ul>{:/} |
+| Conversion             | Conversion tracking starts once a user logs an impression of an in-app message. A conversion is counted if the user has received and viewed the in-app message campaign, and subsequently performs the specific conversion event within the defined conversion window, regardless of whether they clicked on the message or not. <br><br> Conversions are attributed to the most recently received message. If re-eligibility is enabled, the conversion will be assigned to the latest in-app message received, provided that it occurs within the defined conversion window. However, if the in-app message has already been assigned a conversion, then the new conversion cannot be logged for that specific message. This ensures that each in-app message delivery is associated with only one conversion. |
+| Total Conversions      | When a user views an in-app message campaign only once, only one conversion is counted, even if they perform the conversion event multiple times later on. However, if re-eligibility is turned on and the user sees the in-app message campaign multiple times, *Total Conversions* can increase once for each time the user logs an impression for a new instance of the in-app message campaign. <br><br> For example, if a user triggers an in-app message twice and converts after each in-app message impression (resulting in two conversions), then *Total Conversions* will increase by two. However, if there was only one in-app message impression followed by two conversion events, only one conversion will be logged, and *Total Conversions* will increase by one. |
+| Conversion Rate        | The metric of total daily unique impressions (*Unique Impressions*) is used to calculate the conversion rate. <br><br> Conversion Rate = (Primary Conversions) / (Unique Impressions) <br><br> Impressions for in-app messages can only be counted once per day. On the other hand, the number of times a user completes a desired action (a "conversion") can increase within a 24-hour period. While conversions can happen more than once per day, impressions cannot. Therefore, if a user completes a conversion multiple times within a day, the Conversion Rate can increase accordingly, but impressions will only be counted once. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
 *Body clicks are not automatically collected for in-app messages created with the Drag-and-Drop Editor and the Custom Code Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
 {% endalert %}
+
+#### How do conversions increment with re-eligibility?
+
+Each in-app message delivery can only have one conversion event assigned to it, and the conversion will be attributed to the last received message.
+
+If a user converts five times after seeing an in-app message, only one conversion event is counted for that message. However, if a user sees the same in-app message five times in a single day and converts after each impression, five conversions will be counted. The conversion event is attributed to the most recent in-app message sent.
+
+If a user sees an in-app message on two separate days but only converts on the third day, the conversion is logged for the second day's impression. It's important to note that only one conversion can be assigned to each step in a Canvas after the user has received that step.
+
+{% details Expand for example scenarios %}
+
+##### Scenario 1
+
+*A user receives the same in-app message 5 times in a single day and converts 5 times that same day.*
+
+Sarah receives an in-app message from a shopping app about a limited-time sale on her favorite brand of shoes. She clicks on the message and ends up purchasing two pairs of shoes.
+
+A few hours later, she receives the same in-app message again and decides to buy another pair of shoes. This happens a total of 5 times in a single day, and Sarah ends up making 5 separate purchases, each time after clicking on the in-app message.
+
+> **Results:** The *Total Conversions* for Sarah are incremented by 5 for that single day. However, since in-app message impressions can only increment after 24 hours, the *Total Impressions* remain the same. This causes the Conversion Rate to increase within that 24-hour period.
+
+##### Scenario 2
+
+*A user receives one in-app message and converts in a single day.*
+
+Lena receives an in-app message about a new learning course. Intrigued, she clicks on the message and starts the course. While she's in the app, she decides to also sign up for 4 more courses. This all happens on the same day after only receiving one message.
+
+> **Results:** The *Total Conversions* and *Total Impressions* for Lena are incremented by 1.
+
+##### Scenario 3
+
+*A user receives an in-app message and converts 1 day later.*
+
+Tom is a regular customer of an e-commerce app. He receives an in-app message promoting a limited-time discount on a product he's been interested in. Tom clicks on the message to check out the product, but decides not to buy it right away. The next day, Tom remembers the discount and decides to go ahead with the purchase. He opens the app and makes the purchase, which is attributed to the in-app message he received the day before.
+
+> **Results:** The *Total Conversions* and *Total Impressions* for Tom are incremented by 1.
+
+##### Scenario 4
+
+*A user receives an in-app message and converts twice 1 day later.*
+
+Alex recently downloaded an arcade app on their phone. One day, Alex receives an in-app message encouraging them to complete a level in a new game within the app. Alex clicks on the message to start the game, but they get distracted and don't complete a level. The next day, Alex completes two levels in the same game. 
+
+> **Results:** Since completing a level is the conversion event, Alex converted twice on the second day, however, because they only received one in-app message, the *Total Conversions* and *Total Impressions* for Alex are only incremented by 1.
+
+##### Scenario 5
+
+*A user receives the same in-app message 2 times in a single day and converts twice 1 day later.*
+
+John is a busy professional who relies on a delivery app to order food from his favorite restaurants. On his commute to work, he triggers a geofence and receives an in-app message promoting nearby restaurants. When he heads home later, he receives that same message again (because re-eligibility is on). Although he likes the offers, he decides not to order anything that day.
+
+The next day, John decides to order lunch and dinner through the app, performing the conversion event twice.
+
+> **Results:** The *Total Conversions* for John are incremented by 1, and the *Total Impressions* are incremented by 2. Because re-eligibility is on, the conversion will be assigned to the latest in-app message John received, which was the second in-app message (Remember that a conversion can only be logged once for each in-app message delivery).
+
+{% enddetails %}
 
 {% elsif include.channel == "push" %}
 
