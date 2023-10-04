@@ -57,7 +57,7 @@ To edit, add, or remove additional default properties, edit the feature flag its
 Next, you need to [target users][4] by choosing segments or filters to narrow down your audience. Segment membership is calculated when feature flags are refreshed for a given user.
 
 {% alert note %}
-Your target audience will be eligible for the feature flag immediately, when your app refreshes feature flags, or when a new session is started.
+Your target audience will be eligible for the feature flag as soon as you save a rollout greater than 0%. Changes are made available once your app refreshes feature flags, or when a new session is started.
 {% endalert %}
 
 ## Step 4: Distribute variants
