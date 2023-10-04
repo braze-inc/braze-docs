@@ -50,7 +50,7 @@ To test the impact of your feature, use variants to split traffic into two or mo
 
 While you specified default properties when you originally set up your feature flag, you can choose to overwrite those values for users who receive a specific campaign variant.
 
-> image
+![][image1]{: style="max-width:80%"}
 
 To edit, add, or remove additional default properties, edit the feature flag itself from **Messaging** > **Feature Flags**.
 
@@ -80,3 +80,5 @@ After you’ve finished building the last of your experiment, review its details
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
 [4]: https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
 [5]: https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
+
+[image1]: {% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %} 

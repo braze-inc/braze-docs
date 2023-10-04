@@ -17,6 +17,9 @@ guide_featured_list:
 - name: Create a Feature Flag
   link: /docs/developer_guide/platform_wide/feature_flags/create/
   fa_icon: fas fa-columns
+- name: Feature Flag Experiments
+  link: /docs/developer_guide/platform_wide/feature_flags/experiments/
+  fa_icon: fas fa-flask
 - name: Feature Flags in Canvas
   link: /docs/developer_guide/platform_wide/feature_flags/canvas/
   fa_icon: fas fa-project-diagram
