@@ -37,7 +37,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ![A list of previously created feature flags on the Braze dashboard][1]{: style="max-width:75%"}
 
-### Access permissions
+### Access permissions {#permissions}
 
 Note that you must have [user permissions][9] in the Braze dashboard to view, create, or edit feature flags.
 
@@ -104,7 +104,7 @@ Use the **Add Filter** dropdown menu to filter users out of your target audience
 
 ![Two dropdown menus. The first reads Target Users by Segment. The second reads Additional Filters.][3]
 
-#### Rollout traffic
+#### Rollout traffic {#rollout}
 
 Feature flags always start as turned off to allow you to separate the timing of the feature's release and activation in your users' experience. 
 
@@ -116,11 +116,14 @@ When you are ready to rollout your new feature, specify an audience and then use
 Do not set your rollout traffic above 0% until you are ready for your new feature to go live. When you initially define your feature flag in the dashboard, leave this setting at 0%.
 {% endalert %}
 
-## Implement the feature flag in your application
+## Check if the feature flag is enabled within your application {#enabled}
 
 Once you have defined your feature flag, configure your app or site to check whether or not it is enabled for a particular user. When it is enabled, you'll set some action or reference the feature flag's variable properties based on your use case. The Braze SDK provides getter methods to pull your feature flag's status and its properties into your app. 
 
 Feature flags are refreshed automatically at session start so that you can display the most up-to-date version of your feature upon launch. The SDK caches these values so they can be used while offline. 
+
+{% alert note %}
+Be sure to log feature flag impressions 
 
 Let's say you were to rolling out a new type of user profile for your app. You might set the `ID` as `expanded_user_profile`. Then, you would have your app check to see if it should display this new user profile to a particular user. For example:
 
@@ -223,6 +226,72 @@ if featureFlag.enabled
 else
   print "expanded_user_profile is not enabled"
 end if
+```
+{% endtab %}
+{% endtabs %}
+
+### Logging a feature flag impression {#impressions}
+
+Track a feature flag impression whenever a user has had an opportunity to interact with your new feature, or when they __could__ have interacted if the feature is disabled (in the case of a control group in an A/B test).
+
+Usually, you can put this line of code directly underneath where you reference reference your feature flag:
+
+{% tabs %}
+{% tab Javascript %}
+
+```javascript
+braze.logFeatureFlagImpression("expanded_user_profile");
+```
+
+{% endtab %}
+{% tab Swift %}
+
+```swift
+braze.featureFlags.logImpression(id: "expanded_user_profile")
+```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+braze.logFeatureFlagImpression("expanded_user_profile");
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+braze.logFeatureFlagImpression("expanded_user_profile")
+```
+
+{% endtab %}
+{% tab React Native %}
+
+```javascript
+Braze.logFeatureFlagImpression("expanded_user_profile");
+```
+
+{% endtab %}
+{% tab Unity %}
+
+```csharp
+Appboy.AppboyBinding.LogFeatureFlagImpression("expanded_user_profile");
+```
+
+{% endtab %}
+{% tab Cordova %}
+```javascript
+BrazePlugin.logFeatureFlagImpression("expanded_user_profile");
+```
+{% endtab %}
+{% tab Flutter %}
+```dart
+braze.logFeatureFlagImpression("expanded_user_profile");
+```
+{% endtab %}
+{% tab Roku %}
+```brightscript
+m.Braze.logFeatureFlagImpression("expanded_user_profile");
 ```
 {% endtab %}
 {% endtabs %}
@@ -661,7 +730,7 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 {% endtab %}
 {% endtabs %}
 
-## Segmenting with feature flags
+## Segmenting with feature flags {#segmentation}
 
 Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter][6]. For more information about filtering on segments, see [Creating a segment][7].
 
@@ -670,6 +739,10 @@ To prevent recursive segments, it is not possible to create a segment that refer
 {% endalert %}
 
 ## Best practices
+
+### Use either rollout or canvas
+
+To avoid users being enabled and disabled by different entrypoints, you should either set the rollouts slider to a value greater than zero, OR enable the feature flag in a Canvas or experiment. As a best practice, if you plan to use a feature flag in a Canvas or experiment, keep the rollout percentage at zero.
 
 ### Naming conventions
 
