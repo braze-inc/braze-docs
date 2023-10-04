@@ -175,7 +175,7 @@ The following table describes the limitations that apply at a feature flag level
 | Limitation area                                                                                                   | Free version | Paid version |
 | :---------------------------------------------------------------------------------------------------------------- | :----------- | ------------ |
 | Active feature flags*                                                                                             | 10           | 110          |
-| Active campaign experiments                                                                                       | 1            | 100          |
+| [Active campaign experiments]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/) | 1            | 100          |
 | [Feature Flag Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Unlimited    | Unlimited    |
 {: .reset-td-br-1 .reset-td-br-2}
 
