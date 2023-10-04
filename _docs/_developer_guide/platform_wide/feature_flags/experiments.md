@@ -2,7 +2,7 @@
 nav_title: Feature Flag Experiments
 article_title: Feature Flag Experiments
 page_order: 40
-description: " "
+description: "Feature flag experiments let you A/B test changes to your applications to optimize conversion rates."
 tool: Feature Flags
 platform:
   - iOS
