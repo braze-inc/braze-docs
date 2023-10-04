@@ -2,7 +2,7 @@
 nav_title: Feature Flag Experiments
 article_title: Feature Flag Experiments
 page_order: 40
-description: " "
+description: "Feature flag experiments let you A/B test changes to your applications to optimize conversion rates."
 tool: Feature Flags
 platform:
   - iOS
@@ -37,8 +37,6 @@ if (featureFlag?.enabled) {
 1. Go to **Messaging** > **Campaigns** and click **+ Create Campaign**.
 2. Select **Feature Flag Experiment**.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams][1] and [Tags][2] as needed.
-    - Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder][3], you can filter by particular tags.
 
 ## Step 2: Add experiment variants
 
@@ -59,7 +57,7 @@ To edit, add, or remove additional default properties, edit the feature flag its
 Next, you need to [target users][4] by choosing segments or filters to narrow down your audience. Segment membership is calculated when feature flags are refreshed for a given user.
 
 {% alert note %}
-Your target audience will be eligible for the feature flag immediately, when your app refreshes feature flags, or when a new session is started.
+Your target audience will be eligible for the feature flag as soon as you save a rollout greater than 0%. Changes are made available once your app refreshes feature flags, or when a new session is started.
 {% endalert %}
 
 ## Step 4: Distribute variants
