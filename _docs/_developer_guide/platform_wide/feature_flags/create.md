@@ -235,7 +235,7 @@ end if
 
 Track a feature flag impression whenever a user has had an opportunity to interact with your new feature, or when they __could__ have interacted if the feature is disabled (in the case of a control group in an A/B test).
 
-Usually, you can put this line of code directly underneath where you reference reference your feature flag:
+Usually, you can put this line of code directly underneath where you reference your feature flag in your app:
 
 {% tabs %}
 {% tab Javascript %}
@@ -741,9 +741,9 @@ To prevent recursive segments, it is not possible to create a segment that refer
 
 ## Best practices
 
-### Use either rollout or canvas
+### Don't combine rollouts with Canvases or experiments
 
-To avoid users being enabled and disabled by different entrypoints, you should either set the rollouts slider to a value greater than zero, OR enable the feature flag in a Canvas or experiment. As a best practice, if you plan to use a feature flag in a Canvas or experiment, keep the rollout percentage at zero.
+To avoid users being enabled and disabled by different entry points, you should either set the rollouts slider to a value greater than zero OR enable the feature flag in a Canvas or experiment. As a best practice, if you plan to use a feature flag in a Canvas or experiment, keep the rollout percentage at zero.
 
 ### Naming conventions
 
