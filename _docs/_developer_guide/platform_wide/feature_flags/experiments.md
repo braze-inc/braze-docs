@@ -37,7 +37,6 @@ if (featureFlag?.enabled) {
 1. Go to **Messaging** > **Campaigns** and click **+ Create Campaign**.
 2. Select **Feature Flag Experiment**.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams][1] and [Tags][2] as needed.
 
 ## Step 2: Add experiment variants
 
