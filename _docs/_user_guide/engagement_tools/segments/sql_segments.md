@@ -70,14 +70,16 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 {% tab AI SQL Generator %}
 
 {% alert note %}
-The AI SQL generator is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+The AI SQL generator is currently available as a beta feature. Contact your customer success manager if you're interested in participating in this beta trial.
 {% endalert %}
 
-The AI SQL generator leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your SQL segment. Learn about how your data is used and sent to OpenAI [here](https://www.braze.com/docs/user_guide/sage_ai/generative_ai/ai_copywriting#what-is-gpt).
+The AI SQL generator leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your SQL segment.
+
+![AI SQL generator with the prompt "Users that received a notification last month"]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
 
 To use the AI SQL generator, do the following:
 
-1. Click **Launch AI SQL Generator** after creating a SQL segment using either full or incremental refresh.
+1. Click **Launch AI SQL Generator** after creating a [SQL segment]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) using either full or incremental refresh.
 2. Type in your prompt and click **Generate** to translate your prompt into SQL.
 3. Review the generated SQL to make sure it looks correct, and then save your segment.
 
@@ -86,8 +88,12 @@ To use the AI SQL generator, do the following:
 - Users who made less than five purchases in the last year
 
 ### Tips
-- Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
-- Familiarize yourself with the [SQL writing rules]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
+- Familiarize yourself with the available [Snowflake data tables](https://www.braze.com/docs/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
+- Familiarize yourself with the [SQL writing rules](https://www.braze.com/docs/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
+
+### How is my data used and sent to OpenAI?
+
+In order to generate your SQL, Braze will send your prompts to OpenAI’s API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the content you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, including the [Usage Policy](https://openai.com/policies/usage-policies). Braze makes no warranty of any kind with respect to any AI-generated content. 
 {% endtab %}
 {% endtabs %}
 
@@ -212,3 +218,4 @@ Your query may fail for any of the following reasons:
 [3]: {% image_buster /assets/img_archive/sql_segments_usage.png %}
 [4]: {{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment
 [5]: {% image_buster /assets/img_archive/sql_segments_credits.png %}
+[6]: {% image_buster /assets/img/ai_sql_generator.png %}
