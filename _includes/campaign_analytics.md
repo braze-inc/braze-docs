@@ -314,6 +314,9 @@ Here are some key WhatsApp metrics you may see in your analytics. To see the def
 | Failures | The total number of sends that were not successful because the Internet Service Provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure. Failures are included in the _Sends_ count but are not included in the _Deliveries_ count.
 {: .reset-td-br-1 .reset-td-br-2}
 
+#### End-user blocking and reporting metrics
+Additional metrics may be accessed via the [WhatsApp Manager dashboard](https://www.facebook.com/business/help/683499390267496?content_id=NZUBj7XjkYjYuWx), though [confirmation of your access](https://www.facebook.com/business/help/218116047387456) is necessary to access all available insights. 
+
 {% endif %}
 
 ### Historical Performance

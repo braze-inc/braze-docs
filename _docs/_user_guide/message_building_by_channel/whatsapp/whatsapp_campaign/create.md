@@ -77,6 +77,9 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 {% endraw %}
 {% endalert %}
 
+### Including dynamic links 
+Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. At this time, neither of these links can be shortened. 
+
 ## Step 3: Preview and test your message
 
 Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
@@ -122,6 +125,52 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 After you've finished building the last of your campaign or Canvas, review its details, test it, then send it!
 
 Next, check out [WhatsApp reporting]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/) to learn how you can access the results of your WhatsApp campaigns.
+
+## Supported WhatsApp features
+
+Braze supports the following WhatsApp messaging features.
+
+### Outbound messages
+
+You can send users the following in your WhatsApp messages:
+
+Message feature    | Details
+----------- |---------------- 
+Headers | 
+Text | Supports variable parameters
+Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
+Body text | Supports variable parameters
+Footer text | Supports variable parameters 
+CTAs | See [Calls to actions](#ctas).
+{: .reset-td-br-1 .reset-td-br-2}
+
+#### Calls to actions {#ctas}
+
+You can add the following calls to action in your WhatsApp messages:
+
+CTA type    | Details
+----------- |---------------- 
+Visit website | Available for message templates only. <br>One button maximum (including variable parameters).
+Call phone number | Available for message templates only. <br>One button maximum.
+Custom quick reply buttons | Three buttons maximum. 
+Marketing opt-out button | This option does not automatically update subscription statuses. <br><br>For setup instructions, see [Opt-ins & Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection).
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Inbound messages
+
+Users can send you the following in their WhatsApp messages:
+
+Message feature    | Details
+----------- |---------------- 
+Text | 
+Images (JPEG and PNG)| Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
+Audio| audio/aac<br>audio/mp4<br>audio/mpeg<br>audio/amr<br>audio/ogg (only Opus Codecs, base audio/ogg is not supported)
+Documents | text/plain<br>application/pdf<br>application/vnd.ms-powerpoint<br>application/msword<br>application/vnd.ms-excel<br>application/vnd.openxmlformats-officedocument.wordprocessingml.document<br>application/vnd.openxmlformats-officedocument.presentationml.presentation<br>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+CTAs | See [Calls to actions](#ctas).
+Video | video/mp4, video/3gp<br><br>Only H.264 video codec and AAC audio codec are supported. We support videos with a single audio stream or no audio stream.
+{: .reset-td-br-1 .reset-td-br-2}
+
+
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %} 
 [2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %} 

@@ -67,10 +67,23 @@ After following the [Swift Package Manager integration guide]({{site.baseurl}}/d
 Add the following line to your Podfile:
 
 ```ruby
-target 'YourContentExtensionTarget' do
-  pod 'BrazePushStory'
+target 'YourAppTarget' do
+pod 'BrazeKit'
+pod 'BrazeUI'
+pod 'BrazeLocation'
+end
+
+target 'YourNotificationServiceExtensionTarget' do
+pod 'BrazeNotificationService'
+end
+
+target 'YourNotificationContentExtensionTarget' do
+pod 'BrazePushStory'
 end
 ```
+{% alert note %}
+It's not required to have both Rich Push and Push Stories implemented in the same app.
+{% endalert %}
 
 After updating the Podfile, navigate to the directory of your Xcode app project within your terminal and run `pod install`.
 
