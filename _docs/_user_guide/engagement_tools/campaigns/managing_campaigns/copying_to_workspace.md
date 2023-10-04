@@ -1,9 +1,11 @@
 ---
 nav_title: Copying Across Workspaces
 article_title: Copying Across Workspaces
-permalink: "/copying_to_workspaces/"
-hidden: true
+alias: "/copying_to_workspaces/"
+page_order: 0.5
+page_type: reference
 description: "This article provides an overview of how to copy campaigns across workspaces."
+tool: Campaigns
 ---
 
 # Copying campaigns across workspaces
@@ -11,8 +13,7 @@ description: "This article provides an overview of how to copy campaigns across 
 > Copying campaigns across a workspace allows you to get a jumpstart on your message composition by starting with a copy of a campaign in a different workspace. This copy will remain as a draft until you edit and launch, helping you keep and build off your successful messaging strategies.
 
 {% alert important %}
-Copying campaigns across workspaces is currently in early access for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. Contact your Braze account manager if you're interested in participating in this early access. <br><br> Other channel support, such as push and WhatsApp, will be coming soon.
-
+Other channel support, such as push and WhatsApp, will be coming soon.
 {% endalert %}
 
 ## How to copy a campaign
