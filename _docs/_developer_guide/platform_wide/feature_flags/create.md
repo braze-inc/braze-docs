@@ -123,7 +123,8 @@ Once you have defined your feature flag, configure your app or site to check whe
 Feature flags are refreshed automatically at session start so that you can display the most up-to-date version of your feature upon launch. The SDK caches these values so they can be used while offline. 
 
 {% alert note %}
-Be sure to log feature flag impressions 
+Be sure to log [feature flag impressions](#impressions). 
+{% endalert %}
 
 Let's say you were to rolling out a new type of user profile for your app. You might set the `ID` as `expanded_user_profile`. Then, you would have your app check to see if it should display this new user profile to a particular user. For example:
 
