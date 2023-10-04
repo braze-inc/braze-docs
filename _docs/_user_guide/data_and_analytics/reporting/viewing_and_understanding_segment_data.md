@@ -13,7 +13,7 @@ tool:
 
 > This reference article explains the segments section of your Braze dashboard, and includes a summary of the statistics provided.
 
-## Accessing segment data
+## Accessing data about your segments and membership
 
 The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and click the name of a segment to edit and view its data. To learn how to create a segment, check out [Creating a Segment][3].
 
@@ -25,7 +25,7 @@ After clicking on the name of a segment, you'll be able to view segment statisti
 
 When you turn [analytics tracking on for a segment][9], Braze will let you view sessions, custom events, and revenue over time by this segment.
 
-## Segment statistics
+### Segment statistics
 
 You will see the following segment statistics, which update in real-time as you add or delete filters:
 
@@ -38,14 +38,14 @@ You will see the following segment statistics, which update in real-time as you 
 | **Push Enabled (Opted In)** | Push enabled refers to the number of users with at least one push token. Some users may have multiple push tokens (e.g., if they own an iPhone and iPad), so the number of push notifications you send to this segment may be greater than the number of "push enabled" users. Opted In refers to the number of users who have explicitly opted in to push notifications. Users must always explicitly opt-in for you to send them pushes. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Messaging use and historical membership
+### Messaging use and historical membership
 
 If you scroll down the page, you will see segment data on Messaging Use and Historical Membership. Under the **Messaging Use** section, see which campaigns have targeted this segment. Under **Historical Membership**, you see how the size of this segment changed over time. Use the dropdown to filter segment membership by date range. Braze calculates historical segment membership by taking an estimate (similar to how Segment size is an estimate before you click “calculate exact statistics”). Braze gets the estimated count by querying for users in a random bucket range. This means that on one day, the historical segment size could be based on users with a random bucket number of 111 - 120, and on another day, it could be users from 8,452 - 8,455. Therefore, it is possible that there may be fewer users in the segment that land within the randomly selected bucket ranges and hence why the graph might show slight fluctuations on each date.
 
 ![Under Messaging Use, view the campaigns that your segment is being used in.][4]
 ![Use the Historical Membership dropdown to filter segment membership by date range.][10]
 
-## User preview
+### User preview
 
 To view detailed, user-specific information about your segments, click **User Data** and select **User Preview**.
 
@@ -54,6 +54,8 @@ To view detailed, user-specific information about your segments, click **User Da
 On this page, you can view a number of user-specific attributes, such as gender, age, number of sessions, and whether they have opted into push and email.
 
 ![User Preview][8]
+
+## Performance data by segment
 
 [1]: {% image_buster /assets/img_archive/segments.png %}
 [2]: {% image_buster /assets/img_archive/A_Tracking.png %}
