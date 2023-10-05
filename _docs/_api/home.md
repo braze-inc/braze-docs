@@ -53,6 +53,7 @@ glossary_tags:
   - name: Subscription Groups
   - name: User Data
   - name: Live Activity
+  - name: Cloud Data Ingestion
 
 glossaries:
   - name: <a href='/docs/api/endpoints/user_data/post_user_alias/'>/users/alias/new</a>
@@ -118,7 +119,7 @@ glossaries:
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/'>/campaigns/trigger/schedule/create</a>
-    description: Send dashboard created campaign messages (up to 90 days in advance) via API-triggered delivery.
+    description: Send dashboard created campaign messages via API-triggered delivery.
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/'>/campaigns/trigger/schedule/delete</a>
@@ -134,7 +135,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/'>/canvas/trigger/schedule/create</a>
-    description: Schedule Canvas messages (up to 90 days in advance) via API-triggered delivery.
+    description: Schedule Canvas messages via API-triggered delivery.
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/'>/messages/schedule/update</a>
@@ -146,7 +147,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/'>/messages/schedule/create</a>
-    description: Schedule a campaign, Canvas, or other message to be sent at a designated time (up to 90 days in the future).
+    description: Schedule a campaign, Canvas, or other message to be sent at a designated time.
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canvas/trigger/schedule/update</a>
@@ -430,3 +431,18 @@ glossaries:
     tags:
       - SCIM
 ---
+
+<!-- Add during CDI endpoints GA
+name: <a href='/docs/api/endpoints/cdi/get_integration_list/'>/cdi/integrations</a>
+    description: Return a list of existing integrations.
+    tags:
+      - Cloud Data Ingestion
+  - name: <a href='/docs/api/endpoints/cdi/post_job_sync/'>/cdi/integrations/{integration_id}/sync</a>
+    description: Trigger a sync for a given integration.
+    tags:
+      - Cloud Data Ingestion
+  - name: <a href='/docs/api/endpoints/cdi/get_job_sync_status/'>/cdi/integrations/{integration_id}/job_sync_status</a>
+    description: Return a list of sync statuses.
+    tags:
+      - Cloud Data Ingestion
+-->

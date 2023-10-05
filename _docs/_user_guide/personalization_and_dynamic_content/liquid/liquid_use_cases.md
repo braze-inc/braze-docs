@@ -118,13 +118,15 @@ This use case shows how to send messages during the holiday period while avoidin
 {% raw %}
 ```liquid
 {% assign today = 'now' | date: '%Y-%m-%d' %}
-{% if today == "2021-12-24" or today == "2021-12-25" or today == "2021-12-26" %}
+{% if today == "2023-12-24" or today == "2023-12-25" or today == "2023-12-26" %}
 {% abort_message %}
+{% else %}
+Message if today isn't one of the provided holidays.
 {% endif %}
 ```
 {% endraw %}
 
-**Explanation:** Here we assign the term `today` to the reserved variable `now` (the current date and time), using the filters `%Y` (year, i.e., "2021"), `%m` (month, i.e., "12"), and `%d` (day, i.e., "25") to format the date. We then run our conditional statement to say that if the variable `today` matches the holiday days of your choice, then the message will be aborted. 
+**Explanation:** Here we assign the term `today` to the reserved variable `now` (the current date and time), using the filters `%Y` (year, i.e., "2023"), `%m` (month, i.e., "12"), and `%d` (day, i.e., "25") to format the date. We then run our conditional statement to say that if the variable `today` matches the holiday days of your choice, then the message will be aborted. 
 
 The example provided uses Christmas Eve, Christmas Day, and Boxing Day (the day after Christmas).
 
@@ -236,11 +238,11 @@ Countdowns
 
 ### Add x days to today's date {#countdown-add-x-days}
 
-This use case adds a specific number of days to the current date to reference and add in messages. For example, you may want to send a mid-week message that shows events in the area for the weekend, like "Here are the movies we're showing in 3 days!"
+This use case adds a specific number of days to the current date to reference and add in messages. For example, you may want to send a mid-week message that shows events in the area for the weekend.
 
 {% raw %}
 ```liquid
-{{ "now" | date:'%s' | plus:259200 | date:"%F" }}
+Here are the movies we're showing on {{ "now" | date:'%s' | plus:259200 | date:"%F" }}!
 ```
 {% endraw %}
 
@@ -256,7 +258,7 @@ This use case calculates the difference in days between a specific date and the 
 
 {% raw %}
 ```liquid
-{% assign event_date = '2020-08-19' | date: "%s" %}
+{% assign event_date = '2023-12-31' | date: "%s" %}
 {% assign today = 'now' | date: "%s" %}
 {% assign difference = event_date | minus: today %}
 {% assign difference_days = difference | divided_by: 86400 %}
@@ -270,18 +272,16 @@ This use case captures different shipping options, calculates the length of time
 
 {% raw %}
 ```liquid
-{% assign standard_shipping_start = "2019-12-10T00:00-05:00" | date: "%s" %}
-{% assign standard_shipping_end = "2019-12-20T13:00-05:00" | date: "%s" %}
-{% assign express_shipping_end = "2019-12-22T24:00-05:00" | date: "%s" %}
-{% assign overnight_shipping_end = "2019-12-23T24:00-05:00" | date: "%s" %}
+{% assign standard_shipping_start = "2023-12-10T00:00-05:00" | date: "%s" %}
+{% assign standard_shipping_end = "2023-12-20T13:00-05:00" | date: "%s" %}
+{% assign express_shipping_end = "2023-12-22T24:00-05:00" | date: "%s" %}
+{% assign overnight_shipping_end = "2023-12-23T24:00-05:00" | date: "%s" %}
 {% assign today = 'now' | date: "%s" %}
 
 {% assign difference_s = standard_shipping_end | minus: today %}
 {% assign difference_s_days = difference_s | divided_by: 86400.00 | round %}
-difference s days: {{difference_s_days}}
 {% assign difference_e = express_shipping_end | minus: today %}
 {% assign difference_e_days = difference_e | divided_by: 86400.00 | round %}
-difference e days: {{difference_e_days}}
 {% assign difference_o = overnight_shipping_end | minus: today %}
 {% assign difference_o_days = difference | divided_by: 86400.00 | round %}
 
@@ -360,12 +360,11 @@ This use case calculates the difference between the current date and future even
 
 {% raw %}
 ```liquid
-{% assign event_date = '2019-02-19' | date: "%s" %}
+{% assign event_date = '2024-01-15' | date: "%s" %}
 {% assign today = 'now' | date: "%s" %}
 {% assign difference = event_date | minus: today %}
 {% assign difference_days = difference | divided_by: 86400 %}
-There are {{difference_days}} until your birthday!
-{% endif %}
+There are {{difference_days}} days until your birthday!
 ```
 {% endraw %}
 
@@ -648,7 +647,8 @@ Did you forget something in your shopping cart?
 ```
 {% endraw %}
 
-{% alert important %} You must have an event property of the custom event count or use a webhook to your Braze endpoint. This is to increment a custom attribute (`example_event_count`) every time the user performs the event. This example uses a cadence of three (1, 4, 7, 10, etc.).{% endalert %}
+{% alert important %} You must have an event property of the custom event count or use a webhook to your Braze endpoint. This is to increment a custom attribute (`example_event_count`) every time the user performs the event. This example uses a cadence of three (1, 4, 7, 10, etc.). To start the cadence from zero (0, 3, 6, 9, etc.), remove `minus: 1`.
+{% endalert %}
 
 ### Send a message to users who have only purchased from one category {#event-purchased-one-category}
 
@@ -672,9 +672,26 @@ This use case calculates the number of times a custom event has been logged betw
 
 {% raw %}
 ```liquid
+
+{% capture body %}
+{
+ "braze_id": "{{${braze_id}}}",
+ "fields_to_export": ["custom_events"]
+}
+
+{% endcapture %}
+
+{% connected_content YOUR_BRAZE_ENDPOINT/users/export/ids
+ :method post
+  :headers { "Authorization": "Bearer YOUR_API_KEY" }
+  :body {{body}}
+ :content_type application/json
+ :save response
+  :retry %}
+
 {% for custom_event in response.users[0].custom_events %}
 {% assign ce_name = custom_event.name %}
-{% comment %} The following Custom Event name will need to be amended for the target Custom Event. {% endcomment %}
+{% comment %} The following custom event name will need to be amended for the target custom event. {% endcomment %}
 
 {% if ce_name == "Project Exported" %}
 {% comment %}{{custom_event.name}}: {{custom_event.count}}{% endcomment %}
@@ -684,7 +701,7 @@ This use case calculates the number of times a custom event has been logged betw
 
 {% assign prev_month_count = {{custom_attribute.${projects_exported_prev_month}}} %}
 {% assign latest_count = current_count | minus: prev_month_count %}
-{% assign now = '"now" | date: "%s" %}
+{% assign now = "now" | date: "%s" %}
 {% assign yesterday = {{now}} | minus: 86400 %}
 {% assign previous_month = {{yesterday}} | date: "%B" %}
 {% assign previous_year = {{yesterday}} | date: "%y" %}
@@ -842,7 +859,7 @@ Miscellaneous
 
 ### Avoid sending emails to customers that have blocked marketing emails {#misc-avoid-blocked-emails}
 
-This use case takes a list of blocked users saved in a Content Block and ensures those blocked users are not communicated to or targeted in upcoming campaigns or Canvases.
+This use case takes a list of blocked users saved in a Content Block and checks those blocked users are not communicated to or targeted in upcoming campaigns or Canvases.
 
 {% alert important %}
 To use this Liquid, first save the list of blocked emails within a Content Block. The list should have no additional spaces or characters inserted between email addresses (e.g., `test@braze.com,abc@braze.com`).
@@ -932,7 +949,7 @@ This 'Event Listener' can be used to split out users into different journeys bas
 {% endcomment %}
 
 {% comment %}
-When testing, ensure the Campaign ID, Campaign API Endpoint, Canvas ID, Canvas API Endpoint are entered correctly. In this example, Canvas ID and Canvas API endpoint have been set up for sharing with the client; in practice, this can be testing using a Campaign ID and Campaign API endpoint.
+When testing, make sure the campaign ID, campaign API endpoint, Canvas ID, Canvas API endpoint are entered correctly. In this example, the Canvas ID and Canvas API endpoint have been set up for sharing with the client. In practice, this can be testing using a campaign ID and Campaign API endpoint.
 {% endcomment %}
 
 {% comment %}
@@ -977,7 +994,7 @@ The following step checks if the time_to_reminder is less than 26 days away but 
 Users are scheduled to enter the journey on day 13.
 {% endcomment %}
 
-{% elsif 1123200 < {{time_to_reminder}} and {{time_to_reminder}} < 2246399 %}
+{% elsif 1123200 > {{time_to_reminder}} and {{time_to_reminder}} < 2246399 %}
 {% assign time_to_first_message = reminder_start_date | plus: 1123200 %}
 
 {
@@ -996,7 +1013,7 @@ Users are scheduled to enter the journey on day 13.
 },
 
 "schedule": {
-"time": "2021-03-24T20:04:00+0000"
+"time": "{{ time_to_first_message | date: '%Y-%m-%dT%H:%M:%S+0000' }}"
 }
 }
 
@@ -1005,7 +1022,7 @@ The following step checks if the time_to_reminder is less than 13 days away but 
 Users are scheduled to enter the journey on day 7.
 {% endcomment %}
 
-{% elsif 604800 < {{time_to_reminder}} and {{time_to_reminder}} < 1123199 %}
+{% elsif 604800 > {{time_to_reminder}} and {{time_to_reminder}} < 1123199 %}
 {% assign time_to_first_message = reminder_start_date | plus: 604800 %}
 
 {
@@ -1077,12 +1094,6 @@ This use case checks if a custom attribute array contains a specific string, and
 ```liquid
 {% if custom_attribute.${PartnershipProgramsNotLinked} contains 'Hertz' %}
 Link your Hertz account to use Hertz Fast Lane.
-
-{% elsif custom_attribute.${airportCompleted} == false %}
-Clear helps you breeze through airport security. Complete your one-time in-person setup next time you are at the airport. It only takes about 5 minutes.
-
-{% else %}
-Your account is all setup
 {% endif %}
 ```
 {% endraw %}
@@ -1278,16 +1289,16 @@ The following use case checks if a web users is on iOS or Android and, if so, wi
 
 {% raw %}
 ```liquid
-{% if {{targeted_device.${os} == 'android'}} and {{targeted_device.${platform} == 'web'}} %}
+{% if {{targeted_device.${os}}} == 'iOS' and {{targeted_device.${platform}}} == 'web' %}
 
-Content for Android
+Content for iOS.
 
-{% elsif {{targeted_device.${os} == 'ios'}} and {{targeted_device.${platform} == 'web'}} %}
+{% elsif {{targeted_device.${os}}} == 'android' and {{targeted_device.${platform}}} == 'web' %}
 
-Content for iOS
+Content for Android.
 
 {% else %}
-{% abort_message %}
+{% abort_message %} 
 {% endif %}
 ```
 {% endraw %}
@@ -1615,7 +1626,7 @@ This use case checks the current day of the week, and depending on the day, will
 {% raw %}
 ```liquid
 {% assign today = 'now' | date: "%A" %}
-{% case 'today' %}
+{% case today %}
 {% when 'Monday' %}
 Monday copy
 

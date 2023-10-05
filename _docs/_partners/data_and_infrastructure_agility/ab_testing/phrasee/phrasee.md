@@ -21,7 +21,7 @@ To include click tracking information for your subscribers, using Braze Currents
 | Requirement | Description |
 |---|---|
 | Phrasee account | A [Phrasee account][3] is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `campaigns` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `campaigns` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -36,7 +36,7 @@ With this integration, you can integrate email or push campaigns into Phrasee. T
 
 #### Step 1: Set up your campaign in Phrasee to generate the variants of your split test
 
-Set up your Phrasee email campaign as you normally would. Once you have approved your variants, you will be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
+Set up your Phrasee email campaign as you normally would. After you have approved your variants, you will be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
 
 ![A Phrasee campaign showing the available variants.]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
 
@@ -87,7 +87,7 @@ Ensure your scheduled date and time match Braze's configured schedule so that Ph
 
 #### Step 1: Set up your push campaign in Phrasee to generate the variants of your split test
 
-Set up your Phrasee email campaign as you normally would. Once you have approved your variants, you will be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
+Set up your Phrasee email campaign as you normally would. After you have approved your variants, you will be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
 
 ![A Phrasee campaign showing the available variants.]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
 

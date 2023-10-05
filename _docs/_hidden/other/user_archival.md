@@ -11,7 +11,7 @@ description: "This reference article covers user archival definitions, spam bloc
 
 > Each week on Sunday at 5:30 am EST, Braze runs a process to remove inactive users and dormant users from the Braze Services. Note that Braze does not archive users unless the number of users in the workspace hits the 250,000 threshold. 
 
-This process ensures that Braze provides accurate statistics regarding campaign reachable audiences. It also serves in accordance with two key concepts of [GDPR][1]:
+This process is intended to help Braze provide accurate statistics regarding campaign reachable audiences. It also serves in accordance with two key concepts of [GDPR][1]:
 
 1. The storage limitation principle—personal data processed and stored should be kept for no longer than is necessary
 2. Having a legitimate business purpose to process personal data.

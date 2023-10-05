@@ -24,7 +24,6 @@ This endpoint has a rate limit of 5000 requests per day, per company. This rate 
 {% elsif include.endpoint == "look up dashboard user email" %}
 This endpoint has a rate limit of 5000 requests per day, per company. This rate limit is shared with the `/scim/v2/Users/` PUT, GET, DELETE, and POST endpoints as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
-
 <!---/users/external_id/rename-->
 <!---/users/external_id/remove-->
 
@@ -34,7 +33,7 @@ We apply a rate limit of 1,000 requests per minute to this endpoint, as document
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-We apply a base speed limit of 50,000 requests per minute to this endpoint for all customers. Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a max of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
+We apply a base speed limit of 50,000 requests per minute to this endpoint for all customers. Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a maximum of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
 
 See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and reach out to your customer success manager if you need your limit increased.
 
@@ -104,6 +103,20 @@ The daily maximum number of custom send identifiers that can be created via this
 {% elsif include.endpoint == "subscription status set" %}
 For customers who onboarded with Braze on or after January 6, 2022, we apply a rate limit of 5,000 requests per minute shared across the `/subscription/status/set` and `/v2/subscription/status/set` endpoint as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
+<!-- Add this phrase back ", as documented in [API rate limits]({{site.baseurl}}/api/api_limits/)" to CDI endpoints for GA -->
+
+<!---GET /cdi/integrations--->
+{% elsif include.endpoint == "cdi list integrations" %}
+This endpoint has a rate limit of 50 requests per minute.
+
+<!---POST /cdi/integrations/{integration_id}/sync--->
+{% elsif include.endpoint == "cdi job sync" %}
+This endpoint has a rate limit of 20 requests per minute.
+
+<!---POST /cdi/integrations/{integration_id}/job_sync_status--->
+{% elsif include.endpoint == "cdi job sync status" %}
+This endpoint has a rate limit of 100 requests per minute.
+
 {% endif %}
 
 <!---Additional if statement for Messaging endpoints-->
@@ -132,7 +145,7 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 
 {% if include.endpoint == "asynchronous catalog item" %}
 
-This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+This endpoint has a shared rate limit of 16,000 requests per minute between all asynchronous catalog item endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 {% endif %}
 
@@ -144,8 +157,6 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 
 {% if include.endpoint == "synchronous catalog" %}
 
-This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 {% endif %}
-
-

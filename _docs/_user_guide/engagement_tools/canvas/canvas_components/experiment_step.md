@@ -24,7 +24,7 @@ Take advantage of Winning Paths to track performance over a period of time and t
 
 Experiment Paths are best suited for testing delivery, cadence, message copy, and channel combinations.
 
-- **Delivery:** Compare the results between messages sent with different time [delays]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), based on user actions ([Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/)), and using [Intelligent Timing]({{site.baseurl}}/docs/user_guide/intelligence/intelligent_timing/#canvas).<br><br>
+- **Delivery:** Compare the results between messages sent with different time [delays]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), based on user actions ([Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/)), and using [Intelligent Timing]({{site.baseurl}}/docs/user_guide/sage_ai/intelligence/intelligent_timing/#canvas).<br><br>
 - **Cadence:** Test multiple messaging flows over a specific period. For example, you could test two different onboarding cadences:
     - Cadence 1: Send 2 messages in the user's first 2 weeks
     - Cadence 2: Send 3 messages in the user's first 2 weeks
@@ -64,7 +64,7 @@ Lastly, you must build your downstream paths. Select **Done** and return to the 
 
 ![Adding steps to each path that splits from an Experiment Path component.][3]{: style="max-width:75%"}
 
-Keep in mind that paths and their downstream steps cannot be removed from a Canvas once created. However, once launched, you can modify the audience distribution across paths as you see fit. For example, if a day after launching a Canvas, you conclude that one path is superior to the rest based on the analytics, you can set that path to 100% and the others to 0%. Or, depending on your needs, you can continue sending users down multiple paths.
+Keep in mind that paths and their downstream steps cannot be removed from a Canvas after they're created. However, when launched, you can modify the audience distribution across paths as you see fit. For example, if a day after launching a Canvas, you conclude that one path is superior to the rest based on the analytics, you can set that path to 100% and the others to 0%. Or, depending on your needs, you can continue sending users down multiple paths.
 
 ## Tracking performance
 

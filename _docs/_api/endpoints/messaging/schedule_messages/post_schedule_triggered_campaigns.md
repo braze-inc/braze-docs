@@ -14,11 +14,11 @@ description: "This article outlines details about the Schedule API-triggered cam
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
-> Use this endpoint to send dashboard created campaign messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. 
+> Use this endpoint to send dashboard created campaign messages via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. 
 
 You can pass in `trigger_properties` that will be templated into the message itself.
 
-Note that to send messages with this endpoint, you must have a [campaign ID]({{site.baseurl}}/api/identifier_types/), created when you build an [API-Triggered campaign]({{site.baseurl}}/api/api_campaigns/).
+Note that to send messages with this endpoint, you must have a [campaign ID]({{site.baseurl}}/api/identifier_types/), created when you build an [API-triggered campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
   "trigger_properties": (optional, object) personalization key-value pairs for all users in this send; see trigger properties,
   "schedule": {
-    "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
+    "time": (required, datetime as ISO 8601 string) time to send the message,
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   }

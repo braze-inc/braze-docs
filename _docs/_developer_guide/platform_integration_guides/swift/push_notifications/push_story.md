@@ -40,11 +40,15 @@ In Xcode, add the Background Modes capability using the **Signing & Capabilities
 
 ![][3]
 
+### Adding an App Group
+
 Additionally, from the **Signing & Capabilities** pane in Xcode, add the App Groups capability to your main app target as well as the Notification Content Extension targets. Then, click the **+** button. Use your app's bundle ID to create the app group. For example, if your app's bundle ID is `com.company.appname`, you can name your app group `group.com.company.appname.xyz`.
 
 {% alert important %}
 App Groups in this context refer to Apple's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) and not your Braze workspace (previously app group) ID.
 {% endalert %}
+
+If you do not add your app to an App Group, your app may fail to populate certain fields from the push payload and will not work fully as expected.
 
 ## Step 3: Adding the Push Story framework to your app {#enable-capabilities}
 
@@ -63,10 +67,23 @@ After following the [Swift Package Manager integration guide]({{site.baseurl}}/d
 Add the following line to your Podfile:
 
 ```ruby
-target 'YourContentExtensionTarget' do
-  pod 'BrazePushStory'
+target 'YourAppTarget' do
+pod 'BrazeKit'
+pod 'BrazeUI'
+pod 'BrazeLocation'
+end
+
+target 'YourNotificationServiceExtensionTarget' do
+pod 'BrazeNotificationService'
+end
+
+target 'YourNotificationContentExtensionTarget' do
+pod 'BrazePushStory'
 end
 ```
+{% alert note %}
+It's not required to have both Rich Push and Push Stories implemented in the same app.
+{% endalert %}
 
 After updating the Podfile, navigate to the directory of your Xcode app project within your terminal and run `pod install`.
 

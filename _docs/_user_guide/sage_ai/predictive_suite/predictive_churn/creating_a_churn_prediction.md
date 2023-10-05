@@ -18,7 +18,7 @@ In Braze, go to **Analytics** > **Predictive Churn**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Engagement**.
 {% endalert %}
 
-A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them. Here, you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
+A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic information about them. Here, you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
 
 To create a new Prediction, choose **Create Prediction** and select a new **Churn Prediction**.
 
@@ -38,7 +38,7 @@ Remember, you don't need to explain what behaviors might precede churn—only wh
 
 #### Churn Window
 
-Churn Window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 60 days. This window is used to query historical data for training the Prediction. Additionally, once the Prediction is created and users receive scores, the Churn Risk Score indicates how likely a user is to churn within the number of days specified by the Churn Window. 
+Churn Window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 60 days. This window is used to query historical data for training the Prediction. Additionally, after the Prediction is created and users receive scores, the Churn Risk Score indicates how likely a user is to churn within the number of days specified by the Churn Window. 
 
 Here's an example of a simple definition based on lapsing sessions in the last 7 days.
 
@@ -84,7 +84,7 @@ Preview and Demo Predictions will never update users' risk of churn. Additionall
 
 ## Step 5: Build prediction
 
-Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. Once you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
+Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
 
 Once it's done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the Prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
 

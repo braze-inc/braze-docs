@@ -35,7 +35,7 @@ Do not change the push certificate environment (development versus production). 
 When users open your app, they will be prompted to accept push notifications. If they accept this prompt, APNs will generate a push token for that particular device. The iOS SDK will immediately and asynchronously send up the push token for apps using the default [automatic flush policy][40]. After we have a push token associated with a user, they will show as "Push Registered" in the dashboard on their user profile under the **Engagement** tab and will be eligible to receive push notifications from Braze campaigns.
 
 {% alert note %}
-This does not work with the iOS Simulator. You cannot test push notifications with the iOS Simulator as a result.
+As of Xcode 14, you can test remote push notifications on an iOS simulator.
 {% endalert %}
 
 #### Step 3: Launching a Braze push campaign
@@ -83,7 +83,7 @@ If the application does not prompt you to register for push notifications, there
 
 #### Users no longer "push registered" after sending a push notification
 
-This would likely indicate that the user had an invalid push token. This can happen for several reasons:
+This likely indicates that the user had an invalid push token. This can happen for several reasons:
 
 ##### Dashboard and app certificate mismatch
 
@@ -105,7 +105,7 @@ On iOS versions that do not integrate push via the `UserNotifications` framework
 
 ##### Test notification scheduled incorrectly
 
-Check the schedule you set for your test message. If it is set to local time zone delivery or [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), you may have just not received the message yet (or had the app in the foreground when it was received).
+Check the schedule you set for your test message. If it is set to local time zone delivery or [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/), you may have just not received the message yet (or had the app in the foreground when it was received).
 
 #### User not "push registered" for the app being tested
 

@@ -21,7 +21,7 @@ The Braze and ActionIQ integration allows brands to sync and map their ActionIQ 
 | Requirement | Description |
 | ----------- | ----------- |
 | ActionIQ account | An ActionIQ account is required to take advantage of this integration. |
-| Braze REST API key | A Braze REST API key with `users.track` and `user.export.ids` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` and `user.export.ids` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -33,7 +33,7 @@ This integration is used to sync ActionIQ audience membership to Braze by creati
 
 The standard naming convention for the custom attribute created is: `AIQ_<Audience ID>_<Split ID>`.
 
-To create a segment of these users, In Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the ActionIQ custom attribute. Once created, you can select your segment as an audience filter when creating a campaign or Canvas.
+To create a segment of these users, In Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the ActionIQ custom attribute. After the segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
 #### Requirements
 

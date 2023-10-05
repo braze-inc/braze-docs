@@ -40,7 +40,7 @@ Use Braze and mParticle's partnership to configure your integration and import m
 
 mParticle offers three ways to set cohort membership attributes, controlled by the "[Send Segments As](#send_settings)" configuration setting. The processing of each option is described in the following list:
 
-- **Single attribute** (default): mParticle will create a single custom attribute called `SegmentMembership`. The value of this attribute is a list of mParticle audience IDs that match the user. These audience IDs can be found in the mParticle dashboard under **Audiences**. For example, if an mParticle audience "Ibiza dreamers" has an audience ID of "11036", you will be able to segment these users by the audience ID "11036". ![mParticle segment membership][6]<br><br>
+- **Single attribute** (default): mParticle will create a single custom attribute called `SegmentMembership`. The value of this attribute is a string of comma-separated mParticle audience IDs that match the user. These audience IDs can be found in the mParticle dashboard under **Audiences**. For example, if an mParticle audience "Ibiza dreamers" has an audience ID of "11036", you will be able to segment these users by the audience ID "11036" using a regular expression. This solution is not recommended if you have more than a few audiences because custom attributes can be up to 255 characters long, so you will not be able to store dozens or hundreds of audiences on a user profile using this method. If you have a large number of cohorts per user, we strongly recommend the "one attribute per segment" configuration. ![mParticle segment membership][6]<br><br>
 - **One attribute per segment**: mParticle will create a boolean custom attribute for each audience a user belongs to. ![mParticle custom attribute][7]<br><br>
 - **Both single attribute and one attribute per segment**
 
@@ -58,7 +58,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 - **API key operating system**: Select which operating system your Braze API key corresponds to. This selection will limit the types of push tokens forwarded on an audience update.
 - **Send segments as**: The method of sending audiences to Braze: Single Attribute, One Attribute Per Segment, or Both. 
-- **Workspace REST API key**:  Braze REST API key with full permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
+- **Workspace REST API key**:  Braze REST API key with full permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**.
 - **External identity type**: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
 - **Email identity type**: The mParticle user identity type to forward as the email to Braze.
 - **Braze instance**: Specify which cluster your Braze data will be forwarded to.
@@ -81,7 +81,7 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 Since mParticle does not directly maintain segments in Braze, it will not delete segments when the corresponding mParticle audience connection is deleted or deactivated. When this happens, mParticle will not update the audience user attributes in Braze to remove the audience from each user.
 
-To remove the audience from a Braze user before deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. This ensures the audience membership updates in Braze to `false` for the single attribute option or removes the audience ID from the array format.
+To remove the audience from a Braze user before deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. Then, the audience membership will update in Braze to `false` for the single attribute option or removes the audience ID from the array format.
 
 ## Data mapping
 
@@ -91,11 +91,11 @@ Regardless of which approach you choose, you must set up Braze as an output:
 
 ### Configure your Braze output settings
 
-In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze** to open the Braze kit configuration. **Save** once completed.
+In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze** to open the Braze kit configuration. **Save** when completed.
 
 | Setting name | Description |
 | ------------ | ----------- |
-| Braze app identifier key | Your Braze app identifier key can be found in the **Braze Developer Console** under **Settings**. Note that API keys will differ for each platform (iOS, Android, and Web). |
+| Braze app identifier key | Your Braze app identifier key can be found in the Braze dashboard from **Settings** > **API Keys**. Note that API keys will differ for each platform (iOS, Android, and Web). |
 | External identity type | The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID |
 | Email identity type | The mParticle user identity type to forward as an email to Braze. We recommend leaving this to the default value, Email, |
 | Braze instance | The cluster your Braze data will be forwarded to; this should be the same cluster your dashboard is on. |
@@ -132,7 +132,7 @@ mParticle's [Braze event kit integration guide](https://docs.mparticle.com/integ
 
 #### Step 3: Connections settings for your Braze output
 
-In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** once completed.
+In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** when completed.
 
 ![][3]
 
@@ -152,7 +152,7 @@ For server-side data to be forwarded to Braze, it must include an `external_id`;
 
 #### Connections settings for your Braze output
 
-In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** once completed. 
+In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** when completed. 
 
 ![][4]
 

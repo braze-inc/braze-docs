@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Customers using the API for server-to-server calls may need to whitelist `rest.iad-01.braze.com` if they're behind a firewall.
+Customers using the API for server-to-server calls may need to allowlist `rest.iad-01.braze.com` if they're behind a firewall.
 
 ### Request parameters
 
@@ -150,6 +150,38 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     ]
 }`
 ```
+
+## Example request for updating a user profile by phone number
+
+{% alert important %}
+Updating a user profile by phone number with this endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
+Using the `/users/track` endpoint, you can update a user profile by phone number. You'll need to generate an API key with `users.track` permissions to use this endpoint. This endpoint only works if you include a valid phone number.
+
+{% alert important %}
+If you include a request with both email and phone, we will use the email as the identifer.
+{% endalert %}
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+    "attributes": [
+        {
+            "phone": "+15043277269",
+            "string_attribute": "fruit",
+            "boolean_attribute_1": true,
+            "integer_attribute": 25,
+            "array_attribute": [
+                "banana",
+                "apple"
+            ]
+        }
+    ],
+}`
+```
+
 
 ### Frequently asked questions
 

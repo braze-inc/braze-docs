@@ -19,7 +19,7 @@ The Braze and Ada integration allows you to augment user profiles with data coll
 | Requirement | Description |
 | ----------- | ----------- |
 | Ada account | An [Ada](https://ada.cx) account with the Braze and Answer Utilities applications enabled is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -44,7 +44,7 @@ Next to Braze, click **Connect** and provide the following information:
 
 ### Step 2: Pass through an identifier from Braze to Ada
 
-To ensure you're updating the correct user, you'll need to reach out to your Ada team and they can help you make the necessary modifications to the Ada embed script to receive an identifier from Braze. This integration is designed to accept an external ID, but it's possible to pass other identifiers, such as a user alias. 
+To confirm you're updating the correct user, you'll need to reach out to your Ada team and they can help you make the necessary modifications to the Ada embed script to receive an identifier from Braze. This integration is designed to accept an external ID, but it's possible to pass other identifiers, such as a user alias. 
 
 ### Step 3: Drop the Braze block into the relevant Answers
 

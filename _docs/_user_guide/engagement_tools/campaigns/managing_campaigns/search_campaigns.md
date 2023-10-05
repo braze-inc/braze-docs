@@ -1,6 +1,6 @@
 ---
 nav_title: Searching for Campaigns
-article_title: Searching for campaigns
+article_title: Searching for Campaigns
 page_order: 10
 page_type: reference
 description: "This article covers how to use the campaign search to find campaigns."
@@ -13,15 +13,9 @@ tool:
 
 > This article covers how you can use the search field of the campaigns list to refine your results.
 
-## Search exact text
-
-To find exact matches to your search terms, wrap your search in square brackets `[ ]`.
-
-For example, if you search for `[flow]`, you'll see any campaigns that have the word "flow" in it, but not "flower" or "overflow".
-
 ## Filters
 
-Use the filters in the side menu to group results by creator, editor, send dates, or channel, or select **Only Show Mine** to limit the results of your search to campaigns you've created. You can also filter by status and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) to further narrow down your results.
+Use the filters in the side menu to group results by creator, editor, send dates, or channel, or select **Only Show Mine** to limit your search results to campaigns you've created. You can also filter by status and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) to further narrow down your results.
 
 ![][2]
 

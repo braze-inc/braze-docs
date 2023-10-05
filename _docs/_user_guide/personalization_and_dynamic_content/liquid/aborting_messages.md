@@ -10,6 +10,10 @@ description: "This reference article covers aborting Liquid messages and some ex
 
 > Optionally, you can abort Liquid messages within conditionals. This reference article lists some examples of how this feature can be used in marketing campaigns.
 
+{% alert note %}
+If a message step is aborted in a Canvas, the user **will not** exit the Canvas and **will** proceed to the next step.
+{% endalert %}
+
 ## Abort message if "Number Games Attended" = 0
 
 For example, let's say that you did not want to send a message to customers who have not attended a game:
@@ -42,13 +46,13 @@ Send this message in English!
 {% endif %}
 ```
 
-By default Braze will log a generic error message to your Developer Console log:
+By default Braze will log a generic error message to your Message Activity Log:
 
 ```text
 {% abort_message %} called
 ```
 
-You can also have the abort message log something to your Developer Console log by including a string inside the parentheses:
+You can also have the abort message log something to your Message Activity Log by including a string inside the parentheses:
 
 ```liquid
 {% abort_message('language was nil') %}

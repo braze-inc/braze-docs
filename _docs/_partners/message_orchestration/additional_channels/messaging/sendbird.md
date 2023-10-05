@@ -26,7 +26,7 @@ By harnessing the joint capabilities of Braze and Sendbird Notifications, busine
 | ----------- | ----------- |
 | Sendbird account | A Sendbird account is required to take advantage of this partnership. |
 | Sendbird UIKit | You must have the Sendbird UIKit installed in your [iOS][2] or [Android][3] app. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -103,7 +103,7 @@ In Braze, from **Templates & Media**, go to **Webhook Templates** and choose the
 To integrate the notifications' delivery and open status event with a campaign’s conversion metric, add a custom event on the Braze dashboard.
 
 1. From the Braze dashboard, go to **Settings > Manage Settings > Custom Events**, and click **+ Add Custom Event**.
-2. Once you’ve created a custom event, click **Manage Properties**, add a property named "status", and choose "String" as the property type.
+2. After you’ve created a custom event, click **Manage Properties**, add a property named "status", and choose "String" as the property type.
 3. When you compose a notification in campaigns or Canvases, enter the name of the custom event into the **Event Name** field.
 
 This custom event will be triggered twice for each notification, when a message is sent and when a user opens the message.

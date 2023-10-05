@@ -932,7 +932,7 @@ This 'Event Listener' can be used to split out users into different journeys bas
 {% endcomment %}
 
 {% comment %}
-When testing, ensure the Campaign ID, Campaign API Endpoint, Canvas ID, Canvas API Endpoint are entered correctly. In this example, Canvas ID and Canvas API endpoint have been set up for sharing with the client; in practice, this can be testing using a Campaign ID and Campaign API endpoint.
+When testing, make sure the campaign ID, campaign API endpoint, Canvas ID, and Canvas API endpoint are entered correctly. In this example, the Canvas ID and Canvas API endpoint have been set up for sharing with the client. In practice, this can be testing using a Campaign ID and Campaign API endpoint.
 {% endcomment %}
 
 {% comment %}

@@ -15,7 +15,7 @@ tool: Reports
 You can find the **Custom Events Report** under **Analytics**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Events** report pgae under **Data**.
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Events** report page under **Data**.
 {% endalert %}
 
 ![Custom events][14]
@@ -27,6 +27,9 @@ You can export the following CSVs:
 - Custom Events by Hour
     - (Optional) Custom Events for Different Segments
 - Custom Events per MAU
+- Custom Events for Different Segments
+- Custom Events per KPI formula
+    - (Optional) Custom Events for Different Segments
 
 {% alert tip %}
 For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.

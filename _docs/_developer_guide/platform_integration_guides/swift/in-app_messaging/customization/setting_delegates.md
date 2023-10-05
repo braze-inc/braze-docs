@@ -109,7 +109,7 @@ Note that the device orientation must also be supported by the in-app message's 
 ![Supported orientations in Xcode.]({% image_buster /assets/img/supported_interface_orientations_xcode.png %})
 
 {% alert note %}
-The orientation is applied only for the presentation of the message. Once the device changes orientation, the message view adopts one of the orientation it’s support. On smaller devices (iPhones, iPod Touch), setting a landscape orientation for a modal or full in-app message may lead to truncated content.
+The orientation is applied only for the presentation of the message. After the device changes orientation, the message view adopts one of the orientations it supports. On smaller devices (iPhones, iPod Touch), setting a landscape orientation for a modal or full in-app message may lead to truncated content.
 {% endalert %}
 
 ### Modifying message orientations
@@ -143,6 +143,80 @@ inAppMessage.orientation = BRZInAppMessageRawOrientationPortrait;
 // Set inAppMessage orientation to only display in landscape
 inAppMessage.orientation = BRZInAppMessageRawOrientationLandscape;
 ```
+
+{% endtab %}
+{% endtabs %}
+
+## Disabling dark mode
+
+To prevent in-app messages from adopting dark mode styling when the user device has dark mode enabled, implement the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) method. The `PresentationContext` passed to the method contains a reference to the `InAppMessage` object to be presented. Each `InAppMessage` has a `themes` property containing a `dark` and `light` mode theme. If you set the `themes.dark` property to `nil`, Braze will automatically present the in-app message using its light theme.
+
+In-app message types with buttons have an additional `themes` object on their `buttons` property. To prevent buttons from adopting dark mode styling, you can use [`map(_:)`](https://developer.apple.com/documentation/swift/array/map(_:)-87c4d) to create a new array of buttons with a `light` theme and no `dark` theme.
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+func inAppMessage(
+  _ ui: BrazeInAppMessageUI,
+  prepareWith context: inout BrazeInAppMessageUI.PresentationContext
+) {
+  switch context.message {
+    case .slideup:
+      guard var slideup = context.message.slideup else { return }
+      slideup.themes.dark = nil
+      context.message.slideup = slideup
+    
+    case .modal:
+      guard var modal = context.message.modal else { return }
+      modal.themes.dark = nil
+      modal.buttons = modal.buttons.map {
+        var newButton = $0
+        newButton.themes = .init(themes: ["light": $0.themes.light])
+        return newButton
+      }
+      context.message.modal = modal
+    
+    case .modalImage:
+      guard var modalImage = context.message.modalImage else { return }
+      modalImage.themes.dark = nil
+      modalImage.buttons = modalImage.buttons.map {
+        var newButton = $0
+        newButton.themes = .init(themes: ["light": $0.themes.light])
+        return newButton
+      }
+      context.message.modalImage = modalImage
+    
+    case .full:
+      guard var full = context.message.full else { return }
+      full.themes.dark = nil
+      full.buttons = full.buttons.map {
+        var newButton = $0
+        newButton.themes = .init(themes: ["light": $0.themes.light])
+        return newButton
+      }
+      context.message.full = full
+    
+    case .fullImage:
+      guard var fullImage = context.message.fullImage else { return }
+      fullImage.themes.dark = nil
+      fullImage.buttons = fullImage.buttons.map {
+        var newButton = $0
+        newButton.themes = .init(themes: ["light": $0.themes.light])
+        return newButton
+      }
+      context.message.fullImage = fullImage
+    
+    default:
+      break
+  }
+}
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
 
 {% endtab %}
 {% endtabs %}

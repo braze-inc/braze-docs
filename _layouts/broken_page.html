@@ -76,28 +76,31 @@ if (site_language && (site_language != 'en')){
   var urlhash = window.location.hash;
   var urlsearch = window.location.search;
 
-  if (window.location.href.indexOf('redirected=true') == -1) {
-    var redirected  = '?redirected=true' ;
+  if (window.location.href.indexOf('redirected=true') === -1) {
+    var redirected  = '?redirected=true';
     if (urlsearch.indexOf('?') > -1 ) {
       redirected = urlsearch + '&redirected=true';
     }
     if (validurls[urlpath.toLowerCase() + '/' + urlhash] ) {
-      window.location  =  redirecturl(urlpath.toLowerCase() + '/' + urlhash,urlhash,redirected);
+      return location.href = redirecturl(urlpath.toLowerCase() + '/' + urlhash,urlhash,redirected);
     }
     else if (validurls[urlpath.toLowerCase() + urlhash] ) {
-      window.location  =  redirecturl(urlpath.toLowerCase() + urlhash,urlhash,redirected);
+      return location.href = redirecturl(urlpath.toLowerCase() + urlhash,urlhash,redirected);
     }
     else if (validurls[urlpath.toLowerCase() + '/'] ) {
-      window.location  =  redirecturl(urlpath.toLowerCase() + '/',urlhash,redirected);
+      return location.href = redirecturl(urlpath.toLowerCase() + '/',urlhash,redirected);
     }
     else if (validurls[urlpath.toLowerCase()] ) {
-      window.location  =  redirecturl(urlpath.toLowerCase(),urlhash,redirected);
+      return location.href = redirecturl(urlpath.toLowerCase(),urlhash,redirected);
     }
   }
 
-
-
-}  )();
+  window.braze.logCustomEvent("broken page", {
+    hostname: location.hostname,
+    pathname: location.pathname,
+  });
+  window.braze.requestImmediateDataFlush();
+})();
 
 $(document).ready(function(k){
   var search_strings = removeleadingslash(window.location.pathname).split('/');

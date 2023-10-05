@@ -60,7 +60,7 @@ Quick replies appear as clickable button options within the conversation but act
 
 First, build out your Quick Reply CTAs in the [WhatsApp Message Template Manager](https://business.facebook.com/wa/manage/message-templates/) within a message template. 
 
-![The WhatsApp message template manager UI showing how to create a CTA button, providing the button type (custom) and the buton text.][12]{: style="max-width:80%;"}
+![The WhatsApp message template manager UI showing how to create a CTA button, providing the button type (custom) and the button text.][12]{: style="max-width:80%;"}
 
 Once your template has been submitted and approved by WhatsApp, you can use it to build a Canvas within Braze. 
 

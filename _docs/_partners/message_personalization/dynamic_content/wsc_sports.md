@@ -19,7 +19,7 @@ The Braze and WSC Sports integration allows you to include rich and robust sport
 | Requirement | Description |
 | ----------- | ----------- |
 | WSC account | A WSC account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -30,7 +30,7 @@ The WSC Sports application handles the end-to-end process, from selecting the vi
 
 ![][2]{: style="float:right;max-width:25%;margin-bottom:15px;"}
 
-Before starting the integration, make sure you have your desired campaign and user segments built in Braze. Once completed, in the WSC Sports platform, select your desired video, and in the send settings, select Braze user segment and campaign ID you would like to use. Lastly, choose the time you would like your push message sent out. 
+Before starting the integration, make sure you have your desired campaign and user segments built in Braze. When completed, in the WSC Sports platform, select your desired video, and in the send settings, select Braze user segment and campaign ID you would like to use. Lastly, choose the time you would like your push message sent out. 
 
 #### API call
 

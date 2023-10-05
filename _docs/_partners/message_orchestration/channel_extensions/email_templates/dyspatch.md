@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Dyspatch
 
-> [Dyspatch][1] offers an intuitive drag-and-drop email builder used to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then export them to Braze, all in a few quick steps! 
+> [Dyspatch][1] offers an intuitive drag-and-drop email builder used to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then export them to Braze, all in a few steps! 
 
 The Dyspatch and Braze integration allow you to simplify your email creation lifecycle by exporting Dyspatch email templates directly to Braze.
 
@@ -19,7 +19,7 @@ The Dyspatch and Braze integration allow you to simplify your email creation lif
 | Requirement | Description |
 | ----------- | ----------- |
 | Dyspatch account | A [Dyspatch account][3] with an [owner or admin role][4] is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with full **Templates** permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with full **Templates** permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration

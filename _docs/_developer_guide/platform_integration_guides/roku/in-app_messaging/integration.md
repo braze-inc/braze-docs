@@ -56,6 +56,10 @@ The following lists the fields you will need to handle your in-app messages:
 | `uri` | Your URI users will be sent to based on your `click_action`. This field must be included when `click_action` is `"URI"`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert important %}
+For in-app messages containing buttons, the message `click_action` will also be included in the final payload if the click action is added prior to adding the button text.
+{% endalert %}
+
 ### Styling fields
 There are also various styling fields that you could choose to use from the dashboard:
 

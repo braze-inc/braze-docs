@@ -28,7 +28,7 @@ Use Certona's REST API to insert personalized content into your messages. This c
 
 {% raw %}
 ```liquid
-{% connected_content <INSERT_CERTONA_REST_API_KEY> :save recommendations %}
+{% connected_content {CERTONA_REST_API_KEY} :save recommendations %}
 ```
 
 Next, define the content you would like to call such as relevant text or images. For example, `{{recommendations.CertonaObject.RecommendedItems[0].Items[0].name}}`.

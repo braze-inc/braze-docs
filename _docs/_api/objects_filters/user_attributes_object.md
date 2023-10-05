@@ -43,7 +43,7 @@ Use Braze user profile field names (listed as follows or any listed in the secti
 - [External user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [User aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 
-To remove a profile attribute, set it to `null`. Some fields, such as `external_id` and `user_alias` cannot be removed once added to a user profile.
+To remove a profile attribute, set it to `null`. Some fields, such as `external_id` and `user_alias` cannot be removed after they're added to a user profile.
 
 #### Update existing profiles only
 
@@ -85,7 +85,7 @@ The following data types can be stored as a custom attribute:
 | Booleans |  |
 | Dates | Must be stored in the [ISO 8601][19] format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Note that "T" is a time designator, not a placeholder, and should not be changed or removed. <br><br>Time attributes without a time zone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's time zone). <br><br> Events with timestamps in the future will default to the current time. <br><br> For regular custom attributes, if the year is less than 0 or greater than 3000, Braze stores these values as strings on the user. |
 | Floats |  |
-| Integers | Integer custom attributes may be incremented by positive or negative integers by assigning them an object with the field "inc" and the value by which you would like to increment them. <br><br>Example: `"my_custom_attribute_2" : {"inc" : int_value},`|
+| Integers | Integer custom attributes may be incremented by positive or negative integers by assigning them an object with the field "inc" and the value by which you want to increment them. <br><br>Example: `"my_custom_attribute_2" : {"inc" : int_value},`|
 | Strings |  |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -102,7 +102,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | alias_name | (string) |
 | alias_label | (string) |
 | braze_id | (string, optional) When a user profile is recognized via the SDK, an anonymous user profile is created with an associated `braze_id`. The `braze_id` is automatically assigned by Braze, cannot be edited, and is device-specific. | 
-| country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. |
+| country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. Our API will make a best effort to map countries received in different formats. For example, "Australia" may map to "AU". However, if the input doesn't match a given [ISO-3166-1 alpha-2 standard][17], the country value will be set to `NULL`. |
 | current_location | (object) Of the form {"longitude": -73.991443, "latitude": 40.753824} |
 | date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | date_of_last_session | (date at which the user last used the app) String in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY`  |
@@ -111,7 +111,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | email_subscribe | (string) Available values are "opted_in" (explicitly registered to receive email messages), "unsubscribed" (explicitly opted out of email messages), and "subscribed" (neither opted in nor out).  |
 | email_open_tracking_disabled |(boolean) true or false accepted.  Set to true to disable the open tracking pixel from being added to all future emails sent to this user.|
 | email_click_tracking_disabled |(boolean) true or false accepted.  Set to true to disable the click tracking for all links within a future email, sent to this user.|
-| external_id | (string) A unique identifier for a user profile. Once assigned an `external_id`, the user profile is identified across a user's devices. On the first instance of assigning an external_id to an unknown user profile, all existing user profile data will be migrated to the new user profile. |
+| external_id | (string) A unique identifier for a user profile. After assigned an `external_id`, the user profile is identified across a user's devices. On the first instance of assigning an external_id to an unknown user profile, all existing user profile data will be migrated to the new user profile. |
 | facebook | hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | first_name | (string) |
 | gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |

@@ -113,7 +113,7 @@ We strongly recommend that people using `handleActionWithIdentifier` begin using
 
 ## Push category customization
 
-In addition to providing a set of [default push categories][2], Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
+In addition to providing a set of [default push categories][2], Braze supports custom notification categories and actions. After you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
 
 If you are not using the `UserNotifications` framework, see the [alternative categories][31] documentation.
 

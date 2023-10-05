@@ -109,7 +109,7 @@ These in-app messages are accepted by both mobile apps and web applications.
       </ul>
     </td>
     <td>Enforced Device Orientation (Portrait or Landscape)</td>
-    <td>Big and bold! Use when you want to make sure users see your content, such as your most critical campaigns, important notifications, or massive promotions.</td>
+    <td>Big and bold! Use when you want to make sure users see your content, such as your most critical campaigns, important notifications, or massive promotions.<br><br>Note that on mobile devices, portrait and landscape messages won't display if the orientation of the device doesn't match the orientation of the message.</td>
   </tr>
   <tr>
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/modal'>Modal</a></td>
@@ -325,7 +325,7 @@ Refer to our developer documentation for [server-side event triggering]({{site.b
 
 ##### Online versus offline triggering
 
-In-app messages work by sending the message and triggers to the user's device. Once the in-app messages are on a device, it waits to display until the trigger condition is met. If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze (for example, in Airplane mode).
+In-app messages work by sending the message and triggers to the user's device. After the in-app messages are on a device, it waits to display until the trigger condition is met. If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze (for example, in Airplane mode).
 
 {% alert important %}
 Once an in-app message has been stopped, there may be some users that continue to see the message if they started a session before the message was stopped and subsequently perform the trigger event. These users will be counted as a unique impression even after the campaign has been stopped.
@@ -333,7 +333,7 @@ Once an in-app message has been stopped, there may be some users that continue t
 
 #### Choose a priority
 
-Finally, once you've selected the action the in-app message will be triggered off of, you should also set a priority. If two messages are triggered off of the same action, high priority messages will be scheduled to appear on users' devices before messages with lower priorities. 
+Finally, after you've selected the action the in-app message will be triggered off of, you should also set a priority. If two messages are triggered off of the same action, high priority messages will be scheduled to appear on users' devices before messages with lower priorities. 
 
 You can choose between the following message priorities:
 

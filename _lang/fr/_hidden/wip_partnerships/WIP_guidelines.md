@@ -192,7 +192,7 @@ Dans le référentiel de documents GitHub de Braze, trouvez votre branche. Si vo
 1. Configurez votre branche à fusionner de la même manière que celle illustrée dans l’image précédente.<br><br>
 2. Nommez votre demande de tirage de la façon suivante : « Nom du partenariat -Documents partenaires »<br><br>
 3. Fournissez toute information pertinente qui peut aider l’équipe de documentation de Braze à confirmer vos changements, et indiquez votre **chef de produit Braze** pour le contacter. Si nécessaire, nous vous recontacterons par la suite.<br><br>
-4. Une fois que vous avez fait des changements, mentionnez @KellieHawks et @josh-mccrowell-braze dans un commentaire dans la requête d’extraction, et notre équipe prendra le relais.<br><br>
+4. Une fois que vous avez fait des changements, mentionnez @bre-fitzgerald et @josh-mccrowell-braze dans un commentaire dans la requête d’extraction, et notre équipe prendra le relais.<br><br>
 
 ## Processus de vérification {#review}
 

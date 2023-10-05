@@ -30,8 +30,8 @@ description: "This reference article explains the different components of Braze'
   "headers": (optional, valid Key-Value Hash) hash of custom extensions headers (available for SparkPost and SendGrid),
   "should_inline_css": (optional, boolean) whether to inline CSS on the body. If not provided, falls back to the default CSS inlining value for the workspace,
   "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
-    "file_name": (required, string) the name of the file you would like to attach to your email, excluding the extension (e.g., ".pdf"). You can attach any number of files up to 2 MB. This is required if you use "attachments",
-    "url": (required, string) the corresponding URL of the file you would like to attach to your email. The file name's extension will be detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
+    "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (e.g., ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
+    "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension will be detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
 }
 ```
 
@@ -71,7 +71,7 @@ An `email_template_id` can be retrieved from the bottom of any email template cr
 Authentication for email file attachments in this endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
-1. Navigate to **Manage Settings > Connected Content > Basic Authentication Credentials** to add your authentication credentials. 
+1. Navigate to **Settings** > **Connected Content** and click **Add Credential** to add your authentication credentials.
 2. Enter a name, and add a username and password.
 3. In email object of the `/messages/send` endpoint, include a `basic_auth_credential` property specifying the credential name in the attachment details. Refer to the following example with the credential name `company_basic_auth_credential_name`:
 

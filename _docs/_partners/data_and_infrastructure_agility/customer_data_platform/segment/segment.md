@@ -133,7 +133,7 @@ When connecting a React Native Segment Source to Braze, you must set up a source
 
 Within your app codebase, conditionally initialize the Segment SDK by device type, using the respective source write key associated with each app.
 
-When a push token is registered from a device and sent to Braze, it is associated with the app identifier used when initializing the SDK. The device-type conditional initialization ensures that any push tokens sent to Braze are associated with the relevant app.
+When a push token is registered from a device and sent to Braze, it is associated with the app identifier used when initializing the SDK. The device-type conditional initialization helps confirm that any push tokens sent to Braze are associated with the relevant app.
 
 {% alert important %}
 If the React Native app initializes Braze with the same Braze app identifier for all devices, then all React Native users will be considered Android or iOS users in Braze, and all push tokens will be associated with that operating system.
@@ -210,7 +210,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Setting | Description |
 | ------- | ----------- |
 | App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | 
-| REST API key | This can be found in your Braze dashboard under **Developer Console > API Settings**. | 
+| REST API key | This can be found in your Braze dashboard under **Settings** > **API Keys**. | 
 | Custom REST API endpoint | Your Braze REST endpoint that corresponds to your instance (i.e., rest.iad-01.braze.com) | 
 | Update existing users only | **Classic Destination Cloud-Mode (Maintenance) Only**<br><br>Segment recommends migrating to the Cloud Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>Determines whether to update existing users only. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -220,7 +220,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 
 ### Step 4: Map methods {#methods}
 
-Braze supports the [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page), [Identify](https://segment.com/docs/spec/identify/), [Track](https://segment.com/docs/spec/track/) and [Group](https://segment.com/docs/connections/spec/group/) Segment methods. The types of identifiers used within these methods will depend on whether the data is being sent through a server-to-server (cloud-mode) or side-by-side (device-mode) integration. In the Braze Web Mode Actions and Cloud Mode Actions destinations, you can also choose to set up a mapping for a [Segment alias call](https://segment.com/docs/connections/spec/alias/). 
+Braze supports the [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page), [Identify](https://segment.com/docs/spec/identify/), and [Track](https://segment.com/docs/spec/track/) Segment methods. The types of identifiers used within these methods will depend on whether the data is being sent through a server-to-server (cloud-mode) or side-by-side (device-mode) integration. In the Braze Web Mode Actions and Cloud Mode Actions destinations, you can also choose to set up a mapping for a [Segment alias call](https://segment.com/docs/connections/spec/alias/). 
 
 {% alert note %}
 Although user aliases are supported as an identifier in the Braze Cloud Mode (Actions) destination, it should be noted that Segment's alias call is not directly related to Braze user aliases.
@@ -233,7 +233,7 @@ Although user aliases are supported as an identifier in the Braze Cloud Mode (Ac
 | User alias | Cloud mode destinations |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` once one becomes available for the user. 
+The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` after one becomes available for the user. 
 
 It is also possible to engineer a workaround and use `braze_id` to send anonymous user data in cloud-mode. This requires manually including the user's `braze_id` in all your Segment API calls. You can learn more about how to set up this workaround in [Segment's documentation](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users).
 
@@ -290,7 +290,7 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 |---|---|---|
 | [Track](https://segment.com/docs/spec/track/) | Logged as a [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events). | Segment: `analytics.track("played_game");` <br>Braze: `Braze.logCustomEvent("played_game");`|
 | [Track with properties](https://segment.com/docs/spec/track/) | Logged as [Event Property]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties). | Segment: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` <br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
-| [Track with product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | Segment: `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` <br>Braze: `Braze.logPurchase("ab12", 19);` |
+| [Track with product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});` <br>Braze: `Braze.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ##### Order completed {#order-completed}
@@ -301,20 +301,12 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 
 {% endtab %}
 
-{% tab group %}
-#### Group
-
-The group call will record a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) with the name `ab_segment_group_<groupId>`, where `groupId` is the group's ID in the method's parameters. For example, if the group's ID is `1234`, then the custom attribute name will be `ab_segment_group_1234`. The value of the custom attribute will be set to `true`.
-
-In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile-1) and [cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the group event type is a default trigger for the update user profile action; however, this mapping can be customized. In addition, a group call can be used to trigger custom Actions. 
-
-{% endtab %}
 {% tab Page %}
 #### Page {#page}
 
-The [page](https://segment.com/docs/spec/page/) call lets you record whenever a user sees a page of your website, along with any optional properties about the page.
+The [Page](https://segment.com/docs/spec/page/) call lets you record whenever a user sees a page of your website, along with any optional properties about the page.
 
-This event type can be used as a trigger in the Web Mode Actions and Cloud Actions destinations.
+This event type can be used as a trigger in the Web Mode Actions and Cloud Actions destinations to log a custom event to Braze.
 {% endtab %}
 
 {% endtabs %}
@@ -337,7 +329,7 @@ If you use a server-to-server integration (cloud-mode), filters related to autom
 
 If you need to delete or suppress users, note that [Segment's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [`/users/delete` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). Note that verification of these deletions could take up to 30 days.
 
-You must ensure that you select a common user identifier between Braze and Segment (as in `external_id`). Once you've initiated a deletion request with Segment, you can view the status within the deletion requests tab in your Segment dashboard.
+You must ensure that you select a common user identifier between Braze and Segment (as in `external_id`). After you've initiated a deletion request with Segment, you can view the status within the deletion requests tab in your Segment dashboard.
 
 ## Segment replays
 
@@ -385,7 +377,13 @@ The proper format must be followed to ensure that you input your Braze SDK endpo
 Scenarios where data will not pass as expected:
 
 1. Nested custom attributes
-  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze via a cloud-mode destination, the **entire payload** will be sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent. 
+  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze via a cloud-mode destination, the **entire payload** will be sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent.<br><br> To spend only a subset of data points when the payload sends, you can use the custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) feature owned by Segment. This feature in the Segment platform allows you to customize how data is sent to downstream destinations.
+
+  {% alert note %}
+  Custom destination functions are controlled within Segment, and Braze has limited insight into functions that have been configured externally.
+  {% endalert %}
+
+{: start="2"} 
 2. Passing anonymous data server-to-server.
   - Customers may use Segment's server-to-server libraries to funnel anonymous data to other systems. See the map methods section to learn more about sending users without an `external_id` to Braze via a server-to-server (cloud-mode) integration.
 

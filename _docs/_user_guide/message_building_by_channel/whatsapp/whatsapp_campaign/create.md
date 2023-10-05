@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a WhatsApp message
-article_title: Creating a WhatsApp message
+nav_title: Creating a WhatsApp Message
+article_title: Creating a WhatsApp Message
 page_order: 4
 description: "This reference article covers the steps involved in building out and creating a WhatsApp message."
 page_type: reference
@@ -63,13 +63,13 @@ If all of the messages in your campaign are similar or have the same content, co
 
 To compose your message, select an [approved WhatsApp template]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates). 
 
-![][1]
+![][1]{: style="max-width:80%;"}
 
-If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid. If you opted to include images when building your template, upload or add images from the media library. 
+If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, upload or add images from the media library.
 
-![][2]
+Note that disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. If you would like to make updates to the disabled text, you must edit your template and get it reapproved.
 
-Note that disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. If you would like to make updates to the disabled text, you must edit your template and get it reapproved. 
+![][2]{: style="max-width:80%;"}
 
 {% alert tip %}
 {% raw %}
@@ -77,18 +77,21 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 {% endraw %}
 {% endalert %}
 
+### Including dynamic links 
+Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. At this time, neither of these links can be shortened. 
+
 ## Step 3: Preview and test your message
 
 Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
-![][3]
+![][3]{: style="max-width:80%;"}
 
 ## Step 4: Build the remainder of your campaign or Canvas
 
 {% tabs %}
 {% tab Campaign %}
 
-Next, build the remainder of your campaign. See the following sections for further details on how to best utilize our tools to build WhatsApp messages.
+Next, build the remainder of your campaign. See the following sections for further details on how to best use our tools to build WhatsApp messages.
 
 #### Choose a delivery schedule or trigger
 
@@ -123,6 +126,53 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 Next, check out [WhatsApp reporting]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/) to learn how you can access the results of your WhatsApp campaigns.
 
+## Supported WhatsApp features
+
+Braze supports the following WhatsApp messaging features.
+
+### Outbound messages
+
+You can send users the following in your WhatsApp messages:
+
+Message feature    | Details
+----------- |---------------- 
+Headers | 
+Text | Supports variable parameters
+Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
+Body text | Supports variable parameters
+Footer text | Supports variable parameters 
+CTAs | See [Calls to actions](#ctas).
+{: .reset-td-br-1 .reset-td-br-2}
+
+#### Calls to actions {#ctas}
+
+You can add the following calls to action in your WhatsApp messages:
+
+CTA type    | Details
+----------- |---------------- 
+Visit website | Available for message templates only. <br>One button maximum (including variable parameters).
+Call phone number | Available for message templates only. <br>One button maximum.
+Custom quick reply buttons | Three buttons maximum. 
+Marketing opt-out button | This option does not automatically update subscription statuses. <br><br>For setup instructions, see [Opt-ins & Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection).
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Inbound messages
+
+Users can send you the following in their WhatsApp messages:
+
+Message feature    | Details
+----------- |---------------- 
+Text | 
+Images (JPEG and PNG)| Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
+Audio| audio/aac<br>audio/mp4<br>audio/mpeg<br>audio/amr<br>audio/ogg (only Opus Codecs, base audio/ogg is not supported)
+Documents | text/plain<br>application/pdf<br>application/vnd.ms-powerpoint<br>application/msword<br>application/vnd.ms-excel<br>application/vnd.openxmlformats-officedocument.wordprocessingml.document<br>application/vnd.openxmlformats-officedocument.presentationml.presentation<br>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+CTAs | See [Calls to actions](#ctas).
+Video | video/mp4, video/3gp<br><br>Only H.264 video codec and AAC audio codec are supported. We support videos with a single audio stream or no audio stream.
+{: .reset-td-br-1 .reset-td-br-2}
+
+
+
 [1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %} 
 [2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %} 
 [3]: {% image_buster /assets/img/whatsapp/whatsapp8.png %} 
+[4]: {% image_buster /assets/img/whatsapp/whatsapp_plain_text.png %}

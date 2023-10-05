@@ -167,7 +167,7 @@ glossaries:
       - Email
       - Content Cards
   - name: Body Clicks
-    description: Occurs when someone clicks on a slide-up, modal, or fullscreen in-app message that has no buttons.
+    description: Occurs when someone clicks on any of the following in-app message types:<br>- Slide-up <br>- Modal <br>- Fullscreen that has no buttons
     calculation: (Body Clicks) / (Impressions)
     tags:
       - In-App Message

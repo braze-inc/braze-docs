@@ -10,7 +10,7 @@ page_order: 3
 
 # Data processing
 
-> Once the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
+> After the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
 
 ## Supported Shopify events
 
@@ -23,7 +23,7 @@ page_order: 3
 | `shopify_abandoned_cart` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | As soon as a customer adds items to their cart, Braze will store the cart token ID. <br><br>The default Abandoned Cart Delay is set at 1 hour. Meaning, after 1 hour of cart abandonment where no updates have been made to the cart, Braze will then trigger the event. You can update your Abandoned Cart Delay within **Advanced Settings**. | ScriptTag integration |
 | `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Checkout updates webhook's trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned. The Abandoned Checkout Delay is set to 1 hour but is configurable within the **Advanced Settings** section on the Shopify partner page. | Shopify webhooks |
 | `shopify_created_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>**OR**<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.| Shopify webhooks |
-| Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event immediately triggers a Braze purchase event. | Shopify webhooks |
+| Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | An order create event is received from Shopify and the products ordered are mapped to Braze Purchase Events. | Shopify webhooks |
 | `shopify_paid_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order paid events will trigger when an order's payment status is changed to paid. An order is in paid status after a credit card payment has been captured or when an order using a manual payment method is marked as paid. | Shopify webhooks |
 | `shopify_partially_fulfilled_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Partially fulfilled order events will trigger when some of the line items in an order are fulfilled successfully. | Shopify webhooks |
 | `shopify_fulfilled_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Fulfilled order events will trigger when the fulfillment of all of the line items in a fulfillment order is successful. | Shopify webhooks |
@@ -463,6 +463,8 @@ page_order: 3
 | Attribute Name | Description |
 | --- | --- |
 | `shopify_tags`  | This attribute corresponds to the [customer tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
+| `shopify_total_spent` | This attribute tracks the total amount spent on a store and is only supported for users imported through the [Historical Backfill]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/) feature. |
+| `shopify_order_count` | This attribute tracks the total number of orders made in a store and is only supported for users imported through the Historical Backfill feature. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -474,7 +476,9 @@ page_order: 3
   "attributes": [
     {
       "external_id": "user_id",
-      "shopify_tags": "VIP_customer"
+      "shopify_tags": "VIP_customer",
+      "shopify_total_spent": "60.00",
+      "shopify_order_count": "3"
     }
   ]
 }
@@ -574,7 +578,7 @@ The Shopify integration reconciles your user’s device ID and personal informat
 reconcileEmail(<email address>);
 ```
 
-This will cause the anonymous user on the web to be associated with the given email address, which you will supply. For example, if the user enters their email address into a sign-up or login field, you should ensure this is being passed. Once this function is called, any other Shopify events referencing the given email address will be assigned to the same Braze user.
+This will cause the anonymous user on the web to be associated with the given email address, which you will supply. For example, if the user enters their email address into a sign-up or login field, you should make sure this is being passed. After this function is called, any other Shopify events referencing the given email address will be assigned to the same Braze user.
 
 {% alert note %}
 Braze has a no-code solution to implement this function automatically on your Shopify store. If you’re interested in this beta feature, contact your customer success manager or account manager.

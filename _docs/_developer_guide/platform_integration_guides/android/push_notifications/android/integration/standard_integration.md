@@ -134,11 +134,8 @@ While we strongly recommend registering your FCM registration token in your appl
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Migrate from GCM (Optional)
 
-If you are migrating from using GCM to using Firebase with Braze, visit the [GCM migration guide][48] for instructions on switching to using Firebase in your app.
-
-### Step 4: Set Your Firebase credentials
+### Step 3: Set Your Firebase credentials
 
 {% alert warning %}
 The **Legacy** Cloud Messaging API server key is required to configure Android Push in Braze. Using the Firebase Cloud Messaging API (V1) credentials will not allow you to send push notifications.
@@ -161,7 +158,7 @@ Input your Cloud Messaging API (Legacy) server key and sender ID into the Braze 
 
 ![][16]
 
-### Step 5: Remove old permissions
+### Step 4: Remove old permissions
 
 Braze no longer requires the following permissions if using Firebase:
 
@@ -173,7 +170,7 @@ Braze no longer requires the following permissions if using Firebase:
   <uses-permission android:name="YOUR-APPLICATION-PACKAGE-NAME.permission.C2D_MESSAGE" />
   ```
 
-### Step 6: Remove automatic actions from your application class
+### Step 5: Remove automatic actions from your application class
 
 If you have a custom [application][76] subclass, ensure you do not have automatic logic that pings your servers in your class's `Application.onCreate()` lifecycle method. This will ensure that silent push notifications from Braze don't cause unnecessary requests to your servers.
 
@@ -204,7 +201,45 @@ Braze's notification code also uses `BrazeFirebaseMessagingService` to handle op
 Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the preceding integration.
 {% endalert %}
 
-##### Using your own Firebase Messaging Service
+#### Using a fallback Firebase Messaging Service
+
+If you have another Firebase Messaging Service you would also like to use, you can also specify a fallback Firebase Messaging Service to call if your application receives a push that isn't from Braze.
+
+In your `braze.xml`, specify:
+
+```xml
+<bool name="com_braze_fallback_firebase_cloud_messaging_service_enabled">true</bool>
+<string name="com_braze_fallback_firebase_cloud_messaging_service_classpath">com.company.OurFirebaseMessagingService</string>
+```
+
+or set via [runtime configuration:][65]
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
+        .setFallbackFirebaseMessagingServiceEnabled(true)
+        .setFallbackFirebaseMessagingServiceClasspath("com.company.OurFirebaseMessagingService")
+        .build();
+Braze.configure(this, brazeConfig);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val brazeConfig = BrazeConfig.Builder()
+        .setFallbackFirebaseMessagingServiceEnabled(true)
+        .setFallbackFirebaseMessagingServiceClasspath("com.company.OurFirebaseMessagingService")
+        .build()
+Braze.configure(this, brazeConfig)
+```
+
+{% endtab %}
+{% endtabs %}
+
+#### Using your own Firebase Messaging Service
 
 If you already have a Firebase Messaging Service registered, you can pass [`RemoteMessage`][75] objects to Braze via [`BrazeFirebaseMessagingService.handleBrazeRemoteMessage()`][74]. This method will only display a notification if the [`RemoteMessage`][75] object originated from Braze and will safely ignore if not.
 
@@ -248,7 +283,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Ensure small icons conform to design guidelines
+### Step 2: Conform small icons to design guidelines
 
 For general information about Android notification icons, visit the [Notifications overview][37].
 
@@ -330,7 +365,7 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-If you would like to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens][52] article for more information.
+If you want to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens][52] article for more information.
 
 #### Creating custom deep links
 
@@ -417,10 +452,10 @@ For issues related to push analytics, see our [troubleshooting guide][57].
 
 #### Testing from command line
 
-If you'd like to test in-app and push notifications via the command-line, you can send a single notification through the terminal via cURL and the [messaging API][22]. You will need to replace the following fields with the correct values for your test case:
+If you'd like to test in-app and push notifications via the command-line interface, you can send a single notification through the terminal via cURL and the [messaging API][22]. You will need to replace the following fields with the correct values for your test case:
 
-- `YOUR_API_KEY` - available at **Settings** > **API Keys**
-- `YOUR_EXTERNAL_USER_ID` - available by searching for a profile on the **Search Users** page
+- `YOUR_API_KEY` (Go to **Settings** > **API Keys**.)
+- `YOUR_EXTERNAL_USER_ID` (Search for a profile on the **Search Users** page.)
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
@@ -445,11 +480,9 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 
 This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint][66].
 
-## Customizing your integration
+## Customizing notification display
 
-### Custom displaying notifications
-
-#### Step 1: Create your custom notification factory
+### Step 1: Create your custom notification factory
 
 In some scenarios, you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IBrazeNotificationFactory`][6] to create notification objects for display by Braze.
 
@@ -495,7 +528,7 @@ You can return `null` from your custom `createNotification()` method to not show
 For documentation on Braze push data keys, refer to the [Android SDK](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html).
 {% endalert %}
 
-#### Step 2: Set your custom notification factory
+### Step 2: Set your custom notification factory
 
 To instruct Braze to use your custom notification factory, use the `setCustomBrazeNotificationFactory` method to set your [`IBrazeNotificationFactory`][6]:
 
@@ -520,7 +553,7 @@ setCustomBrazeNotificationFactory(brazeNotificationFactory: IBrazeNotificationFa
 The recommended place to set your custom `IBrazeNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity). This will allow the notification factory to be set correctly whenever your app process is active.
 
 {% alert important %}
-Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and a deep understanding of Braze's push functionality. For example, you must ensure your notification logs push opens correctly.
+Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and a deep understanding of Braze's push functionality. For example, you must make sure your notification logs push opens correctly.
 {% endalert %}
 
 To unset your custom [`IBrazeNotificationFactory`][6] and return to default Braze handling for push, pass in `null` to our custom notification factory setter:

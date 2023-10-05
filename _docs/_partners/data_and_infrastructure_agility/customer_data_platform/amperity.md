@@ -65,7 +65,7 @@ Once the query has run, you can either:
 | Requirement | Description |
 | ----------- | ----------- |
 | AWS account | An AWS account is required to use the S3 and Lambda services. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
 | CSV file | Check out the [CSV formatting specifications](#csv), and use step 1 of the Amperity integration to obtain a CSV with user external IDs and attributes to update. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -121,7 +121,7 @@ Follow the direct link to the [application](https://console.aws.amazon.com/lambd
 
 Click **Deploy** and let AWS create all the necessary resources.
 
-You can watch the deployment and verify that the stack (i.e., all the required resources) is being created in the [CloudFormation](https://console.aws.amazon.com/cloudformation/). Find the stack named **serverlessrepo-braze-user-attribute-import**. Once the **Status** turns to `CREATE_COMPLETE`, the function is ready to use. You can click on the stack, open **Resources**, and watch the different resources being created.
+You can watch the deployment and verify that the stack (i.e., all the required resources) is being created in the [CloudFormation](https://console.aws.amazon.com/cloudformation/). Find the stack named **serverlessrepo-braze-user-attribute-import**. After the **Status** turns to `CREATE_COMPLETE`, the function is ready to use. You can click on the stack, open **Resources**, and watch the different resources being created.
 
 The following resources are created:
 
@@ -141,7 +141,7 @@ To read more about different aspects of the Lambda function, such as monitoring 
 
 #### Step 3b: Create Amperity CSV
 
-1. Once you've run and activated your query, you can download a CSV file of your query by clicking **Download**. This is the file you will upload to Braze.<br>![A summary of an Amperity query that has successfully created a list of users to be sent to Braze.][9] 
+1. After you've run and activated your query, you can download a CSV file of your query by clicking **Download**. This is the file you will upload to Braze.<br>![A summary of an Amperity query that has successfully created a list of users to be sent to Braze.][9] 
 
 #### Step 4b: Import CSV
 
@@ -152,7 +152,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Us
 
 {:start="2"}
 2. Upload the CSV file downloaded from Amperity.
-3. Once uploaded, confirm the default and custom attributes, assign an import name, and optionally create a group within the Braze platform from the uploaded Amperity query. 
+3. After the file is uploaded, confirm the default and custom attributes, assign an import name, and optionally create a group within the Braze platform from the uploaded Amperity query. 
 4. Click **Start Import**.
 
 

@@ -12,9 +12,9 @@ tool:
 
 # Email global style settings
 
-> With global style settings, you can personalize the look of your email campaigns and Canvases. You can add and customize a default theme for your drag-and-drop editor. This includes editing your styles for email titles, text, buttons, and more.
+> With global style settings, you can personalize the look of your email campaigns and Canvases. You can add and customize a default theme for your drag-and-drop editor. This includes editing your styles for email titles, text, buttons, and more. Using a combination of these settings can help create a consistent look across your email messaging.
 
-To edit your global style settings, go to **Settings** > **Email Preferences** > **Drag-and-Drop Email Preferences**.
+To edit your global style settings, go to **Settings** > **Email Preferences** > **Drag-and-Drop Email Preferences**. After editing the styles in the drag-and-drop email editor, click **Save**. To further customize your email campaigns and Canvases, check out how you can incorporate [drag-and-drop editor blocks][8].
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Manage Settings** > **Email Settings** > **Drag-and-Drop Email Editor Settings**.
@@ -75,15 +75,27 @@ Optionally, you can override the default style of your drag-and-drop editor them
 
 ## Paragraph styling
 
-To set a default paragraph style, go to  the **Paragraph Styling**, enter the **Font Size** and select **Font Color** to choose a font color. You can also adjust the block styling for the body text by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values. This will apply to the spacing around all four areas surrounding the paragraph block.
+To set a default paragraph style, go to the **Paragraph Styling**, enter the **Font Size** and select **Font Color** to choose a font color. You can also adjust the block styling for the body text by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values. This will apply to the spacing around all four areas surrounding the paragraph block.
 
 ![][7]
 
 ## List styling
 
-When adding lists to your messaging, the **List Styling** section creates the consistency in how your lists are styled. This incudes details like font size, font color, line weight, alignment, text direction, list item spacing and indentation.
+When adding lists to your messaging, the **List Styling** section creates the consistency in how your lists are styled. This incudes details like: 
 
-Here, you can also set the **List Type** to be either numbered or bulleted. The **List Style Type** provides additional customization for the style of your lists. For example, you can set the list types to always be bulleted, and for each bullet to be a square.  
+- Font size
+- Font color
+- Font weight
+- Line height
+- Alignment
+- Text direction
+- Letter spacing
+- List item spacing
+- List item indent
+- List type
+- List style type
+
+You can set the **List Type** to be either numbered or bulleted. The **List Style Type** provides additional customization for the style of your lists. For example, you can set the list types to always be bulleted, and for each bullet to be a square.  
 
 ![][10]
 
@@ -102,7 +114,18 @@ In the **Button Styling** section, you can edit the following default styles for
 
 As with all other styling sections, you can adjust the block styling by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values.
 
-After editing the styles in the drag-and-drop email editor, click **Save**. To further customize your email campaigns and Canvases, check out how you can incorporate [drag-and-drop editor blocks][8].
+## Email template width
+
+Using the email template width, you can adjust and set a width for consistency across your email campaigns. 
+
+![][13]
+
+## Content Block width
+
+You can also set the Content Block width in the email drag-and-drop editor. We recommend matching the Content Block width to the email template width.
+
+![][14]
+
 
 [1]: {% image_buster /assets/img_archive/dnd_global_style_settings.png %}
 [2]: {% image_buster /assets/img_archive/dnd_basic_styling.png %}
@@ -114,4 +137,6 @@ After editing the styles in the drag-and-drop email editor, click **Save**. To f
 [10]: {% image_buster /assets/img_archive/dnd_list_styling.png %}
 [11]: {% image_buster /assets/img_archive/dnd_fallbacks.png %}
 [12]: {% image_buster /assets/img_archive/dnd_button_styling.png %}
+[13]: {% image_buster /assets/img_archive/dnd_email_template_width.png %}
+[14]: {% image_buster /assets/img_archive/dnd_content_block_width.png %}
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks

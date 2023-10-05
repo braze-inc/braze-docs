@@ -20,7 +20,7 @@ The Braze and Pypestream integration allows you to seamlessly orchestrate the en
 | Requirement | Description |
 |---|---|
 | Pypestream account | A [Pypestream account](https://www.pypestream.com/contact-us/) is required to take advantage of this partnership.<br><br>Once subscribed, the Pypestream team will help you set up your dedicated environment to begin building your conversational AI solution to integrate with Braze. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -29,11 +29,11 @@ The Braze and Pypestream integration allows you to seamlessly orchestrate the en
 The Braze and Pypestream partnership can be used in your Canvases to achieve common use cases like:
 * **Intelligent retargeting**: Retarget users with Braze Canvas after their conversational engagement with your brand by leveraging all the rich data points collected via Pypestream.
 * **Dynamic targeting**: Reach out to existing and prospective customers based on their specific cohorts and segments, serving them with tailored conversational experiences via Pypestream.
-* **Contextual customer insights**: Once an end-user (existing or prospective customer) is engaging on your website, combine webpage tags ingested from the Pypestream Event Listener with customer data stored within Braze to provide a fully-personalized and contextual conversational interaction.
+* **Contextual customer insights**: After an end-user (existing or prospective customer) engages on your website, combine webpage tags ingested from the Pypestream Event Listener with customer data stored within Braze to provide a fully-personalized and contextual conversational interaction.
 
 ## Integration
 
-Pypestream leverages a server-less integration layer to perform custom integrations into various platforms. This layer is used to interface with services or systems to support the data requirements of the conversational flow that is being built. These integrations, referred to as Action Node Integrations, are typically written in Python and deployed using the Pypestream platform. Once an action node is instantiated, it provides the flexibility of integrating into any Braze API endpoint and allows the results to be evaluated in many ways. 
+Pypestream leverages a server-less integration layer to perform custom integrations into various platforms. This layer is used to interface with services or systems to support the data requirements of the conversational flow that is being built. These integrations, referred to as Action Node Integrations, are typically written in Python and deployed using the Pypestream platform. After an action node is instantiated, it provides the flexibility of integrating into any Braze API endpoint and allows the results to be evaluated in many ways. 
 
 {% alert note %}
 Visit this [Pypestream article](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070) for an overview and configuration steps for Pypestream action nodes. You must be a Pypestream customer to access this documentation.

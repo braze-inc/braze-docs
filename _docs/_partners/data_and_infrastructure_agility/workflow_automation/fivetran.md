@@ -13,14 +13,14 @@ tool: Currents
 
 > [Fivetran](https://fivetran.com/) is a globally recognized brand whose analyst-focused products and fully managed pipelines enable data-backed decisions by delivering ready-to-query data into your cloud warehouse.
 
-The Braze and Fivetran integration allows users to create a zero-maintenance pipeline that enables you to collect and analyze Braze data by connecting all of your applications and databases to a central warehouse. Once data has been collected in the central warehouse, data teams can explore Braze data effectively using their preferred business intelligence tools. 
+The Braze and Fivetran integration allows users to create a zero-maintenance pipeline that enables you to collect and analyze Braze data by connecting all of your applications and databases to a central warehouse. After data has been collected in the central warehouse, data teams can explore Braze data effectively using their preferred business intelligence tools. 
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
 | Fivetran account | A [Fivetran](https://fivetran.com/login?next=%2Fdashboard) account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with the following permissions:<br>- users.export.ids<br>- users.export.segment<br>- email.unsubscribe<br>- email.hard_bounces<br>- messages.schedule_broadcasts<br>- campaigns.list<br>- campaigns.details<br>- canvas.list<br>- canvas.details<br>- segments.list<br>- segments.details<br>- purchases.product_list<br>- events.list<br>- feed.list<br>- feed.details<br>- templates.email.info<br>- templates.email.list<br>- subscription.status.get<br>- subscription.groups.get <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with the following permissions:<br>- users.export.ids<br>- users.export.segment<br>- email.unsubscribe<br>- email.hard_bounces<br>- messages.schedule_broadcasts<br>- campaigns.list<br>- campaigns.details<br>- canvas.list<br>- canvas.details<br>- segments.list<br>- segments.details<br>- purchases.product_list<br>- events.list<br>- feed.list<br>- feed.details<br>- templates.email.info<br>- templates.email.list<br>- subscription.status.get<br>- subscription.groups.get <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
 | Braze Currents | [Braze Currents](https://www.braze.com/product/data-agility-management/currents/) should be connected to either Amazon S3 or Google Cloud Storage. |
 | Amazon S3 or Google Cloud Storage | This integration requires you have access to one Amazon S3 or Google Cloud Storage. |
@@ -92,7 +92,7 @@ Next, click **Next: Permissions** to select the policy you just created.
 
 ![]({% image_buster /assets/img/fivetran_as3_select_policy.png %})
 
-Click **Next: Review**, name your new role (i.e., Fivetran), and click **Create Role**. Once created, click the role you just created, and note the Role ARN shown.
+Click **Next: Review**, name your new role (i.e., Fivetran), and click **Create Role**. After the role is created, click it and note the Role ARN shown.
 
 ![The Amazon S3 ARN listed in the role.]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 

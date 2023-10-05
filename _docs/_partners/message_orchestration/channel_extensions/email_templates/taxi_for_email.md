@@ -19,7 +19,7 @@ The Braze and Taxi integration leverages Taxi's simple yet powerful syntax to cr
 | Requirement | Description |
 | ------------| ----------- |
 | Taxi for Email account | A Taxi for Email account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with full **Templates** permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with full **Templates** permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze endpoint | [Your Braze endpoint]({{site.baseurl}}/api/basics/#endpoints) aligns with your Braze dashboard URL.<br><br> For example, if your dashboard URL is `https://dashboard-03.braze.com`, your endpoint will be `dashboard-03`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -27,7 +27,7 @@ The Braze and Taxi integration leverages Taxi's simple yet powerful syntax to cr
 
 ### Step 1: Create a Taxi email template
 
-Create a Taxi template on the Taxi platform. Once created, navigate to your **Organization Settings** and select the **ESP Connectors** tab.
+Create a Taxi template on the Taxi platform. After the template is created, navigate to your **Organization Settings** and select the **ESP Connectors** tab.
 
 ### Step 2: Create Braze connector
 
@@ -35,7 +35,7 @@ Create a Taxi template on the Taxi platform. Once created, navigate to your **Or
 2. Click **Braze** to edit the Braze connector settings.
 3. Enter your Braze endpoint and your Braze API key.
 
-Your connector field will change colors once details with correct permissions are provided. If this field does not change, check that your fields align with the requirements listed.
+Your connector field will change colors after details with correct permissions are provided. If this field does not change, check that your fields align with the requirements listed.
 
 ## Usage
 

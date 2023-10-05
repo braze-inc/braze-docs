@@ -47,7 +47,7 @@ Next, declare permissions required to support ADM by adding `<>permission</>` an
     android:versionCode="1"
     android:versionName="1.0">
 
-  <!-- This permission ensures that no other application can intercept your ADM messages. -->
+  <!-- This permission verifies that no other application can intercept your ADM messages. -->
   <permission
     android:name="[YOUR PACKAGE NAME].permission.RECEIVE_ADM_MESSAGE"
     android:protectionLevel="signature" />
@@ -78,13 +78,17 @@ Next, declare that your app uses the device's ADM feature and that your app is d
 Lastly, add intent filters to handle `REGISTRATION` and `RECEIVE` intents from ADM within your Braze `AndroidManifest.xml` file. Immediately after `amazon:enable-feature`, add the following elements:
 
 ```xml
-<receiver android:name="com.braze.push.BrazeAmazonDeviceMessagingReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
-  <intent-filter>
-      <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
-      <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
-      <category android:name="com.yourapp.packagename" />
-  </intent-filter>
-</receiver>
+    <receiver
+      android:name="com.braze.push.BrazeAmazonDeviceMessagingReceiver"
+      android:exported="true"
+      android:permission="com.amazon.device.messaging.permission.SEND">
+      <intent-filter>
+        <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+        <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+
+        <category android:name="${applicationId}" />
+      </intent-filter>
+    </receiver>
 ```
 
 ## Step 3: Store your ADM API key
@@ -103,7 +107,7 @@ To enable Braze to automatically open your app and any deep links when a push no
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-If you would like to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See [Custom handling push receipts and opens][52] in the Android push documentation for more information.
+If you want to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See [Custom handling push receipts and opens][52] in the Android push documentation for more information.
 
 ## Step 5: Add Client Secret and Client ID to Braze dashboard
 

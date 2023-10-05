@@ -43,7 +43,7 @@ Registering with A2P 10DLC may include several types of fees:
 | -------- | ---------- |
 | Registration Fees | Nominal fees applied when registering your brand and use case across all major US networks. |
 | Secondary Vetting Fees | Brands can appeal their [Brand Trust Score](#trust-score) and request a secondary vetting process to improve their overall throughput; there is a fee associated with this process. |
-| Carrier Fees | Fees charged by carriers for outbound SMS and MMS messages sent to users once registered for 10DLC. Starting October 1, 2021, carrier fees will be higher on unregistered traffic (standard long codes) than registered traffic (10DLC). |
+| Carrier Fees | Fees charged by carriers for outbound SMS and MMS messages sent to users after 10DLC registration. Starting October 1, 2021, carrier fees will be higher on unregistered traffic (standard long codes) than registered traffic (10DLC). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Visit the Twilio 10DLC article to check out updated [fee estimates](https://support.twilio.com/hc/en-us/articles/1260803965530-What-pricing-and-fees-are-associated-with-the-A2P-10DLC-service-).

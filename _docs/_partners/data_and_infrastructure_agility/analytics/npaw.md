@@ -20,7 +20,7 @@ hidden: true
 | --------------|------|-------------|
 | YOUBORA API Key |[YOUBORA Settings](https://youbora.nicepeopleatwork.com/users/login)|An API Key generated on user sign up and can be located under **Settings** |
 | ID |[Braze Settings](https://dashboard.braze.com/sign_in) | YOUBORA gives you the options of whether to link the software to Braze via a ***Braze ID***, an ***external User ID***, or a ***User ID*** |
-| Endpoint |[Braze Settings](https://dashboard.braze.com/sign_in)| A fully customizable URL endpoint configurable through your **Braze Dashboard** |
+| Endpoint |[Braze Settings](https://dashboard.braze.com/sign_in)| A fully customizable URL endpoint configurable through your Braze dashboard. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 # Analytics integration
@@ -42,7 +42,7 @@ Fill in the details with the appropriate information gathered from the perquisit
 * **Connector Name** is an **alphanumeric** string that will be used to refer to this integration in the future. This value can be set to anything you like as long as it contains **only** letters and numbers.
 * **User ID** is the ID previously chosen to link your YOUBORA software with your Braze account. For example, if you choose to perform the link via your **Braze ID**, select **Braze ID** from the dropdown to assign the value to the proper field.
 * **API Key** is your YOUBORA tools suite API Key found previously within the **API** section under **Settings** .
-* **Endpoint** is the customizable URL endpoint previously setup within your **Braze Dashboard**.
+* **Endpoint** is the customizable URL endpoint previously setup within your Braze dashboard.
 
 Once all the fields have been filled out, simply click on the **Connect** button to establish a connection and save the changes made.
 
@@ -54,4 +54,4 @@ After creating a sample within the **Sample Manger**, you will now be able to cl
 
 ![NPAW sample manager]({% image_buster /assets/img/npaw_sample_manager.png %})
 
-Now, once you send your users to Braze, you can take action and focus campaigns on user segments to re-engage inactive users, contact your most loyal users or any action on any user segment!
+Now, after you send your users to Braze, you can take action and focus campaigns on user segments to re-engage inactive users, contact your most loyal users or any action on any user segment!

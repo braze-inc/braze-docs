@@ -38,21 +38,22 @@ For information on how to obtain a SCIM token, visit [Automated user provisionin
 
 ## Request parameters
 
-There is no request body for this endpoint.
+```json
+Content-Type: application/json
+X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
+Authorization: Bearer YOUR-REST-API-KEY
+```
 
 ## Example request
 ```json
 curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
---header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 ```
 
 ## Response
 ```json
-Content-Type: application/json
-X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 {
     "schemas": ["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
     "totalResults": 1,
@@ -71,7 +72,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25789fabcded",
-                        "appGroupName": "Test workspace",
+                        "appGroupName": "Test Workspace",
                         "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                         "team": [
                             {

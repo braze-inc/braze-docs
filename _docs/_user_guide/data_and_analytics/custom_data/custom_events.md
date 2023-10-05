@@ -81,7 +81,11 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
 
-![Custom event counts graph on the Custom Events page in the dashboard showing trends for two different custom events][8]
+![Custom event counts graph on the Custom Events page in the dashboard showing trends for a custom event][8]
+
+You can also use **Filters** to breakdown your custom events by hour, monthly average users (MAU), segments, or KPI formulas. 
+
+![Custom event graph filters][9]{: style="max-width:40%;"}
 
 {% alert tip %}
 [Incrementing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time series. User actions that do not need to be analyzed in time series should be recorded using this method.
@@ -151,7 +155,7 @@ If the user has no internet connection, triggered in-app messages with templated
 
 #### Segmentation
 
-If you'd like to create segments based on event property recency and frequency, reach out to your customer success manager to enable segmentation for specific custom event properties. Once enabled, you can access additional filtering options when segmenting, such as:
+If you'd like to create segments based on event property recency and frequency, reach out to your customer success manager to enable segmentation for specific custom event properties. When enabled, you can access additional filtering options when segmenting, such as:
 
 - Has done custom event with property A with value B, X times in the last Y days
 - Has made any purchases with property A with value B, X times in the last Y days
@@ -240,7 +244,7 @@ After generating a schema, you'll be able to reference the nested data during [s
 {% tabs %}
 {% tab Music Example %}
 
-The following is a `/users/track` example with a "Created Playlist" custom event. Once a playlist has been created, to capture the properties of the playlist, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
+The following is a `/users/track` example with a "Created Playlist" custom event. After a playlist has been created, to capture the properties of the playlist, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
 
 ```
 ...
@@ -269,7 +273,7 @@ The following is a `/users/track` example with a "Created Playlist" custom event
 {% endtab %}
 {% tab Restaurant Example%}
 
-The following is a `/users/track` example with an "Ordered" custom event. Once an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
+The following is a `/users/track` example with an "Ordered" custom event. After an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
 
 ```
 ...
@@ -340,13 +344,13 @@ Triggering a campaign with nested properties from the "Ordered" event:
 
 ##### Segmentation
 
-Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Once you've generated a schema, the nested objects explorer will display in the segmentation section. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)). 
+Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. After you've generated a schema, the nested objects explorer will display in the segmentation section. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)). 
 
 ![][4]
 
 ##### Personalization
 
-Using the **Add Personalization** modal, select **Advanced Event Properties** as the personalization type. This allows the option to add a nested event properties once a schema has been generated.
+Using the **Add Personalization** modal, select **Advanced Event Properties** as the personalization type. This allows the option to add a nested event properties after a schema has been generated.
 
 ![][5]{: style="max-width:70%;"}
 
@@ -361,7 +365,7 @@ These segmentation filters include:
 - Has made any purchases with property Y with value V X times in the last Y days.
 - Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
 
-Event properties with custom events are updated in real time for any segment that uses them. You can manage properties under **Manage Settings > Custom Events > Mangage Properties**. Custom event properties used in certain segment filters have a maximum look back history of 30 days. Reach out to your Braze customer success manager to discuss using event property segmentation for your custom events.
+Event properties with custom events are updated in real time for any segment that uses them. You can manage properties from the **Data Settings** > **Custom Events** page by clicking **Manage Properties** for your custom event. Custom event properties used in certain segment filters have a maximum look back history of 30 days. Reach out to your Braze customer success manager to discuss using event property segmentation for your custom events.
 
 #### Frequently asked questions
 
@@ -392,6 +396,7 @@ Contact your Braze customer success manager for recommendations on the best appr
 [5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
 [6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
+[9]: {% image_buster /assets/img/custom_events_report_filters.png %}
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
 [19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/

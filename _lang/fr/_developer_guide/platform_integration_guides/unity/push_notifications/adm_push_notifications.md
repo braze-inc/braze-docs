@@ -52,7 +52,7 @@ Si votre application n’a pas de `AndroidManifest.xml`, vous pouvez utiliser ce
                android:label="@string/app_name">
 
     <!-- Calls the necessary Braze methods to ensure that analytics are collected and that push notifications are properly forwarded to the Unity application. -->
-    <activity android:name="com.appboy.unity.AppboyUnityPlayerActivity" 
+    <activity android:name="com.braze.unity.BrazeUnityPlayerActivity" 
       android:label="@string/app_name" 
       android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" 
       android:screenOrientation="sensor">
@@ -64,14 +64,6 @@ Si votre application n’a pas de `AndroidManifest.xml`, vous pouvez utiliser ce
       </intent-filter>
     </activity>
 
-    <!-- BroadcastReceiver used to forward certain Braze push notification events to Unity -->
-    <receiver android:name="com.appboy.unity.AppboyUnityPushBroadcastReceiver" android:exported="false" >
-      <intent-filter>
-        <action android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_RECEIVED" />
-        <action android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_NOTIFICATION_OPENED" />
-        <action android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_DELETED" />
-      </intent-filter>
-    </receiver>
     <receiver android:name="com.braze.push.BrazeAmazonDeviceMessagingReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
       <intent-filter>
           <action android:name="com.amazon.device.messaging.intent.RECEIVE" />

@@ -26,11 +26,11 @@ Go to **Data Settings** > **Promotion Codes** and click **Create Promotion Code 
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Promotion Codes** under **Integrations**.
 {% endalert %}
 
-You can use the Voucherify campaign name to name the list and ensure data consistency.
+You can use the Voucherify campaign name to name the list and check data consistency.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_code_list.png %}){: style="max-width:50%;"}
 
-Next, add the code snippet that refers to the codes from the list; it will be populated with a unique code once the message is sent.
+Next, add the code snippet that refers to the codes from the list; it will be populated with a unique code when the message is sent.
 
 ### Additional settings
 

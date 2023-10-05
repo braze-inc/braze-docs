@@ -18,7 +18,7 @@ The Braze and Wyng integration allows you to leverage zero-party data earned via
 | Requirement | Description |
 | ----------- | ----------- |
 | Wyng account | A Wyng account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key** |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -41,7 +41,7 @@ To subscribe users to subscription groups, click **Add Subscription** and add yo
 Click **Add custom property** to add attribute and event object pairs to send to the `/users/track` endpoint. Use this to add hardcoded attribute values for each data transaction sent for the integration. To add multiple properties, click the **Add custom property** button again.<br>![An image prompting you to add attribute custom properties.][9]{: style="max-width:80%;"}<br><br>
 - **Send custom event**<br>
 Optionally, you can enable **Sending custom event**. If enabled, you should include the event name and corresponding app ID.<br>![An image prompting you to send custom events, if needed.][10]{: style="max-width:80%;"}<br><br>
-4. Lastly, you must map Wyng fields to Braze API fields based on your use case. Click **Select a field** to choose fields to map, and afterwards, **Save** your integration. Once saved, these mapped fields can be found under **Integrations > Manage**.
+4. Lastly, you must map Wyng fields to Braze API fields based on your use case. Click **Select a field** to choose fields to map, and afterwards, **Save** your integration. When saved, these mapped fields can be found under **Integrations > Manage**.
 ![An example of the different Wyng fields you can map to certain Braze fields.][11]{: style="max-width:80%;"}
 ![A list of available sync fields.][12]{: style="max-width:80%;margin-top:2px"}
 

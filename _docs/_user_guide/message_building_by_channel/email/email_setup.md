@@ -6,7 +6,7 @@ page_order: 1
 guide_top_header: "Email Setup"
 guide_top_text: "Braze can help you start sending email campaigns. Either follow our guides or check out our <a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Email Onboarding</a> Braze Learning course."
 page_type: landing
-description: "This landing page includes resources on getting started with email campaigns including setting up your IPS and domains, IP warming, email validation, and more."
+description: "This landing page includes resources on getting started with email campaigns including setting up your IPs and domains, IP warming, email validation, and more."
 channel: email
 
 guide_featured_title: "Section Articles"
@@ -44,9 +44,9 @@ Before you start sending emails, there are some things you need. Refer to the fo
 | Requirement | Description | Source |
 |---|---|---|
 | A Dedicated IP (Internet Protocol)| A dedicated IP is a unique internet address provided exclusively to a single hosting account. | Braze gives its customers dedicated IPs, to ensure control of your email sender reputation. Braze onboarding will set this up for you.|
-| Whitelabeled Domains | These consist of a domain and a subdomain. Whitelabeling ensures you pass email authentication checks for DKIM and SPF. | The Braze Onboarding team will generate these domains for you, but you must choose their names. |
+| Whitelabeled Domains | These consist of a domain and a subdomain. By using whitelabeling, you can pass email authentication checks for DKIM and SPF. | The Braze Onboarding team will generate these domains for you, but you must choose their names. |
 | Subdomains | This is a subdivision of a domain (i.e., "@news.company.com") within your email address. Having a subdomain will prevent any errors that could damage your company's official email reputation. | The Onboarding team will generate this for you, but you must decide the name of the subdomain. You cannot use subdomains that are currently being used outside of Braze. |
-| IP Pools | These are an optional configuration used to separate out the reputation of different types of email (i.e., "promotional" and "transactional") to prevent the reputation of one from impacting the other and ensure higher deliverability. | The Onboarding team will set up the pools for you. Then, when composing your email, select your email's IP pool from the **IP Pool** dropdown on the **Target Users** page.|
+| IP Pools | These are an optional configuration used to separate out the reputation of different types of email (i.e., "promotional" and "transactional") to prevent the reputation of one from impacting the other and support higher deliverability. | The Onboarding team will set up the pools for you. Then, when composing your email, select your email's IP pool from the **IP Pool** dropdown on the **Target Users** page.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## IP warming
@@ -59,6 +59,6 @@ IP warming is the **most important step** in the email setup process. Though it 
 
 By starting with smaller volumes of email, you are establishing a level of trust with your email provider, showing you are only sending emails to relevant users. By sending your first batch of emails to your most engaged users, this can help you gain trust faster with your provider.
 
-After you're done warming up your IP, you can [start creating and sending emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
+After you're done warming up your IP, you can [start creating and sending emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)!
 
 <br><br>

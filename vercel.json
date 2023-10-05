@@ -2,26 +2,12 @@
 	"trailingSlash": false,
 	"rewrites": [
 		{
-			"source": "/:path*",
-			"has": [
-				{
-					"type": "header",
-					"key": "User-Agent",
-					"value": ".*Bytespider.*"
-				}
-			],
-			"destination": "/docs/blank.html"
+			"source": "/docs/en/:path*",
+			"destination": "/:path*"
 		},
 		{
-			"source": "/assets/(.*)",
-			"has": [
-				{
-					"type": "header",
-					"key": "User-Agent",
-					"value": ".*Bytespider.*"
-				}
-			],
-			"destination": "/docs/blank.html"
+			"source": "/docs/ko/:path*",
+			"destination": "/:path*"
 		},
 		{
 			"source": "/docs/:path*",
@@ -30,6 +16,12 @@
 		{
 			"source": "/api/(.*)",
 			"destination": "/api/404.html"
+		}
+	],
+	"redirects": [
+		{
+			"source": "/docs/ja/:path*",
+			"destination": "/docs/:path*?wovn=ja"
 		}
 	],
 	"github": {

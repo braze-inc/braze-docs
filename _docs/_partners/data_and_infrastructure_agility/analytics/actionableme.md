@@ -20,7 +20,7 @@ The Braze and actionable.me integration allows you to deploy a service to monito
 | Requirement | Description |
 | --- | --- |
 | actionable.me account | An actionable.me account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with the permissions listed in the next section.<br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with the permissions listed in the next section.<br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -55,7 +55,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can cr
 
 ### Step 2: Provide information to the actionable.me team
 
-To complete the integration, you must provide your REST API key and [REST endpoint URL][1] to your actionable.me operations team. actionable.me will then establish the connection and reach out to you once the setup is complete and be in touch to start sharing insights.
+To complete the integration, you must provide your REST API key and [REST endpoint URL][1] to your actionable.me operations team. actionable.me will then establish the connection and reach out to you after the setup is complete and be in touch to start sharing insights.
 
 ![The actionable.me "add platform" page that the actionable.me operations team will configure.][5]
 

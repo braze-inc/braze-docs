@@ -8,7 +8,7 @@ description: "This article provides an overview of Intelligent Timing (previousl
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Timing
 
-> Use Intelligent Timing to deliver your message to each user when Braze determines that user is most likely to engage (open or click), referred to as their optimal send time. This makes it easier for you to ensure that you're messaging your users at their preferred time, which can lead to higher engagement.
+> Use Intelligent Timing to deliver your message to each user when Braze determines that user is most likely to engage (open or click), referred to as their optimal send time. This makes it easier for you to check that you're messaging your users at their preferred time, which can lead to higher engagement.
 
 ## Use cases
 
@@ -152,7 +152,7 @@ In the original Canvas workflow, Intelligent Timing is set in the delay section 
 
 #### Launching the Canvas
 
-Unlike with campaigns, you don't need to worry about launching your Canvas 48 hours before the send date. This is because Intelligent Timing is set on the step level, not the Canvas level. Instead, we recommend that there is at least a 48 hour delay between the user entering the Canvas and receiving the step where Intelligent Timing is used.
+Unlike with campaigns, you don't need to worry about launching your Canvas 48 hours before the send date. This is because Intelligent Timing is set on the step level, not the Canvas level. Instead, we recommend that there is at least a 48-hour delay between the user entering the Canvas and receiving the step where Intelligent Timing is used.
 
 ### Fallback time {#fallback-time}
 
@@ -174,15 +174,16 @@ It's important to be aware of the limitations of using Intelligent Timing early 
 
 #### Custom fallback time
 
-Use custom fallback time to choose a different time to send the message. Similar to the most popular app time, the message will send at the fallback time in the user's local time zone. If the user's local time zone is unknown, it will send in your company time zone.
+Use the custom fallback time to choose a different time to send the message. Similar to the most popular app time, the message will send at the fallback time in the user's local time zone. If the user's local time zone is unknown, it will send in your company time zone.
 
-For campaigns with a custom fallback time is specified, if you launch the campaign within 24 hours of the send date, users whose optimal times have already passed will receive the campaign at the custom fallback time. If the custom fallback time has already passed in their time zone, the message will send immediately.
+For campaigns with a custom fallback time specified, if you launch the campaign within 24 hours of the send date, users whose optimal times have already passed will receive the campaign at the custom fallback time. If the custom fallback time has already passed in their time zone, the message will send immediately.
 
 ## Limitations
 
+- In-app messages, Content Cards, and webhooks are delivered immediately and not given optimal times.
 - Intelligent Timing is not available for action-based or API-triggered campaigns.
 - Intelligent Timing should not be used in the following scenarios:
-    - **Quiet hours:** Using both quiet hours and Intelligent Timing is counterproductive, as quiet hours are based on a top-down assumption about user behavior, such as not messaging someone in the middle of the night, whereas Intelligent Timing is based on user activity. Maybe Sam checks her app notifications at 3 am a lot. We don't judge.
+    - **Quiet hours:** Using both Quiet Hours and Intelligent Timing is counterproductive, as Quiet Hours are based on a top-down assumption about user behavior, such as not messaging someone in the middle of the night, whereas Intelligent Timing is based on user activity. Maybe Sam checks her app notifications at 3 am a lot. We don't judge.
     - **Rate limiting:** If both rate limiting and Intelligent Timing are used, there is no guarantee about when the message will be delivered. Daily recurring campaigns with Intelligent Timing do not accurately support a total message send cap.
     - **IP warming campaigns:** Some Intelligent Timing behaviors can cause difficulties in hitting daily volumes that are needed when you are first warming up your IP. This is because Intelligent Timing evaluates segments twice—once when the campaign or Canvas is first created, and again before sending to users to verify that they should still be in that segment. This can cause segments to shift and change, often leading to some users falling out of the segment on the second evaluation. These users don't get replaced, impacting how close to the maximum user cap you can achieve.
 

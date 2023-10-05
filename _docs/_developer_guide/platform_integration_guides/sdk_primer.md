@@ -1,7 +1,7 @@
 ---
 nav_title: SDK Overview for Developers
 article_title: SDK Overview for Developers
-description: "This onboarding reference article provides a technical overview for developers of the Braze SDK."
+description: "This onboarding reference article provides a technical overview for developers of the Braze SDK. It discusses default analytics tracked by the SDK, blocking automatic data collection, and the live SDK version of your app."
 page_order: 0
 ---
 
@@ -29,71 +29,13 @@ The Braze SDK is designed to be very well-behaved, and not interfere with other 
 
 ## Default analytics and session handling
 
-Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and end, all other automatically tracked data does not count toward your data point allotment.
+Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and session end, all other automatically tracked data does not count toward your data point allotment.
 
 {% alert note %}
 All of our features are configurable, but it's a good idea to fully implement the default data collection model.
 
-<br>If necessary for your use case, you can [limit the collection of certain data](#blocking-data-collection) once the integration is complete. 
+<br>If necessary for your use case, you can [limit the collection of certain data](#blocking-data-collection) after the integration is complete. 
 {% endalert %}
-
-### Device properties
-
-{% tabs %}
-{% tab Web SDK %}
-
-These properties are collected by the Web SDK upon proper integration.
-
-| Name | Description  |
-|---|---|
-| BROWSER | The name of the browser.  |
-| BROWSER_VERSION | The version of the browser. |
-| OS | The name of the operating system.  |
-| RESOLUTION | The screen resolution of the device. The format of this value is "`<width>`x`<height>`".  |
-| LANGUAGE | The language the browser is set to use.  |
-| TIME_ZONE | The time zone of the device.  |
-| USER_AGENT | The user agent string of the browser. <br> See the [Mozilla developer docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) for more information. |
-{: .reset-td-br-1 .reset-td-br-2}
-
- {% endtab %}
- {% tab Android SDK %}
-
-These properties are collected by the Android SDK upon proper integration.
-
-| Name | Description |
-|---|---|
-| ANDROID_VERSION <br> `os_version` | The version of the Android OS installed on the device. |
-| CARRIER | The mobile carrier. |
-| MODEL | The specific hardware of the device. | 
-| RESOLUTION | The screen resolution of the device. The format of this value is "`<width>`x`<height>`". |
-| LOCALE | The default locale of the device. The format of this value is "`<language>`_`<COUNTRY>`" (e.g., "en_US"). |
-| TIMEZONE <br> `time_zone` | The device time zone. |
-| NOTIFICATIONS_ENABLED <br> `remote_notification_enabled` | Whether this app has notifications enabled.|
-{: .reset-td-br-1 .reset-td-br-2}
-
-{% endtab %}
-{% tab Swift SDK %}
-
-These properties are collected by the Swift SDK upon proper integration.
-
-| Name | Description |
-|---|---|
-| Device Resolution <br> `resolution`| The screen resolution of the device. The format of this value is "`<width>`x`<height>`". |  
-| Device Carrier <br> `carrier`| The reported mobile carrier (see note on the [`CTCarrier` deprecation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier)). |
-| Device Locale <br> `locale`| The default locale of the device. |
-| Device Model <br> `model`| The specific hardware of the device.
-| Device OS Version <br> `osVersion` | The version of the iOS OS installed on the device. |
-| Device IDFV <br> `idfv`| Device identifier for vendors. IDFV collection is now optional on our [Swift SDK v5.7.0+](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).|
-| Device IDFA <br> `idfa`| Device identifier for advertisers (if supplied). |
-| Device Push Enabled <br> `notificationEnabled`| Whether this app has push notifications enabled.
-| Device Timezone <br> `timeZone`| The reported time zone of the device.
-| Device Push Authorization Status <br> `notificationAuthorizationStatus`| Whether this app has push authorization for the device.
-| Device Ad Tracking Enabled <br> `adTrackingEnabled`| Whether this app has Ad Tracking enabled. |
-| Device Push Display Options <br> `notificationDisplayOptions`| Display options to match those available in `UNNotificationSettings`. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-{% endtab %}
-{% endtabs %}
 
 ## Data upload and download
 
@@ -150,5 +92,15 @@ For more usage details, refer to [Storage]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% endtabs %}
 
+## What version of the SDK am I on?
+
+You can use the dashboard to see the SDK version of a particular app by visiting **Settings > App Settings**. The **Live SDK Version** lists the highest Braze SDK version used by your most recent live application for at least 5% of your users.
+
+![An app named Swifty in a workspace. The Live SDK version is 6.6.0.][2]{: style="max-width:80%"} 
+
+{% alert tip %}
+If you have an iOS app, you can confirm that you are using the [Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) instead of the legacy [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview) if your **Live SDK Version** is equal to or higher than 5.0.0, which was the first released version of the Swift SDK.
+{% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/
+[2]: {% image_buster /assets/img/live-sdk-version.png %}

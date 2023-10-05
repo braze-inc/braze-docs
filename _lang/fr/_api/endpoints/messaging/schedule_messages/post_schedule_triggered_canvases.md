@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
   "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
   "schedule": {
-    "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
+    "time": (required, datetime as ISO 8601 string) time to send the message,
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   }

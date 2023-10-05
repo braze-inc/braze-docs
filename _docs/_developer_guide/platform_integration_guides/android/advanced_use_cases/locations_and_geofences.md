@@ -57,7 +57,7 @@ Add the Braze boot receiver to the `application` element of your `AndroidManifes
 
 ## Step 3: Enable Braze location collection
 
-If you have not yet enabled Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`:
+If you have not yet enabled Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and confirm its value is set to `true`:
 
 ```xml
 <bool name="com_braze_enable_location_collection">true</bool>
@@ -233,7 +233,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
 Android only allows up to 100 geofences to be stored for a given app. Braze's locations product will use up to 20 geofence slots if available. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard.
 
-For Braze's locations product to work correctly, you should also ensure that your app is not using all available geofence spots.
+For Braze's locations product to work correctly, you should also confirm that your app is not using all available geofence spots.
 
 ### Enable geofences from the locations page
 

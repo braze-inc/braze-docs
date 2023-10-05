@@ -3,6 +3,7 @@ nav_title: Editor Blocks
 article_title: "In-App Message Editor Blocks"
 description: "This reference article describes the editor blocks available in the drag-and-drop editor for in-app messages."
 alias: "/editor_blocks_dnd_iam/"
+page_order: 5
 ---
 
 # In-app message editor blocks
@@ -22,6 +23,7 @@ The following table describes how you can use each editor block type.
 | Image | Inserts an image from the Media Library |
 | Button | Adds a standard button. Properties for this block allow for editing, setting links, and logging analytics. |
 | Spacer | Adds space or padding between other blocks. |
+| Custom Code | Inserts raw HTML, CSS, and JS. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Properties
@@ -68,6 +70,11 @@ Details for each editor block's properties are provided in the following tables.
 | Height | Modifies the height of the spacer. You can also modify this by using the resize handles on the spacer. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+### Custom Code
 
+| Name | Description |
+| --- | --- |
+| Custom Code | Enter the raw HTML, CSS, and JS. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 

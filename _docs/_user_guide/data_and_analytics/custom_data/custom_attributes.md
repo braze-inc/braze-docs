@@ -84,12 +84,12 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the numeric attribute **is more than** a **number**| **MORE THAN** | **NUMBER** |
-| Check if the numeric attribute **is less than** a **number**| **LESS THAN** | **NUMBER** |
 | Check if the numeric attribute **is exactly** a **number**| **EXACTLY** | **NUMBER** |
 | Check if the numeric attribute **does not equal** a **number**| **DOES NOT EQUAL** | **NUMBER** |
-| Check if the numeric attribute **exists** on a user's profile | **EXISTS** | **N/A** |
-| Check if the numeric attribute **does not exist** on a user's profile | **DOES NOT EXIST** | **N/A** |
+| Check if the numeric attribute **is more than** a **number**| **MORE THAN** | **NUMBER** |
+| Check if the numeric attribute **is less than** a **number**| **LESS THAN** | **NUMBER** |
+| Check if the numeric attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
+| Check if the numeric attribute **does not exist** on a user's profile | **IS BLANK** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Number attribute details
@@ -134,14 +134,14 @@ More resources on regular expressions:
 
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
-By default, the max length of an array for an attribute is set to 25, and can be increased to 100 for an individual array. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 100, when a user watches a 101th movie, the first movie will be removed from the array and the most recent movie will be added.
+By default, the maximum length of an array for an attribute is set to 25, and can be increased to 100 for an individual array. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 100, when a user watches a 101th movie, the first movie will be removed from the array and the most recent movie will be added.
 
 If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays to over 100 from the **Custom Attributes** tab of the **Manage Settings** page.
 
 Note that If you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
 
 {% alert note %}
-The option to increase the max length will not be available if the attribute is set to automatically detect the data type; the data type must be set to array.
+The option to increase the maximum length will not be available if the attribute is set to automatically detect the data type; the data type must be set to array.
 {% endalert %}
 
 | Segmentation Options | Dropdown Filter | Input Options |

@@ -70,7 +70,7 @@ Push notifications can respond to user actions inside a content extension. For u
 
 #### Dashboard configuration
 
-To set up a custom view in the dashboard, within the notification button settings enter the specific category you would like to display. Next, in the `.plist` of your Notification Content Extension, you must also set the custom category to the `UNNotificationExtensionCategory` attribute. The value given here must match what is set in the Braze dashboard. Lastly, to enable user interactions in a push notification, set the `UNNotificationExtensionInteractionEnabled` key to true.
+To set up a custom view in the dashboard, within the notification button settings enter the specific category you want to display. Next, in the `.plist` of your Notification Content Extension, you must also set the custom category to the `UNNotificationExtensionCategory` attribute. The value given here must match what is set in the Braze dashboard. Lastly, to enable user interactions in a push notification, set the `UNNotificationExtensionInteractionEnabled` key to true.
 
 ![][3]{: style="float:right;max-width:45%;"}
 
@@ -89,7 +89,7 @@ Push notifications can display user-specific information inside a content extens
 
 #### Dashboard configuration
 
-To set up a personalized push in the dashboard, you must register the specific category you would like to be displayed, and then within the key-value pairs using standard Liquid, set the appropriate user attributes you would like the message to show. These views can be personalized based on specific user attributes of a specific user profile.
+To set up a personalized push in the dashboard, you must register the specific category you want to be displayed, and then within the key-value pairs using standard Liquid, set the appropriate user attributes you want the message to show. These views can be personalized based on specific user attributes of a specific user profile.
 
 ![Four sets of key-value pairs, where "next_session_name" and "next_session_complete_date" are set as an API trigger property using Liquid, and "completed_session count" and "total_session_count" are set as a custom user attribute using Liquid.][5]{: style="max-width:60%;"}
 

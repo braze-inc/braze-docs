@@ -18,7 +18,7 @@ A new email metric, [Machine Opens]({{site.baseurl}}/user_guide/message_building
 A variable `random_bucket_number` has been added to the list of [supported Liquid variables]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags) for message personalization. 
 
 ## iOS 15 rich push notification guidelines
-New [iOS push notification guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) have been added to the iOS rich docs, including info about notification states and a breakdown of text truncation variables.
+New [iOS push notification guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) have been added to the iOS rich docs, including information about notification states and a breakdown of text truncation variables.
 
 ## IPs to whitelist in EU for webhooks and Connected Content
 Additional IPs to whitelist in EU for webhooks and Connected Content have been added to our [webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) and [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) article. These new IPs include `18.157.135.97`, `3.123.166.46`, `3.64.27.36`, `3.65.88.25`, `3.68.144.188`, and `3.70.107.88`.

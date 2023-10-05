@@ -26,15 +26,21 @@ Braze offers several default in-app message types, each customizable with messag
 - [`Slideup`][91]
 - [`Modal`][90]
 - [`Full`][93]
-- [`HTML Full`][92]
+- [`HTML`][92]
 
 It is also possible to define your own [custom in-app message view][12].
 
 All in-app messages implement the [`IInAppMessage`][3] interface, which defines all in-app messages' basic behavior and traits. [`InAppMessageBase`][27] is an abstract class that implements `IInAppMessage` and provides the foundational in-app message implementation. All in-app message classes are subclasses of `InAppMessageBase`.
 
-In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageImmersive`][8], which adds click-action and analytics enabled [buttons][50], as well as header text and a close button. [`InAppMessageImmersiveBase`][28] is an abstract class that implements `IInAppMessageImmersive` and provides the foundational `immersive` in-app message implementation. `Modal` and `Full` in-app messages are subclasses of `InAppMessageImmersiveBase`.
+In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageImmersive`][8], which adds click action and analytics enabled [buttons][50], as well as header text and a close button.
 
-HTML full in-app messages are [`InAppMessageHtmlFull`][51] instances, which implement [`IInAppMessageHtml`][52], another subclass of `IInAppMessage`.
+{% alert important %}
+For in-app messages containing buttons, the message `clickAction` will also be included in the final payload if the click action is added prior to adding the button text.
+{% endalert %}
+
+[`InAppMessageImmersiveBase`][28] is an abstract class that implements `IInAppMessageImmersive` and provides the foundational `immersive` in-app message implementation. `Modal` in-app messages are a subclass of `InAppMessageImmersiveBase`.
+
+HTML in-app messages are [`InAppMessageHtml`][92] instances, which implement [`IInAppMessageHtml`][52], another subclass of `IInAppMessage`.
 
 ### Expected behaviors by message type
 
@@ -60,7 +66,7 @@ These are what it looks like for your users to open one of our default in-app me
 
 {% endtab %}
 {% tab Custom HTML %}
-[`HTML Full`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html-full/index.html) in-app messages are useful for creating fully customized user content. User-defined HTML full in-app message content is displayed in a `WebView` and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our <a href="{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/">best practices</a> for more details.
+[`HTML`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html/index.html) in-app messages are useful for creating fully customized user content. User-defined HTML in-app message content is displayed in a `WebView` and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our <a href="{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/">best practices</a> for more details.
 
 ![An HTML in-app message with the a carousel of content and interactive buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
@@ -229,5 +235,5 @@ class MyApplication : Application() {
 [84]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [90]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-modal/index.html
 [91]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html
-[92]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html-full/index.html
+[92]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html/index.html
 [93]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-full/index.html

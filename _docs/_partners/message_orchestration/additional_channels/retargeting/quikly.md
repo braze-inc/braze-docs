@@ -19,7 +19,7 @@ The Braze and Quikly partnership allows you to accelerate conversions on events 
 | Requirement | Description |
 | ----------- | ----------- |
 | Quikly account | A [Quikly][1] brand partner account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
 | Quikly API key | (Optional) A Quikly API key provided by your client success manager (webhook only) |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -86,7 +86,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Quikly activations can collect mobile phone numbers directly from customers and initiate a new SMS subscription. To enable this integration, provide your Quikly client success manager with the `subscription_group_id`. You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
 
-Quikly will perform a subscription lookup using the customer's phone number and automatically credit them in the activation if an SMS subscription already exists. Otherwise, a new subscription will be initiated, and once the subscription status is verified, the customer will be credited.
+Quikly will perform a subscription lookup using the customer's phone number and automatically credit them in the activation if an SMS subscription already exists. Otherwise, a new subscription will be initiated, and after the subscription status is verified, the customer will be credited.
 
 Here is the complete workflow when a customer provides their mobile number and consent via Quikly:
 1. Quikly performs a subscription lookup using the [subscription group status]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) to see if a given `phone` is subscribed to a `subscription_group_id`. If a subscription exists, credit the user in the Quikly activation. No further action is necessary.

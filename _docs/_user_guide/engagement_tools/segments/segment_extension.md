@@ -12,9 +12,9 @@ tool: Segments
 
 > Braze segmentation allows you to target users based on custom event or purchase behavior stored for the lifetime of that user profile. Examples include finding users who have or not have performed a particular custom event since a specific time, or segmenting users based on which products they have ever purchased or how much money they have spent with your service.
 
-Segment Extensions are audience definitions which allow you to use nested event properties or create windowed aggregations of custom event and purchase event properties in the past 2 years (730 days). By means of example, Braze segmentation allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of a specific product at least twice in the past 2 years. When creating a Segment Extension, you can also specify that the audience be static or regenerated daily.
+Segment Extensions are audience definitions which allow you to use nested event properties or create windowed aggregations of custom event and purchase event properties in the past 2 years (730 days). For example, Braze segmentation allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of a specific product at least twice in the past 2 years. When creating a Segment Extension, you can also specify that the audience be static or regenerated daily.
 
-The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
+The use of nested event properties for [action-based delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
 
 {% alert important %}
 There is a default allotment of 25 active Segment Extensions per workspace at a particular time. If you need to increase this limit, contact your Braze customer success manager to discuss your use case.
@@ -38,13 +38,19 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 ## Step 3: Choose your criteria
 
-Select between purchase, message engagement, or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days (2 years). Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**.
+Select between purchase, message engagement, or custom event criteria for targeting. After you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and the time period—for Segment Extensions specifically, you can go back up to the past 730 days (2 years).
+
+Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range (i.e., past X days), a start date, an end date, or an exact date range (date A to date B).
 
 ![][3]
 
 ### Event property segmentation
 
 To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects.
+
+For string properties, you can enter in multiple values at once. In the example below, this filter looks for users with a status equal to any of the following: gold, silver, or bronze.
+
+![Segmenting based on string properties.][13.5]
 
 ![Segmenting based on numeric properties.][13]
 
@@ -101,7 +107,7 @@ To view the extension criteria, click **View Extension Details** to show the det
 Now you can proceed as usual with [creating your segment][11].
 
 [2]: {% image_buster /assets/img/segment/segment_extension2.png %}
-[3]: {% image_buster /assets/img/segment/segment_extension3.png %}
+[3]: {% image_buster /assets/img/segment/segment_extension1.png %}
 [5]: {% image_buster /assets/img/segment/segment_extension5.png %}
 [6]: {% image_buster /assets/img/segment/segment_extension7.png %}
 [7]: {% image_buster /assets/img/segment/segment_extension6.png %}
@@ -110,9 +116,10 @@ Now you can proceed as usual with [creating your segment][11].
 [11]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 [12]: {% image_buster /assets/img/segment/property1.png %}
 [13]: {% image_buster /assets/img/segment/property2.png %}
+[13.5]: {% image_buster /assets/img/segment/property5.png %}
 [14]: {% image_buster /assets/img/segment/property3.png %}
 [15]: {% image_buster /assets/img/segment/property4.png %}
 [16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
 [17]: {% image_buster /assets/img/segment/segment_extension9.png %}
 [18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/

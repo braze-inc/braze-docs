@@ -4,12 +4,12 @@ article_title: Targeting Users
 page_order: 4
 tool: Campaigns
 page_type: reference
-description: "This reference article covers the Targeting options found in the targeting users step of campaign creation."
+description: "This reference article covers the Targeting Options found in the Target Audiences step of campaign creation."
 ---
 
 # Targeting users
 
-> Once you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Users** step. 
+> After you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Audiences** step. 
 
 ## Targeting options
 
@@ -39,11 +39,15 @@ To target users without adding a segment, you can use a series of filters. This 
 
 ![][26]
 
+## Targeting Seed Groups
+
+For email campaigns, you can target Seed Groups under the **Seed Groups** section. Note that Seed Groups aren't available for API campaigns, although you can include Seed Groups via an API-triggered entry in a campaign. For more information, see [Seed Groups]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#seed-groups).
+
 ## Testing your audience
 
 After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the audience criteria.
 
-![]({% image_buster /assets/img_archive/user_lookup.png %})
+![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
 
 ## Audience summary
 

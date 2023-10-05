@@ -177,6 +177,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Wyng
   url: /docs/partners/message_personalization/dynamic_content/wyng/
+- name: OfferFit
+  url: /docs/partners/message_personalization/dynamic_content/offerfit/
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Personalize.AI
@@ -265,5 +267,12 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/tangerine/
 - name: Stylitics
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
-  
+- name: Redpoint
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/redpoint/  
+- name: Simon Data
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata/
+- name: Ketch
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/ketch/
+- name: Antavo
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/  
 ---

@@ -79,7 +79,6 @@ In this case, relatively few users are currently signed up for the newsletter, b
 [3]: {% image_buster /assets/img_archive/Segment_Segment_Insights.png %}
 [5]: {% image_buster /assets/img_archive/Segment_Language_Insights.png %}
 [7]: {% image_buster /assets/img_archive/Segment_Insights_Events1.png %}
-[8]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
 [9]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
 [10]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
 [11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#creating-tests

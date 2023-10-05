@@ -1,5 +1,5 @@
 ---
-nav_title: Time-Based Functionalities for Canvas
+nav_title: Time-Based Functionalities
 article_title: Time-Based Functionalities for Canvas
 page_order: 1
 tools: Canvas
@@ -61,7 +61,7 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 
 | Definition | Time Zone |
 | ---------- | ----- |
-| [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) calculates the optimal send time based on a statistical analysis of your user's past interactions with your messaging (on a per channel basis) and app. | If you select **a specific time** as your [fallback]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
+| [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) calculates the optimal send time based on a statistical analysis of your user's past interactions with your messaging (on a per channel basis) and app. | If you select **a specific time** as your [fallback]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][5]
@@ -76,6 +76,11 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 [Frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping) is based on calendar days, not a 24-hour period. This means that you could set up a frequency capping rule of sending no more than one campaign a day, but if a user receives a message at 11 pm in their local time, they can still receive another message an hour later (on midnight the next calendar day).
 
 ![][6]
+
+{% alert note %}
+If you have the proper [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions) to approve Canvases, you'll see a [**Summary** step]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/#using-approvals) in the workflow.
+{% endalert %}
+
 
 [1]: {% image_buster /assets/img_archive/schedule_delay_immediately.png %}
 [2]: {% image_buster /assets/img_archive/schedule_delay_after.png %}

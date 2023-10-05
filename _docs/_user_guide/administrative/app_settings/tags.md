@@ -32,6 +32,10 @@ To filter by a tag, select the tag name from the list of tags or search for the 
 
 ![Searching for all campaigns tagged as Welcome Email][6]
 
+{% alert important %}
+You can add up to 175 tags to a campaign, Canvas, or segment.
+{% endalert %}
+
 ## Best practices {#tags-best-practices}
 
 Tags can be a useful organizational tool for keeping track of engagement tactics. You can link segments and campaigns to business objectives, funnel stages, and the like.

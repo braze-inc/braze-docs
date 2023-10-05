@@ -15,7 +15,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/content_cards/create/
   image: /assets/img/cc_icon.png
 - name: Email Campaign
-  link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
+  link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
   image: /assets/img/email_icon.png
 - name: In-App Message Campaign
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/

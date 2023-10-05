@@ -17,7 +17,7 @@ The following example comprises an email collection use case, but the logic appl
 
 Once a user provides information for you to log, we recommend you verify if the data already exists in your database and create a user alias profile or update the existing user profile, as necessary. 
 
-If an unknown user were to view your site and then, at a later date, create an account or identify themselves via email sign-up, profile merging must be handled carefully. Based on the method in which you merge, alias-only user info or anonymous data may be overwritten.
+If an unknown user were to view your site and then, at a later date, create an account or identify themselves via email sign-up, profile merging must be handled carefully. Based on the method in which you merge, alias-only user information or anonymous data may be overwritten.
 
 ## Capturing user data through a web form
 
@@ -48,6 +48,10 @@ It is not recommended to heavily leverage this endpoint when querying a single u
 
 ![Diagram showing the process to update an alias-only user profile. A user submits their email address and a custom attribute, their zip code, on a marketing landing page. An arrow pointing from the landing page collection to an alias-only user profile shows a Braze API request to the Track user endpoint, with the request body containing the user's alias name, alias label, email, and zip code. The profile has the label "Alias Only user created in Braze" with the attributes from the request body to show the data being reflected on the newly-created profile.][3]{: style="max-width:90%;"}
 
+## Capturing user emails through an email capture form
+
+Using an email capture form, you can prompt users to submit their email address, which will be added to their user profile. For more information on how to set up this form, check out [Email capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/).
+ 
 ## Identifying alias-only users
 
 When identifying users upon account creation, alias-only users can be identified and assigned an external ID through the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) by merging the alias-only user with the known profile. 
@@ -57,7 +61,7 @@ To check if a user is alias-only, [check if the user exists](#step-1-check-if-us
 - If the [`/users/export/id` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) returns an `external_id`, you can call the `/users/identify/` endpoint.
 - If the endpoint returns nothing, a `/users/identify/` call should not be made.
 
-## Capturing user data when alias-only user info is already present
+## Capturing user data when alias-only user information is already present
 
 When a user creates an account or identifies themselves via email sign-up, you can merging the profiles. For a list of fields that can be merged, refer to [Merge updates behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
 
@@ -67,7 +71,7 @@ As your user data grows, you can merge duplicate user profiles from the Braze da
 
 You can also use the [Merge users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) to merge one user profile into another. 
 
-Note that once user profiles are merged, this action cannot be undone.
+Note that after user profiles are merged, this action cannot be undone.
 
 ## Additional resources
 - Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) for additional context.<br>

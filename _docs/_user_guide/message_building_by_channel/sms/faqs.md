@@ -19,7 +19,7 @@ You can include any link in any SMS campaign you would like. However, there are 
 
 - Links may take up much of the 160 character limit for SMS. If you include a link and text, it may result in two SMS messages instead of just one.
 - Companies often use link shorteners to limit the character count impact of a link. However, if sending a shortened link through a long code, carriers may block or deny the message, as they may be suspicious of the link redirect.
-- Using a [short code]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/) would be the most reliable number type for including links.
+- Using a [short code]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/) would be the most reliable number type for including links.
 
 Braze also has its own link-shortening feature that will shorten links and provide click-through analytics automatically. Refer to [Link Shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) for more information.
 
@@ -109,7 +109,7 @@ You might be charged additional message segments if you have Liquid personalizat
 
 The app identifier API key or `app_id` is a parameter associating activity with a specific app in your workspace. It designates which app within the workspace you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your android app, and an `app_id` for your web integration. 
 
-Your `app_id` can be found on the dashboard by navigating to **Developer Console > API Settings > Identification**.
+You can find your `app_id` by navigating to **Settings** > **App Settings** and locating the **Identification** section.
 
 ### How will I be billed for SMS?
 

@@ -12,14 +12,14 @@ search_tag: Airbyte
 
 > [Airbyte](https://airbyte.com/) is an open-source data integration engine that helps you consolidate your data in your data warehouses, lakes, and databases.
 
-The Braze and Airbyte integration allows users to create a data pipeline to collect and analyze Braze data by connecting all of your applications and databases to a central warehouse. Once data has been collected in the central warehouse, data teams can explore Braze data effectively using their preferred business intelligence tools.
+The Braze and Airbyte integration allows users to create a data pipeline to collect and analyze Braze data by connecting all of your applications and databases to a central warehouse. After data has been collected in the central warehouse, data teams can explore Braze data effectively using their preferred business intelligence tools.
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
 | Airbyte Cloud account | An [Airbyte Cloud](https://cloud.airbyte.io/workspaces) account is required to take advantage of this integration. |
-| Braze REST API key | A Braze REST API key with all permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with all permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 

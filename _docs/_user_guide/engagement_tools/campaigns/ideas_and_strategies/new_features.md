@@ -38,7 +38,7 @@ This new filter can replace the legacy "App Version Name" filter which would req
 **Important**
 
 * Android apps have both a human readable [`versionName`][7] and an internal [`versionCode`][9]. The App Version Number filter uses `versionCode` because it is guaranteed to be incremented with each app store release.
-* This can cause confusion when your app's `versionName` and `versionCode` get out of sync, especially since both fields can be viewed from the Braze dashboard. As a best practice, ensure your app's `versionName` and `versionCode` are incremented together.
+* This can cause confusion when your app's `versionName` and `versionCode` get out of sync, especially since both fields can be viewed from the Braze dashboard. As a best practice, check that your app's `versionName` and `versionCode` are incremented together.
 * If you need to filter by the human readable `versionName` field instead (uncommon), use the App Version Name filter.
 
 #### SDK requirements
@@ -50,7 +50,7 @@ For Android, this version number is based on the [Package Long Version Code][9] 
 For iOS, this version number is based on the [Short Version String][8] for the app.
 
 {% alert tip %}
-This filter will populate values once users upgrade their apps to the supported Braze SDK Versions. Until then, the filter won't show any versions when selected.
+This filter will populate values after users upgrade their apps to the supported Braze SDK Versions. Until then, the filter won't show any versions when selected.
 {% endalert %}
 
 #### Example scenarios

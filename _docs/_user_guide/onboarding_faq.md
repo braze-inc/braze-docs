@@ -51,7 +51,7 @@ You can upload and update user profiles via CSV files from **Audience** > **Impo
 If you are using the [older navigation]({{site.baseurl}}/navigation), this is located at **Users** > **User Import**.
 {% endalert %}
 
-Before starting your CSV import, it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Learn more about Braze's [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
+Before starting your CSV import, it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, so that each customer will have a single user profile within Braze across their devices. Learn more about Braze's [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
@@ -104,10 +104,10 @@ If you have identified duplicate users, you will need to clean up those user pro
 1. Export the user profiles using our `/users/export/ids` endpoint.
 2. Identify correct user profile (ultimately, your team will need to decide on the correct information) and either:
     - Merge any fields that are pertinent to the actual profile that you want to keep using the `/user/track` endpoint.
-    - Delete the duplicate, non-useful profile without merging any data using the users/delete endpoint. Once you delete a user profile, **there is no way to retrieve the information**.
+    - Delete the duplicate, non-useful profile without merging any data using the users/delete endpoint. After you delete a user profile, **there is no way to retrieve the information**.
 
 {% alert important %}
-We recommend that you first import the new user profiles with the correct `external_id` and corresponding custom attributes and events. Once user profiles are deleted, they can't be retrieved, so deleting should be the very last step.
+We recommend that you first import the new user profiles with the correct `external_id` and corresponding custom attributes and events. After user profiles are deleted, they can't be retrieved, so deleting should be the very last step.
 {% endalert %}
 
 Some additional things to note:
@@ -131,7 +131,7 @@ To import your CSV file, navigate to the **User Import** page under the Users se
 
 The **Import CSV** panel contains importing directions and a button to begin your import. Click **Select CSV File** and select your file of interest. Then, before clicking **Start Import**, you have the option to let Braze know what to do with this list under "What do you want us to do with the users in this CSV".
 
-Select **Import Users in this CSV and also make it possible to retarget this specific batch of users as a group**, and then select **Automatically generate a segment from the users who are imported from this CSV**. Once you click **Start Import**, Braze will upload your file, check the column headers and the data types of each column, and create a segment.
+Select **Import Users in this CSV and also make it possible to retarget this specific batch of users as a group**, and then select **Automatically generate a segment from the users who are imported from this CSV**. After you click **Start Import**, Braze will upload your file, check the column headers and the data types of each column, and create a segment.
 
 To download a CSV template, refer to [user import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
 
@@ -222,7 +222,7 @@ Finally, after you've created an extension, you can use it as a filter when crea
 Campaigns
 {% endapitags %}
 
-To create a multichannel campaign, go to the **Campaigns** page, select **Create Campaign**, then select **Multichannel Campaign**. Once in a multichannel campaign, select **Add Messaging Channel** from the compose tab to add your desired channels. Click the channel icons that appear to toggle through different messaging composers as you build your campaign copy for the different channels.
+To create a multichannel campaign, go to the **Campaigns** page, select **Create Campaign**, then select **Multichannel Campaign**. When inside a multichannel campaign, select **Add Messaging Channel** from the compose tab to add your desired channels. Click the channel icons that appear to toggle through different messaging composers as you build your campaign copy for the different channels.
 
 {% endapi %}
 {% api %}
@@ -270,7 +270,7 @@ For example, a London-based company sending a campaign at 12 pm will reach users
 Campaigns
 {% endapitags %}
 
-Braze will automatically determine a user's time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company's time zone as their default time zone until they are recognized in your app by the SDK.
+Braze will automatically determine a user's time zone from their device. This is designed to support time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company's time zone as their default time zone until they are recognized in your app by the SDK.
 
 You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/).
 
@@ -285,7 +285,7 @@ Campaigns
 
 When scheduling a campaign, you need to choose to send it at a designated time, and then select **Send campaign to users in their local time zone**.
 
-Braze highly recommends that all local time zone campaigns are scheduled 24 hours in advance. Since such a campaign needs to send over the course of an entire day, scheduling them 24 hours in advance ensures that your message will reach your entire segment. However, you can schedule these campaigns less than 24 hours in advance if necessary. Keep in mind that Braze will not send messages to any users that have missed the send time by more than 1 hour.
+Braze highly recommends that all local time zone campaigns are scheduled 24 hours in advance. Since such a campaign needs to send over the course of an entire day, scheduling them 24 hours in advance allows your message reach your entire segment. However, you can schedule these campaigns less than 24 hours in advance if necessary. Keep in mind that Braze will not send messages to any users that have missed the send time by more than 1 hour.
 
 For example, if it's 1 pm and you schedule a local time zone campaign for 3 pm, then the campaign will immediately send to all users whose local time is 3–4 pm, but not to users whose local time is 5 pm. In addition, the send time you choose for your campaign needs to have not yet occurred in your company's time zone.
 
@@ -425,7 +425,7 @@ When you stop a Canvas, the following applies:
 
 - Users will be prevented from entering the Canvas.
 - No further messages will be sent out, despite where a user is in the flow.
-    - **Exception:** Email Canvases won't immediately stop. Once the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
+    - **Exception:** Email Canvases won't immediately stop. After the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
 
 {% alert note %}
 Stopping a Canvas will not exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they will complete the step and move onto the next component. However, if the time that the user should've progressed to the next component has passed, they will instead exit the Canvas.
@@ -488,10 +488,10 @@ If Quiet Hours is active when the conversion event happens, the same rules apply
 
 #### Example 2
 
-There is a one-step Canvas with quiet hours:
+There is a one-step Canvas with Quiet Hours:
 
 1. User enters the Canvas.
-2. First step has no delay, but is within quiet hours, so the message is suppressed.
+2. First step has no delay, but is within Quiet Hours, so the message is suppressed.
 3. User performs the conversion event.
 
 **Result:**

@@ -27,6 +27,9 @@ guide_featured_list:
 
 guide_menu_title: "More Articles"
 guide_menu_list:
+  - name: Configuring Reporting
+    link: /docs/user_guide/data_and_analytics/reporting/configuring_reporting/
+    fa_icon: fas fa-cog
   - name: Campaign Analytics
     link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
     fa_icon: fas fa-chart-bar
@@ -47,6 +50,9 @@ guide_menu_list:
     fa_icon: fas fa-user-check
   - name: Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
+    fa_icon: fas fa-piggy-bank
+  - name: Revenue Report
+    link: /docs/user_guide/data_and_analytics/reporting/revenue_report/
     fa_icon: fas fa-piggy-bank
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/#segment-insights

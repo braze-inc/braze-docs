@@ -46,16 +46,13 @@ For a customer to receive an SMS message, they must have a valid phone number an
 
 ### Handling invalid phone numbers
 
-When a phone number is deemed unreachable or invalid, Braze will mark the user's phone number as invalid and will not attempt to send further communications to that phone number. An invalid phone number is marked in the **Engagement Tab** of a user profile.
+When a phone number is deemed invalid, Braze will mark the user's phone number as invalid and will not attempt to send further communications to that phone number. An invalid phone number is marked in the **Engagement Tab** of a user profile.
 
 ![][picture2]{: style="max-width:50%;border: 0;"}
 
 A phone number is considered invalid for the following reasons:
-- **Provider Error**: a permanent error was received from the SMS provider. This indicates that phone number supplied is incorrectly formatted or permanently unable to receive SMS messages.
-- **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service and releasing their number from their carrier.
-
-#### Deactivated phone numbers
-When a mobile subscriber terminates or releases their phone number, their phone number becomes deactivated and will eventually get recycled and assigned to new users. On a daily basis, Braze receives these deactivated numbers and marks them as invalid within the Braze platform. This ensures that phone numbers you believe had opted into your program that now belong to a different user who has not consented to receive messages, will not continue recieving messages.
+- **Provider Error**: a permanent error was received from the SMS provider. This indicates that the phone number supplied is incorrectly formatted or permanently unable to receive SMS messages.
+- **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service and releasing their number from their carrier (and may eventually be recycled and assigned to a new user).
 
 These invalid phone numbers can be managed using [SMS endpoints]({{site.baseurl}}/api/endpoints/sms/). 
 
@@ -64,6 +61,10 @@ If multiple user profiles have the same phone number and that phone number is ma
 {% endalert %}
 
 You can also include or exclude any users with invalid phone numbers when [creating a segment][2]. 
+
+### Third-party sourcing and verification
+
+Braze relies on third-party tools to source invalid numbers. Braze is not responsible for any outages or misinformation of these services. Thus, this tool should not be relied upon as your sole method of compliance for verifying invalid numbers.
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment

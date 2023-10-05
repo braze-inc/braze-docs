@@ -19,7 +19,7 @@ The Braze and Dynamics 365 Customer Insights integration allows you to export cu
 | Requirement | Description |
 | ----------- | ----------- |
 | Dynamics 365 Customer Insights account | [A Dynamics 365 Customer Insights](https://dynamics.microsoft.com/en-gb/ai/customer-insights/) account is required to take advantage of this partnership. You will need access as an administrator to view and edit connections within your Dynamics 365 Customer Insights account to access the necessary plugins. |
-| Braze REST API key | A Braze REST API key is required with all permissions granted. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key is required with all permissions granted. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -52,7 +52,7 @@ Note that saving an export does not run the export immediately. This export will
 
 Once your segments have successfully exported to Braze, you will be able to find them as custom attributes on user profiles with the same name as the segment found in Dynamics 365 Customer Insights. 
 
-To create a segment of these users, In Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the Dynamics 365 custom attribute. Once created, you can select your segment as an audience filter when creating a campaign or Canvas.
+To create a segment of these users, In Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the Dynamics 365 custom attribute. After the segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
 {% alert note %}
 For more information on this integration, visit Microsoft's Braze [integration article](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-braze).

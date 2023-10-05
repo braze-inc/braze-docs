@@ -13,7 +13,7 @@ A [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segm
 
 ## A2P 10DLC
 
-A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. 10-digit long codes have traditionally been designed for Person-to-Person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. All customers who currently have and/or use long codes are required to register their long codes for 10DLC. Refer to our [A2P 10DLC]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/#application-to-person-10-digit-long-codes-a2p-10dlc) article to learn more.
+A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. 10-digit long codes have traditionally been designed for Person-to-Person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. All customers who currently have and/or use long codes are required to register their long codes for 10DLC. Refer to our [A2P 10DLC]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/#application-to-person-10-digit-long-codes-a2p-10dlc) article to learn more.
 
 ## Global Control Groups
 

@@ -9,11 +9,7 @@ description: "This reference article covers how to QA your message content with 
 
 > Learn how to QA your message content with AI directly from the message composer.
 
-Content QA with AI uses the capabilities of ChatGPT and OpenAI to perform checks on the content of your message, ensuring it adheres to quality standards by identifying ineffective elements such as spelling errors, grammar issues, inappropriate tone, and offensive language. You can access this feature from the **Test** tab when composing a message in a campaign or Canvas.
-
-{% alert important %}
-Content QA with AI is currently in beta and is limited to push and SMS message channels. Contact your Braze customer success manager if you’re interested in participating in the beta.
-{% endalert %}
+Content QA with AI uses the capabilities of ChatGPT and OpenAI to perform checks on the content of your message, ensuring it adheres to quality standards by identifying ineffective elements such as spelling errors, grammar issues, inappropriate tone, and offensive language. You can access this feature from the **Test** tab when composing a push or SMS message in a campaign or Canvas.
 
 ## Key features
 
@@ -26,13 +22,23 @@ Content QA with AI offers the following key features to enhance the quality of y
 
 ## Accessing Content QA with AI
 
+{% alert note %}
+Content QA with AI is only available for push and SMS channels at this time.
+{% endalert %}
+
 To access the content checker, follow these steps:
 
-1. After composing a message, navigate to the **Test** tab.
+1. After composing a push or SMS message, navigate to the **Test** tab.
 2. Locate the **Content QA with AI** section.
 3. Click **Test Content**.
 
 ![Content QA with AI section of the Test tab.][1]{: style="max-width:60%"}
+
+### Language support
+
+ChatGPT is able to understand [multiple languages](https://openai.com/research/gpt-4#:~:text=GPT%2D4%203%2Dshot%20accuracy%20on%20MMLU%20across%20languages), although OpenAI doesn't officially support them. Braze does not pass any additional information about the language or locale of your copy when the message content is sent to OpenAI, therefore it is up to ChatGPT to make that determination.
+
+Results may vary depending on the language you're writing in.
 
 ## Tips for effective use
 

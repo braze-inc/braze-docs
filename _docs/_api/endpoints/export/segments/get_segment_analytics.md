@@ -31,7 +31,7 @@ To use this endpoint, you'll need to generate an API key with the `segments.data
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `segment_id` | Required | String | See [Segment API identifier]({{site.baseurl}}/api/identifier_types/).<br><br> The `segment_id` for a given segment can be found on the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page within your Braze account or you can use the [Export segment list endpoint]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).  |
-| `length` | Required | Integer | Max number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
+| `length` | Required | Integer | Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

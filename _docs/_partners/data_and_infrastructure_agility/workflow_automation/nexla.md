@@ -20,13 +20,13 @@ The Braze and Nexla integration allows customers that use [Currents]({{site.base
 | Requirement | Description |
 |---|---|
 | Nexla account | A [Nexla account][2] is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
 
-Nexla's data-as-a-product, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), make it easy to work with data of any format without worrying about metadata. When you set up your data flows to or from Braze with Nexla, no-code tools make it easy and available in minutes. Once the data flow is set to a destination, Nexla will monitor your flow and scale to any amount of data.
+Nexla's data-as-a-product, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), make it easy to work with data of any format without worrying about metadata. When you set up your data flows to or from Braze with Nexla, no-code tools make it easy and available in minutes. After the data flow is set to a destination, Nexla will monitor your flow and scale to any amount of data.
 
 ## Integration
 

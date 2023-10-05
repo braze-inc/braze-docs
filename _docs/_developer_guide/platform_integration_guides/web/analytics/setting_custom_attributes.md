@@ -13,7 +13,7 @@ description: "This reference article covers how to assign and set custom attribu
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][7].
 
-To assign attributes to your users, call the `braze.getUser()` method to get a reference to the current user of your app. Once you have a reference to the current user, you can call methods to set predefined or custom attributes.
+To assign attributes to your users, call the `braze.getUser()` method to get a reference to the current user of your app. After you have a reference to the current user, you can call methods to set predefined or custom attributes.
 
 ## Assigning predefined user attributes
 
@@ -106,7 +106,7 @@ braze.getUser().setCustomUserAttribute(
 
 #### Setting a custom attribute with an array value
 
-The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under **Manage Settings > Custom Attributes**. If you would like this maximum increased, reach out to your customer service manager. [Arrays][6] exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under **Data Settings** > **Custom Attributes**. If you would like this maximum increased, reach out to your customer service manager. [Arrays][6] exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_STRINGS);

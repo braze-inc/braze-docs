@@ -56,24 +56,20 @@ To disable automatic in-app message display, make these updates in the native la
 
 ## Receiving in-app message data
 
-To receive in-app message data in your Flutter app, the `BrazePlugin` supports sending in-app message data using [Dart Streams](https://dart.dev/tutorials/language/streams) (recommended) or by using a data callback (legacy).
+To receive in-app message data in your Flutter app, the `BrazePlugin` supports sending in-app message data using [Dart Streams](https://dart.dev/tutorials/language/streams).
 
 The `BrazeInAppMessage` object supports a subset of fields available in the native model objects, including `uri`, `message`, `header`, `buttons`, `extras`, and more.
 
-{% alert note %} The legacy data callback method will soon be deprecated. In-app messages can be added to both data streams and data callbacks. If you have already integrated data callbacks and wish to use data streams, remove any callback logic to ensure that in-app messages are processed exactly once. {% endalert %}
+### Step 1: Listen for in-app message data in the Dart layer
 
-### Method 1: In-app message data streams (recommended)
-
-You can set a data stream listener in Dart to receive in-app message data in your Flutter app.
-
-To begin listening to the stream, use the code below to create a `StreamSubscription` in your Flutter app and call the `subscribeToInAppMessages()` method with a function that takes a `BrazeInAppMessage` instance. Remember to `cancel()` the stream subscription when it is no longer needed.
+To receive to the in-app message data in the Dart layer, use the code below to create a `StreamSubscription` and call `braze.subscribeToInAppMessages()`. Remember to `cancel()` the stream subscription when it is no longer needed.
 
 ```dart
 // Create stream subscription
 StreamSubscription inAppMessageStreamSubscription;
 
 inAppMessageStreamSubscription = braze.subscribeToInAppMessages((BrazeInAppMessage inAppMessage) {
-  // Function to handle in-app messages
+  // Handle in-app messages
 }
 
 // Cancel stream subscription
@@ -82,16 +78,14 @@ inAppMessageStreamSubscription.cancel();
 
 For an example, see [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) in our sample app.
 
-### Method 2: In-app message data callback (Legacy)
+### Step 2: Forward in-app message data from the native layer
 
-You can set a callback in Dart to receive Braze in-app message data in the Flutter host app.
-
-To set the callback, call `BrazePlugin.setBrazeInAppMessageCallback()` from your Flutter app with a function that takes a `BrazeInAppMessage` instance.
+To receive the data in the Dart layer from step 1, add the following code to forward the in-app message data from the native layers.
 
 {% tabs %}
 {% tab Android %}
 
-This callback works with no additional integration required.
+The in-app message data is automatically forwarded from the Android layer.
 
 {% endtab %}
 {% tab iOS %}
@@ -105,7 +99,7 @@ This callback works with no additional integration required.
 
 #### Replaying the callback for in-app messages
 
-To store any in-app messages triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when initializing the `BrazePlugin`:
+To store any in-app messages triggered before the callback is available and replay them after it is set, add the following entry to the `customConfigs` map when initializing the `BrazePlugin`:
 ```dart
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```

@@ -24,7 +24,7 @@ To use this feature, add the following method call after a successful purchase i
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));
 ```
 
-This method logs a purchase with a quantity of one. If you would like to pass in a different quantity, you can call the following method:
+This method logs a purchase with a quantity of one. If you want to pass in a different quantity, you can call the following method:
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), quantity(int));
@@ -37,7 +37,7 @@ AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), quantity
 ```
 
 ## Log purchases at the order level
-If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
+If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ## Currency codes
 

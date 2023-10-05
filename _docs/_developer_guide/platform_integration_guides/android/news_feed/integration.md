@@ -102,7 +102,7 @@ Linking to the News Feed from an in-app message must be enabled by registering t
 
 ## Custom feed integration
 
-If you would like to display the feed in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's News Feed models, you will need to subscribe for News Feed updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you want to display the feed in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's News Feed models, you will need to subscribe for News Feed updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
 ### Part 1: Subscribing to feed updates
 
@@ -146,7 +146,6 @@ To log a display of the feed, call [`Braze.logFeedDisplayed()`][6].
 
 To log an impression or click on a Card, call [`Card.logClick()`][7] and [`Card.logImpression()`][8] respectively.
 
-[36]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/get-extras.html
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/

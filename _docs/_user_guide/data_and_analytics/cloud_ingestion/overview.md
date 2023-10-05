@@ -1,6 +1,6 @@
 ---
 nav_title: Overview
-article_title: Cloud Data Ingestion overview and best practices
+article_title: Cloud Data Ingestion Overview and Best Practices
 page_order: 0
 page_type: reference
 description: "This reference article provides an overview of Cloud Data Ingestion, best practices, and product limitations."
@@ -9,7 +9,7 @@ description: "This reference article provides an overview of Cloud Data Ingestio
 
 # Braze Cloud Data Ingestion overview
 
-> Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion connects your data in Snowflake, Redshift, BigQuery, or Databricks to Braze.
+> Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. When synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion connects your data in Snowflake, Redshift, BigQuery, or Databricks to Braze.
 
 {% alert important %}
 Braze Cloud Data Ingestion for BigQuery and Databricks are currently in early access. Contact your Braze account manager if you are interested in participating in the early access. {% endalert %}
@@ -78,6 +78,10 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
 ### Data point usage
 
 Each attribute sent for a user will consume one data point. It's up to you to only send the required data. Data point tracking for Cloud Data Ingestion is equivalent to tracking through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
+
+{% alert important %}
+Braze Cloud Data Ingestion counts towards the available rate limit, so if you're sending data using another method, the rate limit is combined between the Braze API and Cloud Data Ingestion.
+{% endalert %}
 
 ## Data setup recommendations
 
@@ -179,7 +183,7 @@ We use the `UPDATED_AT` timestamp to track what data has been synced successfull
 We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
 
 #### Sample data formatting   
-Any operations that are possible through the Braze `/users/track` endpoint are supported through Cloud Data Ingestion, including updating nested custom attributes, adding subscription status, and syncing custom events or purcahses. 
+Any operations that are possible through the Braze `/users/track` endpoint are supported through Cloud Data Ingestion, including updating nested custom attributes, adding subscription status, and syncing custom events or purchases. 
 
 {% tabs local %}
 {% tab Nested Custom Attributes %}
@@ -240,15 +244,16 @@ To sync purchase events, event name, `product_id`, `currency`, `price`, and `tim
 
 ## Product limitations
 
-| Limitations | Description |
-| --- | --- |
-| Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.
-| Number of rows | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column. |
-| Attributes per row | Each row should contain a single user ID and a JSON object with up to 50 attributes. Each key in the JSON object counts as one attribute (i.e., an array counts as one attribute). |
-| Data type | You can sync user attributes, events, and purchases through Cloud Data Ingestion. |
-| Braze region | This product is available in all Braze regions. Any Braze region can connect to any Snowflake region. |
-| Snowflake region | You can connect your Snowflake instance in any region or cloud to Braze using this product. |
-| Redshift connectivity | Only publicly-accessible Redshift clusters are supported at this time.|
+| Limitations            | Description                                                                                                                                                                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.                                             |
+| Number of rows         | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column.                                                            |
+| Attributes per row     | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
+| Payload size           | Each row can contain a payload of size upto 1 MB. Payloads greater than 1 MB will be rejected.                                                                                     |
+| Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
+| Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
+| Source region       | Braze will connect to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
+
 {: .reset-td-br-1 .reset-td-br-2}
 
 <br><br>

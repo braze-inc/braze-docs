@@ -60,7 +60,7 @@ Example ZIP File:
 
 {% enddetails %}
 
-We strongly suggest that customers who use this endpoint set up their own S3 or Azure credentials so that customers can enforce their own bucket policies on the export. If you do not have your cloud storage credentials provided, the response to the request provides the URL where a ZIP file containing all the user files can be downloaded. The URL will only become a valid location once the export is ready. 
+We strongly suggest that customers who use this endpoint set up their own S3 or Azure credentials so that customers can enforce their own bucket policies on the export. If you do not have your cloud storage credentials provided, the response to the request provides the URL where a ZIP file containing all the user files can be downloaded. The URL will only become a valid location after the export is ready. 
 
 Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you're exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using 'fields_to_export' and specifying only the fields you need in order to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (e.g., create a segment where random bucket number <1000, between 1000 and 2000, etc).
 
@@ -166,6 +166,7 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 - The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will contain only contain data from the last 90 days.
 - Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields will reflect information from all time, and will not be limited to just data from the last 90 days. For example, if a particular user first did the event prior to 90 days ago, this will be accurately reflected in the `first` field, and the `count` field will take into account events that occurred prior to the last 90 days as well.
 - The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit will result in an error.
+- Attempting to export a segment a second time while the first export job is still running will result in a 429 error.
 
 ## Response
 

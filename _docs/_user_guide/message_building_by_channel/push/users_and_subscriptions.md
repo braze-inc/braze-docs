@@ -58,7 +58,7 @@ There are two ways you can check a user's push subscription state with Braze:
 
 All push-enabled platforms - iOS, Web, and Android - require explicit opt-in via an OS-level system prompt, with some slight differences described below.
 
-Because a user's decision is final and you can't ask again once they decline, using [push primer][push-primers] in-app messages is an important strategy for increasing your opt-in rates.
+Because a user's decision is final and you can't ask again after they decline, using [push primer][push-primers] in-app messages is an important strategy for increasing your opt-in rates.
 
 **Native OS push permission prompts**
 
@@ -73,7 +73,7 @@ Because a user's decision is final and you can't ask again once they decline, us
 
 Before Android 13, permission was not needed to send push notifications. On Android 12 and below, all users are considered `Subscribed` upon their first session when Braze automatically requests a push token. At this point, the user is **push enabled** with a valid push token for that device and a default subscription state of `Subscribed`.
 
-Starting with [Android 13][android-13], push permission must be asked of and granted by the user. Your app can manually request permission from the user at opportune times, but if not, users will be prompted automatically once your app creates a [notification channel](https://developer.android.com/reference/android/app/NotificationChannel).
+Starting with [Android 13][android-13], push permission must be asked of and granted by the user. Your app can manually request permission from the user at opportune times, but if not, users will be prompted automatically when your app creates a [notification channel](https://developer.android.com/reference/android/app/NotificationChannel).
 
 ### iOS
 
@@ -194,18 +194,7 @@ Web platforms do not allow background or silent push.
 
 ## Best practices
 
-#### Add push subscription controls to your app
-To avoid users disabling notifications at the device-level, which removes their foreground push token completely, Braze recommends letting users control their push subscription directly within your app. See [updating push subscription states](#update-push-subscription-state) for more details.
-
-#### Prime users for push before showing the system prompt
-You only get one chance to ask a user for push permission, and once they decline, it's very hard to convince them to re-enable push in their device settings. For this reason, you should prime users for push using an in-app message before showing the system prompt. See [Push primers][push-primers] to learn more about increasing opt-ins.
-
-#### Subscription state does not always mean a user is reachable
-If a user doesn't have a valid foreground push token for an app (that is, they turn off push tokens at the device-level through settings, opting not to receive notifications), their subscription state can still be considered `subscribed` to push. However, this user would not be **Push Enabled for App** in Braze since the foreground push token is not valid. 
-
-Additionally, if a user profile doesn't have any valid or registered push token for any other apps, their Push enabled filter in segmentation will also be `false`. 
-
-Push subscription state does not guarantee that a push will be delivered. Users must also be push enabled to receive notifications. This is because a user profile has a single push subscription state but may have multiple devices with different foreground push permissions.
+Refer to our dedicated article on [Push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices) for detailed guidance on how to optimize your usage of push at Braze.
 
 [1]: {% image_buster /assets/img/push_enablement.png %}
 [2]: {% image_buster /assets/img/push_changelog.png %}

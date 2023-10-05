@@ -19,7 +19,7 @@ There are three email subscription states for a user: **opted in**, **subscribed
 | Subscriber State | Description |
 |---|---|
 | Opted In | These customers have clicked on the link in a confirmation email and actively opted in to receiving your messages. |
-| Subscribed | By default, customers are subscribed to email as long as they have a valid email address stored on their profile. Customers remain subscribed until they unsubscribe or opt-in. |
+| Subscribed | By default, users are subscribed to email as long as they have a valid email address stored on their profile. users remain subscribed until they unsubscribe or opt-in. |
 | Unsubscribed | To be marked as unsubscribed, a customer has either explicitly unsubscribed from your emails or has marked an email as spam. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -47,4 +47,4 @@ Single opt-in happens when subscribers sign up via a subscription form and are i
 
 A confirmed opt-in occurs when a user checks a box asking for email communication, and a confirmation message is sent in return. This method allows users to choose the type and frequency of the content improves engagement. 
 
-To ensure you're targeting only the most engaged users, you could also use the double confirmed opt-in method. This approach adds an extra step in which the user must click a button or link in the confirmation email to be placed in the email list. 
+To confirm that you're targeting only the most engaged users, you could also use the double confirmed opt-in method. This approach adds an extra step in which the user must click a button or link in the confirmation email to be placed in the email list. 

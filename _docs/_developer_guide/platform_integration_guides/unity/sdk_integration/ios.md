@@ -4,7 +4,7 @@ article_title: SDK iOS Integration for Unity
 platform: 
   - Unity
   - iOS
-page_order: 0
+page_order: 1
 description: "This reference article covers the iOS SDK integration for the Unity platform."
 search_rank: .9
 ---
@@ -52,30 +52,9 @@ If your application is already using another `UnityAppController` subclass, you 
 
 ## Basic SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. Check out the following articles for more information on integrating push ([Android][53] and [iOS][50]), [in-app messages][34], and [Content Cards][40].
+Braze should now be collecting data from your application, and your basic integration should be complete. For more information on integrating push, check out the following articles: [Android][53] and [iOS][50], [in-app messages][34], and [Content Cards][40].
 
-## Additional advanced implementation options
-
-### Enabling verbose logging in the Unity editor
-To enable verbose logging in the Unity Editor, do the following:
-
-1. Open the Braze Configuration Settings by navigating to **Braze** > **Braze Configuration**.
-2. Click the **Show Braze iOS Settings** dropdown.
-3. In the **SDK Log Level** field, input the value "0".
-
-### Extending the SDK (iOS)
-
-To extend the SDK's behaviors, fork the [Braze Unity SDK GitHub project](https://github.com/appboy/appboy-unity-sdk) and make your required changes.
-
-To publish your modified code as a Unity package, see our [Advanced use cases]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/advanced_use_cases/).
-
-### Transitioning from manual to automated integration (iOS)
-
-To take advantage of the automated iOS integration offered in the Braze Unity SDK, follow these steps on transitioning from a manual to an automated integration.
-
-1. Remove all Braze-related code from your Xcode project's `UnityAppController` subclass.
-2. Remove Braze's iOS libraries from your Unity or Xcode project (i.e., `Appboy_iOS_SDK.framework` and `SDWebImage.framework`) and [import the Braze Unity package](#step-1-importing-the-braze-unity-package) into your Unity project.
-3. Follow the integration instructions on [setting your API key through Unity](#step-2-setting-your-api-key).
+To learn about advanced SDK integration options, check out [Advanced Implementation][54].
 
 [5]: #transitioning-from-manual-to-automated-integration-ios
 [34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/
@@ -85,6 +64,7 @@ To take advantage of the automated iOS integration offered in the Braze Unity SD
 [42]: https://github.com/Appboy/appboy-unity-sdk/releases
 [50]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/
 [53]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/android/
+[54]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases/#ios-sdk-advanced
 [unity-1]: https://github.com/SDWebImage/SDWebImage
 [unity-2]: https://firebase.google.com/docs/unity/setup
 [unity-3]: https://developer.android.com/jetpack/androidx

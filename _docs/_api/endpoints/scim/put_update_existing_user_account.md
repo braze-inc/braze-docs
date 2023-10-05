@@ -19,7 +19,7 @@ description: "This article outlines details about the Update existing dashboard 
 
 It allows you to update of given and family names, permissions (for setting permissions at the company, workspace, and team level) and department. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
-For security reasons, `userName` (email address) cannot be updated through this endpoint. If you would like to change the `userName` (email address) for a user, contact [Support]({{site.baseurl}}/support_contact/).
+For security reasons, `userName` (email address) cannot be updated through this endpoint. If you want to change the `userName` (email address) for a user, contact [Support]({{site.baseurl}}/support_contact/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f9a1642-988e-4011-8fb8-db4340ea1ac7 {% endapiref %}
 
@@ -38,12 +38,12 @@ For security reasons, `userName` (email address) cannot be updated through this 
 ```
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-SCIM-TOKEN-HERE
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 ```json
 {
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-    "name": {
+    "name": {"name": {
         "givenName": "Test",
         "familyName": "User"
     },
@@ -52,13 +52,21 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
         "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
-                "appGroupName": "Test workspace",
+                "appGroupName": "Test Workspace",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
                          "teamName": "Test Team",
                          "teamPermissions": ["admin"]
                     } 
+                ]
+            },
+            {
+                "appGroupName": "Other Test Workspace",
+                "appGroupPermissionSets": [
+                    {
+                        "appGroupPermissionSetName":  "Test Permission Set"
+                    }
                 ]
             } 
         ]
@@ -82,7 +90,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
---header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data raw '{
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
     "name": {
@@ -94,7 +102,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
         "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
-                "appGroupName": "Test workspace",
+                "appGroupName": "Test Workspace",
                 "appGroupPermissions": ["basic_access","send_campaign_canvases"],
                 "team": [
                     {
@@ -125,7 +133,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
-                "appGroupName": "Test workspace",
+                "appGroupName": "Test Workspace",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
