@@ -19,7 +19,7 @@ platform:
 
 Before you can track user data in the experiment, your app needs to record when a user interacts with a feature flag. This is called a feature flag impression. Make sure to log a feature flag impression whenever a user sees or could have seen the feature you're testing, even if they're in the control group.
 
-To learn more, see [Logging a feature flag impression][6].
+To learn more about logging feature flag impressions, see [Creating feature flags][6].
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
@@ -46,7 +46,7 @@ To test the impact of your feature, use variants to split traffic into two or mo
 
 ### Overwriting properties
 
-While you specified default properties when you originally set up your feature flag, you can choose to overwrite those values for users who receive a specific campaign variant.
+Though you specified default properties when you originally set up your feature flag, you can choose to overwrite those values for users who receive a specific campaign variant.
 
 ![][image1]{: style="max-width:80%"}
 
