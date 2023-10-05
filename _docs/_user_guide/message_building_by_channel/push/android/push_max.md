@@ -89,6 +89,6 @@ We recommend that you don't use Braze [promotion codes]({{site.baseurl}}/user_gu
 
 This is because promotion codes are unique. If a push notification that contains a promotion code fails to deliver, when that notification is resent due to Push Max, a new promotion code will be sent. This can result in you consuming promotion codes faster than expected.
 
-### Event properties
+### Canvas event properties and entry properties
 
-Push Max may not work as expected if you include references to event properties in your message. This is because event properties are immediately removed after the initial send, and they aren't saved for future message attempts. So, if the first message fails to send and Push Max tries again, those missing event properties will cause the resent message to fail.
+Push Max may not work as expected if you include Liquid references to [Canvas entry properties or event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in your message. This is because the entry and event properties are not available when Push Max is attempting to resend the message.
