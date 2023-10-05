@@ -82,7 +82,7 @@ pod 'BrazePushStory'
 end
 ```
 {% alert note %}
-It's not required to have both Rich Push and Push Stories implemented in the same app.
+It's not required to have both Rich Push and Push Stories implemented in the same app.For instructions to implement Rich Push, see the [Rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/?tab=swift%20package%20manager).
 {% endalert %}
 
 After updating the Podfile, navigate to the directory of your Xcode app project within your terminal and run `pod install`.
