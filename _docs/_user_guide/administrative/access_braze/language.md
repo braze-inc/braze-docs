@@ -13,7 +13,7 @@ This article describes how to change the language the Braze dashboard appears in
 
 ## Change your dashboard language settings
 
-The Braze dashboard is available in multiple languages. You can change the display language to your preferred language at any time.
+The Braze dashboard is available in [multiple languages](#supported-languages). You can change the display language to your preferred language at any time.
 
 1. In the global header, click <i class="fa-solid fa-globe" aria-label="Select your language"></i>.
 2. Choose your language from the list.
