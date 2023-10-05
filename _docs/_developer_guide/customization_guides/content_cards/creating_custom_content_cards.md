@@ -16,7 +16,7 @@ platform:
 
 > This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases: banner images, a message inbox, and a carousel of images.
 
-Braze provides different [Content Card types][1]: `banner`, `captionedImage`, `classic`, `classicImage`, and `control`. These can be used as a starting place for your implementations, tweaking their look and feel. 
+Braze provides different [Content Card types][1]: `imageOnly`, `captionedImage`, `classic`, `classicImage`, and `control`. These can be used as a starting place for your implementations, tweaking their look and feel. 
 
 You can also display Content Cards in a completely custom manner by creating your own presentation UI populated with data from the Braze models. Parse the Content Card objects and extract their payload data. Then, use the resulting model data to populate your custom UI&mdash;the "run" phase of the [crawl, walk, run approach][2].
 
@@ -233,7 +233,7 @@ If you're implementing a carousel as a secondary Content Cards feed, refer to [C
 
 Content Cards don't have to look like "cards." For example, Content Cards can appear as a dynamic banner that persistently displays on your home page or at the top of designated pages.
 
-To achieve this, your marketers will create a campaign or Canvas step with a **Banner** type of Content Card. Then, set key-value pairs that are appropriate for using [Content Cards as supplemental content][4].
+To achieve this, your marketers will create a campaign or Canvas step with a **Image Only** type of Content Card. Then, set key-value pairs that are appropriate for using [Content Cards as supplemental content][4].
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details

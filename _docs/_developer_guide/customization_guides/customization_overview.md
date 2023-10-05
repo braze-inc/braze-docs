@@ -32,7 +32,7 @@ table td {
 {% tabs %}
 {% tab Crawl %}
 
-![Sample finance app showing Captioned Image and Banner Content Cards]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Sample finance app showing Captioned Image and Image Only Content Cards]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 The Crawl approach puts the power of customization directly in the hands of marketers. While some light development work is necessary upfront to integrate Braze's messaging channels with your app or site, this approach allows you to get up and running quickly. 
 
