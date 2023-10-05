@@ -1,13 +1,14 @@
 ---
 nav_title: Collecting IDFV
 article_title: Collecting IDFV
-platform: iOS
+platform: Swift
 page_type: reference
 description: "This reference article describes how to collect the optional IDFV field for the Swift SDK"
+page_order: 4
 
 ---
 
-# Collecting IDFV - Swift
+# Collecting IDFV 
 
 ## Background
 
