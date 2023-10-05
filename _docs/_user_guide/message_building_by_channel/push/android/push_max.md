@@ -83,8 +83,12 @@ By default, Time to Live is set to 28 days, which is the maximum. You can decrea
 
 ## Things to know
 
-### Push Max and promotion codes
+### Promotion codes
 
-We recommend that you don't use Braze [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) in messages where Push Max is turned on. 
+We recommend that you don't use Braze [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) in messages where Push Max is turned on.
 
 This is because promotion codes are unique. If a push notification that contains a promotion code fails to deliver, when that notification is resent due to Push Max, a new promotion code will be sent. This can result in you consuming promotion codes faster than expected.
+
+### Canvas event properties and entry properties
+
+Push Max may not work as expected if you include Liquid references to [Canvas entry properties or event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in your message. This is because the entry and event properties are not available when Push Max is attempting to resend the message.

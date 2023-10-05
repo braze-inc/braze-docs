@@ -11,9 +11,6 @@ description: "This reference article provides an overview of Cloud Data Ingestio
 
 > Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. When synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion connects your data in Snowflake, Redshift, BigQuery, or Databricks to Braze.
 
-{% alert important %}
-Braze Cloud Data Ingestion for BigQuery and Databricks are currently in early access. Contact your Braze account manager if you are interested in participating in the early access. {% endalert %}
-
 ### How it works
 
 With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
@@ -244,15 +241,16 @@ To sync purchase events, event name, `product_id`, `currency`, `price`, and `tim
 
 ## Product limitations
 
-| Limitations | Description |
-| --- | --- |
-| Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.
-| Number of rows | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column. |
-| Attributes per row | Each row should contain a single user ID and a JSON object with up to 50 attributes. Each key in the JSON object counts as one attribute (i.e., an array counts as one attribute). |
-| Data type | You can sync user attributes, events, and purchases through Cloud Data Ingestion. |
-| Braze region | This product is available in all Braze regions. Any Braze region can connect to any Snowflake region. |
-| Snowflake region | You can connect your Snowflake instance in any region or cloud to Braze using this product. |
-| Redshift connectivity | Only publicly-accessible Redshift clusters are supported at this time.|
+| Limitations            | Description                                                                                                                                                                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.                                             |
+| Number of rows         | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column.                                                            |
+| Attributes per row     | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
+| Payload size           | Each row can contain a payload of size upto 1 MB. Payloads greater than 1 MB will be rejected.                                                                                     |
+| Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
+| Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
+| Source region       | Braze will connect to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
+
 {: .reset-td-br-1 .reset-td-br-2}
 
 <br><br>
