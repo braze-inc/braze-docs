@@ -62,7 +62,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Specify your message types
 
-Next, select a **Card Type**. Braze provides three essential Content Card types: Classic, Captioned Image, and Banner.
+Next, select a **Card Type**. Braze provides three essential Content Card types: Classic, Captioned Image, and Image Only.
 
 To learn more about the expected behavior and look of each of these message types, refer to [Creative Details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/), or check out the links in the following table. These Content Card types are accepted by both mobile apps and web applications.
 
@@ -70,7 +70,7 @@ To learn more about the expected behavior and look of each of these message type
 |---|---|---|
 |[Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![Classic Content Card]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |The Classic Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It's best to use a square image or icon with the Classic Card. |
 |[Captioned Image]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![Captioned Content Card]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | The Captioned Image Card allows you to showcase your content with copy and an attention-grabbing image. |
-|[Banner]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Banner Content Card]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | The Banner Card allows you to get creative and command attention with space for images, GIFs, and other non-text based content. |
+|[Image Only]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Image Only Content Card]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | The Image Only Card allows you to get creative and command attention with space for images, GIFs, and other non-text based content. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Step 3: Compose a Content Card
@@ -87,7 +87,7 @@ Click **Add Languages** and select your desired languages from the provided list
 
 #### Title and message
 
-Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking—the better! We recommend clear and concise titles and message content. These fields are not provided for Banner Cards.
+Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking—the better! We recommend clear and concise titles and message content. These fields are not provided for Image Only Cards.
 
 #### Image
 
@@ -230,7 +230,7 @@ One approach is to archive the campaign and remove active cards from the feed. T
 * **Existing Recipients:** New and existing recipients would see the updated card at the next feed refresh if they are eligible.
 
 {% alert tip %}
-This option is recommended for messages where you are showing latest content in the card (e.g., home page banners), changes must be shown immediately, or when re-eligibility is off.
+This option is recommended for messages where you are showing latest content in the card (for example, home page banners), changes must be shown immediately, or when re-eligibility is off.
 {% endalert %}
 
 #### Option 2: Stop and relaunch

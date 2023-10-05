@@ -69,7 +69,7 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 
 The Content Cards data model is available in the Web SDK.
 
-The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.banner.html), [CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html), and [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html). Each type inherits common properties from a base model [Card](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) and has the following additional properties.
+The Braze Web SDK offers three Content Card types: [ImageOnly](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html), [CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html), and [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html). Each type inherits common properties from a base model [Card](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) and has the following additional properties.
 
 See [Logging analytics]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics) for information on subscribing to card data.
 
@@ -88,9 +88,9 @@ All Content Cards have these shared properties:
 | `isControl` | This property is `true` when a card is a "control" group within an A/B test.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Banner Content Card properties - Banner
+### Image only Content Card properties - ImageOnly
 
-[Banner](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.banner.html) cards are clickable full-sized images.
+[ImageOnly](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html) cards are clickable full-sized images.
 
 |Property|Description|
 |---|---|

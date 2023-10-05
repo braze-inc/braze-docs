@@ -126,7 +126,7 @@ The message inbox is a default implementation with minimal development needed—
 
 When a user is eligible for a card, it will automatically appear in their inbox. Content Cards are inherently built to be viewed in bulk, so users will be able to view all cards that they’re eligible for at once.
 
-With the default implementation, Content Cards in the inbox can appear as classic, banner, or captioned image cards. You choose where the message inbox will be located in your app.
+With the default implementation, Content Cards in the inbox can appear as classic (containing a title, text, and an optional image), image only, or captioned image cards. You choose where the message inbox will be located in your app.
 
 Content Cards come with a default style, but you can choose a custom implementation to display the cards and the feed according to the look and feel of your app.
 
@@ -145,7 +145,7 @@ Carousels display multiple pieces of content in a single space that your custome
 
 When a user is eligible for a card, it will appear in a carousel on whichever page of your app the carousel is added to. Users can swipe horizontally to view additional featured cards.
 
-Because this is a custom implementation, you’ll need to work with your developers to build your own views to display the Content Cards. The default classic, banner, and captioned image cards are not supported with this implementation.
+Because this is a custom implementation, you’ll need to work with your developers to build your own views to display the Content Cards. The default classic, image only, and captioned image cards are not supported with this implementation.
 
 ### Banner
 
