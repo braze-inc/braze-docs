@@ -95,7 +95,7 @@ To [send events via hybrid mode](https://www.rudderstack.com/docs/destinations/s
 After completing the initial setup, configure the following settings to correctly receive your data in Braze:
 
 - **Enable subscription groups in group call**: Enable this setting to send the subscription group status in your group events. For more information, see [Group](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#group).
-- **Use Custom Attributes Operation**: Enable this setting if you want to use Braze’s [nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) functionality to create segments and personalize your messages using a custom attribute object. For more information, see [Send user traits as nested custom attributes](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes).
+- **Use Custom Attributes Operation**: Enable this setting if you want to use the [nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) functionality in Braze to create segments and personalize your messages using a custom attribute object. For more information, see [Send user traits as nested custom attributes](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes).
 - **Track events for anonymous users**: Enable this setting to track anonymous user activity and send this information to Braze.
 
 ### Device mode settings
