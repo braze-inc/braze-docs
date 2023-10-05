@@ -83,8 +83,12 @@ By default, Time to Live is set to 28 days, which is the maximum. You can decrea
 
 ## Things to know
 
-### Push Max and promotion codes
+### Promotion codes
 
-We recommend that you don't use Braze [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) in messages where Push Max is turned on. 
+We recommend that you don't use Braze [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) in messages where Push Max is turned on.
 
 This is because promotion codes are unique. If a push notification that contains a promotion code fails to deliver, when that notification is resent due to Push Max, a new promotion code will be sent. This can result in you consuming promotion codes faster than expected.
+
+### Event properties
+
+Push Max may not work as expected if you include references to event properties in your message. This is because event properties are immediately removed after the initial send, and they aren't saved for future message attempts. So, if the first message fails to send and Push Max tries again, those missing event properties will cause the resent message to fail.
