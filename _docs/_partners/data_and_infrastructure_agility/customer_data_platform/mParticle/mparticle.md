@@ -38,42 +38,85 @@ Use Braze and mParticle's partnership to configure your integration and import m
 
 #### Forwarding Audiences
 
-mParticle offers three ways to set cohort membership attributes, controlled by the "[Send Segments As](#send_settings)" configuration setting. The processing of each option is described in the following list:
+mParticle offers three ways to set cohort membership attributes, controlled by the "[Send Segments As](#send_settings)" configuration setting. Refer to the following sections for the processing of each option:
 
-- **Single attribute** (default): mParticle will create a single custom attribute called `SegmentMembership`. The value of this attribute is a string of comma-separated mParticle audience IDs that match the user. These audience IDs can be found in the mParticle dashboard under **Audiences**. For example, if an mParticle audience "Ibiza dreamers" has an audience ID of "11036", you will be able to segment these users by the audience ID "11036" using a regular expression. This solution is not recommended if you have more than a few audiences because custom attributes can be up to 255 characters long, so you will not be able to store dozens or hundreds of audiences on a user profile using this method. If you have a large number of cohorts per user, we strongly recommend the "one attribute per segment" configuration. ![mParticle segment membership][6]<br><br>
-- **One attribute per segment**: mParticle will create a boolean custom attribute for each audience a user belongs to. ![mParticle custom attribute][7]<br><br>
-- **Both single attribute and one attribute per segment**
+- [Single string attribute (default)](#string)
+- [Single array attribute](#array)
+- [One attribute per segment](#per-segment)
+- [Both single array attribute and single string attribute](#both-1)
+- [Both single array attribute and one attribute per segment](#both-2)
+- [Both single string attribute and one attribute per segment](#both-3)
+- [Single array attribute, single string attribute, and one attribute per segment](#multi)
+
+##### Single string attribute (default) {#string}
+
+mParticle will create a single custom attribute called `SegmentMembership`. The value of this attribute is a string of comma-separated mParticle audience IDs that match the user. These audience IDs can be found in the mParticle dashboard under **Audiences**.
+
+For example, if an mParticle audience "Ibiza dreamers" has an audience ID of "11036", you can segment these users with the filter `SegmentMembership` — `matches regex` — `11036`.
+
+{% alert important %}
+This solution is not recommended if you have more than a few audiences because custom attributes can be up to 255 characters long, so you will not be able to store dozens or hundreds of audiences on a user profile using this method. If you have a large number of cohorts per user, we strongly recommend the "one attribute per segment" configuration.
+{% endalert %}
+
+![mParticle segment membership][6]
+
+##### Single array attribute {#array}
+
+mParticle creates a single custom array attribute in Braze for each user, called `SegmentMembershipArray`. The value of this attribute is an array of mParticle audience IDs that match the user.
+
+For example, if a user is a member of three mParticle audiences with the audience IDs of "13053", "13052", and "13051", you can segment for users who match one of those audience with the filter `SegmentMembershipArray` — `includes value` — `13051`.
+
+##### One attribute per segment {#per-segment}
+
+mParticle will create a boolean custom attribute for each audience a user belongs to. For example, if an mParticle audience is called "Possible Parisians", you can segment these users with the filter `In Possible Parisians` - `equals` - `true`.
+
+![mParticle custom attribute][7]
+
+##### Both single array attribute and single string attribute {#both-1}
+
+mParticle will send attributes as described by both single array attribute and single string attribute.
+
+##### Both single array attribute and one attribute per segment {#both-2}
+
+mParticle will send attributes as described by both single array attribute and one attribute per segment.
+
+##### Both single string attribute and one attribute per segment {#both-3}
+
+mParticle will send attributes as described by both single string attribute and one attribute per segment.
+
+##### Single array attribute, single string attribute, and one attribute per segment {#multi}
+
+mParticle will send attributes as described by single array attribute, single string attribute, and one attribute per segment.
 
 #### Step 1: Create an audience in mParticle {#send_settings}
 
-To create an audience in mParticle, navigate to **Audiences > Single Workspace > + New Audience**.
+To create an audience in mParticle:
 
-To connect Braze as an output for your audience, you must provide the following fields:
+1. Navigate to **Audiences** > **Single Workspace** > **+ New Audience**.
+2. To connect Braze as an output for your audience, you must provide the following fields:
 
-- **API key**: Found in the Braze at **Settings** > **API Keys**.
+| Field Name               | Description                                                                                                                                                                   |
+| ------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| API key                  | Found in the Braze dashboard at **Settings** > **API Keys**.<br><br>If you are using the older navigation, you can find API keys at **Developer Console** > **API Settings**. |
+| API key operating system | Select which operating system your Braze API key corresponds to. This selection will limit the types of push tokens forwarded on an audience update.                          |
+| Send segments as         | The method of sending audiences to Braze. See the section [Forwarding audiences](#forwarding-audiences) for details.                                                          |
+| Workspace REST API key   | Braze REST API key with full permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**.                                                        |
+| External identity type   | The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.                                          |
+| Email identity type      | The mParticle user identity type to forward as the email to Braze.                                                                                                            |
+| Braze instance           | Specify which cluster your Braze data will be forwarded to.                                                                                                                   |
+{: .reset-td-br-1 .reset-td-br-2}
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find API keys at **Developer Console** > **API Settings**.
-{% endalert %}
+{:start="3"}
+3. Lastly **Save** your audience.
 
-- **API key operating system**: Select which operating system your Braze API key corresponds to. This selection will limit the types of push tokens forwarded on an audience update.
-- **Send segments as**: The method of sending audiences to Braze: Single Attribute, One Attribute Per Segment, or Both. 
-- **Workspace REST API key**:  Braze REST API key with full permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**.
-- **External identity type**: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
-- **Email identity type**: The mParticle user identity type to forward as the email to Braze.
-- **Braze instance**: Specify which cluster your Braze data will be forwarded to.
-
-Lastly **Save** your audience. 
-
-You should begin seeing audiences syncing to Braze within a few minutes. Audience membership will only update for users with `external_ids` (i.e., not anonymous users).
-
-Check out This reference article for more information on creating Braze [mParticle audiences](https://docs.mparticle.com/integrations/braze/audience/#configuration-settings).
+You should begin seeing audiences syncing to Braze within a few minutes. Audience membership will only update for users with `external_ids` (that is, not anonymous users). For more information on creating Braze mParticle audience, see the mParticle documentation on [Configuration settings](https://docs.mparticle.com/integrations/braze/audience/#configuration-settings).
 
 #### Step 2: Segment users in Braze
 
-In Braze, to create a segment of these users, navigate to **Segments** under **Engagement** and name your segment.
-- **Single attribute**: Select `SegmentMembership` as your filter. Next, use the "matches regex" option and input your desired audience ID. ![mParticle segment filter "SegmentMembership" set as "matches Regex" and audience ID.][9]<br><br>
-- **One attribute per segment**: Select your custom attribute as the filter. Next, use the "equals" option and choose the appropriate logic. ![mParticle segment filter "in possible parisians" set as "equals" and "true".][8]
+In Braze, to create a segment of these users, navigate to **Segments** under **Engagement** and name your segment. The following are two examples of segments depending on the option you selected for **Send segments as**. For more details on each option, see [Forwarding audiences](#forwarding-audiences.)
+
+- **Single string attribute:** Select `SegmentMembership` as your filter. Next, use the "matches regex" option and input your desired audience ID. ![mParticle segment filter "SegmentMembership" set as "matches Regex" and audience ID.][9]<br><br>
+- **One attribute per segment:** Select your custom attribute as the filter. Next, use the "equals" option and choose the appropriate logic. ![mParticle segment filter "in possible parisians" set as "equals" and "true".][8]
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
