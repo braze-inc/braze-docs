@@ -16,13 +16,13 @@ guide_top_text: "Use the Braze Cloud Data Ingestion endpoints to manage your dat
 guide_featured_title: ""
 guide_featured_list:
   - name: "GET: List Integrations"
-    link: https://www.braze.com/docs/api/cdi/get_integration_list/
+    link: /docs/api/cdi/get_integration_list/
     fa_icon: fas fa-list-ul
   - name: "GET: List Job Sync Status"
-    link: https://www.braze.com/docs/api/cdi/get_job_sync/
+    link: /docs/api/cdi/get_job_sync
     fa_icon: fas fa-list-ul
   - name: "POST: Trigger Sync"
-    link: https://www.braze.com/docs/api/cdi/post_trigger_sync/
+    link: /docs/api/cdi/post_trigger_sync/
     fa_icon: fas fa-play
 
 ---
