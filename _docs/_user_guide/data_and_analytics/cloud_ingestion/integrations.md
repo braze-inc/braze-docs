@@ -36,7 +36,11 @@ New Cloud Data Ingestion integrations require some setup on the Braze side and i
 1. Create a service account and allow access to the Databricks project(s) and dataset(s) that contain the data you want to sync.  
 2. In your Databricks account, set up the table(s) or view(s) you want to sync to Braze.   
 3. Create a new integration in the Braze dashboard.  
-4. Test the integration and start the sync.  
+4. Test the integration and start the sync.
+{% alert important %}
+There may be 2-5 minutes of warm up time when Braze connects to Classic and Pro SQL instances, which will lead to delays duing connection set up and testing, as well as at the beginning of scheduled syncs. Using a Serverless SQL instances will minimize warmup time, but may result in slightly higher integration costs.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
