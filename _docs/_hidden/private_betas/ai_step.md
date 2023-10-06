@@ -44,6 +44,7 @@ There are a few scenarios where Braze will discard the output of the AI step and
 - If the output exceeds 1,024 characters
 - If the output isn’t in JSON
 - If the prompt fails OpenAI’s [moderation](https://platform.openai.com/docs/guides/moderation/overview) requirements, which flags inappropriate user-generated content
+
 ## Example AI step use cases
 
 ### Customer sentiment responses
