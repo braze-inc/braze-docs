@@ -15,13 +15,40 @@ channel:
 
 ## Creating a link alias
 
-Link aliasing works by decorating a Braze-generated query parameter on links in the email channel. To create a link alias, open your email body and click the **Link Management** tab in a Braze campaign or Canvas builder to decorate all known links in the email body. You can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
+Link aliasing works by decorating a Braze-generated query parameter on links in the email channel. To create a link alias, follow these steps: 
+
+1. Open your email body.
+2. Click the **Link Management** tab.
+3. Braze automatically generates unique default link aliases for each of your links.
+4. Give the alias a name. Aliases must be uniquely named per email campaign variant or Canvas component. 
+
+You can also set an alias that will be used to reference a specific link when dealing with reporting or segmentation. 
 
 ![][2]
 
-Braze automatically generates unique default link aliases for each of your links. You can customize these aliases, but keep in mind that aliases must be uniquely named per email campaign variant or Canvas component. 
-
 Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It's best to include a question mark (?) at the end of your link so that Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
+
+### Managing link aliases
+
+Follow these steps to view all of your tracked link aliases:
+
+1. Go to **Settings** > **Email Preferences** under **Worksapce Settings**.
+2. Click the **Link Aliasing Settings** tab.
+
+{% alert important %}
+If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), these settings are under **Manage Settings**.
+{% endalert %}
+
+Here, you can also sort and search through all link aliases.
+
+![Tracked Link Aliases page that shows a link alias named "test" that is an active part of a Canvas step.][8]
+
+#### Untracking link aliases
+
+On the **Link Aliasing Settings** tab, you can turn off tracking for link aliases.
+
+1. Select the link alias.
+2. Click **Turn off tracking**.  
 
 ### Checking workflows
 
@@ -32,12 +59,6 @@ When link aliasing is enabled, messages, Content Blocks, and link templates are 
 ### Extracting data
 
 Use the [List link alias for campaign][3] and [List link alias for Canvas][4] endpoints to extract the `alias` set in each message variant in a campaign or an email-specific Canvas component.
-
-## Link templates
-
-For new message variants, any existing link template can be used from the **Link Management** tab. For messages that were launched with a link template, they still will be applied. If an existing message is modified, the link template must be reapplied through the **Link Management** tab. 
-
-Note that link templates can only be applied for links visible in the **Link Management** tab. This means that links without the `lid` URL parameter, such as "old" Content Blocks or links that cannot be marked up, will not be eligible for link templates. To fix this, we recommend copying "old" Content Blocks or including a question mark (?) or ampersand (&) in the `href` attribute for the URL.
 
 ## Link aliasing in Content Blocks
 
@@ -81,13 +102,21 @@ Check out this link aliasing example for the recommended formatting of the ancho
 ```
 {% endraw %}
 
+## Link templates
+
+For new message variants, any existing [link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/) can be used from the **Link Management** tab. For messages that were launched with a link template, they still will be applied. If an existing message is modified, the link template must be reapplied through the **Link Management** tab. 
+
+{% alert note %}
+Link templates can only be applied for links visible in the **Link Management** tab. This means that links without the `lid` URL parameter, such as "old" Content Blocks or links that cannot be marked up, will not be eligible for link templates. To fix this, we recommend copying "old" Content Blocks or including a question mark (?) or ampersand (&) in the `href` attribute for the URL.
+{% endalert %}
+
 ## Link segmentation
 
 The retargeting of aliases filters allow you to create segmentation filters based on your customers clicking a specifically tracked alias from either an email campaign or Canvas component. This filter is only available for campaigns or Canvases that have tracked aliases present.
 
 ### Tracking links
 
-When composing your email message, a new column will be present in the **Link Management** tab. Here, you can select which aliases you would like to be "tracked" for segmentation purposes and to be present in segmentation filters. Note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes.
+In the **Link Management** tab, select which aliases you would like to be "tracked" for segmentation purposes and to be present in segmentation filters. Note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes.
 
 {% alert tip %}
 To track link engagement metrics, make sure to precede your link with either HTTP or HTTPS.
@@ -112,17 +141,11 @@ Braze allows you to select unlimited links to track, though you may only retarge
 Braze only tracks up to the last 100 clicked link aliases at the profile level. 
 {% endalert %}
 
-To view all of your tracked linked aliases, go to the **Manage Settings** page under the **Settings** section. Next, select **Email Settings > Link Aliasing Settings**. On the **Tracked Link Aliases** page, you can also turn off tracking as well as search and sort your aliases.
-
-![Tracked Link Aliases page that shows a link alias named "test" that is an active part of a Canvas step.][8]
-
 ### Untracking links
 
-Untracking a link will not deallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until they are evicted by newer data. The following segmentation filters will continue to exist, but new segments cannot be created with that filter.
+Untracking a link will not deallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it's replaced by newer data. The following segmentation filters will continue to exist, but new segments cannot be created with that filter.
 
-For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again.
-
-When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
+For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
 
 ![][1]
 
