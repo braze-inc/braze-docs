@@ -144,7 +144,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 3. Edit your footer in the **Compose** section and send a test message. <br><br>{% raw %}The default footer uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute and Braze's physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include ``{{${set_user_to_unsubscribed_url}}}``. You won't be able to save a custom footer without this attribute. <br><br> ![][20] <br><br> If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**. <b><br>![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
 
 {% alert tip %}
-Be very careful to use a template with the custom footer ``{{${email_footer}}}`` or ``{{${set_user_to_unsubscribed_url}}}``when composing an email campaign. A warning will appear, but it'll be your choice to either send an email with or without an unsubscribe link.
+Be very careful when using a template with the custom footer ``{{${email_footer}}}`` or ``{{${set_user_to_unsubscribed_url}}}``when composing an email campaign. A warning will appear, but it'll be your choice to send an email with or without an unsubscribe link.
 {% endalert %}
 
 ![Example email composed without a footer.][21]
