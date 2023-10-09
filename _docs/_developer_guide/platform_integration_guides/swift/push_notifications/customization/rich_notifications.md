@@ -51,17 +51,18 @@ Add the following line to your Podfile:
 
 ```ruby
 target 'YourAppTarget' do
-pod 'BrazeKit'
-pod 'BrazeUI'
-pod 'BrazeLocation'
+  pod 'BrazeKit'
+  pod 'BrazeUI'
+  pod 'BrazeLocation'
 end
 
 target 'YourNotificationServiceExtensionTarget' do
-pod 'BrazeNotificationService'
+  pod 'BrazeNotificationService'
 end
 
+# Only include this below if your project integrates Push Stories as well
 target 'YourNotificationContentExtensionTarget' do
-pod 'BrazePushStory'
+  pod 'BrazePushStory'
 end
 ```
 {% alert note %}
