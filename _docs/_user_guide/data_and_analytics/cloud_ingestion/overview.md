@@ -183,7 +183,7 @@ The PAYLOAD object should not include an external id or other id type.
 
 #### Remove an attribute
 
-You can set it to `null`` if you want to completely remove an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated.
+You can set it to `null` if you want to completely remove an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated.
 
 #### Create JSON string from another table
 
