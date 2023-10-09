@@ -66,7 +66,7 @@ target 'YourNotificationContentExtensionTarget' do
 end
 ```
 {% alert note %}
-It's not required to have both Rich Push and Push Stories implemented in the same app. For instructions to implement Push Stories, see the [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/?tab=swift%20package%20manager).
+If you wish to implement the Push Stories feature, see the [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/?tab=swift%20package%20manager).
 {% endalert %}
 
 After updating the Podfile, navigate to the directory of your Xcode app project within your terminal and run `pod install`.
