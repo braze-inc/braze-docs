@@ -115,7 +115,9 @@ The email preference center is an easy way to manage which users receive certain
 
 ## Changing email subscriptions {#changing-email-subscriptions}
 
-In most cases, your users will manage their email subscription through subscription links that are included in the emails they receive. You must insert a legally-compliant footer with an unsubscribe link at the bottom of every email you send. When users click the unsubscribe URL in your footer, they should be unsubscribed and taken to a landing page that confirms the change to their subscription.
+In most cases, your users will manage their email subscription through subscription links that are included in the emails they receive. You must insert a legally-compliant footer with an unsubscribe link at the bottom of every email you send. When users click the unsubscribe URL in your footer, they should be unsubscribed and taken to a landing page that confirms the change to their subscription. 
+
+Note that when a user selects "Unsubscribe from all of the above types of emails" in the email preference center, this updates their global email subscription status to `unsubscribed` and unsubscribes them from all subscription groups.
 
 ### Creating custom footers {#custom-footer}
 
@@ -141,9 +143,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 2. Go to the **Custom Footer** section and turn on custom footers.
 3. Edit your footer in the **Compose** section and send a test message. <br><br>{% raw %}The default footer uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute and Braze's physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include ``{{${set_user_to_unsubscribed_url}}}``. You won't be able to save a custom footer without this attribute. <br><br> ![][20] <br><br> If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**. <b><br>![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
 
-
-
-> Be very careful to use a template with the custom footer ``{{${email_footer}}}`` or ``{{${set_user_to_unsubscribed_url}}}``when composing an email campaign. A warning will pop up, but it'll be your choice to either send an email with or without an unsubscribe link.
+{% alert tip %}
+Be very careful to use a template with the custom footer ``{{${email_footer}}}`` or ``{{${set_user_to_unsubscribed_url}}}``when composing an email campaign. A warning will appear, but it'll be your choice to either send an email with or without an unsubscribe link.
+{% endalert %}
 
 ![Example email composed without a footer.][21]
 
