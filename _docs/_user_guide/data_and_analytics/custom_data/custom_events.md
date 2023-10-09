@@ -9,9 +9,13 @@ search_rank: 2
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events
 
-> Custom events are actions taken by, or updates about, your users. They're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number and type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
+> This article describes custom events and properties, segmentation, their usage, Canvas entry properties, where to view relevant analytics, and more. To learn more about events in Braze, refer to [Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/events).
 
-## Use cases
+## Overview
+
+Custom events are actions taken by, or updates about, your users. They're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number and type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
+
+### Use cases
 
 Some common custom event use cases include:
 - Trigger a campaign or Canvas based on a custom event using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
@@ -21,11 +25,10 @@ Some common custom event use cases include:
 - Leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps.
 - Generate more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents).
 - Set up Canvas [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) to define when users should not advance to the next step of your Canvas.
-- And more!
 
-## Managing custom events
+### Managing custom events
 
-To create and manage custom events in the dashboard, go to **Data Settings** > **Custom Events**. 
+To create and manage custom events in the dashboard, go to **Data Settings** > **Custom Events**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Events** under **Manage Settings**.
@@ -33,9 +36,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 From this page, you can view, manage, or blocklist existing custom events, or create a new one. If you block a custom event, no data will be collected regarding that event, existing data will be unavailable unless reactivated, and blocklisted events will not show up in filters or graphs.
 
-## Logging custom events
+### Logging custom events
 
-The following lists the methods across various platforms that are used to log custom events. Within these pages, you will also be able to find documentation on how to add properties and quantities to your custom events.
+Custom events require additional setup. The following lists the methods across various platforms that are used to log custom events. Within these pages, you will also be able to find documentation on how to add properties and quantities to your custom events.
 
 {% details Expand for documentation by platform %}
 
@@ -49,11 +52,11 @@ The following lists the methods across various platforms that are used to log cu
 
 {% enddetails %}
 
-## Custom event storage
+### Custom event storage
 
 All data stored on the **User Profile**, including custom event metadata (first/last occurrence, total count, and X in Y over 30 days), is retained indefinitely as long as each profile is [active]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#active-users).
 
-## Custom event segmentation filters
+## Segmentation filters
 
 The following table shows the filters available for segmenting users by custom events.
 
@@ -71,7 +74,7 @@ The following table shows the filters available for segmenting users by custom e
 | Check if the custom event occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Custom event analytics
+## Analytics
 
 Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. You can view these analytics at **Analytics** > **Custom Events Report**.
 
@@ -93,11 +96,13 @@ You can also use **Filters** to breakdown your custom events by hour, monthly av
 
 ### Custom events analytics not showing?
 
-Note that Segments created with custom event data cannot show previous historic data from before they were created.
+Segments created with custom event data cannot show previous historic data from before they were created.
 
 ## Custom event properties
 
-Custom event properties are custom event metadata or attributes that describe a specific occurrence of an event. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, tracking conversions, and generating more sophisticated analytics through raw data export. Custom event properties are not stored on the Braze profile and therefore do not consume data points (see [Data points](#data-points) below for exceptions).
+Custom event properties are custom event metadata or attributes that describe a specific occurrence of an event. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, tracking conversions, and generating more sophisticated analytics through raw data export.
+
+Custom event properties are not stored on the Braze profile and therefore do not consume data points (see [Data points](#data-points) below for exceptions).
 
 {% alert important %}
 Each custom event or purchase can have up to 256 distinct custom event properties. If a custom event or purchase is logged with more than 256 properties, only the first 256 will be captured and available for use.
@@ -105,7 +110,7 @@ Each custom event or purchase can have up to 256 distinct custom event propertie
 
 ### Expected format
 
-The properties values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs ($).
+The properties values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs (`$`).
 
 Property values can be any of the following data types:
 
@@ -148,7 +153,7 @@ For example, if you have a gaming application and want to send a message to user
 If the user has no internet connection, triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display.
 {% endalert %}
 
-#### Considerations with filters
+##### Considerations with filters
 
 - **API calls:** When making API calls and using the "is blank" filter, a custom event property is considered "blank" if excluded from the call. For example, if you were to include `"event_property": ""`, then your users would be considered "not blank".
 - **Integers:** When filtering for a number custom event property and the number is very large, don't use the "exactly" filter. If a number is too large, it may be rounded at a certain length, so your filter won't work as expected.
@@ -171,15 +176,7 @@ In regards to subscription usage, custom event properties enabled for segmentati
 
 ### Canvas entry properties and event properties
 
-{% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when using `canvas_entry_properties` and `event_properties` for the original Canvas workflow.
-{% endalert %}
-
 You can leverage `canvas_entry_properties` and `event_properties` in your Canvas user journeys. Check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) for more information and examples.
-
-{% alert important %}
-You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
-{% endalert %}
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
@@ -196,18 +193,34 @@ For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in an
 For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
+{% details Expand for original Canvas editor %}
+
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference only.
+
 For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
 
+{% enddetails %}
 {% endtab %}
 
 {% tab Event Properties %}
+
+{% alert important %}
+You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
+{% endalert %}
+
 Event properties refer to the properties that you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases.
 
-In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, make sure to use {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
+In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. Make sure to use {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
+
+In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. These `event_properties` can only be used if the user actually took the action (didn't go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
+
+{% details Expand for original Canvas editor %}
+
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference only.
 
 For the original Canvas editor, `event_properties` can't be used in scheduled full steps. However, you can use `event_properties` in the first full step of an action-based Canvas, even if the full step is scheduled.
 
-In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. These `event_properties` can only be used if the user actually took the action (didn't go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
+{% enddetails %}
 
 {% endtab %}
 {% endtabs %}
