@@ -160,10 +160,21 @@ If the user has no internet connection, triggered in-app messages with templated
 
 #### Segmentation
 
-If you'd like to create segments based on event property recency and frequency, reach out to your customer success manager to enable segmentation for specific custom event properties. When enabled, you can access additional filtering options when segmenting, such as:
+Event property segmentation allows you to target users based not just on custom events taken but the properties associated with those events. This feature adds more filtering options when segmenting purchase and custom events.
 
-- Has done custom event with property A with value B, X times in the last Y days
-- Has made any purchases with property A with value B, X times in the last Y days
+Event properties for custom events are updated in real time for any segment that uses them. You can manage properties from the **Data Settings** > **Custom Events** page by clicking **Manage Properties** for your custom event. Custom event properties used in certain segment filters have a maximum look back history of 30 days.
+
+{% alert note %}
+If you'd like to create segments based on event property recency and frequency, reach out to your customer success manager to enable segmentation for specific custom event properties. When enabled, you can access additional filtering options when segmenting.
+{% endalert %}
+
+These segmentation filters include:
+
+- Has done custom event with property A with value B, X times in the last Y days.
+- Has made any purchases with property A with value B, X times in the last Y days.
+- Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
+
+![][3]
 
 Data is only logged for a given event property after it has been enabled by your customer success manager—event properties are only available from that date moving forward.
 
@@ -229,166 +240,7 @@ For the original Canvas editor, `event_properties` can't be used in scheduled fu
 
 You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, for triggering message sends, and for segmentation.
 
-#### Limitations
-
-- Nested data is supported for both [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/), but not other event types.
-- Event property objects that contain array or object values can have an event property payload of up to 50 KB.
-- Event property schemas cannot be generated for purchase events.
-- Event property schemas are generated through sampling custom events from the last 24 hours.
-- The following SDK versions support nested objects:
-
-{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
-
-#### Schema generation
-
-Generating a schema for events with nested event properties allows you to access the nested data. To generate a schema, follow these steps:
-1. Go to **Manage Settings** > **Custom Events**.
-2. Select **Manage Properties** for the events with nested properties.
-3. Click the icon to generate the schema. To view the schema, click the plus button.
-
-![][6]{: style="max-width:80%;"}
-
-After generating a schema, you'll be able to reference the nested data during [segmentation](#segmentation) and [personalization](#personalization).
-
-#### Usage examples
-
-##### API request body
-
-{% tabs %}
-{% tab Music Example %}
-
-The following is a `/users/track` example with a "Created Playlist" custom event. After a playlist has been created, to capture the properties of the playlist, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
-
-```
-...
-"properties": {
-  "songs": [
-    {
-      "title": "Smells Like Teen Spirit",
-      "artist": "Nirvana",
-      "album": {
-        "name": "Nevermind",
-        "yearReleased": "1991"
-      }
-    },
-    {
-      "title": "While My Guitar Gently Weeps",
-      "artist": "the Beatles",
-      "album": {
-        "name": "The Beatles",
-        "yearReleased": "1968"
-      }
-    }
-  ]
-}
-...
-```
-{% endtab %}
-{% tab Restaurant Example%}
-
-The following is a `/users/track` example with an "Ordered" custom event. After an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
-
-```
-...
-"properties": {
-  "r_details": {
-    "name": "McDonalds",
-    "identifier": "12345678",
-    "location" : {
-      "city": "Montclair",
-      "state": "NJ"
-    }
-  }
-}
-...
-```
-{% endtab %}
-{% endtabs %}
-
-##### Liquid templating
-
-The following Liquid templating examples show how to reference the nested properties saved from the preceding API request and use them in your Liquid messaging. Using Liquid and dot notation, traverse the nested data to find the specific node you would like to include in your messages.
-
-{% tabs local %}
-{% tab Music Example %}
-Templating in Liquid in a message triggered by the "Created Playlist" event:
-
-{% raw %}
-`{{event_properties.${songs}[0].album.name}}`: "Nevermind"<br>
-`{{event_properties.${songs}[1].title}}`: "While My Guitar Gently Weeps"
-{% endraw %}
-
-{% endtab %}
-{% tab Restaurant Example %}
-Templating in Liquid in a message triggered by the "Ordered" event:
-
-{% raw %}
-`{{event_properties.${r_details}.location.city}}`: "Montclair"
-{% endraw %}
-
-{% endtab %}
-{% endtabs %}
-
-##### Message triggering
-
-To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages. However, you can also add nested objects after generating a schema.
-
-{% tabs %}
-{% tab Music Example %}
-
-Triggering a campaign with nested properties from the "Created Playlist" event:
-
-![A user choosing a nested property for property filters on a custom event]({% image_buster /assets/img/nested_object2.png %})
-
-The trigger condition `songs[].album.yearReleased` "is" "1968" will match an event where any of the songs have an album released in 1968. We use the bracket notation `[]` for traversing through arrays, and match if **any** item in the traversed array matches the event property.<br>
-{% endtab %}
-{% tab Restaurant Example %}
-
-Triggering a campaign with nested properties from the "Ordered" event:
-
-![A user adding the property filter r_details.name is McDonalds for a custom event]({% image_buster /assets/img/nested_object1.png %})
-
-`r_details.name`: "Mcdonalds"<br>
-`r_details.location.city`: "Montclair"
-{% endtab %}
-{% endtabs %}
-
-{% alert note %} If your event property contains the `[]` or `.` characters, escape them by wrapping the chunk in double-quotes. For instance, `"songs[].album".yearReleased` will match an event with the literal property `"songs[].album"`.  {% endalert %}
-
-##### Segmentation
-
-Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. After you've generated a schema, the nested objects explorer will display in the segmentation section. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)). 
-
-![][4]
-
-##### Personalization
-
-Using the **Add Personalization** modal, select **Advanced Event Properties** as the personalization type. This allows the option to add a nested event properties after a schema has been generated.
-
-![][5]{: style="max-width:70%;"}
-
-##### Event property segmentation
-
-Event property segmentation allows you to target users based not just on custom events taken but the properties associated with those events. This feature adds more filtering options when segmenting purchase and custom events.
-
-![][3]
-
-These segmentation filters include:
-- Has done custom event with property Y with value V X times in the last Y days.
-- Has made any purchases with property Y with value V X times in the last Y days.
-- Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
-
-Event properties with custom events are updated in real time for any segment that uses them. You can manage properties from the **Data Settings** > **Custom Events** page by clicking **Manage Properties** for your custom event. Custom event properties used in certain segment filters have a maximum look back history of 30 days. Reach out to your Braze customer success manager to discuss using event property segmentation for your custom events.
-
-#### Frequently asked questions
-
-##### Does this consume additional data points?
-
-There is no change in how we charge data points as a result of adding this capability.
-
-##### How much nested data can be sent?
-
-If one or more of the event's properties contains nested data, the maximum payload for all combined properties on an event is 50 KB. Any request over that size limit will be rejected.
+To learn more, refer to our dedicated article on [Nested objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
 
 ## Custom event property storage
 
