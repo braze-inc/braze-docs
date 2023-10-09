@@ -155,6 +155,10 @@ Entry controls determine if users are allowed to re-enter a Canvas. You can also
 
 ![]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
 
+#### Setting exit criteria
+
+Setting the [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) determines which users you want to exit a Canvas. If a user performs the exception event or matches the segments and filters, they won't receive any further messages.
+
 ### Step 2d: Select your send settings
 
 Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
