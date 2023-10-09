@@ -60,13 +60,13 @@ target 'YourNotificationServiceExtensionTarget' do
   pod 'BrazeNotificationService'
 end
 
-# Only include this below if your project integrates Push Stories as well
+# Only include the below if you want to also integrate Push Stories
 target 'YourNotificationContentExtensionTarget' do
   pod 'BrazePushStory'
 end
 ```
 {% alert note %}
-If you wish to implement the Push Stories feature, see the [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/?tab=swift%20package%20manager).
+For instructions to implement Push Stories, see the [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/?tab=swift%20package%20manager).
 {% endalert %}
 
 After updating the Podfile, navigate to the directory of your Xcode app project within your terminal and run `pod install`.
