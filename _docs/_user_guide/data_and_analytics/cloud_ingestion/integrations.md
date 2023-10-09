@@ -39,7 +39,7 @@ New Cloud Data Ingestion integrations require some setup on the Braze side and i
 4. Test the integration and start the sync.
 
 {% alert important %}
-There may be 2-5 minutes of warm up time when Braze connects to Classic and Pro SQL instances, which will lead to delays duing connection set up and testing, as well as at the beginning of scheduled syncs. Using a Serverless SQL instances will minimize warmup time and improve query throughput, but may result in slightly higher integration costs.
+There may be two to five minutes of warm-up time when Braze connects to Classic and Pro SQL instances, which will lead to delays during connection setup and testing, as well as at the beginning of scheduled syncs. Using a serverless SQL instance will minimize warmup time and improve query throughput, but may result in slightly higher integration costs.
 {% endalert %}
 
 {% endtab %}
