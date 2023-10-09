@@ -12,7 +12,7 @@ description: "This article outlines details about the Search for an existing das
 {% api %}
 # Search existing dashboard user account by email
 {% apimethod get %}
-/scim/v2/Users?filter={userName@example.com}
+/scim/v2/Users?filter=userName%20eq%20user%40test.com
 {% endapimethod %}
 
 > This endpoint allows you to look up an existing dashboard user account by specifying their email in the filter query parameter. 
