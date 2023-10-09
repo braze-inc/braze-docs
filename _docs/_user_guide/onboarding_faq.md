@@ -188,7 +188,7 @@ You can create up to 10 Segment Extensions per workspace. After these extension 
 
 To increase targeting precision, you can select **Add Property Filters** and segment based on the specific properties of your purchase or custom event. Braze supports event property segmentation based on string, numeric, boolean, and time objects.
 
-We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects).
+We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
 
 Segment Extensions rely on long term storage of event properties and don't have the 30-day custom event property storage limit. This means you can look back on event properties tracked within the past year, and tracking doesn't wait until the extension has been set up first.
 
