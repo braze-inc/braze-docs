@@ -64,7 +64,7 @@ Closes #**ISSUE_NUMBER_HERE**
   </tr>
   <tr>
     <td>@lydia-xie</td>
-    <td>Ingestion<br>Core Objects<br>Core Messaging<br>Messaging Experience<br>Message Components<br>Email (Composition and Infrastructure)</td>
+    <td>Ingestion<br>Core Objects<br>Core Messaging<br>Messaging Experience<br>Message Components<br>Email (Composition and Infrastructure) (tag @rachel-feinberg for Liquid use cases)</td>
   </tr>
   <tr>
     <td>@rachel-feinberg</td>
