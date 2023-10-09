@@ -3,7 +3,7 @@ nav_title: Nested Objects
 article_title: Nested Objects in Custom Events
 page_order: 1
 page_type: reference
-description: " "
+description: "This article describes how to send nested JSON data as properties of custom events and purchases, and how to use those nested objects in your messaging."
 ---
 
 # Nested objects in custom events
