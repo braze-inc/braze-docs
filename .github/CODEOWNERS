@@ -12,6 +12,6 @@
 
 /_docs/_hidden/other/support_contact.md @josh-mccrowell-braze
 
-# Liquid use case library: Validate that new and updated use cases are tested before merging them in.
+# Liquid use case library: Validate that new and updated use cases are tested before merging them in. Rachel will validate. Josh is added as code owner in case Rachel is out of office to avoid blockers.
 
 /_docs/_user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases.md @josh-mccrowell-braze @rachel-feinberg
