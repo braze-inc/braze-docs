@@ -47,7 +47,7 @@ After following the [Swift Package Manager integration guide]({{site.baseurl}}/d
 {% endtab %}
 {% tab CocoaPods %}
 
-Add the following line to your Podfile:
+Add the following to your Podfile:
 
 ```ruby
 target 'YourAppTarget' do
