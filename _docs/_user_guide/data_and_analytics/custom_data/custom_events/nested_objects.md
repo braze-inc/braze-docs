@@ -8,6 +8,8 @@ description: "This article describes how to send nested JSON data as properties 
 
 # Nested objects in custom events
 
+> This article describes how to send nested JSON data as properties of custom events and purchases, and how to use those nested objects in your messaging.
+
 You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, for triggering message sends, and for segmentation.
 
 ## Limitations
