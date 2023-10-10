@@ -83,7 +83,7 @@ See below for details on each templated report.
 
 ### Viewing metrics for campaigns or Canvases {#campaign-canvas-email}
 
-To view email performance metrics broken down by segment at the campaign or Canvas level, use the [Variables](#variables) tab to specify the campaign or Canvas, as well as a time frame for pulling data.
+To view email performance metrics broken down by segment at the campaign or Canvas level, use the [Variables](#variables) tab to specify the campaign or Canvas and a time frame for pulling data.
 
 The following email metrics are available in this report:
 - Sends
