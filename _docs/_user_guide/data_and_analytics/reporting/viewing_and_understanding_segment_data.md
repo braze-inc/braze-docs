@@ -105,7 +105,7 @@ Metrics from non-email channels are not yet available.
 To view email performance broken down by segment at the campaign variant level, Canvas variant level, or Canvas step level, use the [Variables](#variables) tab to specify the following:
 - Specific campaign or Canvas
 - Variants 
-- (Optional) Canvas step
+- Canvas step (optional)
 - Time range
 
 The metrics are the same as those offered for the [campaign or Canvas level](#campaign-canvas-email) template. If you choose multiple variants, your results will be grouped by variant.
