@@ -36,7 +36,12 @@ New Cloud Data Ingestion integrations require some setup on the Braze side and i
 1. Create a service account and allow access to the Databricks project(s) and dataset(s) that contain the data you want to sync.  
 2. In your Databricks account, set up the table(s) or view(s) you want to sync to Braze.   
 3. Create a new integration in the Braze dashboard.  
-4. Test the integration and start the sync.  
+4. Test the integration and start the sync.
+
+{% alert important %}
+There may be two to five minutes of warm-up time when Braze connects to Classic and Pro SQL instances, which will lead to delays during connection setup and testing, as well as at the beginning of scheduled syncs. Using a serverless SQL instance will minimize warmup time and improve query throughput, but may result in slightly higher integration costs.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -175,6 +180,8 @@ If you have a firewall or other network policies, you must give Braze network ac
 
 {% alert important %}
 You may also need to change your security groups to allow Braze to access your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow Redshift TCP connectivity on this port even if the inbound rules are set to "allow all". In addition, it is important that the endpoint for the Redshift cluster be publicly accessible in order for Braze to connect to your cluster.
+
+If you won't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an ssh tunnel to access the Redshift data. [Check out this AWS Knowledge Center post for more information.](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
 {% endalert %}
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | For Instances `EU-01` and `EU-02` |
@@ -343,7 +350,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Te
 {% endalert %}
 
 #### Step 1: Add Redshift connection information and source table
-Input the information for your Redshift data warehouse and source table, then proceed to the next step.
+Input the information for your Redshift data warehouse and source table. If you are using a private network tunnel, toggle the slider and input the tunnel information. Then proceed to the next step.
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
 

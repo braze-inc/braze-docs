@@ -18,7 +18,7 @@ The Braze and OneTrust integration allows you to use the OneTrust workflow build
 | Requirements | Description |
 |---|---|
 | OneTrust account | A [OneTrust](https://www.onetrust.com/) account to take advantage of this partnership. |
-| Braze API key | A Braze REST API key with `users.track` and `subscription.status.set` permissions.<br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze API key | A Braze REST API key with permissions required for the endpoint your OneTrust action will use.<br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 

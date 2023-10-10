@@ -4,7 +4,7 @@ article_title: "GET: List Job Sync Status"
 search_tag: Endpoint
 page_order: 1
 hidden: true
-permalink: /api/cdi/get_job_sync
+permalink: /api/cdi/get_job_sync/
 layout: api_page
 page_type: reference
 description: "This article outlines details about the List job sync status Braze endpoint."
