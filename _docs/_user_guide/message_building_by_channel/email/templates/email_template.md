@@ -180,7 +180,7 @@ You can comment on email templates in the drag-and-drop editor.
 
 After your template is saved, users can see floating icons over unaddressed comments. Select **Resolve** to resolve these comments.
 
-![An exampel of an email template comment that reads "Looks good to me".][10]
+![An example of an email template comment that reads "Looks good to me".][10]
 
 For answers to frequently asked questions about email templates, check out our [Templates FAQ][9].
 

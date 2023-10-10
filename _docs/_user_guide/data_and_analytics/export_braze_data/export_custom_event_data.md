@@ -27,6 +27,9 @@ You can export the following CSVs:
 - Custom Events by Hour
     - (Optional) Custom Events for Different Segments
 - Custom Events per MAU
+- Custom Events for Different Segments
+- Custom Events per KPI formula
+    - (Optional) Custom Events for Different Segments
 
 {% alert tip %}
 For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.

@@ -28,7 +28,7 @@ You can do a manual full refresh on all SQL Segments created in either SQL edito
 
 ## Creating SQL Segment Extensions
 
-{% tabs %}
+{% tabs local %}
 {% tab SQL Editor %}
 
 To create a full refresh SQL Segment Extension:
@@ -65,6 +65,35 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
    When selected, Braze will update segment membership each day automatically. This means that each day at midnight in your company’s time zone (with a potential delay of an hour), Braze will check for new users in your segment and automatically add them to your segment. If a Segment Extension has not been used in 7 days, Braze will automatically pause daily regeneration. An unused Segment Extension is one that is not part of a campaign or Canvas (the campaign or Canvas doesn't need to be active for the extension to be considered "used").<br><br>
 5. Save your Segment Extension.
 
+{% endtab %}
+
+{% tab AI SQL Generator %}
+
+{% alert note %}
+The AI SQL generator is currently available as a beta feature. Contact your customer success manager if you're interested in participating in this beta trial.
+{% endalert %}
+
+The AI SQL generator leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your SQL segment.
+
+![AI SQL generator with the prompt "Users that received a notification last month"]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
+
+To use the AI SQL generator, do the following:
+
+1. Click **Launch AI SQL Generator** after creating a [SQL segment]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) using either full or incremental refresh.
+2. Type in your prompt and click **Generate** to translate your prompt into SQL.
+3. Review the generated SQL to make sure it looks correct, and then save your segment.
+
+### Example prompts
+- Users who received an email in the last month
+- Users who made less than five purchases in the last year
+
+### Tips
+- Familiarize yourself with the available [Snowflake data tables](https://www.braze.com/docs/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
+- Familiarize yourself with the [SQL writing rules](https://www.braze.com/docs/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
+
+### How is my data used and sent to OpenAI?
+
+In order to generate your SQL, Braze will send your prompts to OpenAI’s API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the content you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, including the [Usage Policy](https://openai.com/policies/usage-policies). Braze makes no warranty of any kind with respect to any AI-generated content. 
 {% endtab %}
 {% endtabs %}
 
@@ -189,3 +218,4 @@ Your query may fail for any of the following reasons:
 [3]: {% image_buster /assets/img_archive/sql_segments_usage.png %}
 [4]: {{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment
 [5]: {% image_buster /assets/img_archive/sql_segments_credits.png %}
+[6]: {% image_buster /assets/img/ai_sql_generator.png %}

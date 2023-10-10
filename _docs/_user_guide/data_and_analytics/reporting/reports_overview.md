@@ -241,14 +241,13 @@ Use the [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_da
 
 Check out this page for these statistics:
 
-- Revenue by Date
-- Revenue for Different Segments
-- Revenue for Different Products
-- Purchases by Date
-- Purchases for Different Products
-- Revenue by Hour
-- Hourly Revenue for Different Segments
-- Revenue per User
+- KPI formula results
+- Number of product purchases
+- Revenue for different segments
+- Revenue for different products
+- Revenue per hour
+- Hourly revenue for different segments
+- Revenue per user
 
 {% endtab %}
 {% tab Global Control Group Report %}

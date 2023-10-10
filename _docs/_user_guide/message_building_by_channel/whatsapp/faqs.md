@@ -158,6 +158,17 @@ We do not support chatbots or human-assisted chat within Braze or through direct
 
 If you already use WhatsApp as a customer support channel, we recommend you keep your current setup and create a new WABA via Braze for marketing messaging. This WABA will require a new phone number. 
 
+#### How can I “bridge the gap” between my customer support messaging and my marketing messaging via Braze? 
+You can use WhatsApp Liquid properties to forward inbound WhatsApp message content (including message body and media URLs) from Braze to other platforms, including any customer support tool. For details, see our [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/). 
+
+To send information into Braze, for example, to indicate that a user is in an active support conversation, you can log a custom attribute (such as a boolean "has existing support chat = true/false") and use that as segmentation criteria in their marketing campaigns. You can also deep link between two chat threads to direct users to the support thread from the marketing thread and the reverse. 
+
+#### Does Braze store user responses? 
+Yes. Inbound and outbound messaging is available in the [Messaging History tab]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab)of a user’s profile. 
+
+#### How do user phone numbers need to be stored in Braze? 
+User phone numbers need to be stored in [E.164 format]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/#formatting).
+
 #### What kind of rich media is supported in WhatsApp templates? 
 You can add images, calls to action (URL or phone number), and quick reply buttons to WhatsApp templates. You can add these elements when you build templates directly in WhatsApp. 
 
