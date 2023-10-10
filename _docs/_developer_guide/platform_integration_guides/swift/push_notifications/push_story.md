@@ -91,7 +91,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 {% endtab %}
 {% tab Manual %}
 
-Download the latest `BrazePushStory.zip` from the [GitHub release page](https://github.com/braze-inc/braze-swift-sdk/releases), extract it, and add the `BrazePushStory.xcframework` to your project's `Notification Content Extension`:
+Download the latest `BrazePushStory.zip` from the [GitHub release page](https://github.com/braze-inc/braze-swift-sdk/releases), extract it, and add the `BrazePushStory.xcframework` to your project's `Notification Content Extension`.
 
 ![]({% image_buster /assets/img/swift/push_story/manual1.png %})
 

@@ -38,9 +38,11 @@ To see a sample, refer to the usage in [`NotificationService`][1] of our Example
 {% tabs local %}
 {% tab Swift Package Manager %}
 
-After following the [Swift Package Manager integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/), add `BrazeNotificationService` to your `Notification Service Extension`:
+After following the [Swift Package Manager integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/), add `BrazeNotificationService` to your `Notification Service Extension`.
 
-![In Xcode, under frameworks and libraries, select the "+" icon to add a framework.]
+![In Xcode, under frameworks and libraries, select the "+" icon to add a framework.]({% image_buster /assets/img_archive/rich_notification.png %})
+
+![Select the "BrazeNotificationService" framework in the modal that opens.]({% image_buster /assets/img_archive/rich_notification2.png %})
 
 {% endtab %}
 {% tab CocoaPods %}
