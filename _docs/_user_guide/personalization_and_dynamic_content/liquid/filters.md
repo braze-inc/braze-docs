@@ -165,7 +165,6 @@ If you're updating a user on their purchase, an account balance, or anything reg
 | :--------------- | :--------------- | :-------- |
 | [money][5.1]      | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.         | ✅  Yes   |
 | [money_with_currency][5.2]    | Formats numbers with the currency symbol.     | ⛔  No    |
-| [money_without_trailing_zeros][5.3] | Formats numbers to exclude the decimal separator (either `.` or `,`) and trailing zeros. If there are no trailing zeros, this filter behaves like the `money` filter. <br><br> Note that this filter formats numbers based on the **HTML without currency** setting for your Shopify store. For more information, check out Shopify [currency formatting](https://help.shopify.com/en/manual/payments/currency-formatting?shpxid=9a22bd0c-507D-4B0C-FD32-77196565637F). | ✅  Yes   |
 | [money_without_currency][5.4]     | Formats numbers without the currency symbol.      | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
