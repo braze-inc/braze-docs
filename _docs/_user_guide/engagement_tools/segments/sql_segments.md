@@ -90,7 +90,7 @@ To use the AI SQL generator, do the following:
 ### Tips
 - Familiarize yourself with the available [Snowflake data tables](https://www.braze.com/docs/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
 - Familiarize yourself with the [SQL writing rules](https://www.braze.com/docs/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
-- You cannot send more than 20 prompts per minute with the AI SQL Generator.
+- You can send up to 20 prompts per minute with the AI SQL Generator.
 
 ### How is my data used and sent to OpenAI?
 
