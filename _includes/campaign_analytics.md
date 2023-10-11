@@ -233,62 +233,6 @@ Here are some key in-app message metrics you may see in your analytics. To see t
 *Body clicks are not automatically collected for in-app messages created with the Drag-and-Drop Editor and the Custom Code Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
 {% endalert %}
 
-#### How do conversions increment with re-eligibility?
-
-Each in-app message delivery can only have one conversion event assigned to it, and the conversion will be attributed to the last received message.
-
-If a user converts five times after seeing an in-app message, only one conversion event is counted for that message. However, if a user sees the same in-app message five times in a single day and converts after each impression, five conversions will be counted. The conversion event is attributed to the most recent in-app message sent.
-
-If a user sees an in-app message on two separate days but only converts on the third day, the conversion is logged for the second day's impression. It's important to note that only one conversion can be assigned to each step in a Canvas after the user has received that step.
-
-{% details Expand for example scenarios %}
-
-##### Scenario 1
-
-*A user receives the same in-app message 5 times in a single day and converts 5 times that same day.*
-
-Sarah receives an in-app message from a shopping app about a limited-time sale on her favorite brand of shoes. She clicks on the message and ends up purchasing two pairs of shoes.
-
-A few hours later, she receives the same in-app message again and decides to buy another pair of shoes. This happens a total of 5 times in a single day, and Sarah ends up making 5 separate purchases, each time after clicking on the in-app message.
-
-> **Results:** The *Total Conversions* for Sarah are incremented by 5 for that single day. However, since in-app message impressions can only increment after 24 hours, the *Total Impressions* remain the same. This causes the Conversion Rate to increase within that 24-hour period.
-
-##### Scenario 2
-
-*A user receives one in-app message and converts in a single day.*
-
-Lena receives an in-app message about a new learning course. Intrigued, she clicks on the message and starts the course. While she's in the app, she decides to also sign up for 4 more courses. This all happens on the same day after only receiving one message.
-
-> **Results:** The *Total Conversions* and *Total Impressions* for Lena are incremented by 1.
-
-##### Scenario 3
-
-*A user receives an in-app message and converts 1 day later.*
-
-Tom is a regular customer of an e-commerce app. He receives an in-app message promoting a limited-time discount on a product he's been interested in. Tom clicks on the message to check out the product, but decides not to buy it right away. The next day, Tom remembers the discount and decides to go ahead with the purchase. He opens the app and makes the purchase, which is attributed to the in-app message he received the day before.
-
-> **Results:** The *Total Conversions* and *Total Impressions* for Tom are incremented by 1.
-
-##### Scenario 4
-
-*A user receives an in-app message and converts twice 1 day later.*
-
-Alex recently downloaded an arcade app on their phone. One day, Alex receives an in-app message encouraging them to complete a level in a new game within the app. Alex clicks on the message to start the game, but they get distracted and don't complete a level. The next day, Alex completes two levels in the same game. 
-
-> **Results:** Since completing a level is the conversion event, Alex converted twice on the second day, however, because they only received one in-app message, the *Total Conversions* and *Total Impressions* for Alex are only incremented by 1.
-
-##### Scenario 5
-
-*A user receives the same in-app message 2 times in a single day and converts twice 1 day later.*
-
-John is a busy professional who relies on a delivery app to order food from his favorite restaurants. On his commute to work, he triggers a geofence and receives an in-app message promoting nearby restaurants. When he heads home later, he receives that same message again (because re-eligibility is on). Although he likes the offers, he decides not to order anything that day.
-
-The next day, John decides to order lunch and dinner through the app, performing the conversion event twice.
-
-> **Results:** The *Total Conversions* for John are incremented by 1, and the *Total Impressions* are incremented by 2. Because re-eligibility is on, the conversion will be assigned to the latest in-app message John received, which was the second in-app message (Remember that a conversion can only be logged once for each in-app message delivery).
-
-{% enddetails %}
-
 {% elsif include.channel == "push" %}
 
 #### Push metrics
