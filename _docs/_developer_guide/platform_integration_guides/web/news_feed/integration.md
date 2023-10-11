@@ -115,7 +115,7 @@ In order to disable this functionality add the following style to your CSS:
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html
 [2]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showfeed
 [3]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.banner.html
+[4]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html
 [5]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html
 [14]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
 [17]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.feed.html

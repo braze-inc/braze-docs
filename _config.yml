@@ -235,7 +235,7 @@ algolia:
       - url
       - Path_01
       - collection,tags
-      - content
+      - unordered(content)
       - unordered(platform)
       - channel
     customRanking:
