@@ -1,6 +1,6 @@
 ---
 nav_title: Hightouch
-article_title: Hightouch cohort import
+article_title: Hightouch Cohort Import
 description: "This reference article outlines the cohort import functionality of Hightouch, a platform to sync your customer data from your warehouse to business tools."
 page_type: partner
 search_tag: Partner
