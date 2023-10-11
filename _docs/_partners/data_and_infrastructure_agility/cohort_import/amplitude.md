@@ -32,7 +32,7 @@ Once generated, you can create a new key or invalidate an existing one. The data
 
 ### Step 2: Set up the Braze integration in Amplitude
 
-In Amplitude, navigate to **Sources & Destinations > [project name] > Destinations > Braze**. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Save**.
+In Amplitude, navigate to **Sources & Destinations** > **[project name]** > **Destinations** > **Braze**. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Save**.
 
 ![]({% image_buster /assets/img/amplitude.png %})
 
