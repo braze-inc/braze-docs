@@ -27,7 +27,7 @@ To access a user's profile, go to the **Search Users** page and search for a use
 If you are using the [older navigation]({{site.baseurl}}/navigation), **Search Users** is **User Search** and can be found under **Users**.
 {% endalert %}
 
-If a match is found, you can view the information that you've recorded for this user with the Braze SDK.
+If a match is found, you can view the information you've recorded for this user with the Braze SDK.
 
 Most searches return one user profile. However, if you search for an email that belongs to more than one user, all user profiles that match that email will be returned. If you do enter a non-unique email, click **Next** to view the other profiles that are associated with that email.
 
@@ -35,13 +35,9 @@ Most searches return one user profile. However, if you search for an email that 
 
 ### Merge profiles
 
-{% alert important %}
-Merging user profiles is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
-{% endalert %}
+If your search returns multiple user profiles, merging profiles can be a method to tidy up your Braze user profiles.
 
-If you find that your search returns multiple user profiles, merging profiles can be a method to tidy up your Braze user profiles.
-
-In order to merge user profiles, these user profiles must be found using the same search query (e.g., searching "testuser" returns three different user profiles). Click the **Merge duplicates** button to merge the user profiles. You can select which user profile to keep, meaning this profile will be kept and will gain attributes from the merged profile (the user profile to merge). 
+To merge user profiles, these user profiles must be found using the same search query (e.g., searching "testuser" returns three different user profiles). Click the **Merge duplicates** button to merge the user profiles. You can select which user profile to keep, meaning this profile will be kept and will gain attributes from the merged profile (the user profile to merge). 
 
 Once user profiles are merged, this action cannot be undone. For a list of fields that can be merged, refer to [Merge updates behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
 
@@ -49,7 +45,7 @@ Once user profiles are merged, this action cannot be undone. For a list of field
 
 User profiles are a great resource for troubleshooting and testing because you can easily access information about a user's engagement history, segment membership, device, and operating system.
 
-For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you are troubleshooting a [multi-lingual campaign][13] that didn't behave as expected.
+For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you're troubleshooting a [multi-lingual campaign][13] that didn't behave as expected.
 
 You can use the [Engagement tab](#engagement-tab) to verify whether a certain user received a campaign. In addition, if this particular user did receive the campaign, you can see when they received it. You can also verify whether a user is in a certain segment, and whether a user is opted in to push, email, or both. This information is useful for troubleshooting purposes. For example, you should check this information if a user doesn't receive a campaign that you expected them to receive or receives a campaign that you did not expect them to receive.
 

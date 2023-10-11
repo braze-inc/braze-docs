@@ -11,9 +11,6 @@ description: "This reference article provides an overview of Cloud Data Ingestio
 
 > Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. When synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion connects your data in Snowflake, Redshift, BigQuery, or Databricks to Braze.
 
-{% alert important %}
-Braze Cloud Data Ingestion for BigQuery and Databricks are currently in early access. Contact your Braze account manager if you are interested in participating in the early access. {% endalert %}
-
 ### How it works
 
 With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
@@ -75,6 +72,91 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
 }
 ```
 
+#### Update a field in an existing array of objects
+
+This example shows how to update a field in an existing array of objects. Let's say we have a source table with the following definition:
+
+```json 
+Create table BRAZE_CLOUD_INGESTION_DEMO.BRAZE_SCHEMA.pet_list (
+    pet_id int IDENTITY(1,1), 
+    breed VARCHAR, 
+    type VARCHAR, 
+    name VARCHAR, 
+    owner_id VARCHAR, 
+    age int
+);
+```
+
+In this example, we want to add an array of pets owned by each user, which corresponds to `owner_id`. Specifically, we want to include identification, breed, type, and name. We can use the following query to populate a table or view:
+
+```json
+SELECT 
+CURRENT_TIMESTAMP as UPDATED_AT,
+owner_id as EXTERNAL_ID,
+TO_JSON(
+    OBJECT_CONSTRUCT(
+        '_merge_objects','true',
+       'pets',
+        OBJECT_CONSTRUCT(
+           '$add', ARRAY_AGG( OBJECT_CONSTRUCT(
+                'id',
+                pet_id,
+                'breed',
+                breed,
+                'type',
+                type,
+                'name',
+                name
+                )) WITHIN GROUP (ORDER BY type ASC)    
+        )
+    )
+)
+as PAYLOAD from BRAZE_CLOUD_INGESTION_DEMO.BRAZE_SCHEMA.pet_list group by EXTERNAL_ID;
+```
+
+The expected output would look like this:
+
+```json
+UPDATED_AT	EXTERNAL_ID	PAYLOAD
+2023-10-02 19:56:17.377 +0000	03409324	{"_merge_objects":"true","pets":{"$add":[{"breed":"parakeet","id":5,"name":"Mary","type":"bird"}]}}
+2023-10-02 19:56:17.377 +0000	21231234	{"_merge_objects":"true","pets":{"$add":[{"breed":"calico","id":2,"name":"Gerald","type":"cat"},{"breed":"beagle","id":1,"name":"Gus","type":"dog"}]}}
+2023-10-02 19:56:17.377 +0000	12335345	{"_merge_objects":"true","pets":{"$add":[{"breed":"corgi","id":3,"name":"Doug","type":"dog"},{"breed":"salmon","id":4,"name":"Larry","type":"fish"}]}}
+```
+
+Next, to send an updated name field and new age field for each owner, we can use the following query to populate a table or view:
+
+```json
+SELECT 
+CURRENT_TIMESTAMP as UPDATED_AT,
+owner_id as EXTERNAL_ID,
+TO_JSON(
+    OBJECT_CONSTRUCT(
+        '_merge_objects','true',
+       'pets',
+        OBJECT_CONSTRUCT(
+           '$update', ARRAY_AGG( OBJECT_CONSTRUCT(
+                '$identifier_key','id',
+                '$identifier_value',pet_id,
+                '$new_object',OBJECT_CONSTRUCT(
+                    'name',name,
+                    'age',age
+                )
+                )) WITHIN GROUP (ORDER BY type ASC)    
+        )
+    )
+)
+as PAYLOAD from BRAZE_CLOUD_INGESTION_DEMO.BRAZE_SCHEMA.pet_list group by EXTERNAL_ID; 
+```
+
+The expected output would look like this:
+
+```json
+UPDATED_AT	EXTERNAL_ID	PAYLOAD
+2023-10-02 19:50:25.266 +0000	03409324	{"_merge_objects":"true","pets":{"$update":[{"$identifier_key":"id","$identifier_value":5,"$new_object":{"age":7,"name":"Mary"}}]}}
+2023-10-02 19:50:25.266 +0000	21231234	{"_merge_objects":"true","pets":{"$update":[{"$identifier_key":"id","$identifier_value":2,"$new_object":{"age":3,"name":"Gerald"}},{"$identifier_key":"id","$identifier_value":1,"$new_object":{"age":3,"name":"Gus"}}]}}
+2023-10-02 19:50:25.266 +0000	12335345	{"_merge_objects":"true","pets":{"$update":[{"$identifier_key":"id","$identifier_value":3,"$new_object":{"age":6,"name":"Doug"}},{"$identifier_key":"id","$identifier_value":4,"$new_object":{"age":1,"name":"Larry"}}]}}
+```
+
 ### Data point usage
 
 Each attribute sent for a user will consume one data point. It's up to you to only send the required data. Data point tracking for Cloud Data Ingestion is equivalent to tracking through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
@@ -96,9 +178,9 @@ The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings
 #### Separate EXTERNAL_ID from PAYLOAD column 
 The PAYLOAD object should not include an external id or other id type. 
 
-#### Removing an attribute
+#### Remove an attribute
 
-You can set it to 'null' if you want to completely remove an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated.
+You can set it to `null` if you want to completely remove an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated.
 
 #### Create JSON string from another table
 
@@ -171,7 +253,7 @@ SELECT
 {% endtab %}
 {% endtabs %}
 
-#### Using the UPDATED_AT timestamp
+#### Use the UPDATED_AT timestamp
 
 We use the `UPDATED_AT` timestamp to track what data has been synced successfully to Braze. If many rows are written with the same timestamp while a sync is running, this may lead to duplicate data being synced to Braze. Some suggestions to avoid duplicate data:
 - If you are setting up a sync against a `VIEW`, do not use `CURRENT_TIMESTAMP` as the default value. This will cause all data to sync every time the sync runs because the `UPDATED_AT` field will evaluate to the time our queries are run. 
@@ -241,19 +323,17 @@ To sync purchase events, event name, `product_id`, `currency`, `price`, and `tim
 {% endtab %}
 {% endtabs %}
 
-
 ## Product limitations
 
 | Limitations            | Description                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.                                             |
 | Number of rows         | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column.                                                            |
-| Attributes per row     | Each row should contain a single user ID and a JSON object with up to 50 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
+| Attributes per row     | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
 | Payload size           | Each row can contain a payload of size upto 1 MB. Payloads greater than 1 MB will be rejected.                                                                                     |
 | Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
-| Braze region           | This product is available in all Braze regions. Any Braze region can connect to any Snowflake region.                                                                              |
-| Snowflake region       | You can connect your Snowflake instance in any region or cloud to Braze using this product.                                                                                        |
-| Redshift connectivity  | Only publicly-accessible Redshift clusters are supported at this time.                                                                                                             |
+| Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
+| Source region       | Braze will connect to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
 
 {: .reset-td-br-1 .reset-td-br-2}
 

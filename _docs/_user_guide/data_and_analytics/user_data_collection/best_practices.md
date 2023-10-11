@@ -44,15 +44,15 @@ It is not recommended to heavily leverage this endpoint when querying a single u
   - Do not create a new profile.
   - Log a custom attribute (e.g., `newsletter_subscribed: true`) on the user's profile to indicate that the user has submitted their email via newsletter subscription. If multiple user profiles in Braze exist with the same email address, all profiles will be exported.<br><br>
 - **If a user does not exist:**
-  - Create an alias-only profile via Braze's [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). This endpoint will accept a [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/) and create an alias-only profile when `update_existing_only` is set to `false`. Set the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
+  - Create an alias-only profile via [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). This endpoint will accept a [`user_alias`` object]({{site.baseurl}}/api/objects_filters/user_alias_object/) and create an alias-only profile when `update_existing_only` is set to `false`. Set the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
 
 ![Diagram showing the process to update an alias-only user profile. A user submits their email address and a custom attribute, their zip code, on a marketing landing page. An arrow pointing from the landing page collection to an alias-only user profile shows a Braze API request to the Track user endpoint, with the request body containing the user's alias name, alias label, email, and zip code. The profile has the label "Alias Only user created in Braze" with the attributes from the request body to show the data being reflected on the newly-created profile.][3]{: style="max-width:90%;"}
 
- ## Capturing user emails through an email capture form
+## Capturing user emails through an email capture form
 
- Using an email capture form, you can prompt users to submit their email address, which will be added to their user profile. For more information on how to set up this form, check out [Email capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/).
+Using an email capture form, you can prompt users to submit their email address, which will be added to their user profile. For more information on how to set up this form, check out [Email capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/).
  
- ## Identifying alias-only users
+## Identifying alias-only users
 
 When identifying users upon account creation, alias-only users can be identified and assigned an external ID through the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) by merging the alias-only user with the known profile. 
 

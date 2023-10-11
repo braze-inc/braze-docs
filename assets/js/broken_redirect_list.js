@@ -360,8 +360,9 @@ validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/c
 validurls['/docs/hidden/private_betas/audience_sync_facebook/'] = '/docs/audience_sync_facebook/';
 validurls['/docs/hidden/private_betas/blacklist/'] = '/docs/blacklist/';
 validurls['/docs/hidden/private_betas/fb_app_review/'] = '/docs/fb_app_review/';
-validurls['/docs/hidden/private_betas/nested_object_support/'] = '/docs/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects';
-validurls['/docs/user_guide/data_and_analytics/custom_data/nested_object_support/'] = '/docs/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects';
+validurls['/docs/hidden/private_betas/nested_object_support/'] = '/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/';
+validurls['/docs/user_guide/data_and_analytics/custom_data/nested_object_support/'] = '/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/';
+validurls['/docs/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects'] = '/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/';
 validurls['/docs/services_handbook_21/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf';
 validurls['/docs/services_handbook_22/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf';
 validurls['/docs/hidden/private_betas/view_pii/'] = '/docs/view_pii';
@@ -920,3 +921,5 @@ validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifica
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/'] = '/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/swift_idfv/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/swift_idfv/'] = '/docs/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/';

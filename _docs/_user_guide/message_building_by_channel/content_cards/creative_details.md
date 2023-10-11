@@ -48,7 +48,7 @@ The Captioned Image card is a great way to show off and attract attention to imp
 {% endtab %}
 {% tab Banner %}
 
-If you want fancy, the banner card is for you. This is completely custom to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
+If you want fancy, the banner card is for you. This is completely customized to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
 
 ![Image of a banner with recommended details and a banner example]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 

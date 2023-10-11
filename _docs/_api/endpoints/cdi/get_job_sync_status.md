@@ -4,7 +4,7 @@ article_title: "GET: List Job Sync Status"
 search_tag: Endpoint
 page_order: 1
 hidden: true
-permalink: /api/cdi/get_job_sync
+permalink: /api/cdi/get_job_sync/
 layout: api_page
 page_type: reference
 description: "This article outlines details about the List job sync status Braze endpoint."
@@ -16,7 +16,7 @@ description: "This article outlines details about the List job sync status Braze
 /cdi/integrations/{integration_id}/job_sync_status
 {% endapimethod %}
 
-> Use this endpoint to return a list of past sync statuses for a given integration
+> Use this endpoint to return a list of past sync statuses for a given integration.
 
 {% alert important %}
 This endpoint is currently in early access. Contact your customer success manager if you're interested in participating in this early access.

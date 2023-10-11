@@ -50,10 +50,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Merging users by email
 
-{% alert important %}
-Merging users by email and using `/users/merge` with mismatched identifiers are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 If an `email` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` should be an array specifying which user to merge if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then merging will not occur.
 
 The allowed values for the array are: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` refers to prioritizing the most recently updated user.
@@ -103,6 +99,7 @@ This next example merges the most recently updated unidentified user with email 
 ##### Merging an unidentified user without including the most_recently_updated prioritization
 
 If there are two unidentified users with email address "john.smith@braze.com", this example request doesn't merge any users since there are two unidentified users with that email address. This request only works if there is only one unidentified user with email address "john.smith@braze.com".
+
 ```json
 {
   "merge_updates": {
@@ -124,6 +121,7 @@ The endpoint does not guarantee the sequence of `merge_updates` objects being up
 {% endalert %}
 
 This endpoint will merge any of the following fields if they are not found on the target user:
+
 - First name
 - Last name
 - Email
@@ -137,7 +135,7 @@ This endpoint will merge any of the following fields if they are not found on th
 - Session count (the sum of sessions from both profiles)
 - Date of first session (Braze will pick the earlier date of the two dates)
 - Date of last session (Braze will pick the later date of the two dates)
-- Custom attributes
+- Custom attributes (existing custom attributes on the target profile are retained and will include custom attributes that didn't exist on the target profile)
 - Custom event and purchase event data (excluding event properties)
 - Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
 - Segmentable custom events summary

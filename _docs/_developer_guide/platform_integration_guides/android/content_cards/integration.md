@@ -23,7 +23,7 @@ The [`ContentCardsFragment`][4] class will automatically refresh and display the
 
 The Content Cards data model is available in the Android SDK. For a full reference of the Content Card data model, see the [SDK reference documentation][1].
 
-Braze has four unique Content Cards card types that share a base model: [banner][30], [captioned image][31], [classic (text announcement)][32], and [classic (short news)][41]. Each type inherits common properties from a base model and has the following additional properties.
+Braze has four unique Content Cards card types that share a base model: [image only][30], [captioned image][31], [classic (text announcement)][32], and [classic (short news)][41]. Each type inherits common properties from a base model and has the following additional properties.
 
 See [Logging analytics]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics) for information on subscribing to card data.
 
@@ -44,9 +44,9 @@ The [base card][29] model provides foundational behavior for all cards.
 |`getIsDismissible()`  | Returns a boolean that reflects whether the card is pinned.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Banner image card properties {#banner-image-card-for-android}
+### Image only image card properties {#banner-image-card-for-android}
 
-[Banner image cards][30] are clickable full-sized images.
+[Image only cards][30] are clickable full-sized images.
 
 |Property | Description |
 |---|---|
@@ -105,7 +105,7 @@ Ready to go further? Once you understand the basics of Content Cards, see the [C
 [55]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-control.html
 [57]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html#-1644350493%2FProperties%2F-1725759721
 [29]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
-[30]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html
+[30]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html
 [31]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
 [32]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
 [41]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
