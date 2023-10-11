@@ -176,8 +176,9 @@ If you do not include an unsubscribe link, Braze will prompt you to add this in 
 
 ![]({% image_buster /assets/img/dnd_badge_icon.png %})
 
-
 For answers to frequently asked questions about email templates, check out our [Templates FAQ][9].
+
+
 
 [1]: {% image_buster /assets/img/dnd_compose_error.png %}
 [2]: {% image_buster /assets/img/email_templates/template2.png %}
