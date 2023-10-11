@@ -50,4 +50,4 @@ In Braze, to create a segment of these users, navigate to **Segments** under **E
 
 ![In the Braze segment builder, the user attributes filter "Mixpanel cohorts" is set to "includes" and "Braze cohort".]({% image_buster /assets/img_archive/mixpanel1.png %})
 
-Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
+After saving, you can reference this segment during Canvas or campaign creation in the targeting users step.
