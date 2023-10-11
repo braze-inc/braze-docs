@@ -3,7 +3,7 @@ nav_title: Creating a Transformation
 article_title: Creating a Transformation
 page_order: 1
 page_type: reference
-description: "This reference article provides steps on how to create a transformation using Braze Data Transformation."
+description: "This reference article provides steps to create a transformation using Braze Data Transformation."
 ---
 
 # Creating a transformation
@@ -34,13 +34,13 @@ Navigate to the Braze dashboard, and go to **Data Settings** > **Data Transforma
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Transformations** under **Data**.
 {% endalert %}
 
-Create and name your new transformation. This will open a detailed view, showing your most recent webhook this transformation has received, and a space to write your own transformation. 
+Create and name your new transformation. This will open a detailed view, showing your most recent webhook this transformation has received and a space to write your transformation. 
 
 ![][11]
 
 ## Step 3: Send a test webhook (recommended)
 
-This step is optional, but we recommend sending a test webhook from your source platform over to your newly created transformation. 
+This step is optional, but we recommend sending a test webhook from your source platform to your newly created transformation. 
 
 1. Copy the URL from your transformation.
 2. In your source platform, find a “Send Test” capability to have it generate a sample webhook to send over to this URL. 
@@ -52,7 +52,7 @@ This step is optional, but we recommend sending a test webhook from your source 
 Here’s what it looks like for Typeform:<br>![][12]
 
 {% alert note %}
-Braze Data Dransformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) if you're interested in using this type of platform with Braze Data Transformation.
+Braze Data Transformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) if you're interested in using this type of platform with Braze Data Transformation.
 {% endalert %}
 
 ## Step 4: Write transformation code
@@ -62,7 +62,7 @@ If you have little to no experience with JavaScript code or prefer more detailed
 If you're a developer or have significant experience with JavaScript code, follow the **Advanced** tab for high-level instructions on writing your transformation code.
 
 {% alert tip %}
-Braze Data Transformation has an AI copilot that asks ChatGPT to help you write your code, instead of using the default template. Access the AI copilot by clicking <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transfornmation code**. In order to use this, a webhook must be sent to your transformation.
+Braze Data Transformation has an AI copilot that asks ChatGPT to help you write your code, instead of using the default template. Access the AI copilot by clicking <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transformation code**. To use this, a webhook must be sent to your transformation.
 
 ![]({% image_buster /assets/img/data_transformation/data_transformation3.png %})
 {% endalert %}
@@ -118,7 +118,7 @@ Here, you will write transformation code to define how you’d like to map vario
     ```
 
 2. If you’d like all three (custom attributes, custom events, and purchases) in your transformation calls, skip to step 3. Otherwise, delete the sections that you don't need.<br><br>
-3. Each attribute, event, and purchase object requires a user identifier, either an `external_id`, `user_alias`, `braze_id`, `email`, or `phone`. Find the user identifier in the incoming webhook's payload, and template in that value in your transformation code via a payload line. Use dot notation to access payload object properties. <br><br> Note that using `email` or `phone` as your identifier requires early access to this functionality. Reach out to us at [data-transformation@braze.com](mailto:data-transformation@braze.com) for access. The example [transformation code]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/#example-transformation-code) uses this functionality.<br><br>
+3. Each attribute, event, and purchase object requires a user identifier, either an `external_id`, `user_alias`, `braze_id`, `email`, or `phone`. Find the user identifier in the incoming webhook's payload, and template in that value in your transformation code via a payload line. Use dot notation to access payload object properties. <br><br>
 4. Find the webhook values you’d like to represent as attributes, events, or purchases, and template those values in your transformation code via a payload line. Use dot notation to access payload object properties.<br><br>
 5. For each attribute, event, and purchase object, examine the `_update_existing_only` value. Set this to `false` if you want the transformation to create a new user that may not exist. Leave this as `true` to only update existing profiles.<br><br>
 6. Click **Validate** to return a preview of your code’s output and to check if it is an acceptable `/users/track` request.<br><br>
@@ -126,10 +126,6 @@ Here, you will write transformation code to define how you’d like to map vario
 7. Have your source platform begin sending webhooks. Your transformation code will run for each incoming webhook, and user profiles will begin updating. 
 
 Your webhook integration is now complete!
-
-{% alert important %}
-Accepting an email or phone number as an identifier is possible because Braze Data Transformation users can be granted early access to the `/users/track` feature. If you're interested in participating in this early access, reach out to [data-transformation@braze.com](mailto:data-transformation@braze.com).<br><br>Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function is deprecated.
-{% endalert %}
 
 {% endtab %}
 {% tab Advanced %}
@@ -150,10 +146,6 @@ Click **Validate** to return a preview of your code's output and to check if it'
 External network requests, third-party libraries, and non-JSON webhooks are not currently supported.
 {% endalert %}
 
-{% alert important %}
-Accepting an email or phone number as an identifier is possible because Braze Data Transformation users can be granted early access to the `/users/track` feature. If you're interested in participating in this early access, reach out to [data-transformation@braze.com](mailto:data-transformation@braze.com).<br><br>Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function is deprecated.
-{% endalert %}
-
 {% endtab %}
 {% endtabs %}
 
@@ -164,13 +156,13 @@ After activating your transformation, refer to the analytics on the **Transforma
 - **Incoming Requests:** This is the number of webhooks received at this transformation’s URL. If incoming requests are 0, your source platform hasn’t sent over any webhooks, or the connection cannot be made.
 - **Deliveries:** After receiving incoming requests, Data Transformation applies your transformation code to create a Braze `/users/track` request.
 
-The number of deliveries will never be greater than the number of incoming requests. However, it is a good goal to have 100% of incoming requests leading to deliveries.
+The number of deliveries will never exceed the number of incoming requests. However, it's a good goal to have 100% of incoming requests leading to deliveries.
 
 ### Troubleshooting
 
 - If deliveries are 0, check your transformation code to ensure there are no syntax errors and that it compiles. Then, check whether the output is a valid `/users/track` request.
 - If deliveries are less than the number of incoming requests, that indicates that at least some webhooks are delivered successfully transformed to `/users/track`. Your transformation code doesn't account for 100% of the webhooks received.
-- If your source platform has logs, check if there are inconsistencies across different webhooks.
+- If your source platform has logs, check for inconsistencies across different webhooks.
 - If your transformation code has if/else logic, check if one of the control flows is the cause of failure.
 
 

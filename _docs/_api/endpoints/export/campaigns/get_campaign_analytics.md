@@ -113,7 +113,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                   {
                     "sent": (int) the number of sends,
                     "sent_to_carrier" : (int) the number of messages sent to the carrier,
-                    "delivered": (int)the number of delivered messages,
+                    "delivered": (int) the number of delivered messages,
                     "rejected": (int) the number of rejected messages,
                     "delivery_failed": (int) the number of failied deliveries,
                     "clicks": (int) the number of clicks on shortened links,
@@ -121,6 +121,54 @@ Authorization: Bearer YOUR-REST-API-KEY
                     "help" : (int) the number of help messages recieved
                   }
                 ],
+                "whats_app": [
+                    {
+                        "variation_name": (string) the name of the message in the dashboard,
+                        "variation_api_id": (string) the variation API identifier,
+                        "sent": (int) the number of sends, 
+                        "delivered": (int) the number of delivered messages,
+                        "failed": (int) the number of failed deliveries,
+                        "read": (int) the number of opened messages,
+                        "revenue": (float) the number of dollars of revenue (USD),
+                        "unique_recipients": (int) the number of unique recipients,
+                        "conversions": (int) the number of conversions,
+                        "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
+                        "conversions1": (optional, int) the number of conversions for the second conversion event,
+                        "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
+                        "conversions2": (optional, int) the number of conversions for the third conversion event,
+                        "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
+                        "conversions3": (optional, int) the number of conversions for the fourth conversion event,
+                        "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
+                    },
+                    {
+                        "variation_name": (string) the name of the message in the dashboard,
+                        "variation_api_id": (string) the variation API identifier,
+                        "enrolled": (optional, int) the number of enrolled users,
+                        "revenue": (float) the number of dollars of revenue (USD),
+                        "unique_recipients": (int) the number of unique recipients,
+                        "conversions": (int) the number of conversions,
+                        "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
+                        "conversions1": (optional, int) the number of conversions for the second conversion event,
+                        "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
+                        "conversions2": (optional, int) the number of conversions for the third conversion event,
+                        "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
+                        "conversions3": (optional, int) the number of conversions for the fourth conversion event,
+                        "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
+                    }
+                ]
+            },
+            "conversions_by_send_time": (optional, int),
+            "conversions1_by_send_time": (optional, int),
+            "conversions2_by_send_time": (optional, int),
+            "conversions3_by_send_time": (optional, int),
+            "conversions": (optional, int),
+            "conversions1": (optional, int),
+            "conversions2": (optional, int),
+            "conversions3": (optional, int),
+            "unique_recipients": (int),
+            "revenue": (optional, float)
+            }
+         ],
                 "content_cards" : [
                   { 
                     "variation_name": (string) the variation name, 

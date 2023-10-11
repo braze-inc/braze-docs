@@ -32,9 +32,13 @@ This is similar to deleting a user in the **Manage Users** section of the Braze 
 | `id` | Required | String | The user's resource ID. This parameter is returned by the  `POST` `/scim/v2/Users/` or `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` methods. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Request parameters
+## Request body
 
-There is no request body for this endpoint.
+```json
+Content-Type: application/json
+X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
+Authorization: Bearer YOUR-REST-API-KEY
+```
 
 ## Example request
 ```json

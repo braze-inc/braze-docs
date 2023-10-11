@@ -27,7 +27,7 @@ Learn more about how Braze collects data:
         2. If a profile with this email address already exists within Braze, it will be updated to include any data sent within the request.
         3. In a use case with more than one profile with this email address, the most recently updated profile will be prioritized.
     - Note that if an email-only user profile exists and then an identified profile with the same email address is created (i.e., another profile with the same email address AND an external ID), Braze will create a second profile. Subsequent updates will go to the profile with the external ID.
-        - Braze is working on adding a new API endpoint to allow customers to identify an email-only profile and merge data from the email-only profile into the identified profile.
+        - The two profiles can be merged using the Braze [/merge/users]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) endpoint
 
 ## Handling anonymous users
 
@@ -177,7 +177,7 @@ Connected Contents' versatility makes this a feature used by many of our custome
 
 Things to be aware of:
 - Braze does not charge for API calls and will not count towards your data point allotment.
-- There is a default limit of 1 MB for Connected Content responses. This default limit can be increased upon request. Reach out to your customer success manager for more information.
+- There is a limit of 1 MB for Connected Content responses.
 - Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 - Connected Content calls do not follow redirects.Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.
 - Braze’s systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes. 

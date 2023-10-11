@@ -36,7 +36,7 @@ The following table describes the usage limitations of each version of Data Tran
 | Limitation Area | Free Version | Data Transformation Pro |
 |----|----|----|
 | **Active transformations** | Up to 5 per company | Up to 55 per company |
-| **Per month** | 300,000 incoming requests per minute | 10,300,000 incoming requests per minute |
+| **Per month** | 300,000 incoming requests per month | 10,300,000 incoming requests per month |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
@@ -59,7 +59,7 @@ While we would love for developers to use this feature as well, you don’t need
 
 ### Can I still use Braze Data Transformation if my external platform only gives an email address or phone number as an identifier?
 
-Yes. You can have your transformations updating the `/users/track` endpoint with the [email address or phone number as an identifier]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address). Note this `/users/track` functionality is in early access. If you're interested in participating in this early access, reach out to [data-transformation@braze.com](mailto:data-transformation@braze.com).
+Yes. You can have your transformations updating the `/users/track` endpoint with the [email address or phone number as an identifier]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address).
 
 This works by using `email` or `phone` as your identifier property in the transformation code instead of `external_id` or `braze_id`. The example [transformation code]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/#example-transformation-code) uses this functionality.
 

@@ -19,7 +19,7 @@ The default Content Cards UI can be integrated from the `BrazeUI` library of the
 For more information about iOS view controller options, refer to the [Apple developer documentation](https://developer.apple.com/documentation/uikit/view_controllers/showing_and_hiding_view_controllers).
 {% endalert %}
 
-The `BrazeUI` library of the Swift SDK provides two default view controller contexts: navigation or modal. This means you can integrate Content Cards in these contexts by adding a few lines of code to your app or site. You can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options. Refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example. 
+The `BrazeUI` library of the Swift SDK provides two default view controller contexts: navigation or modal. This means you can integrate Content Cards in these contexts by adding a few lines of code to your app or site. Both views offer customization and styling options as described in the [customization guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles/?tab=ios). You can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options&#8212;refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example. 
 
 {% alert important %}
 The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of `GIFViewProvider`.
@@ -97,7 +97,7 @@ For example usage of `BrazeUI` view controllers, check out the corresponding Con
 
 The Content Cards data model is available in the `BrazeKit` module of the iOS Swift SDK.
 
-Braze offers five Content Card types: banner, captioned image, classic, classic image, and control. Each type is an implementation of the `Braze.ContentCard` type. Note that `BrazeKit` offers an alternative [`ContentCardRaw`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw) class for Objective-C compatibility.
+Braze offers five Content Card types: image only, captioned image, classic, classic image, and control. Each type is an implementation of the `Braze.ContentCard` type. Note that `BrazeKit` offers an alternative [`ContentCardRaw`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw) class for Objective-C compatibility.
 
 For a full list of Content Card properties, as well as details about using Content Cards, refer to the [`ContentCard` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard).
 

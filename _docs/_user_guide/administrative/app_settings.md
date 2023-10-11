@@ -1,6 +1,6 @@
 ---
 nav_title: Settings
-article_title: Settings
+article_title: Settings (previously Developer Console)
 page_order: 3
 layout: dev_guide
 guide_top_header: "Settings"

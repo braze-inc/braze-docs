@@ -5,7 +5,7 @@ description: "This reference article covers how to configure fuzzy opt-out, a se
 page_type: reference
 channel:
   - SMS
-page_order: 1.1
+page_order: 1
 
 ---
 

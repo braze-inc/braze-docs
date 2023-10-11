@@ -32,16 +32,19 @@ For information on how to obtain a SCIM token, visit [Automated user provisionin
 | `id` | Required | String | The user's resource ID. This parameter is returned by the  `POST` `/scim/v2/Users/` or `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` methods. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Request parameters
-
-There is no request body for this endpoint.
+## Request body
+```json
+Content-Type: application/json
+X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
+Authorization: Bearer YOUR-REST-API-KEY
+```
 
 ## Example request
 ```json
 curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
---header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 ```
 
 ## Response
@@ -61,7 +64,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
-                "appGroupName": "Test workspace",
+                "appGroupName": "Test Workspace",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {

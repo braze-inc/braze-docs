@@ -1,11 +1,11 @@
 ---
 nav_title: SMS Double Opt-In
 article_title: SMS Double Opt-In
-permalink: /sms_double_opt_in/
 description: "This reference article covers the SMS double opt-in feature, and explains how to enable the feature, select opt-in keywords and reply messages, and enter users into the SMS double opt-in workflow through subscription updates that occur in REST API, SDK, and preference center updates."
-Tool:
+page_type: reference
+page_order: 2
+channel:
   - SMS
-hidden: true
 ---
 
 # SMS double opt-in
@@ -68,11 +68,12 @@ Each subscription source has a different enrollment behavior, as described in th
 
 Source    | Double Opt-In Enrollment Behavior   
 ----------- | -----------
-SDK | Users are automatically enrolled when subscribed via the Braze SDK.
-REST API | Users won’t be enrolled when their subscription status is set by `/users/track` or the `/v2/subscription/status/set` endpoints. Users can be enrolled when the subscription status is set via `/subscription/status/set` and the optional parameter `use_double_opt_in_logic` is passed as `true` (for example, [{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed", "use_double_opt_in_logic": true}]). 
-Shopify | Users won’t be enrolled when their subscription status is set by our Shopify integration.
-User Import | Users won’t be enrolled when their subscription status is set by User Import.
-[Preference Center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center) | Users are automatically enrolled when subscribed through a preference center.
+SDK | Users will automatically enter the SMS double opt-in workflow when subscribed via the Braze SDK.
+REST API | Users can be entered into the workflow when the subscription status is set via `/subscription/status/set`, `/v2/subscription/status/set` or `/users/track` and the optional parameter `use_double_opt_in_logic` is passed as `true` (for example, [{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed", "use_double_opt_in_logic": true}]). If this parameter is omitted, users will not be entered into the SMS double opt-in workflow.
+Shopify | Users will not be entered into the SMS double opt-in workflow when their subscription status is set by our Shopify integration.
+User Import | Users will not be entered into the SMS double opt-in workflow when their subscription status is set by User Import.
+[Preference Center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center) | Users will automatically enter into the SMS double opt-in workflow when subscribed via a preference center.
+User Update Step | Users can be entered into the SMS double opt-in workflow when their subscription status is set via the User Update Step and the optional parameter `use_double_opt_in_logic` is passed as `true`. If this parameter is omitted, users will not be entered into the SMS double opt-in workflow.
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Multi-language support

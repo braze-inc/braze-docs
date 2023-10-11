@@ -34,6 +34,10 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is called **User Import** and can be found under **Users**.
 {% endalert %}
 
+#### Updated phone numbers and subscription groups
+
+When a phone number is updated on a user profile, the new phone number inherits the subscription group status of the old number. 
+
 ### How to check a user's SMS subscription group
 
 - **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. When inside a user profile, under the Engagement tab, you can view a user's SMS subscription groups. 

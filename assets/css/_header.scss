@@ -278,6 +278,13 @@ $header_transition_time: 0.25s;
 
 
     }
+    #braze_header_lang {
+      color: $white;
+      margin-left: 10px;
+      .nav-item-lang-li {
+        padding-top: 0px;
+      }
+    }
   }
 
   #nav-item-lang {

@@ -18,7 +18,7 @@ The Braze and Personalize.AI integration allows you to export data from Personal
 | Requirement | Description |
 | ----------- | ----------- |
 | Personalize.AI instance | A Personalize.AI instance is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with all permissions. <br><br>This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with all permissions. <br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
 {: .reset-td-br-1 .reset-td-br-2}
 

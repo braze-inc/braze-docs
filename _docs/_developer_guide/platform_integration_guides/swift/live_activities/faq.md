@@ -14,10 +14,6 @@ platform:
 
 ## Functionality and support
 
-### How can I join the Live Activities early access program? 
-
-Live Activities are currently in early access. Contact your Braze account manager if you're interested in participating. There is no additional pricing or paperwork required to join this early access program.
-
 ### What platforms support Live Activities?
 
 Live Activities are currently a feature specific to iOS. The Live Activities article covers the [prerequisites][2] for managing Live Activities through the Braze Swift SDK.

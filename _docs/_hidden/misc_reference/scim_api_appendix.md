@@ -12,7 +12,11 @@ permalink: "/scim_api_appendix/"
 
 ## Permissions object
 
-The permissions object is a field found in some of the requests and responses when interfacing with the user resource through SCIM id permissions.
+The permissions object is a field found in some of the requests and responses when interfacing with the user resource through SCIM ID permissions.
+
+{% alert note %}
+App groups have been renamed to workspaces in Braze, but the keys on this page still reference the old terminology (e.g., `appGroup`, `appGroupName`).
+{% endalert %}
 
 ```
 {
@@ -25,13 +29,13 @@ The permissions object is a field found in some of the requests and responses wh
 
 A valid permissions object is a JSON object with the following key-value pairs:
 
-| Key | Required | Data type | Desciption |
+| Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `companyPermissions` | Required | Array | Array of company-level permission strings from the [Company permission strings](#company) table, in which the presence of the string corresponds to the user having the corresponding permission. |
-| `appGroup` | Required | Array | Array of [app group permission objects](#app-group-permssions-object). |
+| `appGroup` | Required | Array | Array of [workspace permission objects](#workspace-permission-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### App group permssions object
+### Workspace permissions object {#workspace-permission-object}
 
 A valid app group permission object is a JSON object with the following key-value pairs:
 
@@ -39,8 +43,19 @@ A valid app group permission object is a JSON object with the following key-valu
 | --- | --- | --- | --- |
 | `appGroupName`| Optional | String | Name of the workspace. Used to specify which workspace the permissions contained within this object are for. | 
 | `appGroupId` | Required if `appGroupName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace. |
-| `appGroupPermissions` | Required | Array | Array of workspace-level permission strings from the [App group permission strings](#app-group) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified workspace. |
+| `appGroupPermissionsSets` | Optional | Array | Array with a single [workspace permissions set object](#workspace-permissions-set-object). |
+| `appGroupPermissions` | Required | Array | Array of workspace-level permission strings from the [workspace permission strings](#workspace-strings) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified workspace. |
 | `team` | Optional | Array | Array of [Team permission objects](#team-permissions-object). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Workspace permissions set object {#workspace-permissions-set-object}
+
+A valid workspace permissions set object is a JSON object with the following key-value pairs:
+
+| Key | Required | Data type | Description |
+| --- | --- | --- | --- |
+| `appGroupPermissionSetName` | Optional | String | Name of the workspace permission set that is being assigned to the user for this workspace. |
+| `appGroupPermissionSetID` | Required if `appGroupPermissionSetName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace permission set assigned to the user for this workspace. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Team permissions object
@@ -49,14 +64,14 @@ A valid team permission object is a JSON object with the following key-value pai
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
-| `teamName` | Optional | String | Name of the team. Used to specify which team the permissions contained within this object are for. |
+| `teamName` | Optional | String | Name of the team, which can be used to specify which team the permissions within this object are for. |
 | `teamId` | Required if `teamName` is missing | String | ID of the team, serving as an alternative method of specifying the team. |
-| `teamPermissions` | Required | Array | Array of team-level permission strings from the [team permission strings](#team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
+| `teamPermissions` | Required | Array | Array of team-level permission strings from the [teams permission strings](#team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Appendix
 
-### Company permission strings
+### Company permission strings {#company}
 
 | As displayed in UI | SCIM API string |
 | --- | --- |
@@ -65,7 +80,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | Can Add/Remove Workspaces| `add_remove_app_groups` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### App group permission strings
+### Workspace permission strings {#workspace-strings}
 
 | Permission name | SCIM API string |
 | --- | --- |
@@ -93,7 +108,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | Manage Approval Settings | `manage_approval_settings` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Teams permission strings
+### Team permission strings {#team}
 
 | Permission name | SCIM API string |
 | --- | --- |

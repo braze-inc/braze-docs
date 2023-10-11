@@ -37,7 +37,7 @@ Amplitude and Braze offer two different integration methods. Read through the fo
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Braze REST API key | A Braze REST API key with the all permissions.<br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with the all permissions.<br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 | Braze app identifier | The identifier for the app that will receive Amplitude events. This can be found within the **Braze Dashboard > Developer Console > Settings**. |
 
@@ -108,9 +108,9 @@ Refer to Amplitude's documentation to learn more about [syncing properties, reco
 
 #### How to sync user properties and computations
 
-In Amplitude Audiences, select **New > Sync**.
+In Amplitude Audiences, select **Syncs > Create Sync**.
 
-![]({% image_buster /assets/img/amplitude5.png %})
+![]({% image_buster /assets/img/amplitude11.png %})
 
 Next, choose to sync a user property, computation, cohort, or recommendation. 
 

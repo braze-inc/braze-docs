@@ -34,7 +34,7 @@ validurls['/docs/quick_wins/personalized_messaging#conditionals'] = '/docs/user_
 validurls['/docs/quick_wins/personalized_messaging'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/';
 
 validurls['/docs/getting_started/'] = '/docs/user_guide/onboarding_with_braze/';
-validurls['/docs/getting_started#list-unsubscribe-settings'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header';
+validurls['/docs/getting_started#list-unsubscribe-settings'] = '/docs/user_guide/administrative/app_settings/email_settings/#include-a-list-unsubscribe-header';
 validurls['/docs/quick_wins/optimal_send_time'] = '/docs/user_guide/sage_ai/intelligence/intelligent_timing/';
 validurls['/docs/scheduling_and_organizing_campaigns/#intelligent-delivery'] = '/docs/user_guide/sage_ai/intelligence/intelligent_timing/';
 validurls['/docs/troubleshooting_guide/'] = '/docs/help/home/';
@@ -197,6 +197,13 @@ validurls['/docs/user_guide/message_building_by_channel/sms/create/'] = '/docs/u
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/'] = '/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/';
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/'] = '/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/';
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/double_opt_in/'] = '/docs/user_guide/message_building_by_channel/sms/non_native/double_opt_in/';
+validurls['/docs/sms_double_opt_in/'] = '/docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/';
+
+validurls['/docs/user_guide/message_building_by_channel/sms/non_native'] = '/docs/user_guide/message_building_by_channel/sms/keywords';
+validurls['/docs/user_guide/message_building_by_channel/sms/non_native/user_data_migration/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/user_data_migration/';
+validurls['/docs/user_guide/message_building_by_channel/sms/non_native/double_opt_in/'] = '/docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/';
+validurls['/docs/user_guide/message_building_by_channel/sms/non_native/custom_keyword_handling/'] = '/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/';
+validurls['/docs/user_guide/message_building_by_channel/sms/non_native/handling_unkown_phone_numbers'] = '/docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers';
 
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/user_phone_numbers/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/user_data_migration/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/';
@@ -353,8 +360,9 @@ validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/c
 validurls['/docs/hidden/private_betas/audience_sync_facebook/'] = '/docs/audience_sync_facebook/';
 validurls['/docs/hidden/private_betas/blacklist/'] = '/docs/blacklist/';
 validurls['/docs/hidden/private_betas/fb_app_review/'] = '/docs/fb_app_review/';
-validurls['/docs/hidden/private_betas/nested_object_support/'] = '/docs/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects';
-validurls['/docs/user_guide/data_and_analytics/custom_data/nested_object_support/'] = '/docs/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects';
+validurls['/docs/hidden/private_betas/nested_object_support/'] = '/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/';
+validurls['/docs/user_guide/data_and_analytics/custom_data/nested_object_support/'] = '/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/';
+validurls['/docs/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects'] = '/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/';
 validurls['/docs/services_handbook_21/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf';
 validurls['/docs/services_handbook_22/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf';
 validurls['/docs/hidden/private_betas/view_pii/'] = '/docs/view_pii';
@@ -459,9 +467,9 @@ validurls['/docs/developer_guide/platform_integration_guides/fireos/content_card
 
 validurls['/docs/user_guide/personalization_and_dynamic_content/liquid/filters/#e-commerce/'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/filters/#money-filters/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/amerpity/#amperity/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/';
-validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#overview/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
-validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#benefits-of-the-list-unsubscribe-header/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
-validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#how-the-list-unsubscribe-header-works/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#overview/'] = '/docs/user_guide/administrative/app_settings/email_settings/#include-a-list-unsubscribe-header';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#benefits-of-the-list-unsubscribe-header/'] = '/docs/user_guide/administrative/app_settings/email_settings/#include-a-list-unsubscribe-header';
+validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#how-the-list-unsubscribe-header-works/'] = '/docs/user_guide/administrative/app_settings/email_settings/#include-a-list-unsubscribe-header';
 
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/understanding_campaign_status/'] = '/docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/';
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/';
@@ -909,3 +917,8 @@ validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards
 validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/customization/carousel_view/'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
 validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards/implementation_guide/'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
 validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration?tab=objective-c#automatic-push-integration';
+
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/'] = '/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/swift_idfv/';

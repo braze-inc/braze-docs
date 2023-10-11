@@ -9,7 +9,7 @@ page_type: reference
 
 # API identifier types
 
-> This reference guide touches on the different types of API identifiers that can be found within the Braze dashboard, their purpose, where you can find them, and how they are typically used. For information on REST API keys or workspace API keys, refer to the [Rest API key overview]({{site.baseurl}}/api/api_key/)
+> This reference guide touches on the different types of API identifiers that can be found within the Braze dashboard, their purpose, where you can find them, and how they are typically used. For information on REST API keys or workspace API keys, refer to the [API overview]({{site.baseurl}}/api/api_key/).
 
 The following identifiers can be used to access your template, Canvas, campaign, segment, send  or card from Braze's external API. All messages should follow [UTF-8][1] encoding.
 
@@ -24,8 +24,8 @@ The app identifier or `app_id` is a parameter associating activity with a specif
 
 There are two ways to locate your `app_id`:
 
-1. You can find this `app_id` or application identifier from **Settings** > **API Keys**. On this new page, under **Identification**, you will be able to see every `app_id` that exists for your apps.
-2. Go to **Settings** > **App Settings**.  Midway through the page you will find an "API key for **APP NAME** on **PLATFORM**" (e.g "API Key for Ice Cream on iOS). This key is your application identifier.
+1. Go to **Settings** > **API Keys**. Under **Identification**, you can see every `app_id` that exists for your apps.
+2. Go to **Settings** > **App Settings**. Your API key is listed next to the **API Key** field in the settings section.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a new location:<br> - **API Keys** is located at **Developer Console** > **API Settings**<br> - **App Settings** located at **Manage Settings** > **Settings**
@@ -42,6 +42,7 @@ Sometimes, you may find you are prompted for an `app_id` but you are not working
 #### Multiple app identifiers
 
 During SDK set up, the most common use case for multiple app identifiers is separating those identifiers for debug and release build variants.
+
 To easily switch between multiple app identifier in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, a new Android project is configured with `debug` and `release` build types and no product flavors.
 
 For each relevant build variant, create a new `braze.xml` for it in `src/<build variant name>/res/values/`:

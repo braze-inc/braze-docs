@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Customers using the API for server-to-server calls may need to whitelist `rest.iad-01.braze.com` if they're behind a firewall.
+Customers using the API for server-to-server calls may need to allowlist `rest.iad-01.braze.com` if they're behind a firewall.
 
 ### Request parameters
 

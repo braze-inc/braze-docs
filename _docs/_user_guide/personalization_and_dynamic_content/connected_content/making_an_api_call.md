@@ -56,7 +56,7 @@ Braze's systems may make the same Connected Content API call more than once per 
 ## Things to know
 
 * Braze does not charge for API calls and will not count towards your given data point allotment.
-* There is a default limit of 1 MB for Connected Content responses. This default limit can be increased upon request. Reach out to your customer success manager for more information.
+* There is a limit of 1 MB for Connected Content responses.
 * Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 * Connected Content calls do not follow redirects.
 

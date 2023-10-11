@@ -45,6 +45,12 @@ These default limits can be increased upon request. Reach out to your customer s
 | [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+<!-- Add during CDI endpoints GA
+| [`/cdi/integrations`][46] | 50 requests per minute. |
+| [`/cdi/integrations/{integration_id}/sync`][47] | 20 requests per minute. |
+| [`/cdi/integrations/{integration_id}/job_sync_status`][48] | 100 requests per minute. |
+-->
+
 ## Batching API requests
 
 Braze's APIs are built to support batching. With batching, Braze can take in as much data as possible in a single API call so that you don't need to make a lot of API calls. It's more efficient for Braze to process data in batches than to process data one call at a time. For example, handling 1,000 batched API calls requires less resources than handling 75,000 individual calls. Batching is extremely important for any application that may require more than 75,000 calls per hour.
@@ -136,3 +142,6 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [43]: {{site.baseurl}}/get_search_existing_dashboard_user_email/
 [44]: {{site.baseurl}}/api/endpoints/user_data/post_users_merge/
 [45]: {{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/
+[46]: {{site.baseurl}}/api/endpoints/cdi/get_integration_list/
+[47]: {{site.baseurl}}/api/endpoints/cdi/job_sync/
+[48]: {{site.baseurl}}/api/endpoints/cdi/job_sync_status/

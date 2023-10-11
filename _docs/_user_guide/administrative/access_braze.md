@@ -23,6 +23,9 @@ guide_featured_list:
 - name: Accessing Your Account
   link: /docs/user_guide/administrative/access_braze/accessing_your_account/
   fa_icon: fas fa-user-circle
+- name: Language Settings
+  link: /docs/user_guide/administrative/access_braze/language/
+  fa_icon: fas fa-language
 - name: SAML and Single Sign-On
   link: /docs/user_guide/administrative/access_braze/single_sign_on/
   fa_icon: fas fa-sign-in-alt

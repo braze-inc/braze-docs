@@ -307,7 +307,7 @@ This event occurs when an app installation is attributed to a source. Use this t
   "id": (required, string) unique id of this event,
   "user_id": (required, string) Braze user id of the user,
   "external_user_id": (optional, string) External ID of the user,
-  "time": (requierd, int) 10-digit UTC time of the event in seconds since the epoch,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "source": (required, string) the source of the attribution
 }
 ```

@@ -25,8 +25,7 @@ const [cards, setCards] = useState([]);
 
 // listen for updates as a result of card refreshes
 Braze.addListener(Braze.Events.CONTENT_CARDS_UPDATED, async (update) => {
-    const updatedCards = await Braze.getContentCards();
-    setCards(updatedCards);
+    setCards(update.cards);
 });
 
 // trigger a refresh of cards

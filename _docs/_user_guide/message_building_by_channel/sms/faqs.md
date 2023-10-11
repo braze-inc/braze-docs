@@ -109,7 +109,7 @@ You might be charged additional message segments if you have Liquid personalizat
 
 The app identifier API key or `app_id` is a parameter associating activity with a specific app in your workspace. It designates which app within the workspace you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your android app, and an `app_id` for your web integration. 
 
-Your `app_id` can be found on the dashboard by navigating to **Developer Console > API Settings > Identification**.
+You can find your `app_id` by navigating to **Settings** > **App Settings** and locating the **Identification** section.
 
 ### How will I be billed for SMS?
 

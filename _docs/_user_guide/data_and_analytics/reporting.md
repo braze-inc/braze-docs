@@ -51,6 +51,9 @@ guide_menu_list:
   - name: Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
     fa_icon: fas fa-piggy-bank
+  - name: Revenue Report
+    link: /docs/user_guide/data_and_analytics/reporting/revenue_report/
+    fa_icon: fas fa-piggy-bank
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/#segment-insights
     fa_icon: fas fa-chart-pie
