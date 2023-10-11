@@ -95,11 +95,11 @@ After creating your Content Block, you can insert it in your messages by followi
 
 ### Updating and copying Content Blocks
 
-If you choose to update a Content Block, it will update in all messages the Content Block is used. 
+If you choose to update a Content Block, it will update in all messages the Content Block is used if the Content Block is inserted via Liquid. If the Content Block is imported using **Content Blocks** dropdown under **Rows** in the drag-and-drop editor, it won't be updated in all messages.
 
-If you want to update a Content Block for a single message or make a copy to use in other messages, you can copy the HTML from the original message to your new one, or edit the original Content Block (it must have been used in a message already) and save it. You will get a prompt that allows you to save it as a new Content Block.
+If you want to update a Content Block for a single message or make a copy to use in other messages, you can either copy the HTML from the original message to your new one, or edit the original Content Block (it must have been used in a message already) and save it. You will get a prompt that allows you to save it as a new Content Block.
 
-After making edits to a Content Block, you can then select **Save as Draft**, or save and launch the updated Content Block by clicking **Launch Content Block**.
+After making edits to a Content Block, you can select **Save as Draft**, or save and launch the updated Content Block by clicking **Launch Content Block**.
 
 ![][2]
 
