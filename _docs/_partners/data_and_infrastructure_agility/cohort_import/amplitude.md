@@ -55,4 +55,4 @@ In Braze, to create a segment of these users, navigate to **Segments** under **E
 
 ![In the Braze segment builder, the filter "amplitude_cohorts" is set to "includes_value" and "Amplitude cohort test".]({% image_buster /assets/img/amplitude2.png %})
 
-Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
+After saving, you can reference this segment during Canvas or campaign creation in the targeting users step.
