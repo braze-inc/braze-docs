@@ -43,7 +43,7 @@ Email, Web Push, iOS Push
 
 The total number of messages that were unsuccessful. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. An email bounce for customers using SendGrid consists of hard bounces, spam, and emails sent to invalid addresses.
 
-Calculation: (Bounces) / (Sends)
+*Calculation: (Bounces) / (Sends)*
 
 {% endapi %}
 
@@ -57,7 +57,7 @@ iOS Push, Android Push
 
 Push Story Notifications record a body click when the notification is clicked. It will not be recorded when a message is expanded, or for action button clicks.
 
-Calculation: (Body Clicks) / (Impressions)
+*Calculation: (Body Clicks) / (Impressions)*
 
 {% endapi %}
 
@@ -74,7 +74,7 @@ Occurs when someone clicks on any of the following in-app message types:
 - Modal
 - Fullscreen that has no buttons
 
-Calculation: (Body Clicks) / (Impressions)
+*Calculation: (Body Clicks) / (Impressions)*
 
 {% endapi %}
 
@@ -88,7 +88,7 @@ In-App Message
 
 Total number of clicks on Button 1 of the message.
 
-Calculation: (Button 1 Clicks) / (Impressions)
+*Calculation: (Button 1 Clicks) / (Impressions)*
 
 {% endapi %}
 
@@ -102,7 +102,7 @@ In-App Message
 
 Total number of clicks on Button 2 of the message.
 
-Calculation: (Button 2 Clicks) / (Impressions)
+*Calculation: (Button 2 Clicks) / (Impressions)*
 
 {% endapi %}
 
@@ -114,7 +114,7 @@ Calculation: (Button 2 Clicks) / (Impressions)
 In-App Message
 {% endapitags %}
 
-Total number of choices selected when the user clicks the submit button on the survey question page of a [Simple Survey](https://example.com).
+Total number of choices selected when the user clicks the submit button on the survey question page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -126,9 +126,9 @@ Total number of choices selected when the user clicks the submit button on the s
 Email
 {% endapitags %}
 
-The percentage of opened emails that were clicked. This metric is only available in the [Report Builder](https://example.com).
+The percentage of opened emails that were clicked. This metric is only available in the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
 
-Calculation: (Unique Clicks) / (Unique Opens) (for Email)
+*Calculation: (Unique Clicks) / (Unique Opens) (for Email)*
 
 {% endapi %}
 
@@ -142,7 +142,7 @@ SMS
 
 The carrier has confirmed that the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment.
 
-Calculation: Count
+*Calculation: Count*
 
 {% endapi %}
 
@@ -154,7 +154,7 @@ Calculation: Count
 In-App Message
 {% endapitags %}
 
-Total clicks on the call to action button on the confirmation page of a [Simple Survey](https://example.com).
+Total clicks on the call to action button on the confirmation page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -166,7 +166,7 @@ Total clicks on the call to action button on the confirmation page of a [Simple 
 In-App Message
 {% endapitags %}
 
-Total clicks on the close (x) button on the confirmation page of a [Simple Survey](https://example.com).
+Total clicks on the close (x) button on the confirmation page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -204,7 +204,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 
 The percentage of times a defined event occurred compared to all recipients of a sent message. This defined event is determined when you build the campaign.
 
-Calculation: (Primary Conversions) / (Unique Recipients)
+*Calculation: (Primary Conversions) / (Unique Recipients)*
 
 {% endapi %}
 
@@ -218,7 +218,7 @@ Email, Web Push, iOS Push, Android Push, WhatsApp
 
 The total number of message requests that are accepted by the receiving server. This does not mean the message was delivered to a device, only that the message was accepted by the server.
 
-Calculation: Count
+*Calculation: Count*
 
 {% endapi %}
 
@@ -232,7 +232,7 @@ SMS
 
 The SMS could not be sent due to queues overflow (sending SMS at a rate higher than your long or short codes can handle).
 
-Calculation: (Sends) - (Sends to Carrier)
+*Calculation: (Sends) - (Sends to Carrier)*
 
 {% endapi %}
 
@@ -270,7 +270,7 @@ iOS Push, Android Push
 
 The total number (and percentage) of users who opened the app after the push notification was sent, without directly opening the push.
 
-Calculation: (Influenced Opens) / (Deliveries)
+*Calculation: (Influenced Opens) / (Deliveries)*
 
 {% endapi %}
 
@@ -320,7 +320,7 @@ SMS
 
 The SMS has been rejected by the carrier. This can happen for a number of reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment.
 
-Calculation: Count
+*Calculation: Count*
 
 {% endapi %}
 
@@ -332,9 +332,9 @@ Calculation: Count
 Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push
 {% endapitags %}
 
-The total direct revenue divided by unique recipients. This metric is only available on Campaign Comparison Reports, via the [Report Builder](https://example.com).
+The total direct revenue divided by unique recipients. This metric is only available on Campaign Comparison Reports, via the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
 
-Calculation: (Total Direct Revenue) / (Unique Recipients)
+*Calculation: (Total Direct Revenue) / (Unique Recipients)*
 
 {% endapi %}
 
@@ -348,7 +348,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 
 The total number of messages sent in a campaign. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This does not mean the message was received or delivered to a device, only that the message was sent. This metric is provided by Braze.
 
-Calculation: Count
+*Calculation: Count*
 
 {% endapi %}
 
@@ -362,7 +362,7 @@ SMS
 
 This stat is the sum of Confirmed Deliveries, Rejections, and Sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
 
-Calculation: Count
+*Calculation: Count*
 
 {% endapi %}
 
@@ -376,7 +376,7 @@ Email
 
 The total number of emails delivered that were marked as "spam."
 
-Calculation: (Marked as Spam) / (Sends)
+*Calculation: (Marked as Spam) / (Sends)*
 
 {% endapi %}
 
@@ -388,7 +388,7 @@ Calculation: (Marked as Spam) / (Sends)
 In-App Message
 {% endapitags %}
 
-Total clicks on the close (x) button on the survey question page of a [Simple Survey](https://example.com).
+Total clicks on the close (x) button on the survey question page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -400,7 +400,7 @@ Total clicks on the close (x) button on the survey question page of a [Simple Su
 In-App Message
 {% endapitags %}
 
-Total clicks on the submit button of a [Simple Survey](https://example.com).
+Total clicks on the submit button of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -414,7 +414,10 @@ Email, Content Cards
 
 The total number (and percentage) of users who clicked within the delivered email or card.
 
-Calculation: (Total Clicks) / (Deliveries) (for Email) or (Total Clicks) / (Total Impressions) (for Content Cards)
+*Calculation:*
+
+- _**Email:** (Total Clicks) / (Deliveries)_
+- _**Content Cards:** (Total Clicks) / (Total Impressions)_
 
 {% endapi %}
 
@@ -426,9 +429,10 @@ Calculation: (Total Clicks) / (Deliveries) (for Email) or (Total Clicks) / (Tota
 Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push
 {% endapitags %}
 
-The total number of purchases made, based on last-click attribution*. This metric counts multiple purchases from a single user, for example if one user makes two purchases, the count will increment by two. This metric is only available on Campaign Comparison Reports, via the [Report Builder](https://example.com).
+The total number of purchases made, based on last-click attribution*. This metric counts multiple purchases from a single user, for example if one user makes two purchases, the count will increment by two. This metric is only available on Campaign Comparison Reports, via the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
 
 *Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must:
+
 1. Be the last campaign the user clicked prior to purchasing, and
 2. Be clicked by the user less than 3 days prior to purchasing.
 
@@ -442,9 +446,10 @@ The total number of purchases made, based on last-click attribution*. This metri
 Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push
 {% endapitags %}
 
-The amount of revenue generated by this campaign, based on last-click attribution*. This metric is only available on Campaign Comparison Reports, via the [Report Builder](https://example.com).
+The amount of revenue generated by this campaign, based on last-click attribution*. This metric is only available on Campaign Comparison Reports, via the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
 
 *Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must:
+
 1. Be the last campaign the user clicked prior to purchasing, and
 2. Be clicked by the user less than 3 days prior to purchasing.
 
@@ -460,7 +465,7 @@ Content Cards
 
 The number of times Content Cards from a campaign have been dismissed. If a user dismisses a message twice, they will be only counted once.
 
-Calculation: Count
+*Calculation: Count*
 
 {% endapi %}
 
@@ -474,7 +479,7 @@ In-App Message, Content Cards
 
 The number of times the in-app message has been viewed (if a user is shown a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
 
-Calculation: Count
+*Calculation: Count*
 
 {% endapi %}
 
@@ -488,7 +493,11 @@ Email, iOS Push, Android Push, Web Push
 
 The total number of messages that were opened.
 
-Calculation: (Opens) / (Deliveries) (for Email); (Direct Opens) / (Deliveries) (for Web Push); (Unique Opens) / (Deliveries) (for iOS Push, Android, Kindle)
+*Calculation:*
+
+- _**Email:** (Opens) / (Deliveries)_
+- _**Web push:** (Direct Opens) / (Deliveries)_
+- _**iOS, Android, and Kindle push:** (Unique Opens) / (Deliveries)_
 
 {% endapi %}
 
@@ -500,7 +509,7 @@ Calculation: (Opens) / (Deliveries) (for Email); (Direct Opens) / (Deliveries) (
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
 {% endapitags %}
 
-The total revenue in dollars from campaign recipients within the set primary conversion window. This metric is only available on Campaign Comparison Reports, via the [Report Builder](https://example.com).
+The total revenue in dollars from campaign recipients within the set primary conversion window. This metric is only available on Campaign Comparison Reports, via the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
 
 {% endapi %}
 
@@ -514,7 +523,10 @@ Email, Content Cards
 
 Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7-day period for Email. Note that clicks on Braze-provided unsubscribe links are counted as unique clicks.
 
-Calculation: (Unique Clicks) / (Deliveries) (for Email) or (Unique Clicks) / (Unique Impressions) (for Content Cards)
+*Calculation:*
+
+- _**Email:** (Unique Clicks) / (Deliveries)_
+- _**Content Cards:** (Unique Clicks) / (Unique Impressions)_
 
 {% endapi %}
 
@@ -528,7 +540,7 @@ Content Cards
 
 The number of users who have dismissed Content Cards from a campaign. A user dismissing a Content Card from a campaign multiple times represents one unique dismissal.
 
-Calculation: (Unique Dismissals) / (Unique Impressions)
+*Calculation: (Unique Dismissals) / (Unique Impressions)*
 
 {% endapi %}
 
@@ -542,7 +554,7 @@ Email
 
 The total number of delivered emails that have been opened by a single user at least once. This is tracked over a 7-day period for Email.
 
-Calculation: (Unique Opens) / (Deliveries)
+*Calculation: (Unique Opens) / (Deliveries)*
 
 {% endapi %}
 
@@ -556,6 +568,6 @@ Email
 
 The number of recipients whose subscription state changed to unsubscribed as a result of clicking the Braze provided unsubscribe URL.
 
-Calculation: (Unsubscribes) / (Deliveries)
+*Calculation: (Unsubscribes) / (Deliveries)*
 
 {% endapi %}
