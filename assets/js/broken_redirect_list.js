@@ -716,6 +716,7 @@ validurls['/docs/partners/message_orchestration/additional_channels/instant_chat
 validurls['/docs/partners/technology_partners/additional_channels/direct_mail/inkit/'] = '/docs/partners/message_orchestration/additional_channels/direct_mail/inkit/';
 validurls['/docs/partners/technology_partners/additional_channels/direct_mail/lob/'] = '/docs/partners/message_orchestration/additional_channels/direct_mail/lob/';
 validurls['/docs/partners/technology_partners/advertising_technologies/attribution/appsflyer/'] = '/docs/partners/message_orchestration/attribution/appsflyer';
+validurls['/docs/partners/message_orchestration/attribution/appsflyer/appsflyer_audiences/'] = '/docs/partners/data_and_infrastructure_agility/cohort_import/appsflyer_audiences/';
 validurls['/docs/partners/technology_partners/advertising_technologies/attribution/kochava/'] = '/docs/partners/message_orchestration/attribution/kochava/';
 validurls['/docs/partners/technology_partners/advertising_technologies/attribution/singular/'] = '/docs/partners/message_orchestration/attribution/singular/';
 validurls['/docs/partners/technology_partners/advertising_technologies/retargeting/remerge/'] = '/docs/partners/message_orchestration/additional_channels/retargeting/remerge/';
