@@ -8,11 +8,7 @@ search_tag: Partner
 
 # Kubit cohort import
 
-> [Kubit](https://kubit.ai/) is a no-code, self-service analytics platform that delivers instant product insights. 
-
-The Braze and Kubit integration allows you to import user cohorts and target them in the Braze messaging.
-
-For information on integrating Kubit and its other functionalities, see this [article]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/).
+> This article describes how to import user cohorts from [Kubit](https://kubit.ai/) to Braze. For more information on integrating Kubit and its other functionalities, see the main [Kubit article]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/).
 
 ## Data import integration
 

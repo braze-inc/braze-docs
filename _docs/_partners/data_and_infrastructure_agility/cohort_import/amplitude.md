@@ -8,17 +8,13 @@ search_tag: Partner
 
 # Amplitude cohort import
 
-> [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
+> This article covers how to import user cohorts from [Amplitude](https://amplitude.com/) to Braze. For more information on integrating Amplitude and its other functionalities, see the main [Amplitude article]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_audiences/).
 
-Use the partnership between Braze and Amplitude to import Amplitude cohorts directly into Braze for audience segmentation. This allows you to perform deep analysis using Amplitude and seamlessly execute your strategies using Braze.
-
-For information on integrating Amplitude and its other functionalities, see this [article]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_audiences/).
+## Data import integration
 
 {% multi_lang_include video.html id="8a57e44be7da423e9699cedd6c241eae" source="loom"%}
 
 Any integration you set up will count towards your account's data point volume.
-
-## Data import integration
 
 ### Step 1: Get the Braze data import key
 

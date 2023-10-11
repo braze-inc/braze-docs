@@ -8,19 +8,15 @@ search_tag: Partner
 
 # Mixpanel cohort import
 
-> [Mixpanel](https://mixpanel.com/) is a business analytics platform that allows you to export events from Mixpanel into other platforms to perform deeper analysis. The data collected can then be used to build custom reports and measure user engagement and retention.
+> This article describes how to import user cohorts from [Mixpanel](https://mixpanel.com/) to Braze. For more information on integrating Mixpanel and its other functionalities, see the main [Mixpanel article]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/).
 
-Use the partnership between Braze and Mixpanel to configure your integration and import Mixpanel cohorts directly into Braze for retargeting, creating a full loop of data from one system to another. This allows you to perform a deeper analysis using Mixpanel and seamlessly execute your strategies using Braze.
-
-For information on integrating Mixpanel and its other functionalities, see this [article]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/).
+## Data import integration
 
 Any integration you set up will count towards your account's data point volume.
 
 {% alert important %}
 In adherence to Mixpanel's data retention policies, events sent before January 1, 2010 will be removed during import.
 {% endalert %}
-
-## Data import integration
 
 ### Step 1: Get the Braze data import key
 

@@ -8,13 +8,7 @@ search_tag: Partner
 ---
 # Hightouch cohort import
 
-> [Hightouch][1] is a modern data integration platform that enables you to sync customer, product, or proprietary data from your warehouse or data lake to any app of your choice, all without assistance from your IT or engineering teams.
-
-The Braze and Hightouch integration allows you to import user cohorts to Braze, sending targeted campaigns based on data that may only exist in your warehouse.
-
-You can also use Hightouch to build better campaigns on Braze with up-to-date customer data from your data warehouse. By automatically syncing customer data into Braze, you no longer need to worry about data consistency and can focus on building world-class customer experiences. 
-
-For information on integrating Hightouch and its other functionalities, see this [article]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/hightouch/).
+> This article describes how to import user cohorts from [Hightouch][1] to Braze so you can send targeted campaigns based on data that may only exist in your warehouse. For more information on integrating Hightouch and its other functionalities, see the main [Hightouch article]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/hightouch/).
 
 ## Data import integration
 
