@@ -82,7 +82,7 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 {
   "results": [
     {
-        "job_status": (string) status of the sync, see below for explaination of different statuses,
+        "job_status": (string) status of the sync, see below for explanation of different statuses,
         "sync_start_time": (string) time the sync started in ISO 8601,
         "sync_finish_time": (string) time the sync finished in ISO 8601,
         "last_timestamp_synced": (string) last UPDATED_AT timestamp processed by the sync in ISO 8601,
@@ -94,7 +94,7 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 }
 ```
 
-| job_status | Explaination |
+| job_status | explanation |
 | --- | --- |
 | Running | The job is current running |
 | Success | All rows synced successfully |
