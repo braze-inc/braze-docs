@@ -85,6 +85,10 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
+## Failing to find a matching trigger
+
+When Braze fails to find a matching trigger for a particular event, it will try to call `BrazeDelegate.(_:noMatchingTriggerForEvent)`. Implement this method in your class adopting `BrazeDelegate` to handle this scenario. 
+
 ## The in-app message stack
 
 ### Adding in-app messages to the stack
