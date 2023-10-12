@@ -101,6 +101,7 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 | `Partial` | Some rows failed to sync due to errors. |
 | `Error` | No rows were synced. |
 {: .reset-td-br-1 .reset-td-br-2}
+
 ## Troubleshooting
 
 The following table lists possible returned errors and their associated troubleshooting steps.
