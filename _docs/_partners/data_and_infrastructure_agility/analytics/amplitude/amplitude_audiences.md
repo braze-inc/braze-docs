@@ -1,20 +1,20 @@
 ---
-nav_title: Amplitude Audiences
-article_title: Amplitude Audiences
+nav_title: Amplitude
+article_title: Amplitude
 page_order: 0
 alias: /partners/amplitude_recommend/
-description: "This reference article outlines the partnership between Braze Currents and Amplitude, a product analytics and business intelligence platform."
+description: "This reference article outlines the partnership between Braze and Amplitude, a product analytics and business intelligence platform."
 page_type: partner
 tool: Currents
 search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude Audiences
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
-The Braze and Amplitude bi-directional integration allows you to import your Amplitude Cohorts, user traits, and events into Braze, as well as create segments that can target users in future campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) to perform deeper analytics of your product and marketing data.
+The Braze and Amplitude bi-directional integration allows you to [import your Amplitude Cohorts]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/amplitude/), user traits, and events into Braze, as well as create segments that can target users in future campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) to perform deeper analytics of your product and marketing data.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ The Braze and Amplitude bi-directional integration allows you to import your Amp
 Amplitude and Braze offer two different integration methods. Read through the following documentation to decide which methods will fit your needs:
 
 - Braze Event Streaming (beta): An integration that allows you to forward raw Amplitude event data straight to Braze.
-- Cohort import: An integration that allows you to forward Amplitude cohorts to Braze.
+- [Cohort import]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/amplitude/): An integration that allows you to forward Amplitude cohorts to Braze.
 
 ## Braze Event Streaming
 
@@ -50,51 +50,6 @@ Amplitude and Braze offer two different integration methods. Read through the fo
 5. When finished, enable the destination and save. 
 
 Refer to [Braze Event Streaming](https://www.docs.developers.amplitude.com/data/destinations/braze/) for more information on this integration.
-
-## Data import integration
-
-Use Braze and Amplitude's partnership to import Amplitude cohorts directly into Braze for audience segmentation. This allows you to perform deep analysis using Amplitude and seamlessly execute your strategies using Braze.
-
-{% multi_lang_include video.html id="8a57e44be7da423e9699cedd6c241eae" source="loom"%}
-
-Any integration you set up will count towards your account's data point volume.
-
-### Step 1: Get the Braze data import key
-
-In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Amplitude**. Here, you will find the REST endpoint and generate your Braze data import key. 
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
-Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Amplitude's dashboard.<br><br>![]({% image_buster /assets/img/amplitude3.png %})
-
-### Step 2: Set up the Braze integration in Amplitude
-
-In Amplitude, navigate to **Sources & Destinations > [project name] > Destinations > Braze**. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Save**.
-
-![]({% image_buster /assets/img/amplitude.png %})
-
-### Step 3: Export an Amplitude cohort to Braze
-
-First, to export users from Amplitude to Braze, create a [cohort](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) of users you wish to export. Amplitude can sync cohorts to Braze using the following identifiers:
-- User Alias
-- Device ID
-- User ID (External ID)
-
-Once you have created a cohort, click **Sync to...** to export these users to Braze.
-
-#### Defining sync cadence
-
-Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. Make sure to select an option that makes sense for your business needs while also being mindful of consuming [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/).
-
-### Step 4: Segment users in Braze
-
-In Braze, to create a segment of these users, navigate to **Segments** under **Engagement**, name your segment, and select **Amplitude Cohorts** as the filter. Next, use the "includes" option and choose the cohort you created in Amplitude. 
-
-![In the Braze segment builder, the filter "amplitude_cohorts" is set to "includes_value" and "Amplitude cohort test".]({% image_buster /assets/img/amplitude2.png %})
-
-Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
 ## Sync user traits and computations
 
