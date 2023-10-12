@@ -50,6 +50,6 @@ Consider the following tips to make the most of the Content QA with AI feature:
 
 ## How is my data used and sent to OpenAI?
 
-In order to check your message content, Braze will send it to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the message content you provide. Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days.
+In order to check your message content, Braze will send it to OpenAI's API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the message content you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, which may include its [Usage Policy](https://openai.com/policies/usage-policies) and [Sharing & Publication Policy](https://openai.com/policies/sharing-publication-policy). Braze makes no warranty of any kind with respect to any AI-generated content. 
 
 [1]: {% image_buster /assets/img/content_qa_ai.png %}
