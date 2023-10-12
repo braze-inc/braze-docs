@@ -12,7 +12,7 @@ guide_featured_list:
   link: /docs/partners/message_orchestration/attribution/appsflyer/appsflyer/
   fa_icon: fas fa-user-circle
 - name: AppsFlyer Audiences
-  link: /docs/partners/message_orchestration/attribution/appsflyer/appsflyer_audiences/
+  link: /docs/partners/data_and_infrastructure_agility/cohort_import/appsflyer_audiences/
   fa_icon: fas fa-users
 
 ---

@@ -706,6 +706,7 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/census/'] = '/docs/partners/data_and_infrastructure_agility/workflow_automation/census#census';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents';
 validurls['/docs/partners/data_and_infrastructure_agility/cohort_import/mparticle/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle/';
+validurls['/docs/partners/data_and_infrastructure_agility/cohort_import/storyly/'] = '/docs/partners/message_personalization/dynamic_content/storyly/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents#segmentio-for-currents';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium_audience_stream/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/';
 validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation/grouparoo'] = '/docs/partners/home';
@@ -716,6 +717,7 @@ validurls['/docs/partners/message_orchestration/additional_channels/instant_chat
 validurls['/docs/partners/technology_partners/additional_channels/direct_mail/inkit/'] = '/docs/partners/message_orchestration/additional_channels/direct_mail/inkit/';
 validurls['/docs/partners/technology_partners/additional_channels/direct_mail/lob/'] = '/docs/partners/message_orchestration/additional_channels/direct_mail/lob/';
 validurls['/docs/partners/technology_partners/advertising_technologies/attribution/appsflyer/'] = '/docs/partners/message_orchestration/attribution/appsflyer';
+validurls['/docs/partners/message_orchestration/attribution/appsflyer/appsflyer_audiences/'] = '/docs/partners/data_and_infrastructure_agility/cohort_import/appsflyer_audiences/';
 validurls['/docs/partners/technology_partners/advertising_technologies/attribution/kochava/'] = '/docs/partners/message_orchestration/attribution/kochava/';
 validurls['/docs/partners/technology_partners/advertising_technologies/attribution/singular/'] = '/docs/partners/message_orchestration/attribution/singular/';
 validurls['/docs/partners/technology_partners/advertising_technologies/retargeting/remerge/'] = '/docs/partners/message_orchestration/additional_channels/retargeting/remerge/';
@@ -922,3 +924,4 @@ validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persi
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/'] = '/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/swift_idfv/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/swift_idfv/'] = '/docs/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/';

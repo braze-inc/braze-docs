@@ -29,7 +29,14 @@ To enable HTML in-app messages through the Web SDK, you must supply the `allowUs
 
 ## JavaScript bridge {#javascript-bridge}
 
-HTML in-app messages for Web, Android, iOS, and Swift SDKs support a JavaScript "bridge" to interface with Braze SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `appboyBridge` variable.
+HTML in-app messages for Web, Android, iOS, and Swift SDKs support a JavaScript "bridge" to interface with Braze SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `brazeBridge` or `appboyBridge` variable.
+
+{% alert important %}
+Braze recommends that you use the global `brazeBridge` variable. The global `appboyBridge` variable is deprecated but will continue to function for existing users. If you are using `appboyBridge`, we suggest you migrate to `brazeBridge`. <br><br> `appboyBridge` was deprecated in the following SDK versions:
+- Web: [3.3.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#330)
+- Android: [14.0.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#1400)
+- iOS: [4.2.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/#420)
+{% endalert %}
 
 For example, to log a custom attribute and custom event, then close the message, you could use the following JavaScript within your HTML in-app message:
 
