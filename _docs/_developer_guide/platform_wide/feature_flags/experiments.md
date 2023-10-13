@@ -15,6 +15,10 @@ platform:
 
 > Feature flag experiments let you A/B test changes to your applications to optimize conversion rates. Marketers can use feature flags to determine whether a new feature positively or negatively impacts conversion rates, or which set of feature flag properties is most optimal.
 
+{% alert note %}
+Feature Flag Experiments are coming soon!
+{% endalert %}
+
 ## Prerequisites
 
 Before you can track user data in the experiment, your app needs to record when a user interacts with a feature flag. This is called a feature flag impression. Make sure to log a feature flag impression whenever a user sees or could have seen the feature you're testing, even if they're in the control group.
