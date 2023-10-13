@@ -16,7 +16,7 @@ platform:
 > Feature flag experiments let you A/B test changes to your applications to optimize conversion rates. Marketers can use feature flags to determine whether a new feature positively or negatively impacts conversion rates, or which set of feature flag properties is most optimal.
 
 {% alert note %}
-Feature Flag Experiments are coming soon!
+Feature flag experiments are being gradually rolled out and may not be on your dashboard just yet.
 {% endalert %}
 
 ## Prerequisites
