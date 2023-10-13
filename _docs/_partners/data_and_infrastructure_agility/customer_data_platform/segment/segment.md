@@ -262,7 +262,10 @@ Other reserved Braze profile fields such as `email_subscribe` and `push_subscrib
 ##### Adding a user to a subscription group
 You can also subscribe or unsubscribe a user from a given subscription group using the following fields in the traits parameter.
 
-The reserved Braze profile field `braze_subscription_groups` can be attached to an array of objects with the reserved keys `subscription_group_state`, for either the `"subscribed"` or `"unsubscribed"` state, and `subscription_group_id`, for the unique ID of that subscription group, which can be found in the Braze dashboard under `Subscription Group Management`.
+Use the reserved Braze profile field called `braze_subscription_groups`, which can be associated with an array of objects. Each object in the array should have two reserved keys:
+
+1. `subscription_group_state`: Indicates whether the user is `"subscribed"` or `"unsubscribed"` to a specific subscription group.
+2. `subscription_group_id`: Represents the unique ID of the subscription group. You can find this ID in the Braze dashboard under `Subscription Group Management`.
 
 {% subtabs %}
 {% subtab Swift %}
