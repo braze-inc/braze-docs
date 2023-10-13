@@ -348,6 +348,7 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/'] = '/docs/baidu_integration/';
 
 validurls['/docs/hidden/private_betas/amphtml/'] = '/docs/amphtml/';
+validurls['/docs/test_currents_connectors/'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#test-currents-connectors';
 validurls['/docs/hidden/private_betas/global_control_group/'] = '/docs/user_guide/engagement_tools/testing/global_control_group/';
 validurls['/docs/hidden/private_betas/canvas_in-app_messages/'] = '/docs/canvas_in-app_messages/';
 validurls['/docs/hidden/private_betas/predictive_churn/'] = '/docs/predictive_churn/';
