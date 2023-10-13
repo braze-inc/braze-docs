@@ -87,7 +87,7 @@ AppDelegate.braze = braze;
 
 ## Failing to find a matching trigger
 
-When Braze fails to find a matching trigger for a particular event, it will try to call [`BrazeDelegate.(_:noMatchingTriggerForEvent)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:nomatchingtriggerforevent:)-8rt7y/). Implement this method in your class adopting `BrazeDelegate` to handle this scenario. 
+When Braze fails to find a matching trigger for a particular event, it will call [`BrazeDelegate.(_:noMatchingTriggerForEvent)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:nomatchingtriggerforevent:)-8rt7y/). Implement this method in your class adopting `BrazeDelegate` to handle this scenario. 
 
 ## The in-app message stack
 
