@@ -33,7 +33,7 @@ You will still be able to switch back and forth between the new and old navigati
 
 ### App group rename
 
-As part of our navigation and information architecture changes, we have renamed "app group" to "workspace". We recognize that the language "workspace" doesn't reflect the way many users onboard, approach, and use the Braze platform. To better reflect the many use cases of Braze, "app group" is now "workspace".
+As part of our navigation and information architecture changes, we have renamed "app group" to "workspace". We recognize that the language "app group" doesn't reflect the way many users onboard, approach, and use the Braze platform. To better reflect the many use cases of Braze, "app group" is now "workspace".
 
 If you're using our updated navigation, this change will appear throughout the platform.
 
