@@ -34,7 +34,7 @@ To use this endpoint, you'll need to generate an API key with the `email.hard_bo
 | `end_date` | Optional<br>(see note) | String in YYYY-MM-DD format | End date of the range to retrieve hard bounces. This is treated as midnight in UTC time by the API. |
 | `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
 | `offset` | Optional | Integer | Optional beginning point in the list to retrieve from. |
-| `email` | Optional<br>(see note) | String | If provided, we will return whether or not the user has hard bounced. Check that the emails are formatted properly. |
+| `email` | Optional<br>(see note) | String | If provided, we will return whether or not the user has hard bounced. Check that the email strings are formatted properly. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
