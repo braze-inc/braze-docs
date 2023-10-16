@@ -116,7 +116,7 @@ The following table describes the benefits and drawbacks of these two approaches
     padding: 8px;
     text-align: left;
     border: 1px solid black;
-    word-wrap: break-word !important;
+    word-break: break-word !important;
   }
   th {
     background-color: #f4f4f7;
