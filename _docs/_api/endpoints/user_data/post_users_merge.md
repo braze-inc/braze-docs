@@ -121,6 +121,7 @@ The endpoint does not guarantee the sequence of `merge_updates` objects being up
 {% endalert %}
 
 This endpoint will merge any of the following fields if they are not found on the target user:
+
 - First name
 - Last name
 - Email
@@ -134,7 +135,7 @@ This endpoint will merge any of the following fields if they are not found on th
 - Session count (the sum of sessions from both profiles)
 - Date of first session (Braze will pick the earlier date of the two dates)
 - Date of last session (Braze will pick the later date of the two dates)
-- Custom attributes
+- Custom attributes (existing custom attributes on the target profile are retained and will include custom attributes that didn't exist on the target profile)
 - Custom event and purchase event data (excluding event properties)
 - Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
 - Segmentable custom events summary
