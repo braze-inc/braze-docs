@@ -14,7 +14,18 @@ channel:
 
 Email deliverability is the core of campaign success. Using the Deliverability Center in the Braze dashboard, you can view your domains by **IP Reputation** or **Delivery Errors** to discover and troubleshoot any potential issues with email deliverability. 
 
-## Integrating with Google Postmaster
+### Set up Google Postmaster account
+
+Before connecting to the Deliverability Center, you'll need to set up a Google Postmaster Tools account.
+
+1. Go to the [Google Postmaster Tools dashboard](https://postmaster.google.com/managedomains?pli=1).
+2. Click the plus icon.
+3. Enter a domain to use to authenticate your email. Click **Next**. <br>![][9]
+4. Verify your domain and click **Verify**. <br>![][10]
+
+For information and guidance on verifying your domain, check out [Verify your domain (host-specific steps)](https://support.google.com/a/topic/1409901).
+
+## Integrate with Google Postmaster
 
 Before setting up your Deliverability Center, check that your domains have been [added to the Gmail Postmaster Tools][4].
 
@@ -145,3 +156,5 @@ Spam trap hits are the number of messages sent to "trap accounts," which are acc
 [6]: {{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [8]: {% image_buster /assets/img_archive/deliverability_center_msnds.png %}
+[9]: {% image_buster /assets/img_archive/domain_authentication.png %}
+[10]: {% image_buster /assets/img_archive/domain_verification.png %}
