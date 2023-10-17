@@ -19,7 +19,7 @@ Email deliverability is the core of campaign success. Using the Deliverability C
 Before connecting to the Deliverability Center, you'll need to set up a Google Postmaster Tools account.
 
 1. Go to the [Google Postmaster Tools dashboard](https://postmaster.google.com/managedomains?pli=1).
-2. Click the plus icon.
+2. In the bottom right, click the <i class="fas fa-plus-circle"></i> plus icon.
 3. Enter your root domain or subdomain to use to authenticate your email. If you're adding and verifying the root domain, this will allow the verification to be applied downstream to subdomains. For example, by verifying `braze.com`, you can also add `demo.braze.com` and other subdomains later without having to verify these individually.
 4. Google will generate a TXT record that can be added directly to your domain's DNS. This is generally owned by whoever manages your DNS. For information and guidance on how to update your specific DNS, check out [Verify your domain (host-specific steps)](https://support.google.com/a/topic/1409901).
 5. Click **Next**. <br>![][9]
