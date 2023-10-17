@@ -25,7 +25,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 ## Step 2: Select your editing experience 
 
-Select between **Drag-And-Drop Editor** or **HTML Editor** for editing experience. Next, you can create a new template or edit an existing template (plain or [mobile responsive][8]) using the drag-and-drop editing experience or standard HTML experience. You can choose from predesigned Braze templates or create a new layout.
+Select between **Drag-And-Drop Editor** or **HTML Editor** for editing experience. 
+
+Next, you can choose from predesigned Braze templates, create a new template, or edit an existing template (plain or [mobile responsive][8]).
 
 ![][2]
 
@@ -158,15 +160,15 @@ To use your email for an API campaign, you need an `email_template_id`, which ca
 
 ### Commenting on email templates
 
-You can comment on email templates in the drag-and-drop editor. 
+You can collaborate and comment on email templates in the drag-and-drop editor. 
 
 1. Click the Content Block or row in the email body that you’d like to comment on.
-2. Select the <i class="fas fa-comment"></i> comment icon. 
+2. Select the <i class="fas fa-comment"></i> comment icon.
 3. Enter your comment in the sidebar, then click **Submit**.
 4. After entering your comments, click **Done**.
 5. Click **Save Template** to save your comments.
 
-After your template is saved, users can see floating icons over unaddressed comments. Select **Resolve** to resolve these comments.
+After your template is saved, users can see icons over unaddressed comments. Select **Resolve** to resolve these comments.
 
 ![An example of an email template comment that reads "Looks good to me".][10]
 
@@ -177,8 +179,6 @@ If you do not include an unsubscribe link, Braze will prompt you to add this in 
 ![]({% image_buster /assets/img/dnd_badge_icon.png %})
 
 For answers to frequently asked questions about email templates, check out our [Templates FAQ][9].
-
-
 
 [1]: {% image_buster /assets/img/dnd_compose_error.png %}
 [2]: {% image_buster /assets/img/email_templates/template2.png %}
