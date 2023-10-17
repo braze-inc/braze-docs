@@ -20,10 +20,10 @@ Before connecting to the Deliverability Center, you'll need to set up a Google P
 
 1. Go to the [Google Postmaster Tools dashboard](https://postmaster.google.com/managedomains?pli=1).
 2. Click the plus icon.
-3. Enter a domain to use to authenticate your email. Click **Next**. <br>![][9]
-4. Verify your domain and click **Verify**. <br>![][10]
-
-For information and guidance on verifying your domain, check out [Verify your domain (host-specific steps)](https://support.google.com/a/topic/1409901).
+3. Enter your root domain or subdomain to use to authenticate your email. If you're adding and verifying the root domain, this will allow the verification to be applied downstream to subdomains. For example, by verifying `braze.com`, you can also add `demo.braze.com` and other subdomains later without having to verify these individually.
+4. Google will generate a TXT record that can be added directly to your domain's DNS. This is generally owned by whoever manages your DNS. For information and guidance on how to update your specific DNS, check out [Verify your domain (host-specific steps)](https://support.google.com/a/topic/1409901).
+5. Click **Next**. <br>![][9]
+6. Once added to the DNS, return to the Google Postmaster Tools dashboard and click **Verify**. This step confirms you own the domain, so you'll be able to access Gmail deliverability metrics in your Postmaster account. ![][10]
 
 ## Integrate with Google Postmaster
 
