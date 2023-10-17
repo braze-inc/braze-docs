@@ -255,7 +255,7 @@ Alternatively, for HTML, you can use Braze's Liquid filters (`strip_html`) to HT
 {% tab Input %}
 {% raw %}
 ```liquid
-{{ "Have <em>you</em> read <strong>Ulysses</strong>?" &#124; strip_html }}
+{{ "Have <em>you</em> read <strong>Ulysses</strong>?" | strip_html }}
 ```
 {% endraw %}
 {% endtab %}
