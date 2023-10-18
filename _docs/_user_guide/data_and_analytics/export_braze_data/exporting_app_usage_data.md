@@ -1,6 +1,6 @@
 ---
-nav_title: Export Overview Data
-article_title: Export Overview Data
+nav_title: Export Usage Analytics
+article_title: Export Usage Analytics
 page_order: 3
 
 page_type: reference
@@ -10,15 +10,29 @@ tool:
 
 ---
 
-# Exporting overview data
+# Exporting usage analytics
 
-> The **Home** page of the dashboard contains high-level data of app usage, as well as detailed statistics of different KPIs by date. 
+> The **Home** page of the dashboard contains high-level data of app usage, as well as detailed statistics of different KPIs by date.
 
-To obtain CSVs of information from this page, first set the time frame you want to view, then go to the graph at the bottom of the page and choose what data to include in your export.
+To obtain CSVs of information from this page:
 
-![App usage graph][27]
+1. Set the time frame and apps you want to view data for. By default, the dashboard shows the last 30 days of data for all apps.
+
+![Time period and app fields on the Home dashboard.][1]{: style="max-width:60%;"}
+
+{:start="2"}
+2. Scroll down to the **Performance Over Time** graph.
+3. Select the data you'd like to export in the **Statistics For** field. See the [available data](#available-data) for you to export.
+
+![Performance Over Time graph on the Home dashboard.][2]
+
+{:start="4"}
+4. Click <i class="fas fa-bars" title="Chart context menu"></i> and select your export option.
+
+## Available data
 
 You can export CSVs with the following data:
+
 - Session Count by Date
     - (Optional) Session Count for Different Segments
     - (Optional) Session Count for Different App Versions
@@ -52,4 +66,5 @@ You can export CSVs with the following data:
 For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
 {% endalert %}
 
-[27]: {% image_buster /assets/img_archive/app_usage.png %}
+[1]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
+[2]: {% image_buster /assets/img_archive/home_dashboard_export.png %}
