@@ -57,7 +57,7 @@ CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
 CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
 CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
      UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
-     --at least one of external_id, alias_name and alias_label, email, phone or braze_id is required  
+     --at least one of external_id, alias_name and alias_label, email, phone, or braze_id is required  
      EXTERNAL_ID VARCHAR(16777216),
      --if using user alias, both alias_name and alias_label are required
      ALIAS_LABEL VARCHAR(16777216),
