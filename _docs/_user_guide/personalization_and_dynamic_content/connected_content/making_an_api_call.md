@@ -150,11 +150,11 @@ Now that the token is saved, it can be dynamically templated into the subsequent
 ```
 {% endraw %}
 
-## Connected Content IP whitelisting
+## Connected Content IP allowlisting
 
-When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers' or third parties' servers to pull back data. With IP whitelisting, you can verify that Connected Content requests are actually coming from Braze, adding an additional layer of security.
+When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers' or third parties' servers to pull back data. With IP allowlisting, you can verify that Connected Content requests are actually coming from Braze, adding an additional layer of security.
 
-Braze will send Connected Content requests from the following IP ranges. The listed ranges are automatically and dynamically added to any API keys that have been opted-in for whitelisting. 
+Braze will send Connected Content requests from the following IP ranges. The listed ranges are automatically and dynamically added to any API keys that have been opted-in for allowlisting. 
 
 Braze has a reserved set of IPs used for all services, not all of which are active at a given time. This is designed for Braze to send from a different data center or do maintenance, if necessary without impacting customers. Braze may use one, a subset, or all of the following IPs listed when making Connected Content requests.
 

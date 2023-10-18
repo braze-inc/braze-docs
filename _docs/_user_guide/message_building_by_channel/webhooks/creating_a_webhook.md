@@ -204,14 +204,14 @@ When retrying, Braze will make five attempts using exponential backoff for a per
 
 Each webhook is allowed 90 seconds before it times out.
 
-### IP whitelisting {#ip-whitelisting}
+### IP allowlisting {#ip-allowlisting}
 
-When a webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers. With IP whitelisting, you can verify that Webhooks requests are actually coming from Braze, adding an additional layer of security.
+When a webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers. With IP allowlisting, you can verify that Webhooks requests are actually coming from Braze, adding an additional layer of security.
 
-Braze will send webhooks from the following IPs. The listed IPs are automatically and dynamically added to any API keys that have been opted-in for whitelisting.
+Braze will send webhooks from the following IPs. The listed IPs are automatically and dynamically added to any API keys that have been opted-in for allowlisting.
 
 {% alert important %}
-If you're making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the following IPs, including `127.0.0.1`.
+If you're making a Braze-to-Braze webhook and using allowlisting, you should allowlist all the following IPs, including `127.0.0.1`.
 {% endalert %}
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, and `US-06`: |
