@@ -16,8 +16,8 @@ page_order: 2
 {% multi_lang_include video.html id="06G0lxaSjgk" align="right" %}
 
 The Braze and Amperity integration offers a unified view of your customers across the two platforms. This integration allows you to:
-- **Sync Amperity users**: Sync user lists to map Amperity user data to Braze user accounts.
-- **Receive lists of active customers**: Build segments that can send lists of active customers and their associated custom attributes to Braze.
+- **Sync customer profiles**: Map user data and custom attributes from Amperity to Braze. 
+- **Create and send audiences**: Build segments that return lists of active customers and their associated custom attributes to Braze, and send them to Braze.
 - **Manage data updates**: Control the frequency of sending updates for custom attributes to Braze.
 - **Unify data**: Unify data across various Amperity-supported platforms and Braze.
 - **Sync Braze data to Amazon S3**: Use Braze Currents to integrate engagement data from Braze campaigns, allowing you to sync data to Amazon S3 in Apache Avro format.
@@ -27,7 +27,7 @@ The Braze and Amperity integration offers a unified view of your customers acros
 | Requirement | Description |
 | ----------- | ----------- |
 | Amperity account | An [Amperity account](https://amperity.com/request-a-demo) is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track`, `users.export.segment`, and `segments.list` permissions. <br> This can be created within the Braze Dashboard by navigating to **Developer Console** > **Rest API Key** > **Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br> This can be created within the Braze Dashboard by navigating to **Developer Console** > **Rest API Key** > **Create New API Key**. |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager, or be found on the [API overview page]({{site.baseurl}}/api/basics#endpoints). |
 | Braze REST endpoint | Your Braze endpoint URL. Your endpoint will depend on your Braze instance. |
 | (Optional) Currents connector | The S3 Currents connector. |
@@ -42,10 +42,10 @@ Read below to learn about these attributes.
 ### Standard attributes 
 
 [Profile attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields) describe who your customers are. They are often associated with the identity of the customer, such as:
-Names
-Birthdates
-Email addresses
-Phone numbers
+- Names
+- Birthdates
+- Email addresses
+- Phone numbers
 
 ### Custom attributes 
 
@@ -58,14 +58,6 @@ Phone numbers
 Verify the names of custom attributes that will be sent to Braze from Amperity. Amperity will add a custom attribute whenever there isn’t a matching name.
 
 Custom attributes will be updated only for those users that have a matching `external_id` or `braze_id` within Braze.
-=======
-| Requirement | Description |
-| ----------- | ----------- |
-| AWS account | An AWS account is required to use the S3 and Lambda services. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
-| CSV file | Check out the [CSV formatting specifications](#csv), and use step 1 of the Amperity integration to obtain a CSV with user external IDs and attributes to update. |
-{: .reset-td-br-1 .reset-td-br-2}
 
 ### Amperity Audiences
 
@@ -95,41 +87,15 @@ Avoid sending custom attributes that duplicate default user profile fields. For 
 
 ### Data points
 
-By default, all attributes included in the audience or orchestration will be exported to Braze on each sync. Update custom attributes only for customers with whom your brand is currently engaged and only as often as needed for your messaging use cases. 
+Amperity keeps track of what changes between syncs to Braze and the status of sends overall. Amperity will only send Braze the list membership and other chosen attributes that have changed since the last sync.  
 
 ## Integration
 
-### Step 1: Capture your configuration details
+### Step 1: Capture configuration details for Braze
 
-#### Capture configuration details for Braze
-
-1. Create a segment in Braze for users whose attributes are managed by Amperity. We recommend you create a segment of “All Users” so Amperity can update attributes for all new and existing users in Braze.
-2. Create a Braze REST API key for your Braze workspace with the following permissions under User Data:
-- `users.track`: This endpoint syncs the Amperity Audience to Braze as a custom attribute.
-- `users.export.segment`: This endpoint triggers a download of the specified segment into the S3 bucket that Amperity can access. This export is used to determine:
-  - What new Braze users should be added to the Amperity Audience.
-  - What users are currently in the Amperity Audience and should remain.
-  - What users are currently in the Amperity Audience and should be removed.
-`segments.list`: This endpoint exports a list of all segments in your Braze workspace. The “Segment Name” you input when setting up the Braze Destination settings within Amperity’s dashboard will be checked against this list.
-3. Determine the [REST API endpoint]({{site.baseurl}}/api/basics#endpoints) for your Braze instance. For example, if your Braze URL is `https://dashboard-03.braze.com`, your REST API endpoint is `https://rest.iad-03.braze.com` and your instance is “US-03”.
-4. Determine a list of [user profile fields]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields) and [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) that may be sent to Braze from Amperity.
-
-#### Capture configuration details for Amperity
-Amperity requires access to an Amazon S3 bucket, which is used to synchronize attribute updates that are sent from Amperity to Braze. Only the following fields will be exported:
-- `custom_attributes`
-- `email`
-- `braze_id`
-- `external_id`
-
-The S3 bucket requires the following configuration settings:
-- An AWS Identity and Access Management (IAM) access key and secret key
-
-{% alert important %}
-This connector uses the Amperity Amazon S3 connector as part of the Braze configuration. The Amazon S3 connector allows the use of a Role ARN; however, the Braze connector does not. Leave the **IAM Role ARN** setting empty.
-{% endalert %}
-
-- The name of the Amazon S3 bucket
-- The name of the folder in the Amazon S3 bucket into which Amperity exports the data
+1. Create a Braze REST API key for your Braze workspace with the `users.track` permissions under **User Data**. The `users.track` endpoint syncs the Amperity audience to Braze as a custom attribute.
+2. Determine the [REST API endpoint]({{site.baseurl}}/api/basics#endpoints) for your Braze instance. For example, if your Braze URL is `https://dashboard-03.braze.com`, your REST API endpoint is `https://rest.iad-03.braze.com` and your instance is “US-03”.
+3. Determine a list of [user profile fields]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields) and [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) that may be sent to Braze from Amperity.
 
 ### Step 2: Set up Braze as a destination—DataGrid Operator
 
@@ -145,17 +111,23 @@ Name the table "Braze Customer Attributes" and save it. Verify that the table is
 
 In the Amperity platform, navigate to the **Destinations** tab. Look for the option to add a new destination. From the available options, select **Braze**.
 
+![The New Destination section with a name of "Braze API", description of "Send audience attributes to Braze.", and plugin of "Braze".][3]{: style="max-width:60%;"}
+
 #### Step 2d: Configure destination details
 
 Under **Braze settings**, provide the Braze credentials and destination settings, as shown in [the Amperity documentation](https://docs.amperity.com/datagrid/destination_braze.html#add-destination). Input the configuration details collected in the last step and define the Braze identifier. Available identifiers to match are:
 - `braze_id`: An automatically assigned Braze identifier that is unchangeable and associated with a particular user when they are created in Braze.
 - `external_id`: A customer-assigned identifier, typically a UUID. 
 
+![The Braze Settings section with an instance of "US-03", user identifier of "external_id", blank segment name, S3 bucket of "amperity-training-abc123", and S3 folder of "braze-attributes".][4]{: style="max-width:60%;"}
+
 #### Step 2e: Add a data template
 
 In the **Destinations** tab, open the menu for the Braze destination and select **Add data template**. Enter a name and description for the template (e.g., "Braze" and "Send custom attributes to Braze"), verify business user access, and check all configuration settings. 
 
 If any required settings weren’t configured as part of the destination, configure them as part of the data template. Save the data template.
+
+![The Data Template Name section with the name "Braze Audience Attributes" and description "Send audience attributes to Braze."][5]{: style="max-width:60%;"}
 
 #### Step 2f: Save the configuration 
 
@@ -203,8 +175,8 @@ Check out Amperity’s documentation for examples of different segment types you
 
 1. Go to the **Campaign** section and click the option to create a new campaign.
 2. Give your campaign a descriptive and unique name that will help you identify it later, especially if you have multiple campaigns.
-3. Select the segment of customers that you want to target with this campaign. This should be the segment you created earlier.
-4. Choose the data you want to send as part of the campaign. This can include a range of customer attributes.
+3. Select the segment of customers that you want to target with this campaign. This should be the segment you created earlier. <br>![The dropdown field for segments to exclude from targeting.][6]{: style="max-width:50%;"}<br><br>
+4. Choose the data you want to send as part of the campaign. This can include a range of customer attributes. ![The Edit Campaign Attributes  modal allows for the selection of a destination and customer attributes. ][7]{: style="max-width:90%;"}<br><br>
 5. Select **Braze** as the destination where the campaign data will be sent.
 6. Choose when and how often you want the campaign to run. This can be a one-time event or a recurring schedule.
 7. Save your campaign, and run a test to make sure it works as expected.
@@ -222,3 +194,8 @@ Configure feeds and automate data loads using standard workflows.
 
 [1]: {% image_buster /assets/img/amperity/custom_attributes_filters.png %}
 [2]: {% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}
+[3]: {% image_buster /assets/img/amperity/destination_name.png %}
+[4]: {% image_buster /assets/img/amperity/braze_settings.png %}
+[5]: {% image_buster /assets/img/amperity/data_template_name.png %}
+[6]: {% image_buster /assets/img/amperity/select_segments.png %}
+[7]: {% image_buster /assets/img/amperity/edit_campaign_attributes.png %}
