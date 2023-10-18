@@ -588,7 +588,7 @@ validurls['/docs/link_aliasing_101/'] = '/docs/link_aliasing';
 
 validurls['/docs/user_guide/message_building_by_channel/email/best_practices/templates_styling'] = '/docs/user_guide/message_building_by_channel/email/best_practices/email_styling/';
 
-validurls['/docs/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/'] = '/docs/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/';
+validurls['/docs/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/'] = '/docs/user_guide/data_and_analytics/analytics/home_dashboard/';
 
 validurls['/docs/help/help_articles/segments/segmentation_logic_with_negative_or_filters/'] = '/docs/help/help_articles/segments/segmentation_logic_with_and_or/';
 validurls['/docs/help/help_articles/segments/over-segmentation'] = '/docs/developer_guide/platform_wide/analytics_overview/';
@@ -633,7 +633,8 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/'] = '/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/';
 
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/'] = '/docs/user_guide/data_and_analytics/analytics/';
-validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/'] = '/docs/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/';
+validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/'] = '/docs/user_guide/data_and_analytics/analytics/home_dashboard/';
+validurls['/docs/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/'] = '/docs/user_guide/data_and_analytics/analytics/home_dashboard/';
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/email_performance_dashboard/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/';
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/conversions_dashboard/'] = '/docs/user_guide/data_and_analytics/analytics/conversions_dashboard/';
 
