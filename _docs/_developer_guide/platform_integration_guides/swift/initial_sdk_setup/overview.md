@@ -32,4 +32,4 @@ After you have integrated using one of the listed options, followed the steps fo
 
 <br>
 
-{% alert note %} Carthage is not supported as a package manager for the Swift iOS SDK. %}
+{% alert note %} Carthage is not supported as a package manager for the Swift iOS SDK. {% endalert %}
