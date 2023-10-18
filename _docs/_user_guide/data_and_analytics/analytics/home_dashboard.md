@@ -19,11 +19,11 @@ The **Home** page on the dashboard provides key mobile metrics for you to track 
 If you are using the [older navigation]({{site.baseurl}}/navigation), this is your **Overview** page.
 {% endalert %}
 
-![Dashboard Screenshot][1]
+![Home dashboard in Braze][1]
 
 ## Show breakdown
 
-You can click **Show Breakdown** for each row of the dashboard statistics to view each statistic's value per day for the time period specified under the **Display Data For** section.
+You can click **Show Breakdown** for each row of the dashboard statistics to view each statistic's value per day for the time period specified.
 
 ![Expand][2]
 
@@ -88,6 +88,6 @@ Daily Sessions is the number of sessions recorded on a given day. Comparing this
 
 Daily Sessions per MAU is the ratio of Daily Sessions to MAU on a given day. This statistic tells you how many sessions per day you can expect to have logged per MAU. On aggregate, this can give you an idea of the relative frequency of when your users use your app. That is, if your Daily Sessions per MAU were on average 0.5, then you could expect each MAU to record a session about every 2 days.  
 
-[1]: {% image_buster /assets/img_archive/Usage_Page.png %}
-[2]: {% image_buster /assets/img_archive/Breakdown.png %}
+[1]: {% image_buster /assets/img_archive/home_dashboard.png %}
+[2]: {% image_buster /assets/img_archive/home_dashboard_breakdown.png %}
 [3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
