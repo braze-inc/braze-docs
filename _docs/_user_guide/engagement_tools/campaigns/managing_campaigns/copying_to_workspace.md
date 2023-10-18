@@ -112,11 +112,10 @@ Note the following is not a comprehensive list of what is copied across a worksp
 | Copied | Omitted |
 |---|---|
 | Plain text | Link aliasing |
-| HTML |  | 
+| HTML and drag-and-drop content |  | 
 | Preheader |  | 
 | Inline CSS |  | 
 | AMP HTML |  |
-| Drag-and-drop JSON |  |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -138,7 +137,7 @@ Note the following is not a comprehensive list of what is copied across a worksp
 | Name | Link aliasing |
 | Description | API keys | 
 | Content | Territories | 
-| Drag-and-drop JSON | Tags | 
+| HTML and drag-and-drop content | Tags | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
