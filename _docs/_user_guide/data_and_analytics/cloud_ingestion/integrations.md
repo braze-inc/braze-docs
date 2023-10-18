@@ -64,7 +64,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
      ALIAS_NAME VARCHAR(16777216),
      --braze_id can only be used to update existing users created through the Braze SDK
      BRAZE_ID VARCHAR(16777216),
-     --If you include both email and phone, we will use the email as primary the identifer
+     --If you include both email and phone, we will use the email as the primary identifier
      EMAIL VARCHAR(16777216),
      PHONE VARCHAR(16777216),
      PAYLOAD VARCHAR(16777216) NOT NULL
