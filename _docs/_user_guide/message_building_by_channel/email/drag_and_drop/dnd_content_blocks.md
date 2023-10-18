@@ -9,7 +9,7 @@ tool: Media
 
 ---
 
-# Content Blocks
+# Drag-and-drop editor Content Blocks
 
 > The Content Blocks used exclusively in the drag-and-drop editor are similar in functionality to the [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) used across different channels. They're a centralized location for holding information that can be referenced in various email campaigns. This can include grouping together email headers, promotional callouts, and more all in one reusable row.
 

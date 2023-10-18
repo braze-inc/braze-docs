@@ -81,3 +81,13 @@ You may test your integration or take a look at the sample Currents data in our 
 {% alert important %}
 Note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB. 
 {% endalert %}
+
+### Test Currents connectors
+
+Test Currents connectors are free versions of our existing connectors that can be used for testing and trying out different destinations. Test Currents have:
+- No limit to the number of Test Currents connectors you may build.
+- An aggregate maximum of 10,000 events per 30-day rolling period. This event total is updated hourly on the dashboard.
+
+After your Test Currents connectors reach the sending limit, your connector will not send events until the next 30-day period.
+
+To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade**.

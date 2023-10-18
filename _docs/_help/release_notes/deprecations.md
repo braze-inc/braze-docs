@@ -47,6 +47,13 @@ Support for Grouparoo has been discontinued as of April 2022.
 **September 15, 2022**: No new Baidu push messages can be created. Existing messages and data collection are unaffected.<br>
 **January 15, 2023**: Braze will no longer serve messages or collect data from Baidu apps.
 
+### appboyBridge global variable
+
+**Support withdrawn**: May 2021<br>
+**Replaced by**: `brazeBridge`
+
+The global variable `appboyBridge` is deprecated and replaced by `brazeBridge`. `appboyBridge` will continue to function for existing customers, but we recommend you migrate to `brazeBridge` if you're using `appboyBridge`.
+
 ### Amazon Moments partnership
 
 **Support withdrawn**: June 2020

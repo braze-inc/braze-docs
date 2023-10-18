@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# Segment  
+# Segment
 
 {% multi_lang_include video.html id="RfOHfZ34hYM" align="right" %}
 
@@ -258,6 +258,81 @@ Certain Segment special traits map to Braze's standard attribute profile fields:
 {: .reset-td-br-1 .reset-td-br-2}
 
 Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using Braze's naming convention for these fields and passing them as traits within an identify call.
+
+##### Adding a user to a subscription group
+You can also subscribe or unsubscribe a user from a given subscription group using the following fields in the traits parameter.
+
+Use the reserved Braze profile field called `braze_subscription_groups`, which can be associated with an array of objects. Each object in the array should have two reserved keys:
+
+1. `subscription_group_state`: Indicates whether the user is `"subscribed"` or `"unsubscribed"` to a specific subscription group.
+2. `subscription_group_id`: Represents the unique ID of the subscription group. You can find this ID in the Braze dashboard under `Subscription Group Management`.
+
+{% subtabs %}
+{% subtab Swift %}
+```swift
+analytics.identify(
+  userId: "{your-user}",
+  traits: [
+    "braze_subscription_group": [
+      [
+        "subscription_group_id": "{your-group-id}",
+        "subscription_group_state": "subscribed"
+      ],
+      [
+        "subscription_group_id", "{your-group-id}",
+        "subscription_group_state": "unsubscribed"
+      ]
+    ]
+  ]
+)
+```
+{% endsubtab %}
+{% subtab Kotlin %}
+```kotlin
+analytics.identify(
+  "{your-user}",
+  buildJsonObject {
+    put("braze_subscription_group", buildJsonArray {
+        add(
+          buildJsonObject {
+            put("subscription_group_id", "{your-group-id}")
+            put("subscription_group_state", "subscribed")
+          }
+        )
+        add(
+          buildJsonObject {
+            put("subscription_group_id", "{your-group-id}")
+            put("subscription_group_state", "unsubscribed")
+          }
+        )
+      }
+    )
+  }
+)
+```
+{% endsubtab %}
+{% subtab TypeScript %}
+```typescript
+analytics.identify(
+  "{your-user}",
+  {
+    braze_subscription_groups: [
+      {
+        subscription_group_id: "{your-group-id}",
+        subscription_group_state: "subscribed"
+      },
+      {
+        subscription_group_id: "{your-group-id}",
+        subscription_group_state: "unsubscribed"
+      }
+    ]
+  }
+)
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+##### Custom attributes
 
 All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
 
