@@ -200,7 +200,7 @@ The editor will call out any problems it catches with your message before you se
 - Email bodies larger than 400kb (bodies are highly recommended to be [smaller than 102kb][16])
 - Emails with a blank **Body** or **Subject**
 - Emails without an unsubscribe link
-- Email you're sending from is not whitelisted (sends will be highly limited to ensure deliverability)
+- Email you're sending from is not allowlisted (sends will be highly limited to ensure deliverability)
 
 ## Step 4: Build the remainder of your campaign or Canvas
 

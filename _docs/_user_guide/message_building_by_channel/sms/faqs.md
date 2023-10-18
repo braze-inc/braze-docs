@@ -78,7 +78,7 @@ Some downsides to this approach include:
 - If one business violates the rules, all businesses' messages are suspended.
 - Security issues
 
-### How do you whitelist URLs for SMS?
+### How do you allowlist URLs for SMS?
 
 Before sending SMS messages containing URLs to users in certain countries (for example, Sweden or Nordic countries), you must get these URLs registered with the carrier. Reach out to your Braze customer service manager to help. This process will take around five days.  
 

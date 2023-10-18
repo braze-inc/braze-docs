@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Customers using the API for server-to-server calls may need to whitelist the appropriate API URL if they're behind a firewall.
+Customers using the API for server-to-server calls may need to allowlist the appropriate API URL if they're behind a firewall.
 
 Message scheduling endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each 'transmission' sent from the Braze platform).
 
