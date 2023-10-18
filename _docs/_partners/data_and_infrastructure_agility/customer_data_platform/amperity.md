@@ -141,7 +141,7 @@ Then, follow the syncing instructions for Amp360 or AmpIQ as applicable to your 
 
 #### Syncing option 1: Send query results to Braze via Amp360
 
-Amp360 users can use SQL to write free-form queries, and then configure a schedule that sends the results to Braze.
+Amp360 users can use SQL to write free-form queries and then configure a schedule that sends the results to Braze.
 
 ##### Step 1: Create a query in Amperity
 
