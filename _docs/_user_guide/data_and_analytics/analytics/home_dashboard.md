@@ -9,9 +9,9 @@ tool:
 
 ---
 
-# Home dashboard (previously "Overview")
+# Home dashboard
 
-> Learn about the **Home** page and the statistics available there.
+> Learn about the **Home** page (previously the **Overview** page) and the statistics available there.
 
 The **Home** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase.
 
