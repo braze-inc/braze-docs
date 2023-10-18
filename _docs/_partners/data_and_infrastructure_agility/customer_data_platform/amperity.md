@@ -176,10 +176,10 @@ Check out Amperity’s documentation for examples of different segment types you
 1. Go to the **Campaign** section and click the option to create a new campaign.
 2. Give your campaign a descriptive and unique name that will help you identify it later, especially if you have multiple campaigns.
 3. Select the segment of customers that you want to target with this campaign. This should be the segment you created earlier. <br>![The dropdown field for segments to exclude from targeting.][6]{: style="max-width:50%;"}<br><br>
-4. Choose the data you want to send as part of the campaign. This can include a range of customer attributes. ![The Edit Campaign Attributes  modal allows for the selection of a destination and customer attributes. ][7]{: style="max-width:90%;"}<br><br>
+4. Choose the data you want to send as part of the campaign. This can include a range of customer attributes. ![The Edit Campaign Attributes modal allows for selecting a destination and customer attributes. ][7]{: style="max-width:90%;"}<br><br>
 5. Select **Braze** as the destination where the campaign data will be sent.
 6. Choose when and how often you want the campaign to run. This can be a one-time event or a recurring schedule.
-7. Save your campaign, and run a test to make sure it works as expected.
+7. Save your campaign and run a test to make sure it works as expected.
 
 ##### Step 3: Run the Campaign
 
