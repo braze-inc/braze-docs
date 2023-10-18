@@ -30,6 +30,7 @@ guide_featured_list:
 
 After you have integrated using one of the listed options, followed the steps for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/), and enabled other SDK customizations (optional), you can integrate, enable, and customize additional channels and features to fit the needs of your future campaigns.  
 
+{% alert note %} Carthage is not supported as a package manager for the Swift iOS SDK. {% endalert %}
+
 <br>
 
-{% alert note %} Carthage is not supported as a package manager for the Swift iOS SDK. {% endalert %}
