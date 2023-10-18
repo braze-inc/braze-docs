@@ -1,19 +1,19 @@
 ---
-nav_title: Understanding Overview Data
-article_title: Understanding Your Overview Data
+nav_title: Home Dashboard
+article_title: Home Dashboard (Previously Overview)
 page_order: 1
 page_type: reference
-description: "This reference article describes the Overview page, and provides definitions for statistics available on this page."
+description: "This reference article describes your Home dashboard, and provides definitions for statistics available on this page."
 tool: 
   - Reports
 
 ---
 
-# Understanding overview data
+# Home dashboard (previously "Overview")
 
 > Learn about the **Home** page and the statistics available there.
 
-The **Home** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. This is your home page in the dashboard.
+The **Home** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), this is your **Overview** page.
