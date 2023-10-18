@@ -21,13 +21,29 @@ Two options that will change how the Content Card step will interact with Canvas
 
 ## Content Card expiration {#content-card-expiration}
 
-When composing a new Content Card you have the option to choose when it should expire from the user's feed, based on its send time. The expiration time begins when a user reaches its Canvas component and the card is sent.
+When composing a new Content Card you can choose when it should expire from the user’s feed based on its send time. A card can exist in a user's feed for up to 30 days. The countdown for a Content Card's expiration starts as soon as a user reaches the Message step in the Canvas where the card is sent. The card will be active in the user's feed from this point until it expires.
 
-If a sent card expires before a user has viewed it in your app, it will be removed from their feed the next time their cards are refreshed.
+### Relative versus absolute expiration dates
 
-{% alert important %}
-The Content Card will be available until it expires, even if the user has moved to subsequent steps. If you do not want the Content Card to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
-{% endalert %}
+You have two ways to set when a card should disappear from a user's feed: a relative date or an absolute date. Here's how each works:
+
+#### Relative dates
+
+When you choose a relative date, like "Remove sent cards after 5 days in a user's feed", you can set a maximum expiration date of 30 days.
+
+#### Absolute dates
+
+When you choose an absolute date, like "Remove sent cards on December 1, 2023 at 4 pm", there's some nuance involved.
+
+Although you can specify an expiration duration greater than 30 days, the Content Card will exist in a user's feed for a maximum of 30 days. Specifying a duration greater than 30 days allows you to account for any delays before triggering the Message step, but it does not extend the card's maximum life in the user's feed.
+
+Use caution when setting an expiration date further in advance than 30 days from launching the Canvas. If a user reaches the Message step more than 30 days before the specified expiration date, the card will not be sent.
+
+### Expiration behavior
+
+The Content Card remains available in the user's feed until it reaches its expiration date, even if the user progresses to subsequent steps in the Canvas journey. If you don't want the Content Card to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
+
+Once a Content Card expires, it will automatically be removed from the user's feed during the next refresh, even if they haven't viewed it yet.
 
 ## Advancement Behavior options {#advancement-behavior-options}
 
