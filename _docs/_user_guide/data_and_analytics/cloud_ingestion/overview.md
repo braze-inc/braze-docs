@@ -29,7 +29,7 @@ Cloud Data Ingestion supports the following data types:
 - Catalog items
 - User delete requests
 
-User data can be updated by external ID, user alias, Braze ID, email, or phone number.  Users can be deleted by external ID, user alias, or Braze ID. 
+User data can be updated by external ID, user alias, Braze ID, email, or phone number. Users can be deleted by external ID, user alias, or Braze ID. 
 
 ### What gets synced
 
