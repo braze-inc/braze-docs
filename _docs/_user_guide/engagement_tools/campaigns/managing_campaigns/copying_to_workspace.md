@@ -99,7 +99,7 @@ Note the following is not a comprehensive list of what is copied across a worksp
 
 | Copied | Omitted |
 |---|---|
-| Body | From address |
+| [Email body]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/?tab=email%20body) | From address |
 | Message extras |  Reply to | 
 | Title |  BCC | 
 | Subject |  Link template | 
@@ -123,7 +123,7 @@ Note the following is not a comprehensive list of what is copied across a worksp
 
 | Copied | Omitted |
 |---|---|
-| Body | API IDs |
+| [Email body]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/?tab=email%20body) | API IDs |
 | Description | Image IDs | 
 | Subject | Territories | 
 | Headers | Tags | 
