@@ -44,9 +44,15 @@ This is the total count of sessions that Braze has recorded since integration. S
 
 ### Monthly active users
 
-Monthly Active Users (MAU) is the number of users that have recorded a session in your app in the last 30 days. MAU are calculated nightly with a rolling 30-day window. The percentage next to the MAU count will give you a comparison of today's MAU count to the MAU count recorded 31 days ago. MAU provides you with a good understanding of an app's health over an extended period of time as it smooths out the inconsistencies between days of varying usage intensity.
+Monthly Active Users (MAU) is the number of users that have recorded a session in your app in the last 30 days. MAU are calculated nightly with a rolling 30-day window. MAU provides you with a good understanding of an app's health over an extended period of time as it smooths out the inconsistencies between days of varying usage intensity.
 
-Note that anonymous users will count towards your MAU as well. For mobile devices, anonymous users are device dependent. For web users, anonymous users are browser cache dependent.
+The percentage next to the MAU count shows the change in MAU for this period compared to the previous period.
+
+$$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
+
+{% alert note %}
+Anonymous users will also count towards your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
+{% endalert %}
 
 ### Daily active users
 
@@ -54,13 +60,21 @@ Daily Active Users (DAU) displays the number of unique users who record at least
 
 ### New users
 
-New Users tells you how many users who have previously never recorded a session have started using your app. This number is a total of new users over the given time period. This statistic can be very valuable for tracking the effectiveness of your advertising efforts.
+New users tells you how many users who have previously never recorded a session have started using your app. This number is a total of new users over the given time period. This statistic can be very valuable for tracking the effectiveness of your advertising efforts.
 
 > When you initially release your app with Braze, all users will look like new users since Braze has never recorded a session for them before.
 
 ### Stickiness
 
-Your app's "stickiness" value is a ratio of a given day's DAU to MAU. in essence, stickiness measures the percentage of your MAU that come back on a daily basis. for example, a ratio of 50% indicates that on average an active user is using the app for 15 out of 30 days or that about half of your active users come back on a daily basis. stickiness is an important metric for app success because most users don't quit using an app because they actively hate it, but rather because it doesn't become a part of their daily routine. therefore, you can use stickiness as a proxy for measuring how well you're engaging your users. 
+Your app's stickiness value is a ratio of a given periods' DAU to MAU. In essence, stickiness measures the percentage of your MAU that come back on a daily basis. 
+
+For example, if a time period is set to 30 days, a ratio of 50% indicates that on average an active user is using the app for 15 out of 30 days or that about half of your active users come back on a daily basis. Stickiness is an important metric for app success because most users don't quit using an app because they actively hate it, but rather because it doesn't become a part of their daily routine. Therefore, you can use stickiness as a proxy for measuring how well you're engaging your users.
+
+The percentage next to the stickiness ratio shows the change in stickiness for this period compared to the previous period. 
+
+$$\text{Change in stickiness} = \frac{\text{Stickiness of last period} - \text{Stickiness of this period}}{\text{Stickiness of last period}}$$
+
+The time frames for "last period" and "this period" are determined by the date range you select.
 
 {% alert important %}
 The MAU value is calculated nightly and will not update until the next day.
