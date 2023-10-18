@@ -15,6 +15,10 @@ search_rank: 1
 
 > This reference article covers the Content Card integration and the different data models and card-specific properties available for your Android or FireOS application.
 
+{% alert note %}
+Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards) to get started with implementation and customization.
+{% endalert %}
+
 In Android, the Content Cards feed is implemented as a [fragment][2] available in the Braze Android UI project. View [Google's Fragments][3] for information on adding a fragment to an activity.
 
 The [`ContentCardsFragment`][4] class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's `ContentCards` are created on the Braze dashboard.
@@ -91,10 +95,6 @@ All [`Card`][1] data model objects offer the following analytics methods for log
 |`logClick()` | Manually log a click to Braze for a particular card. |
 |`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-{% alert note %}
-Ready to go further? Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards) to get started with customization.
-{% endalert %}
 
 [1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html
 [2]: https://developer.android.com/guide/components/fragments.html

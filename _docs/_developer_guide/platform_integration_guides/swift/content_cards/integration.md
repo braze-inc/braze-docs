@@ -13,6 +13,10 @@ channel:
 
 > This reference article covers the Content Card integration and the different data models and card-specific properties available for your Swift application.
 
+{% alert note %}
+Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards) to get started with implementation and customization.
+{% endalert %}
+
 The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Create the Content Cards view controller using the `braze` instance. If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
 
 {% alert note %}
@@ -20,12 +24,6 @@ For more information about iOS view controller options, refer to the [Apple deve
 {% endalert %}
 
 The `BrazeUI` library of the Swift SDK provides two default view controller contexts: navigation or modal. This means you can integrate Content Cards in these contexts by adding a few lines of code to your app or site. Both views offer customization and styling options as described in the [customization guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles/?tab=ios). You can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options&#8212;refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example. 
-
-{% alert important %}
-The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of `GIFViewProvider`.
-
-For more details on GIF support, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
-{% endalert %}
 
 ## Navigation context
 
@@ -119,7 +117,8 @@ Each card is initialized with a `Context` object, which contains various methods
 
 For more details, refer to the [`Context` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw/context-swift.class)
 
+{% alert important %}
+The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of `GIFViewProvider`.
 
-{% alert note %}
-Ready to go further? Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards) to get started with customization.
+For more details on GIF support, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
 {% endalert %}
