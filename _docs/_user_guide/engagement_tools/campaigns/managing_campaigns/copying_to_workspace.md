@@ -13,7 +13,7 @@ tool: Campaigns
 > Copying campaigns across a workspace allows you to get a jumpstart on your message composition by starting with a copy of a campaign in a different workspace. This copy will remain as a draft until you edit and launch, helping you keep and build off your successful messaging strategies.
 
 {% alert important %}
-Other channel support, such as push and WhatsApp, will be coming soon.
+Copying campaigns across workspaces is generally available for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. Other channel support, such as push and WhatsApp, will be coming soon.
 {% endalert %}
 
 ## How to copy a campaign
