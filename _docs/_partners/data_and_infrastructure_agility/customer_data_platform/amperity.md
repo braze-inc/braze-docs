@@ -145,7 +145,7 @@ Amp360 users can use SQL to write free-form queries and then configure a schedul
 
 ##### Step 1: Create a query in Amperity
 
-Navigate to the query function in Amperity and construct a SQL query that will yield the desired set of customer data. The results should include the specific attributes you want to send to Braze. See this example Amperity query for returning a list of users with their purchase histories.
+Navigate to the query function in Amperity and construct an SQL query that will yield the desired set of customer data. The results should include the specific attributes you want to send to Braze. See this example of Amperity query for returning a list of users with their purchase histories.
 
 ##### Step 2: Add a new orchestration in Amperity
 
