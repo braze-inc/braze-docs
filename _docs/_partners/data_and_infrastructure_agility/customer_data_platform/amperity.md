@@ -188,9 +188,9 @@ Run the campaign to send the segment to Braze. This can be done manually or base
 
 ### Using Amperity with Braze Currents
 To send Braze Currents data into Amperity:
-[Set up a Braze Current]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/) to send data to an Amazon S3 bucket.
-Configure Amperity to [read Apache Avro files from that Amazon S3 bucket](https://docs.amperity.com/datagrid/source_amazon_s3.html).
-Configure feeds and automate data loads using standard workflows.
+1. [Set up a Braze Current]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/) to send data to an Amazon S3 bucket.
+2. Configure Amperity to [read Apache Avro files from that Amazon S3 bucket](https://docs.amperity.com/datagrid/source_amazon_s3.html).
+3. Configure feeds and automate data loads using standard workflows.
 
 [1]: {% image_buster /assets/img/amperity/custom_attributes_filters.png %}
 [2]: {% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}
