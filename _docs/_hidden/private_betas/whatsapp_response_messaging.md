@@ -58,7 +58,7 @@ If all of the messages in your campaign are similar or have the same content, co
 
 Select if you’d like to create a WhatsApp [template message](#template-messages) or response message, depending on your use case. Any business-initiated conversation must start from an approved template, whereas response messages can be used in responses to inbound messages from users within a 24-hour window. 
 
-![][5]{: style="max-width:80%;"}
+![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.][5]{: style="max-width:80%;"}
 
 {% alert tip %}
 {% raw %}
@@ -66,30 +66,35 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 {% endraw %}
 {% endalert %}
 
+![The Add Personalization tool with the attribute "first_name" and the default value "you".][2]{: style="max-width:80%;"}
+
 ### Template messages
 
-You can use template messages to initiate conversations with your users on WhatsApp. These messages are submitted in advance to WhatsApp for content approval, which can take up to 24 hours to approve. Any edits you make to copy needs to be edited and resubmitted to WhatsApp.
+You can use [approved WhatsApp template messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates
+) to initiate conversations with your users on WhatsApp. These messages are submitted in advance to WhatsApp for content approval, which can take up to 24 hours to approve. Any edits you make to copy needs to be edited and resubmitted to WhatsApp.
 
-Each template has at least one assigned language, such as English or Spanish, so make sure you select segments for users that should receive messaging from that language. For example, if you're using a template assigned with  Indonesian, select segments of users who should receive Indonesian messages.
+Disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. To make updates to the disabled text, you must edit your template and get it reapproved.
 
-{{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates
+#### Languages
+
+Each template has an assigned language, so you need to create a campaign or Canvas step for each language to correctly set up user matching. For example, if you're building a Canvas that uses templates assigned with Indonesian and English, you need to create a Canvas step for the Indonesian template and a Canvas step for the English template.
+
+![List of templates including previews of their messages, their assigned languages, and their approved status.][8]{: style="max-width:80%;"}
+
+#### Variables
 
 If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, upload or add images from the media library.
 
-Note that disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. If you would like to make updates to the disabled text, you must edit your template and get it reapproved.
-
-![][2]{: style="max-width:80%;"}
-
 ### Response messages
 
-You can use response messages to reply to inbound messages from your users. These messages are built in-app on Braze during your composition experience and can be edited at any time. Languages can be handled through Liquid.
+You can use response messages to reply to inbound messages from your users. These messages are built in-app on Braze during your composition experience and can be edited at any time. You can use Liquid to match the response message language to the appropriate users.
 
 There are three response message layouts you can use:
 - Quick Reply
 - Text Message
 - Media Message
 
-![][6]
+![The response message composer for a Reply Message that welcomes new users with a discount code.][6]{: style="max-width:80%;"}
 
 ### Dynamic links 
 Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. At this time, neither of these links can be shortened. 
@@ -98,13 +103,13 @@ Call-to-action URLs may contain variables, though Meta requires them to be at th
 
 Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
-![][3]{: style="max-width:80%;"}
+![A preview message for an existing user named Suzanne.][3]{: style="max-width:80%;"}
 
 {% alert note %}
 A conversation window is required to send response messages and test messages. To initiate a conversation window, send a WhatsApp message to the phone number associated with the subscription group you’re using for this message. The associated phone number is listed in the alert on the **Test** tab.
 {% endalert %}
 
-![][7]
+![An alert that says, "To test, first open a conversation window by sending a WhatsApp message to +1 631-202-0907. Then, send your response message to the test user."][7]{: style="max-width:80%;"}
 
 ## Step 4: Build the remainder of your campaign or Canvas
 
@@ -201,3 +206,4 @@ Video | video/mp4, video/3gp<br><br>Only H.264 video codec and AAC audio codec a
 [5]: {% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}
 [6]: {% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}
 [7]: {% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}
+[8]: {% image_buster /assets/img/whatsapp/whatsapp_templates.png %}
