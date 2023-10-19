@@ -39,6 +39,8 @@ Any existing custom HTML templates will need to be re-created using the drag-and
 
 After selecting your editor experience, this is your opportunity to get creative with customizing your email template. You can use HTML to create and emulate your branding in the HTML editor, or include a variety of [creative details]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details) in the drag-and-drop editor.
 
+### Including an unsubscribe link
+
 As you design your email template, if you do not include an unsubscribe link, Braze will prompt you to add this in your email as it’s required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {% raw %}``${email_footer}``{% endraw %}, or by [customizing the footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in your template.
 
 ## Step 4: Check for email errors
@@ -79,13 +81,13 @@ If you make any edits to an existing template, those changes will not be reflect
 
 ### Managing your templates
 
-You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+As you create more email templates, you can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/#duplicate-templates) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/#archive-templates) email templates. Learn more about creating and managing your library of templates and creative content in [Templates and Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ### Using your templates in API campaigns
 
 To use your email for an API campaign, you need an `email_template_id`, which can be found at the bottom of any email template created in Braze.
 
-![][5]
+![API identifier located at the bottom of an email template.][5]
 
 ### Commenting on email templates
 
@@ -99,13 +101,7 @@ You can collaborate and comment on email templates in the drag-and-drop editor.
 
 After your template is saved, users can see icons over unaddressed comments. Select **Resolve** to resolve these comments.
 
-![An example of an email template comment that reads "Looks good to me".][10]
-
-### Including an unsubscribe link
-
-If you do not include an unsubscribe link, Braze will prompt you to add this in your email as it's required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {%raw%}`${email_footer}`{%endraw%}, or by [customizing the footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in your email templates.
-
-![]({% image_buster /assets/img/dnd_badge_icon.png %})
+![An email template comment that reads "Looks good to me".][10]
 
 For answers to frequently asked questions about email templates, check out our [Templates FAQ][9].
 
