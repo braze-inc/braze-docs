@@ -38,6 +38,16 @@ Enabling this feature will impact the delivery speed of your messages as the S3 
 Braze downcases your push tokens before we hash them. This results in the push token `Test_Push_Token12345` being downcased to `test_push_token12345` in the S3 folder with the hash `32b802170652af2b5624b695f34de089`.
 {% endalert %}
 
+## Selecting channels
+
+To select which message channels will save a copy of sent messages to your Amazon S3 bucket, go to **Settings** > **Message Archiving**, select your channels, then click **Save changes**.
+
+![The Message Archiving page has three channels to select: Email, Push, and SMS.][1]
+
+{% alert note %}
+If you don't see **Message Archiving** in **Settings**, your company hasn't purchased and turned on message archiving.
+{% endalert %}
+
 ## File references
 
 Below are references of the JSON payload delivered to your S3 bucket each time a message is sent:
@@ -142,3 +152,5 @@ If your S3 credentials become invalid at any point, Braze will not be able to sa
 
 ### Why does my archive file's "sent_at" timestamp differ slightly from the sent timestamp in Currents? 
 The S3 rendered copy is saved immediately before sending it to the end user. Because of S3 upload times, there may be a delay of a few seconds between the "sent_at" timestamp in the rendered copy versus the actual time the send occurs.
+
+[1]: {% image_buster /assets/img/message_archiving_settings.png %}
