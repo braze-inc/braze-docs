@@ -25,7 +25,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 ## Step 2: Select your editing experience 
 
-Select between **Drag-And-Drop Editor** or **HTML Editor** for editing experience. 
+Select between **Drag-And-Drop Editor** or **HTML Editor** for your editing experience. 
 
 Next, you can choose from predesigned Braze templates, create a new template, or edit an existing template (plain or [mobile responsive][8]).
 
@@ -39,9 +39,7 @@ Any existing custom HTML templates will need to be re-created using the drag-and
 
 After selecting your editor experience, this is your opportunity to get creative with customizing your email template. You can use HTML to create and emulate your branding in the HTML editor, or include a variety of [creative details]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details) in the drag-and-drop editor.
 
-{% raw %}
-As you design your email template, if you do not include an unsubscribe link, Braze will prompt you to add this in your email as it’s required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag ``${email_footer}``, or by [customizing the footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#custom-footer) in your template.
-{% endraw %}
+As you design your email template, if you do not include an unsubscribe link, Braze will prompt you to add this in your email as it’s required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {% raw %}``${email_footer}``{% endraw %}, or by [customizing the footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in your template.
 
 ## Step 4: Check for email errors
 
