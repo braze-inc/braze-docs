@@ -18,7 +18,7 @@ To create a WhatsApp message and leverage the Whatsapp channel, you must first r
 ## Step 1: Choose where to build your message
 
 {% alert note %}
-WhatsApp creates different message templates for each language. Either create a campaign for each language with segmentation to serve the correct template to users, or use Canvas. 
+WhatsApp creates different [message templates](#template-messages) for each language. Either create a campaign for each language with segmentation to serve the correct template to users, or use Canvas. 
 {% endalert %}
 
 Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
