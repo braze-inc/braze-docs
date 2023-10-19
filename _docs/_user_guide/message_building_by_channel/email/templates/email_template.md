@@ -23,106 +23,27 @@ Go to **Templates** > **Email Templates**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Email Templates**.
 {% endalert %}
 
-## Step 2: Create or choose a template
+## Step 2: Select your editing experience 
 
-Now, you can create a new template or edit an existing template (plain or [mobile responsive][8]) using the drag & drop editing experience or standard HTML experience. If you'd like to create a new template, you can choose from Braze's predesigned templates or create a new layout.
+Select between **Drag-And-Drop Editor** or **HTML Editor** for your editing experience. 
 
-![New Template][2]
+Next, you can choose from predesigned Braze templates, create a new template, or edit an existing template (plain or [mobile responsive][8]).
+
+![][2]
 
 {% alert note %}
-Any existing custom HTML templates will need to be re-created using the Drag & Drop Editor.
+Any existing custom HTML templates will need to be re-created using the drag-and-drop editor.
 {% endalert %}
 
 ## Step 3: Customize your template
 
-You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop Editor to customize your content. After selecting your editor experience, you will be guided to it. An **HTML Editor** or **Drag-and-Drop Editor** badge will appear, indicating that you are about to use this editing experience for template creation.
+After selecting your editor experience, this is your opportunity to get creative with customizing your email template. You can use HTML to create and emulate your branding in the HTML editor, or include a variety of [creative details]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details) in the drag-and-drop editor.
 
-If you do not include an unsubscribe link, Braze will prompt you to add this in your email as it's required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {%raw%}`${email_footer}`{%endraw%}, or by [customizing the footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in your email templates.
+### Including an unsubscribe link
 
-{% alert important %}
-When composing your email template copy, do not switch back and forth between different editor types (HTML, Block, Classic) as that may shift the previously created HTML leading to rendering issues. 
-{% endalert %}
+As you design your email template, if you do not include an unsubscribe link, Braze will prompt you to add this in your email as it’s required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {% raw %}``${email_footer}``{% endraw %}, or by [customizing the footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in your template.
 
-![Drag-and-Drop Editor badge in the Email Body section]({% image_buster /assets/img/dnd_badge_icon.png %})
-
-{% tabs %}
-{% tab HTML Editor %}
-
-To enter a subject line, click <i class="fas fa-pencil-alt"></i> **Edit Sending Info**. 
-
-![Email Template Details panel in the HTML editor.]({% image_buster/assets/img/email_templates/template3.png %})
-<br>
-<br>
-
-To enter the robust email editor, click <i class="fas fa-pencil-alt"></i> **Edit Email Body**. If desired, use the dropdown in the **Body** tab to select the Classic, Block, HTML, or Plaintext email editor. The adjacent panel shows a real-time preview of the email being created.
-
-{% alert important %}
-Remember—when composing your email template copy, do not switch back and forth between different editor types (HTML/Block/Classic) as that may shift the previously created HTML leading to rendering issues. 
-{% endalert %}
-
-![Dropdown in the Body tab that displays options for the editor types.]({% image_buster/assets/img/email_templates/template4.png %})
-
-Our editor supports **HTML Autocomplete** triggered by the `Tab` key.  This feature should be used on naked HTML tags. For example, using `Tab` on a `<head>` tag will result in:
-{% raw %}
-```
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-  <title>`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`</title>
-
-</head>
-```
-{% endraw %}
-{% endtab %}
-{% tab Drag & Drop Editor %}
-
-The drag & drop editing experience is divided into three sections: **Sending Settings**, **Content**, and **Preview & Test**.
-
-{% subtabs %}
-{% subtab Send Settings %}
-
-### Sending settings
-
-The **Sending Settings** section allows you to configure your from and reply-to address as well as set the subject line or pre-header. 
-
-{% alert note %}
-Advanced functionality will appear in the campaign or Canvas composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
-{% endalert %}
-
-{% endsubtab %}
-{% subtab Content %}
-
-### Content
-
-The **Content** section contains the editor. There are three key components within this section.
-
-- **Content:** This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future. To use them, just drag one inside an existing row segment; it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.<br><br> For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
-- **Rows:** Rows are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.<br><br>
-- **Settings:** General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings will be used everywhere in your message, except where you use a custom setting.
-
-This is very useful to build a coherent message quickly.
-{% endsubtab %}
-{% subtab Preview and Test %}
-
-### Preview & Test
-
-The **Preview & Test** section allows you to preview your email based on different users.
-
-- **Random User:** Braze will randomly select a user from the database and preview the email based on their attributes/event information.
-Note: This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.<br><br>
-- **Select User:** You can select a specific user based on their email address or external ID. The email will preview based on that user's attributes and event information<br><br>
-- **Custom User:** You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
-{% endsubtab %}
-{% endsubtabs %}
-
-{% alert tip %}
-To read more about the different components of the drag & drop editing experience, visit our Drag & Drop Editor documentation articles [here]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). 
-{% endalert %}
-
-{% endtab %}
-{% endtabs %}
-
-### Step 4a: Check for email errors
+## Step 4: Check for email errors
 
 Email errors are presented on the **Compose** tab of the message workflow. Errors prevent you from progressing forward. "Warnings" indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
 
@@ -136,7 +57,7 @@ Here's a list of errors that are accounted for in our editor:
 - Emails with a blank **Body** or **Subject**
 - Emails with no unsubscribe link
 
-### Step 4b: Preview and test your message
+## Step 5: Preview and test your message
 
 After you finish composing your template, you can test it before sending it out.
 
@@ -150,7 +71,7 @@ When you're ready for a final check, select **Test Send** and send a test messag
 
 If you see any issues with your template or want to make any changes, click **Edit Email** to return to the editor.
 
-## Step 5: Save your template
+## Step 6: Save your template
 
 Be sure to save your template by clicking **Save Template**. You're now ready to use this template in any campaign or Canvas component you choose. To access your template, select the editing experience you built it with, and then select it from the list of available templates.
 
@@ -158,29 +79,29 @@ Be sure to save your template by clicking **Save Template**. You're now ready to
 If you make any edits to an existing template, those changes will not be reflected in campaigns created using previous versions of that template.
 {% endalert %}
 
+### Managing your templates
+
+As you create more email templates, you can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/#duplicate-templates) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/#archive-templates) email templates. Learn more about creating and managing your library of templates and creative content in [Templates and Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+
 ### Using your templates in API campaigns
 
 To use your email for an API campaign, you need an `email_template_id`, which can be found at the bottom of any email template created in Braze.
 
-![][5]
-
-### Managing your templates
-
-You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+![API identifier located at the bottom of an email template.][5]
 
 ### Commenting on email templates
 
-You can comment on email templates in the drag-and-drop editor. 
+You can collaborate and comment on email templates in the drag-and-drop editor. 
 
 1. Click the Content Block or row in the email body that you’d like to comment on.
-2. Select the <i class="fas fa-comment"></i> comment icon. 
+2. Select the <i class="fas fa-comment"></i> comment icon.
 3. Enter your comment in the sidebar, then click **Submit**.
 4. After entering your comments, click **Done**.
 5. Click **Save Template** to save your comments.
 
-After your template is saved, users can see floating icons over unaddressed comments. Select **Resolve** to resolve these comments.
+After your template is saved, users can see icons over unaddressed comments. Select **Resolve** to resolve these comments.
 
-![An example of an email template comment that reads "Looks good to me".][10]
+![An email template comment that reads "Looks good to me".][10]
 
 For answers to frequently asked questions about email templates, check out our [Templates FAQ][9].
 
