@@ -40,7 +40,7 @@ Within the Media Library, you can see the image type, size, dimensions, URL, and
 
 ### Using the Media Library versus a CDN
 
-The Media Library is a free feature that provides better caching for in-app messages than CDNs. During caching, the SDK pre-downloads assets so that in-app messages can be displayed while offline. Additionally, the Media Library is integrated with Braze composers, allowing marketers to select or tag images instead of copy and pasting image URLs.
+Using the Media Library provides better caching and performance for in-app messages. All media library assets found in an in-app message will be pre-cached for faster display, and will be available for offline display. Additionally, the Media Library is integrated with Braze composers, allowing marketers to select or tag images instead of copy and pasting image URLs.
 
 {% alert note %}
 The latency or speed for all CDNs and the Media Library is generally the same.
