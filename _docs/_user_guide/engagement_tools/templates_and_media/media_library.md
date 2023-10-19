@@ -42,10 +42,6 @@ Within the Media Library, you can see the image type, size, dimensions, URL, and
 
 Using the Media Library provides better caching and performance for in-app messages. All Media Library assets found in an in-app message will be pre-cached for faster display and will be available for offline display. Additionally, the Media Library is integrated with Braze composers, allowing marketers to select or tag images instead of copying and pasting image URLs.
 
-{% alert note %}
-The latency or speed for all CDNs and the Media Library is generally the same.
-{% endalert %}
-
 ## Image specifications
 
 All images uploaded to the Media Library must be less than 5&nbsp;MB. Supported file types are PNG, JPEG, and GIF. For specific image recommendations by messaging channel, refer to the following sections.
