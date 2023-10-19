@@ -60,14 +60,6 @@ Select if you’d like to create a WhatsApp [template message](#template-message
 
 ![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.][5]{: style="max-width:80%;"}
 
-{% alert tip %}
-{% raw %}
-If you plan to use Liquid, be sure to include a default value for your chosen personalization so in the event your user profile of the recipient is incomplete, they will not receive a message. Any messages with missing Liquid variables will not be sent via WhatsApp.
-{% endraw %}
-{% endalert %}
-
-![The Add Personalization tool with the attribute "first_name" and the default value "you".][2]{: style="max-width:80%;"}
-
 ### Template messages
 
 You can use [approved WhatsApp template messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates
@@ -85,6 +77,17 @@ Each template has an assigned language, so you need to create a campaign or Canv
 
 If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, upload or add images from the media library.
 
+{% alert tip %}
+{% raw %}
+If you plan to use Liquid, be sure to include a default value for your chosen personalization so in the event your user profile of the recipient is incomplete, they will not receive a message. Any messages with missing Liquid variables will not be sent via WhatsApp.
+{% endraw %}
+{% endalert %}
+
+![The Add Personalization tool with the attribute "first_name" and the default value "you".][2]{: style="max-width:80%;"}
+
+### Dynamic links 
+Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. At this time, neither of these links can be shortened.
+
 ### Response messages
 
 {% alert note %}
@@ -100,9 +103,6 @@ There are three response message layouts you can use:
 
 ![The response message composer for a Reply Message that welcomes new users with a discount code.][6]{: style="max-width:80%;"}
 
-### Dynamic links 
-Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. At this time, neither of these links can be shortened. 
-
 ## Step 3: Preview and test your message
 
 Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
@@ -110,7 +110,7 @@ Braze always recommends previewing and testing your message before sending it. S
 ![A preview message for an existing user named Suzanne.][3]{: style="max-width:80%;"}
 
 {% alert note %}
-A conversation window is required to send response messages and test messages. To initiate a conversation window, send a WhatsApp message to the phone number associated with the subscription group you’re using for this message. The associated phone number is listed in the alert on the **Test** tab.
+A conversation window is required to send response messages, including test messages. To initiate a conversation window, send a WhatsApp message to the phone number associated with the subscription group you’re using for this message. The associated phone number is listed in the alert on the **Test** tab.
 {% endalert %}
 
 ![An alert that says, "To test, first open a conversation window by sending a WhatsApp message to +1 631-202-0907. Then, send your response message to the test user."][7]{: style="max-width:80%;"}
