@@ -224,7 +224,7 @@ import * as braze from "@braze/web-sdk";
 const json = {
   "year_released": 1960
 };
-braze.getUser().setCustomUserAttribute("most_played_song", updatedJson, true);
+braze.getUser().setCustomUserAttribute("most_played_song", json, true);
 
 ```
 

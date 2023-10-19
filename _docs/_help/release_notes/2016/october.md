@@ -9,7 +9,7 @@ description: "This article contains release notes for October 2016."
 # October 2016
 
 ## New security settings
-We've added enhanced security features to Braze, including password expiration rules, password length rules, password complexity rules, dashboard IP login whitelisting, and two-factor authentication.
+We've added enhanced security features to Braze, including password expiration rules, password length rules, password complexity rules, dashboard IP login allowlisting, and two-factor authentication.
 
 > Update: Braze's **Security Settings**, accessed from your **Company Settings** page, also includes rules for password reusability and expiration.
 

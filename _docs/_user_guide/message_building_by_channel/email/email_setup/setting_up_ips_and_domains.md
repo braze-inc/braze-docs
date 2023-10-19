@@ -30,7 +30,7 @@ After receiving your email, we'll get to work configuring your IPs, domains and 
 
 ### Step 3: Add DNS records
 
-After your IPs, domains, subdomains, and IP pools are configured, we'll send you a list of DNS records. Ask your engineers and developers to add these DNS records where needed, and, after they have been added, let us know!
+After your IPs, domains, subdomains, and IP pools are configured, we'll send you a list of DNS records. Ask your engineers and developers to add these DNS records where needed, and after they have been added, let the Braze Onboarding team know.
 
 ### Next steps
 
@@ -38,15 +38,17 @@ We'll check your setup and validate all information in our internal systems. The
 
 ## Method 2: Self-service email setup
 
-This method will set up one sending domain, one tracking domain, and one IP. If you're planning to set up more, please consult with Braze Onboarding team (method 1).
+This method will set up one sending domain, one tracking domain, and one IP in total for a company. If you're planning to set up more, please consult with Braze Onboarding team (method 1).
 
 {% alert important %}
-This self-service email setup feature is currently in beta. Contact your Braze account manager if you're interested in participating in the beta.<br>If you're using the self-service email setup feature, be sure to also consult with the Braze Onboarding team.
+This self-service email setup feature is currently in beta and only available for new customers in onboarding. Contact your Braze account manager if you're interested in participating in the beta.<br>If you're using the self-service email setup feature, be sure to also consult with the Braze Onboarding team.
 {% endalert %}
 
 ### Step 1: Begin setup
 
 Go to **Settings** > **Admin Settings** under **Company Settings**. Next, select the **Sender Verification** tab and click the **Start setup** button.
+
+Note to view the **Sender Verification** tab, you must have the "Can Manage Company Settings" company-level permission.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Sender Verification** by selecting your profile icon.

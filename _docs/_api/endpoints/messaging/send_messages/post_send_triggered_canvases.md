@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`recipients`| Optional | Array | See [Recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). If not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the Canvas.<br><br> The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and `canvas_entry_properties` object. Either `external_user_id` or `user_alias` is required for this call. Requests must specify only one. <br><br> When `send_to_existing_only` is `true`, Braze will only send the message to existing users—however this flag can't be used with user aliases. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with that ID and attributes before sending the message.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-Customers using the API for server-to-server calls may need to whitelist the appropriate API URL if they're behind a firewall.
+Customers using the API for server-to-server calls may need to allowlist the appropriate API URL if they're behind a firewall.
 
 {% alert note %}
 If you include both specific users in your API call and a target segment in the dashboard, the message will send to specifically the user profiles that are both in the API call and qualify for the segment filters.
