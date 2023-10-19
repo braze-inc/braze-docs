@@ -27,7 +27,7 @@ You can create new workspaces or switch between existing workspaces from the wor
 
 1. Select the workspace dropdown and click <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Create workspace**.
 
-> img1
+![][1]
 
 {:start="2"}
 2. Give your workspace a name.
@@ -39,11 +39,11 @@ You might want to adopt a naming convention so that others in your company can e
 {:start="3"}
 3. Click **Create**. It may take a few seconds for Braze to create your workspace.
 
-> img2
+![][2]
 
 You will be taken to the **App Settings** page to begin adding your app instances. You can access this page at any time from **Settings** > **App Settings**.
 
-> img3
+![][3]
 
 ### Step 3: Add your app instances
 
@@ -52,7 +52,7 @@ We refer to the different sites and apps that are collected within a workspace a
 1. From the **App Settings** page, click **+ Add app**.
 2. Give your app instance a name and select what platform or platforms this app instance is on. If you select multiple platforms, Braze will create one app instance for each platform.
 
-> img4
+![][4]{: style="max-width:60%" }
 
 {:start="3"}
 3. Click **Add app** to confirm.
@@ -61,7 +61,7 @@ We refer to the different sites and apps that are collected within a workspace a
 
 After adding your app instance, you will have access to its API key. The API key is used when making requests between your app instance and the Braze API. The API key is also important for integrating the Braze SDK with your app or website.
 
-> img5
+![][5]
 
 {% alert note %}
 You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android, create four app instances within your workspace (Free iOS app, free Android app, pro iOS app, and pro Android app). This will give you four API keys to use, one for each app instance.
@@ -73,7 +73,7 @@ The Live SDK Version displayed on the App Settings page for a specific app is th
 
 This field appears after you have integrated the Braze SDK with your app or website. If a newer version of the Braze SDK is available for your platform, it will be noted here with the tag "Newer Version Available."
 
-> img6
+![][6]
 
 ### Step 4: Repeat as needed
 
@@ -81,9 +81,7 @@ Repeat steps 2 and 3 to set up as many workspaces as your plan requires. As a be
 
 #### Tip: Add a testing workspace
 
-You can perform app testing by completely sandboxing certain users from your production instance. Create a new workspace, and remember to switch your API codes so your production environments are not corrupted with false data.
-
-When you publish your application, be sure to change the API key that Braze is using to match that of your production workspace rather than your testing workspace.
+You can perform app testing by completely sandboxing certain users from your production instance. Create a new workspace, and when you publish your application, be sure to change the API key that Braze is using to match that of your production workspace rather than your testing workspace.
 
 ## Managing workspaces
 
@@ -91,7 +89,7 @@ When you publish your application, be sure to change the API key that Braze is u
 
 You can add favorite workspaces to access the workspaces you use the most even faster.
 
-> img7
+![][7]
 
 To add favorite workspaces:
 
@@ -110,20 +108,21 @@ To rename your workspace:
 2. Hover over your workspace’s name and click <i class="fa-solid fa-pencil" style="color: #0b8294;"></i>.
 3. Give your workspace a new name, then click <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Save**.
 
-> img8
+![][8]
 
 ### Deleting workspaces
 
-{% alert warning %}
-Be careful when deleting workspaces! After a workspace is deleted, it can’t be restored.
-{% endalert %}
 
 To delete your workspace:
 
 1. Go to **Settings** > **App Settings**.
 2. Click **Delete workspace**.
 
-> img9
+{% alert warning %}
+Be careful when deleting workspaces! After a workspace is deleted, it can’t be restored.
+{% endalert %}
+
+![][9]
 
 ## Frequently asked questions
 
@@ -149,7 +148,7 @@ By default, a segment targets all apps and websites in the workspace. To set up 
 2. For **Apps and websites targeted**, select **Users from specific apps**.
 3. In the **Specific apps** dropdown, select your app or site.
 
-> img10
+![][10]{: style="max-width:75%" }
 
 You can then add this segment to your message and begin further refining your audience with additional segments and filters if needed.
 
@@ -170,3 +169,14 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 In the original Canvas workflow, add your segment to the Canvas component level in the **Audience** section. There's no need to segment at the entry level.
 {% enddetails %}
 
+
+[1]: {% image_buster /assets/img/workspaces/workspace_create.png %}
+[2]: {% image_buster /assets/img/workspaces/workspace_name.png %}
+[3]: {% image_buster /assets/img/workspaces/workspace_empty_state.png %}
+[4]: {% image_buster /assets/img/workspaces/workspace_add_app.png %}
+[5]: {% image_buster /assets/img/workspaces/app_api_key.png %}
+[6]: {% image_buster /assets/img/workspaces/app_live_sdk_version.png %}
+[7]: {% image_buster /assets/img/workspaces/workspace_favorites.png %}
+[8]: {% image_buster /assets/img/workspaces/workspace_rename.gif %}
+[9]: {% image_buster /assets/img/workspaces/workspace_delete.png %}
+[10]: {% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %}

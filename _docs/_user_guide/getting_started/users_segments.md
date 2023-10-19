@@ -13,7 +13,7 @@ Understanding your users and effectively targeting them is crucial for sending p
 
 ## Users
 
-In Braze, information about your audience is stored in user profiles. A [user profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) is a comprehensive collection of information and attributes that describe an individual consumer. It serves as a central repository for storing and managing data related to their behavior, preferences, and demographic details.
+In Braze, information about your audience is stored in user profiles. A [user profile]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) is a comprehensive collection of information and attributes that describe an individual consumer. It serves as a central repository for storing and managing data related to their behavior, preferences, and demographic details.
 
 ### Parts of a user profile
 
