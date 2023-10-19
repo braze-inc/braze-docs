@@ -48,7 +48,7 @@ This self-service email setup feature is currently in beta and only available fo
 
 Go to **Settings** > **Admin Settings** under **Company Settings**. Next, select the **Sender Verification** tab and click the **Start setup** button.
 
-Note to view the **Sender Verification** tab, you must have the "Can Manage Company Settings" company level permission.
+Note to view the **Sender Verification** tab, you must have the "Can Manage Company Settings" company-level permission.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Sender Verification** by selecting your profile icon.
