@@ -19,7 +19,7 @@ Workspaces are a shared environment for you to track and manage engagement for r
 
 ### Step 1: Have a plan
 
-Before you begin, make sure you've worked with your team and your Braze onboarding manager to determine the best workspace configuration for your use case. To learn more about planning your workspaces in Braze, check out our Getting Started: Workspaces guide.
+Before you begin, make sure you've worked with your team and your Braze onboarding manager to determine the best workspace configuration for your use case. To learn more about planning your workspaces in Braze, check out our [Getting Started: Workspaces][link] guide.
 
 ### Step 2: Add your workspace
 
@@ -180,3 +180,4 @@ In the original Canvas workflow, add your segment to the Canvas component level 
 [8]: {% image_buster /assets/img/workspaces/workspace_rename.gif %}
 [9]: {% image_buster /assets/img/workspaces/workspace_delete.png %}
 [10]: {% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %}
+[link]: {{site.baseurl}}/user_guide/getting_started/workspaces/
