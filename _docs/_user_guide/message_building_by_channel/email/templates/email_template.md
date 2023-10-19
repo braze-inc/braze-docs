@@ -35,82 +35,13 @@ Next, you can choose from predesigned Braze templates, create a new template, or
 Any existing custom HTML templates will need to be re-created using the drag-and-drop editor.
 {% endalert %}
 
-{% tabs %}
-{% tab HTML Editor %}
+## Step 3: Customize your template
 
-To enter a subject line, click <i class="fas fa-pencil-alt"></i> **Edit Sending Info**. 
+After selecting your editor experience, this is your opportunity to get creative with customizing your email template. You can use HTML to create and emulate your branding in the HTML editor, or include a variety of [creative details]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details) in the drag-and-drop editor.
 
-![Email Template Details panel in the HTML editor.]({% image_buster/assets/img/email_templates/template3.png %})
-<br>
-<br>
-
-To enter the robust email editor, click <i class="fas fa-pencil-alt"></i> **Edit Email Body**. If desired, use the dropdown in the **Body** tab to select the Classic, Block, HTML, or Plaintext email editor. The adjacent panel shows a real-time preview of the email being created.
-
-{% alert important %}
-Remember—when composing your email template copy, do not switch back and forth between different editor types (HTML, Block, Classic) as that may shift the previously created HTML leading to rendering issues. 
-{% endalert %}
-
-![Dropdown in the Body tab that displays options for the editor types.]({% image_buster/assets/img/email_templates/template4.png %})
-
-Our editor supports **HTML Autocomplete** triggered by the `Tab` key. This feature should be used on naked HTML tags. For example, using `Tab` on a `<head>` tag will result in the following:
 {% raw %}
-```
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-  <title>`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`</title>
-
-</head>
-```
+As you design your email template, if you do not include an unsubscribe link, Braze will prompt you to add this in your email as it’s required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag ``${email_footer}``, or by [customizing the footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#custom-footer) in your template.
 {% endraw %}
-{% endtab %}
-{% tab Drag-and-Drop Editor %}
-
-The drag-and-drop editing experience is divided into three sections: **Sending Settings**, **Content**, and **Preview & Test**.
-
-{% subtabs %}
-{% subtab Send Settings %}
-
-### Sending Settings
-
-The **Sending Settings** section allows you to configure your from and reply-to address as well as set the subject line or pre-header. 
-
-{% alert note %}
-Advanced functionality will appear in the campaign or Canvas composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
-{% endalert %}
-
-{% endsubtab %}
-{% subtab Content %}
-
-### Content
-
-The **Content** section contains the editor. There are three key components within this section.
-
-- **Content:** This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future. To use them, just drag one inside an existing row segment; it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.<br><br> For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
-- **Rows:** Rows are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.<br><br>
-- **Settings:** General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings will be used everywhere in your message, except where you use a custom setting.
-
-This is very useful to build a coherent message quickly.
-{% endsubtab %}
-{% subtab Preview and Test %}
-
-### Preview & Test
-
-The **Preview & Test** section allows you to preview your email based on different users.
-
-- **Random User:** Braze will randomly select a user from the database and preview the email based on their attributes/event information.
-Note: This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.<br><br>
-- **Select User:** You can select a specific user based on their email address or external ID. The email will preview based on that user's attributes and event information<br><br>
-- **Custom User:** You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
-{% endsubtab %}
-{% endsubtabs %}
-
-{% alert tip %}
-To read more about the different components of the drag-and-drop editing experience, visit our drag-and-drop editor for email documentation articles [here]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). 
-{% endalert %}
-
-{% endtab %}
-{% endtabs %}
 
 ## Step 4: Check for email errors
 
