@@ -16,7 +16,7 @@ description: "This article outlines the details about the Blacklist emails Braze
 {% endapimethod %}
 
 {% alert important %}
-Braze has released the [`/email/blocklist` endpoint]({{site.baseurl}}/api/endpoints/email/post_blocklist/) with the same functionality as the `/email/blacklist` endpoint. It is recommended to use the `/email/blocklist` endpoint instead.
+Braze has released the [`/email/blocklist` endpoint]({{site.baseurl}}/api/endpoints/email/post_blocklist/) with the same functionality as the `/email/blacklist` endpoint. We recommended you use the `/email/blocklist` endpoint instead.
 {% endalert %}
 
 > Use this endpoint to unsubscribe a user from email and mark them as hard bounced.
