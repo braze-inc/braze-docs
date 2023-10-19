@@ -38,6 +38,14 @@ You can use the **Media Library** to:
 
 Within the Media Library, you can see the image type, size, dimensions, URL, and date it was added to the library.
 
+### Using the Media Library versus a CDN
+
+The Media Library is a free feature that provides better caching for in-app messages than CDNs. During caching, the SDK pre-downloads assets so that in-app messages can be displayed while offline. Additionally, the Media Library is integrated with Braze composers, allowing marketers to select or tag images instead of copy and pasting image URLs.
+
+{% alert note %}
+The latency or speed for all CDNs and the Media Library is generally the same.
+{% endalert %}
+
 ## Image specifications
 
 All images uploaded to the Media Library must be less than 5&nbsp;MB. Supported file types are PNG, JPEG, and GIF. For specific image recommendations by messaging channel, refer to the following sections.
