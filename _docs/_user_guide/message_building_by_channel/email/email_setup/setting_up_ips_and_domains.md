@@ -30,7 +30,7 @@ After receiving your email, we'll get to work configuring your IPs, domains and 
 
 ### Step 3: Add DNS records
 
-After your IPs, domains, subdomains, and IP pools are configured, we'll send you a list of DNS records. Ask your engineers and developers to add these DNS records where needed, and, after they have been added, let the Braze Onboard team know.
+After your IPs, domains, subdomains, and IP pools are configured, we'll send you a list of DNS records. Ask your engineers and developers to add these DNS records where needed, and after they have been added, let the Braze Onboarding team know.
 
 ### Next steps
 
