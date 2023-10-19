@@ -87,6 +87,10 @@ If you added variables while creating the WhatsApp template in the Meta Business
 
 ### Response messages
 
+{% alert note %}
+Response messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
 You can use response messages to reply to inbound messages from your users. These messages are built in-app on Braze during your composition experience and can be edited at any time. You can use Liquid to match the response message language to the appropriate users.
 
 There are three response message layouts you can use:
