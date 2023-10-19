@@ -96,10 +96,11 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 
 | job_status | Explanation |
 | --- | --- |
-| `Running` | The job is currently running. |
-| `Success` | All rows synced successfully. |
-| `Partial` | Some rows failed to sync due to errors. |
-| `Error` | No rows were synced. |
+| `running` | The job is currently running. |
+| `success` | All rows synced successfully. |
+| `partial` | Some rows failed to sync due to errors. |
+| `error` | No rows were synced. |
+| `config_error` | There was an error in integration configuration. Check your integration setup. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Troubleshooting
