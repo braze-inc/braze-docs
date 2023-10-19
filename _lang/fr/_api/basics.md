@@ -288,7 +288,7 @@ Pour renforcer la sécurité, vous pouvez spécifier une liste d’adresses IP e
 Si vous n’en spécifiez aucune, les requêtes pourront être envoyées depuis n’importe quelle adresse IP.
 
 {% alert tip %}
-Vous créez un Webhook Braze à Braze en utilisant une liste blanche ? Consultez notre liste [d’adresses IP à autoriser]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
+Vous créez un Webhook Braze à Braze en utilisant une liste blanche ? Consultez notre liste [d’adresses IP à autoriser]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-allowlisting).
 {% endalert %}
 
 ## Ressources complémentaires

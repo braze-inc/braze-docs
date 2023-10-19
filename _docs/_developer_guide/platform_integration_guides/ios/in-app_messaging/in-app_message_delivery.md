@@ -57,6 +57,10 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 {% endtab %}
 {% endtabs %}
 
+## Failing to find a matching trigger
+
+When Braze fails to find a matching trigger for a particular event, it will call the [noMatchingTriggerForEvent:name:](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_in_app_message_controller_delegate-p.html#ab4d57b13c51545d487227945a37d4ab8) method of the [`ABKInAppMessageControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_in_app_message_controller_delegate-p.html). Implement this method in your class adopting the delegate protocol to handle this scenario. 
+
 ## Local in-app message delivery
 
 ### The in-app message stack

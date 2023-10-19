@@ -79,6 +79,7 @@ Contact your Braze account manager if you're interested in getting started with 
 
 - Domains must be procured, owned, and managed by you.
 - The domain used for this feature must be unique (that is, different from your website domain), and the domain can't be used to host any web content.
+  - You can also use unique subdomains, such as `sms.braze.com`.
 - We recommend choosing a domain with as few characters as possible to minimize the length of your URLs.
 
 ### Using custom domains

@@ -15,6 +15,11 @@ Campaign interaction data refers to how a user interacts with a campaign they re
 Campaign interaction data availability is currently in early access. Contact your customer success manager if you're interested in participating in the early access. <br><br> Support for Canvas interaction data will be coming soon.
 {% endalert %}
 
+Campaigns that use retargeting filters that are retargeting by tag are not exempt from expiration. Retargeting filters that are retargeting by tag include:
+* Received Message from Campaign or Canvas with Tag
+* Clicked/Opened Campaign or Canvas With Tag
+* Last Received Message from Campaign or Canvas With Tag
+
 ### When is campaign interaction data available?
 
 For active campaigns, interaction data is always available in real-time. If a campaign is “stopped,” it will be marked as “expired” after three months, unless it's used in retargeting filters. When expired, the campaign data will be moved to long-term storage with limited availability. 

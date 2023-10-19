@@ -19,7 +19,17 @@ When a sync runs, Braze will directly connect to your data warehouse instance, r
 
 ### Supported data types 
 
-Sync user attributes, custom events, and purchases through Cloud Data Ingestion. Data for a user can be updated by external ID, user alias, or Braze ID. CDI can support nested custom attributes, arrays of objects, and can be used to updated subscription statuses. 
+Cloud Data Ingestion supports the following data types: 
+- User attributes, including: 
+   - Nested custom attributes
+   - Arrays of objects
+   - Subscription statuses
+- Custom events
+- Purchase events
+- Catalog items
+- User delete requests
+
+User data can be updated by external ID, user alias, Braze ID, email, or phone number. Users can be deleted by external ID, user alias, or Braze ID. 
 
 ### What gets synced
 
