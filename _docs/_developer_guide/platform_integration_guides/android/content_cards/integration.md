@@ -16,7 +16,7 @@ search_rank: 1
 > This reference article covers the Content Card integration and the different data models and card-specific properties available for your Android or FireOS application.
 
 {% alert note %}
-Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards) to get started with implementation and customization.
+When you're ready to get started with implementation and customization, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
 {% endalert %}
 
 In Android, the Content Cards feed is implemented as a [fragment][2] available in the Braze Android UI project. View [Google's Fragments][3] for information on adding a fragment to an activity.

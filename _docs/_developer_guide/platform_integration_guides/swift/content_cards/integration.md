@@ -14,7 +14,7 @@ channel:
 > This reference article covers the Content Card integration and the different data models and card-specific properties available for your Swift application.
 
 {% alert note %}
-Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards) to get started with implementation and customization.
+When you're ready to get started with implementation and customization, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
 {% endalert %}
 
 The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Create the Content Cards view controller using the `braze` instance. If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
