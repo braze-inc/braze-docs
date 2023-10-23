@@ -20,7 +20,7 @@ description: "This reference article covers message archiving, a feature that al
 
 ## Overview
 
-When this feature is enabled and you have successfully connected an S3 bucket via your workspace's **Technology Partners** page, Braze will write a gzipped JSON file to your S3 bucket for each email, SMS, or push message sent to a user. Your customer success manager can enable any or all of the channels to be saved.
+When this feature is turned on and you have successfully connected an S3 bucket via your workspace's **Technology Partners** page, Braze will write a gzipped JSON file to your S3 bucket for each email, SMS, or push message sent to a user. You can select any or all of the channels to be saved on the **Message Archiving** settings page.
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (e.g., {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements. 
 
@@ -31,7 +31,7 @@ An example file may look like this:<br>
 `sent_messages/email/819baa08d8d7e77e19d4666f5fc6050b/ee965cb2-8934-4b0a-acf1-91c899c2f915/651fd10b282850b39e1169c13975234b.json.gz`
 
 {% alert important %}
-Enabling this feature will impact the delivery speed of your messages as the S3 file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
+Turning on this feature will impact the delivery speed of your messages as the S3 file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
 {% endalert %}
 
 {% alert note %}
@@ -46,7 +46,7 @@ To select which message channels will save a copy of sent messages to your Amazo
 ![The Message Archiving page has three channels to select: Email, Push, and SMS.][1]
 
 {% alert note %}
-If you don't see **Message Archiving** in **Settings**, your company hasn't purchased and turned on message archiving.
+If you don't see **Message Archiving** in **Settings**, confirm that your company has purchased and turned on message archiving.
 {% endalert %}
 
 ## File references
