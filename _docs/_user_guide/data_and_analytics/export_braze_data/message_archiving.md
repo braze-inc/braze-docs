@@ -14,8 +14,9 @@ description: "This reference article covers message archiving, a feature that al
 
 ## Prerequisites
 
-1. You have purchased this feature, and your customer success manager has enabled the feature.
-2. You have connected an S3 bucket to your workspace via the **Technology Partners** page.
+1. You purchased this feature, and your customer success manager turned on the feature.
+2. You connected an S3 bucket to your workspace on the **Technology Partners** page.
+3. You [selected the applicable channels](#selecting-channels) for message archiving on the **Message Archiving** settings page.
 
 ## Overview
 
