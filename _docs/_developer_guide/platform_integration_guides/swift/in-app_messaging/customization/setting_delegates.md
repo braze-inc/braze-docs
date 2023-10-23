@@ -221,9 +221,9 @@ The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
 {% endtab %}
 {% endtabs %}
 
-## Customizing Button Clicks
+## Customizing button clicks
 
-To access in-app message button information or override the click behavior, implement the `inAppMessage(_:shouldProcess:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:shouldprocess:buttonid:message:view:)-122yi) method. Return true to allow Braze to process the click action; return false to override the behavior.
+To access in-app message button information or override the click behavior, implement [`BrazeInAppMessageUIDelegate.inAppMessage(_:shouldProcess:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:shouldprocess:buttonid:message:view:)-122yi). Return `true` to allow Braze to process the click action, or return `false` to override the behavior.
 {% tabs %}
 {% tab swift %}
 
@@ -273,7 +273,7 @@ To access in-app message button information or override the click behavior, impl
                 view:(UIView *)view {
   NSInteger buttonInt = [buttonId integerValue];
 
-  if (message.type == BRZInAppMessageRawTypeFull || message.type == BRZInAppMessageRawTypeModal ) {
+  if (message.type == BRZInAppMessageRawTypeFull || message.type == BRZInAppMessageRawTypeModal) {
     BRZInAppMessageRawButton *button = message.buttons[buttonInt];
     NSLog(@"%ld", (long)button.identifier);
     NSLog(@"%@", button.text);
