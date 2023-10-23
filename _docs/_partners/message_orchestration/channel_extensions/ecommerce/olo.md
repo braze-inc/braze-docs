@@ -1,7 +1,6 @@
 ---
 nav_title: Olo
 article_title: Olo
-page_order: 100
 description: "This article outlines the partnership between Braze and Olo, a leading open SaaS platform for restaurants that enables hospitality at every touchpoint."
 alias: /partners/olo/
 page_type: partner
