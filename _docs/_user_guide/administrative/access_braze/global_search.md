@@ -22,6 +22,10 @@ Global search is currently in early access and is under active development. Plea
 
 Anything! Not only can you swiftly find campaigns, Canvases, segments, and templates, but you can also navigate to specific pages and even execute quick actions like creating a campaign—all from the search bar.
 
+{% alert tip %}
+To search for exact text, put your search term in quotations (""). For example, searching for [“all users”] will return all items that contain the exact phrase “all users” in their name.
+{% endalert %}
+
 ## Key features
 
 ### Keyboard shortcuts
