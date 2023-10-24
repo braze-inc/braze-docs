@@ -114,7 +114,7 @@ Pour configurer Braze comme destination en mode-appareil pour votre source iOS, 
 
 Pour compléter l'intégration côte à côte, consultez les instructions détaillées de Segment.io pour ajouter le pod Braze Segment.io à votre application [iOS](https://segment.com/docs/connections/destinations/catalog/braze/#ios).
 
-Le code source pour l'intégration du [mode appareil iOS](https://github.com/Appboy/appboy-segment-ios) est maintenu par Braze et est mis à jour régulièrement pour refléter les nouvelles versions du SDK de Braze.
+Le code source pour l'intégration du [mode appareil iOS](https://github.com/braze-inc/analytics-swift-braze) est maintenu par Braze et est mis à jour régulièrement pour refléter les nouvelles versions du SDK de Braze.
 
 {% endtab %}
 {% tab Web or Javascript %}

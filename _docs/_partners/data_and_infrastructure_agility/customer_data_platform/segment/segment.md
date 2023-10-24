@@ -114,7 +114,7 @@ To set up Braze as a device-mode destination for your iOS source, choose **Class
 
 To complete the side-by-side integration, refer to Segment's detailed instructions for adding the Braze Segment pod to your [iOS](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/) app.
 
-The source code for the [iOS device mode](https://github.com/Appboy/appboy-segment-ios) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
+The source code for the [iOS device mode](https://github.com/braze-inc/analytics-swift-braze) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
 {% endtab %}
 {% tab Web or Javascript %}
