@@ -55,7 +55,7 @@ Content Cards allow you to send a highly targeted, dynamic stream of rich conten
 
 {% endtab %}
 {% tab Push Notifications %}
-Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns and news items. [Learn more about using Braze to trigger push notifications, who you can send a push to, and what advanced push capabilities Braze offers.]({{site.baseurl}}/user_guide/message_building_by_channel/push)
+Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns and news items. [Learn more about using Braze to trigger push notifications.]({{site.baseurl}}/user_guide/message_building_by_channel/push)
 
 ![The push message editor displaying an example push message and title to be sent to the Android, iOS, and Web messaging channels.]({% image_buster /assets/img_archive/UOiOSPush.png %})
 
@@ -73,7 +73,7 @@ Send your users rich HTML messages by adding your existing HTML templates, using
 
 {% endtab %}
 {% tab SMS and MMS %}
-Use SMS with Braze to send transactional notifications, share promotions, send reminders, and more. With over 23 billion text messages sent every day worldwide, SMS is the most direct way to reach users and customers. [Learn more about setting up SMS, managing users and phone numbers, subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms).
+Use SMS with Braze to send transactional notifications, share promotions, send reminders, and more. With over 23 billion text messages sent every day worldwide, SMS is the most direct way to reach users and customers. [Learn more about setting up SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms).
 
 SMS and MMS are only available in select Braze packages. Reach out to your account manager or customer success manager to get started.
 
