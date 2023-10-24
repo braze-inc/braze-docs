@@ -9,6 +9,9 @@ guide_top_text: "Amplitude enables you to drive growth through robust product an
 description: "This landing page is home to all things Amplitude, including Amplitude for Currents, Amplitude Recommend, and how to leverage Amplitude and Connected Content."
 
 guide_featured_list:
+- name: Amplitude Cohort Import
+  link: /docs/partners/data_and_infrastructure_agility/cohort_import/amplitude/
+  fa_icon: fas fa-users
 - name: Amplitude for Currents
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/
   fa_icon: fas fa-warehouse

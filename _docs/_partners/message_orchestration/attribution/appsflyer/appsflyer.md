@@ -14,7 +14,9 @@ search_tag: Partner
 
 > AppsFlyer is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics, mobile attribution, and deep linking.
 
-The Braze and AppsFlyer integration allows you to better understand how to optimize and build more holistic campaigns by leveraging mobile install attribution data from AppsFlyer.
+The Braze and AppsFlyer integration allows you to better understand how to optimize and build more holistic campaigns by leveraging mobile install attribution data from AppsFlyer. 
+
+You can also pass your AppsFlyer audiences (cohorts) directly to Braze with the [AppsFlyer Audiences]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/appsflyer_audiences/) integration, allowing you to create powerful customer engagement campaigns targeted toward just the right users at just the right time. 
 
 ## Prerequisites
 

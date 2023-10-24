@@ -14,10 +14,6 @@ noindex: true
 
 > This article will run through all the considerations you'll need to keep in mind when you're migrating your user data to Braze.
 
-{% alert important %}
-Are you currently a non-native (have not or will not switch over to Braze's native keyword processing capability) SMS client? If so, visit our collection of [non-native SMS](/docs/user_guide/message_building_by_channel/sms/non_native/) articles for your corresponding user data migration doc.
-{% endalert %}
-
 ## Format user phone numbers to carrier standards
 
 Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown in the following image, and can have a maximum of 15 digits.

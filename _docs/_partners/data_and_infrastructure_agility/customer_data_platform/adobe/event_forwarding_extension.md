@@ -42,7 +42,7 @@ To connect the Edge Network to Braze, the following are required:
 | Key type | Description |
 | --- | --- |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). |
-| Braze REST API key | A Braze REST API key with all permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**.|
+| Braze REST API key | A Braze REST API key with all permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Step 2: Create a secret

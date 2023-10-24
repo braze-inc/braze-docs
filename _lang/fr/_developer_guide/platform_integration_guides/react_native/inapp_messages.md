@@ -73,18 +73,17 @@ Pour plus d’informations sur ces valeurs, consultez notre [Documentation iOS](
 ```objc
 - (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui
                             displayChoiceForMessage:(BRZInAppMessageRaw *)message {
-  // Convert message to JSON representation
-  NSData *json = [message json];
+  // Convert the message to a JavaScript representation.
+  NSData *inAppMessageData = [message json];
+  NSString *inAppMessageString = [[NSString alloc] initWithData:inAppMessageData encoding:NSUTF8StringEncoding];
   NSDictionary *arguments = @{
-    @"inAppMessage" : json
+    @"inAppMessage" : inAppMessageString
   };
 
-  // Send to JavaScript layer
-  [self.bridge.eventDispatcher
-             sendDeviceEventWithName:@"inAppMessageReceived"
-             body:arguments];
+  // Send to JavaScript.
+  [self sendEventWithName:@"inAppMessageReceived" body:arguments];
 
-  // Note: return `BRZInAppMessageUIDisplayChoiceDiscard` if you would like
+  // Note: Return `BRZInAppMessageUIDisplayChoiceDiscard` if you would like
   // to prevent the Braze SDK from displaying the message natively.
   return BRZInAppMessageUIDisplayChoiceNow;
 }

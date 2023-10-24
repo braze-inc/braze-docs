@@ -79,6 +79,7 @@ Contact your Braze account manager if you're interested in getting started with 
 
 - Domains must be procured, owned, and managed by you.
 - The domain used for this feature must be unique (that is, different from your website domain), and the domain can't be used to host any web content.
+  - You can also use unique subdomains, such as `sms.braze.com`.
 - We recommend choosing a domain with as few characters as possible to minimize the length of your URLs.
 
 ### Using custom domains
@@ -110,10 +111,6 @@ If the campaign has been saved as a draft before test sending, yes! Otherwise, i
 #### Does the Braze SDK need to be installed in order to shorten links?
 
 No, Link Shortening will work without any SDK integration.
-
-#### Can I specify my own custom Link Shortening domain?
-
-Not yet, though we plan to provide more customization options in the future.
 
 #### Do I know which individual users are clicking on a URL?
 

@@ -51,13 +51,13 @@ For more information, refer to the following article based on your platform: [iO
 
 ## REST API key
 
-A REST Application Programming Interface key (REST API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's REST API endpoint. We use REST API keys at Braze in tandem with our App Identifier keys to track, access, send, export, and analyze data to help make sure everything is running smoothly on both your and our end. 
+A REST Application Programming Interface key (REST API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's REST API endpoint. We use REST API keys at Braze in tandem with our App Identifier keys to track, access, send, export, and analyze data to help make sure everything is running smoothly on both your and our end.
 
 Workspaces and API Keys go hand in hand at Braze. Workspaces are designed to house versions of the same application across multiple platforms. Many customers also use workspaces to contain free and premium versions of their applications on the same platform. As you may notice, these workspaces are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
 
 We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to use our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you will need to give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
 
-![REST API keys panel on the API Settings tab of the Developer Console.][27]
+![REST API keys panel on the API Keys page.][27]
 
 {% alert tip %}
 In addition to REST API keys, there also exists a type of key called Identifier keys that can be used to reference specific things like apps, templates, Canvases, campaigns, Content Cards, and segments from the API. For more information, refer to [API Identifier types]({{site.baseurl}}/api/identifier_types/).
@@ -65,7 +65,7 @@ In addition to REST API keys, there also exists a type of key called Identifier 
 
 ### REST API key permissions
 
-API key permissions are permissions you can assign a user or group to limit their access to certain API calls. To view your list of API key permissions, go to **Settings** > **API Keys** under **Setup and Testing**, and select your API key. 
+API key permissions are permissions you can assign a user or group to limit their access to certain API calls. To view your list of API key permissions, go to **Settings** > **API Keys**, and select your API key.
 
 {% tabs %}
 {% tab User Data %}
@@ -290,31 +290,46 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 {% endtab %}
 {% endtabs %}
 
-### Creating and managing REST API keys
+## Creating REST API keys
 
-![][28]{: style="max-width:20%;float:right;margin-left:15px;"}
+To create a new REST API key:
 
-To create a new REST API key, go to **Settings** > **API Keys**.
+1. Go to **Settings** > **API Keys**. This page displays your existing API keys.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
 {% endalert %}
 
-This page displays your existing API keys. To create a new key, click **Create New API Key**.
-
-You can then to do the following:
-
-- Give your new key a name for identification at a glance
-- Select which permissions you want to be associated with your new key
-- Specify allowlisted IP addresses and subnets for the new key
-
-Existing REST API keys can be viewed or deleted by clicking settings <i class="fas fa-gear"></i> and selecting the corresponding option.
-
-![][29]
+{:start="2"}
+2. Click **+ Create New API Key**.
+3. Give your new key a name for identification at a glance.
+4. Select which [permissions](#rest-api-key-permissions) you want to be associated with your new key.
+5. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.
 
 {% alert important %}
 Keep in mind that after you create a new API key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. After you've completed your implementation, go ahead and delete the old key.
 {% endalert %}
+
+## Managing REST API keys
+
+REST API keys cannot be edited after they are created, however, you can view details for or delete existing REST API keys from the **API Keys** page. The **Rest API Keys** list shows the following information at a glance for each key:
+
+| Field        | Description                                                                                                         |
+| ------------ | :------------------------------------------------------------------------------------------------------------------ |
+| API Key Name | The name given to the key upon creation.                                                                            |
+| Identifier   | The API key.                                                                                                        |
+| Created By   | The email address of the user who created the key. This field will show as "N/A" for keys created before June 2023. |
+| Date Created | The date this key was created.                                                                                      |
+| Last Seen    | The date this key was last used. This field will show as "N/A" for keys that have never been used.                  |
+{: .reset-td-br-1 .reset-td-br-2}
+
+To view the details for a specific key, select a key from the list. You can then see all the permissions this key has, whitelisted IPs (if any), and if this key is opted into Braze IP whitelisting.
+
+![][30]
+
+To delete a key, click <i class="fas fa-gear" alt="Settings"></i> and selecting the corresponding option.
+
+![][29]
 
 ## REST API key security
 
@@ -370,3 +385,4 @@ This client library is currently in beta. Want to help us make this library bett
 [28]: {% image_buster /assets/img_archive/create-new-key.png %}
 [29]: {% image_buster /assets/img_archive/api-key-options.png %}
 [27]: {% image_buster /assets/img_archive/rest-api-key.png %}
+[30]: {% image_buster /assets/img_archive/view-api-key.png %}

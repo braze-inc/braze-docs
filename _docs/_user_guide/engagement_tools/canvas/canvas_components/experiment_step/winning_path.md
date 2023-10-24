@@ -11,8 +11,6 @@ tool: Canvas
 
 > Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) in campaigns, and lets you automate your A/B tests. When Winning Path is turned on in an Experiment Path step, after a specified period of time, all subsequent users will be sent down the path with the highest conversion rate.
 
-This feature is best for Canvases with entries that are recurring or triggered, but can be used for Canvases with one-time entry with [a few extra steps](#one-time-entry).
-
 ## Using Winning Path
 
 Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Winning Path**.
@@ -25,11 +23,23 @@ Specify the conversion event that should determine the winner. If there are no c
 
 Then set the **Experiment Window**. The **Experiment Window** specifies how long the experiment will run before the Winning Path is determined and all users that follow are sent down that path. The window begins when the first user enters the step.
 
+![][2]
+
 ### Statistical significance
 
-By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the best performing path. Alternatively, you can select **Continue sending all future users the mix of paths**, which will send future users down the mix of paths according to the percentages specified in the experiment distribution.
+By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the best performing path.
+
+Alternatively, you can select **Continue sending all future users the mix of paths**.
+
+![][6]
+
+This option will send future users down the mix of paths according to the percentages specified in the experiment path distribution.
 
 ![Percentages specified in the experiment distribution][3]
+
+{% alert note %}
+A Delay Group will only appear in your path distribution if your Canvas is set up for one-time entry. Recurring and triggered Canvases will not have a Delay Group when Winning Path is turned on.
+{% endalert %}
 
 ## Using Winning Paths with one-time entry {#one-time-entry}
 
@@ -47,7 +57,9 @@ We don't recommend using local time delivery in Canvases with Winning Paths. Thi
 
 Alternatively, if you wish to use local delivery, use an experiment window of 24-48 or more hours. That way, users in early time zones enter the Canvas and trigger the experiment to start, but plenty of time in the experiment window remains. Users in later time zones will still have sufficient time to enter the Canvas and the Experiment Step with Winning Paths and possibly convert before the experiment window expires.
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_winning_path.png %}
+[1]: {% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %}
+[2]: {% image_buster /assets/img/experiment_step/experiment_winning_settings.png %}
 [3]: {% image_buster /assets/img/experiment_step/experiment_path_distribution.png %}
 [4]: {% image_buster /assets/img/experiment_step/experiment_one_time.png %}
 [5]: {% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}
+[6]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}

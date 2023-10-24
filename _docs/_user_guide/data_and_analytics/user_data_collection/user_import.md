@@ -140,15 +140,15 @@ While `external_id` itself is not mandatory, you **must** include one of these f
 
 Any headers that do not exactly match default user data will create a custom attribute within Braze.
 
-The following data types are accepted in User Import:
+The following data types are accepted in user import:
 - Datetime (Must be stored in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format)
 - Boolean (TRUE/FALSE)
-- Number (Integer or Float with no spaces or commas, floats must use a period '.' as the decimal separator)
-- String (no commas)
+- Number (Integer or float with no spaces or commas, floats must use a period (.) as the decimal separator)
+- String (Can contain commas as long as there are double quotation marks surrounding the column value)
 - Blank (Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.)
 
 {% alert important %}
-Arrays, push tokens, and custom event data types are not supported in User Import.
+Arrays, push tokens, and custom event data types are not supported in user import.
 Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file.
 
 For uploading these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
@@ -255,7 +255,7 @@ Alternatively, for HTML, you can use Braze's Liquid filters (`strip_html`) to HT
 {% tab Input %}
 {% raw %}
 ```liquid
-{{ "Have <em>you</em> read <strong>Ulysses</strong>?" &#124; strip_html }}
+{{ "Have <em>you</em> read <strong>Ulysses</strong>?" | strip_html }}
 ```
 {% endraw %}
 {% endtab %}

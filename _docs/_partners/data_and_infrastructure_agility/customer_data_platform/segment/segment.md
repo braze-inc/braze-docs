@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# Segment  
+# Segment
 
 {% multi_lang_include video.html id="RfOHfZ34hYM" align="right" %}
 
@@ -210,7 +210,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Setting | Description |
 | ------- | ----------- |
 | App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | 
-| REST API key | This can be found in your Braze dashboard under **Developer Console > API Settings**. | 
+| REST API key | This can be found in your Braze dashboard under **Settings** > **API Keys**. | 
 | Custom REST API endpoint | Your Braze REST endpoint that corresponds to your instance (i.e., rest.iad-01.braze.com) | 
 | Update existing users only | **Classic Destination Cloud-Mode (Maintenance) Only**<br><br>Segment recommends migrating to the Cloud Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>Determines whether to update existing users only. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -259,6 +259,81 @@ Certain Segment special traits map to Braze's standard attribute profile fields:
 
 Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using Braze's naming convention for these fields and passing them as traits within an identify call.
 
+##### Adding a user to a subscription group
+You can also subscribe or unsubscribe a user from a given subscription group using the following fields in the traits parameter.
+
+Use the reserved Braze profile field called `braze_subscription_groups`, which can be associated with an array of objects. Each object in the array should have two reserved keys:
+
+1. `subscription_group_state`: Indicates whether the user is `"subscribed"` or `"unsubscribed"` to a specific subscription group.
+2. `subscription_group_id`: Represents the unique ID of the subscription group. You can find this ID in the Braze dashboard under `Subscription Group Management`.
+
+{% subtabs %}
+{% subtab Swift %}
+```swift
+analytics.identify(
+  userId: "{your-user}",
+  traits: [
+    "braze_subscription_group": [
+      [
+        "subscription_group_id": "{your-group-id}",
+        "subscription_group_state": "subscribed"
+      ],
+      [
+        "subscription_group_id", "{your-group-id}",
+        "subscription_group_state": "unsubscribed"
+      ]
+    ]
+  ]
+)
+```
+{% endsubtab %}
+{% subtab Kotlin %}
+```kotlin
+analytics.identify(
+  "{your-user}",
+  buildJsonObject {
+    put("braze_subscription_group", buildJsonArray {
+        add(
+          buildJsonObject {
+            put("subscription_group_id", "{your-group-id}")
+            put("subscription_group_state", "subscribed")
+          }
+        )
+        add(
+          buildJsonObject {
+            put("subscription_group_id", "{your-group-id}")
+            put("subscription_group_state", "unsubscribed")
+          }
+        )
+      }
+    )
+  }
+)
+```
+{% endsubtab %}
+{% subtab TypeScript %}
+```typescript
+analytics.identify(
+  "{your-user}",
+  {
+    braze_subscription_groups: [
+      {
+        subscription_group_id: "{your-group-id}",
+        subscription_group_state: "subscribed"
+      },
+      {
+        subscription_group_id: "{your-group-id}",
+        subscription_group_state: "unsubscribed"
+      }
+    ]
+  }
+)
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+##### Custom attributes
+
 All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
 
 | Segment method | Braze method | Example |
@@ -290,7 +365,7 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 |---|---|---|
 | [Track](https://segment.com/docs/spec/track/) | Logged as a [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events). | Segment: `analytics.track("played_game");` <br>Braze: `Braze.logCustomEvent("played_game");`|
 | [Track with properties](https://segment.com/docs/spec/track/) | Logged as [Event Property]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties). | Segment: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` <br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
-| [Track with product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | Segment: `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` <br>Braze: `Braze.logPurchase("ab12", 19);` |
+| [Track with product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});` <br>Braze: `Braze.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ##### Order completed {#order-completed}

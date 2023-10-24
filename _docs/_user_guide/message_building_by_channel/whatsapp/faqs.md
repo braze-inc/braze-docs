@@ -33,20 +33,6 @@ Yes, you still need to create a WhatsApp business account. We recommend you [nes
 #### How do I access my WhatsApp business account? 
 After completing the embedded sign-up flow, you can access your account at business.facebook.com by navigating to the [WhatsApp section](https://business.facebook.com/wa/manage/home). 
 
-#### If I already have a WhatsApp business account, how do I connect it to Braze? 
-You may be able to migrate your existing WABA depending on the type of WABA you currently have (see details below). Note that WhatsApp business accounts can only be connected to **one** business solution provider simultaneously.
-
-**If your account was set up on the On-Behalf-Of (OBO) model:**
-- Your WABA is owned by the business service provider who set up the account and sends messages on your behalf. For customers with existing OBO accounts, Braze recommends that you create a new WhatsApp business account with a new phone number via the embedded sign-up flow. Note that templates, business verification (if applicable), and current messaging limit will be lost when you do this, meaning you will need to resubmit templates for approval and build up your messaging limit again. Braze recommends copying over your templates or saving them before shutting down your existing OBO account so that you can more easily rebuild templates.<br>
-
-**If your account was set up on the WhatsApp business account sharing model (via an embedded sign-up flow with a different business service provider):**
-- You own your WABA. For sharing accounts, Braze recommends that you create a new WhatsApp business account but [migrate your existing phone number](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/). This will ensure that your templates, business verification (if applicable), and current messaging limit will remain as is and "port" over to Braze.
-
-If you’d like to migrate an existing phone number, notify your Braze contact and they can help with the process.
-
-#### If I have an existing phone number that I am migrating, how long will it take for my new WABA to be set up? 
-Your new WABA will be set up immediately after completing the embedded sign-up flow, which should only take a few minutes. 
-
 #### Can I connect multiple WABAs to Braze? 
 Yes, you can connect one WABAs per workspace. Therefore you can have multiple WABAs connected to multiple of your Braze workspaces. For example, if you have different workspaces for different brands, or different workspaces for different countries, each can have it's own WABA connected.
 
@@ -171,6 +157,17 @@ No. Their Braze subscription status will not be updated.
 We do not support chatbots or human-assisted chat within Braze or through direct integrations. 
 
 If you already use WhatsApp as a customer support channel, we recommend you keep your current setup and create a new WABA via Braze for marketing messaging. This WABA will require a new phone number. 
+
+#### How can I “bridge the gap” between my customer support messaging and my marketing messaging via Braze? 
+You can use WhatsApp Liquid properties to forward inbound WhatsApp message content (including message body and media URLs) from Braze to other platforms, including any customer support tool. For details, see our [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/). 
+
+To send information into Braze, for example, to indicate that a user is in an active support conversation, you can log a custom attribute (such as a boolean "has existing support chat = true/false") and use that as segmentation criteria in their marketing campaigns. You can also deep link between two chat threads to direct users to the support thread from the marketing thread and the reverse. 
+
+#### Does Braze store user responses? 
+Yes. Inbound and outbound messaging is available in the [Messaging History tab]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab)of a user’s profile. 
+
+#### How do user phone numbers need to be stored in Braze? 
+User phone numbers need to be stored in [E.164 format]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/#formatting).
 
 #### What kind of rich media is supported in WhatsApp templates? 
 You can add images, calls to action (URL or phone number), and quick reply buttons to WhatsApp templates. You can add these elements when you build templates directly in WhatsApp. 

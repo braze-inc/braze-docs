@@ -3,13 +3,13 @@ nav_title: Security Settings
 article_title: Security Settings
 page_order: 2
 page_type: reference
-description: "This reference article covers generic cross-company security settings, including authentication rules, IP whitelisting, PII, and two-factor authentication (2FA)."
+description: "This reference article covers generic cross-company security settings, including authentication rules, IP allowlisting, PII, and two-factor authentication (2FA)."
 
 ---
 
 # Security settings
 
-> As an admin, security is a high priority on your list of concerns. This page can help you manage the generic, cross-company security settings, including authentication rules, IP whitelisting, and two-factor authentication.
+> As an admin, security is a high priority on your list of concerns. This page can help you manage the generic, cross-company security settings, including authentication rules, IP allowlisting, and two-factor authentication.
 
 To access this page, go to **Settings** > **Admin Settings** > **Security Settings**.
 
@@ -49,9 +49,9 @@ You can restrict your users from logging in using a password or SSO.
 
 For [SAML SSO][15], customers need to set up their SAML settings prior to enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
 
-## Dashboard IP whitelisting
+## Dashboard IP allowlisting
 
-Use the field shown to whitelist specific IP addresses and subnets from which users can log in to your account (for example, from a company network or VPN). Specify IP addresses and subnets as CIDR ranges in a comma-separated list. If not specified, users will be able to log in from any IP address.
+Use the field shown to allowlist specific IP addresses and subnets from which users can log in to your account (for example, from a company network or VPN). Specify IP addresses and subnets as CIDR ranges in a comma-separated list. If not specified, users will be able to log in from any IP address.
 
 ## Two-factor authentication
 

@@ -66,9 +66,7 @@ This event occurs when an WhatsApp message is read by the end user.
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
-  "canvas_step_id": (optional, string) ID of the Canvas step this event belongs to,
   "canvas_step_message_variation_id": (optional, string) ID of the Canvas step message variation this user received,
-  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
   "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
   "company_id": (optional, string) ID of the sending Company,
@@ -184,7 +182,7 @@ This event occurs when an email send request was successfully communicated betwe
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_step_id": (optional, string) ID of the Canvas step this event belongs to,
   "canvas_step_message_variation_id": (optional, string) ID of the Canvas step message variation this user received,
-  "canvas_step_name": (optional, string) name of the v step this event belongs to,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
   "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
   "company_id": (optional, string) ID of the sending Company,
@@ -506,6 +504,7 @@ This event occurs when a user has exited a Canvas by performing an event.
   "canvas_id": (required, string) ID of the Canvas if from a Canvas,
   "canvas_variation_id": (required, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "canvas_api_id": (optional, string) BSON ID of the experiment step this event belongs to,
   "canvas_variation_api_id": (optional, string) API ID of the Canvas variation this event belongs to,
   "canvas_step_api_id": (optional, string) API ID of the Canvas step this event belongs to
@@ -536,6 +535,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
   "canvas_id": (required, string) ID of the Canvas if from a Canvas,
   "canvas_variation_id": (required, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "canvas_api_id": (optional, string) BSON ID of the experiment step this event belongs to,
   "canvas_variation_api_id": (optional, string) API ID of the Canvas variation this event belongs to,
   "canvas_step_api_id": (optional, string) API ID of the Canvas step this event belongs to
@@ -565,7 +565,7 @@ This event occurs when a user enters a Canvas experiment step path.
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "experiment_step_id": (required, string) BSON ID of the experiment step this event belongs to,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) null,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "experiment_split_id": (optional, string) BSON ID of the experiment split the user enrolled in,
   "experiment_split_name": (optional, string) name of the experiment split the user enrolled in,
   "in_control_group": (required, boolean) whether the user was enrolled in the control group
@@ -598,7 +598,7 @@ This event occurs when a user convert for a Canvas experiment step.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) null,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "experiment_step_id": (optional, string) BSON ID of the experiment step this event belongs to,
   "experiment_split_id": (required, string) BSON ID of the experiment split variation this user received,
   "experiment_split_name": (optional, string) name of the experiment split the user enrolled in,
@@ -636,7 +636,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,  
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,  
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "device_id": (optional, string) ID of the device that we made a delivery attempt to,
@@ -680,7 +680,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "canvas_step_message_variation_id": (optional, string) API ID of the Canvas step message variation this user received,
   "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (optional, string) os version of device used for the action,
@@ -730,7 +730,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "device_id": (optional, string) ID of the device that we made a delivery attempt to,
@@ -759,7 +759,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
-  "app_id": (requried, string) ID for the app on which the bounce occurred,
+  "app_id": (required, string) ID for the app on which the bounce occurred,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
   "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
@@ -772,7 +772,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "device_id": (optional, string) ID of the device that we made a delivery attempt to,
@@ -813,7 +813,7 @@ This event occurs when an email send request was successfully communicated betwe
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "ip_pool": (optional, string) IP pool used for message sending, 
   "message_extras": (optional, string) key-value pairs sent with this event
@@ -838,7 +838,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
 ```json
 // Email Delivery: users.messages.email.Delivery
 {
-  "id": (requried, string) unique ID of this event,
+  "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "external_user_id": (optional, string) External ID of the user,
@@ -854,7 +854,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,  
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,  
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "sending_ip": (optional, string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
   "ip_pool": (optional, string) IP pool used for message sending,
@@ -890,13 +890,13 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "campaign_name": (optional, string) name of the campaign,
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,
   "message_variation_name": (optional, string) the name of the message variation if from a campaign,
-  "email_address": (requied, string) email address for this event,
+  "email_address": (required, string) email address for this event,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),  
   "user_agent": (optional, string) description of the user's system and browser for the event,
   "ip_pool": (optional, string) IP pool used for message sending,
@@ -940,7 +940,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "user_agent": (optional, string) description of the user's system and browser for the event,
   "ip_pool": (optional, string) IP pool used for message sending,
@@ -984,7 +984,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "sending_ip": (optional, string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
   "ip_pool": (optional, string) IP pool used for message sending (for certain bounce cases, IP pool will not be provided) ,
@@ -1027,7 +1027,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "sending_ip": (optional, string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
   "ip_pool": (optional, string) IP pool used for message sending(for certain bounce cases, IP pool will not be provided),
@@ -1069,7 +1069,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "user_agent": (optional, string) This field is no longer used in any destination for this event and will always be empty,
   "ip_pool": (optional, string) IP pool used for message sending,
@@ -1116,7 +1116,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "ip_pool": (optional, string) IP pool used for message sending
 }
@@ -1154,7 +1154,7 @@ This event occurs when a user views an in-app message.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "card_id": (optional, string) ID of the card that was viewed,  
   "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (optional, string) os version of device used for the action,
@@ -1199,7 +1199,7 @@ This event occurs when a user clicks on an in-app message.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "card_id": (optional, string) ID of the card that was viewed,  
   "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (optional, string) os version of device used for the action,
@@ -1245,7 +1245,7 @@ This event occurs when a webhook was processed and sent to the third party speci
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types)
   "message_extras": (optional, string) key-value pairs sent with this event
 }
@@ -1282,7 +1282,7 @@ This event occurs when a Content Card gets sent to a user.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "canvas_name": (optional, string) name of the Canvas,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
   "device_id": (optional, string) ID of the device on which the event occurred,
@@ -1322,7 +1322,7 @@ This event occurs when a user views a Content Card.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "canvas_name": (optional, string) name of the Canvas,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
   "device_id": (optional, string) ID of the device on which the event occurred,
@@ -1366,7 +1366,7 @@ This event occurs when a user clicks a Content Card.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "canvas_name": (optional, string) name of the Canvas,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
   "device_id": (optional, string) ID of the device on which the event occurred,
@@ -1411,7 +1411,7 @@ This event occurs when a user dismisses a Content Card.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "canvas_name": (optional, string) name of the Canvas,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
   "device_id": (optional, string) ID of the device on which the event occurred,
@@ -1525,7 +1525,7 @@ This event occurs when a user clicks an SMS short link.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation a user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "url": (required, string) original URL contained in message that was shortened for click tracking,
   "short_url": (required, string) shortened URL that is sent to user for click tracking,
   "user_agent": (optional, string) User-Agent header of the device performing the click event,
@@ -1562,7 +1562,7 @@ This event occurs when a user sends an SMS.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) message send ID this message belongs to,
   "category": (optional, string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help)
   "message_extras": (optional, string) key-value pairs sent with this event
@@ -1604,7 +1604,7 @@ This event occurs when an SMS is sent to the carrier.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) message send ID this message belongs to
 }
 ```
@@ -1641,7 +1641,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) message send ID this message belongs to
 }
 ```
@@ -1680,7 +1680,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,
   "message_variation_name": (optional, string) the name of the message variation if from a campaign,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types)
 }
 ```
@@ -1719,7 +1719,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) message send ID this message belongs to
 }
 ```
@@ -1761,7 +1761,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to
 }
 ```
 {% endapi %}
@@ -1829,8 +1829,8 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (required, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (required, string) ID of the last step the user was sent before the conversion
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas
+  "canvas_step_id": (required, string) ID of the last step the user was sent before the conversion,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "conversion_behavior_index": (optional, int) index of the conversion behavior,
   "conversion_behavior": (optional, string) JSON-encoded string describing the conversion behavior
 }
@@ -1861,7 +1861,7 @@ This event occurs when a user enters into the Canvas. This event tells you which
   "canvas_variation_id": (required, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step the user entered into,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "in_control_group": (required, boolean) whether the user was enrolled in the control group for a Canvas
 }
 ```
@@ -1907,7 +1907,7 @@ Subscription
 This event occurs when the subscription state of a user in a subscription group changes.
 
 {% alert important %}
-Subscription groups are only available for email and SMS channels at this time.
+Subscription groups are only available for email, SMS, and WhatsApp channels at this time.
 {% endalert %}
 
 ```json
@@ -1928,7 +1928,7 @@ Subscription groups are only available for email and SMS channels at this time.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "subscription_group_id": (required, string) ID of the subscription group,
   "subscription_status": (required, string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed',
   "channel": (optional, string) either 'sms', 'email', or 'whats_app',
@@ -1991,7 +1991,7 @@ This event occurs when the global subscription state of the user changes.
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the Canvas step this event belongs to,
-  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) Message send ID this subscription state change action originated from
 }
 ```

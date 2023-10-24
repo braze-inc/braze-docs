@@ -15,6 +15,9 @@ guide_featured_list:
   - name: Creating a Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     fa_icon: fas fa-palette
+  - name: Commenting in Canvas
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments/
+    fa_icon: fa-solid fa-comment
   - name: Time-Based Functionalities
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
     fa_icon: fas fa-clock
@@ -28,14 +31,14 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
     fa_icon: fas fa-user-check
   - name: Persistent Entry Properties
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/
     fa_icon: fas fa-project-diagram
-  - name: In-App Messages in Canvas
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
-    fa_icon: fas fa-mobile
   - name: Content Cards in Canvas
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/
     fa_icon: fas fa-columns
+  - name: In-App Messages in Canvas
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/
+    fa_icon: fas fa-mobile
   - name: Advancement Behaviors
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
     fa_icon: fas fa-user
