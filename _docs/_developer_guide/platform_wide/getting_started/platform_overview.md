@@ -49,31 +49,31 @@ Once you have defined a segment, Braze's messaging tools allow for multichannel 
 
 {% tabs %}
 {% tab Content Cards %}
-Content Cards allow you to send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, Connected Content, custom card expiration times, card analytics, and easy coordination with push notifications. [Learn more about integrating and customizing Content Cards][4].
+Content Cards allow you to send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, Connected Content, custom card expiration times, card analytics, and easy coordination with push notifications. [Learn more about integrating and customizing Content Cards]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
 
 ![A generic mobile image depicting what the banner, captioned image, and classic Content Card look side by side.]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%"}
 
 {% endtab %}
 {% tab Push Notifications %}
-Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns and news items. [Learn more about using Braze to trigger push notifications, who you can send a push to, and what advanced push capabilities Braze offers.][5]
+Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns and news items. [Learn more about using Braze to trigger push notifications, who you can send a push to, and what advanced push capabilities Braze offers.]({{site.baseurl}}/user_guide/message_building_by_channel/push)
 
-![The push message editor displaying an example push message and title to be sent to the Android, iOS, and Web messaging channels.][8]
+![The push message editor displaying an example push message and title to be sent to the Android, iOS, and Web messaging channels.]({% image_buster /assets/img_archive/UOiOSPush.png %})
 
 {% endtab %}
 {% tab In-App Messaging %}
-Braze provides unobtrusive in-app notifications via our custom-built native user interface. Messages can be presented at any time of your choosing (for example, when users start a new session or complete a specific action) ensuring that your message arrives at the most effective time to engage the user. [Learn more about how marketers create and customize in-app messages][13].
+Braze provides unobtrusive in-app notifications via our custom-built native user interface. Messages can be presented at any time of your choosing (for example, when users start a new session or complete a specific action) ensuring that your message arrives at the most effective time to engage the user. [Learn more about how marketers create and customize in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
 
-![The in-app message editor displaying an example in-app message with a header, body, and button text.][9]
+![The in-app message editor displaying an example in-app message with a header, body, and button text.]({% image_buster /assets/img_archive/In-App_Modal.png %})
 
 {% endtab %}
 {% tab Email %}
-Send your users rich HTML messages by adding your existing HTML templates, using our rich text editor, or our drag and drop editor. Braze makes it easy to include email as part of your mobile engagement strategy. [Learn more about how marketers create emails from the Braze dashboard][6].
+Send your users rich HTML messages by adding your existing HTML templates, using our rich text editor, or our drag and drop editor. Braze makes it easy to include email as part of your mobile engagement strategy. [Learn more about how marketers create emails from the Braze dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/email).
 
-![The email editor displaying the HTML body of an email. Here, you can also see tabs to update sending info, view a live preview of the email, or add content from the Content Library.][10]
+![The email editor displaying the HTML body of an email. Here, you can also see tabs to update sending info, view a live preview of the email, or add content from the Content Library.]({% image_buster /assets/img_archive/EmailTemplateEditor.png %})
 
 {% endtab %}
 {% tab SMS and MMS %}
-Use SMS with Braze to send transactional notifications, share promotions, send reminders, and more. With over 23 billion text messages sent every day worldwide, SMS is the most direct way to reach users and customers. [Learn more about setting up SMS, managing users and phone numbers, subscription groups][7].
+Use SMS with Braze to send transactional notifications, share promotions, send reminders, and more. With over 23 billion text messages sent every day worldwide, SMS is the most direct way to reach users and customers. [Learn more about setting up SMS, managing users and phone numbers, subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms).
 
 SMS and MMS are only available in select Braze packages. Reach out to your account manager or customer success manager to get started.
 
@@ -81,17 +81,17 @@ SMS and MMS are only available in select Braze packages. Reach out to your accou
 
 {% endtab %}
 {% tab WhatsApp %}
-WhatsApp is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses. Braze offers a direct way to reach users and customers on the WhatsApp platform. [Learn more about integrating WhatsApp with Braze][11].
+WhatsApp is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses. Braze offers a direct way to reach users and customers on the WhatsApp platform. [Learn more about integrating WhatsApp with Braze]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp).
 
 WhatsApp access is only available in select Braze packages. Reach out to your account manager or customer success manager to get started.
 
-![A WhatsApp message previewed in the Braze message composer.][15]
+![A WhatsApp message previewed in the Braze message composer.]({% image_buster /assets/img/whatsapp/whatsapp8.png %} )
 
 {% endtab %}
 {% tab Webhooks %}
-Braze's webhooks allow you to trigger non-app actions provide other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint. [Learn more about setting up webhooks in Braze][12].
+Braze's webhooks allow you to trigger non-app actions provide other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint. [Learn more about setting up webhooks in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks).
 
-![The webhook editor displaying an example webhook payload.][14]
+![The webhook editor displaying an example webhook payload.]({% image_buster /assets/img_archive/Webhook_Body_Edit.png %})
 {% endtab %}
 {% endtabs %}
 
