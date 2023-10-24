@@ -210,7 +210,7 @@ If you won't want your Redshift cluster to be publicly accessible, you can set u
 
 #### Step 1: Set up the table 
 
-Optionally, set up a new Project or Dataset to hold your source table.
+Optionally, set up a new project or dataset to hold your source table.
 
 Create one or more tables to use for your CDI integration with the following fields:
 
