@@ -1,48 +1,50 @@
 # Welcome to Braze Docs!
 
-This is where you can contribute to the [Braze Documentation site](http://www.braze.com/docs).
+This repository contains the source files for [Braze Docs](http://www.braze.com/docs), which hosts all user, developer, partner, and API documentation for the Braze customer engagement platform.
 
-## What You Need to Know
+If you'd like to help improve the docs, you can:
 
-- This is a [Jekyll](https://github.com/Appboy/braze-docs/wiki/Jekyll-Overview) site.
-- This branch is merged to our master branch and the production site weekly on Tuesdays and Thursdays.
+- [Report an issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=)
+- [Request a feature](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=enhancement&projects=&template=request_a_feature.md&title=)
+- [Contribute](./CONTRIBUTING.md)
 
-If you would like us to incorporate your changes into the official version of the document, you can submit changes to the braze-inc/braze-docs GitHub Repo and we will review the changes.  If we accept any such changes, they will be licensed to us under the CLA found at https://www.braze.com/docs/cla.
+## Quick start
 
-## Table of Contents
-- [About Braze](#about-braze)
-- [Our CLA](#braze-cla)
-- [Braze Open Source License](#open-source-license)
-- [Before You Contribute](#before-you-contribute)
+To build the docs locally, you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
 
-### About Braze
-[Braze Home Site](https://www.braze.com/)
+```bash
+cd ~/braze-docs
+ruby --version
+```
 
-[Braze Legal Information](https://www.braze.com/legal)
+If it's not, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install Ruby version `2.7.4`. For example, using [rbenv](https://github.com/rbenv/rbenv):
 
-### Braze CLA
-Before you get started, Braze requires that a Braze Contributor License Agreement (CLA) be filled out by every contributor to the Braze Docs open source project.
+```bash
+rbenv install 2.7.4
+```
 
-Braze will not merge a pull request made against a Braze Docs open source project until that pull request is associated with a signed CLA. [Sign a CLA here](https://www.braze.com/docs/cla).
+Next, install project dependencies.
 
-### Code of Conduct
+```bash
+./bundle install
+```
 
-We expect respectful behavior from our administrators and contributors as defined in the [Contributor Covenent](https://github.com/Appboy/braze-docs/blob/develop/CODE_OF_CONDUCT.md). 
+To start your local docs server on localhost `http://127.0.0.1:4000`, run:
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](code-of-conduct.md)
+```bash
+./rake
+```
 
-### Open Source License
+To stop your server, reopen the terminal and press **Control**+**C**.
+
+## Open-source license
+
+Braze Docs is licensed under a Creative Commons public license. For more information, see [LICENSE](./LICENSE).
 
 ![Licence Icon](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
-Braze Documentation is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+## Code of conduct
 
-### Before You Contribute
-1. Complete our [CLA](https://www.braze.com/docs/cla).
-2. Check out our [Code of Conduct](https://github.com/Appboy/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
-3. Check out [our Wiki](https://github.com/Appboy/braze-docs/wiki) - especially…
-  - [Contributor Quick Start Guide](https://github.com/Appboy/braze-docs/wiki/Contributor-Quick-Start-Guide)
-  - [Set Up Your Local Environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment)
-  - [Writing Style Guide](https://docs.google.com/document/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub)
-  - [Media Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vRJSkwcjmjrTfLDagZccLpOMMyh5NN5SXRZSjz12cRAHbX4OrUmhvCmYpf_p5YB-9r4_jSOQLkicQIH/pub)
-  - [Markdown Formatting Style Guide](https://github.com/Appboy/braze-docs/wiki/Special-Formatting)
+At Braze, we expect respectful behavior from both administrators and contributors. For more information, see [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](code-of-conduct.md)
