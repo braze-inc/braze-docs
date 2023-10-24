@@ -19,6 +19,9 @@ guide_featured_list:
   - name: Architecture Overview
     link: /docs/developer_guide/platform_wide/getting_started/architecture_overview/
     fa_icon: fas fa-table-columns
+  - name: Workspace Configuration
+    link: /docs/developer_guide/platform_wide/getting_started/app_group_configuration/
+    fa_icon: fas fa-list-ul
 
 search_rank: 4
 ---

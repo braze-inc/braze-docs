@@ -22,11 +22,11 @@ platform:
 
 ## SDK
 
-The Braze SDKs can be integrated into your mobile and web applications to provide powerful marketing, user management, and analytics tools. 
+The Braze SDKs can be integrated into your mobile and web applications to provide powerful marketing, user management, and analytics tools. The Braze SDK provides two critical pieces of functionality: it collects and syncs user data into a consolidated user profile, and powers messaging channels such as push notifications, in-app messages, and Content Cards. Learn what SDKs Braze offers and [begin your integration][16].
 
 ## Dashboard user interface
 
-The dashboard is the UI that controls all of the data and interactions at the heart of the Braze platform. The dashboard is how most marketers interact with Braze. Marketers use the site to manage notifications, setup targeted messaging campaigns, and view analytics. Developers use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials. If you're just getting started, learn how to [access the dashboard][1].
+The dashboard is the UI that controls all of the data and interactions at the heart of the Braze platform. Marketers will use the dashboard to do their job and create content. Developers use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials. If you're just getting started, learn how to [access the dashboard][1].
 
 ## REST API
 
@@ -49,13 +49,13 @@ Once you have defined a segment, Braze's messaging tools allow for multichannel 
 
 ### Content Cards {#platform-features-content-cards}
 
-With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, Connected Content, custom card expiration times, card analytics, and easy coordination with push notifications.
+With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, Connected Content, custom card expiration times, card analytics, and easy coordination with push notifications. [Learn more about integrating and customizing Content Cards.][4]
 
 ![A generic mobile image depicting what the banner, captioned image, and classic Content Card look side by side.]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%"}
 
 ### Push notifications {#platform-features-push}
 
-Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns and news items.
+Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns and news items. [Learn more about using Braze to trigger push notifications][5].
 
 ![The push message editor displaying an example push message and title to be sent to the Android, iOS, and Web messaging channels.][8]
 
@@ -107,4 +107,5 @@ Braze's webhooks allow you to trigger non-app actions provide other systems and 
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/
 [14]: {% image_buster /assets/img_archive/Webhook_Body_Edit.png %}
-[15]: {% image_buster /assets/img/whatsapp/whatsapp8.png %} 
+[15]: {% image_buster /assets/img/whatsapp/whatsapp8.png %}
+[16]: {{site.baseurl}}/docs/developer_guide/home
