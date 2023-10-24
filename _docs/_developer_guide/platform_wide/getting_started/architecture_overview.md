@@ -7,6 +7,12 @@ platform:
   - iOS
   - Android
   - Web
+  - React Native
+  - Flutter
+  - Cordova
+  - Roku
+  - Swift
+  - Unity
 ---
 
 # Getting started: Architectural overview

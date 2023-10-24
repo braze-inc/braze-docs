@@ -1,12 +1,18 @@
 ---
-nav_title: Integration Overview
-article_title: Getting started&#58; Integration Overview
+nav_title: Integration overview
+article_title: Getting started&#58; Integration overview
 page_order: 1
 description: "This article is a good place to start if you're just beginning with Braze and trying to get an onboarding overview. Links from this article connect to essential Braze topics."
 platform:
   - iOS
   - Android
   - Web
+  - React Native
+  - Flutter
+  - Cordova
+  - Roku
+  - Swift
+  - Unity
 ---
 
 # Getting started: Integration overview

@@ -1,12 +1,21 @@
 ---
-nav_title: Workspace Configuration
-article_title: Workspace Configuration
-page_order: 5
+nav_title: Workspace configuration
+article_title: Getting started&#58; Workspace configuration
+page_order: 4
 description: "This reference article covers single and multi-workspace configuration, how to create your workspace, and how to target and relaunch your app."
-
+platform:
+  - iOS
+  - Android
+  - Web
+  - React Native
+  - Flutter
+  - Cordova
+  - Roku
+  - Swift
+  - Unity
 ---
 
-# Workspace configuration
+# Getting started: Workspace configuration
 
 > This article covers how to create and set up a workspace, and some best practices to keep in mind when grouping applications.
 

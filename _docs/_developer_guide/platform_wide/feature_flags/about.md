@@ -8,6 +8,11 @@ platform:
   - iOS
   - Android
   - Web
+  - Unity
+  - Cordova
+  - React Native
+  - Flutter
+  - Roku
 
 ---
 
