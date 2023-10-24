@@ -42,17 +42,17 @@ Alternatively, if you wish to edit your `Info.plist` file directly, you can foll
 </array>
 ```
 
-## Step 2: Whitelist the custom scheme (iOS 9+)
+## Step 2: Allowlist the custom scheme (iOS 9+)
 
-Starting with iOS 9, apps must have a whitelist of custom schemes that the app is allowed to open. Attempting to call schemes outside this list will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error looks like this:
+Starting with iOS 9, apps must have an allowlist of custom schemes that the app is allowed to open. Attempting to call schemes outside this list will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error looks like this:
 
 ```
 <Warning>: -canOpenURL: failed for URL: "yourapp://deeplink" – error: "This app is not allowed to query for scheme yourapp"
 ```
 
-For example, if an in-app message should open the Facebook app when tapped, the app has to have the Facebook custom scheme (`fb`) in the whitelist. Otherwise, the system will reject the deep link. Deep links that direct to a page or view inside your own app still require that your app's custom scheme be listed in your app's `Info.plist`.
+For example, if an in-app message should open the Facebook app when tapped, the app has to have the Facebook custom scheme (`fb`) in the allowlist. Otherwise, the system will reject the deep link. Deep links that direct to a page or view inside your own app still require that your app's custom scheme be listed in your app's `Info.plist`.
 
-You should add all the schemes that the app needs to deep link to in a whitelist in your app's `Info.plist` with the key `LSApplicationQueriesSchemes`. For example:
+You should add all the schemes that the app needs to deep link to in an allowlist in your app's `Info.plist` with the key `LSApplicationQueriesSchemes`. For example:
 
 ```html
 <key>LSApplicationQueriesSchemes</key>

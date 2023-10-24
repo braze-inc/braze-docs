@@ -62,7 +62,7 @@ You may choose to use Apple's older authentication scheme (.p12 SSL certificates
 1. Download the production push certificate you just created and open it with the Keychain Access application.
 2. In Keychain Access, click on **My Certificates** and locate your push certificate.
 3. Export it as a `.p12` file and use a temporary, unsecure password (you will need this password when uploading your certificate to Braze).
-4. Navigate to **Manage Settings > Settings** in the dashboard and upload your production certificate under **Apple Push Certificate**.
+4. In the Braze dashboard, navigate to **Settings** > **App Settings** and upload your production certificate under **Apple Push Certificate**.
 
 {% endtab %}
 {% endtabs %}

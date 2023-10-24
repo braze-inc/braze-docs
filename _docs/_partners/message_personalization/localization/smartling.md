@@ -19,7 +19,7 @@ The Braze and Smartling integration allows you to translate email templates and 
 | ----------- | ----------- |
 | Smartling account | A [Smartling account][2] is required to take advantage of this partnership. |
 | Smartling translation project | To connect your Braze account with Smartling, you must first sign up and [create a translation project][3]. |
-| Braze REST API key | A Braze REST API key with all templates and Content Blocks permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with all templates and Content Blocks permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 

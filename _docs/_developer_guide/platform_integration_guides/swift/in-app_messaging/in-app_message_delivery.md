@@ -85,6 +85,10 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
+## Failing to find a matching trigger
+
+When Braze fails to find a matching trigger for a particular event, it will call [`BrazeDelegate.(_:noMatchingTriggerForEvent)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:nomatchingtriggerforevent:)-8rt7y/). Implement this method in your class adopting `BrazeDelegate` to handle this scenario. 
+
 ## The in-app message stack
 
 ### Adding in-app messages to the stack
@@ -105,7 +109,7 @@ A triggered in-app message can be returned to the stack in the following situati
 
 - The in-app message is triggered when the app is in the background.
 - Another in-app message is currently visible.
-- The `inAppMessage(_:displayChoiceForMessage:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) returned `.later`.
+- The `inAppMessage(_:displayChoiceForMessage:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) returned `.reenqueue`.
 
 ### Discarding in-app messages
 

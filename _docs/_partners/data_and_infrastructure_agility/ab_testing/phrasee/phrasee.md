@@ -21,7 +21,7 @@ To include click tracking information for your subscribers, using Braze Currents
 | Requirement | Description |
 |---|---|
 | Phrasee account | A [Phrasee account][3] is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `campaigns` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `campaigns` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

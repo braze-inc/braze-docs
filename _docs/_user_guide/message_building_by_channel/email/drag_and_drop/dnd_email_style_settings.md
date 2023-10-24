@@ -81,9 +81,21 @@ To set a default paragraph style, go to the **Paragraph Styling**, enter the **F
 
 ## List styling
 
-When adding lists to your messaging, the **List Styling** section creates the consistency in how your lists are styled. This incudes details like font size, font color, line weight, alignment, text direction, list item spacing and indentation.
+When adding lists to your messaging, the **List Styling** section creates the consistency in how your lists are styled. This incudes details like: 
 
-Here, you can also set the **List Type** to be either numbered or bulleted. The **List Style Type** provides additional customization for the style of your lists. For example, you can set the list types to always be bulleted, and for each bullet to be a square.  
+- Font size
+- Font color
+- Font weight
+- Line height
+- Alignment
+- Text direction
+- Letter spacing
+- List item spacing
+- List item indent
+- List type
+- List style type
+
+You can set the **List Type** to be either numbered or bulleted. The **List Style Type** provides additional customization for the style of your lists. For example, you can set the list types to always be bulleted, and for each bullet to be a square.  
 
 ![][10]
 

@@ -22,6 +22,10 @@ Content QA with AI offers the following key features to enhance the quality of y
 
 ## Accessing Content QA with AI
 
+{% alert note %}
+Content QA with AI is only available for push and SMS channels at this time.
+{% endalert %}
+
 To access the content checker, follow these steps:
 
 1. After composing a push or SMS message, navigate to the **Test** tab.
@@ -30,9 +34,11 @@ To access the content checker, follow these steps:
 
 ![Content QA with AI section of the Test tab.][1]{: style="max-width:60%"}
 
-{% alert note %}
-Content QA with AI is only available for push and SMS channels at this time.
-{% endalert %}
+### Language support
+
+ChatGPT is able to understand [multiple languages](https://openai.com/research/gpt-4#:~:text=GPT%2D4%203%2Dshot%20accuracy%20on%20MMLU%20across%20languages), although OpenAI doesn't officially support them. Braze does not pass any additional information about the language or locale of your copy when the message content is sent to OpenAI, therefore it is up to ChatGPT to make that determination.
+
+Results may vary depending on the language you're writing in.
 
 ## Tips for effective use
 

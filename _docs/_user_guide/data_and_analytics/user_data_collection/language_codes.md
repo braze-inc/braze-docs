@@ -8,9 +8,9 @@ description: "This glossary covers the current user language codes Braze support
 
 # User language codes
 
-> This reference article provides a completed list of current supported user language codes at Braze.
+> This reference article provides a completed list of currently supported user language codes at Braze.
 
-In general, Braze uses the majority of [ISO-639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) standard codes but there exist a few not included in that set.
+In general, Braze uses the majority of [ISO-639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) standard codes, but a few are not included in that set.
 
 | Language | Code | 
 | -------- | ---- |
@@ -197,4 +197,3 @@ In general, Braze uses the majority of [ISO-639-1](http://en.wikipedia.org/wiki/
 | ZULU | zu |
 | NYANKOLE | nyn |
 | NUER | nus |
-| UNKNOWN | nil |

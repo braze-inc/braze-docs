@@ -10,7 +10,7 @@ description: "This article contains release notes for November 2021."
 
 ## Data points usage dashboard
 
-Use the **Total Data Points Usage** dashboard to track your data point usage pacing in relation to your contract allotment. This dashboard provides information on your contract, current billing cycle, company billing data, and workspace billing data. For more information, refer to [Subscriptions and Usage]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/#total-data-points-dashboard).
+Use the **Total Data Points Usage** dashboard to track your data point usage pacing in relation to your contract allotment. This dashboard provides information on your contract, current billing cycle, company billing data, and workspace billing data. For more information, refer to [Billing]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/#total-data-points-dashboard).
 
 ## Change to segment extension regeneration
 

@@ -40,7 +40,7 @@ Alternatively, if you wish to edit your `Info.plist` file directly, you can foll
 </array>
 ```
 
-## Step 2: Adding a scheme whitelist
+## Step 2: Adding a scheme allowlist
 
 You must declare the URL schemes you wish to pass to `canOpenURL(_:)` by adding the `LSApplicationQueriesSchemes` key to your app's Info.plist file. Attempting to call schemes outside this allowlist will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error will look like this:
 

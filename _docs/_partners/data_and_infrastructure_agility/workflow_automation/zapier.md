@@ -35,7 +35,7 @@ Using our WordPress example, in the Zapier platform, we'll set up our zap to tri
 
 ![In the Zapier platform, within a zap, configure the trigger by selecting the desired post status and post type. For this example, "Published", and "Posts" is selected.] [6]
 
-### Step 3: Add an action webhook
+### Step 2: Add an action webhook
 
 Next, define the zap action. When your zap is enabled, and your trigger is detected, the action will automatically occur.
 
@@ -43,7 +43,7 @@ Continuing our example, we want to send a POST request as a JSON to a Braze endp
 
 ![][7]
 
-### Step 4: Set up Braze POST
+### Step 3: Set up Braze POST
 
 When setting up your webhook, use the following settings and provide your Braze REST endpoint in the webhook URL. When complete, select **Publish**.
 
@@ -73,7 +73,7 @@ When setting up your webhook, use the following settings and provide your Braze 
 
 ![][4]{: style="max-width:70%;"}
 
-### Step 5: Create a Braze campaign
+### Step 4: Create a Braze campaign
 
 Once you've successfully set up your zap, you can customize your Braze campaigns or Canvases with WordPress data by using Liquid formatting to display the information in your messages.
 

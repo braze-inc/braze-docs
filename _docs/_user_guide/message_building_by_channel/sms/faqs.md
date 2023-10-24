@@ -78,7 +78,7 @@ Some downsides to this approach include:
 - If one business violates the rules, all businesses' messages are suspended.
 - Security issues
 
-### How do you whitelist URLs for SMS?
+### How do you allowlist URLs for SMS?
 
 Before sending SMS messages containing URLs to users in certain countries (for example, Sweden or Nordic countries), you must get these URLs registered with the carrier. Reach out to your Braze customer service manager to help. This process will take around five days.  
 
@@ -109,7 +109,7 @@ You might be charged additional message segments if you have Liquid personalizat
 
 The app identifier API key or `app_id` is a parameter associating activity with a specific app in your workspace. It designates which app within the workspace you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your android app, and an `app_id` for your web integration. 
 
-Your `app_id` can be found on the dashboard by navigating to **Developer Console > API Settings > Identification**.
+You can find your `app_id` by navigating to **Settings** > **App Settings** and locating the **Identification** section.
 
 ### How will I be billed for SMS?
 

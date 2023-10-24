@@ -32,7 +32,13 @@ It is also possible to define your own [custom in-app message view][12].
 
 All in-app messages implement the [`IInAppMessage`][3] interface, which defines all in-app messages' basic behavior and traits. [`InAppMessageBase`][27] is an abstract class that implements `IInAppMessage` and provides the foundational in-app message implementation. All in-app message classes are subclasses of `InAppMessageBase`.
 
-In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageImmersive`][8], which adds click-action and analytics enabled [buttons][50], as well as header text and a close button. [`InAppMessageImmersiveBase`][28] is an abstract class that implements `IInAppMessageImmersive` and provides the foundational `immersive` in-app message implementation. `Modal` in-app messages are a subclass of `InAppMessageImmersiveBase`.
+In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageImmersive`][8], which adds click action and analytics enabled [buttons][50], as well as header text and a close button.
+
+{% alert important %}
+For in-app messages containing buttons, the message `clickAction` will also be included in the final payload if the click action is added prior to adding the button text.
+{% endalert %}
+
+[`InAppMessageImmersiveBase`][28] is an abstract class that implements `IInAppMessageImmersive` and provides the foundational `immersive` in-app message implementation. `Modal` in-app messages are a subclass of `InAppMessageImmersiveBase`.
 
 HTML in-app messages are [`InAppMessageHtml`][92] instances, which implement [`IInAppMessageHtml`][52], another subclass of `IInAppMessage`.
 

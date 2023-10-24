@@ -9,7 +9,7 @@ tool: Canvas
 
 # Feature flags
 
-> Feature flags allow you to experiment and confirm your hypotheses around new features. Marketers can use feature flags to segment your audience in [Canvas][1] and track the impact of feature rollout on conversations. Moreover, [Experiment Paths][2] allow you optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
+> Feature flags allow you to experiment and confirm your hypotheses around new features. Marketers can use feature flags to segment your audience in [Canvas][1] and track the impact of feature rollout on conversions. Moreover, [Experiment Paths][2] allow you optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
 
 ## Create a feature flag
 
