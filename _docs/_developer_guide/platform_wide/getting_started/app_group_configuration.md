@@ -1,6 +1,6 @@
 ---
-nav_title: Workspace configuration
-article_title: Getting started&#58; Workspace configuration
+nav_title: Workspace Configuration
+article_title: Workspace Configuration
 page_order: 4
 description: "This reference article covers single and multi-workspace configuration, how to create your workspace, and how to target and relaunch your app."
 platform:
