@@ -211,7 +211,7 @@ This statistic uses a proprietary analytical model created by Braze to reconstru
 
 The displayed statistic is generated 36 hours after email sending has begun. It will only run for scheduled e-mail campaigns (one time or recurring). If a campaign recurs, the estimate will be reclaculated 36 hours after another send occurs. 
 
-# Limitations
+###### Limitations
 
 Please note that this metric
 1) is currently only available in Campaigns
