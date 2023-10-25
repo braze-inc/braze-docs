@@ -13,14 +13,14 @@ tool: Segments
 
 > You can generate a Segment Extension using Snowflake SQL queries of [Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
 
-Similar to standard Segment Extensions, you can query events from up to the past 2 years (730 days) in your SQL Segment Extension.
+Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension.
 
 ## Types of SQL Segment Extensions
 
 There are two types of SQL editors to choose from when creating your SQL Segment Extension: the SQL Editor, and the Incremental SQL Editor.
 
-- **Creating extensions with SQL Editor (full refresh):** Using the SQL Editor, you must click refresh to manually refresh the extension. This refresh option is costlier and uses up more credits. Full refresh extension can't automatically regenerate membership, and can't be refreshed using incremental refresh.
-- **Creating extensions with Incremental SQL Editor (incremental refresh):** Incremental refresh calculates only the last 2 days worth of data, which is more cost-efficient and uses up fewer credits each time. When you create an incremental refresh SQL segment, you can set it to automatically regenerate membership daily. <br><br>The main benefit of extensions with incremental refresh is that you can set your segment to automatically refresh membership daily. Segments created with our regular SQL editor can only have their membership refreshed manually. This helps reduce the cost of a daily data refresh for SQL Segment Extensions.
+- **Creating extensions with SQL Editor (full refresh):** Using the SQL Editor, you must click **Refresh** to refresh the extension manually. This refresh option is costlier and uses up more credits. Full refresh extension can't automatically regenerate membership and can't be refreshed using incremental refresh.
+- **Creating extensions with Incremental SQL Editor (incremental refresh):** Incremental refresh calculates only the last two days' worth of data, which is more cost-efficient and uses up fewer credits each time. When you create an incremental refresh SQL segment, you can set it to automatically regenerate membership daily. <br><br>The main benefit of extensions with incremental refresh is that you can set your segment to automatically refresh membership daily. Segments created with our regular SQL editor can only have their membership refreshed manually. This helps reduce the cost of a daily data refresh for SQL Segment Extensions.
 
 {% alert tip %}
 You can do a manual full refresh on all SQL Segments created in either SQL editor.
@@ -187,13 +187,13 @@ If you created a segment where you expect users to enter and exit regularly, man
 
 ## Monitoring your SQL Segments usage
 
-Each Braze workspace has 5 Snowflake credits available per month. If you need more credits, please contact your CSM or Account Manager. Credits are used whenever you refresh, or save and refresh, a SQL Segment’s membership. Credits are not used when you run previews within a SQL Segment or save or refresh a classic Segment Extension.
+Each Braze workspace has five Snowflake credits available per month. If you need more credits, contact your account manager. Credits are used whenever you refresh, or save and refresh, a SQL Segment’s membership. Credits are not used when you run previews within a SQL Segment or save or refresh a classic Segment Extension.
 
 Credit usage is correlated to the run time of your SQL query. The longer the run time is, the more credits a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
 
 To save on credits, preview your query to ensure it is correct before saving the SQL Segment Extension.
 
-Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your credits usage throughout the month within the credits usage panel. From the **Segment Extensions** page, click <i class="fa-solid fa-chart-column"></i> **View SQL Credit Usage**.
+Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your credit usage throughout the month within the credits usage panel. From the **Segment Extensions** page, click <i class="fa-solid fa-chart-column"></i> **View SQL Credit Usage**.
 
 ![SQL Credit Usage panel in the SQL Segment Extensions page][5]{: style="max-width:60%"}
 
@@ -204,7 +204,7 @@ The following will happen when your credits reach zero:
 
 All company users who created a SQL Segment and your company admins will receive a notification email when you have used up 50%, 80%, and 100% of your credits. After your credits reset at the start of the next month, you can create more SQL Segments, and automatic refreshes will resume.
 
-If you want to purchase more SQL Segment credits or additional Segment Extensions, please reach out to your account manager.
+If you want to purchase more SQL Segment credits or additional Segment Extensions, please contact your account manager.
 
 ## Troubleshooting
 

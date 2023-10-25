@@ -73,8 +73,9 @@ The following sample represents the correct GeoJSON for specifying two geofences
         "radius": 100,
         "name": "Statue of Liberty"
       }
-    }, ...
+    }
   ]
+}
 ```
 
 When creating your geofences, keep the following points in mind:

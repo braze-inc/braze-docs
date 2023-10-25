@@ -214,7 +214,7 @@ Braze will send webhooks from the following IPs. The listed IPs are automaticall
 If you're making a Braze-to-Braze webhook and using allowlisting, you should allowlist all the following IPs, including `127.0.0.1`.
 {% endalert %}
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, and `US-06`: |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, and `US-07`: |
 |---|
 | `127.0.0.1`
 | `23.21.118.191`
