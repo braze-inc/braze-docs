@@ -197,7 +197,7 @@ Braze enverra des webhooks depuis les adresses IP suivantes. Les adresses IP ré
 Si vous mettez en place un webhook Braze à Braze et utilisez des listes blanches, vous devriez placer les IP suivantes en liste blanche, y compris `127.0.0.1`.
 {% endalert %}
 
-| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05` et `US-06` : |
+| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` et `US-07` : |
 |---|
 | `127.0.0.1`
 | `23.21.118.191`

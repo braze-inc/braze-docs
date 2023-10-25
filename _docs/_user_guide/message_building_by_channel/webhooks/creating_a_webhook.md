@@ -66,7 +66,7 @@ The **Compose** tab consists of the following fields:
 
 #### Language {#internationalization}
 
-[Internationalization][16] is supported in the URL and the request body. To internationalize your message, click **Add Languages** and fill out the flyout. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our full list of [available languages]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
+[Internationalization][16] is supported in the URL and the request body. To internationalize your message, click **Add Languages** and fill out the required fields. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our full list of [available languages]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 #### Webhook URL
 
@@ -214,7 +214,7 @@ Braze will send webhooks from the following IPs. The listed IPs are automaticall
 If you're making a Braze-to-Braze webhook and using allowlisting, you should allowlist all the following IPs, including `127.0.0.1`.
 {% endalert %}
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, and `US-06`: |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, and `US-07`: |
 |---|
 | `127.0.0.1`
 | `23.21.118.191`
@@ -262,7 +262,7 @@ If you're making a Braze-to-Braze webhook and using allowlisting, you should all
 
 ### Using webhooks with Braze partners {#utilizing-webhooks}
 
-There are many ways to utilize webhooks, and with Braze's technology partners (Alloys), you can use webhooks to uplevel your communication directly with your customers and users.
+There are many ways to utilize webhooks, and with Braze's technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
 
 Check out:
 * [Messenger]({{site.baseurl}}/partners/additional_channels/instant_chat/messenger/)

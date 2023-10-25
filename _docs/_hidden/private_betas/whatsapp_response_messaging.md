@@ -1,14 +1,7 @@
 ---
-nav_title: Creating a WhatsApp Message
-article_title: Creating a WhatsApp Message
-page_order: 4
-description: "This reference article covers the steps involved in building out and creating a WhatsApp message."
-page_type: reference
-tool:
-  - Campaigns
-channel:
-  - WhatsApp
-search_rank: 1
+nav_title: WhatsApp Response Messaging
+permalink: "/whatsapp_response_messaging/"
+hidden: true
 ---
 
 # Creating a WhatsApp message
@@ -17,14 +10,16 @@ search_rank: 1
 
 ## Prerequisites
 
-To create a WhatsApp message and leverage the WhatsApp channel, you must first read through the WhatsApp [overview]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) and do the following:
+To create a WhatsApp message and leverage the Whatsapp channel, you must first read through the WhatsApp [overview]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) and do the following:
   - Acknowledge policies, limits, and content rules
   - Set up your WhatsApp connection
   - Build out initial templates in Meta to use in your messages
 
 ## Step 1: Choose where to build your message
 
-WhatsApp creates different message templates for each language. Either create a campaign for each language with segmentation to serve the correct template to users, or use Canvas. 
+{% alert note %}
+WhatsApp creates different [message templates](#template-messages) for each language. Either create a campaign for each language with segmentation to serve the correct template to users, or use Canvas. 
+{% endalert %}
 
 Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
 
@@ -61,15 +56,26 @@ If all of the messages in your campaign are similar or have the same content, co
 
 ## Step 2: Compose your WhatsApp message
 
-To compose your message, select an [approved WhatsApp template]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates). 
+Select if you’d like to create a WhatsApp [template message](#template-messages) or response message, depending on your use case. Any business-initiated conversation must start from an approved template, whereas response messages can be used in responses to inbound messages from users within a 24-hour window. 
 
-![][1]{: style="max-width:80%;"}
+![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.][5]{: style="max-width:80%;"}
+
+### Template messages
+
+You can use [approved WhatsApp template messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates
+) to initiate conversations with your users on WhatsApp. These messages are submitted in advance to WhatsApp for content approval, which can take up to 24 hours to approve. Any edits you make to copy needs to be edited and resubmitted to WhatsApp.
+
+Disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. To make updates to the disabled text, you must edit your template and get it reapproved.
+
+#### Languages
+
+Each template has an assigned language, so you need to create a campaign or Canvas step for each language to correctly set up user matching. For example, if you're building a Canvas that uses templates assigned with Indonesian and English, you need to create a Canvas step for the Indonesian template and a Canvas step for the English template.
+
+![List of templates including previews of their messages, their assigned languages, and their approved status.][8]{: style="max-width:80%;"}
+
+#### Variables
 
 If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, upload or add images from the media library.
-
-Note that disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. If you would like to make updates to the disabled text, you must edit your template and get it reapproved.
-
-![][2]{: style="max-width:80%;"}
 
 {% alert tip %}
 {% raw %}
@@ -77,14 +83,37 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 {% endraw %}
 {% endalert %}
 
-### Including dynamic links 
-Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. At this time, neither of these links can be shortened. 
+![The Add Personalization tool with the attribute "first_name" and the default value "you".][2]{: style="max-width:80%;"}
+
+### Dynamic links 
+Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. At this time, neither of these links can be shortened.
+
+### Response messages
+
+{% alert note %}
+Response messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
+You can use response messages to reply to inbound messages from your users. These messages are built in-app on Braze during your composition experience and can be edited at any time. You can use Liquid to match the response message language to the appropriate users.
+
+There are three response message layouts you can use:
+- Quick Reply
+- Text Message
+- Media Message
+
+![The response message composer for a Reply Message that welcomes new users with a discount code.][6]{: style="max-width:80%;"}
 
 ## Step 3: Preview and test your message
 
 Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
-![][3]{: style="max-width:80%;"}
+![A preview message for an existing user named Suzanne.][3]{: style="max-width:80%;"}
+
+{% alert note %}
+A conversation window is required to send response messages, including test messages. To initiate a conversation window, send a WhatsApp message to the phone number associated with the subscription group you’re using for this message. The associated phone number is listed in the alert on the **Test** tab.
+{% endalert %}
+
+![An alert that says, "To test, first open a conversation window by sending a WhatsApp message to +1 631-202-0907. Then, send your response message to the test user."][7]{: style="max-width:80%;"}
 
 ## Step 4: Build the remainder of your campaign or Canvas
 
@@ -116,6 +145,8 @@ You can also set custom conversion events based on your specific use case. Get c
 {% tab Canvas %}
 
 If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/) step of our Canvas documentation.
+
+Because conversation windows can only last 24 hours per inbound message, Braze will check to make sure there are no delays exceeding 24 hours between an inbound message and a response message. 
 
 {% endtab %}
 {% endtabs %}
@@ -164,10 +195,10 @@ Message feature    | Details
 ----------- |---------------- 
 Text | 
 Images (JPEG and PNG)| Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
-Audio| audio/aac<br>audio/mp4<br>audio/mpeg<br>audio/amr<br>audio/ogg (only Opus Codecs, base audio/ogg is not supported)
-Documents | text/plain<br>application/pdf<br>application/vnd.ms-powerpoint<br>application/msword<br>application/vnd.ms-excel<br>application/vnd.openxmlformats-officedocument.wordprocessingml.document<br>application/vnd.openxmlformats-officedocument.presentationml.presentation<br>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+Audio| Must be in these supported formats:<br><br>audio/aac<br>audio/mp4<br>audio/mpeg<br>audio/amr<br>audio/ogg (only Opus Codecs, base audio/ogg is not supported)
+Documents | Must be in these supported formats:<br><br>text/plain<br>application/pdf<br>application/vnd.ms-powerpoint<br>application/msword<br>application/vnd.ms-excel<br>application/vnd.openxmlformats-officedocument.wordprocessingml.document<br>application/vnd.openxmlformats-officedocument.presentationml.presentation<br>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 CTAs | See [Calls to actions](#ctas).
-Video | video/mp4, video/3gp<br><br>Only H.264 video codec and AAC audio codec are supported. We support videos with a single audio stream or no audio stream.
+Video | Must be video/mp4 or video/3gp.<br><br>Only H.264 video codec and AAC audio codec are supported. We support videos with a single audio stream or no audio stream.
 {: .reset-td-br-1 .reset-td-br-2}
 
 
@@ -176,3 +207,7 @@ Video | video/mp4, video/3gp<br><br>Only H.264 video codec and AAC audio codec a
 [2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %} 
 [3]: {% image_buster /assets/img/whatsapp/whatsapp8.png %} 
 [4]: {% image_buster /assets/img/whatsapp/whatsapp_plain_text.png %}
+[5]: {% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}
+[6]: {% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}
+[7]: {% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}
+[8]: {% image_buster /assets/img/whatsapp/whatsapp_templates.png %}

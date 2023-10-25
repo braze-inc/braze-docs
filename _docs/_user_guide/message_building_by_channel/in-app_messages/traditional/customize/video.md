@@ -34,7 +34,7 @@ To embed video and other HTML5 content in HTML in-app messages on Android, hardw
 
 To support iOS devices, you must include the `playsinline` attribute since full screen playback is not supported at this time.
 
-- iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
+- iOS does not support auto-play by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
 - Full screen videos will not render correctly on iOS and are not supported at this time. You must include the `playsinline` attribute to show the video within the HTML message instead.
 
 [9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video

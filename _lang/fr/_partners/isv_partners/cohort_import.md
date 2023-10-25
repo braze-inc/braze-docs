@@ -20,6 +20,7 @@ Braze héberge notre application sur plusieurs clusters aux États-Unis et dans 
 | US-04 | `https://rest.iad-04.braze.com` |
 | US-05 | `https://rest.iad-05.braze.com` |
 | US-06 | `https://rest.iad-06.braze.com` |
+| US-07 | `https://rest.iad-07.braze.com` |
 | US-08 | `https://rest.iad-08.braze.com` |
 | EU-01 | `https://rest.fra-01.braze.eu`  |
 | EU-02 | `https://rest.fra-02.braze.eu`  |

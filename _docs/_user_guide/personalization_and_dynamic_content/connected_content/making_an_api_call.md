@@ -158,7 +158,7 @@ Braze will send Connected Content requests from the following IP ranges. The lis
 
 Braze has a reserved set of IPs used for all services, not all of which are active at a given time. This is designed for Braze to send from a different data center or do maintenance, if necessary without impacting customers. Braze may use one, a subset, or all of the following IPs listed when making Connected Content requests.
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`: |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`: |
 |---|
 | `23.21.118.191`
 | `34.206.23.173`

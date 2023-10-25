@@ -26,7 +26,7 @@ For companies with customers in many countries, handling localization early in y
   - [Catalogs](#option-3-catalogs)
   - [Localization partners](#option-4-localization-partners)
   - [Translations in a public Google Sheet](#option-5-translations-in-a-public-google-sheet)
-  - [Google spreadsheet into a JSON API via Sheetdb](#option-6-google-spreadsheet-into-a-json-api-via-sheetdb)
+  - [Google spreadsheet into a JSON API via SheetDB](#option-6-google-spreadsheet-into-a-json-api-via-sheetdb)
 
 ## Orchestration
 
@@ -281,13 +281,13 @@ Another translation option includes housing translations in Google Sheets; often
 The Google Sheets API has a limit of 500 requests per 100 seconds per project. Connected Content calls can be cached, but this solution is not scalable for a high-traffic campaign.
 {% endalert %}
 
-### Option 6: Google spreadsheet into a JSON API via Sheetdb  
+### Option 6: Google spreadsheet into a JSON API via SheetDB  
 
-This option provides an alternative method of transforming Google Sheets into JSON objects queried via Connected Content. By turning a spreadsheet into a JSON API via Sheetdb, you can choose from [multiple subscription tiers](https://sheetdb.io/pricing) depending on the cadence of the API calls.
+This option provides an alternative method of transforming Google Sheets into JSON objects queried via Connected Content. By turning a spreadsheet into a JSON API via SheetDB, you can choose from [multiple subscription tiers](https://sheetdb.io/pricing) depending on the cadence of the API calls.
 
-The spreadsheet structure follows the steps in option 4, but Sheetdb also provides [additional filters](https://docs.sheetdb.io/#sheetdb-api) to query the objects.
+The spreadsheet structure follows the steps in option 4, but SheetDB also provides [additional filters](https://docs.sheetdb.io/#sheetdb-api) to query the objects.
 
-Some users may prefer to implement Sheetdb with fewer Liquid and Connected Block dependencies by implementing Sheetdb’s [search method](https://docs.sheetdb.io/#get-search-in-document) in GET request calls to filter the JSON objects based on {% raw %}`{{${language}}}`{% endraw %} Liquid tag to automatically return the results for a single language rather than building large conditional blocks.
+Some users may prefer to implement SheetDB with fewer Liquid and Connected Block dependencies by implementing SheetDB’s [search method](https://docs.sheetdb.io/#get-search-in-document) in GET request calls to filter the JSON objects based on {% raw %}`{{${language}}}`{% endraw %} Liquid tag to automatically return the results for a single language rather than building large conditional blocks.
 
 #### Step 1: Format the Google sheet
 
@@ -301,7 +301,7 @@ First, build out the Google sheet so that the languages are different objects:
 
 #### Step 2: Use the language Liquid tag in a Connected Content call
 
-Next, implement the {% raw %}{{${language}}}{% endraw %} Liquid tag within a Connected Content call. Note that Sheetdb will auto-generate the `sheet_id` upon creating the spreadsheet.
+Next, implement the {% raw %}{{${language}}}{% endraw %} Liquid tag within a Connected Content call. Note that SheetDB will auto-generate the `sheet_id` upon creating the spreadsheet.
 
 {% raw %}
 ```liquid
@@ -324,6 +324,6 @@ Lastly, use Liquid for templating your messages:
 
 - The {% raw %}`{{${language}}}`{% endraw %} field has to be defined for all users; otherwise, a Liquid conditional block has to be featured as a fallback handler for users without a language.
 - Data modeling within Google Sheets has to follow a different language-driven vertical as opposed to having message objects.
-- Sheetdb offers a limited freemium account and multiple paying options that should be considered based on your campaign Strategy. 
-- Connected Content calls can be cached. Braze recommends measuring the projected cadence of the API calls and investigating an alternative approach of calling the main Sheetdb endpoint instead of using the search method.
+- SheetDB offers a limited free account and multiple paying options that should be considered based on your campaign strategy. 
+- Connected Content calls can be cached. We recommend measuring the projected cadence of the API calls and investigating an alternative approach of calling the main SheetDB endpoint instead of using the search method.
 

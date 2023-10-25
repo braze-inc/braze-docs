@@ -4,7 +4,7 @@ article_title: Report Builder
 alias: /report_builder/
 page_order: 4
 page_type: reference
-description: "This reference article covers how to run a report using the report builder including campaign and Canvas creating comparision reports, and building reports and charts."
+description: "This reference article covers how to run a report using the report builder including campaign and Canvas creating comparison reports, and building reports and charts."
 tool: 
   - Reports
 

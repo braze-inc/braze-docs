@@ -154,7 +154,7 @@ Braze envoie des demandes de Contenu connecté à partir des plages IP suivantes
 
 Braze dispose d’un ensemble d’IP réservé pour tous les services, qui ne sont pas tous actifs à un moment donné.  Cela garantit que si Braze a besoin d’envoyer un autre centre de données ou de procéder à la maintenance, Braze peut le faire sans impacter les clients. Braze peut utiliser un IP, un sous-ensemble d’IP ou tous les IP suivants répertoriés lors de la création de requêtes de contenu connecté.
 
-| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` : |
+| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` : |
 |---|
 | `23.21.118.191`
 | `34.206.23.173`

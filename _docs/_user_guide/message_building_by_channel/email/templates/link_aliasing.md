@@ -32,7 +32,7 @@ Link aliasing is only supported in `href` attributes within HTML anchor tags whe
 
 Follow these steps to view all of your tracked link aliases:
 
-1. Go to **Settings** > **Email Preferences** under **Worksapce Settings**.
+1. Go to **Settings** > **Email Preferences** under **Workspace Settings**.
 2. Click the **Link Aliasing Settings** tab.
 
 {% alert important %}
@@ -143,7 +143,7 @@ Braze only tracks up to the last 100 clicked link aliases at the profile level.
 
 ### Untracking links
 
-Untracking a link will not deallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it's replaced by newer data. The following segmentation filters will continue to exist, but new segments cannot be created with that filter.
+Untracking a link will not reallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it's replaced by newer data. The following segmentation filters will continue to exist, but new segments cannot be created with that filter.
 
 For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
 

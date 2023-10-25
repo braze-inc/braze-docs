@@ -124,7 +124,7 @@ When connecting different workspaces to the same Snowflake account, you must cre
 
 Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | For Instances `EU-01` and `EU-02` |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` |
 |---|---|
 | `23.21.118.191`| `52.58.142.242`
 | `34.206.23.173`| `52.29.193.121`
@@ -194,7 +194,7 @@ You may also need to change your security groups to allow Braze to access your d
 If you won't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an ssh tunnel to access the Redshift data. [Check out this AWS Knowledge Center post for more information.](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
 {% endalert %}
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | For Instances `EU-01` and `EU-02` |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` |
 |---|---|
 | `23.21.118.191`| `52.58.142.242`
 | `34.206.23.173`| `52.29.193.121`
@@ -210,7 +210,7 @@ If you won't want your Redshift cluster to be publicly accessible, you can set u
 
 #### Step 1: Set up the table 
 
-Optionally, set up a new Project or Dataset to hold your source table.
+Optionally, set up a new project or dataset to hold your source table.
 
 Create one or more tables to use for your CDI integration with the following fields:
 
@@ -253,7 +253,7 @@ After creating the service account and granting permissions, generate a JSON key
 
 If you have network policies in place, you must give Braze network access to your Big Query instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | For Instances `EU-01` and `EU-02` |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` |
 |---|---|
 | `23.21.118.191`| `52.58.142.242`
 | `34.206.23.173`| `52.29.193.121`
@@ -312,7 +312,7 @@ Keep the token in a safe place until you need to enter it on the Braze dashboard
 
 If you have network policies in place, you must give Braze network access to your Databricks instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | For Instances `EU-01` and `EU-02` |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` |
 |---|---|
 | `23.21.118.191`| `52.58.142.242`
 | `34.206.23.173`| `52.29.193.121`
@@ -346,7 +346,14 @@ Input the information for your Snowflake data warehouse and source table, then p
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_1.png %})
 
 #### Step 2: Configure sync details
-Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
+Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
+
+Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+
+- Connectivity issues
+- Lack of resources
+- Permissions issues
+- (For catalogs syncs only) Catalog tier is out of space
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_2.png %})
 
@@ -375,7 +382,14 @@ Input the information for your Redshift data warehouse and source table. If you 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
 
 #### Step 2: Configure sync details
-Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
+Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
+
+Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+
+- Connectivity issues
+- Lack of resources
+- Permissions issues
+- (For catalogs syncs only) Catalog tier is out of space
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_7.png %})
 
@@ -395,7 +409,14 @@ Upload the JSON key and provide a name for the service account, then input the d
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_11.png %})
 
 #### Step 2: Configure sync details
-Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
+Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
+
+Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+
+- Connectivity issues
+- Lack of resources
+- Permissions issues
+- (For catalogs syncs only) Catalog tier is out of space
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
@@ -416,7 +437,14 @@ Input the information for your Databricks data warehouse and source table, then 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_16.png %})
 
 #### Step 2: Configure sync details
-Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
+Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
+
+Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+
+- Connectivity issues
+- Lack of resources
+- Permissions issues
+- (For catalogs syncs only) Catalog tier is out of space
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 

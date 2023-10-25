@@ -63,7 +63,7 @@ Fallback fonts are used for the title, header, and body text when your default f
 
 ![][11]
 
-You can add up to 17 fallback fonts. The first fallback font selected will be the one attempted first. The fallback font will only be applied for newly created templates, email campaigns, and Canvas components. The fallback font isn't automatically set for messages that were created before the fallbak font was specified. We highly recommend selecting fallback fonts that are similar to your email messaging to maintain consistency across your branding.
+You can add up to 17 fallback fonts. The first fallback font selected will be the one attempted first. The fallback font will only be applied for newly created templates, email campaigns, and Canvas components. The fallback font isn't automatically set for messages that were created before the fallback font was specified. We highly recommend selecting fallback fonts that are similar to your email messaging to maintain consistency across your branding.
 
 ## Title styling
 
@@ -81,7 +81,7 @@ To set a default paragraph style, go to the **Paragraph Styling**, enter the **F
 
 ## List styling
 
-When adding lists to your messaging, the **List Styling** section creates the consistency in how your lists are styled. This incudes details like: 
+When adding lists to your messaging, the **List Styling** section creates the consistency in how your lists are styled. This includes details like: 
 
 - Font size
 - Font color

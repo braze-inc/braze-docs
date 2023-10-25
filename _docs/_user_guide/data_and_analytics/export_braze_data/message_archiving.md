@@ -14,12 +14,13 @@ description: "This reference article covers message archiving, a feature that al
 
 ## Prerequisites
 
-1. You have purchased this feature, and your customer success manager has enabled the feature.
-2. You have connected an S3 bucket to your workspace via the **Technology Partners** page.
+1. You purchased this feature, and your customer success manager turned on the feature.
+2. You connected an S3 bucket to your workspace on the **Technology Partners** page.
+3. You [selected the applicable channels](#selecting-channels) for message archiving on the **Message Archiving** settings page.
 
 ## Overview
 
-When this feature is enabled and you have successfully connected an S3 bucket via your workspace's **Technology Partners** page, Braze will write a gzipped JSON file to your S3 bucket for each email, SMS, or push message sent to a user. Your customer success manager can enable any or all of the channels to be saved.
+When this feature is turned on and you have successfully connected an S3 bucket via your workspace's **Technology Partners** page, Braze will write a gzipped JSON file to your S3 bucket for each email, SMS, or push message sent to a user. You can select any or all of the channels to be saved on the **Message Archiving** settings page.
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (e.g., {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements. 
 
@@ -30,12 +31,22 @@ An example file may look like this:<br>
 `sent_messages/email/819baa08d8d7e77e19d4666f5fc6050b/ee965cb2-8934-4b0a-acf1-91c899c2f915/651fd10b282850b39e1169c13975234b.json.gz`
 
 {% alert important %}
-Enabling this feature will impact the delivery speed of your messages as the S3 file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
+Turning on this feature will impact the delivery speed of your messages as the S3 file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
 {% endalert %}
 
 {% alert note %}
 **Having trouble finding your push tokens in your S3 buckets?**<br>
 Braze downcases your push tokens before we hash them. This results in the push token `Test_Push_Token12345` being downcased to `test_push_token12345` in the S3 folder with the hash `32b802170652af2b5624b695f34de089`.
+{% endalert %}
+
+## Selecting channels
+
+To select which message channels will save a copy of sent messages to your Amazon S3 bucket, go to **Settings** > **Message Archiving**, select your channels, then click **Save changes**.
+
+![The Message Archiving page has three channels to select: Email, Push, and SMS.][1]
+
+{% alert note %}
+If you don't see **Message Archiving** in **Settings**, confirm that your company has purchased and turned on message archiving.
 {% endalert %}
 
 ## File references
@@ -129,7 +140,7 @@ Refer to our code example repository for [message archive sample files](https://
 Modifications done after the message leaves Braze will not be reflected in the file saved to your S3 bucket. This will include modifications our mail delivery partners make, like wrapping links for click tracking and inserting tracking pixels. 
 
 ### What are messages under the "unassociated" value in the campaign path? 
-When a message is sent outside of a campaign or Canvas, the CampaignId in the file name will be "unassociated". This will happen when you send test messages from the dashboard, when Braze sends SMS auto-responses, or when messages sent through the API do not specify a campaign ID.
+When a message is sent outside of a campaign or Canvas, the campaign ID in the file name will be "unassociated". This will happen when you send test messages from the dashboard, when Braze sends SMS auto-responses, or when messages sent through the API do not specify a campaign ID.
 
 ### How do I find more information about this send? 
 Using the `dispatch_id` and `user_id`, you can cross-reference the templated message with our Currents data to find more information like the external user ID of who received it, the timestamp it was delivered, whether or not the user opened or clicked the message, and more. 
@@ -142,3 +153,5 @@ If your S3 credentials become invalid at any point, Braze will not be able to sa
 
 ### Why does my archive file's "sent_at" timestamp differ slightly from the sent timestamp in Currents? 
 The S3 rendered copy is saved immediately before sending it to the end user. Because of S3 upload times, there may be a delay of a few seconds between the "sent_at" timestamp in the rendered copy versus the actual time the send occurs.
+
+[1]: {% image_buster /assets/img/message_archiving_settings.png %}
