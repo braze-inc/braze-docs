@@ -40,7 +40,7 @@ The drag-and-drop editor is only available for Content Blocks used in email mess
 
 **Steps:**
 
-1. Enter a name for your Content Block. This name will autopopulate as part of the **Content Block Liquid Tag**.
+1. Enter a name for your Content Block. This name will auto-populate as part of the **Content Block Liquid Tag**.
 2. (optional) Add a description.
 3. Select **Drag-And-Drop Editor** as your editing experience, making this a drag-and-drop Content Block type.
 4. Click **Edit Content Block** to begin editing.
@@ -53,7 +53,7 @@ The drag-and-drop editor is only available for Content Blocks used in email mess
 
 **Steps:**
 
-1. Enter a name for your Content Block. This name will autopopulate as part of the **Content Block Liquid Tag**.
+1. Enter a name for your Content Block. This name will auto-populate as part of the **Content Block Liquid Tag**.
 2. (optional) Add a description.
 3. Select **HTML Editor** as your editing experience, making this an HTML Content Block type.
 4. Click **Edit Content Block** to begin editing.

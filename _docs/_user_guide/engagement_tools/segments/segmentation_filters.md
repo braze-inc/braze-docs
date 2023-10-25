@@ -454,7 +454,7 @@ glossaries:
     tags:
       - Install Attribution
   - name: Install Attribution Adgroup
-    description: Segments your users by the adgroup that their install was attributed to.
+    description: Segments your users by the ad group that their install was attributed to.
     tags:
       - Install Attribution
   - name: Install Attribution Campaign

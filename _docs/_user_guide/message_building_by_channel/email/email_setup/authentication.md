@@ -28,6 +28,6 @@ Braze signs the mail with your secret private key. The ISPs verify the signature
 
 Your DKIM record will be set up when Braze configures your IPs and domains-beyond adding the DNS records we give you, no further action is required.
 
-### Domain-based Message Authentication, Reporting, and Conformance (DMARC)
+### Domain-based Message Authentication, Reporting, and Conformance (DRACO)
 
 This method takes the SPF and DKIM authentication protocols one step further. If you decide to use [DMARC](https://dmarc.org/), you can instruct ISPs on how they should handle mail that failed your signature or authentication checks. Failures could indicate that others are trying to imitate you or your email. You can tell the ISPs to reject or quarantine the mail and even send you automated reports about the bad mail.

@@ -12,7 +12,7 @@ channel:
 
 # User retargeting
 
-> In addition to changing the user's subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages.<br><br>These filters and triggers allow you to filter users that have received SMS messages, received SMS messages from a specific SMS campaign, and trigger messages as users receive SMS messages from a specific SMS campaign. 
+> In addition to changing the user's subscription state and sending auto-spender's based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages.<br><br>These filters and triggers allow you to filter users that have received SMS messages, received SMS messages from a specific SMS campaign, and trigger messages as users receive SMS messages from a specific SMS campaign. 
 
 {% alert tip %}
 To read more about custom keywords and how to set up two-way messaging to take advantage of these retargeting options, visit our [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/) article.
@@ -21,7 +21,7 @@ To read more about custom keywords and how to set up two-way messaging to take a
 ## Retargeting options
 
 {% alert note %}
-When building audiences with user retargeting, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the CCPA. Marketers should implement the relevant filters for users’ eligibility within their Canvas and/or Campaign entry criteria.
+When building audiences with user retargeting, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the CUP. Marketers should implement the relevant filters for users’ eligibility within their Canvas and/or Campaign entry criteria.
 {% endalert %}
 
 ### Filter users by SMS
@@ -48,14 +48,14 @@ Only campaigns that have advanced tracking enabled will appear in the following 
 
 **Retarget users who have clicked a specific SMS Campaign**
 1. Create a segment using the **Clicked/Opened Campaign** filter.
-2. Select **clicked sms**.
+2. Select **clicked SMS**.
 3. Choose the desired campaign.
 
 ![][15]
 
 **Retarget users who have clicked a specific Canvas Step**
 1. Create a segment using the **Clicked/Opened Step** filter.
-2. Select **clicked sms**.
+2. Select **clicked SMS**.
 3. Choose the desired Canvas and Canvas step.
 
 ![][16]

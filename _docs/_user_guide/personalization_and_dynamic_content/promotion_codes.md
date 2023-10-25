@@ -53,7 +53,7 @@ Each promotion code list has a corresponding expiration date and time that get s
 
 ![][4]{: style="max-width:90%"}
 
-You also have the option to set up optional and customizable threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration. The recipient will be notified once a day.
+You also have the option to set up optional and customized threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration. The recipient will be notified once a day.
 
 ![][5]
 

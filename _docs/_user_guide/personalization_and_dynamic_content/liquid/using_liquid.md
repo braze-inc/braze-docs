@@ -2,7 +2,7 @@
 nav_title: Using Liquid
 article_title: Liquid Use Case and Overview
 page_order: 0
-description: "This reference article provides an overview of commmon Liquid use cases and how to include Liquid tags into your messaging."
+description: "This reference article provides an overview of common Liquid use cases and how to include Liquid tags into your messaging."
 search_rank: 2
 ---
 

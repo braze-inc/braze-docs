@@ -58,7 +58,7 @@ Note the following is not a comprehensive list of what is copied across a worksp
 | Quiet time configurations | Trigger schedule | 
 | Frequency capping configurations | Campaign summaries | 
 | Recipient subscription state |  | 
-| Reoccuring schedule |  | 
+| Reoccurring schedule |  | 
 | Is Transactional |  | 
 
 {: .reset-td-br-1 .reset-td-br-2}

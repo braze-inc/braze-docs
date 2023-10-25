@@ -26,10 +26,10 @@ The CAN-SPAM Act of 2003 regulates email senders in the U.S. sending "any electr
 
 There are seven key requirements for CAN-SPAM:
 
-1. Don't use false or misleading header information (ie, "From", "To" and "Reply-To")
+1. Don't use false or misleading header information (i.e.,, "From", "To" and "Reply-To")
 2. Don't use deceptive subject lines
 3. Identify the message as an ad
-4. Tell recipients where you're located (ie, physical address)
+4. Tell recipients where you're located (i.e.,, physical address)
 5. Tell recipients how to opt out of receiving future email from you
 6. Honor opt-out requests promptly
 7. Monitor what others are doing on your behalf
@@ -49,7 +49,7 @@ There are a couple key differences between CASL and CAN-SPAM, most notably:
 
 ### Liability
 
-While CASL has a three-year transition period, ending july 1, 2017, the Canadian Radio-Television and Telecommunications Commission (CRTC), the Competition Bureau and the Office of the Privacy Commissioner of Canada may begin investigation and litigation during this period. At the end of the transition period, individuals may also litigate against entities they believe to be sending spam.
+While CASL has a three-year transition period, ending July 1, 2017, the Canadian Radio-Television and Telecommunications Commission (CRTC), the Competition Bureau and the Office of the Privacy Commissioner of Canada may begin investigation and litigation during this period. At the end of the transition period, individuals may also litigate against entities they believe to be sending spam.
 
 ### Exempt messages
 
