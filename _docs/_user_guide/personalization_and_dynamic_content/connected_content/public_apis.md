@@ -83,7 +83,7 @@ Public APIs can be subject to usage restrictions and rate limiting.  Be sure to 
 | --------- | --- |
 | [Numbers API][18] | Provides random numerical trivia facts. |
 | [Clearbit][27] | Provides company logo images. |
-| [London Unified][28] and [NYC MTA][29] | Provide realtime public transit data including line statuses, arrival times, etc. |
+| [London Unified][28] and [NYC MTA][29] | Provide real-time public transit data including line statuses, arrival times, etc. |
 | [Sunrise and Sunset][39] | Provides Sunset and sunrise times for a given latitude and longitude. |
 {: .reset-td-br-1 .reset-td-br-2}
 

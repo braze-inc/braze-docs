@@ -114,7 +114,7 @@ Some additional things to note:
 
 - Any engagement data (such as campaigns or Canvases received) on duplicate user profiles will be lost. The only way to retain the historical engagement context is by adding it as a custom attribute (such as an array custom attribute of all campaigns or Canvases received).
 - When migrating user profiles, it's also up to your team to decide which user profile of the duplicates will be kept. Braze can't decide or provide you a list of profiles to delete.  
-- Ultimately, it will be important for your team to assess the signup process from your users' experience and make sure that you're only calling the `changeUser()` method when a user becomes identified.
+- Ultimately, it will be important for your team to assess the sign-up process from your users' experience and make sure that you're only calling the `changeUser()` method when a user becomes identified.
 
 {% endapi %}
 {% api %}

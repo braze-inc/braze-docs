@@ -17,7 +17,7 @@ search_rank: 1
 
 ## Prerequisites
 
-To create a WhatsApp message and leverage the Whatsapp channel, you must first read through the WhatsApp [overview]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) and do the following:
+To create a WhatsApp message and leverage the WhatsApp channel, you must first read through the WhatsApp [overview]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) and do the following:
   - Acknowledge policies, limits, and content rules
   - Set up your WhatsApp connection
   - Build out initial templates in Meta to use in your messages

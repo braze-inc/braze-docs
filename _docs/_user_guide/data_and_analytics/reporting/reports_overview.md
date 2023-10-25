@@ -25,7 +25,7 @@ Use [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/reportin
 {% tab Canvas Analytics %}
 **Canvas Analytics**
 
-Use [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) to get topline statistics on your Canvas to see how your messaging strategy is performing. Open any live Canvas to key performance stats such as:
+Use [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) to get top-line statistics on your Canvas to see how your messaging strategy is performing. Open any live Canvas to key performance stats such as:
 
 - Number of messages sent within the Canvas
 - Total number of times customers have entered the Canvas
