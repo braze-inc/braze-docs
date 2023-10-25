@@ -17,10 +17,10 @@ Braze allows the user the option to control network traffic using the following 
 
 ***`RequestPolicy` enum value: `automatic`***
 
-This is the **default request policy** value. With this value, immediate server requests are performed when user-facing data is required for Braze's features, such as in-app messages.
+This is the **default request policy** value. With this value, immediate server requests are performed when user-facing data is required for Braze features, such as in-app messages.
 
 The Braze SDK will automatically handle all server communication, including:
-- Flushing custom events and attributes data to Braze's servers
+- Flushing custom events and attributes data to Braze servers
 - Updating Content Cards and geofences
 - Requesting new in-app messages
 
@@ -36,9 +36,7 @@ This protocol is the same as automatic request processing except:
 
 ### Manually flushing user data
 
-### Manually Flushing User Data
-
-Data can be manually flushed to Braze's servers at any time using the following method:
+Data can be manually flushed to Braze servers at any time using the following method:
 
 {% tabs %}
 {% tab swift %}

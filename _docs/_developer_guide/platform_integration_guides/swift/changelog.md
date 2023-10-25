@@ -4,7 +4,7 @@ article_title: Changelog for iOS Swift SDK
 page_order: 30
 page_type: update
 platform: Swift
-description: "This page lists updates to Braze's iOS Swift SDK changelog."
+description: "This page lists updates to the Braze iOS Swift SDK changelog."
 
 ---
 

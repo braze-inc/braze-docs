@@ -143,7 +143,7 @@ The following would indicate a problem with push registration or that the user's
 ## Push clicks not logged {#push-clicks-not-logged}
 
 - Make sure you have followed the [push integration steps][30].
-- Braze does not handle push notifications received silently in the foreground (default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened,  and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. Ensure that your app does not delay calls to Braze's [push handling methods][30]; otherwise, the Swift SDK may treat push notifications as silent foreground push events and not handle them.
+- Braze does not handle push notifications received silently in the foreground (default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened,  and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. Ensure that your app does not delay calls to [push handling methods][30]; otherwise, the Swift SDK may treat push notifications as silent foreground push events and not handle them.
 
 ## Deep links not working
 

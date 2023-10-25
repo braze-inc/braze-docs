@@ -12,11 +12,11 @@ description: "This article describes how to use the Braze Web SDK inside your Br
 
 > This article describes how to use the Braze Web SDK inside your Browser Extensions (Google Chrome, Firefox).
 
-Integrate Braze's Web SDK within your browser extension to collect analytics and display rich messaging to users. This includes both **Google Chrome Extensions** and **Firefox Add-Ons**.
+Integrate the Braze Web SDK within your browser extension to collect analytics and display rich messaging to users. This includes both **Google Chrome Extensions** and **Firefox Add-Ons**.
 
 ## What's supported
 
-In general, since Extensions are simply HTML and Javascript, you can use Braze for the following:
+In general, since extensions are simply HTML and Javascript, you can use Braze for the following:
 
 * **Analytics**: Capture custom events, attributes, and even identify repeat users within your extension. Use these profile traits to power cross-channel messaging.
 * **In-app messages**: Trigger in-app messages when users take action within your extension, using our native or custom HTML messaging.
@@ -25,7 +25,7 @@ In general, since Extensions are simply HTML and Javascript, you can use Braze f
 
 ## What's not supported
 
-* Manifest v3 Service Workers do not support importing modules meant for web environments.
+* Manifest v3 service workers do not support importing modules meant for web environments.
 
 ## Extension types
 
@@ -42,7 +42,7 @@ Braze can be included in the following areas of your extension:
 
 No additional permissions are required in your `manifest.json` when integrating the Braze SDK (`braze.min.js`) as a local file bundled with your extension. 
 
-However, if you use [Google Tag Manager][8], or reference Braze's SDK from an external URL, or have set a strict Content Security Policy for your extension, you will need to adjust the [`content_security_policy`][6] setting in your `manifest.json` to allow remote script sources.
+However, if you use [Google Tag Manager][8], or reference the Braze SDK from an external URL, or have set a strict Content Security Policy for your extension, you will need to adjust the [`content_security_policy`][6] setting in your `manifest.json` to allow remote script sources.
 
 ## Getting started
 
@@ -50,9 +50,9 @@ However, if you use [Google Tag Manager][8], or reference Braze's SDK from an ex
 Before you get started, make sure you've read through the Web SDK's [Initial SDK setup guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/) to learn more about our Javascript integration in general.  <br><br>You may also want to bookmark the [Javascript SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) for full details on all of the different SDK methods and configuration options.
 {% endalert %}
 
-To integrate Braze's Web SDK, you'll first need to download a copy of the latest Javascript library. This can be done using NPM or directly downloading it from [Braze's CDN][7].
+To integrate the Braze Web SDK, you'll first need to download a copy of the latest Javascript library. This can be done using NPM or directly downloading it from the Braze [CDN][7].
 
-Alternatively, if you prefer to use [Google Tag Manager][8] or use an externally hosted copy of Braze's SDK, keep in mind that loading external resources will require you to adjust your [`content_security_policy`][6] setting in your `manifest.json`.
+Alternatively, if you prefer to use [Google Tag Manager][8] or use an externally hosted copy of the Braze SDK, keep in mind that loading external resources will require you to adjust your [`content_security_policy`][6] setting in your `manifest.json`.
 
 Once downloaded, be sure to copy the `braze.min.js` file somewhere into your extension's directory.
 

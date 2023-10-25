@@ -46,7 +46,7 @@ Over time, your users may forget certain features or not notice new features. Wh
 
 ## High ratings
 
-Getting five-star ratings in the app store is on every mobile marketer's wish list. Achieving positive reviews, however, is no easy task because it requires extra work from your users. By applying Braze's functionality in clever ways, we can help you increase your customer engagement.
+Getting five-star ratings in the app store is on every mobile marketer's wish list. Achieving positive reviews, however, is no easy task because it requires extra work from your users. By applying our functionality in clever ways, we can help you increase your customer engagement.
 
 ### Targeting power users
 

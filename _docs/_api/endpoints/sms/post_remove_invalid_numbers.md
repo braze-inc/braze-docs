@@ -14,7 +14,7 @@ description: "This article outlines details about the Remove invalid phone numbe
 /sms/invalid_phone_numbers/remove
 {% endapimethod %}
 
-> Use this endpoint to remove "invalid" phone numbers from Braze's invalid list. 
+> Use this endpoint to remove "invalid" phone numbers from our invalid list. 
 
 This can be used to re-validate phone numbers after they have been marked as invalid.
 

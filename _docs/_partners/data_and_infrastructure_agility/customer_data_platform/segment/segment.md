@@ -49,7 +49,7 @@ Your choice of connection mode will be determined by the type of Source the dest
 | Integration | Details |
 | ----------- | ------- |
 | [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn't mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
-| [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment to Braze's REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
+| [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment to Braze REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -58,13 +58,13 @@ Visit [Segment](https://segment.com/docs/destinations/#connection-modes) to lear
 
 #### Side-by-side SDK integration
 
-Also called device-mode, this integration maps Segment's SDK and [methods](#methods) to Braze's SDK, allowing access to all the features our SDK provides, such as push, in-app messaging, and other methods native to Braze. 
+Also called device-mode, this integration maps Segment's SDK and [methods](#methods) to the Braze SDK, allowing access to all the features our SDK provides, such as push, in-app messaging, and other methods native to Braze. 
 
 {% alert note %}
 When using Segment's device-mode, you do not need to integrate the Braze SDK directly. When adding Braze as a device-mode destination for Segment, the Segment SDK will initialize the Braze SDK and call the relevant mapped Braze methods.
 {% endalert %}
 
-When using a device-mode connection, similar to integrating the Braze SDK natively, Braze's SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
+When using a device-mode connection, similar to integrating the Braze SDK natively, the Braze SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
 
 {% tabs local %}
 {% tab Android %}
@@ -243,7 +243,7 @@ It is also possible to engineer a workaround and use `braze_id` to send anonymou
 
 The [Identify](https://segment.com/docs/spec/identify/) call lets you tie a user to their actions and record attributes about them. 
 
-Certain Segment special traits map to Braze's standard attribute profile fields:
+Certain Segment special traits map to standard attribute profile fields in Braze:
 
 | Special Segment traits | Braze standard attributes |
 | ------------- | ----------- |
@@ -257,7 +257,7 @@ Certain Segment special traits map to Braze's standard attribute profile fields:
 | `gender` | `gender` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using Braze's naming convention for these fields and passing them as traits within an identify call.
+Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using the Braze naming convention for these fields and passing them as traits within an identify call.
 
 ##### Adding a user to a subscription group
 You can also subscribe or unsubscribe a user from a given subscription group using the following fields in the traits parameter.

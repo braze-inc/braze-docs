@@ -23,7 +23,7 @@ The Braze Android SDK can optionally be integrated without UI components. Howeve
 
 ### Basic integration
 
-To access Braze's messaging features, you must integrate the UI library. See the following Android Studio directions to integrate the UI library depending on your IDE:
+To access Braze messaging features, you must integrate the UI library. See the following Android Studio directions to integrate the UI library depending on your IDE:
 
 #### Add Braze dependency
 

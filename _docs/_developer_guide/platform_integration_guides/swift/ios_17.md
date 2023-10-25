@@ -4,7 +4,7 @@ article_title: iOS 17 Upgrade Guide
 page_order: 7
 platform: 
   - iOS
-description: "This article covers Braze's insights into the iOS 17 release to help you upgrade your SDK seamlessly."
+description: "This article covers insights into the iOS 17 release to help you upgrade your SDK seamlessly."
 ---
 
 # iOS 17 upgrade guide {#next-steps}

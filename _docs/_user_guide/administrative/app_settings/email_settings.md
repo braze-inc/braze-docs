@@ -69,7 +69,7 @@ The email opening tracking pixel is an invisible 1 x 1&nbsp;px image that automa
 
 ### Placing the tracking pixel
 
-Braze's default behavior is to append the tracking pixel to the bottom of your email. For the majority of users, this is the ideal place to put the pixel. While the pixel is already styled to cause as few visual changes as possible, any unintentional visual changes would be the least visible at the bottom of an email. This is also the default for email providers such as SendGrid and SparkPost.
+The default behavior in Braze is to append the tracking pixel to the bottom of your email. For the majority of users, this is the ideal place to put the pixel. While the pixel is already styled to cause as few visual changes as possible, any unintentional visual changes would be the least visible at the bottom of an email. This is also the default for email providers such as SendGrid and SparkPost.
 
 ### Changing location of tracking pixel
 
@@ -127,7 +127,7 @@ Changing this setting will not affect any of your existing email messages or tem
 
 ## Resubscribe users when their email changes
 
-You may automatically resubscribe users when they change their email address. For example, if a previously unsubscribed workspace user changes their email address to one that is not on Braze's unsubscribe list, they will automatically become resubscribed.
+You may automatically resubscribe users when they change their email address. For example, if a previously unsubscribed workspace user changes their email address to one that is not on the unsubscribe list for Braze, they will automatically become resubscribed.
 
 ![]({% image_buster /assets/img/email_settings/resubscribe_users.png %}){: style="max-width:90%;" }
 

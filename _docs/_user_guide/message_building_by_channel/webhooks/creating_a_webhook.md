@@ -180,7 +180,7 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 ### Errors, retry logic, and timeouts
 
-Webhooks rely on Braze's servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Message Activity Log][42].
+Webhooks rely on Braze servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Message Activity Log][42].
 
 This description contains the time the error occurred, the app name, and the error message:
 
@@ -262,7 +262,7 @@ If you're making a Braze-to-Braze webhook and using allowlisting, you should all
 
 ### Using webhooks with Braze partners {#utilizing-webhooks}
 
-There are many ways to utilize webhooks, and with Braze's technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
+There are many ways to utilize webhooks, and with our technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
 
 Check out:
 * [Messenger]({{site.baseurl}}/partners/additional_channels/instant_chat/messenger/)

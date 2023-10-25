@@ -27,7 +27,7 @@ If you set User IDs to identify users when a new user logs in they will be count
 
 ## Step 1: Identifying your top users
 
-Using Braze's selection of filters, create a user segment that you feel encompasses your most loyal, consistent user base. The following sample segment defines the top users.
+Using our selection of filters, create a user segment that you feel encompasses your most loyal, consistent user base. The following sample segment defines the top users.
 
 ![][1]
 
