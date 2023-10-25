@@ -88,7 +88,7 @@ Lorsque vous connectez plusieurs groupes d’apps au même compte Snowflake, vou
 
 Selon la configuration de votre compte Snowflake, vous pourrez avoir à autoriser les adresses IP suivantes au sein de votre politique réseau Snowflake. Pour plus de renseignements concernant la manière de l’activer, consultez la documentation Snowflake pertinente pour [modifier une politique réseau](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
-| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | Pour les instances `EU-01` et `EU-02` |
+| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Pour les instances `EU-01` et `EU-02` |
 |---|---|
 | `23.21.118.191`| `52.58.142.242`
 | `34.206.23.173`| `52.29.193.121`
