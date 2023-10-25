@@ -89,7 +89,7 @@ WhatsApp access is only available in select Braze packages. Reach out to your ac
 
 ### Webhooks {#platform-features-webhooks}
 
-Braze's webhooks allow you to trigger non-app actions provide other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint. [Learn more about setting up webhooks in Braze][12].
+Braze's webhooks allow you to trigger non-app actions, providing other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint. [Learn more about setting up webhooks in Braze][12].
 
 ![The webhook editor displaying an example webhook payload.][14]
 
@@ -108,4 +108,4 @@ Braze's webhooks allow you to trigger non-app actions provide other systems and 
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/
 [14]: {% image_buster /assets/img_archive/Webhook_Body_Edit.png %}
 [15]: {% image_buster /assets/img/whatsapp/whatsapp8.png %}
-[16]: {{site.baseurl}}/docs/developer_guide/home
+[16]: {{site.baseurl}}/developer_guide/home
