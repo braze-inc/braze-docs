@@ -201,16 +201,21 @@ Here are some key email-specific metrics that you won't see in other channels. T
 | Click to open | The percentage of recipients that opened your email and then clicked on it. |
 | Machine opens | Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. <br>For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a "Machine Opens". This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost. |
 | Other opens | Includes emails that haven't been identified as "Machine opens". <br>For example, when a user opens an email on another platform (i.e. Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". Note that a user can also open an email (i.e. the open counts toward "Other opens") before a "Machine open" count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards “Other Opens” and only once towards “Unique Opens”. |
+| Estimated Unique Opens | This is an estimate of how many unique opens there would be if machine opens did not exist. This is output from Braze's proprietary statistical model. See below for more information.|
 | Unsubs | The percentage of recipients that clicked the "Unsubscribe" link in your email. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ##### Estimated real open rate {#estimated-real-open-rate}
 
-This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's open rate. Click data is used to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP. The displayed statistic is generated 36 hours after email sending has begun. It is only calculated once at that time.
+This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's unique open rate as if machine opens did not exist. While we receive labels of "Machine Opens" on some open events from email senders (see above), these labels can often label actual opens as real opens. In other words, the "Other Opens" are likely an underestimate of real opens (by actual users). Instead, Braze uses click data on historical campaigns to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP. 
 
-{% alert important %}
-Estimated real open rate is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+The displayed statistic is generated 36 hours after email sending has begun. It will only run for scheduled e-mail campaigns (one time or recurring). If a campaign recurs, the estimate will be reclaculated 36 hours after another send occurs. 
+
+# Limitations
+
+Please note that this metric
+1) is currently only available in Campaigns
+2) does not get reported via Currents
 
 {% elsif include.channel == "in-app message" %}
 
