@@ -116,6 +116,31 @@ Next, replace the default implementation by inheriting `BrazePushStory.Notificat
 class NotificationViewController: BrazePushStory.NotificationViewController {}
 ```
 
+#### Custom handling push story events
+If you want to custom handle push story notification event logic, inherit `BrazePushStory.NotificationViewController` as above and override the `didReceive` methods as below.
+
+```swift
+import BrazePushStory
+import UserNotifications
+import UserNotificationsUI
+
+class NotificationViewController: BrazePushStory.NotificationViewController {
+  override func didReceive(_ notification: UNNotification) {
+    super.didReceive(notification)
+    
+    // Custom handling logic
+  }
+  
+  override func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
+    super.didReceive(response, completionHandler: completion)
+    
+    // Custom handling logic
+  }
+}
+
+```
+
+
 ## Step 5: Setting the Notification Content Extension plist {#notification-content-extension}
 
 Open the `Info.plist` file of the `Notification Content Extension`, then add and change the following keys under `NSExtension \ NSExtensionAttributes`:
