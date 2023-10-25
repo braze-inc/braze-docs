@@ -75,7 +75,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 {% endtabs %}
 
 #### Using your own UNNotificationServiceExtension
-If you need to use your own UNNotificationServiceExtension, you can instead call [`BrazeNotificationService.brazeHandle`][29] in your `didReceive` method.
+If you need to use your own UNNotificationServiceExtension, you can instead call [`BrazeNotificationService.brazeHandle`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazenotificationservice/brazehandle(request:contenthandler:)/) in your `didReceive` method.
 
 ```swift
 import BrazeNotificationService
@@ -107,4 +107,3 @@ Your Marketing team can also create rich notifications from the dashboard. Creat
 [26]: {% image_buster /assets/img_archive/ios10_se_at.png %}
 [27]: https://developer.apple.com
 [28]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-[29]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazenotificationservice/brazehandle(request:contenthandler:)/
