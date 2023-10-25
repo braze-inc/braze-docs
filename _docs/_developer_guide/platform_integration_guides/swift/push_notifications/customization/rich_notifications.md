@@ -75,7 +75,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 {% endtabs %}
 
 #### Using your own UNNotificationServiceExtension
-If you need to use your own UNNotificationServiceExtension, you can instead call [`BrazeNotificationService.brazeHandle`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazenotificationservice/brazehandle(request:contenthandler:)/) in your `didReceive` method.
+If you need to use your own UNNotificationServiceExtension, you can instead call [`brazeHandle`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazenotificationservice/brazehandle(request:contenthandler:)) in your `didReceive` method.
 
 ```swift
 import BrazeNotificationService
