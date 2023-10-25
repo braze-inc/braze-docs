@@ -23,7 +23,7 @@ Contact Cards can be created [programmatically](https://www.twilio.com/blog/send
 
 Contact Cards can be created from the SMS and MMS composer. Select the **Contact Card Generator** tab to get started.
 
-Next, you will be prompted to input your company name or nickname. This is the name that your users will see when they save the card. A 20 character limit is enforced to ensure the user can see your whole company name or alias in their contacts and messaging app. 
+Next, you will be prompted to input your company name or nickname. This is the name that your users will see when they save the card. A 20-character limit is enforced to ensure the user can see your whole company name or alias in their contacts and messaging app. 
 
 ![]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
 
