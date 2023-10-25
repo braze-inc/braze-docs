@@ -10,10 +10,10 @@ description: "This collection of articles will help you get started with our pla
 
 guide_featured_title: "Learning path"
 guide_featured_list:
-  - name: Braze overview
+  - name: Braze Overview
     link: /docs/user_guide/getting_started/overview/
     image: /assets/img/icons/icon-news.png
-  - name: Users and segments
+  - name: Users and Segments
     link: /docs/user_guide/getting_started/users_segments/
     image: /assets/img/icons/segments.svg
   - name: Campaigns and Canvases
@@ -28,25 +28,18 @@ guide_featured_list:
 
 guide_menu_title: "More resources"
 guide_menu_list:
-  - name: SDK overview for Marketers
+  - name: SDK Overview for Marketers
     link: /docs/user_guide/getting_started/web_sdk/
     image: /assets/img/icons/sdk.svg
-  - name: Terms to know
+  - name: Terms to Know
     link: /docs/user_guide/getting_started/terms_to_know/
     image: /assets/img/icons/lightbulb.svg
 
 search_rank: 4
 ---
 
-## Learning goals
+<br>
 
-By the end of your onboarding, you should feel comfortable with:
-
-1. Braze terminology
-2. Working with your engineers to integrate Braze
-3. Using Braze as a tool to launch your campaigns
-4. Setting up and preparing to use email with Braze
-
-You can follow along with this guide, or you can check out [Braze Learning](https://learning.braze.com)! We have courses for you, as well as a [Technical Integration Toolkit](https://learning.braze.com/technical-integration-checklists-and-toolkits) and [Technical Integration Overview](https://learning.braze.com/quick-overview-technical-integration) available for your developers.
+You can follow along with this guide, or you can check out [Braze Learning](https://learning.braze.com) for guided courses, such as our [Marketer](https://learning.braze.com/path/marketer) and [Developer](https://learning.braze.com/path/developer) learning paths.
 
 <br> 
