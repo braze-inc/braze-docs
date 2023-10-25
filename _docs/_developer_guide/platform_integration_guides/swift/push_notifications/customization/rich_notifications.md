@@ -97,7 +97,7 @@ class NotificationService: UNNotificationServiceExtension {
   }
 }
 ```
-{% endtab %}
+
 ## Step 4: Creating a rich notification in your dashboard
 
 Your Marketing team can also create rich notifications from the dashboard. Create a push notification through the push composer and simply attach an image or GIF, or provide a URL that hosts an image, GIF, or video. Note that assets are downloaded on the receipt of push notifications, so you should plan for large, synchronous spikes in requests if you are hosting your content.
