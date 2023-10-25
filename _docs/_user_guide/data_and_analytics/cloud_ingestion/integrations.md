@@ -346,9 +346,9 @@ Input the information for your Snowflake data warehouse and source table, then p
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_1.png %})
 
 #### Step 2: Configure sync details
-Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
+Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
 
-Contact emails will only receive global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
 
 - Connectivity issues
 - Lack of resources
@@ -382,9 +382,9 @@ Input the information for your Redshift data warehouse and source table. If you 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
 
 #### Step 2: Configure sync details
-Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
+Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
 
-Contact emails will only receive global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
 
 - Connectivity issues
 - Lack of resources
@@ -409,9 +409,9 @@ Upload the JSON key and provide a name for the service account, then input the d
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_11.png %})
 
 #### Step 2: Configure sync details
-Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
+Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
 
-Contact emails will only receive global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
 
 - Connectivity issues
 - Lack of resources
@@ -437,9 +437,9 @@ Input the information for your Databricks data warehouse and source table, then 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_16.png %})
 
 #### Step 2: Configure sync details
-Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
+Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
 
-Contact emails will only receive global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
 
 - Connectivity issues
 - Lack of resources
