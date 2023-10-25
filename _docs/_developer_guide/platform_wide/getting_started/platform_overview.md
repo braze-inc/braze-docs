@@ -20,9 +20,11 @@ platform:
 
 > Braze is a customer engagement platform. This simply means that Braze helps you listen to your users, understand your users’ actions and behaviors, and then act on them. The Braze platform has three primary components: the SDK, the dashboard, and the REST API.
 
+![Braze has different layers. In total, it consists of the SDK, the API, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, action layer, and an export layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.][17]
+
 ## SDK
 
-The Braze SDKs can be integrated into your mobile and web applications to provide powerful marketing, user management, and analytics tools. The Braze SDK provides two critical pieces of functionality: it collects and syncs user data into a consolidated user profile, and powers messaging channels such as push notifications, in-app messages, and Content Cards. Learn what SDKs Braze offers and [begin your integration][16].
+The Braze SDKs can be integrated into your mobile and web applications to provide powerful marketing, user management, and analytics tools. The Braze SDK provides two critical pieces of functionality: it collects and syncs user data into a consolidated user profile, and powers messaging channels such as push notifications, in-app messages, and Content Cards. See what [SDKs Braze offers][16].
 
 ## Dashboard user interface
 
@@ -32,7 +34,13 @@ The dashboard is the UI that controls all of the data and interactions at the he
 
 The Braze API provides a web service where you can record actions taken by your users directly via HTTP, rather than through the mobile and web SDKs. This allows you to add custom events for segmentation purposes directly from a web-based application. The [API guide][2] lists available Braze API endpoints and their uses.
 
-## Granular targeting and analysis
+{% alert tip %}
+Want to dig into the architecture of Braze a bit more? Check out our [architecture overview]({{site.baseurl}}/developer_guide/platform_wide/getting_started/architecture_overview).
+{% endalert %}
+
+## Data analysis and action
+
+Data stored in Braze is retained and usable for segmentation, personalization, and targeting as long as you’re a Braze customer. That allows you to act on user profile data (for example, session activity or purchases) until you choose to deprecate that information. For instance, a streaming service could track each subscriber’s viewed content from their first day on the service (even if that was many years ago) and use that data to  power relevant messaging.
 
 ### App analytics
 The Braze dashboard displays graphs that are updated in real-time based upon a number of analytics metrics as well as custom events that you instrument in your application.
@@ -41,7 +49,7 @@ The Braze dashboard displays graphs that are updated in real-time based upon a n
 
 Segmentation allows you to create groups of users based on powerful filters of their in-app behavior, demographic data, etc. Braze also allows you to define any in-app user action as a "custom event" if the desired action is not captured by default. The same is true of user characteristics via "custom attributes". After a user segment is created on the dashboard, your users will move in and out of the segment as they meet (or fail to meet) the defined criteria. For example, you can create segment that includes all users who have spent money in-app and last used the app more than two weeks ago.
 
-![An example segment where the filters "Last made purchase more than 7 days ago" and "Last used these apps more than 4 weeks ago" are set.][3]
+![A segment in the Braze dashboard called "Recent purchasers" juxtaposed next to a phone screen showing a "Top Recommendations for Linda" email.][3]
 
 ## Multichannel messaging
 
@@ -95,7 +103,7 @@ Braze's webhooks allow you to trigger non-app actions, providing other systems a
 
 [1]: {{site.baseurl}}/user_guide/administrative/access_braze
 [2]: {{site.baseurl}}/api/home
-[3]: {% image_buster /assets/img_archive/dashboard_segment_example.png %} "Segmentation Example"
+[3]: {% image_buster /assets/img/getting-started/getting-started-segment.png %} 
 [4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/email
@@ -109,3 +117,4 @@ Braze's webhooks allow you to trigger non-app actions, providing other systems a
 [14]: {% image_buster /assets/img_archive/Webhook_Body_Edit.png %}
 [15]: {% image_buster /assets/img/whatsapp/whatsapp8.png %}
 [16]: {{site.baseurl}}/developer_guide/home
+[17]: {% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %} 

@@ -21,6 +21,8 @@ platform:
 
 As a technical resource, you'll empower your team by integrating Braze into your tech stack. 
 
+![A venn diagram of four circles - discovery, integrate, quality assurance and maintain - centered around "time to value."][27]{: style="max-width:40%;float:right;margin-left:15px;"} 
+
 Onboarding is broadly split up into four steps:
 * [Discovery and planning](#discovery): Work with your team to align on scope, plan a structure for data and campaigns, and create an appropriate workspace structure. 
 * [Integration](#integration): Execute on your plan by integrating the SDK and API, enabling messaging channels, and setting up data import and export. 
@@ -234,3 +236,4 @@ You will track updates to the Braze platform via Braze's [GitHub][23]. Occasiona
 [24]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences/
 [25]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid#about-liquid
 [26]: {{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/
+[27]: {% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %} 
