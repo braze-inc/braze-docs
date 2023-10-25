@@ -100,7 +100,7 @@ To see more metrics, try expanding the date range.
 
 ### Why does my email dashboard display more Other Opens than Unique Opens?
 
-For the _Unique Opens_ metric, Braze will deduplicate-duplicate any repeat opens registered by a given user (whether they include _Machine Opens_ or _Other Opens_), so that only a single _Unique Open_ is incremented if a user opens multiple times. For _Other Opens_, Braze does not de-deduplicate.
+For the _Unique Opens_ metric, Braze will deduplicate any repeat opens registered by a given user (whether they include _Machine Opens_ or _Other Opens_) so that only a single _Unique Open_ is incremented if a user opens multiple times. For _Other Opens_, Braze does not de-deduplicate.
 
 <!---Temporarily hidden until functionality is added
 

@@ -38,7 +38,7 @@ Users will submit a rating through the native App Store review prompt, and can w
 
 ### Considerations
 
-As an alternative to soft priming, you could also display the iOS app rating prompt directly without any Braze soft primer message displayed before. The advantage of this is if the user is opted-out of app review prompts, there wouldn't be the optimal user experience of trying to rate the application but no prompt appearing to do so.
+As an alternative to soft priming, you could also display the iOS app rating prompt directly without any Braze soft primer message displayed before. The advantage of this is if the user is opted-out of app review prompts, there wouldn't be the suboptimal user experience of trying to rate the application but no prompt appearing to do so.
 
 {% alert important %}
 Do not create custom HTML in-app messages that mimic a native iOS app rating prompt, as this violates Apple's guidelines.

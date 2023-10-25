@@ -48,14 +48,14 @@ Only campaigns that have advanced tracking enabled will appear in the following 
 
 **Retarget users who have clicked a specific SMS Campaign**
 1. Create a segment using the **Clicked/Opened Campaign** filter.
-2. Select **clicked SMS**.
+2. Select **clicked sms**.
 3. Choose the desired campaign.
 
 ![][15]
 
 **Retarget users who have clicked a specific Canvas Step**
 1. Create a segment using the **Clicked/Opened Step** filter.
-2. Select **clicked SMS**.
+2. Select **clicked sms**.
 3. Choose the desired Canvas and Canvas step.
 
 ![][16]
