@@ -348,6 +348,13 @@ Input the information for your Snowflake data warehouse and source table, then p
 #### Step 2: Configure sync details
 Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
 
+Contact emails will only receive global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+
+- Connectivity issues
+- Lack of resources
+- Permissions issues
+- (For catalogs syncs only) Catalog tier is out of space
+
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_2.png %})
 
 You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events, and the data type for a sync cannot be changed after creation. 
@@ -377,6 +384,13 @@ Input the information for your Redshift data warehouse and source table. If you 
 #### Step 2: Configure sync details
 Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
 
+Contact emails will only receive global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+
+- Connectivity issues
+- Lack of resources
+- Permissions issues
+- (For catalogs syncs only) Catalog tier is out of space
+
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_7.png %})
 
 You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events, and the data type for a sync cannot be changed after creation. 
@@ -396,6 +410,13 @@ Upload the JSON key and provide a name for the service account, then input the d
 
 #### Step 2: Configure sync details
 Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
+
+Contact emails will only receive global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+
+- Connectivity issues
+- Lack of resources
+- Permissions issues
+- (For catalogs syncs only) Catalog tier is out of space
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
@@ -417,6 +438,13 @@ Input the information for your Databricks data warehouse and source table, then 
 
 #### Step 2: Configure sync details
 Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).
+
+Contact emails will only receive global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+
+- Connectivity issues
+- Lack of resources
+- Permissions issues
+- (For catalogs syncs only) Catalog tier is out of space
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
