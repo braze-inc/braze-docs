@@ -30,11 +30,11 @@ Messaging Analytics displays messaging data for your recent and upcoming schedul
 
 ![The 'Upcoming Message Types' and 'Messages Sent' graphs within Messaging Analytics.]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
 
-To download a copy of your data, select ![Hamburger menu.][1]{: style="border:0;"} **Chart context menu**, then choose your preferred file format.
+To download a copy of your data, select <i class="fa-solid fa-bars" style="color: #2e7487;"></i> **Chart context menu**, then choose your preferred file format.
 
 ## Send Calendar
 
-The Send Calendar displays all your scheduled campaigns for the current month. You can change the month by selecting ![Chevron left.][2]{: style="border:0;max-width: 20px;"} **See previous month** or ![Chevron right.][3]{: style="border:0;max-width: 20px;"} **See next month**. To return to the current month, select **Today**.
+The Send Calendar displays all your scheduled campaigns for the current month. You can change the month by selecting <i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i> **See previous month** or <i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i>**See next month**. To return to the current month, select **Today**.
 
 ![The Send Calendar displaying all scheduled campaigns in the current month.]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
 
