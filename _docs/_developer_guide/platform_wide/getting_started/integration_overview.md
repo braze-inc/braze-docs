@@ -29,6 +29,7 @@ Onboarding is broadly split up into four steps:
 * [Quality Assurance](#qa): Ensure that the loop of data and messaging between the Braze platform and your app or site is working as expected.
 * [Maintenance](#maintenance): Once you've passed off Braze to your Marketing team, you'll continue to ensure everything continues to run smoothly.
 
+<br>
 {% alert tip %}
 We recognize that every organization has its distinct needs, and Braze is built to cater to a diverse range of customization options that can be tailored to your specific requirements. Integration times will vary based on your use case. 
 {% endalert %}
@@ -56,7 +57,6 @@ Your CRM team will plan out the messaging use cases that you'll launch in the ne
 
 For example, a new customer campaign might be: an email sent daily at 10 am to a segment of customers who logged their first session yesterday. The conversion event (the success metric) is logging a session.
 
-<br>
 <br>
 {% alert important %}
 Integration cannot begin until the campaign planning step is complete. This step will determine what parts and pieces of Braze need to be configured during the integration phase.
@@ -94,7 +94,7 @@ It's important that you set up different environments for development and produc
 
 
 ## Integration {#integration}
-![Abstract pyramid graphic representing the flow of information from a data source to a user device.][29]{: style="max-width:50%;float:right;margin-left:15px;"} 
+![Abstract pyramid graphic representing the flow of information from a data source to a user device.][29]{: style="max-width:45%;float:right;margin-left:15px;"} 
 
 Braze supports iOS apps, Android apps, web apps, and more. You can also opt to use a cross-platform wrapper SDK, like Xamarin or Unity. We typically see customers integrate anywhere from 1-6 weeks. Many customers have integrated Braze with just one engineer, depending on their breadth of technical skills and bandwidth. It's entirely dependent on your specific integration scope and how much time your team dedicates to the Braze project. 
 
