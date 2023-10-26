@@ -88,9 +88,9 @@ Pour configurer Braze comme destination en mode-appareil pour votre source Andro
 
 ![]({% image_buster /assets/img/segment/android.png %})
 
-Pour compléter l'intégration côte à côte, consultez les instructions détaillées de Segment.io pour ajouter la dépendance de destination Braze à votre application [Android](https://segment.com/docs/connections/destinations/catalog/braze/#android).
+Pour compléter l'intégration côte à côte, consultez les instructions détaillées de Segment.io pour ajouter la dépendance de destination Braze à votre application [Android](https://segment.com/docs/connections/sources/catalog/libraries/mobile/kotlin-android/destination-plugins/braze-kotlin-android/).
 
-Le code source de la [destination Braze Web Mode (Actions)](https://github.com/segmentio/action-destinations/tree/main/packages/browser-destinations/src/destinations/braze) est maintenu par Segment.io. 
+Le code source pour l'intégration du [mode appareil Android](https://github.com/braze-inc/braze-segment-kotlin) est maintenu par Braze et est mis à jour régulièrement pour refléter les nouvelles versions du SDK de Braze.
 
 {% endtab %}
 {% tab iOS %}
@@ -103,7 +103,7 @@ Le SDK Braze que vous utilisez dépendra du segment SDK que vous utilisez :
 
 | | SDK de segment | SDK Braze |
 | - | ----------- | --------- |
-| Préféré | [Analytique-Swift](https://github.com/segmentio/analytics-swift) | [Swift Segment Braze](https://github.com/braze-inc/analytics-swift-braze) |
+| Préféré | [Analytique-Swift](https://github.com/segmentio/analytics-swift) | [Swift Segment Braze](https://github.com/braze-inc/braze-segment-swift) |
 | Hérité | [Analytique-iOS](https://github.com/segmentio/analytics-ios) | [Segments Braze iOS](https://github.com/Appboy/appboy-segment-ios) |
 {: .reset-td-br-1 .reset-td-br-2}
 {% endalert %}
@@ -112,9 +112,9 @@ Pour configurer Braze comme destination en mode-appareil pour votre source iOS, 
 
 ![]({% image_buster /assets/img/segment/ios.png %})
 
-Pour compléter l'intégration côte à côte, consultez les instructions détaillées de Segment.io pour ajouter le pod Braze Segment.io à votre application [iOS](https://segment.com/docs/connections/destinations/catalog/braze/#ios).
+Pour compléter l'intégration côte à côte, consultez les instructions détaillées de Segment.io pour ajouter le pod Braze Segment.io à votre application [iOS](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/).
 
-Le code source pour l'intégration du [mode appareil iOS](https://github.com/braze-inc/analytics-swift-braze) est maintenu par Braze et est mis à jour régulièrement pour refléter les nouvelles versions du SDK de Braze.
+Le code source pour l'intégration du [mode appareil iOS](https://github.com/braze-inc/braze-segment-swift) est maintenu par Braze et est mis à jour régulièrement pour refléter les nouvelles versions du SDK de Braze.
 
 {% endtab %}
 {% tab Web or Javascript %}
