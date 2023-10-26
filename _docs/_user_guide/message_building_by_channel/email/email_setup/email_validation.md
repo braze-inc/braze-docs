@@ -65,8 +65,8 @@ The Microsoft address local part must follow these parameters:
 
 - Can start with a character (a-z), an underscore (_), or a number (0-9).  
 - Can contain any alphanumeric character (a-z or 0-9) or an underscore (_)
-- Can contain the following characters: (.) or (-) or (+)
-- Cannot start with a period (.) or hyphen (-)
+- Can contain the following characters: (.) or (-) or (+) or (^)
+- Cannot start with a period (.)
 - Cannot contain two or more consecutive periods (.)
 - Cannot end with a period (.)
 
@@ -75,12 +75,12 @@ Note that the validation test checks if the local part, preceding the "+", match
 ### All other domains
 
 For all other domains, Braze allows email addresses matching the following regex for the local part:<br>
-`/\A [\p{L}\p{N}_\-] (?: [\.\+\'\p{L}\p{N}_&#\/\-]* [\p{L}\p{N}_\-] )? \z/x`
+`/\A(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])(?:(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~\.]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])*(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}]))?\z/`
 
 The local part must follow these parameters:
-- Can contain any letter, number, underscore, or dash, including Unicode letters and numbers
+- Can contain any letter, number, underscore, dash, or caret, including Unicode letters and numbers
 - Can contain but may not start with the following characters: (.) (+) (&) (#) or (/)
-- Can contain but may not end with the following characters:  (.) (&) (#) or (/)
+- Can contain but may not end with the following characters:  (.) (&) (#) ($) or (/)
 - Cannot contain double quotes (")
 
 {% alert important %}
