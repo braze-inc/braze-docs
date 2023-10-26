@@ -1,7 +1,7 @@
 ---
 nav_title: Platform Overview
 article_title: Platform Overview
-page_order: 0
+page_order: 1
 description: "This reference article covers the basic parts and capabilities of the Braze platform."
 platform:
   - iOS
@@ -20,7 +20,7 @@ platform:
 
 > Braze is a customer engagement platform. This simply means that Braze helps you listen to your users, understand your users’ actions and behaviors, and then act on them. The Braze platform has three primary components: the SDK, the dashboard, and the REST API.
 
-![Braze has different layers. In total, it consists of the SDK, the API, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, action layer, and an export layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.][17]
+![Braze has different layers. In total, it consists of the SDK, the API, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, action layer, and an export layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.][17]{: style="max-width:40%;float:right;margin-left:15px;"} 
 
 ## SDK
 
@@ -28,7 +28,9 @@ The Braze SDKs can be integrated into your mobile and web applications to provid
 
 ## Dashboard user interface
 
-The dashboard is the UI that controls all of the data and interactions at the heart of the Braze platform. Marketers will use the dashboard to do their job and create content. Developers use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials. If you're just getting started, learn how to [access the dashboard][1].
+The dashboard is the UI that controls all of the data and interactions at the heart of the Braze platform. Marketers will use the dashboard to do their job and create content. Developers use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials. 
+
+If you're just getting started, your team administrator should add you (and all other team members who need access to Braze) as [users on your dashboard][1].
 
 ## REST API
 
@@ -49,7 +51,7 @@ The Braze dashboard displays graphs that are updated in real-time based upon a n
 
 Segmentation allows you to create groups of users based on powerful filters of their in-app behavior, demographic data, etc. Braze also allows you to define any in-app user action as a "custom event" if the desired action is not captured by default. The same is true of user characteristics via "custom attributes". After a user segment is created on the dashboard, your users will move in and out of the segment as they meet (or fail to meet) the defined criteria. For example, you can create segment that includes all users who have spent money in-app and last used the app more than two weeks ago.
 
-![A segment in the Braze dashboard called "Recent purchasers" juxtaposed next to a phone screen showing a "Top Recommendations for Linda" email.][3]
+![A segment in the Braze dashboard called "Recent purchasers" juxtaposed next to a phone screen showing a "Top Recommendations for Linda" email.][3]{: style="max-width:40%;float:right;margin-left:15px;"} 
 
 ## Multichannel messaging
 

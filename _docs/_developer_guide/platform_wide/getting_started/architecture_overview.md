@@ -1,7 +1,7 @@
 ---
 nav_title: Architectural Overview
-article_title: Getting started&#58; Architectural Overview
-page_order: 2
+article_title: Architectural Overview
+page_order: 3
 description: ""
 platform:
   - iOS
@@ -16,3 +16,4 @@ platform:
 ---
 
 # Getting started: Architectural overview
+
