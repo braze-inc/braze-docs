@@ -139,7 +139,6 @@ class NotificationViewController: BrazePushStory.NotificationViewController {
 }
 ```
 
-
 ## Step 5: Setting the Notification Content Extension plist {#notification-content-extension}
 
 Open the `Info.plist` file of the `Notification Content Extension`, then add and change the following keys under `NSExtension \ NSExtensionAttributes`:
