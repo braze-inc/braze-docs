@@ -45,6 +45,9 @@ During your company's onboarding period, Braze will host technical overview sess
 {% endalert %}
 
 ### Campaign planning
+
+![Icons for different channels, such as email, shopping cart, images, geolocation, and so on.][28]{: style="max-width:40%;float:right;margin-left:15px;"} 
+
 Your CRM team will plan out the messaging use cases that you'll launch in the near future. This includes the:
 * [Channel][1] (for example, push notifications or in-app messages)
 * [Delivery method][2] (for example, scheduled delivery or action-based delivery)
@@ -90,6 +93,8 @@ It's important that you set up different environments for development and produc
 
 ## Integration {#integration}
 Braze supports iOS apps, Android apps, web apps, and more. You can also opt to use a cross-platform wrapper SDK, like Xamarin or Unity. We typically see customers integrate anywhere from 1-6 weeks. Many customers have integrated Braze with just one engineer, depending on their breadth of technical skills and bandwidth. It's entirely dependent on your specific integration scope and how much time your team dedicates to the Braze project. 
+
+![Abstract pyramid graphic representing the flow of information from a data source to a user device.][29]{: style="max-width:40%;float:right;margin-left:15px;"} 
 
 You'll need developers who are familiar with:
 * Working in your app or site's native layer
@@ -236,4 +241,6 @@ You will track updates to the Braze platform via Braze's [GitHub][23]. Occasiona
 [24]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences/
 [25]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid#about-liquid
 [26]: {{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/
-[27]: {% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %} 
+[27]: {% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}
+[28]: {% image_buster /assets/img/getting-started/data-graphic-2.png %} 
+[29]: {% image_buster /assets/img/getting-started/data-graphic.png %}  
