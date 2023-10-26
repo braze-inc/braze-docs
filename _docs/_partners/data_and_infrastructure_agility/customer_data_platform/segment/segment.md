@@ -78,7 +78,7 @@ The Braze SDK you use will depend on which Segment SDK you use:
 | | Segment SDK | Braze SDK |
 | - | ----------- | --------- |
 | Preferred | [Analytics-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
-| Legacy | [Analytics-Android](https://github.com/segmentio/analytics-android) | [Braze Segment Android](https://github.com/Appboy/appboy-segment-android) |
+| Legacy | [Analytics-Android](https://github.com/segmentio/analytics-android) | [Braze Segment Android](https://github.com/braze-inc/braze-segment-android) |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
