@@ -91,7 +91,7 @@ USERS_BEHAVIORS_CUSTOMEVENT_SHARED: when a user makes a performs a custom event
 	AD_TRACKING_ENABLED (BOOLEAN)
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED: When a user triggers a geofenced area (e.g., when they enter/exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
+USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED: When a user triggers a geofenced area (e.g. when they enter/exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -109,7 +109,7 @@ USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED: When a user triggers a geofenced area
 	GEOFENCE_ID (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED: When a user triggers a geofenced area (e.g., when they enter/exit a geofence). This event was received through the dedicated Geofence endpoint, and is therefore received in real-time as soon as a users device detects that it has triggered a geofence. In addition, due to rate-limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
+USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED: When a user triggers a geofenced area (e.g. when they enter/exit a geofence). This event was received through the dedicated Geofence endpoint, and is therefore received in real-time as soon as a users device detects that it has triggered a geofence. In addition, due to rate-limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -342,7 +342,7 @@ USERS_CAMPAIGNS_REVENUE_SHARED: when a user generates revenue with in the primar
 	REVENUE (NUMBER(38,0))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_CONVERSION_SHARED: when a user converts for a Canvas
+USERS_CANVAS_CONVERSION_SHARED: when a user converts for a canvas
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -363,7 +363,7 @@ USERS_CANVAS_CONVERSION_SHARED: when a user converts for a Canvas
 	LANGUAGE (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_ENTRY_SHARED: when a user enters a Canvas
+USERS_CANVAS_ENTRY_SHARED: when a user enters a canvas
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -382,7 +382,7 @@ USERS_CANVAS_ENTRY_SHARED: when a user enters a Canvas
 	IN_CONTROL_GROUP (BOOLEAN)
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED: when a user exited a Canvas because of performing an event
+USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED: when a user exited a canvas because of performing an event
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -395,7 +395,7 @@ USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED: when a user exited a Canvas because of 
 	CANVAS_STEP_API_ID (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED: when a user exited a Canvas because of matching an audience
+USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED: when a user exited a canvas because of matching an audience
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -439,7 +439,7 @@ USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED: when a user enters an experiment 
 	IN_CONTROL_GROUP (BOOLEAN)
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_FREQUENCYCAP_SHARED: when a user gets frequency capped for a Canvas step
+USERS_CANVAS_FREQUENCYCAP_SHARED: when a user gets frequency capped for a canvas step
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -846,6 +846,8 @@ USERS_MESSAGES_EMAIL_SEND_SHARED: when we send an email to a user
 	EMAIL_ADDRESS (VARCHAR(16777216))
 	IP_POOL (VARCHAR(16777216))
 	MESSAGE_EXTRAS (VARCHAR(16777216))
+	ESP (VARCHAR(16777216))
+	FROM_DOMAIN (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
 USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED: when an email soft bounces
@@ -1749,51 +1751,51 @@ USERS_USERORPHAN_SHARED: when a user is orphaned, meaning the user is merged wit
 	ORPHANED_BY_ID (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-CHANGELOGS_CAMPAIGN_SHARED:
+CHANGELOGS_CAMPAIGN_SHARED: 
 	ID (VARCHAR(16777216))
+	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
 	API_ID (VARCHAR(16777216))
-	TIME (NUMBER(38,0))
 	NAME (VARCHAR(16777216))
 	CONVERSION_BEHAVIORS (ARRAY)
 	ACTIONS (ARRAY)
 
-CHANGELOGS_CANVAS_SHARED:
+CHANGELOGS_CANVAS_SHARED: 
 	ID (VARCHAR(16777216))
+	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
 	API_ID (VARCHAR(16777216))
-	TIME (NUMBER(38,0))
 	NAME (VARCHAR(16777216))
 	CONVERSION_BEHAVIORS (ARRAY)
 	VARIATIONS (ARRAY)
 
-SNAPSHOTS_APP_SHARED:
+SNAPSHOTS_APP_SHARED: 
 	ID (VARCHAR(16777216))
+	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
 	API_ID (VARCHAR(16777216))
-	TIME (NUMBER(38,0))
 	NAME (VARCHAR(16777216))
 
-SNAPSHOTS_CANVAS_STEP_SHARED:
+SNAPSHOTS_CANVAS_STEP_SHARED: 
 	ID (VARCHAR(16777216))
+	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
 	API_ID (VARCHAR(16777216))
-	TIME (NUMBER(38,0))
 	NAME (VARCHAR(16777216))
 	ACTIONS (ARRAY)
 
-SNAPSHOTS_CANVAS_VARIATION_SHARED:
+SNAPSHOTS_CANVAS_VARIATION_SHARED: 
 	ID (VARCHAR(16777216))
+	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
 	API_ID (VARCHAR(16777216))
-	TIME (NUMBER(38,0))
 	NAME (VARCHAR(16777216))
 
-SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED:
+SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED: 
 	ID (VARCHAR(16777216))
+	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
 	API_ID (VARCHAR(16777216))
-	TIME (NUMBER(38,0))
 	NAME (VARCHAR(16777216))
 
 SNAPSHOTS_EXPERIMENT_STEP_SHARED: 
