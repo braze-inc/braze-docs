@@ -137,7 +137,6 @@ class NotificationViewController: BrazePushStory.NotificationViewController {
     // Custom handling logic
   }
 }
-
 ```
 
 
