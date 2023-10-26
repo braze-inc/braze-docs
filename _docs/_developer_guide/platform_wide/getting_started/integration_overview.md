@@ -56,6 +56,8 @@ Your CRM team will plan out the messaging use cases that you'll launch in the ne
 
 For example, a new customer campaign might be: an email sent daily at 10 am to a segment of customers who logged their first session yesterday. The conversion event (the success metric) is logging a session.
 
+<br>
+<br>
 {% alert important %}
 Integration cannot begin until the campaign planning step is complete. This step will determine what parts and pieces of Braze need to be configured during the integration phase.
 {% endalert %}
@@ -92,7 +94,7 @@ It's important that you set up different environments for development and produc
 
 
 ## Integration {#integration}
-![Abstract pyramid graphic representing the flow of information from a data source to a user device.][29]{: style="max-width:55%;float:right;margin-left:15px;"} 
+![Abstract pyramid graphic representing the flow of information from a data source to a user device.][29]{: style="max-width:50%;float:right;margin-left:15px;"} 
 
 Braze supports iOS apps, Android apps, web apps, and more. You can also opt to use a cross-platform wrapper SDK, like Xamarin or Unity. We typically see customers integrate anywhere from 1-6 weeks. Many customers have integrated Braze with just one engineer, depending on their breadth of technical skills and bandwidth. It's entirely dependent on your specific integration scope and how much time your team dedicates to the Braze project. 
 
@@ -168,20 +170,22 @@ As you execute your integration, you'll provide quality assurance to make sure e
 Make sure your production and testing environments are set up before beginning QA.
 {% endalert %}
 
-| **QA data ingestion**    | **QA messaging**                                               |
+| **QA data ingestion**  | **QA messaging**                                              |
 |---------------------------|---------------------------------------------------------------|
 | You'll QA the way data is ingested, stored, and exported. | You'll ensure that your messages are being sent correctly to your users and everything looks excellent. |
-| - Run tests to confirm data is stored properly. | - Create segments of users. |
-| - Ensure session data is correctly attributed to the intended workspace within Braze. | - Launch campaigns and Canvases successfully. |
-| - Ensure session starts and ends are being recorded. | - Ensure the correct campaigns are being shown to the correct user segments. |
-| - Ensure user attribute information is correctly recorded against user profiles. | - Ensure that push tokens are correctly being registered. |
-| - Test that custom data is being correctly recorded against user profiles. | - Ensure that push tokens are correctly removed. |
-| - Create anonymous user profiles. | - Test that push campaigns are correctly sending to devices and engagement is logged. |
-| - Ensure that anonymous user profiles become known user profiles when the `changeUser()` method is called. | - Test that in-app messages are delivered and metrics logged. |
-|                           | - Test that Content Cards are delivered and metrics logged. |
-|                           | - Facilitate Connected Content (for example, AccuWeather). |
-|                           | - Ensure all message channel integrations are working together properly. |
+| Run tests to confirm data is stored properly. | Create segments of users. |
+| Ensure session data is correctly attributed to the intended workspace within Braze. | Launch campaigns and Canvases successfully. |
+| Ensure session starts and ends are being recorded. | Ensure the correct campaigns are being shown to the correct user segments. |
+| Ensure user attribute information is correctly recorded against user profiles. | Ensure that push tokens are correctly being registered. |
+| Test that custom data is being correctly recorded against user profiles. | Ensure that push tokens are correctly removed. |
+| Create anonymous user profiles. | Test that push campaigns are correctly sending to devices and engagement is logged. |
+| Ensure that anonymous user profiles become known user profiles when the `changeUser()` method is called. | Test that in-app messages are delivered and metrics logged. |
+|                           | Test that Content Cards are delivered and metrics logged. |
+|                           | Facilitate Connected Content (for example, AccuWeather). |
+|                           | Ensure all message channel integrations are working together properly. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+
 
 ### Passing Braze off to marketers
 Once you have integrated your platform or site, you will want to involve your Marketing team to pass ownership of the platform to them. This process looks different at every company, but might include the following:
