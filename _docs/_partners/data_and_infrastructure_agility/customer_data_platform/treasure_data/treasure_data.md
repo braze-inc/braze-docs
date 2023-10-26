@@ -63,11 +63,11 @@ Finally, select **Done**, run your query, and validate that your data moved to B
 
 The export results parameters are included in the following table:
 
-| Parameter | Values | Description |
-|---|---|---|
-| `mode` | User - New Alias<br>User - Identifying<br>User - Track<br>User - Delete | Connector mode |
-| `pre_formated_fields` | String | Use for array or JSON columns to keep the format. |
-| `track_record_type` | Custom Events<br>Purchases<br>User Profile Attributes| Record type for **User - Track** mode |
+| Parameter                 | Values | Description |
+|---------------------------|---|---|
+| `mode`                    | User - New Alias<br>User - Identifying<br>User - Track<br>User - Delete | Connector mode |
+| `pre_formatted_fields`    | String | Use for array or JSON columns to keep the format. |
+| `track_record_type`       | Custom Events<br>Purchases<br>User Profile Attributes| Record type for **User - Track** mode |
 | `skip_on_invalid_records` | Boolean | If enabled, continue and ignore any invalid records for the JSON column. <br> Otherwise, the job stops. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

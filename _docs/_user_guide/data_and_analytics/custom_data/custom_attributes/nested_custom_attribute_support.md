@@ -380,7 +380,7 @@ You can click **Validate** to verify that the contents of the path field is vali
 
 ![][13]
 
-That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze's nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
+That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. The nested object explorer in Braze generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
 
 ### Trigger nested custom attribute changes
 

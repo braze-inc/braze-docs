@@ -31,10 +31,10 @@ We strongly recommend that you implement the SDK via a package manager such as [
 	- Delete the `AppboyKit/include` and `AppboyUI/include` directories.<br><br>
 5. (Optional) If one of the following applies to you:
   - You only want the core analytics features of the SDK and do not use any UI features (e.g., in-app messages or Content Cards).
-  - You have custom UI for Braze's UI features and handle the image downloading yourself.<br><br>You can use the core version of the SDK by removing the file `ABKSDWebImageProxy.m` and `Appboy.bundle`. This will remove the `SDWebImage` framework dependency and all the UI-related resources (e.g., Nib files, images, localization files) from the SDK.
+  - You have custom UI for Braze UI features and handle the image downloading yourself.<br><br>You can use the core version of the SDK by removing the file `ABKSDWebImageProxy.m` and `Appboy.bundle`. This will remove the `SDWebImage` framework dependency and all the UI-related resources (e.g., Nib files, images, localization files) from the SDK.
 
 {% alert warning %}
-If you try to use the core version of the SDK without Braze's UI features, in-app messages will not display. Trying to display Braze's Content Cards UI with the core version will lead to unpredictable behavior.
+If you try to use the core version of the SDK without Braze UI features, in-app messages will not display. Trying to display Braze Content Cards UI with the core version will lead to unpredictable behavior.
 {% endalert %}
 
 ## Step 2: Adding required iOS libraries

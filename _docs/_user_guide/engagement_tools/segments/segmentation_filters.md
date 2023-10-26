@@ -4,7 +4,7 @@ nav_title: Segmentation Filters
 article_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
-glossary_top_text: Braze's SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
+glossary_top_text: The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
 
 page_type: glossary
 tool: Segments
@@ -454,7 +454,7 @@ glossaries:
     tags:
       - Install Attribution
   - name: Install Attribution Adgroup
-    description: Segments your users by the adgroup that their install was attributed to.
+    description: Segments your users by the ad group that their install was attributed to.
     tags:
       - Install Attribution
   - name: Install Attribution Campaign

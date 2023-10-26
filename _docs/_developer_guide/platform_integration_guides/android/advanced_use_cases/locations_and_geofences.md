@@ -96,7 +96,7 @@ Braze.getInstance(context).requestLocationInitialization()
 {% endtab %}
 {% endtabs %}
 
-This will cause the SDK to request geofences from Braze's servers and initialize geofence tracking.
+This will cause the SDK to request geofences from Braze servers and initialize geofence tracking.
 
 See [`RuntimePermissionUtils.java`][4] in our sample application for an example implementation.
 
@@ -231,9 +231,9 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
 ## Step 5: Enable geofences on the dashboard
 
-Android only allows up to 100 geofences to be stored for a given app. Braze's locations product will use up to 20 geofence slots if available. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard.
+Android only allows up to 100 geofences to be stored for a given app. Braze locations products will use up to 20 geofence slots if available. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard.
 
-For Braze's locations product to work correctly, you should also confirm that your app is not using all available geofence spots.
+For Braze locations products to work correctly, confirm that your app is not using all available geofence spots.
 
 ### Enable geofences from the locations page
 
@@ -245,11 +245,11 @@ For Braze's locations product to work correctly, you should also confirm that yo
 
 ## Step 6: Manually request geofence updates (optional)
 
-By default, Braze automatically retrieves the device's location and requests geofences based on that collected location. However, you can manually provide a GPS coordinate that will be used to retrieve proximal Braze Geofences instead. To manually request Braze Geofences, you must disable automatic Braze Geofence requests and provide a GPS coordinate for requests.
+By default, Braze automatically retrieves the device's location and requests geofences based on that collected location. However, you can manually provide a GPS coordinate that will be used to retrieve proximal Braze geofences instead. To manually request Braze Geofences, you must disable automatic Braze geofence requests and provide a GPS coordinate for requests.
 
 #### Part 1: Disable automatic geofence requests
 
-Automatic Braze Geofence requests can be disabled in your `braze.xml` file by setting `com_braze_automatic_geofence_requests_enabled` to `false`:
+Automatic Braze geofence requests can be disabled in your `braze.xml` file by setting `com_braze_automatic_geofence_requests_enabled` to `false`:
 
 ```xml
 <bool name="com_braze_automatic_geofence_requests_enabled">false</bool>
@@ -300,7 +300,7 @@ Braze.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
 {% endtabs %}
 
 {% alert important %}
-Braze Geofences can only be requested once per session, either automatically by the SDK or manually with this method.
+Geofences can only be requested once per session, either automatically by the SDK or manually with this method.
 {% endalert %}
 
 ## Push to sync

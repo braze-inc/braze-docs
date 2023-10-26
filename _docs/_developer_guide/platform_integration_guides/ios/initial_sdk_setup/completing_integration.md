@@ -69,7 +69,7 @@ Update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your **Manage S
 {% endtabs %}
 
 {% alert note %}
-Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
+The `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
 {% endalert %}
 
 {% alert warning %}

@@ -2,7 +2,7 @@
 nav_title: Using Liquid
 article_title: Liquid Use Case and Overview
 page_order: 0
-description: "This reference article provides an overview of commmon Liquid use cases and how to include Liquid tags into your messaging."
+description: "This reference article provides an overview of common Liquid use cases and how to include Liquid tags into your messaging."
 search_rank: 2
 ---
 
@@ -22,7 +22,7 @@ The following values can be substituted into a message, depending on their avail
 - [Most recently used device information][39]
 - [Target device information][40]
 
-You can also pull content directly from a web server via Braze's [Connected Content][9] feature.
+You can also pull content directly from a web server via Braze [Connected Content][9].
 {% endraw %}
 
 {% alert important %}

@@ -30,7 +30,7 @@ For more information on the push protocol standards and browser support, you can
 
 ### Step 1: Configure your site's service worker
 
-- If you don't already have a Service Worker, create a new file named `service-worker.js` with the following snippet, and place it in the root directory of your website.
+- If you don't already have a service worker, create a new file named `service-worker.js` with the following snippet, and place it in the root directory of your website.
 - Otherwise, if your site already registers a service worker, add the following snippet to the service worker file, and set the [`manageServiceWorkerExternally`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) initialization option to `true` when initializing the Web SDK.
 
 <script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
@@ -110,9 +110,9 @@ This security requirement in the open standards specification that Braze Web pus
 
 While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate push domain][28] or view a [working demo][4].
 
-## Service Worker advanced settings
+## Service worker advanced settings
 
-Braze's service worker file will automatically call `skipWaiting` upon install. If you'd like to avoid this, add the following code to your service worker file, preceding importing Braze:
+Our service worker file will automatically call `skipWaiting` upon install. If you'd like to avoid this, add the following code to your service worker file, preceding importing Braze:
 
 <script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fservice-worker-skip-waiting.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 

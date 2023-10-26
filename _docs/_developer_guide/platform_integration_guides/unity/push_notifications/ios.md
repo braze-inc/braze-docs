@@ -33,11 +33,11 @@ Follow our [iOS push notification configuration documentation][8] to configure B
 
 Open the Braze Configuration Settings in the Unity Editor by navigating to **Braze > Braze Configuration**.
 
-Check **Integrate Push With Braze** to automatically register users for push notifications, pass push tokens to Braze, track analytics for push opens, and take advantage of Braze's default push notification handling.
+Check **Integrate Push With Braze** to automatically register users for push notifications, pass push tokens to Braze, track analytics for push opens, and take advantage of our default push notification handling.
 
 ### (Optional): Enable background push
 
-Check **Enable Background Push** if you want to enable `background mode` for push notifications. This allows the system to wake your application from the `suspended` state when a push notification arrives, enabling your application to download content in response to push notifications. Checking this option is required for Braze's uninstall tracking functionality.
+Check **Enable Background Push** if you want to enable `background mode` for push notifications. This allows the system to wake your application from the `suspended` state when a push notification arrives, enabling your application to download content in response to push notifications. Checking this option is required for our uninstall tracking functionality.
 
 ![The Unity editor shows the Braze configuration options. In this editor, the "Automate Unity iOS integration", "Integrate push with braze", and "Enable background push" are enabled.][29]
 
@@ -104,7 +104,7 @@ public class MainMenu : MonoBehaviour {
 
 ### Push token callback
 
-To receive a copy of Braze's device tokens from the OS, set a delegate using `AppboyBinding.SetPushTokenReceivedFromSystemDelegate()`.
+To receive a copy of Braze device tokens from the OS, set a delegate using `AppboyBinding.SetPushTokenReceivedFromSystemDelegate()`.
 
 ### Other features
 

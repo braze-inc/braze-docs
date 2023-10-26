@@ -11,7 +11,7 @@ search_rank: 1
 
 # Geofences
 
-> At the core of Braze's real-time location offering is the concept of a geofence. A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position. Geofences can vary from the size of a building to the size of an entire city.
+> At the core of our real-time location offering is the concept of a geofence. A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position. Geofences can vary from the size of a building to the size of an entire city.
 
 You can define geofences on the Braze dashboard and use them to trigger campaigns in real-time as users enter and exit their borders, or send follow-up campaigns hours or days later. Users who enter or exit your geofences add a new layer of user data that you can use for segmentation and re-targeting.
 
@@ -46,7 +46,7 @@ Once you have created a geofence set, you can manually add geofences by drawing 
 
 Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each individual geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `"radius"` key, and an optional `"name"` key for each geofence. To upload your GeoJSON, click **+ Create Geofence Set** followed by **Upload GeoJSON**.
 
-The following sample represents the correct GeoJSON for specifying two geofences: one for Braze's headquarters in NYC, and one for the Statue of Liberty south of Manhattan. We recommend uploading geofences with a radius of at least 100 meters for optimal functionality.
+The following sample represents the correct GeoJSON for specifying two geofences: one for Braze headquarters in NYC, and one for the Statue of Liberty south of Manhattan. We recommend uploading geofences with a radius of at least 100 meters for optimal functionality.
 
 ```
 {
@@ -73,8 +73,9 @@ The following sample represents the correct GeoJSON for specifying two geofences
         "radius": 100,
         "name": "Statue of Liberty"
       }
-    }, ...
+    }
   ]
+}
 ```
 
 When creating your geofences, keep the following points in mind:

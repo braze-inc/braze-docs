@@ -65,7 +65,7 @@ Large samples ensure that your results reflect the preferences of your average u
 
 #### Randomly sort users into different test groups
 
-Braze's multivariate feature allows you to create up to eight randomly selected test groups. Randomizing is designed to remove bias in the test set and increase the odds of the test groups being similar in composition. This ensures that differing response rates are due to differences in your messages rather than your samples.
+Multivariate testing allows you to create up to eight randomly selected test groups. Randomizing is designed to remove bias in the test set and increase the odds of the test groups being similar in composition. This ensures that differing response rates are due to differences in your messages rather than your samples.
 
 #### Know what elements you're trying to test
 
