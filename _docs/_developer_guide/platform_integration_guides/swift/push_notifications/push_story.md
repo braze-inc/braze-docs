@@ -117,7 +117,7 @@ class NotificationViewController: BrazePushStory.NotificationViewController {}
 ```
 
 #### Custom handling push story events
-If you want to custom handle push story notification event logic, inherit `BrazePushStory.NotificationViewController` as above and override the `didReceive` methods as below.
+If you want to implement your own custom logic to handle push story notification events, inherit `BrazePushStory.NotificationViewController` as above and override the `didReceive` methods as below.
 
 ```swift
 import BrazePushStory
