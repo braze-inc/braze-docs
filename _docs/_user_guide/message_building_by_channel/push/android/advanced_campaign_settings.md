@@ -26,7 +26,7 @@ To assign a notification ID, navigate to the composition page of the push you'd 
 
 ## Time-to-live (TTL) {#ttl}
 
-The time-to-live (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time-to-live are 4 weeks for Firebase Cloud Messaging (FCM) and 31 days for Amazon Device Messaging (ADM).
+The time-to-live (TTL) field allows you to set a custom length of time to store messages with the push messaging service. The default values for time-to-live are 4 weeks for Firebase Cloud Messaging (FCM) and 31 days for Amazon Device Messaging (ADM).
 
 For example, suppose your app is a game and you offer your users an in-game currency bonus if they maintain a streak of playing the game daily. You could send a push alerting a user that that streak is in danger of being broken if they've exceeded a certain number of days. However, if a user was to reconnect their device to the game app 4 weeks later with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
 

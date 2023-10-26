@@ -112,7 +112,7 @@ As a result, we recommend continuing to collect the IDFA if you meet any of the 
 
 Apple requires users to opt-in through a permission prompt to collect IDFA.
 
-To collect IDFA, in addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization from the user using Apple's `ATTrackingManager` in the app tracking transparency framework. Refer to Apple's [user privacy article](https://developer.apple.com/app-store/user-privacy-and-data-use/) for more information.
+To collect IDFA, in addition to implementing our `ABKIDFADelegate` protocol, your application will need to request authorization from the user using Apple's `ATTrackingManager` in the app tracking transparency framework. Refer to Apple's [user privacy article](https://developer.apple.com/app-store/user-privacy-and-data-use/) for more information.
 
 The prompt for app tracking transparency authorization requires an `Info.plist` entry to explain your usage of the identifier:
 

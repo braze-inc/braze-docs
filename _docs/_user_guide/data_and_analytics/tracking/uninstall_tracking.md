@@ -10,7 +10,7 @@ tool: Reports
 
 # Uninstall tracking
 
-Braze's uninstall tracking provides the following details:
+Uninstall tracking in Braze provides the following details:
 
 1. Daily app-level uninstall statistics in a time series graph on the **Home** page.
 2. Campaign-level uninstall statistics in a time series graph on the **Campaign Details** page of a specific campaign. This statistic specifies the number of campaign recipients that uninstall each day.

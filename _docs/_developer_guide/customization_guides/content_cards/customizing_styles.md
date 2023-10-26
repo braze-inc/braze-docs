@@ -355,7 +355,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
 viewController.view.tintColor = .systemGreen
 ```
 
-However, if you wish to modify only the unviewed indicator, you can access the `unviewedIndicatorColor` property of your `BrazeContentCardUI.ViewController.Attributes` struct. If you utilize Braze's `UITableViewCell` implementations, you should access the property before the cell is drawn.
+However, if you wish to modify only the unviewed indicator, you can access the `unviewedIndicatorColor` property of your `BrazeContentCardUI.ViewController.Attributes` struct. If you utilize Braze `UITableViewCell` implementations, you should access the property before the cell is drawn.
 
 For example, to set the color of the unviewed indicator to red:
 

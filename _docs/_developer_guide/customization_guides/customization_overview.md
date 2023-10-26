@@ -8,7 +8,7 @@ description: "This reference article covers the essential concepts of customizin
 
 # Customization overview
 
-> Almost everything at Braze is fully customizable! The articles in this Customization Guide show you how to approach refining your Braze experience through a mixture of configuration and customization. During this process, marketing and engineering teams should work closely together to coordinate exactly how to customize Braze's messaging channels.
+> Almost everything at Braze is fully customizable! The articles in this Customization Guide show you how to approach refining your Braze experience through a mixture of configuration and customization. During this process, marketing and engineering teams should work closely together to coordinate exactly how to customize Braze messaging channels.
 
 {% alert note %}
 The Braze SDK is a powerful toolkit, but at a high level it provides two important pieces of functionality: it helps collect and sync user data across platforms to a consolidated user profile, and also handles messaging channels like in-app messages, push notifications, and Content Cards. The articles in the Customization Guide assume you've already gone through the [SDK implementation process]({{site.baseurl}}/developer_guide/home).
@@ -16,7 +16,7 @@ The Braze SDK is a powerful toolkit, but at a high level it provides two importa
 
 All Braze components are crafted to be accessible, adaptive, and customizable. As such, we recommend starting with the default `BrazeUI` components and customizing them to suit your brand needs and use case. At Braze, we break down customization into three different approaches based on the associated effort and level of flexibility provided. These approaches are referred to as "crawl," "walk," or "run."
 
-- **Crawl:** Take advantage of Braze's basic styling options for a quick, low-effort implementation.
+- **Crawl:** Take advantage of basic styling options for a quick, low-effort implementation.
 - **Walk:** Add some custom styling to the default templates to better match your brand experience.
 - **Run:** Customize every part of your messaging, from style to behavior to cross-channel connections.
 
@@ -34,7 +34,7 @@ table td {
 
 ![Sample finance app showing Captioned Image and Image Only Content Cards]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-The Crawl approach puts the power of customization directly in the hands of marketers. While some light development work is necessary upfront to integrate Braze's messaging channels with your app or site, this approach allows you to get up and running quickly. 
+The Crawl approach puts the power of customization directly in the hands of marketers. While some light development work is necessary upfront to integrate Braze messaging channels with your app or site, this approach allows you to get up and running quickly. 
 
 Marketers determine the the content, audience, and timing of messages through the dashboard. Styling options are limited, however. This approach is best suited for teams with limited developer resources or who want to quickly share simple content. 
 
@@ -56,7 +56,7 @@ Marketers determine the the content, audience, and timing of messages through th
   </tr>
   <tr>
     <td><b>Card style</b></td>
-    <td>Use Braze's default templates.</td>
+    <td>Use default Braze templates.</td>
   </tr>
   <tr>
     <td><b>Behavior</b></td>
@@ -102,7 +102,7 @@ Marketers still maintain control of the audience, content, on-click behavior, an
   </tr>
   <tr>
     <td><b>UI</b></td>
-    <td>Use Braze's templates or use your own developer-created templates.</td>
+    <td>Use Braze templates or use your own developer-created templates.</td>
   </tr>
   <tr>
     <td><b>Behavior</b></td>

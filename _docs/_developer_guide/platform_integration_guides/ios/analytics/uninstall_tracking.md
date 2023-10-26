@@ -19,7 +19,7 @@ Make sure that you have enabled the **Remote notifications** option from the **B
 
 ## Step 2: Checking for Braze background push
 
-Braze uses background push notifications to collect uninstall tracking analytics. Make sure that your application [does not take any unwanted actions][4] upon receiving Braze's uninstall tracking notifications.
+Braze uses background push notifications to collect uninstall tracking analytics. Make sure that your application [does not take any unwanted actions][4] upon receiving our uninstall tracking notifications.
 
 ## Step 3: Test from the dashboard
 

@@ -25,7 +25,7 @@ The [Firebase Messaging Delivery Priority](https://firebase.google.com/docs/clou
 
 ## Time to live (TTL) {#ttl}
 
-The **Time to Live** (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are four weeks for FCM and 31 days for ADM.
+The **Time to Live** (TTL) field allows you to set a custom length of time to store messages with the push messaging service. The default values for time to live are four weeks for FCM and 31 days for ADM.
 
 ## Summary text {#summary-text}
 

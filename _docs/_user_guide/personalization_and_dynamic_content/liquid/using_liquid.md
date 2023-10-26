@@ -22,7 +22,7 @@ The following values can be substituted into a message, depending on their avail
 - [Most recently used device information][39]
 - [Target device information][40]
 
-You can also pull content directly from a web server via Braze's [Connected Content][9] feature.
+You can also pull content directly from a web server via Braze [Connected Content][9].
 {% endraw %}
 
 {% alert important %}
