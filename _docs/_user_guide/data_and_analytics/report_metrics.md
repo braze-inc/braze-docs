@@ -217,6 +217,18 @@ The percentage of times a defined event occurred compared to all recipients of a
 
 {% api %}
 
+### Conversion Window
+
+{% apitags %}
+All
+{% endapitags %}
+
+The number of days after receiving the message during which user actions are tracked and attributed to a conversion event. Conversions that occur after this window are not attributed to the conversion event.
+
+{% endapi %}
+
+{% api %}
+
 ### Deliveries
 
 {% apitags %}
