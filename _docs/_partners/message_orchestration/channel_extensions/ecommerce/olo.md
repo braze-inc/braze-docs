@@ -62,7 +62,7 @@ In this step, you will transform the webhook payload that will be sent from the 
 2. Refresh your Data Transformation and make sure you can see the sample event payload in the **Webhook Details**.
 3. Update your Data Transformation code to support your chosen Olo events.
 4. Click **Validate** to return a preview of your code’s output and to check if it’s an acceptable `/users/track` request.
-5. Save and Activate your Data Transformation.
+5. Save and activate your Data Transformation.
 
 #### Request body format
 
