@@ -213,9 +213,9 @@ The displayed statistic is generated 36 hours after email sending has begun. It 
 
 ###### Limitations
 
-Please note that this metric
-1) is currently only available in Campaigns
-2) does not get reported via Currents
+Please note that currently this metric
+- is only available in Campaigns
+- does not get reported via Currents
 
 {% elsif include.channel == "in-app message" %}
 
