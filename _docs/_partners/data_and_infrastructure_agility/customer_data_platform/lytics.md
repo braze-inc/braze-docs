@@ -1,7 +1,7 @@
 ---
 nav_title: Lytics
 article_title: Lytics
-description: "This reference article covers the Braze and Lytics integration. Lytics is a enterprise Customer Data platform for marketers, analysts, and technologists. This integration allows brands to sync and map their Lytics data directly to Braze."
+description: "This reference article covers the Braze and Lytics integration. Lytics is an enterprise Customer Data platform for marketers, analysts, and technologists. This integration allows brands to sync and map their Lytics data directly to Braze."
 alias: /partners/lytics/
 page_type: partner
 search_tag: Partner
@@ -10,9 +10,9 @@ page_order: 5.5
 
 # Lytics
 
-> [Lytics][1] is the customer data platform (CDP) of choice for the next generation of customer-centric businesses. Lytics Decision Engine, Conductor, and Cloud Connect solutions provide marketers and data teams opportunities to perform identity resolution, orchestration, and campaign optimization in real-time and in a privacy-compliant manner.
+> [Lytics][1] is the customer data platform (CDP) of choice for the next generation of customer-centric businesses. Lytics Decision Engine, Conductor, and Cloud Connect solutions provide marketers and data teams opportunities to perform identity resolution, orchestration, and campaign optimization in real time and in a privacy-compliant manner.
 
-The Braze and Lytics integration provides a unified view of your customers to enable powerful personalization and to drive optimized campaigns using next best action orchestration and decisioning.
+The Braze and Lytics integration provides a unified view of your customers to enable powerful personalization and to drive optimized campaigns using the next best action orchestration and decisions.
 
 The integration allows brands to:
 
@@ -28,10 +28,10 @@ Connect Braze to Lytics to [import](#importing-data-from-braze-to-lytics) email,
 | Requirement | Description |
 | ----------- | ----------- |
 | Lytics account | A Lytics account is required to take advantage of this integration. |
-| Lytics account number | A Lytics account number is necessary for configuring the webhooks endpoint URL. |
+| Lytics account number | A Lytics account number is necessary for configuring the webhook endpoint URL. |
 | Lytics API Token | A Lytics REST API Token with Data Manager permissions. <br><br> This can be created within the Lytics dashboard from **Account Settings Console** > **Access Tokens** > **Create New Token**. |
 | Braze REST API key | A Braze REST API key with `users.track` permission. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze instance | Your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints). Contact your Braze onboarding manager for this information, if you aren't sure. |
+| Braze instance | Your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints). Contact your Braze onboarding manager for this information if you aren't sure. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -111,11 +111,11 @@ You can import audience data from Braze to Lytics using the following methods:
 
 #### Step 1: Create a Lytics API Token
 
-Navigate to the Lytics Account Menu in the bottom left corner by selecting your account name, and select **Access Tokens** from the dropdown menu. Next select **Create API Token**
+Navigate to the Lytics Account Menu in the bottom left corner by selecting your account name, and select **Access Tokens** from the dropdown menu. Next, select **Create API Token**
 
 ![][7]{: style="max-width:80%;"}
 
-Input a name, optional description and a token expiration period. Next, toggle the **Data Manager** scope for API Permissions and click on **Generate Token**. Copy the token and store this token in a secure place.
+Input a name, an optional description, and a token expiration period. Next, toggle the **Data Manager** scope for API Permissions and click on **Generate Token**. Copy the token and store it in a secure place.
 
 ![][8]{: style="max-width:80%;"}
 
@@ -138,7 +138,7 @@ Replace `<ACCOUNT-NUMBER>` with your account number and `<LYTICS-API-TOKEN>` wit
 
 In Braze, create a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). Add the Lytics webhook URL in the **Webhook URL** field.
 
-After defining the request type (HTTP `POST` method), and configuring the rest of the webhook details, your webhook is ready for testing and deployment. Here is a sample body of the POST request after configuring the webhook in Braze:
+After defining the request type (HTTP `POST` method) and configuring the rest of the webhook details, your webhook is ready for testing and deployment. Here is a sample body of the POST request after configuring the webhook in Braze:
 
 ```json
 {
@@ -165,7 +165,7 @@ This section describes how to import Braze user data from a segment into Lytics.
 
 In Lytics, navigate to the **Authorization** dashboard within the **Data** console in the navigation bar. Select **Create New Authorization** and search for and select **Custom Integrations**.
 
-Select the preferrred type of SFTP authorization based on your business and security requirements. The folllowing authorization types are supported for importing files into Lytics via SFTP:
+Select the preferred type of SFTP authorization based on your business and security requirements. The following authorization types are supported for importing files into Lytics via SFTP:
 
 - Client SFTP Server Authorization
 - Client SFTP Server Authorization with PGP Private Key
