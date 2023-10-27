@@ -110,14 +110,14 @@ In `NotificationViewController.swift`, add the following line to import the head
 import BrazePushStory
 ```
 
-Next, replace the default implementation by inheriting `BrazePushStory.NotificationViewController`:
+Next, replace the default implementation by inheriting [`BrazePushStory.NotificationViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazepushstory/notificationviewcontroller/):
 
 ```swift
 class NotificationViewController: BrazePushStory.NotificationViewController {}
 ```
 
 #### Custom handling push story events
-If you want to implement your own custom logic to handle push story notification events, inherit `BrazePushStory.NotificationViewController` as above and override the `didReceive` methods as below.
+If you want to implement your own custom logic to handle push story notification events, inherit `BrazePushStory.NotificationViewController` as above and override the [`didReceive`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazepushstory/notificationviewcontroller/didreceive(_:)) methods as below.
 
 ```swift
 import BrazePushStory
