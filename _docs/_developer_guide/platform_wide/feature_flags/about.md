@@ -145,7 +145,7 @@ An [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_
 
 In this example, our team has built a new checkout flow for our e-commerce app. Even though we're confident it's improving the user experience, we want to run an A/B test to measure its impact on our app's revenue.
 
-To begin, we'll create a new feature flag called `enable_checkout_v2`. We won't add an audience or rollout percentage. Instead, we'll use Canvas to split traffic, enable the feature, and measure the outcome.
+To begin, we'll create a new feature flag called `enable_checkout_v2`. We won't add an audience or rollout percentage. Instead, we'll use a feature flag experiment to split traffic, enable the feature, and measure the outcome.
 
 In our app, we'll check if the feature flag is enabled or not and swap out the checkout flow based on the response:
 
@@ -160,13 +160,13 @@ if (featureFlag.enabled) {
 }
 ```
 
-In Canvas, we'll use an [Experiment Path step][5] and a Feature Flag step to set up our A/B test.
+We'll set up our A/B test in a [Feature Flag Experiment][12].
 
-Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two steps to determine which checkout flow resulted in a higher conversion rate.
+Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate.
 
-![A Canvas with an experiment path splitting traffic into two 50 percent groups.][6]{: width="70%"}
+![A feature flag experiment splitting traffic into two 50 percent groups.][6]
 
-Once we determine our winner, we can stop this Canvas and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
+Once we determine our winner, we can stop this campaign and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
 
 ## Limitations
 
@@ -186,9 +186,10 @@ The following table describes the limitations that apply at a feature flag level
 [3]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/
 [4]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %}
 [5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step
-[6]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-experiment-step.png %}
+[6]: {% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %}
 [7]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %}
 [8]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/
 [9]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %}
 [10]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %}
 [11]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %}
+[12]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/
