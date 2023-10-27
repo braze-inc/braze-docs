@@ -242,7 +242,7 @@ return brazecall;
 
 ### Step 4: Publish your Olo webhook
 
-After you have activated your Data Transformation in Braze, use the [self-service webhooks tool][2] within the Olo dashboard to publish your webhook. Once the webhook has been published, the Data Transformation will start to receive Olo webhook event messages.
+After you have activated your Data Transformation in Braze, use the [self-service webhooks tool][2] within the Olo dashboard to publish your webhook. When the webhook is published, the Data Transformation will start to receive Olo webhook event messages.
 
 ## Things to know
 
