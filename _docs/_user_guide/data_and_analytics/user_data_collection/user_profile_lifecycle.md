@@ -57,7 +57,7 @@ As such, you already have a user profile for this user. In this instance, Braze 
 2. Merge [specific user profile fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior) that don't already exist on the identified user profile from the anonymous profile
 3. Remove the anonymous profile from your user base so the user counts aren't inflated
 
-If an anonymous user has a first name and the known user also has a first name set, the first name of the target is maintained. If the target user has a null value, and the anonymous user has a value, it's merged into the target user if it falls under the [specific user profile fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
+If an anonymous user has a first name and the known user also has a first name set, the first name of the target is maintained. If the target user has a null value, and the anonymous user has a value, it's merged into the target user if it falls under these [specific user profile fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
 
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS][24], [Android][30], [Web][31]).
 
