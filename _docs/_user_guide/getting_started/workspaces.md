@@ -3,7 +3,7 @@ nav_title: Workspaces
 article_title: Getting Started&#58; Workspaces
 page_order: 3
 page_type: reference
-description: ""
+description: "Everything you do in the Braze platform happens within a workspace. This article describes how they work and what important considerations to keep in mind when planning your workspaces in Braze."
 ---
 
 # Getting Started: Workspaces
@@ -12,10 +12,10 @@ Everything you do in the Braze platform happens within a workspace. Workspaces a
 
 ## Understanding workspaces
 
-Workspaces serve two key purposes: 
+Workspaces serve two key purposes:
 
 - **Unifying user data:** When multiple app instances are in one workspace, you can gather and target user data seamlessly across different versions of your app, such as iOS, Android, and web. This makes sure that you always have up-to-date information about each user, regardless of the platform they're using.
-- **Keeping distinct activities separate:** Workspaces also provide a means to keep distinct brands or activities separate. For instance, if you have multiple sub-brands with different user bases, it's beneficial to create separate workspaces for each.
+- **Separating distinct activities:** Workspaces also provide a means to keep distinct brands or activities separate. For instance, if you have multiple sub-brands with different user bases, it's beneficial to create separate workspaces for each.
 
 {% alert tip %} 
 This approach is particularly useful for companies like mobile gaming firms that can manage individual workspaces for each of their games or e-commerce sites that want separate workspaces for each region they operate in. 

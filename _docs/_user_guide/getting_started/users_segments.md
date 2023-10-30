@@ -3,7 +3,7 @@ nav_title: Users and Segments
 article_title: Getting Started&#58; Users and Segments
 page_order: 2
 page_type: reference
-description: ""
+description: "This article provides an overview of users and segments, outlining their significance and how they can be leveraged to engage your audience."
 
 ---
 
