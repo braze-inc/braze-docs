@@ -25,37 +25,65 @@ Due to file size restrictions, your export may fail if the estimated size of you
 
 If you've linked your [Amazon S3 credentials][26] to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire after one day of exporting and requires that you are logged into the dashboard for access.
 
-Data included in the exports:
+## Data included in export
 
-- All User Data
-    - User ID
-    - First Name
-    - Last Name
-    - Time zone
-    - City
-    - Gender
-    - Email Address
-    - Phone Number
-    - Number of Push Tokens
-    - Twitter Username
-    - Session Count
-    - First Session
-    - Last Session
-    - Last App Version Used
-    - In-App Purchase Total
-    - Email Unsubscribe Time 
-    - Device Info
-    - Number of IDFAs
-    - Number of IDFVs
-    - Custom Events
-    - Custom Attributes
-- Email Addresses
-    - User ID
-    - First Name
-    - Last Name
-    - Email Address
-    - Email Unsubscribe Date
-    - Email Opt-in Date
+The following is included in your export depending on your selection.
+
+### CSV Export User Data
+
+| Field Name                  | Description                                              |
+| --------------------------- | -------------------------------------------------------- |
+| Appboy ID                   | Internal ID (cannot be changed)                           |
+| country                     | Country                                    |
+| created_at                  | Date and time when the user profile was created                   |
+| devices                     | Device information                           |
+| date_of_birth               | Date of birth                                            |
+| email                       | Email address                                            |
+| unsubscribed_from_emails_at | Date unsubscribed from emails                            |
+| user_id                     | External ID                                              |
+| first_name                  | First name                                               |
+| first_session               | Date and time of first session                           |
+| gender                      | Gender                                                   |
+| google_ad_ids               | Google advertising IDs associated with the user                      |
+| city                        | City                                     |
+| IDFAs                       | Identifier for Advertising (IDFA) values                 |
+| IDFVs                       | Identifier for Vendor (IDFV) values                      |
+| language                    | Language in ISO-639-1 standard                                        |
+| last_app_version_used       | Last version of the app used                             |
+| last_name                   | Last name                                                |
+| last_session                | Date and time of last session                            |
+| number_of_google_ad_ids     | Count of Google advertising IDs associated               |
+| number_of_IDFAs             | Count of IDFAs associated                                |
+| number_of_IDFVs             | Count of IDFVs associated                                |
+| number_of_push_tokens       | Count of push notification tokens associated             |
+| number_of_roku_ad_ids       | Count of Roku advertising IDs associated                 |
+| number_of_windows_ad_ids    | Count of Windows advertising IDs associated              |
+| phone_number                | Phone number                                             |
+| opted_into_push_at          | Date opted into push notifications                       |
+| unsubscribed_from_push_at   | Date unsubscribed from push notifications                |
+| random_bucket               | Random bucket number                                 |
+| roku_ad_ids                 | Roku advertising IDs associated                          |
+| session_count               | Total number of sessions                                 |
+| timezone                    | User's time zone in the same format as the IANA Time Zone Database                                         |
+| in_app_purchase_total       | Total amount spent on in-app purchases                   |
+| user_aliases                | User aliases, if any                                          |
+| windows_ad_ids              | Windows advertising IDs associated                       |
+| Custom events               | Based on selection at export                             |
+| Custom attributes           | Based on selection at export                             |
+{: .reset-td-br-1 .reset-td-br-2 }
+
+### CSV Export Email Addresses
+
+| Field Name                  | Description            |
+| --------------------------- | ---------------------- |
+| user_id                     | User's external ID     |
+| first_name                  | First name             |
+| last_name                   | Last name              |
+| email                       | Email                  |
+| unsubscribed_from_emails_at | Email unsubscribe date |
+| opted_in_to_emails_at       | Email opt-in date      |
+| user_aliases                | User aliases, if any   |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
 For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
