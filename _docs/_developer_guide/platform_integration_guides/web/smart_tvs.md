@@ -11,7 +11,7 @@ description: "This article covers how to use the Braze Web SDK to integrate with
 
 > The Braze Web SDK lets you collect analytics and display rich in-app messages and Content Card messages to Smart TV users, including [Samsung Tizen TVs][1] and [LG TVs (webOS)][2]. This article covers how to use the Braze Web SDK to integrate with Smart TVs.
 
-For a complete technical reference, check out our [Javascript Documentation][3] or our [sample apps][9] to see the Web SDK running on a TV.
+For a complete technical reference, check out our [JavaScript Documentation][3] or our [sample apps][9] to see the Web SDK running on a TV.
 
 ## Install the Braze SDK
 
@@ -19,7 +19,7 @@ To get started, follow our [Initial SDK setup][4] guide for the Web SDK.
 
 There are two changes required when integrating with Smart TVs:
 
-1. When downloading or importing the Web SDK, be sure to use the "core" bundle (available at https://js.appboycdn.com/web-sdk/x.y/braze.core.min.js, where x.y is the desired version). We recommend using the CDN version of our Web SDK, since the npm version is written in native ES modules whereas the CDN version is transpiled down to ES5. If you prefer to use the [npm version][6], ensure you are using a bundler such as webpack that will remove unused code and that the code is transpiled down to ES5.
+1. When downloading or importing the Web SDK, be sure to use the "core" bundle (available at https://js.appboycdn.com/web-sdk/x.y/braze.core.min.js, where x.y is the desired version). We recommend using the CDN version of our Web SDK, since the NPM version is written in native ES modules whereas the CDN version is transpiled down to ES5. If you prefer to use the [NPM version][6], ensure you are using a bundler such as webpack that will remove unused code and that the code is transpiled down to ES5.
 2. When initializing the Web SDK, you must set the `disablePushTokenMaintenance` and `manageServiceWorkerExternally` initialization options to `true`.
 
 ## Analytics

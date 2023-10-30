@@ -32,7 +32,7 @@ With Braze’s multiple-store support, you can:
 ### Setting up an additional store
 1. After you have installed your first store, select the **+ Connect New Store** option.<br>![][1]<br><br>
 2. You will be prompted to go through the onboarding flow for this new store. More details can be found in our [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/#step-2-brazes-setup-wizard) guide.<br><br>Note that the settings from the previous store will be carried over, but you can update these accordingly.<br><br>
-3. For the collect email or sms subscribers step:
+3. For the collect email or SMS subscribers step:
 - **Customers with multiple regions and markets as stores**: Confirm you set the correct email subscription group to the right store for every store install. To track a user's most recent subscription state from any store, you must enable the “Override existing global state for users” option when installing each store. Doing so will override the Braze global email subscription state and the email subscription group.
 - **Customers with multiple brands as stores**: Currently, we do not have support to override only the email subscription group without also overriding the global email subscription state. We aim to provide this support ahead of general availability.<br><br>
 4. Repeat this installation for as many stores as you need.<br><br>

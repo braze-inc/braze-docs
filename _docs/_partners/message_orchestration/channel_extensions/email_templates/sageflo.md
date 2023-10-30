@@ -34,7 +34,7 @@ Radiate is ideal for franchise and retail businesses looking to scale their mark
 
 ## Integration
 
-Your Sageflo account team will take point on setting up your integration. You will be asked to provide your Braze API credentials and Sageflo will work with your marketing team to configure auidience segments for specific locations and branches. 
+Your Sageflo account team will take point on setting up your integration. You will be asked to provide your Braze API credentials and Sageflo will work with your marketing team to configure audience segments for specific locations and branches. 
 
 Once connected, Sageflo will:
 

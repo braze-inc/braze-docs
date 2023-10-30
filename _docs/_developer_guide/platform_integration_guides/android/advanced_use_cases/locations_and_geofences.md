@@ -42,7 +42,7 @@ Add boot, fine location, and background location permissions to your `AndroidMan
 ```
 
 {% alert important %}
-The background location access permission was added in Android 10 and is required for Geofences to work while the app is backgrounded for all Android 10+ devices.
+The background location access permission was added in Android 10 and is required for Geofences to work while the app is in the background for all Android 10+ devices.
 {% endalert %}
 
 Add the Braze boot receiver to the `application` element of your `AndroidManifest.xml`:

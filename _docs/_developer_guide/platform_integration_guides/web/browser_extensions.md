@@ -16,7 +16,7 @@ Integrate Braze's Web SDK within your browser extension to collect analytics and
 
 ## What's supported
 
-In general, since Extensions are simply HTML and Javascript, you can use Braze for the following:
+In general, since Extensions are simply HTML and JavaScript, you can use Braze for the following:
 
 * **Analytics**: Capture custom events, attributes, and even identify repeat users within your extension. Use these profile traits to power cross-channel messaging.
 * **In-app messages**: Trigger in-app messages when users take action within your extension, using our native or custom HTML messaging.
@@ -47,10 +47,10 @@ However, if you use [Google Tag Manager][8], or reference Braze's SDK from an ex
 ## Getting started
 
 {% alert tip %}
-Before you get started, make sure you've read through the Web SDK's [Initial SDK setup guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/) to learn more about our Javascript integration in general.  <br><br>You may also want to bookmark the [Javascript SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) for full details on all of the different SDK methods and configuration options.
+Before you get started, make sure you've read through the Web SDK's [Initial SDK setup guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/) to learn more about our JavaScript integration in general.  <br><br>You may also want to bookmark the [JavaScript SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) for full details on all of the different SDK methods and configuration options.
 {% endalert %}
 
-To integrate Braze's Web SDK, you'll first need to download a copy of the latest Javascript library. This can be done using NPM or directly downloading it from [Braze's CDN][7].
+To integrate Braze's Web SDK, you'll first need to download a copy of the latest JavaScript library. This can be done using NPM or directly downloading it from [Braze's CDN][7].
 
 Alternatively, if you prefer to use [Google Tag Manager][8] or use an externally hosted copy of Braze's SDK, keep in mind that loading external resources will require you to adjust your [`content_security_policy`][6] setting in your `manifest.json`.
 
@@ -58,7 +58,7 @@ Once downloaded, be sure to copy the `braze.min.js` file somewhere into your ext
 
 ### Extension popups {#popup}
 
-To add Braze to an extension popup, reference the local Javascript file in your `popup.html`, as you would in a regular website. If you're using Google Tag Manager, you can add Braze using our [Google Tag Manager templates][8] instead.
+To add Braze to an extension popup, reference the local JavaScript file in your `popup.html`, as you would in a regular website. If you're using Google Tag Manager, you can add Braze using our [Google Tag Manager templates][8] instead.
 
 ```html
 <html>

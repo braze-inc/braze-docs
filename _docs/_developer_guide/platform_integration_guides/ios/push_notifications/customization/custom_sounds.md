@@ -20,7 +20,7 @@ Custom push notification sounds must be hosted locally within the main bundle of
 - µLaw
 - aLaw
 
-You can package the audio data in an AIFF, WAV, or CAF file. In Xcode, add the sound file to your project as a nonlocalized resource of the application bundle.
+You can package the audio data in an AIFF, WAV, or CAF file. In Xcode, add the sound file to your project as a non-localized resource of the application bundle.
 
 You may use the afconvert tool to convert sounds. For example, to convert the 16-bit linear PCM system sound Submarine.aiff to IMA4 audio in a CAF file, use the following command in the terminal:
 

@@ -46,7 +46,7 @@ By default, Android and FireOS SDK Content Cards match the standard Android UI g
   </style>
 ```
 
-To customize your Content Card stylings, override this default style. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The entire style must be copied over to your local `styles.xml` file for all attributes to be correctly set.
+To customize your Content Card styling, override this default style. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The entire style must be copied over to your local `styles.xml` file for all attributes to be correctly set.
 
 {% subtabs local %}
 {% subtab Correct style override %}

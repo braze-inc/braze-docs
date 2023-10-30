@@ -81,7 +81,7 @@ Once sent, the dashboard provides aggregated [Canvas Analytics]({{site.baseurl}}
 {% endtab %}
 {% tab One journey per country %}
 
-In the "one journey per country" approach, the [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas Components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). These componenets can be [duplicated]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) at the component and overall journey level.
+In the "one journey per country" approach, the [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas Components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). These components can be [duplicated]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) at the component and overall journey level.
 
 Localization can be achieved through the following methods:
 - Separate Canvases per country, this ensures the complex user journeys are defined at the top of the funnel using audience filters

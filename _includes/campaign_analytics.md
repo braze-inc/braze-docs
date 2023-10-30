@@ -31,7 +31,7 @@ Review this panel to see overall metrics such as how many messages have been sen
 
 {% if include.channel == "whatsapp" %}
 {% alert note %}
-The WhatsApp channel includes read rate. This metric is only delivered for users with read reciepts on, which can vary.
+The WhatsApp channel includes read rate. This metric is only delivered for users with read receipts on, which can vary.
 {% endalert %}
 {% endif %}
 

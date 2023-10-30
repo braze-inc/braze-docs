@@ -32,7 +32,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can cr
 
 Your OfferFit license and use case will determine the Braze REST API endpoints you use. Below are various API endpoints you might use.
 
-| Braze REST API endpoint | OfferFit useage |
+| Braze REST API endpoint | OfferFit usage |
 |--------------|----------------|
 | [POST /users/export/ids](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/) | Retrieve the list of customers to be targeted by a campaign or canvas. As OfferFit doesn't accept any PII data, the `fields_to_export` attribute is used to only retrieve the data attributes agreed together with the platform user. |
 | [POST /users/export/segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment/) | Retrieve all the users that are part of a specific segment. As OfferFit doesn't accept any PII data, the `fields_to_export` attribute is used to only retrieve the non-PII fields agreed together with the platform user. |

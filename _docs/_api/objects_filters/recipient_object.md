@@ -31,7 +31,7 @@ The recipients object allows you to combine the [User Alias object]({{site.baseu
 
 ## Recipient object deduping
 
-When making an API call with the Recipient Object, **if there exists a duplicated recipient targeting the same address (ie email, push), the user will be deduped**, meaning identical users will be removed, leaving one. 
+When making an API call with the Recipient Object, **if there exists a duplicated recipient targeting the same address (i.e., email, push), the user will be deduped**, meaning identical users will be removed, leaving one. 
 
 For example, if the same `external_user_id` is used, then only 1 message will be received. Consider making multiple API calls if you need a work-around for this behavior.
 

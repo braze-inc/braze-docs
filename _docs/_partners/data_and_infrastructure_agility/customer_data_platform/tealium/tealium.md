@@ -167,7 +167,7 @@ A connector is an integration between Tealium and another vendor used to transmi
 
 #### Source
 
-Once the source has been configured, navigate back to the Braze connector page under **EventStream > Event Connectors > + Add Conncetor > Braze**. 
+Once the source has been configured, navigate back to the Braze connector page under **EventStream > Event Connectors > + Add Connector > Braze**. 
 
 In the dialogue that opens, select the data source you just built, and under **Event Feed**, select **All Events** or a specific event spec, the recommended path to send only changed values into Braze. Click **Continue**.
 
@@ -254,7 +254,7 @@ Refer to Tealium's [Trace documentation][21] for more detailed instructions on i
 
 There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
 
-#### Sending duplicative data - only send Braze deltas of attributes
+#### Sending duplicate data - only send Braze deltas of attributes
 Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 
 **Solution**: <br>You can check your backend to assess whether an attribute has changed or not, and if so, call Tealium's relevant methods to update the user profile. **This is what users who integrate Braze directly usually do.** <br>**OR**<br> If you don't store your own version of a user profile in your backend and can't tell if attributes change or not, you can use AudienceStream and 
 [create enrichments](https://community.tealiumiq.com/t5/Customer-Data-Hub/Using-Enrichments/ta-p/11932) to only send user attributes when values have changed. See Tealium's documentation on [enrichment rules](https://community.tealiumiq.com/t5/Server-Side-Connectors/Braze-Connector-Setup-Guide/ta-p/29761#).

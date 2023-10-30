@@ -403,7 +403,7 @@ This is a update
 {% tabs %}
 {% tab Styling %}
 #### Embedded Video/YouTube
-Defaults to youtube embedded.
+Defaults to YouTube embedded.
 {% multi_lang_include video.html id="XY5vFY" source="youtube" %}
 
 #### Embedded Video Right Align
