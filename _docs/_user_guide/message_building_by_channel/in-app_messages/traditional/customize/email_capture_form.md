@@ -33,7 +33,7 @@ In general, the logic behind the email capture form is straightforward. It will 
 
 If an anonymous user enters their email in the form and submits it, Braze adds the email address to their profile. If `changeUser` is called later on in their web journey and a new `external_id` is assigned (i.e., when a new user registers with the service), all anonymous user profile data is merged including the email address.
 
-If `changeUser` is called with an existing `external_id`, the anonymous user profile is orphaned and all data for that profile is lost, including the email address.
+If `changeUser` is called with an existing `external_id`, the anonymous user profile is orphaned and [specific user profile data fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior) that do not already exist on the identified user are merged, but any fields that do already exist are lost, including the email address.
 
 For more information, refer to the [User profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
 
