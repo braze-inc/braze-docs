@@ -21,6 +21,10 @@ Push notifications are rate-limited, so don't be afraid of sending as many as yo
 
 To send a silent push notification, set the `content-available` flag to `1` in a push notification payload. When sending a silent push notification, you might also want to include some data in the notification payload, so your application can reference the event. This could save you a few networking requests and increase the responsiveness of your app.
 
+{% alert warning %}
+To ensure that the notification is truly silent, be sure to exclude the title and body when setting the `content-available` flag to `1.` While APNs does not strictly enforce this exclusivity, attaching both a title and body with `content-available=1` is not recommended, as it can lead to undefined behavior. For further details, refer to the official [Apple documentation on background updates](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app).
+{% endalert %}
+
 The `content-available` flag can be set in the Braze dashboard as well as within our [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) in the [messaging API][1].
 
 ![The Braze dashboard showing the "content-available" checkbox found in the "settings" tab of the push composer.][2]
