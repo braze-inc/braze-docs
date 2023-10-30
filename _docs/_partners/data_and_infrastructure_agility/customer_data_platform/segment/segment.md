@@ -49,7 +49,7 @@ Your choice of connection mode will be determined by the type of Source the dest
 | Integration | Details |
 | ----------- | ------- |
 | [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn't mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
-| [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment to Braze's REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
+| [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment to Braze REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -58,13 +58,13 @@ Visit [Segment](https://segment.com/docs/destinations/#connection-modes) to lear
 
 #### Side-by-side SDK integration
 
-Also called device-mode, this integration maps Segment's SDK and [methods](#methods) to Braze's SDK, allowing access to all the features our SDK provides, such as push, in-app messaging, and other methods native to Braze. 
+Also called device-mode, this integration maps Segment's SDK and [methods](#methods) to the Braze SDK, allowing access to all the features our SDK provides, such as push, in-app messaging, and other methods native to Braze. 
 
 {% alert note %}
 When using Segment's device-mode, you do not need to integrate the Braze SDK directly. When adding Braze as a device-mode destination for Segment, the Segment SDK will initialize the Braze SDK and call the relevant mapped Braze methods.
 {% endalert %}
 
-When using a device-mode connection, similar to integrating the Braze SDK natively, Braze's SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
+When using a device-mode connection, similar to integrating the Braze SDK natively, the Braze SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
 
 {% tabs local %}
 {% tab Android %}
@@ -117,7 +117,7 @@ To complete the side-by-side integration, refer to Segment's detailed instructio
 The source code for the [iOS device mode](https://github.com/Appboy/appboy-segment-ios) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
 {% endtab %}
-{% tab Web or Javascript %}
+{% tab Web or JavaScript %}
 
 Segment's new Braze Web Mode (Actions) framework is recommended for setting up Braze as a device-mode destination for your Web source. 
 
@@ -183,7 +183,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Enable HTML in-app messages | Enabling this option will allow Braze dashboard users to use HTML in-app messages. | 
 | Open in-app messages in a new tab | By default, links from in-app message clicks load in the current tab or a new tab as specified in the dashboard on a message-by-message basis. Set this option to `TRUE` to force all links from in-app message clicks open in a new tab or window. |
 | In-app message z index | Provide a value for this option to override Braze's default z-indexes. | 
-| Require explicit in-app message dismissal | By default, when an in-app message is showing, pressing the escape button or a click on the greyed-out background of the page will dismiss the message. Set this option to true to prevent this behavior and require an explicit button click to dismiss messages. |
+| Require explicit in-app message dismissal | By default, when an in-app message is showing, pressing the escape button or a click on the grayed-out background of the page will dismiss the message. Set this option to true to prevent this behavior and require an explicit button click to dismiss messages. |
 | Minimum interval between trigger actions in seconds | Defaults to 30.<br>By default, a trigger action will only fire if at least 30 seconds have elapsed since the last trigger action. Provide a value for this configuration option to override that default with a value of your own. We do not recommend making this value any smaller than 10 to avoid spamming the user with notifications.|
 | Service worker location | By default, when registering users for web push notifications, Braze will look for the required service worker file in the root directory of your web server at `/service-worker.js`. If you want to host your service worker at a different path on that server, provide a value for this option that is the absolute path to the file. (e.g., `/mycustompath/my-worker.js`). Note that setting a value here limits the scope of push notifications on your site. For instance, in the above example, because the service worker file is located within the `/mycustompath/` directory, `requestPushPermission` may only be called from web pages that start with `http://yoursite.com/mycustompath/`. |
 | Disable push token maintenance | By default, users who have already granted web push permission will sync their push token with the Braze backend automatically on new sessions to ensure deliverability. To disable this behavior, set this option to `FALSE`. |
@@ -243,7 +243,7 @@ It is also possible to engineer a workaround and use `braze_id` to send anonymou
 
 The [Identify](https://segment.com/docs/spec/identify/) call lets you tie a user to their actions and record attributes about them. 
 
-Certain Segment special traits map to Braze's standard attribute profile fields:
+Certain Segment special traits map to standard attribute profile fields in Braze:
 
 | Special Segment traits | Braze standard attributes |
 | ------------- | ----------- |
@@ -257,7 +257,7 @@ Certain Segment special traits map to Braze's standard attribute profile fields:
 | `gender` | `gender` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using Braze's naming convention for these fields and passing them as traits within an identify call.
+Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using the Braze naming convention for these fields and passing them as traits within an identify call.
 
 ##### Adding a user to a subscription group
 You can also subscribe or unsubscribe a user from a given subscription group using the following fields in the traits parameter.

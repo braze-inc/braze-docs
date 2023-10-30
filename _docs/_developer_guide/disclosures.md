@@ -7,7 +7,7 @@ guide_top_header: "Disclosures"
 guide_top_text: "Braze has you covered! Check out the following articles!"
 
 page_type: landing
-description: "This landing page is home to Braze's disclosures and qualifications."
+description: "This landing page is home to disclosures and qualifications of Braze."
 
 guide_featured_title: "Disclosures and Qualifications"
 guide_featured_list:

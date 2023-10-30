@@ -152,7 +152,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 Using the `/users/track` endpoint, you can update a user profile by phone number. You'll need to generate an API key with `users.track` permissions to use this endpoint. This endpoint only works if you include a valid phone number.
 
 {% alert important %}
-If you include a request with both email and phone, we will use the email as the identifer.
+If you include a request with both email and phone, we will use the email as the identifier.
 {% endalert %}
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \

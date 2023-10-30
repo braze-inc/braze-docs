@@ -48,9 +48,9 @@ Additionally, an `external_id` is unchangeable after it has been set against a u
 
 There are two scenarios that occur when you identify anonymous users:
 
-1) **An anonymous user becomes a new identified user:** If the `external_id` does not yet exist in Braze's platform, the anonymous user becomes a new identified user and retains all of the same attributes and history of the anonymous user. 
+1) **An anonymous user becomes a new identified user:** If the `external_id` does not yet exist in Braze, the anonymous user becomes a new identified user and retains all of the same attributes and history of the anonymous user. 
 
-2) **An anonymous user is identified as an already existing user:** If the `external_id` already exists in Braze's platform, then this user was previously identified as a user in the system in some other way, such as via another device like a tablet or through imported user data. As such, you already have a user profile for this user. In this instance, Braze orphans the anonymous user, merges the anonymous profile to the identified user profile, and then removes the anonymous profile from your user base so the user counts aren't inflated.
+2) **An anonymous user is identified as an already existing user:** If the `external_id` already exists in Braze, then this user was previously identified as a user in the system in some other way, such as via another device like a tablet or through imported user data. As such, you already have a user profile for this user. In this instance, Braze orphans the anonymous user, merges the anonymous profile to the identified user profile, and then removes the anonymous profile from your user base so the user counts aren't inflated.
 
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS][24], [Android][30], [Web][31]).
 

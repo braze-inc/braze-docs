@@ -21,7 +21,7 @@ Reach out to your Braze account manager for more details.
 
 ## Features and functionality
 
-Content Cards offers many capabilities that are not supported by Braze's News Feed, such as additional delivery options like action-based and API delivery, and enhanced analytics like conversion tracking.
+Content Cards offers many capabilities that are not supported by News Feed, such as additional delivery options like action-based and API delivery, and enhanced analytics like conversion tracking.
 
 As you plan your migration from the News Feed to Content Cards, it will be important to note the main differences between Content Cards and the News Feed:
 

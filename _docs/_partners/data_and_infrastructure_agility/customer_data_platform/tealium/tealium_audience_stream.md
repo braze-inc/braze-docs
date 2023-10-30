@@ -16,7 +16,7 @@ search_tag: Partner
 The Braze and Tealium integration leverages AudienceStream visitor profiles. Shared behaviors segment these profiles to create sets of visitors with common traits, known as audiences. These audiences can help fuel your marketing technology stack in real-time via connectors. 
 
 {% alert important %}
-Tealium AudienceStreams and EventStreams offer both batch and non-batch connector actions. The non-batch connector should be used when real-time requests are important to the use case and there are no concerns about hitting Braze's API rate limit specifications. Contact Braze [Support]({{site.baseurl}}/braze_support/) or your CSM if you have any questions. 
+Tealium AudienceStreams and EventStreams offer both batch and non-batch connector actions. The non-batch connector should be used when real-time requests are important to the use case and there are no concerns about hitting Braze's API rate limit specifications. Contact Braze [Support]({{site.baseurl}}/braze_support/) or your customer success manager if you have any questions. 
 {% endalert %}
 
 ## Prerequisites
@@ -50,7 +50,7 @@ The first step in using AudienceStream is to create attributes. Attributes allow
 
 Visit [Tealium][1] for a full list of available data types.
 
-##### Attribute enrichments
+##### Attribute enrichment
 
 Once you identify your desired attributes, you can configure them with [enrichments](https://community.tealiumiq.com/t5/Getting-Started-with/Attributes-Enrichments/ta-p/25786) - business rules that determine when and how to update the values of attributes. Each data type offers its own selection of enrichments for manipulating the attribute's value. This is associated with the "WHEN" setting. The following options are available for each visit and visitor attribute:
 
@@ -223,7 +223,7 @@ Refer to Tealium's [Trace documentation][21] for more detailed instructions on i
 
 There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
 
-#### Sending duplicative data - only send Braze deltas of attributes
+#### Sending duplicate data - only send Braze deltas of attributes
 Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 
 **Solution**: <br>You can check your backend to assess whether an attribute has changed or not, and if so, call Tealium's relevant methods to update the user profile. **This is what users who integrate Braze directly usually do.** <br>**OR**<br> If you don't store your own version of a user profile in your backend and can't tell if attributes change or not, you can use AudienceStream and [create enrichments](https://community.tealiumiq.com/t5/Customer-Data-Hub/Using-Enrichments/ta-p/11932) to only send user attributes when values have changed. Refer to Tealium's documentation on [enrichment rules](https://community.tealiumiq.com/t5/Server-Side-Connectors/Braze-Connector-Setup-Guide/ta-p/29761#) for more information.
 

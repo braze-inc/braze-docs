@@ -1,6 +1,6 @@
 ---
 nav_title: Braze JavaScript Interface
-article_title: Adding the Braze JavaScript Interface to Webviews for Android and FireOS
+article_title: Adding the Braze JavaScript Interface to WebViews for Android and FireOS
 platform: 
   - Android
   - FireOS

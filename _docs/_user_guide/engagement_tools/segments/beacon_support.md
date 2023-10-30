@@ -14,7 +14,7 @@ description: "This article briefly discusses Beacon and Geofence support and how
 
 > This article briefly discusses Beacon and Geofence support and how to use your location partner account to begin location tracking.
 
-Combining existing beacon or geofence support with Braze's targeting and messaging features allows you to learn more about your user's physical actions and message them accordingly.
+Combining existing beacon or geofence support with our targeting and messaging features allows you to learn more about your user's physical actions and message them accordingly.
 
 ## Radar support
 

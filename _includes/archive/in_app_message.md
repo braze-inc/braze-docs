@@ -25,7 +25,7 @@ The following example shows a paginated HTML Full in-app message:
 
 ![HTML5 Example][in_app_message_23]
 
- {% elsif include.platform == "Android" %}The following example shows a survey HTML Full in-app message created by Soundcloud.
+ {% elsif include.platform == "Android" %}The following example shows a survey HTML Full in-app message created by SoundCloud.
 
 ![HTML5 Example][in_app_message_12]
 {% endif %}

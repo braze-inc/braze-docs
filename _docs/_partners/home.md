@@ -276,5 +276,7 @@ valid_partner_list:
 - name: Antavo
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/
 - name: Lytics
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lytics/  
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lytics/
+- name: Olo
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/  
 ---

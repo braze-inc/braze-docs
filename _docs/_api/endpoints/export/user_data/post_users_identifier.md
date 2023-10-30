@@ -91,13 +91,13 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 | `attributed_campaign` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for a particular ad campaign. |
 | `attributed_source` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for the platform the ad was on. |
 | `attributed_adgroup` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign. |
-| `attributed_ad` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign and adgroup. |
+| `attributed_ad` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign and ad group. |
 | `braze_id` | String | Device-specific unique user identifier set by Braze for this user. |
 | `country` | String | User's country using [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard. |
 | `created_at` | String | Date and time for when the user profile was created, in ISO 8601 format. |
 | `custom_attributes` | Object | Custom attribute key-value pairs for this user. |
 | `custom_events` | Array | Custom events attributed to this user in the last 90 days. |
-| `devices` | Array | Information about the user's device, which could include the following depending on platform:<br><br>- `model`: Device's model name<br>- `os`: Device's operating system<br>- `carrier`: Device's service carrier, if available<br>- `idfv`: (iOS) Braze's device identifier, the Apple Identifier for Vendor, if exists<br>- `idfa`: (iOS) Identifier for Advertising, if exists<br>- `device_id`: (Android) Braze's device identifier<br>- `google_ad_id`: (Android) Google Play Advertising Identifier, if exists<br>- `roku_ad_id`: (Roku) Roku Advertising Identifier<br>- `ad_tracking_enabled`: If ad tracking is enabled on the device, can be true or false |
+| `devices` | Array | Information about the user's device, which could include the following depending on platform:<br><br>- `model`: Device's model name<br>- `os`: Device's operating system<br>- `carrier`: Device's service carrier, if available<br>- `idfv`: (iOS) Braze device identifier, the Apple Identifier for Vendor, if exists<br>- `idfa`: (iOS) Identifier for Advertising, if exists<br>- `device_id`: (Android) Braze device identifier<br>- `google_ad_id`: (Android) Google Play Advertising Identifier, if exists<br>- `roku_ad_id`: (Roku) Roku Advertising Identifier<br>- `ad_tracking_enabled`: If ad tracking is enabled on the device, can be true or false |
 | `dob` | String | User's date of birth in the format `YYYY-MM-DD`. |
 | `email` | String | User's email address. |
 | `external_id` | String | Unique user identifier for identified users. |

@@ -51,7 +51,7 @@ On the WhatsApp partner page, select **Login with Facebook** to start the integr
 It is likely that you already have at least one existing Meta Business account at your company. If that is the case, select the one that you would like your WhatsApp Business account to live within. User permissions and business verification for WhatsApp will be controlled centrally in your Meta Business account.
 
 ### Step 2: WhatsApp setup
-Next, you will be prompted by Braze's setup wizard. Within this flow, you will:
+Next, you will be prompted by the Braze setup wizard. Within this flow, you will:
 1. Create or select your Meta and WhatsApp Business accounts.
 2. Create your WhatsApp Business profile.
 3. Verify your WhatsApp Business number.<br><br>

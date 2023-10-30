@@ -92,7 +92,7 @@ Don't worry, initializing with this option alone won't impact data collection in
 {% endalert %}
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 When calling `initialize`, set the optional `enableSdkAuthentication` property to `true`.
 ```javascript
 import * as braze from"@braze/web-sdk";
@@ -161,7 +161,7 @@ Keep in mind that `changeUser` should only be called when the User ID has _actua
 {% endalert %}
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 Supply the JWT Token when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
 ):
 
@@ -257,14 +257,14 @@ When this feature is set as [Required](#enforcement-options), the following scen
 
 You can use `subscribeToSdkAuthenticationFailures` to subscribe to be notified when the SDK requests fail for one of these reasons. A callback function contains an object with the relevant [`errorCode`][9], `reason` for the error, the `userId` of the request (if the user is not anonymous), and the authentication `signature` that caused the error. 
 
-Failed requests will periodically be retried until your app supplies a new valid JWT. If that user is still logged in, you can use this callback as an opportunity to request a new JWT from your server and supply Braze's SDK with this new valid token.
+Failed requests will periodically be retried until your app supplies a new valid JWT. If that user is still logged in, you can use this callback as an opportunity to request a new JWT from your server and supply the Braze SDK with this new valid token.
 
 {% alert tip %}
 These callback methods are a great place to add your own monitoring or error-logging service to keep track of how often your Braze requests are being rejected.
 {% endalert %}
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 ```javascript
 import * as braze from"@braze/web-sdk";
 braze.subscribeToSdkAuthenticationFailures((error) => {

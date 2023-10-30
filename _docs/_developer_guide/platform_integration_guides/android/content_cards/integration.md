@@ -42,7 +42,7 @@ The [base card][29] model provides foundational behavior for all cards.
 |`getExtras()` | Returns a map of key-value extras for this card.|
 |`getCreated()`  | Returns the unix timestamp of the card's creation time from Braze.|
 |`getIsPinned` | Returns a boolean that reflects whether the card is pinned.|
-|`getOpenUriInWebView()`  | Returns a boolean that reflects whether Uris for this card should be opened <br> in Braze's WebView or not.|
+|`getOpenUriInWebView()`  | Returns a boolean that reflects whether Uris for this card should be opened <br> in the Braze WebView or not.|
 |`getExpiredAt()` | Gets the expiration date of the card.|
 |`getIsRemoved()` | Returns a boolean that reflects whether the end user has dismissed this card.|
 |`getIsDismissible()`  | Returns a boolean that reflects whether the card is pinned.|
@@ -55,7 +55,7 @@ The [base card][29] model provides foundational behavior for all cards.
 |Property | Description |
 |---|---|
 |`getImageUrl()` | Returns the URL of the card's image.|
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.|
+|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL.|
 |`getDomain()` | Returns link text for the property URL.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -68,7 +68,7 @@ The [base card][29] model provides foundational behavior for all cards.
 |`getImageUrl()` | Returns the URL of the card's image.|
 |`getTitle()` | Returns the title text for the card.|
 |`getDescription()` | Returns the body text for the card.|
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.|
+|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL.|
 |`getDomain()` | Returns the link text for the property URL. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -80,7 +80,7 @@ A classic card without an image included will result in a [text announcement car
 |---|---|
 |`getTitle()` | Returns the title text for the card. |
 |`getDescription()` | Returns the body text for the card. |
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL. | 
+|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL. | 
 |`getDomain()` | Returns the link text for the property URL. |
 |`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card. |
 {: .reset-td-br-1 .reset-td-br-2}

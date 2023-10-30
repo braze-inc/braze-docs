@@ -60,7 +60,7 @@ In addition, Braze also provides a push changelog on the user profile under the 
 
 ## Push registration issues
 
-To add verification for your application's push registration logic, implement Braze's [push unit testing][41].
+To add verification for your application's push registration logic, implement [push unit testing][41].
 
 #### No push registration prompt
 
@@ -140,12 +140,12 @@ The `BadDeviceToken` is an APNs error code and does not originate from Braze. Th
 
 ## Issues after push delivery
 
-To add verification for your application's push handling, implement Braze's [push unit tests][41] .
+To add verification for your application's push handling, implement [push unit tests][41] .
 
 #### Push clicks not logged {#push-clicks-not-logged}
 
 - If this is only occurring on iOS 10, make sure you have followed the push integration steps for [iOS 10][30].
-- Braze does not handle push notifications received silently in the foreground (e.g., default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened, and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. You should ensure that your app does not delay calls to Braze's [push handling methods][30]; otherwise, the iOS SDK may treat push notifications as silent foreground push events and not handing them.
+- Braze does not handle push notifications received silently in the foreground (e.g., default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened, and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. You should ensure that your app does not delay calls to our [push handling methods][30]; otherwise, the iOS SDK may treat push notifications as silent foreground push events and not handing them.
 
 #### Web links from push clicks not opening
 

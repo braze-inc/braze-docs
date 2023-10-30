@@ -5,8 +5,8 @@ page_order: 10
 layout: dev_guide
 search_rank: 12
 guide_top_header: "Intelligence Suite"
-guide_top_text: "Braze's Intelligence Suite helps you automate decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale. <br> <br> The Intelligence Suite comprises of three main features: Intelligent Timing, Intelligent Channel, and Intelligent Selection."
-description: "Braze's Intelligence Suite helps you automate decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale."
+guide_top_text: "The Braze Intelligence Suite helps you automate decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale. <br> <br> The Intelligence Suite comprises of three main features: Intelligent Timing, Intelligent Channel, and Intelligent Selection."
+description: "The Braze Intelligence Suite helps you automate decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale."
 
 Tool:
   - Dashboard

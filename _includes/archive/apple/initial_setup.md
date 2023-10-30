@@ -2,11 +2,11 @@ Installing the Braze SDK will provide you with basic analytics functionality{% i
 
 The {{include.platform}} Braze SDK should be installed or updated using [CocoaPods][apple_initial_setup_1], a dependency manager for Objective-C and Swift projects. CocoaPods provides added simplicity for integration and updating.
 
-## {{include.platform}} SDK CocoaPod integration
+## {{include.platform}} SDK CocoaPods integration
 
 ### Step 1: Install CocoaPods
 
-Installing the SDK via the {{include.platform}} [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, check that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater. Note that knowledge of Ruby syntax isn't necessary to install this SDK.
+Installing the SDK via the {{include.platform}} [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, check that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater. Note that knowledge of Ruby syntax isn't necessary to install this SDK.
 
 Simply run the following command to get started:
 
@@ -22,7 +22,7 @@ $ sudo gem install cocoapods
 
 Now that you've installed the CocoaPods Ruby Gem, you're going to need to create a file in your Xcode project directory named `Podfile`.
 
-Add the following line to your Podfile:
+Add the following line to your podfile:
 
 ```
 target 'YourAppTarget' do
@@ -30,13 +30,13 @@ target 'YourAppTarget' do
 end
 ```
 
-**Note**: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-{{include.platform}}-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-{{include.platform}}-SDK'` in your Podfile.
+**Note**: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-{{include.platform}}-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-{{include.platform}}-SDK'` in your podfile.
 {% if include.platform == 'iOS' %}
 **Note**: If you do not use any Braze default UI and don't want to introduce the SDWebImage dependency, please point your Braze dependency in your Podfile to our Core subspec, like `pod 'Appboy-iOS-SDK/Core'` in your Podfile. {% endif %}.
 
 ### Step 3: Installing the Braze SDK
 
-To install the Braze SDK Cocoapod, navigate to the directory of your Xcode app project within your terminal and run the following command:
+To install the Braze SDK CocoaPods, navigate to the directory of your Xcode app project within your terminal and run the following command:
 ```
 pod install
 ```
@@ -87,7 +87,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 {% endtabs %}
 
 {% alert important %}
-Be sure to update `YOUR-API-KEY` with the correct value from your Mangage Settings page.
+Be sure to update `YOUR-API-KEY` with the correct value from your Manage Settings page.
 {% endalert %}
 
 {% alert warning %}

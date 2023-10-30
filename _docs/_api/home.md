@@ -319,7 +319,7 @@ glossaries:
     tags:
       - News Feed
   - name: <a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>
-    description: Remove "invalid" phone numbers from Braze's invalid list. This can be used to re-validate phone numbers after they have been marked as invalid.
+    description: Remove "invalid" phone numbers from the invalid list in Braze. This can be used to re-validate phone numbers after they have been marked as invalid.
     tags:
       - SMS
   - name: <a href='/docs/api/endpoints/sms/get_query_invalid_numbers/'>/sms/invalid_phone_numbers</a>

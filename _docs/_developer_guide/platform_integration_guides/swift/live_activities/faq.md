@@ -48,7 +48,7 @@ Apple requires that the user initiates the Live Activity through some action in 
 
 ## Technical topics and troubleshooting
 
-### How do I know if Live Activites has errors?
+### How do I know if Live Activities has errors?
 
 Any Live Activity errors will be logged in the Braze dashboard in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/), where you can filter by "LiveActivity Errors".
 
