@@ -52,22 +52,22 @@ The following is included in your export depending on your selection.
 | last_app_version_used       | Last version of the app used                             |
 | last_name                   | Last name                                                |
 | last_session                | Date and time of last session                            |
-| number_of_google_ad_ids     | Count of Google advertising IDs associated               |
-| number_of_IDFAs             | Count of IDFAs associated                                |
-| number_of_IDFVs             | Count of IDFVs associated                                |
-| number_of_push_tokens       | Count of push notification tokens associated             |
-| number_of_roku_ad_ids       | Count of Roku advertising IDs associated                 |
-| number_of_windows_ad_ids    | Count of Windows advertising IDs associated              |
+| number_of_google_ad_ids     | Count of associated Google advertising IDs               |
+| number_of_IDFAs             | Count of associated IDFAs                                |
+| number_of_IDFVs             | Count of associated IDFVs                                |
+| number_of_push_tokens       | Count of associated push notification tokens             |
+| number_of_roku_ad_ids       | Count of associated Roku advertising IDs                 |
+| number_of_windows_ad_ids    | Count of associated Windows advertising IDs              |
 | phone_number                | Phone number                                             |
 | opted_into_push_at          | Date opted into push notifications                       |
 | unsubscribed_from_push_at   | Date unsubscribed from push notifications                |
 | random_bucket               | Random bucket number                                 |
-| roku_ad_ids                 | Roku advertising IDs associated                          |
+| roku_ad_ids                 | Roku advertising IDs                          |
 | session_count               | Total number of sessions                                 |
 | timezone                    | User's time zone in the same format as the IANA Time Zone Database                                         |
 | in_app_purchase_total       | Total amount spent on in-app purchases                   |
 | user_aliases                | User aliases, if any                                          |
-| windows_ad_ids              | Windows advertising IDs associated                       |
+| windows_ad_ids              | Windows advertising IDs                       |
 | Custom events               | Based on selection at export                             |
 | Custom attributes           | Based on selection at export                             |
 {: .reset-td-br-1 .reset-td-br-2 }
