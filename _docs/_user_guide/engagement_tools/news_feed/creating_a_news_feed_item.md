@@ -104,7 +104,7 @@ After launching a News Feed card, a button will appear in the new feed statistic
 
 ## Organizing your News Feed
 
-You can re-order your cards within Braze's News Feed page.
+You can re-order your cards within the News Feed page.
 - Cards in the feed are ordered first by whether or not they have been seen by the user, unseen items are at the top of the feed.
   - A card is considered read if it has received an impression in the feed.
   - Impressions are only counted if the card is viewable in the feed (i.e., if a user does not scroll down to read a card, an impression is not counted).

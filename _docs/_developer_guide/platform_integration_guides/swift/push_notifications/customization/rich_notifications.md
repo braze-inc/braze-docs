@@ -74,6 +74,30 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 {% endtab %}
 {% endtabs %}
 
+#### Using your own UNNotificationServiceExtension
+If you need to use your own UNNotificationServiceExtension, you can instead call [`brazeHandle`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazenotificationservice/brazehandle(request:contenthandler:)) in your `didReceive` method.
+
+```swift
+import BrazeNotificationService
+import UserNotifications
+
+class NotificationService: UNNotificationServiceExtension {
+
+  override func didReceive(
+    _ request: UNNotificationRequest,
+    withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void
+  ) {
+    if brazeHandle(request: request, contentHandler: contentHandler) {
+      return
+    }
+
+    // Custom handling here
+
+    contentHandler(request.content)
+  }
+}
+```
+
 ## Step 4: Creating a rich notification in your dashboard
 
 Your Marketing team can also create rich notifications from the dashboard. Create a push notification through the push composer and simply attach an image or GIF, or provide a URL that hosts an image, GIF, or video. Note that assets are downloaded on the receipt of push notifications, so you should plan for large, synchronous spikes in requests if you are hosting your content.

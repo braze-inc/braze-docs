@@ -31,7 +31,7 @@ Once you have created a **Custom Event** or **Product**, you can click **Manage 
 
 ![Custom properties for a custom event][73]{: style="max-width:70%"}
 
-To make these added custom attributes, events, products, or event properties traceable, you must ask your developer to create it in the SDK using the exact name you used to add it earlier. Or, you can use Braze's [APIs]({{site.baseurl}}/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other will be actionable and apply to your users!
+To make these added custom attributes, events, products, or event properties traceable, you must ask your developer to create it in the SDK using the exact name you used to add it earlier. Or, you can use the Braze [APIs]({{site.baseurl}}/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other will be actionable and apply to your users!
 
 {% alert note %}
 All user profile data (custom events, custom attributes, custom data) is stored as long as those profiles are active.

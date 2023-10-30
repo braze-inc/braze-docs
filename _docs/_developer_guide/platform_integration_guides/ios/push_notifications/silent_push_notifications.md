@@ -33,7 +33,7 @@ To use silent push notifications to trigger background work, set up the `content
 
 ![Xcode showing the "remote notifications" mode checkbox under "capabilities".][3]
 
-Enabling background mode for remote notifications is required for Braze's [uninstall tracking][6] feature.
+Enabling background mode for remote notifications is required for [uninstall tracking][6].
 
 Even with the remote notifications background mode enabled, the system will not launch your app into the background if the user has force-quit the application. The user must explicitly launch the application or reboot the device before the app can be automatically launched into the background by the system.
 

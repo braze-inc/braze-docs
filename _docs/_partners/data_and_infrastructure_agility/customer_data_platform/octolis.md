@@ -55,7 +55,7 @@ Next, to set Braze as a new destination, select **+ Add more** at the top of you
 
 Once selected, provide the following:
 
-- Your Braze's API key: This can be created in the Braze dashboard from **Settings** > **API Keys**.
+- Your Braze API key: This can be created in the Braze dashboard from **Settings** > **API Keys**.
 - Time window: Octolis will apply the rate limiting in the given period.
 - Request volume: Number of requests you can make within this time frame.
 - Custom attributes: Specify here the new fields you will send to Braze, their format (string, integer, float), and tick the **Required for syncs** if you want one of them to be mandatory for a sync.

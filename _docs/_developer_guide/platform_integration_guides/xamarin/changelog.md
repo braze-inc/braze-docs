@@ -7,7 +7,7 @@ platform:
   - Xamarin
   - iOS
   - Android
-description: "This page lists updates to Braze's Xamarin SDK changelog."
+description: "This page lists updates to the Braze Xamarin SDK changelog."
 
 ---
 

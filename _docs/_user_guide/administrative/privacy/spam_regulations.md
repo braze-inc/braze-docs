@@ -94,7 +94,7 @@ Just because your emails have successfully sent doesn't mean that they have nece
 
 - Maintain Your Reputation: Be in constant contact with your users to prevent your email lists from becoming stale. Waiting too long to send a message may cause the recipient to forget about you and mark you as spam. Keep your email lists up to date by implementing a sunset policy to remove email addresses that bounce. Bounce rates are a key factor used by ISPs to evaluate a sender's reputation.
 
-- Check and Test: Make sure your message does not contain anything that can trigger spam filters. This includes superfluous tags from external text editors like Microsoft Word, abnormal text formatting, over-usage of ! and ? as punctuation, writing in ALL CAPS, and spam trigger words (see [HubSpot][7] for a list of common trigger words). Send emails with varying content using Braze's multivariate testing capabilities to make sure your emails are not going to spam.
+- Check and Test: Make sure your message does not contain anything that can trigger spam filters. This includes superfluous tags from external text editors like Microsoft Word, abnormal text formatting, over-usage of ! and ? as punctuation, writing in ALL CAPS, and spam trigger words (see [HubSpot][7] for a list of common trigger words). Send emails with varying content using multivariate testing capabilities to make sure your emails are not going to spam.
 
 ## Messaging channel
 

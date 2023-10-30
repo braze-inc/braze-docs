@@ -5,7 +5,7 @@ page_order: 30
 page_type: update
 platform:
   - Flutter
-description: "This page lists updates to Braze's Flutter SDK changelog."
+description: "This page lists updates to the Braze Flutter SDK changelog."
 
 ---
 

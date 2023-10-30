@@ -25,7 +25,7 @@ The Braze and Merkury integration allows you to leverages the `MerkuryID` to inc
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
-The Merkury identity connector requests to Braze operate within Braze's API rate limit specifications. Contact Braze or your Merkle account manager if you have any questions.<br><br>Merkury will send at least one request at the end of a qualified session.
+The Merkury identity connector requests to Braze operate within Braze API rate limit specifications. Contact Braze or your Merkle account manager if you have any questions.<br><br>Merkury will send at least one request at the end of a qualified session.
 {% endalert %}
 
 ## Side-by-side SDK integration

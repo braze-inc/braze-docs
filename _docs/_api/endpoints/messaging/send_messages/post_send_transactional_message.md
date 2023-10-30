@@ -167,7 +167,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 |  Status | Description |
 | ------------ | ----------- |
-| `sent` | Message successfully dispatched to Braze's email sending partner  |
+| `sent` | Message successfully dispatched to a Braze email sending partner |
 | `processed` | Email sending partner has successfully received and prepared the message for sending to the user's inbox provider |
 | `aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or Liquid abort logic was called in the message body. All aborted events include a `reason` field within the metadata object indicating why the message was aborted |
 |`delivered`| Message was accepted by the user's email inbox provider |

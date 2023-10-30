@@ -117,7 +117,7 @@ Though the default setting for the Braze to Segment Engage connection is `Realti
 
 Segment's dashboard provides a "Debugger" feature that allows customers to test whether data from a "Source" is transferring to a "Destination" as expected.
 
-This feature connects to Braze's [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), meaning that it can only be used for identified users (users who already have a user ID for their Braze user profile).
+This feature connects to the Braze [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), meaning that it can only be used for identified users (users who already have a user ID for their Braze user profile).
 
 This will not work for a side-by-side Braze integration. No server data will go through if you haven't input the correct Braze REST API information.
 

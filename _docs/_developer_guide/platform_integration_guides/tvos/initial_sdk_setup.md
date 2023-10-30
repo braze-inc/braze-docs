@@ -98,7 +98,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 Next, update `YOUR-API-KEY` with the correct value from your **Manage Settings** page.
 
-Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
+Our `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
 
 {% endtab %}
 {% endtabs %}

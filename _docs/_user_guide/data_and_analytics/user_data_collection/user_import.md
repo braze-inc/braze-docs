@@ -16,7 +16,7 @@ Braze does not sanitize HTML data during ingestion time. This means that script 
 
 ## REST API
 
-You can use Braze's [`/users/track` endpoint][12] to record custom events, user attributes, and purchases for users.
+You can use the [`/users/track` endpoint][12] to record custom events, user attributes, and purchases for users.
 
 ## Cloud Data Ingestion
 
@@ -34,7 +34,7 @@ If you are uploading a mix of users with an `external_id` and users without, you
 
 ### Importing with external ID
 
-When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and is designed for each customer to have a single user profile within Braze across their devices. Read more about Braze's [user profile lifecycle][13].
+When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and is designed for each customer to have a single user profile within Braze across their devices. Read more about the Braze [user profile lifecycle][13].
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
@@ -249,7 +249,7 @@ The filter used to create the segment selects users who were created or updated 
 
 Braze does not sanitize HTML data during ingestion time. When importing data into Braze, specifically meant for personalization usage in a web browser, ensure that it is stripped of HTML, JavaScript, or any other script tag that potentially could be leveraged maliciously when rendered in a web browser.  
 
-Alternatively, for HTML, you can use Braze's Liquid filters (`strip_html`) to HTML escape rendered text. For example:
+Alternatively, for HTML, you can use Braze Liquid filters (`strip_html`) to HTML escape rendered text. For example:
 
 {% tabs local %}
 {% tab Input %}

@@ -10,11 +10,11 @@ description: "This article covers iOS Swift SDK sample apps."
 
 # Sample apps
 
-> Braze's SDKs each come with sample applications within the repository for your convenience. Each of these apps is fully buildable, so you can test Braze features alongside implementing them within your own applications. 
+> Braze SDKs each come with sample applications within the repository for your convenience. Each of these apps is fully buildable, so you can test Braze features alongside implementing them within your own applications. 
 
 Testing behavior within your own application versus expected behavior and codepaths within the sample applications is an excellent way to debug any problems you may run into.
 
-## Navigating Braze's examples
+## Navigating examples
 
 Several test applications are available within the `Examples` folder of the [Swift SDK GitHub repository][1]. The README describes all of the different permutations of sample integrations, such as:
 

@@ -686,7 +686,7 @@ Enable your production code to display the Content Cards view controller without
 
 Create an extension for your Content Cards code in your `BrazeManager.swift` file, so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
-1. Display the `ABKContentCardsTableViewController`. An optional `navigationController` is the only parameter needed to present or push Braze's view controller.
+1. Display the `ABKContentCardsTableViewController`. An optional `navigationController` is the only parameter needed to present or push our view controller.
 2. Initialize an `ABKContentCardsTableViewController` object and optionally change the title. You must also add the initialized view controller to the navigation stack.
 
 {% subtabs global %}

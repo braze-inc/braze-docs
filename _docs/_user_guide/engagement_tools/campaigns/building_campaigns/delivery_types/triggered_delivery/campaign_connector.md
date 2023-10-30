@@ -4,12 +4,12 @@ article_title: Campaign Connector
 page_order: 2
 tool: Campaigns
 page_type: tutorial
-description: "This how-to article goes over what Braze's Campaign Connector is and how to use it to deliver targeted, relevant content at the right time."
+description: "This how-to article goes over what Campaign Connector is and how to use it to deliver targeted, relevant content at the right time."
 
 ---
 # Campaign Connector
 
-> Braze's Campaign Connector allows you to create campaigns that are triggered when users interact with active campaigns or News Feed cards. This feature is useful because it enables you to deliver targeted, relevant content at the right time. 
+> Campaign Connector allows you to create campaigns that are triggered when users interact with active campaigns or News Feed cards. This feature is useful because it enables you to deliver targeted, relevant content at the right time. 
 
 {% alert note %}
 This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
