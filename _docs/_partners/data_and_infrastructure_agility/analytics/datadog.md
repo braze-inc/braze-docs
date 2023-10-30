@@ -1,7 +1,7 @@
 ---
 nav_title: Datadog
 article_title: "Datadog"
-description: "This reference article outlines the partnership with Braze and DataDog, an observability service for cloud-scale applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform."
+description: "This reference article outlines the partnership with Braze and Datadog, an observability service for cloud-scale applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform."
 alias: /partners/datadog/
 page_type: partner
 search_tag: Partner
@@ -11,7 +11,7 @@ search_tag: Partner
 
 # Datadog
 
-> [Datadog](https://www.datadoghq.com/) is an observability service for cloud-scale applications, providing monitoring of servers, databases, tools, and services, through a SaaS-based data analytics platform.
+> [Datadog](https://www.datadoghq.com/) is an observability service for cloud-scale applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform.
 
 The Braze and Datadog integration allows customers to collect Braze data in Datadog and create alerts on the data we send. For example, setting up a monitor and alert if your weekly newsletter campaign sends an abnormally low volume of messages or if a Canvas step that usually only sends a few messages a day starts sending thousands. 
 
@@ -36,7 +36,7 @@ In the Braze dashboard, navigate to **Partner Integrations** > **Technology Part
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-If you are hosted in the Datadog EU1 or US1-FED sites, please reach out to support to have your Datadog integration configured to send metrics to those sites, otherwise the integration will not work.
+If you are hosted in the Datadog EU1 or US1-FED sites, reach out to support to have your Datadog integration configured to send metrics to those sites, otherwise, the integration will not work.
 
 ## Braze events
 
@@ -51,7 +51,7 @@ Each of these events will have metadata in the form of Datadog tags to give you 
 - `campaign_id` / `campaign_name` (if available)
 - `canvas_id` / `canvas_name` / `canvas_step_id` / `canvas_step_name` (if available)
 
-These events and tags can be monitored on the Datadog **Metrics Explorer** page. These metrics are logged as [distributions](https://docs.datadoghq.com/metrics/distributions/) to DataDog. Given the nature of metrics and imprecision of Datadog's aggregations and rollups, Braze does not retry intermittent network errors or other DataDog API errors that may be encountered during transmission. This means that these metric counts may differ slightly from counts seen in the Braze dashboard and/or through Currents.
+These events and tags can be monitored on the Datadog **Metrics Explorer** page. These metrics are logged as [distributions](https://docs.datadoghq.com/metrics/distributions/) to DataDog. Given the nature of metrics and the imprecision of DataDog's aggregations and rollups, Braze does not retry intermittent network errors or other DataDog API errors that may be encountered during transmission. This means that these metric counts may differ slightly from counts seen in the Braze dashboard and/or through Currents.
 
 ![][1]
 

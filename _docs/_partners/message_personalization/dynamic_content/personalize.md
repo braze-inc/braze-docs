@@ -28,8 +28,8 @@ The Braze and Personalize.AI integration allows you to export data from Personal
 * Provide personalized recommendations for items and offers, including treatment, timing, and content
 * Identify prioritized objectives and target your optimal audience through Braze
 * Identify opportunities to re-engage lapsed users
-* Leverage geo-location data to find the right audience for newly-opened locations
-* Use lookalike modeling to build on limited available data for newer users, matchings them with the most relevant recommendations
+* Leverage geolocation data to find the right audience for newly opened locations
+* Use lookalike modeling to build on limited available data for newer users, matching them with the most relevant recommendations
 * Identify the right ways to engage customers throughout their lifecycle 
 * Proactively assess customers for likelihood to churn and assign a risk score to find early indicators of churn
 * Target customers with personalized interventions to prevent them from becoming inactive
