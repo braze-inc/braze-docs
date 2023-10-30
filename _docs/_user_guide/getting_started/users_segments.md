@@ -17,7 +17,7 @@ In Braze, information about your audience is stored in user profiles. A [user pr
 
 ### Parts of a user profile
 
-By understanding user profiles, you can gain insights into your audience and engage with them on a personalized and targeted level. A user's profile contains a lot of information, but here are some of the key parts of a user profile:
+By understanding user profiles, you can gain insights into your audience and engage with them on a personalized and targeted level. A user's profile contains a lot of information, but here are some of the key parts:
 
 - **User Identifier:** Each user profile is uniquely identified by a user ID, called an `external_id`. This identifier allows Braze to track and associate user data across different channels and devices, providing a unified view of each user's interactions with your brand.
 - [Attributes](#attributes)**:** These are specific pieces of information about the user, such as their name, age, location, or any other demographic information. You can use these attributes to segment your audience and personalize your messaging.
@@ -28,7 +28,7 @@ By understanding user profiles, you can gain insights into your audience and eng
 - **Message History:** This is a record of all the messages that have been sent to the user from the respective messaging channel (such as email or push).
 
 {% alert tip %}
-The Braze platform's SDKs collect 27 different attributes and events automatically. Using these standard events and attributes, you can build segments as soon as you integrate the SDK.
+The Braze platform's SDKs automatically collect 27 different attributes and events. Using these standard events and attributes, you can build segments as soon as you integrate the SDK.
 {% endalert %}
 
 ### Attributes
@@ -52,7 +52,7 @@ Standard attributes are predefined attributes that Braze provides. These are aut
 
 #### Custom attributes
 
-Custom attributes are attributes that you define based on your specific business needs. They allow you to track information that is unique to your app or business. For example, a music streaming app might track custom attributes like:
+[Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) are attributes that you define based on your specific business needs. They allow you to track information that is unique to your app or business. For example, a music streaming app might track custom attributes like:
 
 - Favorite Genre
 - Number of Songs Played
@@ -76,7 +76,7 @@ Events represent specific actions or behaviors performed by users within your ap
 
 #### Standard events
 
-Standard events are predefined events that Braze automatically tracks once the SDK is integrated into your app or site. Some examples of standard events include:
+[Standard events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/events#standard-events) are predefined events that Braze automatically tracks once the SDK is integrated into your app or site. Some examples of standard events include:
 
 - **Session Start:** This event is triggered when a user opens the app.
 - **Session End:** This event is triggered when a user closes the app.
@@ -85,7 +85,7 @@ Standard events are predefined events that Braze automatically tracks once the S
 
 #### Custom events
 
-Custom events are events that you define based on the specific actions you want to track within your app or site. For example, a music streaming app might track custom events like:
+[Custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) are events that you define based on the specific actions you want to track within your app or site. For example, a music streaming app might track custom events like:
 
 - Song Played
 - Playlist Created
@@ -105,19 +105,19 @@ Braze uses data points to help you define the most impactful information for you
 
 Data points are consumed when a user's profile data is updated or when they perform specific actions. These actions can include starting a session, ending a session, recording a custom event, or making a purchase. It's important to note that not all data collected by Braze counts as data points. For instance, data and events collected by default by the Braze Services, such as push tokens, device information, and all campaign engagement tracking events, like email opens and push notification clicks, are not counted as data points.
 
-By thoughtfully considering what information to track as data points, you ensure that you're targeting the highest-impact data for your users' experience. Your Braze account manager will help recommend data best practices to fit your needs.
+By thoughtfully considering what information to track as data points, you're targeting the highest-impact data for your users' experience. Your Braze account manager will help recommend data best practices to fit your needs.
 
 Visit our dedicated article to learn more about [data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
 
 ## Segments
 
-Segmentation allows you to target users based on their demographic, behavioral, social, or technical characteristics and actions (that is, attributes and events). Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users through their customer lifecycle journey.
+[Segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments) allows you to target users based on their demographic, behavioral, social, or technical characteristics and actions (that is, attributes and events). Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users through their customer lifecycle journey.
 
 Tips for working with segments:
 
 - Segments in Braze are dynamic: users are always flowing in and out of segments, as they won't always fit the criteria. Users that fit the criteria of a segment at the moment of sending will be the recipients of that campaign or Canvas.
     - If you want your segment to be static, you can use Segment Extensions. Segment Extensions (with [regeneration turned off]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#extension-regeneration)) represent your audience as a single snapshot in time.
-- You’re not limited to just using one filter at a time. Create finely tuned, granular segments by layering multiple filters on top of each other.
+- You’re not limited to using one filter at a time. Create finely tuned, granular segments by layering multiple filters on top of each other.
 - You can use the actions or inactions of your users to understand how to reach your users where they want to engage with you. These actions might be custom events, engagement with an existing campaign or Canvas, or even a specific message within a Canvas.
 
 ### Example
