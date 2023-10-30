@@ -152,9 +152,10 @@ In our app, we'll check if the feature flag is enabled or not and swap out the c
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-const featureFlag = braze.getFeatureFlag("enable_checkout_v2");
-if (featureFlag.enabled) {
-  return <NewCheckoutFlow />
+const featureFlag = await braze.getFeatureFlag("enable_checkout_v2");
+braze.logFeatureFlagImpression("");
+if (featureFlag?.enabled) {
+  return <NewCheckoutFlow />  
 } else {
   return <OldCheckoutFlow />
 }
