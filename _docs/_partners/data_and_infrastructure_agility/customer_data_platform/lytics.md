@@ -100,6 +100,8 @@ After the export job is configured, Lytics will send the selected audiences to B
 }
 ```
 
+A new user will be created in Braze for any `external_id` included within the audience export that does not yet exist in Braze. 
+
 ## Importing data from Braze to Lytics
 
 You can import audience data from Braze to Lytics using the following methods:
