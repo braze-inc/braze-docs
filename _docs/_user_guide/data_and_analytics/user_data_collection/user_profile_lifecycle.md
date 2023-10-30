@@ -48,9 +48,16 @@ Additionally, an `external_id` is unchangeable after it has been set against a u
 
 There are two scenarios that occur when you identify anonymous users:
 
-1) **An anonymous user becomes a new identified user:** If the `external_id` does not yet exist in Braze, the anonymous user becomes a new identified user and retains all of the same attributes and history of the anonymous user. 
+1) **An anonymous user becomes a new identified user:** <br>If the `external_id` does not yet exist in Braze, the anonymous user becomes a new identified user and retains all of the same attributes and history of the anonymous user. 
 
-2) **An anonymous user is identified as an already existing user:** If the `external_id` already exists in Braze, then this user was previously identified as a user in the system in some other way, such as via another device like a tablet or through imported user data. As such, you already have a user profile for this user. In this instance, Braze orphans the anonymous user, merges the anonymous profile to the identified user profile, and then removes the anonymous profile from your user base so the user counts aren't inflated.
+2) **An anonymous user is identified as an already existing user:** <br>If the `external_id` already exists in Braze, then this user was previously identified as a user in the system in some other way, such as via another device like a tablet or through imported user data. 
+
+As such, you already have a user profile for this user. In this instance, Braze will do the following:
+1. Orphan the anonymous user
+2. Merge [specific user profile fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior) that don't already exist on the identified user profile from the anonymous profile
+3. Remove the anonymous profile from your user base so the user counts aren't inflated
+
+If an anonymous user has a first name and the known user also has a first name set, the first name of the target is maintained. If the target user has a null value, and the anonymous user has a value, it's merged into the target user if it falls under these [specific user profile fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
 
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS][24], [Android][30], [Web][31]).
 
@@ -64,7 +71,7 @@ Unlike an `external_id`, an alias can be updated with a new name for a given lab
 
 ![Two different user profiles for separate users with the same user alias label but different alias values][29]
 
-User aliases also allow you to tag anonymous users with an identifier. For example, if a user provides your e-commerce site with their email address but hasn't yet signed up, the email address can be used as an alias for that anonymous user. These users can then be exported using their aliases or referenced by the API.
+User aliases also allow you to tag anonymous users with an identifier. For example, if a user provides your eCommerce site with their email address but hasn't yet signed up, the email address can be used as an alias for that anonymous user. These users can then be exported using their aliases or referenced by the API.
 
 If an anonymous user profile with an alias is later recognized with an `external_id`, they will be treated as a normal identified user profile, but will retain their existing alias and can still be referenced by that alias.
 
@@ -72,7 +79,7 @@ A user alias can also be set on a known user profile to reference a known user b
 
 For information on how to set a user alias, see our documentation for each platform ([iOS][1], [Android][2], [Web][3]).
 
-![A flow chart of a user profile's lifecycle in Braze. When changeUser() is called for an anonymous user, that user becomes an Identified User and data is migrated to their identified user profile. The Identified User has a Braze ID and external ID. At this point, if a second anonymous user has changeUser() called, their anonymous user data will be orphaned. If the Identified User has an alias added to their existing user profile, no data will be affected but they will become an Identified User with alias. If a third anonymous user with the same alias label as the identified user but a different alias name then has changeUser() called, the existing data is discarded and only the alias label on the identified user profile is maintained.][26]
+![A flow chart of a user profile's lifecycle in Braze. When changeUser() is called for an anonymous user, that user becomes an Identified User and data is migrated to their identified user profile. The Identified User has a Braze ID and external ID. At this point, if a second anonymous user has changeUser() called, user data fields that do not already exist on the Identified User will be merged. If the Identified User has an alias added to their existing user profile, no data will be affected but they will become an Identified User with alias. If a third anonymous user with the same alias label as the Identified User but a different alias name then has changeUser() called, any fields that do not exist on the Identified User will be merged and the alias label on the Identified User profile is maintained.][26]
 
 {% alert tip %}
 Having trouble picturing how this may look for the user profile lifecycle of your customers? Visit [Best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/) to view user data collection best practices.
