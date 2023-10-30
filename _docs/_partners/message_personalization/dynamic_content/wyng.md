@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Wyng
 
-> [Wyng][0] makes it easy to build interactive digital experiences (i.e. quizzes, preference center, promotions) that engage consumers at the right moments, collect preferences and other zero-party data, and personalize in real time.
+> [Wyng][0] makes it easy to build interactive digital experiences (that is, quizzes, preference centers, promotions) that engage consumers at the right moments, collect preferences and other zero-party data, and personalize in real-time.
 
 The Braze and Wyng integration allows you to leverage zero-party data earned via Wyng experiences to personalize interactions in Braze Campaigns and Braze Canvas. Wyng can also power a preference center, so consumers can control the data and preferences (including communication preferences) they share with your brand.
 
