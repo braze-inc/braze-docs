@@ -59,7 +59,7 @@ Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase C
 
 ### In-app messaging {#platform-features-in-app-messaging}
 
-Braze provides unobtrusive in-app notifications via our custom-built native user interface. Messages can be presented at any time of your choosing (e.g., when users start a new session or complete a specific action) ensuring that your message arrives at the most effective time to engage the user. Learn more about [creating an in-app message][13].
+Braze provides unobtrusive in-app notifications via our custom-built native user interface. Messages can be presented at any time of your choosing (for example, when users start a new session or complete a specific action) ensuring that your message arrives at the most effective time to engage the user. Learn more about [creating an in-app message][13].
 
 ![The in-app message editor displaying an example in-app message with a header, body, and button text.][9]
 

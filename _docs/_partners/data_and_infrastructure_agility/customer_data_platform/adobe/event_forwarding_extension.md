@@ -105,8 +105,8 @@ User attributes can be a JSON object containing fields that will create or updat
 | City | The city of the user. |
 | Country | The users country as a string in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
 | Language | The users language as a string in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format. |
-| Date of Birth | The users data of birth in string in format “YYYY-MM-DD” (e.g., 1980-12-21). |
-| Time Zone | Time zone name from [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) database (e.g., ’America/New_York’ or ’Eastern Time (US & Canada)’). |
+| Date of Birth | The users data of birth in string in format “YYYY-MM-DD” (for example, 1980-12-21). |
+| Time Zone | Time zone name from [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) database (for example, ’America/New_York’ or ’Eastern Time (US & Canada)’). |
 | Facebook | A hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | Twitter | Hash containing any of id (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count`(integer). |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -143,7 +143,7 @@ To link the event to a user, you must complete either the `External User ID` fie
 
 | Input | Description | Required |
 | --- | --- | --- |
-| Product ID | Identifier for the purchase. (e.g., product name or product category) | Yes |
+| Product ID | Identifier for the purchase. (for example, product name or product category) | Yes |
 | Purchase time | Date-time as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | Yes |
 | Currency | Currency as a string in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) alphabetic currency code format. | Yes |
 | Price | The price of the object. | Yes |
@@ -173,8 +173,8 @@ User attributes can be a JSON object containing fields that will create or updat
 | City | The city of the user. |
 | Country | The users country as a string in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
 | Language | The users language as a string in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format. |
-| Date of birth | The users data of birth in string in format “YYYY-MM-DD” (e.g., 1980-12-21). |
-| Time zone | Time zone name from [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) database (e.g., ’America/New_York’ or ’Eastern Time (US & Canada)’). |
+| Date of birth | The users data of birth in string in format “YYYY-MM-DD” (for example, 1980-12-21). |
+| Time zone | Time zone name from [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) database (for example, ’America/New_York’ or ’Eastern Time (US & Canada)’). |
 | Facebook | A hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | Twitter | Hash containing any of id (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count`(integer). |
 {: .reset-td-br-1 .reset-td-br-2}

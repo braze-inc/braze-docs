@@ -40,7 +40,7 @@ For example, let's say we have a campaign with an abandoned cart custom event th
 ![][34]
 
 {% alert note %}
-The trigger event "start session" can be the user's very first app open if your campaign's segment applies to new users. (e.g., if your segment consists of those with no sessions).
+The trigger event "start session" can be the user's very first app open if your campaign's segment applies to new users. (for example, if your segment consists of those with no sessions).
 {% endalert %}
 
 Keep in mind that you can still send a triggered campaign to a specific segment of users, so users who aren't a part of the segment won't receive the campaign even if they complete the trigger event. If you notice users not receiving the campaign even though they qualified for the segment, see our section on [why a user might not have received a triggered campaign][49].

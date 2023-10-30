@@ -293,7 +293,7 @@ For more information, see [`ABKURLDelegate.h`][23].
 iOS can take users from your app into its page in the iOS settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to settings from push notifications, in-app messages, and the News Feed.
 
 1. First, make sure your application is set up for either [scheme-based deep links][25] or [universal links][27].
-2. Decide on a URI for deep linking to the **Settings** page (e.g., `myapp://settings` or `https://www.braze.com/settings`).
+2. Decide on a URI for deep linking to the **Settings** page (for example, `myapp://settings` or `https://www.braze.com/settings`).
 3. If you are using custom scheme-based deep links, add the following code to your `application:openURL:options:` method:
 
 {% tabs %}

@@ -15,7 +15,7 @@ page_order: 2
 Starting May 1, 2023, Google Ads will no longer generate similar audiences, also known as "lookalike audiences", for targeting and reporting. Refer to [Google Ads documentation](https://support.google.com/google-ads/answer/12463119?) to learn more.
 {% endalert %}
 
-The Braze Audience Sync to Google integration enables brands to extend the reach of their cross-channel customer journeys to Google Search, Google Shopping, Gmail, YouTube, and Google Display. Using your first-party customer data, you can securely deliver ads based on dynamic behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (e.g., push, email, SMS, etc.) as part of a Braze Canvas can be used to trigger an ad to that user via Google's [Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en).
+The Braze Audience Sync to Google integration enables brands to extend the reach of their cross-channel customer journeys to Google Search, Google Shopping, Gmail, YouTube, and Google Display. Using your first-party customer data, you can securely deliver ads based on dynamic behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (for example, push, email, SMS, etc.) as part of a Braze Canvas can be used to trigger an ad to that user via Google's [Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en).
 
 **Common use cases for syncing Custom Audiences include**:
 - Targeting high-value users via multiple channels to drive purchases or engagement.
@@ -143,7 +143,7 @@ The following table includes metrics and descriptions to help you better underst
 
 ## Troubleshooting
 {% details Why can I not select multiple fields to match in my Google Audience Step configuration? %}
-Google Customer Match has strict requirements around how these audiences are formatted and what customer information is included. Specifically, mobile advertiser IDs need to be uploaded separately from customer contact information (i.e., email and phone number). For more details, refer to [Google's Customer Match documentation](https://support.google.com/google-ads/answer/7659867?hl=en#undefined). 
+Google Customer Match has strict requirements around how these audiences are formatted and what customer information is included. Specifically, mobile advertiser IDs need to be uploaded separately from customer contact information (such as email and phone number). For more details, refer to [Google's Customer Match documentation](https://support.google.com/google-ads/answer/7659867?hl=en#undefined). 
 {% enddetails %}
 
 {% details How long will it take for my audiences to sync in Google? %} 

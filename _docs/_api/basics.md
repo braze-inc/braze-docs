@@ -104,7 +104,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Permission | Endpoint | Description |
 |---|---|---|
-| `messages.send` | [`/messages/send `]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) | Send an immediate, ad-hoc message to specific users. |
+| `messages.send` | [`/messages/send `]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) | Send an immediate, impromptu message to specific users. |
 | `messages.schedule.create` | [`/messages/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/) | Schedule a message to be sent at a specific time. |
 | `messages.schedule.update` | [`/messages/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/) | Update a scheduled message. |
 | `messages.schedule.delete` | [`/messages/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/) | Delete a scheduled message. |

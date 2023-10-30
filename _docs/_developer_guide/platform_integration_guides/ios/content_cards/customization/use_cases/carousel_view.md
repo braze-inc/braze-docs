@@ -47,7 +47,7 @@ That said, you could order and apply additional display logic in a variety of wa
 If you're implementing a carousel as a secondary Content Cards feed, refer to [Using multiple Content Card feeds]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/) to ensure you sort cards into the correct feed based on key-value pairs.
 
 {% alert important %}
-It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g., `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs that the developers build into the app logic.
+It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (for example, `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs that the developers build into the app logic.
 {% endalert %}
 
 For iOS-specific developer documentation on the Content Cards class, methods, and attributes, refer to the iOS [`ABKContentCard` class reference](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html).

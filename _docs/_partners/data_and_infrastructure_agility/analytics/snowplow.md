@@ -97,7 +97,7 @@ If you want to include other properties from the client event and map them onto 
 | Event property rules | Description |
 | --------- | ----------- |
 | Include common event properties | Enabled by default, this option sets whether to automatically include the event properties from the [common event definition][6] in the properties of the Braze event. |
-| Additional user property and event property mapping rules | Specify the property key from the client event and the properties' object key you would like to map it to (or leave the mapped key blank to keep the same name). You can use key path notation here (e.g., `x-sp-tp2.p` for a Snowplow events platform or `x-sp-contexts.com_snowplowanalytics_snowplow_web_page_1.0.id` for a Snowplow events page view id (in array index 0) or pick non-Snowplow properties if using an alternative client.<br><br>Event property mapping rules populate the Braze event properties object.|
+| Additional user property and event property mapping rules | Specify the property key from the client event and the properties' object key you would like to map it to (or leave the mapped key blank to keep the same name). You can use key path notation here (for example, `x-sp-tp2.p` for a Snowplow events platform or `x-sp-contexts.com_snowplowanalytics_snowplow_web_page_1.0.id` for a Snowplow events page view id (in array index 0) or pick non-Snowplow properties if using an alternative client.<br><br>Event property mapping rules populate the Braze event properties object.|
 | Include common user properties| Enabled by default, this option sets whether to include the `user_data` properties from the common event definition in the Braze user attributes object.|
 | Event time property | This option lets you specify the client event property to populate the event time (in ISO-8601 format) or leave it empty to use the current time (default behavior). |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -113,7 +113,7 @@ The entity can be specified in two different formats:
 
 | Entity mapping option | Description |
 | --------- | ----------- |
-| Include unmapped entities in event | When remapping or moving some entities to user attributes with the preceding customization, this option enables you to ensure that all unmapped entities (i.e., any entities not found in the [event property rules](#event-property-rules)) will be included in the properties object of the Braze event. |
+| Include unmapped entities in event | When remapping or moving some entities to user attributes with the preceding customization, this option enables you to ensure that all unmapped entities (such as any entities not found in the [event property rules](#event-property-rules)) will be included in the properties object of the Braze event. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 [1]: https://snowplowanalytics.com

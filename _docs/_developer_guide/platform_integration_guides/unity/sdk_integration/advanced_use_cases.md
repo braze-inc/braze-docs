@@ -79,7 +79,7 @@ To publish your modified code as a Unity package, see our [Advanced use cases]({
 To take advantage of the automated iOS integration offered in the Braze Unity SDK, follow these steps on transitioning from a manual to an automated integration.
 
 1. Remove all Braze-related code from your Xcode project's `UnityAppController` subclass.
-2. Remove Braze iOS libraries from your Unity or Xcode project (i.e., `Appboy_iOS_SDK.framework` and `SDWebImage.framework`) and [import the Braze Unity package](#step-1-importing-the-braze-unity-package) into your Unity project.
+2. Remove Braze iOS libraries from your Unity or Xcode project (such as `Appboy_iOS_SDK.framework` and `SDWebImage.framework`) and [import the Braze Unity package](#step-1-importing-the-braze-unity-package) into your Unity project.
 3. Follow the integration instructions on [setting your API key through Unity](#step-2-setting-your-api-key).
 
 [1]: https://github.com/appboy/appboy-unity-sdk

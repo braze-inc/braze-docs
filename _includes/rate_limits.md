@@ -127,7 +127,7 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 
 - Up to 50 specific `external_ids`, each with individual message parameters
 - A segment of any size created in the Braze dashboard, specified by its `segment_id`
-- An ad-hoc audience segment of any size, defined in the request as a [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
+- An impromptu audience segment of any size, defined in the request as a [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
 
 {% endif %}
 
@@ -139,7 +139,7 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 
 - Up to 50 specific `external_ids`
 - A segment of any size created in the Braze dashboard, specified by its `segment_id`
-- An ad-hoc audience segment of any size, defined in the request as a [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
+- An impromptu audience segment of any size, defined in the request as a [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
 
 {% endif %}
 

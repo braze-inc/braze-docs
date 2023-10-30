@@ -26,10 +26,10 @@ The CAN-SPAM Act of 2003 regulates email senders in the U.S. sending "any electr
 
 There are seven key requirements for CAN-SPAM:
 
-1. Don't use false or misleading header information (i.e.,, "From", "To" and "Reply-To")
+1. Don't use false or misleading header information (such as "From", "To" and "Reply-To")
 2. Don't use deceptive subject lines
 3. Identify the message as an ad
-4. Tell recipients where you're located (i.e.,, physical address)
+4. Tell recipients where you're located (such as physical address)
 5. Tell recipients how to opt out of receiving future email from you
 6. Honor opt-out requests promptly
 7. Monitor what others are doing on your behalf
@@ -70,7 +70,7 @@ Messages that do not fall under one of the exemptions require "expressed or impl
 
 #### Implied consent
 
-Implied consent is based on previous activity with a user through an existing business or non-business relationship. Messages can be sent based on implied consent during the transition period. After July 1, 2017, express consent is required, unless the implied consent is still valid (i.e., the 2 years after a purchase was made).
+Implied consent is based on previous activity with a user through an existing business or non-business relationship. Messages can be sent based on implied consent during the transition period. After July 1, 2017, express consent is required, unless the implied consent is still valid (such as the 2 years after a purchase was made).
 
 - The recipient of a message has purchased or leased a product, good, service or completed other business with your organization in the last 2 years
 - The electronic address has been published and does not explicitly forbid unsolicited emails

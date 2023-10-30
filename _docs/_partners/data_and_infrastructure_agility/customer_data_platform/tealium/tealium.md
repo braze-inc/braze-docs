@@ -60,7 +60,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 | Installed source and Tealium source [libraries](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium connector. |
 | Braze REST and SDK endpoint | Your REST or SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 | Braze app identifier key (side-by-side only) | Your app identifier key. <br><br>This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
-| Code version (side-by-side only) | Corresponds to SDK version and should be in major.minor format (e.g., 3.2 not 3.0.1). The code version should be 3.0 or higher. |
+| Code version (side-by-side only) | Corresponds to SDK version and should be in major.minor format (for example, 3.2 not 3.0.1). The code version should be 3.0 or higher. |
 | REST API key (server-to-server only) | A Braze REST API key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze Dashboard > Developer Console > REST API Key > Create New API Key**.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -68,7 +68,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-side](#side-by-side-sdk-integration) | Uses Tealium's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze remote commands, note that Tealium does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you will have to invoke the method by adding native Braze code to your codebase.|
+| [Side-by-side](#side-by-side-sdk-integration) | Uses Tealium's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze remote commands, note that Tealium does not support all Braze methods (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you will have to invoke the method by adding native Braze code to your codebase.|
 | [Server-to-server](#server-to-server-integration) | Forwards data from Tealium to Braze's REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging,  Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -112,7 +112,7 @@ You can find more details on how to set up Braze mobile remote command and an ov
 - [Remote command tag](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Mobile-Remote-Command-Tag-Setup-Guide/ta-p/32828)
 
 {% alert important %}
-Braze mobile remote commands do not support all Braze methods and messaging channels (e.g., Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you will have to invoke the method directly by adding native Braze code to your codebase.
+Braze mobile remote commands do not support all Braze methods and messaging channels (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you will have to invoke the method directly by adding native Braze code to your codebase.
 {% endalert%}
 
 ### Braze Web SDK tag

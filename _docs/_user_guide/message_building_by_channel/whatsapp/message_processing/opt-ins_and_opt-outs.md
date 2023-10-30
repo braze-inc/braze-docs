@@ -12,9 +12,9 @@ alias: /user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
 
 # Opt-in and opt-out
 
-> Handling WhatsApp opt-ins and opt-outs is crucial as WhatsApp monitors your [phone number quality rating](https://www.facebook.com/business/help/896873687365001), and low ratings may result in your message limits being reduced. One way to ensure a high-quality rating is to prevent users from blocking or reporting your business. This can be done by providing [high-quality messaging](https://developers.facebook.com/docs/whatsapp/messaging-limits#quality-rating-and-messaging-limits) (i.e., value to your users), controlling message frequency, and allowing customers to opt-out of receiving future communications. 
+> Handling WhatsApp opt-ins and opt-outs is crucial as WhatsApp monitors your [phone number quality rating](https://www.facebook.com/business/help/896873687365001), and low ratings may result in your message limits being reduced. One way to ensure a high-quality rating is to prevent users from blocking or reporting your business. This can be done by providing [high-quality messaging](https://developers.facebook.com/docs/whatsapp/messaging-limits#quality-rating-and-messaging-limits) (such as value to your users), controlling message frequency, and allowing customers to opt-out of receiving future communications. 
 
-Opt-ins can come from external sources or from Braze methods such as SMS or in-app and in-browser messages. Opt-outs can be dealt with using keywords set in Braze and WhatsApp marketing buttons. Reference the following methods for guidance on setting up opt-ins and opt-outs. 
+Opt-ins can come from external sources or from Braze methods, such as SMS or in-app and in-browser messages. Opt-outs can be dealt with using keywords set in Braze and WhatsApp marketing buttons. Reference the following methods for guidance on setting up opt-ins and opt-outs. 
 
 #### Opt-in methods
 - [External to Braze opt-in methods](#external-to-braze-opt-in-methods)

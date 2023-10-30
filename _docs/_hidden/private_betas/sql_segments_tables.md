@@ -29,8 +29,8 @@ Table | Description
 [USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED](#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED) | When a user views the News Feed
 [USERS_BEHAVIORS_APP_SESSIONEND_SHARED](#USERS_BEHAVIORS_APP_SESSIONEND_SHARED) | When a user ends a session on an app
 [USERS_BEHAVIORS_APP_SESSIONSTART_SHARED](#USERS_BEHAVIORS_APP_SESSIONSTART_SHARED) | When a user begins a session on an app
-[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | When a user triggers a geofenced area (e.g., when they enter or exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
-[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | When a user triggers a geofenced area (e.g., when they enter or exit a geofence). This event was received through the dedicated geofence endpoint, and is therefore received in real-time as soon as a user's device detects that it has triggered a geofence. <br><br>In addition, due to rate limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
+[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | When a user triggers a geofenced area (for example, when they enter or exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
+[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | When a user triggers a geofenced area (for example, when they enter or exit a geofence). This event was received through the dedicated geofence endpoint, and is therefore received in real-time as soon as a user's device detects that it has triggered a geofence. <br><br>In addition, due to rate limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
 [USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED) | When a user is subscribed or unsubscribed globally from a channel such as email
 [USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED) | When a user is subscribed or unsubscribed to or from a subscription group
 [USERS_CAMPAIGNS_ABORT_SHARED](#USERS_CAMPAIGNS_ABORT_SHARED) | An originally scheduled campaign message was aborted for some reason.
@@ -301,7 +301,7 @@ Field | Type | Description
 `platform` | `null,`&nbsp;`string` | platform of the device
 `os_version` | `null,`&nbsp;`string` | version of the operating system of the device
 `device_model` | `null,`&nbsp;`string` | model of the device
-`event_type` | `string` | What kind of geofence event was triggered. (e.g., 'enter' or 'exit')
+`event_type` | `string` | What kind of geofence event was triggered. (for example, 'enter' or 'exit')
 `location_set_id` | `string` | The ID of the location set of the geofence that was triggered
 `geofence_id` | `string` | The ID of the geofence that was triggered
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -321,7 +321,7 @@ Field | Type | Description
 `platform` | `null,`&nbsp;`string` | platform of the device
 `os_version` | `null,`&nbsp;`string` | version of the operating system of the device
 `device_model` | `null,`&nbsp;`string` | model of the device
-`event_type` | `string` | What kind of geofence event was triggered. (e.g., 'enter' or 'exit')
+`event_type` | `string` | What kind of geofence event was triggered. (for example, 'enter' or 'exit')
 `location_set_id` | `string` | The ID of the location set of the geofence that was triggered
 `geofence_id` | `string` | The ID of the geofence that was triggered
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -1054,7 +1054,7 @@ Field | Type | Description
 `email_address` | `string` | [PII] email address of the user
 `user_agent` | `null,`&nbsp;`string` | user agent on which the open occurred
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
-`machine_open` | `null,`&nbsp;`string` | Populated to 'true' if the open event is triggered without user engagement, e.g., by an Apple device with Mail Privacy Protection enabled. Value may change over time to provide more granularity.
+`machine_open` | `null,`&nbsp;`string` | Populated to 'true' if the open event is triggered without user engagement, for example, by an Apple device with Mail Privacy Protection enabled. Value may change over time to provide more granularity.
 `esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
 `from_domain` | `null,`&nbsp;`string` | sending domain for the email
 `is_amp` | `null, boolean` | indicates that this is an AMP event
@@ -1674,7 +1674,7 @@ Field | Type | Description
 `subscription_group_id` | `null,`&nbsp;`string` | ID of the subscription group targeted for this SMS message
 `subscription_group_api_id` | `null,`&nbsp;`string` | API ID of the subscription group targeted for this SMS message
 `inbound_phone_number` | `string` | the inbound number that the message was sent to
-`action` | `string` | Action taken in respons to this message. (e.g., Subscribed, Unsubscribed or None).
+`action` | `string` | Action taken in respons to this message. (for example, Subscribed, Unsubscribed or None).
 `message_body` | `string` | response from the user
 `media_urls` | `null, {"type"=>"array", "items"=>["null", "string"]}` | media urls from the user
 `campaign_id` | `null,`&nbsp;`string` | internal-use Braze ID of the campaign this event belongs to

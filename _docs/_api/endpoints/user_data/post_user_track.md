@@ -395,6 +395,6 @@ When the `X-Braze-Bulk` header is present with any value, Braze will consider th
 Consider the following use cases where you may use the bulk update header:
 
 - A daily job where multiple users' custom attributes are updated via the `/users/track` endpoint.
-- An ad-hoc user data backfill script which updates user information via the `/users/track` endpoint.
+- An impromptu user data backfill script which updates user information via the `/users/track` endpoint.
 
 {% endapi %}

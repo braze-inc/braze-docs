@@ -60,7 +60,7 @@ After you [integrate OfferFit](#integration), you can automate the experimentati
 
 1. Select a **success metric** to maximize, such as revenue, conversions, ARPU, or any other
 KPI you can measure from your customer data. This is the metric OfferFit will try to maximize with its AI.
-2. Select the **dimensions** to test (e.g., offer, subject line, creative, channel, time, day, frequency, etc.).
+2. Select the **dimensions** to test (for example, offer, subject line, creative, channel, time, day, frequency, etc.).
 3. Select the **options** available for each dimension. For example, you could select email, SMS, and push for the channel dimension, and then select daily, twice a week, and weekly for the frequency dimension.
 
 ![of_use_case_example][2]
@@ -75,7 +75,7 @@ The OfferFit AI will learn from every customer interaction and apply those insig
 |----------|------|----------------|-------------------|
 | **Cross-Sell or Upsell** | Maximize average revenue per user (ARPU) from internet subscriptions. | Run annual campaigns offering every customer the next-highest tier plan. | Empirically discover the best message, sending time, discount, and plan to offer for each customer, learning which customers are susceptible to leapfrog offers and which customers require discounts or other incentives to upgrade. |
 | **Renewal & Retention** | Secure contract renewals, maximizing both contract length and net present value (NPV). | A/B test manually, and offer significant discounts to secure renewals. | Use automated experimentation to find the best renewal offer for each customer, and identify customers who are less price sensitive and need less significant discounts to renew. |
-| **Repeat Purchase** | Maximize purchase and repurchase rates. | All customers receive the same journey after making a website account (i.e., the same email sequence with the same cadence). | Automate experimentation to find the best menu item to offer each customer, as well as the most effective subject line, sending time, and frequency of communication. |
+| **Repeat Purchase** | Maximize purchase and repurchase rates. | All customers receive the same journey after making a website account (such asthe same email sequence with the same cadence). | Automate experimentation to find the best menu item to offer each customer, as well as the most effective subject line, sending time, and frequency of communication. |
 | **Winback** | Increase reactivation by encouraging past subscribers to resubscribe. | Sophisticated A/B testing and segmentation. | Leverage automated experimentation to test thousands of variables at once, discovering the best creative, message, channel and cadence for each individual. |
 | **Referral** | Maximize new accounts opened through business credit card referrals from existing customers. | Fixed email sequence for all customers, with extensive A/B testing to determine the best sending times, cadence, etc. for the customer population. | Automate experimentation to determine ideal email, creative, sending time, and credit card to offer specific customers. |
 | **Lead Nurturing & Conversion** | Drive incremental revenue and pay the right amount for each customer. | As privacy policies change at Facebook and other platforms, prior approaches to personalized paid ads become last effective. | Leverage robust first-party data to automatically experiment on customer segments, biding methodology, bid levels, and creative. |
@@ -89,7 +89,7 @@ The OfferFit AI will learn from every customer interaction and apply those insig
 
 Define your target audience by creating at least one segment in Braze. This segment will be used to send your campaign or Canvas to the right users.
 
-### Step 2: Configure an API-triggered Braze campaign or Canvas and create campaign assets (e.g., HTML templates, images) {#step-2}
+### Step 2: Configure an API-triggered Braze campaign or Canvas and create campaign assets (for example, HTML templates, images) {#step-2}
 
 1. Create a campaign or Canvas in Braze. OfferFit will use this campaign or Canvas to send 1:1 personalized activation events to the right users from your defined audience. 
 2. Do not include a Braze [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign#including-a-control-group) in your campaign or Canvas. This allows the OfferFit control group to be the only active one.

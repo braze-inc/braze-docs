@@ -37,7 +37,7 @@ The following table further outlines the difference in supported features betwee
 | API-created messages | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | A/B testing | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | [Dismissing and pinning cards][4] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Rich analytics][3] (e.g., conversion tracking) | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| [Rich analytics][3] (for example, conversion tracking) | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | [Available in Canvas][2] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | [Connected Content][5] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | Personalization and segmentation | Templated at impression | Templated at send or first impression |

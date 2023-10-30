@@ -43,7 +43,7 @@ Your web server must return a `Content-Type: application/javascript` when servin
 
 #### What if I can't register a service worker in the root directory?
 
-By default, a service worker can only be used within the same directory it is registered in. For example, if your service worker file exists in `/assets/service-worker.js`, it would only be possible to register it within `example.com/assets/*` or a subdirectory of the `assets` folder, but not on your homepage (`example.com/`). For this reason, it is recommended to host and register the service worker in the root directory (i.e., `https://example.com/service-worker.js`).
+By default, a service worker can only be used within the same directory it is registered in. For example, if your service worker file exists in `/assets/service-worker.js`, it would only be possible to register it within `example.com/assets/*` or a subdirectory of the `assets` folder, but not on your homepage (`example.com/`). For this reason, it is recommended to host and register the service worker in the root directory (such as `https://example.com/service-worker.js`).
 
 If you cannot register a service worker in your root domain, an alternative approach is to use the [`Service-Worker-Allowed`](https://w3c.github.io/ServiceWorker/#service-worker-script-response) HTTP header when serving your service worker file. By configuring your server to return `Service-Worker-Allowed: /` in the response for the service worker, this will instruct the browser to broaden the scope and allow it to be used from within a different directory.
 
@@ -60,7 +60,7 @@ If you wish to show your own push-related UI to the user before requesting push 
 If you wish to unsubscribe a user, you can do so by calling `braze.unregisterPush()`.
 
 {% alert important %}
-Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (e.g., from a button click handler or soft push prompt). This is consistent with [Chrome's user experience best practices](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) for push registration.
+Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (for example, from a button click handler or soft push prompt). This is consistent with [Chrome's user experience best practices](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) for push registration.
 {% endalert %}
 
 ### Step 3: Configure Safari push (optional) {#safari}

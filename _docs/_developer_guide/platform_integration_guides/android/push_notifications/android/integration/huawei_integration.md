@@ -23,7 +23,7 @@ Before getting started, you'll need to register and set up a [Huawei Developer a
 
 In the Braze dashboard, go to **App Settings**, listed under the **Settings** navigation.
 
-Click **+ Add App**, provide a name (i.e., My Huawei App), select `Android` as the platform.
+Click **+ Add App**, provide a name (such as My Huawei App), select `Android` as the platform.
 
 ![][4]{: style="max-width:60%;"}
 

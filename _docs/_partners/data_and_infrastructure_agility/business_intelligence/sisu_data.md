@@ -11,14 +11,14 @@ search_tag: Partner
 
 > [Sisu Data][2] is the leader in cloud decision intelligence that uses machine learning to automatically decompose metric performance and deliver fast, comprehensive, and actionable insights.
 
-The Sisu Data and Braze integration allows you to understand across all campaigns or at a campaign level why metrics (e.g., open rate, click-through rate, conversion rate, etc.) are changing and what drives the most optimal outcomes. After these segments are identified, Braze users can materialize the outputs in their data warehouse or send them directly from Sisu to Braze to retarget and reengage users.
+The Sisu Data and Braze integration allows you to understand across all campaigns or at a campaign level why metrics (for example, open rate, click-through rate, conversion rate, etc.) are changing and what drives the most optimal outcomes. After these segments are identified, Braze users can materialize the outputs in their data warehouse or send them directly from Sisu to Braze to retarget and reengage users.
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
 | Sisu account | A [Sisu][3] account is required to take advantage of this partnership. |
-| Cloud warehouse | This integration assumes your Braze data is stored in a cloud warehouse (e.g., Snowflake, BigQuery). To streamline this integration process, we recommend utilizing Braze's native functionality via [Currents][4]. |
+| Cloud warehouse | This integration assumes your Braze data is stored in a cloud warehouse (for example, Snowflake, BigQuery). To streamline this integration process, we recommend utilizing Braze's native functionality via [Currents][4]. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration

@@ -44,7 +44,7 @@ Braze does not accept certain characters and recognizes them as invalid. If an e
 - Whitespaces (ASCII and Unicode)
 {% enddetails %}
 
-This validation is not to be confused with a validation service like Briteverify. This is a check to verify that the syntax of an email address is correct. One of the main drivers to use this validation process is to support international characters (i.e., UTF-8) in the local part of the email address.
+This validation is not to be confused with a validation service like Briteverify. This is a check to verify that the syntax of an email address is correct. One of the main drivers to use this validation process is to support international characters (such as UTF-8) in the local part of the email address.
 
 Email syntax validation looks at both the local and host part of an email address. The local part is anything before the asperand (@), and the host part is anything after the asperand. For example, this local part of an email address may start and end with any of the allowed characters except for a period (.). Note that this process is only validating the syntax of the email address and does not consider whether the domain has a valid MX server or if the user exists on the domain listed.
 
@@ -89,7 +89,7 @@ If the domain part is a Gmail address, the local part needs to be at least two c
 
 ## Host part validation rules
 
-IPv4 or IPv6 addresses are not allowed in the host part of an email address. The top-level domain (e.g., .com, .org, .net, etc.) may not be fully numeric.
+IPv4 or IPv6 addresses are not allowed in the host part of an email address. The top-level domain (such as .com, .org, .net, etc.) may not be fully numeric.
 
 The following regex is used to validate the domain:<br>
 `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i`
@@ -97,7 +97,7 @@ The following regex is used to validate the domain:<br>
 The domain name must follow these parameters:
 
 - Consists of two or more period-separated labels
-	- Each part of a domain name is referred to as a "label". e.g., the domain name "example.com" consists of the "example" label and the "com" label.
+	- Each part of a domain name is referred to as a "label". For example, the domain name "example.com" consists of the "example" label and the "com" label.
 - Must contain at least one period (.)
 - Cannot contain two or more consecutive periods
 - Each period-separated label must:
