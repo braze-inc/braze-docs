@@ -17,14 +17,14 @@ Universal links (iOS) and App Links (Android) are standard web links (`http://my
 
 When a universal link or App Link is opened, the operating system checks to see if any installed app is registered for that domain. If an app is found, it's launched immediately without ever loading the web page. If no app is found, the web URL is loaded in the user's default web browser, which could also be configured to redirect to the App Store or Google Play Store respectively.
 
-Plainly, universal links allow a website to associate its web pages with specific app screens, so when a user clicks a link to a web page that corresponds to an app screen, the app can be opened directly (if the app is currently installed). 
+Plainly, universal links allow a website to associate its web pages with specific app screens, so when a user clicks a link to a web page that corresponds to an app screen, the app can be opened directly (if the app is currently installed).
 
 This table outlines the key differences between universal links and traditional deep links:
 
 |                        | Universal Links and App Links                                  | Deep Links                   |
 | ---------------------- | -------------------------------------------------------------- | ---------------------------- |
 | Platform Compatibility | iOS (version 9 and later) and Android (version 6.0 and later)  | Used in various mobile OS    |
-| Purpose                | Seamlessly link web and app content                            | Link to specific app content |
+| Purpose                | Seamlessly link web and app content on iOS and Android devices | Link to specific app content |
 | Function               | Directs to web pages or app content based on context           | Opens specific app screens   |
 | App Installation       | Opens app if the app is installed, otherwise opens web content | Requires app to be installed |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -87,7 +87,7 @@ These steps are adapted from the Apple developer documentation. For more informa
 2. Select **Associated Domains**.
 3. Click **Save**.
 
-> Image 1
+![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
 
 #### Step 1c: Turn on Associated Domains in your Xcode project {#step-1c}
 
@@ -107,13 +107,11 @@ If you see the error "An App ID with Identifier 'your-app-id' is not available. 
 
 In the domains section, add the appropriate domain tag. You must prefix it with `applinks:`. In this case, you can see we added `applinks:yourdomain.com`.
 
-> Image 2
+![]({% image_buster /assets/img_archive/universal_links_1d.png %})
 
 #### Step 1e: Confirm that the entitlements file is included at build
 
 In the project browser, make sure that your new entitlements file is selected under **Target Membership**.
-
-> Image 3
 
 Xcode should handle this automatically.
 

@@ -162,6 +162,8 @@ Deep links, links that direct users toward a specific page or place within an ap
 
 There are, however, ESPs like SendGrid that support both universal linking and click tracking. Braze recommends integrating [OneLink-based attribution links][3] into your SendGrid or [SparkPost](https://support.appsflyer.com/hc/en-us/articles/360014381317-SparkPost-integration-with-AppsFlyer) email system to seamlessly deep link from emails.
 
+Learn more about this topic in [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
+
 ### AppsFlyer click tracking URLs in Braze (optional)
 
 You can use AppsFlyer's [OneLink attribution links](https://support.AppsFlyer.com/hc/en-us/articles/360001294118) in Braze campaigns across push, email, and more. This allows you to send back install or re-engagement attribution data from their Braze campaigns into AppsFlyer. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
