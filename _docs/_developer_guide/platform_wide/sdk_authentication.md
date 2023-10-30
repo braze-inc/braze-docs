@@ -92,7 +92,7 @@ Don't worry, initializing with this option alone won't impact data collection in
 {% endalert %}
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 When calling `initialize`, set the optional `enableSdkAuthentication` property to `true`.
 ```javascript
 import * as braze from"@braze/web-sdk";
@@ -161,7 +161,7 @@ Keep in mind that `changeUser` should only be called when the User ID has _actua
 {% endalert %}
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 Supply the JWT Token when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
 ):
 
@@ -264,7 +264,7 @@ These callback methods are a great place to add your own monitoring or error-log
 {% endalert %}
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 ```javascript
 import * as braze from"@braze/web-sdk";
 braze.subscribeToSdkAuthenticationFailures((error) => {

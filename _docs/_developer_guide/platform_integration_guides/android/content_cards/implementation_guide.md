@@ -129,7 +129,7 @@ public class ContentCardData{
 {% subtabs global %}
 {% subtab Kotlin %}
 **Custom object initializer**<br>
-MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
+Metadata from a `Card` is used to populate your concrete subclass variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
 
 ```kotlin
 class Tile: ContentCardable {
@@ -150,7 +150,7 @@ class Tile: ContentCardable {
 {% endsubtab %}
 {% subtab Java %}
 **Custom object initializer**<br>
-MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
+Metadata from a `Card` is used to populate your concrete subclass variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
 
 ```java
 public class Tile extends ContentCardable {
@@ -475,7 +475,7 @@ After extending your custom objects to function as Content Cards, logging valuab
 {% tabs %}
 {% tab Kotlin %}
 **Custom objects call the logging methods**<br>
-Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. In this example, the `cardData` property will be nonnull if the object came from a Content Card. 
+Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. In this example, the `cardData` property will be non-null if the object came from a Content Card. 
 
 ```kotlin
 override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
@@ -513,7 +513,7 @@ The [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-de
 {% endtab %}
 {% tab Java %}
 **Custom objects call the logging methods**<br>
-Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a Content Card. 
+Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. Remember, in this example, the `cardData` property will be non-null if the object came from a Content Card. 
 ```java
 @Override
 public View getView(int position, View convertView, ViewGroup parent) {

@@ -32,12 +32,12 @@ The Braze and Kognitiv integration allows you to implement and evaluate your loy
 
 ## Integration
 
-Use Kognitiv webhooks to send requests to Braze when loyalty events occur. The following examples illustrate how to use Kognotiv and Braze to issue a reward, register a Kognotiv user in Braze, and send them a welcome email.
+Use Kognitiv webhooks to send requests to Braze when loyalty events occur. The following examples illustrate how to use Kognitiv and Braze to issue a reward, register a Kognitiv user in Braze, and send them a welcome email.
 
 {% raw %}
 ### Braze issue reward
 
-The following Kongitiv example issues a member reward. Kongitiv Inspire will communicate that reward issuance event to Braze as a custom event via webhooks. To send a follow-up email to communicate the reward, create a campaign or Canvas that triggers off that custom event.
+The following Kognitiv example issues a member reward. Kognitiv Inspire will communicate that reward issuance event to Braze as a custom event via webhooks. To send a follow-up email to communicate the reward, create a campaign or Canvas that triggers off that custom event.
 
 **Webhook URL**: `<braze-api-rest-endpoint>`
 **Request Body**: `Raw Text`
@@ -67,7 +67,7 @@ The following Kongitiv example issues a member reward. Kongitiv Inspire will com
 
 ### Create a user and send a welcome email
 
-The following Kongitiv example creates a new user in Braze when they enroll in KLS. To schedule a welcome email for this user, create a campaign or Canvas in Braze that triggers based on specific custom attributes.
+The following Kognitiv example creates a new user in Braze when they enroll in KLS. To schedule a welcome email for this user, create a campaign or Canvas in Braze that triggers based on specific custom attributes.
 
 **Webhook URL**: `<braze-api-rest-endpoint>` <br>
 **Request Body**: `Raw Text`
@@ -105,7 +105,7 @@ The following Kongitiv example creates a new user in Braze when they enroll in K
 
 ## Kognitiv Inspire documentation and integration features
 
-Once you integrate Braze with Kongitiv Inspire, Kognitiv empowers you to access its extensive API portfolio, cutting-edge webhook features, and robust data import and export capabilities for seamless bulk transfer. For more information on Kongitiv Inspire features and integration capabilities, view the Kognitiv [resource guide][2] or contact them for a guided demonstration.
+Once you integrate Braze with Kognitiv Inspire, Kognitiv empowers you to access its extensive API portfolio, cutting-edge webhook features, and robust data import and export capabilities for seamless bulk transfer. For more information on Kognitiv Inspire features and integration capabilities, view the Kognitiv [resource guide][2] or contact them for a guided demonstration.
 
 ### Endpoints
 

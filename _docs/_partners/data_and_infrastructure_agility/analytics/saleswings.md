@@ -81,7 +81,7 @@ _Example dashboard linked to Braze email & marketing engagement within Salesforc
 ### Step 2: Installing behavioral tracking on your website or app
 
 Currently, there are two ways for you to collect behavioral data in SalesWings for lead scoring and sales insights:
-* [Deploy the SalesWings tracking Javascript][5] on the websites and apps where you want to track and identify leads
+* [Deploy the SalesWings tracking JavaScript][5] on the websites and apps where you want to track and identify leads
 * Send behavioral lead activity data (and lead profile data) via SalesWings integration with Segment.com
 
 ### Step 3: Connecting SalesWings to Braze

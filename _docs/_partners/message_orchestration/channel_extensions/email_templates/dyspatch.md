@@ -30,7 +30,7 @@ The Braze and Dyspatch integration lets you export Dyspatch email templates dire
 
 In the Dyspatch administration portal, open your username drop-down menu and select **Integrations**. Create a new integration, select **Braze**, and enter your Braze API key.
 
-In the **Localize Exports By** field, you can choose how you would like to manage localizations. This field allows you to [localize your email templates][6] and export them to Braze to easily send emails personalized by language or locale. 
+In the **Localize Exports By** field, you can choose how you would like to manage localization. This field allows you to [localize your email templates][6] and export them to Braze to easily send emails personalized by language or locale. 
 
 ![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_integration_create.png %}){: style="max-width:50%;"}
 

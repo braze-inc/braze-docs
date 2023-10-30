@@ -36,7 +36,7 @@ You can now create multiple Internal Groups and assign properties indicating whe
 
 ## New options for web URLs
 
-You now have the option of opening web URLs in an external web browser for push messages, in-app and in-browser messages, and News Feed cards. The "Deep Link into App" action is also now compatible with HTTP/HTTPs deep links. If using a partner like Branch or Apple's Universal Links, you'll require SDK customization. Learn more about [deep linking][29].
+You now have the option of opening web URLs in an external web browser for push messages, in-app and in-browser messages, and News Feed cards. The "Deep Link into App" action is also now compatible with HTTP/HTTPS deep links. If using a partner like Branch or Apple's Universal Links, you'll require SDK customization. Learn more about [deep linking][29].
 
 ## New "Performed Conversion" event Canvas
 

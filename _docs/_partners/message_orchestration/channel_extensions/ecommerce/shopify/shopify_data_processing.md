@@ -572,7 +572,7 @@ Some of the user data and events collected by the Shopify integration will count
 
 ## User reconciliation outside of checkout flow
 
-The Shopify integration reconciles your user’s device ID and personal information when they reach the checkout flow and perform any Shopify webhook events here. Outside of the checkout flow, to support user reconciliation via your Shopify sign-up and login flow, you can execute the following Javascript function within your `theme.liquid` file:
+The Shopify integration reconciles your user’s device ID and personal information when they reach the checkout flow and perform any Shopify webhook events here. Outside of the checkout flow, to support user reconciliation via your Shopify sign-up and login flow, you can execute the following JavaScript function within your `theme.liquid` file:
 
 ```
 reconcileEmail(<email address>);

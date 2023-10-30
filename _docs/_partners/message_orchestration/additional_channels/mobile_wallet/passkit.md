@@ -243,7 +243,7 @@ PassKit requires an `HTTP Header` for authorization that includes your PassKit A
 
 #### Request body
 
-To set up the webhook, fill out the new event details within the request body, including the payload parameters neccesary for your use case:
+To set up the webhook, fill out the new event details within the request body, including the payload parameters necessary for your use case:
 
 ```json
 {% raw %}{
