@@ -1,5 +1,5 @@
 ---
-page_order: 0
+page_order: 10
 nav_title: Terms to Know
 article_title: Braze Terms to Know
 
