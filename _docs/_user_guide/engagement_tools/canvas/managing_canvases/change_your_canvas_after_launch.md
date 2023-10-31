@@ -134,7 +134,7 @@ Editing Canvases with time delays can be a bit tricky! So, keep in mind the foll
 
 If you update the delay in a Delay component or evaluation window in the Action Paths component, only new users entering the Canvas and users that haven't been queued for that step will receive the message at the updated time delay.
 
-If you delete a component with a time delay (i.e., Delay or Action Paths) and decide to redirect those users into another Canvas component, the users will only be redirected after the step's time delay has completed. For example, let's say you delete a Delay component with a one day delay and redirect those users to a Message component. In this case, the users will only be redirected after the one day delay has been completed.
+If you delete a component with a time delay (such as Delay or Action Paths) and decide to redirect those users into another Canvas component, the users will only be redirected after the step's time delay has completed. For example, let's say you delete a Delay component with a one day delay and redirect those users to a Message component. In this case, the users will only be redirected after the one day delay has been completed.
 
 If your Canvas contains one or more [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) components, deleting components could invalidate the results of this component.
 

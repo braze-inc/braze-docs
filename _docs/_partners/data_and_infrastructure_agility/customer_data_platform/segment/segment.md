@@ -48,7 +48,7 @@ Your choice of connection mode will be determined by the type of Source the dest
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn't mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
+| [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
 | [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment to Braze REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -164,8 +164,8 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Setting | Description |
 | ------- | ----------- |
 | App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | 
-| Custom API endpoint<br>(SDK endpoint) | Your Braze SDK endpoint that corresponds to your instance (i.e., `sdk.iad-01.braze.com`) | 
-| Endpoint region | Your Braze instance (i.e., US 01, US 02, EU 01, etc.) | 
+| Custom API endpoint<br>(SDK endpoint) | Your Braze SDK endpoint that corresponds to your instance (such as `sdk.iad-01.braze.com`) | 
+| Endpoint region | Your Braze instance (such as US 01, US 02, EU 01, etc.) | 
 | Enable automatic in-app message registration | Disable this if you want to manually register in-app messages. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -175,17 +175,17 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Setting | Description |
 | ------- | ----------- |
 | App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | 
-| Custom API endpoint<br>(SDK endpoint) | Your Braze SDK endpoint that corresponds to your instance (i.e., `sdk.iad-01.braze.com`) | 
-| Safari website push ID | If you support Safari push, you must specify this option with the website push ID that you provided to Apple when creating your Safari push certificate (starts with `web`, e.g., `web.com.example.domain`). |
+| Custom API endpoint<br>(SDK endpoint) | Your Braze SDK endpoint that corresponds to your instance (such as `sdk.iad-01.braze.com`) | 
+| Safari website push ID | If you support Safari push, you must specify this option with the website push ID that you provided to Apple when creating your Safari push certificate (starts with `web`, for example, `web.com.example.domain`). |
 | Braze Web SDK version | The version of the Braze Web SDK you would like to use |
 | Automatically send in-app messages | By default, all in-app messages a user is eligible for are automatically delivered to the user. Disable this if you would like to manually display in-app messages. |
-| Do not load font awesome | Braze uses Font Awesome for in-app message icons. By default, Braze will automatically load FontAwesome from the FontAwesome CDN. To disable this behavior (e.g., because your site uses a customized version of FontAwesome), set this option to `TRUE`. Note that if you do this, you are responsible for ensuring that FontAwesome is loaded on your site - otherwise, in-app messages may not render correctly. |
+| Do not load font awesome | Braze uses Font Awesome for in-app message icons. By default, Braze will automatically load FontAwesome from the FontAwesome CDN. To disable this behavior (for example, because your site uses a customized version of FontAwesome), set this option to `TRUE`. Note that if you do this, you are responsible for ensuring that FontAwesome is loaded on your site - otherwise, in-app messages may not render correctly. |
 | Enable HTML in-app messages | Enabling this option will allow Braze dashboard users to use HTML in-app messages. | 
 | Open in-app messages in a new tab | By default, links from in-app message clicks load in the current tab or a new tab as specified in the dashboard on a message-by-message basis. Set this option to `TRUE` to force all links from in-app message clicks open in a new tab or window. |
 | In-app message z index | Provide a value for this option to override Braze's default z-indexes. | 
 | Require explicit in-app message dismissal | By default, when an in-app message is showing, pressing the escape button or a click on the grayed-out background of the page will dismiss the message. Set this option to true to prevent this behavior and require an explicit button click to dismiss messages. |
 | Minimum interval between trigger actions in seconds | Defaults to 30.<br>By default, a trigger action will only fire if at least 30 seconds have elapsed since the last trigger action. Provide a value for this configuration option to override that default with a value of your own. We do not recommend making this value any smaller than 10 to avoid spamming the user with notifications.|
-| Service worker location | By default, when registering users for web push notifications, Braze will look for the required service worker file in the root directory of your web server at `/service-worker.js`. If you want to host your service worker at a different path on that server, provide a value for this option that is the absolute path to the file. (e.g., `/mycustompath/my-worker.js`). Note that setting a value here limits the scope of push notifications on your site. For instance, in the above example, because the service worker file is located within the `/mycustompath/` directory, `requestPushPermission` may only be called from web pages that start with `http://yoursite.com/mycustompath/`. |
+| Service worker location | By default, when registering users for web push notifications, Braze will look for the required service worker file in the root directory of your web server at `/service-worker.js`. If you want to host your service worker at a different path on that server, provide a value for this option that is the absolute path to the file. (for example, `/mycustompath/my-worker.js`). Note that setting a value here limits the scope of push notifications on your site. For instance, in the above example, because the service worker file is located within the `/mycustompath/` directory, `requestPushPermission` may only be called from web pages that start with `http://yoursite.com/mycustompath/`. |
 | Disable push token maintenance | By default, users who have already granted web push permission will sync their push token with the Braze backend automatically on new sessions to ensure deliverability. To disable this behavior, set this option to `FALSE`. |
 | Manage service worker externally | If you have your own service worker that you register and control the lifecycle of, set this option to `TRUE`, and the Braze SDK will not register or unregister a service worker. If you set this option to `TRUE`, for push to function correctly, you must register the service worker yourself before calling `requestPushPermission` and ensure that it contains Braze's service worker code, either with `self.importScripts('https://js.appboycdn.com/web-sdk-develop/4.1/service-worker.js');` or by including the content of that file directly. When this option is `TRUE`, the `serviceWorkerLocation` option is irrelevant and is ignored. |
 | Content security nonce | If you provide a value for this option, the Braze SDK will add the nonce to any `<script>` and `<style>` elements created by the SDK. This permits the Braze SDK to work with your website's content security policy. In addition to setting this nonce, you may also need to allow FontAwesome to load, which you can do by adding `use.fontawesome.com` to your Content Security Policy allowlist or by using the `doNotLoadFontAwesome` option and loading it manually. |
@@ -211,7 +211,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | ------- | ----------- |
 | App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | 
 | REST API key | This can be found in your Braze dashboard under **Settings** > **API Keys**. | 
-| Custom REST API endpoint | Your Braze REST endpoint that corresponds to your instance (i.e., rest.iad-01.braze.com) | 
+| Custom REST API endpoint | Your Braze REST endpoint that corresponds to your instance (such as rest.iad-01.braze.com). | 
 | Update existing users only | **Classic Destination Cloud-Mode (Maintenance) Only**<br><br>Segment recommends migrating to the Cloud Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>Determines whether to update existing users only. |
 {: .reset-td-br-1 .reset-td-br-2}
 

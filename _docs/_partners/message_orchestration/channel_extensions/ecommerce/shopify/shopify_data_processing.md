@@ -547,7 +547,7 @@ Some of the user data and events collected by the Shopify integration will count
 ### The Web SDK and Shopify webhooks
 
 <br>**Anonymous users**
-1. With the Web SDK integration, you will begin tracking sessions for your Shopify customers. If your store visitors are guests (i.e., anonymous), Braze will capture the `device_id` for that particular customer's session.
+1. With the Web SDK integration, you will begin tracking sessions for your Shopify customers. If your store visitors are guests (such as anonymous), Braze will capture the `device_id` for that particular customer's session.
 2. As the customer progresses to checkout and provides additional identifiable information like email or phone number, Braze will capture the relevant Shopify user data via Shopify webhooks.
 3. In this process, Braze will effectively match the user by the same `device_id` for the same session and merge all of the user data captured from both the Web SDK and Shopify webhooks into a single user profile in Braze.<br>Braze will also assign the Shopify customer ID as the [user alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases) on the user profile:
 

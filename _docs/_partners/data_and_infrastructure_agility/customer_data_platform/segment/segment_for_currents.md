@@ -112,7 +112,7 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.pushnotification.IosForeground`
   - `users.messages.pushnotification.Open`
   - `users.messages.pushnotification.Send`
-- SMS (abort, carrier send, delivery, delivery failure, inbound recieve, rejection, send, short link click)
+- SMS (abort, carrier send, delivery, delivery failure, inbound receive, rejection, send, short link click)
   - `users.messages.sms.Abort`
   - `users.messages.sms.CarrierSend`
   - `users.messages.sms.Delivery`
@@ -124,7 +124,7 @@ Braze supports exporting the following data listed in the Currents [user behavio
 - Webhook (abort, send)
   - `users.messages.webhook.Abort`
   - `users.messages.webhook.Send`
-- WhatsApp (abort, delivery, failure, inbound recieve, read, send)
+- WhatsApp (abort, delivery, failure, inbound receive, read, send)
   - `users.messages.whatsapp.Abort`
   - `users.messages.whatsapp.Delivery`
   - `users.messages.whatsapp.Failure`

@@ -60,7 +60,7 @@ In Braze, create a custom code in-app message. If you have a ZIP file, drag and 
 
 With B.Layer, you can log button interactions or text input as a Braze attribute. That can be done within the editor. A popular example is an NPS survey.
 
-B.Layer uses braze button tracking added to the links you enter, e.g., `?button=0` - This way, you can see the button clicks in the analytics part of your campaign.
+B.Layer uses Braze button tracking added to the links you enter (for example, `?button=0`). This way, you can see the button clicks in the analytics part of your campaign.
 
 [2]: {% image_buster /assets/img/blayer/blayer2.png %}
 [3]: {% image_buster /assets/img/blayer/blayer3.png %}

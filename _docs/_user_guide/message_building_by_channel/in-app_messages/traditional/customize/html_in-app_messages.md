@@ -177,7 +177,7 @@ The following file types are supported for upload:
 | :--------------- | :-------------------------------- |
 | Font Files       | `.ttf`, `.woff`, `.otf`, `.woff2` |
 | SVG Images       | `.svg`                            |
-| Javascript Files | `.js`                             |
+| JavaScript Files | `.js`                             |
 | CSS Files        | `.css`                            |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -224,7 +224,7 @@ You can track performance within your custom code in-app message using the [`app
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-This method of button tracking replaces the prior automatic click tracking methods (i.e., `?abButtonId=0`), which have been removed.
+This method of button tracking replaces the prior automatic click tracking methods (such as `?abButtonId=0`), which have been removed.
 {% endalert %}
 
 You can track multiple button click events per impression. For example, to close a message and log a Button 2 click, you can use the following:

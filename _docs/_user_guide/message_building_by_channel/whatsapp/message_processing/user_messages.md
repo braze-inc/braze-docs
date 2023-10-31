@@ -16,7 +16,7 @@ alias: /user_guide/message_building_by_channel/whatsapp/quick_replies/
 
 ## Action-based triggers 
 
-Both campaigns and Canvases can start, branch, and have mid-journey changes from an inbound WhatsApp message (a user messaging your WhatsApp), i.e., a trigger word. 
+Both campaigns and Canvases can start, branch, and have mid-journey changes from an inbound WhatsApp message (a user messaging your WhatsApp),  such as a trigger word. 
 
 Ensure that your trigger word matches what you are expecting from users.
 
@@ -88,7 +88,7 @@ Continue building the Canvas as you would otherwise from this point forward.
 
 ### Responses
 
-You will most likely want a reply message for each response. We recommend having a catch-all option for responses outside the bounds of quick replies (i.e., for customers who respond with a general message rather than a predetermined prompt). For example, "We’re sorry, we didn’t recognize your response. For support issues, please message <support channel>."
+You will most likely want a reply message for each response. We recommend having a catch-all option for responses outside the bounds of quick replies (such as for customers who respond with a general message rather than a predetermined prompt). For example, "We’re sorry, we didn’t recognize your response. For support issues, please message <support channel>."
 
 ![A Canvas built out showing the responses for each call-to-action button.][18]
 

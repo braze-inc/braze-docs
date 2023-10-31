@@ -46,7 +46,7 @@ See [iOS notification options]({{site.baseurl}}/user_guide/message_building_by_c
 
 ![]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
-In iOS 15, users can (optionally) choose certain times throughout the day to receive a summary of notifications. Notifications that don't require immediate attention (i.e., sent as "Passive" or while the user is in Focus Mode) will be grouped to prevent constant interruptions throughout the day.
+In iOS 15, users can (optionally) choose certain times throughout the day to receive a summary of notifications. Notifications that don't require immediate attention (such as sent as "Passive" or while the user is in Focus Mode) will be grouped to prevent constant interruptions throughout the day.
 
 For each notification you send, you'll soon be able to specify a "relevance score" to control which notification should appear at the top of the summary.
 

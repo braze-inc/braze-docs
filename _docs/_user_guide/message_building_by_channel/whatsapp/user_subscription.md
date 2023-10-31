@@ -51,7 +51,7 @@ Regardless of the opt-in and opt-out methods you use, you can update the subscri
 
 ![][1]{: style="max-width:90%;"}
 
-To avoid race conditions, any follow-up messaging after the webhook should be contained in a second Canvas that is triggered by outcomes from the first Canvas (i.e., user has entered a Canvas variation and is in a WhatsApp subscription group).
+To avoid race conditions, any follow-up messaging after the webhook should be contained in a second Canvas that is triggered by outcomes from the first Canvas (such as a user has entered a Canvas variation and is in a WhatsApp subscription group).
 
 - Use the advanced JSON editor to update the user profile with the following template: 
 

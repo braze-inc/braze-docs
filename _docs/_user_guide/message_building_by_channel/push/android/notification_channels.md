@@ -12,13 +12,13 @@ channel:
 
 # Notification channels
 
-> [Notification Channels][1] are a way to organize push notifications that were added with Android O. Starting with O, all push notifications must have a Notification Channel that indicates the type of message (e.g., "chat notifications," or "follow notifications"). Your users can then control aspects of their notification (e.g., snoozing, noise/vibration settings, or opting-out, etc.) based upon individual Channels.
+> [Notification Channels][1] are a way to organize push notifications that were added with Android O. Starting with O, all push notifications must have a Notification Channel that indicates the type of message (for example, "chat notifications," or "follow notifications"). Your users can then control aspects of their notification (for example, snoozing, noise/vibration settings, or opting-out, etc.) based upon individual Channels.
 
 ## Transitioning to Android O
 
 Notification channels can only be created in the code of your application and cannot be created programmatically in the Braze dashboard. We recommend your engineering team work with your marketers to ensure the desired notification channels are properly added to the dashboard.
 
-Starting with Android O, push notifications require a valid channel to display. If your app targets Android O or later, you must use Braze SDK version 2.1.0 or later. Your development team should define the channels that you want to use as well as suggested notification settings (e.g., importance, sound, lights) for each channel in your application code. You can find Android's developer documentation [here][4] and Braze's developer documentation [here.][2]
+Starting with Android O, push notifications require a valid channel to display. If your app targets Android O or later, you must use Braze SDK version 2.1.0 or later. Your development team should define the channels that you want to use as well as suggested notification settings (for example, importance, sound, lights) for each channel in your application code. You can find Android's developer documentation [here][4] and Braze's developer documentation [here.][2]
 
 {% alert note %}
 Android supports localization for channel names, so in the code of your application, you can associate one channel ID with multiple translations of a channel name.
@@ -55,7 +55,7 @@ You then decide to change your dashboard default channel from "Marketing" to "Up
 
 In this situation, all 10 campaigns with no channel selection that were previously sent through the "Marketing" Channel will now send through the "Updates" channel because these messages send through the fallback channel. The 15 messages that were sent through the "Social Notifications" channel will continue to send through the "Social Notifications" channel. The five messages that were sent through the "Marketing" channel will continue to send through the "Marketing" channel.
 
-In the event that an invalid channel ID is supplied to Braze (i.e., if you provide a channel ID that your developers did not create in the SDK), we will deliver the notification through your SDK default channel. Therefore, we highly encourage you to test your notification channels via Braze's dashboard during development.
+In the event that an invalid channel ID is supplied to Braze (such as if you provide a channel ID that your developers did not create in the SDK), we will deliver the notification through your SDK default channel. Therefore, we highly encourage you to test your notification channels via Braze's dashboard during development.
 
 To better understand the expected behavior for channels, refer to the following table:
 

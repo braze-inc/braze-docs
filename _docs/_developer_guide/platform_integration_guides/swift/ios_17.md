@@ -32,7 +32,7 @@ Privacy manifests allow developers to outline the privacy practices of their app
 
 #### Code signing
 
-Code signing allows developers who use a third-party SDK in their application to validate that the same developer signed it as previous versions in XCode. 
+Code signing allows developers who use a third-party SDK in their application to validate that the same developer signed it as previous versions in Xcode. 
 
 ### Braze SDK and privacy
 
