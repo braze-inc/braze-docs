@@ -52,7 +52,9 @@ Standard attributes are predefined attributes that Braze provides. These are aut
 
 #### Custom attributes
 
-[Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) are attributes that you define based on your specific business needs. They allow you to track information that is unique to your app or business. For example, a music streaming app might track custom attributes like:
+[Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) are attributes that you define based on your specific business needs. They allow you to track information that is unique to your app or business. 
+
+For example, a music streaming app might track custom attributes like:
 
 - Favorite Genre
 - Number of Songs Played
