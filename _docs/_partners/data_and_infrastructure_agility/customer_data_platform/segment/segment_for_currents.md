@@ -52,7 +52,7 @@ Lastly, select **Launch Current**.
 If you intend to create more than one of the same Currents connectors (for example, two message engagement event connectors), they must be in different workspaces. Because the Braze Segment Currents integration cannot isolate events by different apps in a single workspace, failure to do this will lead to unnecessary data deduping and lost data. 
 {% endalert %}
 
-To read more, visit Segment [documentation](https://segment.com/docs/sources/cloud-apps/appboy/).
+To read more, visit Segment [documentation](https://segment.com/docs/connections/sources/catalog/cloud-apps/braze/).
 
 ## Supported Currents events
 
