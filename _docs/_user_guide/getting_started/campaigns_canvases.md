@@ -20,7 +20,7 @@ While campaigns can be built uniquely depending on the channel, there are four m
 
 | Campaign type        | Description                                                                                                                                                                                                                                                                                              |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Regular              | This is the most common type of campaign. You can target one or more channels depending on your messaging goals, and design, customize, and test your content directly in Braze with our visual editors. Learn how to [create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign) |
+| Regular              | This is the most common type of campaign. You can target one or more channels depending on your messaging goals, and design, customize, and test your content directly in Braze with our visual editors. Learn how to [create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign). |
 | A/B testing          | For campaigns targeting a single channel, you can send more than one version of the same campaign and see which one comes out on top. You can test copy, personalization, and more for up to 8 different versions with a [multivariate campaign]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/). |
 | API                  | [API campaigns]({{site.baseurl}}/api/api_campaigns/) let you send timely messages as quickly as possible. Unlike other campaign types, you don't specify the message, recipients, or schedule in the Braze dashboard. Instead, you pass these identifiers into your API calls. These are typically used for real-time transactional messaging or breaking news.  |
 | Transactional Emails | [Transactional Emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/) are purpose-built for sending automated, non-promotional email messages to facilitate an agreed-upon transaction between you and your customers. They send business-critical notifications to a single user where speed is of the utmost importance. *Available for select packages.* |
@@ -42,7 +42,7 @@ Check out these additional resources to learn more about campaigns at Braze:
 
 Rather than sending out sporadic messages over multiple campaigns, Canvases create an ongoing fluid conversation with users. This is because a user's journey through a Canvas can split into different paths depending on their actions (or inaction) with your brand, allowing you to automatically advance users through a specific flow in real time.
 
-![][2]{: style="border:none"}
+![][2]
 
 In this way, Canvases are great for casting a net to capture users who fall off the path to conversion and placing them in the most effective outreach initiatives.
 
@@ -72,12 +72,12 @@ The following table outlines our supported channels.
 | [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | Display messages within your mobile app while users are actively using it.                                                                             |
 | [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)*                   | Send text messages to users' mobile phones.                                                                                                            |
 | [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | Send messages through the popular messaging platform, WhatsApp, to reach and engage with your users.                                                   |
-| [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | Provide an inbox within your app or website where users can receive and interact with messages, display messages in a carousel, as a banner, and more. |
+| [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | Provide an inbox within your app or website where users can receive and interact with messages, or display messages in a carousel, as a banner, and more. |
 | [Connected TV]({{site.baseurl}}/developer_guide/platform_wide/tv_and_ott/)                           | Engage with users on connected television platforms.                                                                                                   |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Enable real-time communication and integration with external systems through custom HTTP callbacks.                                                    |
 {: .reset-td-br-1 .reset-td-br-2}
 
-**Available as an add-on feature.*
+<sup>**Available as an add-on feature.*</sup>
 
 {% alert tip %}
 For short and urgent messages that can be communicated through most channels (email, SMS, push), take advantage of the [Intelligent Channel]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_channel/) filter to automatically send the message through the best channel for each user.
