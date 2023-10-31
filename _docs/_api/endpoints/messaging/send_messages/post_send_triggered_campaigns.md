@@ -14,7 +14,7 @@ description: "This article outlines details about the Send campaigns via API-tri
 /campaigns/trigger/send
 {% endapimethod %}
 
-> Use this endpoint to send immediate, impromptu messages to designated users via API-triggered delivery. 
+> Use this endpoint to send immediate, one-off messages to designated users via API-triggered delivery. 
 
 API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
 
