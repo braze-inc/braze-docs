@@ -33,7 +33,7 @@ You can create new workspaces or switch between existing workspaces from the wor
 2. Give your workspace a name.
 
 {% alert tip %}
-You might want to adopt a naming convention so that others in your company can easily find your workspace. For example: Upon Voyage US – Production and Upon Voyage US – Staging.
+You might want to adopt a naming convention so that others in your company can easily find your workspace. For example: "Upon Voyage US – Production" and "Upon Voyage US – Staging".
 {% endalert %}
 
 {:start="3"}
@@ -98,7 +98,7 @@ To add favorite workspaces:
 3. Select your workspaces from the list.
 4. Click **Save changes**.
 
-There's no limit to the number of workspaces you can favorite, however, we recommend keeping this list short for convenience.
+There's no limit to the number of workspaces you can favorite, but we recommend keeping this list short for convenience.
 
 ### Renaming workspaces
 
