@@ -1,9 +1,13 @@
-.swiper-container {
+.swiper{
   width: 100%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
   background-color: #F4F4F7;
+}
+.swiper-description {
+  width: 100%;
+  padding: 0 10%;
 }
 .swiper-slide {
   text-align: center;
@@ -24,13 +28,12 @@
   -webkit-align-items: center;
   align-items: center;
   padding: 30px 0px 45px 0px;
-  width: calc(100% - 10px) !important;
-  img {
+  .swiper-image {
     border: none !important;
   }
   @media (min-width: $window-medium-px) {
-    img {
-      max-width: calc(100% - 90px) !important;
+    .swiper-image {
+      max-width: 80% !important;
     }
   }
 }
@@ -39,8 +42,8 @@
   bottom: 5px !important;
 }
 .swiper-button-next {
-  padding: 40px 0px 40px 30px !important;
+  padding: 40px 20px 40px 30px !important;
 }
 .swiper-button-prev {
-  padding: 40px 30px 40px 0px !important;
+  padding: 40px 30px 40px 20px !important;
 }
