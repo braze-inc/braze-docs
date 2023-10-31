@@ -42,7 +42,7 @@ It is not recommended to heavily leverage this endpoint when querying a single u
 
 - **If a user exists:**
   - Do not create a new profile.
-  - Log a custom attribute (e.g., `newsletter_subscribed: true`) on the user's profile to indicate that the user has submitted their email via newsletter subscription. If multiple user profiles in Braze exist with the same email address, all profiles will be exported.<br><br>
+  - Log a custom attribute (for example, `newsletter_subscribed: true`) on the user's profile to indicate that the user has submitted their email via newsletter subscription. If multiple user profiles in Braze exist with the same email address, all profiles will be exported.<br><br>
 - **If a user does not exist:**
   - Create an alias-only profile via [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). This endpoint will accept a [`user_alias`` object]({{site.baseurl}}/api/objects_filters/user_alias_object/) and create an alias-only profile when `update_existing_only` is set to `false`. Set the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
 

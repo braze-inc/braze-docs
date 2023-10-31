@@ -106,7 +106,7 @@ You must successfully test an integration before it can move from Draft to Activ
 Upon successfully creating a Mozart Data account, you can access your Braze data synced to your Snowflake data warehouse from Mozart Data.
 
 #### Transforms
-Mozart Data offers a SQL transformation layer to allow users to create a view or table. You can create a user-level dimension table (e.g., `dim_users`) to summarize each user's product usage data, transactional history, and engagement activities with Braze messages. 
+Mozart Data offers a SQL transformation layer to allow users to create a view or table. You can create a user-level dimension table (for example, `dim_users`) to summarize each user's product usage data, transactional history, and engagement activities with Braze messages. 
 
 #### Analysis
 Using the transform models or raw data synced from Braze, you can analyze users' engagement with Braze messages. Additionally, you can combine the Braze data with other application data and analyze how the insights you gained from users' interaction with the Braze messages relate to other data you may have about the users. For example,  their demographic information, shopping history, product usage, and customer service engagement. 

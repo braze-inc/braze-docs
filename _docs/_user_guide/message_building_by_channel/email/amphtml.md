@@ -156,7 +156,7 @@ Some examples include:
 * Dynamically updating items in the feed
 * Article bookmark email
 
-Using this component, users can submit or clear field values. Also, depending on how you set up your email, you can give additional prompts to users, such as whether or not the survey submission was successful, or render the responses from your users showing results of the survey (i.e., a voting campaign).
+Using this component, users can submit or clear field values. Also, depending on how you set up your email, you can give additional prompts to users, such as whether or not the survey submission was successful, or render the responses from your users showing results of the survey (such as a voting campaign).
 
 {% endtab %}
 {% tab Collapsable Content %}

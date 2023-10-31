@@ -75,7 +75,7 @@ Variables can be **strings**, **boolean** values, or **numbers**. Define both th
 
 ##### Example properties
 
-For example, if we are defining a feature flag that shows an out-of-stock banner for our ecommerce store, we might set the following properties, which our app will use when displaying the banner:
+For example, if we are defining a feature flag that shows an out-of-stock banner for our eCommerce store, we might set the following properties, which our app will use when displaying the banner:
 
 |Property Name|Type|Value|
 |--|--|--|
@@ -121,7 +121,7 @@ Be sure to log [feature flag impressions](#impressions).
 Let's say you were to rolling out a new type of user profile for your app. You might set the `ID` as `expanded_user_profile`. Then, you would have your app check to see if it should display this new user profile to a particular user. For example:
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
@@ -230,7 +230,7 @@ Track a feature flag impression whenever a user has had an opportunity to intera
 Usually, you can put this line of code directly underneath where you reference your feature flag in your app:
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 braze.logFeatureFlagImpression("expanded_user_profile");
@@ -296,7 +296,7 @@ To access the properties of a feature flag, use one of the following methods dep
 If a feature flag is not enabled, or a property you reference does not exist, these methods will return `null`.
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 // Feature flag instance
@@ -416,7 +416,7 @@ height = featureFlag.getNumberProperty("height")
 You can also get a list of all enabled feature flags:
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 const features = getAllFeatureFlags();
@@ -511,7 +511,7 @@ Refreshing happens automatically upon session start. Refreshing is only needed p
 {% endalert %}
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 braze.refreshFeatureFlags(() => {
@@ -589,7 +589,7 @@ You can configure the Braze SDK to listen and update your app when feature flags
 This is useful if you want to update your app if a user is no longer eligible for a feature. For example, setting some state in your app based on whether or not a feature is enabled, or one of its property values.
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 // Register an event listener
@@ -743,7 +743,7 @@ To avoid users being enabled and disabled by different entry points, you should 
   - For example, in a ride sharing app your feature ID may be `driver.profile.show_animation_v3`
 - This also helps when searching for a specific product area or team's feature flags.
 - Make sure that the default state for a feature flag is disabled in your app.
-  - For example, it is an anti-pattern if you have a flag named `disable_feature_xyz`. There may be exceptions, but try to avoid confusing a feature's "enabled" status with the actual enabled behavior (disabling feature xyz).
+  - For example, it is an anti-pattern if you have a flag named `disable_feature_xyz`. There may be exceptions, but try to avoid confusing a feature's "enabled" status with the actual enabled behavior (disabling feature XYZ).
 
 ### Planning ahead
 

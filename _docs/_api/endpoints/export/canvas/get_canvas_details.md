@@ -89,7 +89,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "channels": (array of strings) the channels used in step,
       "messages": {
           "message_variation_id": (string) {  // <=This is the actual id
-              "channel": (string) the channel type of the message (e.g., "email"),
+              "channel": (string) the channel type of the message (for example, "email"),
               // channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses
           }
       }

@@ -60,9 +60,9 @@ Exactly three years ago today we met for the first time!
 ```
 {% endraw %}
 
-**Explanation:** Here, we use the reserved variable `now` to template in the current date and time in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki") format. The filters `%B` (month, i.e., "May") and `%d` (day, i.e., "18") format the current month and day. We then use the same date and time filters on the `signup_date` values to ensure we can compare the two values using conditional tags and logic.
+**Explanation:** Here, we use the reserved variable `now` to template in the current date and time in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki") format. The filters `%B` (month like "May") and `%d` (day like "18") format the current month and day. We then use the same date and time filters on the `signup_date` values to ensure we can compare the two values using conditional tags and logic.
 
-Then we repeat three more variable statements to get the `%B` and `%d` for the `signup_date`, but also adding `%Y` (year, i.e., "2021"). This forms the date and time of the `signup_date` into just the year. Knowing the day and month lets us check if the user's anniversary is today, and knowing the year tells us how many years it's been—which lets us know how many years to congratulate them on!
+Then we repeat three more variable statements to get the `%B` and `%d` for the `signup_date`, but also adding `%Y` (year like "2021"). This forms the date and time of the `signup_date` into just the year. Knowing the day and month lets us check if the user's anniversary is today, and knowing the year tells us how many years it's been—which lets us know how many years to congratulate them on!
 
 {% alert tip %} You can create as many conditions as years you've been collecting sign-up dates. {% endalert %}  
 
@@ -89,7 +89,7 @@ No birthday for you!
 ```
 {% endraw %}
 
-**Explanation:** Similar to the [anniversary year](#anniversary-year) use case, here we take the reserved variable `now` and use the `%W` filter (week, i.e., week 12 out of 52 in a year) to get the number week of the year that the user's birthday falls within. If the user's birthday week matches the current week, we send them a message congratulating them! 
+**Explanation:** Similar to the [anniversary year](#anniversary-year) use case, here we take the reserved variable `now` and use the `%W` filter (week such as week 12 out of 52 in a year) to get the number week of the year that the user's birthday falls within. If the user's birthday week matches the current week, we send them a message congratulating them! 
 
 We also include statements for `last_week` and `next_week` to further personalize your messaging.
 
@@ -109,7 +109,7 @@ Message body
 ```
 {% endraw %}
 
-**Explanation:** Similar to the [birthday week](#birthday-week) use case, except here we use the `%B` filter (month, i.e., "May") to calculate which users have a birthday this month. A potential application could be addressing birthday users in a monthly email.
+**Explanation:** Similar to the [birthday week](#birthday-week) use case, except here we use the `%B` filter (month like "May") to calculate which users have a birthday this month. A potential application could be addressing birthday users in a monthly email.
 
 ### Avoid sending messages on major holidays {#holiday-avoid}
 
@@ -126,7 +126,7 @@ Message if today isn't one of the provided holidays.
 ```
 {% endraw %}
 
-**Explanation:** Here we assign the term `today` to the reserved variable `now` (the current date and time), using the filters `%Y` (year, i.e., "2023"), `%m` (month, i.e., "12"), and `%d` (day, i.e., "25") to format the date. We then run our conditional statement to say that if the variable `today` matches the holiday days of your choice, then the message will be aborted. 
+**Explanation:** Here we assign the term `today` to the reserved variable `now` (the current date and time), using the filters `%Y` (year like "2023"), `%m` (month like "12"), and `%d` (day like "25") to format the date. We then run our conditional statement to say that if the variable `today` matches the holiday days of your choice, then the message will be aborted. 
 
 The example provided uses Christmas Eve, Christmas Day, and Boxing Day (the day after Christmas).
 
@@ -862,7 +862,7 @@ Miscellaneous
 This use case takes a list of blocked users saved in a Content Block and checks those blocked users are not communicated to or targeted in upcoming campaigns or Canvases.
 
 {% alert important %}
-To use this Liquid, first save the list of blocked emails within a Content Block. The list should have no additional spaces or characters inserted between email addresses (e.g., `test@braze.com,abc@braze.com`).
+To use this Liquid, first save the list of blocked emails within a Content Block. The list should have no additional spaces or characters inserted between email addresses (for example, `test@braze.com,abc@braze.com`).
 {% endalert %}
 
 {% raw %}

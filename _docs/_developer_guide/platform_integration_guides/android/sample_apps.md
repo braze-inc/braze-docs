@@ -33,7 +33,7 @@ The Hello Braze test application shows a minimal use case of the Braze SDK and a
 ```
 ./gradlew installDebug
 ```
-If you don't have your `ANDROID_HOME` variable properly set or don't have a `local.properties` folder with a valid `sdk.dir` folder, this plugin will also install the base SDK for you. See the [plugin repo][27] for more information.
+If you don't have your `ANDROID_HOME` variable properly set or don't have a `local.properties` folder with a valid `sdk.dir` folder, this plugin will also install the base SDK for you. See the [plugin repository][27] for more information.
 
 For more information on the Android SDK build system, see the [GitHub Repository README][26].
 

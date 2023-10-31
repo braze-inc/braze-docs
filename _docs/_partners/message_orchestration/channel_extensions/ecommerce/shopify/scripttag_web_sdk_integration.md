@@ -34,7 +34,7 @@ Review the following Web SDK details with your developers to prevent issues duri
 
 Initializing the Web SDK upon session start will be required. Braze will need to collect the `device_id` for tracking anonymous user data as other identifiers like the Shopify customer ID, email, or phone number may not be readily available for guest visitors of your Shopify store.
 
-The `device_id` will also be used to reconcile user data to the anonymous user profile as a customer provides more identifiable information (i.e., email or phone number) during and after the checkout process.
+The `device_id` will also be used to reconcile user data to the anonymous user profile as a customer provides more identifiable information (such as email or phone number) during and after the checkout process.
 
 ### Braze Web SDK version
 

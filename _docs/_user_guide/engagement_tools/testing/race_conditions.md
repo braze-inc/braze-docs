@@ -52,7 +52,7 @@ Attributes that are included in this object will be processed before Braze begin
 
 ## Matching action-based triggers and audience filters
 
-Another common race condition may occur if you configure an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). The user may not be in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas. In this case, Braze recommends you avoid configuring your trigger to match your audience filter. 
+Another common race condition may occur if you configure an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). The user may not be in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas. In this case, Braze recommends you avoid configuring your trigger to match your audience filter. 
 
 ### Avoiding the race condition
 

@@ -118,7 +118,7 @@ The following table lists possible returned errors and their associated troubles
 | `ids-not-strings` | Item IDs must be of type string. |
 | `ids-not-unique` | Item IDs must be unique in the request. |
 | `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
-| `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalalog. This is not related to the ID field mentioned in the error. |
+| `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalog. This is not related to the ID field mentioned in the error. |
 | `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
 | `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
 | `item-array-invalid` | `items` must be an array of objects. |

@@ -11,7 +11,7 @@ channel:
 
 # SMS subscription groups
 
-> Subscription Groups are the foundation for sending SMS & MMS through Braze. A Subscription Group is a collection of [sending phone numbers][2] (i.e., short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
+> Subscription Groups are the foundation for sending SMS & MMS through Braze. A Subscription Group is a collection of [sending phone numbers][2] (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
 
 ## SMS subscription states
 

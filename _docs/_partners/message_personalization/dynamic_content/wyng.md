@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Wyng
 
-> [Wyng][0] makes it easy to build interactive digital experiences (ie. quizzes, preference center, promotions) that engage consumers at the right moments, collect preferences and other zero-party data, and personalize in real time.
+> [Wyng][0] makes it easy to build interactive digital experiences (that is, quizzes, preference centers, promotions) that engage consumers at the right moments, collect preferences and other zero-party data, and personalize in real-time.
 
 The Braze and Wyng integration allows you to leverage zero-party data earned via Wyng experiences to personalize interactions in Braze Campaigns and Braze Canvas. Wyng can also power a preference center, so consumers can control the data and preferences (including communication preferences) they share with your brand.
 
@@ -27,7 +27,7 @@ The Braze and Wyng integration allows you to leverage zero-party data earned via
 
 In Wyng, go to [**Integrations**][1] and select the **Add** tab. Next, hover over **Braze** and click **Connect** for the integration.
 
-![The Braze partner tile in the Wyng plaform.][2]{: style="max-width:80%;"}
+![The Braze partner tile in the Wyng platform.][2]{: style="max-width:80%;"}
 
 ### Step 2: Configure the Braze connector
 
@@ -38,7 +38,7 @@ In Wyng, go to [**Integrations**][1] and select the **Add** tab. Next, hover ove
 - **Subscriptions setup (required)**<br>
 To subscribe users to subscription groups, click **Add Subscription** and add your subscription group name and ID. To add multiple group names and IDs, click the **Add Subscription** button again.<br>![An image prompting you for a subscription group name and ID.][8]{: style="max-width:80%;"}<br><br>
 - **User track setup**<br>
-Click **Add custom property** to add attribute and event object pairs to send to the `/users/track` endpoint. Use this to add hardcoded attribute values for each data transaction sent for the integration. To add multiple properties, click the **Add custom property** button again.<br>![An image prompting you to add attribute custom properties.][9]{: style="max-width:80%;"}<br><br>
+Click **Add custom property** to add attribute and event object pairs to send to the `/users/track` endpoint. Use this to add hard-coded attribute values for each data transaction sent for the integration. To add multiple properties, click the **Add custom property** button again.<br>![An image prompting you to add attribute custom properties.][9]{: style="max-width:80%;"}<br><br>
 - **Send custom event**<br>
 Optionally, you can enable **Sending custom event**. If enabled, you should include the event name and corresponding app ID.<br>![An image prompting you to send custom events, if needed.][10]{: style="max-width:80%;"}<br><br>
 4. Lastly, you must map Wyng fields to Braze API fields based on your use case. Click **Select a field** to choose fields to map, and afterwards, **Save** your integration. When saved, these mapped fields can be found under **Integrations > Manage**.

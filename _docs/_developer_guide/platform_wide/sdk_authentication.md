@@ -92,7 +92,7 @@ Don't worry, initializing with this option alone won't impact data collection in
 {% endalert %}
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 When calling `initialize`, set the optional `enableSdkAuthentication` property to `true`.
 ```javascript
 import * as braze from"@braze/web-sdk";
@@ -161,7 +161,7 @@ Keep in mind that `changeUser` should only be called when the User ID has _actua
 {% endalert %}
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 Supply the JWT Token when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
 ):
 
@@ -264,7 +264,7 @@ These callback methods are a great place to add your own monitoring or error-log
 {% endalert %}
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 ```javascript
 import * as braze from"@braze/web-sdk";
 braze.subscribeToSdkAuthenticationFailures((error) => {
@@ -369,7 +369,7 @@ Once your [Server-side Integration][1] and [SDK Integration][2] are complete, yo
 
 Keep in mind that SDK requests will continue to flow as usual without authentication unless the app's SDK Authentication setting is set to **Required** in the Braze dashboard.
 
-Should anything go wrong with your integration (e.g., your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), disable this feature in the Braze dashboard, and data will resume to flow as usual without verification.
+Should anything go wrong with your integration (for example, your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), disable this feature in the Braze dashboard, and data will resume to flow as usual without verification.
 
 ### Enforcement options {#enforcement-options}
 
@@ -440,7 +440,7 @@ Once disabled, any pending failed SDK requests will eventually be retried by the
 
 #### Why does this feature use public/private keys instead of shared secrets? {#faq-shared-secrets}
 
-When using shared secrets, anyone with access to that shared secret (i.e., the Braze dashboard page) would be able to generate tokens and impersonate your end-users.
+When using shared secrets, anyone with access to that shared secret, such as the Braze dashboard page, would be able to generate tokens and impersonate your end-users.
 
 Instead, we use public/private keys so that not even Braze Employees (let alone your dashboard users) have access to your private keys.
 

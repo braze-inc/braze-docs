@@ -38,7 +38,7 @@ The following steps help you build a `BrazeManager` helper file that your produc
 {% tab Create BrazeManager.swift %}
 
 ##### Create BrazeManager.swift
-To build out your `BrazeManager.swift` file, create a new Swift file named _BrazeManager_ to add to your project at your desired location. Next, Replace `import Foundation` with `import AppboyUI` for SPM (`import Appboy_iOS_SDK` for cocoapods) and then create a `BrazeManager` class that will be used to host all Braze-related methods and variables. `Appboy_iOS_SDK`
+To build out your `BrazeManager.swift` file, create a new Swift file named _BrazeManager_ to add to your project at your desired location. Next, Replace `import Foundation` with `import AppboyUI` for SPM (`import Appboy_iOS_SDK` for CocoaPods) and then create a `BrazeManager` class that will be used to host all Braze-related methods and variables. `Appboy_iOS_SDK`
 
 {% alert note %}
 - `BrazeManager` is an `NSObject` class and not a struct, so it can conform to ABK delegates such as the `ABKInAppMessageUIDelegate`.
@@ -254,7 +254,7 @@ Observe you are being prompted for push notifications before advancing any furth
 
 Next, forward the system push notifications methods from `AppDelegate.swift` to `BrazeManager.swift` to be handled by the Braze iOS SDK.
 
-###### Step 1: Create extension for push notificiation code
+###### Step 1: Create extension for push notification code
 
 Create an extension for your push notification code in your `BrazeManager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 

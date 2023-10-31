@@ -252,7 +252,7 @@ With this approach, newly eligible users will get the new card and previous reci
 * **Existing recipients:** Users who have already received the card would not receive the updated cards until they become re-eligible. If re-eligibility is turned off, they would never receive the new card.
 
 {% alert tip %}
-This option is recommended for unique messages in a notification center or message inbox (e.g., promotions), when it’s important for analytics to be unified, or when timeliness of the message is not a concern (i.e., existing recipients can wait for the eligibility window before seeing the updated cards).
+This option is recommended for unique messages in a notification center or message inbox (for example, promotions), when it’s important for analytics to be unified, or when timeliness of the message is not a concern (such as existing recipients can wait for the eligibility window before seeing the updated cards).
 {% endalert %}
 
 #### Keeping cards in users' feeds

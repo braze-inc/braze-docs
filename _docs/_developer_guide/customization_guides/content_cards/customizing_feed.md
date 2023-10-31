@@ -115,7 +115,7 @@ You can change the order in which your Content Cards are displayed. This allows 
 
 The [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) relies on a [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html) on your `ContentCardsFragment`.
 
-The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customizations:
+The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customization:
 
 {% subtabs local %}
 {% subtab Java %}

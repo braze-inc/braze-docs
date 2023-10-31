@@ -81,7 +81,7 @@ Give your report a name, choose how your report will be formatted, and select yo
 
 You can select from the following compression and delimiter options:
 
-- **Compression:** ZIP, Uncompressed, or Gzip
+- **Compression:** ZIP, Uncompressed, or gzip
 - **Delimiter:** Comma (`,`), Colon (`:`), Semicolon (`;`), or Pipe (`|`)
 
 #### Select time frame

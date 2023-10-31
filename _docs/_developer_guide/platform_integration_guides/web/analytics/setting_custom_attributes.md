@@ -132,7 +132,7 @@ You can also use our REST API to set user attributes. Refer to the [users API][4
 
 ## Setting up user subscriptions
 
-To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType()`  or `setPushNotificationSubscriptionType()`, respectively. Both of these functions take the enum type `braze.User.NotificationSubscriptionTypes` as arguments. This type has three different states:
+To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType()`  or `setPushNotificationSubscriptionType()`, respectively. Both of these functions take the `enum` type `braze.User.NotificationSubscriptionTypes` as arguments. This type has three different states:
 
 | Subscription Status | Definition |
 | ------------------- | ---------- |

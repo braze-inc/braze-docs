@@ -101,13 +101,13 @@ glossaries:
     tags:
       - User Data
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/'>/campaigns/trigger/send</a>
-    description: Send immediate, ad-hoc messages to designated users via API-triggered delivery.
+    description: Send immediate, one-off messages to designated users via API-triggered delivery.
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/'>/canvas/trigger/send</a>
     description: Send Canvas messages via API-Triggered delivery.
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_messages/'>/messages/send</a>
-    description: Send immediate, ad-hoc messages to designated users via the Braze API.
+    description: Send immediate, one-off messages to designated users via the Braze API.
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_create_send_ids/'>/sends/id/create</a>
@@ -115,7 +115,7 @@ glossaries:
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{CAMPAIGN_ID}/send</a>
-    description: Send immediate, ad-hoc transactional messages to a designated user.
+    description: Send immediate, one-off transactional messages to a designated user.
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/'>/campaigns/trigger/schedule/create</a>

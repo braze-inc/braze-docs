@@ -14,7 +14,7 @@ description: "This article outlines details about the Send messages immediately 
 /messages/send
 {% endapimethod %}
 
-> Use this endpoint to send immediate, ad-hoc messages to designated users via the Braze API. 
+> Use this endpoint to send immediate messages to designated users via the Braze API. 
 
 Be sure to include Messaging Objects in your body to complete your requests.
 
@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
    "user_aliases": (optional, array of user alias object) see user alias,
    "segment_id": (optional, string) see segment identifier,
    "audience": (optional, connected audience object) see connected audience,
-   "campaign_id": (optional*, string) *required if you wish to track campaign stats (e.g., sends, clicks, bounces, etc). see campaign identifier,
+   "campaign_id": (optional*, string) *required if you wish to track campaign stats (for example, sends, clicks, bounces, etc). see campaign identifier,
    "send_id": (optional, string) see send identifier,
    "override_frequency_capping": (optional, bool) ignore frequency_capping for campaigns, defaults to false,
    "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
@@ -75,9 +75,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`user_aliases`| Optional | Array of user alias objects| See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
 |`audience`| Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Optional* | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/) for more information. <br><br>*Required if you wish to track campaign stats (e.g., sends, clicks, bounces, etc) on the Braze dashboard. |
+|`campaign_id`| Optional* | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/) for more information. <br><br>*Required if you wish to track campaign stats (for example, sends, clicks, bounces, etc) on the Braze dashboard. |
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/) |
-|`override_frequency_capping`| Optional | Boolean | Ignore frequency_capping for campaigns, defaults to false. |
+|`override_frequency_capping`| Optional | Boolean | Ignore `frequency_capping` for campaigns, defaults to `false`. |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
 |`messages`| Optional | Messaging objects | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -157,7 +157,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 
 ## Response details
 
-Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). For more, information refer to [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch (unique ID for each 'transmission' sent from Braze). For more, information refer to [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 {% endapi %}
 

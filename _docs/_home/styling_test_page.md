@@ -403,7 +403,7 @@ This is a update
 {% tabs %}
 {% tab Styling %}
 #### Embedded Video/YouTube
-Defaults to youtube embedded.
+Defaults to YouTube embedded.
 {% multi_lang_include video.html id="XY5vFY" source="youtube" %}
 
 #### Embedded Video Right Align
@@ -604,7 +604,7 @@ Content of swift
 {% endraw %}
 
 #### Local Tabs
-For self-contained tabs, i.e., tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
+For self-contained tabs, such as tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
 
 {% raw %}
 ```liquid

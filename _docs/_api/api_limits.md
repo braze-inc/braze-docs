@@ -75,7 +75,7 @@ A single request to the [Messaging endpoints][1] can reach any one of the follow
 
 - Up to 50 specific `external_ids`, each with individual message parameters
 - A segment of any size created in the Braze dashboard, specified by its `segment_id`
-- An ad-hoc audience segment of any size, defined in the request as a [Connected Audience][2] object
+- Users who match additional audience filters of any size, defined in the request as a [connected audience][2] object
 
 ## Monitoring your rate limits
 

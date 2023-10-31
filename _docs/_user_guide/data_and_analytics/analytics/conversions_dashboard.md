@@ -61,7 +61,7 @@ Your report is split into three sections: **Total conversions**, **Unique conver
 
 ### Total conversions
 
-The total conversions are total counts and are not de-duplicated when users convert multiple times. For example, if a user converts two times within the conversion window, then two additional total conversions are incremented.
+The total conversions are total counts and are not deduplicated when users convert multiple times. For example, if a user converts two times within the conversion window, then two additional total conversions are incremented.
 
 This section includes the following metric tiles:
 
