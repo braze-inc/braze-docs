@@ -37,7 +37,7 @@ Common examples of when you would want to have multiple app instances in the sam
 
 #### Impact on segmentation filters
 
-Whichever apps you choose to have in one workspace will have their data aggregated—which will have a notable impact on the following segmentation filters in Braze:
+Whichever apps you choose to have in one workspace will have their data aggregated—which will have a notable impact on the following segmentation filters in Braze (this is not an exhaustive list):
 
 - Last Used App
 - First Used App
@@ -45,8 +45,6 @@ Whichever apps you choose to have in one workspace will have their data aggregat
 - Money Spent In-App
 - Push Subscription (This becomes an all-or-none situation—if your users unsubscribe from one app, they are unsubscribed from all apps in the workspace.)
 - Email Subscription (This becomes an all-or-none situation, and can leave you open to compliance issues.)
-
-This is not an exhaustive list.
 
 {% alert note %}
 The aggregation of data across app instances in these filters is why we do not recommend housing substantially different apps within the same workspace. It can make targeting tricky!
