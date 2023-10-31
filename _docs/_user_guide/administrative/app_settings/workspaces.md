@@ -136,7 +136,7 @@ Additionally, your users would exist in two places: the old workspace and the ne
 
 #### What should I do instead?
 
-To separate old and new apps, create a new app instance within the same workspace. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use Liquid to [select the old app and filter the previous app version](https://learning.braze.com/target-different-app-versions-with-liquid/929971).
+To separate old and new apps, create a new app instance within the same workspace. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use filters to [target the previous app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
 
 ### I have multiple app instances in one workspace—how can I make sure to only target a single app with my message?
 
