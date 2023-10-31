@@ -80,8 +80,6 @@ We even have specific instructions for [testing your Android or FireOS integrati
 
 Keep in mind that the implementation finish line isn't also the green light to send a million messages at once. Sending a million push might break your app if every customer clicks the same link at the same time. We recommend discussing what your capacity of your internal set up is for handling requests from Braze before clicking that **Send** button. Then, you can set your [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting) based on that.
 
-Now that you're more familiar with the integration process, check out [Learning to use Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/learning_to_use_braze/) for suggestions on where to go next!
-
 ![]({% image_buster/assets/img/torchie/firebrands.png %}){: style="max-width:15%;float:right;margin-left:15px;border:none;"}
 
 After you're comfortable using Braze, consider becoming a Braze Firebrand! With Braze Firebrands, our customer engagement community, we're building a community of movers and shakers using Braze to modernize their customer experience and marketing. Interested in learning more? [Join now](https://brazefirebrands.splashthat.com/).
