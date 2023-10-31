@@ -31,7 +31,7 @@ The draw to have multiple app instances under one workspace can be enticing, as 
 
 Common examples of when you would want to have multiple app instances in the same workspace:
 
-- When you have multiple, nearly identical apps across different platforms (iOS, web, Android)
+- When you have multiple, nearly identical apps across different platforms
 - When you have different major revisions of the app, but want to keep engaging the same users when they upgrade
 - When you have different versions of the app that the same user could move in or out of (such as free to premium)
 
