@@ -80,7 +80,7 @@ For all other domains, Braze allows email addresses matching the following regex
 The local part must follow these parameters:
 - Can contain any letter, number, underscore, dash, or caret, including Unicode letters and numbers
 - Can contain but may not start with the following characters: (.) (+) (&) (#) or (/)
-- Can contain but may not end with the following characters:  (.) (&) (#) ($) or (/)
+- Can contain but may not end with a period (.)
 - Cannot contain double quotes (")
 
 {% alert important %}
