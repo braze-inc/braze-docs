@@ -1,13 +1,14 @@
 ---
-page_order: 0.5
-nav_title: Video Test Page
+nav_title: Embedded videos
+article_title: Embedded video example
+page_order: 1
 layout: featured_video
 video_id: XY5uXoKIvFY
 video_source: youtube
 noindex: true
 ---
 
-# User Data Collection
+# Embedded video example
 
 Before completing your Braze implementation, make sure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 

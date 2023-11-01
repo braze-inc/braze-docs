@@ -1,9 +1,10 @@
 ---
-nav_title: Docs Metadata
-page_order: 0
+nav_title: Metadata
+page_order: 3
 noindex: true
 ---
-# Docs Metadata
+
+# Metadata
 
 > This article walks through the options for adding metadata to Docs pages. We optimize our search based on page type and other bits of metadata, including: [yaml tags](#yaml-tags) and [page types](#page-types) (based on [templates]({{site.baseurl}}/home/templates/)).
 
@@ -13,18 +14,18 @@ The [content tags](#content-tags) listed on this page are currently a work in pr
 
 {% endalert %}
 
-## YAML Tags
+## YAML tags
 
 These are independent. If you need to see additional optional YAML content based on "Layout", check out the [templates]({{site.baseurl}}/home/templates/) and layouts (TBD) breakdowns.
 
 {% alert important %}
-A note on capitalization... 
-<br> 
-<br> 
+A note on capitalization...
+<br>
+<br>
 Leave all tag values (except for the content for the `description` tag) lowercase. This will ensure consistency. We may change this in the future, but for now, lowercase is better and easier to mass search and replace in the event of a formatting update.
 {% endalert %}
 
-### Configuration Tags
+### Configuration tags
 
 These will automatically change the layout or function of a page.
 
@@ -37,10 +38,11 @@ These will automatically change the layout or function of a page.
 | `permalink` | Sets the page's url. For example: `permalink: /this_page_name/` will set the page's URL to `https://www.braze.com/docs/this_page_name/`. | No, unless page is `hidden`. | String. | Any - this URL is up to you. Encapsulate in slashes (`/`). |
 | `layout` | Sets specific features on the page that align with developed layouts. Defaults is a regular page. | No. | String. | If you do not set this, it will default to a regular content page. You may choose between: `api_page`, `dev_guide`, `featured_video`, `featured`, `glossary_page`, `blank_config`, and `redirect`. There are others, but those are mostly for internal and config uses. |
 | `hide_toc` | Determines whether the Table of Contents on the right side of the page is included or not. | No. | Boolean. | You may choose between `true` and `false`. |
-| `noindex` | Determines whether the article will show in Algolia and Google Searches. Defaults to `false` unless you have the `hidden` YAML tag set as `true`. | No. | Boolean. | `true` or `false`. | 
+| `noindex` | Determines whether the article will show in Algolia and Google Searches. Defaults to `false` unless you have the `hidden` YAML tag set as `true`. | No. | Boolean. | `true` or `false`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Content Tags
+### Content tags
+
 These will assist in external and internal SEO, informing page content and formatting, and other content-based structure.
 
 | YAML Content Tag | Description  | Required? | Exclusive or can multiple be used? | Data Type | Available Values |
@@ -52,11 +54,13 @@ These will assist in external and internal SEO, informing page content and forma
 | `tool` | Notes which engagement tools (Canvas, campaigns, etc.) the article is associated with. | Yes. | Multiple values can be used. | String. | Any of Braze's  tools: `dashboard`, `docs`, `canvas`, `campaigns`, `segments`, `templates`, `media`, `location`, `currents`, `reports`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Multiple Tag Values
+### Multiple tag values
+
 Sometimes, you may find that a content tag for a page could be categorized with multiple values (as in, an article might talk about both Canvas and campaigns, or cover a custom integration for both Android and iOS).
 
-You can format that like this: 
-```
+You can format that like this:
+
+```yaml
 key:
   - string1
   - string2      
@@ -65,8 +69,9 @@ key:
   - string5
   - string6
 ```
+
 {% alert important %}
-Note that there can only be a single `page_type` value for page. A page cannot be both a `reference` and a `glossary`. The different page types exist to narrow the scope and purpose of each article. 
+Note that there can only be a single `page_type` value for page. A page cannot be both a `reference` and a `glossary`. The different page types exist to narrow the scope and purpose of each article.
 {% endalert %}
 
 ### Sample YAML
@@ -86,8 +91,7 @@ tool:
 ---
 ```
 
-
-## Page Types
+## Page types
 
 To apply these, be sure your yaml parameter for page types is: `page_type:`
 
@@ -101,7 +105,7 @@ For example: `page_type: glossary`
 | Tutorial Page <br> <br> `tutorial` | A general walkthrough of an instructional concept. Should contain practical knowledge. Focuses on a single topic (like, how to create a campaign, how to create a Canvas, etc.) Goal or Task-Oriented Article that walks step-by-step through solving a specific issue (How to target specific users, how to segment based on location, etc.). | [Tutorial Article with Video]({{site.baseurl}}/home/templates/tutorial_video/) <br> <br> [Tutorial Article]({{site.baseurl}}/home/templates/tutorial/) <br> <br> [Use Case Article with Video]({{site.baseurl}}/home/templates/use_case_video/) <br> <br> [Use Case Article]({{site.baseurl}}/home/templates/use_case/) |
 | Landing Page <br> <br> `landing` | Page provides a selection of options within a certain section, as well as a description or overview of said section. | [Single Section Landing Page using FA Icons]({{site.baseurl}}/home/templates/landing_single/) <br> <br> [Single Section Landing Page using Images]({{site.baseurl}}/home/templates/landing_images/) <br> <br> [Multi-Section Landing Page using FA Icons]({{site.baseurl}}/home/templates/landing_multiple/) <br> <br> [Multi-Section Landing Page using Images]({{site.baseurl}}/home/templates/landing_multiple_images/)
 | Partner Page <br> <br> `partner` | A page that combines many of the preceding page types into a single page. These pages describe a partner, the benefits of that partner, how to integrate that partner, then how to use that integration and any best practices associated with that usage. | [Partner Page with Video]({{site.baseurl}}/home/templates/partner_page_template_video/) <br> <br> [Partner Page]({{site.baseurl}}/home/templates/partner_page_template/) |
-| Updates and Release Notes <br> <br> `update` | A page that lists updates to a product or SDK in succession. A single update on a larger page or a page about a new feature would **not** count as an `update` page type. | See Release Notes Pages and SDK Changelogs pages. | 
+| Updates and Release Notes <br> <br> `update` | A page that lists updates to a product or SDK in succession. A single update on a larger page or a page about a new feature would **not** count as an `update` page type. | See Release Notes Pages and SDK Changelogs pages. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Potential Page Type: Best Practices
