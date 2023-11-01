@@ -37,7 +37,7 @@ Do not change the push certificate environment (development versus production). 
 When users open your app, they will be prompted to accept push notifications. If they accept this prompt, APNs will generate a push token for that particular device. The Swift SDK will immediately and asynchronously send up the push token for apps using the default [automatic flush policy][40]. After we have a push token associated with a user, they will show as "Push Registered" in the dashboard on their user profile under the **Engagement** tab and will be eligible to receive push notifications from Braze campaigns.
 
 {% alert note %}
-Starting in macOS 13, on certain devices, you can test push notifications on an iOS 16 Simulator running on Xcode 14. For futher details, refer to the [Xcode 14 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes).
+Starting in macOS 13, on certain devices, you can test push notifications on an iOS 16 Simulator running on Xcode 14. For further details, refer to the [Xcode 14 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes).
 {% endalert %}
 
 ### Step 3: Launching a Braze push campaign
@@ -143,7 +143,7 @@ The following would indicate a problem with push registration or that the user's
 ## Push clicks not logged {#push-clicks-not-logged}
 
 - Make sure you have followed the [push integration steps][30].
-- Braze does not handle push notifications received silently in the foreground (default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened,  and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. Ensure that your app does not delay calls to Braze's [push handling methods][30]; otherwise, the Swift SDK may treat push notifications as silent foreground push events and not handle them.
+- Braze does not handle push notifications received silently in the foreground (default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened,  and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. Ensure that your app does not delay calls to [push handling methods][30]; otherwise, the Swift SDK may treat push notifications as silent foreground push events and not handle them.
 
 ## Deep links not working
 

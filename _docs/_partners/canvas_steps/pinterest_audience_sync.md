@@ -33,7 +33,7 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 | Requirement | Origin | Description |
 | --- | --- | --- |
-| Pinterest Business Hub | [Pinterest](https://www.pinterest.com/business/hub/) | A centralized tool to manage your brand's Pinterest assets (i.e., ad accounts, pages, apps). |
+| Pinterest Business Hub | [Pinterest](https://www.pinterest.com/business/hub/) | A centralized tool to manage your brand's Pinterest assets (such as ad accounts, pages, apps). |
 | Pinterest ad account | [Pinterest](https://ads.pinterest.com/) | An active Pinterest ad account tied to your brand's Pinterest Business Hub.<br><br>Ensure that your Pinterest Business Hub admin has granted you admin permissions to the Pinterest ad accounts you plan to use with Braze. |
 | Pinterest terms & policies | Pinterest | Agree to comply with any of Pinterest’s required terms, policies, guidelines, and documentation related to your use of the Pinterest Audience Sync, including any terms, policies, guidelines, and documentation incorporated by reference therein, which may include: the Terms of Service, Business Terms of Service, Privacy Policy, Developer and API Terms of Service, Ad Data Terms, Advertising Guidelines, Advertising Services Agreement, Community Guidelines, and Brand Guidelines. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

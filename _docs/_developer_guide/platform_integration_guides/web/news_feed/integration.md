@@ -71,7 +71,7 @@ This is often used to power badges signifying how many unread News Feed cards th
 
 ## Customization
 
-Braze UI elements come with a default look and feel that matches the composers within the Braze dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more.
+Braze UI elements come with a default look and feel that matches the composers within the Braze dashboard and aims for consistency with other Braze mobile platforms. Default styles in Braze are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more.
 
 For instance, the following is an example override that will cause the News Feed to appear 800&nbsp;px wide:
 
@@ -101,7 +101,7 @@ braze.toggleFeed(undefined, undefined, [braze.Card.Category.ANNOUNCEMENTS, braze
 
 Braze provides an unread and read indicator on News Feed cards as pictured below:
 
-![A News Feed card showing an image of a watch along with some text. In the upper right corner of the text is a blue or grey triangle that indicates if a card has been read or not. A blue triangle signifies that a card has been read.][25]
+![A News Feed card showing an image of a watch along with some text. In the upper right corner of the text is a blue or gray triangle that indicates if a card has been read or not. A blue triangle signifies that a card has been read.][25]
 
 ### Disabling the indicators
 

@@ -16,7 +16,7 @@ Campaign, Canvas, and Canvas Step names and IDs are all available in Liquid, our
 
 ### Liquid
 
-Campaign and Canvas attributes are available as Liquid tags in our dashboard {% raw %}(i.e., `{{campaign.${api_id}}}`){% endraw %}. You can use Liquid to pass these attributes in the message itself, in a Connected Content call, or as key-value pairs. This is usually done for tracking purposes.
+Campaign and Canvas attributes are available as Liquid tags in our dashboard {% raw %}(such as `{{campaign.${api_id}}}`){% endraw %}. You can use Liquid to pass these attributes in the message itself, in a Connected Content call, or as key-value pairs. This is usually done for tracking purposes.
 
 ### REST API
 

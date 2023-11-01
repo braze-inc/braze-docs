@@ -22,7 +22,7 @@ description: "This reference article covers message archiving, a feature that al
 
 When this feature is turned on and you have successfully connected an S3 bucket via your workspace's **Technology Partners** page, Braze will write a gzipped JSON file to your S3 bucket for each email, SMS, or push message sent to a user. You can select any or all of the channels to be saved on the **Message Archiving** settings page.
 
-This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (e.g., {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements. 
+This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements. 
 
 The file will be saved in your S3 bucket using the following key structure:<br>
 `sent_messages/Channel/(md5Ofe164PhoneOrEmailOrPushToken)/(campaign_id OR canvas_step_id)/DispatchId.json.gz`
@@ -140,7 +140,7 @@ Refer to our code example repository for [message archive sample files](https://
 Modifications done after the message leaves Braze will not be reflected in the file saved to your S3 bucket. This will include modifications our mail delivery partners make, like wrapping links for click tracking and inserting tracking pixels. 
 
 ### What are messages under the "unassociated" value in the campaign path? 
-When a message is sent outside of a campaign or Canvas, the CampaignId in the file name will be "unassociated". This will happen when you send test messages from the dashboard, when Braze sends SMS auto-responses, or when messages sent through the API do not specify a campaign ID.
+When a message is sent outside of a campaign or Canvas, the campaign ID in the file name will be "unassociated". This will happen when you send test messages from the dashboard, when Braze sends SMS auto-responses, or when messages sent through the API do not specify a campaign ID.
 
 ### How do I find more information about this send? 
 Using the `dispatch_id` and `user_id`, you can cross-reference the templated message with our Currents data to find more information like the external user ID of who received it, the timestamp it was delivered, whether or not the user opened or clicked the message, and more. 

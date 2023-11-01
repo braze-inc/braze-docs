@@ -122,7 +122,7 @@ As with all content, keep it straightforward with as few extra words as possible
 
 Use buttons for clickable actions, such as sending a form or playing a carousel.
 
-Similar to link text, write button text that clearly describes the action that will happen when a user presses it (e.g., "Read the full story" rather than "Read more"). Test to ensure your button text isn't too long. If the button can't display all of the text, it will truncate with an ellipsis as opposed to the text wrapping to a new line.
+Similar to link text, write button text that clearly describes the action that will happen when a user presses it (for example, "Read the full story" rather than "Read more"). Test to ensure your button text isn't too long. If the button can't display all of the text, it will truncate with an ellipsis as opposed to the text wrapping to a new line.
 
 ### Images
 

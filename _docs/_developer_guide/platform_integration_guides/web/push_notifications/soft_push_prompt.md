@@ -17,7 +17,7 @@ channel: push
 This can be done without SDK customization using our new [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/). 
 {% endalert %} 
 
-Alternatively, if you would like to include special custom handling, instead of calling `requestPushPermission()` directly as described in the standard [Web push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration), use Braze's [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/):
+Alternatively, if you would like to include special custom handling, instead of calling `requestPushPermission()` directly as described in the standard [Web push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration), use our [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/):
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -28,7 +28,7 @@ First, you must create a "Prime for Push" in-app messaging campaign in the Braze
 1. Create a **Modal** in-app message with the text and styling you want. 
 2. Next, set the on-click behavior to **Close Message**. This behavior will be customized later.
 3. Add a key-value pair to the message where the key is `msg-id`, and the value is `push-primer`.
-4. Assign a custom event trigger action (i.e., "prime-for-push") to the message. You can create the custom event manually from the dashboard if needed.
+4. Assign a custom event trigger action (such as "prime-for-push") to the message. You can create the custom event manually from the dashboard if needed.
 
 ## Step 2: Remove calls
 

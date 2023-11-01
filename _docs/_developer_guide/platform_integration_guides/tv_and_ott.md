@@ -3,7 +3,7 @@ nav_title: TV and OTT Integrations
 article_title: TV and OTT Integrations
 page_order: 15
 
-description: "This article will give you details on Braze's TV and OTT features, integrations, available platforms, and other capabilities."
+description: "This article will give you details on Braze TV and OTT features, integrations, available platforms, and other capabilities."
 platform:
   - tvOS
   - Roku
@@ -115,7 +115,7 @@ The following are not currently supported on OTT:
 
 ### Amazon Fire TV {#fire-tv}
 
-Use Braze's Fire OS SDK to integrate with Amazon Fire TV devices.
+Use the Braze Fire OS SDK to integrate with Amazon Fire TV devices.
 
 Features include:
 
@@ -130,7 +130,7 @@ For more information, visit the [Fire OS integration guide][2].
 
 ### Kindle Fire {#kindle-fire}
 
-Use Braze's Fire OS SDK to integrate with Amazon Kindle Fire devices.
+Use the Braze Fire OS SDK to integrate with Amazon Kindle Fire devices.
 
 Features include:
 
@@ -143,7 +143,7 @@ For more information, visit the [Fire OS integration guide][2].
 
 ### Android TV {#android-tv}
 
-Use Braze's Android SDK to integrate with Android TV devices.
+Use the Braze Android SDK to integrate with Android TV devices.
 
 Features include:
 
@@ -163,7 +163,7 @@ Make sure to create a new Android app in the dashboard for your Android OTT inte
 
 ### LG webOS {#lg-webos}
 
-Use Braze's Web SDK to integrate with [LG webOS TVs](https://webostv.developer.lge.com/discover).
+Use the Braze Web SDK to integrate with [LG webOS TVs](https://webostv.developer.lge.com/discover).
 
 Features include:
 
@@ -175,7 +175,7 @@ For more information, visit the [Web Smart TV integration guide][8].
 
 ### Samsung Tizen {#tizen}
 
-Use Braze's Web SDK to integrate with the [Samsung Tizen TVs](https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html).
+Use the Braze Web SDK to integrate with the [Samsung Tizen TVs](https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html).
 
 Features include:
 
@@ -187,7 +187,7 @@ For more information, visit the [Web Smart TV integration guide][8].
 
 ### Roku {#roku}
 
-Use Braze's Roku SDK to integrate with [Roku TVs](https://developer.roku.com/docs/developer-program/getting-started/roku-dev-prog.md)
+Use the Braze Roku SDK to integrate with [Roku TVs](https://developer.roku.com/docs/developer-program/getting-started/roku-dev-prog.md)
 
 Features include:
 
@@ -199,7 +199,7 @@ For more information, visit the [Roku integration guide][3].
 
 ### Apple TV OS {#tvos}
 
-Use Braze's Swift SDK to integrate on tvOS
+Use the Braze Swift SDK to integrate on tvOS
 
 For more information, visit the [iOS Swift SDK integration guide][4].
 
@@ -222,7 +222,7 @@ To target OTT apps for messaging, we recommend creating a segment specific to yo
 
 ## Headless UI {#custom-ui}
 
-For platforms that support in-app messages or Content Cards via headless UI, Braze will deliver a data model (i.e., JSON) that your app can read and use within a UI your app controls. These platforms don't include any default UI or views.
+For platforms that support in-app messages or Content Cards via headless UI, Braze will deliver a data model, such as JSON, that your app can read and use within a UI your app controls. These platforms don't include any default UI or views.
 
 This data will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly.
 

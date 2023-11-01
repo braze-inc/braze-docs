@@ -20,7 +20,7 @@ The Braze [`.unitypackage`][41] bundles native bindings for the Android and iOS 
 There are several Braze Unity packages available for download on the [Braze Unity releases page][42]:
  
 - `Appboy.unitypackage`
-    - This package bundles the Braze Android and iOS SDKs and the [SDWebImage][unity-1] dependency for the iOS SDK, which is required for the proper functionality of Braze's In-App Messaging, and Content Cards features on iOS. The SDWebImage framework is used for downloading and displaying images, including GIFs. If you intend on utilizing full Braze functionality, download and import this package.
+    - This package bundles the Braze Android and iOS SDKs and the [SDWebImage][unity-1] dependency for the iOS SDK, which is required for the proper functionality of Braze in-app messaging, and Content Cards features on iOS. The SDWebImage framework is used for downloading and displaying images, including GIFs. If you intend on utilizing full Braze functionality, download and import this package.
 - `Appboy-nodeps.unitypackage`
     - This package is similar to `Appboy.unitypackage` except for the [SDWebImage][unity-1] framework is not present. This package is useful if you do not want the SDWebImage framework present in your iOS app.
 
@@ -82,7 +82,7 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 
 > Your `AndroidManifest.xml` should exist under `Assets/Plugins/Android/AndroidManifest.xml`. See the [Unity AndroidManifest documentation](https://docs.unity3d.com/Manual/android-manifest.html) for more information.
 
-> All Activity classes registered in your `AndroidManifest.xml` file should be fully integrated with the Braze Android SDK. If you add your own Activity class, you must follow Braze's [Unity Activity integration instructions](#extending-braze-unity-player) to ensure that analytics are being collected.
+> All Activity classes registered in your `AndroidManifest.xml` file should be fully integrated with the Braze Android SDK. If you add your own Activity class, you must follow our [Unity Activity integration instructions](#extending-braze-unity-player) to ensure that analytics are being collected.
 
 {% alert note %}
 Your final `AndroidManifest.xml` should only contain a single Activity with `"android.intent.category.LAUNCHER"` present.

@@ -36,7 +36,7 @@ Hi, here are some articles that you might find interesting:
 ```
 {% endraw %}
 {% alert note %}
-Attribute values must be surrounded by `${}` to operate properly within Braze's version of Liquid syntax.
+Attribute values must be surrounded by `${}` to operate properly within our version of Liquid syntax.
 {% endalert %}
 
 Connected Content requests support GET and POST requests only.
@@ -51,7 +51,7 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 
 Because Braze delivers messages at a very fast rate, be sure that your server can handle thousands of concurrent connections so the servers do not get overloaded when pulling down content. When using public APIs, ensure your usage will not violate any rate-limiting that the API provider may employ. Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.
 
-Braze's systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than one time per recipient.
+Braze systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than one time per recipient.
 
 ## Things to know
 
@@ -90,7 +90,7 @@ If you delete a credential, keep in mind that any Connected Content calls trying
 
 ### Using token authentication
 
-When using Braze's Connected Content, you may find that certain APIs require a token instead of a username and password. Included in the following call is a code snippet to reference and model your messages off of.
+When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Included in the following call is a code snippet to reference and model your messages off of.
 
 {% raw %}
 ```
@@ -158,7 +158,7 @@ Braze will send Connected Content requests from the following IP ranges. The lis
 
 Braze has a reserved set of IPs used for all services, not all of which are active at a given time. This is designed for Braze to send from a different data center or do maintenance, if necessary without impacting customers. Braze may use one, a subset, or all of the following IPs listed when making Connected Content requests.
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`: |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`: |
 |---|
 | `23.21.118.191`
 | `34.206.23.173`

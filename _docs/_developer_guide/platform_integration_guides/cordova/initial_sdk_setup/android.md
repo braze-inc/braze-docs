@@ -74,7 +74,7 @@ Due to how the Cordova 8.0.0+ framework handles preferences, entirely numerical 
 
 This plugin can be forked and modified for custom implementations. Find the platform-specific native source code in the `/plugin/src` directory, the JavaScript interface in the `/plugin/www` directory, and the main configuration file at `/plugin`.
 
-Users that check their platform directory into version control (enabling them to make permanent code edits there) will be able to further leverage Braze's UI elements by calling them directly from their platform-specific project.
+Users that check their platform directory into version control (enabling them to make permanent code edits there) will be able to further leverage Braze UI elements by calling them directly from their platform-specific project.
 
 ### Removing automatic push setup (Android)
 

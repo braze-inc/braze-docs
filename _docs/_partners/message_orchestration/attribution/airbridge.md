@@ -2,7 +2,7 @@
 nav_title: Airbridge
 article_title: Airbridge
 alias: /partners/airbridge/
-description: "This reference article outlines the partnership between Braze and Airbridge, which offers people-based attribution and incrementality measurement to measure true marketing effectiveness across devices, identities, and platforms."
+description: "This reference article outlines the partnership between Braze and Airbridge, which offers people-based attribution and incrementally measurement to measure true marketing effectiveness across devices, identities, and platforms."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Airbridge
 
-> [Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform that helps you discover true sources of growth through mobile attribution, incrementality measurement, and marketing mix modeling.
+> [Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform that helps you discover true sources of growth through mobile attribution, incrementalist measurement, and marketing mix modeling.
 
 The Braze and Airbridge integration lets you pass all non-organic install attribution data from Airbridge to Braze to build personalized marketing campaigns.
 

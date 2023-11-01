@@ -45,7 +45,7 @@ Users can now grant permissions, such as location collection, on a one-time basi
 
 ### Background location permission
 
-Android 11 will require apps to first request the foreground location permission, and then after the app is backgrounded, it may prompt the user again for background location permission. 
+Android 11 will require apps to first request the foreground location permission, and then after the app is in the background, it may prompt the user again for background location permission. 
 Customers using Geofences should ensure their app follows Android's recommendations on collecting background location permission. For more information, see the [Android Docs](https://developer.android.com/preview/privacy/location#background-location).
 
 [1]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#810

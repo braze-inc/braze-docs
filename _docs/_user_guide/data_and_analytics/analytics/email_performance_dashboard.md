@@ -27,7 +27,7 @@ To use your email performance dashboard, go to **Analytics** > **Email Performan
 
 ![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-The calculations for different metrics in the email performance dashboard are the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
+The calculations for different metrics in the email performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
 Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the _Unique click rate_ from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparison-to-last-period-change-in-totals-or-rates).
 
@@ -51,7 +51,7 @@ To use your SMS performance dashboard, go to **Analytics** > **SMS Performance**
 
 ![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-The calculations for different metrics in the SMS performance dashboard are the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [SMS metrics]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
+The calculations for different metrics in the SMS performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [SMS metrics]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
 
 Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). Each tile also shows the [comparison to the last period](#comparison-to-last-period-change-in-totals-or-rates).
 
@@ -82,7 +82,7 @@ The channel performance dashboard automatically compares the time period you hav
 
 The comparison is the percentage change between the last and current periods, calculated by taking the difference between the two periods and dividing it by the metric from the last period.
 
-You can switch between **Show Change in Totals**—which compares the total counts (i.e., number of emails delivered) between the two periods—and **Show Change in Rates**—which compares the rates (i.e., delivery rate).
+You can switch between **Show Change in Totals**—which compares the total counts (such as the number of emails delivered) between the two periods—and **Show Change in Rates**—which compares the rates (such as the delivery rate).
 
 ![Radio buttons to switch between showing change in totals or change in rates for the Channel Performance Dashboard.][4]
 
@@ -100,7 +100,7 @@ To see more metrics, try expanding the date range.
 
 ### Why does my email dashboard display more Other Opens than Unique Opens?
 
-For the _Unique Opens_ metric, Braze will de-duplicate any repeat opens registered by a given user (whether they include _Machine Opens_ or _Other Opens_), so that only a single _Unique Open_ is incremented if a user opens multiple times. For _Other Opens_, Braze does not de-deduplicate.
+For the _Unique Opens_ metric, Braze will deduplicate any repeat opens registered by a given user (whether they include _Machine Opens_ or _Other Opens_) so that only a single _Unique Open_ is incremented if a user opens multiple times. For _Other Opens_, Braze does not de-deduplicate.
 
 <!---Temporarily hidden until functionality is added
 

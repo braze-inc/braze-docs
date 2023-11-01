@@ -68,7 +68,7 @@ Un nombre minimum d’autorisations est requis pour cet utilisateur. Si vous cr�
 
 Si vous avez un pare-feu ou d’autres politiques réseau actives, vous devrez donner accès au réseau de votre instance Redshift à Braze. Autorisez l’accès aux IP ci-dessous correspondant à la région de votre tableau de bord de Braze. 
 
-| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | Pour les instances `EU-01` et `EU-02` |
+| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Pour les instances `EU-01` et `EU-02` |
 |---|---|
 | `23.21.118.191`| `52.58.142.242`
 | `34.206.23.173`| `52.29.193.121`

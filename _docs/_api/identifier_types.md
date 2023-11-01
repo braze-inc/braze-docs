@@ -11,7 +11,7 @@ page_type: reference
 
 > This reference guide touches on the different types of API identifiers that can be found within the Braze dashboard, their purpose, where you can find them, and how they are typically used. For information on REST API keys or workspace API keys, refer to the [API overview]({{site.baseurl}}/api/api_key/).
 
-The following identifiers can be used to access your template, Canvas, campaign, segment, send  or card from Braze's external API. All messages should follow [UTF-8][1] encoding.
+The following identifiers can be used to access your template, Canvas, campaign, segment, send  or card from the Braze external API. All messages should follow [UTF-8][1] encoding.
 
 {% tabs %}
 {% tab App IDs %}

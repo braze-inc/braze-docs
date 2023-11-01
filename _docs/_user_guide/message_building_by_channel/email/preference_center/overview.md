@@ -104,7 +104,7 @@ My encoded string is: {{my_string}}
 
 ### Option 2: Authenticate with JSON web token
 
-Use a [JSON web token](https://auth0.com/learn/json-web-tokens/) to authenticate users to a part of your web server (e.g., account preferences) that is normally behind a layer of authentication such as username and password login. 
+Use a [JSON web token](https://auth0.com/learn/json-web-tokens/) to authenticate users to a part of your web server (for example, account preferences) that is normally behind a layer of authentication such as username and password login. 
 
 This approach does not require query string value-pairs embedded in the URL as these can be passed in the JSON web token's payload, for example:
 

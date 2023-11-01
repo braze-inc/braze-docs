@@ -158,7 +158,7 @@ Unlike with campaigns, you don't need to worry about launching your Canvas 48 ho
 
 You need to choose a fallback time for the message to send to users in your audience who don't have enough engagement data for Braze to calculate an optimal send time. There are two options:
 
-- the most popular time to use the app amongst all users
+- the most popular time to use the app among all users
 - a specific custom fallback time (in the user's local time zone)
 
 #### Most popular app time

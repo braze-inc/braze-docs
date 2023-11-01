@@ -49,7 +49,7 @@ You can use pre-defined [segments]({{site.baseurl}}/user_guide/engagement_tools/
 | Retargeting | Segment customers who have been sent, received, or interacted with previous campaigns. |
 | Marketing Activity | Segment customers based on universal behaviors like last engagement or received campaigns. |
 | User Attributes | Segment customers by their constant attributes and characteristics. |
-| Install Attribution | Segment customers by their first source, adgroup, campaign, or ad. |
+| Install Attribution | Segment customers by their first source, ad group, campaign, or ad. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### The "why": Identify conversion events

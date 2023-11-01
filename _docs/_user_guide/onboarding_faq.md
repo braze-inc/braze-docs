@@ -51,7 +51,7 @@ You can upload and update user profiles via CSV files from **Audience** > **Impo
 If you are using the [older navigation]({{site.baseurl}}/navigation), this is located at **Users** > **User Import**.
 {% endalert %}
 
-Before starting your CSV import, it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, so that each customer will have a single user profile within Braze across their devices. Learn more about Braze's [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
+Before starting your CSV import, it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, so that each customer will have a single user profile within Braze across their devices. Learn more about the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
@@ -114,7 +114,7 @@ Some additional things to note:
 
 - Any engagement data (such as campaigns or Canvases received) on duplicate user profiles will be lost. The only way to retain the historical engagement context is by adding it as a custom attribute (such as an array custom attribute of all campaigns or Canvases received).
 - When migrating user profiles, it's also up to your team to decide which user profile of the duplicates will be kept. Braze can't decide or provide you a list of profiles to delete.  
-- Ultimately, it will be important for your team to assess the signup process from your users' experience and make sure that you're only calling the `changeUser()` method when a user becomes identified.
+- Ultimately, it will be important for your team to assess the sign-up process from your users' experience and make sure that you're only calling the `changeUser()` method when a user becomes identified.
 
 {% endapi %}
 {% api %}
@@ -144,7 +144,7 @@ To download a CSV template, refer to [user import]({{site.baseurl}}/user_guide/d
 Segments
 {% endapitags %}
 
-Braze's SDK provides you with a powerful arsenal of filters to segment and target your users based on specific features and attributes. You can use the [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) glossary to search or narrow these filters by Filter Category (Custom Data, User Activity, Retargeting, Marketing Activity, User Attributes, Install Attribution, Social Activity, Testing, Other).
+The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based on specific features and attributes. You can use the [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) glossary to search or narrow these filters by Filter Category (Custom Data, User Activity, Retargeting, Marketing Activity, User Attributes, Install Attribution, Social Activity, Testing, Other).
 
 {% endapi %}
 {% api %}

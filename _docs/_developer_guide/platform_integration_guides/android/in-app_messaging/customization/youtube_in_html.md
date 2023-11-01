@@ -1,11 +1,11 @@
 ---
-nav_title: Youtube in HTML
-article_title: Youtube in HTML In-App Messages for Android and FireOS
+nav_title: YouTube in HTML
+article_title: YouTube in HTML In-App Messages for Android and FireOS
 platform: 
   - Android
   - FireOS
 page_order: 8
-description: "This reference article covers how to add Youtube videos into HTML in-app messages for your Android or FireOS application."
+description: "This reference article covers how to add YouTube videos into HTML in-app messages for your Android or FireOS application."
 channel:
   - in-app messages
 

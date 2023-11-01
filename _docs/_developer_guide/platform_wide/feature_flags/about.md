@@ -88,7 +88,7 @@ return (<>
 
 Use feature flags to modify your app's functionality in production. This can be particularly important for mobile apps, where app store approvals prevent rolling out changes quickly to all users.
 
-For example, let's say that our marketing team wants to list our current sales and promotions in our app's navigation. Normally, our engineers require one week's lead time for any changes and three days for an app store review. But with Thanksgiving, Black Friday, Cyber Monday, Hanukah, Christmas, and New Year's Day all within two months, we won't be able to meet these tight deadlines.
+For example, let's say that our marketing team wants to list our current sales and promotions in our app's navigation. Normally, our engineers require one week's lead time for any changes and three days for an app store review. But with Thanksgiving, Black Friday, Cyber Monday, Hanukkah, Christmas, and New Year's Day all within two months, we won't be able to meet these tight deadlines.
 
 With feature flags, we can let Braze power the content of our app navigation link, letting our marketing manager make changes in minutes rather than days.
 

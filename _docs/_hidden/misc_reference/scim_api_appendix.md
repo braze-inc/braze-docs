@@ -15,7 +15,7 @@ permalink: "/scim_api_appendix/"
 The permissions object is a field found in some of the requests and responses when interfacing with the user resource through SCIM ID permissions.
 
 {% alert note %}
-App groups have been renamed to workspaces in Braze, but the keys on this page still reference the old terminology (e.g., `appGroup`, `appGroupName`).
+App groups have been renamed to workspaces in Braze, but the keys on this page still reference the old terminology (for example, `appGroup`, `appGroupName`).
 {% endalert %}
 
 ```

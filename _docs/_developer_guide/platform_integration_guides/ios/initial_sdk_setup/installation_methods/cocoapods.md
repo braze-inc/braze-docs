@@ -11,7 +11,7 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ## Step 1: Install CocoaPods
 
-Installing the iOS SDK via [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, make sure you use [Ruby version 2.0.0][apple_initial_setup_2] or greater. Don't worry, knowledge of Ruby syntax isn't necessary to install this SDK.
+Installing the iOS SDK via [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, make sure you use [Ruby version 2.0.0][apple_initial_setup_2] or greater. Don't worry, knowledge of Ruby syntax isn't necessary to install this SDK.
 
 Run the following command to get started:
 
@@ -25,7 +25,7 @@ If you have issues regarding CocoaPods, refer to the CocoaPods [troubleshooting 
 If prompted to overwrite the `rake` executable, refer to the [Getting started](http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions") directions on CocoaPods.org for more details.
 {% endalert %}
 
-## Step 2: Constructing the podfile
+## Step 2: Constructing the Podfile
 
 Now that you've installed the CocoaPods Ruby Gem, you will need to create a file in your Xcode project directory named `Podfile`.
 
@@ -53,7 +53,7 @@ We recommend that integrators import our full SDK. However, if you are certain t
 
 ## Step 3: Installing the Braze SDK
 
-To install the Braze SDK Cocoapod, navigate to the directory of your Xcode app project within your terminal and run the following command:
+To install the Braze SDK CocoaPods, navigate to the directory of your Xcode app project within your terminal and run the following command:
 ```
 pod install
 ```
@@ -68,7 +68,7 @@ Follow the instructions for [completing the integration]({{site.baseurl}}/develo
 
 ## Updating the Braze SDK via CocoaPods
 
-To update a Cocoapod, simply run the following command within your project directory:
+To update a CocoaPod, simply run the following command within your project directory:
 
 ```
 pod update

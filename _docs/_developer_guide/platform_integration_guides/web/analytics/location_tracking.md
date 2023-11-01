@@ -13,7 +13,7 @@ tool: Location
 
 > This article covers how to enable location tracking for Web.
 
-To set a user's current location, use the [`getCurrentPosition()`][0] method of the Geolocation API and log the location data to Braze:
+To set a user's current location, use the [`getCurrentPosition()`][0] method of the geolocation API and log the location data to Braze:
 
 ```javascript
 import * as braze from "@braze/web-sdk";

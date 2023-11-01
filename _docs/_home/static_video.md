@@ -131,7 +131,7 @@ String attributes are useful for storing user input, such as a favorite brand, a
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
-&#42; When segmenting using the **DOES NOT MATCH REGEX** filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targetted properly.
+&#42; When segmenting using the **DOES NOT MATCH REGEX** filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targeted properly.
 {% endalert %}
 
 {% alert tip %}
@@ -178,7 +178,7 @@ Date attributes are useful for storing the last time a specific action was taken
 
 >  The last date a custom event or purchase event occurred is automatically recorded, and should not be recorded in duplicate via a custom date attribute.
 
-Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24 hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
+Date filters using relative dates (for example, more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24 hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -303,7 +303,7 @@ User IDs should be set for each of your users. These should be unchanging and ac
 - Import data about your users using our [user data API][9].
 - Target specific users with our [messaging API][10] for both general and transactional messages.
 
-User IDs must be less than 512 characters long and should be private and not easily obtained (e.g., not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities listed for user IDs. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. The following are some examples of suitable and unsuitable user IDs.
+User IDs must be less than 512 characters long and should be private and not easily obtained (for example, not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities listed for user IDs. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. The following are some examples of suitable and unsuitable user IDs.
 
 Good options for User IDs:
 
@@ -365,7 +365,7 @@ The following keys are reserved and cannot be used as custom event properties:
 
 ### Parsing a generic name field
 
-If only a single generic name field exists for a user (e.g., 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
+If only a single generic name field exists for a user (for example, 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
 
 [4]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"

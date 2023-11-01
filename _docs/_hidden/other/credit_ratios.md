@@ -19,7 +19,7 @@ In the event that Meta modifies its pricing or packaging for WhatsApp, Braze res
 
 **Service Conversations**: End-user sends a message to the business. When the business sends a message in response, this begins the 24hr window.
 
-**Authentication Conversations**: Enable businesses to authenticate users with one-time passcodes, potentially at multiple steps in the login process (e.g., account verification, account recovery, integrity challenges) 
+**Authentication Conversations**: Enable businesses to authenticate users with one-time passcodes, potentially at multiple steps in the login process (for example, account verification, account recovery, integrity challenges) 
   - Authentication conversations will only be supported on a case-by-case basis and Braze cannot guarantee specific SLAs. Additionally, Braze does not support pin generation.
 
 | Region | Marketing | Utility | Service | Authentication | 
