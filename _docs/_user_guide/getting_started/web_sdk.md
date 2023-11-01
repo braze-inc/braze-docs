@@ -1,16 +1,14 @@
 ---
-nav_title: SDK Overview for Marketers
-article_title: SDK Overview for Marketers
+nav_title: SDK Overview 
+article_title: SDK Overview 
 page_order: 9
 page_type: reference
 description: "This reference article covers the basics of the Braze SDK."
 ---
 
-# SDK overview for marketers
+# SDK overview 
 
 > The Braze SDK makes it easy to collect session data, identify users, and record purchases and custom events through your website or app. You can also use the SDK to engage with your users by sending in-app messages and push notifications directly from the Braze dashboard.
-
-Are you a developer looking for a technical rundown of the SDK? Check out our [developer overview][1], instead.
 
 In brief, the Braze SDK:
 * Collects and syncs user data into a consolidated user profile
@@ -83,12 +81,9 @@ All integrations   | &nbsp;  |  &nbsp;
 [![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity Android]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/) 
 [![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/)
 
-
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/
 [4]: {{site.baseurl}}/user_guide/onboarding_with_braze/integration/#the-technical-side-of-the-integration-process
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about/
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [7]: {% image_buster /assets/img_archive/app_group_list.png %}
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [10]: {% image_buster /assets/img_archive/web-users-segment.png %}
