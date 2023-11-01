@@ -1,5 +1,5 @@
 ---
-page_order: 0
+page_order: 10
 nav_title: Terms to Know
 article_title: Braze Terms to Know
 
@@ -17,7 +17,7 @@ glossaries:
   - name: App Instances
     description: The different sites and apps that are collected within a workspace.
   - name: Alloys
-    description: Alloys are Braze's <a href="https://www.braze.com/docs/partners/home/">Technology Partners</a>.
+    description: Alloys are our <a href="https://www.braze.com/docs/partners/home/">Technology Partners</a>.
   - name: Anonymous Users
     description: When a user profile is recognized via the SDK, an anonymous user profile is created with the associated <a href="https://www.braze.com/docs/api/basics/#braze-user-id-explanation">Braze User ID</a>. 
   - name: Application Program Interface (API)
@@ -33,7 +33,7 @@ glossaries:
   - name: Canvas
     description: A single unified interface where marketers can set up campaigns with multiple messages and steps to form a cohesive journey. <a href="https://www.braze.com/docs/user_guide/engagement_tools/canvas/">Canvas</a> also lets you compare and optimize those experiences using comprehensive analytics for the full user experience.
   - name: Connected Content
-    description: Braze's <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/">Connected Content</a> feature expands on marketing personalization to boost customer engagement and conversions. This feature allows you to insert any information accessible via API directly into messages you send to users. Connected Content allows for pulling content either directly from your web server or publicly accessible APIs.
+    description: <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/">Connected Content</a> expands on marketing personalization to boost customer engagement and conversions. This feature allows you to insert any information accessible via API directly into messages you send to users. Connected Content allows for pulling content either directly from your web server or publicly accessible APIs.
   - name: Content Cards
     description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards/about/">Content Cards</a> allow you to send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. Content Cards can be sent to iOS, Android, and web users.
   - name: Currents
@@ -41,9 +41,9 @@ glossaries:
   - name: Custom Attributes
     description: <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/">Custom attributes</a> are a collection of your users' unique traits. They are best for storing attributes about your users, or information about low-value actions within your application. You can assign custom attributes to users within the dashboard. You can filter and segment your users according to these attributes for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/">Android</a> campaigns.
   - name: Custom Events
-    description: Braze's <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-events">custom events</a> are actions taken by your users; they're best suited for tracking high-value user interactions with your application.
+    description: <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-events">Custom events</a> in Braze are actions taken by your users; they're best suited for tracking high-value user interactions with your application.
   - name: Data Point
-    description: A data point is counted when a <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes/">custom attribute</a> is set or updated (even if you're updating it with the same value), a <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/">custom event</a> or purchase event is logged, any standard data (e.g., email, first_name, last_name, country, home_city, etc) is logged, when a session starts, and when a session ends.
+    description: A data point is counted when a <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes/">custom attribute</a> is set or updated (even if you're updating it with the same value), a <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/">custom event</a> or purchase event is logged, any standard data (for example, email, first_name, last_name, country, home_city, etc) is logged, when a session starts, and when a session ends.
   - name: Deep Linking
     description: Connecting a message with a targeted piece of content within a website or mobile app. <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/">Deep links</a> are used to direct customers to their next action or engagement.
   - name: Dormant Users
@@ -81,7 +81,7 @@ glossaries:
   - name: Push Messages
     description: A <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/push/">push message</a>, or push notification, is a notification that appears from a mobile application. Push notifications often appear as pop-up dialogs and banners for both iOS and Android.
   - name: Push Token
-    description: A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. <a href="https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration">Push token migration</a> is the importing of those already-generated keys into Braze's platform.
+    description: A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. <a href="https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration">Push token migration</a> is the importing of those already-generated keys into Braze.
   - name: Push Time to Live
     description: Also known as <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/manage_app_group/push_ttl_settings/">Push TTL</a>, time to live refers to the period that campaigns will continue to attempt to be delivered to an offline user.
   - name: Race Condition

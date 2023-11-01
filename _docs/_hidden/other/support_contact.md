@@ -1313,7 +1313,7 @@ $( document ).ready(function() {
  }
 });
 </script>
-<div id="firefox_warning" style="display:none;">For Firefox users, whitelist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
+<div id="firefox_warning" style="display:none;">For Firefox users, allowlist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
 
 <div class="container-fluid" id="main-container">
       <div class="row">

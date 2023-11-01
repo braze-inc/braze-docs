@@ -30,7 +30,7 @@ The email address and external user ID filters both have three options:
 
   3) **"Matches"** - This will find users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users that have an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
 
-You can select multiple specific emails by using the "matches" option and separating the email addresses with a &#124; character (e.g., "matches" "email1@braze.com &#124; email2@braze.com").
+You can select multiple specific emails by using the "matches" option and separating the email addresses with a &#124; character (for example, "matches" "email1@braze.com &#124; email2@braze.com").
 
 These filters can also be used in conjunction with each other to narrow down your list of test users. For example, the test segment could include an email address filter that "matches" "@braze.com" and another filter that "does not equal" "sales@braze.com". 
 

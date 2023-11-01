@@ -19,7 +19,7 @@ tool: Canvas
 Some benefits of commenting in your Canvas include:
 - Keeping all details and discussions about a Canvas within a Canvas
 - Reviewing edits to a Canvas and encouraging a sign-off process on these changes
-- Collaborating in realtime by tagging and responding to other users 
+- Collaborating in real-time by tagging and responding to other users 
 - Identifying granular details of a Canvas, such as specific segmentation, including properties and attributes that are unique to a Canvas
 
 ## How to comment

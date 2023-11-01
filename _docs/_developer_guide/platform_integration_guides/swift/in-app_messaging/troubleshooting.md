@@ -29,7 +29,7 @@ Most in-app message issues can be broken down into two main categories: delivery
 
 ### Troubleshooting in-app message delivery {#troubleshooting-in-app-message-delivery}
 
-The SDK requests in-app messages from Braze's servers on session start. To check if in-app messages are being delivered to your device, you'll need to ensure that in-app messages are being both requested by the SDK and returned by Braze's servers.
+The SDK requests in-app messages from Braze servers on session start. To check if in-app messages are being delivered to your device, you'll need to ensure that in-app messages are being both requested by the SDK and returned by Braze servers.
 
 #### Check if messages are requested and returned
 

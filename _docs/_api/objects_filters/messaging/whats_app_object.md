@@ -4,7 +4,7 @@ article_title: WhatsApp Messaging Object
 page_order: 15
 page_type: reference
 channel: WhatsApp
-description: "This reference article explains the different components of Braze's WhatsApp object."
+description: "This reference article explains the different components of the Braze WhatsApp object."
 
 ---
 

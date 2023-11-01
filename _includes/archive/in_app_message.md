@@ -25,7 +25,7 @@ The following example shows a paginated HTML Full in-app message:
 
 ![HTML5 Example][in_app_message_23]
 
- {% elsif include.platform == "Android" %}The following example shows a survey HTML Full in-app message created by Soundcloud.
+ {% elsif include.platform == "Android" %}The following example shows a survey HTML Full in-app message created by SoundCloud.
 
 ![HTML5 Example][in_app_message_12]
 {% endif %}
@@ -56,7 +56,7 @@ All in-app messages that a user is eligible for are delivered to the user's devi
 
 When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
 
-For in-app messages that display immediately on deliver (*i.e.*, session start, push click) there can be some latency due to assets not being prefetched.
+For in-app messages that display immediately on deliver (such as session start, push click) there can be some latency due to assets not being prefetched.
 
 #### Minimum time interval between triggers
 

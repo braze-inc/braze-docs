@@ -78,7 +78,7 @@ Some downsides to this approach include:
 - If one business violates the rules, all businesses' messages are suspended.
 - Security issues
 
-### How do you whitelist URLs for SMS?
+### How do you allowlist URLs for SMS?
 
 Before sending SMS messages containing URLs to users in certain countries (for example, Sweden or Nordic countries), you must get these URLs registered with the carrier. Reach out to your Braze customer service manager to help. This process will take around five days.  
 
@@ -99,7 +99,7 @@ If you stagger your users into a Canvas and have different schedule times for ea
 
 ### Will SMS event properties capture keywords in a sentence?
 
-For a keyword to be recognized within a sentence, (e.g., "please stop texting me"), you'll need to use a Liquid statement in the message to recognize the specific word. Event properties have a character limit of 256; otherwise, there is no character limit.
+For a keyword to be recognized within a sentence, (for example, "please stop texting me"), you'll need to use a Liquid statement in the message to recognize the specific word. Event properties have a character limit of 256; otherwise, there is no character limit.
 
 ### Why is the Braze dashboard warning me I may be charged for additional message segments when my message is under 160(GCM-7) or 70(UCS-2) characters?
 

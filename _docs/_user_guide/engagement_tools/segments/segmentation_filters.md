@@ -4,7 +4,7 @@ nav_title: Segmentation Filters
 article_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
-glossary_top_text: Braze's SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
+glossary_top_text: The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
 
 page_type: glossary
 tool: Segments
@@ -342,7 +342,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Opened Email (Other Opens)
-    description: Segments your users by whether or not they have opened a specific email. This includes email opens that haven't been identified as "Machine opens". For example, when a user opens an email on another platform (i.e., Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    description: Segments your users by whether or not they have opened a specific email. This includes email opens that haven't been identified as "Machine opens". For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
     tags:
       - Retargeting
   - name: Opened Email (Machine Opens)
@@ -450,11 +450,11 @@ glossaries:
     tags:
       - User Attributes
   - name: Hard Bounce
-    description: Segment your users by whether or not their email address has hard bounced (i.e., the email address is invalid).
+    description: Segment your users by whether or not their email address has hard bounced (such as the email address is invalid).
     tags:
       - Install Attribution
   - name: Install Attribution Adgroup
-    description: Segments your users by the adgroup that their install was attributed to.
+    description: Segments your users by the ad group that their install was attributed to.
     tags:
       - Install Attribution
   - name: Install Attribution Campaign
@@ -482,7 +482,7 @@ glossaries:
     tags:
       - Testing
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (i.e., segments, campaigns, etc.) and target multiple different segments within one campaign. Note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
+    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, etc.) and target multiple different segments within one campaign. Note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
     tags:
       - Other
   - name: Provisionally Authorized on iOS

@@ -157,11 +157,11 @@ The snippet will look something like this:
 
 #### What if I don't have a 5-star review?
 
-If you don't have any 5-star reviews (i.e., if the endpoint response returns NULL for the 5-star review), then no content will be displayed.
+If you don't have any 5-star reviews (such as if the endpoint response returns NULL for the 5-star review), then no content will be displayed.
 
 #### What if I don't have an image published for a product?
 
-If you don't have any images for a product (i.e., if the endpoint response returns NULL for the product image), then no content will be displayed.
+If you don't have any images for a product (such as if the endpoint response returns NULL for the product image), then no content will be displayed.
 
 #### Can I customize the look and feel, or pull other data fields from Yotpo?
 

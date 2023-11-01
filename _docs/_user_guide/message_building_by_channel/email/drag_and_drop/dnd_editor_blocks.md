@@ -157,14 +157,14 @@ Refer to the following table for details on the `Video` editor block.
 | properties | description |
 |---|---|
 |`URL`| The URL for the video. |
-|`Title`| Auto-generated from the video meta data or can be customized.  Note that only Youtube and Vimeo are supported. |
+|`Title`| Auto-generated from the video meta data or can be customized.  Note that only YouTube and Vimeo are supported. |
 |`Play Icon Style`| Includes different options for the play button located at the top of a video image. |
 |`Play Icon Color`| Option to select either **Light** or **Dark** for the play button. |
 |`Play Icon Size`| Choose the pixel size for the play button. Pre-fixed range from 50&nbsp;px to 80&nbsp;px (incremented by 5&nbsp;px). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-Videos hosted by Vimeo will only work if they are set to public. All other security settings available within Vimeo (e.g., "Hide from Vimeo.com") will generate a different link format that is not supported by this Content Block. These types of links are altered by the builder, which prevents Braze from generating a thumbnail.
+Videos hosted by Vimeo will only work if they are set to public. All other security settings available within Vimeo (for example, "Hide from Vimeo.com") will generate a different link format that is not supported by this Content Block. These types of links are altered by the builder, which prevents Braze from generating a thumbnail.
 {% endalert %}
 
 ### Social

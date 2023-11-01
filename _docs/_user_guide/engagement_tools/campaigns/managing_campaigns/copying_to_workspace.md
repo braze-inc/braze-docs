@@ -13,7 +13,7 @@ tool: Campaigns
 > Copying campaigns across a workspace allows you to get a jumpstart on your message composition by starting with a copy of a campaign in a different workspace. This copy will remain as a draft until you edit and launch, helping you keep and build off your successful messaging strategies.
 
 {% alert important %}
-Copying campaigns across workspaces is generally available for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. Other channel support, such as push and WhatsApp, will be coming soon.
+Copying campaigns across workspaces is generally available for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. Other channel support will be coming soon.
 {% endalert %}
 
 ## How to copy a campaign
@@ -58,7 +58,7 @@ Note the following is not a comprehensive list of what is copied across a worksp
 | Quiet time configurations | Trigger schedule | 
 | Frequency capping configurations | Campaign summaries | 
 | Recipient subscription state |  | 
-| Reoccuring schedule |  | 
+| Reoccurring schedule |  | 
 | Is Transactional |  | 
 
 {: .reset-td-br-1 .reset-td-br-2}
@@ -99,7 +99,7 @@ Note the following is not a comprehensive list of what is copied across a worksp
 
 | Copied | Omitted |
 |---|---|
-| Body | From address |
+| [Email body]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/?tab=email%20body) | From address |
 | Message extras |  Reply to | 
 | Title |  BCC | 
 | Subject |  Link template | 
@@ -112,11 +112,10 @@ Note the following is not a comprehensive list of what is copied across a worksp
 | Copied | Omitted |
 |---|---|
 | Plain text | Link aliasing |
-| HTML |  | 
+| HTML and drag-and-drop content |  | 
 | Preheader |  | 
 | Inline CSS |  | 
 | AMP HTML |  |
-| Drag-and-drop JSON |  |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -124,7 +123,7 @@ Note the following is not a comprehensive list of what is copied across a worksp
 
 | Copied | Omitted |
 |---|---|
-| Body | API IDs |
+| [Email body]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/?tab=email%20body) | API IDs |
 | Description | Image IDs | 
 | Subject | Territories | 
 | Headers | Tags | 
@@ -138,7 +137,7 @@ Note the following is not a comprehensive list of what is copied across a worksp
 | Name | Link aliasing |
 | Description | API keys | 
 | Content | Territories | 
-| Drag-and-drop JSON | Tags | 
+| HTML and drag-and-drop content | Tags | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}

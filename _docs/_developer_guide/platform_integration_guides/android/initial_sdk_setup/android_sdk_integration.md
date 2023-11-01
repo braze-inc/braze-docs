@@ -23,7 +23,7 @@ The Braze Android SDK can optionally be integrated without UI components. Howeve
 
 ### Basic integration
 
-To access Braze's messaging features, you must integrate the UI library. See the following Android Studio directions to integrate the UI library depending on your IDE:
+To access Braze messaging features, you must integrate the UI library. See the following Android Studio directions to integrate the UI library depending on your IDE:
 
 #### Add Braze dependency
 
@@ -32,7 +32,7 @@ Add the `android-sdk-ui` dependency to your app's `build.gradle`.
 If you are using any location or Braze Geofence functionality, also include `android-sdk-location` in your app's `build.gradle`.
 
 {% alert important %}
-If you're using a non-native Android SDK (e.g., Flutter, Cordova, Unity, etc.), that SDK already has the `android-sdk-ui` dependency for the correct version of the Android SDK. Do not update that version manually.
+If you're using a non-native Android SDK (for example, Flutter, Cordova, Unity, etc.), that SDK already has the `android-sdk-ui` dependency for the correct version of the Android SDK. Do not update that version manually.
 {% endalert %}
 
 ```gradle

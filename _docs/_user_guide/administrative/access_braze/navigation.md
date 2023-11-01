@@ -13,7 +13,7 @@ description: "This article describes the changes in Braze navigation."
 
 ![Sidebar of Braze demonstrating the submenu appearing when you hover over a main section.]({% image_buster /assets/img/navigation/sidebar_behavior.gif %}){: style="max-width:50%;float:right;margin-left:15px"}
 
-The new Braze navigation features a completely redesigned information architecture (how information is organized, grouped, and presented) to make each part of Braze more findable and understandable.
+The new Braze navigation features a completely redesigned information architecture (how information is organized, grouped, and presented) to make each part of Braze more searchable and understandable.
 
 Features are now organized into intuitive categories that are familiar and relevant to a marketer's workflow in Braze. Hover over a main section in the sidebar to open the submenu and view all available pages in that section.
 

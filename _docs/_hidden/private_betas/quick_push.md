@@ -20,17 +20,25 @@ This editing experience is best for the following use cases:
 - Mobile push campaigns that need to be sent to multiple device types (such as both iOS and Android).
 - Time-sensitive push notifications that need to target multiple platforms quickly and accurately, where content is the same across platforms (such as breaking news or live game updates).
 
-## What's different
+## Creating a quick push campaign
 
-Overall, the process for creating your push message is the same. However, if you select multiple platforms or devices, your composer will look slightly different from usual.
+To create a campaign targeting multiple platforms and devices:
+
+1. Go to **Campaigns** and click **Create Campaign**.
+2. Select **Push Notification**.
+3. Select your desired platforms (Mobile, Web, Kindle) and mobile devices (iOS, Android). If you select multiple devices, multivariate testing will not be available for your campaign.
 
 ![Options to select multiple platforms for a push campaign, such as Mobile, Web, and Kindle, and multiple devices, such as iOS and Android.][1]
 
-{% alert note %}
-After clicking **Next**, you will be unable to change your selected platforms or devices.
-{% endalert %}
+{:start="4"}
+4. Click **Next**. After clicking **Next**, you will be unable to change your selected platforms or devices.
+5. Continue setting up your push campaign.
 
-On the **Compose** tab, you can specify one title, message, and on-click behavior for all of your chosen platforms and devices. 
+Your composer will look slightly different from usual. Keep reading to see what's different.
+
+### What's different
+
+On the **Compose** tab, you can specify one title, message, and on-click behavior for all of your chosen platforms and devices.
 
 The preview pane shows an approximation of what your message will look like for each platform. While it can give you a good indicator of where you might reach character limits, remember to always test your messages on a real device before sending your campaign.
 

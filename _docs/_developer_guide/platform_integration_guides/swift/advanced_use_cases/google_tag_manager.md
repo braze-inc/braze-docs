@@ -9,7 +9,7 @@ description: "This article covers how to initialize, configure, and implement th
 
 # Google Tag Manager
 
-> Braze's Swift SDK can be initialized and controlled by tags configured within Google Tag Manager.
+> The Braze Swift SDK can be initialized and controlled by tags configured within Google Tag Manager.
 
 As a prerequisite for this implementation, your Swift SDK integration must be complete.
 

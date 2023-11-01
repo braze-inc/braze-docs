@@ -53,7 +53,7 @@ If all of the messages in your campaign are going to be similar or have the same
 3. Select **Content Cards** as your messaging channel.
 4. Choose when Braze calculates audience eligibility and personalization for the Content Card. This can be at step entry or at first impression (recommended). Steps containing Content Cards can be scheduled or action-based.
 5. Choose whether to remove Content Cards when users complete a purchase or perform a custom event.
-6. Set an expiration for the Contnt Card (time in feed). This can be after a duration of time or at a specific time.
+6. Set an expiration for the Content Card (time in feed). This can be after a duration of time or at a specific time.
 7. Filter your audience for this step as necessary in the **Delivery Settings**. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
 8. Choose any other messaging channels that you would like to pair with your message.
 
@@ -252,7 +252,7 @@ With this approach, newly eligible users will get the new card and previous reci
 * **Existing recipients:** Users who have already received the card would not receive the updated cards until they become re-eligible. If re-eligibility is turned off, they would never receive the new card.
 
 {% alert tip %}
-This option is recommended for unique messages in a notification center or message inbox (e.g., promotions), when it’s important for analytics to be unified, or when timeliness of the message is not a concern (i.e., existing recipients can wait for the eligibility window before seeing the updated cards).
+This option is recommended for unique messages in a notification center or message inbox (for example, promotions), when it’s important for analytics to be unified, or when timeliness of the message is not a concern (such as existing recipients can wait for the eligibility window before seeing the updated cards).
 {% endalert %}
 
 #### Keeping cards in users' feeds

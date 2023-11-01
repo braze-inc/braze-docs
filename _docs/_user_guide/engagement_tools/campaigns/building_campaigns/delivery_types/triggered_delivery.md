@@ -23,7 +23,7 @@ Action-based delivery is not available for [Canvas components with in-app messag
 Select a trigger event. This can include any of the following:
 - Starting a session
 - Purchasing an item
-- Interacting with News Feed cards (see [Braze's Campaign Connector][33])
+- Interacting with News Feed cards (see [Campaign Connector][33])
 - Interacting with other campaigns
 - Entering a location
 - Completing any custom event
@@ -33,14 +33,14 @@ Select a trigger event. This can include any of the following:
 - Updating a Subscription Group Status
 - Inbound SMS or WhatsApp message
 
-You can also further filter trigger events through Braze's [custom event properties][32], allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
+You can also further filter trigger events through Braze [custom event properties][32], allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
 
 For example, let's say we have a campaign with an abandoned cart custom event that is further targeted by the "cart value" property filter. This campaign will only reach users who've left between $100 and $200 worth of goods in their carts. 
 
 ![][34]
 
 {% alert note %}
-The trigger event "start session" can be the user's very first app open if your campaign's segment applies to new users. (e.g., if your segment consists of those with no sessions).
+The trigger event "start session" can be the user's very first app open if your campaign's segment applies to new users. (for example, if your segment consists of those with no sessions).
 {% endalert %}
 
 Keep in mind that you can still send a triggered campaign to a specific segment of users, so users who aren't a part of the segment won't receive the campaign even if they complete the trigger event. If you notice users not receiving the campaign even though they qualified for the segment, see our section on [why a user might not have received a triggered campaign][49].
@@ -131,7 +131,7 @@ Any of these things will prevent a user who has completed the trigger event from
 
 For example, imagine you want to send an event-triggered campaign to male users who just registered. When the user registers, you record a custom event `registration` and simultaneously set the user's `gender` attribute. The event may trigger the campaign before Braze has processed the user's gender, preventing them from receiving the campaign.
 
-As a best practice, ensure that the attribute on which the campaign is segmented is flushed to Braze's servers before the event. If this isn't possible, the best way to guarantee delivery is to use [custom event properties][48] to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. For our example, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need when your campaign is triggered.
+As a best practice, ensure that the attribute on which the campaign is segmented is flushed to Braze servers before the event. If this isn't possible, the best way to guarantee delivery is to use [custom event properties][48] to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. For our example, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need when your campaign is triggered.
 
 Additionally, if a campaign is action-based and has a delay, you can check the option to **Re-evaluate segment membership at send-time** to ensure users are still part of the target audience when the message is sent.
 
