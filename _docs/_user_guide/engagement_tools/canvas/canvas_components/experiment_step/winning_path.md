@@ -8,15 +8,19 @@ tool: Canvas
 
 # Winning Path in Experiment Paths
 
-> Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) in campaigns, and lets you automate your A/B tests. When Winning Path is turned on in an Experiment Path step, after a specified period of time, all subsequent users will be sent down the path with the highest conversion rate.
+> Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) in campaigns, and lets you automate your A/B tests.
+
+When Winning Path is turned on in an Experiment Path step, after a specified period of time, all subsequent users will be sent down the path with the highest conversion rate.
 
 ## Using Winning Path
+
+### Step 1: Add an Experiment Path
 
 Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Winning Path**.
 
 ![Settings in Experiment Path titled "Distribute Subsequent Users to Winning Path". The section includes a toggle for Winning Path, and options to configure the conversion event and experiment window.][1]
 
-### Winning Path settings
+### Step 2: Configure Winning Path settings
 
 Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Note that if you determine the winner with opens and clicks, only the first message in the path that generates opens or clicks will contribute to determining the winner.  
 
@@ -24,7 +28,7 @@ Then set the **Experiment Window**. The **Experiment Window** specifies how long
 
 ![][2]
 
-### Statistical significance
+### Step 3: Determine fallback {#statistical-significance}
 
 By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the best performing path.
 
@@ -40,9 +44,15 @@ This option will send future users down the mix of paths according to the percen
 A Delay Group will only appear in your path distribution if your Canvas is set up for one-time entry. Recurring and triggered Canvases will not have a Delay Group when Winning Path is turned on.
 {% endalert %}
 
-## Using Winning Paths with one-time entry {#one-time-entry}
+### Step 4: Launch the Canvas
 
-When using Winning Paths in a Canvas where users are allowed to enter only once, a Delay Group is automatically included. During the duration of the experiment, a percentage of users will be held in the Delay Group while the remaining users enter your Experiment Paths. 
+Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in.
+
+## Things to know
+
+### One-time entry {#one-time-entry}
+
+When using Winning Paths in a Canvas where users are allowed to enter only once, a Delay Group is automatically included. During the duration of the experiment, a percentage of users will be held in the Delay Group while the remaining users enter your Experiment Paths.
 
 ![Experiment Step with a Delay Group for Winning Path][4]{: style="max-width:75%"}
 
@@ -50,7 +60,7 @@ When the test is complete and a Winning Path is determined, the users assigned t
 
 ![Experiment Step with a Delay Group sent down the Winning Path][5]{: style="max-width:75%"}
 
-## Using Winning Paths with local time delivery 
+### Local time delivery
 
 We don't recommend using local time delivery in Canvases with Winning Paths. This is because experiment windows begin when the first user passes through. Users who are in very early time zones may enter the step and trigger the start of the experiment window much earlier than you expect, which can result in the Experiment concluding before the bulk of your users in more typical time zones have had enough time to enter the Canvas and/or convert. 
 
