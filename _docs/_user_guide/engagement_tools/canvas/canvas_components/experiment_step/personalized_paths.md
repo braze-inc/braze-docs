@@ -54,7 +54,7 @@ Finish setting up your Canvas as needed, then launch it. When the first user has
 
 ![][5]{: style="max-width:75%;" }
 
-When the experiment window passes and the experiment is complete, Braze will send users in the delay group to their respective paths.
+When the experiment window passes and the experiment is complete, Braze will send users in the delay group to their respective paths with the highest personalized likelihood of conversion.
 
 ![][6]{: style="max-width:75%;" }
 
