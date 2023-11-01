@@ -124,7 +124,7 @@ Here, you can also set up button prompts within your push notification, such as:
 
 #### Device options
 
-If a user has your app installed on multiple devices, by default your push message is sent to all devices with a valid push token assigned. If desired, you can select **Only send this push to the user's most recently used device**.
+If a user has your app installed on multiple devices, by default, your push message is sent to all devices with a valid push token assigned. If desired, you can select **Only send this push to the user's most recently used device**.
 
 ![Device options checkbox to only send this push to the user's most recently used device.][9]{: style="max-width:70%;" }
 
