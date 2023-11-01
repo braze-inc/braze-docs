@@ -48,5 +48,7 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
 - name: Stylitics
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
+- name: SmarterSends
+  url: /docs/partners/message_personalization/dynamic_content/smartersends/
 
 ---
