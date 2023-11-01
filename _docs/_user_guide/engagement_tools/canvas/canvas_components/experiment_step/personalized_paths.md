@@ -8,7 +8,7 @@ tool: Canvas
 
 # Personalized Paths in Experiment Paths
 
-> Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you automate A/B tests in your Canvas.
+> Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you personalize entire Canvas journeys for individual users based on conversion likelihood.
 
 When Personalized Paths is turned on in an Experiment Path step, a portion of users are held in a delay group while Braze tests the remaining paths against each other. After a period of time you choose, Braze sends users held in the delay group down the best-performing path for each user. Users who enter after the experiment is over will be sent down the path that performs best overall.
 
