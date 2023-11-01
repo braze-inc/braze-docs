@@ -2,7 +2,7 @@
 nav_title: Integration Overview
 article_title: Integration Overview
 page_order: 2
-description: "This article is a good place to start if you're just beginning with Braze and trying to get an onboarding overview. Links from this article connect to essential Braze topics."
+description: "This article provides a basic overview of the onboarding process."
 platform:
   - iOS
   - Android
@@ -17,11 +17,9 @@ platform:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}Getting started: Integration overview
 
-> This article is a good place to start if you're just beginning with Braze and trying to get an onboarding overview. Links from this article connect to essential Braze topics.
+> As a technical resource, you'll empower your team by integrating Braze into your tech stack. This article provides a basic overview of the onboarding process.
 
 ![A venn diagram of four circles - discovery, integrate, quality assurance and maintain - centered around "time to value."][27]{: style="max-width:55%;float:right;margin-left:15px;"} 
-
-As a technical resource, you'll empower your team by integrating Braze into your tech stack. 
 
 Onboarding is broadly split up into four steps:
 * [Discovery and planning](#discovery): Work with your team to align on scope, plan a structure for data and campaigns, and create an appropriate workspace structure. 
@@ -96,7 +94,7 @@ It's important that you set up different environments for development and produc
 ## Integration {#integration}
 ![Abstract pyramid graphic representing the flow of information from a data source to a user device.][29]{: style="max-width:45%;float:right;margin-left:15px;"} 
 
-Braze supports iOS apps, Android apps, web apps, and more. You can also opt to use a cross-platform wrapper SDK, like Xamarin or Unity. We typically see customers integrate anywhere from 1-6 weeks. Many customers have integrated Braze with just one engineer, depending on their breadth of technical skills and bandwidth. It's entirely dependent on your specific integration scope and how much time your team dedicates to the Braze project. 
+Braze supports iOS apps, Android apps, web apps, and more. You can also opt to use a cross-platform wrapper SDK, like React Native or Unity. We typically see customers integrate anywhere from 1-6 weeks. Many customers have integrated Braze with just one engineer, depending on their breadth of technical skills and bandwidth. It's entirely dependent on your specific integration scope and how much time your team dedicates to the Braze project. 
 
 You'll need developers who are familiar with:
 * Working in your app or site's native layer
