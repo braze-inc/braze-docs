@@ -2,7 +2,7 @@
 nav_title: Architectural Overview
 article_title: Architectural Overview
 page_order: 3
-description: ""
+description: "This article discusses the different parts and pieces of the Braze technology stack, with links to relevant articles."
 platform:
   - iOS
   - Android
@@ -17,26 +17,28 @@ platform:
 
 # Getting started: Architectural overview
 
-At a high level, Braze is about data. The Braze platform, powered by the SDK, the REST API, and partner integrations, allows you to aggregate and act on your data. Braze pulls in data from a variety of sources. 
+> At a high level, Braze is about data. The Braze platform, powered by the SDK, the REST API, and partner integrations, allows you to aggregate and act on your data. This article discusses the different parts and pieces of the Braze technology stack, with links to relevant articles. 
 
-1
+![Braze has different layers. In total, it consists of the SDK, the API, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, action layer, and an export layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email][1]{: style="display:block;margin:auto;" }
 
-* You get insights into this data through real-time reports and analytics.
-* Your marketing team dynamically segments your user base using these metrics. 
-* Your marketing team acts on the data, creating content through a variety of messaging channels such as SMS and email. 
-* Then, Braze tracks your users' engagement with this messaging and feeds it back into the platform, creating a loop.
+* [Data ingestion](#ingestion): Braze pulls in data from a variety of sources.
+* [Classification](#classification): You get insights into this data through real-time reports and analytics.
+* [Orchestration](#orchestration): Your marketing team dynamically segments your user base using these metrics. 
+* [Action](#action): Your marketing team acts on the data, creating content through a variety of messaging channels such as SMS and email.
+* [Personalization](#personalization): The data is transformed in real time with personalized information about your audience. 
+* [Export](#exporting-data): Then, Braze tracks your users' engagement with this messaging and feeds it back into the platform, creating a loop.
 
 This all works together to create successful interactions between your user base and your brand so that you can achieve your goals. Braze does all this in the context of something we call our vertically integrated stack. Let's dig into each layer, one at a time.
 
-## Data ingestion
+## Data ingestion {#ingestion}
 
 Braze is built on a streaming data architecture leveraging Snowflake, Kafka, MongoDB, and Redis. Data from many sources can be loaded into Braze via SDK and API. The platform can handle any data in real time, regardless of how it’s nested or structured. Data in Braze is stored on the user profile. 
 
 {% alert tip %}
-Braze can track data for a user throughout their journey with you, from the time that they're anonymous to the time they're logged in to your app and known. User IDs, called `external_id`s in Braze, should be set for each of your users. These should be unchanging and accessible when a user opens the app, allowing you to track your users across devices and platforms. See the [User lifecycle article][2] for best practices.
+Braze can track data for a user throughout their journey with you, from the time that they're anonymous to the time they're logged in to your app and known. User IDs, called `external_id`s in Braze, should be set for each of your users. These should be unchanging and accessible when a user opens the app, allowing you to track your users across devices and platforms. See the [User lifecycle article]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) for best practices.
 {% endalert %}
 
-3
+![Braze imports backend data sources from the API, frontend data sources from the SDK, data warehouse data from Braze Cloud Data Ingestion, and from partner integrations. This data is exported through the Braze API ][3]{: style="display:block;margin:auto;" }
 
 {% alert note %}
 This person-centric user profile database allows for real-time, interactive speed. Braze pre-computes values when data arrives and stores the results in our lightweight document format for fast retrieval. And because the platform was designed this way from the ground up, it is ideal for most messaging use cases—especially combined with other data concepts like Connected Content, product catalogs, and nested attributes. 
@@ -46,15 +48,7 @@ This person-centric user profile database allows for real-time, interactive spee
 Braze can pull data from user databases, offline transactions, and data warehouses through our [REST API][4]. 
 
 ### Frontend data sources via Braze SDK
-Braze automatically captures first-party data from frontend data sources, such as users' devices, by way of the [Braze SDK][5]. The SDK handles new (anonymous) users and manages data on their user profile throughout their lifecycle. In brief, when fully integrated, the SDK:
-* Collects and syncs user data into a consolidated user profile
-* Automatically collects session data, device info, and push tokens
-* Captures marketing engagement data and custom data specific to your business
-* Is architected for security and penetration tested by third parties
-* Is optimized for low-battery or slow-network devices
-* Supports server-side JWT signatures for added security
-* Has write-only access to your systems (can’t retrieve user data)
-* Powers push notifications, in-app messages, and Content Card messaging channels
+Braze automatically captures first-party data from frontend data sources, such as users' devices, by way of the [Braze SDK][5]. The SDK handles new (anonymous) users and manages data on their user profile throughout their lifecycle. 
 
 ### Partner integrations
 Braze has over 150 technology partners, which we call "Alloys." You can supplement your data feeds through a meaningfully robust network of [interoperable technologies and data APIs.][6] 
@@ -64,7 +58,7 @@ You can stream customer data from your data warehouse into the platform through 
 
 Cloud Data Ingestion can sync data from Snowflake, Amazon Redshift, Databricks, and Google BigQuery.
 
-## Classification
+## Classification {#classification}
 The classification layer enables your team to dynamically classify and build audiences, called [segments][8], based on data passing through Braze. 
 
 {% alert note %}
@@ -75,14 +69,14 @@ Many common types of user attributes, such as name, email, date of birth, countr
 
 Learn more about [automatically collected data and custom data][9].
 
-## Orchestration 
+## Orchestration {#orchestration}
 The orchestration layer allows your Marketing team to design user journeys based on your user data and prior engagement. This work is mostly done through our dashboard interface, but you also have the option to launch [campaigns through the API][10]. For example, you can have your backend tell Braze when to send the messages and campaigns your marketers designed in the dashboard, and trigger them according to your backend logic. An example of an API-triggered message might be password resets or shipping confirmations. 
 
 {% alert note %}
 API-triggered campaigns are ideal for more advanced transactional use-cases. They allow marketers to manage campaign copy, multivariate testing, and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from your servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real-time. 
 {% endalert %}
 
-## Personalization 
+## Personalization {#personalization}
 The personalization layer represents Braze’s ability to deliver dynamic content in your messages. By using Liquid, a widely-used personalization language, your team can  dynamically pull in existing data to display the message tailored to each recipient. Additionally, you can insert any information accessible on your webserver or via API directly into the messages you're sending, such as push notifications or emails, by using [Connected Content][11]. Connected Content builds on top of Liquid and uses familiar syntax.
 
 And because this dynamic content is programmable, marketers can include computed values, responses from other calls, or product catalog items. Once you've set these systems up during implementation, your Marketing team can do this with little to no support from technical teams. 
@@ -90,7 +84,7 @@ And because this dynamic content is programmable, marketers can include computed
 ### Feature flags
 Braze allows you to remotely enable or disable functionality for a selection of users through [feature flags][12]. This lets your marketers target the correct segment of your user base with messaging for features you haven't yet rolled out to your entire audience. But more than that, feature flags can be used to turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence.
 
-## Action
+## Action {#action}
 The action layer enables your actual messaging to your users. The purpose of the action layer is to send the right message to the right user at the right time, based on the data available through all of the layers previously discussed. Messaging is done inside your app or site (such as sending in-app messages or through graphic elements like Content Card carousels and banners) or outside your app experience (such as sending push notifications or emails).
 
 ### Messaging channels
@@ -137,8 +131,8 @@ If you're looking for practical example use cases, see our [ideas and strategies
 
 Braze has predictable monthly releases, in addition to releases for any critical issues and major OS updates. See our [changelogs][20] for a sense of Braze's release cycle.
 
-
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
+[1]: {% image_buster /assets/img/getting-started/braze_listen_understand_act.png %}
+[3]: {% image_buster /assets/img/import-export.png %}
 [4]: {{site.baseurl}}/api/endpoints/user_data
 [5]: {{site.baseurl}}/user_guide/getting_started/web_sdk/
 [6]: {{site.baseurl}}/partners/home
@@ -148,6 +142,7 @@ Braze has predictable monthly releases, in addition to releases for any critical
 [10]: {{site.baseurl}}/api/api_campaigns#api-campaigns
 [11]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content
 [12]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/
+[13]: {% image_buster /assets/img/getting_started/channels.png %}
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents
 [15]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/
 [16]: {{site.baseurl}}/api/endpoints/export

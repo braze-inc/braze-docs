@@ -25,7 +25,15 @@ Braze is a customer engagement platform. This simply means that Braze helps you 
 ![Braze has different layers. In total, it consists of the SDK, the API, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, action layer, and an export layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.][17]{: style="max-width:55%;float:right;margin-left:15px;"} 
 
 ## SDK
-The Braze SDKs can be integrated into your mobile and web applications to provide powerful marketing, user management, and analytics tools. The Braze SDK provides two critical pieces of functionality: it collects and syncs user data into a consolidated user profile, and powers messaging channels such as push notifications, in-app messages, and Content Cards.
+The Braze SDKs can be integrated into your mobile and web applications to provide powerful marketing, user management, and analytics tools. In brief, when fully integrated, the SDK:
+* Collects and syncs user data into a consolidated user profile
+* Automatically collects session data, device info, and push tokens
+* Captures marketing engagement data and custom data specific to your business
+* Is architected for security and penetration tested by third parties
+* Is optimized for low-battery or slow-network devices
+* Supports server-side JWT signatures for added security
+* Has write-only access to your systems (can’t retrieve user data)
+* Powers push notifications, in-app messages, and Content Card messaging channels
 
 ## Dashboard user interface
 The dashboard is the UI that controls all of the data and interactions at the heart of the Braze platform. Marketers will use the dashboard to do their job and create content. Developers use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials. 
