@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Typeform
 
-> [Typeform][1] is an easy-to-use tool for collecting data, feedback, and more.
+> [Typeform](https://www.typeform.com/) is an easy-to-use tool for collecting data, feedback, and more.
 
 By integrating Typeform and Braze, you can:
 
