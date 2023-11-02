@@ -52,6 +52,8 @@ To turn on SMS double opt-in, navigate to the **SMS Global Keywords** table in t
 | | Reply Message | This is the confirmation response that a user will receive after they have explicitly confirmed their opt-in and are now messageable via SMS. The user’s Subscription Group status will be set to `Subscribed`.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+When a user receives an opt-in prompt, they have 30 days to confirm their opt-in intent. If a user wants to subscribe after the 30-day window, they need to text an opt-In keyword to start the double opt-in workflow again.
+
 ![The configurable fields have two sections, Opt-In Prompt and Double Opt-In Confirmation, each with the fields Keywords and Reply Message.][4]
 
 ## Subscription Group status
