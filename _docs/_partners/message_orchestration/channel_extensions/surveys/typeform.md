@@ -1,7 +1,7 @@
 ---
 nav_title: Typeform
 article_title: Typeform
-description: "This article outlines the partnership between Braze and Typeform, an easy-to-use tool for collecting data, feedback, and more. "
+description: "This article outlines the partnership between Braze and Typeform, an easy-to-use tool for collecting data, feedback, and more."
 alias: /partners/typeform/
 page_type: partner
 search_tag: Partner
@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Typeform
 
-> [Typeform][1] is an easy-to-use tool for collecting data, feedback, and more..
+> [Typeform][1] is an easy-to-use tool for collecting data, feedback, and more.
 
 By integrating Typeform and Braze, you can:
 
@@ -29,7 +29,7 @@ By integrating Typeform and Braze, you can:
 
 ### Step 1: Set up the Braze Data Transformation to accept Typeform's webhooks {#step-1}
 
-{% multi_lang_include create_transformation.md %} 
+{% multi_lang_include create_transformation.md location="typeform" %}
 
 ### Step 2: Set up Typeform webhooks
 
@@ -37,11 +37,11 @@ Follow the steps in [Typeform's webhooks documentation](https://www.typeform.com
 
 For step 4, add your Data Transformation webhook URL as the **Destination URL**
 
-> img
+![]({% image_buster /assets/img/typeform/typeform_add_webhook.png %}){: style="max-width:50%" }
 
 Send a test event to your Data Transformation by clicking **View deliveries** and then **Send test request**.
 
-> img
+![]({% image_buster /assets/img/typeform/typeform_test_request.png %})
 
 ### Step 3: Write transformation code to accept your chosen Typeform events
 
@@ -53,7 +53,7 @@ In this step, you will transform the webhook payload that will be sent from Type
 4. Click **Validate** to return a preview of your code’s output and to check if it’s an acceptable `/users/track` request.
 5. Save and activate your Data Transformation.
 
-> img
+![]({% image_buster /assets/img/typeform/typeform_test_result.png %})
 
 #### Request body format
 
@@ -617,7 +617,7 @@ After you have written your data transformation, click **Validate** to make your
 
 Once activated, custom event data will be logged to a user's profile when they complete your form.
 
-> img
+![]({% image_buster /assets/img/typeform/typeform_custom_event.png %})
 
 ## Monitoring and troubleshooting
 

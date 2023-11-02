@@ -6,6 +6,18 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Create and name your new transformation. This will open a detailed view, showing your most recent webhook this transformation has received and a space to write your transformation. 
 
-![][11]
+{% if include.location == "typeform" %}
 
-[11]: {% image_buster /assets/img/data_transformation/data_transformation10.png %}
+![][2]
+
+Capture your **Webhook URL** for use in the next step.
+
+[2]: {% image_buster /assets/img/typeform/data_transformation_typeform.png %}
+
+{% elsif include.location == "default" %}
+
+![][1]
+
+[1]: {% image_buster /assets/img/data_transformation/data_transformation10.png %}
+
+{% endif %}
