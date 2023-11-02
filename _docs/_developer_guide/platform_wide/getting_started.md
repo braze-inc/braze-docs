@@ -19,6 +19,9 @@ guide_featured_list:
   - name: Architecture Overview
     link: /docs/developer_guide/platform_wide/getting_started/architecture_overview/
     fa_icon: fas fa-table-columns
+  - name: Analytics Overview
+    link: /docs/developer_guide/platform_wide/getting_started/analytics_overview/
+    fa_icon: fas fa-table-columns
 
 search_rank: 4
 ---
