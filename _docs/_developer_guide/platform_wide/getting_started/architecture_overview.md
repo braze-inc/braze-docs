@@ -126,12 +126,7 @@ When Mel opens the announcement, she adds your new product to her wishlist. Braz
 
 ![][18]
 
-## Next steps
-The [Integration overview article][19] covers the discrete components of the Braze platform in more detail. 
 
-If you're looking for practical example use cases, see our [ideas and strategies]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies) to get practical example use cases. 
-
-Braze has predictable monthly releases, in addition to releases for any critical issues and major OS updates. See our [changelogs][20] for a sense of Braze's release cycle.
 
 [1]: {% image_buster /assets/img/getting-started/braze_listen_understand_act.png %}
 [3]: {% image_buster /assets/img/getting-started/import-export.png %}

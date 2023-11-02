@@ -17,11 +17,11 @@ platform:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}Getting started: Integration overview
 
-> As a technical resource, you'll empower your team by integrating Braze into your tech stack. This article provides a basic overview of the onboarding process.
+> This article provides a basic overview of the onboarding process.
 
 ![A venn diagram of four circles - discovery, integrate, quality assurance and maintain - centered around "time to value."][27]{: style="max-width:50%;float:right;margin-left:15px;"} 
 
-Onboarding is broadly split up into four steps:
+As a technical resource, you'll empower your team by integrating Braze into your tech stack. Onboarding is broadly split up into four steps:
 * [Discovery and planning](#discovery): Work with your team to align on scope, plan a structure for data and campaigns, and create an appropriate workspace structure. 
 * [Integration](#integration): Execute on your plan by integrating the SDK and API, enabling messaging channels, and setting up data import and export. 
 * [Quality Assurance](#qa): Ensure that the loop of data and messaging between the Braze platform and your app or site is working as expected.
