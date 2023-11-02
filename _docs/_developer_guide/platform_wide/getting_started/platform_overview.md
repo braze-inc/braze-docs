@@ -53,6 +53,8 @@ For more on our data models, check out: [Getting Started: Analytics overview]({{
 ## Multichannel messaging
 Braze was designed to handle an evolving technological landscape with its channel-agnostic, user-centric data model. Messaging is done inside your app or site (such as sending in-app messages or through graphic elements like Content Card carousels and banners) or outside your app experience (such as sending push notifications or emails).  
 
+For more on customizing messaging channels, check out: [Getting Started: Customization overview]({{site.baseurl}}/developer_guide/customization_guides/customization_overview).
+
 {% gallery %}
 {{site.baseurl}}/assets/img/getting-started/messaging-channel-graphic.png <br> Once you have defined a segment, Braze's messaging tools allow for multichannel communication with your users. For example, send a push notification and email to the example segment defined in the previous section. Messaging channels are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors. Moreover, you can use our advanced scheduling options to automate campaigns to specific groups of those users going forward.
 {{site.baseurl}}/assets/img_archive/cc_usecase_onboarding.png <br> **Content Cards** <br> With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, Connected Content, custom card expiration times, card analytics, and easy coordination with push notifications. [Learn more about integrating and customizing Content Cards.]({{site.baseurl}}/developer_guide/customization_guides/content_cards)
@@ -64,7 +66,6 @@ Braze was designed to handle an evolving technological landscape with its channe
 {{site.baseurl}}/assets/img_archive/Webhook_template_test.png <br>**Webhooks** <br>Braze's webhooks allow you to trigger non-app actions, providing other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint. [Learn more about setting up webhooks in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks).
 {% endgallery %}
 
-For more on customizing messaging channels, check out: [Getting Started: Customization overview]({{site.baseurl}}/developer_guide/customization_guides/customization_overview).
 
 ## Integrating Braze
 Braze is designed to get up and running quickly and easily. Our average time-to-value is six weeks across our customer base of hundreds of brands.
