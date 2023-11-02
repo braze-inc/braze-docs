@@ -8,16 +8,12 @@ Create and name your new transformation. This will open a detailed view, showing
 
 {% if include.location == "typeform" %}
 
-![][2]
+![](/docs/assets/img/typeform/data_transformation_typeform.png)
 
 Capture your **Webhook URL** for use in the next step.
 
-[2]: {% image_buster /assets/img/typeform/data_transformation_typeform.png %}
-
 {% elsif include.location == "default" %}
 
-![][1]
-
-[1]: {% image_buster /assets/img/data_transformation/data_transformation10.png %}
+![](/docs/assets/img/data_transformation/data_transformation10.png)
 
 {% endif %}
