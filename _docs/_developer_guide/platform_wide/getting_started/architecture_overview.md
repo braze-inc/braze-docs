@@ -132,7 +132,7 @@ If you're looking for practical example use cases, see our [ideas and strategies
 Braze has predictable monthly releases, in addition to releases for any critical issues and major OS updates. See our [changelogs][20] for a sense of Braze's release cycle.
 
 [1]: {% image_buster /assets/img/getting-started/braze_listen_understand_act.png %}
-[3]: {% image_buster /assets/img/import-export.png %}
+[3]: {% image_buster /assets/img/getting-started/import-export.png %}
 [4]: {{site.baseurl}}/api/endpoints/user_data
 [5]: {{site.baseurl}}/user_guide/getting_started/web_sdk/
 [6]: {{site.baseurl}}/partners/home
