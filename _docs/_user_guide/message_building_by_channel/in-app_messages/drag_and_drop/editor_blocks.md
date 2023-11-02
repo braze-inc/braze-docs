@@ -23,7 +23,7 @@ The following table describes how you can use each editor block type.
 | Image | Inserts an image from the Media Library |
 | Button | Adds a standard button. Properties for this block allow for editing, setting links, and logging analytics. |
 | Spacer | Adds space or padding between other blocks. |
-| Custom Code | Inserts raw HTML, CSS, and JS. |
+| Custom Code (early access) | Inserts raw HTML, CSS, and JS.  |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Properties
@@ -72,9 +72,11 @@ Details for each editor block's properties are provided in the following tables.
 
 ### Custom Code
 
+{% alert important %}
+The Custom Code block is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
+{% endalert %}
+
 | Name | Description |
 | --- | --- |
 | Custom Code | Enter the raw HTML, CSS, and JS. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-
