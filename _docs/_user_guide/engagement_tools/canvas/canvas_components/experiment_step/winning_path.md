@@ -41,10 +41,12 @@ This option will send future users down the mix of paths according to the percen
 ![Percentages specified in the experiment distribution][3]
 
 {% alert note %}
-A Delay Group will only appear in your path distribution if your Canvas is set up for one-time entry. Recurring and triggered Canvases will not have a Delay Group when Winning Path is turned on.
+A Delay Group will only appear in your path distribution if your Canvas is set up for one-time entry and your Experiment step has three paths or fewer. Recurring and triggered Canvases will not have a Delay Group when Winning Path is turned on.
 {% endalert %}
 
-### Step 4: Launch the Canvas
+### Step 4: Add your paths and launch the Canvas
+
+A single Experiment Path component can contain up to four paths. However, if your Canvas is set up for [one-time entry](#one-time-entry), one path must be reserved for the Delay Group that Braze automatically adds when Winning Path is turned on. This means for Canvases with one-time entry, you can add up to three paths to your experiment.
 
 Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in.
 
