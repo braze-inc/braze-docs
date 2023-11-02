@@ -114,8 +114,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `item-already-exists` | Ce produit existe déjà dans le catalogue. |
 | `invalid-fields` | Confirmez que les champs de la requête existent dans le catalogue. |
 | `filtered-set-field-too-long` | La valeur du champ est utilisée dans un ensemble filtré qui dépasse la limite de caractères pour un produit. |
-| `already-reached-catalog-item-limit` | Le nombre maximum de catalogues est atteint. Contactez votre gestionnaire de compte Braze pour plus d’informations. |
-| `already-reached-company-item-limit` | Le nombre maximum de produits du catalogue est atteint. Contactez votre gestionnaire de compte Braze pour plus d’informations. | 
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
 | `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter l’[Assistance]({{site.baseurl}}/support_contact/). |
 | `invalid-keys-in-value-object` | Les clés d’objet de produit ne peuvent pas inclure `.` ou `$`. |

@@ -185,7 +185,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `invalid-field-types` | Assurez-vous que les types des champs sont valides. |
 | `field-names-too-large` | La limite de caractères d’un nom de champ est de 250. |
 | `field-names-not-unique` | Le même nom de champ est référencé deux fois. |
-| `reached-company-catalogs-limit` | Le nombre maximum de catalogues est atteint. Contactez votre gestionnaire de compte Braze pour plus d’informations. |
 | `description-too-long` | La limite de caractères pour la description est de 250. |
 {: .reset-td-br-1 .reset-td-br-2}
 
