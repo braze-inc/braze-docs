@@ -25,7 +25,6 @@ You can search for the following items and actions:
 - Segments
 - Email templates
 - [Pages within Braze](#find-pages-that-have-been-renamed)
-- [Quick actions](#quick-create-campaigns), like creating a campaign
 
 {% alert tip %}
 To search for exact text, put your search term in quotations (""). For example, searching for [“all users”] will return all items that contain the exact phrase “all users” in their name.
@@ -76,11 +75,13 @@ You can revisit recently accessed content from the search menu. The search inter
 
 The search understands synonyms for pages that have been renamed in our [updated navigation]({{site.baseurl}}/navigation). For example, it will find "Data Export" when you search for "Currents", as that page has been renamed.
 
+<!-->
 ### Quick create campaigns
 
 Search for channels to see quick create options among your top 10 results. For example, searching for "email" shows "Create Email Campaign" or "Create Transactional Email Campaign".
 
 ![][2]
+<-->
 
 ### Search for emojis
 
