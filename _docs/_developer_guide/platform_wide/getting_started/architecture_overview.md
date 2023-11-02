@@ -17,7 +17,9 @@ platform:
 
 # Getting started: Architectural overview
 
-> At a high level, Braze is about data. The Braze platform, powered by the SDK, the REST API, and partner integrations, allows you to aggregate and act on your data. This article discusses the different parts and pieces of the Braze technology stack, with links to relevant articles. 
+> This article discusses the different parts and pieces of the Braze technology stack, with links to relevant articles. 
+
+At a high level, Braze is about data. The Braze platform, powered by the SDK, the REST API, and partner integrations, allows you to aggregate and act on your data. 
 
 ![Braze has different layers. In total, it consists of the SDK, the API, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, action layer, and an export layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email][1]{: style="display:block;margin:auto;" }
 
@@ -92,7 +94,7 @@ Braze was designed to handle an evolving technological landscape with its channe
 
 The [Braze SDK][5] powers additional messaging channels: push, in-app messages, and Content Cards. You integrate the SDK with your app or site to allow your Marketing team to use the Braze dashboard to coordinate their campaigns across all supported messaging channels.
 
-13
+![][13]
 
 ## Exporting data
 Critically, all end-user interactions with Braze are tracked so you can measure your engagement and outreach. And once Braze has aggregated your data from all these sources, it can be exported back to your tech stack using a variety of tools, closing the loop.
@@ -122,7 +124,7 @@ Your product announcement was sent to all customers who liked a similar item in 
 
 When Mel opens the announcement, she adds your new product to her wishlist. Braze tracks that she clicked the email automatically. The SDK tracks that she's wishlisted your new product. Each time they engage with your brand, you and your users are learning more about each other.
 
-18
+![][18]
 
 ## Next steps
 The [Integration overview article][19] covers the discrete components of the Braze platform in more detail. 
@@ -147,5 +149,6 @@ Braze has predictable monthly releases, in addition to releases for any critical
 [15]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/
 [16]: {{site.baseurl}}/api/endpoints/export
 [17]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data
+[18]: {% image_buster /assets/img/getting-started/putting-it-all-together.png %}
 [19]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/integration_overview/
 [20]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs

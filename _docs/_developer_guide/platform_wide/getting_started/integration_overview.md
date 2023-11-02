@@ -19,7 +19,7 @@ platform:
 
 > As a technical resource, you'll empower your team by integrating Braze into your tech stack. This article provides a basic overview of the onboarding process.
 
-![A venn diagram of four circles - discovery, integrate, quality assurance and maintain - centered around "time to value."][27]{: style="max-width:55%;float:right;margin-left:15px;"} 
+![A venn diagram of four circles - discovery, integrate, quality assurance and maintain - centered around "time to value."][27]{: style="max-width:50%;float:right;margin-left:15px;"} 
 
 Onboarding is broadly split up into four steps:
 * [Discovery and planning](#discovery): Work with your team to align on scope, plan a structure for data and campaigns, and create an appropriate workspace structure. 
