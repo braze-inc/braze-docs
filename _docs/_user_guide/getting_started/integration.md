@@ -9,15 +9,17 @@ description: "This reference article briefly covers the integration steps requir
 
 # Integration
 
-> Integrating with Braze is a worthwhile process. But you're smart. You're **here**. Clearly you already know that. But what you probably don't know was that you and your developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two.
+> Integrating with Braze is a worthwhile process. But you're smart. You're **here**. Clearly, you already know that. But what you probably don't know is that you and your developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two.
 
-{% alert note %} Note that the contents of this article don't apply for email. Check that out in the [Email Setup Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/).{% endalert %}
+{% alert note %} 
+Note that the contents of this article don't apply to email. Check that out in the [Email setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section.
+{% endalert %}
 
 ## The technical side of the integration process
 
-You may find yourself thinking, "My developers are magical! They can do anything, so I usually just leave them to it!" And they probably are and probably can! But there's no reason why you shouldn't know what they're doing behind the scenes. In fact, it would help the entire process if you knew when to jump in with information and what to look for when they say "Can you send me the API key and API endpoint?"
+You may find yourself thinking, "My developers are magical! They can do anything, so I usually just leave them to it!" And they probably are and probably can! But there's no reason why you shouldn't know what they're doing behind the scenes. In fact, it would help the entire process if you knew when to jump in with information and what to look for when they say, "Can you send me the API key and API endpoint?"
 
-So what are they doing when they integrate Braze with your app or site? Glad you asked!
+So, what are they doing when they integrate Braze with your app or site? Glad you asked!
 
 ### Step 1: They implement the Braze SDK
 
@@ -25,7 +27,7 @@ The Braze SDK (Software Development Kit) is how we send and get information to a
 
 * Your [API keys]({{site.baseurl}}/api/api_key/)
 * Your [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Braze no longer gives out custom endpoints so use the predefined SDK endpoints. If you have been given a pre-existing custom endpoint, Here, you can find the set up steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
+  * Braze no longer gives out custom endpoints so use the predefined SDK endpoints. If you have been given a pre-existing custom endpoint, Here, you can find the setup steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
 
 You can either give this information to them directly, or you can give them access to Braze by creating an account for them. 
 
@@ -35,7 +37,7 @@ Ensure that you and your developers don't unknowingly or unintentionally change 
 
 ### Step 2: They implement your desired messaging channels
 
-Braze has many options for getting in touch with your users, and each requires its own set up or tweaking to work the way you want. This is where communication with your engineers becomes critical.
+Braze has many options for getting in touch with your users, and each requires its own setup or tweaking to work the way you want. This is where communication with your engineers becomes critical.
 
 Be sure to tell your developers which channels you want to use to ensure that implementation is done efficiently and in proper order.
 
@@ -55,11 +57,11 @@ You can use Braze to create accessible messaging campaigns across each channel. 
 
 ### Step 3: They set up your data
 
-Braze isn't a one-trick pony. This isn't about just sending emails or sending push. This is about creating personalized customer journeys that are unique for every user and customer. The customer journeys are based on their actions within your app or site and you get to define what those are! Your developers' next task is to ensure that actions taken within your app or site are picked up by Braze.
+Braze isn't a one-trick pony. This isn't about just sending emails or sending push. This is about creating personalized customer journeys that are unique for every user and customer. The customer journeys are based on their actions within your app or site, and you get to define what those are! Your developers' next task is to ensure that actions taken within your app or site are picked up by Braze.
 
 So, what do you need to do to get them this information?
 
-1. Work with your marketing team to define campaigns, goals, attributes, and events that you need to track. Define those use cases, share them with your teams.
+1. Work with your marketing team to define campaigns, goals, attributes, and events you need to track. Define those use cases and share them with your teams.
 2. Define your custom data requirements ([custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/), [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), etc.).
 3. From there, discuss how that data should be tracked (triggered through the SDK, etc.).
 4. Define how many [workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/app_group_management/) you need. Your engineers will need to know how to [test and configure]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/) these workspaces.
@@ -78,7 +80,7 @@ We even have specific instructions for [testing your Android or FireOS integrati
 
 ## After implementation
 
-Keep in mind that the implementation finish line isn't also the green light to send a million messages at once. Sending a million push might break your app if every customer clicks the same link at the same time. We recommend discussing what your capacity of your internal set up is for handling requests from Braze before clicking that **Send** button. Then, you can set your [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting) based on that.
+Keep in mind that the implementation finish line isn't also the green light to send a million messages at once. Sending a million push might break your app if every customer clicks the same link simultaneously. We recommend discussing what your capacity of your internal setup is for handling requests from Braze before clicking that **Send** button. Then, you can set your [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting) based on that.
 
 ![]({% image_buster/assets/img/torchie/firebrands.png %}){: style="max-width:15%;float:right;margin-left:15px;border:none;"}
 
