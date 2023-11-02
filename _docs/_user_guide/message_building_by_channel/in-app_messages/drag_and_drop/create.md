@@ -58,17 +58,13 @@ After selecting the drag-and-drop editor as your editing experience, you can cho
 
 - Start with a blank modal template
 - Use a Braze drag-and-drop in-app message template
-- Select a saved drag-and-drop in-app message template (early access)
+- Select a saved drag-and-drop in-app message template
 
 Click **Build message** to begin designing your in-app message in the drag-and-drop editor.
 
 ![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
 
 You can also access all templates from the **Templates** section of the dashboard.
-
-{% alert important %}
-The ability to save custom templates is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
 
 ## Step 3: Build and design your in-app message
 
