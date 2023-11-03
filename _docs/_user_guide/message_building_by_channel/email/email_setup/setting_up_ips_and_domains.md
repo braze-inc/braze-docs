@@ -26,7 +26,7 @@ Send the following information to your Braze representative:
 
 ### Step 2: Braze configures information
 
-After receiving your email, we'll get to work configuring your IPs, domains and subdomains, and IP pools.
+After receiving your email, we'll get to work configuring your IPs, domains and subdomains, and IP pools. Note that Braze can add up to 30 IP addresses.
 
 ### Step 3: Add DNS records
 
