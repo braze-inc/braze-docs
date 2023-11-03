@@ -24,6 +24,8 @@ Braze is a customer engagement platform. This simply means that Braze helps you 
 
 ![Braze has different layers. In total, it consists of the SDK, the API, the dashboard, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, and an action layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.][17]{: style="max-width:55%;float:right;margin-left:15px;"} 
 
+If you're a marketer looking for a more general overview of Braze, check out the [User Guide Getting Started section]({{site.baseurl}}/user_guide/getting_started/overview/), instead.
+
 ## SDK
 The [Braze SDKs](#integrating-braze) can be integrated into your mobile and web applications to provide powerful marketing, user management, and analytics tools. 
 
@@ -87,6 +89,8 @@ Once you have defined a segment, Braze's messaging tools allow you to engage wit
 {{site.baseurl}}/assets/img/getting-started/run-example.png <br> You can also create completely custom components to control what your messaging looks like, how it behaves, and how they interact with other messaging channels (for example, triggering a Content Card based on a push notification). Braze provides SDK methods to allow you to log metrics like impressions, clicks, and dismissals in the Braze dashboard. Each messaging channel has an analytics article to help facilitate this.
 {% endgallery %}
 
+<br>
+<br>
 For more on customizing messaging channels, check out: [Getting Started: Customization overview]({{site.baseurl}}/developer_guide/customization_guides/customization_overview).
 
 ## Integrating Braze
@@ -121,6 +125,25 @@ All integrations   | &nbsp;  |  &nbsp;
 [![React Native]({% image_buster /assets/img/reactnative_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/) | [![tvOS]({% image_buster /assets/img/tvos_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [tvOS]({{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/) | [![MacOS]({% image_buster /assets/img/macOS_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/){: style="max-width:40%;margin-top:15%;border:0" class="noimgborder"}  [MacOS]({{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/)
 [![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity Android]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/) 
 [![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/)
+
+## Resources to bookmark
+
+As a technical resource, you'll be involved in a lot of the nuts and bolts of Braze. Here are good resources to bookmark outside of our documentation. As you're going forward, keep our [Terms to Know]({{site.baseurl}}/user_guide/getting_started/terms_to_know/) glossary handy in case you have questions on Braze terms.
+
+| Resource | What You'll Learn|
+|---|---|
+| [Braze Public GitHub](https://github.com/braze-inc/) | You'll find detailed integration information and sample code in our GitHub repository. |
+| [Android SDK GitHub Repository](https://github.com/braze-inc/braze-android-sdk/) | The Android SDK GitHub repository. |
+| [Android SDK Reference](https://appboy.github.io/appboy-android-sdk/kdoc/index.html) | Class documentation for the Android SDK. |
+| [iOS (Swift) SDK GitHub Repository](https://github.com/braze-inc/braze-swift-sdk) | The Swift SDK GitHub repository. |
+| [iOS (Swift) SDK Reference](https://braze-inc.github.io/braze-swift-sdk/) | Class documentation for the iOS SDK. |
+| [Web SDK GitHub Repository](https://github.com/braze-inc/braze-web-sdk) | The Web SDK GitHub repository. |
+| [Web SDK Reference](https://js.appboycdn.com/web-sdk/5.0/doc/modules/braze.html/) | Class documentation for the iOS SDK. |
+| [SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs) | Braze has predictable monthly releases, in addition to releases for any critical issues and major OS updates. |
+| [Braze API Postman Collection](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest) | Download our Postman collection here.  |
+| [Braze System Status Monitor](https://braze.statuspage.io/) | Our status page is updated whenever there are incidents or outages. Go to this page to subscribe to alerts. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
 
 [1]: {{site.baseurl}}/user_guide/administrative/access_braze
 [2]: {{site.baseurl}}/api/home
