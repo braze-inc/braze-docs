@@ -21,7 +21,7 @@ If an unknown user were to view your site and then, at a later date, create an a
 
 ## Capturing user data through a web form
 
-### Step 1: Check if user exists
+### Step 1: Check if the user exists
 
 When a user enters content through a web form, check if a user with that email already exists within your database. This can be done in one of two ways:
 
@@ -44,7 +44,7 @@ It is not recommended to heavily leverage this endpoint when querying a single u
   - Do not create a new profile.
   - Log a custom attribute (for example, `newsletter_subscribed: true`) on the user's profile to indicate that the user has submitted their email via newsletter subscription. If multiple user profiles in Braze exist with the same email address, all profiles will be exported.<br><br>
 - **If a user does not exist:**
-  - Create an alias-only profile via [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). This endpoint will accept a [`user_alias`` object]({{site.baseurl}}/api/objects_filters/user_alias_object/) and create an alias-only profile when `update_existing_only` is set to `false`. Set the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
+  - Create an alias-only profile via [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). This endpoint will accept a [`user_alias` object]({{site.baseurl}}/api/objects_filters/user_alias_object/) and create an alias-only profile when `update_existing_only` is set to `false`. Set the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
 
 ![Diagram showing the process to update an alias-only user profile. A user submits their email address and a custom attribute, their zip code, on a marketing landing page. An arrow pointing from the landing page collection to an alias-only user profile shows a Braze API request to the Track user endpoint, with the request body containing the user's alias name, alias label, email, and zip code. The profile has the label "Alias Only user created in Braze" with the attributes from the request body to show the data being reflected on the newly-created profile.][3]{: style="max-width:90%;"}
 
@@ -63,7 +63,7 @@ To check if a user is alias-only, [check if the user exists](#step-1-check-if-us
 
 ## Capturing user data when alias-only user information is already present
 
-When a user creates an account or identifies themselves via email sign-up, you can merging the profiles. For a list of fields that can be merged, refer to [Merge updates behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
+When a user creates an account or identifies themselves via email sign-up, you can merge the profiles. For a list of fields that can be merged, refer to [Merge updates behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
 
 ### Merging duplicate user profiles
 
