@@ -2,7 +2,7 @@
 nav_title: Personalized Paths 
 article_title: Personalized Paths in Experiment Paths 
 page_type: reference
-description: "Personalized Paths is similar to Personalized Variant in campaigns and lets you automate your A/B tests."
+description: "Personalized Paths is similar to Personalized Variant in campaigns and lets you personalize entire Canvas journeys based on each person's conversion likelihood."
 tool: Canvas
 ---
 
