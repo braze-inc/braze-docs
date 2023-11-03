@@ -10,7 +10,7 @@ page_type: landing
 description: "This landing page covers Campaign reporting for each messaging channel, and  retention and funnel reports."
 tool: Reports
 
-guide_featured_title: "Messaging Channels"
+guide_featured_title: "Messaging channels"
 guide_featured_list:
   - name: Content Cards
     link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
@@ -34,7 +34,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
     image: /assets/img/icons/whatsapp.svg
 
-guide_menu_title: "More Articles"
+guide_menu_title: "More articles"
 guide_menu_list:
   - name: Funnel Reports
     link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
