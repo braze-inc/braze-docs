@@ -32,13 +32,13 @@ The Braze SDK automatically captures immense amounts of data at the user level, 
 
 ## In-app messaging
 
-The SDK makes it easy to compose and send in-app messages to directly engage with users. You can choose to send slideup, modal, or fullscreen messages based on your campaign strategy. For more information on composing an in-app message, see our page on [creating an in-app message][8].
+The SDK makes it easy to compose and send in-app messages to engage with users directly. You can choose to send slideup, modal, or fullscreen messages based on your campaign strategy. For more information on composing an in-app message, see our page on [creating an in-app message][8].
 
 ![Push displayed on a web browser][11]{: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 ## Push notifications
 
-Push notifications are another great option to engage with your users, and are especially useful to handle time-sensitive calls to action. Mobile push notifications appear on your users' device, and web push notifications appear even when your site is not open. For specifics on using push notifications, see our [push notification article][5].
+Push notifications are another great option to engage with your users and are especially useful to handle time-sensitive calls to action. Mobile push notifications appear on your users' devices, and web push notifications appear even when your site is not open. For specifics on using push notifications, see our [push notification article][5].
 
 Users of your website or app need to opt-in to receive push notifications. See [push priming][13] for more details. 
 
@@ -50,10 +50,10 @@ You can create a segment of your web users by selecting only your website's app 
 
 ![Segment Details page with web app selected][10]
 
-This will allow you to target users based on their behavior in an intelligent way. If you wanted to target web users to encourage them to download your mobile app, you'd create this segment as your target audience. If you wanted to send a messaging campaign that included a mobile in-app message but not a web message, you would simply uncheck your website's icon in your segment.
+This will allow you to target users based on their behavior in an intelligent way. If you wanted to target web users to encourage them to download your mobile app, you'd create this segment as your target audience. If you wanted to send a messaging campaign that included a mobile in-app message but not a web message, you would uncheck your website's icon in your segment.
 
 ## What integrations does Braze have?
-Braze offers a version of our SDK for many platforms (web, Android, iOS, Flutter, React Native, and more), but they all operate essentially the same way. So if you see a reference to, say, the "Web SDK," it's just the version of the Braze SDK intended for your website.
+Braze offers a version of our SDK for many platforms (web, Android, iOS, Flutter, React Native, and more), but they all operate essentially the same way. So, if you see a reference to, say, the "Web SDK," it's just the version of the Braze SDK intended for your website.
 
 <style>
 table th:nth-child(1) {
