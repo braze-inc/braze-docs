@@ -21,7 +21,7 @@ platform:
 
 At a high level, Braze is about data. The Braze platform, powered by the SDK, the REST API, and partner integrations, allows you to aggregate and act on your data. 
 
-![Braze has different layers. In total, it consists of the SDK, the API, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, action layer, and an export layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email][1]{: style="display:block;margin:auto;" }
+![Braze has different layers. In total, it consists of the SDK, the API, the dashboard, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, and an action layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.][1]{: style="display:block;margin:auto;" }
 
 * [Data ingestion](#ingestion): Braze pulls in data from a variety of sources.
 * [Classification](#classification): You get insights into this data through real-time reports and analytics.
