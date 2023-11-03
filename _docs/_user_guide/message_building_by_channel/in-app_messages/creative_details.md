@@ -12,7 +12,7 @@ channel:
 tools:
   - Media
 
-guide_featured_title: "Specifications for Each Message Type"
+guide_featured_title: "Specifications by message type"
 
 guide_featured_list:
 - name: Modal

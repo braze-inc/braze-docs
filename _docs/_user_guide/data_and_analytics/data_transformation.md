@@ -8,7 +8,7 @@ guide_top_text: "This section is home to articles about Braze Data Transformatio
 page_type: landing
 description: "This landing page is home to articles about Braze Data Transformation, including how to create a data transformation and uses cases."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Overview and Best Practices
     link: /docs/user_guide/data_and_analytics/data_transformation/overview/
