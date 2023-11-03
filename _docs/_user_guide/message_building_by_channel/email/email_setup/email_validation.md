@@ -74,7 +74,7 @@ Note that the validation test checks if the local part, preceding the "+", match
 
 ### All other domains
 
-For all other domains, Braze allows email addresses matching the following regular expression for the local part:<br>
+For all other domains, Braze allows email addresses matching the following regular expression for the local part:
 ```
 /\A(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])(?:(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~\.]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])*(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}]))?\z/
 ```
