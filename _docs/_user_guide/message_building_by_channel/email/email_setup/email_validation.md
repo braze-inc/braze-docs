@@ -52,14 +52,13 @@ Email syntax validation looks at both the local and host part of an email addres
 If the domain part contains any non-[ASCII](https://en.wikipedia.org/wiki/ASCII) characters, it will need to be [Punycode-encoded](https://www.punycoder.com/) before being supplied to Braze.
 {% endalert %}
 
-If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API. When uploading via CSV, a user would be created, but the email address would not be added.
+If Braze receives a request to add a user and the email address is considered invalid, you'll see an error response in the API. When uploading via CSV, a user would be created, but the email address would not be added.
 
 ## Local part validation rules
 
 ### Microsoft domains
 
-If the host domain includes "msn", "hotmail", "outlook", or "live", then the following regular expression will be used to validate the local part:<br>
-`/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
+If the host domain includes "msn", "hotmail", "outlook", or "live", then the following regular expression will be used to validate the local part: `/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
 
 The Microsoft address local part must follow these parameters:
 
