@@ -26,7 +26,7 @@ While Predictive Churn is turned on at a company level, some workspaces may not 
 
 ![][3]{: style="float:right;max-width:60%;margin-left:15px;margin-bottom:15px;margin-top:15px;"}
 
-When building out your prediction audience to fine-tune the kind of use you want your model trained against, you might encounter this message notifying you your Prediction Audience has too few users: 
+When building out your prediction audience to fine-tune the kind of use you want your model trained against, you might encounter this message notifying you your prediction audience has too few users: 
 
 "Not enough past churners available from the selected prediction audience in the past 7 days to reliably build the prediction."
 
