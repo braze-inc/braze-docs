@@ -70,12 +70,14 @@ The Microsoft address local part must follow these parameters:
 - Cannot contain two or more consecutive periods (.)
 - Cannot end with a period (.)
 
-Note that the validation test checks if the local part, preceding the "+", matches the regex.
+Note that the validation test checks if the local part, preceding the "+", matches the regular expression.
 
 ### All other domains
 
-For all other domains, Braze allows email addresses matching the following regex for the local part:<br>
-`/\A(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])(?:(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~\.]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])*(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}]))?\z/`
+For all other domains, Braze allows email addresses matching the following regular expression for the local part:<br>
+```
+/\A(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])(?:(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~\.]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])*(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}]))?\z/
+```
 
 The local part must follow these parameters:
 - Can contain any letter, number, underscore, dash, or caret, including Unicode letters and numbers
@@ -84,14 +86,14 @@ The local part must follow these parameters:
 - Cannot contain double quotes (")
 
 {% alert important %}
-If the domain part is a Gmail address, the local part needs to be at least two characters long. This is in addition to the regex validation listed in this section.
+If the domain part is a Gmail address, the local part needs to be at least two characters long. This is in addition to the regular expression validation listed in this section.
 {% endalert %}
 
 ## Host part validation rules
 
 IPv4 or IPv6 addresses are not allowed in the host part of an email address. The top-level domain (such as .com, .org, .net, etc.) may not be fully numeric.
 
-The following regex is used to validate the domain:<br>
+The following regular expression is used to validate the domain:<br>
 `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i`
 
 The domain name must follow these parameters:
