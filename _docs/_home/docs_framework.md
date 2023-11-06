@@ -1,7 +1,7 @@
 ---
 nav_title: Docs framework
 article_title: Docs framework
-page_order: 2
+page_order: 3
 noindex: true
 ---
 

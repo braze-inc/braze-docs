@@ -1,6 +1,6 @@
 ---
 nav_title: Metadata
-page_order: 3
+page_order: 5
 noindex: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Layouts
-page_order: 3
+page_order: 4
 layout: dev_guide
 noindex: true
 guide_top_header: "Braze Docs Page Layouts"
