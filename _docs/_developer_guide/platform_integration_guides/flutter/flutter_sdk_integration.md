@@ -21,7 +21,7 @@ You will need to complete installation steps on both platforms separately.
 
 To complete the installation, you will need the [app identifier API key]({{site.baseurl}}/api/identifier_types/) as well as the [SDK endpoint][4]. Both are located under **Manage Settings** in the dashboard.
 
-Before following these steps, install and set up the [Flutter SDK][5].
+Before following these steps, install and set up the [Flutter SDK][5]. Ensure your machine is running the appropriate Flutter version requirements [noted here][7].
 
 ## Step 1: Integrate the Braze library
 
@@ -163,3 +163,4 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can se
 [4]: {{site.baseurl}}/api/basics/#endpoints
 [5]: https://docs.flutter.dev/get-started/install
 [6]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart
+[7]: https://github.com/braze-inc/braze-flutter-sdk#readme
