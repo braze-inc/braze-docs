@@ -24,11 +24,11 @@ At a high level, Braze is about data. The Braze platform, powered by the SDK, th
 ![Braze has different layers. In total, it consists of the SDK, the API, the dashboard, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, and an action layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.][1]{: style="display:block;margin:auto;" }
 
 * [Data ingestion](#ingestion): Braze pulls in data from a variety of sources.
-* [Classification](#classification): You get insights into this data through real-time reports and analytics.
-* [Orchestration](#orchestration): Your marketing team dynamically segments your user base using these metrics. 
+* [Classification](#classification): Your marketing team dynamically segments your user base using these metrics. 
+* [Orchestration](#orchestration): Braze intelligently coordinates messages to different audience segments at the ideal time.
 * [Action](#action): Your marketing team acts on the data, creating content through a variety of messaging channels such as SMS and email.
 * [Personalization](#personalization): The data is transformed in real time with personalized information about your audience. 
-* [Export](#exporting-data): Then, Braze tracks your users' engagement with this messaging and feeds it back into the platform, creating a loop.
+* [Export](#exporting-data): Then, Braze tracks your users' engagement with this messaging and feeds it back into the platform, creating a loop. You get insights into this data through real-time reports and analytics.
 
 This all works together to create successful interactions between your user base and your brand so that you can achieve your goals. Braze does all this in the context of something we call our vertically integrated stack. Let's dig into each layer, one at a time.
 
@@ -78,13 +78,14 @@ The orchestration layer allows your Marketing team to design user journeys based
 API-triggered campaigns are ideal for more advanced transactional use-cases. They allow marketers to manage campaign copy, multivariate testing, and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from your servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real-time. 
 {% endalert %}
 
+
+### Feature flags
+Braze allows you to remotely enable or disable functionality for a selection of users through [feature flags][12]. This lets your marketers target the correct segment of your user base with messaging for features you haven't yet rolled out to your entire audience. But more than that, feature flags can be used to turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence.
+
 ## Personalization {#personalization}
 The personalization layer represents Braze’s ability to deliver dynamic content in your messages. By using Liquid, a widely-used personalization language, your team can  dynamically pull in existing data to display the message tailored to each recipient. Additionally, you can insert any information accessible on your webserver or via API directly into the messages you're sending, such as push notifications or emails, by using [Connected Content][11]. Connected Content builds on top of Liquid and uses familiar syntax.
 
 And because this dynamic content is programmable, marketers can include computed values, responses from other calls, or product catalog items. Once you've set these systems up during implementation, your Marketing team can do this with little to no support from technical teams. 
-
-### Feature flags
-Braze allows you to remotely enable or disable functionality for a selection of users through [feature flags][12]. This lets your marketers target the correct segment of your user base with messaging for features you haven't yet rolled out to your entire audience. But more than that, feature flags can be used to turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence.
 
 ## Action {#action}
 The action layer enables your actual messaging to your users. The purpose of the action layer is to send the right message to the right user at the right time, based on the data available through all of the layers previously discussed. Messaging is done inside your app or site (such as sending in-app messages or through graphic elements like Content Card carousels and banners) or outside your app experience (such as sending push notifications or emails).

@@ -94,7 +94,7 @@ It's important that you set up different environments for development and produc
 ## Integration {#integration}
 ![Abstract pyramid graphic representing the flow of information from a data source to a user device.][29]{: style="max-width:45%;float:right;margin-left:15px;"} 
 
-Braze supports iOS apps, Android apps, web apps, and more. You can also opt to use a cross-platform wrapper SDK, like React Native or Unity. We typically see customers integrate anywhere from 1-6 weeks. Many customers have integrated Braze with just one engineer, depending on their breadth of technical skills and bandwidth. It's entirely dependent on your specific integration scope and how much time your team dedicates to the Braze project. 
+Braze supports iOS apps, Android apps, web apps, and more. You can also opt to use a cross-platform wrapper SDK, like React Native or Unity. We typically see customers integrate in anywhere from 1-6 weeks. Many customers have integrated Braze with just one engineer, depending on their breadth of technical skills and bandwidth. It's entirely dependent on your specific integration scope and how much time your team dedicates to the Braze project. 
 
 You'll need developers who are familiar with:
 * Working in your app or site's native layer

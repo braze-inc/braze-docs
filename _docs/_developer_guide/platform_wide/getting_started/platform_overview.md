@@ -45,7 +45,9 @@ The dashboard is the UI that controls all of the data and interactions at the he
 If you're just getting started, your team administrator should add you (and all other team members who need access to Braze) as [users on your dashboard][1].
 
 ## REST API
-The Braze API provides a web service where you can record actions taken by your users directly via HTTP, rather than through the mobile and web SDKs. This allows you to add custom events for segmentation purposes directly from a web-based application. The [API guide][2] lists available Braze API endpoints and their uses.
+The Braze API allows you move data in and out of Braze at scale. Use the API to bring in updates from your backend, data warehouses, and other first and third-party sources. Additionally, use the API to add custom events for segmentation purposes directly from a web-based applications. You can trigger and send messages through the API, allowing technical resources to include complex JSON metadata as part of your campaigns. 
+
+The API also provides a web service where you can record actions taken by your users directly via HTTP, rather than through the mobile and web SDKs. Combined with webhooks, this means you can track actions and trigger activities for users inside and outside your app experience. The [API guide][2] lists available Braze API endpoints and their uses.
 
 For more on the parts and pieces of Braze, check out: [Getting Started: Architecture overview]({{site.baseurl}}/developer_guide/platform_wide/getting_started/architecture_overview).
 
