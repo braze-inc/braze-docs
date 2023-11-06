@@ -56,7 +56,7 @@ Braze automatically captures first-party data from frontend data sources, such a
 Braze has over 150 technology partners, which we call "Alloys." You can supplement your data feeds through a meaningfully robust network of [interoperable technologies and data APIs.][6] 
 
 ### Direct warehouse connection via Braze Cloud Data Ingestion
-You can stream customer data from your data warehouse into the platform through [Braze Cloud Data Ingestion][7] in just a few minutes, allowing you to sync relevant user attributes, events, and purchases. Cloud Data Ingestion’s integration supports complex data structures including nested JSON and arrays of objects.
+You can stream customer data from your data warehouse into the platform through [Braze Cloud Data Ingestion][7] in just a few minutes, allowing you to sync relevant user attributes, events, and purchases. The Cloud Data Ingestion integration supports complex data structures including nested JSON and arrays of objects.
 
 Cloud Data Ingestion can sync data from Snowflake, Amazon Redshift, Databricks, and Google BigQuery.
 
@@ -67,7 +67,7 @@ The classification layer enables your team to dynamically classify and build aud
 The classification, orchestration, and personalization layers are where your Marketing team will do much of their work. They interface with these layers most often through the Braze dashboard, our web interface. Developers have a role in setting up and customizing these layers.
 {% endalert %}
 
-Many common types of user attributes, such as name, email, date of birth, country, etc. are automatically tracked by the SDK by default. As a developer, you'll work with your team to define what additional, custom data makes sense to track for your use case. Your custom data will impact how your user base will be classified and segmented. You will set this data model up during the implementation process. 
+Many common types of user attributes, such as name, email, date of birth, country, and others are automatically tracked by the SDK by default. As a developer, you'll work with your team to define what additional, custom data makes sense to track for your use case. Your custom data will impact how your user base will be classified and segmented. You will set this data model up during the implementation process. 
 
 Learn more about [automatically collected data and custom data][9].
 
@@ -79,7 +79,7 @@ API-triggered campaigns are ideal for more advanced transactional use-cases. The
 {% endalert %}
 
 ## Personalization {#personalization}
-The personalization layer represents Braze’s ability to deliver dynamic content in your messages. By using Liquid, a widely-used personalization language, your team can  dynamically pull in existing data to display the message tailored to each recipient. Additionally, you can insert any information accessible on your webserver or via API directly into the messages you're sending, such as push notifications or emails, by using [Connected Content][11]. Connected Content builds on top of Liquid and uses familiar syntax.
+The personalization layer represents the ability to deliver dynamic content in your messages. By using Liquid, a widely-used personalization language, your team can dynamically pull in existing data to display the message tailored to each recipient. Additionally, you can insert any information accessible on your webserver or via API directly into the messages you're sending, such as push notifications or emails, by using [Connected Content][11]. Connected Content builds on top of Liquid and uses familiar syntax.
 
 And because this dynamic content is programmable, marketers can include computed values, responses from other calls, or product catalog items. Once you've set these systems up during implementation, your Marketing team can do this with little to no support from technical teams. 
 
