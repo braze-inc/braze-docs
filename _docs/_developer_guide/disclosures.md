@@ -9,7 +9,7 @@ guide_top_text: "Braze has you covered! Check out the following articles!"
 page_type: landing
 description: "This landing page is home to disclosures and qualifications of Braze."
 
-guide_featured_title: "Disclosures and Qualifications"
+guide_featured_title: "Disclosures and qualifications"
 guide_featured_list:
   - name: Security Vulnerability Disclosure
     link: /docs/developer_guide/disclosures/security_and_vulnerability_disclosure/

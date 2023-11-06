@@ -12,7 +12,7 @@ tool:
 page_type: landing
 description: "This landing page is home to campaign testing and tips. Here, you can find resources on testing campaigns, such as sending test messages, performing A/B testing, and more."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Sending Test Messages
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
@@ -24,7 +24,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/testing/multivariant_testing/
     fa_icon: fa-solid fa-vials
 
-guide_menu_title: "Additional Articles"
+guide_menu_title: "Additional articles"
 guide_menu_list:
   - name: Campaign Analytics
     link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/

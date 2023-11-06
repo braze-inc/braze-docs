@@ -10,7 +10,7 @@ page_type: landing
 description: "This section goes over the three different campaign delivery methods (Scheduled Delivery, Action-based Deliver, and API-triggered Delivery) and how to set up and use them."
 tool: Campaigns
 
-guide_featured_title: "Delivery Types"
+guide_featured_title: "Delivery types"
 guide_featured_list:
   - name: Scheduled Delivery
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/
@@ -22,7 +22,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/
     fa_icon: fas fa-exclamation
 
-guide_menu_title: "More Articles"
+guide_menu_title: "More articles"
 guide_menu_list:
   - name: Re-eligibility for Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/

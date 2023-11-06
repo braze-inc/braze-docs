@@ -13,7 +13,7 @@ guide_top_header: "iOS Push Customization"
 guide_top_text: ""
 description: "This landing page covers the Braze iOS SDK push customization options, including action buttons, custom sounds, rich notifications, badges, and more.."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Action Buttons
     link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
