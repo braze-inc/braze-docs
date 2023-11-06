@@ -14,7 +14,7 @@ guide_featured_list:
 - name: Navigation
   link: /docs/user_guide/administrative/access_braze/navigation/
   fa_icon: fas fa-list
-- name: Global Search
+- name: Searching Your Dashboard
   link: /docs/user_guide/administrative/access_braze/global_search/
   fa_icon: fas fa-search
 - name: API and SDK Endpoints

@@ -39,7 +39,7 @@ Segmentation allows you to create groups of users based on powerful filters of t
 
 ## Multichannel messaging
 
-Once you have defined a segment, Braze's messaging tools allow for multichannel communication with your users. For example, send a push notification and email to the example segment defined in the previous section. Messaging channels are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors. Moreover, you can use our advanced scheduling options to automate campaigns to specific groups of those users going forward.
+Once you have defined a segment, Braze messaging tools allow for multichannel communication with your users. For example, send a push notification and email to the example segment defined in the previous section. Messaging channels are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors. Moreover, you can use our advanced scheduling options to automate campaigns to specific groups of those users going forward.
 
 {% alert tip %}
 You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation.
@@ -59,7 +59,7 @@ Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase C
 
 ### In-app messaging {#platform-features-in-app-messaging}
 
-Braze provides unobtrusive in-app notifications via our custom-built native user interface. Messages can be presented at any time of your choosing (e.g., when users start a new session or complete a specific action) ensuring that your message arrives at the most effective time to engage the user. Learn more about [creating an in-app message][13].
+Braze provides unobtrusive in-app notifications via our custom-built native user interface. Messages can be presented at any time of your choosing (for example, when users start a new session or complete a specific action) ensuring that your message arrives at the most effective time to engage the user. Learn more about [creating an in-app message][13].
 
 ![The in-app message editor displaying an example in-app message with a header, body, and button text.][9]
 
@@ -77,7 +77,7 @@ Use SMS with Braze to send transactional notifications, share promotions, send r
 
 ### Webhooks {#platform-features-webhooks}
 
-Braze's webhooks allow you to trigger non-app actions provide other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint.
+Braze webhooks allow you to trigger non-app actions provide other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint.
 
 ![The webhook editor displaying an example webhook payload.][22]
 

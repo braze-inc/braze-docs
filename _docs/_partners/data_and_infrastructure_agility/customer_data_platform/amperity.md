@@ -123,7 +123,7 @@ Under **Braze settings**, provide the Braze credentials and destination settings
 
 #### Step 2e: Add a data template
 
-In the **Destinations** tab, open the menu for the Braze destination and select **Add data template**. Enter a name and description for the template (e.g., "Braze" and "Send custom attributes to Braze"), verify business user access, and check all configuration settings. 
+In the **Destinations** tab, open the menu for the Braze destination and select **Add data template**. Enter a name and description for the template (for example, "Braze" and "Send custom attributes to Braze"), verify business user access, and check all configuration settings. 
 
 If any required settings weren’t configured as part of the destination, configure them as part of the data template. Save the data template.
 

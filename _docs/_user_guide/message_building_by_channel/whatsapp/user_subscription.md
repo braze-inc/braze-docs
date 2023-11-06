@@ -25,7 +25,7 @@ There are two subscription states for WhatsApp users: `subscribed` and `unsubscr
 
 ### Setting users' WhatsApp subscription groups
 
-- **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint][4] using Braze's REST API.
+- **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint][4] using the Braze REST API.
 - **Web SDK:** Users can be added to an email, SMS, or WhatsApp subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287), or [Web][11].
 - **User import**: Users can be added to email or SMS subscription groups via **Import Users**. When updating the subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) for more information.
 
@@ -51,7 +51,7 @@ Regardless of the opt-in and opt-out methods you use, you can update the subscri
 
 ![][1]{: style="max-width:90%;"}
 
-To avoid race conditions, any follow-up messaging after the webhook should be contained in a second Canvas that is triggered by outcomes from the first Canvas (i.e., user has entered a Canvas variation and is in a WhatsApp subscription group).
+To avoid race conditions, any follow-up messaging after the webhook should be contained in a second Canvas that is triggered by outcomes from the first Canvas (such as a user has entered a Canvas variation and is in a WhatsApp subscription group).
 
 - Use the advanced JSON editor to update the user profile with the following template: 
 

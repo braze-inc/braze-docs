@@ -126,7 +126,7 @@ Once you set up a test segment, you can utilize these messaging channels. The pr
 - **Does not equal**: Excludes a particular email or user ID from test campaigns.
 - **Matches**: Finds users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users with an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
 <br><br>
-These filters can also be used in conjunction to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the `matches` option and separating the email addresses with a "\|" character (e.g., `matches` "email1@braze.com\|email2@braze.com").
+These filters can also be used in conjunction to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the `matches` option and separating the email addresses with a "\|" character (for example, `matches` "email1@braze.com\|email2@braze.com").
 <br><br>
 4. Add the testing filters to your test segment.
 5. Click **Preview** at the top of the segment editor or export that segment's user data to CSV to verify that you've selected only the users you intended.

@@ -152,7 +152,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 Using the `/users/track` endpoint, you can update a user profile by phone number. You'll need to generate an API key with `users.track` permissions to use this endpoint. This endpoint only works if you include a valid phone number.
 
 {% alert important %}
-If you include a request with both email and phone, we will use the email as the identifer.
+If you include a request with both email and phone, we will use the email as the identifier.
 {% endalert %}
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -395,6 +395,6 @@ When the `X-Braze-Bulk` header is present with any value, Braze will consider th
 Consider the following use cases where you may use the bulk update header:
 
 - A daily job where multiple users' custom attributes are updated via the `/users/track` endpoint.
-- An ad-hoc user data backfill script which updates user information via the `/users/track` endpoint.
+- A user data backfill script that updates user information via the `/users/track` endpoint.
 
 {% endapi %}

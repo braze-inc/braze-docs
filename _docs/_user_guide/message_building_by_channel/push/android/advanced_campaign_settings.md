@@ -26,7 +26,7 @@ To assign a notification ID, navigate to the composition page of the push you'd 
 
 ## Time-to-live (TTL) {#ttl}
 
-The time-to-live (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time-to-live are 4 weeks for Firebase Cloud Messaging (FCM) and 31 days for Amazon Device Messaging (ADM).
+The time-to-live (TTL) field allows you to set a custom length of time to store messages with the push messaging service. The default values for time-to-live are 4 weeks for Firebase Cloud Messaging (FCM) and 31 days for Amazon Device Messaging (ADM).
 
 For example, suppose your app is a game and you offer your users an in-game currency bonus if they maintain a streak of playing the game daily. You could send a push alerting a user that that streak is in danger of being broken if they've exceeded a certain number of days. However, if a user was to reconnect their device to the game app 4 weeks later with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
 
@@ -128,13 +128,13 @@ Refer to our [Android documentation][51] for more information.
 
 In Android O, notification sounds became a property of notification channels. You will need to work with your developer to define the sound for a channel during its configuration and then use the dashboard to select the proper channel when sending your notifications.
 
-For devices running versions of Android before Android O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (e.g., `android.resource://com.mycompany.myapp/raw/mysound`). 
+For devices running versions of Android before Android O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (for example, `android.resource://com.mycompany.myapp/raw/mysound`). 
 
 Selecting **Default** in this field will play the default notification sound on the device. This can be specified via our [Messaging API][13] or in the **Settings** in the push composer wizard.
 
 ![][11]
 
-Next, enter the full sound resource URI (e.g., `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
+Next, enter the full sound resource URI (for example, `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
 
 To message your full user base with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration][16] (to target O+ devices) and send the individual sound from the dashboard (to target &#60;O devices).
 

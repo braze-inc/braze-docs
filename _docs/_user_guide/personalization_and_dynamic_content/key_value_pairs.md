@@ -49,7 +49,7 @@ Apple Push Notification service (APNs) supports setting alert preferences and se
 | launch-image   | strings                  | The name of an image file in the app bundle you wish to be used as the launch image when users tap the action button or move the action slide |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Braze's message composer automatically handles the creation of the following keys: **alert** and **its properties**, **content-available**, **sound**, and **category**. 
+The Braze message composer automatically handles the creation of the following keys: **alert** and **its properties**, **content-available**, **sound**, and **category**. 
 
 These values can be input in the **Settings** tab when building a push message. Select **Alert Options** and select an alert dictionary key for the key to be automatically populated in a new key-value entry.
 
@@ -104,7 +104,7 @@ If you are using the HTTP/2 provider API, any individual payload you send to APN
 
 ###### API-triggered campaigns
 
-Braze allows you to send custom-defined string key-value pairs, known as `extras`. To access your extras in API-triggered and scheduled API-triggered campaigns, in the dashboard set a key as "example_key", and a value as {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. This will result in a dev console output of `"extras": { "test": { "foo": 1, "bar": 1 }`
+Braze allows you to send custom-defined string key-value pairs, known as `extras`. To access your extras in API-triggered and scheduled API-triggered campaigns, in the dashboard set a key as "example_key", and a value as {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. This will result in a developer console output of `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ### Android
 
@@ -122,7 +122,7 @@ Your app's backend must be able to process custom key-value pairs for the data p
 
 ###### API-triggered campaigns
 
-Braze allows you to send custom-defined string key-value pairs, known as `extras`. To access your extras in API-triggered and scheduled API-triggered campaigns, in the dashboard set a key as "example_key", and a value as {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. This will result in a dev console output of `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Braze allows you to send custom-defined string key-value pairs, known as `extras`. To access your extras in API-triggered and scheduled API-triggered campaigns, in the dashboard set a key as "example_key", and a value as {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. This will result in a developer console output of `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ##### FCM messaging options
 
@@ -132,7 +132,7 @@ Android push notifications can be further customized with FCM message options. T
 
 ### Silent push notifications
 
-A silent push notification is a push notification containing no alert message or sound, used to update your app's interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power Braze's [uninstall tracking][4].
+A silent push notification is a push notification containing no alert message or sound, used to update your app's interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power our [uninstall tracking][4].
 
 Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. After you compose your [iOS][2] or [Android][13] silent push notification, ensure that you only target a test user by filtering on [external user ID][14] or [email address][15].
 
@@ -150,7 +150,7 @@ To add a key-value pair to an in-app message, select the **Settings** tab in the
 
 #### API-triggered campaigns
 
-Braze allows you to send custom-defined string key-value pairs, known as `extras`. To access your extras in API-triggered and scheduled API-triggered campaigns, in the dashboard set a key as "example_key", and a value as {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. This will result in a dev console output of `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Braze allows you to send custom-defined string key-value pairs, known as `extras`. To access your extras in API-triggered and scheduled API-triggered campaigns, in the dashboard set a key as "example_key", and a value as {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. This will result in a developer console output of `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ## Emails
 

@@ -141,7 +141,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 {: start="2"}
 2. Go to the **Custom Footer** section and turn on custom footers.
-3. Edit your footer in the **Compose** section and send a test message. <br><br>{% raw %}The default footer uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute and Braze's physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include ``{{${set_user_to_unsubscribed_url}}}``. You won't be able to save a custom footer without this attribute. <br><br> ![][20] <br><br> If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**.{% endraw %} <b><br>![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
+3. Edit your footer in the **Compose** section and send a test message. <br><br>{% raw %}The default footer uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute and our physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include ``{{${set_user_to_unsubscribed_url}}}``. You won't be able to save a custom footer without this attribute. <br><br> ![][20] <br><br> If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**.{% endraw %} <b><br>![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
 
 {% alert tip %}
 Be very careful when using a template with the custom footer {% raw %}``{{${email_footer}}}`` or ``{{${set_user_to_unsubscribed_url}}}``{% endraw %} when composing an email campaign. A warning will appear, but it'll be your choice to send an email with or without an unsubscribe link.
@@ -171,7 +171,7 @@ When creating a custom footer, Braze suggests using attributes for personalizati
 ##### Including an unsubscribe link and opt-in link
 
 {% raw  %}
-As a best practice, Braze recommends including both an unsubscribe link (i.e., ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e., ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
+As a best practice, Braze recommends including both an unsubscribe link (such as ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (such as ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
 {% endraw %}
 
 ##### Setting custom footers for plaintext emails
@@ -184,7 +184,7 @@ You can also choose to set a custom footer for plaintext emails from the **Subsc
 
 When users click an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
 
-To create a custom landing page that users will be directed to (instead of the default page) upon subscribing, go to **Email Preferences** > **Subscription Pages and Footers** and provide the HTML for your custom landing page. We recommend including a resubscribe link (i.e., {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
+To create a custom landing page that users will be directed to (instead of the default page) upon subscribing, go to **Email Preferences** > **Subscription Pages and Footers** and provide the HTML for your custom landing page. We recommend including a resubscribe link (such as {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
 
 ![Custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
 

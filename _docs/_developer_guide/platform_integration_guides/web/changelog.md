@@ -4,7 +4,7 @@ article_title: Changelog for Web SDK
 page_order: 30
 page_type: update
 platform: Web
-description: "This page lists updates to Braze's Web SDK changelog."
+description: "This page lists updates to the Braze Web SDK changelog."
 
 ---
 

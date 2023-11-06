@@ -107,15 +107,13 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
-| `already-reached-catalog-item-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
-| `already-reached-company-item-limit` | Maximum number of catalog items reached. Contact your Braze account manager for more information. |
 | `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 | `catalog-not-found` | Check that the catalog name is valid. |
 | `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
 | `id-in-body` | Remove any item IDs in the request body. |
 | `ids-too-large` | Character limit for each item ID is 250 characters. |
 | `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
-| `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalalog. This is not related to the ID field mentioned in the error. |
+| `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalog. This is not related to the ID field mentioned in the error. |
 | `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
 | `item-already-exists` | The item already exists in the catalog. |
 | `item-array-invalid` | `items` must be an array of objects. | 

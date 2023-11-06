@@ -74,8 +74,8 @@ Refer to the following Liquid tags that can be included in your HTML to generate
 
 | Liquid | Description |
 | --------- | ---------|
-|`{{subscribed_state.${email_global}}}`| Get the global email subscribed state for the user (i.e., "opted_in", "subscribed", or "unsubscribed". |
-|`{{subscribed_state.${<subscription_group_id>}}}`| Get the subscribed state of the specified subscription group for the user (i.e., "subscribed" or "unsubscribed"). |
+|`{{subscribed_state.${email_global}}}`| Get the global email subscribed state for the user (such as "opted_in", "subscribed", or "unsubscribed". |
+|`{{subscribed_state.${<subscription_group_id>}}}`| Get the subscribed state of the specified subscription group for the user (such as "subscribed" or "unsubscribed"). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Form inputs and action

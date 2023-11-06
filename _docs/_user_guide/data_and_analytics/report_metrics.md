@@ -217,6 +217,18 @@ The percentage of times a defined event occurred compared to all recipients of a
 
 {% api %}
 
+### Conversion Window
+
+{% apitags %}
+All
+{% endapitags %}
+
+The number of days after receiving the message during which user actions are tracked and attributed to a conversion event. Conversions that occur after this window are not attributed to the conversion event.
+
+{% endapi %}
+
+{% api %}
+
 ### Deliveries
 
 {% apitags %}
@@ -593,7 +605,7 @@ Distinct number of recipients who have clicked within a message at least once. T
 ### Unique Direct Purchases
 
 {% apitags %}
-Email, Content Cards, In-App Messages, Web Push, iOS Push, Android Push
+Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push
 {% endapitags %}
 
 The number of users who purchased, based on last-click attribution*. This metric is only available on Campaign Comparison Reports, via the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder).
@@ -624,7 +636,7 @@ The number of users who have dismissed Content Cards from a campaign. A user dis
 ### Unique Impressions
 
 {% apitags %}
-In-App Messages, Content Cards
+In-App Message, Content Cards
 {% endapitags %}
 
 The total number of users who received and viewed a given in-app message or card in a day. For in-app messages, unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. Conversely, the count should not increment the second time a user views a Content Card. This number is received from Braze.

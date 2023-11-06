@@ -16,13 +16,13 @@ If you include the following text in your message: `{{${first_name}}}`, the user
 
 The following values can be substituted into a message, depending on their availability:
 
-- [Basic user information][1] (e.g., `first_name`, `last_name`, `email_address`)
+- [Basic user information][1] (for example, `first_name`, `last_name`, `email_address`)
 - [Custom attributes][2]
 - [Custom event properties][11]
 - [Most recently used device information][39]
 - [Target device information][40]
 
-You can also pull content directly from a web server via Braze's [Connected Content][9] feature.
+You can also pull content directly from a web server via Braze [Connected Content][9].
 {% endraw %}
 
 {% alert important %}

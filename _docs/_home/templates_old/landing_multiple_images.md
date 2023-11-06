@@ -40,7 +40,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 
 guide_top_header: "Multi-Section Landing Page using Images"
-guide_top_text: "Multi-Section Landing Pages are great for a large section with division between the pages in the section, usually by topic. This particular template uses the 'dev_guide' layout yaml parameter ('layout: dev_guide'), which prevents you from adding extra information at the bottom of the page, but does allow you to have more than one section of buttons."
+guide_top_text: "Multi-Section Landing Pages are great for a large section with division between the pages in the section, usually by topic. This particular template uses the 'dev_guide' layout YAML parameter ('layout: dev_guide'), which prevents you from adding extra information at the bottom of the page, but does allow you to have more than one section of buttons."
 
 guide_featured_title: "Section 1"
 guide_featured_list:

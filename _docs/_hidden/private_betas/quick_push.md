@@ -26,7 +26,7 @@ To create a campaign targeting multiple platforms and devices:
 
 1. Go to **Campaigns** and click **Create Campaign**.
 2. Select **Push Notification**.
-3. Select your desired platforms (Mobile, Web, Kindle) and mobile devices (iOS, Android). If you select multiple devices, multivariate testing wll not be available for your campaign.
+3. Select your desired platforms (Mobile, Web, Kindle) and mobile devices (iOS, Android). If you select multiple devices, multivariate testing will not be available for your campaign.
 
 ![Options to select multiple platforms for a push campaign, such as Mobile, Web, and Kindle, and multiple devices, such as iOS and Android.][1]
 

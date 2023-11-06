@@ -81,7 +81,7 @@ There are three sample customer use cases provided. Each use case offers a detai
 
 ### Custom slide-up in-app message
 
-![Two iPhone side-by-side. The first iPhone has the slide-up message touching the botton of the phone screen. The second iPhone has the slide-up message sitting higher on the screen allowing you to see the displayed app navigation button.][2]{: style="float:right;max-width:45%;margin-left:15px;border:0;"}
+![Two iPhone side-by-side. The first iPhone has the slide-up message touching the bottom of the phone screen. The second iPhone has the slide-up message sitting higher on the screen allowing you to see the displayed app navigation button.][2]{: style="float:right;max-width:45%;margin-left:15px;border:0;"}
 
 While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message using default methods. Modification like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding the `offset` variable with your own custom variable. The image to the right shows an example of how this can be used to adjust your slide-up in-app messages. 
 
@@ -230,7 +230,7 @@ In the key-value pairs, provide an `attribute_key`; this key, along with the use
 
 The `extras` dictionary in the `ABKInAppMessage` object allows you to query for a `view_type` key (if any) that signals the correct view to display. It's important to note that in-app messages are configured on a per-message basis, so custom and default modal views can work harmoniously.
 
-![Two key-value pairs found in the message composer. The first kvp has "attribute_key" set as "Favorite Team", and the second has "view_type" set as "picker".][5]{: style="max-width:65%;"}
+![Two key-value pairs found in the message composer. The first key-value pair has "attribute_key" set as "Favorite Team", and the second has "view_type" set as "picker".][5]{: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Swift %}
@@ -367,7 +367,7 @@ To set up a custom full in-app message in the dashboard, you must provide a list
 
 In the key-value pairs, provide an `attribute_key`; this key, along with the user's selected values, will be saved to their user profile as a custom attribute. Your custom view logic must handle user attributes sent to Braze.
 
-![Three key-value pairs found in the message composer. The first kvp "attribute_key" is set as "Push Tags", the second "subtitle_text" is set as "Enabling notifications will also...", and the third "view_type" is set as "table_list".][7]{: style="max-width:65%;"}
+![Three key-value pairs found in the message composer. The first key-value pair "attribute_key" is set as "Push Tags", the second "subtitle_text" is set as "Enabling notifications will also...", and the third "view_type" is set as "table_list".][7]{: style="max-width:65%;"}
 
 #### Intercepting in-app message touches
 ![An Apple device displaying rows of settings and toggles. The custom view handles the buttons, and any touches outside of the button controls are handled by the in-app message and will dismiss it.][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}

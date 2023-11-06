@@ -17,7 +17,7 @@ If your [test email][37] looks off, we recommend first checking your HTML setup.
 
 ### Extension conflicts
 
-Certain browser extensions may cause issues with Braze's email editor. One example is [Grammarly][38]) when used with Google Chrome. If you're using one of these extensions, you should either: 
+Certain browser extensions may cause issues with our email editor. One example is [Grammarly][38]) when used with Google Chrome. If you're using one of these extensions, you should either: 
 - Edit Braze emails in a browser that does not have Grammarly as a browser extension
 - Contact your Braze account manager and ask to switch your email editors to HTML only or plain text. 
 

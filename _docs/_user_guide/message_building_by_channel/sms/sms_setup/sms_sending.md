@@ -16,7 +16,7 @@ channel:
 ## SMS sending basics
 
 1. **Select Your Subscription Group**<br>
-SMS messages must be sent from a [subscription group]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). A subscription group is a collection of sending phone numbers (i.e., short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging.<br><br>
+SMS messages must be sent from a [subscription group]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). A subscription group is a collection of sending phone numbers (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging.<br><br>
 
 2. **Input Message Body**<br>
 An SMS message body accepts up to 1600 characters, including Emojis, Liquid, and Connected Content. A single campaign send can result in many message segment sends. Braze SMS message bodies can be composed of either [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) or [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding standards. In the event that a UCS-2 character (for example, an Emoji) is used, the message body will automatically format for that encoding standard.<br><br> 
@@ -54,7 +54,7 @@ To overcome this limitation, during the Subscription Groups [setup process][5], 
 Plan on doing some high-volume sending? We have some best practices for you to ensure it runs smoothly.
 
 - Adjust the delivery speed rate limiting for your campaign/canvases as needed, based on target audience size. This will ensure that you reach the send volume that you need and that Braze sends the messages at the rate that Twilio is expecting and can handle.
-- Ensure you stick to the 160 character limit, and be aware of special characters double-counting (e.g., forward-slashes `\`, carets `^`, and tildes `~`). 
+- Ensure you stick to the 160 character limit, and be aware of special characters double-counting (for example, forward-slashes `\`, carets `^`, and tildes `~`). 
 
 [2]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process

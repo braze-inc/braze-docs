@@ -14,7 +14,7 @@ description: "This reference article describes the different cookies used by the
 
 Before reading on, note that the Braze Web SDK will not store any data in the browser (cookies or otherwise) until your website [initializes][5] the SDK.
 
-Additionally, these values are subject to change and should not be accessed directly through your integration. Instead, see our [Javascript documentation][1] for our public API interfaces.
+Additionally, these values are subject to change and should not be accessed directly through your integration. Instead, see our [JavaScript documentation][1] for our public API interfaces.
 
 {% multi_lang_include archive/web-v4-rename.md %}
 

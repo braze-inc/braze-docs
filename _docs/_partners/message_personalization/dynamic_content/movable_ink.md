@@ -12,14 +12,14 @@ search_tag: Partner
 
 > [Movable Ink](https://www.movableink.com/) is a cloud-based software platform that offers digital marketers a way to create compelling and unique visual experiences that move customers. The Movable Ink platform provides valuable customization options that can easily be inserted into your campaigns. 
 
-Expand Braze's creative capabilities by leveraging Movable Ink's Intelligent Creative features like polling, countdown timer, and scratch-off. The Movable Ink and Braze integration powers a more well-rounded approach to dynamic data-driven messages, providing users with real-time elements about the things that matter.
+Expand our creative capabilities by leveraging Movable Ink's Intelligent Creative features like polling, countdown timer, and scratch-off. The Movable Ink and Braze integration powers a more well-rounded approach to dynamic data-driven messages, providing users with real-time elements about the things that matter.
 
 ## Prerequisites
 
 | Requirement | Description |
 |---|---|
 | Movable Ink account | A Movable Ink account is required to take advantage of this partnership. |
-| Data source | You will need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. Make sure that you pass data with a unifying identifier between Braze and Movable Ink (e.g., `external_id`).
+| Data source | You will need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. Make sure that you pass data with a unifying identifier between Braze and Movable Ink (for example, `external_id`).
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Use cases
@@ -27,7 +27,7 @@ Expand Braze's creative capabilities by leveraging Movable Ink's Intelligent Cre
 - Dynamically personalize images for email, push, or rich notifications based on last known behavior.<br>
 	For Example: 
 	- Using a rich push message to dynamically create a schedule of events by pulling data from API. 
-	- Using the Countdown Timer feature to notify users when a big sale is approaching (e.g., Black Friday, Valentine's Day, Holiday Deals, etc.)
+	- Using the Countdown Timer feature to notify users when a big sale is approaching (for example, Black Friday, Valentine's Day, Holiday Deals, etc.)
 	- Use the Scratch Off feature as a fun and interactive way to disburse Promo Codes.
 
 ## Supported Movable Ink capabilities
@@ -101,7 +101,7 @@ To obtain the source URL, you must have set up the content in the Movable Ink da
 
 ![The page that appears once you have completed your Movable Ink campaign, here you find your content URL.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
 
-Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate fields for your messaging channel can be found in step 4. Lastly, replace any merge tags (i.e., {% raw %}```&mi_u=%%email%%```{% endraw %}) with the corresponding Liquid variable (i.e., {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
+Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate fields for your messaging channel can be found in step 4. Lastly, replace any merge tags (such as {% raw %}```&mi_u=%%email%%```{% endraw %}) with the corresponding Liquid variable (such as {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
 
 ### Step 4: Braze experience
 

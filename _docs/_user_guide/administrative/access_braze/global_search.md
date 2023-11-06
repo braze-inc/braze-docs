@@ -1,24 +1,34 @@
 ---
-nav_title: Global Search
-article_title: Global Search
+nav_title: Searching Your Braze Dashboard
+article_title: Searching Your Braze Dashboard
 page_order: 0.5
 page_type: reference
 description: "Learn about global search in Braze."
 ---
 
-# Global search
+# Searching your Braze dashboard
 
-Global search is a powerful feature that helps you locate campaigns, Canvases, segments, and email templates within Braze with greater ease. You can use the global search to find what you're looking for from anywhere in the Braze platform.
+You can use the search bar to find your work and other information within your Braze dashboard. The search bar is at the top of your Braze dashboard. Click the search bar, or press <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd> on Windows or <kbd>⌘</kbd>&nbsp;+&nbsp;<kbd>K</kbd> on a Mac to jump directly to the search bar.
 
 {% alert important %}
 Global search is currently in early access and is under active development. Please share your thoughts, suggestions, and any issues you encounter using the feedback option at the bottom-right of the search dropdown. If you are interested in participating in the early access, contact your Braze customer success manager.
 {% endalert %}
 
-![][1]
+![][3]
 
 ## What can you search for?
 
-During the early access, you can search for campaigns, Canvases, segments, and email templates. In the global header of Braze, select <i class="fa-solid fa-magnifying-glass"></i> **Search** (or use the [keyboard shortcut](#keyboard-shortcuts)), and a dropdown search menu will open.
+You can search for the following items and actions:
+
+- Campaigns
+- Canvases
+- Segments
+- Email templates
+- [Pages within Braze](#find-pages-that-have-been-renamed)
+
+{% alert tip %}
+To search for exact text, put your search term in quotations (""). For example, searching for [“all users”] will return all items that contain the exact phrase “all users” in their name.
+{% endalert %}
 
 ## Key features
 
@@ -53,11 +63,33 @@ table td {
 
 ### Content type and status tags
 
-Each search result is paired with tags that indicate the result's content type (campaign, Canvas, segment, or email template) and status (active, archived, stopped, etc.).
+Each search result is paired with tags that indicate the result's content type (page, campaign, Canvas, segment, email template) and status (active, archived, stopped, etc.).
 
 ### Access recently opened content
 
-You can revisit recently accessed content from the search menu. The search interface displays your recently opened results below the search bar, including items interacted with throughout the entire Braze platform. This lets you return to previously viewed campaigns, Canvases, segments, or email templates so you can pick up right where you left off with fewer clicks.
+You can revisit recently accessed content from the search menu. The search interface displays your recently opened results below the search bar, including items interacted with throughout the entire Braze platform. This lets you return to previously viewed pages, campaigns, Canvases, segments, or email templates so you can pick up right where you left off with fewer clicks.
+
+![][1]
+
+### Find pages that have been renamed
+
+The search understands synonyms for pages that have been renamed in our [updated navigation]({{site.baseurl}}/navigation). For example, it will find "Data Export" when you search for "Currents", as that page has been renamed.
+
+<!---
+
+### Quick create campaigns
+
+Search for channels to see quick create options among your top 10 results. For example, searching for "email" shows "Create Email Campaign" or "Create Transactional Email Campaign".
+
+![][2]
+
+--->
+
+### Search for emojis
+
+Do you use emojis when naming your work in Braze? Search for them! You can use emojis as search queries. 😎
 
 
-[1]: {% image_buster /assets/img_archive/global_search.png %}
+[1]: {% image_buster /assets/img/global_search/global_search.png %}
+[2]: {% image_buster /assets/img/global_search/search_create_campaign.png %}
+[3]: {% image_buster /assets/img/global_search/global_search2.png %}

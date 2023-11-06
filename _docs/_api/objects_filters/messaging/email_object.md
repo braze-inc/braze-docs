@@ -4,7 +4,7 @@ article_title: Email Messaging Object
 page_order: 5
 page_type: reference
 channel: email
-description: "This reference article explains the different components of Braze's email object."
+description: "This reference article explains the different components of the Braze email object."
 
 ---
 
@@ -30,13 +30,13 @@ description: "This reference article explains the different components of Braze'
   "headers": (optional, valid Key-Value Hash) hash of custom extensions headers (available for SparkPost and SendGrid),
   "should_inline_css": (optional, boolean) whether to inline CSS on the body. If not provided, falls back to the default CSS inlining value for the workspace,
   "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
-    "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (e.g., ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
+    "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (for example, ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
     "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension will be detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
 }
 ```
 
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
-- For more information and best practices on pre-headers, see our help article on [email body styling][46].
+- For more information and best practices on preheaders, see our help article on [email body styling][46].
 
 {% alert warning %}
 Braze recommends that you avoid using Google Drive links for your attachment's `url`, as this can block our servers' calls to get the file and result in the email message not sending.
