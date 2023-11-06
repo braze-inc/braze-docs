@@ -15,7 +15,7 @@ With the updated HTML editor, you can seamlessly switch among editors (HTML, cla
 ![][1]
 
 {% alert important %}
-While you can still revert to the old HTML editor by clicking **Switch to old HTML editor**, note that the old HTML editor will be deprecated in January 2025.
+While you can still revert to the old HTML editor by clicking **Switch to old HTML editor**, note that the old HTML editor will be removed in January 2024.
 {% endalert %}
 
 ## How to access the updated editor
