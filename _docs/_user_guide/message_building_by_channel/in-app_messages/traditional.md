@@ -7,7 +7,7 @@ guide_top_header: "Traditional Editor for In-App Messages"
 description: "This landing page is home to information about the traditional editor for in-app messages."
 guide_top_text: "This landing page is home to information about the traditional editor for in-app messages."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Creating an In-App Message
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/

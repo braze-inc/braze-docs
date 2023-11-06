@@ -124,6 +124,12 @@ The table on this page shows the metrics for each variant from the personalized 
 
 ## Understanding confidence {#understanding-confidence}
 
+Confidence is the statistical measure of how certain we are that a difference in data, like conversion rates, is real and not just due to random chance.
+
+{% alert note %}
+Don't see confidence in your results? Confidence will only appear if you selected **Winning Variant** or **Personalized Variant** as an optimization.
+{% endalert %}
+
 An important part of your results is the confidence of your results. For example, what if the Control Group had a 20% conversion rate and Variant A had a 25% conversion rate? This seems to indicate that sending Variant A is more effective than sending no message. Having a confidence of 95% means that the difference between the two conversion rates is likely due to an actual difference in users' responses and that there is only a 5% likelihood that the difference has occurred by chance.
 
 Braze compares each variant's conversion rate against the control's conversion rate with a statistical procedure called a [Z&nbsp;Test](https://en.wikipedia.org/wiki/Z-test). A result of 95% or greater confidence, as in the preceding example, indicates that the difference is statistically meaningful. This is true anywhere you see a confidence metric in the Braze dashboard that describes the difference between two messages or user populations.

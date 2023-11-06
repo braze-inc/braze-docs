@@ -10,7 +10,7 @@ page_type: landing
 description: "This landing page is home to resources that will help you create and launch a multi-dimensional Canvas such as how to create a Canvas, exception events, exit criteria, Canvas entry properties, and more."
 tool: Canvas
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Creating a Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
@@ -43,7 +43,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
     fa_icon: fas fa-user
  
-guide_menu_title: "Additional Resources"
+guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: AI Copywriting Assistant
     link: /docs/user_guide/intelligence/ai_copywriting/

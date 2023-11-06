@@ -18,7 +18,7 @@ guide_featured_list:
     link: /docs/partners/canvas_steps/faq
     fa_icon: fa-solid fa-question
 
-guide_menu_title: "Available Sync Partners"
+guide_menu_title: "Available sync partners"
 guide_menu_list:
   - name: Facebook Audience Sync
     link: /docs/partners/canvas_steps/facebook_audience_sync

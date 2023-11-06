@@ -9,7 +9,7 @@ guide_top_text: "You can track many actions on your apps. We recommend viewing t
 page_type: landing
 description: "This landing page is home to resources on implementing tracking in your apps, such as open pixel and click tracking, uninstall tracking, influences opens, and segment analytics tracking."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Open Pixel and Click Tracking
     link: /docs/user_guide/data_and_analytics/tracking/email_tracking/

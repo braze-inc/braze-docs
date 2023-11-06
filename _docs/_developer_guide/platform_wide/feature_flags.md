@@ -9,7 +9,7 @@ description: "This landing page is home to all things feature flags, including a
 channel:
   - feature flags
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: About Feature Flags
   link: /docs/developer_guide/platform_wide/feature_flags/about/

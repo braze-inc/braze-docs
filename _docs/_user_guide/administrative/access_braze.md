@@ -9,7 +9,7 @@ guide_top_text: "Here you can find articles to help you access your Braze accoun
 page_type: reference
 description: "This landing page is home to articles on accessing your Braze account or dashboard. Here, you can find resources on SSO, login, Braze instances, SDK endpoints, password resetting, and more."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Navigation
   link: /docs/user_guide/administrative/access_braze/navigation/
