@@ -213,9 +213,7 @@ The displayed statistic is generated 36 hours after email sending has begun. It 
 
 ###### Limitations
 
-Please note that currently this metric
-- is only available in Campaigns
-- does not get reported via Currents
+Estimated real open rate is only available in campaigns. This metric is not reported in Current events.
 
 {% elsif include.channel == "in-app message" %}
 
