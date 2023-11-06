@@ -84,11 +84,10 @@ curl -X POST \
           "example_string_property": YOUR_EXAMPLE_STRING,
           "example_integer_property": YOUR_EXAMPLE_INTEGER
         },
-        "recipient": [
-          {
-            "external_user_id": TARGETED_USER_ID_STRING
+        "recipient":
+        {
+          "external_user_id": TARGETED_USER_ID_STRING
           }
-        ]
       }' \
   https://rest.iad-01.braze.com/transactional/v1/campaigns/{campaign_id}/send
 ```
