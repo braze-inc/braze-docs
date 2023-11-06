@@ -16,6 +16,10 @@ search_tag: Partner
 
 Use Braze Currents to automatically send engagement events (for example, email sent, push sent) from Braze to Heap for analysis.
 
+{% alert note %}
+The Heap data export integration uses the Braze Custom HTTP Connecter. Contact your Heap customer success manager to set up and turn on this feature. <br><br>For more information, see the [Heap documentation](https://help.heap.io/integrations/marketing-automation/braze-integration/).
+{% endalert %}
+
 ### Step 1: Get Heap credentials
 
 You’ll need a webhook endpoint URL to configure this integration, which you can get from your Heap account manager.
