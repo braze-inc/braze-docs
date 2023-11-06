@@ -4,7 +4,7 @@ article_title: Advancement Behaviors
 page_order: 10
 alias: /auto_advance/
 page_type: reference
-description: "This reference article describes Braze's Advancement Behavior feature and covers various scenarios that may come up as you advance through a Canvas."
+description: "This reference article describes Advancement Behavior and covers various scenarios that may come up as you advance through a Canvas."
 tool: Canvas
 
 ---
@@ -59,7 +59,7 @@ Advancement works well when subsequent messaging relates to the previous message
 
 There may be times when you want users to continue to advance through a Canvas even when they do not receive a certain message. For example, you might have a "Welcome" push on Day 3 and a "Welcome" email on Day 6. Some of your users may not be reachable via push notifications, as not everyone opts in to receive push messages. You may want to send the Day 6 email to all users, even if they weren't sent the Day 3 push.
 
-In this scenario, you can use Braze's Advancement Behavior options to ensure that users continue down the Canvas even if they are not sent the Day 3 push.
+In this scenario, you can use Advancement Behavior options to ensure that users continue down the Canvas even if they are not sent the Day 3 push.
 
 If you want all users to receive the Day 6 email, even if they didn't get the Day 3 push, you can set the **Advancement Behavior** to **Immediately Advance Audience**  for the Day 3 push.
 

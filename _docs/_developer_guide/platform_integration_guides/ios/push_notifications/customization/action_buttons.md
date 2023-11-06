@@ -15,11 +15,11 @@ The Braze iOS SDK supports default push categories, including URL handling suppo
 
 ![A GIF of a push message being pulled down to display two customizable action buttons.][13]
 
-To register Braze's default push categories, follow the integration instructions:
+To register our default push categories, follow the integration instructions:
 
 ## Step 1: Adding Braze default push categories
 
-Use the following code to register for Braze's default push categories when you [register for push][36]:
+Use the following code to register for our default push categories when you [register for push][36]:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -61,7 +61,7 @@ If you want to create your own custom notification categories, see [action butto
 
 If you use the `UNNotification` framework and have implemented Braze [delegates][39], you should already have this method integrated. 
 
-To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` delegate method:
+To enable our push action button handling, including click analytics and URL routing, add the following code to your app's `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` delegate method:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -84,7 +84,7 @@ Appboy.sharedInstance()?.userNotificationCenter(center,
 {% endtab %}
 {% endtabs %}
 
-If you are not using UNNotification Framework, you will need to add the following code to your app's `application:handleActionWithIdentifier:forRemoteNotification:completionHandler:` to enable Braze's push action button handling:
+If you are not using UNNotification Framework, you will need to add the following code to your app's `application:handleActionWithIdentifier:forRemoteNotification:completionHandler:` to enable our push action button handling:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

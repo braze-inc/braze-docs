@@ -124,7 +124,7 @@ For `Full` and `HTML` in-app messages, the SDK will attempt to place the message
 
 ## Logging impressions and clicks
 
-Logging in-app message impressions and clicks is not automatic when you implement completely custom handling (i.e., you circumvent Braze's in-app message display by returning `ABKDiscardInAppMessage` in your `beforeInAppMessageDisplayed:`). If you choose to implement your own UI using our in-app message models, you must log analytics with the following methods on the `ABKInAppMessage` class:
+Logging in-app message impressions and clicks is not automatic when you implement completely custom handling (for example, you circumvent Braze in-app message display by returning `ABKDiscardInAppMessage` in your `beforeInAppMessageDisplayed:`). If you choose to implement your own UI using our in-app message models, you must log analytics with the following methods on the `ABKInAppMessage` class:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

@@ -7,7 +7,7 @@ channel: push
 platform:
   - Android
   - FireOS
-description: "This reference article explains the different components of Braze's Kindle and FireOS push object."
+description: "This reference article explains the different components of the Braze Kindle and FireOS push object."
 
 ---
 

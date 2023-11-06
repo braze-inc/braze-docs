@@ -12,7 +12,7 @@ channel:
 
 > The SMS double opt-in feature allows you to require users to explicitly confirm their opt-in intent before they can receive SMS messages. This helps you tailor your focus to users who are likely to be engaged or are engaged with SMS.
 
-When SMS double opt-in is turned on, users are sent an SMS message that asks for their explicit consent before they can be messageable by your campaigns or Canvases. 
+When SMS double opt-in is turned on, users are sent an SMS message that asks for their explicit consent before they can be messaged by your campaigns or Canvases. 
 
 While not an explicit requirement of the Telephone Consumer Protection Act of 1991 (TCPA), Braze recommends that you configure SMS double opt-in to confirm users are aware and consenting to be a part of your SMS program. For more information about SMS Compliance, view [SMS laws, regulations, and abuse prevention]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/).
 
@@ -51,6 +51,8 @@ To turn on SMS double opt-in, navigate to the **SMS Global Keywords** table in t
 | Double Opt-In Confirmation | Keywords | These are the keywords a user can reply with to confirm their opt-in intent. At least one keyword is required. These keywords should be specified in the **Opt-In Prompt Reply Message** field.
 | | Reply Message | This is the confirmation response that a user will receive after they have explicitly confirmed their opt-in and are now messageable via SMS. The user’s Subscription Group status will be set to `Subscribed`.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+When a user receives an opt-in prompt, they have 30 days to confirm their opt-in intent. If a user wants to subscribe after the 30-day window, they need to text an opt-in keyword to start the double opt-in workflow again.
 
 ![The configurable fields have two sections, Opt-In Prompt and Double Opt-In Confirmation, each with the fields Keywords and Reply Message.][4]
 

@@ -6,7 +6,7 @@ noindex: true
 
 # Metadata
 
-> This article walks through the options for adding metadata to Docs pages. We optimize our search based on page type and other bits of metadata, including: [yaml tags](#yaml-tags) and [page types](#page-types) (based on [templates]({{site.baseurl}}/home/templates/)).
+> This article walks through the options for adding metadata to Docs pages. We optimize our search based on page type and other bits of metadata, including: [YAML tags](#yaml-tags) and [page types](#page-types) (based on [templates]({{site.baseurl}}/home/templates/)).
 
 {% alert important %}
 
@@ -51,7 +51,7 @@ These will assist in external and internal SEO, informing page content and forma
 | `page_type` | Type of page, determined by page templates. Inform formatting and content. | Yes. | Exclusive; only one can be used per page. | String. | See [Page Types](#page-types). |
 | `platform` | Notes which platforms (iOS, Android, etc.) the article is associated with. | No, unless on a Dev Guide page.  | Multiple values can be used. | String. | Any of the platforms Braze integrates on: `iOS`, `Android`, `Web`, `API`, and any of the wrapper SDKs. |
 | `channel` | Notes which messaging channels (push, in-app messages, etc.) the article is associated with. | No, unless the content mentions a specific channel or channels. | Multiple values can be used. | String. | Any of the messaging channels Braze sends to: `content cards`, `email`, `news feed`, `in-app messages`, `push`, `sms`, and `webhooks`.|
-| `tool` | Notes which engagement tools (Canvas, campaigns, etc.) the article is associated with. | Yes. | Multiple values can be used. | String. | Any of Braze's  tools: `dashboard`, `docs`, `canvas`, `campaigns`, `segments`, `templates`, `media`, `location`, `currents`, `reports`. |
+| `tool` | Notes which engagement tools (Canvas, campaigns, etc.) the article is associated with. | Yes. | Multiple values can be used. | String. | Any of the following Braze  tools: `dashboard`, `docs`, `canvas`, `campaigns`, `segments`, `templates`, `media`, `location`, `currents`, `reports`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Multiple tag values
@@ -76,7 +76,7 @@ Note that there can only be a single `page_type` value for page. A page cannot b
 
 ### Sample YAML
 
-The top of every markdown page should begin with a section of yaml to define the page.
+The top of every markdown page should begin with a section of YAML to define the page.
 
 ```html
 ---
@@ -93,7 +93,7 @@ tool:
 
 ## Page types
 
-To apply these, be sure your yaml parameter for page types is: `page_type:`
+To apply these, be sure your YAML parameter for page types is: `page_type:`
 
 For example: `page_type: glossary`
 
@@ -102,7 +102,7 @@ For example: `page_type: glossary`
 | Glossary Page <br> <br> `glossary`| Page provides a searchable description of certain terms or elements (metrics, words to know, API Endpoints, etc.) | [API or Code Glossary]({{site.baseurl}}/home/templates/api_glossary/) <br> <br> [General Glossary]({{site.baseurl}}/home/templates/glossary_test_page/)
 | Solution Page <br> <br> `solution` | A troubleshooting or "options" article that walks users through a solution to an issue or through steps to resolving or narrowing down an issue. | [Help Article]({{site.baseurl}}/home/templates/help_article_template/) <br> <br> [Solution Article]({{site.baseurl}}/home/templates/solution/) |
 | Reference Page <br> <br> `reference` | An article that explains a concept and contains specific information about technical processes and product content. (Canvas Steps, Segmentation, specific Product Features etc.). | [Reference Article with Video]({{site.baseurl}}/home/templates/reference_vide/) <br> <br> [Reference Article]({{site.baseurl}}/home/templates/reference/) |
-| Tutorial Page <br> <br> `tutorial` | A general walkthrough of an instructional concept. Should contain practical knowledge. Focuses on a single topic (like, how to create a campaign, how to create a Canvas, etc.) Goal or Task-Oriented Article that walks step-by-step through solving a specific issue (How to target specific users, how to segment based on location, etc.). | [Tutorial Article with Video]({{site.baseurl}}/home/templates/tutorial_video/) <br> <br> [Tutorial Article]({{site.baseurl}}/home/templates/tutorial/) <br> <br> [Use Case Article with Video]({{site.baseurl}}/home/templates/use_case_video/) <br> <br> [Use Case Article]({{site.baseurl}}/home/templates/use_case/) |
+| Tutorial Page <br> <br> `tutorial` | A general walk-through of an instructional concept. Should contain practical knowledge. Focuses on a single topic (like, how to create a campaign, how to create a Canvas, etc.) Goal or Task-Oriented Article that walks step-by-step through solving a specific issue (How to target specific users, how to segment based on location, etc.). | [Tutorial Article with Video]({{site.baseurl}}/home/templates/tutorial_video/) <br> <br> [Tutorial Article]({{site.baseurl}}/home/templates/tutorial/) <br> <br> [Use Case Article with Video]({{site.baseurl}}/home/templates/use_case_video/) <br> <br> [Use Case Article]({{site.baseurl}}/home/templates/use_case/) |
 | Landing Page <br> <br> `landing` | Page provides a selection of options within a certain section, as well as a description or overview of said section. | [Single Section Landing Page using FA Icons]({{site.baseurl}}/home/templates/landing_single/) <br> <br> [Single Section Landing Page using Images]({{site.baseurl}}/home/templates/landing_images/) <br> <br> [Multi-Section Landing Page using FA Icons]({{site.baseurl}}/home/templates/landing_multiple/) <br> <br> [Multi-Section Landing Page using Images]({{site.baseurl}}/home/templates/landing_multiple_images/)
 | Partner Page <br> <br> `partner` | A page that combines many of the preceding page types into a single page. These pages describe a partner, the benefits of that partner, how to integrate that partner, then how to use that integration and any best practices associated with that usage. | [Partner Page with Video]({{site.baseurl}}/home/templates/partner_page_template_video/) <br> <br> [Partner Page]({{site.baseurl}}/home/templates/partner_page_template/) |
 | Updates and Release Notes <br> <br> `update` | A page that lists updates to a product or SDK in succession. A single update on a larger page or a page about a new feature would **not** count as an `update` page type. | See Release Notes Pages and SDK Changelogs pages. |

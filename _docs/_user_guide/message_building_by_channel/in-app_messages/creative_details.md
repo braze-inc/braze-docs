@@ -12,7 +12,7 @@ channel:
 tools:
   - Media
 
-guide_featured_title: "Specifications for Each Message Type"
+guide_featured_title: "Specifications by message type"
 
 guide_featured_list:
 - name: Modal
@@ -48,7 +48,7 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 
 {% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab FullScreen %}
+{% tabs %}{% tab Fullscreen %}
 
 ![Fullscreen in-app message taking over an app screen. The fullscreen message includes a large image, header, message body, and two buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 

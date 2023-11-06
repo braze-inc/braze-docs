@@ -69,7 +69,7 @@ func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
 
 ## Customizing in-app message button clicks
 
-For clicks on in-app message buttons and HTML in-app message buttons (i.e., links), [`ABKInAppMessageUIDelegate`][34] includes the following delegate methods:
+For clicks on in-app message buttons and HTML in-app message buttons (such as links), [`ABKInAppMessageUIDelegate`][34] includes the following delegate methods:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

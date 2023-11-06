@@ -127,7 +127,7 @@ Depending on your Braze implementation, you may want events within Quikly activa
 {% endtab %}
 {% tab Webhooks %}
 ### Webhooks
-Use webhooks to trigger incentives for specific events in the customer journey. For example, if you have a Braze event for when a user logs into your app, turns on push notifications, or uses your store locator, you can use a webhook to trigger a custom offer to that user based on the configuration of a specific Quikly activation. Example tactics include rewarding the first X number of users who perform an action (i.e., logging into your app) with a custom offer or providing an offer that decreases in value as more time elapses to motivate an immediate response.
+Use webhooks to trigger incentives for specific events in the customer journey. For example, if you have a Braze event for when a user logs into your app, turns on push notifications, or uses your store locator, you can use a webhook to trigger a custom offer to that user based on the configuration of a specific Quikly activation. Example tactics include rewarding the first X number of users who perform an action (such as logging into your app) with a custom offer or providing an offer that decreases in value as more time elapses to motivate an immediate response.
 
 ### Create a Quikly webhook in Braze
 

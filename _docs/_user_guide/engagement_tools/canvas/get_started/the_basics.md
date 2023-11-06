@@ -94,7 +94,7 @@ To define your "who", you can use pre-defined segments available in Canvas. You 
 | Retargeting | Segment customers who have been sent, received, or interacted with previous Canvases. |
 | Marketing Activity | Segment customers based on universal behaviors such as the last engagement. |
 | User Attributes | Segment customers by their constant attributes and characteristics. |
-| Install Attribution | Segment customers by their first source, adgroup, campaign, or ad. |
+| Install Attribution | Segment customers by their first source, ad group, campaign, or ad. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### The "where": Find my audience
@@ -115,7 +115,7 @@ This is where we determine which messaging channels make the most sense for your
 
 The "how" collectively summarizes how you'll create your Canvas and how you'll reach your users with your message. For example, in order for a message to be effective, you should optimize the timing of your messaging with regards to the time zones across your different users.
 
-Answering "how" also determines the cadence for sending a Canvas to your audience (i.e., once a week, biweekly, etc.), and which messaging channels to leverage for each Canvas that you build as described with the "where". 
+Answering "how" also determines the cadence for sending a Canvas to your audience (such as once a week, biweekly, etc.), and which messaging channels to leverage for each Canvas that you build as described with the "where". 
 
 ## General tips
 

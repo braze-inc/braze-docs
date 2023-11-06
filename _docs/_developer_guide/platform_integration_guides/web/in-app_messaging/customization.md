@@ -12,7 +12,7 @@ guide_top_header: "Web In-App Message Customization"
 guide_top_text: ""
 description: "This landing page covers the Braze Web SDK in-app message customization options such as custom styling, message dismissal, logging impressions and clicks, and more."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
     link: /docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/custom_styling/

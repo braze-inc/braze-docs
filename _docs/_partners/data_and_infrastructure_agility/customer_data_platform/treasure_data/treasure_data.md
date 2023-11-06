@@ -46,7 +46,7 @@ In the **New Authentication** prompt that shows up, name your connection and pro
 In Treasure Data, navigate to **Queries** under your **Data Workbench** and select a query for which you would like to export data. Run this query to validate the result set.
 
 {% alert note %}
-For users using HIVE to build quieries, HIVE requires that any columns or tables that begin with an underscore be wrapped by backquotes. For example, `_merge_objects`.
+For users using HIVE to build queries, HIVE requires that any columns or tables that begin with an underscore be wrapped by backquotes. For example, `_merge_objects`.
 {% endalert %}
 
 Next, select **Export Results** and select an existing integration authentication.
@@ -63,11 +63,11 @@ Finally, select **Done**, run your query, and validate that your data moved to B
 
 The export results parameters are included in the following table:
 
-| Parameter | Values | Description |
-|---|---|---|
-| `mode` | User - New Alias<br>User - Identifying<br>User - Track<br>User - Delete | Connector mode |
-| `pre_formated_fields` | String | Use for array or JSON columns to keep the format. |
-| `track_record_type` | Custom Events<br>Purchases<br>User Profile Attributes| Record type for **User - Track** mode |
+| Parameter                 | Values | Description |
+|---------------------------|---|---|
+| `mode`                    | User - New Alias<br>User - Identifying<br>User - Track<br>User - Delete | Connector mode |
+| `pre_formatted_fields`    | String | Use for array or JSON columns to keep the format. |
+| `track_record_type`       | Custom Events<br>Purchases<br>User Profile Attributes| Record type for **User - Track** mode |
 | `skip_on_invalid_records` | Boolean | If enabled, continue and ignore any invalid records for the JSON column. <br> Otherwise, the job stops. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

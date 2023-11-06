@@ -26,7 +26,7 @@ For companies with customers in many countries, handling localization early in y
   - [Catalogs](#option-3-catalogs)
   - [Localization partners](#option-4-localization-partners)
   - [Translations in a public Google Sheet](#option-5-translations-in-a-public-google-sheet)
-  - [Google spreadsheet into a JSON API via Sheetdb](#option-6-google-spreadsheet-into-a-json-api-via-sheetdb)
+  - [Google spreadsheet into a JSON API via SheetDB](#option-6-google-spreadsheet-into-a-json-api-via-sheetdb)
 
 ## Orchestration
 
@@ -53,12 +53,12 @@ The "one template per country" approach separates templating into different send
 Once sent, the dashboard reports sending analytics based on each country separately, and any downstream user-level [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) events will also be tied to a specific campaign. 
 
 - Templates benefit from implementing [Braze Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) for maintenance and tracking purposes.
-- Campaigns can inherit the configurations from the same [Braze Template]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) and [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (i.e., [Email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template?redirected=true#creating-an-email-template) built with the use of Liquid).
+- Campaigns can inherit the configurations from the same [Braze Template]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) and [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (such as [Email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template?redirected=true#creating-an-email-template) built with the use of Liquid).
 - Pre-existing campaigns and templates can be [duplicated]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/) to allow a faster time time-to-value.
 
 | Advantages | Considerations |
 | --- | --- |
-| - Scalable to multiple locations<br>- Reporting on revenue per country within Braze (i.e., per campaign)<br>- Flexibility if there is drastically different content per country | - Requires strategic structuring<br>- More build effort required (i.e., separate campaigns for each country) |
+| - Scalable to multiple locations<br>- Reporting on revenue per country within Braze (such as per campaign)<br>- Flexibility if there is drastically different content per country | - Requires strategic structuring<br>- More build effort required (such as separate campaigns for each country) |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -71,7 +71,7 @@ Once sent, the dashboard reports sending analytics based on each country separat
 
 In the "one journey for all" approach, localization is handled within [Canvas Journeys]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey) and Liquid to define messaging for each user. 
 
-Once sent, the dashboard provides aggregated [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), whereas the user level engagement can be measured via custom [Segment Funnels]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/), i.e., combining [**Country**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) and [**Received Canvas Step**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step) filters.
+Once sent, the dashboard provides aggregated [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), whereas the user level engagement can be measured via custom [Segment Funnels]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/), such as combining [**Country**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) and [**Received Canvas Step**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step) filters.
 
 | Advantages | Considerations |
 | --- | --- |
@@ -81,7 +81,7 @@ Once sent, the dashboard provides aggregated [Canvas Analytics]({{site.baseurl}}
 {% endtab %}
 {% tab One journey per country %}
 
-In the "one journey per country" approach, the [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas Components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). These componenets can be [duplicated]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) at the component and overall journey level.
+In the "one journey per country" approach, the [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas Components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). These components can be [duplicated]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) at the component and overall journey level.
 
 Localization can be achieved through the following methods:
 - Separate Canvases per country, this ensures the complex user journeys are defined at the top of the funnel using audience filters
@@ -91,7 +91,7 @@ Once sent, the dashboard provides dynamic analytics per country and within user-
 
 | Advantages | Considerations |
 | --- | --- |
-| - Reporting on revenue per country within Braze (i.e., per Canvas, variant, or step)<br>- Flexibility if there is drastically different content per country<br>- Can add other channels as part of the journey in the future | - Requires strategic structuring<br>- More build effort required (i.e., separate message steps for each country)<br>- Canvas can become large and difficult to read if you have custom, complex journeys for each country in a single Canvas. |
+| - Reporting on revenue per country within Braze (such as per Canvas, variant, or step)<br>- Flexibility if there is drastically different content per country<br>- Can add other channels as part of the journey in the future | - Requires strategic structuring<br>- More build effort required (such as separate message steps for each country)<br>- Canvas can become large and difficult to read if you have custom, complex journeys for each country in a single Canvas. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -281,13 +281,13 @@ Another translation option includes housing translations in Google Sheets; often
 The Google Sheets API has a limit of 500 requests per 100 seconds per project. Connected Content calls can be cached, but this solution is not scalable for a high-traffic campaign.
 {% endalert %}
 
-### Option 6: Google spreadsheet into a JSON API via Sheetdb  
+### Option 6: Google spreadsheet into a JSON API via SheetDB  
 
-This option provides an alternative method of transforming Google Sheets into JSON objects queried via Connected Content. By turning a spreadsheet into a JSON API via Sheetdb, you can choose from [multiple subscription tiers](https://sheetdb.io/pricing) depending on the cadence of the API calls.
+This option provides an alternative method of transforming Google Sheets into JSON objects queried via Connected Content. By turning a spreadsheet into a JSON API via SheetDB, you can choose from [multiple subscription tiers](https://sheetdb.io/pricing) depending on the cadence of the API calls.
 
-The spreadsheet structure follows the steps in option 4, but Sheetdb also provides [additional filters](https://docs.sheetdb.io/#sheetdb-api) to query the objects.
+The spreadsheet structure follows the steps in option 4, but SheetDB also provides [additional filters](https://docs.sheetdb.io/#sheetdb-api) to query the objects.
 
-Some users may prefer to implement Sheetdb with fewer Liquid and Connected Block dependencies by implementing Sheetdb’s [search method](https://docs.sheetdb.io/#get-search-in-document) in GET request calls to filter the JSON objects based on {% raw %}`{{${language}}}`{% endraw %} Liquid tag to automatically return the results for a single language rather than building large conditional blocks.
+Some users may prefer to implement SheetDB with fewer Liquid and Connected Block dependencies by implementing SheetDB’s [search method](https://docs.sheetdb.io/#get-search-in-document) in GET request calls to filter the JSON objects based on {% raw %}`{{${language}}}`{% endraw %} Liquid tag to automatically return the results for a single language rather than building large conditional blocks.
 
 #### Step 1: Format the Google sheet
 
@@ -301,7 +301,7 @@ First, build out the Google sheet so that the languages are different objects:
 
 #### Step 2: Use the language Liquid tag in a Connected Content call
 
-Next, implement the {% raw %}{{${language}}}{% endraw %} Liquid tag within a Connected Content call. Note that Sheetdb will auto-generate the `sheet_id` upon creating the spreadsheet.
+Next, implement the {% raw %}{{${language}}}{% endraw %} Liquid tag within a Connected Content call. Note that SheetDB will auto-generate the `sheet_id` upon creating the spreadsheet.
 
 {% raw %}
 ```liquid
@@ -324,6 +324,6 @@ Lastly, use Liquid for templating your messages:
 
 - The {% raw %}`{{${language}}}`{% endraw %} field has to be defined for all users; otherwise, a Liquid conditional block has to be featured as a fallback handler for users without a language.
 - Data modeling within Google Sheets has to follow a different language-driven vertical as opposed to having message objects.
-- Sheetdb offers a limited freemium account and multiple paying options that should be considered based on your campaign Strategy. 
-- Connected Content calls can be cached. Braze recommends measuring the projected cadence of the API calls and investigating an alternative approach of calling the main Sheetdb endpoint instead of using the search method.
+- SheetDB offers a limited free account and multiple paying options that should be considered based on your campaign strategy. 
+- Connected Content calls can be cached. We recommend measuring the projected cadence of the API calls and investigating an alternative approach of calling the main SheetDB endpoint instead of using the search method.
 

@@ -10,7 +10,7 @@ description: "This landing page covers the customized in-app messaging templates
 channel:
   - in-app messages
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 
 guide_featured_list:
 - name: "Custom HTML"

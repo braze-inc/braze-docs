@@ -71,7 +71,7 @@ Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by
 
 Similar to email, your users or customer can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf "PDF: Federal Trade Commission Act Section 5") to ensure compliance (in the U.S.).
 
-Some spam considerations are built into SMS capabilities in general (long and short code sending limits), as well as Braze's rate limits. However, you should still consider compliance laws when planning your campaigns.
+Some spam considerations are built into SMS capabilities in general (long and short code sending limits), as well as Braze rate limits. However, you should still consider compliance laws when planning your campaigns.
 
 ### Content
 

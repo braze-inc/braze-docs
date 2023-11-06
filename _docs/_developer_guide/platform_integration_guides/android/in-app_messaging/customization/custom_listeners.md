@@ -143,7 +143,7 @@ If you want to use your own conditional logic, you can call [`enableDarkTheme`][
 
 ## Custom view factory
 
-Braze's suite of in-app message types is versatile enough to cover most custom use cases. However, if you want to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible by setting a custom view factory.
+Braze in-app message types are versatile enough to cover most custom use cases. However, if you want to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible by setting a custom view factory.
 
 ### Step 1: Implement an in-app message view factory
 
@@ -205,7 +205,7 @@ We recommend setting your `IInAppMessageViewFactory` in your `Application.onCrea
 
 #### Implementing a Braze view interface
 
-Braze's `slideup` in-app message view implements [`IInAppMessageView`][25].  Braze's `full` and `modal` type message views implement [`IInAppMessageImmersiveView`][24]. Implementing one of these classes will allow Braze to add click listeners to your custom view where appropriate. All Braze view classes extend Android's [`View`][18] class.
+The `slideup` in-app message view implements [`IInAppMessageView`][25]. The `full` and `modal` type message views implement [`IInAppMessageImmersiveView`][24]. Implementing one of these classes allows Braze to add click listeners to your custom view where appropriate. All Braze view classes extend Android's [`View`][18] class.
 
 Implementing `IInAppMessageView` allows you to define a certain portion of your custom view as clickable. Implementing [`IInAppMessageImmersiveView`][24] allows you to define message button views and a close button view.
 

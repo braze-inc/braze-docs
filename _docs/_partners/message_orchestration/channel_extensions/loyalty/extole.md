@@ -77,8 +77,8 @@ To start sending data from your Extole programs into Braze, create a new webhook
 
 
 1. Navigate to **Tech Center > Outbound Webhooks** in your My Extole account and click on the **+ New Integration** button.
-2. Enter a key name (i.e., how you'd like to refer to the key in Extole) and select **Webhook** as the key type. 
-3. In the partner key ID field, add a value that you will recognize for this credential (e.g., your account ID, email address, or user ID).
+2. Enter a key name (such as how you'd like to refer to the key in Extole) and select **Webhook** as the key type. 
+3. In the partner key ID field, add a value that you will recognize for this credential (for example, your account ID, email address, or user ID).
 4. Select `PASSWORD` from the algorithm drop-down.
 5. Add your Braze REST API key to the key field and click **Create Key**.<br><br>![][4]{: style="max-width:80%;"}
 
@@ -92,7 +92,7 @@ If you only provide one Braze REST API key to Extole, only production events wil
 
 ### Creating a new user alias
 
-For certain use cases, such as a new email or SMS subscription where Extole does not have an external ID (user ID) for the user, Extole can check for the user's identifier using Braze's [Export user by identifier endpoint][2]. If the user exists within Braze, Extole will add and update any profile attributes. If the request does not return a user profile, Extole will instead use the [`/user/track` endpoint][3] to create a user alias with the user's email address as the alias name.
+For certain use cases, such as a new email or SMS subscription where Extole does not have an external ID (user ID) for the user, Extole can check for the user's identifier using the Braze [Export user by identifier endpoint][2]. If the user exists within Braze, Extole will add and update any profile attributes. If the request does not return a user profile, Extole will instead use the [`/user/track` endpoint][3] to create a user alias with the user's email address as the alias name.
 
 ## Using this integration
 

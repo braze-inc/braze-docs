@@ -30,7 +30,7 @@ The `content-available` flag instructs devices to download new content in the ba
 
 ## Adding mutable-content flag
 
-The `mutable-content` flag enables advanced receiver customizations in iOS 10+ devices. This flag will automatically be sent when composing a [rich notification][3], regardless of the value of this checkbox.
+The `mutable-content` flag enables advanced receiver customization in iOS 10+ devices. This flag will automatically be sent when composing a [rich notification][3], regardless of the value of this checkbox.
 
 ## Sounds
 

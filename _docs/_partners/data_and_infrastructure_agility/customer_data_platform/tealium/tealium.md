@@ -42,7 +42,7 @@ To learn more about the pros and cons of each method, refer to the following [Te
 {% endtabs %}
 
 {% alert important %}
-Tealium offers both batch and non-batch connector actions. The non-batch connector should be used when real-time requests are important to the use case and there are no concerns about hitting Braze's API rate limit specifications. Contact Braze Support or your CSM if you have any questions.<br><br>
+Tealium offers both batch and non-batch connector actions. The non-batch connector should be used when real-time requests are important to the use case and there are no concerns about hitting Braze's API rate limit specifications. Contact Braze Support or your customer success manager if you have any questions.<br><br>
 
 For batch connectors, requests are queued until one of the following thresholds is met:
 - Maximum number of requests: 75
@@ -60,7 +60,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 | Installed source and Tealium source [libraries](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium connector. |
 | Braze REST and SDK endpoint | Your REST or SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 | Braze app identifier key (side-by-side only) | Your app identifier key. <br><br>This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
-| Code version (side-by-side only) | Corresponds to SDK version and should be in major.minor format (e.g., 3.2 not 3.0.1). The code version should be 3.0 or higher. |
+| Code version (side-by-side only) | Corresponds to SDK version and should be in major.minor format (for example, 3.2 not 3.0.1). The code version should be 3.0 or higher. |
 | REST API key (server-to-server only) | A Braze REST API key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze Dashboard > Developer Console > REST API Key > Create New API Key**.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -68,7 +68,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-side](#side-by-side-sdk-integration) | Uses Tealium's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze remote commands, note that Tealium does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you will have to invoke the method by adding native Braze code to your codebase.|
+| [Side-by-side](#side-by-side-sdk-integration) | Uses Tealium's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze remote commands, note that Tealium does not support all Braze methods (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you will have to invoke the method by adding native Braze code to your codebase.|
 | [Server-to-server](#server-to-server-integration) | Forwards data from Tealium to Braze's REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging,  Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -112,7 +112,7 @@ You can find more details on how to set up Braze mobile remote command and an ov
 - [Remote command tag](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Mobile-Remote-Command-Tag-Setup-Guide/ta-p/32828)
 
 {% alert important %}
-Braze mobile remote commands do not support all Braze methods and messaging channels (e.g., Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you will have to invoke the method directly by adding native Braze code to your codebase.
+Braze mobile remote commands do not support all Braze methods and messaging channels (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you will have to invoke the method directly by adding native Braze code to your codebase.
 {% endalert%}
 
 ### Braze Web SDK tag
@@ -167,7 +167,7 @@ A connector is an integration between Tealium and another vendor used to transmi
 
 #### Source
 
-Once the source has been configured, navigate back to the Braze connector page under **EventStream > Event Connectors > + Add Conncetor > Braze**. 
+Once the source has been configured, navigate back to the Braze connector page under **EventStream > Event Connectors > + Add Connector > Braze**. 
 
 In the dialogue that opens, select the data source you just built, and under **Event Feed**, select **All Events** or a specific event spec, the recommended path to send only changed values into Braze. Click **Continue**.
 
@@ -254,7 +254,7 @@ Refer to Tealium's [Trace documentation][21] for more detailed instructions on i
 
 There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
 
-#### Sending duplicative data - only send Braze deltas of attributes
+#### Sending duplicate data - only send Braze deltas of attributes
 Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 
 **Solution**: <br>You can check your backend to assess whether an attribute has changed or not, and if so, call Tealium's relevant methods to update the user profile. **This is what users who integrate Braze directly usually do.** <br>**OR**<br> If you don't store your own version of a user profile in your backend and can't tell if attributes change or not, you can use AudienceStream and 
 [create enrichments](https://community.tealiumiq.com/t5/Customer-Data-Hub/Using-Enrichments/ta-p/11932) to only send user attributes when values have changed. See Tealium's documentation on [enrichment rules](https://community.tealiumiq.com/t5/Server-Side-Connectors/Braze-Connector-Setup-Guide/ta-p/29761#).

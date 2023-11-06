@@ -143,7 +143,10 @@ US-01 | `https://dashboard.braze.com` or<br> `https://dashboard-01.braze.com` | 
 US-02 | `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com`
 US-03 | `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com`
 US-04 | `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com`
+US-05 | `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com`
 US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
+US-07 | `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com`
+US-08 | `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com`
 EU-01 | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endtab %}
@@ -155,8 +158,12 @@ US-01 | `https://dashboard.braze.com` or<br> `https://dashboard-01.braze.com` | 
 US-02 | `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com`
 US-03 | `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com`
 US-04 | `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com`
+US-05 | `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com`
 US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
+US-07 | `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com`
+US-08 | `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com`
 EU-01 | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
+EU-02 | `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu`
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 ```
 {% endtab %}
@@ -397,7 +404,7 @@ This is a update
 {% tabs %}
 {% tab Styling %}
 #### Embedded Video/YouTube
-Defaults to youtube embedded.
+Defaults to YouTube embedded.
 {% multi_lang_include video.html id="XY5vFY" source="youtube" %}
 
 #### Embedded Video Right Align
@@ -598,7 +605,7 @@ Content of swift
 {% endraw %}
 
 #### Local Tabs
-For self-contained tabs, i.e., tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
+For self-contained tabs, such as tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
 
 {% raw %}
 ```liquid

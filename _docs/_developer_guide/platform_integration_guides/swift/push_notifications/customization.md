@@ -11,7 +11,7 @@ guide_top_header: "Swift Push Customization"
 guide_top_text: ""
 description: "This landing page is home to all things related to Swift push customization."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Action Buttons
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/

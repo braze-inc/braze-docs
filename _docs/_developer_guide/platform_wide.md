@@ -7,7 +7,7 @@ guide_top_header: "Platform Wide Features & Behaviors"
 guide_top_text: "Braze can do a lot! Check out our capabilities, from a developer frame of mind!"
 description: "This landing page lists platform wide features and behaviors like workspace configuration, analytics overview, sending test messages, feature flags, and TV and OTT."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Platform Features
     link: /docs/developer_guide/platform_wide/platform_features/

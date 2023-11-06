@@ -5,7 +5,7 @@ page_order: 30
 page_type: update
 platform:
   - React Native
-description: "This page lists updates to Braze's React Native SDK changelog."
+description: "This page lists updates to the Braze React Native SDK changelog."
 
 ---
 

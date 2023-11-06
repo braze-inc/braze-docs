@@ -10,7 +10,7 @@ page_type: landing
 description: "This landing page is home to articles about the email performance dashboard, the conversions dashboard, and understanding your app usage data."
 tool: Reports
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Home Dashboard
     link: /docs/user_guide/data_and_analytics/analytics/home_dashboard/

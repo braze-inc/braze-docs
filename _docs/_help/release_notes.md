@@ -4,12 +4,12 @@ article_title: Release Notes
 page_order: 4
 layout: dev_guide
 guide_top_header: "Release Notes"
-guide_top_text: "This is where you can find all updates to the Braze platform, with the following <a href='/docs/help/release_notes/#most-recent'>most recent platform updates</a>. You can also check out our <a href='/docs/developer_guide/platform_integration_guides/sdk_changelogs/'>SDK Changelogs</a>."
+guide_top_text: "This is where you can find all updates to the Braze platform, with the following <a href='/docs/help/release_notes/#most-recent'>most recent platform updates</a>. You can also check out our <a href='/docs/developer_guide/platform_integration_guides/sdk_changelogs/'>SDK changelogs</a>."
 page_type: landing
 search_rank: 1
-description: "This landing page is home to Braze Release Notes. This is where you can find all updates to the Braze platform and SDKs, as well as a list of deprecated features."
+description: "This landing page is home to Braze release notes. This is where you can find all updates to the Braze platform and SDKs, as well as a list of deprecated features."
 
-guide_featured_title: "Release Notes"
+guide_featured_title: "Release notes"
 guide_featured_list:
   - name: 2023
     link: /docs/help/release_notes/2023/
@@ -362,7 +362,7 @@ For customers onboarded after June 14, 2023, the default rate limit for manually
 
 ### Audience sync to Facebook
 
-If you use [Audience Sync to Facebook]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/), please be aware that starting in July 2023, Meta is rolling out Meta work accounts to a small set of businesses who are interested in adopting this new account type. If you have a Business Account integrated with Braze, ensure you disconnect and reconnect to the [Facebook partner page]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook) with your Business Account in order to perserve this implementation and not disrupt any active Canvases.
+If you use [Audience Sync to Facebook]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/), please be aware that starting in July 2023, Meta is rolling out Meta work accounts to a small set of businesses who are interested in adopting this new account type. If you have a Business Account integrated with Braze, ensure you disconnect and reconnect to the [Facebook partner page]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook) with your Business Account in order to preserve this implementation and not disrupt any active Canvases.
 
 ### Cloud Data Ingestion for Databricks
 
@@ -378,7 +378,7 @@ The following SDK updates have been released. Breaking updates are listed below;
 
 - [Android SDK 26.0.0–26.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2610)
 	- {% raw %}Added the ability to configure link target behavior for HTML In-App Messages through `BrazeConfig.setIsHtmlInAppMessageHtmlLinkTargetEnabled()` or via adding `<bool name="com_braze_html_in_app_message_enable_html_link_target">true</bool>` to your `braze.xml`. Defaults to enabled.{% endraw %}
-		- {% raw %}When enabled, a link in an in-app message that has the link target set (e.g., `<a HREF="https://www.braze.com" target="_blank">Please Read</a>`) will open the link in a browser, but will not close the in-app message.{% endraw %}
+		- {% raw %}When enabled, a link in an in-app message that has the link target set (for example, `<a HREF="https://www.braze.com" target="_blank">Please Read</a>`) will open the link in a browser, but will not close the in-app message.{% endraw %}
 - [Web SDK 4.7.2–4.8.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#480)
 - [Swift SDK 6.3.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#630)
 - [Unity SDK 4.1.1](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md#411)

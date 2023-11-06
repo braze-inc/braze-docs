@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Merkury](https://merkury.merkleinc.com/) is Merkle’s enterprise identity platform that helps brands maximize consumer engagement, experience, and revenue through first-party cookieless identity capabilities. The `MerkuryID` unifies a brand’s known and unknown customer and prospects records, site/app visits, and consumer data to a single, persistent person ID.
 
-The Braze and Merkury integration allows you to leverages the `MerkuryID` to increase site visitor recognition rates for Braze customers. Upon recognizing visitors that are brand email subscribers, Merkury will update the Braze profile to include the subscribers email address. The increased recognition capabilites of `MerkuryID` improves engagement and personalization opportunities and immediately increases site abandonment email send quantities and associated revenue. 
+The Braze and Merkury integration allows you to leverages the `MerkuryID` to increase site visitor recognition rates for Braze customers. Upon recognizing visitors that are brand email subscribers, Merkury will update the Braze profile to include the subscribers email address. The increased recognition capabilities of `MerkuryID` improves engagement and personalization opportunities and immediately increases site abandonment email send quantities and associated revenue. 
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ The Braze and Merkury integration allows you to leverages the `MerkuryID` to inc
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
-The Merkury identity connector requests to Braze operate within Braze's API rate limit specifications. Contact Braze or your Merkle account manager if you have any questions.<br><br>Merkury will send at least one request at the end of a qualified session.
+The Merkury identity connector requests to Braze operate within Braze API rate limit specifications. Contact Braze or your Merkle account manager if you have any questions.<br><br>Merkury will send at least one request at the end of a qualified session.
 {% endalert %}
 
 ## Side-by-side SDK integration

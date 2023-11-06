@@ -9,7 +9,7 @@ guide_top_text: "This is where you can find topics related to global settings fo
 page_type: landing
 description: "This landing page lists topics related to app and workspace settings."
 
-guide_featured_title: "Setup and Testing"
+guide_featured_title: "Setup and testing"
 guide_featured_list:
   - name: Workspace Management
     link: /docs/user_guide/administrative/app_settings/app_group_management/
@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
     fa_icon: fas fa-users
 
-guide_menu_title: "Workspace Settings"
+guide_menu_title: "Workspace settings"
 guide_menu_list:
   - name: Tags
     link: /docs/user_guide/administrative/app_settings/tags/
@@ -39,7 +39,7 @@ guide_menu_list:
     link: /docs/user_guide/administrative/app_settings/push_ttl_settings/
     fa_icon: fas fa-cogs
 
-guide_menu_title2: "Company Settings"
+guide_menu_title2: "Company settings"
 guide_menu_list2:
   - name: Admin Settings
     link: /docs/user_guide/administrative/app_settings/company_settings/
@@ -51,7 +51,7 @@ guide_menu_list2:
     link: /docs/user_guide/administrative/app_settings/subscription_and_usage/
     fa_icon: fas fa-money-bill
     
-guide_menu_title3: "Data Settings"
+guide_menu_title3: "Data settings"
 guide_menu_list3:
   - name: Custom Event and Attribute Management
     link: /docs/user_guide/administrative/app_settings/custom_event_and_attribute_management/

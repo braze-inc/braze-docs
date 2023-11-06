@@ -53,7 +53,7 @@ These default limits can be increased upon request. Reach out to your customer s
 
 ## Batching API requests
 
-Braze's APIs are built to support batching. With batching, Braze can take in as much data as possible in a single API call so that you don't need to make a lot of API calls. It's more efficient for Braze to process data in batches than to process data one call at a time. For example, handling 1,000 batched API calls requires less resources than handling 75,000 individual calls. Batching is extremely important for any application that may require more than 75,000 calls per hour.
+Braze APIs are built to support batching. With batching, Braze can take in as much data as possible in a single API call so that you don't need to make a lot of API calls. It's more efficient for Braze to process data in batches than to process data one call at a time. For example, handling 1,000 batched API calls requires less resources than handling 75,000 individual calls. Batching is extremely important for any application that may require more than 75,000 calls per hour.
 
 {% alert note %}
 REST API rate limit increases are considered based on need for customers who are making use of the API batching capabilities.
@@ -75,7 +75,7 @@ A single request to the [Messaging endpoints][1] can reach any one of the follow
 
 - Up to 50 specific `external_ids`, each with individual message parameters
 - A segment of any size created in the Braze dashboard, specified by its `segment_id`
-- An ad-hoc audience segment of any size, defined in the request as a [Connected Audience][2] object
+- Users who match additional audience filters of any size, defined in the request as a [connected audience][2] object
 
 ## Monitoring your rate limits
 

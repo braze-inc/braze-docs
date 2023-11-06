@@ -36,7 +36,7 @@ The following Currents integration is supported for both [Amazon S3](#setting-up
 
 In the [Fivetran Dashboard](https://fivetran.com/dashboard), click on **+ Connector** and select the **Braze** connector to launch the setup form. Next, select **Amazon S3**. Note the external ID provided here; you will need it to allow Fivetran to access your S3 bucket. 
 
-![The Fivetran set up Braze connector form. The external ID field needed for this step is located in the middle of the page in a light grey box.]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
+![The Fivetran set up Braze connector form. The external ID field needed for this step is located in the middle of the page in a light gray box.]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
 
 #### Step 2: Give Fivetran access to a specified S3 bucket
 
@@ -92,7 +92,7 @@ Next, click **Next: Permissions** to select the policy you just created.
 
 ![]({% image_buster /assets/img/fivetran_as3_select_policy.png %})
 
-Click **Next: Review**, name your new role (i.e., Fivetran), and click **Create Role**. After the role is created, click it and note the Role ARN shown.
+Click **Next: Review**, name your new role (such as Fivetran), and click **Create Role**. After the role is created, click it and note the Role ARN shown.
 
 ![The Amazon S3 ARN listed in the role.]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 
@@ -122,7 +122,7 @@ Lastly, click **Save & Test**, and Fivetran will do the rest by syncing with the
 
 In the [Fivetran dashboard](https://fivetran.com/dashboard), click on **+ Connector** and select the **Braze** connector to launch the setup form. Next, select **Google Cloud storage**. Make a note of the email address that appears.
 
-![The Fivetran set up Braze connector form. The email field needed for this step is located in the middle of the page in a light grey box.]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
+![The Fivetran set up Braze connector form. The email field needed for this step is located in the middle of the page in a light gray box.]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
 
 #### Step 2: Grant bucket access
 

@@ -29,7 +29,7 @@ If your use cases require exactly-once delivery, you can use the unique identifi
 
 ## Timestamps
 
-All timestamps exported by Currents are sent in the UTC time zone. For some events where it is available, a time zone field is also included, which delivers the iana format of the user's local time zone at the time of the event.
+All timestamps exported by Currents are sent in the UTC time zone. For some events where it is available, a time zone field is also included, which delivers the IANA format of the user's local time zone at the time of the event.
 
 ## Apache Avro
 
@@ -81,7 +81,7 @@ From time to time, Braze may make changes to the Avro schema when fields are add
 
 #### Non-breaking changes
 
-When a field is added to the Avro schema, we consider this a non-breaking change. Added fields will always be "optional" Avro fields (i.e., with a default value of `null`), so they will "match" older schemas according to the [Avro schema resolution spec](http://avro.apache.org/docs/current/spec.html#schema+resolution). These additions should not affect existing ETL processes as the field will simply be ignored until it is added to your ETL process. 
+When a field is added to the Avro schema, we consider this a non-breaking change. Added fields will always be "optional" Avro fields (such as with a default value of `null`), so they will "match" older schemas according to the [Avro schema resolution spec](http://avro.apache.org/docs/current/spec.html#schema+resolution). These additions should not affect existing ETL processes as the field will simply be ignored until it is added to your ETL process. 
 
 {% alert important %}
 We recommend that your ETL setup is explicit about the fields it processes to avoid breaking the flow when new fields are added.

@@ -4,7 +4,7 @@ article_title: Report Builder
 alias: /report_builder/
 page_order: 4
 page_type: reference
-description: "This reference article covers how to run a report using the report builder including campaign and Canvas creating comparision reports, and building reports and charts."
+description: "This reference article covers how to run a report using the report builder including campaign and Canvas creating comparison reports, and building reports and charts."
 tool: 
   - Reports
 
@@ -24,7 +24,7 @@ Use this report to answer key engagement questions, for example:
 - Which push notifications within this Canvas had the highest open rates?
 - Which steps in this group of Canvases had the most conversions?
 - Did Version 1 of a welcome email or Version 2 of a welcome email lead to higher engagement and conversion? Did the changes work?
-- How do different delivery methods (e.g., 3 scheduled pushes, 3 action-based pushes, and 3 API-triggered pushes) impact your open rates, conversion rates, or purchase rates?
+- How do different delivery methods (for example, 3 scheduled pushes, 3 action-based pushes, and 3 API-triggered pushes) impact your open rates, conversion rates, or purchase rates?
 - Have the ongoing improvements to lapsing user messages positively impacted your KPIs over time?
 
 {% alert tip %}

@@ -10,7 +10,7 @@ tool: Campaigns
 page_type: landing
 description: "This landing page is home to resources on building your campaigns. Here, you can find resources on how to create a campaign, time-cased functionalities, campaign scheduling, targeting, conversion, and more."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Creating a Campaign
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
@@ -31,7 +31,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/
     fa_icon: fas fa-exclamation-triangle
 
-guide_menu_title: "Additional Resources"
+guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: AI Copywriting Assistant
     link: /docs/user_guide/intelligence/ai_copywriting/
