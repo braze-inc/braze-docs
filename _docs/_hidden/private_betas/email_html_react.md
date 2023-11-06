@@ -20,7 +20,7 @@ While you can still revert to the old HTML editor by clicking **Switch to old HT
 
 ## How to access the updated editor
 
-To access the updated HTML email editor and link management, you must have link aliasing turned on. To turn on link aliasing, contact your account manager.
+To access the **Link Management** tab in the updated HTML email editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on. To turn on link aliasing, contact your account manager.
 
 Check out our dedicated [HTML editor for email]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor) section for additional resources.
 
