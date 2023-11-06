@@ -63,7 +63,7 @@ Integration cannot begin until the campaign planning step is complete. This step
 ### Creating data requirements
 Then, your CRM team should define what data is required to launch the campaigns they have planned, creating data requirements. 
 
-Many common types of user attributes, such as name, email, date of birth, country, etc. are automatically tracked once the Braze SDK is integrated. Other types of data will need to be defined as custom data.
+Many common types of user attributes, such as name, email, date of birth, country, and similar are automatically tracked once the Braze SDK is integrated. Other types of data will need to be defined as custom data.
 
 As a developer, you'll work with your team to define what additional, custom data makes sense to track. Your custom data will impact how your user base will be classified and segmented. You will set up an event taxonomy across your growth stack, structuring your data so that it is compatible with your systems as it moves in and out of Braze.
 
@@ -84,7 +84,7 @@ Your team administrator should add you (and all other team members who need acce
 ### Workspaces and API keys
 Your team administrator will also create different [workspaces]({{site.baseurl}}/developer_guide/platform_wide/getting_started/app_group_configuration/). Workspaces group your data—users, segments, API keys—into one location. As a best practice, we suggest only putting different versions of the same or very similar apps together under one workspace. 
 
-Importantly, workspaces provide API keys for multiple platforms (iOS, Android, etc.). You'll use the correlated API keys to associate SDK data with a particular workspace. Navigate to your workspaces to access the API key for each of your apps. Ensure each API key has the correct permissions to perform the work you've scoped. See the [API provisioning article for details.][7]
+Importantly, workspaces provide API keys for multiple platforms (such as iOS and Android). You'll use the correlated API keys to associate SDK data with a particular workspace. Navigate to your workspaces to access the API key for each of your apps. Ensure each API key has the correct permissions to perform the work you've scoped. See the [API provisioning article for details.][7]
 
 {% alert important %}
 It's important that you set up different environments for development and production. Setting up a test environment will ensure you won't spend actual money during onboarding and QA. To create a testing environment, set up a testing workspace and be sure to use its API key so that you aren't populating your production workspace with test data.
@@ -123,7 +123,7 @@ When fully integrated with your app or site, the Braze SDK offers a completely-r
 
 During SDK implementation, you will:
 * Write SDK integration code for each platform you want to support.
-* Activate the messaging channels for each platform, ensuring that the Braze SDK tracks the data from your interactions with your customers across email, SMS, push notifications, etc.
+* Activate the messaging channels for each platform, ensuring that the Braze SDK tracks the data from your interactions with your customers across email, SMS, push notifications, and other channels.
 * Create any planned [UI component customizations][6] (for example, custom Content Cards). For completely custom content, you will need to log analytics since the SDK's automatic data collection won't be aware of your new components. You can pattern this implementation on our default components.
 
 
@@ -170,17 +170,17 @@ Make sure your production and testing environments are set up before beginning Q
 
 | **QA data ingestion**  | **QA messaging**                                              |
 |---------------------------|---------------------------------------------------------------|
-| You'll QA the way data is ingested, stored, and exported. | You'll ensure that your messages are being sent correctly to your users and everything looks excellent. |
+| You'll QA the way data is ingested, stored, and exported. | You'll make sure that your messages are being sent correctly to your users and everything looks excellent. |
 | Run tests to confirm data is stored properly. | Create segments of users. |
-| Ensure session data is correctly attributed to the intended workspace within Braze. | Launch campaigns and Canvases successfully. |
-| Ensure session starts and ends are being recorded. | Ensure the correct campaigns are being shown to the correct user segments. |
-| Ensure user attribute information is correctly recorded against user profiles. | Ensure that push tokens are correctly being registered. |
-| Test that custom data is being correctly recorded against user profiles. | Ensure that push tokens are correctly removed. |
+| Confirm session data is correctly attributed to the intended workspace within Braze. | Launch campaigns and Canvases successfully. |
+| Confirm session starts and ends are being recorded. | Confirm the correct campaigns are being shown to the correct user segments. |
+| Confirm user attribute information is correctly recorded against user profiles. | Confirm that push tokens are correctly being registered. |
+| Test that custom data is being correctly recorded against user profiles. | Confirm that push tokens are correctly removed. |
 | Create anonymous user profiles. | Test that push campaigns are correctly sending to devices and engagement is logged. |
-| Ensure that anonymous user profiles become known user profiles when the `changeUser()` method is called. | Test that in-app messages are delivered and metrics logged. |
+| Confirm that anonymous user profiles become known user profiles when the `changeUser()` method is called. | Test that in-app messages are delivered and metrics logged. |
 |                           | Test that Content Cards are delivered and metrics logged. |
 |                           | Facilitate Connected Content (for example, AccuWeather). |
-|                           | Ensure all message channel integrations are working together properly. |
+|                           | Confirm all message channel integrations are working together properly. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 
@@ -194,14 +194,14 @@ Once you have integrated your platform or site, you will want to involve your Ma
 ### Develop for the future
 Have you ever inherited a codebase and had no clue what the initial developer was thinking? Worse, have you ever written code, understood it completely, and then felt completely baffled when you came back to it a year later? 
 
-When onboarding Braze, the collective decisions you make concerning data, user profiles, what integrations were and were not in scope, how customizations are supposed to work, etc., will feel fresh in your mind and therefore obvious. When your team wants to expand Braze or when other technical resources are assigned to your Braze project, this information will be obscure.
+When onboarding Braze, the collective decisions you make concerning data, user profiles, what integrations were and were not in scope, how customizations are supposed to work, and more, will feel fresh in your mind and therefore obvious. When your team wants to expand Braze or when other technical resources are assigned to your Braze project, this information will be obscure.
 
 Create a resource to cement the information you learned during your technical overview sessions. This resource will help quickly onboard new developers who join your team (or serve as a reminder to yourself when you need to expand your current Braze implementation). 
 
 ## Maintenance {#maintenance}
 After handoff to your marketers, you will continue to serve as a resource for maintenance. You will pay attention to iOS and Android updates that might impact the Braze SDK and ensure that your third-party vendors are up to date. 
 
-You will track updates to the Braze platform via Braze's [GitHub][23]. Occasionally, your administrator will receive emails about urgent updates and bug fixes directly from Braze, as well. 
+You will track updates to the Braze platform via the Braze [GitHub][23]. Occasionally, your administrator will receive emails about urgent updates and bug fixes directly from Braze, as well. 
 
 
 
