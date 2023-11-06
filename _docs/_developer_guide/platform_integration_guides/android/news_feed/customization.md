@@ -15,7 +15,7 @@ guide_top_header: "Android and FireOS News Feed Customization"
 guide_top_text: ""
 description: "This landing page covers the Braze Android and FireOS SDK News Feed customization options such as custom styling, handling clicks manually, key-value pairs, and more."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/custom_styling/

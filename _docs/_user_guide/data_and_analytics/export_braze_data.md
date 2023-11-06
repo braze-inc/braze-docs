@@ -10,7 +10,7 @@ page_type: landing
 description: "This landing page is home to resources on exporting Braze data, such as how to export campaign and Canvas results, segment data, overview and revenue data, and more."
 tool: Reports
 
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Popular articles"
 
 guide_featured_list:
   - name: Export Campaign Results
@@ -23,7 +23,7 @@ guide_featured_list:
     link: /docs/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/
     fa_icon: fas fa-file-csv
 
-guide_menu_title: "More Articles"
+guide_menu_title: "More articles"
 guide_menu_list:
   - name: Message Archiving
     link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving/

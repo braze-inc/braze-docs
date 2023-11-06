@@ -9,7 +9,7 @@ tool: Campaigns
 page_type: landing
 description: "This landing page is home to Braze dashboard campaigns. Here, you can find resources on creating your campaign, managing and testing campaigns, and helpful ideas and strategies."
 search_rank: 3
-guide_featured_title: "Section Articles"
+guide_featured_title: "Sections"
 guide_featured_list:
   - name: Getting Started
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/

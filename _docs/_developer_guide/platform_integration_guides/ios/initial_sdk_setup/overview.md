@@ -8,7 +8,7 @@ search_rank: 6
 guide_top_header: "Integration Overview"
 description: "This landing page covers Braze SDK integration guides for CocoaPods, Swift Package Manager, Carthage, and more."
 
-guide_featured_title: "Basic Integration Options"
+guide_featured_title: "Basic integration options"
 guide_featured_list:
 - name: CocoaPods
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/cocoapods/

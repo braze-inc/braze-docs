@@ -11,7 +11,7 @@ description: "The Braze Intelligence Suite helps you automate decision-making wi
 Tool:
   - Dashboard
 
-guide_featured_title: "Tools and Features"
+guide_featured_title: "Tools and features"
 guide_featured_list:
 - name: Intelligent Timing
   link: /docs/user_guide/sage_ai/intelligence/intelligent_timing/
@@ -23,7 +23,7 @@ guide_featured_list:
   link: /docs/user_guide/sage_ai/intelligence/intelligent_selection/
   image: /assets/img/icons/loyalty_heart.svg
 
-guide_menu_title: "Additional Resources"
+guide_menu_title: "Additional resources"
 guide_menu_list:
 - name: Intelligence FAQ
   link: /docs/user_guide/sage_ai/intelligence/faqs/

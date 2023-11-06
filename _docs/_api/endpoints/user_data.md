@@ -38,7 +38,7 @@ guide_featured_list:
     link: /docs/api/endpoints/user_data/post_users_merge/
     fa_icon: fas fa-users
 
-guide_menu_title: "External ID Migration Endpoints"
+guide_menu_title: "External ID migration endpoints"
 guide_menu_list:
   - name: "POST: Rename External IDs"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_rename/

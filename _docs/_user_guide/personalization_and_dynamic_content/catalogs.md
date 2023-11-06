@@ -9,7 +9,7 @@ guide_top_text: "Catalogs allow you to access data from imported CSV files and A
 
 description: "This landing page is home to Catalogs. With catalogs and filtered sets, you can leverage non-user data in your Braze campaigns to send personalized messages."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Creating a Catalog
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/
