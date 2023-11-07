@@ -40,6 +40,6 @@ Each color on the calendar represents a different scheduled campaign type:
 
 - **Red:** Single-channel scheduled campaigns.
 - **Blue:** Multichannel scheduled campaigns.
-- **Gold:** 
+- **Gold:** Stopped campaigns, which are included in the calendar for historical reference.
 
 You can view or modify your campaigns by selecting the campaign in the calendar. For more information, see [Managing campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns).
