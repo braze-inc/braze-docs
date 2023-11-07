@@ -3,7 +3,13 @@
   // min-width: 66%;
   min-height: 100vh;
   line-height: 1.8;
-
+  width: 100%;
+  @media (min-width: $window-medium-px) {
+    width: calc(100% - #{$nav_width});
+  }
+  @media (min-width: $window-large-px) {
+    width: calc(100% - #{$nav_width + $toc_width});
+  }
   padding-left: 15px;
   padding-right: 15px;
   @media (min-width: $window-medium-px) {
@@ -72,9 +78,8 @@
         }
       }
     }
-    
-    $content_transition_time: 0.2s;
 
+    $content_transition_time: 0.2s;
       *,
       *::before,
       *::after {

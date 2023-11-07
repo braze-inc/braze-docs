@@ -33,7 +33,9 @@ $window-medium-px: 768px;
 $window-large-px: 992px;
 $window-xlarge-px: 1200px;
 $window-xxlarge-px: 1400px;
-
+$nav_width: 280px;
+$nav_width_collapsed: 40px;
+$toc_width: 220px;
 $main_max_width: 940px;
 
 // Core palate (colors)
@@ -45,9 +47,7 @@ $left-nav: #212123;
 $navy-bay: #27368f;
 // Lighter versions of navy-bay
 $navy-cove: #7c86bc;
-
 $blue-scooter: #3accdd;
-
 
 $braze-link-color: $blue-scooter;
 // Lighter versions of blue-scooter

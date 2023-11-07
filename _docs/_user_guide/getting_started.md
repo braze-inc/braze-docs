@@ -3,6 +3,7 @@ page_order: 0.1
 nav_title: Getting Started
 article_title: Getting Started with Braze
 layout: dev_guide
+search_rank: 4
 
 guide_top_header: "Getting Started with Braze"
 guide_top_text: "Welcome to Braze, we're happy you're here! This collection of articles will help you get started with our platform and introduce you to the key terms, features, and functionalities of Braze."
@@ -25,17 +26,11 @@ guide_featured_list:
   - name: Integration
     link: /docs/user_guide/getting_started/integration/
     image: /assets/img/icons/strategy_playbook.svg
-
-guide_menu_title: "More resources"
-guide_menu_list:
-  - name: SDK Overview for Marketers
-    link: /docs/user_guide/getting_started/web_sdk/
-    image: /assets/img/icons/sdk.svg
   - name: Terms to Know
     link: /docs/user_guide/getting_started/terms_to_know/
     image: /assets/img/icons/lightbulb.svg
 
-search_rank: 4
+
 ---
 
 <br>
