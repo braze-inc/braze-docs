@@ -15,9 +15,11 @@ platform:
   - Unity
 ---
 
-# Getting started: Platform overview
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}Getting started: Platform overview
 
 > This article covers the basic parts and capabilities of the Braze platform. Links from this article connect to essential Braze topics.
+
+## What is Braze?
 
 Braze is a customer engagement platform. This simply means that Braze helps you listen to your users, understand your users’ actions and behaviors, and then act on them. The Braze platform has three primary components: the SDK, the dashboard, and the REST API.
 
@@ -25,7 +27,7 @@ If you're a marketer looking for a more general overview of Braze, check out the
 
 ![Braze has different layers. In total, it consists of the SDK, the API, the dashboard, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, and an action layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.][17]{: style="max-width:55%;float:right;margin-left:15px;"}
 
-## SDK
+### SDK
 
 The [Braze SDKs](#integrating-braze) can be integrated into your mobile and web applications to provide powerful marketing, user management, and analytics tools.
 
@@ -40,13 +42,13 @@ In brief, when fully integrated, the SDK:
 * Has write-only access to your systems (can’t retrieve user data)
 * Powers push notifications, in-app messages, and Content Card messaging channels
 
-## Dashboard user interface
+### Dashboard user interface
 
 The dashboard is the UI that controls all of the data and interactions at the heart of the Braze platform. Marketers will use the dashboard to do their job and create content. Developers use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
 
 If you're just getting started, your team administrator should add you (and all other team members who need access to Braze) as [users on your dashboard][1].
 
-## REST API
+### REST API
 
 The Braze API allows you move data in and out of Braze at scale. Use the API to bring in updates from your backend, data warehouses, and other first and third-party sources. Additionally, use the API to add custom events for segmentation purposes directly from a web-based applications. You can trigger and send messages through the API, allowing technical resources to include complex JSON metadata as part of your campaigns.
 
