@@ -15,7 +15,7 @@ guide_top_header: "Content Card Customization"
 guide_top_text: "Content Cards are interactive, visually appealing elements that can be used to deliver personalized and engaging content to users. Customizing Content Cards and the feed in which they are located can be done during onboarding or as you continue to grow using Braze. You can also create new, completely custom Content Card types and log analytics to make sure that the Braze dashboard is tracking how successful your new types of cards are."
 description: "This landing page links to various ways to customize Braze SDK Content Cards for multiple platforms."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Customizing Content Card Styles
     link: /docs/developer_guide/customization_guides/content_cards/customizing_styles

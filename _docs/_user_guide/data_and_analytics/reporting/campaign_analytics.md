@@ -7,10 +7,10 @@ guide_top_header: "Campaign analytics"
 guide_top_text: "The Campaign Analytics gives you real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. Choose your messaging channel from those listed to learn more about Campaign Analytics specific to that channel. We also recommend you check out our <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> Braze Learning course for an overview of these analytics."
 
 page_type: landing
-description: "This landing page covers Campaign reporting for each messaging channel, and  retention and funnel reports."
+description: "This landing page covers campaign reporting for each messaging channel and retention and funnel reports."
 tool: Reports
 
-guide_featured_title: "Messaging Channels"
+guide_featured_title: "Messaging channels"
 guide_featured_list:
   - name: Content Cards
     link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
@@ -34,7 +34,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
     image: /assets/img/icons/whatsapp.svg
 
-guide_menu_title: "More Articles"
+guide_menu_title: "More articles"
 guide_menu_list:
   - name: Funnel Reports
     link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/

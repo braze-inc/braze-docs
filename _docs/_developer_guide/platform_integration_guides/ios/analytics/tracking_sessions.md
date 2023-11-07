@@ -15,7 +15,7 @@ The Braze SDK reports session data used by the Braze dashboard to calculate user
 
 ## Session lifecycle
 
-A session is started when you call `[[Appboy sharedInstance]` `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions]`, after which by default sessions start when the `UIApplicationWillEnterForegroundNotification` notification is fired (i.e., the app enters the foreground) and end when the app leaves the foreground (i.e., when the `UIApplicationDidEnterBackgroundNotification` notification is fired or when the app dies).
+A session is started when you call `[[Appboy sharedInstance]` `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions]`, after which by default sessions start when the `UIApplicationWillEnterForegroundNotification` notification is fired (such as the app enters the foreground) and end when the app leaves the foreground (such as when the `UIApplicationDidEnterBackgroundNotification` notification is fired or when the app dies).
 
 {% alert note %}
 If you need to force a new session, you can do so by changing users.

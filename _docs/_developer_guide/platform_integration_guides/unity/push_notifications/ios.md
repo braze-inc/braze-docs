@@ -56,7 +56,7 @@ If you want to pass push notification payloads to Unity or take additional steps
 
 ### Push received listener
 
-The push received listener is fired when a user receives a push notification while actively using the application (i.e., the app is foregrounded). Set the push received listener in the Braze configuration editor. If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.PUSH_RECEIVED`.
+The push received listener is fired when a user receives a push notification while actively using the application (such as when the app is foregrounded). Set the push received listener in the Braze configuration editor. If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.PUSH_RECEIVED`.
 
 ![The Unity editor shows the Braze configuration options. In this editor, the "Set Push Received Listener" option is expanded, and the "Game Object Name" (AppBoyCallback) and "Callback Method Name" (PushNotificationReceivedCallback) are provided.][30]
 

@@ -1,7 +1,7 @@
 ---
 nav_title: TV and OTT Integrations
 article_title: TV and OTT Integrations
-page_order: 4
+page_order: 15
 
 description: "This article will give you details on Braze TV and OTT features, integrations, available platforms, and other capabilities."
 platform:
@@ -222,7 +222,7 @@ To target OTT apps for messaging, we recommend creating a segment specific to yo
 
 ## Headless UI {#custom-ui}
 
-For platforms that support in-app messages or Content Cards via headless UI, Braze will deliver a data model (i.e., JSON) that your app can read and use within a UI your app controls. These platforms don't include any default UI or views.
+For platforms that support in-app messages or Content Cards via headless UI, Braze will deliver a data model, such as JSON, that your app can read and use within a UI your app controls. These platforms don't include any default UI or views.
 
 This data will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly.
 

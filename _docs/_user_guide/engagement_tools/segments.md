@@ -11,7 +11,7 @@ tool: Segments
 page_type: landing
 description: "This landing page covers articles on Segmentation within dashboard campaigns. Here, you can find information on how to set up a segment, filters, funnels, insights, extensions, and more."
 
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Popular articles"
 guide_featured_list:
   - name: Creating a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
@@ -26,7 +26,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/segments/segment_funnels/
     fa_icon: fas fa-user-slash
 
-guide_menu_title: "More Articles"
+guide_menu_title: "More articles"
 guide_menu_list:
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/

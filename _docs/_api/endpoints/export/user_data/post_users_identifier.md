@@ -76,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
   "device_id": "1234567",
   "braze_id": "braze_identifier",
   "email_address": "example@braze.com",
-  "phone": "+11112223333",
+  "phone": "11112223333",
   "fields_to_export": ["first_name", "email", "purchases"]
 }'
 ```

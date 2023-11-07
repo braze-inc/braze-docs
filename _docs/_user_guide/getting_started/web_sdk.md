@@ -1,17 +1,14 @@
 ---
-nav_title: SDK Overview for Marketers
-article_title: SDK Overview for Marketers
-page_order: 3
+nav_title: SDK Overview 
+article_title: SDK Overview 
+page_order: 9
 page_type: reference
-description: "This onboarding reference article covers the basics of the Braze SDK."
-
+description: "This reference article covers the basics of the Braze SDK."
 ---
 
-# SDK overview for marketers
+# SDK overview 
 
 > The Braze SDK makes it easy to collect session data, identify users, and record purchases and custom events through your website or app. You can also use the SDK to engage with your users by sending in-app messages and push notifications directly from the Braze dashboard.
-
-Are you a developer looking for a technical rundown of the SDK? Check out our [developer overview][1], instead.
 
 In brief, the Braze SDK:
 * Collects and syncs user data into a consolidated user profile
@@ -35,13 +32,13 @@ The Braze SDK automatically captures immense amounts of data at the user level, 
 
 ## In-app messaging
 
-The SDK makes it easy to compose and send in-app messages to directly engage with users. You can choose to send slideup, modal, or fullscreen messages based on your campaign strategy. For more information on composing an in-app message, see our page on [creating an in-app message][8].
+The SDK makes it easy to compose and send in-app messages to engage with users directly. You can choose to send slideup, modal, or fullscreen messages based on your campaign strategy. For more information on composing an in-app message, see our page on [creating an in-app message][8].
 
 ![Push displayed on a web browser][11]{: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 ## Push notifications
 
-Push notifications are another great option to engage with your users, and are especially useful to handle time-sensitive calls to action. Mobile push notifications appear on your users' device, and web push notifications appear even when your site is not open. For specifics on using push notifications, see our [push notification article][5].
+Push notifications are another great option to engage with your users and are especially useful to handle time-sensitive calls to action. Mobile push notifications appear on your users' devices, and web push notifications appear even when your site is not open. For specifics on using push notifications, see our [push notification article][5].
 
 Users of your website or app need to opt-in to receive push notifications. See [push priming][13] for more details. 
 
@@ -53,10 +50,10 @@ You can create a segment of your web users by selecting only your website's app 
 
 ![Segment Details page with web app selected][10]
 
-This will allow you to target users based on their behavior in an intelligent way. If you wanted to target web users to encourage them to download your mobile app, you'd create this segment as your target audience. If you wanted to send a messaging campaign that included a mobile in-app message but not a web message, you would simply uncheck your website's icon in your segment.
+This will allow you to target users based on their behavior in an intelligent way. If you wanted to target web users to encourage them to download your mobile app, you'd create this segment as your target audience. If you wanted to send a messaging campaign that included a mobile in-app message but not a web message, you would uncheck your website's icon in your segment.
 
 ## What integrations does Braze have?
-Braze offers a version of our SDK for many platforms (web, Android, iOS, Flutter, React Native, and more), but they all operate essentially the same way. So if you see a reference to, say, the "Web SDK," it's just the version of the Braze SDK intended for your website.
+Braze offers a version of our SDK for many platforms (web, Android, iOS, Flutter, React Native, and more), but they all operate essentially the same way. So, if you see a reference to, say, the "Web SDK," it's just the version of the Braze SDK intended for your website.
 
 <style>
 table th:nth-child(1) {
@@ -84,12 +81,9 @@ All integrations   | &nbsp;  |  &nbsp;
 [![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity Android]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/) 
 [![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/)
 
-
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/
 [4]: {{site.baseurl}}/user_guide/onboarding_with_braze/integration/#the-technical-side-of-the-integration-process
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about/
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [7]: {% image_buster /assets/img_archive/app_group_list.png %}
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [10]: {% image_buster /assets/img_archive/web-users-segment.png %}

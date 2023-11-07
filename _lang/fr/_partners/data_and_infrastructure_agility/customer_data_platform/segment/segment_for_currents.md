@@ -51,7 +51,7 @@ Enfin, cliquez sur **Lancer Current**.
 Si vous avez l’intention de créer plusieurs connecteurs Currents identiques (par exemple, deux connecteurs d’événement d’engagement par message), ces connecteurs doivent faire partie de différents groupes d’apps. L’intégration Currents Segment.io dans Braze ne permet pas d’isoler des événements de différentes applications dans un seul groupe d’apps, le non-respect de cette consigne entraînera des dédoublements et des pertes de données. 
 {% endalert %}
 
-Pour en savoir plus, consultez la [documentation](https://segment.com/docs/sources/cloud-apps/appboy/) de Segment.io.
+Pour en savoir plus, consultez la [documentation](https://segment.com/docs/connections/sources/catalog/cloud-apps/braze/) de Segment.io.
 
 ## Événements Currents pris en charge
 

@@ -69,7 +69,7 @@ To help run tests more efficiently, we suggest reducing time delays to minutes o
 
 ### Leverage Content Blocks
 
-If any content is going to be repeated in your testing framework (e.g., complex Liquid to filter users into different Canvas steps), try saving this repeated content as a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks). Now, you'll be able to include the Content Block throughout the individual Canvas steps.
+If any content is going to be repeated in your testing framework (for example, complex Liquid to filter users into different Canvas steps), try saving this repeated content as a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks). Now, you'll be able to include the Content Block throughout the individual Canvas steps.
 
 ### Use Postman and the Track user endpoint
 

@@ -56,7 +56,7 @@ All in-app messages that a user is eligible for are delivered to the user's devi
 
 When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
 
-For in-app messages that display immediately on deliver (*i.e.*, session start, push click) there can be some latency due to assets not being prefetched.
+For in-app messages that display immediately on deliver (such as session start, push click) there can be some latency due to assets not being prefetched.
 
 #### Minimum time interval between triggers
 

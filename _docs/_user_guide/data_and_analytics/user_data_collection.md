@@ -9,7 +9,7 @@ guide_top_text: "Before completing your Braze implementation, ensure that you ha
 page_type: landing
 description: "This landing page is home to articles on user data collection. Here, you can find resources on archival definitions, importing users, the user profile lifecycle, use cases, best practices, and more."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: SDK Data Collection
     link: /docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/

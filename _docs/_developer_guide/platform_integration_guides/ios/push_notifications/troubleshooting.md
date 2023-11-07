@@ -145,7 +145,7 @@ To add verification for your application's push handling, implement [push unit t
 #### Push clicks not logged {#push-clicks-not-logged}
 
 - If this is only occurring on iOS 10, make sure you have followed the push integration steps for [iOS 10][30].
-- Braze does not handle push notifications received silently in the foreground (e.g., default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened, and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. You should ensure that your app does not delay calls to our [push handling methods][30]; otherwise, the iOS SDK may treat push notifications as silent foreground push events and not handing them.
+- Braze does not handle push notifications received silently in the foreground (for example, default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened, and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. You should ensure that your app does not delay calls to our [push handling methods][30]; otherwise, the iOS SDK may treat push notifications as silent foreground push events and not handing them.
 
 #### Web links from push clicks not opening
 

@@ -111,7 +111,7 @@ Keywords created in custom keyword categories adhere to all of the rules and val
 
 ### Lifecycle-specific keywords
 
-If you have a use case where you would like to limit when a customer can send a specific keyword during their lifecycle (e.g., during their first initial onboarding) to receive a response, you can use the trigger **Sent inbound SMS to subscription group within keyword category OTHER** in your campaign or Canvas and define some ad-hoc keywords that your users can send in at a point in time.
+If you have a use case where you would like to limit when a customer can send a specific keyword during their lifecycle (for example, during their first initial onboarding) to receive a response, you can use the trigger **Sent inbound SMS to subscription group within keyword category OTHER** in your campaign or Canvas and define keywords that your users can send in at a point in time.
 
 This trigger supports filtering on the specific inbound message using is or is not comparisons of the message, as well as matches or does not match regex rules to validate the user's input.
 

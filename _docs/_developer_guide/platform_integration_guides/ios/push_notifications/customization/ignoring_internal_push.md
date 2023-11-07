@@ -11,7 +11,7 @@ channel:
 
 # Ignoring Braze internal push notifications
 
-Braze uses silent push notifications for the internal implementation of certain advanced features. For most integrations, this requires no changes on your app's behalf. However, if you integrate a Braze feature that relies on internal push notifications (e.g., uninstall tracking or geofences), you may want to update your app to ignore our internal pushes.
+Braze uses silent push notifications for the internal implementation of certain advanced features. For most integrations, this requires no changes on your app's behalf. However, if you integrate a Braze feature that relies on internal push notifications (for example, uninstall tracking or geofences), you may want to update your app to ignore our internal pushes.
 
 If your app takes automatic actions on application launches or background pushes, you should consider gating that activity so that it's not triggered by  \ internal push notifications. For example, if you have logic that calls your servers for new content upon every background push or application launch, you likely would not want our internal pushes triggering that because you would incur unnecessary network traffic. Furthermore, because Braze sends certain kinds of internal pushes to all users at approximately the same time, not gating network calls on launch from internal pushes could introduce significant server load.
 
@@ -36,7 +36,7 @@ You can use the utility methods in `ABKPushUtils` to check if your app has recei
   NSDictionary *pushDictionary = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
   BOOL launchedFromAppboyInternalPush = pushDictionary && [ABKPushUtils isAppboyInternalRemoteNotification:pushDictionary];
   if (!launchedFromAppboyInternalPush) {
-    // ... Gated logic here (e.g., pinging your server to download content) ...
+    // ... Gated logic here (such as pinging your server to download content) ...
   }
 }
 ```
@@ -44,7 +44,7 @@ You can use the utility methods in `ABKPushUtils` to check if your app has recei
 ```objc
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
   if (![ABKPushUtils isAppboyInternalRemoteNotification:userInfo]) {
-    // ... Gated logic here (e.g., pinging server for content) ...
+    // ... Gated logic here (such as pinging server for content) ...
   }
 }
 ```
@@ -57,7 +57,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   let pushDictionary = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary as? [AnyHashable : Any] ?? [:]
   let launchedFromAppboyInternalPush = ABKPushUtils.isAppboyInternalRemoteNotification(pushDictionary)
   if (!launchedFromAppboyInternalPush) {
-    // ... Gated logic here (e.g., pinging your server to download content) ...
+    // ... Gated logic here (such as pinging your server to download content) ...
   }
 }
 ```
@@ -67,7 +67,7 @@ func application(_ application: UIApplication,
                  didReceiveRemoteNotification userInfo: [AnyHashable : Any],
                  fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
   if (!ABKPushUtils.isAppboyInternalRemoteNotification(userInfo)) {
-    // ... Gated logic here (e.g., pinging server for content) ...
+    // ... Gated logic here (such as pinging server for content) ...
   }
 }
 ```

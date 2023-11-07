@@ -9,7 +9,7 @@ guide_top_text: "One of the best parts about Braze is its flexibility—you can 
 page_type: landing
 description: "This landing page is home to articles on custom data. Here, you can find resources on event naming conventions, custom event and attributes, purchase events, blocklisting custom data, and more."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Events
     link: /docs/user_guide/data_and_analytics/custom_data/events/

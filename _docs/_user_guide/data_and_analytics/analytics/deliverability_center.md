@@ -52,7 +52,7 @@ To help understand the ratings for IP reputation, refer to this table:
 
 | Reputation Rating | Definition |
 | ----- | ---------- |
-| High | Has a good track record of generating low spam complaints (i.e., users clicking the "spam" button). |
+| High | Has a good track record of generating low spam complaints (such as users clicking the "spam" button). |
 | Medium/Fair | Known to generate positive engagement but occasionally receives spam complaints. Most of the emails from this domain will be sent to the inbox, except when spam complaints increase. |
 | Low | Known to receive elevated rates of spam complaints regularly. Emails from this sender will likely be filtered to the spam folder. |
 | Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |

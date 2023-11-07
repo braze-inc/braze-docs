@@ -36,7 +36,7 @@ Some Android devices manufactured by Chinese Original Equipment Manufacturers (O
 
 Push notifications sent using Push Max will only be delivered to devices that have at least the following [minimum SDK version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
-{% sdk_min_versions android:26.3.2 %}
+{% sdk_min_versions android:29.0.1 %}
 
 ## Using Push Max
 

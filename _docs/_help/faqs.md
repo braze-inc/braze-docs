@@ -7,7 +7,7 @@ layout: dev_guide
 guide_top_header: "Best Practices and Frequently Asked Questions"
 guide_top_text: "This landing page is home to articles on frequently asked questions and best practices about the Braze dashboard and its features."
 
-guide_featured_title: "FAQ Articles"
+guide_featured_title: "FAQ articles"
 guide_featured_list:
   - name: Canvas FAQ
     link: /docs/user_guide/engagement_tools/canvas/faqs/
@@ -24,7 +24,7 @@ guide_featured_list:
   - name: "In-App Messages FAQ"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
     fa_icon: fas fa-mobile-alt
-  - name: "Locations & Geofences FAQ"
+  - name: "Locations and Geofences FAQ"
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
     fa_icon: fas fa-map-marker-alt
   - name: "Media Library FAQ"
@@ -42,7 +42,7 @@ guide_featured_list:
   - name: "Intelligence FAQ"
     link: /docs/user_guide/intelligence/faqs/
     fa_icon: fa-regular fa-lightbulb
-  - name: "Drag & Drop Editor FAQ"
+  - name: "Email Drag-and-Drop Editor FAQ"
     link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/faq/
     fa_icon: fa-regular fa-lightbulb
   - name: "API and CSV Export FAQ"
@@ -59,7 +59,7 @@ guide_featured_list:
     fa_icon: fas fa-flask
 
 
-guide_menu_title: "Best Practices"
+guide_menu_title: "Best practices"
 guide_menu_list:
   - name: "Content Card Best Practices"
     link: /docs/user_guide/message_building_by_channel/content_cards/best_practices/

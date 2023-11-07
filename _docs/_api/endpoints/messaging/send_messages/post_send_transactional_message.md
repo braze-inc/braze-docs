@@ -15,7 +15,7 @@ description: "This article outlines details about the Send transactional email m
 /transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}
 
-> Use this endpoint to send immediate, ad-hoc transactional messages to a designated user. 
+> Use this endpoint to send immediate, one-off transactional messages to a designated user. 
 
 This endpoint is used alongside the creation of a [Transactional Email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
 
@@ -84,11 +84,9 @@ curl -X POST \
           "example_string_property": YOUR_EXAMPLE_STRING,
           "example_integer_property": YOUR_EXAMPLE_INTEGER
         },
-        "recipient": [
-          {
-            "external_user_id": TARGETED_USER_ID_STRING
-          }
-        ]
+        "recipient": {
+          "external_user_id": TARGETED_USER_ID_STRING
+        }
       }' \
   https://rest.iad-01.braze.com/transactional/v1/campaigns/{campaign_id}/send
 ```

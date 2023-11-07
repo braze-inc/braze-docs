@@ -49,7 +49,7 @@ The behavior for the following tags differs between Canvas and campaigns:
 
 ## Most recently used device information
 
-You can template in the following attributes for the user's most recent device across all platforms. If a user has not used your application (e.g., you imported the user via REST API), then these values will all be `null`.
+You can template in the following attributes for the user's most recent device across all platforms. If a user has not used your application (for example, you imported the user via REST API), then these values will all be `null`.
 
 {% raw %}
 
