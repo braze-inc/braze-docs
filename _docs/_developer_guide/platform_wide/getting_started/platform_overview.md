@@ -106,11 +106,9 @@ For more on customizing messaging channels, check out: [Getting Started: Customi
 
 ## Integrating Braze
 
-Braze is designed to get up and running quickly and easily. Our average time-to-value is six weeks across our customer base of hundreds of brands.
+Braze is designed to get up and running quickly and easily. Our average time-to-value is six weeks across our customer base of hundreds of brands. For more on the integration process, check out: [Getting Started: Integration overview]({{site.baseurl}}/developer_guide/platform_wide/getting_started/integration_overview/).
 
-For more on the integration process, check out: [Getting Started: Integration overview]({{site.baseurl}}/developer_guide/platform_wide/getting_started/integration_overview/).
-
-> Explore the different SDKs Braze offers:
+Explore the different SDKs Braze offers:
 
 <style>
 table th:nth-child(1) {
