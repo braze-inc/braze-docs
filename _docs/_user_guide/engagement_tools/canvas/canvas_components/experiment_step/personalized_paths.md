@@ -52,7 +52,7 @@ This option will send future users down the mix of paths according to the percen
 
 A single Experiment Path component can contain up to four paths. However, when Personalized Paths is turned on, you can add up to three paths in your Experiment. The fourth path should be reserved for the Delay Group that Braze automatically adds to your experiment.
 
-Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in.
+Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance).
 
 ![][5]{: style="max-width:75%;" }
 
