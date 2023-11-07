@@ -21,10 +21,6 @@ If you use SendGrid as an email provider, you can send emails to Apple without m
 
 ![Option to allowlist individual email addresses on the Apple Certificate page.]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
 
-To find the address, go to your SendGrid DNS record and copy the **UID**, **Whitelabel Subdomain**, and **Domain** from the **Host Value** column. 
-
-![HOST Value column in SendGrid DNS records section.]({% image_buster /assets/img/email-relay-dns-records.png %})
-
 The address should be formatted as: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`(e.g., `bounces+1234567@braze.online.docs.com`). After the address is added to your Apple Certificate page, emails from this domain will be delivered via the Apple Private Relay system.
 
 {% alert important %}
