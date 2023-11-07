@@ -10,7 +10,7 @@ description: "This article provides an overview of the updated HTML editor for e
 
 > The updated HTML editor for email features a series of UI improvements, including a better code editing experience. 
 
-With the updated HTML editor, you can seamlessly switch among editors (HTML, classic, plaintext, and AMP) with the top editor navigation. These options were previously hidden in a dropdown in the old HTML editor. This updated HTML editor also creates a consistent experience across our editors in other messaging channels, allowing Braze to more efficiently build universal improvements to these editors in the future.
+With the updated HTML editor, you can seamlessly switch between editors (HTML, classic, plaintext, and AMP) with the top editor navigation. These options were previously hidden in a dropdown in the old HTML editor. This updated HTML editor also creates a consistent experience across our editors in other messaging channels, allowing Braze to more efficiently build universal improvements to these editors in the future.
 
 ![][1]
 
