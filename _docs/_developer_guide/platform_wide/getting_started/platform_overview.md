@@ -23,7 +23,7 @@ platform:
 
 Braze is a customer engagement platform. This simply means that Braze helps you listen to your users, understand your users’ actions and behaviors, and then act on them. The Braze platform has three primary components: the SDK, the dashboard, and the REST API.
 
-If you're a marketer looking for a more general overview of Braze, check out the [User Guide Getting Started section]({{site.baseurl}}/user_guide/getting_started/overview/), instead.
+If you're a marketer looking for a more general overview of Braze, check out the [Getting Started section for marketers]({{site.baseurl}}/user_guide/getting_started/overview/), instead.
 
 ![Braze has different layers. In total, it consists of the SDK, the API, the dashboard, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, and an action layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.][17]{: style="max-width:55%;float:right;margin-left:15px;"}
 

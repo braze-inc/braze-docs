@@ -19,13 +19,13 @@ platform:
 
 > This article provides a basic overview of the onboarding process.
 
-![A venn diagram of four circles - discovery, integrate, quality assurance and maintain - centered around "time to value."][27]{: style="max-width:50%;float:right;margin-left:15px;"} 
+![A venn diagram of four circles - discovery, integrate, quality assurance and maintain - centered around "time to value."][27]{: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
 
 As a technical resource, you'll empower your team by integrating Braze into your tech stack. Onboarding is broadly split up into four steps:
 * [Discovery and planning](#discovery): Work with your team to align on scope, plan a structure for data and campaigns, and create an appropriate workspace structure. 
 * [Integration](#integration): Execute on your plan by integrating the SDK and API, enabling messaging channels, and setting up data import and export. 
-* [Quality Assurance](#qa): Ensure that the loop of data and messaging between the Braze platform and your app or site is working as expected.
-* [Maintenance](#maintenance): Once you've passed off Braze to your Marketing team, you'll continue to ensure everything continues to run smoothly.
+* [Quality Assurance](#qa): Confirm that the loop of data and messaging between the Braze platform and your app or site is working as expected.
+* [Maintenance](#maintenance): After you've passed off Braze to your marketing team, you'll continue to make sure everything continues to run smoothly.
 
 <br>
 {% alert tip %}
@@ -35,7 +35,7 @@ We recognize that every organization has its distinct needs, and Braze is built 
 ## Discovery and planning {#discovery}
 During this phase, you will work with your team to scope onboarding tasks and ensure all stakeholders are aligned on a common goal. 
 
-Your team will perform end-to-end planning of your use cases to ensure everything can be built as expected, with the correct data available to do so. This phase includes your project lead, CRM lead, front and back-end Engineering, product owners, and marketers. 
+Your team will perform end-to-end planning of your use cases to make sure everything can be built as expected, with the correct data available to do so. This phase includes your project lead, CRM lead, front and back-end engineering, product owners, and marketers. 
 
 The discovery and planning phase takes, on average, about six weeks. Engineering leads can expect to spend 2-4 hours a week during this phase. Developers working with the product can expect to spend 10-20 hours a week on Braze during the discovery and planning phase. 
 
@@ -74,7 +74,7 @@ Keep data nomenclature consistent across tools. For example, your data warehouse
 Learn more about [automatically collected data and custom data][5].
 
 ### Customizations planning
-Talk to your marketers about their desired customizations. For example, do you want to implement the default Braze Content Cards? Do you want to slightly tweak their look and feel to match your brand guidelines? Do you want to develop an entirely new UI for a component and have Braze track its analytics? Different levels of customization require different levels of scope; see our [customization overview for more information][6].
+Talk to your marketers about their desired customizations. For example, do you want to implement the default Braze Content Cards? Do you want to slightly tweak their look and feel to match your brand guidelines? Do you want to develop an entirely new UI for a component and have Braze track its analytics? Different levels of customization require different levels of scope; see our [customization overview][6] for more information.
 
 ### Getting dashboard access
 The Braze dashboard is our web UI interface. Marketers will use the dashboard to do their job and create content. Developers use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
@@ -82,12 +82,12 @@ The Braze dashboard is our web UI interface. Marketers will use the dashboard to
 Your team administrator should add you (and all other team members who need access to Braze) as users on your dashboard.
 
 ### Workspaces and API keys
-Your team administrator will also create different [workspaces]({{site.baseurl}}/developer_guide/platform_wide/getting_started/app_group_configuration/). Workspaces group your data—users, segments, API keys—into one location. As a best practice, we suggest only putting different versions of the same or very similar apps together under one workspace. 
+Your team administrator will also create different [workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/). Workspaces group your data—users, segments, API keys—into one location. As a best practice, we suggest only putting different versions of the same or very similar apps together under one workspace. 
 
-Importantly, workspaces provide API keys for multiple platforms (such as iOS and Android). You'll use the correlated API keys to associate SDK data with a particular workspace. Navigate to your workspaces to access the API key for each of your apps. Ensure each API key has the correct permissions to perform the work you've scoped. See the [API provisioning article for details.][7]
+Importantly, workspaces provide API keys for multiple platforms (such as iOS and Android). You'll use the correlated API keys to associate SDK data with a particular workspace. Navigate to your workspaces to access the API key for each of your apps. Make sure each API key has the correct permissions to perform the work you've scoped. See the [API provisioning article for details.][7]
 
 {% alert important %}
-It's important that you set up different environments for development and production. Setting up a test environment will ensure you won't spend actual money during onboarding and QA. To create a testing environment, set up a testing workspace and be sure to use its API key so that you aren't populating your production workspace with test data.
+It's important that you set up different environments for development and production. Setting up a test environment will prevent you from spending actual money during onboarding and QA. To create a testing environment, set up a testing workspace and be sure to use its API key so that you aren't populating your production workspace with test data.
 {% endalert %}  
 
 
@@ -144,7 +144,7 @@ Braze is all about data. Data in Braze is stored on the user profile.
 Data points are a structure by which you ensure you're capturing the right data for your marketers, not just "any" data you can possibly vacuum up. Familiarize yourself with [data points][10].
 
 ### Migrating legacy user data
-You can use [Braze's Track Users endpoint][17] to migrate historical data that was recorded outside of Braze. Examples of commonly imported data include push tokens and past purchases. This endpoint can be used for one-off imports or regular batch updates. 
+You can use the Braze [/users/track endpoint][17] to migrate historical data that was recorded outside of Braze. Examples of commonly imported data include push tokens and past purchases. This endpoint can be used for one-off imports or regular batch updates. 
 
 You can also import users and update customer attribute values through a one-time [CSV upload][18] to the dashboard. Uploading CSVs can be helpful for marketers, while our REST API allows for greater flexibility.
 
@@ -199,7 +199,7 @@ When onboarding Braze, the collective decisions you make concerning data, user p
 Create a resource to cement the information you learned during your technical overview sessions. This resource will help quickly onboard new developers who join your team (or serve as a reminder to yourself when you need to expand your current Braze implementation). 
 
 ## Maintenance {#maintenance}
-After handoff to your marketers, you will continue to serve as a resource for maintenance. You will pay attention to iOS and Android updates that might impact the Braze SDK and ensure that your third-party vendors are up to date. 
+After handoff to your marketers, you will continue to serve as a resource for maintenance. You will pay attention to iOS and Android updates that might impact the Braze SDK and make sure that your third-party vendors are up to date. 
 
 You will track updates to the Braze platform via the Braze [GitHub][23]. Occasionally, your administrator will receive emails about urgent updates and bug fixes directly from Braze, as well. 
 
