@@ -50,6 +50,12 @@ On the **Link Aliasing Settings** tab, you can turn off tracking for link aliase
 1. Select the link alias.
 2. Click **Turn off tracking**.  
 
+#### Link aliases and user profile data
+
+In Braze, when a user clicks a link with an alias (let's say "OLD_ALIAS"), this alias is set at the time of the event and written to the user's profile. This cannot be changed later. For example, if you have a link in your app or website with the alias "OLD_ALIAS" and a user clicks on it, the event is recorded in the user's profile with the alias "OLD_ALIAS".
+
+Later, if you decide to rename this link alias to "NEW_ALIAS", the previous click data in the user profile will not be updated, meaning it will still show as "OLD_ALIAS". So, if you target users based on the "NEW_ALIAS", it will not include the data from the "OLD_ALIAS".
+
 ### Checking workflows
 
 Braze recommends evaluating the links within the email, adding link templates, and providing a naming convention that works for segmentation and reporting purposes. This helps you keep track of all links.
@@ -119,7 +125,7 @@ The retargeting of aliases filters allow you to create segmentation filters base
 In the **Link Management** tab, select which aliases you would like to be "tracked" for segmentation purposes and to be present in segmentation filters. Note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes.
 
 {% alert tip %}
-To track link engagement metrics, make sure to precede your link with either HTTP or HTTPS.
+To track link engagement metrics, make sure your link precedes with either HTTP or HTTPS.
 {% endalert %}
 
 Braze allows you to select unlimited links to track, though you may only retarget users on the most recent links they have opened. User profiles include their 100 most recently clicked links. For example, if you track 500 links and a user clicks on all 500 of them, you can retarget or create segments based on the 100 most recently clicked links.
@@ -150,6 +156,8 @@ For segmentation purposes, only 100 links can be tracked per workspace by defaul
 ![][1]
 
 ### Segment filters
+
+The following segment filters apply to only tracked links.
 
 #### Clicked Alias in Campaign
 
