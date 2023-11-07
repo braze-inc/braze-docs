@@ -64,7 +64,7 @@ Cloud Data Ingestion can sync data from Snowflake, Amazon Redshift, Databricks, 
 The classification layer enables your team to dynamically classify and build audiences, called [segments][8], based on data passing through Braze. 
 
 {% alert note %}
-The classification, orchestration, and personalization layers are where your Marketing team will do much of their work. They interface with these layers most often through the Braze dashboard, our web interface. Developers have a role in setting up and customizing these layers.
+The classification, orchestration, and personalization layers are where your marketing team will do much of their work. They interface with these layers most often through the Braze dashboard, our web interface. Developers have a role in setting up and customizing these layers.
 {% endalert %}
 
 Many common types of user attributes, such as name, email, date of birth, country, and others are automatically tracked by the SDK by default. As a developer, you'll work with your team to define what additional, custom data makes sense to track for your use case. Your custom data will impact how your user base will be classified and segmented. You will set this data model up during the implementation process. 
@@ -72,7 +72,7 @@ Many common types of user attributes, such as name, email, date of birth, countr
 Learn more about [automatically collected data and custom data][9].
 
 ## Orchestration {#orchestration}
-The orchestration layer allows your Marketing team to design user journeys based on your user data and prior engagement. This work is mostly done through our dashboard interface, but you also have the option to launch [campaigns through the API][10]. For example, you can have your backend tell Braze when to send the messages and campaigns your marketers designed in the dashboard, and trigger them according to your backend logic. An example of an API-triggered message might be password resets or shipping confirmations. 
+The orchestration layer allows your marketing team to design user journeys based on your user data and prior engagement. This work is mostly done through our dashboard interface, but you also have the option to launch [campaigns through the API][10]. For example, you can have your backend tell Braze when to send the messages and campaigns your marketers designed in the dashboard, and trigger them according to your backend logic. An example of an API-triggered message might be password resets or shipping confirmations. 
 
 {% alert note %}
 API-triggered campaigns are ideal for more advanced transactional use-cases. They allow marketers to manage campaign copy, multivariate testing, and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from your servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real-time. 
@@ -85,7 +85,7 @@ Braze allows you to remotely enable or disable functionality for a selection of 
 ## Personalization {#personalization}
 The personalization layer represents the ability to deliver dynamic content in your messages. By using Liquid, a widely-used personalization language, your team can dynamically pull in existing data to display the message tailored to each recipient. Additionally, you can insert any information accessible on your webserver or via API directly into the messages you're sending, such as push notifications or emails, by using [Connected Content][11]. Connected Content builds on top of Liquid and uses familiar syntax.
 
-And because this dynamic content is programmable, marketers can include computed values, responses from other calls, or product catalog items. Once you've set these systems up during implementation, your Marketing team can do this with little to no support from technical teams. 
+And because this dynamic content is programmable, marketers can include computed values, responses from other calls, or product catalog items. Once you've set these systems up during implementation, your marketing team can do this with little to no support from technical teams. 
 
 ## Action {#action}
 The action layer enables your actual messaging to your users. The purpose of the action layer is to send the right message to the right user at the right time, based on the data available through all of the layers previously discussed. Messaging is done inside your app or site (such as sending in-app messages or through graphic elements like Content Card carousels and banners) or outside your app experience (such as sending push notifications or emails).
@@ -93,7 +93,7 @@ The action layer enables your actual messaging to your users. The purpose of the
 ### Messaging channels
 Braze was designed to handle an evolving technological landscape with its channel-agnostic, user-centric data model. The dashboard manages message delivery and transactional triggers. For example, your marketers can trigger an SMS message offering a coupon for one of your newly-opened storefronts when a user enters the geofence set near this location, or send a user an email to let them know their favorite show has a new season.
 
-The [Braze SDK][5] powers additional messaging channels: push, in-app messages, and Content Cards. You integrate the SDK with your app or site to allow your Marketing team to use the Braze dashboard to coordinate their campaigns across all supported messaging channels.
+The [Braze SDK][5] powers additional messaging channels: push, in-app messages, and Content Cards. You integrate the SDK with your app or site to allow your marketing team to use the Braze dashboard to coordinate their campaigns across all supported messaging channels.
 
 ![][13]
 
