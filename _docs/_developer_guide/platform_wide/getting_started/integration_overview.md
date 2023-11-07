@@ -19,12 +19,12 @@ platform:
 
 > This article provides a basic overview of the onboarding process.
 
-![A venn diagram of four circles - discovery, integrate, quality assurance and maintain - centered around "time to value."][27]{: style="max-width:50%;float:right;margin-left:15px;"} 
+![A venn diagram of four circles - discovery, integrate, quality assurance and maintain - centered around "time to value."][27]{: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
 
 As a technical resource, you'll empower your team by integrating Braze into your tech stack. Onboarding is broadly split up into four steps:
 * [Discovery and planning](#discovery): Work with your team to align on scope, plan a structure for data and campaigns, and create an appropriate workspace structure. 
 * [Integration](#integration): Execute on your plan by integrating the SDK and API, enabling messaging channels, and setting up data import and export. 
-* [Quality Assurance](#qa): Ensure that the loop of data and messaging between the Braze platform and your app or site is working as expected.
+* [Quality Assurance](#qa): Confirm that the loop of data and messaging between the Braze platform and your app or site is working as expected.
 * [Maintenance](#maintenance): Once you've passed off Braze to your Marketing team, you'll continue to ensure everything continues to run smoothly.
 
 <br>
