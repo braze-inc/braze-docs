@@ -52,9 +52,19 @@ On the **Link Aliasing Settings** tab, you can turn off tracking for link aliase
 
 #### Link aliases and user profile data
 
-In Braze, when a user clicks a link with an alias (let's say "OLD_ALIAS"), this alias is set at the time of the event and written to the user's profile. This cannot be changed later. For example, if you have a link in your app or website with the alias "OLD_ALIAS" and a user clicks on it, the event is recorded in the user's profile with the alias "OLD_ALIAS".
+In Braze, when a user clicks a link with an alias, this alias is set at the time of the event and written to the user's profile. For example, if you have a link in your app or website with the alias and a user clicks on it, the event is recorded in the user's profile with the alias.
 
-Later, if you decide to rename this link alias to "NEW_ALIAS", the previous click data in the user profile will not be updated, meaning it will still show as "OLD_ALIAS". So, if you target users based on the "NEW_ALIAS", it will not include the data from the "OLD_ALIAS".
+Later, if you decide to rename this link alias, the previous click data in the user profile **will not** be updated, meaning it will still show as the previous link alias. So, if you target users based on the the new link alias, it will not include the data from the previous link alias.
+
+Let's say we have the following link alias generated via Liquid: 
+{% raw %}
+```liquid
+{% assign link_alias = https://www.braze.com %}
+<a href="{{link_alias}}?">{{link_alias}}?</a>
+```
+{% endraw %}
+
+In this example, `link_alias` is the alias for the link. When a user clicks on this link, an event with the alias `link_alias` is recorded. If you rename this alias, the event data associated with the old alias will not be updated in the user profile. 
 
 ### Checking workflows
 
