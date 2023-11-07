@@ -148,7 +148,7 @@ As a technical resource, you'll be involved in a lot of the nuts and bolts of Br
 | [iOS (Swift) SDK GitHub Repository](https://github.com/braze-inc/braze-swift-sdk) | The Swift SDK GitHub repository. |
 | [iOS (Swift) SDK Reference](https://braze-inc.github.io/braze-swift-sdk/) | Class documentation for the iOS SDK. |
 | [Web SDK GitHub Repository](https://github.com/braze-inc/braze-web-sdk) | The Web SDK GitHub repository. |
-| [Web SDK Reference](https://js.appboycdn.com/web-sdk/5.0/doc/modules/braze.html/) | Class documentation for the iOS SDK. |
+| [Web SDK Reference](https://js.appboycdn.com/web-sdk/5.0/doc/modules/braze.html) | Class documentation for the iOS SDK. |
 | [SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs) | Braze has predictable monthly releases, in addition to releases for any critical issues and major OS updates. |
 | [Braze API Postman Collection](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest) | Download our Postman collection here.  |
 | [Braze System Status Monitor](https://braze.statuspage.io/) | Our status page is updated whenever there are incidents or outages. Go to this page to subscribe to alerts. |
