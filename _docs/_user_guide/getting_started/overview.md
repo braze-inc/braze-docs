@@ -12,7 +12,7 @@ description: "Get acquianted with the core concepts you'll need to know when wor
 Welcome to Braze! This collection of articles will help you get started with our platform and introduce you to the key terms, features, and functionalities of Braze. This page introduces the core concepts you'll need to know when working in Braze.
 
 {% alert tip %}
-We highly recommend checking out our free [Braze Foundations for Everyone](https://learning.braze.com/page/braze-foundations-for-everyone) course along with these articles. No special login or account is needed for this course. If you're a developer looking for a technical rundown of Braze, check out the [Developer Guide Getting Started section]({{site.baseurl}}/developer_guide/platform_wide/getting_started/platform_overview), too.
+We highly recommend checking out our free [Braze Foundations for Everyone](https://learning.braze.com/page/braze-foundations-for-everyone) course along with these articles. No special login or account is needed for this course. If you're a developer looking for a technical rundown of Braze, check out [Getting Started for Developers]({{site.baseurl}}/developer_guide/platform_wide/getting_started/platform_overview), too.
 {% endalert %}
 
 In the Getting Started sections, we focus on the common implementations of Braze. However, Braze is incredibly flexible and can be customized to bring value to your organization in various ways. To establish clarity and brevity, we've provided a descriptive overview of the default setup instead of offering rigid instructions. We recognize that every organization has its distinct needs, and Braze is built to cater to a diverse range of customization options that can be tailored to your specific requirements.
