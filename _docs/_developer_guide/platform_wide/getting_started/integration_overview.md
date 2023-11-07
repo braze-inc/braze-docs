@@ -84,7 +84,7 @@ Your team administrator should add you (and all other team members who need acce
 ### Workspaces and API keys
 Your team administrator will also create different [workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/). Workspaces group your data—users, segments, API keys—into one location. As a best practice, we suggest only putting different versions of the same or very similar apps together under one workspace. 
 
-Importantly, workspaces provide API keys for multiple platforms (such as iOS and Android). You'll use the correlated API keys to associate SDK data with a particular workspace. Navigate to your workspaces to access the API key for each of your apps. Make sure each API key has the correct permissions to perform the work you've scoped. See the [API provisioning article for details.][7]
+Importantly, workspaces provide API keys for multiple platforms (such as iOS and Android). You'll use the correlated API keys to associate SDK data with a particular workspace. Navigate to your workspaces to access the API key for each of your apps. Make sure each API key has the correct permissions to perform the work you've scoped. See the [API provisioning article][7] for details.
 
 {% alert important %}
 It's important that you set up different environments for development and production. Setting up a test environment will prevent you from spending actual money during onboarding and QA. To create a testing environment, set up a testing workspace and be sure to use its API key so that you aren't populating your production workspace with test data.

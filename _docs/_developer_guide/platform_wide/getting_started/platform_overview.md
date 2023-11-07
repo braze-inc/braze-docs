@@ -74,16 +74,16 @@ For more on our data models, check out: [Getting Started: Analytics overview]({{
 
 ## Multichannel messaging
 
-Once you have defined a segment, Braze's messaging tools allow you to engage with your users in a dynamic, personalized way. Braze was designed with a channel-agnostic, user-centric data model. Messaging is done inside your app or site (such as sending in-app messages or through graphic elements like Content Card carousels and banners) or outside your app experience (such as sending push notifications or emails). For example, your marketers can send a push notification and an email to the example segment defined in the previous section.
+After you have defined a segment, Braze messaging tools allow you to engage with your users in a dynamic, personalized way. Braze was designed with a channel-agnostic, user-centric data model. Messaging is done inside your app or site (such as sending in-app messages or through graphic elements like Content Card carousels and banners) or outside your app experience (such as sending push notifications or emails). For example, your marketers can send a push notification and an email to the example segment defined in the previous section.
 
-![Create and trigger personalized messages on any channel, whether outside or within your app or website.][18]
+![Create and trigger personalized messages on any channel, whether outside or within your app or website.][18]{: style="border:none" }
 
 | Channel                                                                                              | Description                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)* | Send highly-targeted and dynamic in-app notifications without interrupting the customer. |
 | [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/) | Send rich HTML messages by building your email using the rich-text editor, our drag-and-drop editor, or by uploading one of your existing HTML templates. |
 | [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) | Send unobtrusive in-app notifications using the Braze custom-built native user interface. |
-| [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) | Automatically trigger push notifications from messaging campaings or news items using the Apple Push Notification Service (APNs) for iOS or Firebase Cloud Messaging (FCM) for Android. |
+| [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) | Automatically trigger push notifications from messaging campaigns or news items using the Apple Push Notification Service (APNs) for iOS or Firebase Cloud Messaging (FCM) for Android. |
 | [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)* | Use SMS/MMS to send transactional notifications, share promotions, send reminders, and more. |
 | [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) | Send web browser notifications, even if your users aren't currently active on your site. |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Use webhooks to trigger non-app actions, providing other systems and applications with real-time data. |
