@@ -29,9 +29,10 @@ To support sending iOS universal links as deep links from within Braze:
 
 ### Deep linking in email
 
-See [Branch's documentation](https://docs.branch.io/pages/integrations/braze/) to set up deep linking from emails sent through Braze.
+Refer to our documentation on [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
+or see [Branch's documentation](https://docs.branch.io/pages/integrations/braze/) to set up deep linking from emails sent through Braze.
 
-Depending on your ESP, additional customization may be required to support click-tracked universal links:
+Depending on your ESP, additional customization may be required to support click-tracked universal links. This information is outlined in our dedicated article, however you can also refer to the following references to learn more:
 
 - [SendGrid][7]
 - [SparkPost][9]
