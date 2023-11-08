@@ -23,10 +23,10 @@ On the Shopify partner page, select **Begin Setup** to start the integration pro
 ![Data Import and Web SDK Installation section of the Shopify partner page in Braze.][2]{: style="max-width:80%;"}
 
 ### Step 2: Braze's setup wizard
-Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your Shopify store name. Make sure to enter the store name, and not your Shopify domain. Note that currently, we can only connect one store per workspace.
+Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your Shopify store name. Make sure to enter the store name, not your Shopify domain. Note that currently, we can only connect one store per workspace.
 
 ### Step 3: Flexible event selection {#event-selection}
-There will be a step explaining which events require us to implement the Braze Web SDK on your store and what to expect when this is added. Proceed to the next page to select the Shopify events you want Braze to track. Selecting any events with an * next to them will enable our Web SDK. The next step will ask you to confirm the selected events.
+There will be a step explaining which events require us to implement the Braze Web SDK on your store and what to expect when this is added. Proceed to the next page to select the Shopify events you want Braze to track. Selecting any events with an asterisk (*) next to them will enable our Web SDK. The next step will ask you to confirm the selected events.
 
 ### Step 4: Backfill historical data
 You have the option to enable a backfill of purchasers from the last 90 days prior to your installation. By automatically syncing over past customer and purchase data, you’ll be able to immediately start targeting and engaging with your customers. Refer to [Shopify historical backfill]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/) to learn more.
@@ -50,20 +50,20 @@ At this step, select whether you want to collect email and SMS opt-ins from your
 If there is an existing global subscription state on a user profile within Braze that's different from Shopify, we recommend you enable **Override existing global subscription state for users**. This will override the Braze state to check if it matches with Shopify.
 
 {% alert important %}
-If you do not override global subscription states, existing user's states may not match those found in Shopify. This can lead to unreceived and unintended messages.
+If you do not override global subscription states, an existing user's states may not match those found in Shopify. This can lead to unreceived and unintended messages.
 {% endalert %}
 
 #### Legacy custom attributes
 
 Legacy Shopify customers may have the old method of collecting email and SMS subscribers via the `shopify_accepts_marketing` and `shopify_sms_consent` custom attributes. If you save the settings above with override enabled, Braze will remove the custom attributes on the user profiles and sync those values over to their respective email subscription group and SMS subscription group.
 
-If you have existing campaigns or Canvases using these legacy custom attributes today, you should remove them and check the campaigns or Canvases are using the appropriate subscription state, group, or both."
+If you have existing campaigns or Canvases using these legacy custom attributes today, you should remove them and check the campaigns or Canvases are using the appropriate subscription state, group, or both.
 
 ### Step 7: Install Braze's Shopify application
 You'll then be redirected to your Shopify store to install the Braze app. When you select **Install Unlisted App**, you will be redirected to the Braze dashboard. 
 
 ### Step 8: Verify completion
-That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. After the Braze app has been successfully installed and the webhook creation is complete, you will be notified via email and ingestion will begin. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established. If you need to support user reconciliation outside of the checkout flow, follow this [additional step]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing#user-reconciliation-outside-of-checkout-flow).
+That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. After the Braze app has been successfully installed and the webhook creation is complete, you will be notified via email, and ingestion will begin. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established. If you need to support user reconciliation outside of the checkout flow, follow this [additional step]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing#user-reconciliation-outside-of-checkout-flow).
 
 ### Shopify setup within Braze
 
@@ -72,7 +72,7 @@ That's it! The status of your integration appears in the **Data Import** section
 ## Troubleshooting
 
 {% details Why is my Shopify app install still pending? %}
-Your install may still be pending for one of the following reasons: 
+Your installation may still be pending for one of the following reasons: 
   - When Braze is setting up your Shopify webhooks
   - When Braze is communicating with Shopify
 
@@ -96,7 +96,7 @@ Go to your Shopify admin page located under **Apps**. You will then see an optio
 ![Shopify]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:80%;"}
 {% enddetails %}
 
-{% details I am struggling reconciling my users, what might be the reason? %}
+{% details I am struggling to reconcile my users. What might be the reason? %}
 
 If you use the ScriptTag integration, and your Shopify store offers a "Buy Now" option that skips the cart, Braze may struggle to reconcile users as Shopify does not allow script tags to retrieve a `device_id` to map the events to a user who skips the cart.
 
