@@ -6,6 +6,7 @@ page_order: 0
 layout: dev_guide
 search_rank: 6
 guide_top_header: "Integration Overview"
+guide_top_text: "{% multi_lang_include archive/ios-swift-upgrade.md %}"
 description: "This landing page covers Braze SDK integration guides for CocoaPods, Swift Package Manager, Carthage, and more."
 
 guide_featured_title: "Basic integration options"
@@ -30,9 +31,6 @@ guide_featured_list:
   fa_icon: fas fa-id-card-alt
 
 ---
-
-{% multi_lang_include archive/ios-swift-upgrade.md %}
-
 <br>
 
 > This page references our older Objective-C SDK. Looking to upgrade to the Swift iOS SDK? It's easy. Check out our [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/) for details.

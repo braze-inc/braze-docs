@@ -10,7 +10,7 @@ channel:
   - news feed
 
 guide_top_header: "iOS News Feed Customization"
-guide_top_text: ""
+guide_top_text: "guide_top_text: "{% multi_lang_include archive/ios-swift-upgrade.md %}"
 description: "This landing page covers the Braze iOS SDK News Feed customization options such as custom styling and badges."
 
 guide_featured_title: "Section articles"
@@ -25,6 +25,4 @@ guide_featured_list:
 
 
 ---
-
-{% multi_lang_include archive/ios-swift-upgrade.md %}
 <br><br>
