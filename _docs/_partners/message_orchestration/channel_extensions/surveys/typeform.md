@@ -14,7 +14,7 @@ search_tag: Partner
 By integrating Typeform and Braze, you can:
 
 - Update user profiles in Braze with data collected from their Typeform response
-- Trigger messaging in Braze based on a user’s engagement with a Typeform
+- Trigger messaging in Braze based on a user’s engagement with a typeform
 - Personalize Braze messaging based on a user’s Typeform responses
 
 ## Prerequisites
