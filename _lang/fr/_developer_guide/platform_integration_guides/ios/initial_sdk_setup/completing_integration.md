@@ -9,7 +9,6 @@ page_order: 2
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
 
-
 # Terminer l’intégration
 
 Avant de suivre ces étapes, assurez-vous d’avoir intégré le SDK en utilisant [Carthage]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/), [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/cocoapods/), [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/), ou une intégration [manuelle]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/).

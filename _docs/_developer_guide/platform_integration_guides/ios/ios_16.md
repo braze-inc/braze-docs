@@ -7,6 +7,8 @@ platform:
 description: "This reference article covers iOS 16, how to upgrade, SDK updates, and more."
 ---
 
+{% multi_lang_include archive/ios-swift-upgrade.md %}
+
 # iOS 16 SDK upgrade guide
 
 This guide describes relevant changes introduced in iOS 16 (2022) and the impact on your Braze iOS SDK integration. Refer to the [iOS 16 release notes][2] for a full migration guide.

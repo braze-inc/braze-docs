@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/ios-swift-upgrade.md %}
+
 <br>
 {% alert important %}
 Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/).

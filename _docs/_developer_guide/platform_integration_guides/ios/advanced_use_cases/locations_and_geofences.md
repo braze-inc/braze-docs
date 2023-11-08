@@ -9,6 +9,8 @@ Tool:
 
 ---
 
+{% multi_lang_include archive/ios-swift-upgrade.md %}
+
 # Locations and geofences
 
 To support geofences for iOS:

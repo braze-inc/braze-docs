@@ -7,6 +7,8 @@ description: "This reference article shows how to manually integrate the Braze S
 
 ---
 
+{% multi_lang_include archive/ios-swift-upgrade.md %}
+
 # Manual integration
 
 {% alert tip %}

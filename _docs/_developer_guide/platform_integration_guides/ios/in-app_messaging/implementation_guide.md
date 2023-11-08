@@ -10,7 +10,6 @@ channel:
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
 
-
 <br>
 {% alert important %}
 Looking for the basic in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/).

@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/ios-swift-upgrade.md %}
+
 # Setting delegates
 
 In-app message display and delivery customizations can be accomplished in code by setting our optional delegates.

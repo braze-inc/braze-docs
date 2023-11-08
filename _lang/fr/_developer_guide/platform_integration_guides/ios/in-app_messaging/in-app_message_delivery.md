@@ -11,7 +11,6 @@ channel:
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
 
-
 # Livraison de messages in-app
 
 ## Types de déclencheurs

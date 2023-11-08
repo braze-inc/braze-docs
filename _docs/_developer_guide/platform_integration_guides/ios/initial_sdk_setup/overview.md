@@ -31,6 +31,8 @@ guide_featured_list:
 
 ---
 
+{% multi_lang_include archive/ios-swift-upgrade.md %}
+
 <br>
 
 > This page references our older Objective-C SDK. Looking to upgrade to the Swift iOS SDK? It's easy. Check out our [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/) for details.

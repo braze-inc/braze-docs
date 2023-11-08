@@ -10,7 +10,6 @@ platform: iOS
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
 
-
 # Guide d’intégration SDK de Braze pour iOS
 
 > Ce guide d’intégration iOS facultatif vous guide étape par étape sur les meilleures pratiques de configuration lors de la première intégration du SDK iOS et de ses principaux composants dans votre application. Ce guide vous aidera à créer un fichier d’aide `BrazeManager.swift` qui dédoublera toutes les dépendances sur le SDK Braze pour iOS du reste de votre code de production, ce qui entraînera une `import AppboyUI` dans toute votre application. Cette approche limite les problèmes liés aux importations excessives de SDK, ce qui facilite le suivi, le débogage et la modification du code. 

@@ -9,6 +9,8 @@ channel:
 search_rank: 3
 ---
 
+{% multi_lang_include archive/ios-swift-upgrade.md %}
+
 # Content Card integration
 
 ## Content Cards data model

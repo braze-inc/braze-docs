@@ -10,7 +10,6 @@ channel:
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
 
-
 <br>
 {% alert important %}
 Vous recherchez le guide d’intégration de base du développeur de notifications push ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).

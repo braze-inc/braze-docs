@@ -9,7 +9,6 @@ description: "Cet article de référence montre comment suivre les achats et les
  
 {% multi_lang_include archive/ios-swift-upgrade.md %}
 
-
 # Enregistrement des achats pour iOS
 
 Enregistrez les achats réalisés via l’application afin que vous puissiez suivre vos revenus au fil du temps ainsi que les sources de revenus et segmenter vos utilisateurs par leur valeur à vie.

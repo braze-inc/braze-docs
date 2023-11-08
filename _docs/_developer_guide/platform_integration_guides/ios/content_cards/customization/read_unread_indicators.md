@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/ios-swift-upgrade.md %}
+
 # Read and unread indicators
 
 ## Disabling the unviewed indicator

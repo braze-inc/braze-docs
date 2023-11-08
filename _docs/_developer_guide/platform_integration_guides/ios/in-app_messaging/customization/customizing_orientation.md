@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/ios-swift-upgrade.md %}
+
 # Customizing orientation
 
 ## Setting orientation for all in-app messages

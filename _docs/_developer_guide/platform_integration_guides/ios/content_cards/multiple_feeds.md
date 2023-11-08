@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/ios-swift-upgrade.md %}
+
 # Using multiple Content Card feeds
 
 Content Cards can be filtered on the app to only display specific cards, enabling you to have multiple Content Card feeds for different use cases (as in having a transactional feed versus a marketing feed).

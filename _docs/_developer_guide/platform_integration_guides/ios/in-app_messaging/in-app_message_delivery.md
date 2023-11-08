@@ -11,7 +11,6 @@ channel:
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
 
-
 # In-app message delivery
 
 ## Trigger types

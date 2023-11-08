@@ -8,6 +8,8 @@ channel:
   - content cards
 ---
 
+{% multi_lang_include archive/ios-swift-upgrade.md %}
+
 # Custom Styling
 
 ## Overriding default images

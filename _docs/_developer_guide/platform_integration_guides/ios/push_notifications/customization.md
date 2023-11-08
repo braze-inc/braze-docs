@@ -36,4 +36,6 @@ guide_featured_list:
 
 
 ---
+
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 <br><br>
