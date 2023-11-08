@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Typeform](https://www.typeform.com/) is an easy-to-use tool for collecting data, feedback, and more.
 
-By integrating Typeform and Braze, you can:
+By integrating Braze and Typeform, you can:
 
 - Update user profiles in Braze with data collected from their Typeform response
 - Trigger messaging in Braze based on a user’s engagement with a typeform
@@ -324,16 +324,16 @@ Content-Type: application/json
 
 ## Example Data Transformations
 
-The following are example templates built using our [example Typeform webhook payload](#example-typeform-webhook-payload). These templates can be used as a starting point. Feel free to start from scratch, or to delete specific components as you see fit.
+The following are example templates built using our [example Typeform webhook payload](#example-typeform-webhook-payload). These templates can be used as a starting point. You can start from scratch or delete specific components as you see fit.
 
 In these example templates, we are logging a custom event to the Braze profile. The title of the Typeform will be passed as the custom event name, and the Typeform results will be passed as event properties. These example templates do not account for the Calendly, File Upload, or Payment question types in Typeform.
 
 ### Example: Email as identifier
 
-In this example template we are using an email address, captured from an email address question within the typeform, as the identifier.
+In this example template, we are using an email address (captured from an email address question within the typeform) as the identifier.
 
 {% alert note %}
-If you intend to use email address as an identifier, please review our [frequently asked questions]({{site.baseurl}}/api/endpoints/user_data/post_user_track#frequently-asked-questions) for the `/users/track` endpoint for more information on expected behavior.
+If you intend to use an email address as an identifier, review our [frequently asked questions]({{site.baseurl}}/api/endpoints/user_data/post_user_track#frequently-asked-questions) for the `/users/track` endpoint for more information on expected behavior.
 {% endalert %}
 
 {% tabs local %}
