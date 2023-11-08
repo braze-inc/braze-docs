@@ -47,11 +47,10 @@ Send a test event to your Data Transformation by clicking **View deliveries** an
 
 In this step, you will transform the webhook payload that will be sent from Typeform to a JavaScript object return value.
 
-1. Send a request to your Data Transformation URL with a sample event payload of an Typeform event you intend to support. See [request body format](#request-body-format) for help formatting your request.
-2. Refresh your Data Transformation and make sure you can see the sample event payload in the **Webhook Details**.
-3. Update your Data Transformation code to support your chosen Typeform events.
-4. Click **Validate** to return a preview of your code’s output and to check if it’s an acceptable `/users/track` request.
-5. Save and activate your Data Transformation.
+1. Refresh your Data Transformation and make sure you can see the Typeform test payload in the **Webhook Details**.
+2. Update your Data Transformation code to support your chosen Typeform events.
+3. Click **Validate** to return a preview of your code’s output and to check if it’s an acceptable `/users/track` request.
+4. Save and activate your Data Transformation.
 
 ![]({% image_buster /assets/img/typeform/typeform_test_result.png %})
 
