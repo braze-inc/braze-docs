@@ -6,7 +6,7 @@ page_order: 0
 layout: dev_guide
 search_rank: 6
 guide_top_header: "Integration Overview"
-guide_top_text: "{% multi_lang_include archive/ios-swift-upgrade.md %}"
+guide_top_text: ""
 description: "This landing page covers Braze SDK integration guides for CocoaPods, Swift Package Manager, Carthage, and more."
 
 guide_featured_title: "Basic integration options"
