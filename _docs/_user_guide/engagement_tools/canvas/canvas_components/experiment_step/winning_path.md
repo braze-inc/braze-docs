@@ -50,6 +50,13 @@ A single Experiment Path component can contain up to four paths. However, if you
 
 Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance).
 
+## Analytics {#analytics}
+
+If Winning Path was turned on, your analytics view is separated into two tabs: **Initial Experiment** and **Winning Path**.
+
+- **Initial Experiment:** Shows the metrics for each path during the experiment window. You can see a summary of how all the paths performed for the specified conversion events, and which path was selected as the winner.
+- **Winning Path:** Shows only the metrics for the Winning Path starting from the moment the Initial Experiment finished.
+
 ## Things to know
 
 ### One-time entry {#one-time-entry}
