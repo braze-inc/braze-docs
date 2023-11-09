@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # News Feed integration
 
 {% alert note %}

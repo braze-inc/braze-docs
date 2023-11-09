@@ -8,6 +8,8 @@ description: "This reference article provides resources for initial integration 
 search_rank: 1
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Initial SDK setup
 
 > This reference article covers how to install the Braze SDK for MacOS. 
