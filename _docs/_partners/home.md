@@ -280,5 +280,5 @@ valid_partner_list:
 - name: Olo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/  
 - name: SmarterSends
-  url: /docs/partners/message_personalization/dynamic_content/smartersends/
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/smartersends/
 ---
