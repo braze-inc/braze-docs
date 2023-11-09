@@ -8,7 +8,7 @@ description: "This page lists updates to the Braze iOS Swift SDK changelog."
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # iOS Swift SDK changelog
 

@@ -7,7 +7,7 @@ description: "This article covers how to implement the universal deep linking de
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Deep linking for iOS
 

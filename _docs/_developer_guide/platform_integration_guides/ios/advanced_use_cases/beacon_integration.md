@@ -7,7 +7,7 @@ description: "This article covers logging custom events using Gimbal Beacons for
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Beacon integration
 

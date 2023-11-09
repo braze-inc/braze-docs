@@ -7,7 +7,7 @@ description: "This article covers how to configure uninstall tracking for your i
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Uninstall tracking for iOS
 

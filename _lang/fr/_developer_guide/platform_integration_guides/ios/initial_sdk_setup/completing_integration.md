@@ -7,7 +7,7 @@ page_order: 2
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Terminer l’intégration
 

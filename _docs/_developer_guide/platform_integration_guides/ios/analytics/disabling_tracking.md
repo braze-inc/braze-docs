@@ -7,7 +7,7 @@ description: "This article shows how to disable data collection for your iOS app
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Disabling data collection for iOS
 

@@ -7,7 +7,7 @@ description: "This reference article covers iOS localization, listing all the cu
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Localization
 

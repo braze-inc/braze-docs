@@ -7,7 +7,7 @@ description: "This article covers how to initialize, configure, and implement th
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Google Tag Manager for iOS
 

@@ -8,7 +8,7 @@ platform: iOS
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Braze iOS SDK integration guide
 

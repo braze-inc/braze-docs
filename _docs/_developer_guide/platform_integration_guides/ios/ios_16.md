@@ -7,7 +7,7 @@ platform:
 description: "This reference article covers iOS 16, how to upgrade, SDK updates, and more."
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # iOS 16 SDK upgrade guide
 

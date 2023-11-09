@@ -7,7 +7,7 @@ page_order: 3
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Other SDK customizations
 

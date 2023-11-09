@@ -10,7 +10,7 @@ alias: /shareplay/
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # SharePlay in-app message implementation guide
 

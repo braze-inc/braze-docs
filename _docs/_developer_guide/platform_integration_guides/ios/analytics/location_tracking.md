@@ -9,7 +9,7 @@ Tool:
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Location tracking for iOS
 
