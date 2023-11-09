@@ -187,7 +187,11 @@ If you created a segment where you expect users to enter and exit regularly, man
 
 ## Monitoring your SQL Segments usage
 
-Each Braze workspace has five Snowflake credits available per month. If you need more credits, contact your account manager. Credits are used whenever you refresh, or save and refresh, a SQL Segment’s membership. Credits are not used when you run previews within a SQL Segment or save or refresh a classic Segment Extension.
+Each Braze workspace has 5 Snowflake credits available per month. If you need more credits, contact your account manager. Credits are used whenever you refresh, or save and refresh, a SQL Segment’s membership. Credits are not used when you run previews within a SQL Segment or save or refresh a classic Segment Extension.
+
+{% alert note %}
+Snowflake credits are not shared between features. For example, credits across SQL Segment Extensions and Query Builder are independent of each other.
+{% endalert %}
 
 Credit usage is correlated to the run time of your SQL query. The longer the run time is, the more credits a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
 
