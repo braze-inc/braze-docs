@@ -8,7 +8,7 @@ guide_top_header: "Connected Content"
 guide_top_text: "Braze Connected Content expands on marketing personalization to boost customer engagement and conversions. This feature allows you to insert any information accessible via API directly into messages you send to users. Connected Content allows for pulling content either directly from your web server or from publicly accessible APIs. You can also use our Connected Content capabilities with our Technology Partners, like <b><a href='/docs/partners/data_augmentation/contextual_location/accuweather/'>AccuWeather</a></b> and <b><a href='/docs/partners/channel_extensions/localization/transifex/'>Transifex</a></b>.<br><br>In addition to the following articles listed, we recommend checking out our <b><a href='https://learning.braze.com/connected-content'>Connected Content</a></b> Braze Learning course."
 description: "This landing page is home to all things Connected Content. Here, you can find articles on how to make API calls, local Connected Content variables, aborting content, and more."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Making An API Call
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/

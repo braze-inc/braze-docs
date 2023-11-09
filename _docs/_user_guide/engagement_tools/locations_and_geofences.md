@@ -9,7 +9,7 @@ page_type: landing
 tool: Location
 description: "This landing page is home to articles on Locations and Geofences. Here, you can find resources on location tracking, creating geofences, mobile integrations, and more."
 search_rank: 3
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Location Tracking
     link: /docs/user_guide/engagement_tools/locations_and_geofences/location_tracking

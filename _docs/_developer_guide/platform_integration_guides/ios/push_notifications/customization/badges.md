@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Badges
 
 You can specify the desired badge count when you compose a push notification through the Braze dashboard. You may also update your badge count manually through your application's [`applicationIconBadgeNumber`][20] property or the [remote notification payload][21]. Braze will also clear the badge count when a Braze notification is received while the app is foregrounded. 

@@ -10,7 +10,7 @@ tool: Campaigns
 page_type: landing
 description: "This landing page is home to campaign ideas and strategies. Here, you can find articles on topics like localization, retargeting, best practices, and more."
 
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Popular articles"
 guide_featured_list:
   - name: Active User Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
@@ -22,7 +22,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/
     fa_icon: fas fa-bullseye
 
-guide_menu_title: "More Articles"
+guide_menu_title: "More articles"
 guide_menu_list:
   - name:  Best Practices
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/

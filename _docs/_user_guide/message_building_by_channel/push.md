@@ -9,7 +9,7 @@ description: "This landing page is home to push messages. Here, you can find art
 channel:
   - push
 
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Popular articles"
 guide_featured_list:
 - name: About Push
   link: /docs/user_guide/message_building_by_channel/push/about/
@@ -27,7 +27,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/
   fa_icon: fas fa-edit
 
-guide_menu_title: "More Articles"
+guide_menu_title: "More articles"
 guide_menu_list:
 - name: Advanced Options
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/

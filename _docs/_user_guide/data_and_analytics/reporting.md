@@ -10,7 +10,7 @@ page_type: landing
 description: "This landing page is home to articles on reporting options available within Braze (not including Currents), including segment reporting, engagement reports, the report builder, and more."
 tool: Reports
 search_rank: 2
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Reports Overview
     link: /docs/user_guide/data_and_analytics/reporting/reports_overview
@@ -25,7 +25,7 @@ guide_featured_list:
     link: /docs/user_guide/data_and_analytics/reporting/report_builder/
     fa_icon: fas fa-wrench
 
-guide_menu_title: "More Articles"
+guide_menu_title: "More articles"
 guide_menu_list:
   - name: Configuring Reporting
     link: /docs/user_guide/data_and_analytics/reporting/configuring_reporting/

@@ -29,10 +29,10 @@ module Tags
           end
         end
       end
-      basesetting = "{slidesPerView: 1,spaceBetween: 30,loop: false, pagination: { el: '.swiper-pagination', clickable: true }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}}"
+      basesetting = "{slidesPerView: 'auto',spaceBetween: 30,loop: false, pagination: { el: '.swiper-pagination', clickable: true }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}}"
 
-      "<div class='swiper-container' id='#{ galleryid }'><div class='swiper-wrapper'>\n#{galleryitems.join("\n")}\n</div><div class='swiper-pagination'></div><div class='swiper-button-next'></div><div class='swiper-button-prev'></div></div>\n" +
-      "<script type='text/javascript'>var swiper = new Swiper('##{galleryid}', #{basesetting});</script>"
+      return "<div class='swiper swiper-container' id='#{ galleryid }'><div class='swiper-wrapper'>\n#{galleryitems.join("\n")}\n</div><div class='swiper-pagination'></div><div class='swiper-button-next'></div><div class='swiper-button-prev'></div></div>\n" +
+        "<script type='text/javascript'>let swiper = new Swiper('##{galleryid}', #{basesetting});</script>"
     end
   end
 end

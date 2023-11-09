@@ -7,6 +7,8 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # CocoaPods integration
 
 ## Step 1: Install CocoaPods

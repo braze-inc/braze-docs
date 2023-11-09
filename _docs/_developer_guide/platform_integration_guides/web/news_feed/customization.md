@@ -12,7 +12,7 @@ guide_top_header: "Web News Feed Customization"
 guide_top_text: ""
 description: "This landing page covers the Braze Web SDK News Feed customization options."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
     link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/custom_styling/

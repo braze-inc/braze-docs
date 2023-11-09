@@ -13,7 +13,7 @@ platform:
 
 channel: push
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Advanced Settings
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/customization/advanced_settings/

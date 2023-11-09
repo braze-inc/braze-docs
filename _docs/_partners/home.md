@@ -278,7 +278,9 @@ valid_partner_list:
 - name: Lytics
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lytics/
 - name: Olo
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/  
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/
 - name: SmarterSends
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/smartersends/
+- name: Typeform
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 ---

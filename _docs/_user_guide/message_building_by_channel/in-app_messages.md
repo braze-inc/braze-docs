@@ -10,7 +10,7 @@ description: "This landing page is home to all things in-app message. Here, you 
 channel:
   - in-app messages
 search_rank: 5
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Popular articles"
 guide_featured_list:
 - name: "About In-App Messages"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/about/
@@ -25,7 +25,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
   fa_icon: fas fa-paint-brush
 
-guide_menu_title: "More Articles"
+guide_menu_title: "More articles"
 guide_menu_list:
 - name: "Testing"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/

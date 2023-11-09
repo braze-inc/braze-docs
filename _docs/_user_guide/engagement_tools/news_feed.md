@@ -10,7 +10,7 @@ page_type: landing
 channel: news feed
 description: "This landing page is home to various News Feed articles. Here, you can find resources to create, categorize, and analyze your News Feed items."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 
 guide_featured_list:
   - name: Creating a News Feed Item

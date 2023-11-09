@@ -7,7 +7,7 @@ description: "This tutorial covers installing the Braze SDK using Swift Package 
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Swift Package Manager integration
 
