@@ -54,7 +54,7 @@ Finish setting up your Canvas as needed, then launch it. When the first user has
 
 If Winning Path was turned on, your analytics view is separated into two tabs: **Initial Experiment** and **Winning Path**.
 
-- **Initial Experiment:** Shows the metrics for each path during the experiment window. You can see a summary of how all the paths performed for the specified conversion events, and which path was selected as the winner.
+- **Initial Experiment:** Shows the metrics for each path during the experiment window. You can see a summary of how all the paths performed for the specified conversion events and which path was selected as the winner.
 - **Winning Path:** Shows only the metrics for the Winning Path starting from the moment the Initial Experiment finished.
 
 ## Things to know
