@@ -9,6 +9,8 @@ channel:
 search_rank: 3
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Content Card integration
 
 ## Content Cards data model

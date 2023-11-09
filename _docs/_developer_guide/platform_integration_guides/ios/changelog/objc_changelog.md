@@ -8,6 +8,8 @@ description: "This page lists updates to the Braze iOS Objective-C SDK changelog
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # iOS Objective-C SDK changelog
 
 {% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/CHANGELOG.md %}
