@@ -52,13 +52,62 @@ This option will send future users down the mix of paths according to the percen
 
 A single Experiment Path component can contain up to four paths. However, when Personalized Paths is turned on, you can add up to three paths in your Experiment. The fourth path should be reserved for the Delay Group that Braze automatically adds to your experiment.
 
-Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in.
+Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance).
 
 ![][5]{: style="max-width:75%;" }
 
 When the experiment window passes and the experiment is complete, Braze will send users in the delay group to their respective paths with the highest personalized likelihood of conversion.
 
 ![][6]{: style="max-width:75%;" }
+
+## Analytics {#analytics}
+
+If Personalized Paths was turned on, your analytics view is separated into two tabs: **Initial Experiment** and **Personalized Paths**.
+
+{% tabs local %}
+{% tab Initial Experiment %}
+
+The **Initial Experiment** tab shows the metrics for each path during the experiment window. You can see a summary of how all the paths performed for the specified conversion events.
+
+![Results of an initial test sent to determine the best performing variant for each user. A table shows the performance of each variant based on various metrics for the target channel.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
+
+This page also shows a breakdown of users' preferred paths based on a combination of certain characteristics. These characteristics are:
+
+- **Recency:** When they last had a session
+- **Frequency:** How often they have sessions
+- **Tenure:** How long they have been a user
+
+![The User Characteristics table, which shows which users are predicted to prefer Path 1 and Path 2 based on the three buckets they fall in for recency, frequency, and tenure.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1_2.png %})
+
+Think of recency as how recent their last interaction with you was, frequency as how often they engage, and tenure as the overall length of time they've been engaging with you. We group users into "buckets" based on these three things (as explained in the **User Characteristics** table) and then see which bucket likes which path more. It’s like sorting users into hundreds of different lists based on when they last shopped with you, how often they shop, and how long they've been customers.
+
+When it comes to choosing a message for a user, Braze examines the buckets they fall into. Each bucket exerts a distinct influence on path selection for users. We quantify this influence using a statistical method called [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression), which is a way of predicting future behavior based on past actions. This method accounts for user interactions during the initial message send. This table only summarizes the results by displaying which path users in each bucket tended to engage with.
+
+Ultimately, Braze combines all this data to select a tailored message path for each user, to make sure it's as engaging and relevant as possible for them.
+
+{% alert note %}
+The time intervals for each bucket are determined based on Canvas-specific user data, which may vary between Canvases.
+{% endalert %}
+
+{% endtab %}
+{% tab Personalized Paths %}
+
+The **Personalized Paths** tab shows the results of the final experiment, where the users in the Delay Group were sent down the best-performing path for them.
+
+The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning path instead. Even if there's no lift, which can sometimes happen, the result is the same as sending only the winning path (a traditional A/B test).
+
+- **Projected lift:** The improvement in your selected conversion event due to using Personalized Paths instead of sending every user down the overall best-performing path.
+- **Overall results:** The results of the second send based on your conversion event.
+- **Projected results:** The projected results of the second send based on your chosen optimization metric if you had sent just the winning variant instead.
+
+![Personalized Paths tab for a Canvas. The cards show the Projected Lift, Overall Conversions (with Personalized Paths), and Projected Unique Opens (with Winning Path).]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
+
+The table on this page shows the metrics for each variant from the personalized variant send. Your **Audience %** adds up to the percentage of the target segment you reserved for the personalized variant group.
+
+![]({% image_buster /assets/img_archive/ab_analytics_pv_2.png %})
+
+{% endtab %}
+{% endtabs %}
 
 ## Using Personalized Paths with local time delivery
 
