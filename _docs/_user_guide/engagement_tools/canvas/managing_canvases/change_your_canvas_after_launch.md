@@ -118,7 +118,7 @@ If you intend to make larger edits that lead to creating a new Canvas copy entir
 
 ### Deleting variants
 
-When variants are deleted from a Canvas, the steps within the variant (including those shared by other variants) will be deleted. When the steps are deleted, you won't be able to view their Canvas analytics. Note that users in deleted variants are allowed to finish their existing user journey and advance to subsequent steps. However, users in deleted variants are exited from the steps and any following messages are not sent. 
+When variants are deleted from a Canvas, the steps within the variant (including those shared by other variants) will be deleted. When the steps are deleted, you won't be able to view their Canvas analytics. Note that users in deleted variants are exited from the steps, and any following messages are not sent. 
 
 ## Best practices
 
