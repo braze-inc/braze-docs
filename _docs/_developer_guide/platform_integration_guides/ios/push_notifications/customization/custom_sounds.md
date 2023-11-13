@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Custom sounds
 
 ## Step 1: Hosting the sound in the app

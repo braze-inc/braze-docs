@@ -8,6 +8,8 @@ description: "This page covers initial setup steps for the tvOS Braze SDK."
 search_rank: 1
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Initial SDK setup
 
 > This reference article covers how to install the Braze SDK for tvOS. Installing the Braze SDK will provide you with basic analytics functionality.

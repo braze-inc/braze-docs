@@ -5,42 +5,41 @@ page_order: 4
 tool: Campaigns
 page_type: reference
 description: "This reference page breaks down the components of the content calendar."
-
 ---
 
 # Content Calendar
 
-> The Content Calendar is a useful central location in the dashboard where you can see a big picture view of upcoming and past scheduled campaigns.
+> The content calendar offers a high-level overview for your upcoming scheduled campaigns.
 
-In addition to this, you will be presented with overall messaging analytics, providing useful information on the type and quantity of future campaigns as well as send stats for past campaigns. 
-![][5]{: style="float:right;max-width:15%;margin-left:15px;margin-bottom:10px;margin-top:10px;"}
-
-To access the calendar, go to **Messaging** > **Content Calendar**.
+You can analyze messaging data, as well as view and manage your scheduled campaigns. To open the calendar, select **Messaging** > **Content Calendar**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Campaigns** > **Calendar**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), select **Engagement** > **Campaigns** > **Calendar**.
 {% endalert %}
 
-![][4]
+## Messaging analytics
 
-{% alert note %}
-Only scheduled campaigns are displayed in the Campaign Calendar. Canvas components, triggered campaigns, and API campaigns will not be displayed here.
-{% endalert %}
+The messaging analytics section contains two reports for your recent and upcoming scheduled campaigns:
 
-### Future send calendar
+- **Upcoming Message Types:** The number of push, email, and in-app messaging campaigns scheduled within the next 14 days.
+- **Messages Sent:** The number of messages sent and opened within past 14 days.
 
-**Red:** Single-channel scheduled campaigns<br>
-**Blue:** Multichannel scheduled campaigns
+You can view messaging analytics for a specific day in a report by placing your cursor over that day in the report.
 
-Note that only **Scheduled Campaigns** are displayed in the Campaign Calendar. Canvas steps, triggered campaigns, and API campaigns will not be displayed here. 
+![The 'Upcoming Message Types' and 'Messages Sent' graphs within Messaging Analytics.]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
 
-### Messaging analytics
+To download a copy of your data, select <i class="fa-solid fa-bars" style="color: #2e7487;"></i> **Chart context menu**, then choose your preferred file format.
 
-**Upcoming Message Types:** Details the amount of push, email, and in-app messaging campaigns over the course of the next 14 days.<br> 
-**Messages Sent:** Details the number of messages sent and opened over the course of the past 14 days. 
+## Send calendar
 
-To get more detailed information on these analytics, you can scroll over the individual bars within the charts for a breakdown by day. If you wish to save the message analytics charts, you can press the ![Hamburger menu.][3]{: style="border:0;"} icon to save the chart in various formats. 
+The send calendar displays all your scheduled campaigns for the current month. You can change the month by selecting <i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i> **See previous month** or <i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i>**See next month**. To return to the current month, select **Today**.
 
-[3]: {% image_buster /assets/img/campaign_calendar/hamburger.png %}
-[4]: {% image_buster /assets/img/campaign_calendar/Campaign3.png %}
-[5]: {% image_buster /assets/img/campaign_calendar/Campaign4.png %}
+![The Send Calendar displaying all scheduled campaigns in the current month.]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
+
+Each color on the calendar represents a different scheduled campaign type:
+
+- **Red:** Single-channel scheduled campaigns.
+- **Blue:** Multichannel scheduled campaigns.
+- **Gold:** Stopped campaigns, which are included in the calendar for historical reference.
+
+You can view or modify your campaigns by selecting the campaign in the calendar. For more information, see [Managing campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns).

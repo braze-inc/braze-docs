@@ -31,6 +31,9 @@ guide_menu_list:
 - name: Winning Path
   link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/
   image: /assets/img/icons/strategy_playbook.svg
+- name: Personalized Paths
+  link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
+  image: /assets/img/icons/strategy_playbook.svg
 ---
 
 

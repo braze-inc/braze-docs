@@ -8,6 +8,8 @@ channel:
   - in-app messages
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Customizing in-app message behavior on click
 
 {% alert note %}

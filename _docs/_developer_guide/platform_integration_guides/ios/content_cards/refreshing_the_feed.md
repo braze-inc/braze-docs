@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Refreshing the feed
 
 ## Refreshing Content Cards
