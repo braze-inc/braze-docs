@@ -44,7 +44,7 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
     - Action-Based: Your user will enter your Canvas after they perform a defined action
     - API-Triggered: Use an API request to enter users into your Canvas
 
-    Learn more about the [Entry Schedule step](#step-2b-set-your-canvas-entry-schedule).
+    Learn more about the [Entry Schedule step](#step-2b-determine-your-canvas-entry-schedule).
   {% endtab %}
   {% tab Target Audience %}
     Here, you will select your target audience:
@@ -99,7 +99,9 @@ You can choose one of three ways in which users can enter your Canvas.
 
 {% tabs local %}
   {% tab Scheduled Delivery %}
-    With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a campaign. You can enroll users in a Canvas as soon as it is launched, or enter them into your journey at some point in the future, or on a recurring basis.
+    With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a campaign. You can enroll users in a Canvas as soon as it is launched, or enter them into your journey at some point in the future, or on a recurring basis (daily, weekly, or monthly). 
+
+    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2023 until December 31, 2023.
 
     ![An example of scheduled delivery. Users will enter the Canvas once, starting at 1:30 pm on June 10, 2023.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
