@@ -43,7 +43,7 @@ If you want to edit or add more components to your Canvas user journey, the foll
 
 If you delete a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) or [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) component, you can optionally redirect the users currently waiting in the step into another Canvas step. For Delays, users will remain in the step until the end of the delay period. For Action Paths, users will remain in the step until the end of the evaluation window.
 
-See the [Canvas Flow](#best-practices) section for some best practices for specific editing use cases. 
+See the [Best practices](#best-practices) section for specific editing use cases. 
 
 {% endtab %}
 
@@ -115,6 +115,10 @@ Canvases scheduled to launch at a local send time can be edited up to 24 hours p
 {% alert tip %}
 If you intend to make larger edits that lead to creating a new Canvas copy entirely, remember to exclude users who received the first Canvas and re-adjust the Canvas schedule times to allow for time zone sending.
 {% endalert %}
+
+### Deleting variants
+
+When variants are deleted from a Canvas, the steps within the variant (including those shared by other variants) will be deleted. When the steps are deleted, you won't be able to view their Canvas analytics. Note that users in deleted variants are exited from the steps, and any following messages are not sent. 
 
 ## Best practices
 
