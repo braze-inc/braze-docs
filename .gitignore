@@ -1,17 +1,21 @@
-_algolia_api_key
-.gem/
-/_site
-.sass-cache
+# IDE
 .DS_Store
-.tags
-.tags1
-.ruby-version
-jekyll-algolia-*
-**/.asset_pipeline
-.jekyll-cache
+.idea
 .vscode
-.jekyll-metadata
 
-# Jetbrains IDEs
-.idea/
-braze-docs.iml
+# JEKYLL
+# general
+_site
+.jekyll-cache
+.jekyll-metadata
+**/.asset_pipeline
+# algolia
+_algolia_api_key
+jekyll-algolia-*
+
+# RUBY
+.gem/
+.ruby-version
+
+# TEMP FILES
+*~
