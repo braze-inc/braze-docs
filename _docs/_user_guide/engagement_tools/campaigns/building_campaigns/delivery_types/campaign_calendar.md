@@ -7,7 +7,7 @@ page_type: reference
 description: "This reference page breaks down the components of the content calendar."
 ---
 
-# Content Calendar
+# Content calendar
 
 > The content calendar offers a high-level overview for your upcoming scheduled campaigns.
 
