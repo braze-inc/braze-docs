@@ -10,10 +10,6 @@ description: "Learn about global search in Braze."
 
 You can use the search bar to find your work and other information within your Braze dashboard. The search bar is at the top of your Braze dashboard. Click the search bar, or press <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd> on Windows or <kbd>⌘</kbd>&nbsp;+&nbsp;<kbd>K</kbd> on a Mac to jump directly to the search bar.
 
-{% alert important %}
-Global search is currently in early access and is under active development. Please share your thoughts, suggestions, and any issues you encounter using the feedback option at the bottom-right of the search dropdown. If you are interested in participating in the early access, contact your Braze customer success manager.
-{% endalert %}
-
 ![][3]
 
 ## What can you search for?
