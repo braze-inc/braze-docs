@@ -86,6 +86,8 @@ Braze.requestPushPermission(permissionOptions);
 
 ### Step 2.1: Listen for push notifications (optional)
 
+You can additionally subscribe to events where Braze has detected and handled an incoming push notification. Use the listener key `Braze.Events.PUSH_NOTIFICATION_EVENT`.
+
 {% alert note %}
 Braze push notification events are available on both Android and iOS. Due to platform differences, iOS will only detect Braze push events when a user has interacted with a notification.
 {% endalert %}
