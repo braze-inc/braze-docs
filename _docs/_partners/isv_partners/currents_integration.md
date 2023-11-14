@@ -342,7 +342,7 @@ Individual events will follow the same evolution rules as our existing Avro sche
 
 ## Error handling and retry mechanism
 
-In the event of an error, Braze will queue and retry the request based on the HTTP return code received. Note that any HTTP error code that is not explicitly listed below will be treated as an HTTP 5XX error.
+In the event of an error, Braze will queue and retry the request based on the HTTP return code received. Any HTTP error code not listed below will be treated as an HTTP 5XX error.
 
 {% alert important %}
 If our retry mechanism fails to deliver events to their endpoint for more than 24 hours, there will be data loss.
