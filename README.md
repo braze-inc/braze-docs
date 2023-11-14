@@ -26,13 +26,13 @@ rbenv install 2.7.4
 Next, install project dependencies.
 
 ```bash
-./bundle install
+bundle install
 ```
 
 To start your local docs server on localhost `http://127.0.0.1:4000`, run:
 
 ```bash
-./rake
+rake
 ```
 
 To stop your server, reopen the terminal and press **Control**+**C**.
