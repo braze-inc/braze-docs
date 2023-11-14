@@ -103,23 +103,24 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 
 For a full list of push notification fields, refer to the table below:
 
-| Field Name  | Description |
-| ----------- | ----------- |
-| `payload_type` | Notification payload type. Only `push_opened` events are supported on iOS. |
-| `url` | URL opened by the notification. |
-| `use_webview` | Specifies whether the URL should be opened in a modal webview. |
-| `title` | Notification title. |
-| `body` | Notification body, or content text. |
-| `summary_text` | Notification summary text. Mapped from `subtitle` on iOS. |
-| `badge_count` | Notification badge count. |
-| `timestamp` | Time at which the payload was received by the application. |
-| `is_silent` | Specifies whether the payload was received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/). |
-| `is_braze_internal` | Specifies whether the payload is used by Braze for an internal SDK feature. |
-| `image_url` | URL associated with the notification image. |
-| `braze_properties` | Braze properties associated with the campaign (key-value pairs). |
-| `ios` | iOS-specific fields. |
-| `android` | Android-specific fields. |
+| Field Name         | Type      | Description |
+| ------------------ | --------- | ----------- |
+| `payload_type`     | String    | Specifies the notification payload type. Only `push_opened` events are supported on iOS. |
+| `url`              | String    | Specifies the URL that was opened by the notification. |
+| `use_webview`      | Boolean   | If `true`, URL is opened in a modal webview. |
+| `title`            | String    | Represents the title of the notification. |
+| `body`             | String    | Represents the body or content text of the notification. |
+| `summary_text`     | String    | Represents the summary text of the notification. This is mapped from `subtitle` on iOS. |
+| `badge_count`      | Integer   | Represents the badge count of the notification. |
+| `timestamp`        | Timestamp | Represents the time at which the payload was received by the application. |
+| `is_silent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/). |
+| `is_braze_internal`| Boolean   | If `true`, specifies that the payload is used by Braze for an internal SDK feature. |
+| `image_url`        | String    | Specifies the URL associated with the notification image. |
+| `braze_properties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |
+| `ios`              | Object    | Represents iOS-specific fields. |
+| `android`          | Object    | Represents Android-specific fields. |
 {: .reset-td-br-1 .reset-td-br-2}
+
 
 ## Step 3: Enable deep linking (optional)
 
