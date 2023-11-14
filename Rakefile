@@ -26,7 +26,15 @@ def jekyll_build(config_file = '_config.yml', lang = 'en')
     FileUtils.copy_file(index_file, File.join('_site', "index.html"))
   end
 end
+
 def jekyll_serve(config_file = '_config.yml')
+  unless File.exist?('.ruby-version')
+    puts "Thanks for contributing to Braze Docs! " \
+         "It looks like you haven't set your local Ruby version yet. " \
+         "For help, see:\n\n" \
+         "  https://github.com/braze-inc/braze-docs#quick-start\n\n---\n"
+    return
+  end
   if ENV["RACK_ENV"] == 'staging'
     pipe "bundle exec jekyll s --port 5006 --config #{config_file}"
   else
