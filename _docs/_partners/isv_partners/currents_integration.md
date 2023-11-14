@@ -342,7 +342,7 @@ Individual events will follow the same evolution rules as our existing Avro sche
 
 ## Error handling and retry mechanism
 
-In the event of an error, Braze will queue and retry the request based on the HTTP return code received.
+In the event of an error, Braze will queue and retry the request based on the HTTP return code received. Any HTTP error code not listed below will be treated as an HTTP 5XX error.
 
 {% alert important %}
 If our retry mechanism fails to deliver events to their endpoint for more than 24 hours, there will be data loss.
@@ -355,7 +355,7 @@ The following HTTP status codes will be recognized by our connector client:
   - Event data will be re-sent in an exponential backoff pattern with jitter. If the data is not successfully sent within 24 hours, it will be dropped.<br><br>
 - **400** — Client-side error
   - Our connector somehow sent at least one malformed event. If this occurs, the event data will be split into batches of size 1 and re-sent. Any events in these size-1 batches that receive an additional HTTP 400 response will be dropped permanently. Partners and/or customers should be encouraged to let us know if they detect this occurring on their end.<br><br>
-- **401** (Unauthorized) or **403** (Forbidden)
+- **401** (Unauthorized), **403** (Forbidden), **404**
   - The connector was configured with invalid credentials. The connector task will halt sending, and will be marked as "Failed". Event data will be re-sent after a delay of between 2 and 5 minutes (this is handled by the Connect Task Restarter). If this issue is not resolved by the customer within 48 hours, the event data will be dropped.<br><br>
 - **413** — Payload Too Large
   - Event data will be split into smaller batches and re-sent.<br><br>
