@@ -94,7 +94,7 @@ Braze push notification events are available on both Android and iOS. Due to pla
 
 ```javascript
 Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
-  console.log(`Push Notification event of type ${data.push_event_type} seen. Title ${data.title}\n and deeplink ${data.deeplink}`);
+  console.log(`Push Notification event of type ${data.payload_type} seen. Title ${data.title}\n and deeplink ${data.url}`);
   console.log(JSON.stringify(data, undefined, 2));
 });
 ```
