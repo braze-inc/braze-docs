@@ -3,14 +3,14 @@ nav_title: Canvas Basics
 article_title: Canvas Basics
 page_order: 1
 page_type: reference
-description: "This reference article covers the basics of Canvas, covering various questions you should ask your self as you set up your first Canvas."
+description: "This reference article covers the basics of Canvas, covering various questions you should ask yourself as you set up your first Canvas."
 tool: Canvas
 
 ---
 
 # Canvas basics
 
-> This reference article covers the basics of Canvas, covering various questions you should ask your self as you set up your first Canvas.
+> This reference article covers the basics of Canvas, covering various questions you should ask yourself as you set up your first Canvas.
 
 ## Understanding Canvas structure
 
