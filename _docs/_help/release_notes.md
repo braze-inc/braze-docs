@@ -136,7 +136,6 @@ The following SDK updates have been released. Breaking updates are listed below;
     - `Braze.getFeatureFlag(id)` will now return `null` if the feature flag does not exist.
     - `Braze.Events.FEATURE_FLAGS_UPDATED` will only trigger when a refresh request completes with success or failure, and upon initial subscription if there was previously cached data from the current session.
 
-
 ## October 17, 2023 release
 
 ### Copying to workspaces
