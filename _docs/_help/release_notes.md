@@ -51,7 +51,94 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/help/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## November 14, 2023 release
+
+### Getting started with Braze
+
+Exciting news! We're introducing two Getting Started sections tailored specifically for our Braze [marketers]({{site.baseurl}}/user_guide/getting_started) and [developers]({{site.baseurl}}/developer_guide/platform_wide/getting_started). These sections are designed to help you hit the ground running with Braze, providing you with all the necessary tools and guidance. Dive in and start exploring.
+
+### New Braze dashboard instance
+
+Braze manages a number of different instances for our dashboard and REST endpoints. We have added a new dashboard instance `US-07`. For more information, refer to [API overview]({{site.baseurl}}/api/basics/).
+
+### Robust channels
+
+#### Custom drag-and-drop templates for in-app messages
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can now use [custom drag-and-drop templates for in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/) to begin designing your in-app message in the drag-and-drop editor.
+
+#### SMS double opt-in
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+[SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/) allows you to require users to explicitly confirm their opt-in intent before they can receive SMS messages. This helps you tailor your focus to users who are likely to be engaged or are engaged with SMS.
+
+#### Estimated real open rate for email reporting
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+[Estimated real open rate]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's unique open rate as if machine opens did not exist. Braze uses click data from each campaign to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP. 
+
+#### Personalized Paths for Canvas
+
+{% multi_lang_include release_type.md release="Beta" %}
+
+With [Personalized Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/), you can personalize entire Canvas journeys for individual users based on conversion likelihood, similar to Personalized Variants in campaigns. Use Personalized Paths with an Experiment Path step to hold a portion of users in a delay group while Braze tests the remaining paths against each other.
+
+### Data flexibility
+
+#### Searching your Braze dashboard
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can use the [search bar]({{site.baseurl}}/user_guide/administrative/access_braze/global_search/) to find your work and other information within your Braze dashboard. The search bar is at the top of your Braze dashboard. 
+
+#### Blocklisting custom attributes and events
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can now blocklist up to 10 custom attributes or events at a time. For more information, refer to [Custom event and attribute management]({{site.baseurl}}/user_guide/administrative/app_settings/custom_event_and_attribute_management/).
+
+#### New help article: Universal links and App links
+
+Apple universal links and Android App Links are mechanisms devised to provide a seamless transition between web content and mobile apps. While universal links are specific to iOS, Android App Links serve the same purpose for Android applications. 
+
+Learn more about this topic in our dedicated [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/) article.
+
+### New Braze partnerships
+
+#### Olo – Channel Extensions
+
+The Braze and [Olo]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/olo/) integration allows you to update user profiles in Braze to keep them consistent with Olo user profiles. You can also send the right messaging from Braze based on Olo events.
+
+#### Typeform – Customer Data Platform
+
+The Braze and [Typeform]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/typeform/) integration allows you to update user profiles in Braze with data collected from their Typeform response, trigger messaging in Braze based on a user’s engagement with a typeform, and personalize Braze messaging based on a user’s Typeform responses.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Web SDK v4.10.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+- [Web SDK v5.0.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+- [Android SDK 29.0.1](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
+- [Swift SDK 7.1.0-7.2.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
+    - `Braze.Configuration.DeviceProperty.pushDisplayOptions` has been deprecated. Providing this value no longer has an effect.
+- [React Native SDK 8.0.0-8.1.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
+    - Updates the native Android bridge from Braze Android SDK 27.0.1 to 29.0.0.
+    - Updates the native iOS bridge from Braze Swift SDK 6.6.0 to 7.0.0.
+    - Renames the `Banner` Content Card type to ImageOnly:
+        - `BannerContentCard` to `ImageOnlyContentCard`
+        - `ContentCardTypes.BANNER` to `ContentCardTypes.IMAGE_ONLY`
+    - On Android, if the XML files in your project contain the word `banner` for Content Cards, it should be replaced with `image_only`.
+    - `Braze.getFeatureFlag(id)` will now return `null` if the feature flag does not exist.
+    - `Braze.Events.FEATURE_FLAGS_UPDATED` will only trigger when a refresh request completes with success or failure, and upon initial subscription if there was previously cached data from the current session.
+
+
 ## October 17, 2023 release
+
 ### Copying to workspaces
 
 [Copying campaigns across a workspace]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) allows you to get a jumpstart on your message composition by starting with a copy of a campaign in a different workspace. This copy will remain as a draft until you edit and launch, helping you keep and build off your successful messaging strategies.
@@ -535,65 +622,5 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Flutter SDK 5.0.0](https://pub.dev/packages/braze_plugin/changelog)
 - [Unity 4.0.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md)
 - [Segment Kotlin 1.3.0](https://github.com/braze-inc/braze-segment-kotlin/blob/main/CHANGELOG.md)
-
-
-## April 4, 2023 release
-
-### Documentation breadcrumbs 
-You might notice that the Braze Docs site now has breadcrumbs on the top of each article to show you where you are in the site. These are just another option to help you navigate!
-
-![A series of breadcrumbs navigating from User Guide > Message Building by Channel > In-App Messages > Templates > Simple Survey][1]{: style="max-width:55%"}
-
-### Creating catalogs in browser
-You can use catalogs to reference non-user data in your Braze campaigns through Liquid. Braze now allows you to create a catalog directly in your browser instead of importing a CSV. Refer to [Creating a catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) for more for more information.
-
-### Custom SQL in query builder
-With the query builder, you can generate reports using Braze data in Snowflake. Now, you can [use custom SQL]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/custom_sql) to unlock new insights.
-
-{% alert important %}
-The SQL editor is in early access. If you're interested in participating in the early access, reach out to your customer success manager.
-{% endalert %}
-
-### Feature flag FAQ
-We've answered some [frequently asked questions for feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/faq).
-
-### Message extras Liquid tag for Currents
-Using the [`message_extras` Liquid tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras), you can annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. This Liquid tag appends key-value pairs to the corresponding send event in Currents.
-
-{% alert important %}
-This Liquid tag is currently in beta for email, SMS, and push send events. Contact your Braze customer success manager if you're interested in participating in the beta.
-{% endalert %}
-
-### New Currents events: users_campaigns_abort and users_canvas_abort
-Two new events were added to the Currents glossary: [Canvas abort message events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#canvas-abort-message-events) and [campaign abort message events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#campaign-abort-message-events).
-
-### New API endpoints: Catalogs
-Use the [Update catalog item]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/) and [Update catalog items]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/) endpoints to update an item or multiple items in your catalog.
-
-### Shopify Historical Backfill
-[Shopify Historical Backfill](https://www.braze.com/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/) allows Braze to import all customers, orders, and purchase events from the last 90 days prior to your Shopify integration connection.
-
-### WhatsApp
-WhatsApp is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses. The [WhatsApp messaging channel]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp) offers a direct way to engage users on the WhatsApp platform through campaigns, opt-ins and opt-outs, quick replies, and more.
-
-#### WhatsApp API object
-As part of Braze's WhatsApp support, the `whats_app` object allows you to modify or create WhatsApp messages via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging). See the [`whats_app` object documentation]({{site.baseurl}}/api/objects_filters/messaging/whats_app_object) for the full spec.
-
-### New Braze partnerships
-
-#### Merkury - Analytics
-The Braze and [Merkury]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/merkury) integration allows you to leverage the `MerkuryID` to increase site visitor recognition rates for Braze customers.
-
-### SDK updates
-
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
-
-- [Cordova SDK 3.0.0](https://github.com/Appboy/appboy-cordova-sdk/blob/3.0.0/CHANGELOG.md)
-- [Swift SDK 5.11.1-5.13.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
-- [Android SDK 24.3.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md)
-- [React Native SDK v3.0.0-v4.0.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
-- [Flutter SDK 4.1.0](https://pub.dev/packages/braze_plugin/changelog)
-- [Expo Plugin v1.1.1](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
-- [Web SDK v4.7.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
 
 <br><br>
