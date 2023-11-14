@@ -55,7 +55,7 @@ To add a custom font:
 Gmail does not support custom fonts, so your custom font may display as a default system font. For other email platforms, check that your custom font displays correctly prior to sending your email messaging.
 {% endalert %}
 
-Be aware that the custom font provider may collect personal data from your recipients. In such cases, you will be required to use the custom fonts in accordance with applicable privacy laws. 
+Please be aware that the custom font provider may collect personal data from your recipients. You should review your font provider's policies prior to use.
 
 To use alternative custom fonts in your email campaigns, you have the option to create an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) or [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/). Be sure to check that your font choice is still web-safe and supported on your email platforms. 
 
@@ -77,13 +77,13 @@ Optionally, you can override the default style of your drag-and-drop editor them
 
 ## Paragraph styling
 
-To set a default paragraph style, go to the **Paragraph Styling**, enter the **Font Size** and select **Font Color** to choose a font color. You can also adjust the block styling for the body text by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values. This will apply to the spacing around all four areas surrounding the paragraph block.
+To set a default paragraph style, go to the **Paragraph Styling**, enter the **Font Size**, and select **Font Color** to choose a font color. You can also adjust the block styling for the body text by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values. This will apply to the spacing around all four areas surrounding the paragraph block.
 
 ![][7]
 
 ## List styling
 
-When adding lists to your messaging, the **List Styling** section creates the consistency in how your lists are styled. This includes details like: 
+When adding lists to your messaging, the **List Styling** section creates consistency in how your lists are styled. This includes details like: 
 
 - Font size
 - Font color
@@ -97,7 +97,7 @@ When adding lists to your messaging, the **List Styling** section creates the co
 - List type
 - List style type
 
-You can set the **List Type** to be either numbered or bulleted. The **List Style Type** provides additional customization for the style of your lists. For example, you can set the list types to always be bulleted, and for each bullet to be a square.  
+You can set the **List Type** to be either numbered or bulleted. The **List Style Type** provides additional customization for the style of your lists. For example, you can set the list types to always be bulleted and for each bullet to be a square.  
 
 ![][10]
 

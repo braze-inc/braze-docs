@@ -88,4 +88,4 @@ All integrations   | &nbsp;  |  &nbsp;
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [10]: {% image_buster /assets/img_archive/web-users-segment.png %}
 [11]: {% image_buster /assets/img_archive/web_push_macbook.png %}
-[13]: {{site.baseurl}}user_guide/message_building_by_channel/push/push_primer_messages/
+[13]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
