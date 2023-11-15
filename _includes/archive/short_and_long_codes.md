@@ -74,6 +74,10 @@ Short and long codes are the phone number from which you send messages to your u
 </tbody>
 </table>
 
+{% alert important %}
+If throughput is exceeded, some messages may fail.
+{% endalert %}
+
 {% tabs %}
 {% tab Short Codes %}
 
