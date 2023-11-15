@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Track User"
-article_title: "POST: Track User"
+nav_title: "POST: Track Users"
+article_title: "POST: Track Users"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
