@@ -8,6 +8,8 @@ description: "This page describes how to fetch and display News Feed data in you
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # News Feed integration
 
 > This article covers how to set up a News Feed for the tvOS platform.

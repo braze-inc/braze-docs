@@ -84,14 +84,43 @@ const permissionOptions = {
 Braze.requestPushPermission(permissionOptions);
 ```
 
-### Step 2.1: Listen for push notifications on Android (optional)
+### Step 2.1: Listen for push notifications (optional)
+
+You can additionally subscribe to events where Braze has detected and handled an incoming push notification. Use the listener key `Braze.Events.PUSH_NOTIFICATION_EVENT`.
+
+{% alert note %}
+Braze push notification events are available on both Android and iOS. Due to platform differences, iOS will only detect Braze push events when a user has interacted with a notification.
+{% endalert %}
 
 ```javascript
 Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
-  console.log(`Push Notification event of type ${data.push_event_type} seen. Title ${data.title}\n and deeplink ${data.deeplink}`);
+  console.log(`Push Notification event of type ${data.payload_type} seen. Title ${data.title}\n and deeplink ${data.url}`);
   console.log(JSON.stringify(data, undefined, 2));
 });
 ```
+
+#### Push notification event fields
+
+For a full list of push notification fields, refer to the table below:
+
+| Field Name         | Type      | Description |
+| ------------------ | --------- | ----------- |
+| `payload_type`     | String    | Specifies the notification payload type. The two values that are sent from the Braze React Native SDK are `push_opened` and `push_received`.  Only `push_opened` events are supported on iOS. |
+| `url`              | String    | Specifies the URL that was opened by the notification. |
+| `use_webview`      | Boolean   | If `true`, URL will open in-app in a modal webview. If `false`, the URL will open in the device browser. |
+| `title`            | String    | Represents the title of the notification. |
+| `body`             | String    | Represents the body or content text of the notification. |
+| `summary_text`     | String    | Represents the summary text of the notification. This is mapped from `subtitle` on iOS. |
+| `badge_count`      | Number   | Represents the badge count of the notification. |
+| `timestamp`        | Number | Represents the time at which the payload was received by the application. |
+| `is_silent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/). |
+| `is_braze_internal`| Boolean   | This will be `true` if a notification payload was sent for an internal SDK feature, such as geofences sync, Feature Flag sync, or uninstall tracking. The payload is received silently for the user. |
+| `image_url`        | String    | Specifies the URL associated with the notification image. |
+| `braze_properties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |
+| `ios`              | Object    | Represents iOS-specific fields. |
+| `android`          | Object    | Represents Android-specific fields. |
+{: .reset-td-br-1 .reset-td-br-2}
+
 
 ## Step 3: Enable deep linking (optional)
 

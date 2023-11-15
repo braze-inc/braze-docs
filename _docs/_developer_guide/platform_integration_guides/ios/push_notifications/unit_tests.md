@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Unit tests {#unit-tests}
 
 This optional guide describes how to implement some unit tests that will verify whether your app delegate correctly follows the steps described in our [push integration instructions][1]. 

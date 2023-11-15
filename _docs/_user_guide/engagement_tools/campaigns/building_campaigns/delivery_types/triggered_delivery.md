@@ -21,17 +21,21 @@ Action-based delivery is not available for [Canvas components with in-app messag
 ### Step 1: Select a trigger event
 
 Select a trigger event. This can include any of the following:
+- Making a purchase
 - Starting a session
-- Purchasing an item
+- Performing a custom event
+- Performing the campaign's primary conversion event
+- Adding an email address to a user profile
+- Changing a custom attribute value
+- Updating a subscription group status
 - Interacting with News Feed cards (see [Campaign Connector][33])
 - Interacting with other campaigns
 - Entering a location
-- Completing any custom event
-- Performing the campaign's primary conversion event
 - Performing the exception event for another campaign
-- Adding an email address to a user profile
-- Updating a Subscription Group Status
-- Inbound SMS or WhatsApp message
+- Interacting with a Canvas step
+- Triggering a geofence
+- Sending an SMS inbound message
+- Sending a WhatsApp inbound message
 
 You can also further filter trigger events through Braze [custom event properties][32], allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
 

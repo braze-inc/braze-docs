@@ -8,6 +8,8 @@ channel:
   - content cards
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Custom Styling
 
 ## Overriding default images
