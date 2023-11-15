@@ -62,7 +62,7 @@ The following image and text specifications apply to the photo carousel portion 
 - **Image ratio:** 2:1 (required)
 - **Recommended image size:** 500 KB
 - **Max image size:** 5 MB
-- **File types:** PNG, JPG
+- **File types:** PNG, JPEG
 
 {% endtab %}
 {% tab Text %}
