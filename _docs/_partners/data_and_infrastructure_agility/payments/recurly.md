@@ -29,7 +29,7 @@ Additional details around using Recurly with Braze can be found in the [Recurly 
 
 ## Integration
 
-To begin, ensure you have active accounts on both Braze and Recurly.
+Before you begin, make sure you have active accounts on both Braze and Recurly.
 
 ### Connect Recurly to Braze
 
@@ -46,6 +46,7 @@ Remember to copy the URL of your Braze instance. For instance, your URL might lo
 <https://dashboard-03.braze.com/dashboard/app_usage?locale=en>
 ```
 
+{:start="3"}
 3. After you enter your credentials, click **Connect**.
 
 ## Using this integration
@@ -83,7 +84,7 @@ Recurly batches certain subscription lifecycle events as single API calls to Bra
 - When multiple subscriptions are renewed at the same time for an account, each of those renewals is batched into a single request.
 - Same model subscription lifecycle events are sent as a single request. An example being a newly created invoice with a payment would send a single API request with both the `Recurly Invoice Created` and `Recurly Successful Payment` custom events.
 
-Batches are sent to braze in groups of up to 75 events at a time. If 100 subscriptions were created at once, we would make 2 API requests to handle this.
+Batches are sent to Braze in groups of up to 75 events at a time. If 100 subscriptions were created at once, we would make 2 API requests to handle this.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
