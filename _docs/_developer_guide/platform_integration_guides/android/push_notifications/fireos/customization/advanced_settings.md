@@ -33,7 +33,7 @@ For push notifications that include images, the message text will be shown in th
 
 ## Custom URIs {#custom-uri}
 
-The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep link inside your app and direct users to resources that exist outside of your app. This can be specified via the [Messaging API][13] or our dashboard under **Advanced Settings** in the push composer wizard as pictured:
+The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep link inside your app and direct users to resources that exist outside of your app. This can be specified via the [Messaging API][13] or our dashboard under **Advanced Settings** in the push composer as pictured:
 
 ![The deep linking advanced setting in the Braze push composer.][12]
 
@@ -66,7 +66,7 @@ Refer to Google's [Android notification][2] documentation for more information.
 
 In Android O, notification sounds became a property of notification channels. You will need to work with your developer to define the sound for a channel during its configuration and then use the dashboard to select the proper channel when sending your notifications.
 
-For devices running versions of Android before O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (for example, `android.resource://com.mycompany.myapp/raw/mysound`). Specifying "default" in this field will play the default notification sound on the device. This can be specified via the [Messaging API][13] or the dashboard under **Settings** in the push composer wizard.
+For devices running versions of Android before O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (for example, `android.resource://com.mycompany.myapp/raw/mysound`). Specifying "default" in this field will play the default notification sound on the device. This can be specified via the [Messaging API][13] or the dashboard under **Settings** in the push composer.
 
 ![The sound advanced setting in the Braze push composer.][11]
 

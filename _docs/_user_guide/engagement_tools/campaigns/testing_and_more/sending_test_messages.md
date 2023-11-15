@@ -146,7 +146,7 @@ To send test News Feed cards, you need to target your previously created test se
 
 Finish confirming your campaign and launch it to test your News Feed cards.
 
-> If you intend to use a single campaign to send a test message to yourself more than once, check the box titled "Allow users to become re-eligible to receive campaign" under the **Schedule** portion of the campaign wizard.
+> If you intend to use a single campaign to send a test message to yourself more than once, check the box titled "Allow users to become re-eligible to receive campaign" under the **Schedule** portion of the campaign composer.
 
 {% endtab %}
 {% endtabs %}
