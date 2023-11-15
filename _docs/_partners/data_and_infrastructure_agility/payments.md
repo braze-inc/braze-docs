@@ -16,5 +16,6 @@ partner_top_header: "Payment Infrastructure"
 valid_partner_list:
 - name: RevenueCat
   url: /docs/partners/data_and_infrastructure_agility/payments/revenuecat/
-
+- name: Recurly
+  url: /docs/partners/data_and_infrastructure_agility/payments/recurly/
 ---
