@@ -725,6 +725,10 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 
 ## Segmenting with feature flags {#segmentation}
 
+{% alert note %}
+Feature Flag membership filter is being gradually rolled out and may not be on your dashboard just yet.
+{% endalert %}
+
 Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter][6]. For more information about filtering on segments, see [Creating a segment][7].
 
 {% alert note %}
