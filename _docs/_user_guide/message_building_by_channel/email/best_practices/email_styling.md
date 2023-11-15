@@ -103,7 +103,7 @@ Refer to the following table for recommended image sizes. Smaller, high-quality 
 
 |     Size    | Header Image Width |  Body Image Width  |   File Types  |
 |:-----------:|:------------------:|:------------------:|:-------------:|
-| 5&nbsp;MB maximum | 600 pixels maximum | 480 pixels maximum | PNG, JPG, GIF |
+| 5&nbsp;MB maximum | 600 pixels maximum | 480 pixels maximum | PNG, JPEG, GIF |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Deep linking

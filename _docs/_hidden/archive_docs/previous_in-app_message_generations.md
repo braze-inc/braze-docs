@@ -129,7 +129,7 @@ For all of the in-app message types listed in the following table, the following
 
 - **Recommended image size:** 500&nbsp;KB 
 - **Max image size:** 5&nbsp;MB
-- **Supported file types:** PNG, JPG, GIF
+- **Supported file types:** PNG, JPEG, GIF
 
 | Type                               | Aspect Ratio | Max Character Count |
 | :--------------------------------- | :----------: | :-----------------: |
