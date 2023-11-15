@@ -41,7 +41,7 @@ popular_topic_list:
     link: /docs/api/home/
   - name: API Overview
     link: /docs/api/basics/
-  - name: Post&#58; Track User Endpoint
+  - name: POST&#58; Track User Endpoint
     link: /docs/api/endpoints/user_data/post_user_track/
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
