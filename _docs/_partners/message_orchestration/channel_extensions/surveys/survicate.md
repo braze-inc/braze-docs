@@ -41,7 +41,7 @@ Log in to your Survicate account and click the **Create new survey** button. Sel
 
 ### Step 2: Connect your survey to Braze
 
-Once the survey is ready, move to the **Configure** tab in the survey wizard and select **Braze** from the dropdown list of tools under the **Identify respondents with** field. Now, you won't need to ask respondents for their contact details.
+Once the survey is ready, move to the **Configure** tab in the survey composer and select **Braze** from the dropdown list of tools under the **Identify respondents with** field. Now, you won't need to ask respondents for their contact details.
 
 ![][3]{: style="max-width:70%;" }
 

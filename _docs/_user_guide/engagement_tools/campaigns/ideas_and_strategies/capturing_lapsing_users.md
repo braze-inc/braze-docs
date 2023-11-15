@@ -45,7 +45,7 @@ Next, we'll create a recurring schedule to send our weekly message on Thursdays 
 
 ## Step 3: Launch the campaign
 
-Now, you're ready to send the campaign. Confirm the settings on the last page of the wizard and click **Launch Campaign**!
+Now, you're ready to send the campaign. Confirm the settings on the last page of the composer and click **Launch Campaign**!
 
 [1]: {% image_buster /assets/img_archive/2weeklapse1.png %}
 [2]: {% image_buster /assets/img_archive/2weeklapse3.png %}

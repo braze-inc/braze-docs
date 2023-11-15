@@ -48,11 +48,11 @@ To send test push notifications or in-app messages, you need to target your prev
 
 Finish confirming your campaign and launch it to test your push notification and in-app messages.
 
->  Be sure to select **Allow users to become re-eligible to receive campaign** under the **Schedule** portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
+>  Be sure to select **Allow users to become re-eligible to receive campaign** under the **Schedule** portion of the campaign composer if you intend to use a single campaign to send a test message to yourself more than once.
 
 ## Sending a test email message
 
-If you're only testing email messages, you do not necessarily have to set up a test segment. In the first step of the campaign wizard where you compose your campaign's email message, click **Send Test** and enter the email address to which you wish to send a test email. 
+If you're only testing email messages, you do not necessarily have to set up a test segment. In the first step of the campaign composer where you compose your campaign's email message, click **Send Test** and enter the email address to which you wish to send a test email. 
 
 ![A Braze campaign with the Test Send tab selected][5]
 
