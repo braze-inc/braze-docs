@@ -17,6 +17,8 @@ The integration between Recurly and Braze simplifies the process of sharing subs
 - Leverage Recurly subscription data (for example, subscription plans, add-ons, or status) to create and manage Braze users, segments, and Canvases to execute cohort-specific campaigns and communications.
 - Send Recurly data directly to Braze, enabling additional messaging use cases and reducing developmental overhead costs.
 
+Additional details around using Recurly with Braze can be found in the [Recurly Docs](https://docs.recurly.com/docs/braze-integration).
+
 ## Prerequisites
 
 | Requirement | Description |
@@ -82,8 +84,6 @@ Recurly batches certain subscription lifecycle events as single API calls to Bra
 - Same model subscription lifecycle events are sent as a single request. An example being a newly created invoice with a payment would send a single API request with both the `Recurly Invoice Created` and `Recurly Successful Payment` custom events.
 
 Batches are sent to braze in groups of up to 75 events at a time. If 100 subscriptions were created at once, we would make 2 API requests to handle this.
-
-Additional details around using Recurly with Braze can be found in the [Recurly Docs](https://docs.recurly.com/docs/braze-integration).
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
