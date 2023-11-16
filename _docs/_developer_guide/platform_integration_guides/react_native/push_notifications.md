@@ -17,7 +17,9 @@ channel: push
 {% tabs %}
 {% tab Expo %}
 
-Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` props to enable push for iOS and Android, respectively.
+Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` options in your `app.json` file to enable push for iOS and Android, respectively. Refer to the configuration instructions [here](https://www.braze.com/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/#step-2-complete-native-setup) for more details.
+
+Note that you will need to use these settings instead of the native setup instructions if you are depending on additional push notification libraries like [Expo Notifications](https://docs.expo.dev/versions/latest/sdk/notifications/).
 
 {% endtab %}
 {% tab Android %}
@@ -100,6 +102,10 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 ```
 
 #### Push notification event fields
+
+{% alert note %}
+Because of platform limitations on iOS, the Braze SDK can only process push payloads while the app is in the foreground. Listeners will only trigger for the `push_opened` event type on iOS, after a user has interacted with a push.
+{% endalert %}
 
 For a full list of push notification fields, refer to the table below:
 
