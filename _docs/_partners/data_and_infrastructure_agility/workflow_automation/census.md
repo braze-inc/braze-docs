@@ -40,7 +40,7 @@ In the prompt that appears, name this connection, and provide your Braze endpoin
 To sync customers to Braze, you must build a sync. Here, you will define where to sync data and how you would like fields mapped across the two platforms.
 
 1. Navigate to the **Syncs** tab and select **New Sync**.<br><br> 
-2. In the wizard, select the source data model from your data warehouse.<br><br>
+2. In the composer, select the source data model from your data warehouse.<br><br>
 3. Configure where the model will be synced to. Select **Braze** as the destination and the [supported object type](#supported-objects) to sync.<br>![In the "Select a Destination" prompt, "Braze" is selected as the connection, and various objects are listed.][10]{: style="max-width:80%;"}<br><br>
 4. Select what synchronization rule you want to apply (**Update or Create** is the most common choice, but you can choose more advanced rules to handle deleting data, for example).<br><br>
 5. Next, for record matching purposes, choose a sync key to [map](#supported-objects) your Braze object to a model field.<br>![In the "Select a Sync Key" prompt, "External User ID" from Braze is matched to "user_id" in the source.][9]{: style="max-width:80%;"}<br><br>

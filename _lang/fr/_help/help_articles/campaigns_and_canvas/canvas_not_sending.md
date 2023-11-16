@@ -28,7 +28,7 @@ Il est important de vérifier votre [public d’entrée]({{site.baseurl}}/user_g
 
 ## Paramètres
 
-Les [paramètres d’entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas) sont importants pour comprendre comment vos Canvas envoient des messages. Vérifiez si vous avez limité le nombre de personnes qui entreront potentiellement dans le Canvas.
+Les [paramètres d’entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas) sont importants pour comprendre comment vos Canvas envoient des messages. Vérifiez si vous avez limité le nombre de personnes qui entreront potentiellement dans le Canvas.
 
 Les utilisateurs peuvent également sortir d’un Canvas s’ils ne sont plus admissibles à recevoir des messages. Par exemple, si le Canvas ne contient que des notifications push et qu’un utilisateur refuse les notifications push après avoir reçu la première étape, alors l’utilisateur sortira du Canvas. Envisagez [de créer une branche]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/branching/#creating-a-branch/) pour ajouter des parcours utilisateur alternatifs.
 
