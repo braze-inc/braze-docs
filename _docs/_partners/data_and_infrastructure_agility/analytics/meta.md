@@ -12,7 +12,7 @@ search_tag: Partner
 
 > With the Facebook Lead Ads integration via [Zapier][1], you can import your leads from Facebook into Braze along with tracking a custom event when leads are captured. Facebook Lead Ads is a type of ad format that allows businesses to collect lead information directly in Facebook. These ads are designed to make the lead generation process easy and seamless.
 
-By leveraging this integration, you can automate the transfer of lead data from Facebook to Braze, enabling real-time engagement and personalized follow-up actions. 
+By leveraging this integration and Braze, you can automate the transfer of lead data from Facebook to Braze, enabling real-time engagement and personalized follow-up actions. 
 
 ## Prerequisites
 
