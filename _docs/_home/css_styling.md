@@ -1,7 +1,7 @@
 ---
-nav_title: CSS styling
+nav_title: CSS styling examples
 article_title: CSS styling examples
-page_order: 0
+page_order: 7
 noindex: true
 ---
 
