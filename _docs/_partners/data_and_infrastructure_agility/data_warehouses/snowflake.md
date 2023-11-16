@@ -107,7 +107,7 @@ Benchmarks, [a data tool built by Braze](https://www.braze.com/perspectives/benc
 
 The initial industries include: 
 - Delivery services
-- eCommerce
+- Ecommerce
 - Education
 - Entertainment
 - Finance
