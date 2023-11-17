@@ -2,7 +2,7 @@
 nav_title: Facebook Lead Ads via Zapier
 article_title: Facebook Lead Ads via Zapier
 description: "This reference article outlines the integration between Braze and Facebook Lead Ads via Zapier to automate the transfer of lead data from Facebook to Braze, enabling real-time engagement and personalized follow-up actions."
-alias: /partners/facebook_lead_ads_zapier/
+alias: /partners/facebook_via_zapier/
 page_type: partner
 search_tag: Partner
 
