@@ -53,6 +53,13 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 {% endtab %}
 {% endtabs %}
 
+## Integration configuration 
+
+When creating a integration, make sure the Data Type on the sync details page is set to `Delete Users`. This will ensure the proper actions are taken during the integration run to delete users.
+
+![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
+
+
 ### How it works
 
 With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
