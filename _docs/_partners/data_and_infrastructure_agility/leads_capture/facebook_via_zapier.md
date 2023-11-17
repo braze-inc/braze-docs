@@ -87,13 +87,13 @@ Lastly, set up your custom request by inserting fields in your payload. The foll
 {
     "attributes": [
         {
-            "email": "<insert_email_field",
+            "email": "<insert_email_field>",
             "first_name": "<insert_first_name_field>",
             "last_name": "<insert_last_name_field>",
-            "lead_form": "<insert_form_name_field",
+            "lead_form": "<insert_form_name_field>",
             "fb_campaign": "<insert_campaign_id_field>",
             "fb_ad_set": "<insert_campaign_id_field>",
-            "fb_ad": "<insert_campaign_id_field",
+            "fb_ad": "<insert_campaign_id_field>",
             "email_subscribe": "subscribed",
             "subscription_groups" : [{
                 "subscription_group_id": "<subscription_group_id>",
@@ -104,9 +104,9 @@ Lastly, set up your custom request by inserting fields in your payload. The foll
     ],
     "events": [
         {
-            "email": "example@email.com",
-            "name": "fb_lead_signup",
-            "time": "2022-12-06T19:20:45+01:00",
+            "email": "<insert_email_field>",
+            "name": "<insert_custom_event_name>",
+            "time": "<insert_timestamp_field>",
             "_update_existing_only": false
         }
     ]
