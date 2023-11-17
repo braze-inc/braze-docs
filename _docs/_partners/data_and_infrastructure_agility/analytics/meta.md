@@ -80,25 +80,23 @@ Add a new step, then select **Webhooks by Zapier**. Next, select **Custom Reques
 
 ![][8]{: style="max-width:80%;"}
 
-Lastly, set up your custom request. The following code snippet shows an example payload. After configuring your webhook, select **Continue and test**. If the test is successful, you can publish your Zap.
+Lastly, set up your custom request by inserting fields in your payload. The following code snippet shows an example payload. 
 
+{% raw %}
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
---data-raw '{
+{
     "attributes": [
         {
-            "email": "example@email.com",
-            "first_name": "first_name",
-            "last_name": "last_name",
-            "lead_form": "{214890246__form_name}",
-            "fb_campaign": "{214890246__campaign_name}",
-            "fb_ad_set": "{214890246__campaign_name}",
-            "fb_ad": "{214890246__campaign_name}",
+            "email": "<insert_email_field",
+            "first_name": "<insert_first_name_field>",
+            "last_name": "<insert_last_name_field>",
+            "lead_form": "<insert_form_name_field",
+            "fb_campaign": "<insert_campaign_id_field>",
+            "fb_ad_set": "<insert_campaign_id_field>",
+            "fb_ad": "<insert_campaign_id_field",
             "email_subscribe": "subscribed",
             "subscription_groups" : [{
-                "subscription_group_id": "subscription_group_id",
+                "subscription_group_id": "<subscription_group_id>",
                 "subscription_state": "subscribed"
                 }
             ]
@@ -114,6 +112,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     ]
 }`
 ```
+{% endraw %}
+
+Here's an example of what this looks like in Zapier:
+
+![][9]{: style="max-width:80%;"}
+
+After configuring your webhook, select **Continue and test**. If the test is successful, you can publish your Zap.
 
 ### Step 4: Test your Facebook Lead Ads Zap
 
