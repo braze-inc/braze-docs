@@ -248,7 +248,6 @@ User actions for purchasing, purchasing specific products, and spending money.
 |---|---
 | Last purchase for app |
 | Last purchased product |
-| Last purchased product |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ### Spend
