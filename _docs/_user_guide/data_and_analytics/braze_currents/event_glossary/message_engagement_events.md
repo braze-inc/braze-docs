@@ -1204,7 +1204,7 @@ This event occurs when a user clicks on an in-app message.
   "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (optional, string) os version of device used for the action,
   "device_model": (optional, string) hardware model of the device,
-  "button_id": (optional, string) index of the button clicked if it was a button that was clicked, tracking ID of the click if the event came from an appboyBridge.logClick invocation, or choice_id if the in app-message type is a simple survey,
+  "button_id": (optional, string) index of the button clicked if it was a button that was clicked, tracking ID of the click if the event came from an appboyBridge.logClick or brazeBridge.logClick invocation, or choice_id if the in app-message type is a simple survey,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "device_id": (optional, string) ID of the device on which the event occurred,
   "ad_id": (optional, string) advertising identifier,
