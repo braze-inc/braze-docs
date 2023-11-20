@@ -19,7 +19,7 @@ By leveraging this integration and Braze, you can automate the transfer of lead 
 | Requirements | Description |
 |---|---|
 | Zapier account | A Zapier account is required to take advantage of this partnership. This integration requires use of [premium Zapier apps](https://zapier.com/app/pricing), so check that your Zapier plan has access to premium apps. |
-| [Facebook Business Manager](https://www.facebook.com/business/help/1710077379203657?id=180505742745347) | A centralized tool to manage your brand’s Facebook assets (for example, ad accounts, pages, apps). |
+| [Facebook Business Manager](https://www.facebook.com/business/help/1710077379203657?id=180505742745347) | You will use Facebook Business Manager, a centralized tool to manage your brand’s Facebook assets (for example, ad accounts, pages, and apps), as part of this integration. |
 | [Facebook ad account](https://www.facebook.com/business/help/195296697183682?id=829106167281625) | An active Facebook ad account tied to your brand’s business manager. <br><br>Ensure that you have the "Manage ad accounts" permission for each ad account you plan to use with Braze, and that you have accepted your ad account terms and conditions. |
 | [Facebook Page](https://www.facebook.com/business/help/183277585892925?id=420299598837059) | An active Facebook Page tied to your brand’s business manager and with "Manage Pages" permissions for each Facebook Page you plan to use with Braze. |
 | [Facebook Leads access](https://www.facebook.com/business/help/540596413257598?id=735435806665862) | Facebook Leads access for each ad account you plan to use with Braze is required to use this integration. |
