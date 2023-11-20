@@ -2,15 +2,15 @@
 page_order: 0
 nav_title: Segmentation filters API
 article_title: Segmentation filters API
-layout: api_glossary
+layout: glossary_page
 glossary_top_header: "Segmentation filters API"
 glossary_top_text: "The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by filter category."
+
 page_type: glossary
+tool: Segments
 description: "This landing page lists available Braze API endpoints and their uses."
-glossary_tag_name: 
-
+glossary_tag_name: Filter Category
 glossary_filter_text: "Select filter category to narrow the glossary:"
-
 glossary_mid_text: "Filter search"
 
 # channel to icon/fa or image mapping
@@ -31,240 +31,240 @@ glossary_tags:
   - name: Install attribution
   - name: Intelligence and predictive
   - name: Social activity
+  - name: Other filters
 
 glossaries:
-  - name: Custom Attributes
-    description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Time zone:<br>Company's Time Zone
+  - name: Segment membership
+    description: 
     tags:
-      - Custom Data
-  - name: Custom Event
-    description: Determines whether or not a user has performed a specially recorded event.<br><br> Example:<br>Activity completed with property activty_name.<br><br>Time zone:<br>UTC - Calendar Day = 1 calendar day will look at 24-48 hours of user history
+      - Segment or CSV membership
+  - name: Braze Segment Extensions
+    description:
     tags:
-      - Custom Data
-  - name: First Did Custom Event
-    description: Determines the earliest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> First Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
+      - Segment or CSV membership
+  - name: Updated/imported from CSV
+    description:
     tags:
-      - Custom Data
-  - name: Last Did Custom Event
-    description: Determines the latest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
+      - Segment or CSV membership
+  - name: Custom attributes
+    description:
     tags:
-      - Custom Data
-  - name: Last Received SMS
-    description: Segments your users by the last time that they have received an SMS. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+      - Custom attributes
+  - name: Nested custom attributes
+    description: 
     tags:
-      - Marketing Activity
-  - name: X Custom Event in Y Days
-    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+      - Custom attributes
+  - name: Day of recurring event
+    description: 
     tags:
-      - Custom Data
-  - name: X Custom Event Property in Y Days
-    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+      - Custom attributes
+  - name: Custom events
+    description:
     tags:
-      - Custom Data
-  - name: Date of Recurring Event
-    description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Time zone&#58;<br>This filter adjusts for whatever time zones the user is in.
+      - Custom events
+  - name: First did custom event
+    description: 
     tags:
-      - Custom Data
-  - name: Feature Flag
-    description: The segment of your users that have a particular <a href="/docs/developer_guide/platform_wide/feature_flags/about">feature flag</a> currently enabled.
+      - Custom events
+  - name: Last did custom event 
+    description:
     tags:
-      - User Activity
-  - name: First Made Purchase
-    description: Segments your users by the earliest recorded time that they have made a purchase in your app. (24-hour period)<br><br>Time zone:<br>UTC
+      - Custom events
+  - name: X custom event in Y days
+    description: 
+      - Custom events
+  - name: X custom event property in Y days
+    description: 
     tags:
-      - User Activity
-  - name: First Purchase for App
-    description: Segments your users by the earliest recorded time that they have bought any item from your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+      - Custom events
+  - name: User Email Address 
+    description: 
     tags:
-      - User Activity
-  - name: First Purchased Product
-    description: Segments your users by the earliest recorded time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+      - Other filters
+  - name: External user ID
+    description: 
     tags:
-      - User Activity
-  - name: First Used App
-    description: Segments your users by the earliest recorded time that they opened your app. <em>Note that this will capture the first session they have using a version of your app with the Braze SDK integrated.</em> (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+      - Other filters
+  - name: Random Bucket Number
+    description: Randomly generated number assigned to each profile for testing purposes.
     tags:
-      - User Activity
-  - name: First Used Specific App
-    description: Segments your users by the earliest recorded time that they opened any of your apps within your workspace. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+      - Other filters
+  - name: Session count overall
+    description: 
     tags:
-      - User Activity
-  - name: Last Made Purchase
-    description: Segments your users by the most recent time that they have made a purchase in your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+      - Sessions
+  - name: Session count for app
+    description:
     tags:
-      - User Activity
-  - name: Last Purchase for App
-    description: Segments your users by the most recent time that they have bought an item from your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+      - Sessions
+  - name: X sessions in last Y days
+    description: 
     tags:
-      - User Activity
-  - name: Last Purchased Product
-    description: Segments your users by the most recent time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+      - Sessions
+  - name: First used app
+    description: 
     tags:
-      - User Activity
-  - name: Last Used App
-    description: Segments your users by the most recent time that they have opened your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+      - Sessions
+  - name: First used specific app
+    description: 
     tags:
-      - User Activity
-  - name: Last Used Specific App
-    description: Segments your users by the most recent time that they have opened a specific, designated app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+      - Sessions
+  - name: Last used app
+    description: 
     tags:
-      - User Activity
-  - name: Median Session Duration
-    description: Segments your users by the median length of their sessions in your app.
+      - Sessions
+  - name: Last used specific app
+    description: 
     tags:
-      - User Activity
-  - name: Money Spent
-    description: Segments your users by the amount of money that they have spent in your app.
+      - Sessions
+  - name: Median session duration
+    description: 
     tags:
-      - User Activity
-  - name: Most Recent App Version
-    description: Segments your users by the latest version of your app that they have used.
+      - Sessions
+  - name: Received message from campaign
+    description: 
     tags:
-      - User Activity
-  - name: Most Recent Device Locale
-    description: Segments your users by the <a href="/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/">locale information</a> from the most recently used device.
+      - Retargeting
+  - name: Received campaign variant
+    description: 
     tags:
-      - User Attributes
-  - name: App Version Number
-    description: Filters based on your app's version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using 'below', 'above', and 'equal to' certain app versions. For Android, this version number is based on the <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()">Package Long Version Code</a> for the app. For iOS, this version number is based on the <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring">Short Version String</a> for the app. Support for this feature is available with Braze Android SDK v3.6.0 and above, and can be enabled by your Braze account manager.
+      - Retargeting
+  - name: Received message from Canvas step
+    description: 
     tags:
-      - User Activity
-  - name: Most Recent Location
-    description: Segments your users by the last recorded location at which they have used your app.
+      - Retargeting
+  - name: Last received message from specific campaign
+    description: 
     tags:
-      - User Activity
-  - name: Purchased Product
-    description: Segments your users by products purchased in your app.
+      - Retargeting
+  - name: Last received message from specific Canvas step
+    description: 
     tags:
-      - User Activity
-  - name: Session Count
-    description: Segments your users by the number of sessions they have had in any of your apps within your workspace.
+      - Retargeting
+  - name: Received message from campaign or Canvas with tag
+    description: 
     tags:
-      - User Activity
-  - name: Session Count For App
-    description: Segments your users by the number of sessions they have had in a specific, designated app.
+      - Retargeting
+  - name: Last received message from campaign or Canvas with tag
+    description: 
     tags:
-      - User Activity
-  - name: Total Number of Purchases
-    description: Segments your users by how many purchases they have made in your app.
+      - Retargeting
+  - name: Has never received a message from campaign or Canvas step
+    description: 
     tags:
-      - User Activity
-  - name: Uninstall Date
-    description: Segments your users by the date they uninstalled your app.
+      - Retargeting
+  - name: Last received email
+    description: 
     tags:
-      - User Activity
-  - name: Uninstalled
-    description: Segments your users by whether they have uninstalled your app and have not reinstalled it.
+      - Retargeting
+  - name: Last received push
+    description: 
     tags:
-      - User Activity
-  - name: X Money Spent in Last Y Days
-    description: Segments your users by the amount of money that they have spent in your app in the last specified number of calendar days between 1 and 30. This amount will only include the sum of the last 50 purchases. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+      - Retargeting
+  - name: Last in-app message impression
+    description:
     tags:
-      - User Activity
-  - name: X Product Purchased in Last Y Days
-    description: Segments your users by the number of times (between 0 and 50) they have bought a specific item from your app in the last specified number of calendar days between 1 and 30 (special membership, gift certificate, etc…). <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+      - Retargeting
+  - name: Last received SMS/MMS
+    description: 
     tags:
-      - User Activity
-  - name: X Purchase Property in Y Days
-    description: Segments your users by the number of times a purchase was made in relation to a certain purchase property in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+      - Retargeting
+  - name: Last received webhook
+    description: 
     tags:
-      - User Activity
-  - name: X Purchases in Last Y Days
-    description: Segments your users by the number of times (between 0 and 50) they have made a purchase in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+      - Retargeting
+  - name: Last received Whatsapp
+    description: 
     tags:
-      - User Activity
-  - name: X Sessions in Last Y Days
-    description: Segments your users by the number of sessions (between 0 and 50) they have had in your app in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+      - Retargeting
+  - name: Last viewed News Feed
+    description: 
     tags:
-      - User Activity
-  - name: Clicked Card
-    description: Segments your users by whether or not they have clicked a specific card or promotion.
+      - Retargeting
+  - name: Last received any message
+    description: 
+    tags:
+      - Retargeting
+  - name: Last engaged with message
+    description: 
     tags:
       - Retargeting
   - name: Clicked/Opened Campaign
-    description: Segments your users by whether or not they have interacted with a specific campaign.
+    description: 
     tags:
       - Retargeting
   - name: Clicked/Opened Campaign or Canvas With Tag
-    description: Segments your users by whether or not they have interacted with a specific campaign or Canvas with a specific tag.
+    description:
     tags:
       - Retargeting
   - name: Clicked/Opened Step
-    description: Segments your users by whether or not they have interacted with a specific Canvas component.
+    description: 
     tags:
       - Retargeting
-  - name: Converted From Campaign
-    description: Segments your users by whether or not they have converted on a specific campaign. This filter doesn't include users that are in the control group.
+  - name: Clicked Alias in campaign
+    description: 
     tags:
       - Retargeting
-  - name: Converted From Canvas
-    description: Segments your users by whether or not they have converted on a specific Canvas. This filter doesn't include users that are in the control group.
+  - name: Clicked Alias in Canvas step
+    description: 
+    tags:
+      - Retargeting
+  - name: Clicked Alias in any campaign or Canvas Step
+    description: 
+    tags:
+      - Retargeting
+  - name: Hard bounced
+    description: 
+    tags:
+      - Retargeting
+  - name: Has marked you as spam
+    description: 
+    tags:
+      - Retargeting
+  - name: Invalid phone number 
+    description: 
+    tags:
+      - Retargeting
+  - name: Last sent specific SMS Inbound Keyword category
+    description: 
+    tags:
+      - Retargeting
+  - name: Converted from Campaign
+    description: 
+    tags:
+      - Retargeting
+  - name: Converted from Canvas
+    description: 
+    tags:
+      - Retargeting
+  - name: In campaign control group
+    description:
+    tags:
+      - Retargeting
+  - name: In Canvas control group
+    description: 
+    tags:
+      - Retargeting
+  - name: Last enrolled in control group
+    description: 
     tags:
       - Retargeting
   - name: Entered Canvas Variation
-    description: Segments your users by whether or not they have entered a variation path of a specific Canvas.
+    description: 
     tags:
       - Retargeting
-  - name: Has Never Received A Campaign or Canvas Step
-    description: Segments your users by whether or not they have received any campaign or Canvas component.
+  - name: Clicked card 
+    description:
     tags:
       - Retargeting
-  - name: In Campaign Control Group
-    description: Segments your users by whether or not they were in the control group for a specific multivariate campaign.
+  - name: Feature flags
+    description: 
     tags:
       - Retargeting
-  - name: In Canvas Control Group
-    description: Segments your users by whether or not they were in the control group for a specific Canvas.
+  - name: Subscription group
+    description: 
     tags:
-      - Retargeting
-  - name: Last Received Campaign or Canvas With Tag
-    description: Segments your users by when they received a specific campaign or Canvas with a specific tag. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
-    tags:
-      - Retargeting
-  - name: Last Received Specific Campaign
-    description: Segments your users by when they last received a specific campaign. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
-    tags:
-      - Retargeting
-  - name: Last Received Specific Canvas Step
-    description: Segments your users by selecting those who received a specific, designated Canvas component. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
-    tags:
-      - Retargeting
-  - name: Received Campaign
-    description: Segments your users by whether or not they have received a specific campaign.
-    tags:
-      - Retargeting
-  - name: Received Campaign Variant
-    description: Segments your users by which variant of a multivariate campaign they have received.
-    tags:
-      - Retargeting
-  - name: Received Campaign or Canvas with Tag
-    description: Segments your users by whether or not they have received a specific campaign or Canvas with a specific tag.
-    tags:
-      - Retargeting
-  - name: Received Canvas Step
-    description: Segments your users by whether or not they have received a specific Canvas component.
-    tags:
-      - Retargeting
-  - name: Has Marked You As Spam
-    description: Segments your users by whether or not they have marked your messages as spam.
-    tags:
-      - Marketing Activity
-  - name: Last Engaged With Message
-    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). Includes option to filter by machine opens or other opens for email messages. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
-    tags:
-      - Marketing Activity
-  - name: Last Enrolled in Any Control Group
-    description: Segments your users by the last time that they fell into the control group in a campaign. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
-    tags:
-      - Marketing Activity
-  - name: Last In-App Message Impression
-    description: Segments your users by determining the last in-app message impression was received. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
-    tags:
-      - Marketing Activity
-  - name: Last Received Any Message
-    description: Segments your users by determining the last message that was received. (24-hour period)<br><br>Example:<br>Last Received Message Less than 1 Day ago = less than 24 hours ago<br><br>Time zone:<br>Company's Time Zone
-    tags:
-      - Marketing Activity
+      - Channel subscription behavior
   - name: Last Received Email
     description: Segments your users by the last time that they have received one of your email messages. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
