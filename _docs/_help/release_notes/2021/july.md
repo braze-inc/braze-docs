@@ -1,6 +1,6 @@
 --- 
 nav_title: July
-page_order: 6
+page_order: 5
 noindex: true
 page_type: update
 description: "This article contains release notes for July 2021."
@@ -8,37 +8,30 @@ description: "This article contains release notes for July 2021."
 
 # July 2021
 
-## Transactional email campaigns
+## Simple Survey in-app message
 
-Transactional emails are those sent to facilitate an agreed-upon transaction between a sender and the recipient. Braze's [Transactional email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) is purpose-built for sending automated, non-promotional email messages like order confirmations, password resets, billing alerts, or other business-critical notifications. In addition, a corresponding [transactional email endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) has been created. Transactional emails and the new endpoint are only available as part of select Braze packages. 
+Use the new [Simple Survey in-app message template]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers.
 
-## Nested object support for event properties
+## Liquid use case library
 
-Braze now supports [nested objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/) for custom events and purchase events. Nested objects allow you to send arrays of data as properties of custom events and purchases. This nested data can be used for templating personalized information in API-triggered messages through the use of Liquid and dot notation.
+Wondering how to do that one thing with Liquid? Just looking for inspiration? Check out our new [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/) for a collection of use cases ranging from anniversaries and birthdays to platform targeting and more.
 
-## New HMAC Liquid filters
+## Email tracking
 
-New [`hmac_sha1` and `hmac_sha256` Liquid encoding filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/) have been added to the Braze platform.
+Open pixel tracking and click tracking can now be disabled per user profile. This flexibility helps customers support regional privacy laws, where an individual user profile might indicate they no longer want to be tracked. Check out our [Email tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/) article to learn more.
 
-## Purchase event page
+## SDK data collection options
 
-Curious about the details of purchase events at Braze? Visit our dedicated [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) article to learn more.
+Learn more about how the Braze SDK can be integrated to allow for flexible data collection in our new documentation on [SDK data collection options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
 
-## New Braze partnerships
+## SSL overview
 
-### Nexla - Workflow automation
+Learn more about SSL at Braze, why SSL is important, and how you can acquire an SSL certificate in our new [SSL Overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl/) article.
 
-[Nexla]({{site.baseurl}}/partners/nexla) is the leader in unified data operations and a 2021 Gartner Cool Vendor. Customers that use Currents to send data to data warehouses can leverage Nexla to extract, transform, and load that data to other locations, making data easily accessible across your entire ecosystem. Nexla enables you to use Braze Currents to get data in a custom format delivered to your destination of choice by a simple point and click. 
+## Amplitude user profile API endpoints
 
-### Amperity - Customer data platform
+Amplitude's User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations. Refer to [Amplitude User Profile API Endpoints]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) to learn more.
 
-[Amperity]({{site.baseurl}}/partners/amperity/) is a comprehensive enterprise customer data platform, helping brands get to know their customers, make strategic decisions, and consistently take the right course of action to serve their consumers better. Amperity supports the Braze platform by providing a unified view of your customers across its CDP and Braze allowing you to send valuable Amperity data to Braze.
+## Campaign details endpoint 
 
-### Digioh - Surveys
-
-[Digioh]({{site.baseurl}}/partners/digioh/) helps you grow your lists, capture first-party data, and put your data to use in your Braze campaigns. The drag-and-drop builder makes it easy to create on-brand forms, pop-ups, preference centers, landing pages, and surveys that connect you with your customers.
-
-### AppsFlyer Audiences - Attribution/Analytics
-
-[AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/) is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics mobile attribution, and deep linking. [AppsFlyer Audiences]({{site.baseurl}}/partners/appsflyer_audiences/) allow you to build audience segments and pass these segments directly to Braze to create powerful customer engagement campaigns.
-
+The [`/campaigns/details` endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) has added a dedicated `message` response for the in-app message channel. Documentation on this can be found [here]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).

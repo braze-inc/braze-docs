@@ -75,7 +75,7 @@ Variables can be **strings**, **boolean** values, or **numbers**. Define both th
 
 ##### Example properties
 
-For example, if we are defining a feature flag that shows an out-of-stock banner for our eCommerce store, we might set the following properties, which our app will use when displaying the banner:
+For example, if we are defining a feature flag that shows an out-of-stock banner for our ecommerce store, we might set the following properties, which our app will use when displaying the banner:
 
 |Property Name|Type|Value|
 |--|--|--|
@@ -724,6 +724,10 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 {% endtabs %}
 
 ## Segmenting with feature flags {#segmentation}
+
+{% alert note %}
+Feature Flag membership filter is being gradually rolled out and may not be on your dashboard just yet.
+{% endalert %}
 
 Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter][6]. For more information about filtering on segments, see [Creating a segment][7].
 

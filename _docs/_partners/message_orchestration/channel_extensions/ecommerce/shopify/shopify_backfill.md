@@ -56,7 +56,7 @@ On the Shopify partner page, select **Start Data Backfill**. For existing Shopif
 
 ### Step 2: Toggle on the backfill of Shopify data
 
-Next, the setup wizard will pop up, and you can optionally enable the backfill of historical Shopify data. As part of this backfill, Braze will sync only the following Shopify data for the last 90 days prior to your Shopify integration by default:
+Next, the setup composer will pop up, and you can optionally enable the backfill of historical Shopify data. As part of this backfill, Braze will sync only the following Shopify data for the last 90 days prior to your Shopify integration by default:
 - Order Created Event
 - Braze Purchase Event
 - Customer Data

@@ -104,7 +104,7 @@ In the **Campaigns** page, create a new campaign, and choose **Push Notification
 
 After you name your campaign, choose **Android Push** as the push platform.
 
-![The campaign creation wizard displaying the available push platforms.][5]
+![The campaign creation composer displaying the available push platforms.][5]
 
 Next, compose your push campaign with a title and message.
 
@@ -112,7 +112,7 @@ Next, compose your push campaign with a title and message.
 
 In the **Test** tab, enter your user ID, which you've set in your app using the [`changeUser(USER_ID_STRING)` method][9], and click **Send Test** to send a test push.
 
-![The test tab in the campaign creation wizard shows you can send a test message to yourself by providing your user ID and entering it into the "Add Individual Users" field.][7]
+![The test tab in the campaign creation composer shows you can send a test message to yourself by providing your user ID and entering it into the "Add Individual Users" field.][7]
 
 At this point, you should receive a test push notification on your Huawei (HMS) device from Braze.
 

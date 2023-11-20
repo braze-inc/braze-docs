@@ -40,7 +40,7 @@ The default Audience Paths component contains two default audience groups, **Gro
 
 ### Defining audience groups
 
-The following screenshot shows the layout of an expanded Audience Paths component. Here, you can define up to eight audience groups (one preset and seven customizable). To define an audience group, select the group name from the Audience Paths wizard. You can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups.
+The following screenshot shows the layout of an expanded Audience Paths component. Here, you can define up to eight audience groups (one preset and seven customizable). To define an audience group, select the group name from the Audience Paths composer. You can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups.
 
 For example, if you wanted to send a group of users helpful food recommendations, you might select custom attribute filters you have already built out such as "Loves Asian Cuisine", "Loves Latin Cuisine", "Loves European Cuisine", etc. 
 

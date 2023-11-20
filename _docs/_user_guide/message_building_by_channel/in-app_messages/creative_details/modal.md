@@ -21,7 +21,7 @@ description: "This reference article covers the message and design requirements 
 Modal in-app messages are designed to fit the device at the best and most filling ratios possible, while staying true to the size and ratios of your chosen image or copy for your message.
 
 - All images must be less than 5&nbsp;MB.
-- We only accept PNG, JPG, and GIF file types.
+- We only accept PNG, JPEG, and GIF file types.
 - We recommend that your images be 500&nbsp;KB.
 
 {% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
