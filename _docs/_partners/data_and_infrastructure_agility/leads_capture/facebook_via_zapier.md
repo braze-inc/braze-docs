@@ -146,7 +146,7 @@ To use this integration, you must have a [Zapier plan](https://zapier.com/app/pr
 {% details Why aren’t Facebook leads syncing to Braze? %}
 1. Check that you have administrator access to your Facebook Page, ad account, and lead access. Then, reconnect your account in Zapier.
 2. Verify that the instant form you created in Facebook maps to the form selected in your Trigger step. 
-3. Check that you have assigned Zapier to Leads Access* by going to **Facebook Business Manager** > **Integrations** > **Lead Access**.
+3. Check that you have assigned Zapier to Leads Access by going to **Facebook Business Manager** > **Integrations** > **Lead Access**.
 {% enddetails %}
 
 {% details Why am I seeing duplicate user profiles with the same email? %}
