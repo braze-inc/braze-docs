@@ -7,7 +7,7 @@ description: "This reference article covers the AI Copywriting Assistant, featur
 
 # AI copywriting assistant
 
-> The AI copywriting assistant passes a brief product name or description to OpenAI's GPT copy generation tool to generate human-like marketing copy for use in your messaging. This functionality is available by default for most message composers in the Braze dashboard.
+> The AI copywriting assistant passes a brief product name or description to a Third-Party Provider GPT copy generation tool owned by OpenAI to generate human-like marketing copy for use in your messaging. This functionality is available by default for most message composers in the Braze dashboard.
 
 ## Steps
 
@@ -21,8 +21,6 @@ To generate copy using the AI copywriting assistant, follow these steps:
 5. Click **Generate Copy**.
 
 The response will be fetched from OpenAI and provided to you. Feel free to experiment and try variations to your heart's content. 
-
-Braze makes no warranty of any kind with respect to any AI-generated content.
 
 ![AI copywriting assistant modal showing the input "Braze Marketing Automation", which generated the output: "Looking to take your marketing to the next level? Braze Marketing Automation is the solution for you! With our powerful tools, you'll be able to create, send, and track your marketing campaigns with ease. So why wait? Sign up today and see the results yourself!"][1]
 
@@ -38,7 +36,7 @@ We filter out responses for offensive content that violates OpenAI's [content po
 
 ## How is my data used and sent to OpenAI?
 
-In order to generate copy, Braze will send your query to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days.
+In order to generate copy, Braze will send your query to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Between you and Braze, any content generated using GPT is your intellectual property. Braze will not assert any claims of copyright ownership on such content and makes no warranty of any kind with respect to any AI-generated content.
 
 ## More AI tools
 
