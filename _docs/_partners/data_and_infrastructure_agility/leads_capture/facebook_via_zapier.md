@@ -33,7 +33,7 @@ By leveraging this integration and Braze, you can automate the transfer of lead 
 
 From Facebook Ads Manager, create a [Facebook Leads campaign and Facebook Lead Ads form](https://www.facebook.com/business/help/397336587121938?id=735435806665862&helpref=uf_permalink).
 
-Include email or phone as a field in your form. You can use an email address or phone number when making a request to the `/users/track` endpoint to update or create the user profile. If you're collecting first names or last names, collect those separately in your form instead of using full names.
+You can use either an email address or phone number when making a request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update or create the user profile. For this reason, include a **Contact field** of **email** or **phone** in your lead ad form. If you're collecting first names or last names, collect those separately in your form instead of using full names.
 
 ### Step 2: Connect your Facebook Account to Zapier 
 
