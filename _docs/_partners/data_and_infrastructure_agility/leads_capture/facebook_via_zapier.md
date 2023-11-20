@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Facebook Lead Ads via Zapier integration
 
-> With the Facebook Lead Ads integration via [Zapier][1], you can import your leads from Facebook into Braze and track a custom event when leads are captured. Facebook Lead Ads is an ad format that allows businesses to collect lead information directly in Facebook. These ads are designed to make the lead generation process easy and seamless.
+> With the Facebook Lead Ads integration via <a href="https://zapier.com/" target="_blank">Zapier</a>, you can import your leads from Facebook into Braze and track a custom event when leads are captured. Facebook Lead Ads is an ad format that allows businesses to collect lead information directly in Facebook. These ads are designed to make the lead generation process easy and seamless.
 
 By leveraging this integration and Braze, you can automate the transfer of lead data from Facebook to Braze, enabling real-time engagement and personalized follow-up actions. 
 
@@ -18,12 +18,12 @@ By leveraging this integration and Braze, you can automate the transfer of lead 
 
 | Requirements | Description |
 |---|---|
-| Zapier account | A Zapier account is required to take advantage of this partnership. This integration requires use of [premium Zapier apps](https://zapier.com/app/pricing), so check that your Zapier plan has access to premium apps. |
-| [Facebook Business Manager](https://www.facebook.com/business/help/1710077379203657?id=180505742745347) | You will use Facebook Business Manager, a centralized tool to manage your brand’s Facebook assets (for example, ad accounts, pages, and apps), as part of this integration. |
-| [Facebook ad account](https://www.facebook.com/business/help/195296697183682?id=829106167281625) | You will need an active Facebook ad account tied to your brand’s business manager. <br><br>Ensure that you have the "Manage ad accounts" permission for each ad account you plan to use with Braze, and that you have accepted your ad account terms and conditions. |
-| [Facebook Page](https://www.facebook.com/business/help/183277585892925?id=420299598837059) | You will need an active Facebook Page tied to your brand’s business manager. <br><br>Ensure that you have the "Manage Pages" permissions for each Facebook Page you plan to use with Braze. |
-| [Facebook Leads access](https://www.facebook.com/business/help/540596413257598?id=735435806665862) | Facebook Leads access for each ad account you plan to use with Braze is required to use this integration. |
-| Braze REST endpoint | [Your REST endpoint URL][0]. Your API endpoint matches the dashboard URL for your Braze instance. <br><br> For example, if your dashboard URL is `https://dashboard-03.braze.com`, your endpoint will be `dashboard-03`. |
+| Zapier account | A Zapier account is required to take advantage of this partnership. This integration requires use of <a href="https://zapier.com/app/pricing/" target="_blank">premium Zapier apps</a>, so check that your Zapier plan has access to premium apps. |
+| <a href="https://www.facebook.com/business/help/1710077379203657?id=180505742745347" target="_blank">Facebook Business Manager</a> | You will use Facebook Business Manager, a centralized tool to manage your brand’s Facebook assets (for example, ad accounts, pages, and apps), as part of this integration. |
+| <a href="https://www.facebook.com/business/help/195296697183682?id=829106167281625/" target="_blank">Facebook ad account</a> | You will need an active Facebook ad account tied to your brand’s business manager. <br><br>Ensure that you have the "Manage ad accounts" permission for each ad account you plan to use with Braze, and that you have accepted your ad account terms and conditions. |
+| <a href="https://www.facebook.com/business/help/183277585892925?id=420299598837059/" target="_blank">Facebook Page</a> | You will need an active Facebook Page tied to your brand’s business manager. <br><br>Ensure that you have the "Manage Pages" permissions for each Facebook Page you plan to use with Braze. |
+| <a href="https://www.facebook.com/business/help/540596413257598?id=735435806665862/" target="_blank">Facebook Leads access</a> | Facebook Leads access for each ad account you plan to use with Braze is required to use this integration. |
+| Braze REST endpoint | [Your REST endpoint URL][1]. Your API endpoint matches the dashboard URL for your Braze instance. <br><br> For example, if your dashboard URL is `https://dashboard-03.braze.com`, your endpoint will be `dashboard-03`. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -31,9 +31,11 @@ By leveraging this integration and Braze, you can automate the transfer of lead 
 
 ### Step 1: Create a Lead Ads campaign with an instant form
 
-From Facebook Ads Manager, create a [Facebook Leads campaign and Facebook Lead Ads form](https://www.facebook.com/business/help/397336587121938?id=735435806665862&helpref=uf_permalink).
 
-You can use either an email address or phone number when making a request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update or create the user profile. For this reason, include a **Contact field** of **email** or **phone** in your lead ad form. If you're collecting first names or last names, collect those separately in your form instead of using full names.
+
+From Facebook Ads Manager, create a <a href="https://www.facebook.com/business/help/397336587121938?id=735435806665862&helpref=uf_permalink" target="_blank">Facebook Leads campaign and Facebook Lead Ads form</a>.
+
+You can use either an email address or phone number when making a request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update or create the user profile. For this reason, include a **Contact field** for **email** or **phone** in your lead ad form. If you're collecting first names or last names, collect those separately in your form instead of using full names.
 
 ### Step 2: Connect your Facebook Account to Zapier 
 
@@ -41,16 +43,18 @@ In Zapier, go to **Apps** to search for available Facebook apps select either **
 
 Note that Zapier has two methods of connecting your Facebook account to Zapier. For more information, refer to:
 
-- [Facebook Lead Ads (for Business Admins)](https://help.zapier.com/hc/en-us/articles/8496123584781-How-to-get-started-with-Facebook-Lead-Ads-for-Business-Admins-on-Zapier#h_01HC9VZFZG0GR2KRYM5EQJN329)
-- [Facebook Lead Ads](https://help.zapier.com/hc/en-us/articles/8496061306253#h_01HC9VMZ2XP0017AR6SE7S30JG)
+- <a href="https://help.zapier.com/hc/en-us/articles/8496123584781-How-to-get-started-with-Facebook-Lead-Ads-for-Business-Admins-on-Zapier#h_01HC9VZFZG0GR2KRYM5EQJN329" target="_blank">Facebook Lead Ads (for Business Admins)</a>
+- <a href="https://help.zapier.com/hc/en-us/articles/8496061306253#h_01HC9VMZ2XP0017AR6SE7S30JG" target="_blank">Facebook Lead Ads</a>
 
 ![][2]{: style="max-width:80%;"}
 
-Next, assign Zapier to Leads Access within your Business Manager. In your Business Manager, go to **Integrations** > **Leads Access** on the left-hand menu. Select your Facebook Page, then click **CRMs**. From here, select **Assign CRMs** and add **Zapier**.
+Next, assign Zapier to Leads Access within your Business Manager. 
+
+In your Business Manager, go to **Integrations** > **Leads Access** on the left-hand menu. Select your Facebook Page, then click **CRMs**. From here, select **Assign CRMs** and add **Zapier**.
 
 ![][3]{: style="max-width:80%;"}
 
-For steps to assign Zapier as a CRM integration, refer to Facebook's [documentation](https://www.facebook.com/business/help/540596413257598?id=735435806665862). 
+For steps to assign Zapier as a CRM integration, refer to Facebook's <a href="https://www.facebook.com/business/help/540596413257598?id=735435806665862" target="_blank">documentation</a>.
 
 ### Step 3: Create your Zap
 
@@ -82,7 +86,6 @@ Add a new step, then select **Webhooks by Zapier**. Next, select **Custom Reques
 
 Lastly, set up your custom request by inserting fields in your payload. The following code snippet shows an example payload. 
 
-{% raw %}
 ```
 {
     "attributes": [
@@ -112,7 +115,6 @@ Lastly, set up your custom request by inserting fields in your payload. The foll
     ]
 }`
 ```
-{% endraw %}
 
 Here's an example of what this looks like in Zapier:
 
@@ -122,7 +124,7 @@ After configuring your webhook, select **Continue and test**. If the test is suc
 
 ### Step 4: Test your Facebook Lead Ads Zap
 
-To test this end-to-end, use Facebook’s Leads Ads Testing Tool in your Facebook Developer Console. For more information, see [Testing and Troubleshooting](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/testing-troubleshooting/). 
+To test this end-to-end, use Facebook’s Leads Ads Testing Tool in your Facebook Developer Console. For more information, see <a href="https://developers.facebook.com/docs/marketing-api/guides/lead-ads/testing-troubleshooting/" target="_blank">Testing and Troubleshooting</a>.
 
 ## User identity management
 
@@ -140,7 +142,7 @@ You can also use an external ID or phone number as part of the request to Braze 
 ## Troubleshooting
 
 {% details I tested the Trigger and Action successfully, so why am I unable to publish my Zapier Zap? %}
-To use this integration, you must have a [Zapier plan](https://zapier.com/app/pricing) that supports premium apps. 
+To use this integration, you must have a <a href="https://zapier.com/app/pricing/" target="_blank">Zapier plan</a> that supports premium apps. 
 {% enddetails %}
 
 {% details Why aren’t Facebook leads syncing to Braze? %}
@@ -150,26 +152,25 @@ To use this integration, you must have a [Zapier plan](https://zapier.com/app/pr
 {% enddetails %}
 
 {% details Why am I seeing duplicate user profiles with the same email? %}
-There are unique ways of creating and managing user profiles in Braze based on their [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-profile-lifecycle). 
+There are unique ways of creating and managing user profiles in Braze based on their [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-profile-lifecycle).
 
-Depending on your internal processes and when you are triggering customers to be created within Braze, you may encounter duplicate user profiles due to a race condition of the user profile being created by the integration and when the user is created from your system. You can [merge user profiles]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) in Braze. 
+Depending on your internal processes and when you are triggering customers to be created within Braze, you may encounter duplicate user profiles due to a race condition of the user profile being created by the integration and when the user is created from your system. You can [merge user profiles]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) in Braze.
 {% enddetails %}
 
 {% details I don’t have a Zapier account. How can I trigger Facebook Lead Ads webhooks into Braze? %}
-If you don’t use Zapier and don’t plan on using Zapier, you can build the integration directly from Facebook into Braze. Refer to [Lead Ads documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads) for more information. 
+If you don’t use Zapier and don’t plan on using Zapier, you can build the integration directly from Facebook into Braze. Refer to <a href="https://developers.facebook.com/docs/marketing-api/guides/lead-ads/" target="_blank">Lead Ads documentation</a> for more information.
 
-For retrieving leads from Facebook, use [webhooks](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/retrieving#webhooks). Refer to [Webhooks documentation](https://developers.facebook.com/docs/graph-api/webhooks/getting-started) to get started with webhooks in Facebook.
+For retrieving leads from Facebook, use <a href="https://developers.facebook.com/docs/marketing-api/guides/lead-ads/retrieving#webhooks" target="_blank">webhooks</a>. Refer to <a href="https://developers.facebook.com/docs/graph-api/webhooks/getting-started" target="_blank">Webhooks documentation</a> to get started with webhooks in Facebook.
 
 After establishing the webhooks URL within Facebook, you can create a [Data Transformation]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/) in Braze. 
 {% enddetails %}
 
 {% alert tip %}
-For more troubleshooting tips, refer to Zapier’s [Facebook leads troubleshooting guide](https://help.zapier.com/hc/en-us/articles/8495982030861-Common-Problems-with-Facebook-Lead-Ads#h_01HC9V6Y652KQYYY96YG99T423).
+For more troubleshooting tips, refer to Zapier’s <a href="https://help.zapier.com/hc/en-us/articles/8495982030861-Common-Problems-with-Facebook-Lead-Ads#h_01HC9V6Y652KQYYY96YG99T423" target="_blank">Facebook leads troubleshooting guide</a>.
 {% endalert %}
 
 
-[0]: {{site.baseurl}}/api/basics/#api-definitions
-[1]: https://zapier.com/
+[1]: {{site.baseurl}}/api/basics/#api-definitions
 [2]: {% image_buster /assets/img/fb_lead_ads_zapier/integration1.png %}
 [3]: {% image_buster /assets/img/fb_lead_ads_zapier/integration2.png %}
 [4]: {% image_buster /assets/img/fb_lead_ads_zapier/create_zap1.png %}
