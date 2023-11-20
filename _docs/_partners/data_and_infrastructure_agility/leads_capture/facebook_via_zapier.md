@@ -37,7 +37,7 @@ Include email or phone as a field in your form. You can use an email address or 
 
 ### Step 2: Connect your Facebook Account to Zapier 
 
-In Zapier, go to **Apps** to search for available Facebook apps select either **Facebook Lead Ads** or **Facebook Lead Ads (for Business admins).
+In Zapier, go to **Apps** to search for available Facebook apps select either **Facebook Lead Ads** or **Facebook Lead Ads (for Business admins)**.
 
 Note that Zapier has two methods of connecting your Facebook account to Zapier. For more information, refer to:
 
