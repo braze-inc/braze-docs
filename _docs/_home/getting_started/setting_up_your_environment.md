@@ -7,7 +7,7 @@ noindex: true
 
 # Setting up your environment
 
-> TODO
+> Learn how to set up your local environment, so you can make complex or multi-document changes to Braze Docs. Optionally, for small single-document changes, you can [make changes directly in GitHub]().
 
 ## Before you start
 

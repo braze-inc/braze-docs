@@ -1,6 +1,6 @@
 ---
-nav_title: Reordering a section
-article_title: Reordering a section
+nav_title: Site navigation
+article_title: Site navigation
 page_order: 3
 noindex: true
 ---

@@ -1,11 +1,11 @@
 ---
-nav_title: Adding and removing pages
-article_title: Adding and removing pages
+nav_title: Managing pages
+article_title: Managing pages
 page_order: 1
 noindex: true
 ---
 
-# Adding and removing pages
+# Managing pages
 
 > TODO
 

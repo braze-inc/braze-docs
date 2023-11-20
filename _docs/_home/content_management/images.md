@@ -1,11 +1,11 @@
 ---
-nav_title: Adding and removing images
-article_title: Adding and removing images
+nav_title: Managing images
+article_title: Managing images
 page_order: 1
 noindex: true
 ---
 
-# Adding and removing images
+# Managing images
 
 > TODO
 

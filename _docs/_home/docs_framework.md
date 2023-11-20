@@ -5,9 +5,9 @@ page_order: 3
 noindex: true
 ---
 
-# Framework
+# Docs framework
 
-> Braze Documentation is built using Jekyll, a Static-Site Generator (SSG). For more information, see [Getting started with Jekyll](https://jekyllrb.com/docs/).
+> Braze Docs is built using Jekyll, a Static-Site Generator (SSG).
 
 ## Directory structure
 
