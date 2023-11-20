@@ -162,7 +162,7 @@ When creating a custom footer, Braze suggests using attributes for personalizati
 | Attribute | Tag |
 | --------- | --- |
 | User's Email Address | {% raw %}`{{${email_address}}}`{% endraw %} |
-| User's Custom Unsubscribe URL | {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} |
+| User's Custom Unsubscribe URL | {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} <br><br>This tag replaces the previous {% raw %}`{{${unsubscribe_url}}}`{% endraw %} tag. While both tags work, we recommend that you use the newer {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} tag instead. |
 | User's Custom Opt-In URL | {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} |
 | User's Custom Subscribe URL | {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}|
 | User's Custom Braze Preference Center URL | {% raw %}`{{${preference_center_url}}}`{% endraw %} |
