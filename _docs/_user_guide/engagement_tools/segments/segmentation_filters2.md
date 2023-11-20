@@ -130,19 +130,19 @@ glossaries:
     tags:
       - Retargeting
   - name: Received message from Canvas step
-    description: 
+    description: Segments your users by whether or not they have received a specific Canvas component.
     tags:
       - Retargeting
   - name: Last received message from specific campaign
-    description: 
+    description: Segments your users by whether or not they have received a specific campaign.
     tags:
       - Retargeting
   - name: Last received message from specific Canvas step
-    description: 
+    description: Segments your users by when they received a specific Canvas component.
     tags:
       - Retargeting
   - name: Received message from campaign or Canvas with tag
-    description: 
+    description: Segments your users by whether or not they have received a specific campaign or Canvas with a specific tag.
     tags:
       - Retargeting
   - name: Last received message from campaign or Canvas with tag
