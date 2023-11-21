@@ -171,12 +171,20 @@ page_order: 1
 ---
 ```
 
+<style>
+table td {
+    word-wrap: break-word;
+}
+</style>
 <table>
+<thead>
     <tr>
-        <th>YAML tag</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th style="width: 15%; text-align: left;">YAML tag</th>
+        <th style="width: 15%; text-align: left;">Type</th>
+        <th style="width: 70%; text-align: left;">Description</th>
     </tr>
+</thead>
+<tbody>
     <tr>
         <td><code>nav_title</code></td>
         <td>String</td>
@@ -185,7 +193,7 @@ page_order: 1
     <tr>
         <td><code>config_only</code></td>
         <td>Boolean</td>
-        <td>Set to true to make the page unclickable.</td>
+        <td>Set to <code>true</code> to prevent the page from opening, so it will only be used as a dropdown in the navigation bar.</td>
     </tr>
     <tr>
         <td><code>layout</code></td>
@@ -197,6 +205,7 @@ page_order: 1
         <td>Numeric</td>
         <td>Defines the order the page should show up in (ascending order).</td>
     </tr>
+</tbody>
 </table>
 
 > TODO: Move this to a different doc:
@@ -219,11 +228,14 @@ layout: documents
 ```
 
 <table>
+<thead>
     <tr>
-        <th>YAML tag</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th style="width: 15%; text-align: left;">YAML tag</th>
+        <th style="width: 15%; text-align: left;">Type</th>
+        <th style="width: 70%; text-align: left;">Description</th>
     </tr>
+</thead>
+<tbody>
     <tr>
         <td><code>layout</code></td>
         <td>String</td>
@@ -249,6 +261,7 @@ layout: documents
         <td>String</td>
         <td>Defines a custom platform YAML config.</td>
     </tr>
+</tbody>
 </table>
 
 
@@ -257,11 +270,14 @@ layout: documents
 Here's a list of some custom yaml tags supported by most layouts (but not all):
 
 <table>
+<thead>
     <tr>
-        <th>YAML tag</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th style="width: 15%; text-align: left;">YAML tag</th>
+        <th style="width: 15%; text-align: left;">Type</th>
+        <th style="width: 70%; text-align: left;">Description</th>
     </tr>
+</thead>
+<tbody>
     <tr>
         <td><code>config_only</code></td>
         <td>Boolean</td>
@@ -302,6 +318,7 @@ Here's a list of some custom yaml tags supported by most layouts (but not all):
         <td>Boolean</td>
         <td>If set to true, hide the feedback option.</td>
     </tr>
+</tbody>
 </table>
 
 
