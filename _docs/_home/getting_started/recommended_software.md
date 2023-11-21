@@ -11,15 +11,23 @@ noindex: true
 ## Software
 
 {% alert note %}
-As of writing, these products are free of cost. If you find that a product is no longer free, [please let us know]().
+As of writing, all recommend software is free of cost. If you find that a product is no longer free, [please let us know]().
 {% endalert %}
 
+<style>
+table td {
+    word-break: break-word;
+}
+</style>
 <table>
+<thead>
     <tr>
         <th>Product Type</th>
         <th>Product</th>
         <th>Description</th>
     </tr>
+</thead>
+<tbody>
     <tr>
         <td>Terminal</td>
         <td><a href="https://wezfurlong.org/wezterm/index.html">Wezterm</a></td>
@@ -61,4 +69,5 @@ As of writing, these products are free of cost. If you find that a product is no
             </ul>
         </td>
     </tr>
+</tbody>
 </table>
