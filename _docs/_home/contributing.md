@@ -10,7 +10,7 @@ Thanks for contributing to Braze Docs! Every Tuesday and Thursday we merge commu
 
 ## Before you start
 
-You'll need to complete the following before contributing:
+You'll need to complete the following:
 
 - [Sign the Contribution License Agreement (CLA)](https://www.braze.com/docs/cla)
 - [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)

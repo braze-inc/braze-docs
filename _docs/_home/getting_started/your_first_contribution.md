@@ -48,7 +48,7 @@ Now that you're a little familiar with the docs repository, you're ready to star
 - **[Using GitHub](#using-github):** For small, single-document changes, you can make changes directly from the GitHub website.
 
 {% alert warning %}
-Before continuing, verify you've completed all tasks in the [Before you start](#before-you-start) section.
+Before continuing, verify you've completed all tasks in [Before you start](#before-you-start).
 {% endalert %}
 
 ### Using your local environment
@@ -104,13 +104,13 @@ git pull
 
 When making changes to the docs, you'll always create a new branch. Use `git branch` along with the `-b` flag to create a new branch.
 
-```branch
+```bash
 git checkout -b BRANCH_NAME
 ```
 
 Replace `BRANCH_NAME` with a short, non-space-separated description of your changes. The output is similar to the following:
 
-```branch
+```bash
 $ git checkout -b fixing-typo-in-metadata
 Switched to a new branch 'fixing-typo-in-metadata'
 ```
@@ -248,13 +248,13 @@ In your PR, select <i class="fa-regular fa-clone"></i> **Copy** next to your bra
 
 In your text editor's terminal, checkout your branch and pull the latest updates from the remote branch in GitHub.
 
-```branch
+```bash
 git checkout BRANCH_NAME && git pull
 ```
 
 Replace `BRANCH_NAME` with the branch name you copied to your clipboard. The output is similar to the following:
 
-```branch
+```bash
 $ git checkout -b fixing-typo-in-metadata  && git pull
 Switched to branch 'fixing-typo-in-metadata'
 Your branch is up to date with 'origin/fixing-typo-in-metadata'.
