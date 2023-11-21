@@ -21,15 +21,15 @@ Tool:
 
 ## How it works
 
-To get started, you can add an Audience Sync step within your Canvas journey. 
+To get started, add an Audience Sync step within your Canvas journey. 
 
 ![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
 
-You can then select one or multiple Audience Sync destinations to sync to. 
+Next, select one or multiple Audience Sync destinations to sync to. 
 
 ![][19]{: style="max-width:80%;"}
 
-Once you have selected a destination, you must configure each partner with the appropriate ad account, audience, and user fields to match, along with specifying whether to add or remove users from the audience. 
+After selecting a destination, you must configure each partner with the appropriate ad account, audience, and user fields to match, along with specifying whether to add or remove users from the audience. 
 
 ![][21]
 

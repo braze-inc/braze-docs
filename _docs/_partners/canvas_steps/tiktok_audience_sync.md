@@ -143,7 +143,7 @@ You can disconnect and reconnect your TikTok account on the TikTok partner page.
 
 {% details Why is my Canvas not allowed to launch? %}
 Ensure your TikTok account successfully connects to Braze on the TikTok partner page.
-Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match
+Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match.
 {% enddetails %}
 
 {% details How do I know if users have matched after passing users to TikTok? %}

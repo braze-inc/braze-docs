@@ -279,6 +279,10 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lytics/
 - name: Olo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/
+- name: Recurly
+  url: /docs/partners/data_and_infrastructure_agility/payments/recurly/
+- name: SmarterSends
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/smartersends/
 - name: Typeform
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/  
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 ---

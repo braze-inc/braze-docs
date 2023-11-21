@@ -18,6 +18,10 @@ description: "This reference article covers message archiving, a feature that al
 2. You connected an S3 bucket to your workspace on the **Technology Partners** page.
 3. You [selected the applicable channels](#selecting-channels) for message archiving on the **Message Archiving** settings page.
 
+{% alert note %}
+For message archiving, use the Dashboard Export integration method to connect the S3 bucket.
+{% endalert %}
+
 ## Overview
 
 When this feature is turned on and you have successfully connected an S3 bucket via your workspace's **Technology Partners** page, Braze will write a gzipped JSON file to your S3 bucket for each email, SMS, or push message sent to a user. You can select any or all of the channels to be saved on the **Message Archiving** settings page.
