@@ -30,4 +30,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Sageflo
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
+- name: SmarterSends
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/smartersends/
 ---

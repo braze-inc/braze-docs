@@ -1,49 +1,50 @@
 ---
 nav_title: November
-page_order: 2
+page_order: 1
 noindex: true
 page_type: update
 description: "This article contains release notes for November 2021."
 ---
- 
 # November 2021
 
-## Data points usage dashboard
+## Click-to-Open Rate reporting metric
+Braze has added a new email metric, Click-to-Open Rate, available in the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/). This metric represents the percentage of open emails that have been clicked.
 
-Use the **Total Data Points Usage** dashboard to track your data point usage pacing in relation to your contract allotment. This dashboard provides information on your contract, current billing cycle, company billing data, and workspace billing data. For more information, refer to [Billing]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/#total-data-points-dashboard).
+## Machine Open reporting metric
 
-## Change to segment extension regeneration
+A new email metric, [Machine Opens]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/#machine-opens), is available on the Canvas and Campaign Analytics pages for emails. This metric identifies email opens that are non-human (such as opened by Apple's servers), displayed as a subset of total opens.
 
-Starting on February 1, 2022, the setting to regenerate extensions daily will be automatically turned off for unused [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Braze defines unused extensions as ones that meet the following criteria:
+## random_bucket_number Liquid variable
+A variable `random_bucket_number` has been added to the list of [supported Liquid variables]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags) for message personalization. 
 
-- Not used in any active campaigns, Canvases, or segments
-- Not used in any inactive (draft, stopped, archived) campaigns, Canvases, or segments
-- Have not been modified in over 7 days
+## iOS 15 rich push notification guidelines
+New [iOS push notification guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) have been added to the iOS rich docs, including information about notification states and a breakdown of text truncation variables.
 
-Braze will notify the company contact and creator of the extension when this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
+## IPs to whitelist in EU for webhooks and Connected Content
+Additional IPs to whitelist in EU for webhooks and Connected Content have been added to our [webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) and [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) article. These new IPs include `18.157.135.97`, `3.123.166.46`, `3.64.27.36`, `3.65.88.25`, `3.68.144.188`, and `3.70.107.88`.
 
-## Android advanced implementation guides
-
-### Content Cards
-
-This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/) covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals.
-
-### In-app messaging
-
-This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/implementation_guide/) covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets.
-
-### Push notifications
-
-This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/implementation_guide/) covers ways to leverage a custom `FirebaseMessagingService` subclass to get the most out of your push messages. Included is a custom use case built by our team, accompanying code snippets, and guidance on logging analytics.
+## Export purchases endpoint
+A new [`/purchases/product_list` endpoint]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/) has been added to Braze. This endpoint returns paginated lists of product IDs.
 
 ## New Braze partnerships
 
 ### Adobe - Customer data platform
+The Braze and [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/#adobe) integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized, targeted experiences to those users. 
 
-Built on the Adobe Experience Platform, Adobe's real-time customer data platform (real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real-time.
+### BlueConic - Customer data platform
+With [Blueconic]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/#blueconic), Braze users can unify data into persistent, individual profiles and then sync it across customer touchpoints and systems in support of a wide range of growth-focused initiatives, including customer lifecycle orchestration, modeling and analytics, digital products and experiences, audience-based monetization, and more.
 
-The Braze and [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/) CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users. 
+### Worthy - Dynamic content
+The Braze and [Worthy]({{site.baseurl}}/partners/message_personalization/dynamic_content/worthy/#worthy) integration allows you to easily create personalized, rich in-app experiences using Worthy's drag-and-drop dynamic content editor and deliver them through Braze.
 
-### Shopify - eCommerce
+### Judo - Dynamic content
+The [Judo]({{site.baseurl}}/partners/message_personalization/dynamic_content/judo/#judo) and Braze integration allows you to overwrite components of your campaign and replace them with Judo experiences. Data from Braze may be used to support personalized content in a Judo experience. User events and data from the experience can feedback into Braze for attribution and targeting.
 
-[Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Together, the Braze and Shopify integration allows brands to connect their Shopify store seamlessly with Braze to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to retarget your users with abandoned checkout messaging and nudge customers to complete their purchase, or retarget users based on their previous purchases.
+### Line - Messaging
+The [Line]({{site.baseurl}}/partners/message_orchestration/additional_channels/messaging/line/#line) and Braze integration allows you to leverage Braze webhooks, advanced segmentation, personalization, and triggering features to message your users in Line through the [Line Messaging API](https://developers.line.biz/en/docs/messaging-api/overview/).
+
+### RevenueCat - Payments
+The [RevenueCat]({{site.baseurl}}/partners/data_and_infrastructure_agility/payments/revenuecat/#revenuecat) and Braze integration allows you to automatically sync your customer's purchase and subscription lifecycle events across platforms. This allows you to build campaigns that react to the subscription lifecycle stage of your customers, such as engaging with customers that opted out during their free trial or sending reminders to customers with billing issues.
+
+### Punchh - Loyalty
+[Punchh]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/punchh/#punchh) has partnered with Braze to sync data across the two platforms for gifting and loyalty purposes. Data published in Braze will be available for segmentation and can sync user data back into Punchh via webhook templates setup in Braze.  

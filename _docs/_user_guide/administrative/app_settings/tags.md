@@ -40,7 +40,7 @@ You can add up to 175 tags to a campaign, Canvas, or segment.
 
 Tags can be a useful organizational tool for keeping track of engagement tactics. You can link segments and campaigns to business objectives, funnel stages, and the like.
 
-The following is an example of tags an eCommerce app might find useful:
+The following is an example of tags an ecommerce app might find useful:
 
 <style>
 table td {

@@ -1,20 +1,41 @@
 ---
 nav_title: April
-page_order: 9
+page_order: 8
 noindex: true
 page_type: update
 description: "This article contains release notes for April 2021."
 ---
 # April 2021
 
-## Segment Extension
+## iOS push advanced implementation guide
 
-A [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension) expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. Once these extension lists are generated, they can then be included/excluded as a filter in your Segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
+This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress-based push), accompanying code snippets, and guidance on logging analytics. Check out the [iOS push advanced implementation guide](/docs/developer_guide/platform_integration_guides/swift/push_notifications/implementation_guide/) to learn more.
 
-## A2P 10DLC
+## VFC support for multimedia message service (MMS)
 
-A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. 10-digit long codes have traditionally been designed for Person-to-Person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. All customers who currently have and/or use long codes are required to register their long codes for 10DLC. Refer to our [A2P 10DLC]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/#application-to-person-10-digit-long-codes-a2p-10dlc) article to learn more.
+vCards, also known as Virtual Contact Files (VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. These VFC files can now be sent through [MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/) and added to the Braze media library. 
 
-## Global Control Groups
+## Updates to user delete
 
-[Global Control Groups]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) allow you to analyze the overall impact of your messaging efforts over time. These groups can help you understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events, by comparing the behaviors of users that receive messaging to those that don't. 
+In October 2020, we made [improvements]({{site.baseurl}}/help/release_notes/2020/october/) to how our user delete handles data subject's phone number or email address. 
+
+## New Braze partnerships
+
+### Airbridge - Attribution
+
+The [Airbridge and Braze integration]({{site.baseurl}}/partners/message_orchestration/attribution/airbridge/) allow you to pass all organic and non-organic install attribution data to Braze to build more personalized marketing campaigns and understand exactly where users were acquired.
+### Kubit - Analytics
+
+[Kubit]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/) is a no-code, self-service analytics platform that delivers instant product insights. Through the seamless no-code integration with Braze, you can import user Cohort information into Braze and launch engagement campaigns to target specific Cohorts. In addition, through the use of Snowflake Secure Data Sharing, you can integrate the raw campaign and impression data from Braze with product analytics in Kubit to measure the impact of these campaigns in real-time. 
+
+### Census - Customer data platform
+
+[Census]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/census/) allows you to keep your customer success, sales, and marketing teams all on the same page by keeping your customer data in sync, all without ongoing help from your engineering department.
+
+### Treasure Data - Customer data platform
+
+[Treasure Data]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/) helps drive relevant customer experiences by harmonizing data, insights, and engagement to work in perfect unison. Armed with actionable indicators, CX Teams, including marketing, sales, and customer service can effectively optimize spend, and personalize omnichannel interactions across the entire customer journey. 
+
+## Phrasee - A/B testing
+
+Braze customer engagement develops relationships through multichannel marketing. Working together with [Phrasee]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/), Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee's deep learning engine handles the testing, monitors the results, and generates new language based on what it's learned. 

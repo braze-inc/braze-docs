@@ -75,7 +75,7 @@ In addition to tracking purchase metrics for segmentation, Braze also notes the 
 
 With purchase event properties, you can set properties on purchases that can be used to further qualify trigger conditions, increase personalization in messaging, and generate more sophisticated analytics through raw data export. Property value types (string, numeric, boolean, date) vary per platform and are often assigned as key-value pairs.
 
-For example, if an eCommerce application wanted to send a message to a user after making a purchase, they could additionally improve their target audience and allow for increased campaign personalization by adding a purchase event property of `brand_name`.
+For example, if an ecommerce application wanted to send a message to a user after making a purchase, they could additionally improve their target audience and allow for increased campaign personalization by adding a purchase event property of `brand_name`.
 
 **Example of triggering based on purchase event properties:**
 

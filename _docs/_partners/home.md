@@ -156,7 +156,7 @@ valid_partner_list:
 - name: Judo
   url: /docs/partners/message_personalization/dynamic_content/judo/
 - name: Shopify
-  url: /docs/partners/message_orchestration/channel_extensions/eCommerce/shopify/
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
 - name: Adobe
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 - name: Worthy
@@ -281,6 +281,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/
 - name: Recurly
   url: /docs/partners/data_and_infrastructure_agility/payments/recurly/
+- name: SmarterSends
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/smartersends/
 - name: Typeform
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/  
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 ---

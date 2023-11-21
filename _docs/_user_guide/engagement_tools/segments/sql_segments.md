@@ -19,7 +19,7 @@ Like standard Segment Extensions, you can query events from up to the past two y
 
 There are two types of SQL editors to choose from when creating your SQL Segment Extension: the SQL Editor, and the Incremental SQL Editor.
 
-- **Creating extensions with SQL Editor (full refresh):** Using the SQL Editor, you must click **Refresh** to refresh the extension manually. This refresh option is costlier and uses up more credits. Full refresh extension can't automatically regenerate membership and can't be refreshed using incremental refresh.
+- **Creating extensions with SQL Editor (full refresh):** Each time your segment refreshes, Braze will query all available data to update your segment, which will use more credits than incremental refreshes. Full refresh extensions can automatically regenerate membership daily, but can’t be refreshed using incremental refresh.
 - **Creating extensions with Incremental SQL Editor (incremental refresh):** Incremental refresh calculates only the last two days' worth of data, which is more cost-efficient and uses up fewer credits each time. When you create an incremental refresh SQL segment, you can set it to automatically regenerate membership daily. <br><br>The main benefit of extensions with incremental refresh is that you can set your segment to automatically refresh membership daily. Segments created with our regular SQL editor can only have their membership refreshed manually. This helps reduce the cost of a daily data refresh for SQL Segment Extensions.
 
 {% alert tip %}
@@ -88,8 +88,8 @@ To use the AI SQL generator, do the following:
 - Users who made less than five purchases in the last year
 
 ### Tips
-- Familiarize yourself with the available [Snowflake data tables](https://www.braze.com/docs/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
-- Familiarize yourself with the [SQL writing rules](https://www.braze.com/docs/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
+- Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
+- Familiarize yourself with the [SQL writing rules]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
 - You can send up to 20 prompts per minute with the AI SQL Generator.
 
 ### How is my data used and sent to OpenAI?

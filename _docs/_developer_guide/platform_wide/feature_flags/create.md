@@ -75,7 +75,7 @@ Variables can be **strings**, **boolean** values, or **numbers**. Define both th
 
 ##### Example properties
 
-For example, if we are defining a feature flag that shows an out-of-stock banner for our eCommerce store, we might set the following properties, which our app will use when displaying the banner:
+For example, if we are defining a feature flag that shows an out-of-stock banner for our ecommerce store, we might set the following properties, which our app will use when displaying the banner:
 
 |Property Name|Type|Value|
 |--|--|--|

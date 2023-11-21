@@ -76,13 +76,13 @@ Use the **Add Row** button to add event properties.
 
 ![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type"(custom event), "event name" (button click), and "event properties".][gtm-custom-event]
 
-### E-Commerce events {#ecommerce}
+### Ecommerce events {#ecommerce}
 
-If your site logs purchases using the standard [e-commerce event][e-commerce] data layer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
+If your site logs purchases using the standard [ecommerce event][ecommerce] data layer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
 
 You can also specify additional property names you want to include as purchase properties by specifying their keys in the Purchase properties list. Note that Braze will look within the individual `item` that is being logged for any purchase properties you add to the list.
 
-For example, let's say your e-commerce payload contains the following `items`:
+For example, let's say your ecommerce payload contains the following `items`:
 
 ```
 items: [{
@@ -229,7 +229,7 @@ In your Google Tag Manager integration, navigate to your Braze Initialization Ta
 [gtm-version-number]: {% image_buster /assets/img/web-gtm/gtm-version-number.png %}
 [changelog]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
 [gtm-debugging-tool]: https://support.google.com/tagmanager/answer/6107056?hl=en
-[e-commerce]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
+[ecommerce]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
 [log-purchase]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase
 [gtm-verbose-logging]: {% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %}
 [gtm-content-cards]: {% image_buster /assets/img/web-gtm/gtm_content_cards.png %}

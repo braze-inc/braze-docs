@@ -1,21 +1,21 @@
 ---
-nav_title: eCommerce
-article_title: eCommerce Partners
+nav_title: Ecommerce
+article_title: Ecommerce Partners
 page_order: 9
 
 page_type: landing
-description: "This landing page lists Braze partners (Alloys) who allow you to integrate with their eCommerce platform."
+description: "This landing page lists Braze partners (Alloys) who allow you to integrate with their Ecommerce platform."
 
 layout: partner_page
 search_tag: Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
-partner_top_header: "eCommerce"
+partner_top_header: "Ecommerce"
 
 valid_partner_list:
 - name: Shopify
-  url: /docs/partners/message_orchestration/channel_extensions/eCommerce/shopify/
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
 - name: Olo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/
 - name: Yotpo
