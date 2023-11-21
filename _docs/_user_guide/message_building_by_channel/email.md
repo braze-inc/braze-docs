@@ -44,6 +44,9 @@ guide_menu_list:
 - name: CSS Inlining
   link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/
   fa_icon: fas fa-align-left
+- name: Custom Email Footer
+  link: /docs/user_guide/message_building_by_channel/email/custom_email_footer/
+  fa_icon: fas fa-envelope-circle-check
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
   fa_icon: fas fa-inbox
