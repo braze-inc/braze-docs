@@ -74,7 +74,7 @@ For effective customer engagement, you must [configure custom events][2] in Braz
 | Recurly Refund Issued                 | Triggered when a refund is issued                                   |
 | Recurly Failed Recurring Payment      | Triggered when an invoice fails for a subscription renewal          |
 
-### Batching and Rate Limiting
+### Batching and rate limiting
 
 Because Recurly uses the Braze `/users/track` endpoint, the integration is subject to standard Braze rate limits of 50,000 requests per minute.
 
