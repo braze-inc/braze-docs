@@ -72,6 +72,7 @@ glossaries:
       - Custom events
   - name: X Custom Event In Y Days
     description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    tags:
       - Custom events
   - name: X Custom Event Property In Y Days
     description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
@@ -294,7 +295,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Background Push Enabled
-    description: 
+    description: Lorem ipsum
     tags:
       - Channel subscription behavior
   - name: Push Opt In Date
@@ -446,7 +447,7 @@ glossaries:
     tags:
       - Advertising use cases 
   - name: Device Google Ad ID
-    description: 
+    description: lorem ipsum
     tags:
       - Advertising use cases
   - name: Device Roku Ad ID
@@ -454,7 +455,7 @@ glossaries:
     tags:
       - Advertising use cases
   - name: Device Windows Ad ID
-    description: 
+    description: lorem ipsum
     tags:
       - Advertising use cases  
   - name: Ad Tracking Enabled
@@ -522,7 +523,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: Churn Risk Score
-    description: 
+    description: lorem ipsum
     tags:
       - Intelligence and predictive
   - name: Purchase Likelihood Category
@@ -530,7 +531,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: Purchase Likelihood Score
-    description: 
+    description: lorem ipsum
     tags:
       - Intelligence and predictive
   - name: Intelligent Channel
@@ -538,7 +539,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: Number of Facebook Friends Using App
-    description: 
+    description: lorem ipsum
     tags:
       - Social activity
   - name: Connected Facebook
@@ -546,11 +547,11 @@ glossaries:
     tags:
       - Social activity
   - name: Connected Twitter
-    description: 
+    description: lorem ipsum
     tags:
       - Social activity
   - name: Number of Twitter Followers
-    description: 
+    description: lorem ipsum
     tags:
       - Social activity
 
