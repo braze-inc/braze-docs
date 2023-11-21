@@ -1,6 +1,5 @@
 ---
-nav_TODO: Recommended software
-article_TODO: Recommended software
+nav_title: Recommended software
 page_order: 0
 noindex: true
 ---

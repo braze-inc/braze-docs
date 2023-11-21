@@ -1,6 +1,5 @@
 ---
 nav_title: Site navigation
-article_title: Site navigation
 page_order: 3
 noindex: true
 ---

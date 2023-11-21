@@ -1,6 +1,5 @@
 ---
 nav_title: Managing pages
-article_title: Managing pages
 page_order: 1
 noindex: true
 ---

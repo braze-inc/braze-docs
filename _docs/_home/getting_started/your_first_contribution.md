@@ -1,6 +1,5 @@
 ---
 nav_title: Your first contribution
-article_title: Your first contribution
 page_order: 2
 noindex: true
 ---

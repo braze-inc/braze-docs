@@ -1,6 +1,5 @@
 ---
 nav_title: Home
-article_title: Contributing to Braze Docs
 page_order: 0
 noindex: true
 ---

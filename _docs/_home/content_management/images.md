@@ -1,6 +1,5 @@
 ---
 nav_title: Managing images
-article_title: Managing images
 page_order: 1
 noindex: true
 ---

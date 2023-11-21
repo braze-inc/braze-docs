@@ -1,6 +1,5 @@
 ---
 nav_title: Setting up your environment
-article_title: Setting up your environment
 page_order: 1
 noindex: true
 ---
