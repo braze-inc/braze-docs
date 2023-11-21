@@ -80,15 +80,13 @@ For Content Blocks, Braze recommends creating copies of existing Content Blocks 
 
 The following table provides examples of links in an email body, link aliasing results, and explanations for how the original link is updated with link aliasing.
 
-{%raw%}
 | Link in Email Body | Link with Aliasing | Logic |
 |---|---|---|
 | https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk | Braze inserts a question mark (?) and adds the first query parameter into the URL. |
 | https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz | Braze detects other query parameters and appends `lid=` to the end of the URL. |
-| `<a href="{{custom_attribute.{product_url}}?">` | `<a href="{{custom_attribute.{product_url}}?lid=ac7a548g5kl7">` | Braze recognizes that this is a URL and already has a question mark (?) present. Then, it appends the `lid` query parameter after the question mark. |
+| {%raw%}`<a href="{{custom_attribute.{product_url}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}?lid=ac7a548g5kl7">`{%endraw%} | Braze recognizes that this is a URL and already has a question mark (?) present. Then, it appends the `lid` query parameter after the question mark. |
 | https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email | Braze expects the URL to use a standard structure where anchors (#) are present after a question mark (?). Because Braze reads from left to right, we will append the question mark and `lid` value before the anchor. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-{%endraw%}
 
 ## Link aliasing for URLs generated via Liquid
 
@@ -100,9 +98,9 @@ Check out this link aliasing example for the recommended formatting of the ancho
 
 {% raw %}
 ```liquid
-{% assign link1 = https://www.braze1.com %}
+{% assign link1 = "https://www.braze1.com" %}
 
-<a href="{{link1}}?">{{link1}}?</a>
+<a href="{{link1}}?">{{link1}}</a>
 ```
 {% endraw %}
 
