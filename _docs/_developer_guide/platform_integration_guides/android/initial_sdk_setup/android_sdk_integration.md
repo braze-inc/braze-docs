@@ -120,7 +120,7 @@ class MyApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-See our SDK reference documentation for more information on the [`BrazeActivityLifecycleCallbackListener`][63].
+See our SDK reference documentation for more information on the parameters available for [`BrazeActivityLifecycleCallbackListener`][63].
 
 ## Step 5: Enable location tracking
 
