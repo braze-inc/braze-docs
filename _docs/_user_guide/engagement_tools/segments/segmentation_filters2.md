@@ -147,11 +147,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Received Message from Campaign or Canvas With Tag
-    description: 
+    description: lorem ipsum
     tags:
       - Retargeting
   - name: Has Never Received a Message from Campaign or Canvas Step
-    description: 
+    description: lorem ipsum
     tags:
       - Retargeting
   - name: Last Received Email
@@ -179,11 +179,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Viewed News Feed
-    description: 
+    description: lorem ipsum
     tags:
       - Retargeting
   - name: News Feed View Count
-    description: 
+    description: lorem ipsum
     tags:
       - Retargeting
   - name: Clicked/Opened Campaign
@@ -199,15 +199,15 @@ glossaries:
     tags:
       - Retargeting
   - name: Clicked Alias in Campaign
-    description: 
+    description: lorem ipsum
     tags:
       - Retargeting
   - name: Clicked Alias in Canvas Step
-    description: 
+    description: lorem ipsum
     tags:
       - Retargeting
   - name: Clicked Alias in Any Campaign or Canvas Step
-    description: 
+    description: lorem ipsum
     tags:
       - Retargeting
   - name: Hard Bounced
@@ -223,7 +223,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Sent Specific SMS Inbound Keyword Category
-    description: 
+    description: lorem ipsum
     tags:
       - Retargeting
   - name: Converted From Campaign
@@ -283,7 +283,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Email Unsubscribed Date 
-    description:  Segments your users by the date on which they unsubscribed from future emails.
+    description: Segments your users by the date on which they unsubscribed from future emails.
     tags:
       - Channel subscription behavior
   - name: Push Enabled
@@ -379,11 +379,11 @@ glossaries:
     tags:
       - Demographic attributes
   - name: First Name
-    description:  Segments your users by their first name, as they indicated from within your app.
+    description: Segments your users by their first name, as they indicated from within your app.
     tags:
       - Demographic attributes
   - name: Last Name
-    description:  Segments your users by their last name, as they indicated from within your app.
+    description: Segments your users by their last name, as they indicated from within your app.
     tags:
       - Demographic attributes
   - name: Has App
@@ -519,7 +519,7 @@ glossaries:
     tags:
       - Install Attribution
   - name: Churn Risk Category
-    description: 
+    description: lorem ipsum
     tags:
       - Intelligence and predictive
   - name: Churn Risk Score
@@ -527,7 +527,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: Purchase Likelihood Category
-    description: 
+    description: lorem ipsum
     tags:
       - Intelligence and predictive
   - name: Purchase Likelihood Score
@@ -543,7 +543,7 @@ glossaries:
     tags:
       - Social activity
   - name: Connected Facebook
-    description: 
+    description: lorem ipsum
     tags:
       - Social activity
   - name: Connected Twitter
