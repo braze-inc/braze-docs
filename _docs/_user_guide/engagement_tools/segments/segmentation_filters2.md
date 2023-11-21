@@ -4,7 +4,7 @@ nav_title: Segmentation filters API
 article_title: Segmentation filters API
 layout: glossary_page
 glossary_top_header: "Segmentation filters API"
-glossary_top_text: "The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by filter category."
+glossary_top_text: The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by filter category.
 
 page_type: glossary
 tool: Segments
@@ -502,7 +502,7 @@ glossaries:
     description: Clients who use Tinyclues can supplement their segments by choosing and importing their cohorts in Tinyclues.
     tags:
       - Cohort membership
-- name: Install Attribution Ad
+  - name: Install Attribution Ad
     description: Segments your users by the ad that their install was attributed to.
     tags:
       - User Attributes
@@ -554,6 +554,4 @@ glossaries:
     description: lorem ipsum
     tags:
       - Social activity
-
-
 ---
