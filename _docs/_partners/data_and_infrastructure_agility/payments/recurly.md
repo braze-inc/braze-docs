@@ -40,7 +40,7 @@ Before you begin, make sure you have active accounts on both Braze and Recurly.
 - **Instance URL:** The Braze REST endpoint of the instance you are provisioned to.
 - **API Key (Identifier):** The Braze REST API key that Recurly should use when sending requests to Braze.
 
-Remember to copy the URL of your Braze instance. For instance, your URL might look like: 
+Remember to copy the URL of your Braze instance. For example, your URL might look like: 
 
 ```
 <https://dashboard-03.braze.com/dashboard/app_usage?locale=en>
