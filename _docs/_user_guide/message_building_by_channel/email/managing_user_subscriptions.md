@@ -174,7 +174,6 @@ For example, this can be useful if you want to target users who have neither opt
 [17]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
 [18]: {% image_buster /assets/img_archive/not_optin.png %}
 [19]: {% image_buster /assets/img_archive/email_settings.png %}
-
 [25]: {{site.baseurl}}/api/endpoints/subscription_groups
 [26]: {% image_buster /assets/img/sub_group_create.png %}
 [27]: {% image_buster /assets/img/sub_group_use.gif %}
