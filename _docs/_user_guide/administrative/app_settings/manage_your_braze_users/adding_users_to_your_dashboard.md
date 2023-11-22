@@ -11,7 +11,7 @@ description: "This reference article covers how to add users to your company acc
 
 > Learn how to add users to your company account or delete users.
 
-## Adding Braze Users
+## Adding Braze users
 
 There is no limit to the number of users (administrators or limited users) you can have on your company account. Your company admins will be responsible for adding users and setting relevant permissions. However, if there is only one admin left in your workspace, that individual will not be able to remove their own admin permissions.
 
@@ -27,13 +27,15 @@ To add a new user to your Braze account, ensure you have admin privileges and pe
 3. Enter their information as prompted, including their email, department, and [user role]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions).<br><br>![][2]<br><br>
 4. For users with a limited role, select the company level and workspace level permissions you want this user to have.<br><br>![][3]
 
+Note that every email address used on a Braze instance must be unique. This means that if you try to add an email address that's already associated with a user who had or still has access to a workspace on the same instance, you'll see an error message. As a workaround for Gmail accounts that recognize the alias created by adding a plus sign (+) to the email address, you could add "+example" to the email address. For instance, `contractor@braze.com` can be `contractor+1@braze.com`.
+
 ### Selecting a department
 
 You must select a department for each user added to your company's Braze account. 
 
 Adding your department to your user profile helps ensure you receive relevant communications built around how you use Braze. You will receive support and alerts that apply to you.
 
-## Deleting Braze Users
+## Deleting Braze users
 
 To delete a user, go to **Settings** > **Company Users**, find their username and click <i class="fa fa-trash-can"></i> **Delete**.
 
