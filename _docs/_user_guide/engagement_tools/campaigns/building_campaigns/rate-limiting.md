@@ -65,7 +65,9 @@ For example, let's say you have a game with an in-app message that triggers when
 
 ### Rate limiting and Canvas components
 
-As you build your Canvas user journey, it's important to consider which components are rate limited. [Message steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) are rate limited by the rate limit set at the Canvas level. For Audience Sync steps, refer to the [available sync partner]({{site.baseurl}}/partners/canvas_steps/) article. All other Canvas components are not rate limited.
+If multiple channels are utilized in a Canvas step, the rate limit will apply to each channel. Note that this can cause higher than expected requests for Connected Content. As a workaround, set a lower rate limit at the Canvas level. 
+
+For example, if your campaign utilizes email and push with a rate limit of 10,000 per minute, Braze will send up to 20,000 messages each minute (10,000 email and 10,000 push).
 
 ### Delivery speed rate limiting
 
