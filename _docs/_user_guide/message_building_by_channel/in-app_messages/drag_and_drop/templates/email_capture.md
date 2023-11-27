@@ -10,8 +10,6 @@ hidden: true
 
 > Use the drag-and-drop email capture in-app message template to collect users' email addresses and grow your subscription groups.
 
-> image
-
 {% alert important %}
 The email capture form is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
@@ -36,23 +34,15 @@ If you include a link in your in-app message that redirects to a URL and the end
 
 ## Creating a phone number capture form
 
-When creating a drag-and-drop in-app message, select **Email capture** for your template and click **Build message**.
-
-> img
-
-This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Email capture** for your template and click **Build message**. This template is supported for both mobile apps and web browsers.
 
 ### Step 1: Set up your message styles
 
 Before you start customizing your template, you can set message-level styles for the entire message using the side menu. For example, you may want to customize the font of all the text or the color of all the links included in your message. You can also make the message a modal or fullscreen display type.
 
-> img
-
 ### Step 2: Customize your phone number capture component
 
 To get started building your email capture form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states).
-
-> img
 
 You can customize the placeholder text and label text of the email capture element.
 
@@ -71,8 +61,6 @@ You can customize the look and feel of your message using the drag-and-drop [in-
 ## Reporting
 
 Once your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, you can [create a segment][5] of users who subscribed to the subscription group by filtering for users who have received the in-app message and submitted the form.
-
-> img
 
 ## Best practices
 
