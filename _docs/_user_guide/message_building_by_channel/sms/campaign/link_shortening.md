@@ -23,7 +23,7 @@ The length of the URL will be determined by the type of tracking that is enabled
 - **Basic tracking** enables campaign-level click tracking. Basic links will have a length of between 20-21 characters.
 - **Advanced tracking** enables campaign-level and user-level click tracking. Links with advanced tracking are longer by up to 7 characters and allow you to create segments of users who have clicked on URLs. Advanced links will have a length of between 27-28 characters.
 
-Links will be shortened using Braze's shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic) or `https://brz.ai/8jshX/2dj8d` (advanced). Refer to the [Testing](#testing) for more information.
+Links will be shortened using our shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic) or `https://brz.ai/8jshX/2dj8d` (advanced). Refer to the [Testing](#testing) for more information.
 
 Shortened URLs will be valid for one year from the date they were created.
 
@@ -79,6 +79,7 @@ Contact your Braze account manager if you're interested in getting started with 
 
 - Domains must be procured, owned, and managed by you.
 - The domain used for this feature must be unique (that is, different from your website domain), and the domain can't be used to host any web content.
+  - You can also use unique subdomains, such as `sms.braze.com`.
 - We recommend choosing a domain with as few characters as possible to minimize the length of your URLs.
 
 ### Using custom domains
@@ -121,7 +122,7 @@ Yes! Any static URL parameters can be added.
 
 #### How long do shortened URLs remain valid?
 
-One year from the time of URL registration (i.e. first send). 
+One year from the time of URL registration (such as first send). 
 
 #### Will Link Shortening work with deep links or universal links?
 

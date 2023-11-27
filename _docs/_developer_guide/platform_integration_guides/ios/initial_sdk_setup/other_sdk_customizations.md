@@ -2,13 +2,12 @@
 nav_title: Other SDK Customizations
 article_title: Other SDK Customizations for iOS
 platform: iOS
-description: "This reference article covers SDK customizations such as log level, IDFA collection, and other customizations."
+description: "This reference article covers SDK customization such as log level, IDFA collection, and other customizations."
 page_order: 3
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
-
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Other SDK customizations
 
@@ -97,7 +96,7 @@ Log level can only be set at runtime with Braze iOS SDK v4.4.0 or newer. If usin
 
 In previous versions of the Braze iOS Swift SDK, the IDFV (Identifier for Vendor) field was automatically collected as the user's device ID. 
 
-Beginning in Swift SDK v5.7.0, the IDFV field can optionally be disabled, and instead, Braze will set a random UUID as the device ID. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+Beginning in Swift SDK v5.7.0, the IDFV field can optionally be disabled, and instead, Braze will set a random UUID as the device ID. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/).
 
 ## Optional IDFA collection
 
@@ -112,7 +111,7 @@ As a result, we recommend continuing to collect the IDFA if you meet any of the 
 
 Apple requires users to opt-in through a permission prompt to collect IDFA.
 
-To collect IDFA, in addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization from the user using Apple's `ATTrackingManager` in the app tracking transparency framework. Refer to Apple's [user privacy article](https://developer.apple.com/app-store/user-privacy-and-data-use/) for more information.
+To collect IDFA, in addition to implementing our `ABKIDFADelegate` protocol, your application will need to request authorization from the user using Apple's `ATTrackingManager` in the app tracking transparency framework. Refer to Apple's [user privacy article](https://developer.apple.com/app-store/user-privacy-and-data-use/) for more information.
 
 The prompt for app tracking transparency authorization requires an `Info.plist` entry to explain your usage of the identifier:
 

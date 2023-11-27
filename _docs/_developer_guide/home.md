@@ -6,7 +6,7 @@ guide_top_text: "This is where developers can find all the integrations availabl
 article_title: Braze Developer Guide
 description: "This landing page is where developers can find all the integrations available with Braze."
 
-guide_featured_title: "Featured Integrations"
+guide_featured_title: "Featured integrations"
 guide_featured_list:
 - name: Android and FireOS
   image: /assets/img/android.png
@@ -20,7 +20,7 @@ guide_featured_list:
   fa_icon: fas fa-globe
   nav_link: web
 
-guide_menu_title: "All Integrations"
+guide_menu_title: "All integrations"
 guide_menu_list:
   - name: Cordova Android
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
@@ -59,7 +59,7 @@ guide_menu_list:
     image: /assets/img/unreal.png
     nav_link: unrealengine
 
-guide_menu_title2: "Legacy Integrations"
+guide_menu_title2: "Legacy integrations"
 guide_menu_list2:
 - name: iOS (legacy)
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/

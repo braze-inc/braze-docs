@@ -22,7 +22,7 @@ Before creating a new Cloud Data Ingestion (CDI) integration for [Catalogs]({{si
 
 The key things to note when creating this catalog are:
 - You should use the same name for the catalog and CDI integration 
-- Any changes to the catalog schema (e.g., adding new fields, changing field type) must be made through the catalogs dashboard or API before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your Snowflake data and the schema in Braze.
+- Any changes to the catalog schema (for example, adding new fields, changing field type) must be made through the catalogs dashboard or API before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your Snowflake data and the schema in Braze.
 
 ## Step 2: Integrate Cloud Data Ingestion with catalogs data
 The setup for a catalogs sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
@@ -56,7 +56,7 @@ The setup for a catalogs sync closely follows the process for [user-data CDI int
     CREATE USER BRAZE_INGESTION_USER;
     GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
     ```
-3. If your Snowflake account has network policies, whitelist the Braze IPs so the CDI service can connect. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+3. If your Snowflake account has network policies, allowlist the Braze IPs so the CDI service can connect. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 4. In the Braze dashboard, navigate to **Technology Partners > Snowflake**, and create a new sync.
 5. Enter connection details (or reuse existing credentials) and the source table.
 6. Proceed to step 2 of the setup flow, select the “Catalogs” sync type, and input the integration name and schedule. Note that the name of the integration should **exactly match** the name of the catalog you previously created.

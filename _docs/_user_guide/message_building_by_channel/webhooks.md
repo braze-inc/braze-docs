@@ -9,7 +9,7 @@ description: "This landing page is home to webhooks. Here, you can find articles
 channel:
   - webhooks
 search_rank: 3
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: About Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/understanding_webhooks/

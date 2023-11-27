@@ -13,7 +13,7 @@ channel:
 
 > The Braze Swift SDK provides URL handling support for push action buttons. 
 
-There are four sets of default push action buttons for Braze's default push categories: `Accept/Decline`, `Yes/No`, `Confirm/Cancel`, and `More`. 
+There are four sets of default push action buttons for Braze default push categories: `Accept/Decline`, `Yes/No`, `Confirm/Cancel`, and `More`. 
 
 ![A GIF of a push message being pulled down to display two customizable action buttons.][13]{: style="max-width:60%"}
 
@@ -21,15 +21,15 @@ If you want to create your own custom notification categories, see [action butto
 
 ## Automatic integration (recommended)
 
-When integrating push using the `configuration.push.automation` configuration option, Braze automatically registers the action buttons for Braze's default push categories and handles the push action button click analytics and URL routing.
+When integrating push using the `configuration.push.automation` configuration option, Braze automatically registers the action buttons for the default push categories and handles the push action button click analytics and URL routing.
 
 ## Manual integration
 
-To manually enable these push action buttons, first register for Braze's default push categories. Then, use the `didReceive(_:completionHandler:)` delegate method to enable push action buttons.
+To manually enable these push action buttons, first register for the default push categories. Then, use the `didReceive(_:completionHandler:)` delegate method to enable push action buttons.
 
 ### Step 1: Adding Braze default push categories {#registering}
 
-Use the following code to register for Braze's default push categories when you [register for push][36]:
+Use the following code to register for the default push categories when you [register for push][36]:
 
 {% tabs %}
 {% tab swift %}
@@ -54,7 +54,7 @@ Clicking on push action buttons with background activation mode will only dismis
 
 ### Step 2: Enable interactive push handling {#enable-push-handling}
 
-To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `didReceive(_:completionHandler:)` delegate method:
+To enable our push action button handling, including click analytics and URL routing, add the following code to your app's `didReceive(_:completionHandler:)` delegate method:
 
 {% tabs %}
 {% tab swift %}

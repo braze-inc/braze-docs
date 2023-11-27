@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# Segment  
+# Segment
 
 {% multi_lang_include video.html id="RfOHfZ34hYM" align="right" %}
 
@@ -48,8 +48,8 @@ Your choice of connection mode will be determined by the type of Source the dest
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn't mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
-| [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment to Braze's REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
+| [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
+| [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment to Braze REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -58,13 +58,13 @@ Visit [Segment](https://segment.com/docs/destinations/#connection-modes) to lear
 
 #### Side-by-side SDK integration
 
-Also called device-mode, this integration maps Segment's SDK and [methods](#methods) to Braze's SDK, allowing access to all the features our SDK provides, such as push, in-app messaging, and other methods native to Braze. 
+Also called device-mode, this integration maps Segment's SDK and [methods](#methods) to the Braze SDK, allowing access to all the features our SDK provides, such as push, in-app messaging, and other methods native to Braze. 
 
 {% alert note %}
 When using Segment's device-mode, you do not need to integrate the Braze SDK directly. When adding Braze as a device-mode destination for Segment, the Segment SDK will initialize the Braze SDK and call the relevant mapped Braze methods.
 {% endalert %}
 
-When using a device-mode connection, similar to integrating the Braze SDK natively, Braze's SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
+When using a device-mode connection, similar to integrating the Braze SDK natively, the Braze SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
 
 {% tabs local %}
 {% tab Android %}
@@ -78,7 +78,7 @@ The Braze SDK you use will depend on which Segment SDK you use:
 | | Segment SDK | Braze SDK |
 | - | ----------- | --------- |
 | Preferred | [Analytics-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
-| Legacy | [Analytics-Android](https://github.com/segmentio/analytics-android) | [Braze Segment Android](https://github.com/Appboy/appboy-segment-android) |
+| Legacy | [Analytics-Android](https://github.com/segmentio/analytics-android) | [Braze Segment Android](https://github.com/braze-inc/braze-segment-android) |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
@@ -90,7 +90,7 @@ To set up Braze as a device-mode destination for your Android source, choose **C
 
 To complete the side-by-side integration, refer to Segment's detailed instructions for adding the Braze destination dependency to your [Android](https://segment.com/docs/connections/sources/catalog/libraries/mobile/kotlin-android/destination-plugins/braze-kotlin-android/) app.
 
-The source code for the Android device mode integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
+The source code for the [Android device mode](https://github.com/braze-inc/braze-segment-kotlin) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
 {% endtab %}
 {% tab iOS %}
@@ -103,7 +103,7 @@ The Braze SDK you use will depend on which Segment SDK you use:
 
 | | Segment SDK | Braze SDK |
 | - | ----------- | --------- |
-| Preferred | [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Braze Segment Swift](https://github.com/braze-inc/analytics-swift-braze) |
+| Preferred | [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Braze Segment Swift](https://github.com/braze-inc/braze-segment-swift) |
 | Legacy | [Analytics-iOS](https://github.com/segmentio/analytics-ios) | [Braze Segment iOS](https://github.com/Appboy/appboy-segment-ios) |
 {: .reset-td-br-1 .reset-td-br-2}
 {% endalert %}
@@ -114,10 +114,10 @@ To set up Braze as a device-mode destination for your iOS source, choose **Class
 
 To complete the side-by-side integration, refer to Segment's detailed instructions for adding the Braze Segment pod to your [iOS](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/) app.
 
-The source code for the [iOS device mode](https://github.com/Appboy/appboy-segment-ios) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
+The source code for the [iOS device mode](https://github.com/braze-inc/braze-segment-swift) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
 {% endtab %}
-{% tab Web or Javascript %}
+{% tab Web or JavaScript %}
 
 Segment's new Braze Web Mode (Actions) framework is recommended for setting up Braze as a device-mode destination for your Web source. 
 
@@ -164,8 +164,8 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Setting | Description |
 | ------- | ----------- |
 | App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | 
-| Custom API endpoint<br>(SDK endpoint) | Your Braze SDK endpoint that corresponds to your instance (i.e., `sdk.iad-01.braze.com`) | 
-| Endpoint region | Your Braze instance (i.e., US 01, US 02, EU 01, etc.) | 
+| Custom API endpoint<br>(SDK endpoint) | Your Braze SDK endpoint that corresponds to your instance (such as `sdk.iad-01.braze.com`) | 
+| Endpoint region | Your Braze instance (such as US 01, US 02, EU 01, etc.) | 
 | Enable automatic in-app message registration | Disable this if you want to manually register in-app messages. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -175,17 +175,17 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Setting | Description |
 | ------- | ----------- |
 | App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | 
-| Custom API endpoint<br>(SDK endpoint) | Your Braze SDK endpoint that corresponds to your instance (i.e., `sdk.iad-01.braze.com`) | 
-| Safari website push ID | If you support Safari push, you must specify this option with the website push ID that you provided to Apple when creating your Safari push certificate (starts with `web`, e.g., `web.com.example.domain`). |
+| Custom API endpoint<br>(SDK endpoint) | Your Braze SDK endpoint that corresponds to your instance (such as `sdk.iad-01.braze.com`) | 
+| Safari website push ID | If you support Safari push, you must specify this option with the website push ID that you provided to Apple when creating your Safari push certificate (starts with `web`, for example, `web.com.example.domain`). |
 | Braze Web SDK version | The version of the Braze Web SDK you would like to use |
 | Automatically send in-app messages | By default, all in-app messages a user is eligible for are automatically delivered to the user. Disable this if you would like to manually display in-app messages. |
-| Do not load font awesome | Braze uses Font Awesome for in-app message icons. By default, Braze will automatically load FontAwesome from the FontAwesome CDN. To disable this behavior (e.g., because your site uses a customized version of FontAwesome), set this option to `TRUE`. Note that if you do this, you are responsible for ensuring that FontAwesome is loaded on your site - otherwise, in-app messages may not render correctly. |
+| Do not load font awesome | Braze uses Font Awesome for in-app message icons. By default, Braze will automatically load FontAwesome from the FontAwesome CDN. To disable this behavior (for example, because your site uses a customized version of FontAwesome), set this option to `TRUE`. Note that if you do this, you are responsible for ensuring that FontAwesome is loaded on your site - otherwise, in-app messages may not render correctly. |
 | Enable HTML in-app messages | Enabling this option will allow Braze dashboard users to use HTML in-app messages. | 
 | Open in-app messages in a new tab | By default, links from in-app message clicks load in the current tab or a new tab as specified in the dashboard on a message-by-message basis. Set this option to `TRUE` to force all links from in-app message clicks open in a new tab or window. |
 | In-app message z index | Provide a value for this option to override Braze's default z-indexes. | 
-| Require explicit in-app message dismissal | By default, when an in-app message is showing, pressing the escape button or a click on the greyed-out background of the page will dismiss the message. Set this option to true to prevent this behavior and require an explicit button click to dismiss messages. |
+| Require explicit in-app message dismissal | By default, when an in-app message is showing, pressing the escape button or a click on the grayed-out background of the page will dismiss the message. Set this option to true to prevent this behavior and require an explicit button click to dismiss messages. |
 | Minimum interval between trigger actions in seconds | Defaults to 30.<br>By default, a trigger action will only fire if at least 30 seconds have elapsed since the last trigger action. Provide a value for this configuration option to override that default with a value of your own. We do not recommend making this value any smaller than 10 to avoid spamming the user with notifications.|
-| Service worker location | By default, when registering users for web push notifications, Braze will look for the required service worker file in the root directory of your web server at `/service-worker.js`. If you want to host your service worker at a different path on that server, provide a value for this option that is the absolute path to the file. (e.g., `/mycustompath/my-worker.js`). Note that setting a value here limits the scope of push notifications on your site. For instance, in the above example, because the service worker file is located within the `/mycustompath/` directory, `requestPushPermission` may only be called from web pages that start with `http://yoursite.com/mycustompath/`. |
+| Service worker location | By default, when registering users for web push notifications, Braze will look for the required service worker file in the root directory of your web server at `/service-worker.js`. If you want to host your service worker at a different path on that server, provide a value for this option that is the absolute path to the file. (for example, `/mycustompath/my-worker.js`). Note that setting a value here limits the scope of push notifications on your site. For instance, in the above example, because the service worker file is located within the `/mycustompath/` directory, `requestPushPermission` may only be called from web pages that start with `http://yoursite.com/mycustompath/`. |
 | Disable push token maintenance | By default, users who have already granted web push permission will sync their push token with the Braze backend automatically on new sessions to ensure deliverability. To disable this behavior, set this option to `FALSE`. |
 | Manage service worker externally | If you have your own service worker that you register and control the lifecycle of, set this option to `TRUE`, and the Braze SDK will not register or unregister a service worker. If you set this option to `TRUE`, for push to function correctly, you must register the service worker yourself before calling `requestPushPermission` and ensure that it contains Braze's service worker code, either with `self.importScripts('https://js.appboycdn.com/web-sdk-develop/4.1/service-worker.js');` or by including the content of that file directly. When this option is `TRUE`, the `serviceWorkerLocation` option is irrelevant and is ignored. |
 | Content security nonce | If you provide a value for this option, the Braze SDK will add the nonce to any `<script>` and `<style>` elements created by the SDK. This permits the Braze SDK to work with your website's content security policy. In addition to setting this nonce, you may also need to allow FontAwesome to load, which you can do by adding `use.fontawesome.com` to your Content Security Policy allowlist or by using the `doNotLoadFontAwesome` option and loading it manually. |
@@ -211,7 +211,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | ------- | ----------- |
 | App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | 
 | REST API key | This can be found in your Braze dashboard under **Settings** > **API Keys**. | 
-| Custom REST API endpoint | Your Braze REST endpoint that corresponds to your instance (i.e., rest.iad-01.braze.com) | 
+| Custom REST API endpoint | Your Braze REST endpoint that corresponds to your instance (such as rest.iad-01.braze.com). | 
 | Update existing users only | **Classic Destination Cloud-Mode (Maintenance) Only**<br><br>Segment recommends migrating to the Cloud Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>Determines whether to update existing users only. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -243,7 +243,7 @@ It is also possible to engineer a workaround and use `braze_id` to send anonymou
 
 The [Identify](https://segment.com/docs/spec/identify/) call lets you tie a user to their actions and record attributes about them. 
 
-Certain Segment special traits map to Braze's standard attribute profile fields:
+Certain Segment special traits map to standard attribute profile fields in Braze:
 
 | Special Segment traits | Braze standard attributes |
 | ------------- | ----------- |
@@ -257,7 +257,82 @@ Certain Segment special traits map to Braze's standard attribute profile fields:
 | `gender` | `gender` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using Braze's naming convention for these fields and passing them as traits within an identify call.
+Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using the Braze naming convention for these fields and passing them as traits within an identify call.
+
+##### Adding a user to a subscription group
+You can also subscribe or unsubscribe a user from a given subscription group using the following fields in the traits parameter.
+
+Use the reserved Braze profile field called `braze_subscription_groups`, which can be associated with an array of objects. Each object in the array should have two reserved keys:
+
+1. `subscription_group_state`: Indicates whether the user is `"subscribed"` or `"unsubscribed"` to a specific subscription group.
+2. `subscription_group_id`: Represents the unique ID of the subscription group. You can find this ID in the Braze dashboard under `Subscription Group Management`.
+
+{% subtabs %}
+{% subtab Swift %}
+```swift
+analytics.identify(
+  userId: "{your-user}",
+  traits: [
+    "braze_subscription_group": [
+      [
+        "subscription_group_id": "{your-group-id}",
+        "subscription_group_state": "subscribed"
+      ],
+      [
+        "subscription_group_id", "{your-group-id}",
+        "subscription_group_state": "unsubscribed"
+      ]
+    ]
+  ]
+)
+```
+{% endsubtab %}
+{% subtab Kotlin %}
+```kotlin
+analytics.identify(
+  "{your-user}",
+  buildJsonObject {
+    put("braze_subscription_group", buildJsonArray {
+        add(
+          buildJsonObject {
+            put("subscription_group_id", "{your-group-id}")
+            put("subscription_group_state", "subscribed")
+          }
+        )
+        add(
+          buildJsonObject {
+            put("subscription_group_id", "{your-group-id}")
+            put("subscription_group_state", "unsubscribed")
+          }
+        )
+      }
+    )
+  }
+)
+```
+{% endsubtab %}
+{% subtab TypeScript %}
+```typescript
+analytics.identify(
+  "{your-user}",
+  {
+    braze_subscription_groups: [
+      {
+        subscription_group_id: "{your-group-id}",
+        subscription_group_state: "subscribed"
+      },
+      {
+        subscription_group_id: "{your-group-id}",
+        subscription_group_state: "unsubscribed"
+      }
+    ]
+  }
+)
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+##### Custom attributes
 
 All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
 
@@ -295,7 +370,7 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 
 ##### Order completed {#order-completed}
 
-When you track an event with the name `Order Completed` using the format described in Segment's [eCommerce API](https://segment.com/docs/spec/ecommerce/v2/), we will record the products you've listed as [purchases]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
+When you track an event with the name `Order Completed` using the format described in Segment's [Ecommerce API](https://segment.com/docs/spec/ecommerce/v2/), we will record the products you've listed as [purchases]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-purchase) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-purchase) destinations, the default mapping can be customized through the Track Purchase Action.
 

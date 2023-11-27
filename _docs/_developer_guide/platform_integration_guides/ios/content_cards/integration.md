@@ -9,6 +9,8 @@ channel:
 search_rank: 3
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Content Card integration
 
 ## Content Cards data model
@@ -79,7 +81,7 @@ Braze offers three Content Card types: banner, captioned image, and classic. Eac
 | `dismissible` | This property reflects if the user can dismiss the card.|
 | `pinned` | This property reflects if the card was set up as "pinned" in the dashboard.|
 | `dismissed` | This property reflects if the user has dismissed the card.|
-| `url` | The URL that will be opened after the card is clicked on. It can be an http(s) URL or a protocol URL.|
+| `url` | The URL that will be opened after the card is clicked on. It can be an HTTP(s) URL or a protocol URL.|
 | `openURLInWebView` | This property determines whether the URL will be opened within the app or in an external web browser.|
 | `extras`| An optional `NSDictionary` of `NSString` values.|
 {: .reset-td-br-1 .reset-td-br-2}

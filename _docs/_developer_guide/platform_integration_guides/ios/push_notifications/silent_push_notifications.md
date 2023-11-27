@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Silent push notifications
 
 Push notifications allow you to notify your app when important events occur. You might send a push notification when you have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. Push notifications can also be silent, containing no alert message or sound, being used only to update your app's interface or trigger background work. 
@@ -20,6 +22,10 @@ Push notifications are rate-limited, so don't be afraid of sending as many as yo
 ## Sending silent push notifications
 
 To send a silent push notification, set the `content-available` flag to `1` in a push notification payload. When sending a silent push notification, you might also want to include some data in the notification payload, so your application can reference the event. This could save you a few networking requests and increase the responsiveness of your app.
+
+{% alert warning %}
+Attaching both a title and body with `content-available=1` is not recommended because it can lead to undefined behavior. To ensure that a notification is truly silent, exclude both the title and body when setting the `content-available` flag to `1.` For further details, refer to the official [Apple documentation on background updates](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app).
+{% endalert %}
 
 The `content-available` flag can be set in the Braze dashboard as well as within our [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) in the [messaging API][1].
 
@@ -33,7 +39,7 @@ To use silent push notifications to trigger background work, set up the `content
 
 ![Xcode showing the "remote notifications" mode checkbox under "capabilities".][3]
 
-Enabling background mode for remote notifications is required for Braze's [uninstall tracking][6] feature.
+Enabling background mode for remote notifications is required for [uninstall tracking][6].
 
 Even with the remote notifications background mode enabled, the system will not launch your app into the background if the user has force-quit the application. The user must explicitly launch the application or reboot the device before the app can be automatically launched into the background by the system.
 

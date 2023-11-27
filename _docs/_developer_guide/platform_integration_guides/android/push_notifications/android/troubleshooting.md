@@ -142,7 +142,7 @@ The Firebase Cloud Messaging server key provided in the Braze dashboard is inval
 
 Braze logs push clicks automatically, so this scenario should be comparatively rare.
 
-If push clicks are not being logged, it is possible that push click data has not been flushed to Braze's servers yet. Braze throttles the frequency of its flushes based on the strength of the network connection. With a good network connection, push click-data should arrive at the server within a minute in most circumstances.
+If push clicks are not being logged, it is possible that push click data has not been flushed to our servers yet. Braze throttles the frequency of its flushes based on the strength of the network connection. With a good network connection, push click-data should arrive at the server within a minute in most circumstances.
 
 ### Deep links not working
 

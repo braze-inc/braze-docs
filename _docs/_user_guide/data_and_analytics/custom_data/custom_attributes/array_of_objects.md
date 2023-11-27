@@ -14,8 +14,8 @@ description: "This reference article covers using an array of objects as a data 
 ## Limitations
 
 - Arrays of objects are intended for custom attributes sent via the API. CSV uploads are not supported. This is because commas in the CSV file will be interpreted as a column separator, and commas in values will cause parsing errors. 
-- Partners do not support arrays of objects. We recommend against using this feature with workspaces that have partner integrations enabled.
 - Arrays of objects have no limit on the number of items but do have a maximum size of 50&nbsp;KB.
+- Not all Braze Partners support arrays of objects. Refer to the [Partner documentation]({{site.baseurl}}/partners/home) to confirm if the integration supports this feature.
 
 Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
 
@@ -456,7 +456,7 @@ braze.getUser().setCustomUserAttribute("pets", json, true);
 {% endtab %}
 {% endtabs %}
 
-## Liquid Templating
+## Liquid templating
 
 You can use this `pets` array to personalize a message. The following Liquid templating example shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
 

@@ -7,7 +7,7 @@ platform:
   - Cordova
   - iOS
   - Android
-description: "This page lists updates to Braze's Cordova SDK changelog for Android and iOS."
+description: "This page lists updates to the Braze Cordova SDK changelog for Android and iOS."
 
 ---
 

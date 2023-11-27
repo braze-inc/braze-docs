@@ -17,7 +17,7 @@ description: "This reference article gives an overview of the result of editing 
 To stop a campaign, open your **Campaign Details** page and select the **Stop Campaign** button in the bottom right of the page. When a campaign is stopped:
 - Messages scheduled to be sent will be canceled
 - A/B tests where the initial test has already been sent will be permanently canceled
-- Events for messages that have already been sent (e.g., open clicks) will still be tracked
+- Events for messages that have already been sent (for example, open clicks) will still be tracked
 - Campaigns can be restarted by clicking **Resume**
 
 Once resumed, this campaign will continue sending messages and A/B tests, but any missed messages will not be re-sent or re-scheduled.

@@ -17,19 +17,19 @@ AMP makes this possible through its use of various components that can be used t
 
 ## Requirements
 
-Braze is not responsible for the user registering with Google or meeting the necessary security requirements.
+Braze is not responsible for users registering with Google or meeting the necessary security requirements.
 
 | Requirement   | Description |
 | --------------| ----------- |
-| AMP for email turned on | AMP is available for everyone. Reach out to your customer success manager and they can work with our product team to enable this feature for you. |
+| AMP for email turned on | AMP is available for everyone. Reach out to your account manager, and they can work with our product team to enable this feature for you. |
 | Gmail account enablement | See [Enabling Gmail account](#enabling-gmail-account). |
 | Google sender authentication | Gmail authenticates the sender of AMP emails with DKIM, SPF, and DMARC. These must be set up for your account, learn more [here](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication). <br><br>- [Domain Keys Identified Mail](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>- [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework)(SPF)<br>- [Domain-based Message Authentication, Reporting, and Conformance](https://en.wikipedia.org/wiki/DMARC)(DMARC)
-| AMP Email Elements | A compelling AMP Email includes the strategic use of various components.<br>Check out the Essentials tab in the [Components](#components) section below. |
+| AMP email elements | A compelling AMP email includes the strategic use of various components. Refer to the Essentials tab in the [Components](#components) section below. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Supported clients
 
-Before you can send AMP Emails to users, you must register with our clients. The registration process involves sending a test AMPHTML email to get approved. Approval times vary client to client. Follow the register links for more information.
+Before you can send AMP emails to users, you must register with our clients. The registration process involves sending a test AMPHTML email to get approved. Approval times vary client to client. Follow the register links for more information.
 
 | Client | Register Link |
 | ------ | -------- |
@@ -42,13 +42,13 @@ For a full list of supported platforms, visit the [AMP documentation](https://am
 
 ### Enabling Gmail account
 
-Go into your Gmail Settings, and under General, check the `Enable Dynamic Email` box.
+Go to your Gmail settings, and select **Enable Dynamic Email** under **General**.
 
 ![][1]
 
 ## API usage
 
-You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{site.baseurl}}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
+You can utilize AMP for email using our API. When you use any of our [Messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
 
 ### Email object specification
 
@@ -156,7 +156,7 @@ Some examples include:
 * Dynamically updating items in the feed
 * Article bookmark email
 
-Using this component, users can submit or clear field values. Also, depending on how you set up your email, you can give additional prompts to users, such as whether or not the survey submission was successful, or render the responses from your users showing results of the survey (i.e., a voting campaign).
+Using this component, users can submit or clear field values. Also, depending on how you set up your email, you can give additional prompts to users, such as whether or not the survey submission was successful, or render the responses from your users showing results of the survey (such as a voting campaign).
 
 {% endtab %}
 {% tab Collapsable Content %}
@@ -196,7 +196,7 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 |---|---|
 | Total Opens | Total opens for the HTML and plaintext versions of your AMP email. |
 | Total Clicks | Total clicks in the HTML and plaintext versions of your AMP email. |
-| AMP Opens | Total count for opens in your AMP HTML email, cumulative count of the HTML, plaintext, and AMP HTML versions of the email. |
+| AMP Opens | Total count for opens in your AMP HTML email and AMP HTML versions of the email. |
 | AMP Clicks | Total count for clicks in your AMP HTML email, cumulative count of the HTML, plaintext, and AMP HTML versions of the email. |
 {: .reset-td-br-1 .reset-td-br-2}  
 

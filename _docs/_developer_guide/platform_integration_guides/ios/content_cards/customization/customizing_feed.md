@@ -8,6 +8,8 @@ channel:
   - content cards
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Customizing the Content Cards feed
 
 You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. The Content Card cells may also be subclassed and then used programmatically or by introducing a custom storyboard that registers the new classes. Check out the Content Cards [sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for a complete example. 
@@ -100,7 +102,7 @@ override func setUpUI() {
 Custom interfaces can be provided by registering custom classes for each desired card type. 
 
 ![A banner Content Card. A banner Content Card shows an image to the right of the banner with the text "Thanks for downloading Braze Demo!".]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
-![A captioned image Content Card. A captioned Content Card shows a Braze image with the caption overlayed across the bottom "Thanks for downloading Braze Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
+![A captioned image Content Card. A captioned Content Card shows a Braze image with the caption overlaid across the bottom "Thanks for downloading Braze Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
 ![A classic Content Card. A classic Content Card shows an image in the center of the card with the words "Thanks for downloading Braze Demo" underneath.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
 Braze provides three Content Card templates (banner, captioned image, and classic). Alternatively, if you want to provide your own custom interfaces, reference the following code snippets:

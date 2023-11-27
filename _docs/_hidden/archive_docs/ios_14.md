@@ -23,7 +23,7 @@ As of iOS 14.5, **IDFA** collection and [certain data sharing](https://developer
 
 - Apps targeting iOS 14 / Xcode 12 must use our [official iOS 14 release][1].
 - Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission.
-- Use of the "Last Known Location" targeting features will require an upgrade to Braze iOS SDK v3.26.1+ for compatibility with _approximate location_ permission. Note that if you are using XCode 12, you will need to upgrade to at least v3.27.0.
+- Use of the "Last Known Location" targeting features will require an upgrade to Braze iOS SDK v3.26.1+ for compatibility with _approximate location_ permission. Note that if you are using Xcode 12, you will need to upgrade to at least v3.27.0.
 - As of iOS 14.5, IDFA collection and [certain data sharing][5] require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt.
 - If you use the "Ad Tracking Enabled" field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report users' opt-in status.
 
@@ -44,7 +44,7 @@ table td {
 |If Your App Uses:|Upgrade Recommendation|Description|
 |------|--------|---|
 |Xcode 12|**Upgrade to iOS SDK v3.27 or later**|Customers using Xcode 12 must use v3.27.0+ for compatibility. If you experience any issues or questions related to our iOS 14 compatibility, open a new [GitHub issue][2].|
-|Most Recent Location| **Upgrade to iOS SDK v3.26.1 or later**|If you use the Most Recent Location targeting feature and are still using XCode 11, you should upgrade to at least iOS SDK v3.26.1 which supports the new  _Approximate Location_ feature. Older SDKs will not be able to reliably collect location when a user upgrades to iOS 14 _and_ choose Approximate Location.<br><br>Even though your app might not target iOS 14, your users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.|
+|Most Recent Location| **Upgrade to iOS SDK v3.26.1 or later**|If you use the Most Recent Location targeting feature and are still using Xcode 11, you should upgrade to at least iOS SDK v3.26.1 which supports the new  _Approximate Location_ feature. Older SDKs will not be able to reliably collect location when a user upgrades to iOS 14 _and_ choose Approximate Location.<br><br>Even though your app might not target iOS 14, your users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.|
 |IDFA Ad Tracking ID| **Upgrade to Xcode 12 and iOS SDK v3.27 may be required**|Sometime in 2021, Apple will begin to require a permission prompt for the collection of the IDFA. At that time, apps must upgrade to Xcode 12 and use the new `AppTrackingTransparency` framework in order to continue collecting IDFA. If you pass IDFA to the Braze SDK you must also upgrade to v3.27.0+ at that time.<br><br>Apps that do not use the new iOS 14 APIs will be unable to collect IDFA, and will instead collect a blank ID (`00000000-0000-0000-0000-000000000000`) after Apple begins to enforce this change in 2021. For more information on whether or not this applies to your app, see [IDFA details](#idfa).|
 
 
@@ -70,7 +70,7 @@ Apps that do not upgrade the Braze iOS SDK to at least v3.26.1 will no longer be
 
 Users who have already granted location access will continue to provide _precise location_ after upgrading.
 
-Note that if you are using XCode 12, you will need to upgrade to at least v3.27.0.
+Note that if you are using Xcode 12, you will need to upgrade to at least v3.27.0.
 
 For more information on Approximate Location, see Apple's [What's New In Location](https://developer.apple.com/videos/play/wwdc2020/10660/) WWDC Video.
 

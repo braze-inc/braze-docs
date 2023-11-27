@@ -9,11 +9,13 @@ channel:
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Unit tests {#unit-tests}
 
-This optional guide describes how to implement some unit tests that will verify whether your app delegate correctly follows the steps described in Braze's [push integration instructions][1]. 
+This optional guide describes how to implement some unit tests that will verify whether your app delegate correctly follows the steps described in our [push integration instructions][1]. 
 
-If all the tests pass, generally, this means the code-based part of your push setup is functional. If a test fails, this might mean that you incorrectly followed a step, or it may result from a valid customization that doesn't align precisely with Braze's default instructions.
+If all the tests pass, generally, this means the code-based part of your push setup is functional. If a test fails, this might mean that you incorrectly followed a step, or it may result from a valid customization that doesn't align precisely with our default instructions.
 
 Either way, this can be a helpful approach to verify you've followed the integration steps and to help monitor for any regressions.
 
@@ -25,7 +27,7 @@ In your app project, go to menu **File > New > Target** and add a new "Unit Test
 
 ## Step 2: Add the Braze SDK to your unit tests
 
-Using the same method you used initially to [install the Braze SDK][2], make sure the same SDK installation is also available to your unit tests target. For example, using Cocoapods:
+Using the same method you used initially to [install the Braze SDK][2], make sure the same SDK installation is also available to your unit tests target. For example, using CocoaPods:
 
 ```
 target 'YourAppTarget' do
@@ -39,7 +41,7 @@ end
 
 ## Step 3: Add OCMock to your unit tests
 
-Add [OCMock][3] to your test target via Cocoapods, Carthage, or its static library. For example, using Cocoapods:
+Add [OCMock][3] to your test target via CocoaPods, Carthage, or its static library. For example, using CocoaPods:
 
 ```
 target 'YourAppTarget' do
@@ -54,7 +56,7 @@ end
 
 ## Step 4: Finish installing the added libraries
 
-Finish installing the Braze SDK and OCMock. For example, using Cocoapods, navigate to the directory of your Xcode app project within your terminal and run the following command:
+Finish installing the Braze SDK and OCMock. For example, using CocoaPods, navigate to the directory of your Xcode app project within your terminal and run the following command:
 
 ```
 pod install

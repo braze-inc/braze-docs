@@ -14,7 +14,18 @@ channel:
 
 Email deliverability is the core of campaign success. Using the Deliverability Center in the Braze dashboard, you can view your domains by **IP Reputation** or **Delivery Errors** to discover and troubleshoot any potential issues with email deliverability. 
 
-## Integrating with Google Postmaster
+### Set up Google Postmaster account
+
+Before connecting to the Deliverability Center, you'll need to set up a Google Postmaster Tools account.
+
+1. Go to the [Google Postmaster Tools dashboard](https://postmaster.google.com/managedomains?pli=1).
+2. In the bottom right, click the <i class="fas fa-plus-circle"></i> plus icon.
+3. Enter your root domain or subdomain to use to authenticate your email. If you're adding and verifying the root domain, this will allow the verification to be applied downstream to subdomains. For example, by verifying `braze.com`, you can also add `demo.braze.com` and other subdomains later without having to verify these individually.
+4. Google will generate a TXT record that can be added directly to your domain's DNS. This is generally owned by whoever manages your DNS. For information and guidance on how to update your specific DNS, check out [Verify your domain (host-specific steps)](https://support.google.com/a/topic/1409901).
+5. Click **Next**. <br>![][9]
+6. Once added to the DNS, return to the Google Postmaster Tools dashboard and click **Verify**. This step confirms you own the domain, so you'll be able to access Gmail deliverability metrics in your Postmaster account. <br> ![][10]
+
+## Integrate with Google Postmaster
 
 Before setting up your Deliverability Center, check that your domains have been [added to the Gmail Postmaster Tools][4].
 
@@ -41,7 +52,7 @@ To help understand the ratings for IP reputation, refer to this table:
 
 | Reputation Rating | Definition |
 | ----- | ---------- |
-| High | Has a good track record of generating low spam complaints (i.e., users clicking the "spam" button). |
+| High | Has a good track record of generating low spam complaints (such as users clicking the "spam" button). |
 | Medium/Fair | Known to generate positive engagement but occasionally receives spam complaints. Most of the emails from this domain will be sent to the inbox, except when spam complaints increase. |
 | Low | Known to receive elevated rates of spam complaints regularly. Emails from this sender will likely be filtered to the spam folder. |
 | Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |
@@ -145,3 +156,5 @@ Spam trap hits are the number of messages sent to "trap accounts," which are acc
 [6]: {{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [8]: {% image_buster /assets/img_archive/deliverability_center_msnds.png %}
+[9]: {% image_buster /assets/img_archive/domain_authentication.png %}
+[10]: {% image_buster /assets/img_archive/domain_verification.png %}

@@ -14,7 +14,9 @@ search_tag: Partner
 
 > AppsFlyer is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics, mobile attribution, and deep linking.
 
-The Braze and AppsFlyer integration allows you to better understand how to optimize and build more holistic campaigns by leveraging mobile install attribution data from AppsFlyer.
+The Braze and AppsFlyer integration allows you to better understand how to optimize and build more holistic campaigns by leveraging mobile install attribution data from AppsFlyer. 
+
+You can also pass your AppsFlyer audiences (cohorts) directly to Braze with the [AppsFlyer Audiences]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/appsflyer_audiences/) integration, allowing you to create powerful customer engagement campaigns targeted toward just the right users at just the right time. 
 
 ## Prerequisites
 
@@ -159,6 +161,8 @@ Attribution data for Facebook and Twitter campaigns is not available through our
 Deep links, links that direct users toward a specific page or place within an app or website, are crucial in creating a tailored user experience. While widely used, issues often come up when using them with click tracking, another vital feature used in collecting user data. These issues are due to ESPs (Email Service Providers) wrapping deep links in their own click recording domain, breaking the original link. 
 
 There are, however, ESPs like SendGrid that support both universal linking and click tracking. Braze recommends integrating [OneLink-based attribution links][3] into your SendGrid or [SparkPost](https://support.appsflyer.com/hc/en-us/articles/360014381317-SparkPost-integration-with-AppsFlyer) email system to seamlessly deep link from emails.
+
+Learn more about this topic in [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
 
 ### AppsFlyer click tracking URLs in Braze (optional)
 

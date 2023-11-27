@@ -22,7 +22,7 @@ Sending MMS with Braze:
 - **Select your subscription group**
   - You must designate a subscription group with MMS enabled phone numbers to target (can be short or long codes).<br><br>
 - **Input message body**
-  - Input PNG, JPG, GIF, and VCF image types from the media library or specify a URL.
+  - Input PNG, JPEG, GIF, and VCF image types from the media library or specify a URL.
   - Only 1 image supported<br><br>
 - **Understand MMS sending**
   - MMS are billed at a different rate versus text-only SMS.
@@ -43,7 +43,7 @@ Creating an MMS message requires your Subscription Group to be configured for MM
 **Image Specifications** | **Recommended Properties**
 --- | ---
 Size | 5&nbsp;MB maximum
-File Types | PNG, JPG, GIF
+File Types | PNG, JPEG, GIF
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Previewing an MMS message

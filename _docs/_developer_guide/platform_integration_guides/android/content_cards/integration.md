@@ -15,6 +15,10 @@ search_rank: 1
 
 > This reference article covers the Content Card integration and the different data models and card-specific properties available for your Android or FireOS application.
 
+{% alert note %}
+When you're ready to get started with implementation and customization, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
+{% endalert %}
+
 In Android, the Content Cards feed is implemented as a [fragment][2] available in the Braze Android UI project. View [Google's Fragments][3] for information on adding a fragment to an activity.
 
 The [`ContentCardsFragment`][4] class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's `ContentCards` are created on the Braze dashboard.
@@ -38,7 +42,7 @@ The [base card][29] model provides foundational behavior for all cards.
 |`getExtras()` | Returns a map of key-value extras for this card.|
 |`getCreated()`  | Returns the unix timestamp of the card's creation time from Braze.|
 |`getIsPinned` | Returns a boolean that reflects whether the card is pinned.|
-|`getOpenUriInWebView()`  | Returns a boolean that reflects whether Uris for this card should be opened <br> in Braze's WebView or not.|
+|`getOpenUriInWebView()`  | Returns a boolean that reflects whether Uris for this card should be opened <br> in the Braze WebView or not.|
 |`getExpiredAt()` | Gets the expiration date of the card.|
 |`getIsRemoved()` | Returns a boolean that reflects whether the end user has dismissed this card.|
 |`getIsDismissible()`  | Returns a boolean that reflects whether the card is pinned.|
@@ -51,7 +55,7 @@ The [base card][29] model provides foundational behavior for all cards.
 |Property | Description |
 |---|---|
 |`getImageUrl()` | Returns the URL of the card's image.|
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.|
+|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL.|
 |`getDomain()` | Returns link text for the property URL.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -64,7 +68,7 @@ The [base card][29] model provides foundational behavior for all cards.
 |`getImageUrl()` | Returns the URL of the card's image.|
 |`getTitle()` | Returns the title text for the card.|
 |`getDescription()` | Returns the body text for the card.|
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.|
+|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL.|
 |`getDomain()` | Returns the link text for the property URL. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -76,7 +80,7 @@ A classic card without an image included will result in a [text announcement car
 |---|---|
 |`getTitle()` | Returns the title text for the card. |
 |`getDescription()` | Returns the body text for the card. |
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL. | 
+|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL. | 
 |`getDomain()` | Returns the link text for the property URL. |
 |`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -91,10 +95,6 @@ All [`Card`][1] data model objects offer the following analytics methods for log
 |`logClick()` | Manually log a click to Braze for a particular card. |
 |`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-{% alert note %}
-Ready to go further? Once you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards) to get started with customization.
-{% endalert %}
 
 [1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html
 [2]: https://developer.android.com/guide/components/fragments.html

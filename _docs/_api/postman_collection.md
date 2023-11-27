@@ -13,11 +13,11 @@ page_type: reference
 
 ## What is Postman?
 
-Postman is a free-to-use visual editing tool for building and testing API requests. As opposed to other methods for interacting with APIs (e.g., using cURL), Postman allows you to easily edit API requests, view header information, and much more. Postman has the ability for you to save Collections or libraries of sample pre-made API requests. To make it easy for our customers to get up and running with our REST API, we created a Collection with pre-made examples for all of our API endpoints.
+Postman is a free-to-use visual editing tool for building and testing API requests. As opposed to other methods for interacting with APIs (for example, using cURL), Postman allows you to easily edit API requests, view header information, and much more. Postman has the ability for you to save Collections or libraries of sample pre-made API requests. To make it easy for our customers to get up and running with our REST API, we created a Collection with pre-made examples for all of our API endpoints.
 
 View or download our Postman Collection by clicking **Run in Postman** in our [Postman docs](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro) to get started.
 
-## Using Braze's Postman collection
+## Using the Braze Postman collection
 
 If you have a Postman account (you can download macOS, Windows, and Linux versions from the [Postman website][1]), you can open our Postman documentation in your own Postman app by clicking the orange **Run in Postman** button. You can then [create an environment](#setting-up-your-postman-environment), or use our Braze REST API environment as a template, and edit the available `POST` and `GET` requests to suit your own needs.
 
@@ -31,7 +31,7 @@ To set up your own environment, perform the following steps:
 
 1. From the **Workspaces** tab, select **Environments**.
 2. Click the **+** plus button to create a new environment.
-3. Give this environment a name (e.g., "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to your [Braze instance][7] and [Braze REST API Key][8].
+3. Give this environment a name (for example, "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to your [Braze instance][7] and [Braze REST API Key][8].
 4. Click **Save**.
 
 {% alert note %}
@@ -44,7 +44,7 @@ In `POST` request bodies, the `api_key` should be encapsulated in quotes: `"MY-A
 
 Once you have configured your environment. You can use any of the pre-built requests in the collection as a template for building new API requests. To start using one of the pre-built requests, click on it within the **Collections** menu of Postman. This will open the request as a new tab in the main window of the Postman app.
 
-In general, there are two types of requests that Braze's API endpoints accept - `GET` and `POST`. Depending on which `HTTP` method the endpoint uses, you'll need to edit the pre-built request differently.
+In general, there are two types of requests that Braze API endpoints accept - `GET` and `POST`. Depending on which `HTTP` method the endpoint uses, you'll need to edit the pre-built request differently.
 
 #### Edit a POST request
 
@@ -60,7 +60,7 @@ When editing a `GET` request, edit the parameters passed in the request URL. To 
 
 ### Send your request
 
-Once your API request is ready, click **Send**. The request sends and the response data populates in a section underneath the request editor. From here, you can view the raw data returned from Braze's API, see the HTTP response code, see how long the request took to process, and view header information.
+Once your API request is ready, click **Send**. The request sends and the response data populates in a section underneath the request editor. From here, you can view the raw data returned from the Braze API, see the HTTP response code, see how long the request took to process, and view header information.
 
 ![Example body response data from a POST request with a status of 201 Created and response time of 269 milliseconds.][6]
 

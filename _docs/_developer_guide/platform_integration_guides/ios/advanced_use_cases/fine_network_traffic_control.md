@@ -7,6 +7,8 @@ description: "This article covers implementing fine network traffic control for 
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Fine network traffic control
 
 ## Request processing policies
@@ -19,13 +21,13 @@ Braze allows the user the option to control network traffic using the following 
 
 - This is the **default request policy** value.
 - The Braze SDK will automatically handle all server communication, including:
-    - Flushing custom events and attributes data to Braze's servers
+    - Flushing custom events and attributes data to Braze servers
     - Updating Content Cards and Geofences
     - Requesting new in-app messages
-- Immediate server requests are performed when user-facing data is required for Braze's features, such as in-app messages.
+- Immediate server requests are performed when user-facing data is required for Braze features, such as in-app messages.
 - To minimize server load, Braze performs periodic flushes of new user data every few seconds.
 
-Data can be manually flushed to Braze's servers at any time using the following method:
+Data can be manually flushed to Braze servers at any time using the following method:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -52,7 +54,7 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
     - Custom attributes and custom event data are not automatically flushed to the server throughout the user session.
 - Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid templating in in-app messages, Geofences, and location tracking. For more details, see the `ABKRequestProcessingPolicy` declaration in [`Appboy.h`][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
 
-Data can be manually flushed to Braze's servers at any time using the following method:
+Data can be manually flushed to Braze servers at any time using the following method:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

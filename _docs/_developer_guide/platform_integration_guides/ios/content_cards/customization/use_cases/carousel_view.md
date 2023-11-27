@@ -8,13 +8,15 @@ channel:
   - content cards
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Use case: Carousel view
 
 ![Sample news app showing carousel of Content Cards in an article.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
 
-With this approach, you will not use Braze's views and default logic but instead, display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
+With this approach, you will not use Braze views and default logic but instead, display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
 
 In terms of the level of development effort, the key differences between the basic implementation and the carousel implementation include:
 
@@ -26,11 +28,11 @@ In terms of the level of development effort, the key differences between the bas
 
 ### Step 1: Create a custom view controller
 
-To create the Content Cards carousel, create your own custom view controller (such as `UICollectionViewController`) and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/#getting-the-data). Note that you won't be able to extend or subclass Braze's default `ABKContentCardTableViewController`, as it's only able to handle our default Content Card types.
+To create the Content Cards carousel, create your own custom view controller (such as `UICollectionViewController`) and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/#getting-the-data). Note that you won't be able to extend or subclass our default `ABKContentCardTableViewController`, as it's only able to handle our default Content Card types.
 
 ### Step 2: Implement analytics
 
-When creating a fully custom view controller, Content Card impressions, clicks, and dismissals are not automatically logged. You must implement the respective analytics methods to ensure impressions, dismissal events, and clicks get properly logged back to Braze's dashboard analytics.
+When creating a fully custom view controller, Content Card impressions, clicks, and dismissals are not automatically logged. You must implement the respective analytics methods to ensure impressions, dismissal events, and clicks get properly logged back to the Braze dashboard analytics.
 
 For information on the analytics methods, refer to [Card methods]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/#card-methods). 
 
@@ -47,7 +49,7 @@ That said, you could order and apply additional display logic in a variety of wa
 If you're implementing a carousel as a secondary Content Cards feed, refer to [Using multiple Content Card feeds]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/) to ensure you sort cards into the correct feed based on key-value pairs.
 
 {% alert important %}
-It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g., `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs that the developers build into the app logic.
+It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (for example, `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs that the developers build into the app logic.
 {% endalert %}
 
 For iOS-specific developer documentation on the Content Cards class, methods, and attributes, refer to the iOS [`ABKContentCard` class reference](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html).

@@ -162,7 +162,7 @@ These mappings of mParticle's SDK for [Android](https://github.com/mparticle-int
 The embedded kit SDK integration allows you to take advantage of our full suite of features (push, in-app messages, and all relevant message analytics tracking).
 
 {% alert note %}
-For Content Cards and custom in-app message integrations, call Braze's SDK methods directly.
+For Content Cards and custom in-app message integrations, call the Braze SDK methods directly.
 {% endalert %}
 
 #### Step 1: Integrate the mParticle SDKs
@@ -189,7 +189,7 @@ Not all connection settings will apply to all platforms and integration types. F
 
 ### Server API integration
 
-This is an add-on to route your backend data to Braze if you're using mParticle's server-side SDKs (e.g., Ruby, Python, etc.). To set up this server-to-server integration with Braze, follow [mParticle's documentation](https://docs.mparticle.com/guides/platform-guide/connections/).
+This is an add-on to route your backend data to Braze if you're using mParticle's server-side SDKs (for example, Ruby, Python, etc.). To set up this server-to-server integration with Braze, follow [mParticle's documentation](https://docs.mparticle.com/guides/platform-guide/connections/).
 
 {% alert important %}
 Server-to-server integration does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method. 
@@ -224,10 +224,10 @@ Braze doesn't support timestamps before year 0 or after year 3000 in `Time` type
 
 | mParticle data type | Braze data type | Description |
 | ------------------- | --------------- | ----------- |
-| User attributes (reserved) | Standard attribute | For example, mParticle's `$FirstName` reserved user attribute key is mapped to Braze's `first_name` standard attribute field. |
+| User attributes (reserved) | Standard attribute | For example, mParticle's `$FirstName` reserved user attribute key is mapped to `first_name` standard attribute field for Braze. |
 | User attributes (other) | Custom Attribute | Any user attributes passed to mParticle that fall outside of its reserved user attribute keys are logged in Braze as a custom attribute.<br><br>User attributes support string, numerical, boolean, date, and arrays but do not support objects or nested objects. |
 | Custom event | Custom event | mParticle custom events are recognized by Braze as a custom event. Event attributes are forwarded as custom event properties.<br><br>Event attributes passed to Braze as event properties support string, numeric, boolean, or date objects but do not support arrays or nested objects. |
-| Purchase commerce event | Purchase event | Purchase commerce events will be mapped to Braze's purchase events. <br><br>Toggle the setting value for bundle commerce event data to log purchases at the order-level or product-level. For example, if `false`, a single incoming event with two unique products, promotions, or impressions would result in at least two outgoing Braze events. If set to `true`, it would result in a single outgoing event with a nested products, promotions or impressions array, respectively.<br><br>For more information on the additional commerce fields that will be logged, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#purchase-events). <br><br>When setting "bundle commerce event data" as `false` product attributes passed to Braze as purchase event properties, support string, numeric, boolean, or date objects but do not support arrays or nested objects.|
+| Purchase commerce event | Purchase event | Purchase commerce events will be mapped to Braze purchase events. <br><br>Toggle the setting value for bundle commerce event data to log purchases at the order-level or product-level. For example, if `false`, a single incoming event with two unique products, promotions, or impressions would result in at least two outgoing Braze events. If set to `true`, it would result in a single outgoing event with a nested products, promotions or impressions array, respectively.<br><br>For more information on the additional commerce fields that will be logged, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#purchase-events). <br><br>When setting "bundle commerce event data" as `false` product attributes passed to Braze as purchase event properties, support string, numeric, boolean, or date objects but do not support arrays or nested objects.|
 | All other commerce events | Custom event | All other commerce events will be mapped to custom events. <br><br>Toggle the setting value for bundle commerce event data to log purchases at the order-level or product-level. For example, if `false`, a single incoming event with two unique products, promotions, or impressions would result in at least two outgoing Braze events. If set to `true`, it would result in a single outgoing event with a nested products, promotions or impressions array, respectively.<br><br>In addition to certain default commerce values, product attributes will be logged as Braze event properties. For more information on the additional commerce fields that will be logged, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#other-commerce-events)<br><br>When setting "bundle commerce event data" as `false` product attributes passed to Braze as event properties, support string, numeric, boolean, or date objects but do not support arrays or nested objects. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -248,7 +248,7 @@ Forward erasure requests to Braze by configuring a data subject request output t
 
 #### Enabling enrich user attributes/identities (server-to-server only) {#enriched}
 
-In the mParticle connection settings, Braze recommends turning off **Include Enriched User Attributes**. If enabled, mParticle will forward all available user attributes (i.e., standard attributes, custom attributes, and calculated attributes) from the existing profile to Braze on each logged event. This will result in high consumption of data points since mParticle will send Braze the same unchanged attributes on each call.
+In the mParticle connection settings, Braze recommends turning off **Include Enriched User Attributes**. If enabled, mParticle will forward all available user attributes (such as standard attributes, custom attributes, and calculated attributes) from the existing profile to Braze on each logged event. This will result in high consumption of data points since mParticle will send Braze the same unchanged attributes on each call.
 
 For example, if a user adds first name, last name, and phone number during their first session and later signs up for a newsletter adding the same information, in addition to email, triggering a newsletter sign-up event:
 - If turned on (default), five data points will be incurred. (sign-up event, email address, first name, last name, and phone number)
@@ -261,11 +261,11 @@ Turning off this setting won't check for changing data. It will, however, preven
 #### Considerations of turning off enriched user attributes
 
 There are a few considerations to be aware of when turning off **Include Enriched User Attributes**:
-1. The server-to-server integration uses the mParticle events API to send events to Braze. Each request is triggered by an event. When a user attribute is changed, such as updating an email address, but is not associated with a specific event (e.g., a profile update custom event), the new value is only passed to an output like Braze as an "enriched attribute" in the payload of the next event triggered by the user. When **Include Enriched User Attributes** is turned off, this new attribute value unassociated with a specific event will not be passed to Braze.
+1. The server-to-server integration uses the mParticle events API to send events to Braze. Each request is triggered by an event. When a user attribute is changed, such as updating an email address, but is not associated with a specific event (for example, a profile update custom event), the new value is only passed to an output like Braze as an "enriched attribute" in the payload of the next event triggered by the user. When **Include Enriched User Attributes** is turned off, this new attribute value unassociated with a specific event will not be passed to Braze.
   - To solve this, we recommend creating a separate "user attribute updated" event that only sends the specific user attribute(s) that have been updated to Braze. Note that with this approach, you are still logging an additional data point for the "user attribute updated" event, but data point consumption will be far less than sending all user attributes on every call with the feature enabled.
 2. Calculated Attributes are passed to Braze as an enriched user attribute, so when "Enriched User Attributes" is turned off these will no longer be passed to Braze. To forward calculated attributes to Braze when "Enriched User Attributes" are turned off, a [calculated attribute feed](https://docs.mparticle.com/guides/platform-guide/calculated-attributes/using-calculated-attributes/#forward-calculated-attributes-in-the-calculated-attributes-feed) could help without pushing all the attributes. The feed will fire an update downstream to Braze when a calculated attribute changes. 
 
-### Sending unnecessary or duplicative data to Braze
+### Sending unnecessary or duplicate data to Braze
 Braze counts a data point each time an attribute is passed to Braze, even if the value is unchanged. For this reason, Braze recommends only forwarding data needed to action on within Braze and ensuring that only deltas of attributes are being passed.
 
 [1]: https://dashboard.braze.com/app_settings/developer_console

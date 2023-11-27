@@ -33,7 +33,7 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
-| TikTok for Business Center Account | [TikTok](https://business.tiktok.com/) | A centralized tool to manage your brand's TikTok assets (i.e., ad accounts, pages, apps). |
+| TikTok for Business Center Account | [TikTok](https://business.tiktok.com/) | A centralized tool to manage your brand's TikTok assets (such as ad accounts, pages, apps). |
 | TikTok Ad Account | [TikTok](https://ads.tiktok.com/) | An active TikTok ad account tied to your brand's Business Center account.<br><br>Ensure that your TikTok Business Center manager admin has granted you admin permissions to the TikTok ad accounts you plan to use with Braze. |
 | TikToK terms & policies | [TikTok](https://ads.tiktok.com/i18n/official/policy/terms) | Agree to comply with any of TikTok’s required terms, policies, guidelines, and documentation related to your use of the Pinterest Audience Sync, including any terms, policies, guidelines, and documentation incorporated by reference therein, which may include: the Commercial Terms of Service, Advertising Terms, Privacy Policy, Custom Audience Terms, Developer Terms of Service, Developer Data Sharing Agreement, Advertising Policies, Brand Guidelines, and Community Guidelines. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -143,7 +143,7 @@ You can disconnect and reconnect your TikTok account on the TikTok partner page.
 
 {% details Why is my Canvas not allowed to launch? %}
 Ensure your TikTok account successfully connects to Braze on the TikTok partner page.
-Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match
+Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match.
 {% enddetails %}
 
 {% details How do I know if users have matched after passing users to TikTok? %}

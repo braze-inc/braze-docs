@@ -38,6 +38,10 @@ You can use the **Media Library** to:
 
 Within the Media Library, you can see the image type, size, dimensions, URL, and date it was added to the library.
 
+### Using the Media Library versus a CDN
+
+Using the Media Library provides better caching and performance for in-app messages. All Media Library assets found in an in-app message will be pre-cached for faster display and will be available for offline display. Additionally, the Media Library is integrated with Braze composers, allowing marketers to select or tag images instead of copying and pasting image URLs.
+
 ## Image specifications
 
 All images uploaded to the Media Library must be less than 5&nbsp;MB. Supported file types are PNG, JPEG, and GIF. For specific image recommendations by messaging channel, refer to the following sections.
@@ -148,7 +152,10 @@ You can generate images for your Media Library using [DALL·E 2](https://openai.
 
 ![AI image generator modal in the Media Library.][6]{: style="max-width:75%"}
 
-Between you and Braze, any images generated using DALL·E 2 is your intellectual property. Braze will not assert any claims of copyright ownership on such images and makes no warranty of any kind with respect to any AI-generated content or images. In order to generate images, Braze will send your query to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days.
+Between you and Braze, any images generated using DALL·E 2 is your intellectual property. Braze will not assert any claims of copyright ownership on such images and makes no warranty of any kind with respect to any AI-generated content or images. 
+
+In order to generate images, Braze will send your query to OpenAI's API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, which may include its [Usage Policy](https://openai.com/policies/usage-policies) and its [Sharing & Publication Policy](https://openai.com/policies/sharing-publication-policy). Braze makes no warranty of any kind with respect to any AI-generated content. 
+
 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}
 [1.5]: {% image_buster /assets/img_archive/media_library_composers.png %}

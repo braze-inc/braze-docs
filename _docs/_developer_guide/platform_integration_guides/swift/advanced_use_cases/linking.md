@@ -40,7 +40,7 @@ Alternatively, if you wish to edit your `Info.plist` file directly, you can foll
 </array>
 ```
 
-## Step 2: Adding a scheme whitelist
+## Step 2: Adding a scheme allowlist
 
 You must declare the URL schemes you wish to pass to `canOpenURL(_:)` by adding the `LSApplicationQueriesSchemes` key to your app's Info.plist file. Attempting to call schemes outside this allowlist will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error will look like this:
 
@@ -112,14 +112,14 @@ Error Domain=NSURLErrorDomain Code=-1200 "An SSL error has occurred, and a secur
 NSURLSession/NSURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9802)
 ```
 
-ATS compliance is enforced for links opened within the mobile app (Braze's default handling of clicked links) and does not apply to sites opened externally via a web browser.
+ATS compliance is enforced for links opened within the mobile app (our default handling of clicked links) and does not apply to sites opened externally via a web browser.
 
 ### Handling ATS requirements
 
 You can handle ATS in one of the following three ways:
 
 #### Ensure all links are ATS-compliant (recommended)
-Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (for example, though in-app message and push campaigns) satisfy ATS requirements. While there are ways to bypass ATS restrictions, Braze's recommended best practice is to ensure that all linked URLs are ATS-compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
+Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (for example, though in-app message and push campaigns) satisfy ATS requirements. While there are ways to bypass ATS restrictions, our recommendation is to ensure that all linked URLs are ATS-compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
 
 #### Partially disable ATS
 You can allow a subset of links with certain domains or schemes to be treated as exceptions to the ATS rules. Your Braze integration will satisfy ATS requirements if every link you use in a Braze messaging channel is either ATS compliant or handled by an exception.
@@ -194,7 +194,7 @@ For example:
 
 ## Deep linking to app settings
 
-You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to your app's settings from Braze's push notifications, in-app messages, and the News Feed.
+You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to your app's settings from Braze push notifications, in-app messages, and the News Feed.
 
 To take users from your app into the iOS settings:
 1. First, make sure your application is set up for either [scheme-based deep links][25] or [universal links][27].

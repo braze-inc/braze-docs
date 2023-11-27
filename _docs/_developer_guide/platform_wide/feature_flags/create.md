@@ -23,10 +23,6 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 
 {% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
-{% alert important %} 
-Feature flags are currently in beta. [Click here](https://dashboard.braze.com/engagement/feature_flags) to learn more about joining the beta program.
-{% endalert %}
-
 ## Implement feature flags in the dashboard
 
 Create, edit, and archive feature flags from **Messaging** > **Feature Flags**. This page displays a list of existing feature flags for this workspace.
@@ -39,17 +35,13 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ### Access permissions {#permissions}
 
-Note that you must have [user permissions][9] in the Braze dashboard to view, create, or edit feature flags.
-
-To view the list of available feature flags, you must have the **Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library** permission.
-
-In order to create or edit existing feature flags, you must have access to the **Manage Feature Flags** permission.
+You must have "Manage Feature Flags" [permission][9] to view, create, or edit feature flags. To view the list of available feature flags, you must have the "Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library" permission.
 
 {% alert note %}
 Administrator users automatically have access to manage feature flags. For limited users, you can explicitly allow or restrict access to **Manage Feature Flags** at a workspace level. This is useful if certain users should only be able to modify feature flags for specific environments or business units.
 {% endalert %}
 
-![Manage Feature Flags permission][8]{: style="max-width:75%"}
+![Manage Feature Flags permission][8]{: style="max-width:60%"}
 
 ### Create a new feature flag
 
@@ -129,7 +121,7 @@ Be sure to log [feature flag impressions](#impressions).
 Let's say you were to rolling out a new type of user profile for your app. You might set the `ID` as `expanded_user_profile`. Then, you would have your app check to see if it should display this new user profile to a particular user. For example:
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
@@ -238,7 +230,7 @@ Track a feature flag impression whenever a user has had an opportunity to intera
 Usually, you can put this line of code directly underneath where you reference your feature flag in your app:
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 braze.logFeatureFlagImpression("expanded_user_profile");
@@ -304,7 +296,7 @@ To access the properties of a feature flag, use one of the following methods dep
 If a feature flag is not enabled, or a property you reference does not exist, these methods will return `null`.
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 // Feature flag instance
@@ -424,7 +416,7 @@ height = featureFlag.getNumberProperty("height")
 You can also get a list of all enabled feature flags:
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 const features = getAllFeatureFlags();
@@ -519,7 +511,7 @@ Refreshing happens automatically upon session start. Refreshing is only needed p
 {% endalert %}
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 braze.refreshFeatureFlags(() => {
@@ -597,7 +589,7 @@ You can configure the Braze SDK to listen and update your app when feature flags
 This is useful if you want to update your app if a user is no longer eligible for a feature. For example, setting some state in your app based on whether or not a feature is enabled, or one of its property values.
 
 {% tabs %}
-{% tab Javascript %}
+{% tab JavaScript %}
 
 ```javascript
 // Register an event listener
@@ -733,6 +725,10 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 
 ## Segmenting with feature flags {#segmentation}
 
+{% alert note %}
+Feature Flag membership filter is being gradually rolled out and may not be on your dashboard just yet.
+{% endalert %}
+
 Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter][6]. For more information about filtering on segments, see [Creating a segment][7].
 
 {% alert note %}
@@ -751,7 +747,7 @@ To avoid users being enabled and disabled by different entry points, you should 
   - For example, in a ride sharing app your feature ID may be `driver.profile.show_animation_v3`
 - This also helps when searching for a specific product area or team's feature flags.
 - Make sure that the default state for a feature flag is disabled in your app.
-  - For example, it is an anti-pattern if you have a flag named `disable_feature_xyz`. There may be exceptions, but try to avoid confusing a feature's "enabled" status with the actual enabled behavior (disabling feature xyz).
+  - For example, it is an anti-pattern if you have a flag named `disable_feature_xyz`. There may be exceptions, but try to avoid confusing a feature's "enabled" status with the actual enabled behavior (disabling feature XYZ).
 
 ### Planning ahead
 

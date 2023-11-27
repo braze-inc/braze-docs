@@ -52,7 +52,7 @@ Designated time schedules are best suited for messages scheduled in advance and 
 
 Because a user's optimal time can be any time over the course of 24 hours, all Intelligent Timing campaigns must be scheduled 24 hours in advance. In addition, similar to designated time campaigns, messages with a 1-day window will miss users who fall out of the segment before their optimal time in their time zone is reached. Segments for Intelligent Timing campaigns should incorporate at minimum a 3-day window to account for this.
 
-If a user's profile does not have enough data to calculate an optimal time, you can choose a backup method to either send during the most popular time to use the app amongst all users or a set custom fallback time. 
+If a user's profile does not have enough data to calculate an optimal time, you can choose a backup method to either send during the most popular time to use the app among all users or a set custom fallback time. 
 
 ### Use cases
 

@@ -46,7 +46,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 **Steps:**
 
-1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas wizard.
+1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
 3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
 4. Filter your Audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
@@ -124,7 +124,11 @@ Here, you can also set up button prompts within your push notification, such as:
 
 #### Device options
 
-If desired, you can choose to only send your push to a user's most recently used device. If a user's most recently used device isn't [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled), the message will not send.
+If a user has your app installed on multiple devices, by default, your push message is sent to all devices with a valid push token assigned. If desired, you can select **Only send this push to the user's most recently used device**.
+
+![Device options checkbox to only send this push to the user's most recently used device.][9]{: style="max-width:70%;" }
+
+There is some nuance for this setting. If this option is selected, Braze will limit multiple sends from occurring except when a campaign targets multiple platforms, such as both iOS and Android. If the user has your app on both an iOS and an Android device, they will receive a push for both platforms. If a user's most recently used device isn't [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled), the message will not send.
 
 For iOS, you can further limit messaging by only sending push notifications to iPad devices, or only sending to iPhone and iPod devices.
 
@@ -178,7 +182,7 @@ For multichannel campaigns targeting both email and push channels, you may want 
 To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
 
 {% alert important %}
-With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
+With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (for example, `Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### Choose conversion events
@@ -208,6 +212,7 @@ Next, check out [Push reporting]({{site.baseurl}}/user_guide/message_building_by
 [6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
 [7]: {% image_buster /assets/img_archive/push_3.png %}
 [8]: https://www.braze.com/customers
+[9]: {% image_buster /assets/img_archive/push_recent_device.png %}
 [15]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [24]: {% image_buster /assets/img_archive/multi_channel_footer.png %}

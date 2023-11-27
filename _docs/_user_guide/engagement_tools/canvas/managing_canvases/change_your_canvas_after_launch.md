@@ -43,7 +43,7 @@ If you want to edit or add more components to your Canvas user journey, the foll
 
 If you delete a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) or [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) component, you can optionally redirect the users currently waiting in the step into another Canvas step. For Delays, users will remain in the step until the end of the delay period. For Action Paths, users will remain in the step until the end of the evaluation window.
 
-See the [Canvas Flow](#best-practices) section for some best practices for specific editing use cases. 
+See the [Best practices](#best-practices) section for specific editing use cases. 
 
 {% endtab %}
 
@@ -116,6 +116,10 @@ Canvases scheduled to launch at a local send time can be edited up to 24 hours p
 If you intend to make larger edits that lead to creating a new Canvas copy entirely, remember to exclude users who received the first Canvas and re-adjust the Canvas schedule times to allow for time zone sending.
 {% endalert %}
 
+### Deleting variants
+
+When variants are deleted from a Canvas, the steps within the variant (including those shared by other variants) will be deleted. When the steps are deleted, you won't be able to view their Canvas analytics. Note that users in deleted variants are exited from the steps, and any following messages are not sent. 
+
 ## Best practices
 
 Check out these best practices to keep in mind when editing or adding to your Canvas after it's been launched using Canvas Flow. 
@@ -134,7 +138,7 @@ Editing Canvases with time delays can be a bit tricky! So, keep in mind the foll
 
 If you update the delay in a Delay component or evaluation window in the Action Paths component, only new users entering the Canvas and users that haven't been queued for that step will receive the message at the updated time delay.
 
-If you delete a component with a time delay (i.e., Delay or Action Paths) and decide to redirect those users into another Canvas component, the users will only be redirected after the step's time delay has completed. For example, let's say you delete a Delay component with a one day delay and redirect those users to a Message component. In this case, the users will only be redirected after the one day delay has been completed.
+If you delete a component with a time delay (such as Delay or Action Paths) and decide to redirect those users into another Canvas component, the users will only be redirected after the step's time delay has completed. For example, let's say you delete a Delay component with a one day delay and redirect those users to a Message component. In this case, the users will only be redirected after the one day delay has been completed.
 
 If your Canvas contains one or more [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) components, deleting components could invalidate the results of this component.
 

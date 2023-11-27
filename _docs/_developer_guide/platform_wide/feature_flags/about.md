@@ -8,6 +8,11 @@ platform:
   - iOS
   - Android
   - Web
+  - Unity
+  - Cordova
+  - React Native
+  - Flutter
+  - Roku
 
 ---
 
@@ -17,20 +22,24 @@ platform:
 
 Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags][3].
 
-{% alert important %} 
-Feature flags are currently in beta. [Click here](https://dashboard.braze.com/engagement/feature_flags) to learn more about joining the beta program.
-{% endalert %}
-
-<!-- When feature flags GAs, do not forget to update https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions with the additional permissions to use feature flags -->
-
 ## Prerequisites
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
 
 {% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
+## Using feature flags
+
+Use feature flags to:
+
+- [Introduce gradual rollouts](#gradual-rollouts)
+- [Remotely control app variables](#remotely-control-app-variables)
+- [Synchronize feature rollout and messaging](#message-coordination)
+- [Experiment with new features](#feature-experimentation)
+
 ### Gradual rollouts
-Use feature flags to gradually enable features to a sample population. For example, you can soft launch a new feature to your VIP users first. This strategy helps mitigate risks associated with shipping new features to everyone at once and helps catch bugs early. 
+
+Use feature flags to gradually enable features to a sample population. For example, you can soft launch a new feature to your VIP users first. This strategy helps mitigate risks associated with shipping new features to everyone at once and helps catch bugs early.
 
 ![Moving image of rollout traffic slider going from 0% to 100%.][1]
 
@@ -75,10 +84,11 @@ return (<>
 
 ```
 
-### Remotely control app variables 
+### Remotely control app variables
+
 Use feature flags to modify your app's functionality in production. This can be particularly important for mobile apps, where app store approvals prevent rolling out changes quickly to all users.
 
-For example, let's say that our marketing team wants to list our current sales and promotions in our app's navigation. Normally, our engineers require one week's lead time for any changes and three days for an app store review. But with Thanksgiving, Black Friday, Cyber Monday, Hanukah, Christmas, and New Year's Day all within two months, we won't be able to meet these tight deadlines.
+For example, let's say that our marketing team wants to list our current sales and promotions in our app's navigation. Normally, our engineers require one week's lead time for any changes and three days for an app store review. But with Thanksgiving, Black Friday, Cyber Monday, Hanukkah, Christmas, and New Year's Day all within two months, we won't be able to meet these tight deadlines.
 
 With feature flags, we can let Braze power the content of our app navigation link, letting our marketing manager make changes in minutes rather than days.
 
@@ -138,9 +148,9 @@ Use feature flags to experiment and confirm your hypotheses around your new feat
 
 An [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) is a powerful tool that compares users' responses to multiple versions of a variable.
 
-In this example, our team has built a new checkout flow for our e-commerce app. Even though we're confident it's improving the user experience, we want to run an A/B test to measure its impact on our app's revenue.
+In this example, our team has built a new checkout flow for our ecommerce app. Even though we're confident it's improving the user experience, we want to run an A/B test to measure its impact on our app's revenue.
 
-To begin, we'll create a new feature flag called `enable_checkout_v2`. We won't add an audience or rollout percentage. Instead, we'll use Canvas to split traffic, enable the feature, and measure the outcome.
+To begin, we'll create a new feature flag called `enable_checkout_v2`. We won't add an audience or rollout percentage. Instead, we'll use a feature flag experiment to split traffic, enable the feature, and measure the outcome.
 
 In our app, we'll check if the feature flag is enabled or not and swap out the checkout flow based on the response:
 
@@ -148,29 +158,44 @@ In our app, we'll check if the feature flag is enabled or not and swap out the c
 import * as braze from "@braze/web-sdk";
 
 const featureFlag = braze.getFeatureFlag("enable_checkout_v2");
-if (featureFlag.enabled) {
-  return <NewCheckoutFlow />
+braze.logFeatureFlagImpression("enable_checkout_v2");
+if (featureFlag?.enabled) {
+  return <NewCheckoutFlow />  
 } else {
   return <OldCheckoutFlow />
 }
 ```
 
-In Canvas, we'll use an [Experiment Path step][5] and a Feature Flag step to set up our A/B test.
+We'll set up our A/B test in a [Feature Flag Experiment][12].
 
-Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two steps to determine which checkout flow resulted in a higher conversion rate.
+Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate.
 
-![A Canvas with an experiment path splitting traffic into two 50 percent groups.][6]{: width="70%"}
+![A feature flag experiment splitting traffic into two 50 percent groups.][6]
 
-Once we determine our winner, we can stop this Canvas and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
+Once we determine our winner, we can stop this campaign and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
+
+## Limitations
+
+The following table describes the limitations that apply at a feature flag level. To purchase the paid version of feature flags, contact your Braze account manager, or request an upgrade in the Braze dashboard.
+
+| Limitation area                                                                                                   | Free version | Paid version |
+| :---------------------------------------------------------------------------------------------------------------- | :----------- | ------------ |
+| Active feature flags*                                                                                             | 10           | 110          |
+| [Active campaign experiments]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/) | 1            | 100          |
+| [Feature Flag Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Unlimited    | Unlimited    |
+{: .reset-td-br-1 .reset-td-br-2}
+
+**Active feature flags are feature flags that are used in any capacity, including rolling it out to a non-zero percentage of your audience, using it in an active campaign, or employing it in an active Canvas.*
 
 [1]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %} 
 [2]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/use_cases/
 [3]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/
 [4]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %}
 [5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step
-[6]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-experiment-step.png %}
+[6]: {% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %}
 [7]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %}
 [8]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/
 [9]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %}
 [10]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %}
 [11]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %}
+[12]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/

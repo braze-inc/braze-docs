@@ -25,7 +25,7 @@ Use the Initialization Tag to add the Braze Web SDK to your website.
 
 Optionally, if you want to be able to send push through the Google Tag Manager, first follow the [push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/) guidelines to:
 1. Configure your site's service worker, placing it in the root directory of your site
-2. Set up browser registration - After the service worker is configured, you must set the `braze.requestPushPermission()` method either natively in their app or through a custom HTML tag (via the GTM dashboard). You will also need to make sure that the tag is fired after the SDK has been initalized.
+2. Set up browser registration - After the service worker is configured, you must set the `braze.requestPushPermission()` method either natively in their app or through a custom HTML tag (via the GTM dashboard). You will also need to make sure that the tag is fired after the SDK has been initialized.
 
 ### Step 2: Select the Initialization Tag
 
@@ -46,7 +46,7 @@ Choose from the optional set of additional initialization options described in t
 Once you've deployed this tag, there are two ways you can verify a proper integration:
 
 1. Using Google Tag Manager's [debugging tool][gtm-debugging-tool], you should see the Braze Initialization Tag has been triggered on your configured pages or events.
-2. You should see network requests made to Braze, and the global `window.braze` library should now be defined on your webpage.
+2. You should see network requests made to Braze, and the global `window.braze` library should now be defined on your web page.
 
 ## Actions Tag template {#actions-tag}
 
@@ -76,13 +76,13 @@ Use the **Add Row** button to add event properties.
 
 ![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type"(custom event), "event name" (button click), and "event properties".][gtm-custom-event]
 
-### E-Commerce events {#ecommerce}
+### Ecommerce events {#ecommerce}
 
-If your site logs purchases using the standard [e-commerce event][e-commerce] data layer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
+If your site logs purchases using the standard [ecommerce event][ecommerce] data layer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
 
 You can also specify additional property names you want to include as purchase properties by specifying their keys in the Purchase properties list. Note that Braze will look within the individual `item` that is being logged for any purchase properties you add to the list.
 
-For example, let's say your e-commerce payload contains the following `items`:
+For example, let's say your ecommerce payload contains the following `items`:
 
 ```
 items: [{
@@ -190,7 +190,7 @@ To upgrade to the latest version of the Braze Web SDK, take the following three 
 
 ### Enable tag debugging {#debugging}
 
-Each Braze tag template has an optional **GTM Tag Debugging** checkbox which can be used to log debug messages to your webpage's JavaScript console.
+Each Braze tag template has an optional **GTM Tag Debugging** checkbox which can be used to log debug messages to your web page's JavaScript console.
 
 ![Google Tag Manager's Debug tool][gtm-tag-debugging]
 
@@ -198,7 +198,7 @@ Each Braze tag template has an optional **GTM Tag Debugging** checkbox which can
 
 Another way to help debug your Google Tag Manager integration is using Google's [Preview mode][14] feature.
 
-This will help identify what values are being sent from your webpage's data layer to each triggered Braze tag and will also explain which tags were or were not triggered.
+This will help identify what values are being sent from your web page's data layer to each triggered Braze tag and will also explain which tags were or were not triggered.
 
 ![The Braze Initialization Tag summary page provides an overview of the tag, including information on which tags were triggered.][gtm-tag-debug-mode]
 
@@ -229,7 +229,7 @@ In your Google Tag Manager integration, navigate to your Braze Initialization Ta
 [gtm-version-number]: {% image_buster /assets/img/web-gtm/gtm-version-number.png %}
 [changelog]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
 [gtm-debugging-tool]: https://support.google.com/tagmanager/answer/6107056?hl=en
-[e-commerce]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
+[ecommerce]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
 [log-purchase]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase
 [gtm-verbose-logging]: {% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %}
 [gtm-content-cards]: {% image_buster /assets/img/web-gtm/gtm_content_cards.png %}

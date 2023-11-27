@@ -12,7 +12,7 @@ channel:
 tools:
   - Media
 
-guide_featured_title: "Specifications for Each Message Type"
+guide_featured_title: "Specifications by message type"
 
 guide_featured_list:
 - name: Modal
@@ -42,13 +42,13 @@ Our guidelines for images are more structured than those for text, as we want to
 In general, Braze recommends using images that fit into a 16:10 screen.
 
 - **All images must be less than 5&nbsp;MB.**
-- We only accept PNG, JPG, and GIF file types.
+- We only accept PNG, JPEG, and GIF file types.
 - We recommend hosting images in the [Braze Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
 - For fullscreen messages, follow our guidelines for [image safe zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
 
 {% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab FullScreen %}
+{% tabs %}{% tab Fullscreen %}
 
 ![Fullscreen in-app message taking over an app screen. The fullscreen message includes a large image, header, message body, and two buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 

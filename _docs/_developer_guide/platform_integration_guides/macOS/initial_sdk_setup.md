@@ -8,11 +8,13 @@ description: "This reference article provides resources for initial integration 
 search_rank: 1
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Initial SDK setup
 
 > This reference article covers how to install the Braze SDK for MacOS. 
 
-As of version [3.32.0][1], the Braze SDK supports macOS for apps using [Mac Catalyst][2] when integrating through Swift Package Manager. Currently, the SDK does not support Mac Catalyst when using Cocoapods or Carthage.
+As of version [3.32.0][1], the Braze SDK supports macOS for apps using [Mac Catalyst][2] when integrating through Swift Package Manager. Currently, the SDK does not support Mac Catalyst when using CocoaPods or Carthage.
 
 {% alert note %}
 To build your app with Mac Catalyst, reference <a href="https://developer.apple.com/documentation/uikit/mac_catalyst">Apple's documentation</a>.

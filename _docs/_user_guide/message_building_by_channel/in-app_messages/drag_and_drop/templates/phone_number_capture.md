@@ -13,10 +13,6 @@ The phone number capture form is a template available in the drag-and-drop edito
 
 ![Three examples of in-app messages created using the phone capture form template.][img7]
 
-{% alert important %}
-Phone number capture form is currently in early access. Contact your Braze account manager if you’re interested in participating in the early access.
-{% endalert %}
-
 ## SDK requirements
 
 ### Minimum SDK versions

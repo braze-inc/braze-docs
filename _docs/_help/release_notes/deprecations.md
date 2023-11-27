@@ -47,6 +47,13 @@ Support for Grouparoo has been discontinued as of April 2022.
 **September 15, 2022**: No new Baidu push messages can be created. Existing messages and data collection are unaffected.<br>
 **January 15, 2023**: Braze will no longer serve messages or collect data from Baidu apps.
 
+### appboyBridge global variable
+
+**Support withdrawn**: May 2021<br>
+**Replaced by**: `brazeBridge`
+
+The global variable `appboyBridge` is deprecated and replaced by `brazeBridge`. `appboyBridge` will continue to function for existing customers, but we recommend you migrate to `brazeBridge` if you're using `appboyBridge`.
+
 ### Amazon Moments partnership
 
 **Support withdrawn**: June 2020
@@ -96,7 +103,7 @@ The Braze SDK provided a feedback widget that could be added to your app to allo
 **Support withdrawn**: Braze removal of support: July 2018, Google removal of support: May 29, 2019<br>
 **Replaced by**: [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)
 
-Google has [removed support for GCM](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) as of May 29, 2019. Braze has discountinued support for GCM from the Android SDKs in July 2018, which was noted within our [Android SDK changelogs](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md). This means that existing GCM tokens will continue to work, and you will be able to message your existing users. However, you will not be able to message new users.
+Google has [removed support for GCM](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) as of May 29, 2019. Braze has discontinued support for GCM from the Android SDKs in July 2018, which was noted within our [Android SDK changelogs](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md). This means that existing GCM tokens will continue to work, and you will be able to message your existing users. However, you will not be able to message new users.
 
 Customers that have not already migrated to [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase) may be affected by this change.
 
@@ -107,7 +114,7 @@ If you have not transitioned to FCM, all GCM push tokens registrations will fail
 **Support withdrawn**: 2014-2015<br>
 **Replaced by**: [Android Studio]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)
 
-Braze has discountinued support for the Eclipse IDE due to Google [sunsetting support](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html) for the Eclipse Android Developer Tools (ADT) plugin. 
+Braze has discontinued support for the Eclipse IDE due to Google [sunsetting support](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html) for the Eclipse Android Developer Tools (ADT) plugin. 
 
 If you need assistance with your Eclipse integration prior to migration, contact [Support]({{site.baseurl}}/support_contact/) for assistance.
 

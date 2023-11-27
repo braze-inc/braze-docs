@@ -36,10 +36,10 @@ Custom attribute objects can contain [data types][1], such as:
 ## Limitations
 
 - Nested custom attributes are intended for custom attributes sent via the Braze SDK or API. 
-- Partners do not support arrays of objects. We recommend against using this feature with workspaces that have partner integrations enabled.
 - Objects have a maximum size of 50&nbsp;KB.
 - Key names and string values have a size limit of 255 characters.
 - Key names cannot contain spaces.
+- Not all Braze Partners support nested custom attributes. Refer to the [Partner documentation]({{site.baseurl}}/partners/home) to confirm if the integration supports this feature.
 
 ## API example
 
@@ -224,7 +224,7 @@ import * as braze from "@braze/web-sdk";
 const json = {
   "year_released": 1960
 };
-braze.getUser().setCustomUserAttribute("most_played_song", updatedJson, true);
+braze.getUser().setCustomUserAttribute("most_played_song", json, true);
 
 ```
 
@@ -380,7 +380,7 @@ You can click **Validate** to verify that the contents of the path field is vali
 
 ![][13]
 
-That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze's nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
+That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. The nested object explorer in Braze generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
 
 ### Trigger nested custom attribute changes
 

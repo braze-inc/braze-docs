@@ -10,13 +10,13 @@ description: "This reference article covers how to create and use catalogs to re
 
 > With catalogs, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
 
-Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider. 
+Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an ecommerce business, or course information for an education provider. 
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
 ## Preparing your CSV file
 
-Before creating a catalog, be sure to have your CSV file ready first if your preferred catalog creation method is to upload. 
+Before creating a catalog, be sure to have your CSV file ready if your preferred catalog creation method is to upload. 
 
 Note these guidelines when creating your CSV file. The first column of the CSV file must be a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
 
@@ -27,7 +27,7 @@ Note these guidelines when creating your CSV file. The first column of the CSV f
 - Maximum field value (cell) of 5,000 characters
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
-Make sure that you are encoding your CSV file using the UTF-8 format in order to successfully upload your CSV file in the next step. We also recommend that you format all text in your CSV files as lowercase.
+Make sure that you are encoding your CSV file using the UTF-8 format to upload your CSV file in the next step successfully. We also recommend formatting all text in your CSV files as lowercase.
 
 {% alert note %}
 Need more space to accommodate for your CSV files? Contact your Braze account manager for more information about upgrading your catalogs.
@@ -59,7 +59,7 @@ Click **Create New Catalog**, then choose to either **Upload CSV** or **Create i
 This data type cannot be edited after you set up your catalog.
 {% endalert %}
 
-Note that you cannot use templates in a catalog name. For example, you cannot have the following as the catalog name or else the call will fail.
+Note that you cannot use templates in a catalog name. For example, you cannot have the following as the catalog name, or the call will fail.
 {% raw %}
 ```liquid
 {% catalog_items custom_attribute.${catalog} item1, item2 %}
@@ -70,9 +70,9 @@ Note that you cannot use templates in a catalog name. For example, you cannot ha
 Your CSV file can be rejected if you go above [company limitations](#limits). 
 {% endalert %}
 
-You also have the option of updating the CSV file after selecting to create a catalog in the browser. Click **Update Catalog > Upload CSV**, then select whether to update, add, or delete items in your catalog.
+You can also update the CSV file after selecting to create a catalog in the browser. Click **Update Catalog > Upload CSV**, then select whether to update, add, or delete items in your catalog.
 
-### Method 2: Create in browser
+### Method 2: Create in the browser
 
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
@@ -80,10 +80,10 @@ You also have the option of updating the CSV file after selecting to create a ca
 - Can only include numbers, letters, hyphens, and underscores <br> ![][14]{: style="max-width:80%;"} <br><br>
 2. (optional) Type a description for your catalog.
 3. Select the catalog you've just created from the list **Catalogs** page to update your catalog.
-4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use to dropdown to select the data type. Repeat as needed.<br> ![][12]{: style="max-width:50%;"}<br><br>
+4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use the dropdown to select the data type. Repeat as needed.<br> ![][12]{: style="max-width:50%;"}<br><br>
 5. Click **Update Catalog > Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, click **Save Item** or **Save and Add Another** to continue adding your items. <br> ![][13]{: style="max-width:50%;"}
 
-You also have the option of uploading a CSV file after selecting to create a catalog in the browser. 
+You can also upload a CSV file after selecting to create a catalog in the browser. 
 
 #### Example catalog
 
@@ -131,7 +131,7 @@ Next, we'll name this catalog "games_catalog" and click the **Process Catalog** 
 
 ![][11]{: style="max-width:85%;"}
 
-Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and reupload an updated version using the same catalog name. 
+Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and re-upload an updated version using the same catalog name. 
 
 ## Using catalogs in a message
 
@@ -271,7 +271,7 @@ With templating, you can render a different catalog item for each user based on 
 
 ### Uploading a CSV
 
-You can upload a CSV of new catalog items to add, or catalog items to update. To delete a list of items, you can upload a CSV of item IDs to delete them.
+You can upload a CSV of new catalog items to add or catalog items to update. To delete a list of items, you can upload a CSV of item IDs to delete them.
 
 ### Using Liquid
 
@@ -296,7 +296,7 @@ The following table describes the limitations that apply at a catalog level:
 ### Storage limits
 
 {% alert important %}
-The package entitlement shown in the Braze dashboard is rounded to the nearest unit for visual purposes; however, you are still entitled to the full entitlement purchased. To request an upgrade for catalogs storage, contact your Braze account manager.
+The package entitlement shown in the Braze dashboard is rounded to the nearest unit for visual purposes; however, you are still entitled to the full entitlement purchased. To request an upgrade for catalog storage, contact your Braze account manager.
 {% endalert %}
 
 #### Free version

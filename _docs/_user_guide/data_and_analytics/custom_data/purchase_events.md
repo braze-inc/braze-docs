@@ -11,15 +11,15 @@ search_rank: 3
 
 > Learn about purchase events and properties, their usage, segmentation, where to view relevant analytics, and more.
 
-Purchase events are purchase actions taken by your users. These events are used to record in-app purchases and establish the Lifetime Value (LTV) for each individual user profile. These purchase events must be set up by your team. Logging purchase events gives you the option to add properties like quantity and type, helping you further target your users based on these properties.
+Purchase events are purchase actions taken by your users. These events are used to record in-app purchases and establish the Lifetime Value (LTV) for each user profile. These purchase events must be set up by your team. Logging purchase events allows you to add properties like quantity and type, helping you further target your users based on these properties.
 
-After you have set up and begun logging purchase events, you can view this purchase data on a user's profile, in the [Overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#overview-tab).
+After you have set up and begun logging purchase events, you can view this purchase data on a user's profile in the [Overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#overview-tab).
 
 ## Logging purchase events
 
-You can log purchases by passing a [Purchase Object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
+You can log purchases by passing a [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
-The following lists methods across various platforms that are used to log purchases. Within these pages, you will also be able to find documentation on how to add properties and quantities to your purchase event.
+The following lists methods across various platforms that are used to log purchases. Within these pages, you will also find documentation on how to add properties and quantities to your purchase event.
 
 - [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)
@@ -31,7 +31,7 @@ The following lists methods across various platforms that are used to log purcha
 
 ## Blocklisting purchase events
 
-In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Custom Events and Attribute Management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) to learn more.
+In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Custom events and attribute management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) to learn more.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Products** under **Manage Settings**.
@@ -39,7 +39,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## Purchase event segmentation
 
-You can trigger any number or type of follow-up campaigns based on logged purchase events, and enable the following segmentation filters based on the recency and frequency of that event when targeting users.
+You can trigger any number or type of follow-up campaigns based on logged purchase events and enable the following segmentation filters based on the recency and frequency of that event when targeting users.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -65,7 +65,7 @@ If you would like to segment on the number of times a specific purchase has occu
 
 ## Purchase event analytics
 
-In addition to tracking purchase metrics for segmentation, Braze also notes the number purchases for each product and the revenue generated over time. You can view this data on the [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page.
+In addition to tracking purchase metrics for segmentation, Braze also notes the number of purchases for each product and the revenue generated over time. You can view this data on the [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page.
 
 ![Purchase graph on the Revenue page showing statistics for all purchases][4]
 
@@ -73,28 +73,28 @@ In addition to tracking purchase metrics for segmentation, Braze also notes the 
 
 ## Purchase event properties {#purchase-properties}
 
-With purchase event properties, you can set properties on purchases that can be used to further qualify trigger conditions, increase personalization in messaging, and generate more sophisticated analytics through raw data export. Property value types (string, numeric, boolean, date) vary per platform, and are often assigned as key-value pairs.
+With purchase event properties, you can set properties on purchases that can be used to further qualify trigger conditions, increase personalization in messaging, and generate more sophisticated analytics through raw data export. Property value types (string, numeric, boolean, date) vary per platform and are often assigned as key-value pairs.
 
-For example, if an eCommerce application wanted to send a message to a user after they have made a purchase, they could additionally improve their target audience and allow for increased campaign personalization by adding a purchase event property of `brand_name`.
+For example, if an ecommerce application wanted to send a message to a user after making a purchase, they could additionally improve their target audience and allow for increased campaign personalization by adding a purchase event property of `brand_name`.
 
-**Example of Triggering based on Purchase Event Properties:**
+**Example of triggering based on purchase event properties:**
 
 ![Action-based delivery settings to send a campaign to users who purchase headphones with a brand name equal to HeadphoneMart][2]{: style="max-width:80%;margin-left:15px;"}
 
-Refer to [Purchase Properties Object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) for more.
+Refer to [purchase properties object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) for more.
 
 ### Event property segmentation
 
-Event property segmentation allows you to target users based not just on custom events taken but the properties associated with those events. This feature adds additional filtering options when segmenting purchase and custom events.
+Event property segmentation allows you to target users based not just on custom events taken but also on the properties associated with those events. This feature adds additional filtering options when segmenting purchase and custom events.
 
 ![][6]
 
 These segmentation filters include:
-- Has done custom event with property Y with value V X times in the last Y days.
+- Has done the custom event with property Y with value V X times in the last Y days.
 - Has made any purchases with property Y with value V X times in the last Y days.
 - Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
 
-Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must reach out to your Braze customer success manager to get event properties turned on for your custom events.
+Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must contact your Braze customer success manager to get event properties turned on for your custom events.
 
 When approved, additional properties can be added in the dashboard under **Data Settings** > **Custom Events** by clicking **Manage Properties**. You can then use these event properties in the target step of the campaign or Canvas builder.
 
@@ -116,7 +116,7 @@ You can't use `event_properties` in the lead Message step. Instead, you must use
 [Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB.
 
 {% alert note %}
-For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
+For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
 {% endalert %}
 
 For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid when referencing these properties: ``{% raw %} canvas_entry_properties${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
@@ -130,7 +130,7 @@ For the Canvases built with the original editor, `canvas_entry_properties` can b
 {% endtab %}
 
 {% tab Event Properties %}
-Event properties refer to the properties that you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases.
+Event properties refer to the properties you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery and Canvases.
 
 In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, make sure to use {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
@@ -142,7 +142,7 @@ In the first Message step following an Action Path, you can use `event_propertie
 {% endtabs %}
 
 ### Log purchases at the order level
-If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
+If you would like to log purchases at the order level instead of the product level, you can use the order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 [1]: {% image_buster /assets/img/purchase1.png %}
 [2]: {% image_buster /assets/img/purchase2.png %}

@@ -9,7 +9,7 @@ description: "This landing page is home to Braze email. Here, you can learn how 
 channel:
   - email
 search_rank: 2
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Popular articles"
 guide_featured_list:
 - name: About Email
   link: /docs/user_guide/message_building_by_channel/email/about/
@@ -33,7 +33,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
   fa_icon: fas fa-chart-bar
 
-guide_menu_title: "More Articles"
+guide_menu_title: "More articles"
 guide_menu_list:
 - name: Email Setup
   link: /docs/user_guide/message_building_by_channel/email/email_setup/
@@ -44,6 +44,9 @@ guide_menu_list:
 - name: CSS Inlining
   link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/
   fa_icon: fas fa-align-left
+- name: Custom Email Footer
+  link: /docs/user_guide/message_building_by_channel/email/custom_email_footer/
+  fa_icon: fas fa-envelope-circle-check
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
   fa_icon: fas fa-inbox

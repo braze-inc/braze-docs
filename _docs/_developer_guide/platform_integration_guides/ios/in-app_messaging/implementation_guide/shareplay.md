@@ -3,16 +3,18 @@ nav_title: SharePlay
 article_title: SharePlay In-App Message Implementation Guide
 platform: iOS
 page_order: 1
-description: "This advanced SharePlay implementation guide expands on the video use case provided in the in-app message advanced implementation guide. SharePlay is a newly released feature that enables iOS 15 Facetime users to have a shared media experience across their devices, offering real-time audio and video syncing."
+description: "This advanced SharePlay implementation guide expands on the video use case provided in the in-app message advanced implementation guide. SharePlay is a newly released feature that enables iOS 15 FaceTime users to have a shared media experience across their devices, offering real-time audio and video syncing."
 channel:
   - in-app messages
 alias: /shareplay/
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # SharePlay in-app message implementation guide
 
-> SharePlay is a newly released feature that enables iOS 15 Facetime users to have a shared media experience across their devices, offering real-time audio and video syncing. SharePlay is a great way for users to experience content with friends and family, offering Braze customers an additional avenue for video content and opportunities to introduce new users to your application.
+> SharePlay is a newly released feature that enables iOS 15 FaceTime users to have a shared media experience across their devices, offering real-time audio and video syncing. SharePlay is a great way for users to experience content with friends and family, offering Braze customers an additional avenue for video content and opportunities to introduce new users to your application.
 
 ![SharePlay][6]{: style="border:0;margin-top:10px;"}
 ## Overview
@@ -20,7 +22,7 @@ alias: /shareplay/
 The new `GroupActivities` framework released by Apple as part of the iOS 15 update allows you to leverage FaceTime by integrating SharePlay into your applications with the help of Braze in-app messages.
 ![SharePlay][3]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
 
-When users initiate a SharePlay video in a Facetime call, an "Open" button will appear at the top of everyone's screen. When opened, audio and video will sync across all compatible devices, allowing users to watch videos together in real-time. Those who do not have the app downloaded will be redirected to the App Store.
+When users initiate a SharePlay video in a FaceTime call, an "Open" button will appear at the top of everyone's screen. When opened, audio and video will sync across all compatible devices, allowing users to watch videos together in real-time. Those who do not have the app downloaded will be redirected to the App Store.
 
 **Synced Media Playback**<br>
 With synced media playback, if one person pauses the SharePlay video, it will be paused across all devices. <br><br>

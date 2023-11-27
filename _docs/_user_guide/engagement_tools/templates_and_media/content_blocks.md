@@ -16,7 +16,7 @@ tool:
 
 With Content Blocks, you can:
 
-- Create a consistent look and feel to your email campaigns by using them as headers and footers.
+- Create a consistent look and feel for your email campaigns by using them as headers and footers.
 - Distribute the same offer codes through different channels.
 - Create pre-defined assets that can be used to build messages with consistent information and assets.
 - Copy entire message bodies to other messages.
@@ -40,26 +40,26 @@ The drag-and-drop editor is only available for Content Blocks used in email mess
 
 **Steps:**
 
-1. Enter a name for your Content Block. This name will autopopulate as part of the **Content Block Liquid Tag**.
+1. Enter a name for your Content Block. This name will auto-populate as part of the **Content Block Liquid Tag**.
 2. (optional) Add a description.
 3. Select **Drag-And-Drop Editor** as your editing experience, making this a drag-and-drop Content Block type.
 4. Click **Edit Content Block** to begin editing.
 4. In the editor, drag and drop the blocks in the **Content** tab to build out your Content Block. 
 5. Using the **Row** tab, you can adjust details such as the row or content area background colors, alignment, padding, and more.
-6. After you finish creating your Content Block, click **Done**.
+6. After creating your Content Block, click **Done**.
 
 {% endtab %}
 {% tab HTML %}
 
 **Steps:**
 
-1. Enter a name for your Content Block. This name will autopopulate as part of the **Content Block Liquid Tag**.
+1. Enter a name for your Content Block. This name will auto-populate as part of the **Content Block Liquid Tag**.
 2. (optional) Add a description.
 3. Select **HTML Editor** as your editing experience, making this an HTML Content Block type.
 4. Click **Edit Content Block** to begin editing.
 4. In the editor, enter your HTML. 
 5. Using the **Row** tab, you can adjust details such as the row or content area background colors, alignment, padding, and more.
-6. After you finish creating your Content Block, click **Done**.
+6. After creating your Content Block, click **Done**.
 
 {% endtab %}
 {% endtabs %}
@@ -68,7 +68,7 @@ The drag-and-drop editor is only available for Content Blocks used in email mess
 
 | Content Block Attribute | Specifications |
 |---|---|
-| Name | Required field with a maximum of 100 characters. It cannot be renamed after Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
+| Name | Required field with a maximum of 100 characters. It cannot be renamed after the Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
 | Description | (optional) Maximum of 250 characters. Provide a description of the Content Block so that other Braze users will know what it's for and where it's used. |
 | Content Size | Maximum of 50kB (kilobyte). |
 | Placement | Content Blocks cannot be used within an email footer. |
@@ -95,11 +95,11 @@ After creating your Content Block, you can insert it in your messages by followi
 
 ### Updating and copying Content Blocks
 
-If you choose to update a Content Block, it will update in all messages the Content Block is used. 
+If you choose to update a Content Block, it will update in all messages the Content Block is used if it is inserted via Liquid. If the Content Block is imported using **Content Blocks** dropdown under **Rows** in the drag-and-drop editor, it won't be updated in all messages.
 
-If you want to update a Content Block for a single message or make a copy to use in other messages, you can copy the HTML from the original message to your new one, or edit the original Content Block (it must have been used in a message already) and save it. You will get a prompt that allows you to save it as a new Content Block.
+If you want to update a Content Block for a single message or make a copy to use in other messages, you can either copy the HTML from the original message to your new one or edit the original Content Block (it must have been used in a message already) and save it. You will get a prompt that allows you to save it as a new Content Block.
 
-After making edits to a Content Block, you can then select **Save as Draft**, or save and launch the updated Content Block by clicking **Launch Content Block**.
+After making edits to a Content Block, you can select **Save as Draft**, or save and launch the updated Content Block by clicking **Launch Content Block**.
 
 ![][2]
 
@@ -123,9 +123,9 @@ Once you have finished using a Content Block, you can archive it from the [Templ
 
 Messages using the archived Content Block will still perform as though it was there. However, we recommend several best practices to ensure that outdated information is not accidentally included in your emails.
 
-1. When your Block is only used in a few emails, we recommend archiving the outdated Block and updating your live messages with a newer Block that has not been archived.
-2. When your Block only has a typo or needs a minor change, we do not recommend archiving the Block. Just update and get sending!
-3. When your Block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing **all** content from the Block, then archiving it. This will ensure no outdated information makes its way into any newly sent emails.
+1. When your block is only used in a few emails, we recommend archiving the outdated Block and updating your live messages with a newer Block that has not been archived.
+2. When your block only has a typo or needs a minor change, we do not recommend archiving the Block. Just update and get sending!
+3. When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing **all** content from the block and then archiving it. This will ensure no outdated information is included in any newly sent emails.
 
 {% alert tip %}
 You can save a Content Block without content in it.

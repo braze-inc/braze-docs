@@ -28,7 +28,7 @@ By scrolling down the page, you can see a larger breakdown of your clicks and im
 
 ## Retargeting data
 
-You can leverage Braze's data on which users are interacting with your News Feed via segment filters that let you retarget specific behaviors.
+You can leverage Braze data on which users are interacting with your News Feed via segment filters that let you retarget specific behaviors.
 
 ### Feed impression filter
 

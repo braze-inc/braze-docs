@@ -12,7 +12,7 @@ description: "This landing page lists several advanced push options like Push St
 guide_top_header: "Advanced Push Options"
 guide_top_text: "This landing page lists several advanced push options like Push Stories and push action buttons."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Push Action Buttons"
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/

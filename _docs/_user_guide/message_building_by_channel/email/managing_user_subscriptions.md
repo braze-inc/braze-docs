@@ -121,70 +121,15 @@ Note that when a user selects "Unsubscribe from all of the above types of emails
 
 ### Creating custom footers {#custom-footer}
 
-{% raw %}
-Braze provides the ability to set a workspace-wide custom email footer which you can template into every email using the ``{{${email_footer}}}`` Liquid attribute.
-{% endraw %}
+If you don't want to use the default Braze footer in your emails, you can create a workspace-wide custom email footer which you can template into every email using the {% raw %}`{{${email_footer}}}`{% endraw %} Liquid attribute.
 
-This way, you don't have to create a new footer for every email template or email campaign you use. Changes you make to your custom footer will be reflected in all new and existing email campaigns. Remember that compliance with the [CAN-SPAM Act of 2003](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business) requires you to include a physical address for your company and an unsubscribe link in your emails. 
-
-{% alert warning %}
-It is your responsibility to make sure that your custom footer meets the aforementioned requirements.
-{% endalert %}
-
-To create or edit your custom footer, do the following:
-
-1. Go to **Settings** > **Email Preferences**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is called **Email Settings** and is located under **Manage Settings**.
-{% endalert %}
-
-{: start="2"}
-2. Go to the **Custom Footer** section and turn on custom footers.
-3. Edit your footer in the **Compose** section and send a test message. <br><br>{% raw %}The default footer uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute and Braze's physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include ``{{${set_user_to_unsubscribed_url}}}``. You won't be able to save a custom footer without this attribute. <br><br> ![][20] <br><br> If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**.{% endraw %} <b><br>![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
-
-{% alert tip %}
-Be very careful when using a template with the custom footer {% raw %}``{{${email_footer}}}`` or ``{{${set_user_to_unsubscribed_url}}}``{% endraw %} when composing an email campaign. A warning will appear, but it'll be your choice to send an email with or without an unsubscribe link.
-{% endalert %}
-
-![Example email composed without a footer.][21]
-
-![No-footer campaign composition.][22]
-
-#### Best practices for custom footers
-
-Braze suggests the following best practices when creating and using custom footers.
-
-##### Personalizing with attributes
-
-When creating a custom footer, Braze suggests using attributes for personalization. The full set of default and custom attributes are available, but here are a few you may find useful:
-
-| Attribute | Tag |
-| --------- | --- |
-| User's Email Address | {% raw %}`{{${email_address}}}`{% endraw %} |
-| User's Custom Unsubscribe URL | {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} |
-| User's Custom Opt-In URL | {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} |
-| User's Custom Subscribe URL | {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}|
-| User's Custom Braze Preference Center URL | {% raw %}`{{${preference_center_url}}}`{% endraw %} |
-{: .reset-td-br-1 .reset-td-br-2}
-
-##### Including an unsubscribe link and opt-in link
-
-{% raw  %}
-As a best practice, Braze recommends including both an unsubscribe link (i.e., ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e., ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
-{% endraw %}
-
-##### Setting custom footers for plaintext emails
-
-You can also choose to set a custom footer for plaintext emails from the **Subscription Pages and Footers** tab on the **Email Preferences** page, which follows the same rules as the custom footer for HTML emails. If you don't include a plaintext footer, Braze will automatically build one from the HTML footer. When your custom footers are to your liking, click **Save** at the bottom of the page.
-
-![Email with Set Custom Plaintext Footer option selected.][23]{: style="max-width:70%" }
+This way, you don't have to create a new footer for every email template or email campaign you use. For steps, refer to [Custom email footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/).
 
 ### Creating a custom unsubscribe page
 
 When users click an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
 
-To create a custom landing page that users will be directed to (instead of the default page) upon subscribing, go to **Email Preferences** > **Subscription Pages and Footers** and provide the HTML for your custom landing page. We recommend including a resubscribe link (i.e., {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
+To create a custom landing page that users will be directed to (instead of the default page) upon subscribing, go to **Email Preferences** > **Subscription Pages and Footers** and provide the HTML for your custom landing page. We recommend including a resubscribe link (such as {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
 
 ![Custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
 
@@ -229,11 +174,6 @@ For example, this can be useful if you want to target users who have neither opt
 [17]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
 [18]: {% image_buster /assets/img_archive/not_optin.png %}
 [19]: {% image_buster /assets/img_archive/email_settings.png %}
-[20]: {% image_buster /assets/img_archive/custom_footer.png %}
-[21]: {% image_buster /assets/img_archive/no_unsub_link_warning.png %}
-[22]: {% image_buster /assets/img_archive/no_footer_test.png %}
-[23]: {% image_buster /assets/img_archive/custom_footer_save_changes.png %}
-[24]: {% image_buster /assets/img_archive/email_unsub_protocol.png %}
 [25]: {{site.baseurl}}/api/endpoints/subscription_groups
 [26]: {% image_buster /assets/img/sub_group_create.png %}
 [27]: {% image_buster /assets/img/sub_group_use.gif %}

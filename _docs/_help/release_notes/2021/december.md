@@ -1,50 +1,60 @@
 ---
 nav_title: December
-page_order: 1
+page_order: 0
 noindex: true
 page_type: update
 description: "This article contains release notes for December 2021."
+alias: "/help/release_notes/2022/january/"
 ---
 # December 2021
 
-## Click-to-Open Rate reporting metric
-Braze has added a new email metric, Click-to-Open Rate, available in the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/). This metric represents the percentage of open emails that have been clicked.
+## Update to export users by segment endpoint
 
-## Machine Open reporting metric
+Beginning December 2021, the following changes take effect for the [Export users by segment endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/):
 
-A new email metric, [Machine Opens]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/#machine-opens), is available on the Canvas and Campaign Analytics pages for emails. This metric identifies email opens that are non-human (i.e., opened by Apple's servers), displayed as a subset of total opens.
+1. The `fields_to_export` field in this API request will be required. The option to default to all fields will be removed.
+2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will only contain data from the last 90 days.
 
-## random_bucket_number Liquid variable
-A variable `random_bucket_number` has been added to the list of [supported Liquid variables]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags) for message personalization. 
+## New properties for Currents message engagement events
 
-## iOS 15 rich push notification guidelines
-New [iOS push notification guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) have been added to the iOS rich docs, including information about notification states and a breakdown of text truncation variables.
+New properties have been added for select [message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). This update applies to the following Currents message engagement events and all partners that use them:
 
-## IPs to whitelist in EU for webhooks and Connected Content
-Additional IPs to whitelist in EU for webhooks and Connected Content have been added to our [webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) and [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) article. These new IPs include `18.157.135.97`, `3.123.166.46`, `3.64.27.36`, `3.65.88.25`, `3.68.144.188`, and `3.70.107.88`.
+- Add `LINK_ID`, `LINK_ALIAS` to:
+  - Email Click (all destinations)
+- Add `USER_AGENT` to:
+  - Email Open
+  - Email Click
+  - Email Mark As Spam
+- Add `MACHINE_OPEN` to:
+  - Email Open
 
-## Export purchases endpoint
-A new [`/purchases/product_list` endpoint]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/) has been added to Braze. This endpoint returns paginated lists of product IDs.
+## New Liquid personalization tag
+
+We now support targeting users who have foreground push enabled on their device with the following Liquid tags:
+
+{% raw %}
+- `{{most_recently_used_device.${foreground_push_enabled}}}`
+- `{{targeted_device.${foreground_push_enabled}}}`
+{% endraw %}
+
+For more information, refer to [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+
+## About webhooks
+
+Webhooks are powerful, flexible tools—but they can be a bit confusing. If you're wondering what webhooks are and how you can use them in Braze, check out our new article on [About webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/).
+
+## Amazon Personalize
+
+Amazon Personalize is like having your very own all day Amazon machine learning recommendation system. Based on over 20 years of recommendation experience, Amazon Personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations and targeted marketing promotions. 
+
+If you'd like to learn more, visit our new [Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/) article to understand the use cases Amazon Personalize offers, data it works with, how to configure the service, and how to integrate it with Braze.
 
 ## New Braze partnerships
 
-### Adobe - Customer data platform
-The Braze and [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/#adobe) integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized, targeted experiences to those users. 
+### Yotpo – Ecommerce
 
-### BlueConic - Customer data platform
-With [Blueconic]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/#blueconic), Braze users can unify data into persistent, individual profiles and then sync it across customer touchpoints and systems in support of a wide range of growth-focused initiatives, including customer lifecycle orchestration, modeling and analytics, digital products and experiences, audience-based monetization, and more.
+The [Yotpo]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/) and Braze integration allows you to dynamically pull and display star ratings, top reviews, and visual user-generated content on products within emails and other communication channels within Braze. You can also include customer-level loyalty data in emails and other communication methods to create a more personalized interaction, boosting sales and loyalty.
 
-### Worthy - Dynamic content
-The Braze and [Worthy]({{site.baseurl}}/partners/message_personalization/dynamic_content/worthy/#worthy) integration allows you to easily create personalized, rich in-app experiences using Worthy's drag-and-drop dynamic content editor and deliver them through Braze.
+### Zeotap – Customer data platform
 
-### Judo - Dynamic content
-The [Judo]({{site.baseurl}}/partners/message_personalization/dynamic_content/judo/#judo) and Braze integration allows you to overwrite components of your campaign and replace them with Judo experiences. Data from Braze may be used to support personalized content in a Judo experience. User events and data from the experience can feedback into Braze for attribution and targeting.
-
-### Line - Messaging
-The [Line]({{site.baseurl}}/partners/message_orchestration/additional_channels/messaging/line/#line) and Braze integration allows you to leverage Braze webhooks, advanced segmentation, personalization, and triggering features to message your users in Line through the [Line Messaging API](https://developers.line.biz/en/docs/messaging-api/overview/).
-
-### RevenueCat - Payments
-The [RevenueCat]({{site.baseurl}}/partners/data_and_infrastructure_agility/payments/revenuecat/#revenuecat) and Braze integration allows you to automatically sync your customer's purchase and subscription lifecycle events across platforms. This allows you to build campaigns that react to the subscription lifecycle stage of your customers, such as engaging with customers that opted out during their free trial or sending reminders to customers with billing issues.
-
-### Punchh - Loyalty
-[Punchh]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/punchh/#punchh) has partnered with Braze to sync data across the two platforms for gifting and loyalty purposes. Data published in Braze will be available for segmentation and can sync user data back into Punchh via webhook templates setup in Braze.  
+With the [Zeotap]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/) and Braze integration, you can extend the scale and reach of your campaigns by syncing Zeotap customer segments to map Zeotap user data to Braze user accounts. You can then act on this data, delivering personalized target experiences to your users.

@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Push Story setup
 
 The Push Story feature requires the `UNNotification` framework and iOS 10. The feature is only available from iOS SDK version 3.2.1.
@@ -69,7 +71,7 @@ After following the [Swift Package Manager integration guide]({{site.baseurl}}/d
 ![]({% image_buster /assets/img/ios/push_story/spm2.png %})
 
 {% endtab %}
-{% tab Cocoapods %}
+{% tab CocoaPods %}
 
 Add the following line to your Podfile:
 

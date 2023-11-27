@@ -12,7 +12,7 @@ tool:
 - Media
 description: "This landing page is home to Templates and Media articles. Here, you can find resources on the media library, how to manage templates, upload images, create Content Blocks, and more."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Media Library
     link: /docs/user_guide/engagement_tools/templates_and_media/media_library/

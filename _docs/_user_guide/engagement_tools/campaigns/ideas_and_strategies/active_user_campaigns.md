@@ -27,14 +27,14 @@ If you set User IDs to identify users when a new user logs in they will be count
 
 ## Step 1: Identifying your top users
 
-Using Braze's selection of filters, create a user segment that you feel encompasses your most loyal, consistent user base. The following sample segment defines the top users.
+Using our selection of filters, create a user segment that you feel encompasses your most loyal, consistent user base. The following sample segment defines the top users.
 
 ![][1]
 
 Additionally, you will not have to continue updating this segment, as users who pass in or out of the campaign's restrictions will be correspondingly targeted or dismissed.
 
 {% alert note %}
-The preceding example segments users by general app usage. In most cases, the total collection of filters needed to define your top user segment will largely be defined by the specificities of your app.
+The preceding example segments users by general app usage. In most cases, the total collection of filters needed to define your top user segment will largely be defined by the specifics of your app.
 {% endalert %}
 
 ## Step 2: Reach out to your top users

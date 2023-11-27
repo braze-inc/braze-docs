@@ -9,7 +9,7 @@ description: "This reference article covers how to QA your message content with 
 
 > Learn how to QA your message content with AI directly from the message composer.
 
-Content QA with AI uses the capabilities of ChatGPT and OpenAI to perform checks on the content of your message, ensuring it adheres to quality standards by identifying ineffective elements such as spelling errors, grammar issues, inappropriate tone, and offensive language. You can access this feature from the **Test** tab when composing a push or SMS message in a campaign or Canvas.
+Content QA with AI uses the capabilities of GPT and OpenAI to perform checks on the content of your message, ensuring it adheres to quality standards by identifying ineffective elements such as spelling errors, grammar issues, inappropriate tone, and offensive language. You can access this feature from the **Test** tab when composing a push or SMS message in a campaign or Canvas.
 
 ## Key features
 
@@ -36,7 +36,7 @@ To access the content checker, follow these steps:
 
 ### Language support
 
-ChatGPT is able to understand [multiple languages](https://openai.com/research/gpt-4#:~:text=GPT%2D4%203%2Dshot%20accuracy%20on%20MMLU%20across%20languages), although OpenAI doesn't officially support them. Braze does not pass any additional information about the language or locale of your copy when the message content is sent to OpenAI, therefore it is up to ChatGPT to make that determination.
+GPT is able to understand [multiple languages](https://openai.com/research/gpt-4#:~:text=GPT%2D4%203%2Dshot%20accuracy%20on%20MMLU%20across%20languages), although OpenAI doesn't officially support them. Braze does not pass any additional information about the language or locale of your copy when the message content is sent to OpenAI, therefore it is up to GPT to make that determination.
 
 Results may vary depending on the language you're writing in.
 
@@ -50,6 +50,6 @@ Consider the following tips to make the most of the Content QA with AI feature:
 
 ## How is my data used and sent to OpenAI?
 
-In order to check your message content, Braze will send it to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the message content you provide. Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days.
+In order to check your message content, Braze will send it to OpenAI's API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the message content you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, which may include its [Usage Policy](https://openai.com/policies/usage-policies) and its [Sharing & Publication Policy](https://openai.com/policies/sharing-publication-policy). Braze makes no warranty of any kind with respect to any AI-generated content.
 
 [1]: {% image_buster /assets/img/content_qa_ai.png %}

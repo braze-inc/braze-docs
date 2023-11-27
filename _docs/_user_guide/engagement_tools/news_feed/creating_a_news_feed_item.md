@@ -61,9 +61,9 @@ Banner cards consist of:
 
 |          Card type         |          Aspect Ratio         | Recommended Image Size | Maximum Image Size |   File Types  |
 |:-----------------------------:|:----------------------:|:------------------:|:-------------:|
-|          Classic         | 1:1 (110 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPG, GIF |
-|          Captioned image         | 4:3 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPG, GIF |
-|          Banner         | 6:1 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPG, GIF |
+|          Classic         | 1:1 (110 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPEG, GIF |
+|          Captioned image         | 4:3 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPEG, GIF |
+|          Banner         | 6:1 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPEG, GIF |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 - PNG files are recommended.
@@ -104,10 +104,10 @@ After launching a News Feed card, a button will appear in the new feed statistic
 
 ## Organizing your News Feed
 
-You can re-order your cards within Braze's News Feed page.
+You can re-order your cards within the News Feed page.
 - Cards in the feed are ordered first by whether or not they have been seen by the user, unseen items are at the top of the feed.
   - A card is considered read if it has received an impression in the feed.
-  - Impressions are only counted if the card is viewable in the feed (ie, if a user does not scroll down to read a card, an impression is not counted).
+  - Impressions are only counted if the card is viewable in the feed (that is, if a user does not scroll down to read a card, an impression is not counted).
 - Cards are then ordered by the date and time of creation, where more recent items are first.
 
 [1]: {% image_buster /assets/img_archive/newsfeed1_new.png %}

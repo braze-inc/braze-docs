@@ -13,7 +13,7 @@ platform:
 
 channel: push
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Android Inline Image Push
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/inline_image_push/
@@ -24,8 +24,8 @@ guide_featured_list:
   - name: Advanced Settings
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
     fa_icon: fa fa-cog
-  - name: Custom Broadcast Receiver
-    link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_broadcast_receiver/
+  - name: Push Event Callback
+    link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/
     fa_icon: fa fa-cog
 
 

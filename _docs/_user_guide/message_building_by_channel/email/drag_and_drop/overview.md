@@ -101,9 +101,9 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 Once you've finished designing and building your email message, it's time to add your sending information in the **Sending Settings** section.
 
 1. Under **Sending Info**, select an email as the **From Display Name + Address**. You can also customize this by selecting **Customize From Display Name + Address**.
-2. Select an email  **Reply-To Address**. You can also customize this by selecting **Customize Reply-To Address**.
+2. Select an email as the **Reply-To Address**. You can also customize this by selecting **Customize Reply-To Address**.
 3. Next, select an email as the **BCC Address** to make your email visible to this address.
-4. Add a subject line to your email. Optionally, you can also add a preheader and a whitespace after the preheader. This can help prevent how emn
+4. Add a subject line to your email. Optionally, you can also add a preheader and a whitespace after the preheader.
 
 A preview in the right-hand panel will populate with the sending information you've added. This information can also be updated by navigating to **Settings** > **Email Preferences** > **Sending Configuration**.
 
@@ -112,14 +112,14 @@ A preview in the right-hand panel will populate with the sending information you
 Under **Sending Settings**, you can add personalization for email headers and email extras, which allows you to send additional data back to other email service providers. Personalizing an email header, such as including a recipient's name, can also contribute to the likelihood of your email being opened.
 
 {% alert note %}
-Advanced functionality will appear in the campaign or Canvas composer. In advanced functionality, you can modify your inline CSS setting and enter in a header or extra key-value pairs (if configured).
+Advanced functionality will appear in the campaign or Canvas composer. In advanced functionality, you can modify your inline CSS setting and enter a header or extra key-value pairs (if configured).
 {% endalert %}
 
 ## Step 4: Test your email
 
 After adding your sending information, it's time to finally test your email. 
 
-Go to the **Preview and Test** section. Here, you have the option of previewing your email as a user, or sending a test message. This section also includes [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/), which allows you to check that your email has rendered correctly across different mobile and web clients.
+Go to the **Preview and Test** section. Here, you have the option of previewing your email as a user or sending a test message. This section also includes [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/), which allows you to check that your email has rendered correctly across different mobile and web clients.
 
 {% alert tip %}
 You can also use the **Dark Mode Preview** toggle in the preview panel to view your email body in dark mode and adjust your email as needed. 
@@ -129,7 +129,7 @@ Because you can view three different versions of the same email in the actual ed
 
 #### Preview and test send
  
-Under the **Preview as a User** tab, you can select the following user types to preview your message as.
+Under the **Preview as a User** tab, you can select the following user types to preview your message.
 
 - **Random User:** Braze will randomly select a user from the database and preview the email based on their attributes or event information.
 - **Select User:** You can select a specific user based on their email address or external ID. The email will preview based on that user's attributes and event information
@@ -154,7 +154,7 @@ The underlying engine that produces HTML from the drag-and-drop editor has been 
 
 Our average exported HTML data footprint size has been reduced, leading to faster loading and rendering, reduced mobile clipping, and reduced bandwidth consumption.
 
-HTML rendering has improved based on these following updates that minimize the number of conditional comments and CSS media queries. As a result, HTML files are smaller and more efficiently coded.
+HTML rendering has improved based on the following updates that minimize the number of conditional comments and CSS media queries. As a result, HTML files are smaller and more efficiently coded.
 - Migration from a `<div>` element-based design to a standard `<table>` formatted codebase
 - [Editor blocks][7] have been re-coded for conciseness
 - Final HTML code is compressed to remove whitespace between tags
@@ -169,7 +169,7 @@ As you continue building drag-and-drop emails, you can further customize each em
 You can create a custom theme for your drag-and-drop editor using [global style settings]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/).
 {% endalert %}
 
-### Auto width images
+### Auto-width images
 
 Images added to your email will automatically be set to **Auto width**. To adjust this setting, toggle off **Auto width** and adjust the width percentage as needed.
 
@@ -185,7 +185,7 @@ Using color layering, you can change the color of the email background, content 
 
 ![Block Options for the drag-and-drop editor.][4]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-To adjust padding, scroll down to **Block Options**, and toggle **More Options**. You can fine-tune your padding to get your email looking just right.
+To adjust padding, scroll down to **Block Options** and select **More Options**. You can fine-tune your padding to get your email looking just right.
 
 ### Content background
 
@@ -195,7 +195,7 @@ You can add a background image to your row configuration, allowing you to incorp
 
 ![Options for adding personalization for the drag-and-drop editor.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Basic Liquid is supported in the drag-and-drop email editor. To add personalization into your email:
+Basic Liquid is supported in the drag-and-drop email editor. To add personalization to your email:
 
 1. Select **Personalization** under the **Content** section. 
 2. Select the personalization type. This includes standard (default) attributes, device attributes, custom attributes, and more. 
@@ -204,7 +204,7 @@ Basic Liquid is supported in the drag-and-drop email editor. To add personalizat
 
 #### Dynamic images
 
-You can choose to include dynamic images into your email messaging by including Liquid in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
+You can choose to include dynamic images in your email messaging by including Liquid in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
 
 ### Add HTML attributes to links
 
@@ -222,7 +222,9 @@ Another common use case is to flag specific links as universal links. Universal 
 * **SendGrid:** `universal = "true"`
 * **SparkPost:** `data-msys-sublink = "open-in-app"` (a [custom sub-path](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) must be configured)
 
-To set up universal links, we recommend integrating with [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking).
+To set up universal links, refer to [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
+
+Alternatively, you can integrate with one of our attribution partners, such as [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), to manage universal links.
 
 [1]: {% image_buster /assets/img/dnd/dnd_template1.png %}
 [2]: {% image_buster /assets/img/dnd/dnd1.png %}

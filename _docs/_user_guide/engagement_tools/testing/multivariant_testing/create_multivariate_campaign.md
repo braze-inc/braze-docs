@@ -81,8 +81,8 @@ What levers do you have to pull and what are the desired effects? While there ar
 
 | Channel | Aspects of Message You Can Change | Results To Look For |
 | ---------------------| --------------- | ------------- |
-| Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (e.g., "triple" versus "increase by 200%")  <br> Presentation of time (e.g., "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
-| Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (e.g., "triple" versus "increase by 200%") <br> Presentation of time (e.g., "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
+| Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (for example, "triple" versus "increase by 200%")  <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
+| Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (for example, "triple" versus "increase by 200%") <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
 | In-app message | Aspects listed for "push" <br> [Message format][7] | Click <br> Conversion Rate |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -108,11 +108,11 @@ Additionally, when choosing which segment to run your test on, be sure to consid
 As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator](https://www.optimizely.com/resources/sample-size-calculator/).
 {% endalert %}
 
-### Control and test group assignments and bias
+### Bias and randomization
 
-A common question with control and test group assignments is wondering if they can introduce bias to your testing.
+A common question with control and test group assignments is wondering if they can introduce bias to your testing. Others sometimes wonder how we know if these assignments are truly random.
 
-Users are assigned to message variants, Canvas variants, or their respective control groups by concatenating their (randomly generated) user ID with the (randomly generated) campaign or Canvas ID, taking the modulus of that value with 100, and then ordering users into slices that correspond to the percentage assignments for variants and optional control chosen in the dashboard. So, there is no practical way that users' behaviors prior to the creation of a particular campaign or Canvas could vary systematically between variants and control.
+Users are assigned to message variants, Canvas variants, or their respective control groups by concatenating their (randomly generated) user ID with the (randomly generated) campaign or Canvas ID, taking the modulus of that value with 100, and then ordering users into slices that correspond to the percentage assignments for variants and optional control chosen in the dashboard. So, there is no practical way that users' behaviors prior to the creation of a particular campaign or Canvas could vary systematically between variants and control. It is also not practical to be any more random (or more accurately, pseudo-random) than this implementation.
 
 #### Mistakes to avoid
 

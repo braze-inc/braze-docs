@@ -221,6 +221,72 @@ The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
 {% endtab %}
 {% endtabs %}
 
+## Customizing button clicks
+
+To access in-app message button information or override the click behavior, implement [`BrazeInAppMessageUIDelegate.inAppMessage(_:shouldProcess:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:shouldprocess:buttonid:message:view:)-122yi). Return `true` to allow Braze to process the click action, or return `false` to override the behavior.
+{% tabs %}
+{% tab swift %}
+
+```swift
+  func inAppMessage(
+    _ ui: BrazeInAppMessageUI, shouldProcess clickAction: Braze.InAppMessage.ClickAction,
+    buttonId: String?, message: Braze.InAppMessage, view: InAppMessageView
+  ) -> Bool {
+    guard let buttonId,
+      let idInt = Int(buttonId)
+    else { return true }
+    var button: BrazeKit.Braze.InAppMessage.Button? = nil
+
+    switch message {
+    case .modal(let modal):
+      button = modal.buttons[idInt]
+
+    case .modalImage(let modalImage):
+      button = modalImage.buttons[idInt]
+
+    case .full(let full):
+      button = full.buttons[idInt]
+
+    case .fullImage(let fullImage):
+      button = fullImage.buttons[idInt]
+
+    default:
+      break
+    }
+    
+    print(button?.id)
+    print(button?.text)
+    print(button?.clickAction)
+
+    return true
+  }
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+```objc
+- (BOOL)inAppMessage:(BrazeInAppMessageUI *)ui
+       shouldProcess:(enum BRZInAppMessageRawClickAction)clickAction
+                 url:(NSURL *)uri
+            buttonId:(NSString *)buttonId
+             message:(BRZInAppMessageRaw *)message
+                view:(UIView *)view {
+  NSInteger buttonInt = [buttonId integerValue];
+
+  if (message.type == BRZInAppMessageRawTypeFull || message.type == BRZInAppMessageRawTypeModal) {
+    BRZInAppMessageRawButton *button = message.buttons[buttonInt];
+    NSLog(@"%ld", (long)button.identifier);
+    NSLog(@"%@", button.text);
+    NSLog(@"%ld", (long)button.clickAction);
+  }
+  return YES;
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+
 ## Hiding the status bar during display
 
 For `Full`, `FullImage` and `HTML` in-app messages, the SDK will hide the status bar by default. For other types of in-app messages, the status bar is left untouched. To configure this behavior, use the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) to set the `statusBarHideBehavior` property on the `PresentationContext`. This field takes one of the following values:
@@ -258,11 +324,12 @@ func inAppMessage(
 
 Configure `BrazeInAppMessageUI.DisplayChoice` to return one of the following values:
 
-| Display Choice                      | Behavior                                                                              |
-| ----------------------------------- | ------------------------------------------------------------------------------------- |
-| `.now`                              | The message will be displayed immediately. This is the default value.                 |
-| `.later`                            | The message will be not be displayed and will be placed back on the top of the stack. |
-| `.discard`                          | The message will be discarded and will not be displayed.                              |
+| Display Choice                      | Behavior                                                                                                                    |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `.now`                              | The message will be displayed immediately. This is the default value.                                                       |
+| `.reenqueue`                        | The message will be not be displayed and will be placed back on the top of the stack.                                       |
+| `.later`                            | The message will be not be displayed and will be placed back on the top of the stack. (Deprecated, please use `.reenqueue`) |
+| `.discard`                          | The message will be discarded and will not be displayed.                                                                    |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Implementation samples

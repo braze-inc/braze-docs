@@ -4,8 +4,10 @@ article_title: iOS 16 Upgrade Guide
 page_order: 7
 platform: 
   - iOS
-description: "This refernce article covers iOS 16, how to upgrade, SDK updates, and more."
+description: "This reference article covers iOS 16, how to upgrade, SDK updates, and more."
 ---
+
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # iOS 16 SDK upgrade guide
 

@@ -16,4 +16,4 @@ channel:
 
 To notify your users of this feature it is possible to send an in-app message or push notification through Braze to the user explaining this functionality or asking the user if they would like to change their icon. The developer would only need to create a deep link into the application where the native iOS prompt can be shown to make the icon change. This is similar to the same guidance we provide around setting up a push notification primer for APNs today.
 
-In addition, this messaging can take full advantage of Braze's segmentation ability to make the message copy highly contextual to a user. You can also leverage Braze's A/B testing of messages to see which messaging makes the most impact on your desired result.
+In addition, this messaging can take full advantage of segmentation to make the message copy highly contextual to a user. You can also leverage A/B testing of messages to see which messaging makes the most impact on your desired result.

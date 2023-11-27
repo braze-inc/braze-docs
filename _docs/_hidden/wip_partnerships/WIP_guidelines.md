@@ -46,7 +46,7 @@ We recommend first [forking](https://help.github.com/en/github/getting-started-w
 
 After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement). The GitHub username provided in the CLA must match the GitHub username for the user who commits the changes to the `braze-docs` repository. This step is required.
 
-{% alert note %}
+{% alert important %}
 We cannot merge any pull requests into our repository unless you have signed our CLA. If the CLA is not signed when your changes are submitted for review, this may result in a delay in getting your documentation published.
 {% endalert %}
 
@@ -204,6 +204,10 @@ One of the most important things you can do before committing your changes is to
 ### Step 6: Committing to GitHub {#committing}
 
 Once you have made the adequate changes to your partnership doc, save your document, and commit your changes.
+
+{% alert note %}
+Remember that we cannot merge any pull requests into our repository until you have signed our [CLA](https://www.braze.com/docs/cla). Submitting your updates before signing the CLA can introduce problems into our ability to finalize your content. Please sign the CLA before committing your changes to GitHub.
+{% endalert %}
 
 Within the Braze docs GitHub repository, find your branch. If your document is completed and ready to review, navigate to your forked repo in GitHub and select **New Pull Request**. Next, select how you would like your forked branch to be merged, name your request your partnership name and provide any relevant information that we can use to reference when reviewing your content.
 

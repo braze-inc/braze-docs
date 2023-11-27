@@ -61,11 +61,13 @@ If you select **Every time the campaign is scheduled**, those two phases will be
 
 For in-app messages and Content Cards, you can control marketing pressure by setting a maximum number of impressions that will be displayed to your user base, after which Braze will not send down more messages to your users. However, it is important to note that this cap is not exact. New Content Cards and in-app message rules are sent down to an app on session start, meaning that Braze can send a message to the user before the cap is hit, but by the time the user triggers the message, the cap has now been hit. In this situation, the device will still display the message.
 
-For example, let's say you have a game with an in-app message that triggers when a user beats a level, and you cap it at 100 impressions. There have been 99 impressions so far. Alice and Bob both open the game and Braze tells their devices that they are eligible to receive the message when they beat a level. Alice beats a level first and gets the message. Bob beats the level next, but since his device has not communicated with Braze's servers since his session started, his device is unaware that the message has met its cap and he will also receive the message. However, when an impression cap has been hit, the next time any device requests the list of eligible in-app messages, that message will not be sent down and will be removed from that device.
+For example, let's say you have a game with an in-app message that triggers when a user beats a level, and you cap it at 100 impressions. There have been 99 impressions so far. Alice and Bob both open the game and Braze tells their devices that they are eligible to receive the message when they beat a level. Alice beats a level first and gets the message. Bob beats the level next, but since his device has not communicated with Braze servers since his session started, his device is unaware that the message has met its cap and he will also receive the message. However, when an impression cap has been hit, the next time any device requests the list of eligible in-app messages, that message will not be sent down and will be removed from that device.
 
 ### Rate limiting and Canvas components
 
-As you build your Canvas user journey, it's important to consider which components are rate limited. [Message steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) are rate limited by the rate limit set at the Canvas level. For Audience Sync steps, refer to the [available sync partner]({{site.baseurl}}/partners/canvas_steps/) article. All other Canvas components are not rate limited.
+If multiple channels are utilized in a Canvas step, the rate limit will apply to each channel. Note that this can cause higher than expected requests for Connected Content. As a workaround, set a lower rate limit at the Canvas level. 
+
+For example, if your campaign utilizes email and push with a rate limit of 10,000 per minute, Braze will send up to 20,000 messages each minute (10,000 email and 10,000 push).
 
 ### Delivery speed rate limiting
 
@@ -108,7 +110,7 @@ For push campaigns delivering on multiple platforms, the rate limit selected wil
 
 ## Frequency capping
 
-As your user base continues to grow and your messaging scales to include lifecycle, triggered, transactional, and conversion campaigns, it's important to prevent your notifications from appearing spammy or disruptive. By providing greater control over your users' experience, frequency capping enables you to create the campaigns you desire without overwhelming your audience.
+As your user base continues to grow and your messaging scales to include lifecycle, triggered, transactional, and conversion campaigns, it's important to prevent your notifications from appearing "spammy" or disruptive. By providing greater control over your users' experience, frequency capping enables you to create the campaigns you desire without overwhelming your audience.
 
 ### Feature overview {#freq-cap-feat-over}
 

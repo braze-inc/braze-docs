@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Custom sounds
 
 ## Step 1: Hosting the sound in the app
@@ -20,7 +22,7 @@ Custom push notification sounds must be hosted locally within the main bundle of
 - µLaw
 - aLaw
 
-You can package the audio data in an AIFF, WAV, or CAF file. In Xcode, add the sound file to your project as a nonlocalized resource of the application bundle.
+You can package the audio data in an AIFF, WAV, or CAF file. In Xcode, add the sound file to your project as a non-localized resource of the application bundle.
 
 You may use the afconvert tool to convert sounds. For example, to convert the 16-bit linear PCM system sound Submarine.aiff to IMA4 audio in a CAF file, use the following command in the terminal:
 
@@ -34,7 +36,7 @@ Custom sounds must be under 30 seconds when played. If a custom sound is over th
 
 ## Step 2: Providing the dashboard with a protocol URL for the sound
 
-Your sound must be hosted locally within the app. You must specify a protocol URL that directs to the location of the sound file in the app within the **Sound** field in the push composer. Specifying "default" in this field will play the default notification sound on the device. This can be specified via our [messaging API][25] or our dashboard under **Settings** in the push composer wizard, as pictured in the following screenshot:
+Your sound must be hosted locally within the app. You must specify a protocol URL that directs to the location of the sound file in the app within the **Sound** field in the push composer. Specifying "default" in this field will play the default notification sound on the device. This can be specified via our [messaging API][25] or our dashboard under **Settings** in the push composer, as pictured in the following screenshot:
 
 ![][8]
 

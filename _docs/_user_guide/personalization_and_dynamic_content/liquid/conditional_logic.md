@@ -123,13 +123,13 @@ Hey {{${first_name} | default: 'there'}}, we're having a sale! Hurry up and get 
 {% endif %}
 ```
 
-Note that a null attribute value isn't strictly associated with a value type (e.g., a "null" string is the same as a "null" array), so in the example above, the null attribute value is referencing an unset first name, which would be a string.
+Note that a null attribute value isn't strictly associated with a value type (for example, a "null" string is the same as a "null" array), so in the example above, the null attribute value is referencing an unset first name, which would be a string.
 
 {% endraw %}
 
 ### Blank attribute values
 
-A blank value occurs when the attribute on a user profile isn't set, is set with a whitespace string (i.e., ` ` ), or is set as `false`. Blank values should be checked before other variables to avoid a Liquid processing error.
+A blank value occurs when the attribute on a user profile isn't set, is set with a whitespace string (` `), or is set as `false`. Blank values should be checked before other variables to avoid a Liquid processing error.
 
 The following tag allows you to specify a message for users that have a blank "first name" attribute.
 

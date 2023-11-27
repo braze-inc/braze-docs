@@ -31,8 +31,8 @@ With Braze’s multiple-store support, you can:
 
 ### Setting up an additional store
 1. After you have installed your first store, select the **+ Connect New Store** option.<br>![][1]<br><br>
-2. You will be prompted to go through the onboarding flow for this new store. More details can be found in our [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/#step-2-brazes-setup-wizard) guide.<br><br>Note that the settings from the previous store will be carried over, but you can update these accordingly.<br><br>
-3. For the collect email or sms subscribers step:
+2. You will be prompted to go through the onboarding flow for this new store. More details can be found in our [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/) guide.<br><br>Note that the settings from the previous store will be carried over, but you can update these accordingly.<br><br>
+3. For the collect email or SMS subscribers step:
 - **Customers with multiple regions and markets as stores**: Confirm you set the correct email subscription group to the right store for every store install. To track a user's most recent subscription state from any store, you must enable the “Override existing global state for users” option when installing each store. Doing so will override the Braze global email subscription state and the email subscription group.
 - **Customers with multiple brands as stores**: Currently, we do not have support to override only the email subscription group without also overriding the global email subscription state. We aim to provide this support ahead of general availability.<br><br>
 4. Repeat this installation for as many stores as you need.<br><br>
@@ -79,7 +79,7 @@ To trigger messaging to users completing actions with a specific store:
 
 ### Shopify user merging and syncing
 
-If the user’s Shopify customer ID, email address, or phone number exists already within Braze using the alias, {% raw %}`shopify_customer_id_{{storefront_domain}}`, `shopify_email`, or `shopify_phone`, {% endraw %} then we’ll update the existing user profile. If those aliases do not exist within Braze, we will create a new user profile. Note that it is possible for a user’s data (e.g., city) to differ across multiple Shopify stores for the same user. In such cases, Braze will always update the user profile from the store with the most recent activity. 
+If the user’s Shopify customer ID, email address, or phone number exists already within Braze using the alias, {% raw %}`shopify_customer_id_{{storefront_domain}}`, `shopify_email`, or `shopify_phone`, {% endraw %} then we’ll update the existing user profile. If those aliases do not exist within Braze, we will create a new user profile. Note that it is possible for a user’s data (for example, city) to differ across multiple Shopify stores for the same user. In such cases, Braze will always update the user profile from the store with the most recent activity. 
 
 {% alert warning %}
 Braze will update the user profile with Shopify customer data from the store with the most recent activity. This means that any attributes, such as email, phone number, sending phone, city, etc., can be overwritten with the most recent store activity. For example, if a user has a different phone number in two different stores, Braze will update the user profile with the phone number from the store with the most recent activity.

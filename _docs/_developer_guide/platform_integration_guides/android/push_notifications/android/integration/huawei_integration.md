@@ -21,13 +21,13 @@ Before getting started, you'll need to register and set up a [Huawei Developer a
 
 ## Step 2: Create a new Huawei app in the Braze dashboard
 
-In the Braze dashboard, go to **Manage Settings**, listed under the **Settings** navigation.
+In the Braze dashboard, go to **App Settings**, listed under the **Settings** navigation.
 
-Click **+ Add App**, provide a name (i.e., My Huawei App), select `Android` as the platform.
+Click **+ Add App**, provide a name (such as My Huawei App), select `Android` as the platform.
 
 ![][4]{: style="max-width:60%;"}
 
-Once your new Braze app has been created, locate the push notification settings and select `Huawei` as the push provider. Next, provide your `Huawei App ID` and `Huawei App Secret`.
+Once your new Braze app has been created, locate the push notification settings and select `Huawei` as the push provider. Next, provide your `Huawei Client Secret` and `Huawei App ID`.
 
 ![][12]
 
@@ -104,7 +104,7 @@ In the **Campaigns** page, create a new campaign, and choose **Push Notification
 
 After you name your campaign, choose **Android Push** as the push platform.
 
-![The campaign creation wizard displaying the available push platforms.][5]
+![The campaign creation composer displaying the available push platforms.][5]
 
 Next, compose your push campaign with a title and message.
 
@@ -112,7 +112,7 @@ Next, compose your push campaign with a title and message.
 
 In the **Test** tab, enter your user ID, which you've set in your app using the [`changeUser(USER_ID_STRING)` method][9], and click **Send Test** to send a test push.
 
-![The test tab in the campaign creation wizard shows you can send a test message to yourself by providing your user ID and entering it into the "Add Individual Users" field.][7]
+![The test tab in the campaign creation composer shows you can send a test message to yourself by providing your user ID and entering it into the "Add Individual Users" field.][7]
 
 At this point, you should receive a test push notification on your Huawei (HMS) device from Braze.
 

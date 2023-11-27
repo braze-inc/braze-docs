@@ -32,7 +32,7 @@ Link aliasing is only supported in `href` attributes within HTML anchor tags whe
 
 Follow these steps to view all of your tracked link aliases:
 
-1. Go to **Settings** > **Email Preferences** under **Worksapce Settings**.
+1. Go to **Settings** > **Email Preferences** under **Workspace Settings**.
 2. Click the **Link Aliasing Settings** tab.
 
 {% alert important %}
@@ -49,6 +49,10 @@ On the **Link Aliasing Settings** tab, you can turn off tracking for link aliase
 
 1. Select the link alias.
 2. Click **Turn off tracking**.  
+
+#### Link aliases and user profile data
+
+In Braze, if you have a link alias in your app or website and a user clicks on it, the event is recorded in the user's profile with the alias. Later, if you decide to rename this link alias, the previous click data in the user profile **will not** be updated, meaning it will still show as the previous link alias. So, if you target users based on the the new link alias, it will not include the data from the previous link alias.
 
 ### Checking workflows
 
@@ -76,15 +80,13 @@ For Content Blocks, Braze recommends creating copies of existing Content Blocks 
 
 The following table provides examples of links in an email body, link aliasing results, and explanations for how the original link is updated with link aliasing.
 
-{%raw%}
 | Link in Email Body | Link with Aliasing | Logic |
 |---|---|---|
 | https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk | Braze inserts a question mark (?) and adds the first query parameter into the URL. |
 | https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz | Braze detects other query parameters and appends `lid=` to the end of the URL. |
-| `<a href="{{custom_attribute.{product_url}}?">` | `<a href="{{custom_attribute.{product_url}}?lid=ac7a548g5kl7">` | Braze recognizes that this is a URL and already has a question mark (?) present. Then, it appends the `lid` query parameter after the question mark. |
+| {%raw%}`<a href="{{custom_attribute.{product_url}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}?lid=ac7a548g5kl7">`{%endraw%} | Braze recognizes that this is a URL and already has a question mark (?) present. Then, it appends the `lid` query parameter after the question mark. |
 | https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email | Braze expects the URL to use a standard structure where anchors (#) are present after a question mark (?). Because Braze reads from left to right, we will append the question mark and `lid` value before the anchor. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-{%endraw%}
 
 ## Link aliasing for URLs generated via Liquid
 
@@ -96,9 +98,9 @@ Check out this link aliasing example for the recommended formatting of the ancho
 
 {% raw %}
 ```liquid
-{% assign link1 = https://www.braze1.com %}
+{% assign link1 = "https://www.braze1.com" %}
 
-<a href="{{link1}}?">{{link1}}?</a>
+<a href="{{link1}}?">{{link1}}</a>
 ```
 {% endraw %}
 
@@ -119,7 +121,7 @@ The retargeting of aliases filters allow you to create segmentation filters base
 In the **Link Management** tab, select which aliases you would like to be "tracked" for segmentation purposes and to be present in segmentation filters. Note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes.
 
 {% alert tip %}
-To track link engagement metrics, make sure to precede your link with either HTTP or HTTPS.
+To track link engagement metrics, make sure your link precedes with either HTTP or HTTPS.
 {% endalert %}
 
 Braze allows you to select unlimited links to track, though you may only retarget users on the most recent links they have opened. User profiles include their 100 most recently clicked links. For example, if you track 500 links and a user clicks on all 500 of them, you can retarget or create segments based on the 100 most recently clicked links.
@@ -143,13 +145,15 @@ Braze only tracks up to the last 100 clicked link aliases at the profile level.
 
 ### Untracking links
 
-Untracking a link will not deallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it's replaced by newer data. The following segmentation filters will continue to exist, but new segments cannot be created with that filter.
+Untracking a link will not reallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it's replaced by newer data. The following segmentation filters will continue to exist, but new segments cannot be created with that filter.
 
 For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
 
 ![][1]
 
 ### Segment filters
+
+The following segment filters apply to click events that are tracked at the time the event is processed. This means untracking links won't remove existing data and tracking a link won't backfill the data.
 
 #### Clicked Alias in Campaign
 

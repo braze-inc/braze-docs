@@ -4,7 +4,7 @@ article_title: Segment Extensions
 page_order: 3.1
 
 page_type: tutorial
-description: "This how-to article will walk you through how to set up and use a Segment Extension to enhance your segmentation capabilites."
+description: "This how-to article will walk you through how to set up and use a Segment Extension to enhance your segmentation capabilities."
 tool: Segments
 ---
 
@@ -40,7 +40,7 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 Select between purchase, message engagement, or custom event criteria for targeting. After you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and the time period—for Segment Extensions specifically, you can go back up to the past 730 days (2 years).
 
-Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range (i.e., past X days), a start date, an end date, or an exact date range (date A to date B).
+Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range (such as past X days), a start date, an end date, or an exact date range (date A to date B).
 
 ![][3]
 

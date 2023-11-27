@@ -37,7 +37,7 @@ Intelligent Selection allocates variants for sending based on the current status
 
 Intelligent Selection will stop optimizing when it has 95% confidence that continuing the experiment won't improve the conversion rate by more than 1% of its current rate.
 
-### Why can I not enable Intelligent Selection in my Canvas or campaign (greyed out)?
+### Why can I not enable Intelligent Selection in my Canvas or campaign (grayed out)?
 
 Intelligent Selection will be unavailable if:
 

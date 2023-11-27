@@ -9,7 +9,7 @@ description: "This landing page is home to Braze Content Cards. Here, you can fi
 channel:
   - content cards
 search_rank: 5
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: About Content Cards
   link: /docs/user_guide/message_building_by_channel/content_cards/about/

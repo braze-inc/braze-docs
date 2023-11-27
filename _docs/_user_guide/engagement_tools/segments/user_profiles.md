@@ -37,7 +37,7 @@ Most searches return one user profile. However, if you search for an email that 
 
 If your search returns multiple user profiles, merging profiles can be a method to tidy up your Braze user profiles.
 
-To merge user profiles, these user profiles must be found using the same search query (e.g., searching "testuser" returns three different user profiles). Click the **Merge duplicates** button to merge the user profiles. You can select which user profile to keep, meaning this profile will be kept and will gain attributes from the merged profile (the user profile to merge). 
+To merge user profiles, these user profiles must be found using the same search query (for example, searching "testuser" returns three different user profiles). Click the **Merge duplicates** button to merge the user profiles. You can select which user profile to keep, meaning this profile will be kept and will gain attributes from the merged profile (the user profile to merge). 
 
 Once user profiles are merged, this action cannot be undone. For a list of fields that can be merged, refer to [Merge updates behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
 

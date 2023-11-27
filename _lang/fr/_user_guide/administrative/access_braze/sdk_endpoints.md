@@ -21,6 +21,7 @@ description: "Cet article de référence couvre les endpoints SDK de Braze et le
 |US-04 | sdk.iad-04.braze.com |
 |US-05 | sdk.iad-05.braze.com |
 |US-06 | sdk.iad-06.braze.com |
+|US-07 | sdk.iad-07.braze.com |
 |US-08 | sdk.iad-08.braze.com |
 |EU-01 | sdk.fra-01.braze.eu |
 |EU-02 | sdk.fra-02.braze.eu |

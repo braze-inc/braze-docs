@@ -106,7 +106,7 @@ You can find details of all the Braze fields in this section.
 | Quantity | Dropdown selection | • Quantity attribute for purchase action.<br>• Onboard the relevant attribute to the Zeotap Catalogue and map to it. |
 | Country | Dropdown selection | Map to the `Country` Catalogue field you are onboarding. |
 | City | Dropdown selection | Map to the `City` Catalogue field you are onboarding. |
-| Language | Dropdown selection | • The accepted format is `ISO-639-1` standard (e.g., en).<br>• Onboard correctly formatted language and map to it. |
+| Language | Dropdown selection | • The accepted format is `ISO-639-1` standard (for example, en).<br>• Onboard correctly formatted language and map to it. |
 | Date of Birth | Dropdown selection | Map to the `Date of Birth` field you are onboarding. |
 | Custom Attribute | Custom Data Input | Map any user attribute to a custom data input, which is then sent to Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}

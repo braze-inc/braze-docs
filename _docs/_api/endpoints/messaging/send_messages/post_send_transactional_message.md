@@ -15,7 +15,7 @@ description: "This article outlines details about the Send transactional email m
 /transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}
 
-> Use this endpoint to send immediate, ad-hoc transactional messages to a designated user. 
+> Use this endpoint to send immediate, one-off transactional messages to a designated user. 
 
 This endpoint is used alongside the creation of a [Transactional Email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
 
@@ -84,11 +84,9 @@ curl -X POST \
           "example_string_property": YOUR_EXAMPLE_STRING,
           "example_integer_property": YOUR_EXAMPLE_INTEGER
         },
-        "recipient": [
-          {
-            "external_user_id": TARGETED_USER_ID_STRING
-          }
-        ]
+        "recipient": {
+          "external_user_id": TARGETED_USER_ID_STRING
+        }
       }' \
   https://rest.iad-01.braze.com/transactional/v1/campaigns/{campaign_id}/send
 ```
@@ -167,7 +165,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 |  Status | Description |
 | ------------ | ----------- |
-| `sent` | Message successfully dispatched to Braze's email sending partner  |
+| `sent` | Message successfully dispatched to a Braze email sending partner |
 | `processed` | Email sending partner has successfully received and prepared the message for sending to the user's inbox provider |
 | `aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or Liquid abort logic was called in the message body. All aborted events include a `reason` field within the metadata object indicating why the message was aborted |
 |`delivered`| Message was accepted by the user's email inbox provider |

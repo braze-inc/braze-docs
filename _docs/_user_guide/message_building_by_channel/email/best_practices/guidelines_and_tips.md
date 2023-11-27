@@ -16,7 +16,7 @@ Here are some quick tips to keep in mind while building your content:
 
 - When formatting your email, use inline style sheets as CSS.
 - To use one email template for both mobile and desktop versions, keep the width under 500 pixels.
-- Images uploaded to the email template must be less than 5&nbsp;MB. Supported formats include PNG, JPG, and GIF.
+- Images uploaded to the email template must be less than 5&nbsp;MB. Supported formats include PNG, JPEG, and GIF.
 - Don't set heights and widths for images as this will cause unnecessary white space in a degraded email.
 - `div` tags should not be used as most email clients do not support their use. Instead, use nested tables.
 - Avoid using JavaScript because it does not work with any ESP.
@@ -58,7 +58,7 @@ Email addresses targeted via the Braze servers must be validated per [RFC 2822](
 
 ### Setting from and reply-to addresses
 
-When setting your "from" addresses, make sure your "from" email domain matches your sending domain (i.e., `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
+When setting your "from" addresses, make sure your "from" email domain matches your sending domain (such as `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
 
 ### Checking HTML details
 

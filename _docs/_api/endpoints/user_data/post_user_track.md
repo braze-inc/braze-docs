@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Track User"
-article_title: "POST: Track User"
+nav_title: "POST: Track Users"
+article_title: "POST: Track Users"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -76,10 +76,6 @@ For each of the request components listed in the following table, one of `extern
 
 ## Example request for updating a user profile by email address
 
-{% alert important %}
-Updating a user profile by email address with this endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 Using the `/users/track` endpoint, you can update a user profile by email address. You'll need to generate an API key with `users.track` permissions to use this endpoint.
 
 ```
@@ -153,14 +149,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ## Example request for updating a user profile by phone number
 
-{% alert important %}
-Updating a user profile by phone number with this endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 Using the `/users/track` endpoint, you can update a user profile by phone number. You'll need to generate an API key with `users.track` permissions to use this endpoint. This endpoint only works if you include a valid phone number.
 
 {% alert important %}
-If you include a request with both email and phone, we will use the email as the identifer.
+If you include a request with both email and phone, we will use the email as the identifier.
 {% endalert %}
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -379,30 +371,5 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API-generated user profile.
 
 The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app, simply add the filter: `Session Count > 0`.
-
-## Making bulk updates
-
-If you have a use case where you need to make batch updates to the `users/track` endpoint, we recommend adding the bulk update header so that Braze can properly identify, observe, and route your request.
-
-Refer to the following sample request with the `X-Braze-Bulk` header:
-
-```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
---header 'Content-Type: application/json' \
---header 'X-Braze-Bulk: true' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
---data-raw '{ "attributes": [ ], "events": [ ], "purchases": [ ] }'
-```
-
-{% alert warning %}
-When the `X-Braze-Bulk` header is present with any value, Braze will consider the request a bulk request. Set the value to `true`. Currently, setting the value to `false` does not disable the header—it will still be treated as if it were true.
-{% endalert %}
-
-### Use cases
-
-Consider the following use cases where you may use the bulk update header:
-
-- A daily job where multiple users' custom attributes are updated via the `/users/track` endpoint.
-- An ad-hoc user data backfill script which updates user information via the `/users/track` endpoint.
 
 {% endapi %}

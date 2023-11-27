@@ -187,7 +187,6 @@ The following table lists possible returned errors and their associated troubles
 | `invalid-field-names` | Fields can only include letters, numbers, hyphens, and underscores. |
 | `invalid-field-types` | Make sure the field types are valid. |
 | `invalid-fields` | `fields` is not formatted correctly. |
-| `reached-company-catalogs-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
 | `too-many-catalog-atoms` | You can only create one catalog per request. |
 | `too-many-fields` | Number of fields limit is 500. |
 {: .reset-td-br-1 .reset-td-br-2}

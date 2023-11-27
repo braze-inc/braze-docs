@@ -11,17 +11,27 @@ description: "This reference article provides an overview of Cloud Data Ingestio
 
 > Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. When synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion connects your data in Snowflake, Redshift, BigQuery, or Databricks to Braze.
 
-### How it works
+## How it works
 
 With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
 
 When a sync runs, Braze will directly connect to your data warehouse instance, retrieve all new data from the specified table, and update the corresponding data on your Braze dashboard. Each time the sync runs, any updated data will be reflected in Braze.
 
-### Supported data types 
+## Supported data types 
 
-Sync user attributes, custom events, and purchases through Cloud Data Ingestion. Data for a user can be updated by external ID, user alias, or Braze ID. CDI can support nested custom attributes, arrays of objects, and can be used to updated subscription statuses. 
+Cloud Data Ingestion supports the following data types: 
+- User attributes, including: 
+   - Nested custom attributes
+   - Arrays of objects
+   - Subscription statuses
+- Custom events
+- Purchase events
+- Catalog items
+- User delete requests
 
-### What gets synced
+User data can be updated by external ID, user alias, Braze ID, email, or phone number. Users can be deleted by external ID, user alias, or Braze ID. 
+
+## What gets synced
 
 Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is later than the last synced row will be selected and pulled into Braze.
 
@@ -72,7 +82,7 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
 }
 ```
 
-#### Update a field in an existing array of objects
+### Example: Update a field in an existing array of objects
 
 This example shows how to update a field in an existing array of objects. Let's say we have a source table with the following definition:
 
@@ -157,7 +167,7 @@ UPDATED_AT	EXTERNAL_ID	PAYLOAD
 2023-10-02 19:50:25.266 +0000	12335345	{"_merge_objects":"true","pets":{"$update":[{"$identifier_key":"id","$identifier_value":3,"$new_object":{"age":6,"name":"Doug"}},{"$identifier_key":"id","$identifier_value":4,"$new_object":{"age":1,"name":"Larry"}}]}}
 ```
 
-### Data point usage
+## Data point usage
 
 Each attribute sent for a user will consume one data point. It's up to you to only send the required data. Data point tracking for Cloud Data Ingestion is equivalent to tracking through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
 
@@ -330,11 +340,10 @@ To sync purchase events, event name, `product_id`, `currency`, `price`, and `tim
 | Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.                                             |
 | Number of rows         | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column.                                                            |
 | Attributes per row     | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
-| Payload size           | Each row can contain a payload of size upto 1 MB. Payloads greater than 1 MB will be rejected.                                                                                     |
+| Payload size           | Each row can contain a payload of size up to 1 MB. Payloads greater than 1 MB will be rejected.                                                                                     |
 | Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
 | Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
 | Source region       | Braze will connect to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
-
 {: .reset-td-br-1 .reset-td-br-2}
 
 <br><br>

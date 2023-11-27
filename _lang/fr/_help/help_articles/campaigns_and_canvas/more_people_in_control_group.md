@@ -41,6 +41,6 @@ Vous avez toujours besoin d’aide ? Ouvrez un [ticket de support]({{site.baseu
 
 _Dernière mise à jour le 3 décembre 2020_
 
-[1]: {{site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas
+[1]: {{site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas
 [41]: {% image_buster /assets/img_archive/trouble15.png %}
 [42]: {% image_buster /assets/img_archive/trouble16.png %}

@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+
 # Read and unread indicators
 
 ## Disabling the unviewed indicator
@@ -19,7 +21,7 @@ You can choose to disable the blue line at the bottom of the card, which indicat
 
 ## Customizing the unviewed indicator
 
-The unviewed indicator can be accessed through the `unviewedLineView` property of the `ABKBaseContentCardCell` class. If you use Braze's `UITableViewCell` implementations, you should access the property before the cell is drawn.
+The unviewed indicator can be accessed through the `unviewedLineView` property of the `ABKBaseContentCardCell` class. If you use `UITableViewCell` implementations, you should access the property before the cell is drawn.
 
 For example, to set the color of the unviewed indicator to red:
 

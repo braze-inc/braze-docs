@@ -37,7 +37,7 @@ When using the integration, BlueConic will send deltas (changing data) on each s
 
 In BlueConic, select **Connections** in the navigation bar, and then **Add Connection**. In the prompt that appears, search **Braze** and select **Braze connection**. 
 
-Expand or collapse available metadata fields in the connection by clicking the grey chevron icon. Within these fields, you can favorite this connection, name your connection, add labels, include a description, and choose to get email notifications if the connection [runs or fails to run][5]. 
+Expand or collapse available metadata fields in the connection by clicking the gray chevron icon. Within these fields, you can favorite this connection, name your connection, add labels, include a description, and choose to get email notifications if the connection [runs or fails to run][5]. 
 
 Save your settings.
 

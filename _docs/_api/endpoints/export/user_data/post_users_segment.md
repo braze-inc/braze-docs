@@ -20,7 +20,7 @@ description: "This article outlines details about the Export users by segment Br
 Beginning December 2021, the following changed for this API:<br><br>1. The `fields_to_export` field in this API request is **required**. The option to default to all fields has been removed.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
 {% endalert %}
 
-User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line). Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
+User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
 
 This endpoint is currently not supported by Google Cloud Storage.
 
@@ -60,9 +60,9 @@ Example ZIP File:
 
 {% enddetails %}
 
-We strongly suggest that customers who use this endpoint set up their own S3 or Azure credentials so that customers can enforce their own bucket policies on the export. If you do not have your cloud storage credentials provided, the response to the request provides the URL where a ZIP file containing all the user files can be downloaded. The URL will only become a valid location after the export is ready. 
+We strongly suggest that customers who use this endpoint set up their own S3 or Azure credentials so that customers can enforce their own bucket policies on the export. If you do not have your cloud storage credentials, the response to the request provides the URL where a ZIP file containing all the user files can be downloaded. The URL will only become a valid location after the export is ready. 
 
-Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you're exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using 'fields_to_export' and specifying only the fields you need in order to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (e.g., create a segment where random bucket number <1000, between 1000 and 2000, etc).
+Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data you can export from this endpoint. Depending on the fields you're exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using 'fields_to_export' and specify only the fields you need to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base into more segments based on a random bucket number (for example, create a segment where a random bucket number is less than 1000, between 1000 and 2000, etc).
 
 In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be "success":true. If you have not added S3 credentials to Braze, then the body of the post will additionally have the attribute `url` with the download URL as the value.
 
@@ -78,9 +78,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "segment_id" : (required, string) identifier for the segment to be exported,
-  "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
+  "callback_endpoint" : (optional, string) endpoint to post a download URL when the export is available,
   "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
-  "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to zip file format
+  "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to ZIP file format
 }
 ```
 
@@ -128,7 +128,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 
 ## Fields to export
 
-The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:
+The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve the response time of this API endpoint:
 
 | Field to export | Data type | Description |
 |---|---|---|
@@ -136,13 +136,13 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 | `attributed_campaign` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for a particular ad campaign. |
 | `attributed_source` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for the platform the ad was on. |
 | `attributed_adgroup` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign. |
-| `attributed_ad` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign and adgroup. |
+| `attributed_ad` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign and ad group. |
 | `braze_id` | String | Device-specific unique user identifier set by Braze for this user. |
 | `country` | String | User's country using [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard. |
 | `created_at` | String | Date and time for when the user profile was created, in ISO 8601 format. |
 | `custom_attributes` | Object | Custom attribute key-value pairs for this user. |
 | `custom_events` | Array | Custom events attributed to this user in the last 90 days. |
-| `devices` | Array | Information about the user's device, which could include the following depending on platform:<br><br>- `model`: Device's model name<br>- `os`: Device's operating system<br>- `carrier`: Device's service carrier, if available<br>- `idfv`: (iOS) Braze's device identifier, the Apple Identifier for Vendor, if exists<br>- `idfa`: (iOS) Identifier for Advertising, if exists<br>- `device_id`: (Android) Braze's device identifier<br>- `google_ad_id`: (Android) Google Play Advertising Identifier, if exists<br>- `roku_ad_id`: (Roku) Roku Advertising Identifier<br>- `ad_tracking_enabled`: If ad tracking is enabled on the device, can be true or false |
+| `devices` | Array | Information about the user's device, which could include the following depending on platform:<br><br>- `model`: Device's model name<br>- `os`: Device's operating system<br>- `carrier`: Device's service carrier, if available<br>- `idfv`: (iOS) Braze device identifier, the Apple Identifier for Vendor, if exists<br>- `idfa`: (iOS) Identifier for Advertising, if exists<br>- `device_id`: (Android) Braze device identifier<br>- `google_ad_id`: (Android) Google Play Advertising Identifier, if exists<br>- `roku_ad_id`: (Roku) Roku Advertising Identifier<br>- `ad_tracking_enabled`: If ad tracking is enabled on the device, can be true or false |
 | `dob` | String | User's date of birth in the format `YYYY-MM-DD`. |
 | `email` | String | User's email address. |
 | `external_id` | String | Unique user identifier for identified users. |
@@ -153,7 +153,8 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 | `last_coordinates` | Array of floats | User's most recent device location, formatted as `[longitude, latitude]`. |
 | `last_name` | String | User's last name. |
 | `phone` | String | User's telephone number in E.164 format. |
-| `purchase`s | Array | Purchases this user has made in the last 90 days. |
+| `purchases` | Array | Purchases this user has made in the last 90 days. |
+| `push_tokens` | Array | Information about the user's push tokens. |
 | `random_bucket` | Integer | User's [random bucket number]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event), used to create uniformly distributed segments of random users. |
 | `time_zone` | String | User's time zone in the same format as the IANA Time Zone Database. |
 | `total_revenue` | Float | Total revenue attributed to this user. Total revenue is calculated based on purchases the user made during conversion windows for the campaigns and Canvases they received. |
@@ -175,7 +176,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, e.g., 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, for example, 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```

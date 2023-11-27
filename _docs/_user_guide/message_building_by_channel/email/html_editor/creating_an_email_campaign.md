@@ -53,7 +53,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 **Steps:**
 
-1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas wizard.
+1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
 3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
 4. Filter your Audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
@@ -200,7 +200,7 @@ The editor will call out any problems it catches with your message before you se
 - Email bodies larger than 400kb (bodies are highly recommended to be [smaller than 102kb][16])
 - Emails with a blank **Body** or **Subject**
 - Emails without an unsubscribe link
-- Email you're sending from is not whitelisted (sends will be highly limited to ensure deliverability)
+- Email you're sending from is not allowlisted (sends will be highly limited to ensure deliverability)
 
 ## Step 4: Build the remainder of your campaign or Canvas
 
@@ -237,7 +237,7 @@ For multichannel campaigns targeting both email and push channels, you may want 
 To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will check that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
 
 {% alert important %}
-With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
+With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (for example, `Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### Choose conversion events
@@ -249,7 +249,7 @@ Braze allows you to track how often users perform specific actions, [conversion 
 - Performs specific custom event
 - Opens email
 
-You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of Braze's [Intelligent Selection]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/) feature.
+You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of [Intelligent Selection]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/).
 {% endtab %}
 
 {% tab Canvas %}

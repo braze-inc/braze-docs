@@ -26,9 +26,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 {% endalert %}
 
 {:start="2"}
-2. Click **Create New SQL Report**.
+2. Click **Create New SQL Report**. If you need inspiration or help in crafting your query, select **Query Template** and choose a template from the list. Otherwise, select **SQL Editor** to head straight to the editor.
 3. Your report is automatically given a name with the current date and time. Hover over the name and click <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
-4. Write your SQL query in the editor or select a [query template](#query-templates) from the **Query Templates** tab. If you choose to write your own SQL, see [custom SQL](#custom-sql) for requirements and resources.
+4. Write your SQL query in the editor or [get help from AI](#ai-query-builder) from the **AI Query Builder** tab. If you choose to write your own SQL, see [custom SQL](#custom-sql) for requirements and resources.
 5. Click **Run Query**.
 6. Save your query.
 7. To download a CSV of your report, click **Export**.
@@ -37,7 +37,33 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Results from each report can be generated once a day. If you run the same report more than once in one calendar day, you'll see the same results in both reports.
 
-### Report timeout
+## AI Query Builder
+
+The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your query.
+
+{% alert note %}
+The AI Query Builder is currently available as a beta feature. Contact your customer success manager if you’re interested in participating in this beta trial.
+{% endalert %}
+
+![][2]{: style="max-width:60%;" }
+
+To use the AI Query Builder, do the following:
+
+1. After creating a report in the Query Builder, select the **AI Query Builder** tab.
+2. Type in your prompt or select a sample prompt and click **Generate** to translate your prompt into SQL.
+3. Review the generated SQL to make sure it looks correct, and then click **Insert into Editor**.
+
+### Tips
+
+- Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
+- Familiarize yourself with the [SQL writing rules]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/#custom-sql) for this feature. Not following these rules will cause an error.
+- You can send up to 20 prompts per minute with the AI Query Builder.
+
+### How is my data used and sent to OpenAI?
+
+In order to generate your SQL, Braze will send your prompts to OpenAI’s API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the content you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, including the [Usage Policy](https://openai.com/policies/usage-policies). Braze makes no warranty of any kind with respect to any AI-generated content. 
+
+## Report timeout
 
 Reports that take longer than 6 minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
 
@@ -45,7 +71,7 @@ If a report times out or runs into errors even after retrying, please contact su
 
 ## Query templates
 
-All templates surface data from the last 60 days. You can access query templates from **Reference** > **Query Templates**.
+All templates surface data from the last 60 days. You can access query templates by selecting **Create SQL Query** > **Query Template** when first creating a report.
 
 <style>
 table th:nth-child(1) {
@@ -86,11 +112,7 @@ To view table details within the Query Builder:
 3. Click <i class="fas fa-chevron-down" alt=""></i> **See Details** to view the table description and information about the table columns, such as data types.
 4. To insert the table name in your SQL, click <i class="fas fa-copy" title="Copy table name to SQL editor"></i>.
 
-To view pre-written queries provided by Braze:
-
-1. Select the **Query Templates** tab.
-2. Select the report you’d like to run.
-3. Click **Run Query** to view results.
+To view pre-written queries provided by Braze select **Query Template** when first creating a report in the Query Builder.
 
 Restricting your query to a specific time period will help you generate results quicker. The following is an example query that gets the number of purchases and the revenue generated for the last hour.
 
@@ -125,6 +147,10 @@ Results, and exports of results, are tables that can contain up to 1,000 rows. F
 
 Each Braze workspace has 5 Snowflake credits available per month. A small portion of a Snowflake credit is used whenever you run a query or preview a table.
 
+{% alert note %}
+Snowflake credits are not shared between features. For example, credits across SQL Segment Extensions and Query Builder are independent of each other.
+{% endalert %}
+
 Credit usage is correlated to the run time of your SQL query. The longer the run time is, the higher the portion of a Snowflake credit a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
 
 {% alert note %}
@@ -138,3 +164,4 @@ Credits are not used when writing, editing, or saving reports within the Braze S
 When you reach the credit cap, you cannot run queries, but you can create, edit, and save SQL reports. If you want to purchase more Query Builder credits, please get in touch with your account manager.
 
 [1]: {% image_buster /assets/img_archive/query_builder_credits.png %}
+[2]: {% image_buster /assets/img_archive/query_builder_ai_tab.png %}

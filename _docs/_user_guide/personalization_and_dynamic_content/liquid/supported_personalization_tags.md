@@ -18,7 +18,7 @@ As a convenience, a summary of supported personalization tags are provided. For 
 | -------------  | ---- |
 | Standard (Default) Attributes | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
 | Device Attributes | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| [Email List Attributes][43] | `{{${set_user_to_unsubscribed_url}}}` <br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
+| [Email List Attributes][43] | `{{${set_user_to_unsubscribed_url}}}` <br>This tag replaces the previous `{{${unsubscribe_url}}}` tag. While the older tag will still work in previously created emails, we recommend that you use the newer tag instead. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
 | [SMS Attributes][48] | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
 | [WhatsApp Attributes][46] | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` |
 | Campaign Attributes | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
@@ -49,18 +49,18 @@ The behavior for the following tags differs between Canvas and campaigns:
 
 ## Most recently used device information
 
-You can template in the following attributes for the user's most recent device across all platforms. If a user has not used your application (e.g., you imported the user via REST API), then these values will all be `null`.
+You can template in the following attributes for the user's most recent device across all platforms. If a user has not used your application (for example, you imported the user via REST API), then these values will all be `null`.
 
 {% raw %}
 
 |Tag | Description |
 |---|---|
 |`{{most_recently_used_device.${browser}}}` | The most recently used browser on the user's device. Examples include "Chrome" and "Safari". |
-|`{{most_recently_used_device.${id}}}` | This is Braze's device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms it is a randomly generated UUID. |
+|`{{most_recently_used_device.${id}}}` | This is the Braze device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms it is a randomly generated UUID. |
 | `{{most_recently_used_device.${carrier}}}` | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange". |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | If the device has ad tracking enabled or not. This is a boolean value (`true` or `false`). |
-| `{{most_recently_used_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with Braze's [optional IDFA collection][40]. For non-iOS devices, this value will be null. |
-| `{{most_recently_used_device.${google_ad_id}}}` | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with Braze's optional Google Play Advertising ID collection. For non-Android devices, this value will be null. |
+| `{{most_recently_used_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with our [optional IDFA collection][40]. For non-iOS devices, this value will be null. |
+| `{{most_recently_used_device.${google_ad_id}}}` | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with our optional Google Play Advertising ID collection. For non-Android devices, this value will be null. |
 | `{{most_recently_used_device.${roku_ad_id}}}` | For Roku devices, this value will be the Roku Advertising Identifier that is collected when your application is configured with Braze. For non-Roku devices, this value will be null. |
 | `{{most_recently_used_device.${model}}}` | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox". |
 | `{{most_recently_used_device.${os}}}` | The device's operating system, if available. Examples include "iOS 9.2.1" and "Android (Lollipop)" and "Windows". |
@@ -77,7 +77,7 @@ For in-app messages, you can use the following app attributes within Liquid. The
 |Tag | Description |
 |------------------|---|
 | `{{app.${api_id}}}` | The API key of the app requesting the message. For example, you use this key in conjunction with `abort_message()` Liquid to avoid sending in-app messages to certain apps, such as TV platforms or development builds that use a separate SDK API key.|
-| `{{app.${name}}}` | The name of the app (as defined in the Braze dashbaord) requesting the message|
+| `{{app.${name}}}` | The name of the app (as defined in the Braze dashboard) requesting the message|
 {: .reset-td-br-1 .reset-td-br-2}
 
 For example, this Liquid code will abort a message if the requesting apps are not one of the two API keys in the list:
@@ -97,10 +97,10 @@ For push notification and in-app message channels, you can template in the follo
 
 |Tag | Description |
 |------------------|---|
-| `{{targeted_device.${id}}}` | This is Braze's device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms it is a randomly generated UUID. |
+| `{{targeted_device.${id}}}` | This is the Braze device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms it is a randomly generated UUID. |
 | `{{targeted_device.${carrier}}}` | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange". |
-| `{{targeted_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with Braze's [optional IDFA collection][40]. For non-iOS devices, this value will be null. |
-| `{{targeted_device.${google_ad_id}}}` | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with Braze's [optional Google Play Advertising ID collection]. For non-Android devices, this value will be null. |
+| `{{targeted_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with our [optional IDFA collection][40]. For non-iOS devices, this value will be null. |
+| `{{targeted_device.${google_ad_id}}}` | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with our [optional Google Play Advertising ID collection]. For non-Android devices, this value will be null. |
 | `{{targeted_device.${roku_ad_id}}}` | For Roku devices, this value will be the Roku Advertising Identifier that is collected when your application is configured with Braze. For non-Roku devices, this value will be null. |
 | `{{targeted_device.${model}}}` | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox". |
 | `{{targeted_device.${os}}}` | The device's operating system, if available. Examples include "iOS 9.2.1" and "Android (Lollipop)" and "Windows". |
@@ -208,7 +208,7 @@ In this example, we check the first five items in the sneaker brands viewed arra
 
 Then, we send the sale message when converse_viewer is true. Otherwise, we abort the message.
 
-This is a simple example of how iteration tags can be used in Braze's message composer. You can find more information in Shopify's documentation on [iteration tags][32].
+This is a simple example of how iteration tags can be used in the Braze message composer. You can find more information in Shopify's documentation on [iteration tags][32].
 
 ## Syntax tags
 

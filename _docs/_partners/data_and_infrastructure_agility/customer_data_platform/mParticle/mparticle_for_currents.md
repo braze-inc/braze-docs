@@ -35,7 +35,7 @@ The Braze feed integration supports four separate feeds: iOS, Android, Web, and 
 
 ![][1]
 
-For each feed, under **Act as Platform** select the matching platform from the list. If you do not see an option to select an **act-as** feed, the data will be treated as unbound, but can still be forwarded to data warehourse outputs.
+For each feed, under **Act as Platform** select the matching platform from the list. If you do not see an option to select an **act-as** feed, the data will be treated as unbound, but can still be forwarded to data warehouse outputs.
 
 ![The first integration dialog box, prompting you to provide a configuration name, determine a feed status, and select a platform to act as.][2]{: style="max-width:40%;"}  ![The second integration dialog box showing the server-to-server key and server-to-server secret.][3]{: style="max-width:37%;"}
 
@@ -100,7 +100,7 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.pushnotification.Bounce`
   - `users.messages.pushnotification.Open`
   - `users.messages.pushnotification.Send`
-- SMS (abort, carrier send, delivery, delivery failure, inbound recieve, rejection, send, short link click)
+- SMS (abort, carrier send, delivery, delivery failure, inbound receive, rejection, send, short link click)
   - `users.messages.sms.Abort`
   - `users.messages.sms.CarrierSend`
   - `users.messages.sms.Delivery`
@@ -112,7 +112,7 @@ Braze supports exporting the following data listed in the Currents [user behavio
 - Webhook (abort, send)
   - `users.messages.webhook.Abort`
   - `users.messages.webhook.Send`
-- WhatsApp (abort, delivery, failure, inbound recieve, read, send)
+- WhatsApp (abort, delivery, failure, inbound receive, read, send)
   - `users.messages.whatsapp.Abort`
   - `users.messages.whatsapp.Delivery`
   - `users.messages.whatsapp.Failure`

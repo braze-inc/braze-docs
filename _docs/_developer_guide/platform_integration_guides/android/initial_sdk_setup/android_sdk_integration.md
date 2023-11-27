@@ -23,7 +23,7 @@ The Braze Android SDK can optionally be integrated without UI components. Howeve
 
 ### Basic integration
 
-To access Braze's messaging features, you must integrate the UI library. See the following Android Studio directions to integrate the UI library depending on your IDE:
+To access Braze messaging features, you must integrate the UI library. See the following Android Studio directions to integrate the UI library depending on your IDE:
 
 #### Add Braze dependency
 
@@ -32,7 +32,7 @@ Add the `android-sdk-ui` dependency to your app's `build.gradle`.
 If you are using any location or Braze Geofence functionality, also include `android-sdk-location` in your app's `build.gradle`.
 
 {% alert important %}
-If you're using a non-native Android SDK (e.g., Flutter, Cordova, Unity, etc.), that SDK already has the `android-sdk-ui` dependency for the correct version of the Android SDK. Do not update that version manually.
+If you're using a non-native Android SDK (for example, Flutter, Cordova, Unity, etc.), that SDK already has the `android-sdk-ui` dependency for the correct version of the Android SDK. Do not update that version manually.
 {% endalert %}
 
 ```gradle
@@ -78,7 +78,9 @@ Now that you've added your API key, you need to add the following permissions to
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-> With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation][46].
+{% alert note %}
+With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation][46].
+{% endalert %}
 
 ## Step 4: Tracking user sessions in Android
 
@@ -98,7 +100,7 @@ public class MyApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener(sessionHandlingEnabled, inAppMessagingRegistrationEnabled));
+    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener());
   }
 }
 ```
@@ -110,7 +112,7 @@ public class MyApplication extends Application {
 class MyApplication : Application() {
   override fun onCreate() {
     super.onCreate()
-    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener(sessionHandlingEnabled, inAppMessagingRegistrationEnabled))
+    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener())
   }
 }
 ```
@@ -118,10 +120,7 @@ class MyApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-The first argument instructs the listener to handle `openSession()` and `closeSession()` calls.
-The second argument instructs the listener to handle `registerInAppMessageManager()` and `unregisterInAppMessageManager()` calls.
-
-See our [KDoc][63] for more information. Note that any non-standard manual session integration is not fully supported.
+See our SDK reference documentation for more information on the parameters available for [`BrazeActivityLifecycleCallbackListener`][63].
 
 ## Step 5: Enable location tracking
 

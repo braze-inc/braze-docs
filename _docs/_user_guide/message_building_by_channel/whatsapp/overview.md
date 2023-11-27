@@ -51,7 +51,7 @@ On the WhatsApp partner page, select **Login with Facebook** to start the integr
 It is likely that you already have at least one existing Meta Business account at your company. If that is the case, select the one that you would like your WhatsApp Business account to live within. User permissions and business verification for WhatsApp will be controlled centrally in your Meta Business account.
 
 ### Step 2: WhatsApp setup
-Next, you will be prompted by Braze's setup wizard. Within this flow, you will:
+Next, you will be prompted by the Braze setup workflow. Within this flow, you will:
 1. Create or select your Meta and WhatsApp Business accounts.
 2. Create your WhatsApp Business profile.
 3. Verify your WhatsApp Business number.<br><br>
@@ -72,7 +72,7 @@ Only approved WhatsApp message templates can be used to initiate conversations w
 In the Meta Business Manager, under **Account Tools**, select **Message Templates**.
 Next, select **Create Templates**.<br><br>![][3]{: style="max-width:100%;"}<br><br>
 2. **Message settings**<br>
-In the new message template wizard, select the category of your message, name your template, and choose the languages you want to support. You can delete or add more languages later.<br><br> 
+In the new message template composer, select the category of your message, name your template, and choose the languages you want to support. You can delete or add more languages later.<br><br> 
 	The available message template categories include the following:
 	- Marketing: Send promotional offers, product announcements, and more to increase awareness and engagement
 	- Utility: Send account updates, order updates, alerts, and more to share important information

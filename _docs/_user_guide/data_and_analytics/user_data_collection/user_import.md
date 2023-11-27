@@ -16,7 +16,7 @@ Braze does not sanitize HTML data during ingestion time. This means that script 
 
 ## REST API
 
-You can use Braze's [`/users/track` endpoint][12] to record custom events, user attributes, and purchases for users.
+You can use the [`/users/track` endpoint][12] to record custom events, user attributes, and purchases for users.
 
 ## Cloud Data Ingestion
 
@@ -34,7 +34,7 @@ If you are uploading a mix of users with an `external_id` and users without, you
 
 ### Importing with external ID
 
-When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and is designed for each customer to have a single user profile within Braze across their devices. Read more about Braze's [user profile lifecycle][13].
+When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and is designed for each customer to have a single user profile within Braze across their devices. Read more about the Braze [user profile lifecycle][13].
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
@@ -110,21 +110,21 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | `external_id` | String | A unique user identifier for your customer. | Yes, see the following note |
 | `user_alias_name` | String | A unique user identifier for anonymous users. An alternative to the `external_id`. | No, see the following note |
 | `user_alias_label` | String | A common label by which to group user aliases. | Yes if `user_alias_name` is used |
-| `first_name` | String | The first name of your users as they have indicated (e.g., `Jane`). | No |
-| `last_name` | String | The last name of your users as they have indicated (e.g., `Doe`). | No |
-| `email` | String | The email of your users as they have indicated (e.g., `jane.doe@braze.com`). | No |
-| `country` | String | Country codes must be passed to Braze in the ISO-3166-1 alpha-2 standard (e.g., `GB`). | No |
-| `dob` | String | Must be passed in the format "YYYY-MM-DD" (e.g., `1980-12-21`). This will import your user's Date of Birth and enable you to target users whose birthday is "today". | No |
+| `first_name` | String | The first name of your users as they have indicated (for example, `Jane`). | No |
+| `last_name` | String | The last name of your users as they have indicated (for example, `Doe`). | No |
+| `email` | String | The email of your users as they have indicated (for example, `jane.doe@braze.com`). | No |
+| `country` | String | Country codes must be passed to Braze in the ISO-3166-1 alpha-2 standard (for example, `GB`). | No |
+| `dob` | String | Must be passed in the format "YYYY-MM-DD" (for example, `1980-12-21`). This will import your user's Date of Birth and enable you to target users whose birthday is "today". | No |
 | `gender` | String | "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say), or nil (unknown). | No |
-| `home_city` | String | The home city of your users as they have indicated (e.g., `London`). | No |
-| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (e.g., `en`). <br>Refer to our [list of accepted languages][1]. | No |
-| `phone` | String | A telephone number as indicated by your users, in `E.164` format (e.g., `+442071838750`). <br> Refer to [User Phone Numbers][2] for formatting guidance. | No |
+| `home_city` | String | The home city of your users as they have indicated (for example, `London`). | No |
+| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (for example, `en`). <br>Refer to our [list of accepted languages][1]. | No |
+| `phone` | String | A telephone number as indicated by your users, in `E.164` format (for example, `+442071838750`). <br> Refer to [User Phone Numbers][2] for formatting guidance. | No |
 | `email_open_tracking_disabled` | Boolean | true or false accepted.  Set to true to disable the open tracking pixel from being added to all future emails sent to this user.   | No |
 | `email_click_tracking_disabled` | Boolean | true or false accepted.  Set to true to disable the click tracking for all links within a future email, sent to this user. | No |
 | `email_subscribe` | String | Available values are `opted_in` (explicitly registered to receive email messages), `unsubscribed` (explicitly opted out of email messages), and `subscribed` (neither opted in nor out). | No |
 | `push_subscribe` | String | Available values are `opted_in` (explicitly registered to receive push messages), `unsubscribed` (explicitly opted out of push messages), and `subscribed` (neither opted in nor out). | No |
-| `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (e.g., `America/New_York` or `Eastern Time (US & Canada)`).  | No |
-| `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO 8601 formats: {::nomarkdown} <ul> <li> "YYYY-MM-DD" </li> <li> "YYYY-MM-DDTHH:MM:SS+00:00" </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> "YYYY-MM-DDTHH:MM:SS" (e.g., 2019-11-20T18:38:57) </li> </ul> {:/} | No |
+| `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (for example, `America/New_York` or `Eastern Time (US & Canada)`).  | No |
+| `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO 8601 formats: {::nomarkdown} <ul> <li> "YYYY-MM-DD" </li> <li> "YYYY-MM-DDTHH:MM:SS+00:00" </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> "YYYY-MM-DDTHH:MM:SS" (for example, 2019-11-20T18:38:57) </li> </ul> {:/} | No |
 | `subscription_group_id` | String | The `id` of your subscription group. This identifier can be found on the subscription group page of your dashboard. | No |
 | `subscription_state` | String | The subscription state for the subscription group specified by `subscription_group_id`. Allowed values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). | No, but strongly recommended if `subscription_group_id` is used |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -249,13 +249,13 @@ The filter used to create the segment selects users who were created or updated 
 
 Braze does not sanitize HTML data during ingestion time. When importing data into Braze, specifically meant for personalization usage in a web browser, ensure that it is stripped of HTML, JavaScript, or any other script tag that potentially could be leveraged maliciously when rendered in a web browser.  
 
-Alternatively, for HTML, you can use Braze's Liquid filters (`strip_html`) to HTML escape rendered text. For example:
+Alternatively, for HTML, you can use Braze Liquid filters (`strip_html`) to HTML escape rendered text. For example:
 
 {% tabs local %}
 {% tab Input %}
 {% raw %}
 ```liquid
-{{ "Have <em>you</em> read <strong>Ulysses</strong>?" &#124; strip_html }}
+{{ "Have <em>you</em> read <strong>Ulysses</strong>?" | strip_html }}
 ```
 {% endraw %}
 {% endtab %}
@@ -297,7 +297,7 @@ Values encapsulated in single ('') or double ("") quotation marks will be read a
 
 ### Data imported as custom attribute
 
-If you are seeing a piece of default user data (e.g., `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the "first name" field on a user's profile.
+If you are seeing a piece of default user data (for example, `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the "first name" field on a user's profile.
 
 {% alert important %}
 Braze will ban or block users with over 5 million sessions ("dummy users") and no longer ingest their SDK events. For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).

@@ -25,7 +25,7 @@ local_redirect:
   
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/objective-c-deprecation-notice.md %}
 
 # Push integration
 
@@ -358,7 +358,7 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 ## Step 7: Unit tests (optional)
 
-To add test coverage for the integration steps you've just followed, implement Braze's [push unit testing][36].
+To add test coverage for the integration steps you've just followed, implement [push unit testing][36].
 
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}

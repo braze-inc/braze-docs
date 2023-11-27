@@ -34,7 +34,7 @@ You must ensure the following items are created, completed and/or accepted befor
 
 | Requirement | Origin | Description |
 | --- | --- | --- |
-| Snapchat Business Manager | Snapchat | A centralized tool to manage your brand's Snapchat assets (i.e., ad accounts, pages, apps). |
+| Snapchat Business Manager | Snapchat | A centralized tool to manage your brand's Snapchat assets (such as ad accounts, pages, apps). |
 | Snapchat ad account | Snapchat | An active Snapchat ad account tied to your brand's Snapchat Business Manager.<br><br>Ensure that your Snapchat Business Manager admin has granted you admin permissions to the Snapchat ad accounts you plan to use with Braze. |
 | Snapchat terms & policies | [Snapchat](https://www.snap.com/en-US/policies) | Agree to comply with any of Snapchat’s required terms, policies, guidelines, and documentation related to your use of the Snapchat Audience Sync, including any terms, policies, guidelines, and documentation incorporated by reference therein, which may include: the Terms of Service, Business Terms of Service, Developer Terms, Audience Match, Advertising Policies, Commercial Content Policy, Community Guidelines, and Supplier Responsibility. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

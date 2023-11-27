@@ -26,10 +26,10 @@ The CAN-SPAM Act of 2003 regulates email senders in the U.S. sending "any electr
 
 There are seven key requirements for CAN-SPAM:
 
-1. Don't use false or misleading header information (ie, "From", "To" and "Reply-To")
+1. Don't use false or misleading header information (such as "From", "To" and "Reply-To")
 2. Don't use deceptive subject lines
 3. Identify the message as an ad
-4. Tell recipients where you're located (ie, physical address)
+4. Tell recipients where you're located (such as physical address)
 5. Tell recipients how to opt out of receiving future email from you
 6. Honor opt-out requests promptly
 7. Monitor what others are doing on your behalf
@@ -49,7 +49,7 @@ There are a couple key differences between CASL and CAN-SPAM, most notably:
 
 ### Liability
 
-While CASL has a three-year transition period, ending july 1, 2017, the Canadian Radio-Television and Telecommunications Commission (CRTC), the Competition Bureau and the Office of the Privacy Commissioner of Canada may begin investigation and litigation during this period. At the end of the transition period, individuals may also litigate against entities they believe to be sending spam.
+While CASL has a three-year transition period, ending July 1, 2017, the Canadian Radio-Television and Telecommunications Commission (CRTC), the Competition Bureau and the Office of the Privacy Commissioner of Canada may begin investigation and litigation during this period. At the end of the transition period, individuals may also litigate against entities they believe to be sending spam.
 
 ### Exempt messages
 
@@ -70,7 +70,7 @@ Messages that do not fall under one of the exemptions require "expressed or impl
 
 #### Implied consent
 
-Implied consent is based on previous activity with a user through an existing business or non-business relationship. Messages can be sent based on implied consent during the transition period. After July 1, 2017, express consent is required, unless the implied consent is still valid (i.e., the 2 years after a purchase was made).
+Implied consent is based on previous activity with a user through an existing business or non-business relationship. Messages can be sent based on implied consent during the transition period. After July 1, 2017, express consent is required, unless the implied consent is still valid (such as the 2 years after a purchase was made).
 
 - The recipient of a message has purchased or leased a product, good, service or completed other business with your organization in the last 2 years
 - The electronic address has been published and does not explicitly forbid unsolicited emails
@@ -94,7 +94,7 @@ Just because your emails have successfully sent doesn't mean that they have nece
 
 - Maintain Your Reputation: Be in constant contact with your users to prevent your email lists from becoming stale. Waiting too long to send a message may cause the recipient to forget about you and mark you as spam. Keep your email lists up to date by implementing a sunset policy to remove email addresses that bounce. Bounce rates are a key factor used by ISPs to evaluate a sender's reputation.
 
-- Check and Test: Make sure your message does not contain anything that can trigger spam filters. This includes superfluous tags from external text editors like Microsoft Word, abnormal text formatting, over-usage of ! and ? as punctuation, writing in ALL CAPS, and spam trigger words (see [HubSpot][7] for a list of common trigger words). Send emails with varying content using Braze's multivariate testing capabilities to make sure your emails are not going to spam.
+- Check and Test: Make sure your message does not contain anything that can trigger spam filters. This includes superfluous tags from external text editors like Microsoft Word, abnormal text formatting, over-usage of ! and ? as punctuation, writing in ALL CAPS, and spam trigger words (see [HubSpot][7] for a list of common trigger words). Send emails with varying content using multivariate testing capabilities to make sure your emails are not going to spam.
 
 ## Messaging channel
 

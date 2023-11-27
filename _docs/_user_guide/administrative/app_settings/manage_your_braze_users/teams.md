@@ -109,7 +109,7 @@ Similar to the first scenario, Michelle must add the Development team tag to the
 
 One possible use case for teams is to create a teams-based approval system for testing and launching content in a production environment.
 
-To do so, create a "Development" team that only has access to test users. You can limit a team to only access test users if your test users are identifiable by a custom attribute. Then, add the custom attribute as a definition when creating or editing the team (see the preceeding section [Creating teams](#creating-teams)). Your approvers should have access to all users.
+To do so, create a "Development" team that only has access to test users. You can limit a team to only access test users if your test users are identifiable by a custom attribute. Then, add the custom attribute as a definition when creating or editing the team (see the preceding section [Creating teams](#creating-teams)). Your approvers should have access to all users.
 
 The general process would be as follows:
 

@@ -1,41 +1,36 @@
 ---
 nav_title: May
-page_order: 8
+page_order: 7
 noindex: true
 page_type: update
 description: "This article contains release notes for May 2021."
 ---
+
 # May 2021
 
-## iOS push advanced implementation guide
+## Conversion correlation
 
-This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress-based push), accompanying code snippets, and guidance on logging analytics. Check out the [iOS push advanced implementation guide](/docs/developer_guide/platform_integration_guides/swift/push_notifications/implementation_guide/) to learn more.
+This guide covers the [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the **Campaign Analytics** page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
 
-## VFC support for multimedia message service (MMS)
+## Global Control Group Report
 
-vCards, also known as Virtual Contact Files (VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. These VFC files can now be sent through [MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/) and added to the Braze media library. 
+We've updated the metrics on the [Global Control Groups]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) report to better help you analyze the overall impact of your messaging efforts over time. Key changes include adding **Events per User** and **Estimated Group Size**, and adjusting the calculation for **Incremental Uplift** to reflect the difference in total events between your treatment and control groups.
 
-## Updates to user delete
+## Reports Overview
 
-In October 2020, we made [improvements]({{site.baseurl}}/help/release_notes/2020/october/) to how our user delete handles data subject's phone number or email address. 
+Not sure where to start with analyzing your campaigns or Canvases? The [Reports Overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
 
-## New Braze partnerships
+## New US-05 cluster
 
-### Airbridge - Attribution
+Braze supports a new US cluster, US-05. Refer to our list of dashboard and REST [Endpoints]({{site.baseurl}}/api/basics/#endpoints) to see more.
 
-The [Airbridge and Braze integration]({{site.baseurl}}/partners/message_orchestration/attribution/airbridge/) allow you to pass all organic and non-organic install attribution data to Braze to build more personalized marketing campaigns and understand exactly where users were acquired.
-### Kubit - Analytics
+## Braze UI updates
 
-[Kubit]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/) is a no-code, self-service analytics platform that delivers instant product insights. Through the seamless no-code integration with Braze, you can import user Cohort information into Braze and launch engagement campaigns to target specific Cohorts. In addition, through the use of Snowflake Secure Data Sharing, you can integrate the raw campaign and impression data from Braze with product analytics in Kubit to measure the impact of these campaigns in real-time. 
+In May 2021, Braze updated the following labels and terms in the Braze dashboard:
 
-### Census - Customer data platform
-
-[Census]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/census/) allows you to keep your customer success, sales, and marketing teams all on the same page by keeping your customer data in sync, all without ongoing help from your engineering department.
-
-### Treasure Data - Customer data platform
-
-[Treasure Data]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/) helps drive relevant customer experiences by harmonizing data, insights, and engagement to work in perfect unison. Armed with actionable indicators, CX Teams, including marketing, sales, and customer service can effectively optimize spend, and personalize omnichannel interactions across the entire customer journey. 
-
-## Phrasee - A/B testing
-
-Braze customer engagement develops relationships through multichannel marketing. Working together with [Phrasee]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/), Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee's deep learning engine handles the testing, monitors the results, and generates new language based on what it's learned. 
+- App Usage --> Overview
+- App Settings --> Settings
+- Manage App Group --> Manage Settings
+- Money Spent In-App --> Money Spent
+- App Usage (User Profile) --> Sessions Overview
+- Import a CSV of user information to add and/or update users in this App Group --> Import a CSV of user information to add or update users

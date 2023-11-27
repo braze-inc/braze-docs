@@ -18,7 +18,7 @@ Braze Data Transformation can expedite your data integration, even if you have v
 Many modern-day platforms have “webhooks,” or real-time API notifications, to send information about a new event or new data from one platform to another. Data Transformation provides:
 
 - A Braze address to receive such webhooks.
-- Capabilities to transform the webhook’s payload with JavaScript code so you can create a valid Braze `/users/track` call. You can choose what information to use from the webhook and how you want the data represented on Braze user profiles as user attributes, events, or purchases.
+- Capabilities to transform the webhook payload with JavaScript code so you can create a valid Braze `/users/track` call. You can choose what information to use from the webhook and how you want the data represented on Braze user profiles as user attributes, events, or purchases.
 - Capabilities to send the compiled `/users/track` call.
 
 The end result is a webhook integration that connects a source platform of your choice by turning their webhooks into Braze user profile updates.
@@ -61,7 +61,7 @@ While we would love for developers to use this feature as well, you don’t need
 
 Yes. You can have your transformations updating the `/users/track` endpoint with the [email address or phone number as an identifier]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address).
 
-This works by using `email` or `phone` as your identifier property in the transformation code instead of `external_id` or `braze_id`. The example [transformation code]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/#example-transformation-code) uses this functionality.
+This works by using `email` or `phone` as your identifier property in the transformation code instead of `external_id` or `braze_id`. The example [transformation code]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/use_cases/#example-transformation-code) uses this functionality.
 
 {% alert note %}
 Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function has been deprecated.

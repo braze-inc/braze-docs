@@ -15,7 +15,6 @@ search_rank: 1
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-
 The Braze Web SDK includes a Content Cards feed UI to speed up your integration efforts. If you would prefer to build your own UI instead, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
 
 ## Standard feed UI
@@ -144,7 +143,7 @@ The [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.clas
 
 ## Control group 
 
-If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
+If you use the default Content Cards feed, impressions and clicks will be automatically tracked.
 
 If you use a custom integration for Content Cards, you need need [log impressions]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics/) when a Control Card would have been seen. As part of this effort, make sure to handle Control cards when logging impressions in an A/B test. These cards are blank, and while they aren’t seen by users, you should still log impressions in order to compare how they perform against non-Control cards.
 

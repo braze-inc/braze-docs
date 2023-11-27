@@ -129,7 +129,7 @@ Name your current, and then in the **Credentials** section, make sure the **AWS 
 Keep your AWS access key ID and secret access key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
-You can also add the following customizations based on your needs:
+You can also add the following customization based on your needs:
 
 - Folder Path (defaults to `currents`) 
 - Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the `x-amz-server-side-encryption` header
@@ -278,7 +278,7 @@ In Braze, navigate to the **Currents** page under **Integrations**. Next, click 
 
 Give your Current a name. Then, in the **Credentials** section, make sure the **AWS Role ARN** radio button is selected, then provide your role ARN and AWS S3 bucket name in the designated fields.
 
-You can also add the following customizations based on your needs:
+You can also add the following customization based on your needs:
 
 - Folder Path (defaults to `currents`)
 - Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the `x-amz-server-side-encryption` header
