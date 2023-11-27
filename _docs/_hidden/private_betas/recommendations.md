@@ -18,55 +18,69 @@ Contact your Braze customer success manager if you're interested in participatin
 
 ## Prerequisites
 
-You must have at least one [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) to take advantage of Item Recommendations.
+You must have at least one [catalog][catalog] to take advantage of Item Recommendations.
 
 ## Creating an Item Recommendation
 
-From the **Predictions** page, select **Create Prediction** > **Item Recommendation**.
+To create an item recommendation:
 
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Analytics** and **Catalogs** under **Data Settings**.
-{% endalert %}
+1. Go to **Analytics** > **Item Recommendation**.
+2. Select **Create Prediction** > **Item Recommendation**.
 
 You can also choose to create a recommendation straight from an individual catalog. From the **Catalogs** page, select your catalog and click **Create Recommendation**.
 
-### Step 1: Define your recommendation
+### Step 1: Add recommendation details
 
-1. Enter a name and optional description for your recommendation.
-2. If not already populated, select the catalog for which this recommendation will calculate the most popular products.
-3. Select the recommendation type:
-   - **Most popular:** Calculates the items from the catalog that are purchased most often by users in the entire workspace.
-   - **Personalized:** Uses transformers, a new kind of deep learning, to predict each individual user's next most likely set of items to purchase. We calculate up to 30 of the next most likely items ranked from most to least likely.
-
-Both recommendation types use the last 6 months of purchase data.
+First, give your recommendation a name and optional description.
 
 ![][1]
 
-### Step 2: Select how you track user purchases
+### Step 2: Define your recommendation
+
+Next, select the recommendation type. Both recommendation types use the last 6 months of purchase data.
+
+- **Most popular:** Calculates the items from the catalog that are purchased most often by users in the entire workspace.
+- **Personalized:** Uses transformers, a new kind of deep learning, to predict each individual user's next most likely set of items to purchase. We calculate up to 30 of the next most likely items ranked from most to least likely.
+
+![][2-1]
+
+If not already populated, select the [catalog][catalog] that this recommendation will pull items from.
+
+#### Add a selection
+
+If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog (such as brand, size, or location). If your selection contains Liquid, it can't be used in your recommendation.
+
+![][2-2]
+
+{% alert tip %}
+If you can't find your selection, make sure it's set up in your catalog first.
+{% endalert %}
+
+### Step 3: Select how you track user purchases
 
 Next, select the option your company most frequently uses to track purchases. This can either be through purchase events (with the [Purchase Object]({{site.baseurl}}/api/objects_filters/purchase_object/)) or custom events.
 
 If you choose **Custom Event**, select your event from the list.
 
-![][2]
+![][3]
 
-### Step 3: Choose the corresponding product ID {#product-ids}
+### Step 4: Choose the corresponding property name {#property-name}
 
-To create a recommendation, you need to tell Braze where to find the unique identifier in your event that matches the `id` field of the catalog. We refer to this as the **Product ID**.
+To create a recommendation, you need to tell Braze where to find the unique identifier in your event that matches the `id` field of the catalog. Select this field for the **Property Name**.
 
-The **Product IDs** field will be pre-populated with a list of fields sent through the SDK to Braze. If enough data is provided, these IDs will also be ranked in order of probability to be the correct product ID. Select the one that corresponds to the product IDs.
+The **Property Name** field will be pre-populated with a list of fields sent through the SDK to Braze. If enough data is provided, these properties will also be ranked in order of probability to be the correct property. Select the one that corresponds to the `id` field of the catalog.
+
+![][4]
 
 #### Requirements
 
-There are some requirements for selecting your product IDs:
+There are some requirements for selecting your property:
 
 - Must map to the `id` field of your selected catalog.
 - **If you selected Purchase Object:** Must be the `product_id` or a top-level field of your purchase event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`. This field can be nested.
 
-![][3]
-
-### Step 4: Train the recommendation
+### Step 5: Train the recommendation
 
 When you're ready, select **Create Recommendation**. This process will take a few minutes to complete. You will receive an email update when the recommendation is successfully trained, or an explanation of why the creation may have failed.
 
@@ -74,7 +88,7 @@ You can find the recommendation on the **Predictions** page, where you can then 
 
 ## Using recommendations in messaging
 
-![][4]{: style="max-width:30%;float:right;margin-left:15px;"}
+![][10]{: style="max-width:30%;float:right;margin-left:15px;"}
 
 After your recommendation finishes training, you can personalize your messages with Liquid to insert the most popular products in that catalog. The Liquid can be generated for you by the personalization window found in message composers:
 
@@ -85,7 +99,10 @@ After your recommendation finishes training, you can personalize your messages w
 5. For **Information to Display**, select which fields from the catalog should be included for each item. This information corresponds to the columns in your uploaded CSV file used to generate your catalog.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
-[1]: {% image_buster /assets/img/item_recommendation_1.png %}
-[2]: {% image_buster /assets/img/item_recommendation_2.png %}
-[3]: {% image_buster /assets/img/item_recommendation_3.png %}
-[4]: {% image_buster /assets/img/add_personalization.png %}
+[1]: {% image_buster /assets/img/item_recs_1.png %}
+[2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
+[2-2]: {% image_buster /assets/img/item_recs_2-2.png %}
+[3]: {% image_buster /assets/img/item_recs_3.png %}
+[4]: {% image_buster /assets/img/item_recs_4.png %}
+[10]: {% image_buster /assets/img/add_personalization.png %}
+[catalog]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/
