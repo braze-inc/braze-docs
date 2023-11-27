@@ -179,9 +179,9 @@ table td {
 <table>
 <thead>
     <tr>
-        <th style="width: 15%; text-align: left;">YAML tag</th>
-        <th style="width: 15%; text-align: left;">Type</th>
-        <th style="width: 70%; text-align: left;">Description</th>
+        <th style="width: 20%; text-align: left;">YAML tag</th>
+        <th style="width: 20%; text-align: left;">Type</th>
+        <th style="width: 60%; text-align: left;">Description</th>
     </tr>
 </thead>
 <tbody>
@@ -230,9 +230,9 @@ layout: documents
 <table>
 <thead>
     <tr>
-        <th style="width: 15%; text-align: left;">YAML tag</th>
-        <th style="width: 15%; text-align: left;">Type</th>
-        <th style="width: 70%; text-align: left;">Description</th>
+        <th style="width: 20%; text-align: left;">YAML tag</th>
+        <th style="width: 20%; text-align: left;">Type</th>
+        <th style="width: 60%; text-align: left;">Description</th>
     </tr>
 </thead>
 <tbody>
@@ -272,9 +272,9 @@ Here's a list of some custom yaml tags supported by most layouts (but not all):
 <table>
 <thead>
     <tr>
-        <th style="width: 15%; text-align: left;">YAML tag</th>
-        <th style="width: 15%; text-align: left;">Type</th>
-        <th style="width: 70%; text-align: left;">Description</th>
+        <th style="width: 20%; text-align: left;">YAML tag</th>
+        <th style="width: 20%; text-align: left;">Type</th>
+        <th style="width: 60%; text-align: left;">Description</th>
     </tr>
 </thead>
 <tbody>
