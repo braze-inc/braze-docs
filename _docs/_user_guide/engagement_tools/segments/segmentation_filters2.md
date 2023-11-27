@@ -86,7 +86,7 @@ glossaries:
     description: Allows you to designate your campaign recipients by individual user IDs for testing.
     tags:
       - Other Filters
-  - name: Random Bucket {::nomarkdown}#{:/}
+  - name: "Random Bucket #"
     description: Segments your users by a randomly assigned number (0 to 9999 inclusive). It can enable the creation of uniformly distributed segments of truly random users for A/B and multivariate testing.
     tags:
       - Other Filters
