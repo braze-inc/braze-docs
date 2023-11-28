@@ -399,10 +399,6 @@ glossaries:
     tags:
       - App 
   - name: Uninstalled
-    description: Segments your users by who uninstalled and didn't reinstall your app.
-    tags:
-      - Uninstall 
-  - name: Uninstalled
     description: Segments your users by whether they have uninstalled your app and have not reinstalled it.
     tags:
       - Uninstall 
