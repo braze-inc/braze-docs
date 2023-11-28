@@ -176,7 +176,9 @@ For example:
 
 ### Step 3.2b: Add `getInitialURL()`
 
-Add the `getInitialURL()` method to handle when a deep link opens your app.
+Add the `Linking.getInitialURL()` method to handle when a deep link opens your app.
+
+You should also call the `Braze.getInitialURL` method to handle deep links from iOS push notification clicks while your app is not running. Braze provides this workaround since React Native's Linking API does not support this scenario due to a race condition on app startup.
 
 For example:
 
@@ -190,6 +192,15 @@ For example:
         }
       })
       .catch(err => console.error('Error getting initial URL', err));
+
+    // Handles deep links when an iOS app is launched from a hard close via push click.
+    Braze.getInitialURL(url => {
+      if (url) {
+        console.log('Braze.getInitialURL is ' + url);
+        showToast('Braze.getInitialURL is ' + url);
+        handleOpenUrl({ url });
+      }
+    });
 ```
 
 {% endtab %}
