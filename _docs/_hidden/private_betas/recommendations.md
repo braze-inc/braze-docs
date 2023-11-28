@@ -61,7 +61,7 @@ If you choose **Custom Event**, select your event from the list.
 
 ### Step 4: Choose the corresponding property name {#property-name}
 
-To create a recommendation, you need to tell Braze where to find the unique identifier in your event that matches the `id` field of the catalog. Select this field for the **Property Name**.
+To create a recommendation, you need to tell Braze which field of your purchase event (purchase object or custom event) has the unique indentifier that matches the `id` field of the catalog. Select this field for the **Property Name**.
 
 The **Property Name** field will be pre-populated with a list of fields sent through the SDK to Braze. If enough data is provided, these properties will also be ranked in order of probability to be the correct property. Select the one that corresponds to the `id` field of the catalog.
 
@@ -72,7 +72,7 @@ The **Property Name** field will be pre-populated with a list of fields sent thr
 There are some requirements for selecting your property:
 
 - Must map to the `id` field of your selected catalog.
-- **If you selected Purchase Object:** Must be the `product_id` or a top-level field of your purchase event's `properties`.
+- **If you selected Purchase Object:** Must be the `product_id` or a field of your purchase event's `properties`. This field can be nested.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`. This field can be nested.
 
 ### Step 5: Train the recommendation
@@ -91,7 +91,7 @@ After your recommendation finishes training, you can personalize your messages w
 2. For **Personalization Type**, select **Item Recommendation**.
 3. For **Item Recommendation Name**, select the recommendation you just created.
 4. For **Number of Predicted Items**, enter how many top products you'd like to be inserted. For example, you can display the top three most purchased items.
-5. For **Information to Display**, select which fields from the catalog should be included for each item. This information corresponds to the columns in your uploaded CSV file used to generate your catalog.
+5. For **Information to Display**, select which fields from the catalog should be included for each item. The values for these fields for each item will be drawn from the catalog associated with this recommendation.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
