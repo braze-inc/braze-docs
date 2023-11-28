@@ -1,9 +1,9 @@
 ---
 nav_title: Item Recommendations
 article_title: Item Recommendations
-permalink: "/recommendations/"
-description: "This reference article covers how to create an Item Recommendation for most popular products."
-hidden: true
+page_order: 10
+alias: "/recommendations/"
+description: "This reference article covers how to create an Item Recommendation for items in a catalog."
 ---
 
 # Item Recommendations
