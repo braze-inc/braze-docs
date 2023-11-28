@@ -381,11 +381,11 @@ validurls['/docs/partners/data_augmentation/contextual_location/factual/'] = '/d
 
 validurls['/docs/report_by_variant/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/#performance-by-variant';
 
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#html-upload-with-preview';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#html-upload-with-preview';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#supported-sdk-versions'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#supported-sdk-versions';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#upload-assets'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#asset-files';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/modal_with_css/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/#web-modal-css';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#html-upload-with-preview';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#html-upload-with-preview';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#supported-sdk-versions'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#supported-sdk-versions';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#upload-assets'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#asset-files';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/modal_with_css/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#web-modal-css';
 
 validurls['/docs/services_handbook/'] = '/docs/handbooks/';
 
@@ -936,6 +936,7 @@ validurls['/docs/user_guide/onboarding_with_braze/learning_to_use_braze/'] = '/d
 validurls['/docs/user_guide/onboarding_with_braze/web_sdk/'] = '/docs/user_guide/getting_started/web_sdk/';
 validurls['/docs/user_guide/onboarding_with_braze/integration/'] = '/docs/user_guide/getting_started/integration/';
 validurls['/docs/user_guide/onboarding_with_braze/terms_to_know'] = '/docs/user_guide/getting_started/terms_to_know/';
+validurls['/docs/user_guide/onboarding_with_braze/data_points#data-points'] = '/docs/user_guide/data_and_analytics/data_points/';
 
 validurls['/docs/developer_guide/platform_wide/analytics_overview/'] = '/docs/developer_guide/platform_wide/getting_started/analytics_overview/';
 validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personal_path'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/';

@@ -18,7 +18,7 @@ description: "This article outlines details about the Send campaigns via API-tri
 
 API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
 
-If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Note that to send messages with this endpoint, you must have a [Campaign ID](https://www.braze.com/docs/api/identifier_types/) created when you build an [API-triggered campaign]({{site.baseurl}}/api/api_campaigns/).
+If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/). To send messages with this endpoint, you must have a [campaign ID](https://www.braze.com/docs/api/identifier_types/) created when you build an [API-triggered campaign]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
@@ -75,9 +75,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 - When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. 
 - When `send_to_existing_only` is `false`, an attribute must be included. Braze will create a user with the `id` and attributes before sending the message.
 
-{% alert important %}
-A user's subscription group status can be updated via the inclusion of a `subscription_groups` parameter within the `attributes` object. This is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access. More details can be found in the [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
-{% endalert %}
+A user's subscription group status can be updated via the inclusion of a `subscription_groups` parameter within the `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
 ## Example request
 ```
@@ -155,13 +153,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 
 ## Response details
 
-Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch, a unique ID for each transmission sent from the Braze platform. When using this endpoint, you receive a single `dispatch_id` for an entire batched set of users. For more information on `dispatch_id` check out our documentation on [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch, a unique ID for each transmission sent from Braze. When using this endpoint, you receive a single `dispatch_id` for an entire batched set of users. For more information on `dispatch_id` check out our documentation on [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 ## Create send endpoint
 
 **Using the Attributes Object in campaigns**
 
-Braze has a Messaging Object called `attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
+Braze has a messaging object called `attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaign. Using the `campaign/trigger/send` endpoint as this API call will process the user attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
 
 {% alert important %}
 Looking for the Canvas version of this endpoint? Check out [Sending Canvas messages via API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
