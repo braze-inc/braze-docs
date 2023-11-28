@@ -35,7 +35,7 @@ From Facebook Ads Manager, create a <a href="https://www.facebook.com/business/h
 
 You can use either an email address or phone number when making a request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update or create the user profile. For this reason, include a **Contact field** for **email** or **phone** in your lead ad form. If you're collecting first names or last names, collect those separately in your form instead of using full names.
 
-### Step 2: Connect your Facebook Account to Zapier 
+### Step 2: Connect your Facebook account to Zapier 
 
 #### Step 2a: Select your connection method in Zapier
 
