@@ -70,7 +70,24 @@ var valid_partners = {
 
 var alloy_data;
 if ('data' in alloy_partners) {
-    alloy_data = alloy_partners['data']
+    alloy_data = alloy_partners['data'];
+    alloy_data.push({
+  		"slug": "facebookzapier",
+  		"integration_partner_id": "d0fe0680-6abe-41d2-bb88-27c3075847d7",
+  		"partner_name": "Facebook Zapier",
+  		"partner_logo_url": "/docs/assets/img/fb_lead_ads_zapier/facebook-zapier.png",
+  		"partner_description": "Facebook Lead Ads via Zapier offers you the ability to gather, automate, and transfer lead information directly into Braze.",
+  		"partner_featured_short_description": "Facebook Lead Ads via Zapier offers you the ability to gather, automate, and transfer lead information directly into Braze.",
+  		"partner_featured": false,
+  		"partner_and_braze_description": "Import your leads from Facebook and track a custom event when leads are captured by combining Zapier and Braze.",
+  		"partner_website_url": "https://www.facebook.com/",
+  		"partner_specialties": ["Retargeting"],
+  		"partner_categories": ["Advertising Technologies"],
+  		"partner_integration_methods": ["Webhooks"],
+  		"partner_customer_story_url": [],
+  		"partner_solutions": [],
+  		"partner_industries": [],
+  	})
 }
 
 
