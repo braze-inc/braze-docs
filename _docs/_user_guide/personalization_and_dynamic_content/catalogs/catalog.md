@@ -86,7 +86,7 @@ You can also update the CSV file after selecting to create a catalog in the brow
 You can also upload a CSV file after selecting to create a catalog in the browser.
 
 {% alert note %}
-Note that Braze processes time values based on the dashboard timestamp. For example, if a column has a value of "03/13/2024" and your time zone is the Pacific Time Zone, this time would be imported to Braze as "Mar 12, 2024, 5:00 PM".
+Braze processes time values based on the dashboard timestamp. For example, if a column has a value of "03/13/2024" and your time zone is the Pacific Time Zone, this time would be imported to Braze as "Mar 12, 2024, 5:00 PM".
 {% endalert %}
 
 #### Example catalog
