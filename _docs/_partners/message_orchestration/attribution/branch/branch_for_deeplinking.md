@@ -16,6 +16,8 @@ search_tag: Partner
 
 The Braze and Branch integration allows you to provide better experiences to your customers by allowing you to properly [attribute]({{site.baseurl}}/partners/advertising_technologies/attribution/branch_for_attribution/) the beginning of their user journey and connect them through deep links to their intended location.
 
+If you include a call link (`href=tel:`),
+
 ## Integration
 
 Follow [Branch's SDK integration guide](https://help.branch.io/developers-hub/docs/native-sdks-overview) to get up and running with your Branch integration. Refer to the following for additional use cases.
