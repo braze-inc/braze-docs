@@ -83,7 +83,11 @@ You can also update the CSV file after selecting to create a catalog in the brow
 4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use the dropdown to select the data type. Repeat as needed.<br> ![][12]{: style="max-width:50%;"}<br><br>
 5. Click **Update Catalog > Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, click **Save Item** or **Save and Add Another** to continue adding your items. <br> ![][13]{: style="max-width:50%;"}
 
-You can also upload a CSV file after selecting to create a catalog in the browser. 
+You can also upload a CSV file after selecting to create a catalog in the browser.
+
+{% alert note %}
+Note that Braze processes time values based on the dashboard timestamp. For example, if a column has a value of "03/13/2024" and your time zone is the Pacific Time Zone, this time would be imported to Braze as "Mar 12, 2024, 5:00 PM".
+{% endalert %}
 
 #### Example catalog
 
