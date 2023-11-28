@@ -13,6 +13,7 @@ You can use Item Recommendations to calculate the most popular products or creat
 ## Prerequisites
 
 You must have at least one [catalog][catalog] to take advantage of Item Recommendations.
+You must have purchase data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog. 
 
 ## Creating an Item Recommendation
 
