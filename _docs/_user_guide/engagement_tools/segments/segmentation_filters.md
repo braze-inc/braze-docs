@@ -515,19 +515,19 @@ glossaries:
     tags:
       - Install Attribution
   - name: Churn Risk Category
-    description: Segments your users by their churn risk category.
+    description:  Segments your users by churn risk category according to a specific Prediction.
     tags:
       - Intelligence and predictive
   - name: Churn Risk Score
-    description: Segments your users by their churn risk score.
+    description: Segments your users by churn risk score according to a specific Prediction.
     tags:
       - Intelligence and predictive
-  - name: Purchase Likelihood Category
-    description: Segments your users by their purchase likelihood category.
+  - name: Event Likelihood Category
+    description: Segments your users by likelihood of performing an event according to a specific Prediction.
     tags:
       - Intelligence and predictive
-  - name: Purchase Likelihood Score
-    description: Segments your users by their purchase likelihood score.
+  - name: Event Likelihood Score
+    description: Segments your users by likelihood of performing an event according to a specific Prediction.
     tags:
       - Intelligence and predictive
   - name: Intelligent Channel
