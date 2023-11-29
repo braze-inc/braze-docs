@@ -155,7 +155,6 @@ For iOS, add `populateInitialUrlFromLaunchOptions` to your AppDelegate's `didFin
 For example:
 
 ```objc
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   self.moduleName = @"BrazeProject";
@@ -172,7 +171,6 @@ For example:
 
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
-
 ```
 
 ### Step 3.2b: Add `getInitialURL()`
@@ -184,24 +182,24 @@ You should also call the `Braze.getInitialURL` method to handle deep links from 
 For example:
 
 ```javascript
-    Linking.getInitialURL()
-      .then(url => {
-        if (url) {
-          console.log('Linking.getInitialURL is ' + url);
-          showToast('Linking.getInitialURL is ' + url);
-          handleOpenUrl({ url });
-        }
-      })
-      .catch(err => console.error('Error getting initial URL', err));
+Linking.getInitialURL()
+  .then(url => {
+    if (url) {
+      console.log('Linking.getInitialURL is ' + url);
+      showToast('Linking.getInitialURL is ' + url);
+      handleOpenUrl({ url });
+    }
+  })
+  .catch(err => console.error('Error getting initial URL', err));
 
-    // Handles deep links when an iOS app is launched from a hard close via push click.
-    Braze.getInitialURL(url => {
-      if (url) {
-        console.log('Braze.getInitialURL is ' + url);
-        showToast('Braze.getInitialURL is ' + url);
-        handleOpenUrl({ url });
-      }
-    });
+// Handles deep links when an iOS app is launched from a hard close via push click.
+Braze.getInitialURL(url => {
+  if (url) {
+    console.log('Braze.getInitialURL is ' + url);
+    showToast('Braze.getInitialURL is ' + url);
+    handleOpenUrl({ url });
+  }
+});
 ```
 
 {% endtab %}
