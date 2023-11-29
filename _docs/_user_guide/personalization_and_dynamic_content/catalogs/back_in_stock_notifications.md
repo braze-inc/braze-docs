@@ -28,7 +28,7 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
 
 1. Go to your catalog and click the **Settings** tab.
 2. Select the **Back in stock** toggle.
-3. If the global back in stock settings, you will be prompted to set up the custom events and properties that will be used to trigger back in stock notifications:
+3. If the global back in stock settings have not been configured, you will be prompted to set up the custom events and properties that will be used to trigger back in stock notifications:
     <br>
     - **Custom event for subscriptions** is the Braze custom event that will be used to subscribe a user for back in stock notifications. When this event occurs, the user that performed the event will be subscribed.
     - **Custom event for unsubscribing** is the Braze custom event that will be used to unsubscribe a user from back in stock notifications.
