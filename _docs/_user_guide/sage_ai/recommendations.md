@@ -93,7 +93,7 @@ There are some requirements for selecting your property:
 
 When you're ready, select **Create Recommendation**. This process will take a few minutes to complete. You will receive an email update when the recommendation is successfully trained or an explanation of why the creation may have failed.
 
-You can find the recommendation on the **Predictions** page, where you can then edit or archive it as needed. Only one most popular products recommendation can be created per catalog.
+You can find the recommendation on the **Predictions** page, where you can then edit or archive it as needed. Recommendations will automatically retrain once every month.
 
 ## Analytics
 
@@ -125,6 +125,10 @@ After your recommendation finishes training you will receive an email letting yo
 4. For **Number of Predicted Items**, enter how many top products you'd like to be inserted. For example, you can display the top three most purchased items.
 5. For **Information to Display**, select which fields from the catalog should be included for each item. The values for these fields for each item will be drawn from the catalog associated with this recommendation.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
+
+## Update frequency
+
+Recommendations in the free version of the feature will update each user's list of recommended items once every week. The recommendation model itself will automatically update once per month.
 
 
 
