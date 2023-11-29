@@ -18,7 +18,7 @@ Back-in-stock notifications for Catalogs are currently in early access. Contact 
 ## How it works
 When the selected custom event is performed by a user, it can be used to create a back-in-stock subscription for a combination of that user and catalog item that it occurred for, if the item's inventory field is currently at 0. Once the item is back in stock, users can be notified through a Canvas.
 
-Back-in-stock notifications are determined by notification rules. Subscription statuses will be observed, so if the user has not opted in to notifications, they will be filtered out and will not receive notifications.
+Back-in-stock notifications are determined by notification rules. If the user has not opted in to notifications, they will be filtered out and will not receive messaging.
 
 Note that users are only subscribed for 90 days. If an item isn't back in stock within 90 days, the user is removed from the subscription. Braze will process up to 10 item updates per minute. This means if you update 11 items in one minute, only the first 10 items will trigger the back-in-stock notification.
 
@@ -28,11 +28,11 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
 
 1. Go to your catalog and click the **Settings** tab.
 2. Select the **Back in stock** toggle.
-3. If you have not previously configured your global back in stock settings, you will be prompted to set up the custom events and properties that will be used to trigger back in stock notifications:
+3. If the global back in stock settings, you will be prompted to set up the custom events and properties that will be used to trigger back in stock notifications:
     <br>
     - **Custom event for subscriptions** is the Braze custom event that will be used to subscribe a user for back in stock notifications. When this event occurs, the user that performed the event will be subscribed.
     - **Custom event for unsubscribing** is the Braze custom event that will be used to unsubscribe a user from back in stock notifications.
-    - **Item ID Event property** is the property on the above custom event that will be used to determine the item for a back in stock subscription. This property on the custom event should contain an Item ID, that is present in a catalog. The custom event should also contain a `catalog_name` property, to specify which catalog this item is in.
+    - **Item ID Event property** is the property on the above custom event that will be used to determine the item for a back in stock subscription or unsubscription. This property on the custom event should contain an Item ID, that is present in a catalog. The custom event should also contain a `catalog_name` property, to specify which catalog this item is in.
     - **Fallback Catalog** This is the catalog that will be used for the back in stock subscription, if there is no `catalog_name` property present on the custom event. 
     <br>
     After setting these values, click **Save** and continue to the catalog's back in stock settings page.
