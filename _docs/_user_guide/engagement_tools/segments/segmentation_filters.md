@@ -367,7 +367,7 @@ glossaries:
     tags:
       - Demographic attributes
   - name: Birthday
-    description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on the 29th of February will be included in segments including March 1.
+    description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on the 29th of February will be included in segments including March 1.<br><br>To target December or January birthdays, only insert filter logic within the 12-month span of the year you're targeting. In other words, do not insert logic that looks back to the previous calendar year's December or forward to the next year's January. For example, to target December birthdays, you can filter for "on December 31", "before December 31", or "after November 30".
     tags:
       - Demographic attributes
   - name: Gender
