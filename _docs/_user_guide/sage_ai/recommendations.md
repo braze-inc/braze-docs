@@ -20,7 +20,7 @@ You can use AI Item Recommendations to calculate the most popular products or cr
 This page describes the free version of AI Item Recommendations. When using the free version:
 
 - You can create one recommendation per [recommendation type](#recommendation-type) in a workspace.
-- The items recommended to each user in a recommendation update once a week.
+- The items recommended to each user in a recommendation update once a month.
 
 ## Creating an AI Item Recommendation
 
@@ -102,22 +102,35 @@ You can view analytics for your recommendation to see which items users were rec
 1. Go to **Analytics** > **Item Recommendation**.
 2. Select your recommendation from the list.
 
-This page shows a breakdown of your recommendation audience.
+At the top of the page, you can find statistics about your recommendation, such as precision and coverage.
 
 ![][5]
 
+These metrics are defined in the following table. 
+
 | Metric              | Description |
 | ------------------- | ---------- |
-| Precision           | The percentage of time the model correctly guessed the next item a user purchased. Precision is heavily dependent on your specific catalog size and mix, and should be used as a guide to understand how often the model correctly guesses the user's next purchase.<br><br>This number can vary, with averages from between 6–20%. Based on Braze testing, you can expect to see personalized item recommendations be about three times more precise than most popular item recommendations. This metric updates when the model next retrains.  |
+| Precision           | The percentage of time the model correctly guessed the next item a user purchased. Precision is heavily dependent on your specific catalog size and mix, and should be used as a guide to understand how often the model is correct.<br><br>This number can vary, with averages from between 6–20%. Based on Braze testing, you can expect to see personalized item recommendations be about three times more precise than most popular item recommendations. This metric updates when the model next retrains.  |
 | Coverage            | What percentage of available items in the catalog are recommended to at least one user. You can expect to see higher item coverage with personalized item recommendations over most popular ones. |
 | Recommendation type | Percentage of users who will receive personalized recommendations versus the fallback of most popular items. The fallback is sent to users who don’t have enough data to generate a personalized recommendation. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+The next section shows a breakdown of items in the catalog, split into two columns:
+
+- **Personalized items:** This column lists each item in the catalog in order of most often to least often recommended to users. This column also shows how many users were assigned each item by the model.
+- **Most Popular items:** This column lists each item in the catalog in order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace.
+
+![][6]
+
+For your reference, the final section shows a summary of your chosen recommendation configuration, as well as when the recommendation was last updated.
+
+![][7]{: style="max-width:45%" }
 
 ## Using recommendations in messaging
 
 ![][10]{: style="max-width:30%;float:right;margin-left:15px;"}
 
-After your recommendation finishes training you will receive an email letting you know it succeeded. Then, you can personalize your messages with Liquid to insert the most popular products in that catalog. The Liquid can be generated for you by the personalization window found in message composers:
+After your recommendation finishes training, you can personalize your messages with Liquid to insert the most popular products in that catalog. The Liquid can be generated for you by the personalization window found in message composers:
 
 1. In any message composers that support personalization, click <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Add personalization"></i> to open the personalization window.
 2. For **Personalization Type**, select **Item Recommendation**.
