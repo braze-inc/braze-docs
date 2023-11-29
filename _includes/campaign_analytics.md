@@ -213,11 +213,7 @@ The displayed statistic is generated 36 hours after email sending has begun. It 
 
 ###### Limitations
 
-- Estimated Real Open Rate is being gradually rolled out and may not appear in your campaign analytics just yet.
-- Additionally, Estimated Real Open Rate is:
-   - Only available in campaigns
-   - Not reported in Current events
-   - Not retroactively calculated for past campaigns
+Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is not retroactively calculated for campaigns launched before November 14, 2023.
 
 {% elsif include.channel == "in-app message" %}
 
