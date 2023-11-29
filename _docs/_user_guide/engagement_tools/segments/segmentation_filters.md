@@ -4,7 +4,7 @@ nav_title: Segmentation Filters
 article_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
-glossary_top_text: The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by filter category.
+glossary_top_text: The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. You can search or narrow these filters by filter category.
 
 page_type: glossary
 tool: Segments
@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, etc.) and target multiple different segments within one campaign. Note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
+    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, and others) and target multiple different segments within one campaign. Note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
     tags:
       - Segment or CSV membership
   - name: Braze Segment Extensions
@@ -71,11 +71,11 @@ glossaries:
     tags:
       - Custom events
   - name: X Custom Event In Y Days
-    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, and so on.
     tags:
       - Custom events
   - name: X Custom Event Property In Y Days
-    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, and so on.
     tags:
       - Custom events
   - name: Email Address 
@@ -375,7 +375,7 @@ glossaries:
     tags:
       - Demographic attributes
   - name: Phone Number
-    description: Segments your users by their phone number. Only use digits [0-9]. Do not include parenthesis, dashes, etc.
+    description: Segments your users by their phone number. Only use digits [0-9]. Do not include parenthesis, dashes, and similar.
     tags:
       - Demographic attributes
   - name: First Name
