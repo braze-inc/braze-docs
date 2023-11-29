@@ -20,7 +20,7 @@ You can use AI Item Recommendations to calculate the most popular products or cr
 This page describes the free version of AI Item Recommendations. When using the free version:
 
 - You can create one recommendation per [recommendation type](#recommendation-type) in a workspace.
-- The items recommended to each user in a recommendation update once a month.
+- The items recommended to each user in a recommendation update once a week. The recommendation model itself will automatically update once a month.
 
 ## Creating an AI Item Recommendation
 
@@ -138,10 +138,6 @@ After your recommendation finishes training, you can personalize your messages w
 4. For **Number of Predicted Items**, enter how many top products you'd like to be inserted. For example, you can display the top three most purchased items.
 5. For **Information to Display**, select which fields from the catalog should be included for each item. The values for these fields for each item will be drawn from the catalog associated with this recommendation.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
-
-## Update frequency
-
-Recommendations in the free version of the feature will update each user's list of recommended items once every week. The recommendation model itself will automatically update once per month.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
