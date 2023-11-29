@@ -1,7 +1,7 @@
 ---
 nav_title: AI Item Recommendations
 article_title: AI Item Recommendations
-page_order: 10
+page_order: 100
 alias: "/recommendations/"
 description: "This reference article covers how to create an Item Recommendation for items in a catalog."
 ---
@@ -12,14 +12,15 @@ You can use AI Item Recommendations to calculate the most popular products or cr
 
 ## Prerequisites
 
-You must have at least one [catalog][catalog] to take advantage of Item Recommendations.
-You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog. 
+- You must have at least one [catalog][catalog] to take advantage of AI Item Recommendations.
+- You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 
-{% alert tip %}
-This page describes the free version of AI Item Recommendations. When using this version:
-1. You may only create 1 Recommendation per each of the types below in each Braze workspace.
-2. Each recommendation will only updates the items recommended for each per user once per week.
-{% endalert %}
+### Important notes
+
+This page describes the free version of AI Item Recommendations. When using the free version:
+
+- You can create one recommendation per [recommendation type](#recommendation-type) in a workspace.
+- The items recommended to each user in a recommendation update once a week.
 
 ## Creating an AI Item Recommendation
 
@@ -36,14 +37,13 @@ First, give your recommendation a name and optional description.
 
 ![][1]
 
-### Step 2: Define your recommendation
+### Step 2: Define your recommendation {#recommendation-type}
 
 Next, select the recommendation type. Both recommendation types use the last 6 months of item interaction (purchase or custom event) data.
 
-- **Most popular:** Calculates the items from the catalog that are interacted with most often by users in the entire workspace.
-- **Personalized:** Uses transformers, a new kind of deep learning, to predict each individual user's next most likely set of items to purchase or interact with. We calculate up to 30 of the next most likely items ranked from most to least likely.
-- **Most Recent:** Surfaces each user's most recent purchases.
-
+- **Most popular:** Calculates the items from the catalog that users interact with most often in the entire workspace.
+- **Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to purchase or interact with. We calculate up to 30 of the next most likely items ranked from most to least likely.
+- **Most recent:** Surfaces each user's most recent purchases.
 
 ![][2-1]
 
@@ -51,7 +51,7 @@ If not already populated, select the [catalog][catalog] that this recommendation
 
 #### Add a selection
 
-If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog (such as brand, size, or location). If your selection contains Liquid, it can't be used in your recommendation.
+If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. If your selection contains Liquid, the selection can't be used in your recommendation.
 
 ![][2-2]
 
@@ -61,7 +61,13 @@ If you can't find your selection, make sure it's set up in your catalog first.
 
 ### Step 3: Select the interaction to drive recommendations
 
-Next, select the event you want this recommendation to optimize for. This can be a purchase or any other kind of item interaction. For example, purchase events (with the [Purchase Object]({{site.baseurl}}/api/objects_filters/purchase_object/)) can be used or custom events that represent a purchase or any other item interaction. For example, you could create a recommendation based on product views, clicks, plays (of media) by specifying the interaction event you'd like in this step.
+Next, select the event you want this recommendation to optimize for. This event is usually a purchase, but it can also be any kind of interaction with an item.
+
+You can optimize for:
+
+- Purchase events with the [Purchase Object]({{site.baseurl}}/api/objects_filters/purchase_object/)
+- Custom events that represent a purchase
+- Custom events that represent any other item interaction (such as product views, clicks, or media plays)
 
 If you choose **Custom Event**, select your event from the list.
 
@@ -85,9 +91,27 @@ There are some requirements for selecting your property:
 
 ### Step 5: Train the recommendation
 
-When you're ready, select **Create Recommendation**. This process will take a few minutes to complete. You will receive an email update when the recommendation is successfully trained, or an explanation of why the creation may have failed.
+When you're ready, select **Create Recommendation**. This process will take a few minutes to complete. You will receive an email update when the recommendation is successfully trained or an explanation of why the creation may have failed.
 
 You can find the recommendation on the **Predictions** page, where you can then edit or archive it as needed. Only one most popular products recommendation can be created per catalog.
+
+## Analytics
+
+You can view analytics for your recommendation to see which items users were recommended, and how accurate the recommendation model was.
+
+1. Go to **Analytics** > **Item Recommendation**.
+2. Select your recommendation from the list.
+
+This page shows a breakdown of your recommendation audience.
+
+![][5]
+
+| Metric              | Description |
+| ------------------- | ---------- |
+| Precision           | The percentage of time the model correctly guessed the next item a user purchased. Precision is heavily dependent on your specific catalog size and mix, and should be used as a guide to understand how often the model correctly guesses the user's next purchase.<br><br>This number can vary, with averages from between 6–20%. Based on Braze testing, you can expect to see personalized item recommendations be about three times more precise than most popular item recommendations. This metric updates when the model next retrains.  |
+| Coverage            | What percentage of available items in the catalog are recommended to at least one user. You can expect to see higher item coverage with personalized item recommendations over most popular ones. |
+| Recommendation type | Percentage of users who will receive personalized recommendations versus the fallback of most popular items. The fallback is sent to users who don’t have enough data to generate a personalized recommendation. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Using recommendations in messaging
 
@@ -102,10 +126,16 @@ After your recommendation finishes training you will receive an email letting yo
 5. For **Information to Display**, select which fields from the catalog should be included for each item. The values for these fields for each item will be drawn from the catalog associated with this recommendation.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
+
+
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
 [2-2]: {% image_buster /assets/img/item_recs_2-2.png %}
 [3]: {% image_buster /assets/img/item_recs_3.png %}
 [4]: {% image_buster /assets/img/item_recs_4.png %}
+[5]: {% image_buster /assets/img/item_recs_analytics_1.png %}
+[6]: {% image_buster /assets/img/item_recs_analytics_2.png %}
+[7]: {% image_buster /assets/img/item_recs_analytics_3.png %}
+
 [10]: {% image_buster /assets/img/add_personalization.png %}
 [catalog]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/

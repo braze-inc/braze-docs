@@ -16,9 +16,6 @@ guide_featured_list:
 - name: Predictive Events
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_events/
   image: /assets/img/icons/prediction_crystal_ball.svg
-- name: Item Recommendations
-  link: /docs/user_guide/sage_ai/predictive_suite/recommendations/
-  image: /assets/img/icons/loyalty_heart.svg
 ---
 
 {% alert tip %}
