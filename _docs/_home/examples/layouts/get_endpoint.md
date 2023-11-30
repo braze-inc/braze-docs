@@ -2,10 +2,8 @@
 nav_title: "GET: [Endpoint Name]"
 article_title: "Example layout: GET: [Endpoint Name]"
 search_tag: Endpoint
-
 page_order: 1
 excerpt_separator: ""
-
 layout: api_page
 page_type: reference
 description: "This article outlines the usage of and parameters for using the Get [endpoint name] Braze endpoint."
