@@ -17,11 +17,11 @@ You'll need to complete the following:
 
 ## Making changes
 
-For small, single-document changes, you can [make changes directly in GitHub](./getting_started/your_first_contribution.md).
+For small, single-document changes, you can [make changes directly in GitHub](), like this:
 
 ![Editing a file directly in GitHub.]({% image_buster /assets/img/contributing/editing_directly_in_github.png %})
 
-For complex or multi-document changes, you'll need to [set up your local environment](), then [make your changes locally]().
+For complex or multi-document changes, you'll need to [set up your local environment](), then [make your changes locally]() using Git, like this:
 
 ```bash
 $ git push origin my-changes
@@ -44,7 +44,7 @@ branch 'my-branch' set up to track 'origin/my-branch'.
 
 ## Creating a pull request
 
-After making your changes, you'll [create a pull request (PR)](). In your PR, you can add a PR summary, check commit history, or [view your changes in a site preview]().
+After making your changes, you'll [create a pull request (PR)](). In your PR, you can add a summary, review your commit history, or [open a site preview]().
 
 ![An example pull request (PR) on GitHub.]({% image_buster /assets/img/contributing/creating_a_pull_request.png %})
 

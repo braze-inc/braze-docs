@@ -27,7 +27,7 @@ To add a new image to the documentation, or edit an existing image, please follo
 
 Image names should be all lowercase to prevent issues with linking. Image references are not case-agnostic.
 
-## Updating an existing image
+## Replacing an existing image
 
 When updating an image, replace the old image with a new image of the same name by following this flow:
 

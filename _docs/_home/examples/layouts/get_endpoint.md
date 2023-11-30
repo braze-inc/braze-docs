@@ -1,6 +1,6 @@
 ---
 nav_title: "GET: [Endpoint Name]"
-article_title: "GET: [Endpoint Name]"
+article_title: "Example layout: GET: [Endpoint Name]"
 search_tag: Endpoint
 
 page_order: 1

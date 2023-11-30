@@ -1,6 +1,6 @@
 ---
 nav_title: Managing pages
-page_order: 1
+page_order: 0
 noindex: true
 ---
 
@@ -16,7 +16,7 @@ New pages will be created within the `/_docs` folder in 1 of the main folders:
 
 **_All file names and folders should all be lower case. Underscores (\_) should be used instead of spaces or special characters._**
 
-## Adding a new page
+## Creating a new page
 
 While uncommon, if you would like to add a new page through the on-GitHub contribution method, listed below are the instructions and required YAML to do so.
 
@@ -61,3 +61,11 @@ channel:
 ```
 
 Write your content as described above, then submit your changes.
+
+## Updating an existing page
+
+> TODO:
+
+## Removing an existing page
+
+> TODO:

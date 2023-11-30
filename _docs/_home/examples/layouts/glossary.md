@@ -5,7 +5,7 @@ page_order: 0
 noindex: true
 ---
 
-# Glossary layout
+# Example layout: Glossary
 
 > The glossary layout is in YAML. It requires several components and parameters. Glossary layouts are good for localized searchable content, like dictionaries and specific categories of content.
 

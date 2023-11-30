@@ -1,6 +1,6 @@
 ---
 nav_title: "POST: [Endpoint Name]"
-page_order: "POST: User Track"
+page_order: "Example layout: POST: User Track"
 search_tag: Endpoint
 page_order: 4
 layout: api_page

@@ -1,11 +1,10 @@
 ---
-nav_title: Overviews
-article_title: Overview layout
+nav_title: Overview
 page_order: 0
 noindex: true
 ---
 
-# Overview layout
+# Example layout: Overview
 
 > The overview layout is good for creating a specific navigation option at the top of a page that allows users to click a button to travel to a specific part of a page or a completely other page.
 

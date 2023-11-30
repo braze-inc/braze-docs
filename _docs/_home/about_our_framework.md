@@ -1,10 +1,10 @@
 ---
-nav_title: Framework
+nav_title: About our framework
 page_order: 3
 noindex: true
 ---
 
-# Framework
+# About our framework
 
 > Learn about the various components that make up the Braze Docs framework.
 
@@ -66,6 +66,14 @@ _Example output:_
 For a full walkthrough, see [Managing pages]().
 {% endalert %}
 
+## Images
+
+> TODO: add overview for images.
+
+{% alert note %}
+For a full walkthrough, see [Managing images]().
+{% endalert %}
+
 ## Content reuse
 
 Jekyll offers the ability to reuse written content across the docs using the `include` tag. Includes are located in the `_includes` directory and can be written in Markdown or HTML syntax.
@@ -109,7 +117,7 @@ layout: LAYOUT_VALUE
 
 Replace `LAYOUT_VALUE` with the name of the layout file and the file extension removed.
 
-_Example file:_
+_Example file tree:_
 
 ```plaintext
 braze-docs
@@ -263,13 +271,13 @@ braze-docs
 └── _docs
     └── _primary_section
         ├── subsection_a
-        │   ├── subsection_a.md # not configured as a landing page
         │   ├── page_a.md
         │   └── page_b.md
-        └── subsection_b
-            ├── subsection_b.md # configured as a landing page
-            ├── page_a.md
-            └── page_b.md
+        ├── subsection_b
+        │   ├── page_a.md
+        │   └── page_b.md
+        ├── subsection_a.md # not configured as a landing page
+        └── subsection_b.md # configured as a landing page  
 ```
 
 In the `_primary_section` directory, `subsection_a` is **not** configured with a landing page, while `subsection_b` is configured with a landing page. In the following example, `subsection_a.md` has `config_only:` set to `true`, which prevents this page from being rendered as a landing page:
@@ -288,7 +296,7 @@ _Example output:_
 
 ![]()
 
-However, `subsection_b.md` doesn't use the `config_only:` key, so the page is rendered as a landing page:
+However, `subsection_b.md` doesn't use the `config_only:` key, so this page _is_ rendered as a landing page:
 
 _Example input:_
 
@@ -303,23 +311,33 @@ _Example output:_
 
 ![]()
 
-While subsections with `config_only:` set to `true` won't be rendered as a page on Braze Docs, its directory names will still be added to the URL for all pages in that subsection. See the following example:
+Keep in mind: while a subsection with `config_only:` set to `true` is not rendered as a page, the subsection's directory name is still used in all URLs for the pages within that subsection. See the following example:
 
 ```plaintext
 braze-docs
 └── _docs
     └── _primary_section
         ├── subsection_a
-        │   ├── subsection_a.md # not configured as a landing page
         │   ├── page_a.md
         │   └── page_b.md
-        └── subsection_b
-            ├── subsection_b.md # configured as a landing page
-            ├── page_a.md
-            └── page_b.md
+        ├── subsection_b
+        │   ├── page_a.md
+        │   └── page_b.md
+        ├── subsection_a.md # not configured as a landing page
+        └── subsection_b.md # configured as a landing page  
 ```
 
-The URLs for `page_a.md` and `page_b.md` will still contain `subsection_a` even if `config_only:` is set to `true` in `subsection_a.md`.
+The URLs for `subsection_a/page_a.md` and `subsection_a/page_b.md` will contain `subsection_a` even though `subsection_a.md` is not configured as a landing page.
+
+_Example `subsection_a.md`:_
+
+```markdown
+---
+nav_title: Subsection A
+page_order: 0
+config_only: true
+---
+```
 
 _Example URLs for Subsection A:_
 
@@ -328,7 +346,16 @@ https://www.braze.com/docs/primary_section/subsection_a/page_a
 https://www.braze.com/docs/primary_section/subsection_a/page_b
 ```
 
-This is the same for `subsection_b` with the addition that `subsection_b.md` _also_ gets a dedicated URL since it's been configured as a landing page.
+While this is similar for `subsection_b`, in addition to `subsection_b/page_a.md` and `subsection_b/page_b.md` receiving unique URLS, `subsection_b.md` also receives a unique URL since it's configured as a landing page.
+
+_Example `subsection_b.md`:_
+
+```markdown
+---
+nav_title: Subsection B
+page_order: 0
+---
+```
 
 _Example URLs for Subsection B:_
 

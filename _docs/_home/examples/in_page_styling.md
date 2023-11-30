@@ -1,10 +1,10 @@
 ---
-nav_title: CSS styling examples
-page_order: 7
+nav_title: In-page styling
+page_order: 0
 noindex: true
 ---
 
-# CSS styling examples
+# In-page styling examples
 
 ## Header Test
 

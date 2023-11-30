@@ -1,6 +1,6 @@
 ---
-nav_title: Archived
+nav_title: Layouts
+page_order: 1
 config_only: true
-page_order: 50
 noindex: true
 ---

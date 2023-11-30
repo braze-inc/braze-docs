@@ -1,6 +1,6 @@
 ---
-nav_title: Redirecting URLs
-page_order: 5
+nav_title: Reusing content
+page_order: 3
 noindex: true
 ---
 
