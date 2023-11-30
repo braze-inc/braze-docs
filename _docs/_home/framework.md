@@ -62,6 +62,10 @@ _Example output:_
 
 ![]()
 
+{% alert note %}
+For a full walkthrough, see [Managing pages]().
+{% endalert %}
+
 ## Content reuse
 
 Jekyll offers the ability to reuse written content across the docs using the `include` tag. Includes are located in the `_includes` directory and can be written in Markdown or HTML syntax.
@@ -107,7 +111,7 @@ Replace `LAYOUT_VALUE` with the name of the layout file and the file extension r
 
 _Example file:_
 
-```commandline
+```plaintext
 braze-docs
 ├── _build
 ├── _config.yml
@@ -168,7 +172,7 @@ These primary sections can be accessed on the site header from any page on Braze
 
 ![]()
 
-Each primary section is built using [Jekyll collections](https://jekyllrb.com/docs/collections/), which allows related content to be grouped together for easy management. Keep in mind: while all primary sections are collections, not all collections are primary sections. You can find the full list of collections in Jekyll's configuration file, `_config.yml`:
+Each primary section is built using [Jekyll collections](https://jekyllrb.com/docs/collections/), which allows related content to be grouped together for easy management. Keep in mind, while all primary sections are collections, not all collections are primary sections. You can find the full list of Braze Docs collections in the Jekyll configuration file, `_config.yml`:
 
 ```yaml
 collections:
@@ -212,9 +216,9 @@ collections:
     hidden: true
 ```
 
-Each of these collections represent a directory within the `_docs` directory.
+Each collection listed represents a directory within the `_docs` directory.
 
-```commandline
+```plaintext
 braze-docs
 └── _docs
     ├── _api
@@ -248,13 +252,13 @@ _Example output:_
 
 ### Subsections
 
-All primary sections on Braze Docs contain one or more subsections, each subsection representing an expandable item on the left-side navigation.
+All primary sections on Braze Docs contain one or more subsection, each representing an expandable item on the left-side navigation.
 
 ![]()
 
 Unlike primary sections, subsections can be configured with or _without_ a landing page. Subsections without landing pages are helpful for organizing related content together while minimizing the number of non-useful pages in Braze Docs. Whether a subsection is configured with or without a landing page, all subsections represent both a directory _and_ Markdown file in the repository. See the following example:
 
-```commandline
+```plaintext
 braze-docs
 └── _docs
     └── _primary_section
@@ -298,3 +302,38 @@ page_order: 0
 _Example output:_
 
 ![]()
+
+While subsections with `config_only:` set to `true` won't be rendered as a page on Braze Docs, its directory names will still be added to the URL for all pages in that subsection. See the following example:
+
+```plaintext
+braze-docs
+└── _docs
+    └── _primary_section
+        ├── subsection_a
+        │   ├── subsection_a.md # not configured as a landing page
+        │   ├── page_a.md
+        │   └── page_b.md
+        └── subsection_b
+            ├── subsection_b.md # configured as a landing page
+            ├── page_a.md
+            └── page_b.md
+```
+
+The URLs for `page_a.md` and `page_b.md` will still contain `subsection_a` even if `config_only:` is set to `true` in `subsection_a.md`.
+
+_Example URLs for Subsection A:_
+
+```plaintext
+https://www.braze.com/docs/primary_section/subsection_a/page_a
+https://www.braze.com/docs/primary_section/subsection_a/page_b
+```
+
+This is the same for `subsection_b` with the addition that `subsection_b.md` _also_ gets a dedicated URL since it's been configured as a landing page.
+
+_Example URLs for Subsection B:_
+
+```plaintext
+https://www.braze.com/docs/primary_section/subsection_b
+https://www.braze.com/docs/primary_section/subsection_b/page_a
+https://www.braze.com/docs/primary_section/subsection_b/page_b
+```
