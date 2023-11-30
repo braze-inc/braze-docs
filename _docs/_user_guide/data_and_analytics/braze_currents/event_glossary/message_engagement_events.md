@@ -130,7 +130,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
 WhatsApp, Failure
 {% endapitags %}
 
-This event occurs when an Internet Service Provider returns a hard bounce. A hard bounce signifies a permanent deliverability failure.
+This event occurs when WhatsApp cannot deliver the message to the user. A hard bounce signifies a permanent deliverability failure.
 
 ```json
 // WhatsApp Delivery Failure: users.messages.whatsapp.Failure
@@ -169,7 +169,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
 WhatsApp, Sends
 {% endapitags %}
 
-This event occurs when an email send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the end user.
+This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the end user.
 
 ```json
 // WhatsApp Send: users.messages.whatsapp.Send
