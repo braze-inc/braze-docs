@@ -76,11 +76,13 @@ Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 
 
 ### Why is my promotional message not displaying the promotion card or product carousel in the end user's inbox?
 
-There are many factors that determine whether product carousel will be shown in the Gmail Promotion Tab.
+There are many factors that determine whether product carousel will be shown in the Gmail Promotion tab.
 
 All images in the annotation still have to pass a quality filter. In order for product carousel to populate, it's crucial that all images in the annotation are in the recommended image aspect ratio, high quality or high resolution close-up product images. The images should contain little to no text (preferable). The quality filter also filters inappropriate content, so the images must be family, user, and child-friendly.
 
-Furthermore, Gmail has a density cap on how many product carousels appear in a user’s Gmail Promotion tab. For instance, if a user subscribes to a lot of brands that use product carousel in their promotion email, Gmail eventually puts a cap on how many product carousels are shown. 
+Furthermore, Gmail has a density cap on how many product carousels appear in a user’s Gmail Promotion tab. For instance, if a user subscribes to a lot of brands that use product carousel in their promotion email, Gmail eventually puts a cap on how many product carousels are shown.
+
+Due to Google's privacy and safety regulations, emails with annotations must be widely sent for the annotation to work. It's recommend to launch a campaign and send it to at least 100 recipients for Google's system to detect it as a "mass send." Image URLs may not vary across recipients.
 
 ### How are clicks on a promotion card or product carousel tracked?
 
