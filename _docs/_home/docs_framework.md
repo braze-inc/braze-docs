@@ -38,13 +38,11 @@ METADATA_KEY: METADATA_VALUE
 
 Replace the following:
 
-- `METADATA_KEY`: The key for a supported metadata type. For more information, see [Metadata]().
+- `METADATA_KEY`: The key representing a supported metadata type. For more information, see [Metadata]().
 - `METADATA_VALUE`: The value assigned to the metadata type's key. For more information, see [Metadata]().
 - `CONTENT`: The page's content written in Markdown syntax.
 
-For example:
-
-_Input:_
+_Example input:_
 
 ```markdown
 ---
@@ -60,7 +58,7 @@ Learn how you can get started with Braze.
 ## Step 1: Create an account
 ```
 
-_Output:_
+_Example output:_
 
 ![]()
 
@@ -77,9 +75,7 @@ Replace the following:
 - `RELATIVE_PATH`: (Optional) The relative path to the file from the `_includes` directory. This is only needed if you're including a file from a directory inside the `_includes` directory, such as `_includes/braze/upgrade_notice.md`.
 - `FILE`: The name of the file including the file extension.
 
-For example:
-
-_Input:_
+_Example input:_
 
 ```markdown
 # Getting started with Braze
@@ -89,7 +85,7 @@ Learn how you can get started with Braze.
 {% raw %}{% multi_lang_include braze/upgrade_notice.md %}{% endraw %}
 ```
 
-_Output:_
+_Example output:_
 
 ![]()
 
@@ -107,9 +103,33 @@ layout: LAYOUT_VALUE
 ---
 ```
 
-Replace `LAYOUT_VALUE` with the name of the layout file and the file extension removed. For example, to use the `api_glossary.html` layout, add the following to your YAML front matter:
+Replace `LAYOUT_VALUE` with the name of the layout file and the file extension removed.
 
-_Input:_
+_Example file:_
+
+```commandline
+braze-docs
+├── _build
+├── _config.yml
+├── _data
+├── _docs
+├── _includes
+│   └── api_glossary.html
+├── _lang
+├── _layouts
+├── _plugins
+├── _site
+├── assets
+├── config
+├── public
+├── scripts
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+└── README.md
+```
+
+_Example input:_
 
 ```markdown
 ---
@@ -117,7 +137,7 @@ layout: api_glossary
 ---
 ```
 
-_Output:_
+_Example output:_
 
 ![]()
 
@@ -127,47 +147,154 @@ For more information, see [Layouts]().
 
 ## Sections
 
-> TODO: Something like "There are main sections and subsections... Primary are X and sub are Y."
+Braze Docs is organized into [primary sections]() and [subsections](). Choose a section to learn more.
+
+{% alert note %}
+For a full walkthrough, see [Managing sections]().
+{% endalert %}
 
 ### Primary sections
 
-> TODO: improve/make better examples.
+The primary sections on Braze Docs are:
 
-Articles are organized into section folders (i.e., `_docs/`), and each section folder is defined as a [Jekyll collection](http://jekyllrb.com/docs/collections/). Collections can be thought of as groupings of Jekyll posts that can be given their own unique properties.  Files within `_docs/` will mimic the url structure unless they have a permalinks config value or are `hidden` pages.
+- [Braze Docs Home](https://www.braze.com/docs)
+- [User Guide](https://www.braze.com/docs/user_guide/introduction)
+- [Developer Guide](https://www.braze.com/docs/developer_guide/home)
+- [Braze API Guide](https://www.braze.com/docs/api/home)
+- [Technology Partners](https://www.braze.com/docs/partners/home)
+- [Braze Help](https://www.braze.com/docs/help/home)
 
-Each collection holds relevant articles. For example:
+These primary sections can be accessed on the site header from any page on Braze Docs.
 
-```plaintext
-/_docs/_developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup.md
+![]()
+
+Each primary section is built using [Jekyll collections](https://jekyllrb.com/docs/collections/), which allows related content to be grouped together for easy management. Keep in mind: while all primary sections are collections, not all collections are primary sections. You can find the full list of collections in Jekyll's configuration file, `_config.yml`:
+
+```yaml
+collections:
+  home:
+    title: Documentation
+    output: true
+    default_nav_url: ''
+    page_order: 1
+  user_guide:
+    title: User Guide
+    output: true
+    default_nav_url: introduction/
+    page_order: 2
+  developer_guide:
+    title: Developer Guide
+    output: true
+    default_nav_url: home/
+    page_order: 3
+  api:
+    title: API
+    output: true
+    default_nav_url: home/
+    page_order: 4
+  partners:
+    title: Technology Partners
+    output: true
+    default_nav_url: home/
+    page_order: 5
+  help:
+    title: Help
+    output: true
+    default_nav_url: home/
+    page_order: 6
+  hidden: # Hidden pages not directly linked via navigation
+    title: Braze
+    output: true
+    hidden: true
+  docs_pages: # Site specific pages. ie main redirects and search
+    title: Braze
+    output: true
+    hidden: true
 ```
 
-The live url will be based on the collections url. For example:
+Each of these collections represent a directory within the `_docs` directory.
 
-```plaintext
-https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/
+```commandline
+braze-docs
+└── _docs
+    ├── _api
+    ├── _developer_guide
+    ├── _docs_pages
+    ├── _help
+    ├── _hidden
+    ├── _home
+    ├── _partners
+    └── _user_guide
 ```
+
+The landing page for each primary section is a standard Markdown file with the `page_order:` key set to `0`.
+
+_Example input:_
+
+```markdown
+---
+page_order: 0
+layout: dev_guide
+guide_top_header: "Braze Developer Guide"
+guide_top_text: "This is where developers can find all the integrations available with Braze.<br>For additional resources and to join the Braze developer community, visit the <a href='https://www.braze.com/dev-portal'>Braze developer portal</a>."
+article_title: Braze Developer Guide
+description: "This landing page is where developers can find all the integrations available with Braze."
+---
+```
+
+_Example output:_
+
+![]()
 
 ### Subsections
 
-Folders can be created to generate the navigation sidebar layout as desired. Navigation name will use the folder name. If a different folder name is desired, then on the same level as the folder, a config folder file of the same name can be created to determine the order.
+All primary sections on Braze Docs contain one or more subsections, each subsection representing an expandable item on the left-side navigation.
 
-In the previous example, there's an iOS folder:
+![]()
 
-```plaintext
-└──_docs/
-   └──_developer_guide/
-      └──platform_integration_guides/
-         ├──ios/
-         └──ios.md
+Unlike primary sections, subsections can be configured with or _without_ a landing page. Subsections without landing pages are helpful for organizing related content together while minimizing the number of non-useful pages in Braze Docs. Whether a subsection is configured with or without a landing page, all subsections represent both a directory _and_ Markdown file in the repository. See the following example:
+
+```commandline
+braze-docs
+└── _docs
+    └── _primary_section
+        ├── subsection_a
+        │   ├── subsection_a.md # not configured as a landing page
+        │   ├── page_a.md
+        │   └── page_b.md
+        └── subsection_b
+            ├── subsection_b.md # configured as a landing page
+            ├── page_a.md
+            └── page_b.md
 ```
 
-To label this folder "iOS" in the navigation sidebar, we'll add the following metadata to `ios.md`:
+In the `_primary_section` directory, `subsection_a` is **not** configured with a landing page, while `subsection_b` is configured with a landing page. In the following example, `subsection_a.md` has `config_only:` set to `true`, which prevents this page from being rendered as a landing page:
 
-```yaml
+_Example input:_
+
+```markdown
 ---
-nav_title: iOS
+nav_title: Subsection A
+page_order: 0
 config_only: true
-layout: blank_config
-page_order: 1
 ---
 ```
+
+_Example output:_
+
+![]()
+
+However, `subsection_b.md` doesn't use the `config_only:` key, so the page is rendered as a landing page:
+
+_Example input:_
+
+```markdown
+---
+nav_title: Subsection B
+page_order: 0
+---
+```
+
+_Example output:_
+
+![]()
