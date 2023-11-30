@@ -1,105 +1,135 @@
 ---
-nav_title: Docs framework
+nav_title: Framework
 page_order: 3
 noindex: true
 ---
 
-# Docs framework
+# Framework
 
-> Braze Docs is built using Jekyll, a framework--or more specifically, a Static-Site Generator (SSG)--for managing docs-as-code repositories.
+> Learn about the various components that make up the Braze Docs framework.
 
-## Docs-as-code
+## Managing the docs
 
-> TODO: What is docs-as-code?
+Braze Docs is managed using docs-as-code, a method for managing documentation that mirrors the software development lifecycle by using a version control system. Braze Docs uses the Git version control system, which allows contributors to work on the same piece of documentation without overwriting each other's work.
 
-## Static-site generators
+{% alert note %}
+For more information, see [About version control and Git](https://docs.github.com/en/get-started/using-git/about-git#about-version-control-and-git).
+{% endalert %}
 
-> TODO: What is a static-site generator?
+## Building the site
 
-## Languages and file types
+Braze Docs is built using Jekyll, a popular Static-Site Generator (SSG) that allows content files and design files to be stored in separate directories, such as `_docs` for content files and `assets` for design files. When the site is built, Jekyll intelligently merges each file and stores them as XML and HTML data in the `_site` directory.
 
-> TODO: What is Markdown and YAML, and how does it fit into the big picture?
-
-Articles are written in [Markdown syntax](http://daringfireball.net/projects/markdown/) as .md files housed within the `_docs/` directory. Jekyll uses [kramdown](http://kramdown.gettalong.org/) to parse Markdown files from plain text into HTML. [Configuration for Markdown parsers](http://jekyllrb.com/docs/configuration/#markdown-options) can be set in `_config.yml`.
-
-> TODO: improve/make better examples. Input should be code example, output should be an image.
-
-To be recognized and processed by Jekyll, a file requires YAML Front Matter. Front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is an example of the front matter in `/_docs/_developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup.md`:
-
-```yaml
----
-nav_title: Set Up
-platform: iOS
-page_order: 0
-search_rank: 5
----
-```
-
-> TODO: should we actually be suggesting people to do this, or no?
-
-Front matter can be empty as well, if you want Jekyll to recognize the file but don't care to actually set any variables:
-
-```yaml
----
----
-```
-
-Within a file's front matter, you can set [predefined variables](http://jekyllrb.com/docs/frontmatter/#predefined-global-variables) as well as [custom ones](http://jekyllrb.com/docs/frontmatter/#custom-variables). For each file with front matter, Jekyll makes a variety of data available via the [Liquid templating system](https://github.com/Shopify/liquid/wiki). All front matter variables will be available via Liquid tags, both further down in the file and in any layouts or includes that reference the given page. Therefore, in `Creating_a_Segment.md`, `{% raw %}{{ page.title }}{% endraw %}` would render to "Creating a Segment."
-
-More information on front matter variables as data can be found on the [Jekyll Variables documentation](http://jekyllrb.com/docs/variables/) and [Front Matter](https://jekyllrb.com/docs/front-matter/).
-
-## Layouts
-
-Pages are rendered using the HTML files stored in the `/_docs/_layouts/` directory. Each page has a global `layout` variable in its front matter, which specifies which layout file to use.
-
-
-Jekyll uses [Liquid](https://github.com/Shopify/liquid/wiki) templating to process templates. For example, in `/_docs/_layouts/self_help.html`:
-
-```html
-  <div id="help_list" >
-      {%- for help_list in page.resources_list  -%}
-        {%- if help_list.link -%}
-        <a href="{{ help_list.link }}">
-          {%- endif %}
-      <div id="{{ help_list.name | handle }}" class="help_item">
-        <div class="help_img" >
-        {%- if help_list.image -%}
-        <img src="{{site.baseurl}}{{ help_list.image}} " />
-        {%- endif -%}
-        </div>
-        <div class="help_info">
-          <div class="help_name">
-              {{ help_list.name }}
-          </div>
-        </div>
-      </div>
-        {%- if help_list.link -%}
-        </a>
-        {%- endif %}
-      {%- endfor -%}
-    </div>
-```
+{% alert note %}
+For more information, see [Jekyll Directory Structure](https://jekyllrb.com/docs/structure/).
+{% endalert %}
 
 ## Pages
 
-Let's take a look at the YAML front matter for `/_docs/_developer_guide/platform_integration_guides/ios/push_notifications/customization.md`:
+Each page on Braze Docs is written in Markdown syntax and stored as a Markdown file using the `.md` file extension. At the top of each Markdown file, YAML front matter is used to add hidden metadata for each page.
 
-```yaml
+```markdown
 ---
-nav_title: Customization
-platform: iOS
-ex_push_payload: archive/apple/push_payload.json
-page_order: 1
-search_rank: 5
-layout: documents
+METADATA_KEY: METADATA_VALUE
+---
+
+# CONTENT
+```
+
+Replace the following:
+
+- `METADATA_KEY`: The key for a supported metadata type. For more information, see [Metadata]().
+- `METADATA_VALUE`: The value assigned to the metadata type's key. For more information, see [Metadata]().
+- `CONTENT`: The page's content written in Markdown syntax.
+
+For example:
+
+_Input:_
+
+```markdown
+---
+nav_title: Getting started
+layout: default
+page_order: 5
+---
+
+# Getting started with Braze
+
+Learn how you can get started with Braze.
+
+## Step 1: Create an account
+```
+
+_Output:_
+
+![]()
+
+## Content reuse
+
+Jekyll offers the ability to reuse written content across the docs using the `include` tag. Includes are located in the `_includes` directory and can be written in Markdown or HTML syntax.
+
+```markdown
+{% raw %}{% multi_lang_include RELATIVE_PATH/FILE %}{% endraw %}
+```
+
+Replace the following:
+
+- `RELATIVE_PATH`: (Optional) The relative path to the file from the `_includes` directory. This is only needed if you're including a file from a directory inside the `_includes` directory, such as `_includes/braze/upgrade_notice.md`.
+- `FILE`: The name of the file including the file extension.
+
+For example:
+
+_Input:_
+
+```markdown
+# Getting started with Braze
+
+Learn how you can get started with Braze.
+
+{% raw %}{% multi_lang_include braze/upgrade_notice.md %}{% endraw %}
+```
+
+_Output:_
+
+![]()
+
+{% alert note %}
+For a full walkthrough, see [Reusing content]().
+{% endalert %}
+
+## Layouts
+
+By default, Jekyll uses the `default.html` layout in the `_layouts` directory to build each page on Braze Docs. However, different layouts can be used by assigning the layout to the `layout:` key in the YAML front matter.
+
+```markdown
+---
+layout: LAYOUT_VALUE
 ---
 ```
+
+Replace `LAYOUT_VALUE` with the name of the layout file and the file extension removed. For example, to use the `api_glossary.html` layout, add the following to your YAML front matter:
+
+_Input:_
+
+```markdown
+---
+layout: api_glossary
+---
+```
+
+_Output:_
+
+![]()
+
+{% alert note %}
+For more information, see [Layouts]().
+{% endalert %}
 
 ## Sections
 
 > TODO: Something like "There are main sections and subsections... Primary are X and sub are Y."
 
-### Top-level sections
+### Primary sections
 
 > TODO: improve/make better examples.
 
@@ -141,13 +171,3 @@ layout: blank_config
 page_order: 1
 ---
 ```
-
-## Includes
-
-Includes are small page fragments in the `/_docs/_includes/` directory which can be included in multiple places on the site via the include tag. For example:
-
-```plaintext
-{% raw %}{% multi_lang_include header.html %}{% endraw %}
-```
-
-For a step-by-step guide, see [Reusing content]().
