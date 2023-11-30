@@ -1,6 +1,6 @@
 ---
-nav_title: Overview
-article_title: "Shopify"
+nav_title: Shopify overview
+article_title: "Shopify overview"
 description: "This reference article outlines the partnership with Braze and Shopify, a global commerce company that allows you to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to nudge customers to complete their purchases, or retarget users based on their previous purchases."
 page_type: partner
 search_tag: Partner
@@ -10,37 +10,44 @@ page_order: 0
 
 # Shopify overview
 
-> [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere. 
+> [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere.
 
-The Shopify and Braze integration allows brands to connect their Shopify store seamlessly to pass select Shopify events and customers into Braze. Leverage Braze's cross-channel strategies and Canvas to engage new leads, message new customers, or retarget your users with abandoned checkout messaging to nudge them to complete their purchase
+The Shopify and Braze integration allows you to connect your Shopify store to seamlessly pass your Shopify data into Braze. You can leverage cross-channel strategies and Canvas in Braze to engage new leads, message new customers, or retarget your users with abandoned checkout messaging to nudge them to complete their purchases.
 
-## Prerequisites
+## Supported features
 
-All Braze customers looking to utilize the Shopify integration must sign Braze's Shopify order form. Reach out to your account executive for more details.
+- Track onsite behavior and anonymous users via the Braze Web SDK
+- Assist with syncing and reconciling Shopify customers in Braze via the Braze Web SDK
+- Sync Shopify customers and user data
+- Collect Shopify email and SMS subscriber opt-in subscription states
+- Backfill historical Shopify purchase data 
+- Shopify catalog sync 
+- Use in-app messages as a channel 
 
-This integration will create alias user profiles if we are unable to match Shopify data using the email or phone number ([see here for more details on Shopify user reconciliation]({{site.baseurl}}/shopify_processing/#shopify-user-syncing)). Consult with your development teams around the downstream impacts and need to merge these user profiles as part of your user lifecycle before you enable the integration. 
+## Supported use cases 
+
+- Path-to-purchase campaigns and Canvas user journeys, including: 
+  - Browse abandonment 
+  - Abandoned cart 
+  - Abandoned checkout 
+  - Order confirmations 
+  - Fulfillment updates 
+  - Order cancellations 
+  - Order refunds
+- Product recommendations
+- Cross-sell and upsells
+- [Back-in-stock]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/back_in_stock/) (early access) 
+
+## Requirements
 
 | Requirement | Description |
-| ----------- | ----------- |
-| Shopify store | You must have an active [Shopify](https://www.shopify.com) store.<br><br>Note that at this time, you are only able to connect one Shopify store per workspace. |
-| Event property segmentation enabled | To confirm you can segment your Shopify events properties, you must work with your customer success manager or [Braze support]({{site.baseurl}}/braze_support/) to confirm that you have event property segmentation enabled for your dashboard. |
-| User permissions | You have to be either a:<br>• Store owner<br> • Staff<br>• Member with all **General** and **Online Store** settings, as well as these additional admin permissions selected:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Orders<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• View Products<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Customers<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Manage settings<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• View apps developed by staff and collaborators<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Manage and install apps and channels |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| --- | --- |
+| Shopify store | You have an active [Shopify](https://www.shopify.com/) store.<br><br>You can connect one Shopify store per workspace. If you are interested in connecting multiple stores to one workspace, contact your customer success manager to join the Shopify Multiple Stores beta. |
+| Shopify user permissions | You have one of the following permissions to your Shopify store:{::nomarkdown}<ul><li>Store owner</li><li>Staff</li><li>Member with all General and Online Store settings, as well as these additional admin permissions:</li></ul><ul style="PADDING-LEFT: 12px"><li>Orders</li><li>View (located under <b>Products</b>)</li><li>Customers</li><li>Manage settings</li><li>View apps developed by staff and collaborators</li><li>Manage and install apps and channels</li></ul>{:/} |
+| Braze Web SDK Implementation | To track onsite behavior and anonymous users, you must implement the Braze Web SDK either through our Shopify out-of-the-box integration or manually. <br><br>For more information on your implementation options, see [Implementing the Web SDK on your Shopify site](). |
+| Event property segmentation enabled | To confirm you can segment your Shopify events properties, work with your customer success manager or [Braze Support]({{site.baseurl}}/braze_support/) to confirm that event property segmentation is turned on for your Braze dashboard. |
+{: .reset-td-br-1 .reset-td-br-2 }
 
-## Integration
+## General Data Protection Regulation (GDPR)
 
-With Braze's turnkey Shopify integration, you can:
-- Seamlessly connect your Shopify store within Braze
-- Allow Braze to ingest and process Shopify user data
-- Sync Shopify user profiles into Braze
-- Collect email and SMS opt-ins from your Shopify store to sync to Braze
-
-#### Web SDK integration via Shopify ScriptTag (optional)
-
-Braze also allows you to embed our [Web SDK integration]({{site.baseurl}}/scripttag_web_sdk_integration/) via ScriptTag on to your Shopify store. This integration requires the above [prerequisites](#prerequisites), as well as the ones found on the [ScriptTag]({{site.baseurl}}/scripttag_web_sdk_integration/#prerequisites) integration page.
-
-Embedding our Web SDK via ScriptTag supports tracking the following:
-  - [Anonymous user tracking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) to track guest activity in your store
-  - [Monthly active user]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#monthly-active-users) tracking as the Web SDK is capable of tracking session data from your store visitors
-  - Option to collect Shopify on-site activity users which will count toward your [data point]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points) consumption
-  - Option to enable [in-browser messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) as a channel on your Shopify store
+Concerning personal data submitted to Braze services by or on behalf of its customers, Braze is the data processor, and our customers are the data controllers. Accordingly, Braze processes such personal data solely at the instruction of our customers and, when applicable, notifies our customers of data subject requests. As the data controllers, our customers respond directly to Data subject requests. As part of the Braze platform’s Shopify integration, Braze automatically receives [Shopify’s GDPR webhooks](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). However, Braze customers are ultimately responsible for responding to data subject requests from their Shopify customers through the use of [Braze SDKs]({{site.baseurl}}/developer_guide/home/) or [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) in accordance with our [GDPR compliance]({{site.baseurl}}/help/dp-technical-assistance/) policies.
