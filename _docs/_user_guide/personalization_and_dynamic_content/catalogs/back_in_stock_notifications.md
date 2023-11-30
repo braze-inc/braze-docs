@@ -3,7 +3,7 @@ nav_title: Back-In-Stock Notifications
 article_title: Back-In-Stock Notifications
 alias: "/back_in_stock/"
 page_order: 1
-description: "This reference article describes how to create back-in-stock notifications in Braze Shopify catalogs"
+description: "This reference article describes how to create back-in-stock notifications in Braze catalogs"
 ---
 
 # Back-in-stock notifications
