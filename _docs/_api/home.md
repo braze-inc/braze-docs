@@ -430,10 +430,7 @@ glossaries:
     description: Look up an existing dashboard user account by specifying their email.
     tags:
       - SCIM
----
-
-<!-- Add during CDI endpoints GA
-name: <a href='/docs/api/endpoints/cdi/get_integration_list/'>/cdi/integrations</a>
+  - name: <a href='/docs/api/endpoints/cdi/get_integration_list/'>/cdi/integrations</a>
     description: Return a list of existing integrations.
     tags:
       - Cloud Data Ingestion
@@ -445,4 +442,4 @@ name: <a href='/docs/api/endpoints/cdi/get_integration_list/'>/cdi/integrations<
     description: Return a list of sync statuses.
     tags:
       - Cloud Data Ingestion
--->
+---
