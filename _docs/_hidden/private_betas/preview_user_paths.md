@@ -16,18 +16,6 @@ hidden: true
 Previewing user paths in Canvas is currently in early access and only available in pre-launch draft Canvases. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
-## Supported steps
-
-The following steps are supported:
-- Message 
-- Audience Path
-- Decision Split
-- Delay
-- Action
-- Experiment
-
-If the test overlaps with a step type that isn't listed above, the unsupported step will be skipped, and the test user will continue to the next supported step.
-
 ## Start a test run
 
 Follow these steps to preview your user journey:
@@ -40,13 +28,21 @@ Follow these steps to preview your user journey:
 
 You can run a preview if you don't have permissions to edit a Canvas, but this preview will run with unsaved changes if there are any.
 
+### Supported steps
+
+The following steps are supported:
+- Message 
+- Audience Path
+- Decision Split
+- Delay
+- Action Path
+- Experiment Path
+
+If the test overlaps with a step type that isn't listed above, the unsupported step will be skipped, and the test user will continue to the next supported step.
+
 ### Canvas step details
 
 To view more details for entrance criteria, click **See more**. Steps with segmentation will show the met or unmet criteria. Messages will also show this for delivery validations and channel eligibility. Message steps will show which channels were sent versus not sent.
-
-## Example
-
-
 
 ## Previews for timing
 
@@ -56,36 +52,50 @@ Message and Delay steps show the time at which a user would progress or receive 
 
 ## Action Paths and events
 
-If your Canvas includes an Action Paths step, select whether a user took an action or not in the step. During this preview, an event isn't performed, meaning that event properties aren't applied based on the step's outcome. The same is true for the Canvas entry in that Braze does not perform the entry event or API trigger, so the event and API trigger properties are not applied based on the Canvas’s entry.
+If your Canvas includes an Action Paths step, select whether a user took an action or not in the step. During this preview, an event isn’t performed, meaning that event properties aren’t applied based on the step’s outcome. The same is true for the Canvas entry in that Braze does not perform the entry event or API trigger, so the event and API trigger properties are not applied based on the Canvas entry.
 
 ## When users enter and exit
 
-Test users will enter the preview even if they are not eligible in real life. If they are not eligible, you can see why they would not have met the criteria. 
+Test users will enter the preview even if they are not eligible in real life. If they are not eligible, you can see why they would not have met the criteria.
 
-While exit criteria is not yet supported, you can still view the exits in the sidebar and the Canvas body. For entry purposes, the following are true:
-- Re-eligibility is allowed 
-- Rate limiting and frequency capping are valid 
+While exit criteria are not yet supported, you can still view the exits in the sidebar and the Canvas body. For testing purposes, the following are assumed to be true:
+
+- Re-eligibility is allowed.
+- Rate limiting and frequency capping are valid.
 
 ## Experiment Paths and Canvas variants
 
-- For Canvases with top-level variants, you're prompted to select a variant at the start of the test.
-- For Experiment Paths, you will need to select the variant the user progresses through when the test user encounters the step
-- For Experiment Paths using Personalized Path or Winning Variant, even though there's a delay period over which the test user waits inside a message step under these settings, this delay isn't taken into account since Braze assumes the user progressed through the selected variant immediately.
+- For Canvases with top-level variants, select a variant at the start of the test.
+- For Experiment Paths, select the variant the user progresses through when the test user encounters the step.
+- For Experiment Paths using Personalized Path or Winning Variant, while there’s a delay period over which the test user waits in a Message step, this delay isn’t taken into account since Braze assumes the user progressed through the selected variant immediately.
 
 ## Test sends
 
-You can opt to send test messages to an internal test group or an individual user as the test run populates. This means that only messages the user encounters along the test path will be sent. The recipients will receive messages with their own attributes by default, but you can override these with the test user’s attributes. 
+You can opt to send test messages to an internal test group or an individual user as the test run populates. This means that only messages the user encounters along the test path will be sent. The recipients will receive messages with their own attributes by default, but you can override these with the test user’s attributes.
 
 ## Responsiveness
 
 At the moment, filters within steps in this preview mode are not responsive to the timing assumed by the test run. For example, if an audience path references an event that has occurred on or after a specific date, and the test run shows the results for a future date, the filter will not take that future date into account.
 
-Similarly, filters won't recognize actions that have occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode won’t recognize that a user encountered a Message step that was “sent” earlier in the Canvas, and it won’t recognize that the test user “took an action” to advance through an action path.
+Similarly, filters won’t recognize actions that have occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode won’t recognize that a user encountered a Message step that was “sent” earlier in the Canvas, and it won’t recognize that the test user “took an action” to advance through an action path.
 
-### Connected Content
+## Connected Content
 
-Connected Content will be executed if it’s included in the Canvas. Users should avoid testing or remove Connected Content that is configured to alter users’ profiles or data that is referenced in other Canvases or campaigns.
+Connected Content will be executed if it’s included in the Canvas. If your Canvas includes Connected Content, remove the Connected Content that is configured to alter user profiles or data that is referenced in other Canvases or campaigns. Or, you can opt to not preview the user journey.
 
-### Webhooks
+## Webhooks
 
-Webhooks will execute when test messages are sent, but not during the test run otherwise. Similar to Connected Content, customers should consider removing webhooks that that are configured to alter users’ profiles or data that is referenced in other Canvases or campaigns.
+Webhooks will execute when test messages are sent, but not during the test run. Similar to Connected Content, consider removing webhooks that are configured to alter user profiles or data that is referenced in other Canvases or campaigns.
+
+## Example
+
+In this example, the Canvas is set up to target users who haven't had a session in an app. This journey includes a Message step with a welcome email, a Delay step set for one day, and an Audience Paths step that splits into two paths: users who have at least one session, and everyone else. Depending on which audience path a user falls in, the subsequent Message step will be sent.
+
+![][1]{:style="max-width:70%"}
+
+Because our test user meets the Canvas entry criteria, they're able to enter the Canvas and go through the user journey. However, because our test user hasn't opened the app in the last calendar day, they will continue down the "Everyone else" path and receive an push notification that reads: "Last change! Complete your first task for an exclusive bonus."
+
+![][2]
+
+[1]: {% image_buster /assets/img/preview_user_path_example.png %}
+[2]: {% image_buster /assets/img/preview_user_path_results_example.png %}
