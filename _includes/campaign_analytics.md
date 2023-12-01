@@ -162,6 +162,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 
 | Term | Definition |
 | -- | -- |
+| Messages Sent | This is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression):<br><br>  {::nomarkdown}<ul><li><b>At launch or step entry:</b> The number of cards created and available to be seen. This doesn't count whether the users viewed the card.</li><li><b>At first impression:</b> The number of cards displayed to users.</li></ul>{:/} |
 | Total Impressions | The total count of impressions logged for a given Content Card. This can increment multiple times for the same user. |
 | Unique Impressions | The number of users who have viewed a given card. This count doesn't increment the second time that a user views a card. |
 | Unique Recipients | The total number of viewers (unique, but only unique per day) that have viewed the particular card. Because a viewer can be a unique recipient every day, you should expect this to be higher than Unique Impressions. |
