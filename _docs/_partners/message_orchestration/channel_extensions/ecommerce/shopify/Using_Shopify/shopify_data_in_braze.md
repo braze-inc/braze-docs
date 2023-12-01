@@ -5,7 +5,7 @@ description: "This reference article outlines how to use Shopify data in Braze f
 page_type: partner
 search_tag: Partner
 alias: "/shopify_data/"
-page_order: 4
+page_order: 1
 ---
 
 # Shopify data in Braze

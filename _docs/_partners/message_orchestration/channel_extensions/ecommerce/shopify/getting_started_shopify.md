@@ -1,7 +1,7 @@
 ---
 nav_title: Getting Started
 article_title: "Getting started with Shopify"
-description: "This reference article outlines how to set up Shopify, a global commerce company that allows you to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze."
+description: "This reference article outlines how to implement the Braze Web SDK onto your Shopify website."
 page_type: partner
 search_tag: Partner
 page_order: 1
@@ -9,12 +9,13 @@ page_order: 1
 
 # Getting started with Shopify
 
+> This article outlines how to implement the Braze Web SDK onto your Shopify website. After implementation, view [Setting up Shopify]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify) to learn how to finish setting up the Shopify integration with Braze.
+
 ## Integration setup checklist
 
-- [Implement the Braze Web SDK](#implement-web-sdk)
-  - Setup user reconciliation for Shopify forms
-- [Shopify integration setup in Braze]()
-- Testing 
+1. [Implement the Braze Web SDK](#implement-web-sdk)
+2. [Set up Shopify in Braze]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify)
+3. Test the Shopify integration
 
 ## Implementing the Web SDK on your Shopify website {#implement-web-sdk}
 
@@ -32,7 +33,7 @@ Before you begin onboarding the integration, please review the following with yo
 |<i aria-hidden="true" class="fas fa-times" title="Not supported"></i><span class="sr-only">Supported</span> | Not supported
 {: .reset-td-br-1 .reset-td-br-2} 
 
-|| Web SDK via Shopify ScriptTag | Direct web SDK integration via theme.liquid | Direct web SDK integration via Shopify Hydrogen
+| Features | Web SDK via Shopify ScriptTag | Direct web SDK integration via theme.liquid | Direct web SDK integration via Shopify Hydrogen
 |-------------|-------------|-------------|------------
 | Out-of-the-box on-site tracking      | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i>          
 | Capture form user reconciliation (Low engineering lift required)   | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-times" title="Not supported"></i> 
@@ -169,15 +170,11 @@ During the installation process, Braze will check if instances of the Web SDK ar
 
 #### How to enable
 
-To manually implement the Web SDK, view [Initial SDK setup]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/). 
+To manually implement the Web SDK, view [Initial SDK setup]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/). To implement the Web SDK via Google Tag Manager, view [Google Tag Manager for Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager#google-tag-manager). 
 
-To implement the Web SDK via Google Tag Manager, view [Google Tag Manager for Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager#google-tag-manager). 
-
-With either implementation path, make sure that your Web SDK integration includes the following: 
+With either implementation path, make sure that your Web SDK integration includes the following or the Shopify integration will not be supported: 
 - Web SDK version of v4.0+
 - Web SDK initializes upon session start
-
-If the above items are not met, then the Shopify integration will not be supported. 
 
 #### What to expect after integration
 
@@ -288,7 +285,7 @@ The Web SDK tracks Shopify onsite behavior and anonymous users with the `device_
 When users register or log into their account, you may want to [identify the user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles) with an external ID. After the user registers and logs in, add the [changeUser](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) method to assign an external ID if a user creates an account or logs in. 
 
 {% alert note %}
-If you set a temporary alias on the user profile, you can proceed to make a request to the [users/merge]({{site.baseurl}}/api/endpoints/user_data/post_users_merge) endpoint to identify the user at a later point. 
+If you set a temporary alias on the user profile, you can proceed to make a request to the [users/merge endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge) endpoint to identify the user at a later point. 
 {% endalert %}
 
 #### Setting up checkout user reconciliation
