@@ -105,7 +105,7 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 #### Push notification event fields
 
 {% alert note %}
-Because of platform limitations on iOS, the Braze SDK can only process push payloads while the app is in the foreground. Listeners will only trigger for the `push_opened` event type on iOS, after a user has interacted with a push.
+Because of platform limitations on iOS, the Braze SDK can only process push payloads while the app is in the foreground. Listeners will only trigger for the `push_opened` event type on iOS after a user has interacted with a push.
 {% endalert %}
 
 For a full list of push notification fields, refer to the table below:
