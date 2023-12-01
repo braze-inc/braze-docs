@@ -5,7 +5,7 @@ alias: "/shopify_historical_backfill/"
 description: "This reference article outlines how to set up Shopify historical backfill, including risks and supported data."
 page_type: partner
 search_tag: Partner
-page_order: 4
+page_order: 1
 ---
 
 # Shopify Historical Backfill 

@@ -12,7 +12,7 @@ description: "This landing page is home to all things Shopify including a Shopif
 guide_featured_title: "Articles"
 guide_featured_list:
 - name: Shopify overview
-  link: /docs/shopify_overview/
+  link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/overview/
   fa_icon: fa-brands fa-shopify
 - name: Web SDK integration with Shopify ScriptTag
   link: /docs/scripttag_web_sdk_integration/
