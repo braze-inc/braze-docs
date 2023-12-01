@@ -38,9 +38,11 @@ METADATA_KEY: METADATA_VALUE
 
 Replace the following:
 
-- `METADATA_KEY`: The key representing a supported metadata type. For more information, see [Metadata]().
-- `METADATA_VALUE`: The value assigned to the metadata type's key. For more information, see [Metadata]().
-- `CONTENT`: The page's content written in Markdown syntax.
+| Placeholder      | Description                                                                             |
+|------------------|-----------------------------------------------------------------------------------------|
+| `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata](). |
+| `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]().  |
+| `CONTENT`        | The page's content written in Markdown syntax.                                          |
 
 _Example input:_
 
@@ -84,8 +86,10 @@ Jekyll offers the ability to reuse written content across the docs using the `in
 
 Replace the following:
 
-- `RELATIVE_PATH`: (Optional) The relative path to the file from the `_includes` directory. This is only needed if you're including a file from a directory inside the `_includes` directory, such as `_includes/braze/upgrade_notice.md`.
-- `FILE`: The name of the file including the file extension.
+| Placeholder     | Description                                                                                                                                                                                                             |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `RELATIVE_PATH` | (Optional) The relative path to the file from the `_includes` directory. This is only needed if you're including a file from a directory inside the `_includes` directory, such as `_includes/braze/upgrade_notice.md`. |
+| `FILE`          | The name of the file including the file extension.                                                                                                                                                                      |
 
 _Example input:_
 

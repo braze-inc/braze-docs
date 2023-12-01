@@ -57,7 +57,7 @@ Replace the following:
 | `HEADING`           | The title of your Heading 2 section.                                                                                                                                                                                                        |
 | `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
 
-You may add additional metadata and headings as needed, this template is just to get you started. For a list of all supported YAML metadata, see [Metadata]().
+You may add additional metadata and headings as needed, this template is just to get you started. For a list of supported YAML metadata, see [Metadata]().
 
 {% multi_lang_include contributing/short_cross_referencing_other_pages.md %}
 
