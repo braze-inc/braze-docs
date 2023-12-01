@@ -53,30 +53,7 @@ Before continuing, verify you've completed all tasks in [Before you start](#befo
 
 {% tabs %}
 {% tab local environment %}
-In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), select **Fork**.
-
-![]()
-
-{% alert tip %}
-For more information, see [**About forks**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks).
-{% endalert %}
-
-Keep the default settings, then select **Create fork**.
-
-![]()
-
-In your forked repository, select **Code** > **SSH** > <i class="fa-regular fa-clone"></i> **Copy**.
-
-![]()
-
-In your terminal, open your home directory, then clone the Braze Docs repository.
-
-```bash
-cd ~
-git clone git@github.com:braze-inc/braze-docs.git
-```
-
-Most modern text editors (such as [VS Code](https://code.visualstudio.com/Download) and [Intellij IDEA](https://www.jetbrains.com/idea/download/)) offer an in-app terminal. Close your stand-alone terminal, then open the `braze-docs` directory and the in-app terminal in your text editor.
+Most modern text editors (such as [VS Code](https://code.visualstudio.com/Download) and [Intellij IDEA](https://www.jetbrains.com/idea/download/)) offer an in-app terminal for running commands and interacting with your project files. Open your text editor, then open your text editor's in-app terminal.
 
 ![]()
 
@@ -84,7 +61,19 @@ Most modern text editors (such as [VS Code](https://code.visualstudio.com/Downlo
 If you're having trouble, feel free to use your stand-alone terminal instead.
 {% endalert %}
 
-In the terminal, check if you're in the `braze-docs` directory, then your Git status.
+In the terminal, open the `braze-docs` directory.
+
+```bash
+cd ~/PATH_TO_REPOSITORY
+```
+
+Replace `PATH_TO_REPOSITORY` with the location you saved `braze-docs` when you [set up your environment](). The output will be similar to the following:
+
+```bash
+cd ~/braze/braze-docs
+```
+
+Check if you're in the `braze-docs` directory, then check your Git status.
 
 ```bash
 pwd
@@ -132,7 +121,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Use `git add` to tell Git which changes you want to stage for your commit. In the following example, there are two options:
+Use `git add` to tell Git which changes you want to stage for your commit. The following command shows two options:
 
 - **Left side of pipe:** Add all of your changed files using `--all`.
 - **Right side of pipe:** Add an individual file by replacing `PATH_TO_FILE` with the relative path to your changed file.
@@ -150,12 +139,12 @@ git commit -m "COMMIT_MESSAGE"
 Replace `COMMIT_MESSAGE` with a short sentence describing your changes. The output is similar to the following:
 
 ```bash
-$ git commit -m "Fixing a typo in the metadata doc."
-[fixing-typo-in-recommended-software 8b05e34] Fixing a typo in the metadata doc.
+$ git commit -m "Fixing a typo in the recommended software doc."
+[fixing-typo-in-recommended-software 8b05e34] Fixing a typo in the recommended software doc.
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
-Finally, push your changes to the Braze Docs GitHub repository, so you can [create your pull-request (PR)](#create-a-pull-request-pr) next.
+Finally, push your changes to the Braze Docs GitHub repository.
 
 ```bash
 git push -u origin BRANCH_NAME
@@ -187,9 +176,11 @@ Select **Edit this file**, then make your changes using [Markdown formatting]().
 
 ![]()
 
-When you're finished, select **Commit changes,** so you can [create your pull-request (PR)](#create-a-pull-request-pr) next.
+When you're finished, select **Commit changes**.
 
 ![]()
+{% endtab %}
+{% endtabs %}
 
 ## Create a pull-request (PR)
 
@@ -206,8 +197,6 @@ In the PR description, you'll see Markdown comments similar to the following:
 These comments will guide you through your PR description. When you're finished, select the pull request dropdown, then select **Draft pull request**.
 
 ![]()
-{% endtab %}
-{% endtabs %}
 
 ## Preview your changes
 
@@ -296,8 +285,8 @@ git commit -m "COMMIT_MESSAGE"
 Replace `COMMIT_MESSAGE` with a short sentence describing your changes. The output is similar to the following:
 
 ```bash
-$ git commit -m "Fixing a typo in the metadata doc."
-[fixing-typo-in-recommended-software 8b05e34] Fixing a typo in the metadata doc.
+$ git commit -m "Fixing a typo in the recommended software doc."
+[fixing-typo-in-recommended-software 8b05e34] Fixing a typo in the recommended software doc.
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 

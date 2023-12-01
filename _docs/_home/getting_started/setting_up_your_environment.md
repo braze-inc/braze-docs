@@ -19,6 +19,31 @@ Before you start, you'll need to complete the following:
   - [Windows](https://docs.github.com/en/github-ae@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows)
   - [Linux](https://docs.github.com/en/github-ae@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux)
 
+## Fork the repository
+
+Open the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), then select **Fork**.
+
+![]()
+
+{% alert tip %}
+For more information, see [**About forks**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks).
+{% endalert %}
+
+Keep the default settings, then select **Create fork**.
+
+![]()
+
+In your forked repository, select **Code** > **SSH** > <i class="fa-regular fa-clone"></i> **Copy**.
+
+![]()
+
+In your terminal, open your home directory, then clone the Braze Docs repository.
+
+```bash
+cd ~
+git clone git@github.com:braze-inc/braze-docs.git
+```
+
 ## Install Ruby version `2.7.4`
 
 To build the docs locally, you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.

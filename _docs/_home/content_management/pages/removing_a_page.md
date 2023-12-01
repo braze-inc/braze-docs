@@ -6,10 +6,18 @@ noindex: true
 
 # Removing an existing page
 
-> Learn how to create pages, update pages, and remove pages on Braze Docs. If you're looking to create a new section instead, see [Managing sections](). For general information about pages, see [About our framework]().
+> Learn how to remove a page on Braze Docs. For general information about pages, see [About our framework]().
 
 {% multi_lang_include contributing/general_getting_started.md %}
 
-## Removing an existing page
+{% multi_lang_include contributing/creating_a_new_branch.md %}
+
+{% multi_lang_include contributing/locating_the_directory.md %}
+
+## Removing the page
 
 > TODO:
+
+{% multi_lang_include contributing/creating_a_pull_request.md %}
+
+{% multi_lang_include contributing/requesting_a_review.md %}
