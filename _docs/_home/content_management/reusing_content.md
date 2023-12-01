@@ -1,10 +1,16 @@
 ---
 nav_title: Reusing content
-page_order: 3
+page_order: 4
 noindex: true
 ---
 
 # Reusing content
+
+> Learn how to reuse content across Braze Docs, so you can ... For general information about content reuse, see [About our framework]().
+
+{% multi_lang_include contributing/general_getting_started.md %}
+
+## Reusing content
 
 Includes are small page fragments in the `/_docs/_includes/` directory which can be included in multiple places on the site via the include tag. For example:
 

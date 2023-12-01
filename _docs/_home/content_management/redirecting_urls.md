@@ -1,12 +1,14 @@
 ---
 nav_title: Redirecting URLs
-page_order: 4
+page_order: 5
 noindex: true
 ---
 
 # Redirecting URLs
 
 > Learn how to redirect broken or outdated URLs for Braze Docs.
+
+{% multi_lang_include contributing/general_getting_started.md %}
 
 ## Redirecting a deleted page
 

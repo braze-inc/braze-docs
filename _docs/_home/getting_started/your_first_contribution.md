@@ -16,9 +16,9 @@ When you're finished with this tutorial, you'll be able to:
 <i class="fa-solid fa-circle-check" style="color: #34a853;"></i> Preview your changes in a test site<br>
 <i class="fa-solid fa-circle-check" style="color: #34a853;"></i> Request a review from the Braze Docs team<br>
 
-## Before you start
+## Getting started
 
-You'll need to complete the following:
+Before you start, you'll need to complete the following:
 
 - [Sign the Contribution License Agreement (CLA)](https://www.braze.com/docs/cla)
 - [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
@@ -51,8 +51,8 @@ Now that you're a little familiar with the docs repository, you're ready to star
 Before continuing, verify you've completed all tasks in [Before you start](#before-you-start).
 {% endalert %}
 
-### Using your local environment
-
+{% tabs %}
+{% tab local environment %}
 In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), select **Fork**.
 
 ![]()
@@ -171,9 +171,8 @@ To github.com:braze-inc/braze-docs.git
  * [new branch]      fixing-typo-in-recommended-software -> fixing-typo-in-recommended-software
 branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo-in-recommended-software'.
 ```
-
-### Using GitHub
-
+{% endtab %}
+{% tab github %}
 In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), select `_docs`.
 
 ![]()
@@ -207,6 +206,8 @@ In the PR description, you'll see Markdown comments similar to the following:
 These comments will guide you through your PR description. When you're finished, select the pull request dropdown, then select **Draft pull request**.
 
 ![]()
+{% endtab %}
+{% endtabs %}
 
 ## Preview your changes
 
@@ -240,8 +241,8 @@ Approved contributions will be deployed on the next Tuesday or Thursday. Be sure
 
 After you or a member of the Braze Docs team reviews your work, you may need to make additional changes to your PR. You can do so using your local environment or GitHub.
 
-### Using your local environment
-
+{% tabs %}
+{% tab local environment %}
 In your PR, select <i class="fa-regular fa-clone"></i> **Copy** next to your branch name.
 
 ![]()
@@ -316,9 +317,8 @@ To github.com:braze-inc/braze-docs.git
  * [new branch]      fixing-typo-in-recommended-software -> fixing-typo-in-recommended-software
 branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo-in-recommended-software'.
 ```
-
-### Using GitHub
-
+{% endtab %}
+{% tab github %}
 In your PR, select **Files Changes**.
 
 ![]()
@@ -336,3 +336,5 @@ Select **Commit directly to the BRANCH_NAME branch** > **Commit changes**, where
 ![]()
 
 When you're ready, [request a review]() next.
+{% endtab %}
+{% endtabs %}

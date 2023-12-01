@@ -8,9 +8,9 @@ noindex: true
 
 Thanks for contributing to Braze Docs! Every Tuesday and Thursday we merge community contributions into the `main` branch and deploy them to [Braze Docs](http://www.braze.com/docs). Use this guide to get your changes merged next!
 
-## Before you start
+## Getting started
 
-You'll need to complete the following:
+Before you start, you'll need to complete the following:
 
 - [Sign the Contribution License Agreement (CLA)](https://www.braze.com/docs/cla)
 - [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
