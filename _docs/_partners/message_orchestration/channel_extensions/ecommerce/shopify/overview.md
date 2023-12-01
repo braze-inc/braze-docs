@@ -1,7 +1,7 @@
 ---
 nav_title: Overview
 article_title: Shopify overview
-page_order: 1
+page_order: 0
 layout: dev_guide
 guide_top_header: "Shopify overview"
 guide_top_text: "This is where you can find an overview of Shopify features."

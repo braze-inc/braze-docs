@@ -15,7 +15,7 @@ page_order: 3
 
 ### Shopify user tracking
 
-If your store visitors are guests (that is, anonymous), Braze will capture the `device_id` for those particular customers’ sessions. After you set up user reconciliation for Shopify forms during your [implementation of the Web SDK](), customer emails will be added to anonymous user profiles whenever customers enter their information into a form. 
+If your store visitors are guests (that is, anonymous), Braze will capture the `device_id` for those particular customers’ sessions. After you set up user reconciliation for Shopify forms during your [implementation of the Web SDK]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk), customer emails will be added to anonymous user profiles whenever customers enter their information into a form. 
 
 When store visitors enter their email into a newsletter or email capture form, Braze will receive a Shopify webhook event to create the user profile. Braze then merges this user profile with the anonymous user profile tracked by the Web SDK and assigns the Shopify customer ID as the user alias on the user profile. 
 
