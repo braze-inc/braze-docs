@@ -949,3 +949,4 @@ validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/sho
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_in_braze/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Using_Shopify/shopify_data_in_braze/'
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Using_Shopify/use_cases/'
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/scripttag_web_sdk_integration/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/'
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/overview/shopify_backfill/'

@@ -12,27 +12,27 @@ description: "This landing page is home to all things Shopify including a Shopif
 guide_featured_title: "Articles"
 guide_featured_list:
 - name: Shopify overview
-  link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/overview/
+  link: /docs/shopify_overview_menu/
   fa_icon: fa-brands fa-shopify
-- name: Web SDK integration with Shopify ScriptTag
-  link: /docs/scripttag_web_sdk_integration/
-  fa_icon: fa-solid fa-tag
-- name: Setting up Shopify
-  link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/
+- name: Getting started with Shopify
+  link: /docs/getting_started_shopify/
   fa_icon: fa fa-shopping-cart
-- name: Shopify Data Processing
+- name: Setting up Shopify
+  link: /docs/setting_up_shopify/
+  fa_icon: fa fa-shopping-cart
+- name: Shopify data processing
   link: /docs/shopify_processing/
   fa_icon: fa-solid fa-database
-- name: Shopify Data in Braze
+- name: Shopify data in Braze
   link: /docs/shopify_data/
   fa_icon: fas fa-cogs
-- name: Shopify Backfill
-  link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/
+- name: Shopify historical backfill
+  link: /docs/shopify_historical_backfill/
   fa_icon: fa-solid fa-database
-- name: Shopify Catalogs
+- name: Shopify catalogs
   link: /docs/shopify_catalogs/
   fa_icon: fas fa-list
-- name: Use Cases
+- name: Use cases
   link: /docs/shopify_use_cases/
   fa_icon: fa fa-users
 

@@ -4,6 +4,7 @@ article_title: "Getting started with Shopify"
 description: "This reference article outlines how to implement the Braze Web SDK onto your Shopify website."
 page_type: partner
 search_tag: Partner
+alias: /getting_started_shopify/
 page_order: 1
 ---
 
@@ -108,14 +109,14 @@ Here are examples of how to implement the `reconcileEmail` method into your Shop
 1. When a user is logged into Shopify, the customer object is defined. In the `theme.liquid` file, add the following snippet in the `head tag`:
 
 ```javascript
-    <script>
+   {% raw %} <script>
       const customerPoller = setInterval(()=>{
         {% if customer %}
           reconcileEmail("{{customer.email}}");
-        {% endif %}
+        {% endif %}{}
         clearInterval(customerPoller)
       }, 2000)
-    </script>
+    </script> {% endraw %}
 ```
 {: start="2"}
 2. We first call `setInterval` so that the BrazeSDK is loaded first
@@ -209,14 +210,14 @@ Here are examples of how you would implement the `reconcileEmail` method into yo
 1. When a user is logged into Shopify, the customer object is defined. In the `theme.liquid` file add the following snippet in the `head tag`:
 
 ```javascript
-    <script>
+{% raw %}<script>
       const customerPoller = setInterval(()=>{
         {% if customer %}
           reconcileEmail("{{ customer.email }}");
         {% endif %}
         clearInterval(customerPoller)
       }, 2000)
-    </script>
+    </script>{% endraw %}
 ```
 
 {: start="2"}
@@ -292,68 +293,17 @@ If you set a temporary alias on the user profile, you can proceed to make a requ
 
 When you enable the abandoned checkout event, Braze will receive the Shopify checkouts/create webhook. Braze will attempt to match to an existing user profile by either email address, phone number, or Shopify customer ID. If no match exists, Braze will create an alias profile. 
 
-To make sure that the user profile tracked onsite merges with the Shopify alias user profile created by the Shopify webhooks, you can use the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/). 
+To make sure that the user profile tracked onsite merges with the Shopify alias user profile created by the Shopify webhooks, you can use the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) by following the steps below. 
 
 {% alert tip %}
-You can log a custom event via the SDK or API call made on the `theme.liquid` file to trigger a Canvas that includes a request to the users/merge endpoint. Here are example approaches.
+You can log a custom event via the SDK or API call made on the `theme.liquid` file to trigger a Canvas that includes a request to the `users/merge` endpoint. Here are example approaches.
 {% endalert %}
-
-{% subtabs %}
-{% subtab API approach %}
 
 As soon as a customer visits your Shopify site, an anonymous user is created. This user is automatically assigned a Braze `device_id`. 
 
-Then, you can randomly assign a unique [user alias]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) for your site visitor upon a new session. 
+1. Randomly assign a unique [user alias]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) for your site visitor upon a new session.
 
-As users perform actions on your site, you can log them as [custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events) or [capture user attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/). When the user proceeds to checkout and inputs their email, a Shopify customer ID is created. Braze will process Shopify webhooks and create a new user profile if the email, phone, or Shopify alias doesn’t match an existing user. 
-
-To prevent duplicate user profiles, you will need to merge the user profile with the Braze `device_id` with the user profile with the Shopify alias profile. You can create an API-triggered Canvas that will set a delay, update your user with the `do_not_merge` attribute, and make a request to the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/). 
-
-IMAGE
-
-In your Canvas entry criteria, target only unidentified user profiles, meaning that they don’t have an external ID and `do_not_merge` is not true.
-
-IMAGE
-
-You can create a custom attribute `do_not_merge` to distinguish whether customers need to get merged or not. 
-
-IMAGE
-
-Next, create a webhook to send a request like below: 
-
-```javascript
-{
-  "merge_updates": [
-    {
-      "identifier_to_merge": {
-           "user_alias": {
-                "alias_label": "temp_user_id",
-                "alias_name": "{{canvas_entry_properties.${temp_user_id}}}"
-            }
-      },
-      "identifier_to_keep": {
-           "user_alias": {
-                "alias_label": "shopify_customer_id",
-                "alias_name": "{{canvas_entry_properties.${shopify_customer_id}}}"
-            }
-      }
-    }
-  ]
-}
-```
-{% alert tip %}
-For information about `merge_users` behavior, see [POST: Merge users]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior). 
-{% endalert %}
-
-As users exit the flow or complete checkout, subsequent Shopify webhooks will be matched by email address or phone number or using the Shopify alias. 
-
-{% endsubtab %}
-
-{% subtab Non-API approach %}
-
-As soon as a customer visits your Shopify site, an anonymous user is created. This user is automatically assigned a Braze `device_id`. 
-
-You can then randomly assign a unique [user alias]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) for your site visitor upon a new session. 
+2. As users perform actions on your site, log them as [custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events) or [capture user attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/). When the user proceeds to checkout and inputs their email, a Shopify customer ID is created. Braze will process Shopify webhooks and create a new user profile if the email, phone, or Shopify alias doesn’t match an existing user.
 
 ```javascript
 {
@@ -364,21 +314,35 @@ You can then randomly assign a unique [user alias]({{site.baseurl}}/api/objects_
 }
 ```
 
-As users perform actions on your site, you can log them as [custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events) or [capture user attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/). When the user proceeds to checkout and inputs their email, a Shopify customer ID is created. Braze will process Shopify webhooks and create a new user profile if the email address, phone number, or Shopify alias doesn’t match an existing user. 
+{% subtabs %}
+{% subtab API approach %}
 
-When users exit the flow or complete checkout, you can log a custom event to trigger a Canvas that will set a delay, update your user with the `do_not_merge` attribute, and make a request to the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/). 
+{: start="3"}
+3. To prevent duplicate user profiles, you will need to merge the user profile with the Braze `device_id` with the user profile with the Shopify alias profile. You can create an API-triggered Canvas that will set a delay, update your user with the `do_not_merge` attribute, and make a request to the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/). 
+
+{% endsubtab %}
+{% subtab Non-API approach %}
+
+{: start="3"}
+3. When users exit the flow or complete checkout, you can log a custom event to trigger a Canvas that will set a delay, update your user with the `do_not_merge` attribute, and make a request to the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
+
+{% endsubtab %}
+{% endsubtabs %}
 
 IMAGE
 
-Within your Canvas entry criteria, target only user profiles that are unidentified, meaning that they don’t have an external ID and `do_not_merge` is not true.
+{: start="4"}
+4. In your Canvas entry criteria, target only unidentified user profiles, meaning that they don’t have an external ID and `do_not_merge` is not true.
 
 IMAGE
 
-You can create a custom attribute `do_not_merge` to distinguish whether customers need to get merged or not. 
+{: start="5"}
+5. Create a custom attribute `do_not_merge` to distinguish whether customers need to get merged or not. 
 
 IMAGE
 
-Next, create a webhook to send a request. An example is below: 
+{: start="6"}
+6. Next, create a webhook to send a request like below: 
 
 ```javascript
 {
@@ -400,13 +364,12 @@ Next, create a webhook to send a request. An example is below:
   ]
 }
 ```
-
 {% alert tip %}
 For information about `merge_users` behavior, see [POST: Merge users]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior). 
 {% endalert %}
 
-{% endsubtab %}
-{% endsubtabs %}
+{: start="7"}
+7. As users exit the flow or complete checkout, subsequent Shopify webhooks will be matched by email address or phone number or using the Shopify alias.
 
 {% endtab %}
 {% endtabs %}

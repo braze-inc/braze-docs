@@ -4,6 +4,7 @@ article_title: "Shopify user identity management"
 description: "This reference article outlines the Shopify user identity management feature."
 page_type: partner
 search_tag: Partner
+alias: "/shopify_user_identity/"
 page_order: 3
 ---
 

@@ -4,8 +4,8 @@ article_title: "Setting up Shopify"
 description: "This reference article outlines how to set up Shopify after integrating it into your Braze Web SDK."
 page_type: partner
 search_tag: Partner
-alias: "/setting_up_shopify/"
 alias: "/shopify_subscription_states/"
+alias: "/setting_up_shopify/"
 page_order: 2
 ---
 
@@ -52,7 +52,7 @@ You can optionally enable a backfill of purchases from the last 90 days prior to
 IMAGE
 
 {% alert warning %}
-To make sure the backfill imports Order Created Events and Braze Purchase Events, you must have selected “Order Created” and “Braze Purchase Event” during event selection in Step 3.
+To make sure the backfill imports Order Created Events and Braze Purchase Events, you must have selected “Order Created” and “Braze Purchase Event” during event selection in [Step 3](#step-3-flexible-event-selection).
 {% endalert %}
 
 ### Step 5: Shopify Catalog Sync (optional)
