@@ -1,6 +1,6 @@
 ### Cross-referencing other pages
 
-To cross-reference other Braze Docs pages in your content, use the following syntax:
+To cross-reference other pages on Braze Docs within your content, use the following syntax:
 
 ```markdown
 [LINK_TEXT]({{site.baseurl}}LINK)

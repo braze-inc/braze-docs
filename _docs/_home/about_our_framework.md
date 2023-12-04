@@ -10,19 +10,15 @@ noindex: true
 
 ## Managing the docs
 
-Braze Docs is managed using docs-as-code, a method for managing documentation that mirrors the software development lifecycle by using a version control system. Braze Docs uses the Git version control system, which allows contributors to work on the same piece of documentation without overwriting each other's work.
+Braze Docs is managed using docs-as-code, a method for managing documentation that mirrors the software development lifecycle by using a version control system. Braze Docs uses the Git version control system, which allows contributors to work on the same piece of documentation without overwriting each other's work. For more information, see [About version control and Git](https://docs.github.com/en/get-started/using-git/about-git#about-version-control-and-git).
 
-{% alert note %}
-For more information, see [About version control and Git](https://docs.github.com/en/get-started/using-git/about-git#about-version-control-and-git).
-{% endalert %}
+![The Braze Docs repository's home page on GitHub.]()
 
 ## Building the site
 
-Braze Docs is built using Jekyll, a popular Static-Site Generator (SSG) that allows content files and design files to be stored in separate directories, such as `_docs` for content files and `assets` for design files. When the site is built, Jekyll intelligently merges each file and stores them as XML and HTML data in the `_site` directory.
+Braze Docs is built using Jekyll, a popular Static-Site Generator (SSG) that allows content files and design files to be stored in separate directories, such as `_docs` for content files and `assets` for design files. When the site is built, Jekyll intelligently merges each file and stores them as XML and HTML data in the `_site` directory. For more information, see [Jekyll Directory Structure](https://jekyllrb.com/docs/structure/).
 
-{% alert note %}
-For more information, see [Jekyll Directory Structure](https://jekyllrb.com/docs/structure/).
-{% endalert %}
+![The home page for Braze Docs.]()
 
 ## Pages
 
@@ -315,7 +311,31 @@ _Example output:_
 
 ![]()
 
-Keep in mind: while a subsection with `config_only:` set to `true` is not rendered as a page, the subsection's directory name is still used in all URLs for the pages within that subsection. See the following example:
+{% alert note %}
+While a subsection with `config_only:` set to `true` is not rendered as a page, the subsection's directory name is still used in the URLs for pages in that subsection. For more information, see [URLs]().
+{% endalert %}
+
+## URLs
+
+URLs on Braze Docs always match the directory structure within the docs repository. 
+
+_Example file tree:_
+
+```plaintext
+braze-docs
+└── _docs
+    └── _primary_section
+        └── subsection_a
+            └── page_a.md
+```
+
+_Example URL:_
+
+```plaintext
+https://www.braze.com/docs/primary_section/subsection_a/page_a
+```
+
+This includes URLs for pages located in a [subsection]() with `config_only:` set to `true`. Even though `config_only` subsections aren't rendered as pages, the subsection's directory name is still used in the URLs for pages in that directory. See the following example:
 
 ```plaintext
 braze-docs

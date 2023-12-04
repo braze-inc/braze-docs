@@ -10,10 +10,6 @@ noindex: true
 
 {% multi_lang_include contributing/general_getting_started.md %}
 
-{% multi_lang_include contributing/creating_a_new_branch.md %}
-
-{% multi_lang_include contributing/locating_the_directory.md %}
-
 ## Creating a Markdown file
 
 Using your text editor, create a Markdown file for your new page.
@@ -62,7 +58,3 @@ You may add additional metadata and headings as needed, this template is just to
 {% multi_lang_include contributing/short_cross_referencing_other_pages.md %}
 
 {% multi_lang_include contributing/short_adding_images.md %}
-
-{% multi_lang_include contributing/creating_a_pull_request.md %}
-
-{% multi_lang_include contributing/requesting_a_review.md %}

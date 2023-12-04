@@ -1,4 +1,16 @@
-## Creating a Pull-Request (PR)
+---
+nav_title: Creating a pull request
+page_order: 0
+noindex: true
+---
+
+# Creating a Pull Request (PR)
+
+> Learn how to create a Pull Request (PR) for your latest changes.
+
+{% multi_lang_include contributing/general_getting_started.md %}
+
+## Creating a PR
 
 In the terminal, add your changes and stage your commit.
 

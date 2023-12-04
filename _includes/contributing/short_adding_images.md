@@ -11,7 +11,7 @@ Replace `PATH_TO_IMAGE` with the path to your image, including the file extensio
 ```markdown
 In Braze, select **User Settings**.
 
-{% raw %} {% image_buster assets/img/braze_platform/user_settings.png %} {% endraw %}
+{% raw %}{% image_buster assets/img/braze_platform/user_settings.png %}{% endraw %}
 ```
 
 {% alert note %}

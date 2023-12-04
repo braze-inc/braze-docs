@@ -1,4 +1,14 @@
-## Locating the directory
+---
+nav_title: Locating a file
+page_order: 0
+noindex: true
+---
+
+# Locating a file
+
+> TODO
+
+## Locating a file
 
 In your text editor, select the `_docs` directory, then open the directory of the [Jekyll collection]() you'd like to add your page to.
 
@@ -29,7 +39,3 @@ _docs
 ├── _partners
 └── _user_guide
 ```
-
-{% alert tip %}
-URLs on Braze Docs always match the directory structure within the docs repository. Use a page or section's URL to help find your way around.
-{% endalert %}

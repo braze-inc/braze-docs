@@ -10,10 +10,6 @@ noindex: true
 
 {% multi_lang_include contributing/general_getting_started.md %}
 
-{% multi_lang_include contributing/creating_a_new_branch.md %}
-
-{% multi_lang_include contributing/locating_the_directory.md %}
-
 ## Creating your section
 
 > TODO
@@ -25,7 +21,3 @@ noindex: true
 ### Without a landing page
 
 > TODO
-
-{% multi_lang_include contributing/creating_a_pull_request.md %}
-
-{% multi_lang_include contributing/requesting_a_review.md %}
