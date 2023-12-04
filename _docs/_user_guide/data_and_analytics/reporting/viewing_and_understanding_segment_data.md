@@ -83,7 +83,7 @@ See below for details on each templated report.
 
 ### Viewing metrics for campaigns or Canvases {#campaign-canvas-email}
 
-To view email performance metrics broken down by segment at the campaign or Canvas level, use the [Variables](#variables) tab to specify the campaign or Canvas and a time frame for pulling data.
+To view email performance metrics broken down by segment at the campaign or Canvas level, use the [Variables](#variables) tab to specify the campaigns or Canvases and a time frame for pulling data. If no campaigns or Canvases are specified, the report will include emails from all campaigns and Canvases from the specified time frame. You can also opt to view all campaigns and Canvases with certain tags.
 
 The following email metrics are available in this report:
 - Sends
@@ -102,11 +102,11 @@ Metrics from non-email channels are not yet available.
 
 ### Viewing metrics for variants or steps
 
-To view email performance broken down by segment at the campaign variant level, Canvas variant level, or Canvas step level, use the [Variables](#variables) tab to specify the following:
-- Specific campaign or Canvas
-- Variants 
+To view email performance broken down by segment at the campaign variant level, Canvas variant level, or Canvas step level, first choose a variant or step-level report (these are reports that have “for variants or steps” in the title), and then use the **Variables** tab to specify the following:
+
+- Specific campaign or Canvas (required if using a variant or step-level report) 
+- Variants (required if using a variant or step-level report)
 - Canvas step (optional)
-- Time range
 
 The metrics are the same as those offered for the [campaign or Canvas level](#campaign-canvas-email) template. If you choose multiple variants, your results will be grouped by variant.
 
@@ -117,14 +117,14 @@ The metrics are the same as those offered for the [campaign or Canvas level](#ca
 
 To view purchase and revenue metrics broken down by segment for a specific campaign or Canvas, use the [Variables](#variables) tab to specify the following:
 
-- Specific campaign or Canvas
-- Time range
 - Conversion window (the number of days after email receipt or click that Braze should attribute purchases or revenue to)
 - (Optional) Specific product
 
+In addition, use the Variables tab to specify whether to run report for one or more campaigns/Canvases, or one or more tags. If no campaigns, Canvases, or tags are chosen, then the report will run for all emails from campaigns/Canvases during your chosen time frame.
+
 Currently, this report pulls metrics from only the email channel. Any revenue or purchase data from channels besides emails will not be reflected in the report. 
 
-The following email metrics are available:
+The following email metrics are available for emails:
 
 - Unique purchases upon receipt
 - Revenue upon receipt
@@ -169,12 +169,14 @@ Before generating your report, go to the **Variables** tab to provide informatio
 
 The variables include:
 
-- **Campaign or Canvas:** Always required. Every template requires you to specify a campaign or Canvas.
+- **Campaign or Canvas:** You can include one or multiple campaigns or Canvases (there is no maximum for how many campaigns or Canvases you can specify). If you do not specify any campaigns or Canvases, the report will include all campaigns or Canvases from your chosen time frame.
 - **Variant:** If using a template that offers variant-level break downs, after selecting a campaign or Canvas, you can select variants from within that campaign or Canvas. If you select multiple variants, your results will be grouped by variant.
 - **Step:** If you select a Canvas variant, you can select a Canvas step. You cannot select a step without first selecting a Canvas variant. 
 - **Time range:** Identify the time period you want to pull data from. If no time range is specified, the time range will default to the past 30 days.
 - **Product name:** If running a report for purchase data, you can identify a specific product to pull data for.
 - **Conversion window:** Always required for reports with revenue and purchase data. The number of days after email receipt or click that Braze should attribute purchases or revenue to.
+- **Segments:** Identify the segments to break down data by. If not specified, the report will run for all segments that have analytics tracking turned on.
+- **Tags:** Specify tags in **Variables** to run your report for all campaigns or Canvases with certain tags. You may include multiple tags. If you add both tags and specific campaigns or Canvases to a report, your report will include data from your tags and the specified campaigns or Canvases. 
 
 ## Data availability
 
