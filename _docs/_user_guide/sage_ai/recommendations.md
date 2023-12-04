@@ -3,10 +3,12 @@ nav_title: AI Item Recommendations
 article_title: AI Item Recommendations
 page_order: 100
 alias: "/recommendations/"
-description: "This reference article covers how to create an Item Recommendation for items in a catalog."
+description: "This reference article covers how to create an AI Item Recommendation for items in a catalog."
 ---
 
 # AI Item Recommendations
+
+> Learn how to create an AI Item Recommendation for items in a catalog.
 
 You can use AI Item Recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
 
@@ -26,8 +28,8 @@ This page describes the free version of AI Item Recommendations. When using the 
 
 To create an item recommendation:
 
-1. Go to **Analytics** > **Item Recommendation**.
-2. Select **Create Prediction** > **Item Recommendation**.
+1. Go to **Analytics** > **AI Item Recommendation**.
+2. Select **Create Prediction** > **AI Item Recommendation**.
 
 You can also choose to create a recommendation straight from an individual catalog. From the **Catalogs** page, select your catalog and click **Create Recommendation**.
 
@@ -43,7 +45,10 @@ Next, select the recommendation type. Both recommendation types use the last 6 m
 
 - **Most popular:** Calculates the items from the catalog that users interact with most often in the entire workspace.
 - **Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to purchase or interact with. We calculate up to 30 of the next most likely items ranked from most to least likely.
-- **Most recent:** Surfaces each user's most recent purchases.
+
+<!--
+**Most recent:** Surfaces each user's most recent purchases.
+-->
 
 ![][2-1]
 
@@ -91,7 +96,7 @@ There are some requirements for selecting your property:
 
 ### Step 5: Train the recommendation
 
-When you're ready, select **Create Recommendation**. This process will take a few minutes to complete. You will receive an email update when the recommendation is successfully trained or an explanation of why the creation may have failed.
+When you're ready, select **Create Recommendation**. This process can take anywhere from 10 minutes to 36 hours to complete. You will receive an email update when the recommendation is successfully trained or an explanation of why the creation may have failed.
 
 You can find the recommendation on the **Predictions** page, where you can then edit or archive it as needed. Recommendations will automatically retrain once every month.
 
@@ -110,7 +115,7 @@ These metrics are defined in the following table.
 
 | Metric              | Description |
 | ------------------- | ---------- |
-| Precision           | The percentage of time the model correctly guessed the next item a user purchased. Precision is heavily dependent on your specific catalog size and mix, and should be used as a guide to understand how often the model is correct.<br><br>This number can vary, with averages from between 6–20%. Based on Braze testing, you can expect to see personalized item recommendations be about three times more precise than most popular item recommendations. This metric updates when the model next retrains.  |
+| Precision           | The percentage of time the model correctly guessed the next item a user purchased. Precision is heavily dependent on your specific catalog size and mix, and should be used as a guide to understand how often the model is correct.<br><br>In past testing, we have seen models perform well with precision numbers ranging from 6-20%. This metric updates when the model next retrains.  |
 | Coverage            | What percentage of available items in the catalog are recommended to at least one user. You can expect to see higher item coverage with personalized item recommendations over most popular ones. |
 | Recommendation type | Percentage of users who will receive personalized recommendations versus the fallback of most popular items. The fallback is sent to users who don’t have enough data to generate a personalized recommendation. |
 {: .reset-td-br-1 .reset-td-br-2}
