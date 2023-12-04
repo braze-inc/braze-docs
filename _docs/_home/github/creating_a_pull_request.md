@@ -1,6 +1,6 @@
 ---
 nav_title: Creating a pull request
-page_order: 0
+page_order: 2
 noindex: true
 ---
 

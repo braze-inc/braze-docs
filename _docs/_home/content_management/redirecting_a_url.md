@@ -81,7 +81,7 @@ redirect_to: /docs/developer_guide/getting_started/
 
 ## Setting up a heading redirect
 
-To redirect the URL for a page's heading, you'll use the `local_redirect` key within the page's YAML front matter. First, find the page's Markdown file, then open it in your text editor and rename the relevant heading.
+To redirect the URL for an in-page heading, you'll use the `local_redirect` key within the page's YAML front matter. First, find the page's Markdown file, then open it in your text editor and rename the relevant heading.
 
 ![]()
 
