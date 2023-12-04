@@ -57,9 +57,9 @@ Cet événement se produit si un message de campagne a été abandonné en raiso
 // Campaign Message Abort: users_campaigns_abort
 {
   "id": (string) globally unique ID of this event,
-  "user_id": (string) BSON id of the user that performed this event, 
+  "user_id": (string) Braze ID of the user that performed this event, 
   "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_id": (string) Braze ID of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
   "device_id": (string) id of the device on which the event occurred,
   "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
@@ -90,9 +90,9 @@ Cet événement se produit si un message Canvas a été abandonné en raison d�
 // Canvas Message Abort: users_canvas_abort
 {
   "id": (string) globally unique ID of this event,
-  "user_id": (string) BSON id of the user that performed this event, 
+  "user_id": (string) Braze ID of the user that performed this event, 
   "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_id": (string) Braze ID of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,  
   "device_id": (string) id of the device on which the event occurred,
   "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
@@ -126,7 +126,7 @@ Cet événement se produit si un message Carte de contenu a été abandonné en 
 {
   "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_id": (string) Braze ID of the app group this user belongs to,
   "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (string) name of the campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
@@ -145,7 +145,7 @@ Cet événement se produit si un message Carte de contenu a été abandonné en 
   "send_id": (string) message send ID this message belongs to,
   "time": (int) unix timestamp at which the event happened,
   "timezone": (string) timezone of the user,
-  "user_id": (string) BSON id of the user that performed this event
+  "user_id": (string) Braze ID of the user that performed this event
 }
 ```
 {% endapi %}
@@ -166,7 +166,7 @@ Cet événement se produit si un message e-mail a été abandonné en raison d�
 {
   "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_id": (string) Braze ID of the app group this user belongs to,
   "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (string) name of the campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
@@ -187,7 +187,7 @@ Cet événement se produit si un message e-mail a été abandonné en raison d�
   "send_id": (string) message send ID this message belongs to,
   "time": (int) unix timestamp at which the event happened,
   "timezone": (string) timezone of the user,
-  "user_id": (string) BSON id of the user that performed this event, 
+  "user_id": (string) Braze ID of the user that performed this event, 
 }
 ```
 {% endapi %}
@@ -211,7 +211,7 @@ Cet événement se produit si un message in-app a été abandonné en raison d�
   "ad_id": (string) advertising identifier,
   "ad_id_type": (string) one of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (string) Whether advertising tracking is enabled for the device,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_id": (string) Braze ID of the app group this user belongs to,
   "browser": (string) browser of the device,
   "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (string) name of the campaign,
@@ -222,7 +222,7 @@ Cet événement se produit si un message in-app a été abandonné en raison d�
   "canvas_step_name": (string) API id of the Canvas step this event belongs to,
   "canvas_variation_id": (string) id of the Canvas variation this event belongs to,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "card_id": (string) BSON id of the card this in app message comes from,
+  "card_id": (string) Braze ID of the card this in app message comes from,
   "carrier:" (string) carrier of the device,
   "device_id": (string) id of the device on which the event occurred,
   "device_model" (string) model of the device,
@@ -236,7 +236,7 @@ Cet événement se produit si un message in-app a été abandonné en raison d�
   "send_id": (string) message send ID this message belongs to,
   "time": (int) unix timestamp at which the event happened,
   "timezone": (string) IANA time zone of the user at the time of the event,
-  "user_id": (string) BSON id of the user that performed this event,
+  "user_id": (string) Braze ID of the user that performed this event,
   "version": (string) which version of in app message, legacy or triggered
 }
 ```
@@ -258,14 +258,14 @@ Cet événement se produit si un message de Carte de fil d’actualité a été 
 {
   "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_id": (string) Braze ID of the app group this user belongs to,
   "browser": (string) browser of the device,
   "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (string) name of the campaign,
   "canvas_name": (string) name of the Canvas,
   "canvas_step_name": (string) API id of the Canvas step this event belongs to,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "card_id": (string) BSON id of the card this in app message comes from,
+  "card_id": (string) Braze ID of the card this in app message comes from,
   "carrier:" (string) carrier of the device,
   "device_id": (string) id of the device on which the event occurred,
   "device_model" (string) model of the device,
@@ -277,7 +277,7 @@ Cet événement se produit si un message de Carte de fil d’actualité a été 
   "resolution": (string) resolution of the device,
   "time": (int) unix timestamp at which the event happened,
   "timezone": (string) IANA time zone of the user at the time of the event,
-  "user_id": (string) BSON id of the user that performed this event
+  "user_id": (string) Braze ID of the user that performed this event
 }
 ```
 {% endapi %}
@@ -298,8 +298,8 @@ Cet événement se produit si un message de notification push a été abandonné
 {
   "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "app_id": (string) BSON id of the app this user belongs to,
+  "app_group_id": (string) Braze ID of the app group this user belongs to,
+  "app_id": (string) Braze ID of the app this user belongs to,
   "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (string) name of the campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
@@ -317,7 +317,7 @@ Cet événement se produit si un message de notification push a été abandonné
   "send_id": (string) message send ID this message belongs to,
   "time": (int) unix timestamp at which the event happened,
   "timezone": (string) IANA time zone of the user at the time of the event,
-  "user_id": (string) BSON id of the user that performed this event
+  "user_id": (string) Braze ID of the user that performed this event
 }
 ```
 {% endapi %}
@@ -338,7 +338,7 @@ Cet événement se produit si un message SMS a été abandonné en raison d’he
 {
   "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_id": (string) Braze ID of the app group this user belongs to,
   "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (string) name of the campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
@@ -354,7 +354,7 @@ Cet événement se produit si un message SMS a été abandonné en raison d’he
   "message_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
   "time": (int) unix timestamp at which the event happened,
-  "user_id": (string) BSON id of the user that performed this event
+  "user_id": (string) Braze ID of the user that performed this event
 }
 }
 ```
@@ -376,7 +376,7 @@ Cet événement se produit si un message Webhook a été abandonné en raison d�
 {
   "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_id": (string) Braze ID of the app group this user belongs to,
   "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (string) name of the campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
@@ -395,7 +395,7 @@ Cet événement se produit si un message Webhook a été abandonné en raison d�
   "send_id": (string) message send ID this message belongs to,
   "time": (int) unix timestamp at which the event happened,
   "timezone": (string) IANA time zone of the user at the time of the event,
-  "user_id": (string) BSON id of the user that performed this event
+  "user_id": (string) Braze ID of the user that performed this event
 }
 ```
 {% endapi %}
@@ -418,11 +418,11 @@ Cet événement ce produit lorsqu’un utilisateur quitte un Canvas en effectuan
   "id": (string) globally unique ID of this event,
   "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_id": (string) Braze ID of the app group this user belongs to,
   "app_group_api_id": (string) API ID of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
   "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_api_id": (string) Braze ID of the experiment step this event belongs to,
   "canvas_variation_api_id": (string) API id of the Canvas variation this event belongs to,
   "canvas_step_api_id": (string) API id of the Canvas step this event belongs to,
 }
@@ -446,13 +446,13 @@ Cet événement ce produit lorsqu’un utilisateur quitte un Canvas en correspon
   "id": (string) globally unique ID of this event,
   "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_id": (string) Braze ID of the app group this user belongs to,
   "app_group_api_id": (string) API ID of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_api_id": (string) Braze ID of the experiment step this event belongs to,
   "canvas_variation_api_id": (string) API id of the Canvas variation this event belongs to,
   "canvas_step_api_id": (string) API id of the Canvas step this event belongs to,
 }
@@ -479,10 +479,10 @@ Cet événement se produit quand un utilisateur entre dans une étape Canvas Exp
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
+  "experiment_step_id": (string) Braze ID of the experiment step this event belongs to,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
+  "experiment_split_id": (string) Braze ID of the experiment split the user enrolled in,
   "experiment_split_name": (string) name of the experiment split the user enrolled in,
   "in_control_group": (boolean) whether the user was enrolled in the control group
 }
@@ -506,15 +506,15 @@ Cet événement se produit lorsqu’un utilisateur effectue une conversion pour 
   "id": (string) globally unique ID of this event,
   "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
-  "app_id": (string) BSON id of the app this user belongs to,
+  "app_id": (string) Braze ID of the app this user belongs to,
   "time": (int) unix timestamp at which the event happened,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
-  "experiment_split_id": (string) BSON ID of the experiment split variation this user received,
+  "experiment_step_id": (string) Braze ID of the experiment step this event belongs to,
+  "experiment_split_id": (string) Braze ID of the experiment split variation this user received,
   "experiment_split_name": (string) name of the experiment split the user enrolled in,
   "conversion_behavior_index": (int) index of the conversion behavior,
   "conversion_behavior": (string): conversion behavior
@@ -1827,7 +1827,7 @@ Les groupes d’abonnement sont disponibles uniquement pour les canaux e-mail et
   "user_id": (required, string) Braze user id of the user,
   "external_user_id": (optional, string) External ID of the user,
   "device_id": (optional, string) device_id that is tied to this user if user is anonymous, 
-  "app_group_id": (required, string) BSON id of the app group this user belongs to, 
+  "app_group_id": (required, string) Braze ID of the app group this user belongs to, 
   "email_address": (optional, string) email address for this user,
   "phone_number": (optional, string) phone number of the user (presented in e.164 format),
   "app_id": (optional, string) id for the app on which the user action occurred,
@@ -1883,7 +1883,7 @@ Cet événement se produit lorsque le statut global d’abonnement de l’utilis
 // Global State Change: users.behaviors.subscription.GlobalStateChange
 {
   "id": (required, string) unique ID of this event,
-  "user_id": (required, string) Braze BSON id of the user with this global subscription state change,
+  "user_id": (required, string) Braze Braze ID of the user with this global subscription state change,
   "external_user_id": (string) External ID of the user,
   "email_address": (string) User email address,
   "state_change_source": (optional, string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
@@ -1891,12 +1891,12 @@ Cet événement se produit lorsque le statut global d’abonnement de l’utilis
   "channel": (optional, string) Channel: only email for now,
   "time": (required, string) 10-digit UTC time of the state change event in seconds since the epoch,
   "timezone": (optional, string) IANA timezone of the user at the time of the event,
-  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_group_id": (required, string) Braze ID of the app group this user belongs to,
   "app_id": (optional, string) id for the app on which the user action occurred,
-  "campaign_id": (optional, string) BSON id of the Campaign if from a Campaign,
+  "campaign_id": (optional, string) Braze ID of the Campaign if from a Campaign,
   "campaign_name": (optional, string) name of the campaign,
   "message_variation_id": (optional, string) id of the message variation if from a campaign,
-  "canvas_id": (optional, string) BSON id of the Canvas if from a Canvas,
+  "canvas_id": (optional, string) Braze ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
@@ -1948,7 +1948,7 @@ Cet événement n’est pas déclenché au moment précis où l’utilisateur d�
   "user_id": (required, string) Braze user id of the user,
   "external_user_id": (optional, string) External ID of the user,
   "device_id": (optional, string) id of the device on which the session occurred,
-  "app_group_id": (optional, string) BSON id of the app group this user belongs to,   
+  "app_group_id": (optional, string) Braze ID of the app group this user belongs to,   
   "app_id": (required, string) id for the app on which the user action occurred,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch
 }
