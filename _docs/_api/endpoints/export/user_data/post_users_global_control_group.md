@@ -76,7 +76,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-Individual custom attributes cannot be exported. However, all custom attributes can be exported by including custom_attributes in the fields_to_export array (for example,['first_name', 'email', 'custom_attributes']).
+Individual custom attributes cannot be exported. However, all custom attributes can be exported by including custom_attributes in the fields_to_export array (for example, `['first_name', 'email', 'custom_attributes']`).
 {% endalert %}
 
 ## Request parameters
