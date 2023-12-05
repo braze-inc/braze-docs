@@ -1074,3 +1074,4 @@ validurls['/docs/SDK_Integration/Android'] = '/docs/developer_guide/platform_int
 validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/device-token-not-for-topic'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/#message-activity-log-errors';
 validurls['/docs/user_guide/message_building_by_channel/push_notifications'] = '/docs/user_guide/message_building_by_channel/push';
 validurls['/docs/message_building_by_channel/email/best_practices'] = '/docs/user_guide/message_building_by_channel';
+validurls['/docs/hidden/private_betas/tiktok'] = '/docs/partners/canvas_steps/tiktok_audience_sync/';
