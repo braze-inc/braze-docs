@@ -36,7 +36,7 @@ To use this endpoint, you'll need to generate an API key with the `users.alias.n
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "user_aliases" :[
     {
@@ -82,7 +82,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-API-KEY-HERE
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"
