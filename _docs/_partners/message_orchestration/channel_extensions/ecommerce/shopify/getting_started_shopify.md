@@ -345,12 +345,12 @@ As soon as a customer visits your Shopify site, an anonymous user is created. Th
 {: start="4"}
 4. In your Canvas entry criteria, target only unidentified user profiles, meaning that they don’t have an external ID and `do_not_merge` is not true.
 
-![]({% image_buster /assets/img/shopify/shop_usermerge_canvas.png %})
+![]({% image_buster /assets/img/Shopify/shop_usermerge_canvas.png %})
 
 {: start="5"}
 5. Create a custom attribute `do_not_merge` to distinguish whether customers need to get merged or not. 
 
-![]({% image_buster /assets/img/shopify/shop_usermerge_canvas_entrycriteria.png %})
+![]({% image_buster /assets/img/Shopify/shop_usermerge_canvas_entrycriteria.png %})
 
 {: start="6"}
 6. Next, create a webhook to send a request like below: 
