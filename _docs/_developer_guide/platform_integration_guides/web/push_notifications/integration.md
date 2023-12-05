@@ -20,7 +20,7 @@ Refer to our [push best practices][8] for more resources.
 
 ![][27]
 
-Web push notifications are implemented using the [W3C push standard][1], which browsers are in the process of supporting. Currently, the browsers that support web push include most versions of Chrome, Firefox, Opera and Safari. 
+Web push notifications are implemented using the [W3C push standard][1], which most major browsers support.
 
 For more information on the push protocol standards and browser support, you can review resources from [Apple][5] [Mozilla][6] and [Microsoft][7]
 
