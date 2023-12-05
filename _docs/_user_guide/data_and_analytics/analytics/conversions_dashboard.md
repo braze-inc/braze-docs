@@ -1,164 +1,112 @@
 ---
 nav_title: Conversions Dashboard
 article_title: Conversions Dashboard
+alias: "/conversions_dashboard_v2/"
+description: "The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods."
 page_order: 3
 page_type: reference
-description: "This reference article covers the Conversions Dashboard, which allows you to analyze conversions across campaigns, Canvases, and channels using different attribution methods."
 tool: 
   - Reports
-
 ---
 
-# Conversions dashboard
+# Conversions dashboard updates
 
-> The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods.
-
-You can specifically track these attribution methods:
-- **Open conversions:** Conversions that occurred after a user opened the message
-- **Click conversions:** Conversions that occurred after a user clicked the message
-- **Received conversions:** Conversions that occurred after a user received the message
-- **Last-click conversions:** Conversions that occurred after a user clicked the message if the message was the most recent one the user clicked (This feature is currently being tested on a small subset of early access customers)
-
-When measuring your conversions, you can specify the time frame, conversion event, and conversion window.
-
-{% alert important %}
-This feature is in early access and is under active development. If you're interested in participating in the early access, please reach out to your customer success manager.
-{% endalert %}
+> The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different [attribution methods](#attribution-methods). When measuring your conversions, you can specify the time frame, conversion event, and conversion window.
 
 ## Setting up your report
 
+To set up your conversions dashboard report:
+
 1. Navigate to **Analytics** > **Conversions**.
+2. Select a **Date Range** for your report, up to a 90-day window.
+3. Select the campaigns or Canvases (or both) that you would like to analyze. 
+   - If you would like to filter campaigns and Canvases by tag, select a **Tag**.  
+4. Select the **Channel(s)** you would like to analyze for your messages.
+5. (Optional) If desired, select a **Breakdown** layer. This allows you to view different dimensions of data, such as by variant, Canvas step, country, or language.
+6. (Optional) If you are interested in calculating conversions of an event that was not set up as a conversion event on the campaign or Canvas, turn on [Use custom events](#using-custom-events).
+7. Select an [Attribution Method](#attribution-methods) through which to analyze the selected messages.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Conversions** under **Data**.
+If you are analyzing conversions for multiple channels, your **Attribution Method** will default to **Last-Touch Attribution**.
 {% endalert %}
 
-{:start="2"}
-2. Select a time period for your report, up to 365 days in the past.
-3. Select a conversion event, **Started session**, **Performed custom event**, or **Made a specific purchase**.
-4. Decide if you want your report to include [untracked events](#untracked-events) (Optional, this feature is currently being tested on a small subset of early access customers).
-5. Select a conversion window, up to 7 days. This is how much time users have after they perform the message engagement action for the conversion event to count as a conversion. Conversion events that occur outside of this window are not counted in your report.
-6. Click **Refresh**.
+{:start="8"}
+8. Click **Create** to run the report.
 
-### Untracked events
+After the page has loaded, select a **Conversion Event** to filter the report for conversion data. The available selections will include the events that were pre-configured on the Canvases and campaigns. If you selected a custom event when setting up your report (step 6), this option is not available.
 
-Untracked events are events that were not originally assigned as conversion events for the campaigns and Canvases in your report. If unselected, then your report will only include conversion metrics for events that were originally included as conversion events, and any other occurrences of that event during the time frame are not counted in your report.
+### Using custom events
 
-For example, let's say you're running your report on campaign A (see the next section, [Filtering your report](#filtering-your-report), for how to filter reports to a specific campaign). You're interested in seeing the conversion rate for users who received campaign A and performed custom event X, but custom event X was not one of the four conversion events tracked for this campaign. If you choose to not include untracked events, then your report will show 0 conversions. However, if you do include untracked events, then Braze will generate a report of users who performed custom event X after receiving, opening, or clicking campaign A.
+If you are interested in calculating conversions of an event that was not set up as a conversion event on the campaign or Canvas, you can select a specific custom event to use as a conversion event. 
 
-### Filtering your report
+1. When setting up your report, turn on **Use custom events**.
+2. Select a custom event that you would like to use as the conversion event.
+3. Select the conversion window within which that event should have occurred to be counted as a conversion.
 
-You can filter by campaign, Canvas step, or channel to narrow down your report's results. You must select a channel to run the report.
-
-- **Filter by campaign:** Select up to 10 campaigns to show conversions that occurred after receiving, opening, or clicking any of the selected campaigns.
-- **Filter by Canvas step:** Select up to 10 Canvases or 10 Canvas steps to show conversions that occurred after receiving, opening, or clicking any of the selected Canvases or steps.
-- **Filter by channel:** Select one channel (required) to show conversions that occurred after receiving, opening, or clicking any messages sent from that channel. By default, the email channel is selected.
-- **Filter by country:** Select up to 10 countries to show conversions for users with those countries in their profile.
+{% alert note %}
+If you select a custom event, you will not see the **Conversion Event** dropdown on the page and will have to re-run to report to view conversions for different custom events.
+{% endalert %}
 
 ## Understanding your results
 
-Your report is split into three sections: **Total conversions**, **Unique conversions**, and **Conversion performance by channel**.
+Your report is split into three sections:
 
-### Total conversions
+- [Conversion details](#conversion-details)
+- [Conversion funnel](#conversion-funnel)
+- [Conversions over time](#conversions-over-time)
 
-The total conversions are total counts and are not deduplicated when users convert multiple times. For example, if a user converts two times within the conversion window, then two additional total conversions are incremented.
+### Conversion details
 
-This section includes the following metric tiles:
+The conversion details table will always show one column for *Recipients* and another for *Conversions* (rate and total). The remaining two table columns that appear depend on the options you selected when setting up your report. The following table describes possible metrics.
 
-<style type="text/css">
-.tg td{word-break:normal;}
-.tg th{word-break:normal;}
-.leftHeader{font-size: 12px; font-weight: bold; background-color: #f4f4f7; text-transform: uppercase; color: #212123; font-family: "Sailec W00 Bold",Arial,Helvetica,sans-serif;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0pky"></th>
-    <th class="tg-0pky">Number of conversions</th>
-    <th class="tg-0pky">Total conversions per user</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="leftHeader">Received conversions</td>
-    <td class="tg-0pky">The number of times your selected conversion event occurred after message receipt, within the selected conversion window.</td>
-    <td class="tg-0pky">Calculated as (Number of total conversions from time period) / (Number of unique recipients from time period)</td>
-  </tr>
-  <tr>
-    <td class="leftHeader">Open conversions</td>
-    <td class="tg-0pky">The number of times your selected conversion event occurred after message open, within the selected conversion window.</td>
-    <td class="tg-0pky">Calculated as (Number of conversions from time period) / (Number of unique recipients from time period)</td>
-  </tr>
-  <tr>
-    <td class="leftHeader">Click conversions</td>
-    <td class="tg-0pky">The number of times your selected conversion event occurred after message click, within the selected conversion window.</td>
-    <td class="tg-0pky">Calculated as (Number of conversions from time period) / (Number of unique recipients from time period)</td>
-  </tr>
-</tbody>
-</table>
+| Metric shown | Description |
+ | --- | --- |
+| Recipients | The number of users who received a message through the selected channel within the report's date range |
+| Conversion Rate (Recipients) | Calculated as: (Number of conversions) / (Number of recipients) |
+| Attribution method | Defined by the [attribution method](#attribution-methods) you selected when you set up the report. For Last Touch attribution or if multiple channels are selected, this appears as [Touches](#terms-to-know). |
+| Conversion Rate (Attribution method) | Defined by the [attribution method](#attribution-methods) you selected when you set up the report. If multiple channels are selected, this defaults to last-touch attribution. |
+{: .reset-td-br-1 .reset-td-br-2 }
 
-### Unique conversions
+![]({% image_buster /assets/img_archive/conversions2_details.png %})
 
-The unique conversions rates and counts track the number of users who converted one or more times. This section includes the following metrics:
+If you selected breakdown-level details for campaigns or Canvases when setting up your report (step 5), you can click <i class="fas fa-angle-down"></i> to expand the table.
 
-| Metric | Calculation |
-| --- | --- | ---- |
-| Unique received conversions rate | (Number of users that converted at least once after message receipt, within selected conversion window) / (Number of unique recipients) |
-| Unique open conversions rate | (Number of users that converted at least once after message open, within selected conversion window) / (Number of unique recipients) |
-| Unique click conversions rate | (Number of users that converted at least once after message click, within selected conversion window) / (Number of unique recipients) |
-| Last click conversions rate (This feature is currently being tested on a small subset of early access customers) | (Number of users that converted at least once if their most recent click within the conversion window was for this message) / (Number of unique recipients)
-{: .reset-td-br-1 .reset-td-br-2}
+### Conversion funnel
 
-### Conversion performance by channel
+This bar graph shows the absolute counts for each [engagement event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) based on the selected channel. The conversions count will be defined as per the selected attribution method.
 
-This section shows the conversion results for each messaging channel. Due to how opens and clicks are tracked across channels, not all metrics are available for all channels. 
+By default, all selected campaigns and Canvases are shown. To deselect a campaign or Canvas, click on the name of the campaign or Canvas that you'd like to exclude. For additional details on the engagement event, you can hover over each bar.
+
+To download the time series data, click and select your download option. Available options are PNG, JPEG, PDF, SVG, or CSV.
 
 {% alert note %}
-Receipt events vary from channel to channel, therefore the _unique recipients_ metric used in the denominator of total and unique conversion calculations will alter slightly from channel to channel. For example, in-app messages track impressions rather than receipts. That means for the in-app message channel, the calculations for _Total conversions_ and _Unique conversions_ use the number of impressions in the denominator.
+This graph only shows data for a single channel at a time. Use the **Channel** dropdown on the chart to select a single channel.
 {% endalert %}
 
-The following table lists how each attribution method is tracked for each channel:
+![]({% image_buster /assets/img_archive/conversions2_funnel.png %}){: style="max-width:70%"}
 
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0pky"></th>
-    <th class="tg-0pky">Receipt Conversions</th>
-    <th class="tg-0pky">Open Conversions</th>
-    <th class="tg-0pky">Click Conversions</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="leftHeader">Email</td>
-    <td class="tg-0pky">Email receipts</td>
-    <td class="tg-0pky">Email opens</td>
-    <td class="tg-0pky">Email clicks</td>
-  </tr>
-  <tr>
-    <td class="leftHeader">SMS</td>
-    <td class="tg-0pky">SMS sends</td>
-    <td class="tg-0pky">N/A</td>
-    <td class="tg-0pky">N/A</td>
-  </tr>
-  <tr>
-    <td class="leftHeader">Push</td>
-    <td class="tg-0pky">Push sends</td>
-    <td class="tg-0pky">Push influenced opens</td>
-    <td class="tg-0pky">Push direct opens</td>
-  </tr>
-  <tr>
-    <td class="leftHeader">In-app message</td>
-    <td class="tg-0pky">In-app message impressions</td>
-    <td class="tg-0pky">N/A</td>
-    <td class="tg-0pky">In-app message clicks</td>
-  </tr>
-  <tr>
-    <td class="leftHeader">Content Card</td>
-    <td class="tg-0pky">Content Card impressions</td>
-    <td class="tg-0pky">N/A</td>
-    <td class="tg-0pky">Content Card clicks</td>
-  </tr>
-</tbody>
-</table>
+### Conversions over time
+
+This time series graph includes a representation of the conversions per campaign or Canvas over time. By default, all selected campaigns and Canvases are shown. To deselect a campaign or Canvas, click on the name of the campaign or Canvas that you'd like to exclude.
+
+To download the time series data, click <i class="fas fa-bars"></i> and select your download option. Available options are PNG, JPEG, PDF, SVG, or CSV.
+
+![]({% image_buster /assets/img_archive/conversions2_over_time.png %}){: style="max-width:70%"}
+
+### Attribution methods
+
+| Attribution method | Definition | Rate calculation | Channel-specific options |
+| --- | --- | --- | --- |
+| Upon Receipt | Total number of conversions that occurred after message receipt | Calculated as (Unique Received Conversions) / (Unique Recipients) | {::nomarkdown}<ul><li>Upon email delivery</li><li>Upon SMS delivery</li></ul>{:/} |
+| Upon Send | Total number of conversions that occurred after message send | Calculated as (Unique Send Conversions) / (Unique Recipients) | {::nomarkdown}<ul><li>Upon push send</li><li>Upon Content Card send</li><li>Upon SMS send</li></ul>{:/} |
+| Upon Open | Total number of conversions that occurred after message open | Calculated as (Unique Open Conversions) / (Unique Recipients) | {::nomarkdown}<ul><li>Upon email open</li><li>Upon push open</li></ul>{:/} |
+| Upon Click | Total number of conversions that occurred message click | Calculated as (Unique Click Conversions) / (Unique Recipients) | {::nomarkdown}<ul><li>Upon email click</li><li>Upon Content Card click</li><li>Upon IAM click</li></ul>{:/} |
+| Upon Impression | Total number of conversions that occurred after an impression | Calculated as (Unique Impression Conversions) / (Unique Recipients) | {::nomarkdown}<ul><li>Upon IAM impression</li><li>Upon Content Card impression</li></ul>{:/} |
+| Upon Last-Touch | Conversions that give all credit to the last-touched or clicked message during the conversion window. | Calculated as (Number of Touches) / (Unique Recipients) | Last-touch attribution is automatically selected if multiple channels are added to the report.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Terms to know
+
+| Term | Definition |
+| --- | --- |
+| Touch | A physical interaction or touchpoint with a message.<br><br>Touches can include:<br>{::nomarkdown}<ul><li>Email Open and Email Click</li><li>Push Open</li><li>Content Card Click</li><li>In-App Message Click</li><li>SMS Delivery</li></ul>{:/} |
