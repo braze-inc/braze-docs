@@ -61,7 +61,7 @@ This event occurs when an WhatsApp message is read by the end user.
 // WhatsApp Read: users.messages.whatsapp.Read
 
 {
-  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -78,7 +78,7 @@ This event occurs when an WhatsApp message is read by the end user.
   "subscription_group_id": (optional, string) ID of the sending Subscription Group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
-  "user_id": (required, string) BSON id of the user that performed this event
+  "user_id": (required, string) Braze ID of the user that performed this event
 }
 ```
 
@@ -97,7 +97,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
 // WhatsApp Delivery: users.messages.whatsapp.Delivery
 
 {
-  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -116,7 +116,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
   "subscription_group_id": (optional, string) ID of the sending Subscription Group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
-  "user_id": (required, string) BSON id of the user that performed this event
+  "user_id": (required, string) Braze ID of the user that performed this event
 }
 ```
 
@@ -130,13 +130,13 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
 WhatsApp, Failure
 {% endapitags %}
 
-This event occurs when an Internet Service Provider returns a hard bounce. A hard bounce signifies a permanent deliverability failure.
+This event occurs when WhatsApp cannot deliver the message to the user. A hard bounce signifies a permanent deliverability failure.
 
 ```json
 // WhatsApp Delivery Failure: users.messages.whatsapp.Failure
 
 {
-  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -157,7 +157,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "subscription_group_id": (optional, string) ID of the sending Subscription Group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
-  "user_id": (required, string) BSON id of the user that performed this event
+  "user_id": (required, string) Braze ID of the user that performed this event
 }
 ```
 {% endapi %}
@@ -169,13 +169,13 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
 WhatsApp, Sends
 {% endapitags %}
 
-This event occurs when an email send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the end user.
+This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the end user.
 
 ```json
 // WhatsApp Send: users.messages.whatsapp.Send
 
 {
-  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -195,7 +195,7 @@ This event occurs when an email send request was successfully communicated betwe
   "subscription_group_id": (optional, string) ID of the sending Subscription Group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
-  "user_id": (required, string) BSON id of the user that performed this event
+  "user_id": (required, string) Braze ID of the user that performed this event
 }
 ```
 {% endapi %}
@@ -217,7 +217,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
   "action": (optional, string) action taken in response to this message (for example, Subscribed, Unsubscribed, or None),
-  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) id of the Canvas if from a Canvas,
@@ -235,7 +235,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
   "send_id": (optional, string) message send ID this message belongs to,
   "subscription_group_id": (optional, string) ID of the sending Subscription Group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
-  "user_id": (required, string) BSON id of the user that performed this event
+  "user_id": (required, string) Braze ID of the user that performed this event
 ```
 {% endapi %}
 {% api %}
@@ -252,7 +252,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
 // WhatsApp Inbound Received: users.messages.whatsapp.InboundReceive
 
 {
-  "app_group_id": (required, string) BSON id of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -274,7 +274,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
   "subscription_group_id": (optional, string) ID of the sending Subscription Group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "user_phone_number": (optional, string) the user’s phone number from which the message was received,
-  "user_id": (required, string) BSON id of the user that performed this event
+  "user_id": (required, string) Braze ID of the user that performed this event
 }
 ```
 {% endapi %}
@@ -295,7 +295,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -314,7 +314,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
   "send_id": (optional, string) message send ID this message belongs to,
   "time": (required, int) unix timestamp at which the event happened,
   "timezone": (optional, string) timezone of the user,
-  "user_id": (required, string) BSON ID of the user that performed this event
+  "user_id": (required, string) Braze ID of the user that performed this event
 }
 ```
 {% endapi %}
@@ -335,7 +335,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (optional, string) BSON ID of the workspace this user belongs to,
+  "app_group_id": (optional, string) Braze ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -356,7 +356,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
   "send_id": (optional, string) message send ID this message belongs to,
   "time": (required, int) unix timestamp at which the event happened,
   "timezone": (optional, string) timezone of the user,
-  "user_id": (required, string) BSON ID of the user that performed this event, 
+  "user_id": (required, string) Braze ID of the user that performed this event, 
 }
 ```
 {% endapi %}
@@ -377,8 +377,8 @@ This event occurs if a push notification message was aborted based on Liquid abo
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
-  "app_id": (required, string) BSON ID of the app this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
+  "app_id": (required, string) Braze ID of the app this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -398,7 +398,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
   "send_id": (optional, string) message send ID this message belongs to,
   "time": (required, int) unix timestamp at which the event happened,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
-  "user_id": (required, string) BSON ID of the user that performed this event
+  "user_id": (required, string) Braze ID of the user that performed this event
 }
 ```
 {% endapi %}
@@ -419,7 +419,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -435,7 +435,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
   "message_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "subscription_group_id": (optional, string) ID of the subscription group targeted for this SMS message,
   "time": (required, int) unix timestamp at which the event happened,
-  "user_id": (required, string) BSON ID of the user that performed this event
+  "user_id": (required, string) Braze ID of the user that performed this event
 }
 ```
 {% endapi %}
@@ -456,7 +456,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts, Quiet
 {
   "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
   "abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
-  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
   "campaign_name": (optional, string) name of the campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -475,7 +475,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts, Quiet
   "send_id": (optional, string) message send ID this message belongs to,
   "time": (required, int) unix timestamp at which the event happened,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
-  "user_id": (required, string) BSON ID of the user that performed this event
+  "user_id": (required, string) Braze ID of the user that performed this event
 }
 ```
 {% endapi %}
@@ -498,14 +498,14 @@ This event occurs when a user has exited a Canvas by performing an event.
   "id": (required, string) globally unique ID of this event,
   "user_id": (required, string) Braze user ID of the user, 
   "external_user_id": (optional, string) External user ID of the user,
-  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "app_group_api_id": (optional, string) API ID of the workspace this user belongs to,
   "time": (required, int) unix timestamp at which the event happened,
   "canvas_id": (required, string) ID of the Canvas if from a Canvas,
   "canvas_variation_id": (required, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "canvas_api_id": (optional, string) BSON ID of the experiment step this event belongs to,
+  "canvas_api_id": (optional, string) Braze ID of the experiment step this event belongs to,
   "canvas_variation_api_id": (optional, string) API ID of the Canvas variation this event belongs to,
   "canvas_step_api_id": (optional, string) API ID of the Canvas step this event belongs to
 }
@@ -529,14 +529,14 @@ This event occurs when a user has exited a Canvas by matching an audience.
   "id": (required, string) globally unique ID of this event,
   "user_id": (required, string) Braze user ID of the user, 
   "external_user_id": (optional, string) External user ID of the user,
-  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "app_group_api_id": (optional, string) API ID of the workspace this user belongs to,
   "time": (required, int) unix timestamp at which the event happened,
   "canvas_id": (required, string) ID of the Canvas if from a Canvas,
   "canvas_variation_id": (required, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "canvas_api_id": (optional, string) BSON ID of the experiment step this event belongs to,
+  "canvas_api_id": (optional, string) Braze ID of the experiment step this event belongs to,
   "canvas_variation_api_id": (optional, string) API ID of the Canvas variation this event belongs to,
   "canvas_step_api_id": (optional, string) API ID of the Canvas step this event belongs to
 }
@@ -563,10 +563,10 @@ This event occurs when a user enters a Canvas experiment step path.
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "experiment_step_id": (required, string) BSON ID of the experiment step this event belongs to,
+  "experiment_step_id": (required, string) Braze ID of the experiment step this event belongs to,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "experiment_split_id": (optional, string) BSON ID of the experiment split the user enrolled in,
+  "experiment_split_id": (optional, string) Braze ID of the experiment split the user enrolled in,
   "experiment_split_name": (optional, string) name of the experiment split the user enrolled in,
   "in_control_group": (required, boolean) whether the user was enrolled in the control group
 }
@@ -591,7 +591,7 @@ This event occurs when a user convert for a Canvas experiment step.
   "id": (required, string) globally unique ID of this event,
   "user_id": (required, string) Braze user ID of the user, 
   "external_user_id": (optional, string) External user ID of the user,
-  "app_id": (optional, string) BSON ID of the app this user belongs to,
+  "app_id": (optional, string) Braze ID of the app this user belongs to,
   "time": (required, int) unix timestamp at which the event happened,
   "canvas_id": (required, string) ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
@@ -599,8 +599,8 @@ This event occurs when a user convert for a Canvas experiment step.
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "experiment_step_id": (optional, string) BSON ID of the experiment step this event belongs to,
-  "experiment_split_id": (required, string) BSON ID of the experiment split variation this user received,
+  "experiment_step_id": (optional, string) Braze ID of the experiment step this event belongs to,
+  "experiment_split_id": (required, string) Braze ID of the experiment split variation this user received,
   "experiment_split_name": (optional, string) name of the experiment split the user enrolled in,
   "conversion_behavior_index": (optional, int) index of the conversion behavior,
   "conversion_behavior": (optional, string) conversion behavior
@@ -1973,7 +1973,7 @@ This event occurs when the global subscription state of the user changes.
 // Global State Change: users.behaviors.subscription.GlobalStateChange
 {
   "id": (required, string) unique ID of this event,
-  "user_id": (required, string) Braze BSON ID of the user with this global subscription state change,
+  "user_id": (required, string) Braze Braze ID of the user with this global subscription state change,
   "external_user_id": (optional, string) External ID of the user,
   "email_address": (optional, string) User email address,
   "state_change_source": (optional, string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
@@ -1981,12 +1981,12 @@ This event occurs when the global subscription state of the user changes.
   "channel": (optional, string) Channel: only email for now,
   "time": (required, int) 10-digit UTC time of the state change event in seconds since the epoch,
   "timezone": (optional, string) IANA timezone of the user at the time of the event,
-  "app_group_id": (required, string) BSON ID of the workspace this user belongs to,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "app_id": (optional, string) ID for the app on which the user action occurred,
-  "campaign_id": (optional, string) BSON ID of the campaign if from a campaign,
+  "campaign_id": (optional, string) Braze ID of the campaign if from a campaign,
   "campaign_name": (optional, string) name of the campaign,
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,
-  "canvas_id": (optional, string) BSON ID of the Canvas if from a Canvas,
+  "canvas_id": (optional, string) Braze ID of the Canvas if from a Canvas,
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
