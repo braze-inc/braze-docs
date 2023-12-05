@@ -9,7 +9,7 @@ tool:
   - Reports
 ---
 
-# Conversions dashboard updates
+# Conversions dashboard
 
 > The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different [attribution methods](#attribution-methods). When measuring your conversions, you can specify the time frame, conversion event, and conversion window.
 
