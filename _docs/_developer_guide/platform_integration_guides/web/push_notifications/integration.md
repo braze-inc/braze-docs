@@ -20,7 +20,7 @@ Refer to our [push best practices][8] for more resources.
 
 ![][27]
 
-Web push notifications are implemented using the [W3C push standard][1], which browsers are in the process of supporting. Currently, the browsers that support web push include most versions of Chrome, Firefox, and Opera. Web push is not supported on any iOS browsers to date. It's expected that as the standard becomes more widely adopted, more browsers will continue to implement support. Additionally, desktop Safari (on Mac OS X) has a custom web push solution based on Apple push notification services; Braze supports these Safari notifications.
+Web push notifications are implemented using the [W3C push standard][1], which browsers are in the process of supporting. Currently, the browsers that support web push include most versions of Chrome, Firefox, Opera and Safari. 
 
 For more information on the push protocol standards and browser support, you can review resources from [Apple][5] [Mozilla][6] and [Microsoft][7]
 
