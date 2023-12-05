@@ -318,7 +318,7 @@ As soon as a customer visits your Shopify site, an anonymous user is created. Th
 {% subtab API approach %}
 
 {: start="3"}
-3. To prevent duplicate user profiles, you will need to merge the user profile with the Braze `device_id` with the user profile with the Shopify alias profile. You can create an API-triggered Canvas that will set a delay, update your user with the `do_not_merge` attribute, and make a request to the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/). 
+3. To prevent duplicate user profiles, you will need to merge the user profile with the Braze `device_id` with the user profile with the Shopify alias profile. You can create an API-triggered Canvas that will set a delay, update your user with the `do_not_merge` attribute, and make a request to the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
 
 {% endsubtab %}
 {% subtab Non-API approach %}
@@ -329,17 +329,15 @@ As soon as a customer visits your Shopify site, an anonymous user is created. Th
 {% endsubtab %}
 {% endsubtabs %}
 
-IMAGE
-
 {: start="4"}
 4. In your Canvas entry criteria, target only unidentified user profiles, meaning that they don’t have an external ID and `do_not_merge` is not true.
 
-IMAGE
+![]({% image_buster /assets/img/shopify/shop_usermerge_canvas.png %})
 
 {: start="5"}
 5. Create a custom attribute `do_not_merge` to distinguish whether customers need to get merged or not. 
 
-IMAGE
+![]({% image_buster /assets/img/shopify/shop_usermerge_canvas_entrycriteria.png %})
 
 {: start="6"}
 6. Next, create a webhook to send a request like below: 
