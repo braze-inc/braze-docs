@@ -85,6 +85,7 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `androidNotificationAccentColor` | string  |  Android only. Sets the Android notification accent color.                                                                      |
 | `androidNotificationLargeIcon` | string  |  Android only. Sets the Android notification large icon.                                                                    |
 | `androidNotificationSmallIcon` | string  |  Android only. Sets the Android notification small icon.                                                                      |
+| `iosRequestPushPermissionsAutomatically` | boolean  |  iOS only. Whether the user should automatically be prompted for push permissions on app launch. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Example configuration:
@@ -115,6 +116,7 @@ Example configuration:
           "androidNotificationAccentColor": "#ff3344",
           "androidNotificationLargeIcon": "@drawable/custom_app_large_icon",
           "androidNotificationSmallIcon": "@drawable/custom_app_small_icon",
+          "iosRequestPushPermissionsAutomatically": false,
         }
       ],
     ]

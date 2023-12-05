@@ -19,7 +19,7 @@ description: "This article outlines details about the Remove hard bounced email 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7b87a884-fa20-4085-b9f1-18363103575f {% endapiref %}
 
 {% alert note %}
-When creating an API key to use with this endpoint, you must set `email.bounce.remove` permissions.
+To use this endpoint, you’ll need to generate an API key with the `email.bounce.remove` permission.
 {% endalert %}
 
 ## Rate limit
