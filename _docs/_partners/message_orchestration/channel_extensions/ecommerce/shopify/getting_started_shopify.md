@@ -149,7 +149,7 @@ Here are examples of how to implement the `reconcileEmail` method into your Shop
         }, 2000)
     </script>
 ```
-{% raw %}
+{% endraw %}
 
 {: start="2"}
 2. We first call `setInterval` so that the script is loaded first
@@ -226,7 +226,7 @@ Here are examples of how you would implement the `reconcileEmail` method into yo
 </script>
 
 ```
-{% raw %}
+{% endraw %}
 
 {: start="2"}
 2. We first call `setInterval` so that the BrazeSDK is loaded first.
@@ -257,7 +257,7 @@ Here are examples of how you would implement the `reconcileEmail` method into yo
   </script>
 
 ```
-{% raw %}
+{% endraw %}
 
 {: start="2"}
 2. We first call `setInterval` so that the script is loaded first.
@@ -325,7 +325,7 @@ As soon as a customer visits your Shopify site, an anonymous user is created. Th
   }
 }
 ```
-{% raw %}
+{% endraw %}
 
 {% subtabs %}
 {% subtab API approach %}
