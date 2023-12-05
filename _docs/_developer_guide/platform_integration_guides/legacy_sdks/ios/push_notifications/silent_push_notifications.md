@@ -7,6 +7,7 @@ description: "This reference article covers implementing silent push notificatio
 channel:
   - push
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

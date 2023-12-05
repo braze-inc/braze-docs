@@ -7,6 +7,7 @@ description: "This reference article covers potential troubleshooting topics for
 channel:
   - push
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

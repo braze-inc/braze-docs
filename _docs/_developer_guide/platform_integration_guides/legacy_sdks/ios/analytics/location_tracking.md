@@ -7,6 +7,7 @@ description: "This article shows how to configure location tracking for your iOS
 Tool:
   - Location
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

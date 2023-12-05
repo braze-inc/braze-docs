@@ -7,6 +7,7 @@ description: "This advanced implementation guide covers iOS Content Card code co
 channel:
   - content cards
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

@@ -6,6 +6,7 @@ page_order: 1
 description: "This article covers Content Card custom styling options for your iOS application."
 channel:
   - content cards
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

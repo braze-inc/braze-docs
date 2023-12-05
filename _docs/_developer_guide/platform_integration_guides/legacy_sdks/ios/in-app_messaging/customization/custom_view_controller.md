@@ -6,6 +6,7 @@ page_order: 7
 description: "This reference article covers how to leverage a custom in-app messaging view controller for your iOS application."
 channel:
   - in-app messages
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

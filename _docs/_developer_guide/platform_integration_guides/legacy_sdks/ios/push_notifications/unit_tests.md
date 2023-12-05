@@ -7,6 +7,7 @@ description: "This reference article describes how to implement optional unit te
 channel:
   - push
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

@@ -6,6 +6,7 @@ page_order: 5
 description: "This article covers how to implement a Content Card carousel view use case for iOS applications."
 channel:
   - content cards
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

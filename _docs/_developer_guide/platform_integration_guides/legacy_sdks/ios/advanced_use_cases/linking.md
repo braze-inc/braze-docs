@@ -5,6 +5,7 @@ platform: iOS
 page_order: 0
 description: "This article covers how to implement the universal deep linking delegate for your iOS app and examples on how to deep link to app settings or a News Feed."
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

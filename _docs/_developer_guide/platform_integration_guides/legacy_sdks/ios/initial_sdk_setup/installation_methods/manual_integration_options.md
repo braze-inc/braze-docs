@@ -5,6 +5,7 @@ platform: iOS
 page_order: 4
 description: "This reference article shows how to manually integrate the Braze SDK for iOS."
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

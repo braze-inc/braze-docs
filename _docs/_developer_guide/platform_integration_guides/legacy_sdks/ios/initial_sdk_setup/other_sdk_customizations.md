@@ -5,6 +5,7 @@ platform: iOS
 description: "This reference article covers SDK customization such as log level, IDFA collection, and other customizations."
 page_order: 3
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

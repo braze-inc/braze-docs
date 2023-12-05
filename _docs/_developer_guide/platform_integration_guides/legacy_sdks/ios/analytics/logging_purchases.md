@@ -5,6 +5,7 @@ platform: iOS
 page_order: 4
 description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your iOS application."
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

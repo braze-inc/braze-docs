@@ -7,6 +7,7 @@ description: "This article covers adding badges to your Content Cards in your iO
 channel:
   - content cards
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

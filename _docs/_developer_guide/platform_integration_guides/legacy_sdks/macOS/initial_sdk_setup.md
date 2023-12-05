@@ -6,6 +6,7 @@ page_order: 0
 page_type: reference
 description: "This reference article provides resources for initial integration of the Braze SDK on macOS."
 search_rank: 1
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

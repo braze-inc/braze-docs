@@ -5,6 +5,7 @@ page_order: 7
 platform: 
   - iOS
 description: "This reference article covers iOS 16, how to upgrade, SDK updates, and more."
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

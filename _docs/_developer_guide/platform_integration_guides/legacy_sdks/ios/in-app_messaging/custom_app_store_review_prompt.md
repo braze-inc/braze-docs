@@ -7,6 +7,7 @@ description: "This reference article shows how to set up a custom iOS App Store 
 channel:
   - in-app messages
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

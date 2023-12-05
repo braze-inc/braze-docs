@@ -7,6 +7,7 @@ description: "This reference article shows how to refresh the News Feed in your 
 channel:
   - news feed
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

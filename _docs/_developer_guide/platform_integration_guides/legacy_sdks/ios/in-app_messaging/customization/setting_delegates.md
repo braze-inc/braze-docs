@@ -7,6 +7,7 @@ description: "This reference article covers setting in-app messaging delegates f
 channel:
   - in-app messages
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

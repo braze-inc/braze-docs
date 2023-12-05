@@ -5,4 +5,5 @@ description: "This reference article covers Content Card integration guidelines 
 layout: redirect
 redirect_to: /docs/developer_guide/platform_integration_guides/tvos/in-app_messaging/
 page_order: 2
+noindex: true
 ---

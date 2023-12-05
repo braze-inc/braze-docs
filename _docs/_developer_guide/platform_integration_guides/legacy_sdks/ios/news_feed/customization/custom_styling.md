@@ -7,6 +7,7 @@ description: "This reference article covers how to implement custom News Feed st
 channel:
   - news feed
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

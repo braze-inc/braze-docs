@@ -7,6 +7,7 @@ description: "This reference article covers implementing multiple Content Card f
 channel:
   - content cards
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

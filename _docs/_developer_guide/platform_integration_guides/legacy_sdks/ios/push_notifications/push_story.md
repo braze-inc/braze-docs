@@ -7,6 +7,7 @@ description: "This reference article shows how to set up Push Stories for your i
 channel:
   - push
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

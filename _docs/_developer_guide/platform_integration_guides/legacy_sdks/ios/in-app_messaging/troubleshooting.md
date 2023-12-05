@@ -7,6 +7,7 @@ description: "This reference article covers potential iOS in-app message trouble
 channel:
   - in-app messages
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

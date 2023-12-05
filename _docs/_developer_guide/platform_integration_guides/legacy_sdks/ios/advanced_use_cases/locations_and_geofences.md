@@ -7,6 +7,7 @@ description: "This reference article covers how to implement locations and geofe
 Tool:
   - Location
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

@@ -5,6 +5,7 @@ platform: tvOS
 page_type: reference
 description: "This reference article covers in-app messaging integration guidelines for the tvOS platform."
 page_order: 3
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

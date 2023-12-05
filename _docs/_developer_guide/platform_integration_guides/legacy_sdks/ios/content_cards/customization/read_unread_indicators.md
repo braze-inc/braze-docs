@@ -7,6 +7,7 @@ description: "This reference article covers iOS read and unread indicators and h
 channel:
   - content cards
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

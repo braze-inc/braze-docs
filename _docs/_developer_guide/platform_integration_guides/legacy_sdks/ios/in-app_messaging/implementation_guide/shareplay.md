@@ -8,6 +8,7 @@ channel:
   - in-app messages
 alias: /shareplay/
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

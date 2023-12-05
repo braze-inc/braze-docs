@@ -6,6 +6,7 @@ page_order: 2
 description: "This article covers Content Card feed customization options in your iOS application."
 channel:
   - content cards
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

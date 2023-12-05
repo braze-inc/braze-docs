@@ -7,6 +7,7 @@ description: "This reference article covers how to set in-app message orientatio
 channel:
   - in-app messages
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

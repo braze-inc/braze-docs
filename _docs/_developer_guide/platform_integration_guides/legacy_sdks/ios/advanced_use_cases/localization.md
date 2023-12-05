@@ -5,6 +5,7 @@ platform: iOS
 page_order: 2
 description: "This reference article covers iOS localization, listing all the current languages supported by Braze."
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

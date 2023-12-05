@@ -6,6 +6,7 @@ page_order: 6
 description: "This advanced implementation guide covers iOS in-app message code considerations, three use cases built by our team, and accompanying code snippets."
 channel:
   - in-app messages
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

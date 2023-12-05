@@ -5,6 +5,7 @@ platform: iOS
 page_order: 9
 description: "This reference article covers iOS sample apps."
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

@@ -7,6 +7,7 @@ description: "This reference article shows how to define a News Feed category in
 channel:
   - news feed
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

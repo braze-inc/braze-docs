@@ -6,6 +6,7 @@ page_order: 10
 page_type: reference
 description: "This page describes how to fetch and display News Feed data in your tvOS application."
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

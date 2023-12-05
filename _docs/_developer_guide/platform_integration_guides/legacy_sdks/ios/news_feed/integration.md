@@ -7,6 +7,7 @@ description: "This article covers an overview of the News Feed data model, integ
 channel:
   - news feed
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

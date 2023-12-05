@@ -5,6 +5,7 @@ platform: iOS
 page_order: 4
 description: "This article covers logging custom events using Gimbal Beacons for iOS."
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

@@ -7,6 +7,7 @@ description: "This reference article covers the integration steps, data models, 
 channel:
   - content cards
 search_rank: 3
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

@@ -7,6 +7,7 @@ description: "This reference article covers implementing Content Card refreshing
 channel:
   - content cards
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

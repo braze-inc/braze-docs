@@ -30,6 +30,7 @@ guide_featured_list:
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/
   fa_icon: fas fa-id-card-alt
 
+noindex: true
 ---
 <br>
 

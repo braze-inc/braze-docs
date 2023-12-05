@@ -6,6 +6,7 @@ description: "This iOS integration guide takes you on a step-by-step journey on 
 page_order: 10
 platform: iOS
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

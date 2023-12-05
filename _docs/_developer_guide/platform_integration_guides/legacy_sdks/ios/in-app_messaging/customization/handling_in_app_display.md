@@ -7,6 +7,7 @@ description: "This reference article covers in-app messaging custom display hand
 channel:
   - in-app messages
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

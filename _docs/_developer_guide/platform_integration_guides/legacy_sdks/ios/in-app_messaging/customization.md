@@ -41,5 +41,6 @@ guide_featured_list:
     fa_icon: fa fa-code
 
 
+noindex: true
 ---
 <br><br>

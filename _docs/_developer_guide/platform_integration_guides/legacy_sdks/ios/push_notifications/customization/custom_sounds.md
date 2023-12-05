@@ -7,6 +7,7 @@ description: "This reference article covers implementing custom sounds in your i
 channel:
   - push
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

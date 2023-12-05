@@ -6,6 +6,7 @@ page_order: 5
 description: "This reference article covers custom in-app messaging on-click behavior for your iOS application."
 channel:
   - in-app messages
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

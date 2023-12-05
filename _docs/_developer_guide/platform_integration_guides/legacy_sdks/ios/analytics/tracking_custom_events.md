@@ -5,6 +5,7 @@ platform: iOS
 page_order: 2
 description: "This reference article covers how to add and track custom events for your iOS application."
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

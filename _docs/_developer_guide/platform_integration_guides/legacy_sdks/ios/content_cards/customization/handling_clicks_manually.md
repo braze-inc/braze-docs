@@ -6,6 +6,7 @@ page_order: 3
 description: "This article covers how to handle Content Cards clicks manually in your iOS application."
 channel:
   - content cards
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

@@ -6,6 +6,7 @@ page_type: update
 platform: iOS
 description: "This page lists updates to the Braze iOS Objective-C SDK changelog."
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

@@ -7,6 +7,7 @@ description: "This reference article covers how to integrate iOS push primers."
 platform: iOS
 channel:
   - push
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

@@ -7,6 +7,7 @@ description: "This reference article covers iOS in-app messaging types, expected
 channel:
   - in-app messages
 search_rank: 4
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

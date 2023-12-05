@@ -35,5 +35,6 @@ guide_featured_list:
     fa_icon: fa fa-arrows-h
 
 
+noindex: true
 ---
 <br><br>

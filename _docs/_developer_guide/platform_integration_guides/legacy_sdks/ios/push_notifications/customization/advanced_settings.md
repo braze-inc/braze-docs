@@ -7,6 +7,7 @@ description: "This reference article covers advanced iOS push notification setti
 channel:
   - push
 
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}

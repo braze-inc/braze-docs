@@ -6,6 +6,7 @@ page_order: 29
 description: "This reference article covers in-app messaging modal dismissal for your iOS application."
 channel:
   - in-app messages
+noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}
