@@ -108,16 +108,19 @@ Here are examples of how to implement the `reconcileEmail` method into your Shop
 
 1. When a user is logged into Shopify, the customer object is defined. In the `theme.liquid` file, add the following snippet in the `head tag`:
 
+{% raw %}
 ```javascript
-   {% raw %} <script>
+   <script>
       const customerPoller = setInterval(()=>{
         {% if customer %}
           reconcileEmail("{{customer.email}}");
         {% endif %}{}
         clearInterval(customerPoller)
       }, 2000)
-    </script> {% endraw %}
+    </script>
 ```
+{% endraw %}
+
 {: start="2"}
 2. We first call `setInterval` so that the BrazeSDK is loaded first
 3. We use Liquid to check if a customer object is set on the page
@@ -130,6 +133,7 @@ Here are examples of how to implement the `reconcileEmail` method into your Shop
 
 1. In `theme.liquid`, copy the following snippet in the `head tag`:
 
+{% raw %}
 ```javascript
     <script>
          const emailInputPoller = setInterval(()=>{
@@ -145,6 +149,7 @@ Here are examples of how to implement the `reconcileEmail` method into your Shop
         }, 2000)
     </script>
 ```
+{% raw %}
 
 {: start="2"}
 2. We first call `setInterval` so that the script is loaded first
@@ -209,16 +214,19 @@ Here are examples of how you would implement the `reconcileEmail` method into yo
 
 1. When a user is logged into Shopify, the customer object is defined. In the `theme.liquid` file add the following snippet in the `head tag`:
 
+{% raw %}
 ```javascript
-{% raw %}<script>
-      const customerPoller = setInterval(()=>{
-        {% if customer %}
-          reconcileEmail("{{ customer.email }}");
-        {% endif %}
-        clearInterval(customerPoller)
-      }, 2000)
-    </script>{% endraw %}
+<script>
+  const customerPoller = setInterval(()=>{
+    {% if customer %}
+      reconcileEmail("{{ customer.email }}");
+    {% endif %}
+    clearInterval(customerPoller)
+  }, 2000)
+</script>
+
 ```
+{% raw %}
 
 {: start="2"}
 2. We first call `setInterval` so that the BrazeSDK is loaded first.
@@ -232,6 +240,7 @@ Here are examples of how you would implement the `reconcileEmail` method into yo
 
 1. In `theme.liquid` copy the following snippet in the `head tag`:
 
+{% raw %}
 ```javascript
   <script>
          const emailInputPoller = setInterval(()=>{
@@ -246,7 +255,9 @@ Here are examples of how you would implement the `reconcileEmail` method into yo
       clearInterval(emailInputPoller)
         }, 2000)
   </script>
+
 ```
+{% raw %}
 
 {: start="2"}
 2. We first call `setInterval` so that the script is loaded first.
@@ -305,6 +316,7 @@ As soon as a customer visits your Shopify site, an anonymous user is created. Th
 
 2. As users perform actions on your site, log them as [custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events) or [capture user attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/). When the user proceeds to checkout and inputs their email, a Shopify customer ID is created. Braze will process Shopify webhooks and create a new user profile if the email, phone, or Shopify alias doesn’t match an existing user.
 
+{% raw %}
 ```javascript
 {
   "user_alias": {
@@ -313,6 +325,7 @@ As soon as a customer visits your Shopify site, an anonymous user is created. Th
   }
 }
 ```
+{% raw %}
 
 {% subtabs %}
 {% subtab API approach %}
