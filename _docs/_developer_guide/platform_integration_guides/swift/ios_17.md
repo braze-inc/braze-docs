@@ -7,7 +7,7 @@ platform:
 description: "This article covers insights into the iOS 17 release to help you upgrade your SDK seamlessly."
 ---
 
-# iOS 17 upgrade guide {#next-steps}
+# iOS 17 upgrade guide
 
 > Curious about how Braze is preparing for the upcoming iOS release? This article summarizes our insights into the iOS 17 release to help you create a seamless experience for you and your users.
 
@@ -29,6 +29,8 @@ Apple announced its commitment to expand the scope of App Tracking Transparency 
 #### Privacy manifests
 
 Privacy manifests allow developers to outline the privacy practices of their app&#8212;including third-party SDKs&#8212;in a standardized format. As part of this effort, Apple plans to identify and block iOS APIs that might be used for fingerprinting. If applications use such APIs, they will be obliged to list a "required reason" for using that API in the privacy manifest. 
+
+Braze will be releasing support for a Privacy Manifest as well as fine grained control over tracking and non-tracking data declaration.
 
 #### Code signing
 
