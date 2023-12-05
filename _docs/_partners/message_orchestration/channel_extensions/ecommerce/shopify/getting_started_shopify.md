@@ -342,6 +342,7 @@ As soon as a customer visits your Shopify site, an anonymous user is created. Th
 {: start="6"}
 6. Next, create a webhook to send a request like below: 
 
+{% raw %}
 ```javascript
 {
   "merge_updates": [
@@ -362,6 +363,8 @@ As soon as a customer visits your Shopify site, an anonymous user is created. Th
   ]
 }
 ```
+{% endraw %}
+
 {% alert tip %}
 For information about `merge_users` behavior, see [POST: Merge users]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior). 
 {% endalert %}
