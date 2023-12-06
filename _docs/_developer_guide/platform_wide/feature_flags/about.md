@@ -178,14 +178,22 @@ Once we determine our winner, we can stop this campaign and increase the rollout
 
 The following table describes the limitations that apply at a feature flag level. To purchase the paid version of feature flags, contact your Braze account manager, or request an upgrade in the Braze dashboard.
 
-| Limitation area                                                                                                   | Free version | Paid version |
-| :---------------------------------------------------------------------------------------------------------------- | :----------- | ------------ |
-| Active feature flags*                                                                                             | 10           | 110          |
-| [Active campaign experiments]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/) | 1            | 100          |
-| [Feature Flag Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Unlimited    | Unlimited    |
+| Limitation area                                                                                                   | Free version     | Paid version      |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| [Active feature flags](#active-feature-flags)                                                                     | 10 per workspace | 110 per workspace |
+| [Active campaign experiments]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | 1 per workspace  | 100 per workspace |
+| [Feature Flag Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Unlimited        | Unlimited         |
 {: .reset-td-br-1 .reset-td-br-2}
 
-**Active feature flags are feature flags that are used in any capacity, including rolling it out to a non-zero percentage of your audience, using it in an active campaign, or employing it in an active Canvas.*
+### Active feature flags
+
+A feature flag is considered active and will count toward your limit if any of the following apply:
+
+- Rollout is more than 0%
+- Used in an active Canvas
+- Used in an active experiment
+
+Even if the same feature flag matches multiple criteria, such as if it's used in a Canvas and the rollout is 50%, it will only count as 1 active feature flag toward your limit.
 
 [1]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %} 
 [2]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/use_cases/
