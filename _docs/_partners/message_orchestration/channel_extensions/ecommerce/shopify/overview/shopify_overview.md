@@ -18,7 +18,7 @@ The Shopify and Braze integration allows you to connect your Shopify store to se
 
 - Track onsite behavior and anonymous users via the Braze Web SDK
 - Assist with syncing and reconciling Shopify customers in Braze via the Braze Web SDK
-- Sync Shopify customers and user data
+- Sync Shopify customer data
 - Collect Shopify email and SMS subscriber opt-in subscription states
 - Backfill historical Shopify purchase data 
 - Shopify catalog sync 
@@ -30,6 +30,7 @@ The Shopify and Braze integration allows you to connect your Shopify store to se
   - Browse abandonment 
   - Abandoned cart 
   - Abandoned checkout 
+- Post-purchase campaigns and Canvas user journeys, including:
   - Order confirmations 
   - Fulfillment updates 
   - Order cancellations 

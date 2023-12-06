@@ -10,15 +10,20 @@ page_order: 1
 
 # Shopify data in Braze
 
-## Personalization
+> Using nested object support for custom events, Braze Shopify customers can use Liquid template variables of the nested event properties.
 
-Using nested object support for custom events, Braze Shopify customers can use Liquid template variables of the nested event properties. The following tables list the Liquid templating variables for each event.
+After the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
+
+## Supported Shopify events
 
 {% tabs %}
-{% tab Product Viewed %}
+{% tab Shopify Events %}
+{% subtabs global %}
+{% subtab Product Viewed %}
 **Event**: `shopify_product_viewed`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
+
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
@@ -28,13 +33,16 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item Vendor | `{{event_properties.${vendor}}}` |
 | Item Images | `{{event_properties.${images}}}` |
 
-{% endraw %}
-{% endtab %}
 
-{% tab Product Clicked %}
+{% endraw %}
+{% endsubtab %}
+
+
+{% subtab Product Clicked %}
 **Event**: `shopify_product_clicked`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
+
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
@@ -44,11 +52,13 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item Vendor | `{{event_properties.${vendor}}}` |
 | Item Images | `{{event_properties.${images}}}` |
 {% endraw %}
-{% endtab %}
+{% endsubtab %}
 
-{% tab Abandon Cart %}
+
+{% subtab Abandoned Cart %}
 **Event**: `shopify_abandoned_cart`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -62,11 +72,13 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item Price | `{{event_properties.${line_items}[0].price}}` |
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 {% endraw %}
-{% endtab %}
+{% endsubtab %}
 
-{% tab Abandon Checkout %}
+
+{% subtab Abandoned Checkout %}
 **Event**: `shopify_abandoned_checkout`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -88,12 +100,15 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
+{% endsubtab %}
 
-{% endtab %}
-{% tab Created Order %}
+
+{% subtab Created Order %}
+
 
 **Event**: `shopify_created_order`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -120,11 +135,14 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 
-{% endtab %}
-{% tab Purchase %}
+
+{% endsubtab %}
+{% subtab Purchase %}
+
 
 **Event**: Purchase<br>
 **Type**: [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
+
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -137,10 +155,12 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 
-{% endtab %}
-{% tab Order Paid %}
+
+{% endsubtab %}
+{% subtab Paid Order %}
 **Event**: `shopify_paid_order`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -166,11 +186,13 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
-{% endtab %}
+{% endsubtab %}
 
-{% tab Partially Fulfilled Order %}
+
+{% subtab Partially Fulfilled Order %}
 **Event**: `shopify_partially_fulfilled_order`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -213,11 +235,13 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
-{% endtab %}
+{% endsubtab %}
 
-{% tab Fulfilled Order %}
+
+{% subtab Fulfilled Order %}
 **Event**: `shopify_fulfilled_order`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -260,11 +284,13 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
-{% endtab %}
+{% endsubtab %}
 
-{% tab Cancelled Order %}
+
+{% subtab Cancelled Order %}
 **Event**: `shopify_cancelled_order`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -293,12 +319,12 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
-{% endtab %}
+{% endsubtab %}
 
-
-{% tab Created Refund %}
+{% subtab Created Refund %}
 **Event**: `shopify_created_refund`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -316,8 +342,478 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Example Payload %}
+{% subtabs global %}
+{% subtab Product Viewed %}
+```json
+{
+ "name": "shopify_product_viewed",
+ "properties": {
+     "id": 5971657097407,
+     "title": "Example T-Shirt",
+     "price": 1999,
+     "vendor": "Acme",
+     "images": [
+         "//cdn.shopify.com/s/files/1/0503/3849/6703/products/green-t-shirt.jpg?v=1603397913"
+     ]
+ }
+}
+```
+{% endsubtab %}
+{% subtab Product Clicked %}
+```json
+{
+   "name": "shopify_product_clicked",
+   "properties": {
+       "id": 5971657097407,
+       "title": "Example T-Shirt",
+       "price": 1999,
+       "vendor": "Acme",
+       "images": [
+           "//cdn.shopify.com/s/files/1/0503/3849/6703/products/green-t-shirt.jpg?v=1603397913"
+       ]
+   }
+}
+```
+{% endsubtab %}
+{% subtab Abandoned Cart %}
+```json
+{
+   "name": "shopify_abandoned_cart",
+   "time": "2022-10-14T15:08:31.571Z",
+   "properties": {
+     "cart_id": "163989958f6b0de13f3b4f702fa5ee0d",
+     "line_items": [
+       {
+         "price": 60,
+         "product_id": 7110622675033,
+         "properties": null,
+         "quantity": 1,
+         "sku": null,
+         "title": "Spinach Surprise Smoothie - 12 Pack",
+         "variant_id": 40094740545625,
+         "vendor": "Jennifer's Juice"
+       }
+     ]
+   },
+   "braze_id": "63497b3ca3eabd0053380451"
+ }
+
+```
+{% endsubtab %}
+{% subtab Abandoned Checkout %}
+```json
+{
+ "name": "shopify_abandoned_checkout",
+ "time": "2020-09-10T18:53:37-04:00",
+ "properties": {
+   "applied_discount": {
+     "amount": "30.00",
+     "title": "XYZPromotion",
+     "description": "Promotionalitemforblackfriday."
+   },
+   "discount_code": "30_DOLLARS_OFF",
+   "total_price": "398.00",
+   "line_items": [
+     {
+   "price": "199.00",
+   "properties": {},       
+   "product_id": 632910392,
+       "quantity": 1,
+       "sku": "IPOD2008PINK",
+       "title": "IPodNano-8GB",
+       "variant_id": 40094740545625,
+       "variant_title": "Pink iPod Nano 8 GB",
+       "vendor": "Apple",
+     }
+   ],
+   "abandoned_checkout_url": "https://checkout.local/690933842/checkouts/123123123/recover?key=example-secret-token",
+   "checkout_id": "123123123"
+ }
+}
+```
+{% endsubtab %}
+{% subtab Created Order %}
+```json
+{
+ "name": "shopify_created_order",
+ "time": "2020-09-10T18:53:45-04:00",
+ "properties": {
+   "total_discounts": "5.00",
+   "total_price": "403.00",
+   "discount_codes": [],
+   "line_items": [
+     {
+       "product_id": 632910392,
+       "quantity": 1,
+       "sku": "IPOD2008PINK",
+       "title": "IPodNano-8GB",
+       "variant_id": 40094740545625,
+       "variant_title": "Pink iPod Nano 8 GB",
+       "vendor": null,
+       "name": "IPodNano-8GB",
+       "properties": [],
+       "price": "199.00"
+     },
+     {
+       "product_id": 632910393,
+       "quantity": 1,
+       "sku": "IPOD2008SILVER",
+       "title": "IPodNano-8GB",
+       "variant_id": 40094740545626,
+       "variant_title": "Silver iPod Nano 8 GB",
+       "vendor": null,
+       "name": "IPodNano-8GB",
+       "properties": [],
+       "price": "199.00"
+     }
+   ],
+   "order_id": 820982911946154500,
+   "confirmed": false,
+   "order_status_url": "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
+   "order_number": 1234,
+   "cancelled_at": "2020-09-10T18:53:45-04:00",
+   "shipping": [
+     {
+       "title": "Standard",
+       "price": "10.00"
+     },
+     {
+       "title": "Expedited",
+       "price": "25.00"
+     }
+   ],
+   "tags": "heavy"
+ }
+}
+```
+{% endsubtab %}
+{% subtab Purchase %}
+```json
+{
+ "product_id": 632910392,
+ "currency": "USD",
+ "price": "199.00",
+ "time": "2020-09-10T18:53:45-04:00",
+ "quantity": 1,
+ "source": "shopify",
+ "properties": {
+   "name": "IPodNano-8GB",
+   "sku": "IPOD2008PINK",
+   "variant_id": 40094740545626,
+   "variant_title": "Silver iPod Nano 8 GB",
+   "vendor": null,
+   "properties": []
+ }
+}
+```
+{% endsubtab %}
+{% subtab Paid Order %}
+```json
+{
+ "name": "shopify_paid_order",
+ "time": "2022-05-23T13:52:38-04:00",
+ "properties": {
+   "order_id": 4444596371647,
+   "line_items": [
+     {
+       "quantity": 1,
+       "product_id": 6143033344191,
+       "sku": null,
+       "title": "LED High Tops",
+       "variant_id": 40094740549876,
+       "variant_title": null,
+       "vendor": "partners-demo",
+       "name": "LED High Tops",
+       "properties": [],
+       "price": "80.00",
+       "fulfillment_status": null
+     }
+   ],
+ }
+}
+```
+{% endsubtab %}
+{% subtab Partially Fulfilled Order %}
+```json
+{
+ "name": "shopify_partially_fulfilled_order",
+ "time": "2022-05-23T14:43:34-04:00",
+ "properties": {
+   "order_id": 4444668657855,
+   "line_items": [
+     {
+       "quantity": 1,
+       "product_id": 6143032066239,
+       "sku": null,
+       "title": "Dark Denim Top",
+       "variant_id": 40094740549876,
+       "variant_title": "",
+       "vendor": "partners-demo",
+       "name": "Dark Denim Top",
+       "properties": [],
+       "price": "60.00",
+       "fulfillment_status": "fulfilled"
+     }
+   ],
+   "shipping": [
+     {
+       "title": "Standard",
+       "price": "0.00"
+     }
+   ],
+   "total_price": "130.66",
+   "confirmed": true,
+   "total_discounts": "0.00",
+   "discount_codes": [],
+   "order_number": 1093,
+   "order_status_url": "https://test-store.myshopify.com/",
+   "cancelled_at": null,
+   "tags": "",
+   "closed_at": null,
+   "fulfillment_status": "partial",
+   "fulfillments": [
+     {
+       "shipment_status": null,
+       "status": "success",
+       "tracking_company": "Other",
+       "tracking_number": "123",
+       "tracking_numbers": [
+         "123"
+       ],
+       "tracking_url": "https://braze.com",
+       "tracking_urls": [
+         "https://braze.com"
+       ],
+       "line_items": [
+         {
+           "fulfillment_status": "fulfilled",
+           "name": "Dark Denim Top",
+           "price": "60.00",
+           "product_id": 6143032066239,
+           "properties": [],
+           "quantity": 1,
+           "requires_shipping": true,
+           "sku": null,
+           "title": "Dark Denim Top",
+           "variant_id": 40094740549876,
+           "variant_title": "",
+           "vendor": "partners-demo"
+         }
+       ]
+     }
+   ]
+ },
+ "braze_id": "abc123abc123"
+}
+```
+{% endsubtab %}
+{% subtab Fulfilled Order %}
+```json
+{
+ "name": "shopify_fulfilled_order",
+ "time": "2022-05-23T14:44:34-04:00",
+ "properties": {
+   "order_id": 4444668657855,
+   "line_items": [
+     {
+       "quantity": 1,
+       "product_id": 6143032066239,
+       "sku": null,
+       "title": "Dark Denim Top",
+  "variant_id": 40094740549876,
+       "variant_title": "Small Dark Denim Top",
+
+
+       "vendor": "partners-demo",
+       "name": "Dark Denim Top",
+       "properties": [],
+       "price": "60.00",
+       "fulfillment_status": "fulfilled"
+     }
+   ],
+   "shipping": [
+     {
+       "title": "Standard",
+       "price": "0.00"
+     }
+   ],
+   "total_price": "130.66",
+   "confirmed": true,
+   "total_discounts": "0.00",
+   "discount_codes": [],
+   "order_number": 1093,
+   "order_status_url": "https://test-store.myshopify.com/",
+   "cancelled_at": null,
+   "tags": "",
+   "closed_at": "2022-05-23T14:44:34-04:00",
+   "fulfillment_status": "fulfilled",
+   "fulfillments": [
+     {
+       "shipment_status": null,
+       "status": "success",
+       "tracking_company": "Other",
+       "tracking_number": "456",
+       "tracking_numbers": [
+         "456"
+       ],
+       "tracking_url": "https://braze.com",
+       "tracking_urls": [
+         "https://braze.com"
+       ],
+       "line_items": [
+         {
+           "fulfillment_status": "fulfilled",
+           "name": "Dark Denim Top",
+           "price": "60.00",
+           "product_id": 6143032066239,
+           "quantity": 1,
+           "requires_shipping": true,
+           "sku": null,
+           "title": "Dark Denim Top",
+           "variant_id": 40094740549876,
+           "variant_title": "Small Dark Denim Top",
+           "vendor": "partners-demo"
+         }
+       ]
+     }
+   ]
+ },
+ "braze_id": "123abc123abc"
+}
+```
+{% endsubtab %}
+{% subtab Cancelled Order %}
+```json
+{
+ "name": "shopify_cancelled_order",
+ "time": "2022-05-23T14:40:52-04:00",
+ "properties": {
+   "order_id": 4444596371647,
+   "line_items": [
+     {
+       "quantity": 1,
+       "product_id": 6143033344191,
+       "sku": null,
+       "title": "LED High Tops",
+       "variant_id": 40094740549876,
+       "variant_title": "",
+       "vendor": "partners-demo",
+       "name": "LED High Tops",
+       "properties": [],
+       "price": "80.00",
+       "fulfillment_status": null
+     }
+   ],
+   "shipping": [
+     {
+       "title": "Standard",
+       "price": "0.00"
+     }
+   ],
+   "total_price": "141.54",
+   "confirmed": true,
+   "total_discounts": "0.00",
+   "discount_codes": [],
+   "order_number": 1092,
+   "order_status_url": "https://test-store.myshopify.com/",
+   "cancelled_at": "2022-05-23T14:40:52-04:00",
+   "tags": "",
+   "closed_at": "2022-05-23T14:40:51-04:00",
+   "fulfillment_status": null,
+   "fulfillments": []
+ },
+ "braze_id": "123abc123abc"
+}
+```
+{% endsubtab %}
+{% subtab Created Refund %}
+```json
+{
+ "name": "shopify_created_refund",
+ "time": "2022-05-23T14:40:50-04:00",
+ "properties": {
+   "order_id": 4444596371647,
+   "note": null,
+   "line_items": [
+     {
+       "quantity": 1,
+       "product_id": 6143033344191,
+       "sku": null,
+       "title": "LED High Tops",
+       "variant_id": 40094740549876,
+       "variant_title": "",
+       "vendor": "partners-demo",
+       "properties": [],
+       "price": "80.00"
+     },
+     {
+       "quantity": 1,
+       "product_id": 6143032852671,
+       "sku": null,
+       "title": "Chequered Red Shirt",
+       "variant_id": 40094796619876,
+       "variant_title": "",
+       "vendor": "partners-demo",
+       "properties": [],
+       "price": "50.00"
+     }
+   ]
+ },
+ "braze_id": "abc123abc123"
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
+
+## Supported Shopify custom attributes
+{% tabs local %}
+{% tab Shopify Custom Attributes %}
+| Attribute Name | Description |
+| --- | --- |
+| `shopify_tags`  | This attribute corresponds to the [customer tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
+| `shopify_total_spent` | This attribute tracks the total amount spent on a store and is only supported for users imported through the [Historical Backfill]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/) feature. |
+| `shopify_order_count` | This attribute tracks the total number of orders made in a store and is only supported for users imported through the Historical Backfill feature. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Example Payload %}
+{% subtabs global %}
+{% subtab Shopify Tags %}
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user_id",
+      "shopify_tags": "VIP_customer",
+      "shopify_total_spent": "60.00",
+      "shopify_order_count": "3"
+    }
+  ]
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+## Supported Shopify standard attributes
+
+- Email
+- First Name
+- Last Name
+- Phone
+- City
+- Country
+
+{% alert note %}
+Braze will only update supported Shopify custom attributes and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze will not trigger an update, and you will not be charged a data point.
+{% endalert %}
 
 ## Segmentation
 

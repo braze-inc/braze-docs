@@ -271,7 +271,7 @@ Here are examples of how you would implement the `reconcileEmail` method into yo
 {% endtab %}
 {% tab Headless Shopify site %}
 
-### Implementing the Web SDK directly onto your headless Shopify site
+### Implementing the Web SDK directly onto your headless Shopify site {#headless-site}
 
 The Braze Shopify ScriptTag integration is incompatible with headless Shopify sites. As a result, you will not be able to get out-of-the-box support for product viewed, product clicked, or abandoned cart events, or enable in-app messaging through our pre-defined scripts. 
 
@@ -300,7 +300,7 @@ When users register or log into their account, you may want to [identify the use
 If you set a temporary alias on the user profile, you can proceed to make a request to the [users/merge endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge) endpoint to identify the user at a later point. 
 {% endalert %}
 
-#### Setting up checkout user reconciliation
+#### Setting up checkout user reconciliation {#headless-checkout}
 
 When you enable the abandoned checkout event, Braze will receive the Shopify checkouts/create webhook. Braze will attempt to match to an existing user profile by either email address, phone number, or Shopify customer ID. If no match exists, Braze will create an alias profile. 
 

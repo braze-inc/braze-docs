@@ -8,7 +8,9 @@ description: "This reference article covers how to import your products from Sho
 
 # Shopify catalogs 
 
-> Shopify catalogs allow you to import your products from your Shopify store into a Braze [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), making it easier and automated to bring in product data for deeper personalization of your messages. This Shopify catalog will update in near real-time as you make edits and changes to the products in your Shopify store. You can enrich your abandoned cart, order confirmation, and more with the most up-to-date product details and information.
+> Shopify catalogs allow you to import your products from your Shopify store into a Braze [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), making it easier and automated to bring in product data for deeper personalization of your messages. 
+
+Shopify catalogs will update in near real-time as you make edits and changes to the products in your Shopify store. You can enrich your abandoned cart, order confirmation, and more with the most up-to-date product details and information.
 
 ## Setting up Shopify catalog sync
 

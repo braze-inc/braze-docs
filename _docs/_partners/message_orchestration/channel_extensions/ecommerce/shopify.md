@@ -20,9 +20,6 @@ guide_featured_list:
 - name: Setting up Shopify
   link: /docs/setting_up_shopify/
   fa_icon: fa fa-shopping-cart
-- name: Shopify data processing
-  link: /docs/shopify_processing/
-  fa_icon: fa-solid fa-database
 - name: Shopify data in Braze
   link: /docs/shopify_data/
   fa_icon: fas fa-cogs
