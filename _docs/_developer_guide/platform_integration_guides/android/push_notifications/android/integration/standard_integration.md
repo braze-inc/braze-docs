@@ -108,7 +108,7 @@ When you're finished, select **Save**.
 
 ![Placeholder image tag.]()
 
-### Step 7: Set up automatic token registration
+### Step 6: Set up automatic token registration
 
 When a user opts-in for push notifications, you'll need to create a unique FCM token for their device before you can send them notifications. With the Braze SDK, you can enable automatic FCM token registration for each user's device by updating your project's Braze configuration.
 
