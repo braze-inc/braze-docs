@@ -11,19 +11,14 @@ search_rank: 3
 
 # Standard Android push integration
 
-> This article covers how to integrate push notifications in your Android application.
+> Learn how to integrate push notifications in your Android app.
 
-![Android inline image push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
+Push notifications let you re-engage your users with time-sensitive and relevant content by sending out-of-app alerts directly to their device screen. When you're finished integrating push for your app, be sure to check out [Push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 
-A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
+## Registering for push
 
-Braze sends push notifications to Android devices using [Firebase Cloud Messaging (FCM)][45].
-
-Check out our [help documentation][8] for push best practices.
-
-## Registering for push 
-
-Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase push sample app](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
+In the following steps, you'll register for push using Google's [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/). If you'd like to see a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample
+ App](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
 
 ### Step 1: Add Firebase to your project
 
@@ -64,7 +59,7 @@ Enter a service account name, ID, and description, then select **Create and cont
 
 ![Placeholder image tag.]()
 
-In the **Role** field, use the search bar to find and select **Firebase Cloud Messaging API Admin**, then select **Continue**.
+In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles, then select **Continue**.
 
 ![Placeholder image tag.]()
 
