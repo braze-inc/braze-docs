@@ -86,7 +86,7 @@ Select **Add Key** > **Create new key**.
 
 ![Placeholder image tag.]()
 
-Choose **JSON**, then select **Create**. Be sure to remember where you downloaded the key--you'll need it in the next step.
+Choose **JSON**, then select **Create**. Be sure to remember where you downloaded the key&#8212;you'll need it in the next step.
 
 ![Placeholder image tag.]()
 
@@ -125,7 +125,7 @@ Under **Firebase Cloud Messaging API (V1)**, copy the number in the **Sender ID*
 ![Placeholder image tag.]()
 
 {% alert important %}
-Do **not** copy the Firebase Sender ID under **Cloud Messaging API (Legacy)**. This feature is no longer supported by Google.
+Do not copy the Firebase Sender ID under **Cloud Messaging API (Legacy)**. This feature is no longer supported by Google.
 {% endalert %}
 
 In your project, use your Firebase Sender ID to enable automatic FCM token registration within your `braze.xml` or `BrazeConfig` file.
