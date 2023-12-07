@@ -64,11 +64,11 @@ Enter a service account name, ID, and description, then select **Create and cont
 
 ![Placeholder image tag.]()
 
-Choose your project, then select **Continue**.
+In the **Role** field, use the search bar to find and select **Firebase Cloud Messaging API Admin**, then select **Continue**.
 
 ![Placeholder image tag.]()
 
-In the **Service account admins role** field, add **Firebase Cloud Messaging API** as an admin, then select **Done**.
+If you need to grant any specific users access to your FCM service account, add them now. When you're finished, select **Done**.
 
 ![Placeholder image tag.]()
 
