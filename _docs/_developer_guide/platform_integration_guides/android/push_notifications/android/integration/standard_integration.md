@@ -68,7 +68,7 @@ Choose your project, then select **Continue**.
 
 ![Placeholder image tag.]()
 
-In the **Service account admins role** field, add **Firebase Cloud Messaging API**, then select **Done**.
+In the **Service account admins role** field, add **Firebase Cloud Messaging API** as an admin, then select **Done**.
 
 ![Placeholder image tag.]()
 
@@ -203,7 +203,7 @@ Braze.configure(this, brazeConfig)
 {% endtabs %}
 
 {% alert tip %}
-If you'd like use **manual** FCM token registration instead, you can call [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) inside your app's [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method.
+If you'd like manually register FCM tokens instead, you can call [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) inside your app's [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method.
 {% endalert %}
 
 ### Step 8: Remove unnecessary permissions
