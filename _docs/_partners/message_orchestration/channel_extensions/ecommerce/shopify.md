@@ -12,7 +12,7 @@ description: "This landing page is home to all things Shopify including a Shopif
 guide_featured_title: "Articles"
 guide_featured_list:
 - name: Shopify overview
-  link: /docs/shopify_overview_menu/
+  link: /docs/shopify_overview/
   fa_icon: fa-brands fa-shopify
 - name: Getting started with Shopify
   link: /docs/getting_started_shopify/
