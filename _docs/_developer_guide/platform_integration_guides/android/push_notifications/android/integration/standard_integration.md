@@ -218,7 +218,7 @@ With your new push integration set up, the following permissions are no longer n
   <uses-permission android:name="YOUR-APPLICATION-PACKAGE-NAME.permission.C2D_MESSAGE" />
   ```
 
-### Step 9: Remove automatic requests in your application class
+### Step 8: Remove automatic requests in your application class
 
 To prevent Braze from triggering unnecessary network requests everytime you send silent push notifications, remove any automatic network requests configured in your `Application` class's `onCreate()` method. For more information see, [Android Developer Reference: Application](https://developer.android.com/reference/android/app/Application).
 
