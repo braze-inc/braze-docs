@@ -14,12 +14,12 @@ You can use AI Item Recommendations to calculate the most popular products or cr
 
 ## Prerequisites
 
-- You must have at least one [catalog][catalog] to take advantage of AI Item Recommendations.
+- You must have at least one [catalog][catalog] to use AI Item Recommendations.
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 
 ### Important notes
 
-This page describes the free version of AI Item Recommendations. When using the free version:
+This article describes the free version of AI Item Recommendations. When using the free version:
 
 - You can create one recommendation per [recommendation type](#recommendation-type) in a workspace.
 - The items recommended to each user in a recommendation update once a week. The recommendation model itself will automatically update once a month.
@@ -31,7 +31,7 @@ To create an item recommendation:
 1. Go to **Analytics** > **AI Item Recommendation**.
 2. Select **Create Prediction** > **AI Item Recommendation**.
 
-You can also choose to create a recommendation straight from an individual catalog. From the **Catalogs** page, select your catalog and click **Create Recommendation**.
+You can also choose to create a recommendation straight from an individual catalog. Select your catalog from the **Catalogs** page and click **Create Recommendation**.
 
 ### Step 1: Add recommendation details
 
@@ -102,7 +102,7 @@ You can find the recommendation on the **Predictions** page, where you can then 
 
 ## Analytics
 
-You can view analytics for your recommendation to see which items users were recommended, and how accurate the recommendation model was.
+You can view analytics for your recommendation to see which items users were recommended and how accurate the recommendation model was.
 
 1. Go to **Analytics** > **Item Recommendation**.
 2. Select your recommendation from the list.
@@ -152,6 +152,5 @@ After your recommendation finishes training, you can personalize your messages w
 [5]: {% image_buster /assets/img/item_recs_analytics_1.png %}
 [6]: {% image_buster /assets/img/item_recs_analytics_2.png %}
 [7]: {% image_buster /assets/img/item_recs_analytics_3.png %}
-
 [10]: {% image_buster /assets/img/add_personalization.png %}
 [catalog]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/
