@@ -162,7 +162,7 @@ If you don’t use Zapier and don’t plan on using Zapier, you can build the in
 
 For retrieving leads from Facebook, use <a href="https://developers.facebook.com/docs/marketing-api/guides/lead-ads/retrieving#webhooks" target="_blank">webhooks</a>. Refer to <a href="https://developers.facebook.com/docs/graph-api/webhooks/getting-started" target="_blank">Webhooks documentation</a> to get started with webhooks in Facebook.
 
-After establishing the webhooks URL within Facebook, you can create a [Data Transformation]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/) in Braze. 
+After establishing the webhooks URL in Facebook, work with your team to determine the best path to forward the data to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Similar to the Zapier approach, we’d recommend making a [request by email]({{site.baseurl}}/api/endpoints/user_data/post_user_track#example-request-for-updating-a-user-profile-by-phone-number) through the `users/track` endpoint.
 {% enddetails %}
 
 {% alert tip %}
