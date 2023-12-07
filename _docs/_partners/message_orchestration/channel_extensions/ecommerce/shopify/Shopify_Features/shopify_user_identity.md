@@ -84,7 +84,7 @@ During the Shopify setup process, Braze provides flexible controls to sync your 
 
 During the **Collect Email of SMS Subscribers** step, select whether you want to collect email and SMS opt-ins from your Shopify store to sync to Braze.
 
-IMAGE
+![Modal to collect the subscription groups of email subscribers and SMS subscribers.]({% image_buster /assets/img/Shopify/shopify_usersyncing_subscribercollection.png %}){: style="max-width:70%"}
 
 #### Collect email subscribers
 
