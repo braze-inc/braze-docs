@@ -2,15 +2,15 @@
 nav_title: Personalized Paths 
 article_title: Personalized Paths in Experiment Paths 
 page_type: reference
-description: "Personalized Paths is similar to Personalized Variant in campaigns and lets you personalize entire Canvas journeys based on each person's conversion likelihood."
+description: "Personalized Paths lets you personalize any point of a Canvas journey for individual users based on conversion likelihood."
 tool: Canvas
 ---
 
 # Personalized Paths in Experiment Paths
 
-> Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you personalize entire Canvas journeys for individual users based on conversion likelihood.
+> Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you personalize any point of a Canvas journey for individual users based on conversion likelihood.
 
-When Personalized Paths is turned on in an Experiment Path step, a portion of users are held in a delay group while Braze tests the remaining paths against each other. After a period of time you choose, Braze sends users held in the delay group down the best-performing path for each user. Users who enter after the experiment is over will be sent down the path that performs best overall.
+When Personalized Paths is turned on in an Experiment Path step, a portion of users are held in a delay group while Braze tests the remaining paths against each other. After a period of time you choose, Braze sends users held in the delay group down the path that is most likely to result in conversion for each user based on what was learned during the testing window. Users who enter after the experiment is over will be sent down the path that performs best overall.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ Then set the **Experiment Window**. The **Experiment Window** determines how lon
 
 ### Step 3: Determine fallback
 
-By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the best-performing path.
+By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the single best-performing path.
 
 Alternatively, you can select **Continue sending all future users the mix of paths**.
 
