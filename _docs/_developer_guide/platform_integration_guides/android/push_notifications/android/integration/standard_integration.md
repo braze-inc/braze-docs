@@ -17,8 +17,7 @@ With push notifications, you can re-engage your app users by sending time-sensit
 
 ## Registering for push
 
-In the following steps, you'll learn how to register for push using Google's [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) solution. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample
- App](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
+In this section, you'll learn how to register for push using Google's [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) solution. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample App](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
 
 ### Step 1: Add Firebase to your project
 
