@@ -101,3 +101,43 @@ If you included Braze purchase events in your Shopify integration setup, by defa
 You can also choose to set either the SKU or product title from Shopify instead of the Shopify Product ID.
 
 ![]({% image_buster /assets/img/Shopify/shop_setup_advanced_productid.png %}){: style="max-width:60%"}
+
+## Troubleshooting
+
+{% details Why is my Shopify app install still pending? %}
+Your installation may still be pending for one of the following reasons:
+ - When Braze is setting up your Shopify webhooks
+ - When Braze is communicating with Shopify
+
+
+If your app installation is pending for 1 hour, Braze will fail the installation, and you will be prompted to Retry Setup.<br><br>
+![Shopify]({% image_buster /assets/img/Shopify/shopify_integration8.png %}){: style="max-width:80%;"}
+{% enddetails %}
+
+
+{% details Why did my Shopify app install fail? %}
+Your install may have failed for one of the following reasons:
+ - Braze could not reach Shopify
+ - Braze failed to process the request
+ - Your Shopify access token is invalid
+ - The Braze Shopify app was deleted from your Shopify admin page
+
+
+If this happens, you will be able to select **Retry Setup** and start the installation process again.<br><br>
+![Shopify]({% image_buster /assets/img/Shopify/shopify_integration16.png %}){: style="max-width:80%;"}
+{% enddetails %}
+
+
+{% details How do I uninstall the Braze application from my Shopify store? %}
+Go to your Shopify admin page located under **Apps**. You will then see an option to delete the Braze application.<br><br>
+![Shopify]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:80%;"}
+{% enddetails %}
+
+
+{% details I am struggling to reconcile my users. What might be the reason? %}
+
+
+If you use the ScriptTag integration, and your Shopify store offers a "Buy Now" option that skips the cart, Braze may struggle to reconcile users as Shopify does not allow script tags to retrieve a `device_id` to map the events to a user who skips the cart.
+
+
+{% enddetails %}
