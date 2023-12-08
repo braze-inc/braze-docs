@@ -99,13 +99,13 @@ On [Firebase Console](https://console.firebase.google.com/), open your project, 
 
 Select **Cloud Messaging**, then under **Firebase Cloud Messaging API (V1)**, copy the number in the **Sender ID** field.
 
-![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
-
 {% alert important %}
 Do not copy the Firebase Sender ID under **Cloud Messaging API (Legacy)**. This feature is no longer supported by Google.
 {% endalert %}
 
-In your project, use your Firebase Sender ID to enable automatic FCM token registration within your `braze.xml` or `BrazeConfig` file.
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
+
+Next, go back to your Android Studio project and use your Firebase Sender ID to enable automatic FCM token registration within your `braze.xml` or `BrazeConfig` file.
 
 {% tabs local %}
 {% tab braze.xml %}
