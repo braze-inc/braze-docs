@@ -35,7 +35,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) wi
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "external_ids": ["external_identifier1", "external_identifier2"],
   "braze_ids": ["braze_identifier1", "braze_identifier2"],
@@ -77,7 +77,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "deleted" : (required, integer) number of user ids queued for deletion
 }

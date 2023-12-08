@@ -31,7 +31,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) wi
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
@@ -162,7 +162,7 @@ Session data will only be merged if the app exists on both user profiles. Note t
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "merge_updates": [
     {

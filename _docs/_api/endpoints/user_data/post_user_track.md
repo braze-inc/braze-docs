@@ -33,7 +33,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) wi
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
@@ -80,7 +80,7 @@ Using the `/users/track` endpoint, you can update a user profile by email addres
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
     "attributes": [
         {
@@ -156,7 +156,7 @@ If you include a request with both email and phone, we will use the email as the
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
     "attributes": [
         {
@@ -186,7 +186,7 @@ A new profile will be created and an email-only user will be created. An alias w
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
     "attributes": [
         {
@@ -261,7 +261,7 @@ Updating the subscription status with this endpoint will both update the user sp
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "attributes": [
   {
@@ -349,7 +349,7 @@ You can use the `/users/track` endpoint to create a new alias-only user by setti
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
 {
     "attributes": [
