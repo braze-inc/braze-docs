@@ -25,7 +25,7 @@ First, you'll need to add Firebase to your Android project. For step-by-step ins
 
 ### Step 2: Add Cloud Messaging to your dependencies
 
-Next you'll add the Cloud Messaging library to your project dependencies. In your Android project, open `build.gradle`, then add the following line to your `dependencies` block.
+Next, add the Cloud Messaging library to your project dependencies. In your Android project, open `build.gradle`, then add the following line to your `dependencies` block.
 
 ```gradle
 implementation "com.google.firebase:firebase-messaging:+"
@@ -42,7 +42,7 @@ dependencies {
 
 ### Step 3: Create a service account
 
-Next you'll create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. On the **Service accounts** page, select **Create Service Account**.
+Next, create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. On the **Service accounts** page, select **Create Service Account**.
 
 ![A project's service account home page with "Create Service Account" highlighted.]({% image_buster /assets/img/android/push_integration/create_a_service_account/select-create-service-account.png %})
 
@@ -50,17 +50,13 @@ Enter a service account name, ID, and description, then select **Create and cont
 
 ![The form for "Service account details."]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
 
-In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles, then select **Continue**.
+In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. If you need to grant specific users access to your FCM service account, select **Continue**. Otherwise, select **Done**.
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
-If you need to grant specific users access to your FCM service account, add them now. When you're finished, select **Done**.
-
-![The form for the final step: "Grant users access to this service account."]({% image_buster /assets/img/android/push_integration/create_a_service_account/complete-service-account-creation.png %})
-
 ### Step 4: Generate JSON credentials
 
-Next you'll generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. Locate the FCM service account [you created earlier](#step-3-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
+Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. Locate the FCM service account [you created earlier](#step-3-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
 
 ![The project's service account homepage with the "Actions" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
 
@@ -74,7 +70,7 @@ Choose **JSON**, then select **Create**. Be sure to remember where you downloade
 
 ### Step 5: Upload your JSON credentials to Braze
 
-Next you'll upload your JSON credentials to your Braze dashboard. In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**.
+Next, upload your JSON credentials to your Braze dashboard. In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**.
 
 ![The "Settings" menu open in Braze with "App Settings" highlighted.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
