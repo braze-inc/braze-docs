@@ -42,10 +42,6 @@ dependencies {
 
 ### Step 3: Create a service account
 
-{% alert note %}
-If you already have a service account...
-{% endalert %}
-
 Next you'll create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. On the **Service accounts** page, select **Create Service Account**.
 
 ![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/create_a_service_account/select-create-service-account.png %})
