@@ -942,3 +942,5 @@ validurls['/docs/developer_guide/platform_wide/analytics_overview/'] = '/docs/de
 validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personal_path'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/';
 
 validurls['/docs/help/release_notes/2021/12_14_21/'] = '/docs/help/release_notes/2021/december/';
+
+validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel'] = '/docs/partners/data_and_infrastructure_agility/workflow_automation/growthloop';
