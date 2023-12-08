@@ -22,9 +22,8 @@ Templates built using the drag-and-drop editor for email are not accepted.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `templates.email.info` permission.
-{% endalert %}
+## Prerequisites
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `templates.email.info` permission.
 
 ## Rate limit
 

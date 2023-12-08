@@ -20,9 +20,8 @@ Up to 50 merges may be specified per request. This endpoint is asynchronous.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d262b86d-cf84-46e2-b9d0-f882bb7078de {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `users.merge` permission.
-{% endalert %}
+## Prerequisites
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.merge` permission.
 
 ## Rate limit
 

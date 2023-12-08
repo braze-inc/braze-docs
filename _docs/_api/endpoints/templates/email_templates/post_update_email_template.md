@@ -22,9 +22,8 @@ All fields other than the `email_template_id` are optional, but you must specify
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#afb25494-3350-458d-932d-5bf4220049fa {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `templates.email.update` permission.
-{% endalert %}
+## Prerequisites
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `templates.email.update` permission.
 
 ## Rate limit
 

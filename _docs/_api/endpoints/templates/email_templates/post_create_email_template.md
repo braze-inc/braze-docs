@@ -21,9 +21,8 @@ Users' email subscription status can be updated and retrieved via Braze using a 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `templates.email.create` permission.
-{% endalert %}
+## Prerequisites
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `templates.email.create` permission.
 
 ## Rate limit
 

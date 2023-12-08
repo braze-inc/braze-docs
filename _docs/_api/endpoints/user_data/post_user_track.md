@@ -22,9 +22,8 @@ Braze processes the data passed via API at face value and customers should only 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `users.track` permission.
-{% endalert %}
+## Prerequisites
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.track` permission.
 
 ## Rate limit
 

@@ -18,9 +18,8 @@ description: "This article outlines details about the Update Content Blocks Braz
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `content_blocks.update` permission.
-{% endalert %}
+## Prerequisites
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `content_blocks.update` permission.
 
 ## Rate limit
 
