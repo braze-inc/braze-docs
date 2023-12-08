@@ -173,15 +173,13 @@ The `messages` response will contain information about each message. The followi
   "from": (array) list of strings of the numbers associated with the subscription group,
   "template_name": (string) the name of the WhatsApp template being sent,
   "template_language_code": (string) the language code of the WhatsApp template being sent,
-  "header_variables": (array) list of strings of liquid variables being inserted into header of WhatsApp template being sent,
-  "body_variables": (array)  list of strings of liquid variables being inserted into body of WhatsApp template being sent,
-  "button_variables": (array)  list of strings of liquid variables being inserted into buttons of WhatsApp template being sent
+  "header_variables": (array) list of strings, if present, of liquid variables being inserted into header of WhatsApp template being sent,
+  "body_variables": (array)  list of strings, if present, of liquid variables being inserted into body of WhatsApp template being sent,
+  "button_variables": (array)  list of strings, if present, of liquid variables being inserted into buttons of WhatsApp template being sent
 }
 ```
 
 ##### Response messages
-
-
 
 ```json
 {
