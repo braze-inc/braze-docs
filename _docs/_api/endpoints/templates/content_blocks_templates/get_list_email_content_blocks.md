@@ -45,7 +45,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": "integer",
   "content_blocks": [

@@ -29,7 +29,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) wi
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
@@ -56,10 +56,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
-```
+```json
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/update' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "content_block_id" :"content_block_id", 
   "name": "content_block",
@@ -74,7 +74,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": (string) Your newly generated block id,
   "liquid_tag": (string) The generated block tag from the Content Block name,

@@ -32,18 +32,18 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) wi
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
 {
-   "template_name": (required, string) the name of your email template,
-   "subject": (required, string) the email template subject line,
-   "body": (required, string) the email template body that may include HTML,
-   "plaintext_body": (optional, string) a plaintext version of the email template body,
-   "preheader": (optional, string) the email preheader used to generate previews in some clients,
+   "template_name": (required, string) The name of your email template,
+   "subject": (required, string) The email template subject line,
+   "body": (required, string) The email template body that may include HTML,
+   "plaintext_body": (optional, string) A plaintext version of the email template body,
+   "preheader": (optional, string) The email preheader used to generate previews in some clients,
    "tags": (optional, Array of Strings) Tags must already exist,
-   "should_inline_css": (optional, Boolean) One of 'true' or 'false' is expected
+   "should_inline_css": (optional, Boolean) If `true`, the `inline_css` feature is used on this template.
  }
 ```
 
@@ -65,7 +65,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "template_name": "email_template_name",
   "subject": "Welcome to my email template!",

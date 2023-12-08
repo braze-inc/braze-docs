@@ -38,18 +38,18 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) wi
 ## Example request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=1&offset=0' \
---header 'Authorization: Bearer YOUR-REST-API-KEY'
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
 ## Response 
 
 {% alert important %}
-Templates built using the Drag & Drop Editor for email are not provided in this response.
+Templates built using the drag-and-drop editor for email are not provided in this response.
 {% endalert %}
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": the number of templates returned
   "templates": [template with the following properties]:
