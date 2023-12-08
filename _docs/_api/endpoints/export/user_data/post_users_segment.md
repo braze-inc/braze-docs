@@ -91,7 +91,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`segment_id` | Required | String | Identifier for the segment to be exported. See [segment identifier]({{site.baseurl}}/api/identifier_types/).<br><br>The `segment_id` for a given segment can be found from the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page within your Braze account or you can use the [Segment List Endpoint]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
 |`callback_endpoint` | Optional | String | Endpoint to post a download URL to when the export is available. |
 |`fields_to_export` | Required* | Array of strings | Name of user data fields to export. You can also export all custom attributes by including `custom_attributes` in this parameter. <br><br>*Beginning April 2021, new accounts must specify specific fields to export. |
-| `custom_attributes_to_export` | Optional | Array of strings | Name of specific custom attribute to export. Up to 500 custom attributes can be exported. Attribute names are located by navigating to **Manage Settings** > **Custom Attributes**. |
+| `custom_attributes_to_export` | Optional | Array of strings | Name of specific custom attribute to export. Up to 500 custom attributes can be exported. To create and manage custom attributes in the dashboard, go to **Data Settings** > **Custom Attributes**. |
 |`output_format` | Optional | String | The output format of your file. Defaults to `zip` file format. If you are using your own S3 bucket, you can specify `zip` or `gzip`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

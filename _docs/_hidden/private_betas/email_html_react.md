@@ -18,7 +18,7 @@ With the updated HTML editor, you can seamlessly switch between editors (HTML, c
 To access the **Link Management** tab in the updated HTML email editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on. To turn on link aliasing, contact your account manager.
 {% endalert %}
 
-While you can still switch to the old HTML editor by clicking **Switch to old HTML editor**, note that the old HTML editor will be removed in January 2024.
+While you can still switch to the old HTML editor by clicking **Switch to old HTML editor**, note that the old HTML editor will be removed in early 2024.
 
 Check out our dedicated [HTML editor for email]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor) section for additional resources.
 
