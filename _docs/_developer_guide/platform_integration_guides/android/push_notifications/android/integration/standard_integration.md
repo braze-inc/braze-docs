@@ -60,7 +60,7 @@ If you need to grant specific users access to your FCM service account, add them
 
 ### Step 4: Generate JSON credentials
 
-Next you'll generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. Locate the FCM service account [you created earlier](), then select **Actions** > **Manage Keys**.
+Next you'll generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. Locate the FCM service account [you created earlier](#step-3-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
 
 ![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
 
@@ -70,37 +70,31 @@ Select **Add Key** > **Create new key**.
 
 Choose **JSON**, then select **Create**. Be sure to remember where you downloaded the key&#8212;you'll need it in the next step.
 
-![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %})
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
 
 ### Step 5: Upload your JSON credentials to Braze
 
-Next you'll upload your JSON credentials to your Braze dashboard. In Braze, select **Settings** > **App Settings**.
+Next you'll upload your JSON credentials to your Braze dashboard. In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**.
 
 ![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
-Choose your app, then under **Push Notification Settings**, choose **Firebase**. Select **Upload JSON File**, then upload your JSON credentials [from earlier]().
+Under your Android app's **Push Notification Settings**, choose **Firebase**, then select **Upload JSON File** and upload the credentials [you generated earlier](#step-4-generate-json-credentials). When you're finished, select **Save**.
 
 ![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/upload-json-file.png %})
 
-When you're finished, select **Save**.
-
 ### Step 6: Set up automatic token registration
 
-When a user opts-in for push notifications, your app needs to generate an FCM token for their device before you can send them push notifications. With the Braze SDK, you can enable automatic FCM token registration for each user's device by updating your project's Braze configuration.
+When one of your users opt-in for push notifications, your app needs to generate an FCM token on their device before you can send them push notifications. With the Braze SDK, you can enable automatic FCM token registration for each user's device in your project's Braze configuration files.
 
-On [Firebase Console](https://console.firebase.google.com/), open your project, then select **Settings** > **Project settings**.
+First, go to [Firebase Console](https://console.firebase.google.com/), open your project, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
 
 ![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
 
 Select **Cloud Messaging**, then under **Firebase Cloud Messaging API (V1)**, copy the number in the **Sender ID** field.
 
-{% alert important %}
-Do not copy the Firebase Sender ID under **Cloud Messaging API (Legacy)**. This feature is no longer supported by Google.
-{% endalert %}
-
 ![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
-Next, go back to your Android Studio project and use your Firebase Sender ID to enable automatic FCM token registration within your `braze.xml` or `BrazeConfig` file.
+Next, open your Android Studio project and use your Firebase Sender ID to enable automatic FCM token registration within your `braze.xml` or `BrazeConfig` file.
 
 {% tabs local %}
 {% tab braze.xml %}
@@ -116,8 +110,8 @@ Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase projec
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string translatable="false" name="com_braze_api_key">BRAZE_API_KEY</string><bool translatable="false" name="com_braze_firebase_cloud_messaging_registration_enabled">true</bool>
-<string translatable="false" name="com_braze_firebase_cloud_messaging_sender_id">FIREBASE_SENDER_ID</string>
+  <string translatable="false" name="com_braze_api_key">12345ABC-6789-DEFG-0123-HIJK456789LM</string><bool translatable="false" name="com_braze_firebase_cloud_messaging_registration_enabled">true</bool>
+<string translatable="false" name="com_braze_firebase_cloud_messaging_sender_id">603679405392</string>
 </resources>
 ```
 {% endtab %}
@@ -145,13 +139,13 @@ Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase projec
 {% subtab JAVA %}
 ```java
 BrazeConfig brazeConfig = new BrazeConfig.Builder()
-  .setApiKey("BRAZE_API_KEY")
-  .setCustomEndpoint("CUSTOM_ENDPOINT_OR_CLUSTER")
+  .setApiKey("12345ABC-6789-DEFG-0123-HIJK456789LM")
+  .setCustomEndpoint("sdk.iad-01.braze.com")
   .setSessionTimeout(60)
   .setHandlePushDeepLinksAutomatically(true)
   .setGreatNetworkDataFlushInterval(10)
   .setIsFirebaseCloudMessagingRegistrationEnabled(true)
-  .setFirebaseCloudMessagingSenderIdKey("FIREBASE_SENDER_ID")
+  .setFirebaseCloudMessagingSenderIdKey("603679405392")
   .build();
 Braze.configure(this, brazeConfig);
 ```
@@ -159,13 +153,13 @@ Braze.configure(this, brazeConfig);
 {% subtab KOTLIN %}
 ```kotlin
 val brazeConfig = BrazeConfig.Builder()
-  .setApiKey("BRAZE_API_KEY")
-  .setCustomEndpoint("CUSTOM_ENDPOINT_OR_CLUSTER")
+  .setApiKey("12345ABC-6789-DEFG-0123-HIJK456789LM")
+  .setCustomEndpoint("sdk.iad-01.braze.com")
   .setSessionTimeout(60)
   .setHandlePushDeepLinksAutomatically(true)
   .setGreatNetworkDataFlushInterval(10)
   .setIsFirebaseCloudMessagingRegistrationEnabled(true)
-  .setFirebaseCloudMessagingSenderIdKey("FIREBASE_SENDER_ID")
+  .setFirebaseCloudMessagingSenderIdKey("603679405392")
   .build()
 Braze.configure(this, brazeConfig)
 ```
