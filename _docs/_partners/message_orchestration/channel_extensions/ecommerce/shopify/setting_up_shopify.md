@@ -92,7 +92,7 @@ After the Braze app is installed, you will be notified via email, and Braze will
 
 By default, Braze automatically sets the delay to trigger the `shopify_abandoned_checkout` and `shopify_abandoned_cart` events to one hour of inactivity. You can set the **Abandoned Cart Delay** and **Abandoned Checkout Delay** for each event from 5 minutes up to 24 hours by selecting the dropdown and then selecting **Set Delay** on the Shopify partner page.
 
-![]({% image_buster /assets/img/Shopify/shop_setup_advanced_abandonment.png %}){: style="max-width:60%"}
+![]({% image_buster /assets/img/Shopify/shop_setup_advanced_abandonment.png %}){: style="max-width:30%"}
 
 #### Set your preferred product identifier
 
@@ -100,7 +100,7 @@ If you included Braze purchase events in your Shopify integration setup, by defa
 
 You can also choose to set either the SKU or product title from Shopify instead of the Shopify Product ID.
 
-![]({% image_buster /assets/img/Shopify/shop_setup_advanced_productid.png %}){: style="max-width:60%"}
+![]({% image_buster /assets/img/Shopify/shop_setup_advanced_productid.png %}){: style="max-width:30%"}
 
 ## Troubleshooting
 
