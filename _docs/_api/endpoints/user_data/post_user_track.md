@@ -59,7 +59,7 @@ For each of the request components listed in the following table, one of `extern
 | `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example request body
+## Example requests
 
 ### Example request for updating a user profile by email address
 
