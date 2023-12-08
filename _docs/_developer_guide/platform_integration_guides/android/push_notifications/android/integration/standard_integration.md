@@ -13,11 +13,11 @@ search_rank: 3
 
 > Learn how to integrate push notifications in your Android app.
 
-Push notifications let you re-engage your users with time-sensitive and relevant content by sending out-of-app alerts directly to their device screen. When you're finished integrating push for your app, be sure to check out [Push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
+With push notifications, you can re-engage your app users by sending time-sensitive and relevant content directly to their device screen&#8212;even if their app is closed. When you're finished integrating push for your app, be sure to check out our [push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 
 ## Registering for push
 
-In the following steps, you'll register for push using Google's [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/). If you'd like to see a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample
+In the following steps, you'll learn how to register for push using Google's [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) solution. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample
  App](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
 
 ### Step 1: Add Firebase to your project
@@ -47,61 +47,47 @@ dependencies {
 If you already have a service account...
 {% endalert %}
 
-Next you'll create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project.
+Next you'll create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. On the **Service accounts** page, select **Create Service Account**.
 
-![Placeholder image tag.]()
-
-Select **Create Service Account**.
-
-![Placeholder image tag.]()
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/create_a_service_account/select-create-service-account.png %})
 
 Enter a service account name, ID, and description, then select **Create and continue**.
 
-![Placeholder image tag.]()
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
 
 In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles, then select **Continue**.
 
-![Placeholder image tag.]()
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
-If you need to grant any specific users access to your FCM service account, add them now. When you're finished, select **Done**.
+If you need to grant specific users access to your FCM service account, add them now. When you're finished, select **Done**.
 
-![Placeholder image tag.]()
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/create_a_service_account/complete-service-account-creation.png %})
 
 ### Step 4: Generate JSON credentials
 
-Next you'll generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project.
+Next you'll generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. Locate the FCM service account [you created earlier](), then select **Actions** > **Manage Keys**.
 
-![Placeholder image tag.]()
-
-Locate the FCM service account [you created earlier](), then select **Actions** > **Manage Keys**.
-
-![Placeholder image tag.]()
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
 
 Select **Add Key** > **Create new key**.
 
-![Placeholder image tag.]()
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
 
 Choose **JSON**, then select **Create**. Be sure to remember where you downloaded the key&#8212;you'll need it in the next step.
 
-![Placeholder image tag.]()
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %})
 
 ### Step 5: Upload your JSON credentials to Braze
 
 Next you'll upload your JSON credentials to your Braze dashboard. In Braze, select **Settings** > **App Settings**.
 
-![Placeholder image tag.]()
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
-Choose your app.
+Choose your app, then under **Push Notification Settings**, choose **Firebase**. Select **Upload JSON File**, then upload your JSON credentials [from earlier]().
 
-![Placeholder image tag.]()
-
-Under **Push Notification Settings**, choose **Firebase**, then select **Upload JSON File** and upload your JSON credentials [from earlier]().
-
-![Placeholder image tag.]()
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/upload-json-file.png %})
 
 When you're finished, select **Save**.
-
-![Placeholder image tag.]()
 
 ### Step 6: Set up automatic token registration
 
@@ -109,15 +95,11 @@ When a user opts-in for push notifications, your app needs to generate an FCM to
 
 On [Firebase Console](https://console.firebase.google.com/), open your project, then select **Settings** > **Project settings**.
 
-![Placeholder image tag.]()
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
 
-Select **Cloud Messaging**.
+Select **Cloud Messaging**, then under **Firebase Cloud Messaging API (V1)**, copy the number in the **Sender ID** field.
 
-![Placeholder image tag.]()
-
-Under **Firebase Cloud Messaging API (V1)**, copy the number in the **Sender ID** field.
-
-![Placeholder image tag.]()
+![Placeholder image tag.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
 {% alert important %}
 Do not copy the Firebase Sender ID under **Cloud Messaging API (Legacy)**. This feature is no longer supported by Google.
