@@ -84,6 +84,10 @@ You can select from the following compression and delimiter options:
 - **Compression:** ZIP, Uncompressed, or gzip
 - **Delimiter:** Comma (`,`), Colon (`:`), Semicolon (`;`), or Pipe (`|`)
 
+{% alert note %}
+Statistics are only collected for the date range specified by the report. To receive accurate open and click rate statistics, select a date range that includes when the Sends events were performed for your campaigns and Canvases.
+{% endalert %}
+
 #### Select time frame
 
 By default, the data range shown will go from the earliest message selected until the present date.  You can customize this by selecting the date dropdown and using the custom range selection OR by selecting the next radio button and defining your date range with the dropdown options available.
