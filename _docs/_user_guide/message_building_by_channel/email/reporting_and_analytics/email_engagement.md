@@ -8,7 +8,9 @@ description: "This article provides an overview of graphs in the email insights 
 
 # Email Insights dashboard
 
-The Email Insights dashboard helps you track and better understand where and when your customers are interacting with your emails. These reports provide rich and granular data for marketers on how to optimize your emails to drive greater engagement.
+> The Email Insights dashboard helps you track and better understand where and when your customers are interacting with your emails. 
+
+The reports on this dashboard can provide rich and granular data for marketers on how to optimize your emails to drive greater engagement.
 
 ### Engagement by Mailbox Provider
 
