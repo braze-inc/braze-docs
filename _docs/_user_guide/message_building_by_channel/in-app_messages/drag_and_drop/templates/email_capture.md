@@ -6,7 +6,7 @@ description: "This reference page covers how to create an email capture form wit
 hidden: true
 ---
 
-# Phone number capture form
+# Email capture form
 
 > Use the drag-and-drop email capture in-app message template to collect users' email addresses and grow your subscription groups.
 
@@ -32,7 +32,7 @@ If you want to include text links that do not dismiss the message, users must be
 If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, clicking on the link will close the message, and the user will not be able to return to the message to submit the form.
 {% endalert %}
 
-## Creating a phone number capture form
+## Creating an email capture form
 
 When creating a drag-and-drop in-app message, select **Email capture** for your template and click **Build message**. This template is supported for both mobile apps and web browsers.
 
@@ -40,7 +40,7 @@ When creating a drag-and-drop in-app message, select **Email capture** for your 
 
 Before you start customizing your template, you can set message-level styles for the entire message using the side menu. For example, you may want to customize the font of all the text or the color of all the links included in your message. You can also make the message a modal or fullscreen display type.
 
-### Step 2: Customize your phone number capture component
+### Step 2: Customize your email capture component
 
 To get started building your email capture form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states).
 
