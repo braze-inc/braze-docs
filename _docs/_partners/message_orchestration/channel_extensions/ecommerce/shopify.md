@@ -11,25 +11,25 @@ description: "This landing page is home to all things Shopify including a Shopif
 
 guide_featured_title: "Featured articles"
 guide_featured_list:
-- name: Shopify overview
+- name: Shopify Overview
   link: /docs/shopify_overview/
   fa_icon: fa-brands fa-shopify
-- name: Getting started with Shopify
+- name: Getting Started with Shopify
   link: /docs/getting_started_shopify/
   fa_icon: fa fa-shopping-cart
-- name: Setting up Shopify
+- name: Setting Up Shopify
   link: /docs/setting_up_shopify/
   fa_icon: fa fa-shopping-cart
-- name: Shopify data in Braze
+- name: Shopify Data in Braze
   link: /docs/shopify_data/
   fa_icon: fas fa-cogs
-- name: Shopify historical backfill
+- name: Shopify Historical Backfill
   link: /docs/shopify_historical_backfill/
   fa_icon: fa-solid fa-database
-- name: Shopify catalogs
+- name: Shopify Catalogs
   link: /docs/shopify_catalogs/
   fa_icon: fas fa-list
-- name: Use cases
+- name: Use Cases
   link: /docs/shopify_use_cases/
   fa_icon: fa fa-users
 
