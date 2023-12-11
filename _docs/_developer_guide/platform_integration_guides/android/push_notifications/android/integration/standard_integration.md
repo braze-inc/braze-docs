@@ -15,6 +15,10 @@ search_rank: 3
 
 With push notifications, you can re-engage your app users by sending time-sensitive and relevant content directly to their device screen&#8212;even if their app is closed. When you're finished integrating push for your app, be sure to check out our [push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 
+{% alert important %}
+If you've already set up your push integration, and you're looking to migrate your Messaging API instead, see [Migrating your Google Messaging API]().
+{% endalert %}
+
 ## Registering for push
 
 In this section, you'll learn how to register for push using Google's [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) solution. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample App.](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push)
