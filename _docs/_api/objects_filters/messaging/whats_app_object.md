@@ -141,7 +141,7 @@ Currently, only one button variable can be specified, which is the path componen
 ```json
 {
   "body": (required, string) the body of the message to send,
-  "header_image_uri": (optional, string) the uri of the image to send as the message header (only valid if header_text not present),
+  "header_image_uri": (optional, string) the URI of the image to send as the message header (only valid if header_text not present),
   "header_text": (optional, string) the text to send as the message header (only valid if header_image_uri not present),
   "footer": (optional, string) the footer of the message to send,
   "buttons": (required, array) array of Button objects. Will render in message based on order in array.
