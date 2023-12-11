@@ -145,8 +145,7 @@ The following table summarizes mailbox provider support for “mailto:” header
 | Apple Mail | Supported | Not supported | Not supported |
 | Outlook.com | Supported | Not supported | Not supported |
 | Yahoo! Mail | Supported | Not supported | Supported |
-
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Append email subject lines
 
