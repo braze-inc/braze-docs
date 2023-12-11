@@ -17,7 +17,7 @@ description: "This reference article explains the different components of the Br
 ```json
 {
   "app_id": (required, string) see App Identifier,
-  "subscription_group_id": (required, string) the id of your subscription group,
+  "subscription_group_id": (required, string) the ID of your subscription group,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
   "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message),
   "message": (required, object) message object specifying fields the required fields based on the specified message_type. See Message Types for field specifications.
