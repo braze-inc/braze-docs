@@ -169,13 +169,13 @@ The `messages` response will contain information about each message. The followi
 ```json
 {
   "channel": "whats_app",
-  "subscription_group_id": (string) the API id of the subscription group selected in the WhatsApp message
-  "from": (array) list of strings of the numbers associated with the subscription group,
+  "subscription_group_id": (string) the API ID of the subscription group selected in the WhatsApp message
+  "from": (array) the list of strings of the numbers associated with the subscription group,
   "template_name": (string) the name of the WhatsApp template being sent,
   "template_language_code": (string) the language code of the WhatsApp template being sent,
-  "header_variables": (array) list of strings, if present, of liquid variables being inserted into header of WhatsApp template being sent,
-  "body_variables": (array)  list of strings, if present, of liquid variables being inserted into body of WhatsApp template being sent,
-  "button_variables": (array)  list of strings, if present, of liquid variables being inserted into buttons of WhatsApp template being sent
+  "header_variables": (array) the list of strings, if present, of Liquid variables being inserted into header of WhatsApp template being sent,
+  "body_variables": (array) the list of strings, if present, of Liquid variables being inserted into body of WhatsApp template being sent,
+  "button_variables": (array) the list of strings, if present, of Liquid variables being inserted into buttons of WhatsApp template being sent
 }
 ```
 
@@ -184,9 +184,9 @@ The `messages` response will contain information about each message. The followi
 ```json
 {
   "channel": "whats_app",
-  "subscription_group_id": (string) the API id of the subscription group selected in the WhatsApp message
+  "subscription_group_id": (string) the API ID of the subscription group selected in the WhatsApp message
   "from": (array) list of strings of the numbers associated with the subscription group,
-  "layout": (string) the name of the WhatsApp template being sent (text | media | quick-reply),
+  "layout": (string) the name of the WhatsApp template being sent (text or media or quick-reply),
   "header_text": (string, optional) the text, if present, of the header of the message being sent,
   "body_text": (string, optional) the text, if present, of the body of the message being sent,
   "footer_text": (string, optional) the text, if present, of the footer of the message being sent,
