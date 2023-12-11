@@ -122,7 +122,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 By default, frequency capping is toggled on when new campaigns are created. From here, you can choose the following:
 
-- Which messaging channel you would like to cap: push, email, SMS, webhook, or any of those four.
+- Which messaging channel you would like to cap: push, email, SMS, webhook, frequency capping, or any of those five.
 - How many times each user should receive a campaign or Canvas component sends from a channel within a certain time frame.
 - How many times each user should receive a campaign or Canvas component sends by [tag](#frequency-capping-by-tag) within a certain time frame.
 
