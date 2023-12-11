@@ -109,7 +109,7 @@ When enabled, this feature is applied to the entire workspace. Braze currently s
 
 ![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %}){: style="max-width:70%;" }
 
-Starting in mid-December 2023, the list-unsubscribe header setting will default to On only for new customers in response to new sender guideline requirements from [Yahoo](https://blog.postmaster.yahooinc.com/) and [Gmail](https://support.google.com/mail/answer/81126?hl=en) for bulk senders. You can optionally disable this setting under **Email Preferences**.
+Starting in mid-December 2023, the list-unsubscribe header setting will be turned on by default for **new customers** in response to new sender guideline requirements from [Yahoo](https://blog.postmaster.yahooinc.com/) and [Gmail](https://support.google.com/mail/answer/81126?hl=en) for bulk senders. You can optionally disable this setting under **Email Preferences**.
 
 Note that the header is not automatically added for messages targeting unsubscribed users, as these represent transactional messages in Braze. 
 
