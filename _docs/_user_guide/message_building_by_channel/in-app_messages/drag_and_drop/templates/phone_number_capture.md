@@ -7,7 +7,7 @@ description: "This reference page covers how to create a phone number capture fo
 
 # Phone number capture form
 
-> Learn how to create an in-app message to collect users' phone numbers capture form.
+> Learn how to create an in-app message to collect users' phone numbers.
 
 The phone number capture form is a template available in the drag-and-drop editor for in-app messages. Use this template to collect users' phone numbers and grow your SMS and WhatsApp subscription groups.
 
