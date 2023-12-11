@@ -24,9 +24,8 @@ Deleting user profiles cannot be undone. It will permanently remove users which 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `users.delete` permission.
-{% endalert %}
+## Prerequisites
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.delete` permission.
 
 ## Rate limit
 
@@ -36,7 +35,7 @@ To use this endpoint, you'll need to generate an API key with the `users.delete`
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
@@ -59,7 +58,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "external_ids": ["external_identifier1", "external_identifier2"],
   "braze_ids": ["braze_identifier1", "braze_identifier2"],
@@ -78,7 +77,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "deleted" : (required, integer) number of user ids queued for deletion
 }

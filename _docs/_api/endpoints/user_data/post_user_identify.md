@@ -35,19 +35,17 @@ To prevent unexpected loss of data when identifying users, we highly recommend t
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `users.identify` permission.
-{% endalert %}
+## Prerequisites
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.identify` permission.
 
 ## Rate limit 
-
 A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API limits]({{site.baseurl}}/api/basics/#api-limits).
 
 ## Request body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
@@ -110,7 +108,7 @@ Setting the field to `none` will not merge any user data to the identified user 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "aliases_to_identify" : 
   [
@@ -126,14 +124,15 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 }'
 ```
 
+{% alert tip %}
 For more information on `alias_name` and `alias_label`, check out our [user aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) documentation.
-
+{% endalert %}
 
 ## Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-API-KEY-HERE
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"
