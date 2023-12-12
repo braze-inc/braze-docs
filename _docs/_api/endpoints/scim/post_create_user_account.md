@@ -16,11 +16,13 @@ description: "This article outlines details about the Create new dashboard user 
 /scim/v2/Users
 {% endapimethod %}
 
-> This endpoint allows you to create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, workspace, and team level). 
-
-For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/). 
+> Use this endpoint to create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, workspace, and team level). 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#768a3c9d-ce1d-44fc-a0e4-d556b09f7aa3 {% endapiref %}
+
+{% alert note %}
+To use this endpoint, you'll need a SCIM token. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+{% endalert %}
 
 ## Rate limit
 

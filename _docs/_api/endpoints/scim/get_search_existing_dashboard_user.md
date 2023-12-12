@@ -21,9 +21,11 @@ Note that when the query parameter is URL encoded it will read like this:
 
 `/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22`
 
-For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
-
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5037d810-b822-4c54-bb51-f30470a42a95 {% endapiref %}
+
+{% alert note %}
+To use this endpoint, you'll need a SCIM token. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+{% endalert %}
 
 ## Rate limit
 
