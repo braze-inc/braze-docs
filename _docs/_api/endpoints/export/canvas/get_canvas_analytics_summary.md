@@ -18,9 +18,9 @@ description: "This article outlines details about the Export Canvas data summary
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `canvas.data_summary` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `canvas.data_summary` permission.
 
 ## Rate limit
 

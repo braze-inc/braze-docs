@@ -543,11 +543,11 @@ glossaries:
     tags:
       - Social activity
   - name: Connected Twitter
-    description: Segments your users by whether they connected your app to Twitter.
+    description: Segments your users by whether they connected your app to X (formerly Twitter).
     tags:
       - Social activity
   - name: Number of Twitter Followers
-    description: Segments your users by how many Twitter followers they have.
+    description: Segments your users by how many X (formerly Twitter) followers they have.
     tags:
       - Social activity
 ---

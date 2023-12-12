@@ -20,9 +20,9 @@ Scheduled messages or triggers that are deleted very close to or during the time
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `canvas.trigger.schedule.delete` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `canvas.trigger.schedule.delete` permission.
 
 ## Rate limit
 

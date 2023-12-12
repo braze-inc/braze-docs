@@ -23,6 +23,7 @@ Braze processes the data passed via API at face value and customers should only 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
 
 ## Prerequisites
+
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.track` permission.
 
 Customers using the API for server-to-server calls may need to allowlist `rest.iad-01.braze.com` if they're behind a firewall.

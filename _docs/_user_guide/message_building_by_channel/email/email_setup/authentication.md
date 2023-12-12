@@ -30,4 +30,37 @@ Your DKIM record will be set up when Braze configures your IPs and domains-beyon
 
 ### Domain-based Message Authentication, Reporting, and Conformance (DMARC)
 
-This method takes the SPF and DKIM authentication protocols one step further. If you decide to use [DMARC](https://dmarc.org/), you can instruct ISPs on how they should handle mail that failed your signature or authentication checks. Failures could indicate that others are trying to imitate you or your email. You can tell the ISPs to reject or quarantine the mail and even send you automated reports about the bad mail.
+[Domain-based Message Authentication, Reporting & Conformance (DMARC)](https://dmarc.org/) is an email authentication protocol for email senders to prove the legitimacy of their mail, which enables mailbox receiver confidence and encourages mail acceptance. DMARC allows email senders to specify how to handle emails that were not authenticated using Sender Policy Framework (SPF) or Domain Keys Identified Mail (DKIM). This is achieved by verifying that both SPF and DKIM checks are passed. 
+
+Senders can instruct mailbox providers on how they should handle mail that failed their signature or authentication checks. Failures could indicate that others are trying to imitate you or your email. Senders can tell mailbox providers to reject or quarantine mail and even send automated reports about mail that fails checks. By doing so, mailbox providers can better identify spammers and prevent malicious email from invading inboxes while minimizing false positives and providing better authentication reporting for greater transparency in the marketplace.
+
+#### How it works
+
+To deploy DMARC, you need to publish a DMARC Record to your Domain Naming System (DNS). This is a TXT record that publicly expresses your email domain’s policy after checking SPF and DKIM status. DMARC authenticates if either SPF or DKIM, or both pass. This is referred to as DMARC Alignment.
+
+A DMARC record also tells email servers to send XML reports back to the reporting email address listed in the DMARC record. These reports provide insight into how your email is moving through the ecosystem and allow you to identify everything that is attempting to use your email domain to send email communications.
+
+The policy you have in your DMARC record will tell the participating recipient email server what to do with mail that doesn’t pass SPF and DKIM but claims to be from your domain. Braze recommends setting a DMARC policy on the root domain, which will be applied to all subdomains. This means no additional setup will be necessary on any current and new subdomains in the future. There are three types of policies you can set:
+
+| Policy | Impact |
+| --- | --- |
+| None | Tell the mailbox provider to perform no actions against messages that fail. |
+| Quarantine | Tell the mailbox provider to send messages that fail to the spam folder. |
+| Reject | Tell the mailbox provider that messages that fail will go to the spam folder and should be blocked. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+#### How to check your domain's DMARC authentication
+
+There are two options to check your domain's DMARC authentication:
+
+* **Option 1:** You can input your parent domain or subdomain in any third-party DMARC checker, such as [MXToolbox](https://mxtoolbox.com/dmarc.aspx), to audit whether you have a DMARC policy in place and what that policy is set to.
+* **Option 2:** Open up an email from your domain or subdomain in your mailbox, and find the original message to check whether DMARC is passing authentication on this email.
+
+For example, if you’re using Gmail, follow these steps:
+
+1. Click the **More** <i class="fa-solid fa-ellipsis"></i> in an email message.
+2. Select **Show original**.
+3. Check if you have a "PASS" status for **DMARC**.
+
+![An email that has "PASS" as the DMARC value.]({% image_buster /assets/img_archive/dmarc_example.png %})
+

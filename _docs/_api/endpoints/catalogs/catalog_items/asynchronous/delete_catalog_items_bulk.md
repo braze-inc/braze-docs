@@ -21,9 +21,9 @@ Each request can support up to 50 items. This endpoint is asynchronous.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#647c82e8-8b38-4df2-bde2-b1d8e19fd332 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `catalogs.delete_items` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `catalogs.delete_items` permission.
 
 ## Rate limit
 

@@ -152,9 +152,9 @@ Your user base can be segmented by attribution data in the Braze dashboard using
 
 Additionally, attribution data for a particular user is available on each user's profile in the Braze dashboard.
 
-## Facebook, Snapchat, and Twitter attribution data
+## Facebook, Snapchat, and X (formerly Twitter) attribution data
 
-Attribution data for Facebook and Twitter campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
+Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
 
 ## Email deep linking and click tracking
 

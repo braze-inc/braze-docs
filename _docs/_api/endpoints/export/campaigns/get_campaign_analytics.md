@@ -20,9 +20,9 @@ Data returned includes how many messages were sent, opened, clicked, or converte
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `campaigns.data_series` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `campaigns.data_series` permission.
 
 ## Rate limit
 
