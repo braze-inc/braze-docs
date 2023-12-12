@@ -124,7 +124,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, for example, `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
 | subscription_groups| Array of objects with `subscription_group_id` and `subscription_state` string, for example, `[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`. Available values for `subscription_state` are "subscribed" and "unsubscribed".|
 | time_zone | (string) Of time zone name from [IANA Time Zone Database][26] (for example, "America/New_York" or "Eastern Time (US & Canada)"). Only valid time zone values will be set. |
-| twitter | Hash containing any of `id` (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
+| twitter | Hash containing any of `id` (integer), `screen_name` (string, X (formerly Twitter) handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.
