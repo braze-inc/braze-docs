@@ -24,7 +24,7 @@ def jekyll_build(config_file = '_config.yml', lang = 'en')
   if (lang != 'en')
     index_file = File.join(public_folder, "index_#{lang}.html")
     FileUtils.copy_file(index_file, File.join('_site', "index.html"))
-    FileUtils.copy_file(File.join("_site/docs/#{lang}", "index.html"), File.join('_site', "404.html"))
+    FileUtils.copy_file(File.join("_site/docs/#{lang}", "404.html"), File.join('_site', "404.html"))
   end
 end
 def jekyll_serve(config_file = '_config.yml')
