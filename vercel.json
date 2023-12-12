@@ -6,7 +6,7 @@
 			"destination": "/:path*"
 		},
 		{
-			"source": "/docs/ko/:path*",
+			"source": "/docs/(ko|de)/:path*",
 			"destination": "/:path*"
 		},
 		{
