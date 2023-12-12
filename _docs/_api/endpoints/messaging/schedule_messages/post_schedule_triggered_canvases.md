@@ -22,9 +22,9 @@ Note that to send messages with this endpoint, you must have a [Canvas ID]({{sit
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `canvas.trigger.schedule.create` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `canvas.trigger.schedule.create` permission.
 
 ## Rate limit
 

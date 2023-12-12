@@ -25,6 +25,7 @@ This endpoint completely removes the deprecated ID and cannot be undone. Using t
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
 ## Prerequisites
+
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.external_ids.remove` permission.
 
 ## Rate limit

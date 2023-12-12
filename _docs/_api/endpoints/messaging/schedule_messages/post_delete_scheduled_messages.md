@@ -18,9 +18,9 @@ description: "This article outlines details about the Delete scheduled messages 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `messages.schedule.delete` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `messages.schedule.delete` permission.
 
 ## Rate limit
 
