@@ -65,9 +65,7 @@ You can export individual user profiles in JSON format using the [Export users b
 
 Subscription groups are segment filters that can further narrow your audience from the [global subscription states](#subscription-states). You can add up to 100 subscription groups per workspace. These groups allow you to present more granular subscription options to end-users.
 
-For example, suppose you send out multiple categories of email campaigns (promotional, newsletter, or product updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using an [email preference center](#email-preference-center). 
-
-Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
+For example, suppose you send out multiple categories of email campaigns (promotional, newsletter, or product updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using an [email preference center](#email-preference-center). Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
 
 Use the [Subscription Group endpoints][25] to programmatically manage the subscription groups that you have stored on the Braze dashboard to the **Subscription Group** page.
 
@@ -100,6 +98,12 @@ Archived subscription groups cannot be edited and will no longer appear in segme
 You can archive your group from the **Subscription Groups** page. Find your group in the list, then click the gear and select **Archive** from the dropdown menu.
 
 Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is `subscribed` to it, they will remain "`subscribed`" to this group, even if they clicks an unsubscribe link (this shouldn't matter to Susie because "Subscription Group A" is archived and you can't send any messages using it).
+
+#### Viewing subscription group sizes
+
+You can reference the **Subscription Group Timeseries** graph in the **Subscription Groups** page to see the subscription group size based on the number of users over a period of time. These subscription group sizes are also consistent with other areas of Braze, such as segment size calculation.
+
+![][10]
 
 #### Viewing subscription groups in campaign analytics
 
@@ -167,6 +171,7 @@ For example, this can be useful if you want to target users who have neither opt
 
 ![Email Subscription Status used as a segment filter.][18]
 
+[10]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
