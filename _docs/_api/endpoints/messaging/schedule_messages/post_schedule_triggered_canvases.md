@@ -141,4 +141,19 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
 }'
 ```
 
+## Response
+
+### Example success response
+
+```
+Content-Type: application/json
+Authorization: Bearer YOUR-API-KEY-HERE
+{
+{
+    "dispatch_id": "dispatch_identifier",
+    "schedule_id": "schedule_identifier",
+    "message": "success"
+}
+```
+
 {% endapi %}
