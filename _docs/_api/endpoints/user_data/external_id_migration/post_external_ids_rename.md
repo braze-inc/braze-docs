@@ -16,7 +16,7 @@ description: "This article outlines details about the Rename external IDs endpoi
 
 > Use this endpoint to rename your users' external IDs. 
 
-You can send up to 50 rename objects per request. You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
+You can send up to 50 rename objects per request. 
 
 This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. Having multiple external IDs allows for a migration period so that older versions of your apps that use the previous external ID naming schema don't break. 
 
@@ -28,9 +28,9 @@ Make sure to remove deprecated external IDs with the `/users/external_ids/remove
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `users.external_ids.rename` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.external_ids.rename` permission.
 
 ## Rate limit
 

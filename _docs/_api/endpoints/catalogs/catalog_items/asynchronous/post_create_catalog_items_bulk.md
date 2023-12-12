@@ -21,9 +21,9 @@ Each request can support up to 50 items. This endpoint is asynchronous.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cea18bb3-b83a-4160-81fe-8cd42aa6e7cc {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `catalogs.add_items` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `catalogs.add_items` permission.
 
 ## Rate limit
 

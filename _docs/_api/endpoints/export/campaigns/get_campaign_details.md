@@ -20,9 +20,9 @@ If you want to retrieve Canvas data, refer to the [Export Canvas details]({{site
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `campaigns.details` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `campaigns.details` permission.
 
 ## Rate limit
 
@@ -159,6 +159,38 @@ The `messages` response will contain information about each message. The followi
   "body": (string) the payload body,
   "from": (string) the list of numbers associated with the subscription group,
   "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
+}
+```
+
+#### WhatsApp
+
+##### Template messages
+
+```json
+{
+  "channel": "whats_app",
+  "subscription_group_id": (string) the API ID of the subscription group selected in the WhatsApp message
+  "from": (array) the list of strings of the numbers associated with the subscription group,
+  "template_name": (string) the name of the WhatsApp template being sent,
+  "template_language_code": (string) the language code of the WhatsApp template being sent,
+  "header_variables": (array) the list of strings, if present, of Liquid variables being inserted into header of WhatsApp template being sent,
+  "body_variables": (array) the list of strings, if present, of Liquid variables being inserted into body of WhatsApp template being sent,
+  "button_variables": (array) the list of strings, if present, of Liquid variables being inserted into buttons of WhatsApp template being sent
+}
+```
+
+##### Response messages
+
+```json
+{
+  "channel": "whats_app",
+  "subscription_group_id": (string) the API ID of the subscription group selected in the WhatsApp message
+  "from": (array) list of strings of the numbers associated with the subscription group,
+  "layout": (string) the name of the WhatsApp template being sent (text or media or quick-reply),
+  "header_text": (string, optional) the text, if present, of the header of the message being sent,
+  "body_text": (string, optional) the text, if present, of the body of the message being sent,
+  "footer_text": (string, optional) the text, if present, of the footer of the message being sent,
+  "buttons": (array) list of button objects in the message being sent ({"text": (string) the text of the button})
 }
 ```
 

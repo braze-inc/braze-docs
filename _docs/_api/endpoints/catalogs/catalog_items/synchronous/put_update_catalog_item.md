@@ -21,9 +21,9 @@ If the `item_id` isn't found, this endpoint will create the item in your catalog
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b2871ed7-734e-4a37-b8f1-e11584e569f5 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `catalogs.replace_item` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `catalogs.replace_item` permission.
 
 ## Rate limit
 

@@ -18,9 +18,8 @@ description: "This article outlines details about the See Content Blocks informa
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `content_blocks.info` permission.
-{% endalert %}
+## Prerequisites
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `content_blocks.info` permission.
 
 ## Rate limit
 
@@ -46,7 +45,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/i
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-API-KEY-HERE
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": (string) the Content Block identifier,
   "name": (string) the name of the Content Block,

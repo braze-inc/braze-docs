@@ -443,15 +443,15 @@ glossaries:
     tags:
       - Advertising use cases 
   - name: Device Google Ad ID
-    description: lorem ipsum
+    description: Segments your users by the Google ad ID.
     tags:
       - Advertising use cases
   - name: Device Roku Ad ID
-    description: 
+    description: Segments your users by the Roku ad ID.
     tags:
       - Advertising use cases
   - name: Device Windows Ad ID
-    description: lorem ipsum
+    description: Segments your users by the Windows ad ID.
     tags:
       - Advertising use cases  
   - name: Ad Tracking Enabled
