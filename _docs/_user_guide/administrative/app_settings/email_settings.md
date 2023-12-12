@@ -138,14 +138,16 @@ Braze intends to add support for one-click unsubscribe in early 2024, as well as
 
 The following table summarizes mailbox provider support for “mailto:” header, list-unsubscribe URL, and one-click unsubscribe ([RFC 8058](https://datatracker.ietf.org/doc/html/rfc8058)).
 
-| List-unsubscribe header | Mailto: header | List-unsubscribe URL | One-click unsubscribe (RFC 8059) | 
+| List-unsubscribe header | Mailto: header | List-unsubscribe URL | One-click unsubscribe (RFC 8058) | 
 | ----- | --- | --- | --- |
-| Gmail | Not supported | Supported | Supported |
+| Gmail | SUpported* | Supported | Supported |
 | Gmail Mobile | Not supported | Not supported | Not supported |
 | Apple Mail | Supported | Not supported | Not supported |
 | Outlook.com | Supported | Not supported | Not supported |
-| Yahoo! Mail | Supported | Not supported | Supported |
+| Yahoo! Mail | Supported* | Not supported | Supported |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+_*Yahoo and Gmail will eventually deprecate the "mailto:" header and will only support one-click._
 
 ## Append email subject lines
 
