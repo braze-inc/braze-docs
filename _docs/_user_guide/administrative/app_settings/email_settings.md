@@ -140,7 +140,7 @@ The following table summarizes mailbox provider support for “mailto:” header
 
 | List-unsubscribe header | Mailto: header | List-unsubscribe URL | One-click unsubscribe (RFC 8058) | 
 | ----- | --- | --- | --- |
-| Gmail | SUpported* | Supported | Supported |
+| Gmail | Supported* | Supported | Supported |
 | Gmail Mobile | Not supported | Not supported | Not supported |
 | Apple Mail | Supported | Not supported | Not supported |
 | Outlook.com | Supported | Not supported | Not supported |
