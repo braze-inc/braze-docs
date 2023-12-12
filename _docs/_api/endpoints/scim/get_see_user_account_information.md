@@ -19,9 +19,9 @@ description: "This article outlines details about the Look up an existing dashbo
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need a SCIM token. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
-{% endalert %}
 
 ## Rate limit
 

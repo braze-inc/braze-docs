@@ -21,9 +21,9 @@ This is similar to deleting a user in the **Manage Users** section of the Braze 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16 {% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need a SCIM token. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
-{% endalert %}
 
 ## Rate limit
 

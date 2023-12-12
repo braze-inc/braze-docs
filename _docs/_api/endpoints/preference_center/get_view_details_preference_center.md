@@ -18,9 +18,9 @@ description: "This article outlines details about the View details for preferenc
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6a47fd7c-2997-4832-aedb-d101a2dd03a5 {% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need an API key with the `preference_center.get` permission.
-{% endalert %}
 
 ## Rate limit
 

@@ -20,9 +20,9 @@ Each preference center URL is unique to each user.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bc750ff-068e-4391-897e-6eddca2561cd {% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `preference_center.user.get` permission.
-{% endalert %}
 
 ## Rate limit
 

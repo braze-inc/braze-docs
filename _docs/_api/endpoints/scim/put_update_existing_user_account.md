@@ -23,9 +23,9 @@ For security reasons, `userName` (email address) cannot be updated through this 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f9a1642-988e-4011-8fb8-db4340ea1ac7 {% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need a SCIM token. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
-{% endalert %}
 
 ## Rate limit
 
