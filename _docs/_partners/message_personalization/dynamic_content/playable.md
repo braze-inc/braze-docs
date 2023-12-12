@@ -18,15 +18,15 @@ The Braze and Playable integration allows you to deliver your best content (high
 
 | Requirement | Description | 
 | ----------- | ----------- |
-| Playable Account | A Playable account is required to take advantage of this partnership. If you do not already have a Playable account, [sign up here][signup].
-Video Content | Upload video files to Playable or provide video URLs from websites like Facebook, Instagram, YouTube, Twitter, TikTok, and more! |
+| Playable Account | A Playable account is required to take advantage of this partnership. If you do not already have a Playable account, sign up [here][signup].
+Video Content | Upload video files to Playable or provide video URLs from websites like Facebook, Instagram, YouTube, X (formerly Twitter), TikTok, and more. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Implementation
 
 ### Step 1: Add your video to Playable
 
-In the Playable platform, upload video files or add videos by providing a URL of your video on Facebook, Instagram, YouTube, Twitter, TikTok, etc.
+In the Playable platform, upload video files or add videos by providing a URL of your video on Facebook, Instagram, YouTube, X (formerly Twitter), TikTok, and more.
 
 ### Step 2: Copy the embed code from Playable
 

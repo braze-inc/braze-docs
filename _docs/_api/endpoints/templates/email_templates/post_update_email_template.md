@@ -22,9 +22,8 @@ All fields other than the `email_template_id` are optional, but you must specify
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#afb25494-3350-458d-932d-5bf4220049fa {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `templates.email.update` permission.
-{% endalert %}
+## Prerequisites
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `templates.email.update` permission.
 
 ## Rate limit
 
@@ -34,19 +33,19 @@ To use this endpoint, you'll need to generate an API key with the `templates.ema
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
 {
-  "email_template_id": (required, string) your email template's API Identifier,
-  "template_name": (optional, string) the name of your email template,
-  "subject": (optional, string) the email template subject line,
-  "body": (optional, string) the email template body that may include HTML,
-  "plaintext_body": (optional, string) a plaintext version of the email template body,
-  "preheader": (optional, string) the email preheader used to generate previews in some clients,
-  "tags": (optional, array of Strings) tags must already exist,
-  "should_inline_css": (optional, Boolean) one of 'true' or 'false' is expected
+  "email_template_id": (required, string) Your email template's API Identifier,
+  "template_name": (optional, string) The name of your email template,
+  "subject": (optional, string) The email template subject line,
+  "body": (optional, string) The email template body that may include HTML,
+  "plaintext_body": (optional, string) A plaintext version of the email template body,
+  "preheader": (optional, string) The email preheader used to generate previews in some clients,
+  "tags": (optional, array of Strings) Tags must already exist,
+  "should_inline_css": (optional, Boolean) If `true`, the `inline_css` feature will be applied to the template.
 }
 ```
 
@@ -68,14 +67,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/update' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "email_template_id": "email_template_id",
   "template_name": "Weekly Newsletter",
   "subject": "This Week'\''s Styles",
   "body": "Check out this week'\''s digital lookbook to inspire your outfits. Take a look at https://www.braze.com/",
   "plaintext_body": "This is the updated text within my email body and here is a link to https://www.braze.com/.",
-  "preheader": "We want you to have the best looks this Summer",
+  "preheader": "We want you to have the best looks this summer",
   "tags": ["Tag1", "Tag2"]
 }'
 ```
