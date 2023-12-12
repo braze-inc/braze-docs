@@ -26,7 +26,7 @@ Video Content | Upload video files to Playable or provide video URLs from websit
 
 ### Step 1: Add your video to Playable
 
-In the Playable platform, upload video files or add videos by providing a URL of your video on Facebook, Instagram, YouTube, Twitter, TikTok, and more.
+In the Playable platform, upload video files or add videos by providing a URL of your video on Facebook, Instagram, YouTube, X (formerly Twitter), TikTok, and more.
 
 ### Step 2: Copy the embed code from Playable
 
