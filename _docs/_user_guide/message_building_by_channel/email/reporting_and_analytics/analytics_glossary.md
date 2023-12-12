@@ -51,7 +51,7 @@ glossaries:
     description: The percentage of delivered emails that have been opened by a single user at least once. This is tracked over a 7 day period for Email.
     calculation: (Unique Opens) / (Deliveries)
   - name: "Unique Clicks"
-    description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email.
+    description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email and measured by <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>
     calculation: Count
   - name: "Unique Clicks % or Click Rate"
     description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email.
