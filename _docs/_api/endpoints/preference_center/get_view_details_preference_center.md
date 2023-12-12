@@ -20,7 +20,7 @@ description: "This article outlines details about the View details for preferenc
 
 ## Prerequisites
 
-To use this endpoint, you'll need an API key with the `preference_center.get` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `preference_center.get` permission.
 
 ## Rate limit
 
