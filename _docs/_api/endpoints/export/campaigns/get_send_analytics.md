@@ -22,9 +22,9 @@ Campaign conversions will be attributed towards the most recent `send_id` that a
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76f822a8-a13b-4bfb-b20e-72b5013dfe86 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `sends.data_series` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `sends.data_series` permission.
 
 ## Rate limit
 

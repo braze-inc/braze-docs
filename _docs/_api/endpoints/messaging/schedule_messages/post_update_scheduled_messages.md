@@ -20,9 +20,9 @@ This endpoint accepts updates to either the `schedule` or `messages` parameter o
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f61edf74-4467-4551-b9c4-a4b8d188cd7a {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `messages.schedule.update` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `messages.schedule.update` permission.
 
 ## Rate limit
 

@@ -25,6 +25,7 @@ Up to 50 user aliases may be specified per request.
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
 
 ## Prerequisites
+
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.alias.new` permission.
 
 ## Rate limit
