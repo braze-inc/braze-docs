@@ -20,7 +20,7 @@ description: "This article outlines details about the List preference centers Br
 
 ## Prerequisites
 
-To use this endpoint, you'll need an API key with the `preference_center.list` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `preference_center.list` permission.
 
 ## Rate limit
 
