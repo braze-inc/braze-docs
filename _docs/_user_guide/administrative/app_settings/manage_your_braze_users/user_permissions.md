@@ -61,7 +61,7 @@ You can manage user permissions by group or on an individual basis when editing 
 |View PII | Allows users to view the personally identifiable information fields as defined by your company within the dashboard. |
 |View User Profiles PII Compliant| Allows users to view user profiles but redacts fields your company has defined as personally identifiable information (PII). |
 |Manage Dashboard Users| Allows users to view, edit, and manage the **Company Users** page. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level. This permission doesn't allow users to delete users because only administrators can delete users. |
-|Manage Media Library Assets| Allows users to add, edit, and delete library assets.|
+|Manage Media Library Assets| Allows users to add, edit, and delete media library assets.|
 |View Usage Data| Allows users to view app usage.|
 |Import and Update User Data| Allows users to import CSV and update files of app users as well as view the User Import page. This also allows you to edit the subscription status of a user and their subscription group opt-in/opt-out rules. |
 |View Billing Details| Allows users to view subscriptions and billing. |
