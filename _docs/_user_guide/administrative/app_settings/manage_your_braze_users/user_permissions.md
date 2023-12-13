@@ -65,7 +65,7 @@ You can manage user permissions by group or on an individual basis when editing 
 |View Usage Data| Allows users to view app usage.|
 |Import and Update User Data| Allows users to import CSV and update files of app users as well as view the User Import page. This also allows you to edit the subscription status of a user and their subscription group opt-in/opt-out rules. |
 |View Billing Details| Allows users to view subscriptions and billing. |
-|Access Dev Console| Allows access to Developer Console (where you can view API keys, API campaign activity log, event user log, and internal groups for testing messages).|
+|Access Dev Console| Allows full access to the following settings and logs:<br> {::nomarkdown}<ul><li><a href='/docs/user_guide/administrative/app_settings/api_settings_tab/'>API Keys</a></li><li><a href='/docs/user_guide/administrative/app_settings/internal_groups_tab/'>Internal Groups</a></li><li><a href='/docs/user_guide/administrative/app_settings/message_activity_log_tab/'>Message Activity Log</a></li><li><a href='/docs/user_guide/administrative/app_settings/event_user_log_tab/'>Event User Log</a></li></ul>{:/}|
 |Manage External Integrations| Allows access to all tabs under **Technology Partners** and the ability to sync Braze with other platforms.|
 |Manage Apps| Allows users to edit **App Settings**.|
 |Manage Teams|Allows users to manage **Internal Teams**. The ability to select this permission depends on your contract with Braze.|
