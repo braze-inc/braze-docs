@@ -69,7 +69,7 @@ If multiple channels are utilized in a Canvas step, the rate limit will apply to
 
 For example, if your multi-channel Canvas step utilizes email and SMS in a Canvas with a rate limit of 10,000 per minute, Braze will send up to 20,000 messages each minute (10,000 email and 10,000 SMS). 
 
-All push destinations in a message step are treated as a single channel for the purposes of rate limiting.  If a multi-channel Canvas step utilizes email, iOS push, and Android push in a Canvas with a rate limit of 10,000 per minute, Braze will send up to 20,000 messages each minute (10,000 email and 10,000 combined push).
+All push destinations in a message step are treated as a single channel for the purposes of rate limiting. If a multi-channel Canvas step utilizes email, iOS push, and Android push in a Canvas with a rate limit of 10,000 per minute, Braze will send up to 20,000 messages each minute (10,000 email and 10,000 combined push).
 
 ### Delivery speed rate limiting
 
