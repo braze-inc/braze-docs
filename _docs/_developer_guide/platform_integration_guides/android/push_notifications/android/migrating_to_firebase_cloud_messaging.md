@@ -11,7 +11,7 @@ search_rank: 3
 
 # Migrating to the Firebase Cloud Messaging API
 
-> Learn how to migrate from Google's deprecated Cloud Messaging API to their fully-supported Firebase Cloud Messaging (FCM) API. For more information, see Google's [Firebase FAQ - 2023](https://firebase.google.com/support/faq#fcm-23-deprecation).
+Learn how to migrate from Google's deprecated Cloud Messaging API to their fully-supported Firebase Cloud Messaging (FCM) API. For more information, see Google's [Firebase FAQ - 2023](https://firebase.google.com/support/faq#fcm-23-deprecation).
 
 {% alert important %}
 If this is your first time setting up the push integration for Android, see [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration) instead.
@@ -27,7 +27,7 @@ Under your Android app's **Push Notification Settings**, check the number in the
 
 ![The form for "Push Notification Settings".]({% image_buster /assets/img/android/push_integration/verify-sender-id/verify-sender-id.png %})
 
-Next, open [Firebase Console](https://console.firebase.google.com/), then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
+Next, open Firebase Console, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
 
 ![The Firebase project with the "Settings" menu open.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
 
@@ -37,7 +37,7 @@ Select **Cloud Messaging**. Under **Cloud Messaging API (Legacy)**, verify the *
 
 ## Step 2: Create a service account
 
-Next, create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. On the **Service accounts** page, select **Create Service Account**.
+Next, create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to **Service Accounts**, then choose your project. On the **Service Accounts** page, select **Create Service Account**.
 
 ![A project's service account home page with "Create Service Account" highlighted.]({% image_buster /assets/img/android/push_integration/create_a_service_account/select-create-service-account.png %})
 
@@ -51,7 +51,7 @@ In the **Role** field, find and select **Firebase Cloud Messaging API Admin** fr
 
 ## Step 3: Generate JSON credentials
 
-Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. Locate the FCM service account [you created earlier](#step-2-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
+Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to **Service Accounts**, then choose your project. Locate the FCM service account [you created earlier](#step-2-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
 
 ![The project's service account homepage with the "Actions" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
 
