@@ -1,6 +1,6 @@
 ---
 nav_title: Migrating to Firebase Cloud Messaging
-article_title: Migrating to Firebase Cloud Messaging (FCM)
+article_title: Migrating to the Firebase Cloud Messaging API
 platform: Android
 page_order: 29
 description: "This article covers how to migrate from Google's deprecated Cloud Messaging API to Firebase Cloud Messaging (FCM)."
@@ -9,12 +9,12 @@ channel:
 search_rank: 3
 ---
 
-# Migrating to Firebase Cloud Messaging (FCM)
+# Migrating to the Firebase Cloud Messaging API
 
-Learn how to migrate from Google's deprecated Cloud Messaging API to their Firebase Cloud Messaging API. For more information, see Google's [Firebase FAQ - 2023](https://firebase.google.com/support/faq#fcm-23-deprecation).
+Learn how to migrate from Google's deprecated Cloud Messaging API to their fully-supported Firebase Cloud Messaging (FCM) API. For more information, see Google's [Firebase FAQ - 2023](https://firebase.google.com/support/faq#fcm-23-deprecation).
 
 {% alert important %}
-If this is your first time setting up the Android push integration, see [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration) instead.
+If this is your first time setting up the push integration for Android, see [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration) instead.
 {% endalert %}
 
 ## Step 1: Verify your Sender ID
@@ -23,15 +23,15 @@ First, open Braze, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings*
 
 ![The "Settings" menu open in Braze with "App Settings" highlighted.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
-Under your Android app's **Push Notification Settings**, check the number in the **Firebase Cloud Messaging Sender ID** field&#8212;you'll compare this Sender ID to the one in your Firebase project.
+Under your Android app's **Push Notification Settings**, check the number in the **Firebase Cloud Messaging Sender ID** field&#8212;you'll compare this to the one in your Firebase project later.
 
 ![The form for "Push Notification Settings".]({% image_buster /assets/img/android/push_integration/verify-sender-id/verify-sender-id.png %})
 
-Next, open [Firebase Console](https://console.firebase.google.com/). In your project, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
+Next, open [Firebase Console](https://console.firebase.google.com/), then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
 
 ![The Firebase project with the "Settings" menu open.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
 
-Select **Cloud Messaging**, then under **Cloud Messaging API (Legacy)**, check the number in the **Sender ID** field. Verify the Sender IDs in your Braze dashboard and Firebase project match.
+Select **Cloud Messaging**. Under **Cloud Messaging API (Legacy)**, verify the **Sender ID** matches the one listed in your Braze dashboard.
 
 ![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
@@ -45,7 +45,7 @@ Enter a service account name, ID, and description, then select **Create and cont
 
 ![The form for "Service account details."]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
 
-In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. To use a [custom role](https://cloud.google.com/iam/docs/creating-custom-roles) instead, give your role the `cloudmessaging.messages.create` permission, then choose your role from the list. When you're finished, select **Done**.
+In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. To use a [custom role](https://cloud.google.com/iam/docs/creating-custom-roles), give your role the `cloudmessaging.messages.create` permission, then choose it from the list instead. When you're finished, select **Done**.
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
@@ -85,7 +85,7 @@ Open your JSON file in a web browser or text editor. Your file should look simil
 }
 ```
 
-Copy the value assigned to `private_key` (without the quotes). Your clipboard contents should look similar to the following:
+Copy the value assigned to `private_key` (excluding the quotes). Your clipboard contents should look similar to the following:
 
 ```json
 -----BEGIN PRIVATE KEY-----MIIEvX0FAkEAoIBAQC23XvZBnMpL...8u9vY-----END PRIVATE KEY-----
