@@ -90,28 +90,64 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this is lo
 Once saved, Braze will send special instructions to the ESP in order to place the open tracking pixel at the top of all HTML emails.
   
 {% alert important %} 
-SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTTP - if your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
+SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTTP-if your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
 {% endalert %}
 
-## Include a list-unsubscribe header
+## Enable list-unsubscribe header
 
-![][00]{: style="float:right;max-width:60%;margin-left:15px;"}
+Using a list-unsubscribe header allows your recipients to unsubscribe easily from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and is not a part of the message body itself.
 
-This feature allows you to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users. This header allows email providers to include an **Unsubscribe** button when displaying an email.
+![][0]{: style="max-width:90%"}
 
-Some recipients prefer to have an unsubscribe link available in the same place for all emails, rather than having to find links in each mailing. When enabled, this feature puts a prominent unsubscribe link in the header of the email, making it easier to unsubscribe and, therefore, helps reduce the likelihood that a user would mark your email as spam. This can have a significant impact on your reputation and deliverability as an email sender.
+When a recipient clicks **Unsubscribe**, the mailbox provider sends the unsubscribe request to the destination defined in the email header.
+
+Enabling list-unsubscribe is a deliverability best practice and a requirement at some of the premier mailbox providers. It encourages end users to safely remove themselves from unwanted messages versus hitting the spam button in an email client, the latter of which is detrimental to sending reputation and email deliverability.
 
 ### How the list-unsubscribe header works
 
-When enabled, this feature is applied to the entire workspace. Braze will add a standard list-unsubscribe "mailto:" header to all eligible outgoing emails. This list-unsubscribe header is not customizable. Upon receiving a list-unsubscribe request from a user, Braze will ensure this user is unsubscribed. If there is no match, Braze will not process this request. 
+When enabled, this feature is applied to the entire workspace. Braze currently supports the list-unsubscribe “mailto:” header. Upon receiving a list-unsubscribe request from a user, Braze will ensure this user is unsubscribed. If there is no match, Braze will not process this request.
 
 ![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %}){: style="max-width:70%;" }
 
-Note that the header is not added for messages targeting all users including unsubscribed users, as these represent transactional messages which do not need an unsubscribe function.
+Starting in mid-December 2023, the list-unsubscribe header setting will be turned on by default for **new customers** in response to new sender guideline requirements from [Yahoo](https://blog.postmaster.yahooinc.com/) and [Gmail](https://support.google.com/mail/answer/81126?hl=en) for bulk senders. You can optionally disable this setting under **Email Preferences**.
 
-### Availability
+Note that the header is not automatically added for messages targeting unsubscribed users, as these represent transactional messages in Braze. 
 
-Currently, only Windows Live Hotmail and Gmail support the list-unsubscribe header. Additionally, these mailbox providers may still choose not to show the unsubscribe link if you haven't completed [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) yet, or if you are a new sender. This is because providers like Gmail won't include the unsubscribe option if they can't trust that you'll actually unsubscribe the user.
+{% alert warning %}
+If a list-unsubscribe header is set manually in the **Email Headers** for an email message, this will override the default Braze list-unsubscribe header setting if the same keys are used.
+{% endalert %}
+
+### One-click unsubscribe
+
+Using one-click unsubscribe for the list-unsubscribe header ([RFC 8058](https://datatracker.ietf.org/doc/html/rfc8058)) focuses on providing an easy way for recipients to opt-out from emails. 
+
+#### Requirements
+
+In order for one-click unsubscribe to work as expected in accordance with RFC 8058, the email sender must meet the below requirements:
+* The URL must be able to handle unsubscribe POST requests
+* The URL must be HTTPS
+* The URL must not return an HTTPS redirect. One-click unsubscribe links that go to a landing or other type of web page don't comply with RFC 8058
+* The message must have a valid DKIM signature
+
+{% alert note %}
+Gmail intends for senders to implement the one-click unsubscribe for all their outgoing commercial, promotional messages as of June 1, 2024. For more information see [Gmail’s sender guidelines](https://support.google.com/mail/answer/81126?hl=en#subscriptions&zippy=%2Crequirements-for-sending-or-more-messages-per-day:~:text=Make%20it%20easy%20to%20unsubscribe) and [Gmail’s Email Sender Guidelines FAQ](https://support.google.com/a/answer/14229414#zippy=%2Cwhat-time-range-or-duration-is-used-when-calculating-spam-rate%2Cif-the-list-header-is-missing-is-the-message-body-checked-for-a-one-click-unsubscribe-link%2Cif-unsubscribe-links-are-temporarily-unavailable-due-to-maintenance-or-other-reasons-are-messages-flagged-as-spam%2Ccan-a-one-click-unsubscribe-link-to-a-landing-or-preferences-page%2Cwhat-is-a-bulk-sender%2Chow-can-bulk-senders-make-sure-theyre-meeting-the-sender-guidelines%2Cdo-the-sender-guidelines-apply-to-messages-sent-to-google-workspace-accounts%2Cdo-the-sender-guidelines-apply-to-messages-sent-from-google-workspace-accounts%2Cwhat-happens-if-senders-dont-meet-the-requirements-in-the-sender-guidelines%2Cif-messages-are-rejected-because-they-dont-meet-the-sender-guidelines-do-you-send-an-error-message-or-other-alert%2Cwhat-happens-when-sender-spam-rate-exceeds-the-maximum-spam-rate-allowed-by-the-guidelines%2Cwhat-is-the-dmarc-alignment-requirement-for-bulk-senders%2Cif-messages-fail-dmarc-authentication-can-they-be-delivered-using-ip-allow-lists-or-spam-bypass-lists-or-will-these-messages-be-quarantined%2Ccan-bulk-senders-get-technical-support-for-email-delivery-issues%2Cdo-all-messages-require-one-click-unsubscribe:~:text=for%20mitigations.-,Unsubscribe%20links,-Do%20all%20messages). Yahoo announced an early 2024 timeline for the updating requirements. For more information refer to [More Secure, Less Spam: Enforcing Email Standards for a Better Experience](https://blog.postmaster.yahooinc.com/).<br><br>
+Braze intends to add support for one-click unsubscribe in early 2024, as well as the ability to add your "mailto:" and one-click unsubscribe URL that’s setup by the sender in the list-unsubscribe header.
+{% endalert %}
+
+#### Mailbox provider support
+
+The following table summarizes mailbox provider support for “mailto:” header, list-unsubscribe URL, and one-click unsubscribe ([RFC 8058](https://datatracker.ietf.org/doc/html/rfc8058)).
+
+| List-unsubscribe header | Mailto: header | List-unsubscribe URL | One-click unsubscribe (RFC 8058) | 
+| ----- | --- | --- | --- |
+| Gmail | Supported* | Supported | Supported |
+| Gmail Mobile | Not supported | Not supported | Not supported |
+| Apple Mail | Supported | Not supported | Not supported |
+| Outlook.com | Supported | Not supported | Not supported |
+| Yahoo! Mail | Supported* | Not supported | Supported |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+_*Yahoo and Gmail will eventually deprecate the "mailto:" header and will only support one-click._
 
 ## Append email subject lines
 
@@ -167,7 +203,7 @@ Learn more about best practices for email list management in [Managing email sub
 {% endtab %}
 {% endtabs %}
 
-[00]: {% image_buster /assets/img_archive/list_unsub_img1.png %}
+[0]: {% image_buster /assets/img_archive/list_unsub_img1.png %}
 [1]: {% image_buster /assets/img/email_settings/outbound_email.png %}
 [2]: {% image_buster /assets/img/email_settings/switch.gif %}
 [6]: https://learning.braze.com/email-open-tracking-pixel
