@@ -61,7 +61,7 @@ You can manage user permissions by group or on an individual basis when editing 
 |View PII | Allows users to view the personally identifiable information fields as defined by your company within the dashboard. |
 |View User Profiles PII Compliant| Allows users to view user profiles but redacts fields your company has defined as personally identifiable information (PII). |
 |Manage Dashboard Users| Allows users to view, edit, and manage the **Company Users** page. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level. This permission doesn't allow users to delete users because only administrators can delete users. |
-|Manage Media Library| Allows users to upload images to the library. You can still upload pictures and audio directly to a campaign without this permission.|
+|Manage Media Library Assets| Allows users to add, edit, and delete media library assets.|
 |View Usage Data| Allows users to view app usage.|
 |Import and Update User Data| Allows users to import CSV and update files of app users as well as view the User Import page. This also allows you to edit the subscription status of a user and their subscription group opt-in/opt-out rules. |
 |View Billing Details| Allows users to view subscriptions and billing. |
@@ -105,7 +105,7 @@ Each permission set can be defined for a specific group of users, such as in the
 Permission Set Name    | Permissions  
 ----------- | ---------------- 
 Developers | “Access Dev Console”
-Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br> “Manage Media Library”
+Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br> “Manage Media Library Assets”
 User Management | “Manage Dashboard Users” <br> “Manage Teams”
 {: .reset-td-br-1 .reset-td-br-2}
 
