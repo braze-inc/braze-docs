@@ -19,9 +19,11 @@ In the following example, the conditionals `connected.recommendations.size < 5` 
      {% abort_message() %}
    {% endif %}
 ```
+{% endraw %}
 
 You can also specify an abort reason, which will be saved to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). This abort reason must be a string and cannot contain Liquid.
 
+{% raw %}
 `{% abort_message('Could not get enough recommendations') %}`
 {% endraw %}
 
