@@ -23,9 +23,9 @@ First, open Braze, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings*
 
 ![The "Settings" menu open in Braze with "App Settings" highlighted.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
-Under your Android app's **Push Notification Settings**, check the number in the **Firebase Cloud Messaging Sender ID** field&#8212;you'll compare this to the one in your Firebase project later.
+Under your Android app's **Push Notification Settings**, check the number in the **Firebase Cloud Messaging Sender ID** field&#8212;you'll compare this to the one in your Firebase project next.
 
-![The form for "Push Notification Settings".]({% image_buster /assets/img/android/push_integration/verify-sender-id/verify-sender-id.png %})
+![The form for "Push Notification Settings".]({% image_buster /assets/img/android/push_integration/migration/verify-sender-id/verify-sender-id.png %})
 
 Next, open Firebase Console, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
 
@@ -67,36 +67,12 @@ Choose **JSON**, then select **Create**.
 Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location before continuing.
 {% endalert %}
 
-Open your JSON file in a web browser or text editor. Your file should look similar to the following:
-
-```json
-{
-  "type": "service_account",
-  "project_id": "fcm",
-  "private_key_id": "EALMIIEvX0FAk23XvoIBAQCZBnMp",
-  "private_key": "-----BEGIN PRIVATE KEY-----MIIEvX0FAkEAoIBAQC23XvZBnMpL...8u9vY-----END PRIVATE KEY-----",
-  "client_email": "firebase-cloud-messaging@fcm.iam.gserviceaccount.com",
-  "client_id": "1230498710982375089",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-cloud-messaging.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
-```
-
-Copy the value assigned to `private_key` (excluding the quotes). Your clipboard contents should look similar to the following:
-
-```json
------BEGIN PRIVATE KEY-----MIIEvX0FAkEAoIBAQC23XvZBnMpL...8u9vY-----END PRIVATE KEY-----
-```
-
-## Step 4: Update your credentials in Braze
+## Step 4: Upload your JSON credentials to Braze
 
 In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**.
 
 ![The "Settings" menu open in Braze with "App Settings" highlighted.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
-Because you're migrating from an existing Firebase service, you only need to update your **Firebase Cloud Messaging Server Key**. Replace the old key with the one [you copied previously](#step-3-generate-json-credentials), then select **Save**.
+Under **Push Notification Settings**, select **Upload JSON File**, then choose the file [you generated earlier](#step-3-generate-json-credentials). When you're finished, select **Save**.
 
-![The form for "Push Notification Settings" with the private key updated in the "Firebase Cloud Messaging Server Key" field.]({% image_buster /assets/img/android/push_integration/update_json_credentials/update-json-credentials-in-braze.png %})
+![The form for "Push Notification Settings" with the private key updated in the "Firebase Cloud Messaging Server Key" field.]({% image_buster /assets/img/android/push_integration/migration/upload_json_credentials/upload-json-file.png %})

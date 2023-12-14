@@ -32,7 +32,7 @@ First, you'll need to add Firebase to your Android project. For step-by-step ins
 Next, add the Cloud Messaging library to your project dependencies. In your Android project, open `build.gradle`, then add the following line to your `dependencies` block.
 
 ```gradle
-implementation "com.google.firebase:firebase-messaging:+"
+implementation "com.braze:android-sdk-ui:+"
 ```
 
 Your dependencies should look similar to the following:
@@ -40,7 +40,7 @@ Your dependencies should look similar to the following:
 ```gradle
 dependencies {
   implementation project(':android-sdk-ui')
-  implementation "com.google.firebase:firebase-messaging:+"
+  implementation "com.braze:android-sdk-ui:+"
 }
 ```
 
@@ -98,7 +98,7 @@ Select **Cloud Messaging**, then under **Firebase Cloud Messaging API (V1)**, co
 
 ![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
-Next, open your Android Studio project and use your Firebase Sender ID to enable automatic FCM token registration within your `braze.xml` or `BrazeConfig` file.
+Next, open your Android Studio project and use your Firebase Sender ID to enable automatic FCM token registration within your `braze.xml` or `BrazeConfig`.
 
 {% tabs local %}
 {% tab braze.xml %}
@@ -120,7 +120,7 @@ Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase projec
 ```
 {% endtab %}
 {% tab BrazeConfig %}
-To configure automatic FCM token registration, add the following lines to  your `BrazeConfig` file:
+To configure automatic FCM token registration, add the following lines to  your `BrazeConfig`:
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -137,7 +137,7 @@ To configure automatic FCM token registration, add the following lines to  your 
 {% endsubtab %}
 {% endsubtabs %}
 
-Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase project settings. Your `BrazeConfig` file should look similar to the following:
+Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase project settings. Your `BrazeConfig` should look similar to the following:
 
 {% subtabs global %}
 {% subtab JAVA %}
