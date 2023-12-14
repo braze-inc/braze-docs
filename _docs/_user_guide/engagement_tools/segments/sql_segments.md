@@ -29,7 +29,7 @@ You can do a manual full refresh on all SQL Segments created in either SQL edito
 ## Creating SQL Segment Extensions
 
 {% tabs local %}
-{% tab SQL Editor %}
+{% tab Full refresh %}
 
 To create a full refresh SQL Segment Extension:
 
@@ -39,29 +39,30 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 {% endalert %}
 
 {:start="2"}
-2. Click **Create New Extension** and select **SQL Editor**.<br><br>
-   ![Dropdown button on the Segment Extension page to open the SQL editor.]({% image_buster /assets/img_archive/sql_segments_create.png %}){: style="max-width:40%" }<br><br>
+2. Click **Create New Extension** and select **Full refresh**.<br><br>
+   ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
    ![SQL editor showing an example SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
 4. Save your Segment Extension.
 
 {% endtab %}
-{% tab Incremental SQL Editor %}
+{% tab Incremental refresh %}
 
-The Incremental SQL Editor allows user query aggregations to happen on a per date basis for an event within a given time frame. To create an incremental refresh SQL Segment Extension:
+The Incremental refresh SQL editor allows user query aggregations to happen on a per date basis for an event within a given time frame. To create an incremental refresh SQL Segment Extension:
 
 1. Go to **Audience** > **Segment Extensions**.
 {% alert note %}
+
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
 {% endalert %}
 
 {:start="2"}
-2. Click **Create New Extension** and select **Incremental SQL Editor**.<br><br>
-   ![Dropdown button on the Segment Extension page to open the incremental SQL editor.]({% image_buster /assets/img_archive/sql_segments_create_incremental.png %}){: style="max-width:40%" }<br><br>
+2. Click **Create New Extension** and select **Incremental refresh**.<br><br>
+   ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
    ![SQL editor showing an example incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
 4. If desired, select **Regenerate Extension Daily**.<br><br>
-   ![Checkbox to regenerate the extension daily.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %})<br><br>
+   ![Checkbox to regenerate the extension daily.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
    When selected, Braze will update segment membership each day automatically. This means that each day at midnight in your company’s time zone (with a potential delay of an hour), Braze will check for new users in your segment and automatically add them to your segment. If a Segment Extension has not been used in 7 days, Braze will automatically pause daily regeneration. An unused Segment Extension is one that is not part of a campaign or Canvas (the campaign or Canvas doesn't need to be active for the extension to be considered "used").<br><br>
 5. Save your Segment Extension.
 
