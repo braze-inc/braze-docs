@@ -9,8 +9,6 @@ channel:
 search_rank: 3
 ---
 
-{% multi_lang_include early_access_banner.md %}
-
 # Standard Android push integration
 
 > Learn how to integrate push notifications in your Android app.
@@ -24,6 +22,8 @@ If your Android push integration is already set up, and you're looking to migrat
 ## Registering for push
 
 In this section, you'll learn how to register for push using Google's Firebase Cloud Messaging (FCM) API. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample App.](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push)
+
+{% multi_lang_include firebase_cloud_messaging/early_access_banner.md %}
 
 ### Step 1: Add Firebase to your project
 

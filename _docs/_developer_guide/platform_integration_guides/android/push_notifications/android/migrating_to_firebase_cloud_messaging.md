@@ -9,11 +9,11 @@ channel:
 search_rank: 3
 ---
 
-{% multi_lang_include early_access_banner.md %}
-
 # Migrating to the Firebase Cloud Messaging API
 
-Learn how to migrate from Google's deprecated Cloud Messaging API to their fully-supported Firebase Cloud Messaging (FCM) API. For more information, see Google's [Firebase FAQ - 2023](https://firebase.google.com/support/faq#fcm-23-deprecation).
+> Learn how to migrate from Google's deprecated Cloud Messaging API to their fully-supported Firebase Cloud Messaging (FCM) API. For more information, see Google's [Firebase FAQ - 2023](https://firebase.google.com/support/faq#fcm-23-deprecation).
+
+{% multi_lang_include firebase_cloud_messaging/early_access_banner.md %}
 
 {% alert important %}
 If this is your first time setting up the push integration for Android, see [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration) instead.
