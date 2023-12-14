@@ -28,7 +28,19 @@ Go to **Audience** > **Segment Extensions**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
 {% endalert %}
 
-From the Segment Extensions table, click <i class="fas fa-plus"></i> **Create New Extension**.
+From the Segment Extensions table, click **Create New Extension**, then select your Segment Extension creation experience:
+
+- **Simple extension:** Create a Segment Extension focused on a single event by using a guided form.
+Best for when you don't want to use SQL.
+- **Start with a template:** Create a SQL segment with a customizable template using Snowflake data.
+- **Incremental refresh:** Write a Snowflake SQL segment that automatically refreshes the last 2 days of data or manually refresh as needed. Best for balancing accuracy and cost-efficiency.
+- **Full refresh:** Write a Snowflake SQL segment that recalculates the entire audience upon manual refresh. Best for when you need a complete, up-to-date view of your audience.
+
+![][20]{: style="max-width:50%"}
+
+If you select an experience that uses SQL, see [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) for further information.
+
+If you select **Simple extension**, continue to the steps below.
 
 ## Step 2: Name your Segment Extension
 
@@ -123,3 +135,4 @@ Now you can proceed as usual with [creating your segment][11].
 [17]: {% image_buster /assets/img/segment/segment_extension9.png %}
 [18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
 [19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
+[20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
