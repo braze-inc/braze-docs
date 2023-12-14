@@ -64,7 +64,7 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 
 ![][img3]{: style="max-width:75%" }
 
-#### Step 1d: Test your webhook
+#### Step 1d: Test your webhook {#step-1d}
 
 You will need to share a sample payload with your Movable Ink Client Experience team. You can generate this payload in the **Test** tab based on the payload that you have constructed.
 
@@ -82,16 +82,74 @@ To test your webhook, do the following:
 
 ### Step 2: Finalize your campaign setup
 
+#### Step 2a: Schedule your campaign
 
+When you're done composing and testing the webhook, [schedule your campaign][2]. 
+
+Braze supports scheduled, action-based, and API-triggered deliveries. [Action-based delivery][3] is usually the best fit for most behavioral event use cases. However, if there are any questions about which may make sense for your use case, discuss with your Braze and Movable Ink customer success managers.
+
+For action-based delivery:
+
+1. Specify the trigger action. This is the event that will trigger the webhook to Movable Ink.
+2. Make sure the **Schedule Delay** is set to **Immediately**. Event data should be sent to Movable Ink immediately after the event occurs, without a delay.
+3. Set the campaign duration by specifying a start time. An end time is likely not be applicable, however this can be set if required for the use case.
+
+{% alert note %}
+To make sure data is streamed to Movable Ink in real time, don't select **Send campaign to users in their local time zone**.
+{% endalert %}
+
+#### Step 2b: Specify your audience
+
+Next, determine which users you want to target for this campaign. For details, refer to [Targeting users][4].
+
+Make sure not to use A/B testing in your campaign by clearing the **Control Group** checkbox. If a control group is included, a percentage of users will not have data sent to Movable Ink. All of your audience should go to the variant rather than the control group.
+
+![][img5]
+
+#### Step 2c: Choose conversion events (optional)
+
+If desired, you can assign conversion events to this campaign within Braze.
+
+However, given that the webhook is intended just to stream data, attribution at this level is likely less useful than looking at attribution at the campaign level after the behavioral data from Braze is used to personalize content.
+
+### Step 3: Launch the campaign
+
+Review your webhook setup and launch your campaign.
 
 ## Considerations
 
-### Aligning on a UUID
+### Aligning on a unique user identifier
+
+Make sure the unique user identifier (UUID) value that you're using as your `mi_u`, is available within Braze and can be included in the event payloads sent to Movable Ink.
+
+This ensures that the behavioral events Movable Ink references when generating an image are associated with the same customer they received the behavioral events for. If the UUID value is not the same as the Braze `external_id`, the UUID must be captured and passed to Braze as an attribute or in the event properties of a Braze event to leverage this identifier.
+
+Braze tracks user behavior across multiple platforms (web, mobile app, etc.), so a single user may have several distinct anonymous IDs. These IDs can be merged into the single known Stories user profile when an `identify` event is sent to Movable Ink, as long as the `identify` event includes both an anonymous identifier and the single known identifier.
+
+Once Movable Ink receives a `user_id` for a single user, all future events for that user must include that same `user_id`.
 
 ### Sharing event payloads with Movable Ink
 
+Before setting up the connector to Movable Ink’s Customer Data API, make sure to share your event payloads with your Movable Ink Client Experience team. This allows Movable Ink to map your events to their event schema and will prevent any rejected or failed API calls.
+
+You can generate an event payload within Braze using any event properties. Generate a sample payload for a random user or by searching a specific user ID. Refer to [Step 1d](#step-1d) above for details.
+
+Share this sample payload with your Movable Ink Client Experience team. Make sure that there is no sensitive personally identifiable information in the sample payload (such as email address, phone number, or full birth dates). 
+
+To learn more about custom event properties and the expected format of data contained within properties, refer to [Custom event properties][5].
+
+## Sample payloads
+
+
+
+
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
+[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types
+[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
+[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
+[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
 [img1]: {% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}
 [img2]: {% image_buster /assets/img/movable_ink/cd_api_webhook_settings.png %}
 [img3]: {% image_buster /assets/img/movable_ink/cd_api_webhook_kvp.png %}
 [img4]: {% image_buster /assets/img/movable_ink/cd_api_webhook_response.png %}
+[img5]: {% image_buster /assets/img/movable_ink/cd_api_webhook_ab.png %}
