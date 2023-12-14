@@ -9,6 +9,8 @@ channel:
 search_rank: 3
 ---
 
+{% multi_lang_include early_access_banner.md %}
+
 # Standard Android push integration
 
 > Learn how to integrate push notifications in your Android app.

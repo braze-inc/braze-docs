@@ -9,6 +9,8 @@ channel:
 search_rank: 3
 ---
 
+{% multi_lang_include early_access_banner.md %}
+
 # Migrating to the Firebase Cloud Messaging API
 
 Learn how to migrate from Google's deprecated Cloud Messaging API to their fully-supported Firebase Cloud Messaging (FCM) API. For more information, see Google's [Firebase FAQ - 2023](https://firebase.google.com/support/faq#fcm-23-deprecation).
