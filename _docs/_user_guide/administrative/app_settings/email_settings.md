@@ -121,7 +121,7 @@ Using one-click unsubscribe for the list-unsubscribe header ([RFC 8058](https://
 
 #### Requirements
 
-Email senders using their own custom unsubscribe functionality must meet the following requirements to ensure the one-click unsubscribe URL that their set up is in accordance with RFC 8058:
+If you're sending emails using your own custom unsubscribe functionality, you must meet the following requirements to make sure the one-click unsubscribe URL that you set up is in accordance with RFC 8058:
 
 * The URL must be able to handle unsubscribe POST requests
 * The URL must be HTTPS
