@@ -51,7 +51,7 @@ glossaries:
     tags:
       - Custom attributes
   - name: Nested Custom Attributes
-    description: Attributes that are the properties of custom attributes.
+    description: Attributes that are the properties of custom attributes.<br><br>For nested custom attributes with a time data type, you can select "Day of Year" or "Time" when filtering for a particular time frame. "Day of Year" contains the month and day instead of the full timestamp. "Time" contains the full timestamp, including the year.
     tags:
       - Custom attributes
   - name: Day of Recurring Event

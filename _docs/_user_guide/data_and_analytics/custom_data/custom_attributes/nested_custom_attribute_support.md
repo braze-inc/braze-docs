@@ -30,6 +30,7 @@ Custom attribute objects can contain [data types][1], such as:
 - Booleans
 - Arrays
 - Time
+  - You can select "Day of Year" or "Time" when filtering for a particular time frame. "Day of Year" contains the month and day instead of the full timestamp. "Time" contains the full timestamp, including the year.
 - Other objects
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/)
 
