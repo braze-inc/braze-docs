@@ -81,14 +81,15 @@ This allows you to:
       ![Target users that last received any message more than 23 weeks ago, have never received a message from a campaign or Canvas step, last used these apps more than 23 weeks ago, and have used these apps exactly zero times.][2]<br><br>
 2. Set re-eligibility to be a little less than 6 months long.<br><br>
       ![Entry controls with re-eligibility turned on and the re-eligibility window set to 23 weeks.][3]<br><br>
-3. Configure the User Update step to add an attribute to each profile.<br><br>
-      ![User Update step that adds the attribute "do_not_archive": true to the user's profile.][4]
+3. Configure the User Update step to add an event to each profile.<br><br>
+      ![User Update step that adds the "do_not_archive" event to the user's profile.][4]
 {% details Sample User Update object %}
 ```json
 {
-    "attributes": [ 
+    "events": [
         {
-            "do_not_archive": true
+            "name": "do_not_archive",
+            "time": "{{ 'now' | time_zone: 'UTC' | date: '%Y-%m-%dT%H:%M:%SZ' }}"
         }
     ]
 }
