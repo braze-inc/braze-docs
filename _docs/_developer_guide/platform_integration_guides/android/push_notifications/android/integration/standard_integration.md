@@ -15,20 +15,24 @@ search_rank: 3
 
 With push notifications, you can re-engage your app users by sending time-sensitive and relevant content directly to their device screen&#8212;even if their app is closed. When you're finished integrating push for your app, be sure to check out our [push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 
+{% alert important %}
+If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/migrating_to_firebase_cloud_messaging).
+{% endalert %}
+
 ## Registering for push
 
-In this section, you'll learn how to register for push using Google's [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) solution. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample App.](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push)
+In this section, you'll learn how to register for push using Google's Firebase Cloud Messaging (FCM) API. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample App.](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push)
 
 ### Step 1: Add Firebase to your project
 
-First, you'll need to add Firebase to your Android project. For step-by-step instructions, see Google's [Firebase setup guide.][49]
+First, you'll need to add Firebase to your Android project. For step-by-step instructions, see Google's [Firebase setup guide][49].
 
 ### Step 2: Add Cloud Messaging to your dependencies
 
 Next, add the Cloud Messaging library to your project dependencies. In your Android project, open `build.gradle`, then add the following line to your `dependencies` block.
 
 ```gradle
-implementation "com.google.firebase:firebase-messaging:+"
+implementation "com.braze:android-sdk-ui:+"
 ```
 
 Your dependencies should look similar to the following:
@@ -36,13 +40,13 @@ Your dependencies should look similar to the following:
 ```gradle
 dependencies {
   implementation project(':android-sdk-ui')
-  implementation "com.google.firebase:firebase-messaging:+"
+  implementation "com.braze:android-sdk-ui:+"
 }
 ```
 
 ### Step 3: Create a service account
 
-Next, create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. On the **Service accounts** page, select **Create Service Account**.
+Next, create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to **Service Accounts**, then choose your project. On the **Service Accounts** page, select **Create Service Account**.
 
 ![A project's service account home page with "Create Service Account" highlighted.]({% image_buster /assets/img/android/push_integration/create_a_service_account/select-create-service-account.png %})
 
@@ -50,13 +54,13 @@ Enter a service account name, ID, and description, then select **Create and cont
 
 ![The form for "Service account details."]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
 
-In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. If you need to grant specific users access to your FCM service account, select **Continue**. Otherwise, select **Done**.
+In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. For more restrictive access, create a [custom role](https://cloud.google.com/iam/docs/creating-custom-roles) with the `cloudmessaging.messages.create` permission, then choose it from the list instead. When you're finished, select **Done**.
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
 ### Step 4: Generate JSON credentials
 
-Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts/project), then choose your project. Locate the FCM service account [you created earlier](#step-3-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
+Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to **Service Accounts**, then choose your project. Locate the FCM service account [you created earlier](#step-3-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
 
 ![The project's service account homepage with the "Actions" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
 
@@ -68,6 +72,10 @@ Choose **JSON**, then select **Create**. Be sure to remember where you downloade
 
 ![The form for creating a private key with "JSON" selected.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
 
+{% alert warning %}
+Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location&#8212;you'll delete your key after you upload it to Braze.
+{% endalert %}
+
 ### Step 5: Upload your JSON credentials to Braze
 
 Next, upload your JSON credentials to your Braze dashboard. In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**.
@@ -78,11 +86,15 @@ Under your Android app's **Push Notification Settings**, choose **Firebase**, th
 
 ![The form for "Push Notification Settings" with "Firebase" selected as the push provider.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/upload-json-file.png %})
 
+{% alert warning %}
+Private keys could pose a security risk if compromised. Now that your key is uploaded to Braze, delete the file [you generated previously](#step-4-generate-json-credentials).
+{% endalert %}
+
 ### Step 6: Set up automatic token registration
 
 When one of your users opt-in for push notifications, your app needs to generate an FCM token on their device before you can send them push notifications. With the Braze SDK, you can enable automatic FCM token registration for each user's device in your project's Braze configuration files.
 
-First, go to [Firebase Console](https://console.firebase.google.com/), open your project, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
+First, go to Firebase Console, open your project, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
 
 ![The Firebase project with the "Settings" menu open.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
 
@@ -90,7 +102,7 @@ Select **Cloud Messaging**, then under **Firebase Cloud Messaging API (V1)**, co
 
 ![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
-Next, open your Android Studio project and use your Firebase Sender ID to enable automatic FCM token registration within your `braze.xml` or `BrazeConfig` file.
+Next, open your Android Studio project and use your Firebase Sender ID to enable automatic FCM token registration within your `braze.xml` or `BrazeConfig`.
 
 {% tabs local %}
 {% tab braze.xml %}
@@ -112,7 +124,7 @@ Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase projec
 ```
 {% endtab %}
 {% tab BrazeConfig %}
-To configure automatic FCM token registration, add the following lines to  your `BrazeConfig` file:
+To configure automatic FCM token registration, add the following lines to  your `BrazeConfig`:
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -129,7 +141,7 @@ To configure automatic FCM token registration, add the following lines to  your 
 {% endsubtab %}
 {% endsubtabs %}
 
-Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase project settings. Your `BrazeConfig` file should look similar to the following:
+Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase project settings. Your `BrazeConfig` should look similar to the following:
 
 {% subtabs global %}
 {% subtab JAVA %}
