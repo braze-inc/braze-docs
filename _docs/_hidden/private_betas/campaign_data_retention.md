@@ -12,10 +12,11 @@ hidden: true
 Campaign interaction data refers to how a user interacts with a campaign they received (for example, when a user opens campaign A or a user receives variant A). This data can be accessed for retargeting the moment you need it.
 
 {% alert important %}
-Campaign interaction data availability will be rolling out to customers in early 2024. <br><br> Support for Canvas interaction data will come soon after that.
+Starting early 2024, unused campaign interaction data will be automatically archived for all customers according to the process outlined here. <br><br>This process will extend to Canvas interaction data in the future.
 {% endalert %}
 
 Campaigns that use retargeting filters that are retargeting by tag are not exempt from expiration. Retargeting filters that are retargeting by tag include:
+
 * Received Message from Campaign or Canvas with Tag
 * Clicked/Opened Campaign or Canvas With Tag
 * Last Received Message from Campaign or Canvas With Tag
