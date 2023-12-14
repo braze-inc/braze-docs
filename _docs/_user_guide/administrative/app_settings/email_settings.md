@@ -97,7 +97,7 @@ SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTT
 
 Using a list-unsubscribe header allows your recipients to unsubscribe easily from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and is not a part of the message body itself.
 
-![][0]{: style="max-width:90%"}
+![][0]{: style="float:right;max-width:60%;margin-left:15px;"}
 
 When a recipient clicks **Unsubscribe**, the mailbox provider sends the unsubscribe request to the destination defined in the email header.
 
@@ -108,8 +108,6 @@ Enabling list-unsubscribe is a deliverability best practice and a requirement at
 When enabled, this feature is applied to the entire workspace. Braze currently supports the list-unsubscribe “mailto:” header. Upon receiving a list-unsubscribe request from a user, Braze will ensure this user is unsubscribed. If there is no match, Braze will not process this request.
 
 ![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %}){: style="max-width:70%;" }
-
-Starting in mid-December 2023, the list-unsubscribe header setting will be turned on by default for **new customers** in response to new sender guideline requirements from [Yahoo](https://blog.postmaster.yahooinc.com/) and [Gmail](https://support.google.com/mail/answer/81126?hl=en) for bulk senders. You can optionally disable this setting under **Email Preferences**.
 
 Note that the header is not automatically added for messages targeting unsubscribed users, as these represent transactional messages in Braze. 
 
@@ -123,7 +121,8 @@ Using one-click unsubscribe for the list-unsubscribe header ([RFC 8058](https://
 
 #### Requirements
 
-In order for one-click unsubscribe to work as expected in accordance with RFC 8058, the email sender must meet the below requirements:
+If you're sending emails using your own custom unsubscribe functionality, you must meet the following requirements to make sure the one-click unsubscribe URL that you set up is in accordance with RFC 8058:
+
 * The URL must be able to handle unsubscribe POST requests
 * The URL must be HTTPS
 * The URL must not return an HTTPS redirect. One-click unsubscribe links that go to a landing or other type of web page don't comply with RFC 8058
