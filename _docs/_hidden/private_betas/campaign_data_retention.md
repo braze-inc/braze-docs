@@ -23,7 +23,7 @@ Campaigns that use retargeting filters that are retargeting by tag are not exemp
 
 ### When is campaign interaction data available?
 
-For active campaigns, interaction data is always available in real-time. If a campaign is “stopped,” it will be marked as “expired” after three months, unless it's used in retargeting filters. When expired, the campaign data will be moved to long-term storage with limited availability. 
+For active campaigns, interaction data is always available in real-time. If a campaign is "stopped," it will be marked as "expired" after three months, unless it's used in retargeting filters. When expired, the campaign data will be moved to long-term storage with limited availability. 
 
 However, this is temporary because you can restore this data by using its interaction data for retargeting. To restore your campaign, follow these steps:
 
