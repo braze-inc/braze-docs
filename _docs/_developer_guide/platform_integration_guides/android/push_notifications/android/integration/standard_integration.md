@@ -16,7 +16,7 @@ search_rank: 3
 With push notifications, you can re-engage your app users by sending time-sensitive and relevant content directly to their device screen&#8212;even if their app is closed. When you're finished integrating push for your app, be sure to check out our [push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 
 {% alert important %}
-If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to Firebase Cloud Messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/migrating_google_messaging_api).
+If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to Firebase Cloud Messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/migrating_to_firebase_cloud_messaging).
 {% endalert %}
 
 ## Registering for push
@@ -54,7 +54,7 @@ Enter a service account name, ID, and description, then select **Create and cont
 
 ![The form for "Service account details."]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
 
-In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. To use a [custom role](https://cloud.google.com/iam/docs/creating-custom-roles) instead, give your role the `cloudmessaging.messages.create` permission, then choose your role from the list. When you're finished, select **Done**.
+In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. For more restrictive access, create a [custom role](https://cloud.google.com/iam/docs/creating-custom-roles) with the `cloudmessaging.messages.create` permission, then choose it from the list instead. When you're finished, select **Done**.
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
@@ -73,7 +73,7 @@ Choose **JSON**, then select **Create**. Be sure to remember where you downloade
 ![The form for creating a private key with "JSON" selected.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
 
 {% alert warning %}
-Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location before continuing.
+Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location&#8212;you'll delete your key after you upload it to Braze.
 {% endalert %}
 
 ### Step 5: Upload your JSON credentials to Braze
@@ -85,6 +85,10 @@ Next, upload your JSON credentials to your Braze dashboard. In Braze, select <i 
 Under your Android app's **Push Notification Settings**, choose **Firebase**, then select **Upload JSON File** and upload the credentials [you generated earlier](#step-4-generate-json-credentials). When you're finished, select **Save**.
 
 ![The form for "Push Notification Settings" with "Firebase" selected as the push provider.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/upload-json-file.png %})
+
+{% alert warning %}
+Private keys could pose a security risk if compromised. Now that your key is uploaded to Braze, delete the file [you generated previously](#step-4-generate-json-credentials).
+{% endalert %}
 
 ### Step 6: Set up automatic token registration
 

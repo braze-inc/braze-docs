@@ -45,7 +45,7 @@ Enter a service account name, ID, and description, then select **Create and cont
 
 ![The form for "Service account details."]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
 
-In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. To use a [custom role](https://cloud.google.com/iam/docs/creating-custom-roles), give your role the `cloudmessaging.messages.create` permission, then choose it from the list instead. When you're finished, select **Done**.
+In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. For more restrictive access, create a [custom role](https://cloud.google.com/iam/docs/creating-custom-roles) with the `cloudmessaging.messages.create` permission, then choose it from the list instead. When you're finished, select **Done**.
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
@@ -64,7 +64,7 @@ Choose **JSON**, then select **Create**.
 ![The form for creating a private key with "JSON" selected.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
 
 {% alert warning %}
-Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location before continuing.
+Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location for now&#8212;you'll delete your key after you upload it to Braze.
 {% endalert %}
 
 ## Step 4: Upload your JSON credentials to Braze
@@ -76,3 +76,7 @@ In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Sett
 Under **Push Notification Settings**, select **Upload JSON File**, then choose the file [you generated earlier](#step-3-generate-json-credentials). When you're finished, select **Save**.
 
 ![The form for "Push Notification Settings" with the private key updated in the "Firebase Cloud Messaging Server Key" field.]({% image_buster /assets/img/android/push_integration/migration/upload_json_credentials/upload-json-file.png %})
+
+{% alert warning %}
+Private keys could pose a security risk if compromised. Now that your key is uploaded to Braze, delete the file [you generated previously](#step-4-generate-json-credentials).
+{% endalert %}
