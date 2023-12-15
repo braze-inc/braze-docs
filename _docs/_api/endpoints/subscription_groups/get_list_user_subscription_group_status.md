@@ -30,9 +30,9 @@ If you want to see examples or test this endpoint for **WhatsApp Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `subscription.status.get` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `subscription.status.get` permission.
 
 ## Rate limit
 

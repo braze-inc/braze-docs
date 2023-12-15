@@ -18,9 +18,9 @@ description: "This article outlines details about the Export daily active users 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#90a64560-65aa-4f71-a8ef-1edf49321986 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `kpi.dau.data_series` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `kpi.dau.data_series` permission.
 
 ## Rate limit
 

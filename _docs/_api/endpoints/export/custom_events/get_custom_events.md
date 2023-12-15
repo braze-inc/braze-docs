@@ -18,9 +18,9 @@ description: "This article outlines details about the Export custom events list 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `events.list` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `events.list` permission.
 
 ## Rate limit
 
