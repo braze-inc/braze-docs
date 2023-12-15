@@ -783,7 +783,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% endtab %}
 {% tab Example Payload %}
-{% subtabs global %}
+{% subtabs %}
 {% subtab Shopify Tags %}
 ```json
 {
