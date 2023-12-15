@@ -288,6 +288,12 @@ When working with nested custom attributes segmentation, you'll have access to a
 
 ![A user choosing an operator based on the data type for the nested custom attribute][7]
 
+### Filtering for Time data types
+
+When filtering a custom attribute object with a Time data type, you can choose to filter with operators under the **Day of Year** or **Time** categories when comparing the date value. 
+
+If you select an operator under the **Day of Year** category, only the month and day will be checked for comparison instead of the full timestamp of the nested custom attribute value. Selecting an operator under the **Time** category will compare the full timestamp, including the year.
+
 ### Multi-criteria segmentation
 
 Use **Multi-Criteria Segmentation** to create a segment that matches multiple criteria within a single object. This qualifies the user into the segment if they have at least one object array that matches all the criteria specified. For example, users will only match this segment if their key is not blank, and if their number is more than 0.
