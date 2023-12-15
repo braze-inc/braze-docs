@@ -18,9 +18,9 @@ description: "This article outlines details about the Export segment analytics B
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e {% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need to generate an API key with the `segments.data_series` permission.
-{% endalert %}
 
 ## Rate limit
 

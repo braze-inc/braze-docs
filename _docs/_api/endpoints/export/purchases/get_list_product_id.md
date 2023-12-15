@@ -18,9 +18,9 @@ description: "This article outlines details about the Export product IDs Braze e
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need to generate an API key with the `purchases.product_list` permission.
-{% endalert %}
 
 ## Rate limit
 

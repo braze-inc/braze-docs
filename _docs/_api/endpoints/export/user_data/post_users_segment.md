@@ -28,9 +28,9 @@ Note that a company may run at most one export per segment using this endpoint a
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need to generate an API key with the `users.export.segment` permission.
-{% endalert %}
 
 ## Rate limit
 

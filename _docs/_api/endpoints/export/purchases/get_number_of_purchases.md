@@ -18,9 +18,9 @@ description: "This article outlines details about the Export number of purchases
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6ac59282-d231-4317-88df-f7f12169b94e{% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need to generate an API key with the `purchases.quantity_series` permission.
-{% endalert %}
 
 ## Rate limit
 

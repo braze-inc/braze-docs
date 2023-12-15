@@ -18,9 +18,9 @@ description: "This article outlines details about the Export custom events analy
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bd1ab63-d1a5-4301-8d17-246cf24a178c {% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need to generate an API key with the `events.data_series` permission.
-{% endalert %}
 
 ## Rate limit
 

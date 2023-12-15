@@ -18,9 +18,9 @@ description: "This article outlines details about the Export revenue data Braze 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f6e05f9a-13c0-4d66-8caa-4a376d25749f{% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need to generate an API key with the `purchases.revenue_series` permission.
-{% endalert %}
 
 ## Rate limit
 
