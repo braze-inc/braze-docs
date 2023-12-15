@@ -62,8 +62,6 @@ If you want to get started with Braze quickly, you have the option to allow Braz
 The pre-defined script for the Braze Web SDK for this integration method is not customizable.
 {% endalert %}
 
-If you want to track additional onsite events and data outside of what’s supported within the [Shopify integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_in_braze/) or enable additional channels like content cards, see [Implementing the Web SDK directly onto your Shopify site]().
-
 #### How it works with the Shopify integration
 
 When your Shopify site is loaded, Shopify will check to see if any script tags need to be loaded to the page. During the process, the Braze Web SDK scripts will be loaded onto the pages of your store or the order status page of checkout. 
@@ -72,39 +70,45 @@ We’ll also add pre-defined scripts if you have selected product viewed, produc
 
 #### How to enable
 
-To automatically enable the Braze Web SDK scripts as part of your integration, select the supported Shopify ScriptTag events or enable in-app messaging as a channel during your [Shopify integration setup](). 
+To automatically enable the Braze Web SDK scripts as part of your integration, select the supported Shopify ScriptTag events or enable in-app messaging as a channel during your [Shopify integration setup]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/). 
 
 From the Shopify setup wizard, the events denoted with an asterisk (*) are supported by the Web SDK. If you select these events or include in-browser messaging, Braze will add the Web SDK implementation via Shopify ScriptTag to your Shopify store as part of your setup.
 
-#### What to expect after implementation
+#### Shopify email capture forms and user reconciliation 
 
-**Braze Web SDK initialization**
+Capture forms obtain identifiable customer information early in the customer’s lifecycle for downstream messaging and engagement. 
 
-The Web SDK will initialize upon session start. Braze will need to collect the `device_id` for tracking anonymous user data as other identifiers like the Shopify customer ID, email, or phone number may not be readily available for guest visitors of your Shopify store.
+The Web SDK tracks Shopify onsite behavior and anonymous users by using the `device_id`. The Braze Shopify ScriptTag integration assigns emails from Shopify email capture forms, such as a newsletter signup, to the user’s `device_id`.
 
-The `device_id` will also be used to reconcile user data to the anonymous user profile as a customer provides more identifiable information (such as an email address or phone number) during and after the checkout process.
-
-**Braze Web SDK version**
-
-The current version of the Braze Web SDK via Shopify ScriptTag integration is v4.2.
-
-**Monthly Active Users (MAU)**
-
-The Web SDK tracks sessions of your Shopify customers and guests. As a result, this will accrue as MAU within your Braze dashboard reporting and towards your MAU allotments. It is important to note that anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
-
-#### Setting up Shopify forms for user reconciliation
-
-Ecommerce brands will likely have experiences on their Shopify site to capture identifiable information from customers ahead of checkout, like email capture forms.
-
-The Web SDK tracks Shopify onsite behavior and anonymous users with the `device_id`. To confirm that email addresses are added to the anonymous user profile, add the `reconcileEmail` method to each input form on your site. This may include: 
+Typical email capture forms include: 
 - Account login page 
 - Account registration page 
 - Email capture form 
 - Newsletter signup form
 
+There are two ways to reconcile the user's email and `device_id`: 
+- Using the Braze automated email capture script 
+- Adding your own call to the Braze `reconcileEmail()` script.
+
+##### Automated email capture script (early access)
+
+The automated email capture script reconciles customer email input with the user’s `device_id`. There are several requirements for it to work properly:
+
+- The textbox where the customer inputs their email must be an Input HTML Element under a Form HTML Element named "email".
+- The email must be entered through an HTML form submission, not a web service.
+- All email input fields should be used for the customer to enter their own email address, or the wrong email may be assigned to the `device_id`. For example, an email referral for friends and family would be incorrectly treated as the customer’s email and updated on the Braze user profile.
+
+{% alert note %}
+The automated email capture script is currently in early access. Contact your customer success manager if you're interested in participating in this early access. <br><br> If your integration is already installed, it will need to be reinstalled at this point to complete its activation.
+{% endalert %}
+
+##### Calling reconcileEmail()
+
+Adding calls to `reconcileEmail()` to your Shopify storefront’s website allows you to control exactly which input fields are used to assign a customer email to their `device_id`. We suggest you use this approach if your storefront does not meet the requirements for the automated email capture script.
+
 Here are examples of how to implement the `reconcileEmail` method into your Shopify `theme.liquid` code: 
 
-##### Account and registration
+**Account and registration**
 
 1. When a user is logged into Shopify, the customer object is defined. In the `theme.liquid` file, add the following snippet in the `head tag`:
 
@@ -129,7 +133,7 @@ Here are examples of how to implement the `reconcileEmail` method into your Shop
 6. After the script loads, we call `clearInterval` so that it loads only once
 7. You can check the console to confirm the email is reconciled
 
-##### Newsletter and email capture forms
+**Newsletter and email capture forms**
 
 1. In `theme.liquid`, copy the following snippet in the `head tag`:
 
@@ -160,6 +164,26 @@ Here are examples of how to implement the `reconcileEmail` method into your Shop
 6. After the script loads, we call `clearInterval` so that it loads only once
 7. You can check the console to confirm the email is reconciled
 
+{% alert note %}
+At this time, the Braze email capture form will not create a Shopify customer. As a result, you could have Braze user profiles without associated Shopify user profiles until the customer goes through checkout or creates an account. 
+{% endalert %}
+
+#### What to expect after implementation
+
+**Braze Web SDK initialization**
+
+The Web SDK will initialize upon session start. Braze will need to collect the `device_id` for tracking anonymous user data as other identifiers like the Shopify customer ID, email, or phone number may not be readily available for guest visitors of your Shopify store.
+
+The `device_id` will also be used to reconcile user data to the anonymous user profile as a customer provides more identifiable information (such as an email address or phone number) during and after the checkout process.
+
+**Braze Web SDK version**
+
+The current version of the Braze Web SDK via Shopify ScriptTag integration is v4.2.
+
+**Monthly Active Users (MAU)**
+
+The Web SDK tracks sessions of your Shopify customers and guests. As a result, this will accrue as MAU within your Braze dashboard reporting and towards your MAU allotments. It is important to note that anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
+
 {% endtab %}
 
 {% tab theme.liquid %}
@@ -182,6 +206,100 @@ With either implementation path, make sure that your Web SDK integration include
 - Web SDK version of v4.0+
 - Web SDK initializes upon session start
 
+#### Shopify email capture forms and user reconciliation 
+
+Capture forms obtain identifiable customer information early in the customer’s lifecycle for downstream messaging and engagement. 
+
+The Web SDK tracks Shopify onsite behavior and anonymous users by using the `device_id`. The Braze Shopify ScriptTag integration assigns emails from Shopify email capture forms, such as a newsletter signup, to the user’s `device_id`.
+
+Typical email capture forms include: 
+- Account login page 
+- Account registration page 
+- Email capture form 
+- Newsletter signup form
+
+There are two ways to reconcile the user's email and `device_id`: 
+- Using the Braze automated email capture script 
+- Adding your own call to the Braze `reconcileEmail()` script.
+
+##### Automated email capture script (early access)
+
+The automated email capture script reconciles customer email input with the user’s `device_id`. There are several requirements for it to work properly:
+
+- The textbox where the customer inputs their email must be an Input HTML Element under a Form HTML Element named "email".
+- The email must be entered through an HTML form submission, not a web service.
+- All email input fields should be used for the customer to enter their own email address, or the wrong email may be assigned to the `device_id`. For example, an email referral for friends and family would be incorrectly treated as the customer’s email and updated on the Braze user profile.
+
+{% alert note %}
+The automated email capture script is currently in early access. Contact your customer success manager if you're interested in participating in this early access. <br><br> If your integration is already installed, it will need to be reinstalled at this point to complete its activation.
+{% endalert %}
+
+##### Calling reconcileEmail()
+
+Adding calls to `reconcileEmail()` to your Shopify storefront’s website allows you to control exactly which input fields are used to assign a customer email to their `device_id`. We suggest you use this approach if your storefront does not meet the requirements for the automated email capture script.
+
+Here are examples of how to implement the `reconcileEmail` method into your Shopify `theme.liquid` code: 
+
+**Account and registration**
+
+1. When a user is logged into Shopify, the customer object is defined. In the `theme.liquid` file, add the following snippet in the `head tag`:
+
+{% raw %}
+```javascript
+   <script>
+      const customerPoller = setInterval(()=>{
+        {% if customer %}
+          reconcileEmail("{{customer.email}}");
+        {% endif %}{}
+        clearInterval(customerPoller)
+      }, 2000)
+    </script>
+```
+{% endraw %}
+
+{: start="2"}
+2. We first call `setInterval` so that the BrazeSDK is loaded first
+3. We use Liquid to check if a customer object is set on the page
+4. If there is a customer, we call `reconcileEmail`
+5. We retrieve email value in the Liquid form `customer.email`
+6. After the script loads, we call `clearInterval` so that it loads only once
+7. You can check the console to confirm the email is reconciled
+
+**Newsletter and email capture forms**
+
+1. In `theme.liquid`, copy the following snippet in the `head tag`:
+
+{% raw %}
+```javascript
+    <script>
+         const emailInputPoller = setInterval(()=>{
+      if (document.getElementById('{FORM_ID}')) {
+        document.getElementById('{FORM_ID}').addEventListener("submit",
+          function() {  
+            var email = document.getElementById('{INPUT_EMAIL_ID}').value
+            reconcileEmail(email)
+          }
+        );
+      }
+      clearInterval(emailInputPoller)
+        }, 2000)
+    </script>
+```
+{% endraw %}
+
+{: start="2"}
+2. We first call `setInterval` so that the script is loaded first
+3. Replace `{FORM_ID}` with the element ID of the form you want to capture
+(such as “ContactFooter”.)
+4. Replace `{INPUT_EMAIL_ID}` with the element ID of the email input field inside the form
+5. When the form is submitted, the script will call `reconcileEmail` with the email input value
+6. After the script loads, we call `clearInterval` so that it loads only once
+7. You can check the console to confirm the email is reconciled
+
+{% alert note %}
+At this time, the Braze email capture form will not create a Shopify customer. As a result, you could have Braze user profiles without associated Shopify user profiles until the customer goes through checkout or creates an account. 
+{% endalert %}
+
 #### What to expect after integration
 
 **Braze Web SDK initialization**
@@ -197,76 +315,6 @@ The current version of the Braze Web SDK should be v4.0+.
 **Monthly Active Users (MAU)**
 
 The Web SDK tracks the sessions of your Shopify customers and guests. As a result, this will accrue as MAU within your Braze dashboard reporting and towards your MAU allotments. It is important to note that anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
-
-#### Setting up Shopify forms for user reconciliation
-
-Ecommerce brands will likely have experiences on their Shopify site to capture identifiable information from customers ahead of checkout, like email capture forms.
-
-The Web SDK tracks Shopify onsite behavior and anonymous users with the `device_id`. To confirm that email addresses are added to the anonymous user profile, add the `reconcileEmail` method to each input form on your site. This may include: 
-- Account login page 
-- Account registration page 
-- Email capture form 
-- Newsletter signup form
-
-Here are examples of how you would implement the `reconcileEmail` method into your Shopify `theme.liquid` code: 
-
-##### Account and registration
-
-1. When a user is logged into Shopify, the customer object is defined. In the `theme.liquid` file add the following snippet in the `head tag`:
-
-{% raw %}
-```javascript
-<script>
-  const customerPoller = setInterval(()=>{
-    {% if customer %}
-      reconcileEmail("{{ customer.email }}");
-    {% endif %}
-    clearInterval(customerPoller)
-  }, 2000)
-</script>
-
-```
-{% endraw %}
-
-{: start="2"}
-2. We first call `setInterval` so that the BrazeSDK is loaded first.
-3. We use Liquid to check if a customer object is set on the page.
-4. If there is a customer, we call `reconcileEmail`.
-5. We retrieve email value in the Liquid form `customer.email`.
-6. After the script loads, we call `cleatInterval` so that it loads only once.
-7. You can check the console to confirm the email is reconciled.
-
-##### Newsletter and email capture forms
-
-1. In `theme.liquid` copy the following snippet in the `head tag`:
-
-{% raw %}
-```javascript
-  <script>
-         const emailInputPoller = setInterval(()=>{
-      if (document.getElementById('{FORM_ID}')) {
-        document.getElementById('{FORM_ID}').addEventListener("submit",
-          function() {  
-            var email = document.getElementById('{INPUT_EMAIL_ID}').value
-            reconcileEmail(email)
-          }
-        );
-      }
-      clearInterval(emailInputPoller)
-        }, 2000)
-  </script>
-
-```
-{% endraw %}
-
-{: start="2"}
-2. We first call `setInterval` so that the script is loaded first.
-3. Replace `{FORM_ID}` with the element ID of the form you want to capture
-(such as “ContactFooter”).
-4. Replace `{INPUT_EMAIL_ID}` with the element ID of the email input field inside the form.
-5. When the form is submitted, the script will call `reconcileEmail` with the email input value.
-6. After the script loads, we call `clearInterval` so that it loads only once.
-7. You can check the console to confirm the email is reconciled.
 
 {% endtab %}
 {% tab Headless Shopify site %}
