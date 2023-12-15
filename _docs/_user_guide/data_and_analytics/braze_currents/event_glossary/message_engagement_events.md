@@ -1931,6 +1931,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "subscription_group_id": (required, string) ID of the subscription group,
   "subscription_status": (required, string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed',
+  "pending_double_opt_in": ( , ) ,
   "channel": (optional, string) either 'sms', 'email', or 'whats_app',
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
