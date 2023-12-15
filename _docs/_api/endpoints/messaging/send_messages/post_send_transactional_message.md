@@ -27,9 +27,9 @@ Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cec874e1-fa51-42a6-9a8d-7fc57d6a63bc {% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need to generate an API key with the `transactional.send` permission.
-{% endalert %}
 
 ## Rate limit
 

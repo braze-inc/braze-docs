@@ -944,9 +944,23 @@ validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/experiment
 
 validurls['/docs/help/release_notes/2021/12_14_21/'] = '/docs/help/release_notes/2021/december/';
 
+
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify#prerequisites'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/#requirements';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/#shopify-setup-within-braze'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify_backfill/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/Shopify_Features/shopify_backfill/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Using_Shopify/shopify_data_in_braze/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Shopify_Features/shopify_catalogs/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/#troubleshooting/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Shopify_Features/shopify_catalogs/#troubleshooting/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/back_in_stock/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Shopify_Features/shopify_catalogs/back_in_stock/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_in_braze/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Using_Shopify/shopify_data_in_braze/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Using_Shopify/use_cases/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/scripttag_web_sdk_integration/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/';
+
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/';
 validurls['/docs/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/macOS/initial_sdk_setup/';
 validurls['/docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/initial_sdk_setup/';
+
 
 validurls['/docs/developer_guide/platform_integration_guides/ios/advanced_use_cases/beacon_integration/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/advanced_use_cases/beacon_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/advanced_use_cases/fine_network_traffic_control/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/advanced_use_cases/fine_network_traffic_control/';
