@@ -138,8 +138,219 @@ Share this sample payload with your Movable Ink Client Experience team. Make sur
 
 To learn more about custom event properties and the expected format of data contained within properties, refer to [Custom event properties][5].
 
+### Known versus anonymous users
+
+In Braze, events can be recorded under an anonymous user profile. Which identifiers are linked to the user profile during event logging depends on how the user was created (through Braze SDK or APIs) and their current stage in the user lifecycle.
+
+#### Only forwarding Braze events for known users
+
+In your webhook campaign, use the `External User ID` filter to target only users that have an `external_id` with the filter `External User ID` `is not blank`.
+
+#### Forwarding Braze events for anonymous and known users
+
+If you want to forward Braze events from anonymous users (users before an `external_id` is assigned to their profile), you'll need to decide which identifier to use as the `anonymous_id` for Movable Ink until an `external_id` becomes available. Choose an `anonymous_id` that will remain constant on your Braze user profile. You can use Liquid logic in the webhook body to decide whether to pass an `anonymous_id` or a `user_id`.
+
+For more, refer to the example webhooks under [sample payloads](#sample-payloads).
+
 ## Sample payloads
 
+### Product View Event
+
+{% tabs %}
+{% tab Example request %}
+
+```
+curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/{{key}}' \
+--header 'Authorization: Basic TUlBdXN0RmQ4anlka3B4YTBaTU51SW5jRA==' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "anonymous_id": "123-abc-678",
+ "event": "product_viewed",
+ "properties": {
+   "categories": [
+           {
+               "id": "Bathroom",
+               "url": "https://example.com/cat/bathroom"
+           }
+       ],
+   "meta": {
+     "color": "green"
+   },
+   "title": "All-Purpose Cleaning Wipes",
+   "price": 1.99,
+   "id": "56544",
+   "url": "https://www.example.com/variants_id/5f08cb918dcc595aa74b0fbc"
+ },
+ "timestamp": 1257894000000,
+ "timezone": "America/New_York",
+ "type": "track",
+ "user_id": "5c3aa83113dd490100d3d8d7"'
+```
+
+{% endtab %}
+{% tab Example webhook %}
+
+In this example, a hashed email address is used as the `anonymous_id` for users who do not have an `external_id`.
+
+{% raw %}
+
+```liquid
+// converts the timestamp of "now" to seconds since 1970 and assigns it to a local variable "timestamp
+{% assign timestamp = "now" | date: "%s"  %}
+
+// example of md5 hashing the email address to use as the anonymous_id
+{% assign anon_id = {{${email_address}}} | md5  %}
+
+// condition logic to determine which identifier to use. If an external_id is available use that, otherwise use the anonymous_id
+{% if {{${user_id}}} %}
+{% capture user_identifier %}"user_id": "{{${user_id}}}"{% endcapture %}
+{% else %}
+{% capture user_identifier %}"anonymous_id": "{{anon_id}}"{% endcapture %}
+{% endif %}
+
+{
+ {{user_identifier}}
+ "event": "product_viewed",
+ "properties": {
+   "categories": [
+           {
+               "id": "{{event_properties.${categories}[0].id}}",
+               "url": "{{event_properties.${categories}[0].url}}"
+           }
+       ],
+   "meta": {
+     "color": "{{event_properties.${meta}.color}}"
+   },
+   "title": "{{event_properties.${title}}}",
+   "price": "{{event_properties.${price}}}",
+   "id": "{{event_properties.${id}}}",
+   "url": "{{event_properties.${url}}}"
+ },
+ "timestamp": "{{timestamp}}",
+ "timezone": "{{${time_zone}}}",
+ "type": "track",
+}
+
+```
+
+{% endraw %}
+{% endtab %}
+{% endtabs %}
+
+### Category View Event
+
+{% tabs %}
+{% tab Example request %}
+
+```
+
+```
+
+{% endtab %}
+{% tab Example webhook %}
+
+{% raw %}
+
+```liquid
+
+```
+
+{% endraw %}
+
+{% endtab %}
+{% endtabs %}
+
+### Cart Add Event
+
+{% tabs %}
+{% tab Example request %}
+
+```
+
+```
+
+{% endtab %}
+{% tab Example webhook %}
+
+{% raw %}
+
+```liquid
+
+```
+
+{% endraw %}
+
+{% endtab %}
+{% endtabs %}
+
+### Product Search Event
+
+{% tabs %}
+{% tab Example request %}
+
+```
+
+```
+
+{% endtab %}
+{% tab Example webhook %}
+
+{% raw %}
+
+```liquid
+
+```
+
+{% endraw %}
+
+{% endtab %}
+{% endtabs %}
+
+### Conversion Event
+
+{% tabs %}
+{% tab Example request %}
+
+```
+
+```
+
+{% endtab %}
+{% tab Example webhook %}
+
+{% raw %}
+
+```liquid
+
+```
+
+{% endraw %}
+
+{% endtab %}
+{% endtabs %}
+
+### Identify Event
+
+{% tabs %}
+{% tab Example request %}
+
+```
+
+```
+
+{% endtab %}
+{% tab Example webhook %}
+
+{% raw %}
+
+```liquid
+
+```
+
+{% endraw %}
+
+{% endtab %}
+{% endtabs %}
 
 
 
