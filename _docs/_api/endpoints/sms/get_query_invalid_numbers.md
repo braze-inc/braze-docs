@@ -19,7 +19,7 @@ description: "This article outlines details about Query invalid phone numbers Br
 
 ## Prerequisites
 
-To use this endpoint, you'll need to generate an API key with the `sms.invalid_phone_numbers` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `sms.invalid_phone_numbers` permission.
 
 ## Rate limit
 

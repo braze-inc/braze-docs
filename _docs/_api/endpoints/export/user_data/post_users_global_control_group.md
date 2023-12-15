@@ -22,7 +22,7 @@ User data is exported as multiple files of user JSON objects separated by new li
 
 ## Prerequisites
 
-To use this endpoint, you'll need to generate an API key with the `users.export.global_control_group` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `users.export.global_control_group` permission.
 
 ## Rate limit
 

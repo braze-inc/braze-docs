@@ -22,7 +22,7 @@ This can be used to re-validate phone numbers after they have been marked as inv
 
 ## Prerequisites
 
-To use this endpoint, you'll need to generate an API key with the `sms.invalid_phone_numbers.remove` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `sms.invalid_phone_numbers.remove` permission.
 
 ## Rate limit
 

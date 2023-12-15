@@ -30,7 +30,7 @@ Note that a company may run at most one export per segment using this endpoint a
 
 ## Prerequisites
 
-To use this endpoint, you'll need to generate an API key with the `users.export.segment` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `users.export.segment` permission.
 
 ## Rate limit
 

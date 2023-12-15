@@ -30,7 +30,7 @@ If you want to see examples or test this endpoint for **WhatsApp Groups**:
 
 ## Prequisites
 
-To use this endpoint, you'll need to generate an API key with the `subscription.groups.get` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `subscription.groups.get` permission.
 
 ## Rate limit
 

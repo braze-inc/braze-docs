@@ -22,7 +22,8 @@ The segments are returned in groups of 100 sorted by time of creation (oldest to
 
 ## Prerequisites
 
-To use this endpoint, you'll need to generate an API key with the `segments.list` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `segments.list` permission.
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

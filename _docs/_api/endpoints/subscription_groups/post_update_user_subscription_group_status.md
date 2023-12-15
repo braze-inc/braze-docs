@@ -27,7 +27,7 @@ If you want to see examples or test this endpoint for **SMS Subscription Groups*
 
 ## Prerequisites
 
-To use this endpoint, you'll need to generate an API key with the `subscription.status.set` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `subscription.status.set` permission.
 
 ## Rate limit
 

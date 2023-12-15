@@ -20,7 +20,7 @@ description: "This article outlines details about the Export custom events list 
 
 ## Prerequisites
 
-To use this endpoint, you'll need to generate an API key with the `events.list` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `events.list` permission.
 
 ## Rate limit
 
