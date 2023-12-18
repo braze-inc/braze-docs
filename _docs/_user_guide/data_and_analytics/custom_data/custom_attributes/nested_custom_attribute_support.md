@@ -30,6 +30,7 @@ Custom attribute objects can contain [data types][1], such as:
 - Booleans
 - Arrays
 - Time
+  - When filtering a nested time custom attribute, you can choose to filter based on "Day of Year" or "Time". "Day of Year" will check only the month and day for comparison. "Time" will compare the full timestamp, including the year.
 - Other objects
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/)
 
@@ -286,6 +287,12 @@ After adding a path to your property, click **Validate** to verify that the valu
 When working with nested custom attributes segmentation, you'll have access to a new comparator grouped by data type. For example, since `play_analytics.count` is a number, you can select a comparator under the **Number** category.
 
 ![A user choosing an operator based on the data type for the nested custom attribute][7]
+
+### Filtering for Time data types
+
+When filtering a nested time custom attribute, you can choose to filter with operators under the **Day of Year** or **Time** categories when comparing the date value. 
+
+If you select an operator under the **Day of Year** category, only the month and day will be checked for comparison instead of the full timestamp of the nested custom attribute value. Selecting an operator under the **Time** category will compare the full timestamp, including the year.
 
 ### Multi-criteria segmentation
 
