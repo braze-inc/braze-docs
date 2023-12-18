@@ -24,9 +24,8 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 |---|---|
 | Movable Ink account | A Movable Ink account is required to take advantage of this partnership. |
 | Movable Ink API credentials | Movable Ink's Solutions team will generate API credentials for you. The API credentials consist of:{::nomarkdown}<ul><li>An endpoint URL (where the data will be sent to)</li><li>Username and password (used to authenticate the API)</li></ul>{:/} If desired, Movable Ink can supply the username and password as a base64-encoded value to be used as a basic authorization header value. |
-| Behavioral event payloads | |
-| Creative assets | |
-| Business logic | |
+| Behavioral event payloads | You will need to share your event payloads with your Movable Ink Client Experience team. See [Sharing event payloads](#event-payloads) with Movable Ink for details. |
+| Creative assets and business logic | You will need to share creative assets with Movable Ink, including Adobe Photoshop (PSD) files directing Movable Ink on how to build the block and a fallback image. You will also need to provide business logic for how and when to display the partner-activated content block. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -128,7 +127,7 @@ Braze tracks user behavior across multiple platforms (web, mobile app, etc.), so
 
 Once Movable Ink receives a `user_id` for a single user, all future events for that user must include that same `user_id`.
 
-### Sharing event payloads with Movable Ink
+### Sharing event payloads with Movable Ink {#event-payloads}
 
 Before setting up the connector to Movable Ink’s Customer Data API, make sure to share your event payloads with your Movable Ink Client Experience team. This allows Movable Ink to map your events to their event schema and will prevent any rejected or failed API calls.
 
@@ -156,37 +155,42 @@ For more, refer to the example webhooks under [sample payloads](#sample-payloads
 
 ### Product View Event
 
-{% tabs %}
+{% tabs local %}
 {% tab Example request %}
+
+{% raw %}
 
 ```
 curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/{{key}}' \
---header 'Authorization: Basic TUlBdXN0RmQ4anlka3B4YTBaTU51SW5jRA==' \
+--header 'Authorization: Basic {{authorization}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
- "anonymous_id": "123-abc-678",
- "event": "product_viewed",
- "properties": {
-   "categories": [
-           {
-               "id": "Bathroom",
-               "url": "https://example.com/cat/bathroom"
-           }
-       ],
-   "meta": {
-     "color": "green"
-   },
-   "title": "All-Purpose Cleaning Wipes",
-   "price": 1.99,
-   "id": "56544",
-   "url": "https://www.example.com/variants_id/5f08cb918dcc595aa74b0fbc"
- },
- "timestamp": 1257894000000,
- "timezone": "America/New_York",
- "type": "track",
- "user_id": "5c3aa83113dd490100d3d8d7"'
+  "anonymous_id": "123-abc-678",
+  "event": "product_viewed",
+  "properties": {
+    "categories": [
+      {
+        "id": "Bathroom",
+        "url": "https://example.com/cat/bathroom"
+      }
+    ],
+    "meta": {
+      "color": "green"
+    },
+    "title": "All-Purpose Cleaning Wipes",
+    "price": 1.99,
+    "id": "56544",
+    "url": "https://www.example.com/variants_id/5f08cb918dcc595aa74b0fbc"
+  },
+  "timestamp": 1257894000000,
+  "timezone": "America/New_York",
+  "type": "track",
+  "user_id": "5c3aa83113dd490100d3d8d7"
+}'
+
 ```
 
+{% endraw %}
 {% endtab %}
 {% tab Example webhook %}
 
@@ -195,13 +199,13 @@ In this example, a hashed email address is used as the `anonymous_id` for users 
 {% raw %}
 
 ```liquid
-// converts the timestamp of "now" to seconds since 1970 and assigns it to a local variable "timestamp
-{% assign timestamp = "now" | date: "%s"  %}
+// Converts the timestamp of "now" to seconds since 1970 and assigns it to a local variable "timestamp"
+{% assign timestamp = "now" | date: "%s" %}
 
-// example of md5 hashing the email address to use as the anonymous_id
-{% assign anon_id = {{${email_address}}} | md5  %}
+// Example of md5 hashing the email address to use as the anonymous_id
+{% assign anon_id = {{${email_address}}} | md5 %}
 
-// condition logic to determine which identifier to use. If an external_id is available use that, otherwise use the anonymous_id
+// Condition logic to determine which identifier to use. If an external_id is available use that, otherwise use the anonymous_id
 {% if {{${user_id}}} %}
 {% capture user_identifier %}"user_id": "{{${user_id}}}"{% endcapture %}
 {% else %}
@@ -209,26 +213,26 @@ In this example, a hashed email address is used as the `anonymous_id` for users 
 {% endif %}
 
 {
- {{user_identifier}}
- "event": "product_viewed",
- "properties": {
-   "categories": [
-           {
-               "id": "{{event_properties.${categories}[0].id}}",
-               "url": "{{event_properties.${categories}[0].url}}"
-           }
-       ],
-   "meta": {
-     "color": "{{event_properties.${meta}.color}}"
-   },
-   "title": "{{event_properties.${title}}}",
-   "price": "{{event_properties.${price}}}",
-   "id": "{{event_properties.${id}}}",
-   "url": "{{event_properties.${url}}}"
- },
- "timestamp": "{{timestamp}}",
- "timezone": "{{${time_zone}}}",
- "type": "track",
+  {{user_identifier}}
+  "event": "product_viewed",
+  "properties": {
+    "categories": [
+      {
+        "id": "{{event_properties.${categories}[0].id}}",
+        "url": "{{event_properties.${categories}[0].url}}"
+      }
+    ],
+    "meta": {
+      "color": "{{event_properties.${meta}.color}}"
+    },
+    "title": "{{event_properties.${title}}}",
+    "price": "{{event_properties.${price}}}",
+    "id": "{{event_properties.${id}}}",
+    "url": "{{event_properties.${url}}}"
+  },
+  "timestamp": "{{timestamp}}",
+  "timezone": "{{${time_zone}}}",
+  "type": "track",
 }
 
 ```
@@ -239,19 +243,55 @@ In this example, a hashed email address is used as the `anonymous_id` for users 
 
 ### Category View Event
 
-{% tabs %}
+{% tabs local %}
 {% tab Example request %}
 
-```
+{% raw %}
 
 ```
+curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/{{key}}' \
+--header 'Authorization: Basic {{authorization}}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "anonymous_id": "123-abc-678",
+  "event": "category_viewed",
+  "properties": {
+    "id": "bathroom-1",
+    "title": "Bathroom Stuff",
+    "url": "https://www.example.com/categories/bathroom"
+  },
+  "timestamp": 1257894000000,
+  "timezone": "America/New_York",
+  "type": "track",
+  "user_id": "5c3aa83113dd490100d3d8d7"
+}'
+```
+
+{% endraw %}
 
 {% endtab %}
 {% tab Example webhook %}
 
+This example shows a webhook tracking events for only known users (users with an `external_id`).
+
 {% raw %}
 
 ```liquid
+// Converts the timestamp of "now" to seconds since 1970 and assigns it to a local variable "timestamp"
+{% assign timestamp = "now" | date: "%s" %}
+
+{
+  "event": "category_viewed",
+  "properties": {
+    "id": "{{event_properties.${id}}}",
+    "title": "{{event_properties.${title}}}",
+    "url": "{{event_properties.${url}}}"
+  },
+  "timestamp": "{{timestamp}}",
+  "timezone": "{{${time_zone}}}",
+  "type": "track",
+  "user_id": "{{${user_id}}}"
+}
 
 ```
 
@@ -262,13 +302,41 @@ In this example, a hashed email address is used as the `anonymous_id` for users 
 
 ### Cart Add Event
 
-{% tabs %}
+{% tabs local %}
 {% tab Example request %}
 
-```
+{% raw %}
 
 ```
+curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/{{key}}' \
+--header 'Authorization: Basic {{authorization}}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "anonymous_id": "123-abc-678",
+  "event": "product_added",
+  "properties": {
+    "categories": [
+      {
+        "id": "Bathroom",
+        "url": "https://example.com/cat/bathroom"
+      }
+    ],
+    "meta": {
+      "color": "green"
+    },
+    "title": "All-Purpose Cleaning Wipes",
+    "price": 1.99,
+    "id": "56544",
+    "url": "https://www.example.com/variants_id/5f08cb918dcc595aa74b0fbc"
+  },
+  "timestamp": 1257894000000,
+  "timezone": "America/New_York",
+  "type": "track",
+  "user_id": "5c3aa83113dd490100d3d8d7"
+}'
+```
 
+{% endraw %}
 {% endtab %}
 {% tab Example webhook %}
 
@@ -285,13 +353,30 @@ In this example, a hashed email address is used as the `anonymous_id` for users 
 
 ### Product Search Event
 
-{% tabs %}
+{% tabs local %}
 {% tab Example request %}
 
-```
+{% raw %}
 
 ```
+curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/{{key}}' \
+--header 'Authorization: Basic {{authorization}}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "anonymous_id": "123-abc-678",
+  "event": "product_searched",
+  "properties": {
+    "query": "cleaners",
+    "url": "https://www.example.com/search?q=cleaners"
+  },
+  "timestamp": 1257894000000,
+  "timezone": "America/New_York",
+  "type": "track",
+  "user_id": "5c3aa83113dd490100d3d8d7"
+}'
+```
 
+{% endraw %}
 {% endtab %}
 {% tab Example webhook %}
 
@@ -308,19 +393,99 @@ In this example, a hashed email address is used as the `anonymous_id` for users 
 
 ### Conversion Event
 
-{% tabs %}
+{% tabs local %}
 {% tab Example request %}
-
-```
-
-```
-
-{% endtab %}
-{% tab Example webhook %}
 
 {% raw %}
 
-```liquid
+```
+curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/{{key}}' \
+--header 'Authorization: Basic {{authorization}}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "anonymous_id": "123-abc-678",
+  "event": "order_completed",
+  "context": {
+    "campaign": {
+      "rules_pic_key": "rules_pic_key"
+    }
+  },
+  "properties": {
+    "id": "1238790",
+    "products": [
+      {
+        "title": "The Desk to Dinner Shirt",
+        "price": 98,
+        "quantity": 1,
+        "id": "27295-WT594-LXREG",
+        "url": "http://www.example.com/products/shirts/desk-to-dinner"
+      },
+      {
+        "title": "Tech Short Sleeve Shirt",
+        "price": 70,
+        "quantity": 1,
+        "id": "23825-WT368-LXREG",
+        "url": "http://www.example.com/products/shirts/tech-short-sleeve"
+      },
+      {
+        "title": "Stretch Washed Chinos",
+        "price": 10.05,
+        "quantity": 2,
+        "id": "17408-OL001-33X32",
+        "url": "http://www.example.com/products/pants/stretch-washed-chinos"
+      }
+    ],
+    "revenue": 188.10
+  },
+  "timestamp": 1257894000000,
+  "timezone": "America/New_York",
+  "type": "track",
+  "user_id": "2fef6644-abcd-4b73-9ccd-f46b72ac1b70"
+}'
+
+```
+
+{% endraw %}
+{% endtab %}
+{% tab Example webhook %}
+
+The following is a sample payload for purchases at the order level.
+
+{% raw %}
+
+```
+
+POST https://YOUR_REST_API_URL/users/track
+Content-Type: application/json
+Authorization: BASIC AUTH
+
+{
+  "purchases": [
+    {
+      "external_id": "user1",
+      "app_id": "11ae5b4b-2445-4440-a04f-bf537764c9ad",
+      "product_id": "Completed Order",
+      "currency": "USD",
+      "price": 219.98,
+      "time": "2013-07-16T19:20:30+01:00",
+      "properties": {
+        "products": [
+          {
+            "name": "Monitor",
+            "category": "Gaming",
+            "product_amount": 19.99
+          },
+          {
+            "name": "Gaming Keyboard",
+            "category": "Gaming",
+            "product_amount": 199.99
+          }
+        ]
+      }
+    }
+  ]
+}
+
 
 ```
 
@@ -331,19 +496,46 @@ In this example, a hashed email address is used as the `anonymous_id` for users 
 
 ### Identify Event
 
-{% tabs %}
+{% tabs local %}
 {% tab Example request %}
 
-```
+{% raw %}
 
 ```
+curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/{{key}}' \
+--header 'Authorization: Basic {{authorization}}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "anonymous_id": "jg0iq5gd30dqpwn8zmx05p06mzjmjir4r8",
+  "timestamp": 1257894000000,
+  "timezone": "America/New_York",
+  "type": "identify",
+  "user_id": "mycustomerid123"
+}'
+```
 
+{% endraw %}
 {% endtab %}
 {% tab Example webhook %}
+
+In this example, a hashed email address is used as the `anonymous_id` for users who do not have an `external_id`.
 
 {% raw %}
 
 ```liquid
+// Converts the timestamp of "now" to seconds since 1970 and assigns it to a local variable "timestamp"
+{% assign timestamp = "now" | date: "%s" %}
+
+// Example of md5 hashing the email address to use as the anonymous_id
+{% assign anon_id = {{${email_address}}} | md5 %}
+
+{
+  "anonymous_id": "{{anon_id}}",
+  "timestamp": "{{timestamp}}",
+  "timezone": "{{${time_zone}}}",
+  "type": "identify",
+  "user_id": "{{${user_id}}}"
+}
 
 ```
 
