@@ -51,7 +51,7 @@ glossaries:
     tags:
       - Custom attributes
   - name: Nested Custom Attributes
-    description: Attributes that are the properties of custom attributes.<br><br>When filtering a custom attribute object with a Time data type, you can choose to filter based on "Day of Year" or "Time" when comparing the date value. If you select "Day of Year", only the month and day will be checked for comparison instead of the full timestamp of the nested custom attribute value. Selecting "Time" will compare the full timestamp, including the year.
+    description: Attributes that are the properties of custom attributes.<br><br>When filtering a custom attribute object with a Time data type, you can choose to filter based on "Day of Year" or "Time". "Day of Year" will check only the month and day for comparison. "Time" will compare the full timestamp, including the year.
     tags:
       - Custom attributes
   - name: Day of Recurring Event
