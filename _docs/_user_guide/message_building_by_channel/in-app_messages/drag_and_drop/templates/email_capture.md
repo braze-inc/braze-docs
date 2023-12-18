@@ -55,7 +55,7 @@ If the user enters an email address that includes any unaccepted special charact
 We recommend including opt-in language and links to your brand’s privacy policy and terms and conditions in your message. We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes. Be sure to work with your legal team to develop language that is tailored to your specific brand.
 
 {% alert note %}
-Deliverability best practices often exceed legal requirements, and our recommendation is to always obtain explicit consent to send email and allow users to easily decline.
+Deliverability best practices often exceed legal requirements, and our recommendation is to always obtain explicit consent to send emails and allow users to easily decline.
 {% endalert %}
 
 ### Step 4: Style your message
