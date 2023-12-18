@@ -50,7 +50,7 @@ Navigate to the **Test** tab to preview and send an SMS to [content test groups]
 Make sure to save the campaign or Canvas before sending a test message to receive the shortened URL that will be dispatched in your message. If the campaign or Canvas is not saved before a test send, the test send will contain a placeholder URL.
 
 {% alert important %}
-If a draft is created within an active Canvas, a shortened URL will not be generated. The actual shortened URL will be generated when the Canvas draft is promoted to active.
+If a draft is created within an active Canvas, a shortened URL will not be generated. The actual shortened URL will be generated when the Canvas draft is made active.
 {% endalert %}
 
 ![][2]
