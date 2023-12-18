@@ -290,7 +290,7 @@ When working with nested custom attributes segmentation, you'll have access to a
 
 ### Filtering for Time data types
 
-When filtering a custom attribute object with a Time data type, you can choose to filter with operators under the **Day of Year** or **Time** categories when comparing the date value. 
+When filtering a nested time custom attribute, you can choose to filter with operators under the **Day of Year** or **Time** categories when comparing the date value. 
 
 If you select an operator under the **Day of Year** category, only the month and day will be checked for comparison instead of the full timestamp of the nested custom attribute value. Selecting an operator under the **Time** category will compare the full timestamp, including the year.
 
