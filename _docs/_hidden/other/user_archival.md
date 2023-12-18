@@ -84,6 +84,8 @@ This allows you to:
 3. Configure the User Update step to add an event to each profile.<br><br>
       ![User Update step that adds the "do_not_archive" event to the user's profile.][4]
 {% details Sample User Update object %}
+
+{% raw %}
 ```json
 {
     "events": [
@@ -94,4 +96,6 @@ This allows you to:
     ]
 }
 ```
+{% endraw %}
+
 {% enddetails %}
