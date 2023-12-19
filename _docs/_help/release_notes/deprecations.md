@@ -39,13 +39,13 @@ Support for Grouparoo has been discontinued as of April 2022.
 
 **March 24, 2022**: The Braze Windows SDK is deprecated, and no new Windows apps can be created in the Braze dashboard.<br>
 **September 15, 2022**: No new messages can be sent to Windows apps. Existing messages and data collection are unaffected.<br>
-**January 15, 2023**: Braze will no longer serve messages or collect data from Windows apps.
+**January 15, 2023 or later**: Braze will no longer serve messages or collect data from Windows apps.
 
 ### Baidu push integration
 
 **March 24, 2022**: The Braze Baidu push integration is deprecated, and no new Baidu apps can be created in the Braze dashboard. <br>
 **September 15, 2022**: No new Baidu push messages can be created. Existing messages and data collection are unaffected.<br>
-**January 15, 2023**: Braze will no longer serve messages or collect data from Baidu apps.
+**January 15, 2023 or later**: Braze will no longer serve messages or collect data from Baidu apps.
 
 ### appboyBridge global variable
 
