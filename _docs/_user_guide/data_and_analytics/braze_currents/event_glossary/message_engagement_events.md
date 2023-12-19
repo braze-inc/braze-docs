@@ -689,7 +689,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "device_id": (optional, string) ID of the device that we made a delivery attempt to,
   "button_action_type": (optional, string) Action type of the push notification,
-  button. One of [URI, DEEP_LINK, NONE, CLOSE, SHARE]. null if not
+  button. One of [URI, DEEP_LINK, NONE, CLOSE]. null if not
   from a button click,
   "button_string": (optional, string) identifier (button_string) of the push notification button clicked. null if not from a button click,
   "ad_id": (optional, string) advertising identifier,
