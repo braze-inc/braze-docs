@@ -42,7 +42,7 @@ Buy now! Would 5% off convince you?
 
 ## Conditional logic
 
-You can include many types of [intelligent logic within messages][1]—one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
+You can include many types of [intelligent logic within messages][1], such as a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
 {% raw %}
 
 ```liquid
@@ -74,14 +74,14 @@ Este es un mensaje en español de Braze !
 这是一条来自Braze的中文消息。
 ```
 
-You can specify as many conditional statements as you'd like- subsequent conditions will be checked if the previous conditions are not met. In this example, if a customer's device is not set to English this code will check to see if the customer's device is set to Spanish or Chinese. If the customer's device meets one of these conditions, the customer will receive a message in the relevant language.
+You can specify as many conditional statements as you'd like. Subsequent conditions will be checked if the previous conditions are not met. In this example, if a customer's device is not set to English this code will check to see if the customer's device is set to Spanish or Chinese. If the customer's device meets one of these conditions, the customer will receive a message in the relevant language.
 
 ```liquid
 {% else %}
 This is a message from Braze! This is going to go to anyone who did not match the other specified languages!
 ```
 
-You have the option to include an `{% else %}` statement in your conditional logic. If none of the conditions that you set are met, the `{% else %}`  statement specifies the message that should send. In this case, we default to English if a customer's language is not English, Spanish or Chinese.
+You have the option to include an `{% else %}` statement in your conditional logic. If none of the conditions that you set are met, the `{% else %}`  statement specifies the message that should send. In this case, we default to English if a customer's language is not English, Spanish, or Chinese.
 
 ```liquid
 {% endif %}
