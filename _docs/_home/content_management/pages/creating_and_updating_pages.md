@@ -1,20 +1,28 @@
 ---
-nav_title: Creating a new page
+nav_title: Creating and updating pages
 page_order: 0
 noindex: true
 ---
 
-# Creating a new page
+# Creating and updating pages
 
-> Learn how to create a new page for Braze Docs. If you're looking to create a new section instead, see [Managing sections](). For general information about pages, see [About our framework]().
+> Learn how to create and update pages on Braze Docs. If you're looking to create a new section instead, see [Managing sections](). For general information about pages, see [About our framework]().
 
-{% multi_lang_include contributing/general_getting_started.md %}
+{% multi_lang_include contributing/prerequisites.md %}
 
-## Creating a Markdown file
+## Creating a new page
 
-Using your text editor, create a Markdown file for your new page.
+First, open your text editor and find the directory you'd like to add your new page to.
 
-```plaintext
+![A text editor with the file tree open.]()
+
+{% alert tip %}
+The repository file tree mirrors the Braze Docs site URL, such as `_api/endpoints/catalogs/` for the [API section]({{site.baseurl}}/api/endpoints/catalogs/).
+{% endalert %}
+
+Create a new Markdown file for your page.
+
+```bash
 PAGE_TITLE.md
 ```
 
@@ -22,8 +30,6 @@ Replace `PAGE_TITLE` with the title of your page (be sure it adheres to the [Hea
 
 - **Page title:** Setting up your development environment for C++
 - **File name:** `setting_up_your_development_environment_for_cpp.md`
-
-## Adding your content
 
 To use the default page layout, copy and paste the following template into your Markdown file. For other layouts, see [Layouts]().
 
@@ -54,6 +60,10 @@ Replace the following:
 | `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
 
 You may add additional metadata and headings as needed, this template is just to get you started. For a list of supported YAML metadata, see [Metadata]().
+
+## Markdown content
+
+Whether you're creating a new page or updating existing content, you'll use the following guidelines. {% multi_lang_include contributing/short_creating_a_pull_request.md %}
 
 {% multi_lang_include contributing/short_cross_referencing_other_pages.md %}
 

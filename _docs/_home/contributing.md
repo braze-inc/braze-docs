@@ -6,7 +6,7 @@ noindex: true
 
 # Contributing to Braze Docs
 
-Thanks for contributing to Braze Docs! Every Tuesday and Thursday we merge community contributions into the `main` branch and deploy them to [Braze Docs](http://www.braze.com/docs). Use this guide to get your changes merged next!
+Thanks for contributing to Braze Docs! Every Tuesday and Thursday we merge community contributions into the `master` branch and deploy them to [Braze Docs]({{site.baseurl}}). Use this guide to get your changes merged during our next deploy.
 
 ## Getting started
 
@@ -50,6 +50,6 @@ After making your changes, you'll [create a pull request (PR)](). In your PR, yo
 
 ## Requesting a review
 
-After finalizing your pull request (PR), you'll [submit your PR for review](). Someone at Braze will review your work. If everything looks good, we'll merge your PR into the `develop` branch and your changes will be deployed to [Braze Docs](https://braze.com/docs) on the next Tuesday or Thursday.
+After finalizing your pull request (PR), you'll [submit your PR for review](). Someone at Braze will review your work. If everything looks good, we'll merge your PR into the `develop` branch and your changes will be deployed to [Braze Docs]({{site.baseurl}}) on the next Tuesday or Thursday.
 
 ![A pull request (PR) recently merged into the 'develop' branch.]({% image_buster /assets/img/contributing/merging_a_pull_request.png %})

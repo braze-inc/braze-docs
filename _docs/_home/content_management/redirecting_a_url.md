@@ -6,23 +6,19 @@ noindex: true
 
 # Redirecting a URL
 
-> Learn how to redirect URLs for pages on Braze Docs.
+> Learn how to redirect URLs for pages and page headings on Braze Docs.
 
 Page URLs always match the directory structure of the Braze Docs repository. When a Markdown file is renamed or moved to a different directory, the original URL will result in a 404 error if a redirect isn't set up.
 
-![]()
+![Example of a 404 page on Braze Docs.]()
 
 By setting up URL redirects, you'll help prevent bookmarks from breaking for Braze Docs users.
 
-{% multi_lang_include contributing/general_getting_started.md %}
+{% multi_lang_include contributing/prerequisites.md %}
 
 ## Setting up a page redirect
 
-When redirecting an entire page, you can either set up the redirect using the global redirect file or the in-page YAML front matter.
-
-{% tabs %}
-{% tab global redirect (recommended) %}
-Open your text editor, then find the page's Markdown file and move or rename the file as needed.
+To redirect the URL for an entire page, you'll use our global redirect file. First, open your text editor, then find the page's Markdown file and move or rename the file as needed.
 
 ![]()
 
@@ -50,34 +46,8 @@ Your redirect should be similar to the following:
 ```javascript
 validurls['/docs/user_guide/data_and_analytics/engagement_reports'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports';
 ```
-{% endtab %}
-{% tab in-page redirect %}
-When using an in-page redirect, you will _not_ rename the Markdown file. Instead, find the page's Markdown file and open it in your text editor.
 
-![]()
-
-{% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
-
-In the page's YAML front matter, set up your redirect.
-
-```yaml
-layout: redirect
-redirect_to: NEW_URL
-```
-
-Replace `NEW_URL` with the new URL you want to redirect _to_ and remove `https://www.braze.com/` from the URL string. Your redirect should be similar to the following:
-
-```yaml
----
-nav_title: Getting started
-article_title: Getting started with the Braze SDK
-description: "If you're new to the Braze SDK, learn how to get started."
-layout: redirect
-redirect_to: /docs/developer_guide/getting_started/
----
-```
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include contributing/short_creating_a_pull_request.md %}
 
 ## Setting up a heading redirect
 
@@ -111,3 +81,5 @@ description: "If you're new to the Braze SDK, learn how to get started."
 local_redirect:
   building-from-source: '/docs/developer_guide/getting_started/#using-our-install-script'
 ```
+
+{% multi_lang_include contributing/short_creating_a_pull_request.md %}

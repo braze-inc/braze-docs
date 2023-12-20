@@ -8,7 +8,7 @@ noindex: true
 
 > Learn how to add images, replace images, and remove images on Braze Docs. For general information about images, see [About our framework]().
 
-{% multi_lang_include contributing/general_getting_started.md %}
+{% multi_lang_include contributing/prerequisites.md %}
 
 ## Replacing an existing image
 

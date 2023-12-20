@@ -6,22 +6,76 @@ noindex: true
 
 # Reusing content
 
-> Learn how to reuse content across Braze Docs, so you can ... For general information about content reuse, see [About our framework]().
+> Learn how to reuse content across Braze Docs, so you can improve content consistency and reduce the time for content creation.
 
-{% multi_lang_include contributing/general_getting_started.md %}
+Content reuse in Jekyll is accomplished using includes. Includes are stored in the `_includes` directory as a regular Markdown file. Although, unlike the Markdown files in the `_docs` directory, these files don't need YAML front matter.
 
-## Reusing content
+For general information about content reuse, see [About our framework]().
 
-Includes are small page fragments in the `/_docs/_includes/` directory which can be included in multiple places on the site via the include tag. For example:
+{% multi_lang_include contributing/prerequisites.md %}
 
-```plaintext
-{% raw %}{% multi_lang_include header.html %}{% endraw %}
+## Creating an include
+
+While include files can be stored anywhere in the `_includes` directory, it's best to keep related content together using subdirectories. First, create a new Markdown file with a `.md` extension. Your file tree should like similar to the following:
+
+```bash
+braze-docs
+└── _includes
+    ├── alerts
+    ├── archive
+    └── contributing
+        └── prerequisites.md
 ```
 
-Like Jekyll pages, articles and layouts, these page fragments can be populated via Liquid templating. Includes in combination with Liquid templating can be extremely useful in preventing redundancy.
+Next, reference our [style guide](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub) to add content to your page. Your page should look similar to the following:
 
-How to use include formatting:
+{% raw %}
+```markdown
+## Prerequisites
 
-1. Create a file in the `includes/archive` folder.
-2. Add your content to the markdown file, no introductory YAML/metadata needed.
-3. In the files you want to reference the alert, include `{% raw %}{% multi_lang_include archive/alert_name.md %}{% endraw %}`
+Before you start, you'll need to complete the following:
+
+- [Sign the contributors license agreement]({{site.baseurl}}/cla)
+- [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
+- [Set up your local environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment)
+```
+{% endraw %}
+
+Anytime this [include is used](#using-an-include), the following will be rendered when Jekyll builds the site:
+
+![The "Creating a new page" document with the "Prerequisites" include rendered.]()
+
+{% multi_lang_include contributing/short_creating_a_pull_request.md %}
+
+## Using an include
+
+In your text editor, open a Markdown file, then add the include you'd like to use.
+
+{% raw %}
+```plaintext
+{% multi_lang_include PATH_TO_INCLUDE %}
+```
+{% endraw %}
+
+Replace `PATH_TO_INCLUDE` with the relative path from inside the `_includes` directory. Your reference should look like the following:
+
+_Example file tree:_
+
+```bash
+braze-docs
+└── _includes
+    ├── alerts
+    ├── archive
+    └── contributing
+        └── prerequisites.md
+```
+
+_Example include:_
+
+{% raw %}
+```plaintext
+{% multi_lang_include contributing/prerequisites.md %}
+```
+{% endraw %}
+
+{% multi_lang_include contributing/short_creating_a_pull_request.md %}

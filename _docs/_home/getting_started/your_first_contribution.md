@@ -16,7 +16,7 @@ When you're finished with this tutorial, you'll be able to:
 <i class="fa-solid fa-circle-check" style="color: #34a853;"></i> Preview your changes in a test site<br>
 <i class="fa-solid fa-circle-check" style="color: #34a853;"></i> Request a review from the Braze Docs team<br>
 
-## Getting started
+## Prerequisites
 
 Before you start, you'll need to complete the following:
 
@@ -34,7 +34,7 @@ The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) host
 
 As a contributor, you'll primarily work within the following directories:
 
-- **[`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs):** Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories that mirror the docs site, such as `_api` for the [API section](https://www.braze.com/docs/api/home) and `user_guide` for the [User Guide section](https://www.braze.com/docs/user_guide/introduction).
+- **[`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs):** Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories mirroring the docs site, such as `_api` for the [API section]({{site.baseurl}}/api/home) and `user_guide` for the [User Guide section]({{site.baseurl}}/user_guide/introduction).
 - **[`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes):** Contains text files that can be _reused_ in any file within `_docs`. Typically, includes are short, modular pieces of content that don't use standard formatting.
 - **[`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets):** Contains all the images for Braze Docs. Any text file in `_docs` or `_includes` can link to this directory to display an image on its page.
 

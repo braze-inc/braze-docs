@@ -8,7 +8,7 @@ noindex: true
 
 > Learn how to create a new Git branch in your local environment. If you're new to Git or docs-as-code, start with our tutorial instead: [Your first contribution]().
 
-{% multi_lang_include contributing/general_getting_started.md %}
+{% multi_lang_include contributing/prerequisites.md %}
 
 ## Creating a new branch
 

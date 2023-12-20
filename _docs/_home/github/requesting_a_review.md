@@ -8,7 +8,7 @@ noindex: true
 
 > Learn how to request a review for your Pull Request (PR) on GitHub so a member of the Braze Docs team can review and merge your changes.
 
-{% multi_lang_include contributing/general_getting_started.md %}
+{% multi_lang_include contributing/prerequisites.md %}
 
 ## Requesting a review
 

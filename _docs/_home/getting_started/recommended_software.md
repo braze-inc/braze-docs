@@ -22,7 +22,7 @@ table td {
 <table>
 <thead>
     <tr>
-        <th>Product Type</th>
+        <th>Type</th>
         <th>Product</th>
         <th>Description</th>
     </tr>

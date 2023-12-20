@@ -8,7 +8,7 @@ noindex: true
 
 > Learn how to create a Pull Request (PR) for your latest changes.
 
-{% multi_lang_include contributing/general_getting_started.md %}
+{% multi_lang_include contributing/prerequisites.md %}
 
 ## Creating a PR
 
