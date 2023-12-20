@@ -26,7 +26,7 @@ Leverage the integration between Friendbuy and Braze to expand your email and SM
 <li>If you need assistance, open a <a href="https://www.braze.com/docs/braze_support/">support ticket</a>.</li>
 </ol>
 
-2. Confirm your API-Key. In your Braze account, go to **Settings > API Keys**. A REST API key is required with every request to the Braze API. The API Key gives you access to your data for a workspace.
+2. Confirm your API Key. In your Braze account, go to **Settings > API Keys**. A REST API key is required with every request to the Braze API. When generating a new API key, be sure to select the *User Data* and *Email* permissions.
 
 3. Log into your [Friendbuy][3] account and go to **Developer Center > Integrations** tab > click on **Add integration** on the Braze integration card.
 
