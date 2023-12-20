@@ -53,12 +53,14 @@ The opt-in checkboxes are required to collect consent from the customer indicati
 **Note**: We use the international standard (E.164) to confirm valid phone numbers. If an invalid number is submitted, it will not be sent to Braze. Ex: 555-555-5555
 
 
+
 <table>
 
 <tr>
 
-<td><h5><strong>Friendbuy Custom Attributes</strong></h5></td>
-<td><h5 id="definition"><strong>Definition</strong></h5></td>
+<td><h5><strong>Custom Attribute Name</strong></h5></td>
+<td><h5><strong>Definition</strong></h5></td>
+<td><h5><strong>Data Type</strong></h5></td>
 
 </tr>
 
@@ -68,6 +70,8 @@ The opt-in checkboxes are required to collect consent from the customer indicati
 
 <td><p>Referrers are categorized as <em>Advocate</em> and referees are categorized as <em>Referred Friend</em></p></td>
 
+<td>String</td>
+
 </tr>
 
 <tr>
@@ -76,26 +80,37 @@ The opt-in checkboxes are required to collect consent from the customer indicati
 
 <td><p>The name the customer entered when submitting their info through a referral widget</p></td>
 
-</tr>
-
-<tr>
-
-<td><p><strong>Friendbuy Referral Link</strong></p></td><td><p>A personal referral link (PURL) generated for an Advocate. For example, https://fbuy.io/EzcW</p></td>
+<td>String</td>
 
 </tr>
 
 <tr>
 
-<td><p><strong>Friendbuy Date of Last Share</strong></p></td><td><p>The date and time the Advocate last shared with a Friend via any share channel. If the Advocate has not shared yet, the property won't be visible.</p></td>
+<td><p><strong>Friendbuy Referral Link</strong></p></td>
+
+<td><p>A personal referral link (PURL) generated for an Advocate. For example, https://fbuy.io/EzcW</p></td>
+
+<td>String</td>
 
 </tr>
 
 <tr>
 
+<td><p><strong>Friendbuy Date of Last Share</strong></p></td>
+
+<td><p>The date and time the Advocate last shared with a Friend via any share channel. If the Advocate has not shared yet, the property won't be visible.</p></td>
+
+<td>Time</td>
+
+</tr>
+
+<tr>
 
 <td><p><strong>Friendbuy Campaign ID</strong></p></td>
 
 <td><p>The Campaign ID associated with the personal referral link generated for an Advocate</p></td>
+
+<td>String</td>
 
 </tr>
 
@@ -105,6 +120,8 @@ The opt-in checkboxes are required to collect consent from the customer indicati
 
 <td><p>The Campaign Name associated with the personal referral link generated for an Advocate</p></td>
 
+<td>String</td>
+
 </tr>
 
 <tr>
@@ -112,6 +129,8 @@ The opt-in checkboxes are required to collect consent from the customer indicati
 <td><p><strong>Friendbuy Coupon Code</strong></p></td>
 
 <td><p>The most recent Referral coupon code distributed to the customer.</p><p>Note: only one code will be displayed</p></td>
+
+<td>String</td>
 
 </tr>
 
@@ -121,6 +140,8 @@ The opt-in checkboxes are required to collect consent from the customer indicati
 
 <td><p>The currency value of the most recent coupon code distributed to the customer.</p></td>
 
+<td>Number</td>
+
 </tr>
 
 <tr>
@@ -128,6 +149,8 @@ The opt-in checkboxes are required to collect consent from the customer indicati
 <td><p><strong>Friendbuy Coupon Status</strong></p></td>
 
 <td><p>The status of the most recent coupon code distributed to the customer.</p><p>Note: status will be 'distributed' or 'redeemed'</p></td>
+
+<td>String</td>
 
 </tr>
 
@@ -137,6 +160,8 @@ The opt-in checkboxes are required to collect consent from the customer indicati
 
 <td><p>Currency code (USD, CAD, etc.) or percent (%) associated with the most recent coupon code distributed to the customer.</p></td>
 
+<td>String</td>
+
 </tr>
 
 <tr>
@@ -144,6 +169,8 @@ The opt-in checkboxes are required to collect consent from the customer indicati
 <td><p><strong>Friendbuy Coupon Campaign ID</strong></p></td>
 
 <td><p>The Campaign ID associated with the coupon code generated for a customer.</p></td>
+
+<td>String</td>
 
 </tr>
 
