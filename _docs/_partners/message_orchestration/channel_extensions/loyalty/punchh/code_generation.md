@@ -25,7 +25,7 @@ Using the Punchh coupon framework and Braze, the following scenarios can be achi
     - Dynamic coupon generation token: This is a system-generated security token for encryption.
     - Dynamic coupon generation URL: This URL will be embedded in the email as a link or image, as required by the business.
 
-![][2]{: style="max-width:60%;"}    
+![The form for creating a coupon campagin in Punchh.][2]{: style="max-width:60%;"}
 
 ### Step 2: Generate signature and construct URL
 
@@ -54,22 +54,36 @@ To use the Punchh dynamic coupon code API, a JWT Token must be constructed. The 
 {% capture jwt %}{{signature_structure}}.{{final_signature | remove: '='}}{% endcapture %}
 ```
 {% endraw %} 
+
 ### Step 3: Append coupon code to message body
 
 #### Link to Punchh web page
 
-On clicking the coupon URL, the user will be redirected to a Punchh-hosted web page, where the generated coupon will be displayed to the user, as shown in the following image. For example,
-`https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN?sign={{jwt}}`
+On clicking the coupon URL, the user will be redirected to a Punchh-hosted web page, where the generated coupon will be displayed to the user, as shown in the following image.
 
-![][1]
+_Example input:_
+
+{% raw %}
+```liquid
+https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN?sign={{jwt}}
+```
+{% endraw %}
+
+_Example output:_
+
+![Confirmation message after a user successfully generates a coupon code.][1]
 
 #### Extract code via JSON as plain text
 
-A JSON response can be returned by adding `.json` before the sign query parameter of the Punchh URL, for example:
+A JSON response can be returned by adding `.json` before the sign query parameter of the Punchh URL. For example:
 
-`https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN.json?sign={{jwt}}`
+{% raw %}
+```liquid
+https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN.json?sign={{jwt}}
+```
+{% endraw %}
 
-You could then leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to insert the code as plain text into any message body as follows:
+You could then leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to insert the code as plain text into any message body. For example:
 
 {% raw %}
 ```liquid
@@ -80,10 +94,19 @@ You could then leverage [Connected Content]({{site.baseurl}}/user_guide/personal
 
 #### Link image inside email content
 
-The coupon code will be shown as an image within the email. For example,
-`<img src="https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN.png?sign={{jwt}}">`
+The coupon code will be shown as an image within the email.
 
-![][3]
+_Example input:_
+
+{% raw %}
+```liquid
+<img src="https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN.png?sign={{jwt}}">`
+```
+{% endraw %}
+
+_Example output:_
+
+![Rendered output of the coupon code image tag.][3]
 
 ## Associated error messages
 
