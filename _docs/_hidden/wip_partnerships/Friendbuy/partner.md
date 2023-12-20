@@ -42,9 +42,9 @@ Leverage the integration between Friendbuy and Braze to expand your email and SM
 
 # How customer data is sent to Braze
 
-Customer data collected in your referral program will be added to the respective Braze profile after a customer interacts with your referral program widgets. <u>Important to note, customer data will <b>only</b> be sent to Braze if the customer <b>opts-in</b> through the referral widget by selecting the opt-in boxes.</u>
+Customer data collected in your referral program will be added to the respective Braze profile after a customer interacts with your referral program widgets. Email is used as the identifier for creating and updating Braze profiles. <u>Important to note, customer data will <b>only</b> be sent to Braze if the customer <b>opts-in</b> through the referral widget by selecting the opt-in boxes.</u>
 
-For example, if a customer enters both their email and phone number in the widget but only checks the opt-in box for SMS marketing (and leaves the email marketing opt-in box unchecked), then only the phone number will be sent to Braze. If a customer submits their contact information without either opt-in box checked, customer data will not be sent to Braze since consent was not collected.
+For example, if a customer enters both their email and phone number in the widget but only checks the opt-in box for email marketing (and leaves the SMS marketing opt-in box unchecked), then only the email address will be sent to Braze. If a customer submits their contact information without either opt-in box checked, customer data will not be sent to Braze since consent was not collected.
 
 The opt-in checkboxes are required to collect consent from the customer indicating they would like to receive additional emails and/or SMS messages from your company. See an example referral widget below:
 
