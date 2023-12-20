@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Creating your section
+## Create a section
 
 > TODO
 

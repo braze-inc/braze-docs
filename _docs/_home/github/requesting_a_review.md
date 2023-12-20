@@ -10,15 +10,15 @@ noindex: true
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Requesting a review
+## Request a review
 
 Once you're ready for a member of the Braze Docs team to review your work, select **Ready for review**.
 
-![]()
+![An example pull request with the "Ready for review" button highlighted.]()
 
 In the **Reviewers** section, select the **settings gear**, then add `@docs-team` as the reviewer.
 
-![]()
+![An example pull request with the "@docs-team" added as the reviewer.]()
 
 If the docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). If no changes are required, the Braze Docs team will approve and merge your changes.
 

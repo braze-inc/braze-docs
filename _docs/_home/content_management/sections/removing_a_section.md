@@ -10,6 +10,6 @@ noindex: true
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Removing the section
+## Remove a section
 
 > TODO

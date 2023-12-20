@@ -10,7 +10,9 @@ noindex: true
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Creating a new page
+{% multi_lang_include contributing/short_create_a_new_branch.md %}
+
+## Create a new page
 
 First, open your text editor and find the directory you'd like to add your new page to.
 
@@ -61,10 +63,10 @@ Replace the following:
 
 You may add additional metadata and headings as needed, this template is just to get you started. For a list of supported YAML metadata, see [Metadata]().
 
-## Markdown content
+## Create or update content
 
-Whether you're creating a new page or updating existing content, you'll use the following guidelines. {% multi_lang_include contributing/short_creating_a_pull_request.md %}
+Whether you're creating a new page or updating existing content, you'll use the following guidelines. {% multi_lang_include contributing/short_create_a_pull_request.md %}
 
-{% multi_lang_include contributing/short_cross_referencing_other_pages.md %}
+{% multi_lang_include contributing/short_cross_reference_other_pages.md %}
 
-{% multi_lang_include contributing/short_adding_images.md %}
+{% multi_lang_include contributing/short_add_images.md %}

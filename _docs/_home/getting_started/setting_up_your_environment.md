@@ -8,7 +8,7 @@ noindex: true
 
 > Learn how to set up your local environment, so you can make complex or multi-document changes to Braze Docs. Optionally, for small single-document changes, you can [make changes directly in GitHub]().
 
-## Getting started
+## Prerequisites
 
 Before you start, you'll need to complete the following:
 
@@ -23,7 +23,7 @@ Before you start, you'll need to complete the following:
 
 Open the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), then select **Fork**.
 
-![]()
+![The Braze Docs GitHub repository with the "Fork" button highlighted.]()
 
 {% alert tip %}
 For more information, see [**About forks**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks).
@@ -31,11 +31,11 @@ For more information, see [**About forks**](https://docs.github.com/en/pull-requ
 
 Keep the default settings, then select **Create fork**.
 
-![]()
+![The Braze Docs GitHub repository with the "Create fork" button highlighted.]()
 
 In your forked repository, select **Code** > **SSH** > <i class="fa-regular fa-clone"></i> **Copy**.
 
-![]()
+![An example forked repository with the "Code" dropdown open and the "Copy" icon highlighted.]()
 
 In your terminal, open your home directory, then clone the Braze Docs repository.
 

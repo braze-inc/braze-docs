@@ -1,10 +1,10 @@
 ---
-nav_title: Redirecting a URL
+nav_title: Redirecting URLs
 page_order: 5
 noindex: true
 ---
 
-# Redirecting a URL
+# Redirecting URLs
 
 > Learn how to redirect URLs for pages and page headings on Braze Docs.
 
@@ -16,19 +16,15 @@ By setting up URL redirects, you'll help prevent bookmarks from breaking for Bra
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Setting up a page redirect
+## Redirect a page
 
 To redirect the URL for an entire page, you'll use our global redirect file. First, open your text editor, then find the page's Markdown file and move or rename the file as needed.
 
-![]()
+![A text editor with the file tree open on the left side.]()
 
 {% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
 
-Navigate to the `assets/js/` directory, then open the global redirect file: `broken_redirect_list.js`.
-
-![]()
-
-At the bottom of the file, set up your redirect on a newline.
+Navigate to the `assets/js/` directory, then open the global redirect file: `broken_redirect_list.js`. At the bottom of the file, set up your redirect on a newline.
 
 ```javascript
 validurls['REDIRECT_FROM'] = 'REDIRECT_TO';
@@ -47,13 +43,13 @@ Your redirect should be similar to the following:
 validurls['/docs/user_guide/data_and_analytics/engagement_reports'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports';
 ```
 
-{% multi_lang_include contributing/short_creating_a_pull_request.md %}
+{% multi_lang_include contributing/short_create_a_pull_request.md %}
 
-## Setting up a heading redirect
+## Redirect a heading
 
 To redirect the URL for an in-page heading, you'll use the `local_redirect` key within the page's YAML front matter. First, find the page's Markdown file, then open it in your text editor and rename the relevant heading.
 
-![]()
+![A text editor with the file tree open on the left side.]()
 
 {% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
 
@@ -82,4 +78,4 @@ local_redirect:
   building-from-source: '/docs/developer_guide/getting_started/#using-our-install-script'
 ```
 
-{% multi_lang_include contributing/short_creating_a_pull_request.md %}
+{% multi_lang_include contributing/short_create_a_pull_request.md %}

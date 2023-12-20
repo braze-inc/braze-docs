@@ -10,6 +10,6 @@ noindex: true
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Reordering the section
+## Reordering a section
 
 > TODO

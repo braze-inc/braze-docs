@@ -58,7 +58,7 @@ Learn how you can get started with Braze.
 
 _Example output:_
 
-![]()
+![Example page on Braze Docs.]()
 
 {% alert note %}
 For a full walkthrough, see [Managing pages]().
@@ -66,7 +66,23 @@ For a full walkthrough, see [Managing pages]().
 
 ## Images
 
-> TODO: add overview for images.
+Images are stored as PNG files inside `assets/img`. The structure of the `img` directory does not need to match the structure of Braze Docs, however it's best to group related images together into subdirectories.
+
+Each image can be linked to one or more pages using the following syntax:
+
+```markdown
+{% raw %} {% image_buster /assets/img/PATH_TO_IMAGE %} {% endraw %}
+```
+
+Replace `PATH_TO_IMAGE` with the relative path to your image from inside the `img` directory (including the file extension). Your image link should be similar to the following:
+
+{% raw %}
+```markdown
+In Braze, select **User Settings**.
+
+{% image_buster assets/img/braze_platform/user_settings.png %}
+```
+{% endraw %}
 
 {% alert note %}
 For a full walkthrough, see [Managing images]().
@@ -99,7 +115,7 @@ Learn how you can get started with Braze.
 
 _Example output:_
 
-![]()
+![Content reuse example on Braze Docs.]()
 
 {% alert note %}
 For a full walkthrough, see [Reusing content]().
@@ -151,7 +167,7 @@ layout: api_glossary
 
 _Example output:_
 
-![]()
+![API glossary layout example on Braze Docs.]()
 
 {% alert note %}
 For more information, see [Layouts]().
@@ -178,7 +194,7 @@ The primary sections on Braze Docs are:
 
 These primary sections can be accessed on the site header from any page on Braze Docs.
 
-![]()
+![The primary sections as shown on the site header on Braze Docs.]()
 
 Each primary section is built using [Jekyll collections](https://jekyllrb.com/docs/collections/), which allows related content to be grouped together for easy management. Keep in mind, while all primary sections are collections, not all collections are primary sections. You can find the full list of Braze Docs collections in the Jekyll configuration file, `_config.yml`:
 
@@ -256,13 +272,13 @@ description: "This landing page is where developers can find all the integration
 
 _Example output:_
 
-![]()
+![An example landing page on Braze Docs.]()
 
 ### Subsections
 
 All primary sections on Braze Docs contain one or more subsection, each representing an expandable item on the left-side navigation.
 
-![]()
+![An example subsection on Braze Docs with its section expanded on the left-side navigation.]()
 
 Unlike primary sections, subsections can be configured with or _without_ a landing page. Subsections without landing pages are helpful for organizing related content together while minimizing the number of non-useful pages in Braze Docs. Whether a subsection is configured with or without a landing page, all subsections represent both a directory _and_ Markdown file in the repository. See the following example:
 
@@ -294,7 +310,7 @@ config_only: true
 
 _Example output:_
 
-![]()
+![The left-side navigation on Braze Docs, showing an example of an expanded section without a landing page.]()
 
 However, `subsection_b.md` doesn't use the `config_only:` key, so this page _is_ rendered as a landing page:
 
@@ -309,7 +325,7 @@ page_order: 0
 
 _Example output:_
 
-![]()
+![The left-side navigation on Braze Docs, showing an example of an expanded section with a landing page.]()
 
 {% alert note %}
 While a subsection with `config_only:` set to `true` is not rendered as a page, the subsection's directory name is still used in the URLs for pages in that subsection. For more information, see [URLs]().

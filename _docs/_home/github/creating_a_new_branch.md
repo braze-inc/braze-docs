@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Creating a new branch
+## Create a new branch
 
 Get the latest changes from the Braze Docs repository, then create a new Git branch.
 

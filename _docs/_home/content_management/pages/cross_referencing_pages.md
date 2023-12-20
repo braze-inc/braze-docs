@@ -39,7 +39,7 @@ Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/plat
 ```
 {% endraw %}
 
-{% multi_lang_include contributing/short_creating_a_pull_request.md %}
+{% multi_lang_include contributing/short_create_a_pull_request.md %}
 {% endtab %}
 {% tab reference-style %}
 In your text editor, open the file you'd like to edit, then create your reference-style link.
@@ -85,6 +85,6 @@ Your links should look similar to the following:
 ```
 {% endraw %}
 
-{% multi_lang_include contributing/short_creating_a_pull_request.md %}
+{% multi_lang_include contributing/short_create_a_pull_request.md %}
 {% endtab %}
 {% endtabs %}

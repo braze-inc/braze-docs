@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Adding a new image
+## Add a new image
 
 To add a new image to the documentation, or edit an existing image, please follow the guidelines in our [Image Styling Guide](https://docs.google.com/document/d/e/2PACX-1vRJSkwcjmjrTfLDagZccLpOMMyh5NN5SXRZSjz12cRAHbX4OrUmhvCmYpf_p5YB-9r4_jSOQLkicQIH/pub), then follow these steps:
 

@@ -14,7 +14,7 @@ For general information about content reuse, see [About our framework]().
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Creating an include
+## Create an include
 
 While include files can be stored anywhere in the `_includes` directory, it's best to keep related content together using subdirectories. First, create a new Markdown file with a `.md` extension. Your file tree should like similar to the following:
 
@@ -45,9 +45,9 @@ Anytime this [include is used](#using-an-include), the following will be rendere
 
 ![The "Creating a new page" document with the "Prerequisites" include rendered.]()
 
-{% multi_lang_include contributing/short_creating_a_pull_request.md %}
+{% multi_lang_include contributing/short_create_a_pull_request.md %}
 
-## Using an include
+## Use an include
 
 In your text editor, open a Markdown file, then add the include you'd like to use.
 
@@ -78,4 +78,4 @@ _Example include:_
 ```
 {% endraw %}
 
-{% multi_lang_include contributing/short_creating_a_pull_request.md %}
+{% multi_lang_include contributing/short_create_a_pull_request.md %}

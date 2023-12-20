@@ -1,4 +1,4 @@
-### Cross-referencing other pages
+### Cross-reference other pages
 
 To cross-reference other pages on Braze Docs within your content, use the following syntax:
 

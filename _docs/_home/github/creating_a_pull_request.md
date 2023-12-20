@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Creating a PR
+## Create a PR
 
 In the terminal, add your changes and stage your commit.
 
@@ -46,7 +46,7 @@ branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo
 
 Next, go to the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), then select **Open pull request**.
 
-![]()
+![The Braze Docs GitHub repository with the "Open pull request" button highlighted.]()
 
 In the PR description, you'll see Markdown comments similar to the following. Use these comments to help fill out your PR.
 
@@ -56,4 +56,4 @@ In the PR description, you'll see Markdown comments similar to the following. Us
 
 When you're finished, select the pull request dropdown, then select **Draft pull request**.
 
-![]()
+![The Braze Docs GitHub repository with the "Draft pull request" button highlighted.]()

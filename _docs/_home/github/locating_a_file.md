@@ -8,7 +8,7 @@ noindex: true
 
 > TODO
 
-## Locating a file
+## Locate a file
 
 In your text editor, select the `_docs` directory, then open the directory of the [Jekyll collection]() you'd like to add your page to.
 

@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Replacing an existing image
+## Replace an existing image
 
 When updating an image, replace the old image with a new image of the same name by following this flow:
 
@@ -21,7 +21,7 @@ When updating an image, replace the old image with a new image of the same name 
 5. `git add .` again.
 6. `git status` again and confirm the image was modified.
 
-## Removing an existing image
+## Remove an existing image
 
 > TODO: make this more of a note/callout, not a section with it's own heading.
 
