@@ -65,11 +65,11 @@ On clicking the coupon URL, the user will be redirected to a Punchh-hosted web p
 
 #### Extract code via JSON as plain text
 
-A JSON response can be returned by adding .json before the sign query parameter of the Punchh URL, for example:
+A JSON response can be returned by adding `.json` before the sign query parameter of the Punchh URL, for example:
 
 `https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN.json?sign={{jwt}}`
 
-You could then leverage [Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to insert the code as plain text into any message body as follows:
+You could then leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to insert the code as plain text into any message body as follows:
 
 {% raw %}
 ```liquid
