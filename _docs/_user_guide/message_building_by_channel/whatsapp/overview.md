@@ -52,7 +52,7 @@ It is likely that you already have at least one existing Meta Business account a
 
 ### Step 2: WhatsApp setup
 Next, you will be prompted by the Braze setup workflow. Within this flow, you will:
-1. Create or select your Meta and WhatsApp Business accounts.
+1. Create or select your Meta and WhatsApp Business accounts. Make sure to review the [WhatsApp display name guidelines](https://www.facebook.com/business/help/757569725593362).
 2. Create your WhatsApp Business profile.
 3. Verify your WhatsApp Business number.<br><br>
 
@@ -62,11 +62,11 @@ Next, you will be prompted by the Braze setup workflow. Within this flow, you wi
 WhatsApp Business Accounts (WABA) cannot be shared with multiple Business Solution Providers. You will need a specific WABA for each Braze workspace.
 {% endalert %}	
 
-Once the setup is complete, a dedicated WhatsApp subscription group will be created for your users.
+After the setup is complete, a dedicated WhatsApp subscription group will be created for your users.
 
 ### Step 3: Create WhatsApp templates
 
-Only approved WhatsApp message templates can be used to initiate conversations with customers. WhatsApp templates can be built in the [Meta Business Manager](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343).
+Only approved WhatsApp message templates can be used to initiate conversations with customers. WhatsApp templates can be built in the [Meta Business Manager](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343). For a list of the WhatsApp messaging features supported by Braze, check out [Supported WhatsApp features]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#supported-whatsapp-features).
 
 1. **Navigate to the [template manager](https://business.facebook.com/wa/manage/message-templates)**<br>
 In the Meta Business Manager, under **Account Tools**, select **Message Templates**.
@@ -85,9 +85,17 @@ Next, you will be prompted to create your message template. <br><br>Here, you ca
 
 You can check the approval status of your message template in either the **Message Template** page in the Meta Business Manager, or when creating a campaign or Canvas in Braze. Additionally, you can be notified by email by the WhatsApp team depending on your notification permissions. 
 
+{% alert note %}
+Approved templates can be used in as many campaigns and Canvases as you like. They can also be sent to as many opt-ed in users as you like. This is true unless the quality of the template decreases. 
+{% endalert %}
+
 ### Step 4: Create a WhatsApp campaign
 
 Once WhatsApp templates have been approved, you can move over to the dashboard to build out a [WhatsApp Canvas or campaign]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/). 
+
+{% alert note %}
+After your WhatsApp Business Account is created, Meta will determine your starting messaging limit. To learn more, check out [throughput]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/#throughput).
+{% endalert %}
 
 ## Next steps
 
