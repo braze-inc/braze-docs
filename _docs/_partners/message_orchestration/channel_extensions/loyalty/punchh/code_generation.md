@@ -29,7 +29,7 @@ Using the Punchh coupon framework and Braze, the following scenarios can be achi
 
 ### Step 2: Generate signature and construct URL
 
-JWT.IO library is used to decode, verify, and generate JSON web tokens, an open, industry-standard RFC 7519 method for securely representing claims between two parties. 
+The JWT.IO library decodes, verifies, and generates JSON web tokens, an open, industry-standard RFC 7519 method for representing claims securely between two parties. 
 
 The `ClaimType` names mentioned below can be used to ensure the uniqueness of guests and coupons.
 - `email`: represents the user's email address. 
@@ -41,9 +41,9 @@ To use the Punchh dynamic coupon code API, a JWT Token must be constructed. The 
 
 {% raw %}
 ```liquid
-{% capture header %}{"typ":"JWT","alg":"HS256"}{% endcapture %}
+{% capture header %}{"alg":"HS256","typ":"JWT"}{% endcapture %}
 
-{% capture payload %} {"email":"{{${email_address}}}","first_name":"{{${first_name}}}","last_name":"{{${last_name}}}","campaign_id":YOUR-CAMPAIGN-ID}{% endcapture %}
+{% capture payload %}{"campaign_id":YOUR-CAMPAIGN-ID,"email":"{{${email_address}}}","first_name":"{{${first_name}}}","last_name":"{{${last_name}}}"}{% endcapture %}
 
 {% capture signature_structure %}{{header | base64_encode}}.{{payload | base64_encode}}{% endcapture %}
 
@@ -54,14 +54,29 @@ To use the Punchh dynamic coupon code API, a JWT Token must be constructed. The 
 {% capture jwt %}{{signature_structure}}.{{final_signature | remove: '='}}{% endcapture %}
 ```
 {% endraw %} 
-### Step 3: Append coupon code in email content
+### Step 3: Append coupon code to message body
 
 #### Link to Punchh web page
 
-On clicking the coupon URL, the user will be redirected to a Punchh-hosted web page, where the generated coupon will be displayed to the user as shown in the following image. For example,
+On clicking the coupon URL, the user will be redirected to a Punchh-hosted web page, where the generated coupon will be displayed to the user, as shown in the following image. For example,
 `https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN?sign={{jwt}}`
 
 ![][1]
+
+#### Extract code via JSON as plain text
+
+A JSON response can be returned by adding .json before the sign query parameter of the Punchh URL, for example:
+
+`https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN.json?sign={{jwt}}`
+
+You could then leverage [Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to insert the code as plain text into any message body as follows:
+
+{% raw %}
+```liquid
+{% connected_content https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN.json?sign={{jwt}} :save punchh_coupon %}
+{{punchh_coupon.coupon}}
+```
+{% endraw %}
 
 #### Link image inside email content
 
