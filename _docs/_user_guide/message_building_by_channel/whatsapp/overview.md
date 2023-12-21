@@ -1,8 +1,8 @@
 ---
-nav_title: Overview
-article_title: WhatsApp Overview
+nav_title: WhatsApp Setup
+article_title: WhatsApp Setup
 alias: /partners/whatsapp/
-description: "This article provides an overview of the Braze WhatsApp channel, prerequisites, guidance on getting the integration started."
+description: "This article covers how to set up the Braze WhatsApp channel, including prerequisites and suggested next steps."
 page_type: partner
 search_tag: Partner
 page_order: 0
@@ -11,7 +11,7 @@ channel:
 search_rank: 2
 ---
 
-# WhatsApp Overview
+# WhatsApp setup
 
 > [WhatsApp](https://www.whatsapp.com/) Business messaging is a popular peer-to-peer messaging platform used across the world offering conversation based messaging for businesses.	
 
