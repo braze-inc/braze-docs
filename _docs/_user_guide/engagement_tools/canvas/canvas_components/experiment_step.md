@@ -14,7 +14,7 @@ tool: Canvas
 
 These components will enable you to track path performance to make informed decisions about your Canvas journey.
 
-When you include a Experiment Paths component, it will randomly assign users to different paths (or an optional control group) you create. Portions of the audience will be assigned to different paths according to percentages you select, allowing you to test different messages or paths against each other and determine which is most effective.
+When you include a Experiment Paths step, it will randomly assign users to different paths (or an optional control group) you create. Portions of the audience will be assigned to different paths according to percentages you select, allowing you to test different messages or paths against each other and determine which is most effective.
 
 ![][0]{: style="float:right;max-width:50%;margin-left:15px;"}
 
@@ -66,6 +66,10 @@ Lastly, you must build your downstream paths. Select **Done** and return to the 
 ![Adding steps to each path that splits from an Experiment Path component.][3]{: style="max-width:75%"}
 
 Keep in mind that paths and their downstream steps cannot be removed from a Canvas after they're created. However, when launched, you can modify the audience distribution across paths as you see fit. For example, if a day after launching a Canvas, you conclude that one path is superior to the rest based on the analytics, you can set that path to 100% and the others to 0%. Or, depending on your needs, you can continue sending users down multiple paths.
+
+{% alert note %}
+Experiment Paths can't be edited after a Canvas is launched. This includes being unable to turn on Personalized Paths or Winning Paths for an already active Canvas with an Experiment Path step. For more information, refer to [Editing Canvases after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+{% endalert %}
 
 ## Tracking performance
 
