@@ -6,7 +6,7 @@ noindex: true
 
 # Creating and updating pages
 
-> Learn how to create and update pages on Braze Docs. If you're looking to create a new section instead, see [Managing sections](). For general information about pages, see [About our framework]().
+> Learn how to create and update pages on Braze Docs. If you're looking to create a new section instead, see [Sections]({{site.baseurl}}/home/content_management/sections/). For general information about pages, see [About our framework]({{site.baseurl}}/home/about_our_framework/).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -33,7 +33,7 @@ Replace `PAGE_TITLE` with the title of your page (be sure it adheres to the [Hea
 - **Page title:** Setting up your development environment for C++
 - **File name:** `setting_up_your_development_environment_for_cpp.md`
 
-To use the default page layout, copy and paste the following template into your Markdown file. For other layouts, see [Layouts]().
+To use the default page layout, copy and paste the following template into your Markdown file. For other layouts, see [Layouts]({{site.baseurl}}/home/layouts/).
 
 ```markdown
 ---
@@ -61,7 +61,7 @@ Replace the following:
 | `HEADING`           | The title of your Heading 2 section.                                                                                                                                                                                                        |
 | `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
 
-You may add additional metadata and headings as needed, this template is just to get you started. For a list of supported YAML metadata, see [Metadata]().
+You may add additional metadata and headings as needed, this template is just to get you started. For a list of supported YAML metadata, see [Metadata]({{site.baseurl}}/home/metadata/).
 
 ## Create or update content
 

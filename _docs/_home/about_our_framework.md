@@ -34,11 +34,11 @@ METADATA_KEY: METADATA_VALUE
 
 Replace the following:
 
-| Placeholder      | Description                                                                             |
-|------------------|-----------------------------------------------------------------------------------------|
-| `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata](). |
-| `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]().  |
-| `CONTENT`        | The page's content written in Markdown syntax.                                          |
+| Placeholder      | Description                                                                                                                         |
+|------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata]({{site.baseurl}}/home/metadata/). |
+| `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{site.baseurl}}/home/metadata).   |
+| `CONTENT`        | The page's content written in Markdown syntax.                                                                                      |
 
 _Example input:_
 
@@ -61,7 +61,7 @@ _Example output:_
 ![Example page on Braze Docs.]()
 
 {% alert note %}
-For a full walkthrough, see [Managing pages]().
+For a full walkthrough, see [Creating and updating pages]({{site.baseurl}}/home/content_management/pages/creating_and_updating_pages/).
 {% endalert %}
 
 ## Images
@@ -118,7 +118,7 @@ _Example output:_
 ![Content reuse example on Braze Docs.]()
 
 {% alert note %}
-For a full walkthrough, see [Reusing content]().
+For a full walkthrough, see [Reusing content]({{site.baseurl}}/home/content_management/pages/reusing_content/).
 {% endalert %}
 
 ## Layouts
@@ -170,15 +170,15 @@ _Example output:_
 ![API glossary layout example on Braze Docs.]()
 
 {% alert note %}
-For more information, see [Layouts]().
+For more information, see [Layouts]({{site.baseurl}}/home/layouts/).
 {% endalert %}
 
 ## Sections
 
-Braze Docs is organized into [primary sections]() and [subsections](). Choose a section to learn more.
+Braze Docs is organized into [primary sections](#primary-sections) and [subsections](#subsections). Choose a section to learn more.
 
 {% alert note %}
-For a full walkthrough, see [Managing sections]().
+For a full walkthrough, see [Sections]({{site.baseurl}}/home/content_management/sections/).
 {% endalert %}
 
 ### Primary sections
@@ -328,7 +328,7 @@ _Example output:_
 ![The left-side navigation on Braze Docs, showing an example of an expanded section with a landing page.]()
 
 {% alert note %}
-While a subsection with `config_only:` set to `true` is not rendered as a page, the subsection's directory name is still used in the URLs for pages in that subsection. For more information, see [URLs]().
+While a subsection with `config_only:` set to `true` is not rendered as a page, the subsection's directory name is still used in the URLs for pages in that subsection. For more information, see [URLs](#urls).
 {% endalert %}
 
 ## URLs
@@ -351,7 +351,7 @@ _Example URL:_
 https://www.braze.com/docs/primary_section/subsection_a/page_a
 ```
 
-This includes URLs for pages located in a [subsection]() with `config_only:` set to `true`. Even though `config_only` subsections aren't rendered as pages, the subsection's directory name is still used in the URLs for pages in that directory. See the following example:
+This includes URLs for pages located in a [subsection](#subsections) with `config_only:` set to `true`. Even though `config_only` subsections aren't rendered as pages, the subsection's directory name is still used in the URLs for pages in that directory. See the following example:
 
 ```plaintext
 braze-docs

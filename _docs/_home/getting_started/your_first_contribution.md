@@ -206,9 +206,9 @@ In you're PR, you can preview your changes in a test environment that's identica
 
 Double-check your work using the following Braze style guides:
 
-- [Writing style guide]({{site.baseurl}}/home/contributing/styleguides/writing/)
-- [Images style guide]({{site.baseurl}}/home/contributing/styleguides/images/)
-- [Alerts style guide]({{site.baseurl}}/home/contributing/styleguides/alerts/)
+- [Writing style guide]({{site.baseurl}}/home/styleguides/writing/)
+- [Images style guide]({{site.baseurl}}/home/styleguides/images/)
+- [Alerts style guide]({{site.baseurl}}/home/styleguides/alerts/)
 
 If you'd like to make additional changes, see [Make additional changes](). Otherwise, you can [request a review]() from the Braze Docs team.
 

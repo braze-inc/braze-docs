@@ -10,7 +10,7 @@ noindex: true
 
 Content reuse in Jekyll is accomplished using includes. Includes are stored in the `_includes` directory as a regular Markdown file. Although, unlike the Markdown files in the `_docs` directory, these files don't need YAML front matter.
 
-For general information about content reuse, see [About our framework]().
+For general information about content reuse, see [About our framework]({{site.baseurl}}/home/about_our_framework/).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
