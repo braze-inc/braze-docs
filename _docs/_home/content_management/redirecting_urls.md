@@ -43,7 +43,7 @@ Your redirect should be similar to the following:
 validurls['/docs/user_guide/data_and_analytics/engagement_reports'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports';
 ```
 
-{% multi_lang_include contributing/short_create_a_pull_request.md %}
+{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 
 ## Redirect a heading
 
@@ -78,4 +78,4 @@ local_redirect:
   building-from-source: '/docs/developer_guide/getting_started/#using-our-install-script'
 ```
 
-{% multi_lang_include contributing/short_create_a_pull_request.md %}
+{% multi_lang_include contributing/minis/creating_a_pull_request.md %}

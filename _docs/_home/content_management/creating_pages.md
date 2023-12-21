@@ -1,25 +1,23 @@
 ---
-nav_title: Creating and updating pages
+nav_title: Creating pages
 page_order: 0
 noindex: true
 ---
 
-# Creating and updating pages
+# Creating pages
 
-> Learn how to create and update pages on Braze Docs. If you're looking to create a new section instead, see [Sections](../../../../_docs/_home/content_management/sections.md). For general information about pages, see [About our framework](../../../../_docs/_home/about_our_framework.md).
+> Learn how to create pages on Braze Docs. If you'd like to create a new section instead, see [Sections](../../../_docs/_home/content_management/managing_sections.md). For general information about pages, see [About our framework](../../../_docs/_home/about_our_framework.md#pages).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-{% multi_lang_include contributing/short_create_a_new_branch.md %}
+## Create a new file
 
-## Create a new page
-
-First, open your text editor and find the directory you'd like to add your new page to.
+First, [create a new branch](../../../_docs/_home/github/creating_a_new_branch.md), then open the directory you'd like to add a new page to.
 
 ![A text editor with the file tree open.]()
 
 {% alert tip %}
-The repository file tree mirrors the Braze Docs site URL, such as `_api/endpoints/catalogs/` for the [API section]({{site.baseurl}}/api/endpoints/catalogs/).
+The repository file tree mirrors the Braze Docs site URL. For example, the [Catalogs]({{site.baseurl}}/api/endpoints/catalogs/) page in the API guide is located here: `_api/endpoints/catalogs/`.
 {% endalert %}
 
 Create a new Markdown file for your page.
@@ -33,7 +31,9 @@ Replace `PAGE_TITLE` with the title of your page (be sure it adheres to the [Hea
 - **Page title:** Setting up your development environment for C++
 - **File name:** `setting_up_your_development_environment_for_cpp.md`
 
-To use the default page layout, copy and paste the following template into your Markdown file. For other layouts, see [Layouts](../../../../_docs/_home/examples/layouts.md).
+## Use a layout
+
+To use the default page layout, copy and paste the following template into your Markdown file. For other layouts, see [Layouts](../../../_docs/_home/examples/layouts.md).
 
 ```markdown
 ---
@@ -61,12 +61,12 @@ Replace the following:
 | `HEADING`           | The title of your Heading 2 section.                                                                                                                                                                                                        |
 | `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
 
-You may add additional metadata and headings as needed, this template is just to get you started. For a list of supported YAML metadata, see [Metadata](../../../../_docs/_home/metadata.md).
+You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [Metadata](../../../_docs/_home/metadata.md).
 
-## Create or update content
+## Add your content
 
-Whether you're creating a new page or updating existing content, you'll use the following guidelines. {% multi_lang_include contributing/short_create_a_pull_request.md %}
+Other than the following Braze-specific exceptions, all content should be written using [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/). {% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 
-{% multi_lang_include contributing/short_cross_reference_other_pages.md %}
+{% multi_lang_include contributing/minis/cross_referencing.md %}
 
-{% multi_lang_include contributing/short_add_images.md %}
+{% multi_lang_include contributing/minis/adding_images.md %}

@@ -1,12 +1,12 @@
 ---
-nav_title: Cross-referencing pages
+nav_title: Cross-referencing
 page_order: 3
 noindex: true
 ---
 
-# Cross-referencing pages
+# Cross-referencing
 
-> Learn how to cross-reference other pages on Braze Docs. To cross-reference pages _outside_ Braze Docs, use [standard Markdown link syntax](https://www.markdownguide.org/basic-syntax/#links).
+> Learn how to cross-reference other pages on Braze Docs. If you'd like to cross-reference pages outside Braze Docs instead, use [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/#links).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -39,7 +39,7 @@ Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/plat
 ```
 {% endraw %}
 
-{% multi_lang_include contributing/short_create_a_pull_request.md %}
+{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 {% endtab %}
 {% tab reference-style %}
 In your text editor, open the file you'd like to edit, then create your reference-style link.
@@ -85,6 +85,6 @@ Your links should look similar to the following:
 ```
 {% endraw %}
 
-{% multi_lang_include contributing/short_create_a_pull_request.md %}
+{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 {% endtab %}
 {% endtabs %}

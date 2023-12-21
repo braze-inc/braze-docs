@@ -178,7 +178,7 @@ For more information, see [Layouts](../../_docs/_home/examples/layouts.md).
 Braze Docs is organized into [primary sections](#primary-sections) and [subsections](#subsections). Choose a section to learn more.
 
 {% alert note %}
-For a full walkthrough, see [Sections](../../_docs/_home/content_management/sections.md).
+For a full walkthrough, see [Sections](../../_docs/_home/content_management/managing_sections.md).
 {% endalert %}
 
 ### Primary sections

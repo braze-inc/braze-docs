@@ -41,7 +41,7 @@ A cross-reference link surrounded by Liquid raw tags will look similar to the fo
 {% raw %}
 ````plaintext
 {/% raw %/}
-If you're looking to leverage the Braze SDK in your app, see the [Braze Developer Guide]({{site.baseurl}}/developer_guide/home). You'll be able to do things like this:
+If you'd like to leverage the Braze SDK in your app, see the [Braze Developer Guide]({{site.baseurl}}/developer_guide/home). You'll be able to do things like this:
 
 ```liquid
 {% unless hide_nav %}

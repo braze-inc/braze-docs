@@ -10,7 +10,7 @@ noindex: true
 
 Content reuse in Jekyll is accomplished using includes. Includes are stored in the `_includes` directory as a regular Markdown file. Although, unlike the Markdown files in the `_docs` directory, these files don't need YAML front matter.
 
-For general information about content reuse, see [About our framework](../../../../_docs/_home/about_our_framework.md).
+For general information about content reuse, see [About our framework](../../../_docs/_home/about_our_framework.md).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -37,7 +37,7 @@ Before you start, you'll need to complete the following:
 
 - [Sign the contributors license agreement]({{site.baseurl}}/cla)
 - [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
-- [Set up your local environment](../../../../_docs/_home/getting_started/setting_up_your_environment.md)
+- [Set up your local environment](../../../_docs/_home/getting_started/setting_up_your_environment.md)
 ```
 {% endraw %}
 
@@ -45,7 +45,7 @@ Anytime this [include is used](#using-an-include), the following will be rendere
 
 ![The "Creating a new page" document with the "Prerequisites" include rendered.]()
 
-{% multi_lang_include contributing/short_create_a_pull_request.md %}
+{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 
 ## Use an include
 
@@ -78,4 +78,4 @@ _Example include:_
 ```
 {% endraw %}
 
-{% multi_lang_include contributing/short_create_a_pull_request.md %}
+{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
