@@ -157,15 +157,17 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
 {
-  "merge_updates": {
-    "identifier_to_merge": {
-      "email": "john.smith@braze.com", 
-      "prioritization": ["unidentified", "most_recently_updated"]
-    },
-    "identifier_to_keep": {
-      "external_id": "john"
-    },
-  }
+  "merge_updates": [
+    {
+      "identifier_to_merge": {
+        "email": "john.smith@braze.com",
+        "prioritization": ["unidentified", "most_recently_updated"]
+      },
+      "identifier_to_keep": {
+        "external_id": "john"
+      }
+    }
+  ]
 }'
 ```
 
@@ -179,16 +181,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
 {
-  "merge_updates": {
-    "identifier_to_merge": {
-      "email": "john.smith@braze.com", 
-      "prioritization": ["unidentified", "most_recently_updated"]
-    },
-    "identifier_to_keep": {
-      "email": "john.smith@braze.com", 
-      "prioritization": ["identified", "most_recently_updated"]
-    },
-  }
+  "merge_updates": [
+    {
+      "identifier_to_merge": {
+        "email": "john.smith@braze.com",
+        "prioritization": ["unidentified", "most_recently_updated"]
+      },
+      "identifier_to_keep": {
+        "email": "john.smith@braze.com",
+        "prioritization": ["identified", "most_recently_updated"]
+      }
+    }
+  ]
 }'
 ```
 
@@ -202,15 +206,17 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
 {
-  "merge_updates": {
-    "identifier_to_merge": {
-      "email": "john.smith@braze.com", 
-      "prioritization": ["unidentified"]
-    },
-    "identifier_to_keep": {
-      "external_id": "john"
-    },
-  }
+  "merge_updates": [
+    {
+      "identifier_to_merge": {
+        "email": "john.smith@braze.com",
+        "prioritization": ["unidentified"]
+      },
+      "identifier_to_keep": {
+        "external_id": "john"
+      }
+    }
+  ]
 }'
 ```
 
