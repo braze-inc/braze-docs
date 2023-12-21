@@ -20,10 +20,6 @@ When you include a Experiment Paths step, it will randomly assign users to diffe
 
 Take advantage of Winning Paths to track performance over a period of time and then automatically send subsequent users down the path with the best performance.
 
-{% alert note %}
-Experiment Paths can't be edited after a Canvas is launched. This includes being unable to turn on Personalized Paths or Winning Paths for an already active Canvas with an Experiment Path step.
-{% endalert %}
-
 ## Use cases
 
 Experiment Paths are best suited for testing delivery, cadence, message copy, and channel combinations.
@@ -70,6 +66,10 @@ Lastly, you must build your downstream paths. Select **Done** and return to the 
 ![Adding steps to each path that splits from an Experiment Path component.][3]{: style="max-width:75%"}
 
 Keep in mind that paths and their downstream steps cannot be removed from a Canvas after they're created. However, when launched, you can modify the audience distribution across paths as you see fit. For example, if a day after launching a Canvas, you conclude that one path is superior to the rest based on the analytics, you can set that path to 100% and the others to 0%. Or, depending on your needs, you can continue sending users down multiple paths.
+
+{% alert note %}
+Experiment Paths can't be edited after a Canvas is launched. This includes being unable to turn on Personalized Paths or Winning Paths for an already active Canvas with an Experiment Path step. For more information, refer to [Editing Canvases after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+{% endalert %}
 
 ## Tracking performance
 
