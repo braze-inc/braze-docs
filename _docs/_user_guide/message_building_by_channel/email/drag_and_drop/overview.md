@@ -210,7 +210,7 @@ You can choose to include dynamic images in your email messaging by including Li
 
 ![][6]{: style="float:right;max-width:35%;margin-left:15px;"}
 
-For links, text blocks, buttons, and images, you can easily append additional information to HTML tags in emails by selecting **Add new attribute**. This can be especially useful for message personalization, segmentation, and styling.
+When using links, text blocks, buttons, and images, select **Add new attribute** to append additional information to HTML tags in emails. This can be especially useful for message personalization, segmentation, and styling.
 
 A common use case is to insert an attribute into your anchor tag to disable click tracking when sending through Braze.
 
