@@ -36,8 +36,8 @@ Replace the following:
 
 | Placeholder      | Description                                                                                                                         |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata]({{site.baseurl}}/home/metadata/). |
-| `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{site.baseurl}}/home/metadata).   |
+| `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata](../../_docs/_home/metadata.md). |
+| `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata](../../_docs/_home/metadata.md).   |
 | `CONTENT`        | The page's content written in Markdown syntax.                                                                                      |
 
 _Example input:_
@@ -61,7 +61,7 @@ _Example output:_
 ![Example page on Braze Docs.]()
 
 {% alert note %}
-For a full walkthrough, see [Creating and updating pages]({{site.baseurl}}/home/content_management/pages/creating_and_updating_pages/).
+For a full walkthrough, see [Creating and updating pages](../../_docs/_home/content_management/pages/creating_and_updating_pages.md).
 {% endalert %}
 
 ## Images
@@ -118,7 +118,7 @@ _Example output:_
 ![Content reuse example on Braze Docs.]()
 
 {% alert note %}
-For a full walkthrough, see [Reusing content]({{site.baseurl}}/home/content_management/pages/reusing_content/).
+For a full walkthrough, see [Reusing content](../../_docs/_home/content_management/pages/reusing_content.md).
 {% endalert %}
 
 ## Layouts
@@ -170,7 +170,7 @@ _Example output:_
 ![API glossary layout example on Braze Docs.]()
 
 {% alert note %}
-For more information, see [Layouts]({{site.baseurl}}/home/layouts/).
+For more information, see [Layouts](../../_docs/_home/examples/layouts.md).
 {% endalert %}
 
 ## Sections
@@ -178,7 +178,7 @@ For more information, see [Layouts]({{site.baseurl}}/home/layouts/).
 Braze Docs is organized into [primary sections](#primary-sections) and [subsections](#subsections). Choose a section to learn more.
 
 {% alert note %}
-For a full walkthrough, see [Sections]({{site.baseurl}}/home/content_management/sections/).
+For a full walkthrough, see [Sections](../../_docs/_home/content_management/sections.md).
 {% endalert %}
 
 ### Primary sections

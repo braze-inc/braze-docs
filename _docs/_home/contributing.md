@@ -17,11 +17,11 @@ Before you start, you'll need to complete the following:
 
 ## Making changes
 
-For small, single-document changes, you can [make changes directly in GitHub]({{site.baseurl}}/home/getting_started/your_first_contribution/?tab=github#make-a-change), like this:
+For small, single-document changes, you can [make changes directly in GitHub](), like this:
 
 ![Editing a file directly in GitHub.]({% image_buster /assets/img/contributing/editing_directly_in_github.png %})
 
-For complex or multi-document changes, you'll need to [set up your local environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/), then [make your changes locally]({{site.baseurl}}/home/getting_started/your_first_contribution/?tab=local%20environment#make-a-change) using Git, like this:
+For complex or multi-document changes, you'll need to [set up your local environment](../../_docs/_home/getting_started/setting_up_your_environment.md), then [make your changes locally]() using Git, like this:
 
 ```bash
 $ git push origin my-changes
@@ -44,12 +44,12 @@ branch 'my-branch' set up to track 'origin/my-branch'.
 
 ## Creating a pull request
 
-After making your changes, you'll [create a pull request (PR)]({{site.baseurl}}/home/getting_started/your_first_contribution#create-a-pull-request-pr). In your PR, you can add a summary, review your commit history, or [open a site preview]({{site.baseurl}}/home/getting_started/your_first_contribution#preview-your-changes).
+After making your changes, you'll [create a pull request (PR)](../../_docs/_home/getting_started/your_first_contribution.md#create-a-pull-request-pr). In your PR, you can add a summary, review your commit history, or [open a site preview](../../_docs/_home/getting_started/your_first_contribution.md#preview-your-changes).
 
 ![An example pull request (PR) on GitHub.]({% image_buster /assets/img/contributing/creating_a_pull_request.png %})
 
 ## Requesting a review
 
-After finalizing your pull request (PR), you'll [submit your PR for review]({{site.baseurl}}/home/getting_started/your_first_contribution#request-a-review). Someone at Braze will review your work. If everything looks good, we'll merge your PR into the `develop` branch and your changes will be deployed to [Braze Docs]({{site.baseurl}}) on the next Tuesday or Thursday.
+After finalizing your pull request (PR), you'll [submit your PR for review](../../_docs/_home/getting_started/your_first_contribution.md#request-a-review). Someone at Braze will review your work. If everything looks good, we'll merge your PR into the `develop` branch and your changes will be deployed to [Braze Docs]({{site.baseurl}}) on the next Tuesday or Thursday.
 
 ![A pull request (PR) recently merged into the 'develop' branch.]({% image_buster /assets/img/contributing/merging_a_pull_request.png %})

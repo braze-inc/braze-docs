@@ -6,7 +6,7 @@ noindex: true
 
 # Adding a new image
 
-> Learn how to add images, replace images, and remove images on Braze Docs. For general information about images, see [About our framework]({{site.baseurl}}/home/about_our_framework/).
+> Learn how to add images, replace images, and remove images on Braze Docs. For general information about images, see [About our framework](../../../../_docs/_home/about_our_framework.md).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
