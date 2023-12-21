@@ -34,7 +34,7 @@ This message will only send to customers who are known to have attended a game.
 
 ## Message English speaking customers only
 
-You can message English speaking customers only by creating an "if" statement that'll match when a customer's language is English and an else statement that'll abort the message for anyone who does not speak English or does not have a language on their profile.
+You can message English-speaking customers only by creating an "if" statement that'll match when a customer's language is English and an "else" statement that will abort the message for anyone who does not speak English or does not have a language on their profile.
 
 {% raw %}
 ```liquid

@@ -689,7 +689,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "device_id": (optional, string) ID of the device that we made a delivery attempt to,
   "button_action_type": (optional, string) Action type of the push notification,
-  button. One of [URI, DEEP_LINK, NONE, CLOSE, SHARE]. null if not
+  button. One of [URI, DEEP_LINK, NONE, CLOSE]. null if not
   from a button click,
   "button_string": (optional, string) identifier (button_string) of the push notification button clicked. null if not from a button click,
   "ad_id": (optional, string) advertising identifier,
@@ -1930,7 +1930,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "subscription_group_id": (required, string) ID of the subscription group,
-  "subscription_status": (required, string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed',
+  "subscription_status": (required, string) status of the subscription after the change: 'Subscribed', 'Unsubscribed', or 'Pending Double Opt-In',
   "channel": (optional, string) either 'sms', 'email', or 'whats_app',
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,

@@ -751,7 +751,7 @@ To avoid users being enabled and disabled by different entry points, you should 
 
 ### Planning ahead
 
-Always play it safe. When considering new features that may require a kill-switch, it's better to release new code with a feature flag and not need it than it is to realize a new app update is required.
+Always play it safe. When considering new features that may require an off switch, it's better to release new code with a feature flag and not need it than it is to realize a new app update is required.
 
 ### Be descriptive
 
