@@ -372,6 +372,14 @@ The **Conversion Correlation** panel gives you insight into what user attributes
 
 ![The Conversion Correlation panel with an analysis on user attributes and behavior from the Primary Conversion Event - A.]({% image_buster /assets/img/convcorr.png %})
 
+{% if include.channel == "whatsapp" %}
+
+### Meta analytics
+
+In addition to Braze analytics, template-level analytics can be accessed in the WhatsApp Business Manager. For information, check out [Meta's instructions](https://www.facebook.com/business/help/218116047387456). 
+
+{% endif %}
+
 {% if include.channel == "SMS" %}
 
 ### SMS Currents events

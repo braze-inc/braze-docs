@@ -86,6 +86,10 @@ Create an in-app message or in-browser pop-up prompting customers to opt-in to W
 
 Use [HTML in-app message](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal) with [JavaScript "bridge"]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge) to interface with Braze SDK. Make sure to use the WhatsApp subscription group ID. 
 
+#### Phone number capture form
+
+Use the [phone number capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) template in the drag-and-drop editor for in-app messages to collect user phone numbers and grow your WhatsApp subscription groups.
+
 ## Set up opt-outs for your Braze WhatsApp channel
 
 ### General opt-out keywords
