@@ -229,6 +229,18 @@ override fun onNewIntent(intent: Intent) {
 {% endtab %}
 {% tab iOS %}
 
+#### (Optional) Configuring your Podfile for Dynamic XCFrameworks
+
+To import certain Braze libraries, such as BrazeUI, into an Objective-C++ file, you will need to use the `#import` syntax. Starting in version 7.4.0 of the Braze Swift SDK, binaries have an [optional distribution channel as dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic), which are compatible with this syntax.
+
+If you wish to use this distribution channel, manually override the CocoaPods source locations in your Podfile, referencing the sample below:
+
+```ruby
+pod 'BrazeKit', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-swift-sdk-prebuilt-dynamic/{your-version}/BrazeKit.podspec'
+pod 'BrazeUI', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-swift-sdk-prebuilt-dynamic/{your-version}/BrazeUI.podspec'
+pod 'BrazeLocation', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-swift-sdk-prebuilt-dynamic/{your-version}/BrazeLocation.podspec'
+```
+
 #### Step 2.1b: Install pods
 
 Since React Native automatically links the libraries to the native platform, you can install the SDK with the help of CocoaPods.
@@ -236,7 +248,11 @@ Since React Native automatically links the libraries to the native platform, you
 From the root folder of the project:
 
 ```bash
+# To install using the React Native legacy architecture
 cd ios && pod install
+
+# To install using the React Native New Architecture
+cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
 ```
 
 #### Step 2.2b: Configure the Braze SDK
