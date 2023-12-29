@@ -49,6 +49,14 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 | ------- | ------- |
 | `pod 'BrazeLocation'` | Location library providing support for location analytics and geofence monitoring. |
 | `pod 'BrazeUI'` | Braze-provided user interface library for in-app messages and Content Cards. |
+{: .ws-td-nw-1}
+
+##### Extension libraries
+
+[BrazeNotificationService](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications) and [BrazePushStory](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories) are extension modules that provide additional functionality and should not be added directly to your main application target. Instead, you will need to create separate extension targets for each of these modules and import the Braze modules into their corresponding targets.
+
+| Library | Details |
+| ------- | ------- |
 | `pod 'BrazeNotificationService'` | Notification service extension library providing support for rich push notifications. |
 | `pod 'BrazePushStory'` | Notification content extension library providing support for Push Stories. |
 {: .ws-td-nw-1}
@@ -60,7 +68,7 @@ To install the Braze SDK CocoaPod, navigate to the directory of your Xcode app p
 pod install
 ```
 
-At this point, you should be able to open the new Xcode project workspace created by CocoaPods. Make sure to use this Xcode workspace instead of your Xcode project. 
+At this point, you should be able to open the new Xcode project workspace created by CocoaPods. Make sure to use this Xcode workspace instead of your Xcode project.
 
 ![A Braze Example folder expanded to show the new `BrazeExample.workspace`.][apple_initial_setup_15]
 

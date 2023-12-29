@@ -36,15 +36,21 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 | `BrazeKit` | Main SDK library providing support for analytics and push notifications. |
 | `BrazeLocation` | Location library providing support for location analytics and geofence monitoring. |
 | `BrazeUI` | Braze-provided user interface library for in-app messages and Content Cards. |
-| `BrazeNotificationService` | Notification service extension library providing support for rich push notifications. |
-| `BrazePushStory` | Notification content extension library providing support for push stories. |
 {: .ws-td-nw-1}
+
+#### Extension libraries
 
 {% alert warning %}
 [BrazeNotificationService](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications) and [BrazePushStory](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories) are extension modules that provide additional functionality and should not be added directly to your main application target. Instead follow the linked guides to integrate them separately into their respective target extensions.
 {% endalert %}
 
- Select the package that best suits your needs and click **Add Package**. Make sure you select `BrazeKit` at a minimum. 
+| Package | Details |
+| ------- | ------- |
+| `BrazeNotificationService` | Notification service extension library providing support for rich push notifications. |
+| `BrazePushStory` | Notification content extension library providing support for push stories. |
+{: .ws-td-nw-1}
+
+ Select the package that best suits your needs and click **Add Package**. Make sure you select `BrazeKit` at a minimum.
 
 ![][5]
 
