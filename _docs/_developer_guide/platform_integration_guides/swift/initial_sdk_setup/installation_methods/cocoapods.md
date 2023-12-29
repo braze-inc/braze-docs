@@ -26,7 +26,7 @@ If you have issues regarding CocoaPods, refer to the CocoaPods [troubleshooting 
 Now that you've installed the CocoaPods Ruby Gem, you will need to create a file in your Xcode project directory named `Podfile`.
 
 {% alert note %}
-Starting in version 7.4.0, the Braze Swift SDK has additional distribution channels as [static XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static) and [dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic). If you wish to use either of these formats instead, follow the installation instructions from its respective repository.
+Starting in version 7.3.0, the Braze Swift SDK has additional distribution channels as [static XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static) and [dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic). If you wish to use either of these formats instead, follow the installation instructions from its respective repository.
 {% endalert %}
 
 Add the following line to your Podfile:
