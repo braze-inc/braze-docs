@@ -138,7 +138,7 @@ However, the segmentation stats or preview may not show this individual user bec
 Braze has testing filters to target specific users by user ID or email address.
 
 
-## Step 5: Add an exclusion group to your segment
+## Step 5: Add an exclusion group to your segment (optional)
 
 
 When building a segment, you can apply one or multiple exclusion groups. Exclusion groups contain criteria that identify users to exclude from your segment, and will always be connected to your filter groups with an "AND NOT" operator.
