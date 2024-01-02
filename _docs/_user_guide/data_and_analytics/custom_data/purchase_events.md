@@ -128,9 +128,9 @@ When using purchase events to track purchase data, you should track refunds by l
 
 However, keep in mind the refund will count as an additional purchase event. Let's consider the following example. Sam makes their first purchase for $12 but returns part of the purchase for a refund of $5. Sam's profile would log:
 
-- Purchase, price $12
-- Purchase, price -$5
-- **Lifetime revenue:** $7
+- 1 purchase with a price of $12
+- 1 purchase with a price of -$5
+- Lifetime revenue of $7
 
 While Sam would have two purchase events on their profile, in reality, they only made one purchase. This is important to consider if you have any segments or use cases built around the number of purchases a user has made. Constant refunds will inflate the purchase count on user's profile.
 
