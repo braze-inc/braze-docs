@@ -819,8 +819,10 @@ This event occurs when an email send request was successfully communicated betwe
   "message_extras": (optional, string) key-value pairs sent with this event
 }
 ```
+
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 - `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 {% endapi %}
 
@@ -862,10 +864,11 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "from_domain": (optional, string) sending domain for the email
 }
 ```
-#### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-{% endapi %}
 
+#### Property details
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+{% endapi %}
 
 {% api %}
 
@@ -906,8 +909,10 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "is_amp": (optional, boolean) indicates that this is an AMP event
 }
 ```
+
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
@@ -951,8 +956,10 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "is_amp": (optional, boolean) indicates that this is an AMP event
 }
 ```
+
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
@@ -994,8 +1001,10 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "is_drop": (optional, boolean) indicates that this event counts as a drop event
 }
 ```
+
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
@@ -1036,8 +1045,10 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "from_domain": (optional, string) sending domain for the email
 }
 ```
+
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
@@ -1077,9 +1088,10 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
   "from_domain": (optional, string) sending domain for the email
 }
 ```
+
 #### Property details
 
-The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 
@@ -1123,7 +1135,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 ```
 #### Property details
 
-The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
@@ -1860,8 +1872,6 @@ This event occurs when a user enters into the Canvas. This event tells you which
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (required, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (optional, string) ID of the step the user entered into,
-  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "in_control_group": (required, boolean) whether the user was enrolled in the control group for a Canvas
 }
 ```
