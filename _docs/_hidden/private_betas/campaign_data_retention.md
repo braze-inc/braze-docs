@@ -23,9 +23,9 @@ Campaigns that use retargeting filters that are retargeting by tag are not exemp
 
 ### When is campaign interaction data available?
 
-For active campaigns, interaction data is always available in real-time. If a campaign is "stopped," it will be marked as "expired" after three months, unless it's used in retargeting filters. When expired, the campaign data will be moved to long-term storage with limited availability. 
+For active campaigns, interaction data is always available in real-time. If a campaign is "stopped," it will be marked as "expired" after three months, unless it's used in retargeting filters. When expired, the campaign data will be moved to long-term storage with limited availability. However, this is temporary because you can restore this data by using its interaction data for retargeting. 
 
-However, this is temporary because you can restore this data by using its interaction data for retargeting. To restore your campaign, follow these steps:
+To restore your campaign, follow these steps:
 
 1. Go to the expired campaign.
 2. At the top of this campaign's landing page, click **Restore interaction data** in the banner.
@@ -34,6 +34,6 @@ However, this is temporary because you can restore this data by using its intera
 
 You will receive an email after the restoration is complete. You can also restore interaction data for multiple campaigns from the **Campaigns** page by selecting the campaigns and clicking the **Restore interaction data** button.
 
+For tags that have expired campaigns, go to the **Campaigns** page and search by the relevant tag. Then, select the campaigns and click **Restore interaction data** to restore the tag. After another three months of inactivity, these campaigns will expire again.
+
 [1]: {% image_buster /assets/img/restore_interaction_data.png %}
-
-
