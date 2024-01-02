@@ -13,13 +13,11 @@ search_rank: 3
 
 Purchase events are purchase actions taken by your users. These events are used to record in-app purchases and establish the Lifetime Value (LTV) for each user profile. These purchase events must be set up by your team. Logging purchase events allows you to add properties like quantity and type, helping you further target your users based on these properties.
 
-After you have set up and begun logging purchase events, you can view this purchase data on a user's profile in the [Overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#overview-tab).
-
 ## Logging purchase events
 
 You can log purchases by passing a [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
-The following lists methods across various platforms that are used to log purchases. Within these pages, you will also find documentation on how to add properties and quantities to your purchase event.
+The following lists methods across various platforms that are used to log purchases. Within these pages, you will also find documentation on how to add properties and quantities to your purchase event. You can futher target your users based on these properties.
 
 - [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)
@@ -29,47 +27,112 @@ The following lists methods across various platforms that are used to log purcha
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)
 
-## Blocklisting purchase events
+## Viewing purchase data
 
-In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Custom events and attribute management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) to learn more.
+After you have set up and begun logging purchase events, you can view this purchase data on a user's profile in the [Overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#overview-tab).
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Products** under **Manage Settings**.
-{% endalert %}
+## Using purchase data
 
-## Purchase event segmentation
+There are several ways you can use purchase data in Braze:
 
-You can trigger any number or type of follow-up campaigns based on logged purchase events and enable the following segmentation filters based on the recency and frequency of that event when targeting users.
+- **[Segmentation](#purchase-event-segmentation):** Use purchase data to create segments of users based on their purchasing behavior.
+- **[Personalization](#personalization):** Use purchase data to personalize messages to users.
+- **[Trigger messages](#trigger-messages):** Set up messages to trigger based on purchase events.
+- **[Analytics](#analytics):** Analyze your purchase data to gain insights into user behavior and the effectiveness of your marketing campaigns.
 
-| Segmentation Options | Dropdown Filter | Input Options |
-| ---------------------| --------------- | ------------- |
-| Check if the total number of dollars spent **is greater than** a **number**| **GREATER THAN** | **NUMBER** |
-| Check if the total number of dollars spent **is less than** a **number**| **LESS THAN** | **NUMBER** |
-| Check if total number of dollars spent **is exactly** a **number**| **EXACTLY** | **NUMBER** |
-| Check if the purchase last occurred **after X date** | **AFTER** | **TIME** |
-| Check if the purchase last occurred **before X date** | **BEFORE** | **TIME** |
-| Check if the purchase last occurred **more than X days ago** | **MORE THAN** | **TIME** |
-| Check if the purchase last occurred **less than X days ago** | **LESS THAN** | **TIME** |
-| Check if the purchase occurred **more than X (Max = 50) number of times** | **MORE THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
-| Check if the purchase occurred **less than X (Max = 50) number of times** | **LESS THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
-| Check if the purchase occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+### Segmentation {#purchase-event-segmentation}
 
-**Example of Filtering based on Purchase Event:**
+You can trigger any number or type of follow-up campaigns based on logged purchase events. For example, you can create a segment of users who made a purchase in the last 30 days, or a segment of users who have spent over a certain amount.
 
-![Filtering for users that have made more than five purchases][1]{: style="max-width:80%;margin-left:15px;"}
+The following segmentation filters are available when targeting users:
+
+- First Made Purchase
+- First Purchase For App
+- Last Purchased Product
+- Money Spent
+- Purchased Product
+- Total Number of Purchases
+- X Money Spent in Y Days
+- X Product Purchased in Y Days
+- X Purchase Property in Y Days
+- X Purchases in Last Y Days
+
+For details on each filter, refer to the [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) glossary and filter by "Purchase behavior".
+
+![Filtering for users that have made exactly five purchases][1]
 
 {% alert tip %} 
 If you would like to segment on the number of times a specific purchase has occurred, you should record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
 {% endalert %}
 
-## Purchase event analytics
+### Personalization
 
-In addition to tracking purchase metrics for segmentation, Braze also notes the number of purchases for each product and the revenue generated over time. You can view this data on the [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page.
+Like any other type of data you collect from your users, you can use purchase data to personalize your messaging through Liquid. For example, you can send a personalized email to a user recommending products similar to ones they just purchased.
 
-![Purchase graph on the Revenue page showing statistics for all purchases][4]
+Let's say you have a purchase event property called `last_purchased_product` that stores the name of the last product a user purchased. You could use this property to personalize an email message like this:
 
-![Purchase breakdown table on the Revenue page listing the products in your applications, the number of times they've been purchased, and their associated revenue][3]
+{% raw %}
+
+```liquid
+{% if ${last_purchased_product} == "Running Shoes" %}
+  We hope you're enjoying your new running shoes! Based on your recent purchase, you might also like these running shorts and water bottles.
+{% elsif ${last_purchased_product} == "Yoga Mat" %}
+  We hope you're enjoying your new yoga mat! Based on your recent purchase, you might also like these yoga blocks and straps.
+{% else %}
+  Thank you for your recent purchase! We hope you're enjoying your new item.
+{% endif %}
+```
+
+{% endraw %}
+
+In this example, the message is personalized based on the `last_purchased_product` property. If the last product the user purchased was "Running Shoes", they receive a message recommending running shorts and water bottles. If the last product was a "Yoga Mat", they receive a message recommending yoga blocks and straps. If the `last_purchased_product` is anything else, they receive a generic thank you message.
+
+### Trigger messages
+
+A common use case is to automatically send a message, such as an email, when a user makes a purchase. For example, you can send a thank you message or discount code for a future purchase.
+
+To do so, create an action-based campaign or Canvas, then set the trigger action to **Make Purchase**. You can also specify additional conditions for the trigger, such as the product purchased or the purchase amount.
+
+You can also personalize your triggered message with Liquid.
+
+{% raw %}
+
+```liquid
+Thank you for your purchase of ${purchase_product_name}! As a token of our appreciation, here's a discount code for your next purchase: SAVE10
+```
+
+{% endraw %}
+
+In this example, `${purchase_product_name}` is a custom attribute that you would replace with the actual attribute name that stores the name of the purchased product in your Braze setup.
+
+### Analytics
+
+In addition to tracking purchase metrics for segmentation, Braze also notes the number of purchases for each product and the revenue generated over time. This can be helpful to see which products are most popular or measure the impact of a promotional campaign on sales.
+
+You can view this data on the [Revenue Report]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page.
+
+#### Lifetime revenue calculation
+
+Braze uses purchase events to calculate the lifetime revenue (also called lifetime value or LTV) of a user, which is a prediction of the net profit attributed to the entire future relationship with a customer. This can help you make informed decisions about customer acquisition and retention strategies.
+
+$$\text{Lifetime revenue} = \frac{\text{Total spend in dollars}}{\text{Total number of purchase events}}$$
+
+There are two main places in Braze you can reference to understand your users' LTV:
+
+- For overall metrics like *Lifetime revenue* and the *Lifetime value per user* for each app and site, refer to your [Revenue Report]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
+- To understand a specific user's lifetime revenue, refer to their [user profile]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
+
+##### Impact of refunds on lifetime revenue
+
+When using purchase events to track purchase data, you should track refunds by logging a Braze purchase event with a negative `price` property. This approach will maintain an accurate total for the lifetime revenue.
+
+However, keep in mind the refund will count as an additional purchase event. Let's consider the following example. Sam makes their first purchase for $12 but returns part of the purchase for a refund of $5. Sam's profile would log:
+
+- 1 purchase with a price of $12
+- 1 purchase with a price of -$5
+- Lifetime revenue of $7
+
+While Sam would have two purchase events on their profile, in reality, they only made one purchase. This is important to consider if you have any segments or use cases built around the number of purchases a user has made. Constant refunds will inflate the purchase count on user's profile.
 
 ## Purchase event properties {#purchase-properties}
 
@@ -144,9 +207,17 @@ In the first Message step following an Action Path, you can use `event_propertie
 ### Log purchases at the order level
 If you would like to log purchases at the order level instead of the product level, you can use the order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
-[1]: {% image_buster /assets/img/purchase1.png %}
+## Blocklisting purchase events
+
+You may occasionally identify purchase events that either consume too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist the custom data object while your engineering team works to remove it from the backend of your app or website.
+
+In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Custom events and attribute management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) to learn more.
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Products** under **Manage Settings**.
+{% endalert %}
+
+[1]: {% image_buster /assets/img/purchase_filter_example.gif %}
 [2]: {% image_buster /assets/img/purchase2.png %}
-[3]: {% image_buster /assets/img/purchase3.png %}
-[4]: {% image_buster /assets/img/purchase4.jpg %}
 [5]: {% image_buster /assets/img/purchase5.png %}
 [6]: {% image_buster /assets/img/nested_object3.png %}
