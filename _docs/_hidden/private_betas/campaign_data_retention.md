@@ -34,6 +34,6 @@ To restore your campaign, follow these steps:
 
 You will receive an email after the restoration is complete. You can also restore interaction data for multiple campaigns from the **Campaigns** page by selecting the campaigns and clicking the **Restore interaction data** button.
 
-For tags that have expired campaigns, go to the **Campaigns** page and search by the relevant tag. Then, select the campaigns and click **Restore interaction data** to restore the tag. After another three months of inactivity, these campaigns would expire again.
+For tags that have expired campaigns, go to the **Campaigns** page and search by the relevant tag. Then, select the campaigns and click **Restore interaction data** to restore the tag. After another three months of inactivity, these campaigns will expire again.
 
 [1]: {% image_buster /assets/img/restore_interaction_data.png %}
