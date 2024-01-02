@@ -27,6 +27,6 @@ If you must change the data type of a custom attribute or event (for example, ch
 The ability to prevent automatic detection from updating the custom attribute data type is currently in early access. Contact your customer success manager if you’re interested in participating in this early access.
 {% endalert %}
 
-_Last updated on Jan 2, 2023_
+_Last updated on January 2, 2024_
 
 [1]: {% image_buster /assets/img/change_custom_attribute.png %}
