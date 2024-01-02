@@ -102,7 +102,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | alias_name | (string) |
 | alias_label | (string) |
 | braze_id | (string, optional) When a user profile is recognized via the SDK, an anonymous user profile is created with an associated `braze_id`. The `braze_id` is automatically assigned by Braze, cannot be edited, and is device-specific. | 
-| country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. Our API will make a best effort to map countries received in different formats. For example, "Australia" may map to "AU". However, if the input doesn't match a given [ISO-3166-1 alpha-2 standard][17], the country value will be set to `NULL`. |
+| country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. Our API will make a best effort to map countries received in different formats. For example, "Australia" may map to "AU". However, if the input doesn't match a given [ISO-3166-1 alpha-2 standard][17], the country value will be set to `NULL`. <br><br>Setting `country` on a user via CSV import or API will prevent Braze from automatically capturing this information via the SDK. |
 | current_location | (object) Of the form {"longitude": -73.991443, "latitude": 40.753824} |
 | date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | date_of_last_session | (date at which the user last used the app) String in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY`  |
@@ -116,7 +116,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | first_name | (string) |
 | gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |
 | home_city | (string) |
-| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24]. For supported languages, see our [list of accepted languages][2]. |
+| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24]. For supported languages, see our [list of accepted languages][2].<br><br>Setting `language` on a user via CSV import or API will prevent Braze from automatically capturing this information via the SDK. |
 | last_name | (string) |
 | marked_email_as_spam_at | (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | phone | (string) |
@@ -124,7 +124,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, for example, `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
 | subscription_groups| Array of objects with `subscription_group_id` and `subscription_state` string, for example, `[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`. Available values for `subscription_state` are "subscribed" and "unsubscribed".|
 | time_zone | (string) Of time zone name from [IANA Time Zone Database][26] (for example, "America/New_York" or "Eastern Time (US & Canada)"). Only valid time zone values will be set. |
-| twitter | Hash containing any of `id` (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
+| twitter | Hash containing any of `id` (integer), `screen_name` (string, X (formerly Twitter) handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.

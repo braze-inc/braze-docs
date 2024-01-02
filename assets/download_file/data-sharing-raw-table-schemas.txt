@@ -91,7 +91,7 @@ USERS_BEHAVIORS_CUSTOMEVENT_SHARED: when a user makes a performs a custom event
 	AD_TRACKING_ENABLED (BOOLEAN)
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED: When a user triggers a geofenced area (e.g., when they enter/exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
+USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED: When a user triggers a geofenced area (for example, when they enter/exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -109,7 +109,7 @@ USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED: When a user triggers a geofenced area
 	GEOFENCE_ID (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED: When a user triggers a geofenced area (e.g., when they enter/exit a geofence). This event was received through the dedicated Geofence endpoint, and is therefore received in real-time as soon as a users device detects that it has triggered a geofence. In addition, due to rate-limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
+USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED: When a user triggers a geofenced area (for example, when they enter/exit a geofence). This event was received through the dedicated Geofence endpoint, and is therefore received in real-time as soon as a users device detects that it has triggered a geofence. In addition, due to rate-limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
@@ -1287,37 +1287,6 @@ USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED: when we send a push notification to
 	IS_SAMPLED (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_MESSAGES_PUSHNOTIFICATION_RETRYSEND_SHARED: when we resend a push notification to a user from PushMax
-	ID (VARCHAR(16777216))
-	USER_ID (VARCHAR(16777216))
-	EXTERNAL_USER_ID (VARCHAR(16777216))
-	PUSH_TOKEN (VARCHAR(16777216))
-	DEVICE_ID (VARCHAR(16777216))
-	APP_GROUP_ID (VARCHAR(16777216))
-	APP_GROUP_API_ID (VARCHAR(16777216))
-	TIME (NUMBER(38,0))
-	APP_API_ID (VARCHAR(16777216))
-	DISPATCH_ID (VARCHAR(16777216))
-	SEND_ID (VARCHAR(16777216))
-	CAMPAIGN_ID (VARCHAR(16777216))
-	CAMPAIGN_API_ID (VARCHAR(16777216))
-	MESSAGE_VARIATION_API_ID (VARCHAR(16777216))
-	CANVAS_ID (VARCHAR(16777216))
-	CANVAS_API_ID (VARCHAR(16777216))
-	CANVAS_VARIATION_API_ID (VARCHAR(16777216))
-	CANVAS_STEP_API_ID (VARCHAR(16777216))
-	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216))
-	GENDER (VARCHAR(16777216))
-	COUNTRY (VARCHAR(16777216))
-	TIMEZONE (VARCHAR(16777216))
-	LANGUAGE (VARCHAR(16777216))
-	PLATFORM (VARCHAR(16777216))
-	AD_ID (VARCHAR(16777216))
-	AD_ID_TYPE (VARCHAR(16777216))
-	AD_TRACKING_ENABLED (BOOLEAN)
-	MESSAGE_EXTRAS (VARCHAR(16777216))
-	SF_CREATED_AT (TIMESTAMP_NTZ(9))
-
 USERS_MESSAGES_WEBHOOK_ABORT_SHARED: An originally scheduled webhook message was aborted for some reason.
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
@@ -1751,7 +1720,7 @@ USERS_USERORPHAN_SHARED: when a user is orphaned, meaning the user is merged wit
 	ORPHANED_BY_ID (VARCHAR(16777216))
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-CHANGELOGS_CAMPAIGN_SHARED: 
+CHANGELOGS_CAMPAIGN_SHARED:
 	ID (VARCHAR(16777216))
 	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
@@ -1760,7 +1729,7 @@ CHANGELOGS_CAMPAIGN_SHARED:
 	CONVERSION_BEHAVIORS (ARRAY)
 	ACTIONS (ARRAY)
 
-CHANGELOGS_CANVAS_SHARED: 
+CHANGELOGS_CANVAS_SHARED:
 	ID (VARCHAR(16777216))
 	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
@@ -1769,14 +1738,14 @@ CHANGELOGS_CANVAS_SHARED:
 	CONVERSION_BEHAVIORS (ARRAY)
 	VARIATIONS (ARRAY)
 
-SNAPSHOTS_APP_SHARED: 
+SNAPSHOTS_APP_SHARED:
 	ID (VARCHAR(16777216))
 	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
 	API_ID (VARCHAR(16777216))
 	NAME (VARCHAR(16777216))
 
-SNAPSHOTS_CANVAS_STEP_SHARED: 
+SNAPSHOTS_CANVAS_STEP_SHARED:
 	ID (VARCHAR(16777216))
 	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
@@ -1784,21 +1753,21 @@ SNAPSHOTS_CANVAS_STEP_SHARED:
 	NAME (VARCHAR(16777216))
 	ACTIONS (ARRAY)
 
-SNAPSHOTS_CANVAS_VARIATION_SHARED: 
+SNAPSHOTS_CANVAS_VARIATION_SHARED:
 	ID (VARCHAR(16777216))
 	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
 	API_ID (VARCHAR(16777216))
 	NAME (VARCHAR(16777216))
 
-SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED: 
+SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED:
 	ID (VARCHAR(16777216))
 	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
 	API_ID (VARCHAR(16777216))
 	NAME (VARCHAR(16777216))
 
-SNAPSHOTS_EXPERIMENT_STEP_SHARED: 
+SNAPSHOTS_EXPERIMENT_STEP_SHARED:
 	ID (VARCHAR(16777216))
 	TIME (NUMBER(38,0))
 	APP_GROUP_ID (VARCHAR(16777216))
@@ -1807,4 +1776,3 @@ SNAPSHOTS_EXPERIMENT_STEP_SHARED:
 	EXPERIMENT_SPLITS (ARRAY)
 	CONVERSION_BEHAVIORS (ARRAY)
 	NAME (VARCHAR(16777216))
-

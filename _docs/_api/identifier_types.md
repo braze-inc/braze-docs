@@ -43,7 +43,7 @@ Sometimes, you may find you are prompted for an `app_id` but you are not working
 
 During SDK set up, the most common use case for multiple app identifiers is separating those identifiers for debug and release build variants.
 
-To easily switch between multiple app identifier in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, a new Android project is configured with `debug` and `release` build types and no product flavors.
+To easily switch between multiple app identifier in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant](https://developer.android.com/studio/build/build-variants.html). A build variant is a combination of build type and product flavor. Note that by default, a new Android project is configured with `debug` and `release` build types and no product flavors.
 
 For each relevant build variant, create a new `braze.xml` for it in `src/<build variant name>/res/values/`:
 

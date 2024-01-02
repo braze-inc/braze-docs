@@ -95,7 +95,7 @@ Table | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed the event
+`user_id` | `string` | Braze ID of the user that performed the event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this action occurred
@@ -121,7 +121,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that installed
+`user_id` | `string` | Braze ID of the user that installed
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -134,7 +134,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that records the location
+`user_id` | `string` | Braze ID of the user that records the location
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this location was recorded
@@ -159,7 +159,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that made a purchase
+`user_id` | `string` | Braze ID of the user that made a purchase
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which the purchase occurred
@@ -183,7 +183,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that uninstalled
+`user_id` | `string` | Braze ID of the user that uninstalled
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -196,7 +196,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that upgraded the app
+`user_id` | `string` | Braze ID of the user that upgraded the app
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app the user upgraded
@@ -215,7 +215,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performs this action
+`user_id` | `string` | Braze ID of the user that performs this action
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this session occurred
@@ -237,7 +237,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that viewed the News Feed
+`user_id` | `string` | Braze ID of the user that viewed the News Feed
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which the user viewed the News Feed
@@ -254,7 +254,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performs this action
+`user_id` | `string` | Braze ID of the user that performs this action
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this session occurred
@@ -273,7 +273,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performs this action
+`user_id` | `string` | Braze ID of the user that performs this action
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this session occurred
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -291,7 +291,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed the event
+`user_id` | `string` | Braze ID of the user that performed the event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this action occurred
@@ -311,7 +311,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed the event
+`user_id` | `string` | Braze ID of the user that performed the event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this action occurred
@@ -331,7 +331,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user affected
+`user_id` | `string` | Braze ID of the user affected
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `email_address` | `null,`&nbsp;`string` | [PII] email address of the user
 `state_change_source` | `null,`&nbsp;`string` | source of the state change (REST, SDK, Dashboard, etc)
@@ -356,7 +356,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user affected
+`user_id` | `string` | Braze ID of the user affected
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -386,7 +386,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -410,7 +410,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -433,7 +433,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -455,7 +455,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -477,7 +477,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -502,10 +502,10 @@ Field | Type | Description
 | Field                                  | Type                     | Description                                                                |
 | -------------------------------------- | ------------------------ | -------------------------------------------------------------------------- |
 | `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                          |
-| `user_id`                              | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                              |
+| `user_id`                              | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                              |
 | `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                         |
 | `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous       |
-| `app_group_id`                         | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                              |
+| `app_group_id`                         | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                              |
 | `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                               |
 | `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                                 |
 | `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to                |
@@ -528,10 +528,10 @@ Field | Type | Description
 | Field                                  | Type                     | Description                                                                                                     |
 | -------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------- |
 | `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                                                               |
-| `user_id`                              | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                                                                   |
+| `user_id`                              | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                                                                   |
 | `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                                                              |
 | `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous                                            |
-| `app_group_id`                         | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                                                                   |
+| `app_group_id`                         | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                                                                   |
 | `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                                                                    |
 | `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                                                                      |
 | `app_api_id`                           | `string`,&nbsp;`null`    | API ID of the app on which this event occurred                                                                  |
@@ -553,10 +553,10 @@ Field | Type | Description
 | Field                     | Type                     | Description                                                          |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------- |
 | `id`                      | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
-| `user_id`                 | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `user_id`                 | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                        |
 | `external_user_id`        | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
 | `device_id`               | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
-| `app_group_id`            | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `app_group_id`            | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                        |
 | `app_group_api_id`        | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                         |
 | `time`                    | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
 | `canvas_id`               | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
@@ -576,10 +576,10 @@ Field | Type | Description
 | Field                     | Type                     | Description                                                          |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------- |
 | `id`                      | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
-| `user_id`                 | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `user_id`                 | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                        |
 | `external_user_id`        | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
 | `device_id`               | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
-| `app_group_id`            | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `app_group_id`            | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                        |
 | `app_group_api_id`        | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                         |
 | `time`                    | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
 | `canvas_id`               | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
@@ -595,10 +595,10 @@ Field | Type | Description
 | Field                     | Type                     | Description                                                          |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------- |
 | `id`                      | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
-| `user_id`                 | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `user_id`                 | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                        |
 | `external_user_id`        | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
 | `device_id`               | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
-| `app_group_id`            | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `app_group_id`            | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                        |
 | `app_group_api_id`        | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                         |
 | `time`                    | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
 | `canvas_id`               | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
@@ -613,10 +613,10 @@ Field | Type | Description
 | Field                       | Type                     | Description                                                                                                     |
 | --------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------- |
 | `id`                        | `string`,&nbsp;`null`    | Globally unique ID for this event                                                                               |
-| `user_id`                   | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                                                                   |
+| `user_id`                   | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                                                                   |
 | `external_user_id`          | `string`,&nbsp;`null`    | [PII] External user ID of the user                                                                              |
 | `device_id`                 | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous                                            |
-| `app_group_id`              | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                                                                   |
+| `app_group_id`              | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                                                                   |
 | `time`                      | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                                                                      |
 | `app_api_id`                | `string`,&nbsp;`null`    | API ID of the app on which this event occurred                                                                  |
 | `canvas_id`                 | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to                                                     |
@@ -633,10 +633,10 @@ Field | Type | Description
 | Field                     | Type                     | Description                                                          |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------- |
 | `id`                      | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
-| `user_id`                 | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `user_id`                 | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                        |
 | `external_user_id`        | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
 | `device_id`               | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
-| `app_group_id`            | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `app_group_id`            | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                        |
 | `time`                    | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
 | `canvas_id`               | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
 | `canvas_api_id`           | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                           |
@@ -653,10 +653,10 @@ Field | Type | Description
 | Field                                  | Type                     | Description                                                          |
 | -------------------------------------- | ------------------------ | -------------------------------------------------------------------- |
 | `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
-| `user_id`                              | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `user_id`                              | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                        |
 | `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
 | `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
-| `app_group_id`                         | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `app_group_id`                         | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                        |
 | `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                         |
 | `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
 | `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
@@ -677,10 +677,10 @@ Field | Type | Description
 | Field                                  | Type                     | Description                                                          |
 | -------------------------------------- | ------------------------ | -------------------------------------------------------------------- |
 | `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                    |
-| `user_id`                              | `string`,&nbsp;`null`    | BSON ID of the user that performed this event                        |
+| `user_id`                              | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                        |
 | `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                   |
 | `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous |
-| `app_group_id`                         | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                        |
+| `app_group_id`                         | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                        |
 | `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                         |
 | `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                           |
 | `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to          |
@@ -703,7 +703,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -731,7 +731,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `content_card_id` | `string` | ID of the card that generated this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -769,7 +769,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `content_card_id` | `string` | ID of the card that generated this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -807,7 +807,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `content_card_id` | `string` | ID of the card that generated this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -845,7 +845,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -872,7 +872,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -902,7 +902,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -935,7 +935,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -970,7 +970,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1001,7 +1001,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1032,7 +1032,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1065,7 +1065,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1093,7 +1093,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1125,7 +1125,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1153,7 +1153,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1194,7 +1194,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1234,7 +1234,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1273,7 +1273,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1300,7 +1300,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1325,7 +1325,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1350,7 +1350,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that we made a delivery attempt to
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1380,7 +1380,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `push_token` | `null,`&nbsp;`string` | push token that bounced
 `device_id` | `null,`&nbsp;`string` | `device_id` that we made a delivery attempt to that bounced
@@ -1412,7 +1412,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1446,7 +1446,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1483,7 +1483,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1511,7 +1511,7 @@ Field | Type | Description
 `carrier` | `null,`&nbsp;`string` | carrier of the device
 `browser` | `null,`&nbsp;`string` | browser of the device
 `button_string` | `null,`&nbsp;`string` | identifier (button_string) of the push notification button clicked. null if not from a button click
-`button_action_type` | `null,`&nbsp;`string` | Action type of the push notification button. One of [URI, DEEP_LINK, NONE, CLOSE, SHARE]. null if not from a button click
+`button_action_type` | `null,`&nbsp;`string` | Action type of the push notification button. One of [URI, DEEP_LINK, NONE, CLOSE]. null if not from a button click
 `slide_id` | `null,`&nbsp;`string` | slide identifier of the push carousel slide user clicks on
 `slide_action_type` | `null,`&nbsp;`string` | action type of the push carousel slide
 `ad_id` | `null,`&nbsp;`string` | [PII] advertising ID of the device that we made a delivery attempt to
@@ -1524,7 +1524,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `push_token` | `null,`&nbsp;`string` | push token that we made a delivery attempt to
 `device_id` | `null,`&nbsp;`string` | `device_id` that we made a delivery attempt to
@@ -1556,7 +1556,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1578,7 +1578,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1607,7 +1607,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1636,7 +1636,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1666,7 +1666,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `null,`&nbsp;`string` | BSON ID of the user that performed this event
+`user_id` | `null,`&nbsp;`string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace associated with the inbound phone number
 `time` | `int` | Unix timestamp at which the event happened
@@ -1692,7 +1692,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1723,7 +1723,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1752,15 +1752,15 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `null,`&nbsp;`string` | BSON ID of the user targeted by short_url, null if short_url did not use user click tracking
+`user_id` | `null,`&nbsp;`string` | Braze ID of the user targeted by short_url, null if short_url did not use user click tracking
 `external_user_id` | `null,`&nbsp;`string` | [PII] external ID of the user targeted by short_url if one exists, null if short_url did not use user click tracking
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace used to generate short_url
 `time` | `int` | Unix timestamp at which short_url was clicked
 `timezone` | `null,`&nbsp;`string` | timezone of the user
-`campaign_id` | `null,`&nbsp;`string` | BSON ID of the campaign short_url was generated for, null if not from a campaign
+`campaign_id` | `null,`&nbsp;`string` | Braze ID of the campaign short_url was generated for, null if not from a campaign
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign short_url was generated for, null if not from a campaign
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation short_url was generated for, null if not from a campaign
-`canvas_id` | `null,`&nbsp;`string` | BSON ID of the Canvas short_url was generated for, null if not from a Canvas
+`canvas_id` | `null,`&nbsp;`string` | Braze ID of the Canvas short_url was generated for, null if not from a Canvas
 `canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas short_url was generated for, null if not from a Canvas
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation short_url was generated for, null if not from a Canvas
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step short_url was generated for, null if not from a Canvas
@@ -1776,7 +1776,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1804,7 +1804,7 @@ Field | Type | Description
 Field | Type | Description
 ------|------|------------
 `id` | `string` | globally unique ID for this event
-`user_id` | `string` | BSON ID of the user that performed this event
+`user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1832,9 +1832,9 @@ Field | Type | Description
 | Field                       | Type                     | Description                                        |
 | --------------------------- | ------------------------ | -------------------------------------------------- |
 | `id`                        | `string`,&nbsp;`null`    | Globally unique ID for this event                  |
-| `app_group_id`              | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to      |
+| `app_group_id`              | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to      |
 | `app_group_api_id`          | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to       |
-| `user_id`                   | `string`,&nbsp;`null`    | BSON ID of the user that performed this event      |
+| `user_id`                   | `string`,&nbsp;`null`    | Braze ID of the user that performed this event      |
 | `external_user_id`          | `string`,&nbsp;`null`    | [PII] External user ID of the user                 |
 | `time`                      | `int`,&nbsp;`null`       | Unix timestamp at which the event happened         |
 | `random_bucket_number`      | `int`,&nbsp;`null`       | Current random bucket number assigned to the user  |
@@ -1847,8 +1847,8 @@ Field | Type | Description
 | Field              | Type                     | Description                                                   |
 | ------------------ | ------------------------ | ------------------------------------------------------------- |
 | `id`               | `string`,&nbsp;`null`    | Globally unique ID for this event                             |
-| `user_id`          | `string`,&nbsp;`null`    | BSON ID of the user that was deleted                          |
-| `app_group_id`     | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                 |
+| `user_id`          | `string`,&nbsp;`null`    | Braze ID of the user that was deleted                          |
+| `app_group_id`     | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                 |
 | `app_group_api_id` | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                  |
 | `time`             | `int`,&nbsp;`null`       | Unix timestamp at which the user delete request was processed |
 | `sf_created_at`    | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                 |
@@ -1859,13 +1859,13 @@ Field | Type | Description
 | Field              | Type                     | Description                                                                   |
 | ------------------ | ------------------------ | ----------------------------------------------------------------------------- |
 | `id`               | `string`,&nbsp;`null`    | Globally unique ID for this event                                             |
-| `user_id`          | `string`,&nbsp;`null`    | BSON ID of the user that was orphaned                                         |
+| `user_id`          | `string`,&nbsp;`null`    | Braze ID of the user that was orphaned                                         |
 | `external_user_id` | `string`,&nbsp;`null`    | [PII] External user ID of the user                                            |
 | `device_id`        | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous          |
-| `app_group_id`     | `string`,&nbsp;`null`    | BSON ID of the workspace this user belongs to                                 |
+| `app_group_id`     | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                                 |
 | `app_group_api_id` | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                                  |
 | `app_api_id`       | `string`,&nbsp;`null`    | API ID of the app the orphaned user belonged to                               |
 | `time`             | `int`,&nbsp;`null`       | Unix timestamp at which the user was orphaned                                 |
-| `orphaned_by_id`   | `string`,&nbsp;`null`    | BSON ID of the user whose profile was merged with the orphaned user's profile |
+| `orphaned_by_id`   | `string`,&nbsp;`null`    | Braze ID of the user whose profile was merged with the orphaned user's profile |
 | `sf_created_at`    | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

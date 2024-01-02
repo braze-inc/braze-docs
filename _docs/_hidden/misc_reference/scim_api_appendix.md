@@ -93,7 +93,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | View PII | `view_pii` |
 | View User Profiles PII Compliant | `view_user_profile` |
 | Manage Dashboard Users | `manage_dashboard_users` |
-| Manage Media Library | `manage_media_library` |
+| Manage Media Library Assets | `manage_media_library` |
 | View Usage Data | `view_usage_data` |
 | Import and Update User Data | `import_update_user_data` |
 | View Billing Details | `view_billing_details` |
@@ -120,7 +120,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | Export User Data | `export_user_data` |
 | View User Profile | `view_user_profile` |
 | Manage Dashboard Users | `manage_dashboard_users` |
-| Manage Media Library | `manage_media_library` |
+| Manage Media Library Assets | `manage_media_library` |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Department strings

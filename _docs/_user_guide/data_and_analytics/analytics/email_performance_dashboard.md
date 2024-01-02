@@ -43,6 +43,30 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+## Email Insights dashboard 
+
+The Email Insights dashboard helps you track and better understand where and when your customers are interacting with your emails. These reports can provide rich and granular data for marketers on how to optimize your emails to drive greater engagement. To access the dashboard, go to **Analytics** > **Email Performance** > **Email Insights**.
+
+### Engagement by Mailbox Provider
+
+The **Engagement by Mailbox Provider** report displays the top mailbox providers contributing to your clicks or opens. You can click into specific premier mailbox providers to drill down into specific receiving domains. For example, if Microsoft is listed on this report as one of your top mailbox providers metric, you can further view details for their receiving domains such as “outlook.com”, “hotmail.com”, “live.com”, and more.
+
+![][5]{: style="max-width:70%;"}
+
+### Time of Engagement
+
+The **Time of Engagement** report displays data on when users are engaging with your emails. This can help answer questions such as which weekday or what time sees the highest engagement from your customers. With these insights, you can experiment with the best day or time to send your messages to drive higher engagement. Note that these times are based on your workspace’s time zone.
+
+The **Day of the Week** engagement report breaks down opens or clicks by day of the week. 
+
+![][6]
+
+The **Time of the Day** engagement report breaks down opens or clicks by each hour in a 24-hour time window.
+
+![][7]
+
+For more information on analytics for your emails, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
+
 ## SMS performance dashboard
 
 To use your SMS performance dashboard, go to **Analytics** > **SMS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
@@ -124,3 +148,6 @@ This means Braze hasn't recorded any data for that metric during the time period
 [2]: {% image_buster /assets/img_archive/email_performance_dashboard_2.png %}
 [3]: {% image_buster /assets/img_archive/dashboard_filters.png %}
 [4]: {% image_buster /assets/img_archive/email_performance_dashboard_3.png %}
+[5]: {% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}
+[6]: {% image_buster /assets/img_archive/time_engagement.png %}
+[7]: {% image_buster /assets/img_archive/time_engagement_day.png %}

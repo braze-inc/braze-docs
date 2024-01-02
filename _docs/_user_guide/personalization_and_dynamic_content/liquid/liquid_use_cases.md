@@ -1275,7 +1275,7 @@ This use case checks if a user's target device runs on Mac or Windows and, if so
 
 {% raw %}
 ```liquid
-{% if {{targeted_device.${os}}} == 'Mac' OR {{targeted_device.${os}}} == 'Windows' %}
+{% if {{targeted_device.${os}}} == 'Mac' or {{targeted_device.${os}}} == 'Windows' %}
 
 This message will display on your desktop web browser.
 

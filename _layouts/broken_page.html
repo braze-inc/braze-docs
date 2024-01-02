@@ -93,6 +93,9 @@ if (site_language && (site_language != 'en')){
     else if (validurls[urlpath.toLowerCase()] ) {
       return location.href = redirecturl(urlpath.toLowerCase(),urlhash,redirected);
     }
+    else if (urlpath.match(/\/docs\/[a-zA-Z]{2}\//)){
+      return location.href = urlpath.toLowerCase().replace(/\/docs\/[a-zA-Z]{2}\//,"/docs/");
+    }
   }
 
   window.braze.logCustomEvent("broken page", {
@@ -154,7 +157,10 @@ $(document).ready(function(k){
           <div id="broken_banner_text">
             {{ page.broken_text }}
           </div>
-
+          <div style="text-align:center;">
+            {{ page.broken_text1 }}<br />
+            {{ page.broken_text2 }}<br />
+          </div>
         </div>
 
       </div>

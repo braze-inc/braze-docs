@@ -396,7 +396,11 @@ The total direct revenue divided by unique recipients. This metric is only avail
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
 {% endapitags %}
 
-The total number of messages sent in a campaign. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This does not mean the message was received or delivered to a device, only that the message was sent. This metric is provided by Braze.
+*Sends*, or *Messages Sent*, is the total number of messages sent in a campaign. Upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This does not mean the message was received or delivered to a device, only that the message was sent. This metric is provided by Braze.
+
+{% alert tip %}
+For Content Cards, this metric is calculated differently depending on what you selected for **Card creation**. See [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) for details.
+{% endalert %}
 
 <span class="calculation-line">Calculation: Count</span>
 

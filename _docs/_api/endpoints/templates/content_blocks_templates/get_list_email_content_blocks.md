@@ -18,9 +18,8 @@ description: "This article outlines details about the List available Content Blo
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `content_blocks.list` permission.
-{% endalert %}
+## Prerequisites
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `content_blocks.list` permission.
 
 ## Rate limit
 
@@ -46,7 +45,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": "integer",
   "content_blocks": [

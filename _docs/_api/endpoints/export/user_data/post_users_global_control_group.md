@@ -20,9 +20,9 @@ User data is exported as multiple files of user JSON objects separated by new li
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `users.export.global_control_group` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `users.export.global_control_group` permission.
 
 ## Rate limit
 
@@ -76,7 +76,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-Individual custom attributes cannot be exported. However, all custom attributes can be exported by including custom_attributes in the fields_to_export array (for example,['first_name', 'email', 'custom_attributes']).
+Individual custom attributes cannot be exported. However, all custom attributes can be exported by including custom_attributes in the fields_to_export array (for example, `['first_name', 'email', 'custom_attributes']`).
 {% endalert %}
 
 ## Request parameters

@@ -20,9 +20,9 @@ If you are targeting a segment, a record of your request will be stored in the [
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `messages.schedule.create` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `messages.schedule.create` permission.
 
 ## Rate limit
 

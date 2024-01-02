@@ -23,9 +23,9 @@ Braze has released the [`/email/blocklist` endpoint]({{site.baseurl}}/api/endpoi
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 
-{% alert note %}
-When creating an API key to use with this endpoint, you must set `email.blacklist` permissions.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `email.blacklist` permission.
 
 ## Rate limit
 

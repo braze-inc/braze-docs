@@ -20,9 +20,9 @@ This endpoint accepts updates to either the `schedule` or `messages` parameter o
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f61edf74-4467-4551-b9c4-a4b8d188cd7a {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `messages.schedule.update` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `messages.schedule.update` permission.
 
 ## Rate limit
 
@@ -55,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`messages` | Optional | Object | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request example
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/update' \
 --header 'Content-Type: application/json' \

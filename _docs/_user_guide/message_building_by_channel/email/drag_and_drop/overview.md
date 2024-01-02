@@ -198,9 +198,9 @@ You can add a background image to your row configuration, allowing you to incorp
 Basic Liquid is supported in the drag-and-drop email editor. To add personalization to your email:
 
 1. Select **Personalization** under the **Content** section. 
-2. Select the personalization type. This includes standard (default) attributes, device attributes, custom attributes, and more. 
+2. Select the personalization type. This includes default (standard) attributes, device attributes, custom attributes, and more. 
 3. Search for the attribute to be added.
-4. Next, copy your generated Liquid snippet and paste it into a content block in your email body.
+4. Copy your generated Liquid snippet and paste it into a content block in your email body.
 
 #### Dynamic images
 
@@ -210,7 +210,7 @@ You can choose to include dynamic images in your email messaging by including Li
 
 ![][6]{: style="float:right;max-width:35%;margin-left:15px;"}
 
-With attributes, you can easily append additional information to HTML tags in emails. These attributes can be applied to links, both in text blocks and buttons, and images. This can be especially useful for message personalization, segmentation, and styling.
+When using links, buttons, images, and videos in the drag-and-drop editor, select **Add new attribute** under **Attributes** in the **Content** section to append additional information to HTML tags in emails. This can be especially useful for message personalization, segmentation, and styling.
 
 A common use case is to insert an attribute into your anchor tag to disable click tracking when sending through Braze.
 

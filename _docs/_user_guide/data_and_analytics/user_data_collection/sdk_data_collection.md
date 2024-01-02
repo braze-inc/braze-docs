@@ -57,12 +57,10 @@ Calculated metrics include the following attributes.
 | Uninstalled                                    | Boolean and time |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-
 {% alert important %}
 If you are interested in only the minimum integration, and you integrate with mParticle, Segment, Tealium, or GTM, note the following:
-- **Mobile Platforms**: You must manually update the code for these configurations. mParticle and Segment do not offer a way to do this through their platform. 
+- **Mobile platforms**: You must manually update the code for these configurations. mParticle and Segment do not offer a way to do this through their platform. 
 - **Web**: Braze integration must be done natively to allow for the minimum integration configuration. Tag managers do not offer a way to do this through their platform. 
-
 {% endalert %} 
 
 ## Optional data collected by default
@@ -87,12 +85,15 @@ In addition to the minimum integration data, the following attributes are automa
 
 To learn more about tracking device-level properties such as device wireless carrier, time zone, resolution, etc.), see the platform specific documentation: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation"), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation"), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation").
 
-## Personalized integration 
+## Personalized integration
 
-To make the most out of Braze, integrators often implement the Braze SDKs and log [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes), [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#logging-custom-events) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#logging-purchase-events) that are pertinent to their business on top of the automatically collected data. 
+To make the most out of Braze, integrators often implement the Braze SDKs and log [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes), [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#logging-custom-events) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#logging-purchase-events) that are pertinent to their business on top of the automatically collected data.
 
-A personalized integration allows for customized communication that is relevant to your users' experience. 
+A personalized integration allows for customized communication that is relevant to your users' experience.
 
+{% alert important %}
+Braze will ban or block users with over 5 million sessions ("dummy users") and no longer ingest their SDK events. For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).
+{% endalert %}
 
 
 [1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html "Android device-level fields"
