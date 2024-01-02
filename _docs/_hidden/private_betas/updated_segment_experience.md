@@ -12,8 +12,9 @@ hidden: true
 
 > Segmentation allows you to target users based upon their demographic, behavioral, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
+## Steps
 
-## Step 1: Navigate to the segments section
+### Step 1: Navigate to the segments section
 
 
 Go to **Audience** > **Segments**.
@@ -24,7 +25,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 {% endalert %}
 
 
-## Step 2: Name your segment
+### Step 2: Name your segment
 
 
 Click <i class="fas fa-plus"></i> **Create Segment** to begin building your segment. Name your segment by describing the type of user you intend to filter for. This will ensure that this segment can accurately be the target of multiple campaigns or Canvases to come. Vague segment titles can cause confusion down the line.
@@ -39,7 +40,7 @@ Optionally, you can do the following:
 ![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.][2]{: style="max-width:70%;"}
 
 
-## Step 3: Choose your app or platform
+### Step 3: Choose your app or platform
 
 
 Choose which apps or platforms you'd like to target by selecting **Users from all apps** (default), or **Users from specific apps**. If you choose **Users from all apps**, the segment includes all users regardless of any session or app data. If you choose **Users from specific apps**, you can then select which apps or platforms you want to include in your segment.
@@ -51,13 +52,13 @@ For example, if you'd like to send an in-app message to only iOS devices, select
 ![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.][5]
 
 
-## Step 4: Add filters to your segment
+### Step 4: Add filters to your segment
 
 
 Add at least one filter to your segment to narrow down your audience.
 
 
-### Filter groups
+#### Filter groups
 
 
 Filters are organized into filter groups. Every filter must be part of a filter group that has a minimum of one filter. A segment can have multiple filter groups. To add one, click **Add filter group**.
@@ -69,7 +70,7 @@ Click the icons next to each filter to duplicate or remove it. After duplicating
 You can also use the icon within each filter group to duplicate that filter group and the filters within it, or delete that filter group from your segment.
 
 
-### Segmentation logic using AND and OR
+#### Segmentation logic using AND and OR
 
 
 Within a filter group, filters can be joined by either "AND" or "OR". Between filter groups, groups can be joined by either "AND" or "OR". When using filter groups, you can create segmentation logic such as:
@@ -80,7 +81,7 @@ Within a filter group, filters can be joined by either "AND" or "OR". Between fi
 Selecting "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters. Selecting "AND" means that users who do not pass that filter will not be included in your segment.
 
 
-### Filter operators
+#### Filter operators
 
 
 Depending on the specific filter you select, you will have different operators for identifying filter values. To dive deeper into the operators available for different types of custom attributes, see [Custom attribute storage]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes). Note that when using the “is any of” operator, the maximum number of items you can include in that field is 256.
@@ -99,7 +100,7 @@ Segments already using the Segment Membership Filter cannot be further included 
 {% endalert %}
 
 
-### Testing segments
+#### Testing segments
 
 
 After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, click **Lookup User** and search for a user’s `external_id` or `braze_id`.
@@ -126,7 +127,7 @@ When a user doesn’t match part or all of the segment, filter, or app criteria,
 ![A user lookup of "user1234" triggers an alert stating, "user1234 does not match the following targeting criteria:" and displays two missing criteria: a tenure greater than one year and today being an anniversary.][8]{: style=" max-width:60%;"}
 
 
-### Single-user segments
+#### Single-user segments
 
 
 You can create single user segments (or segments of a handful of users) using unique attributes that identify users, like a user name or a user ID.
@@ -138,7 +139,7 @@ However, the segmentation stats or preview may not show this individual user bec
 Braze has testing filters to target specific users by user ID or email address.
 
 
-## Step 5: Add an exclusion group to your segment (optional)
+### Step 5: Add an exclusion group to your segment (optional)
 
 
 When building a segment, you can apply one or multiple exclusion groups. Exclusion groups contain criteria that identify users to exclude from your segment, and will always be connected to your filter groups with an "AND NOT" operator.
@@ -153,7 +154,7 @@ Create an exclusion group by adding filters, the same way you would for filter g
 Excluded users will not be counted as part of your segment’s **Total reachable users** statistic.
 
 
-## Step 6: Save your segment
+### Step 6: Save your segment
 
 
 Once you've clicked **Save**, you're ready to start sending messages to your users!
