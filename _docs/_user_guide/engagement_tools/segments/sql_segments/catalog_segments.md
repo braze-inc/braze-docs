@@ -1,6 +1,6 @@
 ---
 nav_title: "Catalog Segments"
-article_title: Catalog segments
+article_title: Catalog Segments
 
 page_type: reference
 description: "This article describes how to create catalog segments, which use catalog data in SQL Segment Extensions to build audiences of users."
