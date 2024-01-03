@@ -40,7 +40,7 @@ To use the default page layout, copy and paste the following into your Markdown 
 ```markdown
 ---
 nav_title: NAV_TITLE
-article_tite: ARTICLE_TITLE
+article_title: ARTICLE_TITLE
 description: SHORT_DESCRIPTION
 ---
 

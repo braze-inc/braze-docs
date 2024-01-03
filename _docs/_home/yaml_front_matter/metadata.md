@@ -24,135 +24,231 @@ If you're new to Braze Docs or docs-as-code, start with our tutorial.
 
 Replace the following:
 
-| Placeholder      | Description                                                                                                               |
-|------------------|---------------------------------------------------------------------------------------------------------------------------|
-| `METADATA_KEY`   | The key representing a supported metadata type. Replace with a [metadata key](#metadata-keys) from the following section. |
-| `METADATA_VALUE` | The value assigned to the metadata key. Check a metadata key's supported values in the following section.                 |
+| Placeholder      | Description                                                                                                                |
+|------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `METADATA_KEY`   | The key representing a supported metadata type. Replace with a [metadata key](#supported-keys) from the following section. |
+| `METADATA_VALUE` | The value assigned to the metadata key. Check a metadata key's supported values in the following section.                  |
 
-## Supported keys
+## Required keys
 
-### Channel
+### Article title
 
-The messaging channel a page is related to.
-
-- **Key:** `channel`
-- **Required?:** No, unless the content mentions a specific channel or channels.
-- **Accepts Multiple Values?:** Multiple values can be used.
-- **Data Type:** `string`
-- **Available Values:** Any of the messaging channels Braze sends to: `content cards`, `email`, `news feed`, `in-app messages`, `push`, `sms`, and `webhooks`.
+The `article_title` key is used to set the page title in online search results. This key accepts any `string` value. For style guidelines, see [Naming Conventions](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.n0sf2nl43bpo).
 
 **Usage example:**
 
 ```markdown
 ---
-channel: email, news feed
+article_title: Getting started with Braze Docs
 ---
 ```
 
 ### Description
 
-- **Key:** `description`
-- **Description:** Description of the page that will show in online searches. Encapsulate in quotes.
-- **Required?:** Yes.
-- **Accepts Multiple Values?:** No.
-- **Data Type:** `string`
-- **Available Values:** Any - the page description of a page is up to you. We recommend less than 3 sentences. Template: `This {page_type} {lists, describes, walks you through} {topic or task} for {platform and/or channel} using {tool}.` Though the exact phrasing can vary, it must include at least the page type, what the page aims to do (as in, it will "walk you through how to perform noted task" or "teach you how to read a certain report" or "describe the requirements of a certain Partner integration". Example: `This glossary lists all of the terms you need to know while onboarding with Braze and preparing for the Integration Phase.` Or `This reference article describes the different kinds of Canvas Steps and how they affect iOS or Android push campaigns.` Or even `This solutions article will walk you through a custom integration.`
+The `description` key is used to set the page description in online search results. This key accepts any `string` value under 150 characters that's surrounded by double quotes.
 
-### Engagement tool
+**Usage example:**
 
-- **Key:** `tool`
-- **Description:** Notes which engagement tools (Canvas, campaigns, etc.) the article is associated with.
-- **Required?:** Yes.
-- **Accepts Multiple Values?:** Multiple values can be used.
-- **Data Type:** `string`
-- **Available Values:** Any of the following Braze  tools: `dashboard`, `docs`, `canvas`, `campaigns`, `segments`, `templates`, `media`, `location`, `currents`, `reports`.
-
-### Hide page
-
-- **Key:** `hidden`
-- **Description:** Whether the page will be visible in the left navigation bar. Setting this to `false` will cause the page not to appear in searches (both on-site or through online search providers).
-- **Required?:** No.
-- **Accepts Multiple Values?:** No.
-- **Data Type:** `boolean`
-- **Available Values:** You may choose between `true` and `false`.
-
-### Hide page (content only)
-
-- **Key:** `config_only`
-- **Description:** Whether a page will act as a page or as a category in the left navigation panel. Defaults to `false`.
-- **Required?:** No.
-- **Accepts Multiple Values?:** No.
-- **Data Type:** `boolean`
-- **Available Values:** You may choose between `true` and `false`.
-
-### Hide page (search only)
-
-- **Key:** `noindex`
-- **Description:** Determines whether the article will show in Algolia and Google Searches. Defaults to `false` unless you have the `hidden` YAML tag set as `true`.
-- **Required?:** No.
-- **Accepts Multiple Values?:** No.
-- **Data Type:** `boolean`
-- **Available Values:** `true` or `false`.
-
-### Hide table of contents
-
-- **Key:** `hide_toc`
-- **Description:** Determines whether the Table of Contents on the right side of the page is included or not.
-- **Required?:** No.
-- **Accepts Multiple Values?:** No.
-- **Data Type:** `boolean`
-- **Available Values:** You may choose between `true` and `false`.
+```markdown
+---
+description: "If you're new to Braze Docs, start with this step-by-step tutorial."
+---
+```
 
 ### Navigation title
 
-- **Key:** `nav_title`
-- **Description:** This is the title of the article that will appear in the left navigation of the Docs site. Encapsulate in quotes.
-- **Required?:** Yes, unless page is `hidden`.
-- **Accepts Multiple Values?:** No.
-- **Data Type:** `string`
-- **Available Values:** Any - the title of a page is up to you. We recommend less than 30 characters with spaces.
+The `nav_title` key is used to set the page title on the left-side navigation bar on Braze Docs. This key accepts any `string` less than 30 characters. If the [`hidden`](#hide-page) key is set to `true`, `nav_title` is not required.
+
+**Usage example:**
+
+```markdown
+---
+nav_title: Getting started
+---
+```
+
+## Optional keys
+
+### Engagement tool
+
+The `tool` key is used to set the page's related engagement tool(s). This key accepts one or more of the following `string` values as a list:
+
+- `dashboard`
+- `docs`
+- `canvas`
+- `campaigns`
+- `currents`
+- `location`
+- `media`
+- `reports`
+- `segments`
+- `templates`
+
+**Usage example:**
+
+```markdown
+---
+tool:
+  - currents
+  - segments
+---
+```
+
+### Hide from navigation
+
+The `hidden` key is used to hide a page from the left-side navigation on Braze Docs. This key accepts the boolean values `true` or `false`.
+
+**Usage example:**
+
+```markdown
+---
+hidden: true
+---
+```
+
+### Hide from search
+
+The `noindex` key is used to hide a page from internal and external search results (such as Braze Docs and Google Search). This key accepts the boolean values `true` or `false`.
+
+**Usage example:**
+
+```markdown
+---
+noindex: true
+---
+```
+
+### Hide table of contents
+
+The `hide_toc` key is used to hide the in-page Table of Contents (toc) on the right side of the page. This key accepts the boolean values `true` or `false`.
+
+**Usage example:**
+
+```markdown
+---
+hide_toc: true
+---
+```
+
+### Messaging channel
+
+The `channel` key is used to set a page's related messaging channel(s). This key accepts one or more of the following `string` values as a list:
+
+- `content cards`
+- `email`
+- `in-app messages`
+- `news feed`
+- `push`
+- `sms`
+- `webhooks`
+
+**Usage example:**
+
+```markdown
+---
+channel:
+  - email
+  - news feed
+---
+```
+
+### Navigation only
+
+The `config_only` key is used to hide a page's content without hiding it on left-side navigation bar. Use this key when [creating a section without a landing page]({{sitebase.url}}/docs/home/content_management/sections/?tab=without%20landing%20page#creating-a-section). This key accepts the boolean values `true` or `false`.
+
+**Usage example:**
+
+```markdown
+---
+config_only: true
+---
+```
 
 ### Override default URL
 
-- **Key:** `permalink`
-- **Description:** Sets the page's url. For example: `permalink: /this_page_name/` will set the page's URL to `https://www.braze.com/docs/this_page_name/`.
-- **Required?:** No, unless page is `hidden`.
-- **Accepts Multiple Values?:** No.
-- **Data Type:** `string`
-- **Available Values:** Any - this URL is up to you. Encapsulate in slashes (`/`).
+The `permalink` key is used with the [`hidden`](#hide-from-navigation) key to override the default URL for a page on Braze Docs. The value assigned to `permalink` will be prepended with `https://www.braze.com/docs` before redirecting. This key accepts any `string` value meeting the following requirements:
+
+- Characters are lowercase
+- Words are separated by underscores (`_`)
+- "Directories" are separated by backslashes (`/`)
+- All other special characters are removed
+
+**Usage example:**
+
+```markdown
+---
+hidden: true
+permalink: /support_contact/docs_team/
+---
+```
 
 ### Page layout
 
-- **Key:** `layout`
-- **Description:** Sets specific features on the page that align with developed layouts. Defaults is a regular page.
-- **Required?:** No.
-- **Accepts Multiple Values?:** No.
-- **Data Type:** `string`
-- **Available Values:** If you do not set this, it will default to a regular content page. You may choose between: `api_page`, `dev_guide`, `featured_video`, `featured`, `glossary_page`, `blank_config`, and `redirect`. There are others, but those are mostly for internal and config uses.
+The `layout` key is used to set the layout for a page. If `layout` is not set, the `default` layout will be used. This key accepts any of the following `string` values:
+
+- `api_page`
+- `dev_guide`
+- `featured_video`
+- `featured`
+- `glossary_page`
+- `blank_config`
+- `redirect`
+
+For more information about each value, see [Page layouts]({{sitebase.url}}/docs/home/yaml_front_matter/page_layouts/).
+
+**Usage example:**
+
+```markdown
+---
+page_layout: glossary_page
+---
+```
 
 ### Page order
 
-- **Key:** `page_order`
-- **Description:** This is the order in which the article will appear in the left navigation of the Docs site.
-- **Required?:** Yes, unless page is hidden.
-- **Accepts Multiple Values?:** No.
-- **Data Type:** `integer`
-- **Available Values:** Any number (including multiple decimals) between `1` and `100`. You can use `1.1`, `1.2`, `1.3`, etc. to order pages, as well.
+The `page_order` key is used to [order sections]({{sitebase.url}}/docs/home/content_management/sections/#ordering-a-section) on the left-side navigation bar. This key accepts any non-negative number (such as `0`, `20`, or `5.5`).
+
+**Usage example:**
+
+```markdown
+---
+page_order: 35.6
+---
+```
 
 ### Page type
 
-- **Key:** `page_type`
-- **Description:** Type of page, determined by page templates. Inform formatting and content.
-- **Required?:** Yes.
-- **Accepts Multiple Values?:** No.
-- **Data Type:** `string`
-- **Available Values:** See [Page Types](#page-types).
+The `page_type` key is used to set formatting of a page. This key accepts any of the following `string` values:
+
+- `glossary`
+- `solution`
+- `reference`
+- `tutorial`
+- `landing`
+- `partner`
+- `update`
+
+For more information about each value, see [Page types]({{sitebase.url}}/docs/home/yaml_front_matter/page_types/).
+
+**Usage example:**
+
+```markdown
+---
+page_type: tutorial
+---
+```
 
 ### Platform
 
-- **Key:** `platform`
-- **Description:** Notes which platforms (iOS, Android, etc.) the article is associated with.
-- **Required?:** No, unless on a Dev Guide page.
-- **Accepts Multiple Values?:** Multiple values can be used.
-- **Data Type:** `string`
-- **Available Values:** Any of the platforms Braze integrates on: `iOS`, `Android`, `Web`, `API`, and any of the wrapper SDKs.
+The `platform` key is used to set the page's related platform(s). This key accepts one or more [Braze SDKs]({{sitebase.url}}/docs/developer_guide/home/) as a `string` value in a list.
+
+**Usage example:**
+
+```markdown
+---
+platform:
+  - iOS
+  - Web
+  - Android
+---
+```

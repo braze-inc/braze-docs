@@ -15,7 +15,7 @@ To use a page layout, you'll need to add the [`page_layout`]({{sitebase.url}}/do
 ```markdown
 ---
 nav_title: Getting started
-article_tite: Getting started with Braze Docs
+article_title: Getting started with Braze Docs
 page_layout: PAGE_LAYOUT_VALUE
 ---
 ```

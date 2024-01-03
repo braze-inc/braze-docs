@@ -15,7 +15,7 @@ To use a page type, you'll need to add the [`page_type`]({{sitebase.url}}/docs/h
 ```markdown
 ---
 nav_title: Getting started
-article_tite: Getting started with Braze Docs
+article_title: Getting started with Braze Docs
 page_type: PAGE_TYPE_VALUE
 ---
 ```
