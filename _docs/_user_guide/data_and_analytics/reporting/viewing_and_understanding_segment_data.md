@@ -148,6 +148,62 @@ To view purchase and revenue metrics broken down by segment for a specific campa
 - (Optional) Specific product
 
 {% endtab %}
+{% tab Top/bottom messaging for email engagement %}
+
+### Viewing metrics for the top or bottom performers
+
+This report in the [Variables](#variables) tab displays the campaigns, Canvases, or Canvas steps that were the highest or lowest performers for a specified email engagement metric. 
+
+Use cases include: 
+- 10 campaigns with the highest unique email open rates
+- 25 Canvases with the most email unsubscribes
+- 50 Canvas steps with the highest unique clicks
+
+The following email metrics are available in this report:
+- Sends
+- Deliveries
+- Complaints
+- Unique opens
+- Unique machine opens
+- Unique non-machine opens
+- Unique clicks
+- Unsubscribes
+- Bounces
+- Soft bounces
+- Complaints
+
+To view this report, you must specify the following variables in the **Variables** tab:
+- **Metrics:** Select one of the metrics by which to rank your results
+- **Number of reports:** Select top or bottom results and the number of results, such as Top 10 or Bottom 15
+- **Message type:** Specify if your results are campaigns, Canvases, or Canvas steps
+
+{% endtab %}
+{% tab Top/bottom messaging for purchases %}
+
+### Viewing metrics for the top or bottom performers
+
+This report in the [Variables](#variables) tab displays the campaigns, Canvases, or Canvas steps that were the highest or lowest performers for a specified purchase or revenue metric.
+
+Use cases include:
+- 20 campaigns with the highest purchase rates for a specific product
+- 25 Canvases with the most generated revenue
+- 10 Canvas steps with the lowest product purchase rate
+
+The following email metrics are available in this report:
+- Unique purchases upon receipt
+- Revenue upon receipt
+- Unique purchases upon click
+- Revenue upon click
+- Unique recipients
+- Unique email clicks
+
+To view this report, you must specify the following variables in the **Variables** tab:
+- **Metrics:** Select one of the metrics by which to rank your results
+- **Number of reports:** Select top or bottom results and the number of results, such as Top 10 or Bottom 15
+- **Message type:** Specify if your results are campaigns, Canvases, or Canvas steps
+- **Conversion window:** The number of days after email receipt or click to which Braze will attribute purchases or revenue 
+
+{% endtab %}
 {% endtabs %}
 
 ## Creating a report from a Query Builder template
