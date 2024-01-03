@@ -6,7 +6,7 @@ If you'd like to help improve the docs, you can:
 
 - [Report an issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=)
 - [Request a feature](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=enhancement&projects=&template=request_a_feature.md&title=)
-- [Contribute](./CONTRIBUTING.md)
+- [Contribute](https://www.braze.com/docs/home/contributing/)
 
 ## Quick start
 
@@ -48,3 +48,4 @@ Braze Docs is licensed under a Creative Commons public license. For more informa
 At Braze, we expect respectful behavior from both administrators and contributors. For more information, see [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
+
