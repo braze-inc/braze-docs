@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-> This template is for submitting **documentation feature requests** such as in-page tabbing, accessability improvements, content organization, and more. To report a docs issue instead, see [Report an issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
+> This template is for requesting docs-related features such as in-page tabbing, accessibility improvements, content organization, etc. To report a docs issue instead, see [Report an issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
 
 ### Feature description
 <!-- A clear and concise description of the feature. -->
