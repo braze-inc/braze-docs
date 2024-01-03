@@ -25,7 +25,7 @@ This feature allows users to control what specific first-party data is shared wi
 
 {% alert important %}
 **Audience Sync Pro disclaimer**<br>
-Reach out to your Braze Customer Success Manager for more details on this integration.
+Braze Audience Sync to Snapchat is considered an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager.
 {% endalert %}
 
 ## Prerequisites 

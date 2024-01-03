@@ -24,8 +24,8 @@ Using the Braze Audience Sync to Pinterest, brands can elect to add user data fr
 This feature allows brands to control what specific first-party data is shared with Pinterest. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
 {% alert important %}
-**Availability disclaimer**<br>
-Reach out to your Braze Customer Success Manager for more details on this integration.
+**Audience Sync Pro disclaimer**<br>
+Braze Audience Sync to Pinterest is considered an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager.
 {% endalert %}
 
 ## Prerequisites 
