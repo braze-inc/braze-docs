@@ -1,16 +1,18 @@
 ---
-nav_title: Creating pages
+nav_title: Pages
 page_order: 0
 noindex: true
 ---
 
-# Creating pages
+# Pages
 
-> Learn how to create pages on Braze Docs. If you'd like to create a new section instead, see [Sections](../../../_docs/_home/content_management/managing_sections.md). For general information about pages, see [About our framework](../../../_docs/_home/about_our_framework.md#pages).
+> Learn how to create, modify, and remove pages on Braze Docs. If you'd like to create a new section instead, see [Sections](../../../_docs/_home/content_management/managing_sections.md). For general information about pages, see [About our framework](../../../_docs/_home/about_our_framework.md#pages).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Create a new file
+## Creating a page
+
+### Step 1: Create a new file
 
 First, [create a new branch](../../../_docs/_home/github/creating_a_new_branch.md), then open the directory you'd like to add a new page to.
 
@@ -31,9 +33,9 @@ Replace `PAGE_TITLE` with the title of your page (be sure it adheres to the [Hea
 - **Page title:** Setting up your development environment for C++
 - **File name:** `setting_up_your_development_environment_for_cpp.md`
 
-## Use a layout
+### Step 2: Add a layout
 
-To use the default page layout, copy and paste the following template into your Markdown file. For other layouts, see [Layouts](../../../_docs/_home/examples/layouts.md).
+To use the default page layout, copy and paste the following into your Markdown file. For other layouts, see [Layouts](../../../_docs/_home/examples/layouts.md).
 
 ```markdown
 ---
@@ -63,10 +65,13 @@ Replace the following:
 
 You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [Metadata](../../../_docs/_home/metadata.md).
 
-## Add your content
+When you're ready to add content to your new page, continue to [Modifying a page](#modifying-a-page).
 
-Other than the following Braze-specific exceptions, all content should be written using [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/). {% multi_lang_include contributing/minis/creating_a_pull_request.md %}
+## Modifying a page
+
+Other than the Braze-specific syntax covered in this section, all page content should use [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/). {% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 
 {% multi_lang_include contributing/minis/cross_referencing.md %}
 
 {% multi_lang_include contributing/minis/adding_images.md %}
+

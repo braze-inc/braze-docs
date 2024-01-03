@@ -53,7 +53,7 @@ Replace the following:
 | Placeholder        | Description                                                              |
 |--------------------|--------------------------------------------------------------------------|
 | `LINK_TEXT`        | The page title or related action.                                        |
-| `REFERENCE_NUMBER` | Any integer not being used by another reference-style link on this page. |
+| `REFERENCE_NUMBER` | Assign any positive integer that's not already assigned to another reference-style link on this page. |
 
 Your references should look similar to the following:
 
@@ -88,3 +88,4 @@ Your links should look similar to the following:
 {% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 {% endtab %}
 {% endtabs %}
+

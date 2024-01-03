@@ -21,7 +21,7 @@ For small, single-document changes, you can [make changes directly in GitHub](),
 
 ![Editing a file directly in GitHub.]({% image_buster /assets/img/contributing/editing_directly_in_github.png %})
 
-For complex or multi-document changes, you'll need to [set up your local environment](../../_docs/_home/getting_started/setting_up_your_environment.md), then [make your changes locally]() using Git, like this:
+For complex or multi-document changes, you'll need to [set up your local environment](../../_docs/_home/getting_started/setting_up_your_environment.md), then [make your changes using Git](), like this:
 
 ```bash
 $ git push origin my-changes

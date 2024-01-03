@@ -1,4 +1,4 @@
-### Add images
+### Adding images
 
 To add images in your page, place the image's PNG file inside the relevant location within `assets/img`, then using the following syntax:
 
