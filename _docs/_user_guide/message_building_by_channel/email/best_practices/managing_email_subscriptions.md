@@ -14,12 +14,12 @@ channel: email
 
 ## Unsubscribed email addresses
 
-Braze will automatically unsubscribe any user that either manually unsubscribes from your email through a [custom footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions) or marks an email as spam. These users won't be targeted by future emails.
+Braze will automatically unsubscribe any user that either manually unsubscribes from your email through a [custom footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer) or marks an email as spam. These users won't be targeted by future emails.
 
 If a user unsubscribes and later changes their email, their new email will also be unsubscribed. In other words, after an external user ID is associated with an unsubscribe, future email addresses for that user ID will also be unsubscribed.
 
 {% alert tip %}
-Refer to our [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) best practices for guidance on how to reengage your users effectively!
+Refer to our [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) best practices for guidance on how to reengage your users effectively.
 {% endalert %}
 
 ## Bounces and invalid emails
@@ -33,6 +33,8 @@ For duplicate emails, if one email unsubscribes, other profiles (up to 100 profi
 Braze automatically checks for and removes duplicate email addresses when an email campaign is sent. This way an email is only sent once and is "deduped" which checks that it doesn't hit the same email multiple times even if multiple user profiles share a common address.
 
 Because deduplication occurs when targeted users are included in the same dispatch, triggered campaigns (excluding API-triggered campaigns) may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times.
+
+For example, if user A and user B share the email `johndoe@example.com` but their profile is in different time zone, when the campaign trigger event includes sending in a user's time zone, the email `johndoe@example.com` will receive two emails.
 
 {% alert important %}
 If you send an API campaign through an API call (excluding API-triggered campaigns), and multiple users are specified in the segment audience with the same email address, we will send it to that address as many times are listed in the call. This is because we assume that API calls are purposefully constructed.

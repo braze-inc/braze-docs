@@ -65,9 +65,7 @@ You can export individual user profiles in JSON format using the [Export users b
 
 Subscription groups are segment filters that can further narrow your audience from the [global subscription states](#subscription-states). You can add up to 100 subscription groups per workspace. These groups allow you to present more granular subscription options to end-users.
 
-For example, suppose you send out multiple categories of email campaigns (promotional, newsletter, or product updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using an [email preference center](#email-preference-center). 
-
-Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
+For example, suppose you send out multiple categories of email campaigns (promotional, newsletter, or product updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using an [email preference center](#email-preference-center). Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
 
 Use the [Subscription Group endpoints][25] to programmatically manage the subscription groups that you have stored on the Braze dashboard to the **Subscription Group** page.
 
@@ -101,6 +99,12 @@ You can archive your group from the **Subscription Groups** page. Find your grou
 
 Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is `subscribed` to it, they will remain "`subscribed`" to this group, even if they clicks an unsubscribe link (this shouldn't matter to Susie because "Subscription Group A" is archived and you can't send any messages using it).
 
+#### Viewing subscription group sizes
+
+You can reference the **Subscription Group Timeseries** graph in the **Subscription Groups** page to see the subscription group size based on the number of users over a period of time. These subscription group sizes are also consistent with other areas of Braze, such as segment size calculation.
+
+![][10]
+
 #### Viewing subscription groups in campaign analytics
 
 You can see the number of users who changed their subscription state (subscribed or unsubscribed) from a specific email campaign on that campaign's analytics page.
@@ -121,64 +125,9 @@ Note that when a user selects "Unsubscribe from all of the above types of emails
 
 ### Creating custom footers {#custom-footer}
 
-{% raw %}
-Braze provides the ability to set a workspace-wide custom email footer which you can template into every email using the ``{{${email_footer}}}`` Liquid attribute.
-{% endraw %}
+If you don't want to use the default Braze footer in your emails, you can create a workspace-wide custom email footer which you can template into every email using the {% raw %}`{{${email_footer}}}`{% endraw %} Liquid attribute.
 
-This way, you don't have to create a new footer for every email template or email campaign you use. Changes you make to your custom footer will be reflected in all new and existing email campaigns. Remember that compliance with the [CAN-SPAM Act of 2003](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business) requires you to include a physical address for your company and an unsubscribe link in your emails. 
-
-{% alert warning %}
-It is your responsibility to make sure that your custom footer meets the aforementioned requirements.
-{% endalert %}
-
-To create or edit your custom footer, do the following:
-
-1. Go to **Settings** > **Email Preferences**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is called **Email Settings** and is located under **Manage Settings**.
-{% endalert %}
-
-{: start="2"}
-2. Go to the **Custom Footer** section and turn on custom footers.
-3. Edit your footer in the **Compose** section and send a test message. <br><br>{% raw %}The default footer uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute and our physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include ``{{${set_user_to_unsubscribed_url}}}``. You won't be able to save a custom footer without this attribute. <br><br> ![][20] <br><br> If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**.{% endraw %} <b><br>![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
-
-{% alert tip %}
-Be very careful when using a template with the custom footer {% raw %}``{{${email_footer}}}`` or ``{{${set_user_to_unsubscribed_url}}}``{% endraw %} when composing an email campaign. A warning will appear, but it'll be your choice to send an email with or without an unsubscribe link.
-{% endalert %}
-
-![Example email composed without a footer.][21]
-
-![No-footer campaign composition.][22]
-
-#### Best practices for custom footers
-
-Braze suggests the following best practices when creating and using custom footers.
-
-##### Personalizing with attributes
-
-When creating a custom footer, Braze suggests using attributes for personalization. The full set of default and custom attributes are available, but here are a few you may find useful:
-
-| Attribute | Tag |
-| --------- | --- |
-| User's Email Address | {% raw %}`{{${email_address}}}`{% endraw %} |
-| User's Custom Unsubscribe URL | {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} |
-| User's Custom Opt-In URL | {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} |
-| User's Custom Subscribe URL | {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}|
-| User's Custom Braze Preference Center URL | {% raw %}`{{${preference_center_url}}}`{% endraw %} |
-{: .reset-td-br-1 .reset-td-br-2}
-
-##### Including an unsubscribe link and opt-in link
-
-{% raw  %}
-As a best practice, Braze recommends including both an unsubscribe link (such as ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (such as ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
-{% endraw %}
-
-##### Setting custom footers for plaintext emails
-
-You can also choose to set a custom footer for plaintext emails from the **Subscription Pages and Footers** tab on the **Email Preferences** page, which follows the same rules as the custom footer for HTML emails. If you don't include a plaintext footer, Braze will automatically build one from the HTML footer. When your custom footers are to your liking, click **Save** at the bottom of the page.
-
-![Email with Set Custom Plaintext Footer option selected.][23]{: style="max-width:70%" }
+This way, you don't have to create a new footer for every email template or email campaign you use. For steps, refer to [Custom email footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/).
 
 ### Creating a custom unsubscribe page
 
@@ -222,6 +171,7 @@ For example, this can be useful if you want to target users who have neither opt
 
 ![Email Subscription Status used as a segment filter.][18]
 
+[10]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
@@ -229,11 +179,6 @@ For example, this can be useful if you want to target users who have neither opt
 [17]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
 [18]: {% image_buster /assets/img_archive/not_optin.png %}
 [19]: {% image_buster /assets/img_archive/email_settings.png %}
-[20]: {% image_buster /assets/img_archive/custom_footer.png %}
-[21]: {% image_buster /assets/img_archive/no_unsub_link_warning.png %}
-[22]: {% image_buster /assets/img_archive/no_footer_test.png %}
-[23]: {% image_buster /assets/img_archive/custom_footer_save_changes.png %}
-[24]: {% image_buster /assets/img_archive/email_unsub_protocol.png %}
 [25]: {{site.baseurl}}/api/endpoints/subscription_groups
 [26]: {% image_buster /assets/img/sub_group_create.png %}
 [27]: {% image_buster /assets/img/sub_group_use.gif %}

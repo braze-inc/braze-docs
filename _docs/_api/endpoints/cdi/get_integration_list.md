@@ -3,8 +3,7 @@ nav_title: "GET: List Integrations"
 article_title: "GET: List Integrations"
 search_tag: Endpoint
 page_order: 1
-hidden: true
-permalink: /api/cdi/get_integration_list/
+alias: /api/cdi/get_integration_list/
 layout: api_page
 page_type: reference
 description: "This article outlines details about the List integrations Braze endpoint."

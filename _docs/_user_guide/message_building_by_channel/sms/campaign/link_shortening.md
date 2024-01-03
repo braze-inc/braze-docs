@@ -49,6 +49,10 @@ Navigate to the **Test** tab to preview and send an SMS to [content test groups]
 
 Make sure to save the campaign or Canvas before sending a test message to receive the shortened URL that will be dispatched in your message. If the campaign or Canvas is not saved before a test send, the test send will contain a placeholder URL.
 
+{% alert important %}
+If a draft is created within an active Canvas, a shortened URL will not be generated. The actual shortened URL will be generated when the Canvas draft is made active.
+{% endalert %}
+
 ![][2]
 
 {% alert note %}
@@ -114,7 +118,7 @@ No, Link Shortening will work without any SDK integration.
 
 #### Do I know which individual users are clicking on a URL?
 
-Not yet. This will be part of a future user-level click tracking release. If you use Currents, you can leverage [SMS click events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#sms-click-events) (`users.messages.sms.ShortLinkClick`) to send this data to your data warehouse.
+Yes. When Advanced Tracking is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting#trigger-messages-as-users-receive-sms) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent via Currents.
 
 #### Can I add UTM parameters to a URL before it is shortened?
 

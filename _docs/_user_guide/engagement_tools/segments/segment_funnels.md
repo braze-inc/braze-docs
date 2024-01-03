@@ -30,7 +30,7 @@ Segment funnels allow you to see how each added filter impacts your segment stat
 
 - Segment funnels let you compare the percentage of users who commit different actions. For instance, do active users, or those with high LTV, [tend to interact more with push or email][4]? To find out, create a segment of active users with one or more filters, and then see how statistics change when you add a filter for opting in to push, and when you add a filter for opting in to email.
 
-- Analyze how LTV changes as you add filters. For active users, do those who connect to Facebook or those who connect to Twitter have a higher LTV? Or is LTV significantly higher for those who have connected to both? If you find, for instance, that connecting to Twitter has very little impact on LTV but connecting to Facebook has a large impact, you may want your marketing campaigns to focus on incentivizing Facebook connections.
+- Analyze how LTV changes as you add filters. For active users, do those who connect to Facebook or those who connect to X (formerly Twitter) have a higher LTV? Or is LTV significantly higher for those who have connected to both? If you find, for instance, that connecting to X (formerly Twitter) has very little impact on LTV but connecting to Facebook has a large impact, you may want your marketing campaigns to focus on incentivizing Facebook connections.
 
 ## Sample use cases
 

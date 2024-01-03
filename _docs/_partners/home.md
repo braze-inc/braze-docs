@@ -39,6 +39,8 @@ valid_partner_list:
   alt:
     - title: Attribution
       url: /docs/partners/message_orchestration/attribution/branch/branch_for_attribution/
+- name: Facebook Zapier
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/facebook_via_zapier/
 - name: Kochava
   url: /docs/partners/message_orchestration/attribution/kochava/
 - name: Singular
@@ -160,9 +162,9 @@ valid_partner_list:
 - name: Adobe
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 - name: Worthy
-  url: /docs/partners/message_personalization/dynamic_content/worthy/ 
+  url: /docs/partners/message_personalization/dynamic_content/worthy/
 - name: Yotpo
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/ 
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Zeotap
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
 - name: Toovio
@@ -217,7 +219,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
 - name: Wunderkind
   url: /docs/partners/data_and_infrastructure_agility/analytics/wunderkind/
-- name: B.Layer 
+- name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Tellius
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
@@ -231,8 +233,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
 - name: Airbyte
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/airbyte/
-- name: Flywheel
-  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/
+- name: GrowthLoop
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/growthloop/
 - name: Mozart Data
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
 - name: loplat
@@ -279,6 +281,10 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lytics/
 - name: Olo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/
+- name: Recurly
+  url: /docs/partners/data_and_infrastructure_agility/payments/recurly/
+- name: SmarterSends
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/smartersends/
 - name: Typeform
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/  
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 ---

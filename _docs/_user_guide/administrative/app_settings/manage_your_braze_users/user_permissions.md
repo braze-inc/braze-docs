@@ -61,11 +61,11 @@ You can manage user permissions by group or on an individual basis when editing 
 |View PII | Allows users to view the personally identifiable information fields as defined by your company within the dashboard. |
 |View User Profiles PII Compliant| Allows users to view user profiles but redacts fields your company has defined as personally identifiable information (PII). |
 |Manage Dashboard Users| Allows users to view, edit, and manage the **Company Users** page. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level. This permission doesn't allow users to delete users because only administrators can delete users. |
-|Manage Media Library| Allows users to upload images to the library. You can still upload pictures and audio directly to a campaign without this permission.|
+|Manage Media Library Assets| Allows users to add, edit, and delete media library assets.|
 |View Usage Data| Allows users to view app usage.|
 |Import and Update User Data| Allows users to import CSV and update files of app users as well as view the User Import page. This also allows you to edit the subscription status of a user and their subscription group opt-in/opt-out rules. |
 |View Billing Details| Allows users to view subscriptions and billing. |
-|Access Dev Console| Allows access to Developer Console (where you can view API keys, API campaign activity log, event user log, and internal groups for testing messages).|
+|Access Dev Console| Allows full access to the following settings and logs:<br> {::nomarkdown}<ul><li><a href='/docs/user_guide/administrative/app_settings/api_settings_tab/'>API Keys</a></li><li><a href='/docs/user_guide/administrative/app_settings/internal_groups_tab/'>Internal Groups</a></li><li><a href='/docs/user_guide/administrative/app_settings/message_activity_log_tab/'>Message Activity Log</a></li><li><a href='/docs/user_guide/administrative/app_settings/event_user_log_tab/'>Event User Log</a></li></ul>{:/}|
 |Manage External Integrations| Allows access to all tabs under **Technology Partners** and the ability to sync Braze with other platforms.|
 |Manage Apps| Allows users to edit **App Settings**.|
 |Manage Teams|Allows users to manage **Internal Teams**. The ability to select this permission depends on your contract with Braze.|
@@ -76,7 +76,6 @@ You can manage user permissions by group or on an individual basis when editing 
 |View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
 |Manage Transformations|Allows users to create and manage Data Transformations. |
 |Manage Feature Flags| Allows users to create or edit [feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/).|
-| Launch and Manage Content Blocks| Allows users to launch Content Blocks. Users with this permission can also edit, archive, and unarchive launched [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/). |
 |Launch Preference Centers| Allows users to launch [preference centers]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Approve and Deny Campaigns| Allows users to approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you're interested in participating in the early access. |
 | Approve and Deny Canvases| Allows users to approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/canvas_approval) must be turned on for this permission to apply. |
@@ -106,7 +105,7 @@ Each permission set can be defined for a specific group of users, such as in the
 Permission Set Name    | Permissions  
 ----------- | ---------------- 
 Developers | “Access Dev Console”
-Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br> “Manage Media Library”
+Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br> “Manage Media Library Assets”
 User Management | “Manage Dashboard Users” <br> “Manage Teams”
 {: .reset-td-br-1 .reset-td-br-2}
 

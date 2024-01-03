@@ -68,6 +68,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
 - name: Smartling
   url: /docs/partners/message_personalization/localization/smartling/
+- name: SmarterSends
+  url: /docs/partners/message_personalization/dynamic_content/smartersends/
 - name: Tangerine
   url: /docs/partners/message_personalization/location/tangerine/ 
 - name: Stylitics

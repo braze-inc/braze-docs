@@ -52,6 +52,7 @@ validurls['/docs/enabling_message_channels/push_notifications/ios'] = '/docs/dev
 
 validurls['/docs/ios/#push-notifications'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/';
 validurls['/docs/platform_integration_guides/swift/push_notifications/integrations'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/';
+validurls['/docs/platform_integration_guides/swift/push_notifications/integration'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/';
 validurls['/docs/partner_integrations/#adjust'] = '/docs/partners/adjust/';
 validurls['/docs/frequently_asked_questions#local-timezone-delivery'] = '/docs/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer';
 validurls['/docs/frequently_asked_questions'] = '/docs/help/faqs/';
@@ -381,11 +382,11 @@ validurls['/docs/partners/data_augmentation/contextual_location/factual/'] = '/d
 
 validurls['/docs/report_by_variant/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/#performance-by-variant';
 
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#html-upload-with-preview';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#html-upload-with-preview';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#supported-sdk-versions'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#supported-sdk-versions';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#upload-assets'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#asset-files';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/modal_with_css/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/#web-modal-css';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#html-upload-with-preview';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#html-upload-with-preview';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#supported-sdk-versions'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#supported-sdk-versions';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#upload-assets'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#asset-files';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/modal_with_css/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#web-modal-css';
 
 validurls['/docs/services_handbook/'] = '/docs/handbooks/';
 
@@ -522,7 +523,7 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 
 validurls['/docs/user_guide/message_building_by_channel/push/best_practices/push_reporting/'] = '/docs/user_guide/message_building_by_channel/push/push_reporting/';
 
-validurls['/docs/help/best_practices/'] = '/docs/faqs/';
+validurls['/docs/help/best_practices/'] = '/docs/help/faqs/';
 validurls['/docs/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/'] = '/docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/';
 validurls['/docs/developer_guide/platform_integration_guides/flutter/preview/'] = '/docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/';
 
@@ -890,7 +891,7 @@ validurls['/docs/developer_guide/platform_integration_guides/fireos/push_notific
 validurls['/docs/user_guide/intelligence/intelligent_selection/'] = '/docs/user_guide/sage_ai/intelligence/intelligent_selection/';
 validurls['/docs/user_guide/intelligence/intelligent_timing/'] = '/docs/user_guide/sage_ai/intelligence/intelligent_timing/';
 validurls['/docs/help/best_practices/email/overview/'] = '/docs/help/help_articles/email/';
-validurls['/docs/user_guide/onboarding_with_braze/overview'] = '/docs/user_guide/onboarding_with_braze/';
+validurls['/docs/user_guide/onboarding_with_braze/overview'] = '/docs/user_guide/getting_started';
 validurls['/docs/api/objects_filters/user_attributes/object/'] = '/docs/api/objects_filters/user_attributes_object/';
 validurls['/docs/user_guide/administrative/access_braze/resetting_your_password/'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/#resetting-your-password/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/ios_14/'] = '/docs/ios_14/';
@@ -936,8 +937,155 @@ validurls['/docs/user_guide/onboarding_with_braze/learning_to_use_braze/'] = '/d
 validurls['/docs/user_guide/onboarding_with_braze/web_sdk/'] = '/docs/user_guide/getting_started/web_sdk/';
 validurls['/docs/user_guide/onboarding_with_braze/integration/'] = '/docs/user_guide/getting_started/integration/';
 validurls['/docs/user_guide/onboarding_with_braze/terms_to_know'] = '/docs/user_guide/getting_started/terms_to_know/';
+validurls['/docs/user_guide/onboarding_with_braze/data_points#data-points'] = '/docs/user_guide/data_and_analytics/data_points/';
 
 validurls['/docs/developer_guide/platform_wide/analytics_overview/'] = '/docs/developer_guide/platform_wide/getting_started/analytics_overview/';
 validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personal_path'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/';
 
 validurls['/docs/help/release_notes/2021/12_14_21/'] = '/docs/help/release_notes/2021/december/';
+
+
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify#prerequisites'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/#requirements';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/#shopify-setup-within-braze'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify_backfill/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/Shopify_Features/shopify_backfill/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Using_Shopify/shopify_data_in_braze/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Shopify_Features/shopify_catalogs/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/#troubleshooting/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Shopify_Features/shopify_catalogs/#troubleshooting/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/back_in_stock/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Shopify_Features/shopify_catalogs/back_in_stock/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_in_braze/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Using_Shopify/shopify_data_in_braze/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Using_Shopify/use_cases/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/scripttag_web_sdk_integration/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/';
+
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/';
+validurls['/docs/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/macOS/initial_sdk_setup/';
+validurls['/docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/initial_sdk_setup/';
+
+
+validurls['/docs/developer_guide/platform_integration_guides/ios/advanced_use_cases/beacon_integration/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/advanced_use_cases/beacon_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/advanced_use_cases/fine_network_traffic_control/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/advanced_use_cases/fine_network_traffic_control/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/advanced_use_cases/google_tag_manager/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/advanced_use_cases/google_tag_manager/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/advanced_use_cases/linking/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/advanced_use_cases/localization/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/advanced_use_cases/localization/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/advanced_use_cases/locations_and_geofences/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/advanced_use_cases/locations_and_geofences/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/advanced_use_cases/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/advanced_use_cases/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/analytics/disabling_tracking/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/analytics/disabling_tracking/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/analytics/location_tracking/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/analytics/location_tracking/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/analytics/logging_purchases/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/analytics/setting_custom_attributes/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/analytics/setting_user_ids/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/analytics/tracking_custom_events/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/analytics/tracking_sessions/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/analytics/uninstall_tracking/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/analytics/uninstall_tracking/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/analytics/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/analytics/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/changelog/objc_changelog/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/changelog/swift_changelog/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/changelog/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/changelog/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/customization/badges/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/badges/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/customization/custom_styling/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/custom_styling/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/customization/customizing_feed/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/customizing_feed/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/customization/handling_clicks_manually/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/handling_clicks_manually/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/customization/read_unread_indicators/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/read_unread_indicators/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/customization/use_cases/carousel_view/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/use_cases/carousel_view/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/customization/use_cases/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/use_cases/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/customization/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/implementation_guide/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/integration/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/integration/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/multiple_feeds/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/refreshing_the_feed/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/refreshing_the_feed/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/custom_app_store_review_prompt/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/custom_app_store_review_prompt/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/behavior_on_click/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/behavior_on_click/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/custom_triggering/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/custom_triggering/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/custom_view_controller/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/custom_view_controller/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/customizing_orientation/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/customizing_orientation/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handling_in_app_display/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/handling_in_app_display/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/key_value_pairs/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/key_value_pairs/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/modal_dismissal/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/modal_dismissal/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/setting_delegates/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/shareplay/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/implementation_guide/shareplay/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/implementation_guide/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/in-app_message_delivery/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/in-app_message_delivery/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/overview/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/troubleshooting/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/troubleshooting/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/completing_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/carthage_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/cocoapods/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/cocoapods/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/ios_sdk_integration/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/ios_sdk_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/ios_16/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/ios_16/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/customization/badges/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/customization/badges/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/customization/custom_styling/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/customization/custom_styling/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/customization/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/customization/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/defining_a_news_feed_category/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/defining_a_news_feed_category/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/integration/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/integration/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/refreshing_the_news_feed/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/refreshing_the_news_feed/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/action_buttons/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/advanced_settings/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/advanced_settings/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/badges/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/badges/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/custom_sounds/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/custom_sounds/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/ignoring_internal_push/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/rich_notifications/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/implementation_guide/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/integration/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/push_primer/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/push_primer/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/push_story/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/push_story/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/silent_push_notifications/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/testing/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/testing/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/troubleshooting/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/unit_tests/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/sample_apps/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/sample_apps/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/storage/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/storage/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/';
+
+validurls['/docs/developer_guide/platform_integration_guides/macOS/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/macOS/';
+
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/';
+validurls['/docs/developer_guide/platform_integration_guides/tvos/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/';
+
+validurls['/docs/user_guide/message_building_by_channel/sms/sms_setup/sms_subscription_groups'] = '/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/handling_in_app_display'] = '/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handling_in_app_display/';
+validurls['/docs/user_guide/data_and_analytics/your_reports/engagement_reports'] = '/docs/user_guide/data_and_analytics/reporting/engagement_reports/';
+validurls['/docs/React_Native/Android_and_FireOS'] = '/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/baidu_integration'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/';
+validurls['/docs/api/interactive'] = '/docs/api/home';
+validurls['/docs/api/home/en'] = '/docs/api/home';
+validurls['/docs/partners/braze_currents/how_it_works'] = '/docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/';
+validurls['/docs/React_Native'] = '/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/changelog/Examples/Podfile'] = '/docs/developer_guide/platform_integration_guides/swift/changelog/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopfiy/shopify_backfill'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/';
+validurls['/docs/help/best_practices/user_onboarding'] = '/docs/help/best_practices/';
+validurls['/docs/React_Native/iOS'] = '/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/?tab=ios';
+validurls['/docs/user_guide/engagement_tools/testing/random_bucket_numbers/undefined/user_guide/introduction'] = '/docs/user_guide/engagement_tools/testing/random_bucket_numbers/';
+validurls['/docs/developer_guide/platform_integration_guides/flutter/react_sdk_setup'] = '/docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/';
+validurls['/docs/user_guide/engagement_tools/canvas/canvas_basics'] = '/docs/user_guide/engagement_tools/canvas/get_started/the_basics/';
+validurls['/docs/partners/message_personalization/judo'] = '/docs/partners/message_personalization/dynamic_content/judo/';
+validurls['/docs/user_guide/engagement_tools/campaign'] = '/docs/user_guide/engagement_tools/campaigns';
+validurls['/docs/user_guide/data_and_analytics/engagement_reports'] = '/docs/user_guide/data_and_analytics/reporting/engagement_reports/';
+validurls['/docs/partners/braze_currents/data_partner_integrations/dpi'] = '/docs/user_guide/data_and_analytics/braze_currents/available_partners/';
+validurls['/docs/partners/message_personalization/peak'] = '/docs/partners/message_personalization/dynamic_content/peak/';
+validurls['/docs/message_building_by_channel'] = '/docs/user_guide/message_building_by_channel';
+validurls['/docs/partners/insights/business_intelligence'] = '/docs/partners/data_and_infrastructure_agility/business_intelligence';
+validurls['/docs/SDK_Integration/Android'] = '/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/device-token-not-for-topic'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/#message-activity-log-errors';
+validurls['/docs/user_guide/message_building_by_channel/push_notifications'] = '/docs/user_guide/message_building_by_channel/push';
+validurls['/docs/message_building_by_channel/email/best_practices'] = '/docs/user_guide/message_building_by_channel';
+validurls['/docs/hidden/private_betas/tiktok'] = '/docs/partners/canvas_steps/tiktok_audience_sync/';
+
+validurls['/docs/email_engagement_dashboard/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/#email-insights-dashboard/';
+
+validurls['/docs/user_guide/administrative/app_settings/email_settings/#include-a-list-unsubscribe-header'] = '/docs/user_guide/administrative/app_settings/email_settings/#enable-list-unsubscribe-header';
+
+validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/'] = '/docs/partners/data_and_infrastructure_agility/workflow_automation/growthloop/';

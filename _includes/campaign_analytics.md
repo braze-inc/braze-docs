@@ -162,10 +162,11 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 
 | Term | Definition |
 | -- | -- |
+| Messages Sent | This is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression):<br><br>  {::nomarkdown}<ul><li><b>At launch or step entry:</b> The number of cards created and available to be seen. This doesn't count whether the users viewed the card.</li><li><b>At first impression:</b> The number of cards displayed to users.</li></ul>{:/} |
 | Total Impressions | The total count of impressions logged for a given Content Card. This can increment multiple times for the same user. |
 | Unique Impressions | The number of users who have viewed a given card. This count doesn't increment the second time that a user views a card. |
 | Unique Recipients | The total number of viewers (unique, but only unique per day) that have viewed the particular card. Because a viewer can be a unique recipient every day, you should expect this to be higher than Unique Impressions. |
-| Unique Clicks | The number of recipients who have clicked the CTA link of a Content Card at least once—excluding clicks on Braze-provided unsubscribe links. |
+| Unique Clicks | The number of recipients who have clicked the CTA link of a Content Card at least once—excluding clicks on Braze-provided unsubscribe links. Measured by [`dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/). |
 Unique Dismissals | The number of users who have dismissed Content Cards from a campaign. A user dismissing a Content Card from a campaign multiple times represents one unique dismissal. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -197,7 +198,7 @@ Here are some key email-specific metrics that you won't see in other channels. T
 | --- | --- |
 | Spam | The percentage of users that marked your email as spam, or the email was designated as spam. If this metric is greater than 0.08, that could be a sign that either your message copy is too salesy or you should reconsider your email address collection methods (to confirm you're messaging those who are interested in your correspondence). |
 | Unique opens | The percentage of recipients that opened your email. This can also include emails that are machine opened. This number should be between 10–20%. Anything greater than 20% is exceptional! |
-| Unique clicks | The percentage of recipients that clicked within the email sent. This number should be between 5–10%. Anything greater than 10% is exceptional! |
+| Unique clicks | The percentage of recipients that clicked within the email sent. Measured by [`dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/). This number should be between 5–10%. Anything greater than 10% is exceptional! |
 | Click to open | The percentage of recipients that opened your email and then clicked on it. |
 | Estimated real opens  | This is an estimate of how many unique opens there would be if machine opens did not exist. This is the result of a proprietary Braze statistical model. See the following section for details. |
 | Machine opens | Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. <br>For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a "Machine Opens". This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for SparkPost. |
