@@ -39,5 +39,5 @@ guide_menu_list:
 ---
 
 {% alert important %}
-Audience Syncs to Pinterest, Snapchat, and TikTok are considered Audience Sync Pro integrations. For more information on these integrations, reach out to your Braze account manager.
+Audience Syncs to Pinterest, Snapchat, and TikTok are Audience Sync Pro integrations. For more information on these integrations, reach out to your Braze account manager.
 {% endalert %}
