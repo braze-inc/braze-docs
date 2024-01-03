@@ -12,7 +12,7 @@ noindex: true
 
 ## Creating a PR
 
-If you're ready to create a PR, that means you've already [created a new branch]({{sitebase.url}}/home/github/creating_a_new_branch/) and you're finished making your changes. In the terminal, checkout your previous branch.
+If you're ready to create a PR, that means you've already [created a new branch]({{sitebase.url}}/home/github/creating_a_new_branch/) and you're finished making changes. In the terminal, checkout your previous branch.
 
 ```bash
 git checkout BRANCH_NAME

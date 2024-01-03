@@ -6,7 +6,7 @@ noindex: true
 
 # Images
 
-> Learn how to add, modify, and remove images on Braze Docs. For general information about images, see [About our framework](../../../_docs/_home/about_our_framework.md).
+> Learn how to add, modify, and remove images on Braze Docs. For general information about images, see [About our framework]({{sitebase.url}}/docs/home/about_our_framework).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -14,7 +14,7 @@ noindex: true
 
 ### Step 1: Upload the image file
 
-First, [create a new branch](../github/creating_a_new_branch.md), then go to `assets/img`. Generally, your new image should be added to the same directory as the other images on your page, however you may use your best judgment. Confirm your new image follows our [Image Style Guide](), then add the PNG file to the relevant subdirectory.
+First, [create a new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then go to `assets/img`. Generally, your new image should be added to the same directory as the other images on your page, however you may use your best judgment. Confirm your new image follows our [Image Style Guide](), then add the PNG file to the relevant subdirectory.
 
 ![A text editor with the file tree open and a new image added to the 'img' directory.]()
 
@@ -149,7 +149,7 @@ Next, add your new image to the same directory as the original image. If asked, 
 
 ## Removing an image
 
-To remove an image, [create a new branch](../github/creating_a_new_branch.md), then remove the [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link the page. 
+To remove an image, [create a new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then remove the [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link the page. 
 
 {% alert warning %}
 Do not delete the image file from the repository. If an image file is removed, other language translations referencing that image wll show a broken image instead.

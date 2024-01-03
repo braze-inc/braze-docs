@@ -18,7 +18,7 @@ By setting up URL redirects, you'll help prevent bookmarks from breaking for Bra
 
 ## Redirecting a page
 
-To redirect the URL for an entire page, you'll use our global redirect file. First, [create a new branch](../../github/creating_a_new_branch.md), then find the page's Markdown file and move or rename the file.
+To redirect the URL for an entire page, you'll use our global redirect file. First, [create a new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then find the page's Markdown file and move or rename the file.
 
 ![A text editor with the file tree open on the left side.]()
 
@@ -47,7 +47,7 @@ validurls['/docs/user_guide/data_and_analytics/engagement_reports'] = '/docs/use
 
 ## Redirecting a heading
 
-To redirect the URL for an in-page heading, you'll use the `local_redirect` key within the page's YAML front matter. First, [create a new branch](../../github/creating_a_new_branch.md), then open the page's markdown file and rename the relevant heading.
+To redirect the URL for an in-page heading, you'll use the `local_redirect` key within the page's YAML front matter. First, [create a new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then open the page's markdown file and rename the relevant heading.
 
 ![A text editor with the file tree open on the left side.]()
 

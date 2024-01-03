@@ -44,8 +44,8 @@ For more information, see [Docs framework]().
 
 Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]() and find a simple change you'd like to make. Next, choose how you'd like to make your change:
 
-- **(Recommended) [Using your local environment](#using-your-local-environment):** For complex or multi-document changes, you'll need to make changes from your local environment.
-- **[Using GitHub](#using-github):** For small, single-document changes, you can make changes directly from the GitHub website.
+- **(Recommended) Using your local environment:** For complex or multi-document changes, you'll need to make changes from your local environment.
+- **Using GitHub:** For small, single-document changes, you can make changes directly from the GitHub website.
 
 {% alert warning %}
 Before continuing, verify you've completed all tasks in [Before you start](#before-you-start).
@@ -168,9 +168,9 @@ In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), 
 
 Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For more information see [Directory structure]().
 
-For example, `braze.com/home/metadata/` can be found on the following page:
+For example, `braze.com/home/yaml_front_matter/` can be found on the following page:
 
-![The "Metadata" page in the "Contributing" section on Braze Docs.]()
+![The "YAML front matter" page in the "Contributing" section on Braze Docs.]()
 
 Select **Edit this file**, then make your changes using [Markdown formatting]().
 
@@ -206,9 +206,9 @@ In your PR, you can preview your changes in a test environment that's identical 
 
 Double-check your work using the following Braze style guides:
 
-- [Writing style guide](../../../_docs/_home/styleguides/writing.md)
-- [Images style guide](../../../_docs/_home/styleguides/images.md)
-- [Alerts style guide](../../../_docs/_home/styleguides/alerts.md)
+- [Writing style guide]({{sitebase.url}}/docs/home/style_guides/writing/)
+- [Images style guide]({{sitebase.url}}/docs/home/style_guides/images/)
+- [Alerts style guide]({{sitebase.url}}/docs/home/style_guides/alerts/)
 
 If you'd like to make additional changes, see [Make additional changes](). Otherwise, you can [request a review]() from the Braze Docs team.
 

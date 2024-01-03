@@ -13,7 +13,7 @@ Replace the following:
 | Placeholder  | Description                                             |
 |--------------|---------------------------------------------------------|
 | `LINK_TEXT`  | The page title or related action.                       |
-| `SHORT_URL` | The page URL with `https://www.braze.com/docs` removed. |
+| `SHORT_URL`  | The page URL with `https://www.braze.com/docs` removed. |
 
 Your cross-reference link should be similar to the following:
 

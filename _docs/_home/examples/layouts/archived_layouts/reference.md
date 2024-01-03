@@ -53,7 +53,7 @@ Include:
 
 ## Topic 1 Regarding this Concept
 
-This should explain a specific aspect of this concept, like how a specific type of Canvas Step is used in combination with a channel. If you would like to see an example of how to do this thing in the wild, check out [this link to that tutorial]({{site.baseurl}}/home/templates/tutorial_video.md).
+This should explain a specific aspect of this concept, like how a specific type of Canvas Step is used in combination with a channel. If you would like to see an example of how to do this thing in the wild, check out [this link to that tutorial]().
 
 ### Code Sample
 
