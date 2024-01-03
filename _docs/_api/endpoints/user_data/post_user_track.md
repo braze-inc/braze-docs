@@ -197,6 +197,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 
 ### Example request to create an alias-only user
+
 You can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If this value is omitted, the alias-only user profile will not be created. Using an alias-only user guarantees that one profile with that alias will exist. This is especially helpful when building a new integration as it prevents the creation of duplicate user profiles.
 
 ```
@@ -286,5 +287,9 @@ A new profile will be created and an email-only user will be created. An alias w
 You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API-generated user profile.
 
 The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app, simply add the filter: `Session Count > 0`.
+
+### How does `/users/track` handle duplicate events?
+
+Each event object in the events array represents a single occurrence of a custom event by a user at a designated time. This means each event ingested into Braze has its own event ID, so "duplicate" events are treated as separate, unique events.
 
 {% endapi %}
