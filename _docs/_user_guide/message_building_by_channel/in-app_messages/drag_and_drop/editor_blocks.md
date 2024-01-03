@@ -78,5 +78,5 @@ The Custom Code block is currently in early access. Contact your Braze customer 
 
 | Name | Description |
 | --- | --- |
-| Custom Code | Enter the raw HTML, CSS, and JS. |
+| Custom Code | Allows you to add, edit, or delete HTML, CSS, and JavaScript for an in-app message. |
 {: .reset-td-br-1 .reset-td-br-2}
