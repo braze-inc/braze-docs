@@ -34,11 +34,11 @@ METADATA_KEY: METADATA_VALUE
 
 Replace the following:
 
-| Placeholder      | Description                                                                                                                             |
-|------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter). |
-| `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter).  |
-| `CONTENT`        | The page's content written in Markdown syntax.                                                                                          |
+| Placeholder      | Description                                                                                                                                   |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/). |
+| `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).  |
+| `CONTENT`        | The page's content written in Markdown syntax.                                                                                                |
 
 _Example input:_
 
@@ -170,7 +170,7 @@ _Example output:_
 ![API glossary layout example on Braze Docs.]()
 
 {% alert note %}
-For more information, see [Metadata]({{sitebase.url}}/docs/home/yaml_front_matter/#metadata).
+For more information, see [Page layouts]({{sitebase.url}}/docs/home/yaml_front_matter/page_layouts).
 {% endalert %}
 
 ## Sections
