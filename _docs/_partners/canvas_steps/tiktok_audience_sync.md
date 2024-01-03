@@ -24,7 +24,7 @@ This feature lets brands control what specific first-party data is shared with T
 
 {% alert important %}
 **Audience Sync Pro disclaimer**<br>
-Reach out to your Braze Customer Success Manager for more details on this integration.
+Braze Audience Sync to TikTok is an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager.
 {% endalert %}
 
 ## Prerequisites
