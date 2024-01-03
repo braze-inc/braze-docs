@@ -19,7 +19,7 @@ Before you start, you'll need to complete the following:
   - [Windows](https://docs.github.com/en/github-ae@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows)
   - [Linux](https://docs.github.com/en/github-ae@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux)
 
-## Fork the repository
+## Step 1: Fork the repository
 
 Open the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), then select **Fork**.
 
@@ -44,7 +44,7 @@ cd ~
 git clone git@github.com:braze-inc/braze-docs.git
 ```
 
-## Install Ruby version `2.7.4`
+## Step 2: Install Ruby 
 
 To build the docs locally, you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
 
@@ -59,7 +59,7 @@ If it's not, use a [supported version manager](https://www.ruby-lang.org/en/docu
 rbenv install 2.7.4
 ```
 
-## Install Braze Docs dependencies
+## Step 3: Install dependencies
 
 Next, install project dependencies.
 
@@ -67,7 +67,7 @@ Next, install project dependencies.
 ./bundle install
 ```
 
-## Starting the local server
+## Step 4: Start a local server
 
 To start your local docs server on localhost `http://127.0.0.1:4000`, run:
 
@@ -75,6 +75,5 @@ To start your local docs server on localhost `http://127.0.0.1:4000`, run:
 ./rake
 ```
 
-## Stopping the local server
-
 To stop your server, reopen the terminal and press **Control**+**C**.
+

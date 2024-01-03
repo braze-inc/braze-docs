@@ -1,25 +1,38 @@
 ---
 nav_title: Creating a pull request
-page_order: 2
+page_order: 1
 noindex: true
 ---
 
 # Creating a Pull Request (PR)
 
-> Learn how to create a Pull Request (PR) for your latest changes.
+> Learn how to create a Pull Request (PR) so you can review your working branch before requesting a review.
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Create a PR
+## Creating a PR
 
-In the terminal, add your changes and stage your commit.
+If you're ready to create a PR, that means you've already [created a new branch]({{sitebase.url}}/home/github/creating_a_new_branch/) and you're finished making your changes. In the terminal, checkout your previous branch.
+
+```bash
+git checkout BRANCH_NAME
+```
+
+Replace `BRANCH_NAME` with the branch name you created previously. Your output should be similar to the following:
+
+```bash
+$ git checkout fixing-typo-in-metadata
+Switched to branch 'fixing-typo-in-metadata'
+```
+
+Add your changes and stage your commit.
 
 ```bash
 git add --all
 git commit -m "COMMIT_MESSAGE"
 ```
 
-Replace `COMMIT_MESSAGE` with a short sentence describing your changes. The output is similar to the following:
+Replace `COMMIT_MESSAGE` with a short sentence describing your changes. Your output should be similar to the following:
 
 ```bash
 $ git commit -m "Fixing a typo in the recommended software doc."
@@ -57,3 +70,4 @@ In the PR description, you'll see Markdown comments similar to the following. Us
 When you're finished, select the pull request dropdown, then select **Draft pull request**.
 
 ![The Braze Docs GitHub repository with the "Draft pull request" button highlighted.]()
+
