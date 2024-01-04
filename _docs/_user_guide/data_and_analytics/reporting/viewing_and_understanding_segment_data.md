@@ -120,7 +120,7 @@ To view purchase and revenue metrics broken down by segment for a specific campa
 - Conversion window (the number of days after email receipt or click that Braze should attribute purchases or revenue to)
 - (Optional) Specific product
 
-In addition, use the Variables tab to specify whether to run report for one or more campaigns/Canvases, or one or more tags. If no campaigns, Canvases, or tags are chosen, then the report will run for all emails from campaigns/Canvases during your chosen time frame.
+In addition, use the **Variables** tab to specify whether to run the report for one or more campaigns or Canvases, or one or more tags. If no campaigns, Canvases, or tags are chosen, then the report will run for all emails from campaigns or Canvases during your chosen time frame.
 
 Currently, this report pulls metrics from only the email channel. Any revenue or purchase data from channels besides emails will not be reflected in the report. 
 
