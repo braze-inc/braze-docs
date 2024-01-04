@@ -10,6 +10,8 @@ If you'd like to help improve the docs, you can:
 
 ## Quick start
 
+> **Note:** For a full walkthrough, see [Setting up your environment](https://www.braze.com/docs/home/getting_started/setting_up_your_environment/).
+
 To build the docs locally, you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
 
 ```bash

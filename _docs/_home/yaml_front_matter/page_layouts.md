@@ -20,48 +20,122 @@ page_layout: PAGE_LAYOUT_VALUE
 ---
 ```
 
+**Example output:**
+
+!["An example page using the 'VALUE' layout."]()
+
 Replace `PAGE_LAYOUT_VALUE` with one of the values from the following sections:
 
 ## Accepted values
 
 ### API page
 
-DESCRIPTION.
+The `api_page` value is used to apply the API page format. Use this layout for...
 
-- **Value:** `api_page`
+**Example input:**
+
+```markdown
+---
+page_layout: api_page
+---
+```
+
+**Example output:**
+
+!["An example page using the 'api_page' layout."]()
 
 ### Blank page
 
-DESCRIPTION.
+The `blank_config` value is used to apply the blank page format. Use this layout for... 
 
-- **Value:** `blank_config`
+**Example input:**
+
+```markdown
+---
+page_layout: blank_config
+---
+```
+
+**Example output:**
+
+!["An example page using the 'blank_config' layout."]()
 
 ### Developer guide
 
-DESCRIPTION.
+The `dev_guide` value is used to apply the developer guide format. Use this layout for... 
 
-- **Value:** `dev_guide`
+**Example input:**
+
+```markdown
+---
+page_layout: dev_guide
+---
+```
+
+**Example output:**
+
+!["An example page using the 'dev_guide' layout."]()
 
 ### Video page
 
-DESCRIPTION.
+The `featured_video` value is used to apply the video page format. Use this layout for... 
 
-- **Value:** `featured_video`
+**Example input:**
+
+```markdown
+---
+page_layout: featured_video
+---
+```
+
+**Example output:**
+
+!["An example page using the 'featured_video' layout."]()
 
 ### Featured page
 
-DESCRIPTION.
+The `featured` value is used to apply the featured page format. Use this layout for... 
 
-- **Value:** `featured`
+**Example input:**
+
+```markdown
+---
+page_layout: featured
+---
+```
+
+**Example output:**
+
+!["An example page using the 'featured' layout."]()
 
 ### Glossary page
 
-DESCRIPTION.
+The `glossary_page` value is used to apply the glossary page format. Use this layout for... 
 
-- **Value:** `glossary_page`
+**Example input:**
+
+```markdown
+---
+page_layout: glossary_page
+---
+```
+
+**Example output:**
+
+!["An example page using the 'glossary_page' layout."]()
 
 ### Redirect page URL
 
-DESCRIPTION.
+The `redirect` value is used to apply the [redirect the URL for an in-page heading]({{sitebase.url}}/docs/home/content_management/redirecting_urls/#redirecting-a-heading). 
 
-- **Value:** `redirect`
+**Example input:**
+
+```markdown
+---
+page_layout: redirect
+---
+```
+
+**Example output:**
+
+!["An example page using the 'redirect' layout."]()
