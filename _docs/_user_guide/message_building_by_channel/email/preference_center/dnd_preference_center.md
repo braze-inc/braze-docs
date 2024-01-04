@@ -35,9 +35,10 @@ This Liquid tag can be included in any outbound email campaigns or Canvas steps 
 Click **Launch Editor** to begin designing your preference center in the drag-and-drop editor.
 
 ### Define available subscription groups
+
 To determine which subscription groups should be shown in the preference center, click the **+ Add subscription groups** button to launch a modal where desired subscription groups can be selected. After selecting, click the **Add Subscription Groups** button to add them to the preference center.
 
-You can further configure the selected subscription groups by clicking on the smart block and adjusting the block Properties.
+You can further configure the selected subscription groups by clicking on the smart block and adjusting the block properties.
 - Adjust the order that subscription groups appear
 - Add or remove additional subscription groups
 - Include descriptions
@@ -87,6 +88,8 @@ Blocks represent different types of content you can use in your message. Simply 
 ![]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
 
 Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor block properties]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
+
+If you're using the Custom Code block in your preference center, inline frames may not generate in the custom code when delivered to your users.
 
 {% endtab %}
 {% endtabs %}
