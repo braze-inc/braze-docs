@@ -139,6 +139,105 @@ Your query may fail for any of the following reasons:
     - Reports that take longer than 6 minutes to run will time out.
     - If a report times out, try to limit the time range in which you are querying data or query a more specific set of data.
 
+## Variables
+
+### Overview
+
+Variables allow you to use predefined variable types in SQL to reference values without needing to manually copy the value. For example, instead of manually copying a campaign's ID to the SQL editor, you can use `{{campaign.${My campaign}}}` to directly select a campaign from a dropdown in the **Variables** tab.
+
+![][3]
+
+After a Variable is created, it will appear in the **Variables** tab of your Query Builder report. Benefits of using SQL variables include:
+
+- Save time by creating a campaign variable to select from a list when creating your report, instead of pasting in campaign IDs.
+- Swap in values by adding variables that allow you to reuse the report for slightly different use cases in the future (such as a different custom event).
+- Reduce user error when editing your SQL by reducing the amount of editing needed for each report. Teammates that are more comfortable with SQL can create reports that less technical teammates can then use.
+
+### Guidelines
+
+Variables must adhere to the following liquid syntax: `{{ type.${name} }}`. `type` must be one of the accepted types, while `name` can be anything you choose. The labels for these variables default to the variable name.
+
+By default, all variables are mandatory (and your report will not run unless variable values are selected) except for the date range, which defaults to the past 30 days when the value isn’t provided.
+
+### Variable types
+
+#### Number
+ 
+Replacement: The provided value, such as `5.5`
+ 
+Usage example: `some_number_column < {{number.${some name}}}`
+
+#### Date range
+
+![][4]
+
+If both `start_date` and `end_date` are being used, they must have the same name so you can use them as a date range.
+
+##### Values
+
+Date range type:
+    - **One of:** relative, start date, end date, date range. 
+        
+    All 4 options are shown if both `start_date` and `end_date` are used with the same name. If only one is used, then only the relevant options will show.
+        - Relative:
+            - Allows you to specify past X days
+            - Dependent on start_date presence
+        - Start date:
+            - Allows you to specify a start date
+            - Dependent on start_date presence
+        - End date:
+            - Allows you to specify end date
+            - Dependent on end_date presence
+        - Date range:
+            - Allows you to specify both start and end date
+            - Dependent on both start_date and end_date presence
+
+##### Replacement
+
+`start_date` and `end_date` get replaced by a Unix timestamp in seconds for the specified date in UTC, such as `1696517353`.
+
+##### Usage
+
+For all of relative, start date, end date, and date range:
+- time > `{{start_date.${some name}}}` AND time < `{{end_date.${some name}}}`
+    - You can use either `start_date` or `end_date` if you don’t want a date range.
+
+#### Messaging
+
+All messaging variables must share the same identifier when you want to tie their state together in one group.
+
+##### Canvas
+
+For selecting one Canvas. Sharing the same name with a campaign will result in a radio button within the Variables panel that enables you to select either Canvas or campaign.
+
+Replacement: Canvas BSON ID
+
+Usage: `canvas_id = ‘{{canvas.${some name}}}’`
+
+##### Canvases
+
+For selecting multiple Canvases. Sharing the same name with a campaign will result in a radio button within the **Variables** tab that allows you to select either Canvas or campaign.
+
+Replacement: Canvases BSON IDs
+
+Usage: `canvas_id IN ({{canvases.${some name}}})`
+
+##### Campaign
+
+For selecting one campaign. Sharing the same name with a Canvas will result in a radio button within the **Variables** tab that allows you to select either Canvas or campaign.
+
+Replacement: Campaign BSON ID
+
+Usage: `campaign_id = ‘{{campaign.${some name}}}’`
+
+##### Campaigns
+
+For multi-selecting campaigns. Sharing the same name with a Canvas will result in a radio button within the **Variables** tab that allows you to select either Canvas or campaign.
+
+Replacement: Campaigns BSON IDs
+
+Usage: `campaign_id IN ({{campaigns.${some name}}})`
+
 ## Data and results
 
 Results, and exports of results, are tables that can contain up to 1,000 rows. For reports that require larger amounts of data, use another tool such as [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) or Braze’s [export APIs]({{site.baseurl}}/api/endpoints/export).
@@ -165,3 +264,5 @@ When you reach the credit cap, you cannot run queries, but you can create, edit,
 
 [1]: {% image_buster /assets/img_archive/query_builder_credits.png %}
 [2]: {% image_buster /assets/img_archive/query_builder_ai_tab.png %}
+[3]: {% image_buster /assets/img_archive/sql_variables_panel.png %}
+[4]: {% image_buster /assets/img_archive/query_builder_time_range.png %}
