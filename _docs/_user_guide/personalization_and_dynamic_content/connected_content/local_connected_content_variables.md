@@ -169,7 +169,7 @@ You can utilize the HTTP status from a Connected Content call by first saving it
 {% endraw %}
 
 {% alert important %}
-This key will only be automatically added to the Connected Content object if the endpoint returns a JSON object. If the endpoint returns an array or other type, then that key cannot be set automatically in the response.
+This key will only be automatically added to the Connected Content object if the endpoint returns a valid JSON object and a `2XX` response. If the endpoint returns an array or other type, that key cannot be automatically set in the response.
 {% endalert %}
 
 ## Configurable caching {#configurable-caching}

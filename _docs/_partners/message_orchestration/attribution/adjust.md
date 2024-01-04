@@ -100,9 +100,9 @@ Assuming you configure your integration as suggested, Braze will map Adjust's da
 | `{creative_name}` | Attributed Ad |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Facebook and Twitter attribution data
+## Facebook and X (formerly Twitter) attribution data
 
-Attribution data for Facebook and Twitter campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
+Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
 
 ## Adjust click tracking URLs in Braze (optional)
 

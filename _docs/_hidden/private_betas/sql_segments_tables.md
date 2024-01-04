@@ -1511,7 +1511,7 @@ Field | Type | Description
 `carrier` | `null,`&nbsp;`string` | carrier of the device
 `browser` | `null,`&nbsp;`string` | browser of the device
 `button_string` | `null,`&nbsp;`string` | identifier (button_string) of the push notification button clicked. null if not from a button click
-`button_action_type` | `null,`&nbsp;`string` | Action type of the push notification button. One of [URI, DEEP_LINK, NONE, CLOSE, SHARE]. null if not from a button click
+`button_action_type` | `null,`&nbsp;`string` | Action type of the push notification button. One of [URI, DEEP_LINK, NONE, CLOSE]. null if not from a button click
 `slide_id` | `null,`&nbsp;`string` | slide identifier of the push carousel slide user clicks on
 `slide_action_type` | `null,`&nbsp;`string` | action type of the push carousel slide
 `ad_id` | `null,`&nbsp;`string` | [PII] advertising ID of the device that we made a delivery attempt to

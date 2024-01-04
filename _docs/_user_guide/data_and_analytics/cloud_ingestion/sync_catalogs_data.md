@@ -7,7 +7,7 @@ description: "This reference article provides an overview of how to sync catalog
 
 ---
 
-# Sync Catalogs data
+# Sync catalogs data
 
 {% alert important %}
 Braze Cloud Data Ingestion support for catalogs is currently in early access, and is available for Snowflake, Redshift, and BigQuery sources. Contact your Braze account manager if you are interested in participating in the early access.
@@ -15,14 +15,14 @@ Braze Cloud Data Ingestion support for catalogs is currently in early access, an
  
 ## Step 1: Create a new catalog
 
-Before creating a new Cloud Data Ingestion (CDI) integration for [Catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), you will need to create a new catalog or identify an existing catalog you want to use for the integration. There are a few ways to create a new catalog and any of these will work for the CDI integration:
+Before creating a new Cloud Data Ingestion (CDI) integration for [catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), you will need to create a new catalog or identify an existing catalog you want to use for the integration. There are a few ways to create a new catalog and any of these will work for the CDI integration:
 - Upload a [CSV]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-1-upload-csv)
 - Create a catalog in the [Braze dashboard]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-2-create-in-browser)
-- Create a catalog through the [API]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)
+- Create a catalog using the [Create catalog endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)
 
 The key things to note when creating this catalog are:
 - You should use the same name for the catalog and CDI integration 
-- Any changes to the catalog schema (for example, adding new fields, changing field type) must be made through the catalogs dashboard or API before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your Snowflake data and the schema in Braze.
+- Any changes to the catalog schema (for example, adding new fields, changing field type) must be made through the catalogs dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your Snowflake data and the schema in Braze.
 
 ## Step 2: Integrate Cloud Data Ingestion with catalogs data
 The setup for a catalogs sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 

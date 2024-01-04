@@ -51,7 +51,7 @@ glossaries:
     tags:
       - Custom attributes
   - name: Nested Custom Attributes
-    description: Attributes that are the properties of custom attributes.
+    description: Attributes that are the properties of custom attributes.<br><br>When filtering a nested time custom attribute, you can choose to filter based on "Day of Year" or "Time". "Day of Year" will check only the month and day for comparison. "Time" will compare the full timestamp, including the year.
     tags:
       - Custom attributes
   - name: Day of Recurring Event
@@ -443,15 +443,15 @@ glossaries:
     tags:
       - Advertising use cases 
   - name: Device Google Ad ID
-    description: lorem ipsum
+    description: Segments your users by the Google ad ID.
     tags:
       - Advertising use cases
   - name: Device Roku Ad ID
-    description: 
+    description: Segments your users by the Roku ad ID.
     tags:
       - Advertising use cases
   - name: Device Windows Ad ID
-    description: lorem ipsum
+    description: Segments your users by the Windows ad ID.
     tags:
       - Advertising use cases  
   - name: Ad Tracking Enabled
@@ -543,11 +543,11 @@ glossaries:
     tags:
       - Social activity
   - name: Connected Twitter
-    description: Segments your users by whether they connected your app to Twitter.
+    description: Segments your users by whether they connected your app to X (formerly Twitter).
     tags:
       - Social activity
   - name: Number of Twitter Followers
-    description: Segments your users by how many Twitter followers they have.
+    description: Segments your users by how many X (formerly Twitter) followers they have.
     tags:
       - Social activity
 ---

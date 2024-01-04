@@ -108,7 +108,7 @@ User attributes can be a JSON object containing fields that will create or updat
 | Date of Birth | The users data of birth in string in format “YYYY-MM-DD” (for example, 1980-12-21). |
 | Time Zone | Time zone name from [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) database (for example, ’America/New_York’ or ’Eastern Time (US & Canada)’). |
 | Facebook | A hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
-| Twitter | Hash containing any of id (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count`(integer). |
+| Twitter | Hash containing any of id (integer), `screen_name` (string, X (formerly Twitter) handle), `followers_count` (integer), `friends_count` (integer), `statuses_count`(integer). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -176,7 +176,7 @@ User attributes can be a JSON object containing fields that will create or updat
 | Date of birth | The users data of birth in string in format “YYYY-MM-DD” (for example, 1980-12-21). |
 | Time zone | Time zone name from [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) database (for example, ’America/New_York’ or ’Eastern Time (US & Canada)’). |
 | Facebook | A hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
-| Twitter | Hash containing any of id (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count`(integer). |
+| Twitter | Hash containing any of id (integer), `screen_name` (string, X (formerly Twitter) handle), `followers_count` (integer), `friends_count` (integer), `statuses_count`(integer). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}

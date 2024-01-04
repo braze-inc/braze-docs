@@ -67,7 +67,9 @@ For example, let's say you have a game with an in-app message that triggers when
 
 If multiple channels are utilized in a Canvas step, the rate limit will apply to each channel. Note that this can cause higher than expected requests for Connected Content. As a workaround, set a lower rate limit at the Canvas level. 
 
-For example, if your multi-channel Canvas step utilizes email and push in a Canvas with a rate limit of 10,000 per minute, Braze will send up to 20,000 messages each minute (10,000 email and 10,000 push).
+For example, if your multi-channel Canvas step utilizes email and SMS in a Canvas with a rate limit of 10,000 per minute, Braze will send up to 20,000 messages each minute (10,000 email and 10,000 SMS). 
+
+All push destinations in a message step are treated as a single channel for the purposes of rate limiting. If a multi-channel Canvas step utilizes email, iOS push, and Android push in a Canvas with a rate limit of 10,000 per minute, Braze will send up to 20,000 messages each minute (10,000 email and 10,000 combined push).
 
 ### Delivery speed rate limiting
 
@@ -122,7 +124,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 By default, frequency capping is toggled on when new campaigns are created. From here, you can choose the following:
 
-- Which messaging channel you would like to cap: push, email, SMS, webhook, or any of those four.
+- Which messaging channel you would like to cap: push, email, SMS, webhook, WhatsApp, or any of those five.
 - How many times each user should receive a campaign or Canvas component sends from a channel within a certain time frame.
 - How many times each user should receive a campaign or Canvas component sends by [tag](#frequency-capping-by-tag) within a certain time frame.
 

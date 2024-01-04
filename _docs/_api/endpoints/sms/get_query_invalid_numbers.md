@@ -17,9 +17,9 @@ description: "This article outlines details about Query invalid phone numbers Br
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `sms.invalid_phone_numbers` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `sms.invalid_phone_numbers` permission.
 
 ## Rate limit
 

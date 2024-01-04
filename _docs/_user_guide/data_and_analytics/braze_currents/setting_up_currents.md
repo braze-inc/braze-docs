@@ -91,3 +91,7 @@ Test Currents connectors are free versions of our existing connectors that can b
 After your Test Currents connectors reach the sending limit, your connector will not send events until the next 30-day period.
 
 To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade**.
+
+## Updating Currents
+
+{% multi_lang_include updating_currents.md %}

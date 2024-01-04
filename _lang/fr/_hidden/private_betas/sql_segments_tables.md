@@ -1299,7 +1299,7 @@ Champ | Type | Description
 `carrier` | `null,`&nbsp;`string` | transporteur de l’appareil
 `browser` | `null,`&nbsp;`string` | navigateur de l’appareil
 `button_string` | `null,`&nbsp;`string` | identifiant (button_string) du bouton cliqué de la notification push. Vide si ne provient pas d’un clic de bouton
-`button_action_type` | `null,`&nbsp;`string` | Type d’action du bouton de la notification push. Un parmi [URI, DEEP_LINK, NONE, CLOSE, SHARE]. Vide si ne provient pas d’un clic de bouton
+`button_action_type` | `null,`&nbsp;`string` | Type d’action du bouton de la notification push. Un parmi [URI, DEEP_LINK, NONE, CLOSE]. Vide si ne provient pas d’un clic de bouton
 `slide_id` | `null,`&nbsp;`string` | identifiant de diapositive de la diapositive de carrousel de notification push sur laquelle l’utilisateur a cliqué
 `slide_action_type` | `null,`&nbsp;`string` | type d’action de la diapositive de carrousel de notification push
 `ad_id` | `null,`&nbsp;`string` | [Informations personnellement identifiables] ID publicitaire de l’appareil auquel nous avons essayé de livrer

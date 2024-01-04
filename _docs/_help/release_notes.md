@@ -51,6 +51,91 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/help/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## December 12, 2023 release
+
+### Updates to Android push integration
+
+On June 20, 2023, Google deprecated their Cloud Messaging API for sending push notifications to Android apps. The [Standard Android push integration](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/) now shows you how to set up Google's Firebase Cloud Messaging API instead.
+
+For more information about Google's Cloud Messaging API depreciation, see [Firebase FAQ](https://firebase.google.com/support/faq#fcm-23-deprecation).
+
+### Robust channels
+
+#### WhatsApp response messaging
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+When [creating a WhatsApp message]({{site.baseurl}}/whatsapp_response_messaging/) in a campaign or Canvas, you can create response messages to reply to user's WhatsApp messages within a 24-hour window. Response messaging can be particularly helpful in Canvases that encourage interactions between your brand and its users, such as opt-in campaigns.
+
+#### WhatsApp frequency capping
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can now set up [frequency capping rules]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) for WhatsApp. Frequency capping is applied at the campaign or Canvas component send level, and can be set up for each workspace from **Settings** > **Frequency Capping Rules**.  
+
+### Data flexibility
+
+#### Conversions dashboard
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+The [conversions dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard/) allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods. When measuring your conversions, you can specify the time frame, conversion event, and conversion window.
+
+#### Email Insights reports
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+There's a new tab, Email Insights, located within the [Email Performance dashboard]({{site.baseurl}}/email_engagement_dashboard/) that contains two new reports:
+
+- **Engagement by Mailbox Providers:** Shows the number of clicks and opens by mailbox provider. You can select a mailbox provider and drilldown into specific receiving domains.
+- **Engagement by Day of Week:** Shows when users are engaging with their emails.
+
+#### Update to subscription group timeseries graph
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+The **Subscription Group Timeseries** graph that appears on the **Subscription Groups** page now shows the subscription count per user rather than per email or phone number. This better aligns with how Braze calculates statistics in other areas of the dashboard.
+
+### AI & ML automation
+
+#### AI Item Recommendations
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+[AI Item Recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/) is a deep learning-based product recommendation engine that uses collective user purchasing behavior to recommend items. You can use AI Item Recommendations to calculate the most popular products or create personalized AI recommendations for a specific catalog. After you create your recommendation, you can use personalization to insert those products into your messages.
+
+### New Braze partnerships
+
+#### Facebook Lead Ads via Zapier – Leads Capture
+
+With the [Facebook Lead Ads integration via Zapier]({{site.baseurl}}/partners/data_and_infrastructure_agility/leads_capture/facebook_via_zapier/), you can import your leads from Facebook into Braze and track a custom event when leads are captured.
+
+#### SmarterSends – Message Templates
+
+The Braze and [SmarterSends]({{site.baseurl}}/partners/message_orchestration/channel_extensions/email_templates/smartersends/) partnership allows you to combine the power of Braze with the hyper-localized content owned by your distributed users to elevate your marketing campaigns.
+
+#### Recurly – Payments
+
+The [Recurly]({{site.baseurl}}/partners/data_and_infrastructure_agility/payments/recurly/) and Braze integration simplifies the process of sharing subscription data with Braze, enabling targeted communication with customers.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Flutter SDK 8.0.0-8.1.0](https://pub.dev/packages/braze_plugin/changelog)
+  - Updates the native Android bridge from Braze Android SDK 27.0.1 to 29.0.1.
+  - Updates the native iOS bridge from Braze Swift SDK 6.6.1 to 7.2.0.
+  - Modifies the behavior for Feature Flags methods.
+    - `BrazePlugin.getFeatureFlagByID(String id)` will now return `null` if the feature flag does not exist.
+    - `BrazePlugin.subscribeToFeatureFlags(void Function(List<BrazeFeatureFlag>) onEvent))` will only trigger in the following situations:
+      - When a refresh request completes with success or failure.
+      - Upon initial subscription if there was previously cached data from the current session.
+  - The minimum supported Android SDK version is 21.
+- [React Native SDK 8.2.0](https://github.com/braze-inc/braze-react-native-sdk/blob/8.2.0/CHANGELOG.md)
+- [Swift SDK 7.3.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
+- [Braze Segment Swift Plugin 2.2.0](https://github.com/braze-inc/braze-segment-swift/blob/main/CHANGELOG.md)
+- [Braze Expo Plugin 1.2.0](https://github.com/braze-inc/braze-react-native-sdk/blob/8.2.0/CHANGELOG.md)
+
 ## November 14, 2023 release
 
 ### Getting started with Braze
@@ -564,62 +649,5 @@ The following SDK updates have been released. Breaking updates are listed below;
       - `getFeatureFlagNumberProperty(id, key)`
 - [Unreal SDK 2.5.0](https://github.com/braze-inc/braze-unreal-sdk/blob/master/CHANGELOG.md#250)
 - [Unity SDK 4.1.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md#410)
-
-## May 2, 2023 release
-
-### Redesigned Braze UI/UX
-
-_Generally available on May 16, 2023_
-
-Save time and find exactly what you need with the newly redesigned UI/UX and information architecture. Quickly navigate throughout the platform, complete tasks, and discover new features with ease. To make this transition easier for you and your team, check out our dedicated [navigation guide]({{site.baseurl}}/navigation) to learn what has changed and what you can expect next.
-
-### Query builder
-
-With the [query builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder), you can generate reports using Braze data in Snowflake. The query builder comes with pre-built SQL query templates to get you started, or you can write your own custom SQL queries to unlock even more insights.
-
-### Canvas version history
-
-[Version history]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_version_history/) allows you to view and access Canvas analytics and the user journeys for any previous version of your Canvas. Referencing your Canvas version history can be especially helpful to maintain a record of the evolution of a Canvas.
-
-### Incremental refresh for SQL Segments
-
-You can now create [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) that use incremental refresh, which only refreshes the last 2 days worth of data. This is more cost-efficient and uses up fewer SQL Segment credits each time the segment membership refreshes. Unlike full refresh extensions, you can set incremental refresh extensions to automatically regenerate membership daily.
-
-### Deliverability Center for email
-
-The [Deliverability Center]({{site.baseurl}}/user_guide/data_and_analytics/analytics/deliverability_center#deliverability-center) provides more insight into your email performance by supporting the use of Gmail Postmaster Tools to track data on emails sent and gather data about your sending domain.
-
-{% alert important %}
-The Deliverability Center is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
-{% endalert %}
-
-### Update for catalog limitations
-
-As of May 1, 2023, there have been updates for [catalogs storage limits]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits). To request an upgrade for catalogs storage, contact your Braze account manager.
-
-### New API and SDK endpoints article
-
-Braze manages a number of different instances for our dashboard, SDK, and REST endpoints, which we call "clusters." Check out [API and SDK endpoints]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) for a list of dashboard URLs, API endpoints, and SDK endpoints for available Braze instances.
-
-### Liquid FAQ
-
-We’ve answered some [frequently asked questions for Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/faq/). 
-
-### iOS SDK deprecation - Swift
-
-Braze's legacy iOS SDK is being deprecated in favor of the new Swift SDK. This brings improved performance, new features, and many improvements—including [new documentation](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview)!
-
-Looking to upgrade? Check out our [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/) for details.
-
-### SDK updates
-
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
-
-- [React Native SDK v4.1.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
-- [Android SDK 25.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
-- [Swift SDK 5.14.0-6.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#600)
-- [Flutter SDK 5.0.0](https://pub.dev/packages/braze_plugin/changelog)
-- [Unity 4.0.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md)
-- [Segment Kotlin 1.3.0](https://github.com/braze-inc/braze-segment-kotlin/blob/main/CHANGELOG.md)
 
 <br><br>
