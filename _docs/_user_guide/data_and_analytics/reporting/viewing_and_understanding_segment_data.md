@@ -124,7 +124,7 @@ In addition, use the **Variables** tab to specify whether to run the report for 
 
 Currently, this report pulls metrics from only the email channel. Any revenue or purchase data from channels besides emails will not be reflected in the report. 
 
-The following email metrics are available for emails:
+The following metrics are available for emails:
 
 - Unique purchases upon receipt
 - Revenue upon receipt
