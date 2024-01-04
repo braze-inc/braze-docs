@@ -176,17 +176,17 @@ Regarding how impressions are logged, there are some nuances between web, Androi
 
 #### Unique Recipients versus Unique Impressions
 
-There are a few metrics available that cover the visibility of your message. This includes Messages Sent, Unique Recipients, and Unique Impressions. In particular, the difference between Unique Recipients and Unique Impressions can be a bit confusing. Let's use a few example scenarios to understand these metrics better.
+There are a few metrics available that cover the visibility of your message. This includes _Messages Sent_, _Unique Recipients_, and _Unique Impressions_. In particular, the difference between _Unique Recipients_ and _Unique Impressions_ can be a bit confusing. Let's use a few example scenarios to understand these metrics better.
 
-Let's say you view a Content Card today, then view the same card tomorrow, and again the day after tomorrow—you will be counted as a Unique Recipient three times. However, you will only be counted for one Unique Impression. You'll also be included in the number of Messages Sent, as the card was available on your device.
+Let's say you view a Content Card today, then view the same card tomorrow, and again the day after tomorrow—you will be counted as a _Unique Recipient_ three times. However, you will only be counted for one _Unique Impression_. You'll also be included in the number of _Messages Sent_, as the card was available on your device.
 
-As another example, suppose you see five Unique Impressions on a Content Card campaign showing 150,000 Messages Sent. This means the card was made available (on the backend) to an audience of 150,000 users, but only five users' devices performed all of the following steps after that send occurred:
+As another example, suppose you see five _Unique Impressions_ on a Content Card campaign showing 150,000 _Messages Sent_. This means the card was made available (on the backend) to an audience of 150,000 users, but only five users' devices performed all of the following steps after that send occurred:
 
 1. Started a session or the app explicitly requested a Content Cards sync (or both)
 2. Navigated to the Content Cards view
 3. SDK recorded an impression and logged it to the server
 
-Your Messages Sent refers to Content Cards available to be seen, while Unique Recipients refers to Content Cards that were actually seen.
+Your _Messages Sent_ refers to Content Cards available to be seen, while _Unique Recipients_ refers to Content Cards that were actually seen.
 
 {% elsif include.channel == "email" %}
 
@@ -208,7 +208,7 @@ Here are some key email-specific metrics that you won't see in other channels. T
 
 ##### Estimated real open rate {#estimated-real-open-rate}
 
-This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's unique open rate as if machine opens did not exist. While we receive labels of "Machine Opens" on some open events from email senders (see above), these labels can often label actual opens as real opens. In other words, the "Other Opens" are likely an underestimate of real opens (by actual users). Instead, Braze uses click data from each campaign to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP.
+This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's unique open rate as if machine opens did not exist. While we receive labels of _Machine Opens_ on some open events from email senders (see above), these labels can often label actual opens as real opens. In other words, the _Other Opens_ are likely an underestimate of real opens (by actual users). Instead, Braze uses click data from each campaign to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP.
 
 The displayed statistic is generated 36 hours after email sending has begun and repeats every 24 hours thereafter. It will only run for scheduled email campaigns (one-time or recurring). If a campaign recurs, the estimate will be recalculated 36 hours after another send occurs.
 
@@ -229,8 +229,8 @@ Here are some key in-app message metrics you may see in your analytics. To see t
 | Unique impressions     | The total number of people who actually received and viewed the in-app message. If a user receives the message twice within 24 hours, only one impression is counted that day. <br><br> **If re-eligibility is on:** {::nomarkdown}<ul><li>Unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action again.</li><li>For in-app messages, *Unique Impressions* = *Unique Recipients* since impressions and recipients both increment after 24 hours.</li></ul>{:/} |
 | Total Impressions            | The number of users whose devices reported that the message had been delivered. If a user receives the message twice, they are counted twice. <br><br> **If there are multiple devices:** {::nomarkdown}<ul><li>If re-eligibility is off, the user should only see the in-app message once. Even if the user uses multiple devices, they will only see it on the first device that is targeted. This assumes that the profile has consolidated devices and a user has one user ID that they are logged into across devices. </li></ul>{:/} **If re-eligibility is on:** {::nomarkdown}<ul><li>An impression is logged for every time that user sees the in-app message.</li></ul>{:/} |
 | Conversion             | Conversion tracking starts once a user logs an impression of an in-app message. A conversion is counted if the user has received and viewed the in-app message campaign, and subsequently performs the specific conversion event within the defined conversion window, regardless of whether they clicked on the message or not. <br><br> Conversions are attributed to the most recently received message. If re-eligibility is enabled, the conversion will be assigned to the latest in-app message received, provided that it occurs within the defined conversion window. However, if the in-app message has already been assigned a conversion, then the new conversion cannot be logged for that specific message. This ensures that each in-app message delivery is associated with only one conversion. |
-| Total Conversions      | When a user views an in-app message campaign only once, only one conversion is counted, even if they perform the conversion event multiple times later on. However, if re-eligibility is turned on and the user sees the in-app message campaign multiple times, *Total Conversions* can increase once for each time the user logs an impression for a new instance of the in-app message campaign. <br><br> For example, if a user triggers an in-app message twice and converts after each in-app message impression (resulting in two conversions), then *Total Conversions* will increase by two. However, if there was only one in-app message impression followed by two conversion events, only one conversion will be logged, and *Total Conversions* will increase by one. |
-| Conversion Rate        | The metric of total daily unique impressions (*Unique Impressions*) is used to calculate the conversion rate. <br><br> Conversion Rate = (Primary Conversions) / (Unique Impressions) <br><br> Impressions for in-app messages can only be counted once per day. On the other hand, the number of times a user completes a desired action (a "conversion") can increase within a 24-hour period. While conversions can happen more than once per day, impressions cannot. Therefore, if a user completes a conversion multiple times within a day, the Conversion Rate can increase accordingly, but impressions will only be counted once. |
+| Total Conversions      | When a user views an in-app message campaign only once, only one conversion is counted, even if they perform the conversion event multiple times later on. However, if re-eligibility is turned on and the user sees the in-app message campaign multiple times, _Total Conversions_ can increase once for each time the user logs an impression for a new instance of the in-app message campaign. <br><br> For example, if a user triggers an in-app message twice and converts after each in-app message impression (resulting in two conversions), then _Total Conversions_ will increase by two. However, if there was only one in-app message impression followed by two conversion events, only one conversion will be logged, and _Total Conversions_ will increase by one. |
+| Conversion Rate        | The metric of total daily unique impressions (_Unique Impressions_) is used to calculate the conversion rate. <br><br> Conversion Rate = (Primary Conversions) / (Unique Impressions) <br><br> Impressions for in-app messages can only be counted once per day. On the other hand, the number of times a user completes a desired action (a "conversion") can increase within a 24-hour period. While conversions can happen more than once per day, impressions cannot. Therefore, if a user completes a conversion multiple times within a day, the _Conversion Rate_ can increase accordingly, but impressions will only be counted once. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -251,7 +251,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-Even though _Direct Opens_ and _Influenced Opens_ include the word "opens", they're actually different metrics. _Direct Opens_ refers to the direct opening of a push notification, as stated in the table above. _Influenced Opens_ refers to the opening of an app, without opening a push notification within a specific timeframe after receiving it. So, _Influenced Opens_ refers to the app opens, not push notification opens.
+Even though _Direct Opens_ and _Influenced Opens_ include the word "opens", they're actually different metrics. _Direct Opens_ refers to the direct opening of a push notification, as stated in the table above. _Influenced Opens_ refers to the opening of an app, without opening a push notification within a specific time frame after receiving it. So, _Influenced Opens_ refers to the app opens, not push notification opens.
 {% endalert %}
 
 > Delivery of notifications is a “best effort” by APNs. It is not intended to deliver data to your app, only to notify the user that there is new data available. The important distinction is that we will display how many messages we successfully delivered to APNs, not necessarily how many APNs successfully delivered to devices.
@@ -273,7 +273,7 @@ Firebase Cloud Messaging (FCM) bounces could occur in three cases:
 | Scenario | Description |
 | -- | -- |
 | Uninstalled applications | When a message attempts delivery to a device and the intended app is uninstalled on that device, the message will be discarded and the device's registration ID will be invalidated. Any future attempts at messaging the device will return a NotRegistered error. |
-| Backed up application | When an application is backed up, its registration ID could become invalid before the application is restored. In this case, FCM will no longer store the application's registration ID and the application will no longer receive messages. As such, registration IDs should _not_ be saved when an application is backed up. |
+| Backed up application | When an application is backed up, its registration ID could become invalid before the application is restored. In this case, FCM will no longer store the application's registration ID and the application will no longer receive messages. As such, registration IDs should **not** be saved when an application is backed up. |
 | Updated application | When an application is updated, the previous version's registration ID may no longer work. As such, an updated application should replace its existing registration ID. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -285,13 +285,13 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 
 | Term | Definition |
 | -- | -- |
-| Sent | A campaign or Canvas step has been launched or triggered, and an SMS has been sent from Braze. It is possible that the SMS does not reach a user's device due to errors, as explained below.
-| Sent to Carrier | Braze has attempted to send the SMS through to the carriers. This stat is the sum of Confirmed Deliveries, Rejections, and sends where the carrier did not confirm delivery or rejection. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of sending. Note that this metric does not exist for all Braze mobile aggregators. |
-| Delivery Failures | Messages that were not attempted to be sent due to a failed outcome within aggregator logs. This could be due to queue overflow or invalid recipient number, depending on the associated aggregator error code. Please reach out to Braze [support]({{site.baseurl}}/braze_support/) for assistance in understanding the reasons for delivery failures.
-| Confirmed Delivery | The carrier has confirmed that the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment.
-| Rejections | The SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment.
-| Opt-Out | A user replied to your message with an [Opt-Out Keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was unsubscribed from your SMS program. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message.
-| Help | A user replied to your message with a [HELP Keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was dispatched a HELP auto-response. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message.
+| Sent | A campaign or Canvas step has been launched or triggered, and an SMS has been sent from Braze. It is possible that the SMS does not reach a user's device due to errors, as explained below. |
+| Sent to Carrier | Braze has attempted to send the SMS through to the carriers. This stat is the sum of _Confirmed Deliveries_, Rejections, and sends where the carrier did not confirm delivery or rejection. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of sending. Note that this metric does not exist for all Braze mobile aggregators. |
+| Delivery Failures | Messages that were not attempted to be sent due to a failed outcome within aggregator logs. This could be due to queue overflow or invalid recipient number, depending on the associated aggregator error code. Reach out to [Braze Support]({{site.baseurl}}/braze_support/) for assistance in understanding the reasons for delivery failures. |
+| Confirmed Delivery | The carrier has confirmed that the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment. |
+| Rejections | The SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment. |
+| Opt-Out | A user replied to your message with an [opt-out keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was unsubscribed from your SMS program. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
+| Help | A user replied to your message with a [HELP keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was dispatched a HELP auto-response. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% elsif include.channel == "webhook" %}
@@ -302,9 +302,9 @@ Here are some key webhook metrics you may see in your analytics. To see the defi
 
 | Term | Definition |
 | --- | --- |
-| Unique Recipients | The total number of users (unique, but only unique per day) that have received the particular webhook. 
-| Sends | Sends (and Messages Sent) include all attempted sends, successful and unsuccessful. This metric counts when a webhook was processed and sent to the third party specified in that webhook, and does not signify whether or not the request was received. |
-| Errors | The total number of sends that were not successful. Errors are included in the _Sends_ count but are not included in the _Unique Recipients_ count.
+| Unique Recipients | The total number of users (unique, but only unique per day) that have received the particular webhook. |
+| Sends | _Sends_ (and _Messages Sent_) include all attempted sends, successful and unsuccessful. This metric counts when a webhook was processed and sent to the third party specified in that webhook, and does not signify whether or not the request was received. |
+| Errors | The total number of sends that were not successful. Errors are included in the _Sends_ count but are not included in the _Unique Recipients_ count. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% elsif include.channel == "whatsapp" %}
@@ -318,7 +318,7 @@ Here are some key WhatsApp metrics you may see in your analytics. To see the def
 | Sends | The total number of sends successfully communicated between Braze and WhatsApp. However, this does not necessarily mean the message was received by the end user. |
 | Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. |
 | Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be “On” for Braze to track reads. |
-| Failures | The total number of sends that were not successful because the Internet Service Provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure. Failures are included in the _Sends_ count but are not included in the _Deliveries_ count.
+| Failures | The total number of sends that were not successful because the Internet Service Provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure. Failures are included in the _Sends_ count but are not included in the _Deliveries_ count. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### End-user blocking and reporting metrics
@@ -375,7 +375,7 @@ The **Conversion Correlation** panel gives you insight into what user attributes
 Like email, Braze receives user-level events related to an SMS message as it makes its journey to a user. Any inbound SMS event will also be sent as a Currents event through the [SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events) event. This will allow you to perform additional actions or reporting on the messages your users are texting in outside of the Braze platform. 
 
 {% alert note %}
-Inbound messages are truncated past 1600 characters.
+Inbound messages are truncated past 1,600 characters.
 {% endalert %}
 
 {% endif %}
