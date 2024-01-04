@@ -23,7 +23,6 @@ local_redirect:
 local_redirect:
   step-2-enable-interactive-push-handling: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/action_buttons/#step-2-enable-interactive-push-handling'
   
-noindex: true
 ---
 
 {% multi_lang_include archive/objective-c-deprecation-notice.md %}
