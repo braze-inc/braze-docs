@@ -221,8 +221,6 @@ To create a report from a [Query Builder]({{site.baseurl}}/user_guide/data_and_a
 
 Before generating your report, go to the **Variables** tab to provide information for the Report Builder template, including required variables that will vary based on report. 
 
-![The Variables tab allows users to specify the campaign or Canvas, time range, time period, product name, and conversion window.]({% image_buster /assets/img_archive/variables_panel_1.png %})
-
 The variables include:
 
 - **Campaign or Canvas:** You can include one or multiple campaigns or Canvases (there is no maximum for how many campaigns or Canvases you can specify). If you do not specify any campaigns or Canvases, the report will include all campaigns or Canvases from your chosen time frame.
