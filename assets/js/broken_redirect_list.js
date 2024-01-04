@@ -9,6 +9,7 @@ validurls['/docs/best_practices/email#managing-email-subscriptions'] = '/docs/he
 validurls['/docs/best_practices/email'] = '/docs/help/best_practices/email/managing_email_subscriptions/';
 validurls['/docs/best_practices/'] = '/docs/help/home/';
 
+validurls['/docs/whatsapp_response_messaging/'] = '/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#response-messages';
 validurls['/docs/dashboard_features/#changing-email-subscriptions'] = '/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions';
 validurls['/docs/dashboard_features/#common-errors'] = '/docs/user_guide/data_and_analytics/user_data_collection/user_import/#common-errors';
 validurls['/docs/dashboard_features/#conversion-events'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events';
