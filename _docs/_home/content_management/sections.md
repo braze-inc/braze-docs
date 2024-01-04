@@ -55,7 +55,7 @@ Open your new markdown file and add the following template to use the default la
 ```markdown
 ---
 nav_title: NAV_TITLE
-article_tite: LANDING_PAGE_TITLE
+article_title: LANDING_PAGE_TITLE
 description: SHORT_DESCRIPTION
 ---
 

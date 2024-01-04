@@ -1,6 +1,0 @@
----
-nav_title: Examples
-page_order: 7
-config_only: true
-noindex: true
----
