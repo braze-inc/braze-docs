@@ -221,6 +221,8 @@ To create a report from a [Query Builder]({{site.baseurl}}/user_guide/data_and_a
 
 Before generating your report, go to the **Variables** tab to provide information for the Report Builder template, including required variables that will vary based on report. 
 
+![][11]
+
 The variables include:
 
 - **Campaign or Canvas:** You can include one or multiple campaigns or Canvases (there is no maximum for how many campaigns or Canvases you can specify). If you do not specify any campaigns or Canvases, the report will include all campaigns or Canvases from your chosen time frame.
@@ -256,3 +258,4 @@ If your company turned on this feature on October 2, and turned on analytics tra
 [8]: {% image_buster /assets/img_archive/user_preview.png %}
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
 [10]: {% image_buster /assets/img_archive/historical_membership2.png %}
+[11]:{% image_buster /assets/img_archive/variables_panel.png %}
