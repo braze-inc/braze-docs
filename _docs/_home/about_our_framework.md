@@ -14,6 +14,12 @@ Braze Docs is managed using docs-as-code, a method for managing documentation th
 
 ![The Braze Docs repository's home page on GitHub.]()
 
+As a contributor, you'll primarily work within the following directories:
+
+- **[`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs):** Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories mirroring the docs site, such as `_api` for the [API section]({{site.baseurl}}/api/home) and `user_guide` for the [User Guide section]({{site.baseurl}}/user_guide/introduction).
+- **[`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes):** Contains text files that can be _reused_ in any file within `_docs`. Typically, includes are short, modular pieces of content that don't use standard formatting.
+- **[`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets):** Contains all the images for Braze Docs. Any text file in `_docs` or `_includes` can link to this directory to display an image on its page.
+
 ## Building the site
 
 Braze Docs is built using Jekyll, a popular Static-Site Generator (SSG) that allows content files and design files to be stored in separate directories, such as `_docs` for content files and `assets` for design files. When the site is built, Jekyll intelligently merges each file and stores them as XML and HTML data in the `_site` directory. For more information, see [Jekyll Directory Structure](https://jekyllrb.com/docs/structure/).
@@ -102,6 +108,7 @@ Replace the following:
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `RELATIVE_PATH` | (Optional) The relative path to the file from the `_includes` directory. This is only needed if you're including a file from a directory inside the `_includes` directory, such as `_includes/braze/upgrade_notice.md`. |
 | `FILE`          | The name of the file including the file extension.                                                                                                                                                                      |
+{: .reset-td-br-1 .reset-td-br-2}
 
 _Example input:_
 

@@ -6,7 +6,7 @@ noindex: true
 
 # Recommended software
 
-> The recommended software for contributing to Braze Docs on macOS or Windows.
+> This article lists the software we recommend for contributing to Braze Docs on macOS or Windows.
 
 ## Software
 
@@ -35,8 +35,8 @@ table td {
     </tr>
     <tr>
         <td>Terminal extension</td>
-        <td>*<a href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux (WSL)</a></td>
-        <td>WSL lets you install a Linux subsystem and run Unix-like commands on your Windows operating system. If you're contributing from a Windows operating system, we recommend installing WSL, so you can use any Unix-like command mentioned in the docs.<br><br><em>*Only available for Windows.</em></td>
+        <td><a href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux (WSL)</a> *</td>
+        <td>WSL lets you install a Linux subsystem and run Unix-like commands on your Windows operating system. If you're contributing from a Windows operating system, we recommend installing WSL, so you can use any Unix-like command mentioned in the docs.<br><br><em>* Only available for Windows.</em></td>
     </tr>
     <tr>
         <td>Package manager</td>

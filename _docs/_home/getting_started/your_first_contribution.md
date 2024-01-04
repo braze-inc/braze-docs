@@ -32,26 +32,39 @@ The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) host
 
 ![The Braze Docs GitHub repository homepage.]()
 
-As a contributor, you'll primarily work within the following directories:
-
-- **[`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs):** Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories mirroring the docs site, such as `_api` for the [API section]({{site.baseurl}}/api/home) and `user_guide` for the [User Guide section]({{site.baseurl}}/user_guide/introduction).
-- **[`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes):** Contains text files that can be _reused_ in any file within `_docs`. Typically, includes are short, modular pieces of content that don't use standard formatting.
-- **[`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets):** Contains all the images for Braze Docs. Any text file in `_docs` or `_includes` can link to this directory to display an image on its page.
-
 For more information, see [Docs framework]().
 
 ## Make a change
 
 Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]() and find a simple change you'd like to make. Next, choose how you'd like to make your change:
 
-- **(Recommended) Using your local environment:** For complex or multi-document changes, you'll need to make changes from your local environment.
-- **Using GitHub:** For small, single-document changes, you can make changes directly from the GitHub website.
+- **Using GitHub (Basic):** For small, single-document changes, you can make changes directly from the GitHub website.
+- **Using your local environment (Advanced):** For complex or multi-document changes, you'll need to make changes from your local environment. If you're a documentation guru, this is the recommended method.
 
-{% alert warning %}
-Before continuing, verify you've completed all tasks in [Before you start](#before-you-start).
+{% alert important %}
+Before continuing, verify you've completed all [prerequisite tasks](#prerequisites).
 {% endalert %}
 
 {% tabs %}
+{% tab github %}
+In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), select `_docs`.
+
+![The Braze Docs GitHub repository homepage with the '_docs' folder highlighted in the file tree.]()
+
+Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For more information see [Directory structure]().
+
+For example, `braze.com/home/yaml_front_matter/` can be found on the following page:
+
+![The "YAML front matter" page in the "Contributing" section on Braze Docs.]()
+
+Select **Edit this file**, then make your changes using [Markdown formatting]().
+
+![An example page on Braze Docs with the "Edit this file" button highlighted.]()
+
+When you're finished, select **Commit changes**.
+
+![The Braze Docs GitHub repository with the "Commit changes" button highlighted after editing a file.]()
+{% endtab %}
 {% tab local environment %}
 Most modern text editors (such as [VS Code](https://code.visualstudio.com/Download) and [Intellij IDEA](https://www.jetbrains.com/idea/download/)) offer an in-app terminal for running commands and interacting with your project files. Open your text editor, then open your text editor's in-app terminal.
 
@@ -161,25 +174,6 @@ To github.com:braze-inc/braze-docs.git
 branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo-in-recommended-software'.
 ```
 {% endtab %}
-{% tab github %}
-In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), select `_docs`.
-
-![The Braze Docs GitHub repository homepage with the '_docs' folder highlighted in the file tree.]()
-
-Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For more information see [Directory structure]().
-
-For example, `braze.com/home/yaml_front_matter/` can be found on the following page:
-
-![The "YAML front matter" page in the "Contributing" section on Braze Docs.]()
-
-Select **Edit this file**, then make your changes using [Markdown formatting]().
-
-![An example page on Braze Docs with the "Edit this file" button highlighted.]()
-
-When you're finished, select **Commit changes**.
-
-![The Braze Docs GitHub repository with the "Commit changes" button highlighted after editing a file.]()
-{% endtab %}
 {% endtabs %}
 
 ## Create a pull-request (PR)
@@ -226,7 +220,7 @@ If the docs team requests additional changes after their review, you'll be notif
 
 Approved contributions will be deployed on the next Tuesday or Thursday. Be sure to check out [Braze Docs]() to see your hard work. Thanks for contributing!
 
-## Optional: make additional changes
+## Optional: Make additional changes
 
 After you or a member of the Braze Docs team reviews your work, you may need to make additional changes to your PR. You can do so using your local environment or GitHub.
 
