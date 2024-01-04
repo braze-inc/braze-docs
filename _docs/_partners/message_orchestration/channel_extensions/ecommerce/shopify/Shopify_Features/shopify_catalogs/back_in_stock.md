@@ -26,8 +26,7 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
 
 1. Go to your catalog and click the **Settings** tab.
 2. Select the **Back in stock** toggle.
-3. Set your notification rule. There are two options: **Notify all subscribed users** and **Notify a certain number of users per 10 minutes**. <br><br>Selecting **Notify all subscribed users** notifies all customers who are waiting when the item is back in stock. **Notify a certain number of users per 10 minutes** notifies a specified number of customers per 10 minutes per item. Braze will notify the specified numbers of customers in 10-minute increments until there are no more customers to notify, or until the item goes out of stock. 
-4. Click **Save settings**.
+3. Set your notification rule. There are two options: **Notify all subscribed users** and **Notify a certain number of users per a certain number of minutes**. <br>Selecting **Notify all subscribed users** notifies all customers who are waiting when the item is back in stock. **Notify a certain number of users per a certain number of minutes** notifies a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify, or until the item goes out of stock. Your notification rate cannot exceed notifying 10,000 users per minute.
 
 ![Catalog settings that show the back in stock feature turned on. The notification rules are to notify a thousand users every ten minutes.][1]
 

@@ -29,6 +29,9 @@ guide_featured_list:
 - name: Shopify Catalogs
   link: /docs/shopify_catalogs/
   fa_icon: fas fa-list
+- name: Back-In-Stock Notifications
+  link: /docs/back_in_stock/
+  fa_icon: fas fa-cart-shopping
 - name: Use Cases
   link: /docs/shopify_use_cases/
   fa_icon: fa fa-users
