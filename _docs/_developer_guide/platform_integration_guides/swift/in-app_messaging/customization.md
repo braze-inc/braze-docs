@@ -17,9 +17,6 @@ guide_featured_list:
   - name: In-App Message UI Delegate
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates/
     fa_icon: fa fa-cogs
-  - name: Overriding In-App Message Logic
-    link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/handling_in_app_display/
-    fa_icon: fa fa-cog
   - name: Custom On-Click Behavior
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/behavior_on_click/
     fa_icon: fa fa-mouse-pointer
