@@ -410,6 +410,22 @@ glossaries:
     description: Update multiple items in a catalog.
     tags:
       - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>
+    description: Create multiple fields in a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field/'>/catalogs/{catalog_name}/fields/{field_name}</a>
+    description: Delete multiple fields in a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selection/'>/catalogs/{catalog_name}/selections</a>
+    description: Create a selection in a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_selections/asynchronous/delete_catalog_selection/'>/catalogs/{catalog_name}/selections/{selection_name}</a>
+    description: Delete a catalog selection.
+    tags:
+      - Catalogs
   - name: <a href='/docs/post_create_user_account/'>/scim/v2/Users</a>
     description: Create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, workspace, and team level).
     tags:
