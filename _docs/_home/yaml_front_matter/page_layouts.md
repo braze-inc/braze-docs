@@ -20,17 +20,13 @@ page_layout: PAGE_LAYOUT_VALUE
 ---
 ```
 
-**Example output:**
-
-!["An example page using the 'VALUE' layout."]()
-
 Replace `PAGE_LAYOUT_VALUE` with one of the values from the following sections:
 
 ## Accepted values
 
 ### API page
 
-The `api_page` value is used to apply the API page format. Use this layout for...
+The `api_page` value is used to apply the API page format.
 
 **Example input:**
 
@@ -46,7 +42,7 @@ page_layout: api_page
 
 ### Blank page
 
-The `blank_config` value is used to apply the blank page format. Use this layout for... 
+The `blank_config` value is used to apply the blank page format. 
 
 **Example input:**
 
@@ -62,7 +58,7 @@ page_layout: blank_config
 
 ### Developer guide
 
-The `dev_guide` value is used to apply the developer guide format. Use this layout for... 
+The `dev_guide` value is used to apply the developer guide format. 
 
 **Example input:**
 
@@ -78,7 +74,7 @@ page_layout: dev_guide
 
 ### Video page
 
-The `featured_video` value is used to apply the video page format. Use this layout for... 
+The `featured_video` value is used to apply the video page format. 
 
 **Example input:**
 
@@ -94,7 +90,7 @@ page_layout: featured_video
 
 ### Featured page
 
-The `featured` value is used to apply the featured page format. Use this layout for... 
+The `featured` value is used to apply the featured page format. 
 
 **Example input:**
 
@@ -110,7 +106,7 @@ page_layout: featured
 
 ### Glossary page
 
-The `glossary_page` value is used to apply the glossary page format. Use this layout for... 
+The `glossary_page` value is used to apply the glossary page format. 
 
 **Example input:**
 
@@ -126,7 +122,7 @@ page_layout: glossary_page
 
 ### Redirect page URL
 
-The `redirect` value is used to apply the [redirect the URL for an in-page heading]({{sitebase.url}}/docs/home/content_management/redirecting_urls/#redirecting-a-heading). 
+The `redirect` value is used to [redirect URLs for in-page headings]({{sitebase.url}}/docs/home/content_management/redirecting_urls/#redirecting-a-heading). 
 
 **Example input:**
 
