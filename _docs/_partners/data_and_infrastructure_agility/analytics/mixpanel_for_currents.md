@@ -38,7 +38,7 @@ In your Mixpanel dashboard, click into the **Project Settings** in either a new 
 
 ### Step 2: Create Braze Current
 
-In Braze, navigate to **Currents > + Create Current > Create Mixpanel Export**. Provide an integration name, contact email, Mixpanel API secret, and Mixpanel token in the listed fields. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**.
+In Braze, navigate to **Currents > **+ Create Current** > **Create Mixpanel Export**. Provide an integration name, contact email, Mixpanel API secret, and Mixpanel token in the listed fields. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**.
 
 ![The Braze Mixpanel Currents page. This page includes fields for integration name, contact email, API secret, and mixpanel export token. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
