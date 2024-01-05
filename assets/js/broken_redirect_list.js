@@ -168,6 +168,7 @@ validurls['/docs/user_guide/administrative/app_settings/push_ttl_settings/'] = '
 validurls['/docs/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/okta/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile/';
 validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/#email-analytics-glossary/'] = '/docs/user_guide/message_building_by_channel/email/analytics_glossary/';
+validurls['/docs/user_guide/message_building_by_channel/whatsapp/message_processing/experiments/'] = '/docs/user_guide/message_building_by_channel/whatsapp/meta_resources/#faq';
 
 validurls['/docs/user_guide/data_and_analytics/braze_currents/event_delivery_sematics/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/integration/'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
