@@ -143,7 +143,7 @@ Your query may fail for any of the following reasons:
 
 ### Overview
 
-Variables allow you to use predefined variable types in SQL to reference values without needing to manually copy the value. For example, instead of manually copying a campaign's ID to the SQL editor, you can use `{{campaign.${My campaign}}}` to directly select a campaign from a dropdown in the **Variables** tab.
+Variables allow you to use predefined variable types in SQL to reference values without needing to manually copy the value. For example, instead of manually copying a campaign's ID to the SQL editor, you can use {% raw %}`{{campaign.${My campaign}}}`{% endraw %} to directly select a campaign from a dropdown in the **Variables** tab.
 
 ![][3]
 
@@ -155,17 +155,16 @@ After a Variable is created, it will appear in the **Variables** tab of your Que
 
 ### Guidelines
 
-Variables must adhere to the following liquid syntax: `{{ type.${name} }}`. `type` must be one of the accepted types, while `name` can be anything you choose. The labels for these variables default to the variable name.
+Variables must adhere to the following liquid syntax: {% raw %}`{{ type.${name}}}`{% endraw %}. `type` must be one of the accepted types, while `name` can be anything you choose. The labels for these variables default to the variable name.
 
 By default, all variables are mandatory (and your report will not run unless variable values are selected) except for the date range, which defaults to the past 30 days when the value isn’t provided.
 
 ### Variable types
 
 #### Number
- 
-Replacement: The provided value, such as `5.5`
- 
-Usage example: `some_number_column < {{number.${some name}}}`
+
+- Replacement value: The provided value, such as `5.5`
+- Usage example: {% raw %}`some_number_column < {{number.${some name}}}`{% endraw %}
 
 #### Date range
 
@@ -176,21 +175,22 @@ If both `start_date` and `end_date` are being used, they must have the same name
 ##### Values
 
 Date range type:
-    - **One of:** relative, start date, end date, date range. 
-        
-    All 4 options are shown if both `start_date` and `end_date` are used with the same name. If only one is used, then only the relevant options will show.
-        - Relative:
-            - Allows you to specify past X days
-            - Dependent on start_date presence
-        - Start date:
-            - Allows you to specify a start date
-            - Dependent on start_date presence
-        - End date:
-            - Allows you to specify end date
-            - Dependent on end_date presence
-        - Date range:
-            - Allows you to specify both start and end date
-            - Dependent on both start_date and end_date presence
+
+   - **One of:** relative, start date, end date, date range.
+      
+   All four options are shown if both `start_date` and `end_date` are used with the same name. If only one is used, then only the relevant options will show.
+       - Relative:
+           - Allows you to specify the past X days
+           - Dependent on `start_date` presence
+       - Start date:
+           - Allows you to specify a start date
+           - Dependent on `start_date` presence
+       - End date:
+           - Allows you to specify an end date
+           - Dependent on `end_date` presence
+       - Date range:
+           - Allows you to specify both a start and end date
+           - Dependent on both `start_date` and `end_date` presence
 
 ##### Replacement
 
@@ -199,8 +199,9 @@ Date range type:
 ##### Usage
 
 For all of relative, start date, end date, and date range:
-- time > `{{start_date.${some name}}}` AND time < `{{end_date.${some name}}}`
-    - You can use either `start_date` or `end_date` if you don’t want a date range.
+
+- `time > {{start_date.${some name}}} AND time < {{end_date.${some name}}}`
+   - You can use either `start_date` or `end_date` if you don’t want a date range.
 
 #### Messaging
 
@@ -210,33 +211,22 @@ All messaging variables must share the same identifier when you want to tie thei
 
 For selecting one Canvas. Sharing the same name with a campaign will result in a radio button within the Variables panel that enables you to select either Canvas or campaign.
 
-Replacement: Canvas BSON ID
-
-Usage: `canvas_id = ‘{{canvas.${some name}}}’`
+- Replacement value: Canvas BSON ID
+- Usage example: {% raw %}`canvas_id = ‘{{canvas.${some name}}}’`{% endraw %}
 
 ##### Canvases
 
 For selecting multiple Canvases. Sharing the same name with a campaign will result in a radio button within the **Variables** tab that allows you to select either Canvas or campaign.
 
-Replacement: Canvases BSON IDs
-
-Usage: `canvas_id IN ({{canvases.${some name}}})`
+- Replacement value: Canvases BSON IDs
+- Usage example: {% raw %}`canvas_id IN ({{canvases.${some name}}})`{% endraw %}
 
 ##### Campaign
 
 For selecting one campaign. Sharing the same name with a Canvas will result in a radio button within the **Variables** tab that allows you to select either Canvas or campaign.
 
-Replacement: Campaign BSON ID
-
-Usage: `campaign_id = ‘{{campaign.${some name}}}’`
-
-##### Campaigns
-
-For multi-selecting campaigns. Sharing the same name with a Canvas will result in a radio button within the **Variables** tab that allows you to select either Canvas or campaign.
-
-Replacement: Campaigns BSON IDs
-
-Usage: `campaign_id IN ({{campaigns.${some name}}})`
+- Replacement value: Campaign BSON ID
+- Usage example: {% raw %}`campaign_id = ‘{{campaign.${some name}}}’`{% endraw %}
 
 ## Data and results
 
