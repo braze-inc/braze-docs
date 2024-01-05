@@ -199,6 +199,8 @@ The date range type can be relative, start date, end date, or date range.
 
 All messaging variables must share the same identifier when you want to tie their state together in one group.
 
+![][5]{: style="max-width:50%;"}
+
 ##### Canvas
 
 For selecting one Canvas. Sharing the same name with a campaign will result in a radio button within the Variables panel that enables you to select either Canvas or campaign.
@@ -372,11 +374,15 @@ For whether the select dropdown allows a single or multi-select. For now, this i
 
 Usage example: `is_multi_select: ‘true’`
 
+![][7]{: style="max-width:50%;"}
+
 #### Radio button
 
 For showing options as radio buttons instead of a select dropdown in the **Variables** tab. You can include this metadata only if you use the options variable.
 
 Usage example: `is_radio_button: ‘true’`
+
+![][6]{: style="max-width:50%;"}
 
 #### Options
 
@@ -451,3 +457,6 @@ When you reach the credit cap, you cannot run queries, but you can create, edit,
 [2]: {% image_buster /assets/img_archive/query_builder_ai_tab.png %}
 [3]: {% image_buster /assets/img_archive/sql_variables_panel.png %}
 [4]: {% image_buster /assets/img_archive/query_builder_time_range.png %}
+[5]: {% image_buster /assets/img_archive/sql_variables_canvases.png %}
+[6]: {% image_buster /assets/img_archive/sql_variables_campaigns.png %}
+[7]: {% image_buster /assets/img_archive/sql_variables_productname.png %}
