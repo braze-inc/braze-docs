@@ -198,12 +198,12 @@ Here are some key email-specific metrics that you won't see in other channels. T
 | --- | --- |
 | Unique Clicks | The percentage of recipients that clicked within the email sent. Measured by [`dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/). This number should be between 5–10%. Anything greater than 10% is exceptional! |
 | Unique Opens | The percentage of recipients that opened your email. This can also include emails that are machine opened. This number should be between 10–20%. Anything greater than 20% is exceptional! |
-| Machine Opens | Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. <br>For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a _Machine Opens_. This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost. |
-| Other Opens | Includes emails that haven't been identified as _Machine Opens_. <br>For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an _Other Opens_. Note that a user can also open an email (such as the open counts toward _Other Opens_) before a _Machine Opens_ count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards _Other Opens_ and only once towards _Unique Opens_. |
 | Click to Open | The percentage of recipients that opened your email and then clicked on it. |
-| Estimated Real Opens | This is an estimate of how many unique opens there would be if machine opens did not exist. This is the result of a proprietary Braze statistical model. See the following section for details. |
 | Spam | The percentage of users that marked your email as spam, or the email was designated as spam. If this metric is greater than 0.08, that could be a sign that either your message copy is too salesy or you should reconsider your email address collection methods (to confirm you're messaging those who are interested in your correspondence). |
 | Unsubs | The percentage of recipients that clicked the "Unsubscribe" link in your email. |
+| Other Opens | Includes emails that haven't been identified as _Machine Opens_. <br>For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an _Other Opens_. Note that a user can also open an email (such as the open counts toward _Other Opens_) before a _Machine Opens_ count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards _Other Opens_ and only once towards _Unique Opens_. |
+| Estimated Real Opens | This is an estimate of how many unique opens there would be if machine opens did not exist. This is the result of a proprietary Braze statistical model. See the following section for details. |
+| Machine Opens | Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. <br>For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a _Machine Opens_. This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ##### Estimated real open rate {#estimated-real-open-rate}
@@ -234,7 +234,7 @@ Here are some key in-app message metrics you may see in your analytics. To see t
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-*Body clicks are not automatically collected for in-app messages created with the Drag-and-Drop Editor and the Custom Code Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
+*Body clicks are not automatically collected for in-app messages created with the drag-and-drop editor and the custom code editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
 {% endalert %}
 
 {% elsif include.channel == "push" %}
