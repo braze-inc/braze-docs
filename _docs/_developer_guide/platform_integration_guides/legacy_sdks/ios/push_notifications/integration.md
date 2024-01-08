@@ -32,13 +32,7 @@ noindex: true
 
 ## Step 1: Configure push notifications
 
-Before you can send an iOS push notification using Braze, you must provide your `.p8`  push notification file  provided by Apple.
-
-{% tabs local %}
-  {% tab .p8 File (Recommended) %}
-**Using a .p8 file (authentication token)**
-
-As described on the Apple [developer documentation](https://developer.apple.com/documentation/usernotifications):
+Before you can send an iOS push notification using Braze, you must provide your `.p8`  push notification file provided by Apple. As described on the Apple [developer documentation](https://developer.apple.com/documentation/usernotifications):
 
 1. In your developer account, go to [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate).
 2. Under **Keys**, select **All** and click the **Add button** (+) in the upper-right corner.
@@ -51,16 +45,6 @@ As described on the Apple [developer documentation](https://developer.apple.com/
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), upload the .p8 file at **Manage Settings** > **Settings**.
 {% endalert %}
-
-{% endtab %}
-{% tab .p12 Certificate (Legacy) %}
-
-{% alert warning %}
-P12 certificates are no longer supported. Please switch to use the `.p8` file.
-
-{% endtab %}
-{% endtabs %}
-
 
 ## Step 2: Enable push capabilities
 

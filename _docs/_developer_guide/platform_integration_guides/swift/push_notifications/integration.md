@@ -25,33 +25,17 @@ Push notifications are rate-limited, so don't be afraid of sending as many as yo
 
 Before you can send an iOS push notification using Braze, you must provide your `.p8`  push notification file  provided by Apple.
 
-{% tabs local %}
-{% tab .p8 File (Recommended) %}
-**Using a .p8 file (authentication token)**
-
 1. In your Apple developer account, go to [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate).
 2. Under **Keys**, select **All** and click the add button (+) in the upper-right corner.
 3. Under **Key Description**, enter a unique name for the signing key.
 4. Under **Key Services**, select the **Apple Push Notification service (APNs)** checkbox, then click **Continue**. Click **Confirm**.
 5. Note the key ID. Click **Download** to generate and download the key. Make sure to save the downloaded file in a secure place, as you cannot download this more than once.
-6. In Braze, go to **Settings** > **App Settings** and upload the `.p8` file under **Apple Push Certificate**.
-7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/documentation/foundation/nsbundle/1418023-bundleidentifier), [key ID](https://developer.apple.com/help/account/manage-keys/get-a-key-identifier/), and [team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id). Click **Save**.<br><br>
+6. In Braze, go to **Settings** > **App Settings** and upload the `.p8` file under **Apple Push Certificate**. You can upload either your development or production push certificate. To test push notifications after your app is live in the App Store, its recommended to set up a separate workspace for the development version of your app.
+7. When prompted, enter your app's [bundle ID](https://developer.apple.com/documentation/foundation/nsbundle/1418023-bundleidentifier), [key ID](https://developer.apple.com/help/account/manage-keys/get-a-key-identifier/), and [team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id), then select **Save**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can upload your `.p8` file from **Manage Settings** > **Settings**.
 {% endalert %}
-
-{% endtab %}
-{% endtab %}
-{% tab .p12 Certificate (Legacy) %}
-
-{% alert warning %}
-P12 certificates are no longer supported. Please switch to use the `.p8` file.
-
-{% endtab %}
-{% endtabs %}
-
->  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications after your app goes live in the App Store, we recommend setting up a separate workspace or app for the development version of your app.
 
 ### Enable push capabilities
 
