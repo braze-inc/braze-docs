@@ -26,6 +26,9 @@ guide_menu_list:
   - name: Google Audience Sync
     link: /docs/partners/canvas_steps/google_audience_sync
     fa_icon: fa-brands fa-google
+  - name: Criteo Audience Sync
+    link: /docs/partners/canvas_steps/criteo_audience_sync
+    fa_icon: fa-brands fa-bolt-lightning
   - name: Pinterest Audience Sync
     link: /docs/partners/canvas_steps/pinterest_audience_sync
     fa_icon: fa-brands fa-pinterest
