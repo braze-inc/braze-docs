@@ -318,7 +318,7 @@ Here are some key WhatsApp metrics you may see in your analytics. To see the def
 | Sends | The total number of sends successfully communicated between Braze and WhatsApp. However, this does not necessarily mean the message was received by the end user. |
 | Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. |
 | Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be “On” for Braze to track reads. |
-| Failures | The total number of sends that were not successful because the Internet Service Provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure. Failures are included in the _Sends_ count but are not included in the _Deliveries_ count.
+| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the Sends count but are not included in the Deliveries count.
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### End-user blocking and reporting metrics
@@ -367,6 +367,14 @@ The **Conversion Event Details** panel shows you the performance of your convers
 The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/).
 
 ![The Conversion Correlation panel with an analysis on user attributes and behavior from the Primary Conversion Event - A.]({% image_buster /assets/img/convcorr.png %})
+
+{% if include.channel == "whatsapp" %}
+
+### Meta analytics
+
+In addition to Braze analytics, template-level analytics can be accessed in the WhatsApp Business Manager. For information, check out [Meta's instructions](https://www.facebook.com/business/help/218116047387456). 
+
+{% endif %}
 
 {% if include.channel == "SMS" %}
 

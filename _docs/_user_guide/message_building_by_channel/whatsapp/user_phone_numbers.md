@@ -46,5 +46,10 @@ You can see the differences between local number formatting as well as universal
 
 For a customer to receive an WhatsApp message, they must have a valid phone number and be opted-in to a subscription group. For more information, refer to [WhatsApp subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/).
 
+
+### Multiple users with the same phone number
+
+If multiple users have the same phone number within a segment of a single campaign or Canvas step, Braze will deduplicate the sending and send only one message to that one phone number. 
+
 [picture]: {% image_buster /assets/img/sms/e164.png %}
 
