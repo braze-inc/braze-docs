@@ -44,7 +44,7 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 {% tab static %}
 1. Drag and drop each **static** XCFramework you wish to use into the file navigator in your Xcode project. Make sure to at least include `BrazeKit.xcframework`.
 2. Open your project settings and select your build target. For each Braze framework listed under the "Frameworks, Libraries, and Embedded Content" section, set the "Embed" status to "Do Not Embed".
-3. You must add the corresponding bundle for `BrazeKit` to your project. Additionally, If you included any of `BrazeLocation`, `BrazeUI`, or `BrazeUICompat`, you must also add the corresponding bundle for each of those frameworks that you included as well. The bundles can be found in the `braze-swift-sdk-prebuilt` release asset's `bundle` sub-directory.
+3. You must add the corresponding bundle for `BrazeKit` to your project. Additionally, If you included any of `BrazeLocation`, `BrazeUI`, or `BrazeUICompat`, you must also add the corresponding bundle for each of those frameworks that you included as well. The bundles can be found in `braze-swift-sdk-prebuilt/bundle`.
     * To add the bundles, select your build target in Xcode project settings, select the "Build Phases" tab, and then add each required bundle under the "Copy Bundle Resources" section.
 4. The `SDWebImage` framework is required to support GIFs within Braze Content Cards and in-app messaging UI. If you wish to enable GIF functionality, also include the `SDWebImage.xcframework` file included in `braze-swift-sdk-prebuilt/static`. You do not need a matching bundle for `SDWebImage.xcframework`.
 {% endtab %}
