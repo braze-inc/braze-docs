@@ -34,3 +34,6 @@ You have the option of using either dynamic or static XCFrameworks. Both can be 
 {% endtab %}
 
 {% endtabs %}
+
+### Note: Using the Braze Swift SDK with pure Objective-C projects
+If the project you are integrating Braze into currently consists entirely of Objective-C files, attempting to build the project after adding Braze XCFrameworks will generate missing symbol errors. To fix this, simply add a blank Swift file (`.swift` file extension) into your project. This forces the build toolchain to embed the Swift runtime and link to Swift frameworks when building the project.
