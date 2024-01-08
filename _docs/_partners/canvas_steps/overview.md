@@ -12,6 +12,10 @@ Tool:
 
 > The Braze Audience Sync feature helps you extend the reach of your campaigns to many of the top social and advertising technologies. Through [Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas), brands can dynamically and securely sync first-party user data into the advertising ecosystem to drive marketing and operational efficiencies.
 
+{% alert important %}
+This documentation is not intended to provide, nor may it be relied upon as providing legal advice. The use of Audience Sync is subject to specific legal requirements. To ensure that you are using it in compliance with all applicable laws, you should seek the advice of your legal counsel.
+{% endalert %}
+
 ## Use cases
 
 - Targeting high-value users via owned and paid channels to drive incremental purchases or engagement.
@@ -19,23 +23,37 @@ Tool:
 - Retargeting users with ads who are less responsive to other marketing channels.
 - Creating suppression audiences to prevent users from receiving advertisements when they’re already loyal consumers of your brand.
 
+## Feature availability
+
+All Braze customers will immediately have access to Audience Sync to Google and Facebook. To unlock additional Audience Sync destinations including TikTok, Pinterest, Snapchat, or Criteo, you will need to purchase Audience Sync Pro. Contact your Braze account manager for more details.
+
 ## How it works
 
-To get started, add an Audience Sync step within your Canvas journey. 
+To use Audience Sync to Google or Facebook, connect your ad account by searching for the partner on the **Technology Partners** page.
 
-![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
-
-Next, select one or multiple Audience Sync destinations to sync to. 
-
-![][19]{: style="max-width:80%;"}
-
-After selecting a destination, you must configure each partner with the appropriate ad account, audience, and user fields to match, along with specifying whether to add or remove users from the audience. 
-
-![][21]
+![][3]{: style="max-width:35%;"} ![][4]{: style="max-width:35%;"}
 
 Keep in mind that Braze will sync users as soon as they enter the Audience Sync step within your Canvas. 
 
 For each Audience Sync destination, the partner may have different requirements for which fields we can send. Refer to the specific partner documentation for more details. 
+
+### Audience Sync Pro
+
+To use an Audience Sync Pro partner including TikTok, Pinterest, Snapchat, or Criteo, you’ll be able to select your partners based on your Audience Sync Pro purchase allotments in the **Audience Sync Pro** section on the **Technology Partners** page.
+
+![][5]{: style="max-width:75%;"}
+
+First, select the partners you intend to use by selecting Select Partners. Each purchase of Audience Sync Pro will provide you 3 allotted Audience Sync Pro destinations, which will be available within each of your workspaces within your dashboard.
+
+![][6]{: style="max-width:65%;"}
+
+After selecting your Audience Sync Pro destinations, connect your selected partner ad account by clicking on the partner tile.
+
+![][7]{: style="max-width:75%;"}
+
+Next, you can create your Audience Sync step in Canvas using this Audience Sync Pro destination. 
+
+![][9]{: style="max-width:85%;"}
 
 ## Data privacy considerations
 
@@ -53,6 +71,13 @@ To learn more on how to comply with these Data Protection laws within the Braze 
 
 [1]: {% image_buster /assets/img/audience_sync/audience_sync.png %}
 [2]: {% image_buster /assets/img/audience_sync/audience_sync2.png %}
+[3]: {% image_buster /assets/img/audience_sync/facebook_partner.png %}
+[4]: {% image_buster /assets/img/audience_sync/google_ads_partner.png %}
+[5]: {% image_buster /assets/img/audience_sync/audience_sync_pro1.png %}
+[6]: {% image_buster /assets/img/audience_sync/audience_sync_pro2.png %}
+[7]: {% image_buster /assets/img/audience_sync/audience_sync_pro3a.png %}
+[8]: {% image_buster /assets/img/audience_sync/audience_sync_pro3b.png %}
+[9]: {% image_buster /assets/img/audience_sync/audience_sync_pro4.png %}
 [18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
 [19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
 [20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}
