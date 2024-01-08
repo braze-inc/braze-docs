@@ -13,21 +13,24 @@ description: "This reference article shows how to integrate the Braze Swift SDK 
 We strongly recommend that you implement the SDK via a package manager such as [Swift Package Manager](../swift_package_manager/) or [CocoaPods](../cocoapods/). It will save you a lot of time and automate much of the process. However, if you are unable to do so, you may follow these instructions to integrate manually.
 {% endalert %}
 
-## Source files
+## Step 1: Downloading the Braze SDK
+You have the option of using either dynamic or static XCFrameworks. Both can be found in [the releases section of the Braze Swift SDK repository](https://github.com/braze-inc/braze-swift-sdk/releases).
 
-## Prebuilt XCFrameworks
+## Step 2: Linking against the frameworks
+{% tabs %}
 
-1. Download the XCFrameworks you wish to use. You have the option of using either static ([here](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static/releases) and [here](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static)) or dynamic ([here](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic)) prebuilt Braze XCFrameworks.
-2. Open your project in Xcode and drag and drop the XCFramework into the file navigator. Open the project settings, and under the "Frameworks, Libraries, and Embedded Content" section for your build target, set the "Embed" status for each included XCFramework to "Embed & Sign".
-3. The `SDWebImage` framework is required for Content Cards and in-app messaging to function properly. `SDWebImage` is used for image downloading and displaying, including GIFs. If you intend to use Content Cards or in-app messages, follow the SDWebImage integration steps.
+{% tab dynamic %}
+1. Open your project in Xcode and drag and drop each XCFramework you wish to use into the file navigator. Make sure to at least include `BrazeKit.xcframework`.
+2. Open your project settings and select your build target. For each Braze framework listed under the "Frameworks, Libraries, and Embedded Content" section, set the "Embed" status to "Embed & Sign".
+3. The `SDWebImage` framework is required to support GIFs within Braze Content Cards and in-app messaging UI. If you wish to enable GIF functionality, also include the `SDWebImage.xcframework` file included in `braze-swift-sdk-prebuilt/static`.
+{% endtab %}
 
-### SDWebImage integration
+{% tab static %}
+1. Open your project in Xcode and drag and drop each XCFramework you wish to use into the file navigator. Make sure to at least include `BrazeKit.xcframework`.
+2. Open your project settings and select your build target. For each Braze framework listed under the "Frameworks, Libraries, and Embedded Content" section, set the "Embed" status to "Do Not Embed".
+3. You must add the corresponding bundle for `BrazeKit` to your project. Additionally, If you included any of `BrazeLocation`, `BrazeUI`, or `BrazeUICompat`, you must also add the corresponding bundle for each of those frameworks that you included as well. The bundles can be found in the `braze-swift-sdk-prebuilt` release asset's `bundle` sub-directory.
+    * To add the bundles, select your build target in Xcode project settings, select the "Build Phases" tab, and then add each required bundle under the "Copy Bundle Resources" section.
+4. The `SDWebImage` framework is required to support GIFs within Braze Content Cards and in-app messaging UI. If you wish to enable GIF functionality, also include the `SDWebImage.xcframework` file included in `braze-swift-sdk-prebuilt/static`. You do not need a matching bundle for `SDWebImage.xcframework`.
+{% endtab %}
 
-To install `SDWebImage`, follow their [instructions](https://github.com/SDWebImage/SDWebImage/wiki/Installation-Guide#build-sdwebimage-as-xcframework) and then drag and drop the resulting `XCFramework` into your project.
-
-{% alert warning %}
-If you try to use the core version of the SDK without Braze UI features, in-app messages will not display. Trying to display Braze Content Cards UI with the core version will lead to unpredictable behavior.
-{% endalert %}
-
-
-## Rich push notifications and push notification stories
+{% endtabs %}
