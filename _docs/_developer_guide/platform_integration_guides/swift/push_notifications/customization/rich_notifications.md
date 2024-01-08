@@ -77,7 +77,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 
 Follow the [manual integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration/) to add `BrazeNotificationService.xcframework` to your `Notification Service Extension`.
 
-{% end tab %}
+{% endtab %}
 {% endtabs %}
 
 #### Using your own UNNotificationServiceExtension
