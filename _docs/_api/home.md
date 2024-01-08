@@ -415,7 +415,7 @@ glossaries:
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field/'>/catalogs/{catalog_name}/fields/{field_name}</a>
-    description: Delete multiple fields in a catalog.
+    description: Delete a field from a catalog.
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selection/'>/catalogs/{catalog_name}/selections</a>
