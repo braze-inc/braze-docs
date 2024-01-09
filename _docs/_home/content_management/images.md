@@ -73,7 +73,7 @@ Your in-line image should be similar to the following:
 ```
 {% endraw %}
 
-At the bottom of the page, you'll add your reference.
+At the bottom of the page, add your reference.
 
 {% raw %}
 ```markdown
