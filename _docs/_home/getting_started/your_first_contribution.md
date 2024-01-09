@@ -306,7 +306,7 @@ In your PR, select **Files Changed**.
 
 ![An example pull request with the "Files Changes" tab highlighted.]()
 
-Locate the file you'd like to update, then select <i class="fa-solid fa-ellipsis"></i> **Ellipsis** > **Edit file**.
+Locate the file you'd like to update, then select <i class="fa-solid fa-ellipsis"></i> **Show options** > **Edit file**.
 
 ![The "Filed" section in an example pull request with the "Edit file" button highlighted.]()
 
