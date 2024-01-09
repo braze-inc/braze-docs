@@ -59,7 +59,7 @@ In your text editor, open a Markdown file, then add the include you'd like to us
 
 Replace `PATH_TO_INCLUDE` with the relative path from inside the `_includes` directory. Your reference should look like the following:
 
-_Example file tree:_
+### Example file tree
 
 ```bash
 braze-docs
@@ -70,7 +70,7 @@ braze-docs
         └── prerequisites.md
 ```
 
-_Example include:_
+### Example include
 
 {% raw %}
 ```plaintext

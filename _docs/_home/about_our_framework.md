@@ -46,7 +46,7 @@ Replace the following:
 | `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).  |
 | `CONTENT`        | The page's content written in Markdown syntax.                                                                                                |
 
-_Example input:_
+### Example input
 
 ```markdown
 ---
@@ -62,7 +62,7 @@ Learn how you can get started with Braze.
 ## Step 1: Create an account
 ```
 
-_Example output:_
+### Example output
 
 ![Example page on Braze Docs.]()
 
@@ -110,7 +110,7 @@ Replace the following:
 | `FILE`          | The name of the file including the file extension.                                                                                                                                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
-_Example input:_
+### Example input
 
 ```markdown
 # Getting started with Braze
@@ -120,7 +120,7 @@ Learn how you can get started with Braze.
 {% raw %}{% multi_lang_include braze/upgrade_notice.md %}{% endraw %}
 ```
 
-_Example output:_
+### Example output
 
 ![Content reuse example on Braze Docs.]()
 
@@ -140,7 +140,7 @@ layout: LAYOUT_VALUE
 
 Replace `LAYOUT_VALUE` with the name of the layout file and the file extension removed.
 
-_Example file tree:_
+### Example file tree
 
 ```plaintext
 braze-docs
@@ -164,7 +164,7 @@ braze-docs
 └── README.md
 ```
 
-_Example input:_
+### Example input
 
 ```markdown
 ---
@@ -172,7 +172,7 @@ layout: api_glossary
 ---
 ```
 
-_Example output:_
+### Example output
 
 ![API glossary layout example on Braze Docs.]()
 
@@ -260,7 +260,7 @@ braze-docs
 
 The landing page for each primary section is a standard Markdown file with the `page_order:` key set to `0`.
 
-_Example input:_
+### Example input
 
 ```markdown
 ---
@@ -273,7 +273,7 @@ description: "This landing page is where developers can find all the integration
 ---
 ```
 
-_Example output:_
+### Example output
 
 ![An example landing page on Braze Docs.]()
 
@@ -305,7 +305,7 @@ For a full walkthrough, see [Creating a section]({{sitebase.url}}/docs/home/cont
 
 In the `_primary_section` directory, `subsection_a` is **not** configured with a landing page, while `subsection_b` is configured with a landing page. In the following example, `subsection_a.md` has `config_only:` set to `true`, which prevents this page from being rendered as a landing page:
 
-_Example input:_
+### Example input
 
 ```markdown
 ---
@@ -315,13 +315,13 @@ config_only: true
 ---
 ```
 
-_Example output:_
+### Example output
 
 ![The left-side navigation on Braze Docs, showing an example of an expanded section without a landing page.]()
 
 However, `subsection_b.md` doesn't use the `config_only:` key, so this page _is_ rendered as a landing page:
 
-_Example input:_
+### Example input
 
 ```markdown
 ---
@@ -330,7 +330,7 @@ page_order: 0
 ---
 ```
 
-_Example output:_
+### Example output
 
 ![The left-side navigation on Braze Docs, showing an example of an expanded section with a landing page.]()
 
@@ -342,7 +342,7 @@ While a subsection with `config_only:` set to `true` is not rendered as a page, 
 
 URLs on Braze Docs always match the directory structure within the docs repository. 
 
-_Example file tree:_
+### Example file tree
 
 ```plaintext
 braze-docs
@@ -352,7 +352,7 @@ braze-docs
             └── page_a.md
 ```
 
-_Example URL:_
+### Example URL
 
 ```plaintext
 https://www.braze.com/docs/primary_section/subsection_a/page_a
@@ -376,7 +376,7 @@ braze-docs
 
 The URLs for `subsection_a/page_a.md` and `subsection_a/page_b.md` will contain `subsection_a` even though `subsection_a.md` is not configured as a landing page.
 
-_Example `subsection_a.md`:_
+### Example file for Subsection A
 
 ```markdown
 ---
@@ -386,7 +386,7 @@ config_only: true
 ---
 ```
 
-_Example URLs for Subsection A:_
+### Example URLs for Subsection A
 
 ```plaintext
 https://www.braze.com/docs/primary_section/subsection_a/page_a
@@ -395,7 +395,7 @@ https://www.braze.com/docs/primary_section/subsection_a/page_b
 
 While this is similar for `subsection_b`, in addition to `subsection_b/page_a.md` and `subsection_b/page_b.md` receiving unique URLS, `subsection_b.md` also receives a unique URL since it's configured as a landing page.
 
-_Example `subsection_b.md`:_
+### Example file for subsection B
 
 ```markdown
 ---
@@ -404,7 +404,7 @@ page_order: 0
 ---
 ```
 
-_Example URLs for Subsection B:_
+### Example URLs for Subsection B
 
 ```plaintext
 https://www.braze.com/docs/primary_section/subsection_b
