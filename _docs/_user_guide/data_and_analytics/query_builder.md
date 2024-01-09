@@ -155,7 +155,7 @@ After a Variable is created, it will appear in the **Variables** tab of your Que
 
 ### Guidelines
 
-Variables must adhere to the following liquid syntax: {% raw %}`{{ type.${name}}}`{% endraw %}. `type` must be one of the accepted types, while `name` can be anything you choose. The labels for these variables default to the variable name.
+Variables must adhere to the following Liquid syntax: {% raw %}`{{ type.${name}}}`{% endraw %}, where `type` must be one of the accepted types and `name` can be anything you choose. The labels for these variables default to the variable name.
 
 By default, all variables are mandatory (and your report will not run unless variable values are selected) except for the date range, which defaults to the past 30 days when the value isn’t provided.
 
