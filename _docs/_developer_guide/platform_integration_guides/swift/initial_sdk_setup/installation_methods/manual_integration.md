@@ -29,7 +29,7 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 {: .ws-td-nw-1}
 
 {% alert warning %}
-[BrazeNotificationService](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications) and [BrazePushStory](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories) are extension modules that provide additional functionality and should not be added directly to your main application target. Instead follow the linked guides to integrate them separately into their respective target extensions.
+[BrazeNotificationService](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications) and [BrazePushStory](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories) are extension modules that provide additional functionality and should not be added directly to your main application target. Instead, follow the linked guides to integrate them separately into their respective target extensions.
 {% endalert %}
 
 ## Step 3: Linking against the frameworks
