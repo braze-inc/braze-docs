@@ -14,7 +14,7 @@ We strongly recommend that you implement the SDK via a package manager such as [
 {% endalert %}
 
 ## Step 1: Downloading the Braze SDK
-You have the option of using either dynamic or static XCFrameworks. Both can be found in [the releases section of the Braze Swift SDK repository](https://github.com/braze-inc/braze-swift-sdk/releases). The `braze-swift-sdk-prebuilt.zip` folder under "Assets" includes everything needed for this guide.
+You have the option of using either dynamic or static XCFrameworks. Both can be found in [the releases section of the Braze Swift SDK repository](https://github.com/braze-inc/braze-swift-sdk/releases). The `braze-swift-sdk-prebuilt.zip` archive under "Assets" includes everything needed for this guide.
 
 ## Step 2: Select libraries to use
 The Braze Swift SDK separates features into standalone libraries to provide developers with more control over which features to import into their projects. Each library corresponds to one of the XCFrameworks you downloaded. In the next step, you can add any combination of these to your project.
