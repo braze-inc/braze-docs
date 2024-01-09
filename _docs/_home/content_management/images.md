@@ -62,7 +62,7 @@ Replace the following:
 
 | Placeholder | Description                                             |
 |-------------|---------------------------------------------------------|
-| `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessabile for those using screen readers.|
+| `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers.|
 | `REFERENCE_NUMBER` | Assign any positive integer that's not already assigned to another reference-style link on this page. |
 
 Your in-line image should be similar to the following:
