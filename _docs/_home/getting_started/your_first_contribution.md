@@ -318,7 +318,7 @@ Select **Commit directly to the BRANCH_NAME branch** > **Commit changes**, where
 
 ![The "Commit changes" button highlighted after choosing "Commit directly to BRANCH_NAME branch."]()
 
-When you're ready, [request a review]() next.
+When you're ready, [request a review]({{site.baseurl}}/docs/home/getting_started/your_first_contribution/?tab=local%20environment#request-a-review) next.
 {% endtab %}
 {% endtabs %}
 
