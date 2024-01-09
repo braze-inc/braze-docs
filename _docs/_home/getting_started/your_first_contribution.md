@@ -284,7 +284,7 @@ $ git commit -m "Fixing a typo in the recommended software doc."
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
-Finally, push your new changes to the remote branch on GitHub, then [request a review]().
+Finally, push your new changes to the remote branch on GitHub, then [request a review]({{site.baseurl}}/docs/home/getting_started/your_first_contribution/?tab=local%20environment#request-a-review).
 
 ```bash
 git push
