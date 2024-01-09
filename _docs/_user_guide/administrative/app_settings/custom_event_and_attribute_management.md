@@ -47,7 +47,7 @@ To stop tracking a specific custom attribute, event, or product, follow these st
 
 ![Multiple selected custom attributes that are blocklisted on the Custom Attributes page.][1]
 
-To prevent collecting certain device attributes, see our [SDK guide][88].
+You can blocklist up to 300 custom attributes and 300 events. To prevent collecting certain device attributes, see our [SDK guide][88].
 
 Once a custom event or attribute is blocklisted:
 
