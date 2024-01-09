@@ -94,7 +94,7 @@ tool:
 ---
 ```
 
-### Hide from navigation
+### Hide from navigation {#hide-page}
 
 The `hidden` key is used to hide a page from the left-side navigation on Braze Docs. This key accepts the boolean values `true` or `false`.
 
