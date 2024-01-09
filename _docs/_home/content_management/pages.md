@@ -35,7 +35,7 @@ Replace `PAGE_TITLE` with the title of your page (be sure it adheres to the [Hea
 
 ### Step 2: Add a layout
 
-To use the default page layout, copy and paste the following into your Markdown file. For other layouts, see [Layouts]({{sitebase.url}}/docs/home/examples/layouts).
+To use the default page layout, copy and paste the following into your Markdown file. For other layouts, see [Layouts]({{sitebase.url}}/docs/home/yaml_front_matter/page_layouts/).
 
 ```markdown
 ---
