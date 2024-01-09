@@ -9,47 +9,91 @@ description: "This reference article shows how to integrate the Braze Swift SDK 
 
 # Manual integration
 
-{% alert tip %}
-We strongly recommend that you implement the SDK via a package manager such as [Swift Package Manager](../swift_package_manager/) or [CocoaPods](../cocoapods/). It will save you a lot of time and automate much of the process. However, if you are unable to do so, you may follow these instructions to integrate manually.
-{% endalert %}
+> If you don't have access to a package manager, such as [Swift Package Manager]({{sitebase.url}}/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) or [CocoaPods]({{sitebase.url}}/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/), you can manually integrate the Swift SDK instead.
 
-## Step 1: Downloading the Braze SDK
-You have the option of using either dynamic or static XCFrameworks. Both can be found in [the releases section of the Braze Swift SDK repository](https://github.com/braze-inc/braze-swift-sdk/releases). The `braze-swift-sdk-prebuilt.zip` archive under "Assets" includes everything needed for this guide.
+## Step 1: Download the Braze SDK
 
-## Step 2: Select libraries to use
-The Braze Swift SDK separates features into standalone libraries to provide developers with more control over which features to import into their projects. Each library corresponds to one of the XCFrameworks you downloaded. In the next step, you can add any combination of these to your project.
+Go to the [Braze SDK release page on GitHub](https://github.com/braze-inc/braze-swift-sdk/releases), then download `braze-swift-sdk-prebuilt.zip`.
 
-| Package | Details |
-| ------- | ------- |
-| `BrazeKit` | Main SDK library providing support for analytics and push notifications. |
-| `BrazeLocation` | Location library providing support for location analytics and geofence monitoring. |
-| `BrazeUI` | Braze-provided user interface library for in-app messages and Content Cards. |
-| `BrazeNotificationService` | Notification service extension library providing support for rich push notifications. |
-| `BrazePushStory` | Notification content extension library providing support for push stories. |
+!["The Braze SDK release page on GitHub."]()
+
+Your package contents will look similar to the following:
+
+```bash
+braze-swift-sdk-prebuilt
+├── static
+├── bundle
+└── dynamic
+```
+
+## Step 2: Choose your framework(s)
+
+The Braze Swift SDK contains a variety of standalone XCframeworks, which gives you the freedom to integrate the features you want instead of needing to add them all. First, decide whether you'd like to use static or dynamic XCframeworks, then place the relevant files in a temporary location for later steps. To learn more about each framework, reference the following table:
+
+| Package                    | Description                                                                                                                                                                                                                                                                                                           |
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `BrazeKit`                 | Main SDK library that provides support for analytics and push notifications.                                                                                                                                                                                                                                          |
+| `BrazeLocation`            | Location library that provides support for location analytics and geofence monitoring.                                                                                                                                                                                                                                |
+| `BrazeUI`                  | Braze-provided user interface library for in-app messages and Content Cards.                                                                                                                                                                                                                                          |
+| `BrazeNotificationService` | Notification service extension library that provides support for rich push notifications.  Do not add this library directly to your main application target, instead [add the `BrazeNotificationService` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications). |
+| `BrazePushStory`           | Notification content extension library that provides support for push stories. Do not add this library directly to your main application target, instead [add the `BrazePushStory` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories).                                  |
 {: .ws-td-nw-1}
 
-{% alert warning %}
-[BrazeNotificationService](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications) and [BrazePushStory](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories) are extension modules that provide additional functionality and should not be added directly to your main application target. Instead, follow the linked guides to integrate them separately into their respective target extensions.
+## Step 3: Integrate your framework(s)
+
+The steps for integrating dynamic frameworks and static XCframeworks are different. Follow the steps for your desired XCframework type:
+
+{% tabs %}
+{% tab dynamic %}
+In your Xcode project, drag and drop the dynamic XCFrameworks you'd like to use into your file tree. At a minimum, you'll need to add the `BrazeKit.xcframework` file.
+
+!["An example Xcode project with the file tree open showing 'Brazekit.xcframework'."]()
+
+{% alert note %}
+To enable GIF support, also add the `SDWebImage.xcframework` file located in `braze-swift-sdk-prebuilt/dynamic`.
 {% endalert %}
 
-## Step 3: Linking against the frameworks
-{% tabs %}
+In your project settings, select your build target, then for each Braze framework listed under **Frameworks, Libraries, and Embedded Content**, choose **Embed & Sign**.
 
-{% tab dynamic %}
-1. Drag and drop each **dynamic** XCFramework you wish to use into the file navigator in your Xcode project. Make sure to at least include `BrazeKit.xcframework`.
-2. Open your project settings and select your build target. For each Braze framework listed under the "Frameworks, Libraries, and Embedded Content" section, set the "Embed" status to "Embed & Sign".
-3. The `SDWebImage` framework is required to support GIFs within Braze Content Cards and in-app messaging UI. If you wish to enable GIF functionality, also include the `SDWebImage.xcframework` file included in `braze-swift-sdk-prebuilt/dynamic`.
+!["An example Xcode project with each Braze library set to 'Embed & Sign.'"]()
 {% endtab %}
 
 {% tab static %}
-1. Drag and drop each **static** XCFramework you wish to use into the file navigator in your Xcode project. Make sure to at least include `BrazeKit.xcframework`.
-2. Open your project settings and select your build target. For each Braze framework listed under the "Frameworks, Libraries, and Embedded Content" section, set the "Embed" status to "Do Not Embed".
-3. You must add the corresponding bundle for `BrazeKit` to your project. Additionally, If you included any of `BrazeLocation`, `BrazeUI`, or `BrazeUICompat`, you must also add the corresponding bundle for each of those frameworks that you included as well. The bundles can be found in `braze-swift-sdk-prebuilt/bundle`.
-    * To add the bundles, select your build target in Xcode project settings, select the "Build Phases" tab, and then add each required bundle under the "Copy Bundle Resources" section.
-4. The `SDWebImage` framework is required to support GIFs within Braze Content Cards and in-app messaging UI. If you wish to enable GIF functionality, also include the `SDWebImage.xcframework` file included in `braze-swift-sdk-prebuilt/static`. You do not need a matching bundle for `SDWebImage.xcframework`.
-{% endtab %}
+In your Xcode project, drag and drop the static XCFrameworks you'd like to use into your file tree. At a minimum, you'll need to add the `BrazeKit.xcframework` file.
 
+!["An example Xcode project with the file tree open showing 'Brazekit.xcframework'."]()
+
+{% alert note %}
+To enable GIF support, also add the `SDWebImage.xcframework` file located in `braze-swift-sdk-prebuilt/dynamic`.
+{% endalert %}
+
+In your project settings, select your build target, then for each Braze framework listed under **Frameworks, Libraries, and Embedded Content**, choose **Do Not Embed**.
+
+!["An example Xcode project with each Braze library set to 'Do Not Embed.'"]()
+
+Next, you'll open the `bundle` directory you [previously downloaded](#step-1-download-the-braze-sdk), and get the bundles for each of the following frameworks (if applicable):
+
+- `BrazeKit`
+- `BrazeLocation`
+- `BrazeUI`
+- `BrazeUICompat`
+
+In your project settings, select your build target, then **Build Phases**. Under **Copy Bundle Resources** drag and drop each bundle to the related resource.
+
+!["An example Xcode project with bundles added under 'Copy Bundle Resources.'"]()
+{% endtab %}
 {% endtabs %}
 
-### Note: Using the Braze Swift SDK with pure Objective-C projects
-If you are integrating Braze into a project which currently consists entirely of Objective-C files, attempting to build the project after adding Braze XCFrameworks will generate missing symbol errors. To fix this, simply add a blank Swift file (`.swift` file extension) into your project. This forces the build toolchain to embed the Swift runtime and link to Swift frameworks when building the project.
+## Common errors for Objective-C projects
+
+If your Xcode project only contains Objective-C files, you may get "missing symbol" errors when you try to build your project. To fix these errors, open your project and add an empty Swift file in your file tree. This file will force your build toolchain to embed [Swift Runtime](https://support.apple.com/kb/dl1998) and link to the appropriate frameworks during build time.
+
+```bash
+FILE_NAME.swift
+```
+
+Replace `FILE_NAME` with any non-spaced string. Your file should look similar to the following:
+
+```bash
+empty_swift_file.swift
+```
