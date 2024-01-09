@@ -6,7 +6,7 @@ noindex: true
 
 # Sections
 
-> Learn how to create and order sections on Braze Docs. If you'd like to create, modify, or delete an individual page instead, see [Pages]({{sitebase.url}}/docs/home/content_management/pages/adding_and_updating_pages). For general information about sections, see [About our framework]({{sitebase.url}}/docs/home/about_our_framework).
+> Learn how to create and order sections on Braze Docs. If you'd like to create, modify, or delete an individual page instead, see [Pages]({{sitebase.url}}/docs/home/content_management/pages/). For general information about sections, see [About our framework]({{sitebase.url}}/docs/home/about_our_framework).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
