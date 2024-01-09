@@ -44,10 +44,6 @@ Catalog segments use SQL to join data from catalogs and data from custom events 
 | `events.name` |  If using a custom event, you must either populate this with the name of your custom event or remove it if you'd like to filter on all events (events that don't have the property won't be joined on the catalog). In nearly all use cases, you will be adding the name of a specific custom event.<br><br>If using a purchase event, replace `event.name = ''` with `event.product_id = ''` and add the name of your product.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% alert important %}
-If using a purchase event, replace `USERS_BEHAVIORS_CUSTOMEVENT_SHARED` with `USERS_BEHAVIORS_PURCHASE_SHARED`.
-{% endalert %}
-
 {: start=”3”}
 3. If needed, fill in additional optional fields for your use case to segment by a particular field value within your catalog:
 - `items.field_name`: A particular field (column name) within this catalog
