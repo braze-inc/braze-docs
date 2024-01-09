@@ -161,6 +161,22 @@ By default, all variables are mandatory (and your report will not run unless var
 
 ### Variable types
 
+The following variable types are accepted:
+
+- [Number](#number)
+- [Date range](#date-range)
+- [Messaging](#messaging)
+- [Products](#products)
+- [Custom events](#custom-events)
+- [Custom events properties](#custom-event-properties)
+- [Workspace](#workspace)
+- [Catalogs](#catalogs)
+- [Catalog fields](#catalog-fields)
+- [Options](#options)
+- [Segments](#segments)
+- [String](#string)
+- [Tags](#tags)
+
 #### Number
 
 - **Replacement value:** The provided value, such as `5.5`
@@ -274,9 +290,9 @@ For selecting a list of custom event property names. It must be used with the cu
 - **Replacement value:** Custom event property names are separated by commas such as in `property1, property2`
 - **Usage example:** {% raw %}`name = ‘{{custom_event_properties.${property names)}}}’`{% endraw %}
 
-#### App group
+#### Workspace
 
-For selecting an app group.
+For selecting a workspace.
 
 - **Replacement value:** App group BSON ID
 - **Usage example:** {% raw %}`app_group_id = ‘{{workspace.${app_group_id}}}’`{% endraw %}
