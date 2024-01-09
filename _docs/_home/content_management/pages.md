@@ -63,7 +63,7 @@ Replace the following:
 | `HEADING`           | The title of your Heading 2 section.                                                                                                                                                                                                        |
 | `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
 
-You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter).
+You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).
 
 When you're ready to add content to your new page, continue to [Modifying a page](#modifying-a-page).
 
