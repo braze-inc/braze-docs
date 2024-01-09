@@ -393,7 +393,7 @@ https://www.braze.com/docs/primary_section/subsection_a/page_a
 https://www.braze.com/docs/primary_section/subsection_a/page_b
 ```
 
-While this is similar for `subsection_b`, in addition to `subsection_b/page_a.md` and `subsection_b/page_b.md` receiving unique URLS, `subsection_b.md` also receives a unique URL since it's configured as a landing page.
+While this is similar for `subsection_b`, in addition to `subsection_b/page_a.md` and `subsection_b/page_b.md` receiving unique URLS, `subsection_b.md` also receives a unique URL because it's configured as a landing page.
 
 ### Example file for subsection B
 
