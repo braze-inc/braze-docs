@@ -249,11 +249,11 @@ Since React Native automatically links the libraries to the native platform, you
 From the root folder of the project:
 
 ```bash
-# To install using the React Native legacy architecture
-cd ios && pod install
-
 # To install using the React Native New Architecture
 cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
+
+# To install using the React Native legacy architecture
+cd ios && pod install
 ```
 
 #### Step 2.2b: Configure the Braze SDK
