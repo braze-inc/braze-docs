@@ -20,7 +20,7 @@ Open your project and navigate to your project's settings. Select the **Swift Pa
 ![][3]
 
 {% alert note %}
-Starting in version 7.3.0, the Braze Swift SDK has additional distribution channels as [static XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static) and [dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic). If you wish to use either of these formats instead, follow the installation instructions from its respective repository.
+Starting in version 7.4.0, the Braze Swift SDK has additional distribution channels as [static XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static) and [dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic). If you wish to use either of these formats instead, follow the installation instructions from its respective repository.
 {% endalert %}
 
 Enter the URL of our iOS Swift SDK repository `https://github.com/braze-inc/braze-swift-sdk` in the text field. Under the **Dependency Rule** section, select the SDK version. Finally, click **Add Package**.
