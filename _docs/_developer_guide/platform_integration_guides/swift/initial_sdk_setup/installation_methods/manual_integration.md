@@ -17,7 +17,11 @@ Go to the [Braze SDK release page on GitHub](https://github.com/braze-inc/braze-
 
 !["The Braze SDK release page on GitHub."]()
 
-Your package contents will look similar to the following:
+## Step 2: Choose your frameworks
+
+The Braze Swift SDK contains a variety of standalone XCframeworks, which gives you the freedom to integrate the features you want rather than needingn to integrate them all.
+
+First, decide whether you'd like to use static or dynamic XCframeworks, then open the relevant directory in `braze-swift-sdk-prebuilt`.
 
 ```bash
 braze-swift-sdk-prebuilt
@@ -26,9 +30,7 @@ braze-swift-sdk-prebuilt
 └── dynamic
 ```
 
-## Step 2: Choose your framework(s)
-
-The Braze Swift SDK contains a variety of standalone XCframeworks, which gives you the freedom to integrate the features you want instead of needing to add them all. First, decide whether you'd like to use static or dynamic XCframeworks, then place the relevant files in a temporary location for later steps. To learn more about each framework, reference the following table:
+Move the desired XCframwork files to a temporary location, so you can easily access them later. To learn more about each file, reference the following:
 
 | Package                    | Description                                                                                                                                                                                                                                                                                                           |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,9 +41,9 @@ The Braze Swift SDK contains a variety of standalone XCframeworks, which gives y
 | `BrazePushStory`           | Notification content extension library that provides support for push stories. Do not add this library directly to your main application target, instead [add the `BrazePushStory` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories).                                  |
 {: .ws-td-nw-1}
 
-## Step 3: Integrate your framework(s)
+## Step 3: Integrate your frameworks
 
-The steps for integrating dynamic frameworks and static XCframeworks are different. Follow the steps for your desired XCframework type:
+The steps for integrating dynamic and static XCframeworks are different. Follow the corresponding steps for your desired XCframework type:
 
 {% tabs %}
 {% tab dynamic %}
