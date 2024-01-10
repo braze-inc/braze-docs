@@ -4,7 +4,6 @@ article_title: Manual Integration for iOS
 platform: Swift
 page_order: 3
 description: "This reference article shows how to integrate the Braze Swift SDK using manual installation."
-
 ---
 
 # Manual integration
@@ -88,7 +87,7 @@ In your project settings, select your build target, then **Build Phases**. Under
 
 ## Common errors for Objective-C projects
 
-If your Xcode project only contains Objective-C files, you may get "missing symbol" errors when you try to build your project. To fix these errors, open your project and add an empty Swift file in your file tree. This file will force your build toolchain to embed [Swift Runtime](https://support.apple.com/kb/dl1998) and link to the appropriate frameworks during build time.
+If your Xcode project only contains Objective-C files, you may get "missing symbol" errors when you try to build your project. To fix these errors, open your project and add an empty Swift file to your file tree. This will force your build toolchain to embed [Swift Runtime](https://support.apple.com/kb/dl1998) and link to the appropriate frameworks during build time.
 
 ```bash
 FILE_NAME.swift
