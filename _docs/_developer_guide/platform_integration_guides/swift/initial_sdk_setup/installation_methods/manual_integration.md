@@ -15,11 +15,11 @@ description: "This reference article shows how to integrate the Braze Swift SDK 
 
 Go to the [Braze SDK release page on GitHub](https://github.com/braze-inc/braze-swift-sdk/releases), then download `braze-swift-sdk-prebuilt.zip`.
 
-!["The Braze SDK release page on GitHub."]()
+!["The Braze SDK release page on GitHub."]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
 
 ## Step 2: Choose your frameworks
 
-The Braze Swift SDK contains a variety of standalone XCframeworks, which gives you the freedom to integrate the features you want rather than needingn to integrate them all.
+The Braze Swift SDK contains a variety of standalone XCframeworks, which gives you the freedom to integrate the features you want rather than needing to integrate them all.
 
 First, decide whether you'd like to use static or dynamic XCframeworks, then open the relevant directory in `braze-swift-sdk-prebuilt`.
 
@@ -30,7 +30,7 @@ braze-swift-sdk-prebuilt
 └── dynamic
 ```
 
-Move the desired XCframwork files to a temporary location, so you can easily access them later. To learn more about each file, reference the following:
+Move the desired XCframwork directories to a temporary location, so you can easily access them later. To learn more about each file, reference the following:
 
 | Package                    | Description                                                                                                                                                                                                                                                                                                           |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -47,12 +47,12 @@ The steps for integrating dynamic and static XCframeworks are different. Follow 
 
 {% tabs %}
 {% tab dynamic %}
-In your Xcode project, drag and drop the dynamic XCFrameworks you'd like to use into your file tree. At a minimum, you'll need to add the `BrazeKit.xcframework` file.
+In your Xcode project, drag and drop the dynamic XCFrameworks you'd like to use into your file tree. At a minimum, you'll need to add `BrazeKit.xcframework`.
 
 !["An example Xcode project with the file tree open showing 'Brazekit.xcframework'."]()
 
 {% alert note %}
-To enable GIF support, also add the `SDWebImage.xcframework` file located in `braze-swift-sdk-prebuilt/dynamic`.
+To enable GIF support, also add `SDWebImage.xcframework` located in `braze-swift-sdk-prebuilt/dynamic`.
 {% endalert %}
 
 In your project settings, select your build target, then for each Braze framework listed under **Frameworks, Libraries, and Embedded Content**, choose **Embed & Sign**.
@@ -61,12 +61,12 @@ In your project settings, select your build target, then for each Braze framewor
 {% endtab %}
 
 {% tab static %}
-In your Xcode project, drag and drop the static XCFrameworks you'd like to use into your file tree. At a minimum, you'll need to add the `BrazeKit.xcframework` file.
+In your Xcode project, drag and drop the static XCFrameworks you'd like to use into your file tree. At a minimum, you'll need to add `BrazeKit.xcframework`.
 
 !["An example Xcode project with the file tree open showing 'Brazekit.xcframework'."]()
 
 {% alert note %}
-To enable GIF support, also add the `SDWebImage.xcframework` file located in `braze-swift-sdk-prebuilt/dynamic`.
+To enable GIF support, also add `SDWebImage.xcframework` located in `braze-swift-sdk-prebuilt/static`.
 {% endalert %}
 
 In your project settings, select your build target, then for each Braze framework listed under **Frameworks, Libraries, and Embedded Content**, choose **Do Not Embed**.
