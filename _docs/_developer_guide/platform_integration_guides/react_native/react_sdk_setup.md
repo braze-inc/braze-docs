@@ -233,7 +233,8 @@ override fun onNewIntent(intent: Intent) {
 
 To import certain Braze libraries, such as BrazeUI, into an Objective-C++ file, you will need to use the `#import` syntax. Starting in version 7.3.0 of the Braze Swift SDK, binaries have an [optional distribution channel as dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic), which are compatible with this syntax.
 
-If you wish to use this distribution channel, manually override the CocoaPods source locations in your Podfile, referencing the sample below:
+If you wish to use this distribution channel, manually override the CocoaPods source locations in your Podfile. Reference the sample below and replace `{your-version}` with the relevant 
+version you wish to import:
 
 ```ruby
 pod 'BrazeKit', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-swift-sdk-prebuilt-dynamic/{your-version}/BrazeKit.podspec'
