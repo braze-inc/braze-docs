@@ -20,15 +20,15 @@ The Braze SDKs include a default card feed to get you started with Content Cards
 To build your own UI, you can get a list of available cards, and listen for updates to cards:
 
 ```javascript
-// set initial cards
+// Set initial cards
 const [cards, setCards] = useState([]);
 
-// listen for updates as a result of card refreshes
+// Listen for updates as a result of card refreshes: listener is called whenever the card is updated, such as on a new session, on a manual refresh with `requestContentCardsRefresh()`, or when a user calls up the Content Card feed and it's after the timeout period
 Braze.addListener(Braze.Events.CONTENT_CARDS_UPDATED, async (update) => {
     setCards(update.cards);
 });
 
-// trigger a refresh of cards
+// Manually trigger a refresh of cards
 Braze.requestContentCardsRefresh();
 ```
 
