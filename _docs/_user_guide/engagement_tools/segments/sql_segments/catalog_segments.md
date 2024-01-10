@@ -49,7 +49,7 @@ Here are guidelines to select the variables:
 | `Custom event property` | The name of your custom event property, which matches values with your `Catalog field`. In the ecommerce example use case, this would be `Shopify_ID.`|
 {: .reset-td-br-1 .reset-td-br-2}
 
-{: start=”4”}
+{: start="4"}
 4. If needed, fill in additional optional fields for your use case to segment by a particular field value within your catalog:
 - `Catalog field`: A particular field (column name) within this catalog
 - `Value`: A specific value within that field or column <br><br> Using the health app as an example, let’s say that within the catalog for each doctor you could book, there’s a field called `specialty` that contains a value such as `vision` or `dental`. To segment users who have visited any doctors with the value `dental`, you can select `specialty` as the `Catalog field`, and select `dental` as the `Value`.
