@@ -68,7 +68,7 @@ curl -X POST "https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation" 
 > The demonstrated method for initiating the data load from Scuba to Braze uses a CURL command. However, for enhanced usability and better management of API requests, it is recommended to utilize an API client, such as Postman.
 
 ### Default Behavior
-> - The integration's default setting configures `update_existing_only` to `false`. In this context, setting `update_existing_only` to `false` allows the integration to create new records in Braze if they do not already exist, in addition to updating existing records.
+> - This integration's default setting configures `update_existing_only` to `false`. In this context, setting `update_existing_only` to `false` allows the integration to create new records in Braze if they do not already exist, in addition to updating existing records.
 
 ### Rate Limit Considerations
 > - To comply with Braze API rate limits, this endpoint restricts the number of entities processed to a maximum of 50,000 per minute.
