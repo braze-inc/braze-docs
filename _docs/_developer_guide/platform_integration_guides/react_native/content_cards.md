@@ -24,7 +24,7 @@ To build your own UI, you can get a list of available cards, and listen for upda
 const [cards, setCards] = useState([]);
 
 // Listen for updates as a result of card refreshes, such as:
-// a new session, a manual refreshe with `requestContentCardsRefresh()`, or after the timeout period
+// a new session, a manual refresh with `requestContentCardsRefresh()`, or after the timeout period
 Braze.addListener(Braze.Events.CONTENT_CARDS_UPDATED, async (update) => {
     setCards(update.cards);
 });
