@@ -101,7 +101,7 @@ braze-docs
 {% endtab %}
 
 {% tab without landing page %}
-To create a section without a landing page, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch/), then navigate to the relevant primary secetion or subsection and create a directory and Markdown file for your new section.
+To create a section without a landing page, create a [new branch]({{site.baseurl}}/home/github/creating_a_new_branch/), then navigate to the relevant primary section or subsection and create a directory and Markdown file for your new section.
 
 ```plaintext
 braze-docs
