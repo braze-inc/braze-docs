@@ -212,7 +212,7 @@ If you're ready for a member of the Braze Docs team to review your work, select 
 
 ![An example pull request with the "Ready for review" button highlighted.]()
 
-Then, in the **Reviewers** section, select the **settings gear**, then add `@docs-team` as a reviewer.
+Next, in the **Reviewers** section, select the gear icon, then add `@docs-team` as a reviewer.
 
 ![An example pull request with the "@docs-team" added as the reviewer.]()
 
