@@ -97,7 +97,7 @@ Utilizing the behavioral actor properties of users we've imported to Braze, we c
 [4]: https://docs.scuba.io/glossary/actor-property
 [5]: https://docs.scuba.io/glossary/actor
 [6]: https://docs.scuba.io/guides/bql-syntax-and-usage
-[501]: {% image_buster /assets/img/scuba/1_segment_name.png %}
-[502]: {% image_buster /assets/img/scuba/2_filter_attribute.png %}
-[503]: {% image_buster /assets/img/scuba/3_select_property.png %}
-[504]: {% image_buster /assets/img/scuba/4_operator_end.png %}
+[501]: {% image_buster /assets/img/scuba/analytics/segment_name.png %}
+[502]: {% image_buster /assets/img/scuba/analytics/filter_attribute.png %}
+[503]: {% image_buster /assets/img/scuba/analytics/select_property.png %}
+[504]: {% image_buster /assets/img/scuba/analytics/operator_end.png %}
