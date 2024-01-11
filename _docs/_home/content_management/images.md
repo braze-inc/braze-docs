@@ -14,7 +14,7 @@ noindex: true
 
 ### Step 1: Upload the image file
 
-First, [create a new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then go to `assets/img`. Generally, your new image should be added to the same directory as the other images on your page, however you may use your best judgment. Confirm your new image follows our [Image Style Guide](), then add the PNG file to the relevant subdirectory.
+First, create a [new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then go to `assets/img`. Generally, your new image should be added to the same directory as the other images on your page. However, you may use your best judgment. Confirm your new image follows our [Image Style Guide](), then add the PNG file to the relevant subdirectory.
 
 ![A text editor with the file tree open and a new image added to the 'img' directory.]()
 
@@ -123,7 +123,7 @@ First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch/
 Generally, your new image should be added to the same directory as the other images on this page, however you may use your best judgment. Confirm your new image follows our [Image Style Guide](), then add the PNG file to the relevant location in `assets/img/`.
 
 {% alert warning %}
-Do not to delete the old image file when you add your new one.
+Do not delete the old image file when you add your new one.
 {% endalert %}
 
 ![A text editor with the file tree open and a new image added to the 'img' directory.]()
@@ -155,7 +155,7 @@ Next, add your new image to the same directory as the original image. If asked, 
 To remove an image, [create a new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then remove the [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link the page.
 
 {% alert warning %}
-Do not delete the image file from the repository. If an image file is removed, other language translations referencing that image wll show a broken image instead.
+Do not delete the image file from the repository. If an image file is removed, other language translations referencing that image will show a broken image.
 {% endalert %}
 
 {% multi_lang_include contributing/minis/creating_a_pull_request.md %}

@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-> This template is for submitting tool-related issues such as broken links, missing images and content, incorrect CSS styling, broken Liquid tags, etc. To request a docs feature instead, see [Request a feature](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=enhancement&projects=&template=request_a_feature.md&title=).
+> This template is for submitting tool-related issues such as broken links, missing images and content, incorrect CSS styling, broken Liquid tags, and more. To request a docs feature, see [Request a feature](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=enhancement&projects=&template=request_a_feature.md&title=).
 
 ### Issue description
 <!-- A clear and concise description of the issue. -->

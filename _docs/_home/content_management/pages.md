@@ -6,7 +6,7 @@ noindex: true
 
 # Pages
 
-> Learn how to create, modify, and remove pages on Braze Docs. If you'd like to create a new section instead, see [Sections]({{sitebase.url}}/docs/home/content_management/sections/). For general information about pages, see [About our framework]({{sitebase.url}}/docs/home/about_our_framework/#pages).
+> Learn how to create, modify, and remove pages on Braze Docs. To create a new section, see [Sections]({{sitebase.url}}/docs/home/content_management/sections/). For general information about pages, see [About our framework]({{sitebase.url}}/docs/home/about_our_framework/#pages).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -64,7 +64,7 @@ Replace the following:
 | `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
-You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).
+You may add additional metadata and headings as needed, as this template is to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).
 
 When you're ready to add content to your new page, continue to [Modifying a page](#modifying-a-page).
 

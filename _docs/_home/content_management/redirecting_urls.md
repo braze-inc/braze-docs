@@ -24,7 +24,7 @@ To redirect the URL for an entire page, you'll use our global redirect file. Fir
 
 {% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
 
-Navigate to the `assets/js/` directory, then open the global redirect file: `broken_redirect_list.js`. At the bottom of the file, set up your redirect on a newline.
+Navigate to the `assets/js/` directory, then open the global redirect file: `broken_redirect_list.js`. At the bottom of the file, set up your redirect on a new line.
 
 ```javascript
 validurls['REDIRECT_FROM'] = 'REDIRECT_TO';
