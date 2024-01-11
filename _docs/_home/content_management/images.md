@@ -14,7 +14,7 @@ noindex: true
 
 ### Step 1: Upload the image file
 
-First, create a [new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then go to `assets/img`. Generally, your new image should be added to the same directory as the other images on your page. However, you may use your best judgment. Confirm your new image follows our [Image Style Guide](), then add the PNG file to the relevant subdirectory.
+First, [create a new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then go to `assets/img`. Generally, your new image should be added to the same directory as the other images on your page. However, you may use your best judgment. Confirm your new image follows our [Image Style Guide](), then add the PNG file to the relevant subdirectory.
 
 ![A text editor with the file tree open and a new image added to the 'img' directory.]()
 
