@@ -35,6 +35,11 @@ doc_menu_list:
     image: /assets/img/new-icons/api.svg
     link: /docs/api/home/
     description: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more."
+  - name: Compliance
+    bg_color: '#ff9349'
+    image: /assets/img/new-icons/file-contract-solid.svg
+    link: /docs/compliance/
+    description: ""
 
 popular_topic_list:
   - name: Braze API Dictionary
