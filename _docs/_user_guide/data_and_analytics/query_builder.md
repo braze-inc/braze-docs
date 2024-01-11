@@ -294,8 +294,8 @@ For selecting a list of custom event property names. It must be used with the cu
 
 For selecting a workspace.
 
-- **Replacement value:** App group BSON ID
-- **Usage example:** {% raw %}`app_group_id = ‘{{workspace.${app_group_id}}}’`{% endraw %}
+- **Replacement value:** Workspace BSON ID
+- **Usage example:** {% raw %}`workspace_id = ‘{{workspace.${app_group_id}}}’`{% endraw %}
 
 #### Catalogs
 

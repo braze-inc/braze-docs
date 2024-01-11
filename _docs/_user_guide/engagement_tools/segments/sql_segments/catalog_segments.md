@@ -35,25 +35,46 @@ Catalog segments use SQL to join data from catalogs and data from custom events 
 1. Go to **Segment Extensions** > **Create New Extension** > **Start With Template** and select the template **Catalog segment**. <br>![Modal with "Catalog segment" selected as the template to create.][1]{: style="max-width:70%" }
 
 {: start="2"}
-2. The SQL editor automatically populates with a template. <br>![SQL editor with a pregenerated template.][2]{: style="max-width:70%" }<br>The following fields in this template are left blank and must be filled out before the segment can be generated:
+2. The SQL editor automatically populates with a template. <br>![SQL editor with a pregenerated template.][2]{: style="max-width:70%" }<br>This template joins user event data with catalog data to segment users who engaged with certain catalog items.
 
-| Field | Description |
+3. Use the **Variables** tab to provide the necessary fields for your template before generating your segment. <br>For Braze to identify users based on their engagement with catalog items, you need to do the following: <br> - Select a catalog that contains a catalog field <br> - Select a custom event that contains an event property <br> - Match your catalog field and event property values
+
+Here are guidelines to select the variables:
+
+| Variable field | Description |
 | --- | --- |
-| `items.catalog.id` | This is the ID for a specific catalog, which can be pulled from the catalog URL in the Braze dashboard. |
-| `id` | Replace `:id` (located before `::STRING`) with the event or purchase property that matches your item ID in the catalog. In the ecommerce use case, you would insert `shopify_id`. |
-| `events.name` |  If using a custom event, you must either populate this with the name of your custom event or remove it if you'd like to filter on all events (events that don't have the property won't be joined on the catalog). In nearly all use cases, you will be adding the name of a specific custom event.<br><br>If using a purchase event, replace `event.name = ''` with `event.product_id = ''` and add the name of your product.|
+| `Catalog` | The name of the catalog you’re using to target users. |
+| `Catalog field`| The field in your catalog that contains the same values as your `Custom event property`. This is often a type of ID. In the ecommerce use case, this would be `shopify_id`. |
+| `Custom event` | The name of your custom event, which is the same event that contains a property with values matching your `Catalog field`. In the ecommerce use case, this would be `Made Order`. |
+| `Custom event property` | The name of your custom event property, which matches values with your `Catalog field`. In the ecommerce example use case, this would be `Shopify_ID.`|
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% alert important %}
-If using a purchase event, replace `USERS_BEHAVIORS_CUSTOMEVENT_SHARED` with `USERS_BEHAVIORS_PURCHASE_SHARED`.
-{% endalert %}
+{: start="4"}
+4. If needed, fill in additional optional fields for your use case to segment by a particular field value within your catalog:
+- `Catalog field`: A particular field (column name) within this catalog
+- `Value`: A specific value within that field or column <br><br> Using the health app as an example, let’s say that within the catalog for each doctor you could book, there’s a field called `specialty` that contains a value such as `vision` or `dental`. To segment users who have visited any doctors with the value `dental`, you can select `specialty` as the `Catalog field`, and select `dental` as the `Value`.
 
-{: start=”3”}
-3. If needed, fill in additional optional fields for your use case to segment by a particular field value within your catalog:
-- `items.field_name`: A particular field (column name) within this catalog
-- `items.field_value`: A specific value within that field or column <br><br> Using the health app as an example, let’s say that within the catalog for each doctor you could book, there’s a field called `specialty` that contains a value such as `vision` or `dental`. To segment users who have visited any doctors with the value `dental`, you can replace `items.field_name` with `specialty`, and replace `items.field_value` with `dental`. 
+5. After creating a SQL Segment, we recommend clicking **Run Preview** to see if your query returns users or if there are errors. For more information about [previewing query results]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results), managing [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions), and more, check out [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
-4. After creating a SQL Segment, we recommend clicking **Run Preview** to see if your query returns users or if there are errors. For more information about [previewing query results]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results), managing [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions), and more, check out [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
+## Use case
+
+Let's say you have health app and want to segment users who have booked a visit for the dentist. You also have the following:
+
+- A catalog `Doctors` that contains the different doctors a patient can book, each assigned with a `doctor ID`
+- A custom event `Booked Visit` with a `doctor ID` property that shares the same values as the `doctor ID` field in your catalog
+- A `speciality` field within your catalog that contains `dental` value
+
+You would set up a catalog segment by using the following variables:
+
+| Variable | Property |
+| --- | --- |
+| `Catalog`| Doctors |
+| `Catalog field` | doctor ID |
+| `Custom event`| Booked Visit|
+| `Custom event property` | doctor ID |
+| `(Under Filter SQL Results) Catalog field` | Specialty |
+| `(Under Filter SQL Results) Value`| Dental |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Frequently asked questions
 
