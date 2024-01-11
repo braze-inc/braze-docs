@@ -10,30 +10,6 @@ guide_top_text: "> Welcome to the Compliance Center. Lorem ipsum dolor sit amet,
 guide_top_text2: "<h4>Lorem</h4><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 guide_top_text3: "<h4>Ipsum lorem</h4><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-guide_featured_title: "Using Braze"
-guide_featured_list:
-- name: Data Protection Technical Assistance for Data Subject Requests
-  link: /docs/dp-technical-assistance/
-  fa_icon: fas fa-cogs
-- name: Email Open Pixel and Click Tracking
-  link: /docs/user_guide/data_and_analytics/tracking/email_tracking#open-pixel-and-click-tracking-overview
-  fa_icon: fa-solid fa-envelope
-- name: Default and Minimum SDK Data Collection
-  link: /docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
-  fa_icon: fas fa-cogs
-- name: Canvas Audience Sync Data Privacy Considerations
-  link: /docs/partners/canvas_steps/overview#data-privacy-considerations
-  fa_icon: fa-solid fa-arrows-rotate
-- name: Braze Data Retention
-  link: /docs/api/data_retention#data-retention-handled-by-braze-for-specific-features-of-the-braze-services
-  fa_icon: fa-solid fa-database
-- name: User Archival
-  link: /docs/user_archival/
-  fa_icon: fa-solid fa-user
-- name: Additional Privacy Resources
-  link: https://www.braze.com/resources/search?section%5B%5D=articles&q=privacy
-  fa_icon: fa-solid fa-book
-
 guide_menu_title: "Legal"
 guide_menu_list:
 - name: Data Processing Addendum (PDF)
