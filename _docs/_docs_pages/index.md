@@ -39,7 +39,7 @@ doc_menu_list:
     bg_color: '#ff9349'
     image: /assets/img/new-icons/file-contract-solid.svg
     link: /docs/compliance/
-    description: ""
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 popular_topic_list:
   - name: Braze API Dictionary
