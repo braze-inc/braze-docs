@@ -1,18 +1,17 @@
 ---
-nav_title: Scuba Analytics
+nav_title: Scuba
 article_title: Scuba Analytics
-page_order: 1
 description: "This Scuba and Braze technical reference describes how to activate Scuba's real-time data insight using Braze Segments."
 alias: /partners/scuba/
 page_type: partner
 search_tag: Partner
-hidden: true
-layout: dev_guide
 ---
 
 # Scuba Analytics
 
->[Scuba Analytics][1] is a full-stack ML-powered data collaboration platform designed for high-velocity time-series data. It redefines how organizations handle first-party and high-velocity time-series data, offering insights into customers and real-time competition tracking. The platform ingests and queries vast amounts of event data from various customer touch points in real-time. It provides real-time cross-channel measurement, hyper-personalization, privacy-focused no-code data science, and self-service analytics, ensuring speed, precision, and scalability. SCUBA prioritizes data purity and privacy, ensuring GDPR compliance. The platform's features include SCUBACONNECT for schemaless edge ingestion, enabling seamless data source connection, real-time analysis, and activation for agile data management and product development.
+>[Scuba Analytics][1] is a full-stack, machine-learning-powered data collaboration platform designed for high-velocity time-series data. It redefines how organizations handle first-party and high-velocity time-series data, offering insights into customers and real-time competition tracking.
+
+The Scuba platform ingests and queries vast amounts of event data from various customer touch points in real-time. It provides real-time cross-channel measurement, hyper-personalization, privacy-focused no-code data science, and self-service analytics, ensuring speed, precision, and scalability. SCUBA prioritizes data purity and privacy, ensuring GDPR compliance. The platform's features include SCUBACONNECT for schemaless edge ingestion, enabling seamless data source connection, real-time analysis, and activation for agile data management and product development.
 
 ## Prerequisites
 
@@ -34,19 +33,19 @@ layout: dev_guide
 
 ## Use cases
 
-This integration allows you to selectively export users (referred to as actors in Scuba) based on specific property values and then load these users into your Braze instance. In Scuba, custom actor properties are used to analyze behavioral trends, activate your data across various platforms, and conduct predictive modeling using Machine Learning.
+Scuba allows you to selectively export users (also referred to as actors) based on specific property values, then load these users into Braze. In Scuba, custom actor properties are used to analyze behavioral trends, activate your data across various platforms, and conduct predictive modeling using Machine Learning.
 
-## Integration
+## Integrating Scuba
 
-This integration is invoked via a single REST API call to Scuba, wherein you provide your credentials and details of your target segments/behaviors in Scuba. and 
+This integration is invoked via a single REST API call to Scuba, wherein you provide your credentials and details of your target segments/behaviors in Scuba.
 
-### Step 1: Gather Details
+### Step 1: Get your credentials
 
 To use this integration, you can make a single webhook request to Scuba. In this HTTP request, you will provide your credentials along with the details of your target segments and behaviors in Scuba. Ensure you have gathered all the requirements mentioned above before we format the example request.
 
-### Step 2: Create an invoke the HTTP Request to load your data
+### Step 2: Make a POST request
 
-To perform the data load, make an **HTTP POST** request to the connector url **https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation** and include the required inputs in the request's JSON body. Include a header indicating content-type: application/json.
+To load your data, make an **HTTP POST** request to the connector url **https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation** and include the required inputs in the request's JSON body. Include a header indicating content-type: application/json.
 
 ```
 curl -X POST "https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation" \
@@ -63,34 +62,47 @@ curl -X POST "https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation" 
 "scuba_period_end":"<<insert Scuba Period End here>>", \
 "scuba_record_limit":"<<OPTIONAL: insert Scuba Record Limit here>>"}'
 ```
- 
-### Data Load from Scuba to Braze: Method and Limitations
-> The demonstrated method for initiating the data load from Scuba to Braze uses a CURL command. However, for enhanced usability and better management of API requests, it is recommended to utilize an API client, such as Postman.
 
-### Default Behavior
-> - This integration's default setting configures `update_existing_only` to `false`. In this context, setting `update_existing_only` to `false` allows the integration to create new records in Braze if they do not already exist, in addition to updating existing records.
+{% alert important %}
+The example above loads data from Scuba to Braze using a CURL command. However, for enhanced usability and better management of API requests, its recommended to utilize an API client, such as Postman.
+{% endalert %}
 
-### Rate Limit Considerations
-> - To comply with Braze API rate limits, this endpoint restricts the number of entities processed to a maximum of 50,000 per minute.
+#### Default behavior
 
+By default, Scuba configures `update_existing_only` to `false`. By setting `update_existing_only` to `false`, Scuba will create new records in Braze if they don't already exist, in addition to updating your existing records.
 
-## Creating a segment from Scuba's behavioral data 
+#### Rate limits
+
+To comply with Braze API rate limits, this endpoint restricts the number of entities processed to a maximum of 50,000 per minute.
+
+## Creating a segment from Scuba's behavioral data
 
 Utilizing the behavioral actor properties of users we've imported to Braze, we can create segments of these users in Braze.
 
-1. Navigate to Audience > Segments. Click "Create Segment" and provide a segment name.
-   ![Create Segment][501]
 
-2. Now within the Segment Details section, navigate to the Filters section, and click "Select Filter". Choose "Custom Attributes" from the dropdown menu.
-   ![Select Custom Attribute Filter][502]
+### Step 1: Create a new segment
 
-3. Click "Search custom attributes" in the newly created filter. Here, you will see your actor property name from Scuba as one of the custom attributes. Select this attribute.
-   ![Select Actor Property][503]
+In Braze, go to **Audience** > **Segments**, then select **Create Segment** and enter a name for your new segment.
 
-4. Right of the selected actor property name, choose the preferred evaluation operator (equals, by default) and value (if applicable). Your choices will vary depending on how your actor properties are defined in Scuba. In this example, we're simply checking if the value is equal to **true**. A more trivial example could use "is not blank" without a target value.
-   ![Evaluation Operator(s)][504]
+![Create Segment][501]
 
-5. Click "Save" at the bottom of the Segment Details section to save the new segment.
+### Step 2: Find and select the Scuba attribute
+
+Now within the Segment Details section, navigate to the Filters section, and click "Select Filter". Choose "Custom Attributes" from the dropdown menu.
+
+![Select Custom Attribute Filter][502]
+
+Click "Search custom attributes" in the newly created filter. Here, you will see your actor property name from Scuba as one of the custom attributes. Select this attribute.
+
+![Select Actor Property][503]
+
+### Step 3: Configure the attribute
+
+Right of the selected actor property name, choose the preferred evaluation operator (equals, by default) and value (if applicable). Your choices will vary depending on how your actor properties are defined in Scuba. In this example, we're simply checking if the value is equal to **true**. A more trivial example could use "is not blank" without a target value.
+
+![Evaluation Operator(s)][504]
+
+When you're finished, select **Save**.
 
 [1]: https://scuba.io
 [3]: https://docs.scuba.io/glossary/dataset-table
