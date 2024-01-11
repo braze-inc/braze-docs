@@ -11,7 +11,7 @@ noindex: true
 ## Software
 
 {% alert note %}
-As of writing, all recommend software is free of cost. If you find that a product is no longer free, [please let us know]().
+As of writing, all recommended software is free of cost. If you find that a product is no longer free, [please let us know]().
 {% endalert %}
 
 <style>

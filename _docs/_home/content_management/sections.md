@@ -84,7 +84,7 @@ Replace the following:
 You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter).
 {% endalert %}
 
-Next, open your new directory and create Markdowns file for each new page you want to add to your new secetion. Your directory structure should look similar to the following:
+Next, open your new directory and create a Markdown file for each new page you want to add to your new section. Your directory structure should look similar to the following:
 
 ```plaintext
 braze-docs
@@ -143,7 +143,7 @@ config_only: true
 ```
 
 {% alert tip %}
-You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter).
+You may add additional metadata and headings as needed, as this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter).
 {% endalert %}
 
 Replace `NAV_TITLE` with the title of your page as it will appear on the left-side navigation bar. Your page should look similar to the following:
@@ -157,7 +157,7 @@ config_only: true
 ---
 ```
 
-Next, open your new directory and create Markdowns file for each new page you want to add to your new secetion. Your directory structure should look similar to the following:
+Next, open your new directory and create a Markdown file for each new page you want to add to your new section. Your directory structure should look similar to the following:
 
 ```plaintext
 braze-docs

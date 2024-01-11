@@ -36,7 +36,7 @@ For more information, see [Docs framework]().
 
 ## Step 2: Make a change
 
-Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]() and find a simple change you'd like to make. Next, choose how you'd like to make your change:
+Now that you're more familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]() and find a change you want to make. Next, choose how you'd like to make your change:
 
 - **Using GitHub (Basic):** For small, single-document changes, you can make changes directly from the GitHub website.
 - **Using your local environment (Advanced):** For complex or multi-document changes, you'll need to make changes from your local environment. If you're a documentation guru, this is the recommended method.

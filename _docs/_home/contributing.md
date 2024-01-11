@@ -50,6 +50,6 @@ After making your changes, you'll [create a pull request (PR)]({{sitebase.url}}/
 
 ## Requesting a review
 
-After finalizing your pull request (PR), you'll [submit your PR for review]({{sitebase.url}}/docs/home/getting_started/your_first_contribution/#request-a-review). Someone at Braze will review your work. If everything looks good, we'll merge your PR into the `develop` branch and your changes will be deployed to Braze Docs on the next Tuesday or Thursday.
+After finalizing your pull request (PR), you'll [submit your PR for review]({{sitebase.url}}/docs/home/getting_started/your_first_contribution/#request-a-review). A member of the Braze Docs team will review your work. If everything looks good, we'll merge your PR into the `develop` branch, and your changes will be deployed to Braze Docs on the next deployment day.
 
 ![A pull request (PR) recently merged into the 'develop' branch.]({% image_buster /assets/img/contributing/merging_a_pull_request.png %})
