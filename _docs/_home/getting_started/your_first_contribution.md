@@ -23,8 +23,8 @@ Before you start, you'll need to complete the following:
 - [Sign the Contribution License Agreement (CLA)](https://www.braze.com/docs/cla)
 - [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
 - [Create a GitHub account](https://github.com/join)
-- Optional: [Set up your local environment]()
-- Optional: [Download the recommended software]()
+- [Set up your local environment]() (optional)
+- [Download the recommended software]() (optional)
 
 ## Step 1: Explore the GitHub repository
 
@@ -220,7 +220,7 @@ If the docs team requests additional changes after their review, you'll be notif
 
 Approved contributions will be deployed on the next Tuesday or Thursday. Be sure to check out [Braze Docs]() to see your hard work. Thanks for contributing!
 
-## Step 6: (Optional) make additional changes
+## Step 6: Make additional changes (optional)
 
 After you or a member of the Braze Docs team reviews your work, you may need to make additional changes to your PR. You can do so using your local environment or GitHub.
 
