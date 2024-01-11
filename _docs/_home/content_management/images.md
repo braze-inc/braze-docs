@@ -140,7 +140,7 @@ First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch/
 ```
 {% endraw %}
 
-Confirm your new image follows our [Image Style Guide](), then save your image as a with the same exact name as the original image. For example, if the original image is named `getting_started_with_github_select_start3.png`, your new image should also be named `getting_started_with_github_select_start3.png`. 
+Confirm your new image follows our [Image Style Guide]({{sitebase.url}}/docs/home/contributing/style_guides/), then save your image as a with the same exact name as the original image. For example, if the original image is named `getting_started_with_github_select_start3.png`, your new image should also be named `getting_started_with_github_select_start3.png`. 
 
 Next, add your new image to the same directory as the original image. If asked, confirm you'd like to overwrite the image.
 

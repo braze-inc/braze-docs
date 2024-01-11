@@ -23,8 +23,8 @@ Before you start, you'll need to complete the following:
 - [Sign the Contribution License Agreement (CLA)](https://www.braze.com/docs/cla)
 - [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
 - [Create a GitHub account](https://github.com/join)
-- [Set up your local environment]() (optional)
-- [Download the recommended software]() (optional)
+- [Set up your local environment]({{sitebase.url}}/docs/home/getting_started/setting_up_your_local_environment/) (optional)
+- [Download the recommended software]({{sitebase.url}}/docs/home/getting_started/recommended_software/) (optional)
 
 ## Step 1: Explore the GitHub repository
 
@@ -32,11 +32,11 @@ The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) host
 
 ![The Braze Docs GitHub repository homepage.]()
 
-For more information, see [Docs framework]().
+For more information, see [About our framework]({{sitebase.url}}/docs/home/about_our_famework/).
 
 ## Step 2: Make a change
 
-Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]() and find a simple change you'd like to make. Next, choose how you'd like to make your change:
+Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open Braze Docs and find a simple change you'd like to make. Next, choose how you'd like to make your change:
 
 - **Using GitHub (Basic):** For small, single-document changes, you can make changes directly from the GitHub website.
 - **Using your local environment (Advanced):** For complex or multi-document changes, you'll need to make changes from your local environment. If you're a documentation guru, this is the recommended method.
@@ -51,13 +51,13 @@ In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), 
 
 ![The Braze Docs GitHub repository homepage with the '_docs' folder highlighted in the file tree.]()
 
-Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For more information see [Directory structure]().
+Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For more information see [About our framework]({{sitebase.url}}/docs/home/about_our_framework/).
 
 For example, `braze.com/home/yaml_front_matter/` can be found on the following page:
 
 ![The "YAML front matter" page in the "Contributing" section on Braze Docs.]()
 
-Select **Edit this file**, then make your changes using [Markdown formatting]().
+Select **Edit this file**, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/).
 
 ![An example page on Braze Docs with the "Edit this file" button highlighted.]()
 
@@ -117,7 +117,7 @@ $ git checkout -b fixing-typo-in-metadata
 Switched to a new branch 'fixing-typo-in-metadata'
 ```
 
-In your text editor, open the document you want to change, then make your changes using [Markdown formatting](). For help navigating the `braze-docs` repository, see [Directory structure]().
+In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/). For help navigating the `braze-docs` repository, see [About our framework]({{sitebase.url}}/docs/home/about_our_framework/).
 
 ![A text editor with an example document open.]()
 
@@ -204,7 +204,7 @@ Double-check your work using the following Braze style guides:
 - [Images style guide]({{sitebase.url}}/docs/home/style_guides/images/)
 - [Alerts style guide]({{sitebase.url}}/docs/home/style_guides/alerts/)
 
-If you'd like to make additional changes, see [Make additional changes](). Otherwise, you can [request a review]() from the Braze Docs team.
+If you'd like to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
 
 ## Step 5: Request a review
 
@@ -218,7 +218,7 @@ Next, in the **Reviewers** section, select the gear icon, then add `@docs-team` 
 
 If the docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). Otherwise, the docs team will approve and merge your changes.
 
-Approved contributions will be deployed on the next Tuesday or Thursday. Be sure to check out [Braze Docs]() to see your hard work. Thanks for contributing!
+Approved contributions will be deployed on the next Tuesday or Thursday. Be sure to check out Braze Docs to see your hard work. Thanks for contributing!
 
 ## Step 6: Make additional changes (optional)
 
@@ -244,7 +244,7 @@ Switched to branch 'fixing-typo-in-metadata'
 Your branch is up to date with 'origin/fixing-typo-in-metadata'.
 ```
 
-In your text editor, open the document you want to change, then make your changes using [Markdown formatting](). For help navigating the `braze-docs` repository, see [Directory structure]().
+In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/). For help navigating the `braze-docs` repository, see [Directory structure]({{sitebase.url}}/docs/home/about_our_framework/).
 
 ![A text editor with an example document open.]()
 
