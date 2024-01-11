@@ -6,7 +6,7 @@ noindex: true
 
 # Contributing to Braze Docs
 
-> Thanks for contributing to Braze Docs! Every Tuesday and Thursday we merge community contributions into the `master` branch and deploy them to Braze Docs. Use this guide to get your changes merged during our next deploy.
+> Thanks for contributing to Braze Docs! Every Tuesday and Thursday, we merge community contributions into the `master` branch and deploy them to Braze Docs. Use this guide to get your changes merged during our next deployment.
 
 ## Getting started
 
