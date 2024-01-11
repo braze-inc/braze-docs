@@ -28,110 +28,124 @@ Replace `PAGE_LAYOUT_VALUE` with one of the values from the following sections:
 
 The `api_page` value is used to apply the API page format.
 
-**Example input:**
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 ---
 page_layout: api_page
 ---
 ```
+{% endtab %}
 
-**Example output:**
-
+{% tab example output %}
 !["An example page using the 'api_page' layout."]()
+{% endtab %}
+{% endtabs %}
 
 ### Blank page
 
 The `blank_config` value is used to apply the blank page format. 
 
-**Example input:**
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 ---
 page_layout: blank_config
 ---
 ```
+{% endtab %}
 
-**Example output:**
-
+{% tab example output %}
 !["An example page using the 'blank_config' layout."]()
+{% endtab %}
+{% endtabs %}
 
 ### Developer guide
 
 The `dev_guide` value is used to apply the developer guide format. 
 
-**Example input:**
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 ---
 page_layout: dev_guide
 ---
 ```
+{% endtab %}
 
-**Example output:**
-
+{% tab example output %}
 !["An example page using the 'dev_guide' layout."]()
+{% endtab %}
+{% endtabs %}
 
 ### Video page
 
 The `featured_video` value is used to apply the video page format. 
 
-**Example input:**
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 ---
 page_layout: featured_video
 ---
 ```
+{% endtab %}
 
-**Example output:**
-
+{% tab example output %}
 !["An example page using the 'featured_video' layout."]()
+{% endtab %}
+{% endtabs %}
 
 ### Featured page
 
 The `featured` value is used to apply the featured page format. 
 
-**Example input:**
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 ---
 page_layout: featured
 ---
 ```
+{% endtab %}
 
-**Example output:**
-
+{% tab example output %}
 !["An example page using the 'featured' layout."]()
+{% endtab %}
+{% endtabs %}
 
 ### Glossary page
 
 The `glossary_page` value is used to apply the glossary page format. 
 
-**Example input:**
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 ---
 page_layout: glossary_page
 ---
 ```
+{% endtab %}
 
-**Example output:**
-
+{% tab example output %}
 !["An example page using the 'glossary_page' layout."]()
+{% endtab %}
+{% endtabs %}
 
 ### Redirect page URL
 
 The `redirect` value is used to [redirect URLs for in-page headings]({{sitebase.url}}/docs/home/content_management/redirecting_urls/#redirecting-a-heading). 
 
-**Example input:**
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 ---
 page_layout: redirect
 ---
 ```
+{% endtab %}
 
-**Example output:**
-
+{% tab example output %}
 !["An example page using the 'redirect' layout."]()
+{% endtab %}
+{% endtabs %}

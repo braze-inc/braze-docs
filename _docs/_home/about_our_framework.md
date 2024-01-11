@@ -46,8 +46,8 @@ Replace the following:
 | `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).  |
 | `CONTENT`        | The page's content written in Markdown syntax.                                                                                                |
 
-### Example input
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 ---
 nav_title: Getting started
@@ -61,10 +61,12 @@ Learn how you can get started with Braze.
 
 ## Step 1: Create an account
 ```
+{% endtab %}
 
-### Example output
-
+{% tab example output %}
 ![Example page on Braze Docs.]()
+{% endtab %}
+{% endtabs %}
 
 {% alert note %}
 For a full walkthrough, see [Creating a page]({{sitebase.url}}/docs/home/content_management/pages/#creating-a-page).
@@ -110,8 +112,8 @@ Replace the following:
 | `FILE`          | The name of the file including the file extension.                                                                                                                                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Example input
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 # Getting started with Braze
 
@@ -119,10 +121,12 @@ Learn how you can get started with Braze.
 
 {% raw %}{% multi_lang_include braze/upgrade_notice.md %}{% endraw %}
 ```
+{% endtab %}
 
-### Example output
-
+{% tab example output %}
 ![Content reuse example on Braze Docs.]()
+{% endtab %}
+{% endtabs %}
 
 {% alert note %}
 For a full walkthrough, see [Reusing content]({{sitebase.url}}/docs/home/content_management/reusing_content).
@@ -140,7 +144,9 @@ layout: LAYOUT_VALUE
 
 Replace `LAYOUT_VALUE` with the name of the layout file and the file extension removed.
 
-### Example file tree
+{% tabs local %}
+{% tab example input %}
+**File tree**
 
 ```plaintext
 braze-docs
@@ -164,17 +170,19 @@ braze-docs
 └── README.md
 ```
 
-### Example input
+**In-page metadata**
 
 ```markdown
 ---
 layout: api_glossary
 ---
 ```
+{% endtab %}
 
-### Example output
-
+{% tab example output %}
 ![API glossary layout example on Braze Docs.]()
+{% endtab %}
+{% endtabs %}
 
 {% alert note %}
 For more information, see [Page layouts]({{sitebase.url}}/docs/home/yaml_front_matter/page_layouts).
@@ -260,8 +268,8 @@ braze-docs
 
 The landing page for each primary section is a standard Markdown file with the `page_order:` key set to `0`.
 
-### Example input
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 ---
 page_order: 0
@@ -272,10 +280,12 @@ article_title: Braze Developer Guide
 description: "This landing page is where developers can find all the integrations available with Braze."
 ---
 ```
+{% endtab %}
 
-### Example output
-
+{% tab example output %}
 ![An example landing page on Braze Docs.]()
+{% endtab %}
+{% endtabs %}
 
 ### Subsections
 
@@ -305,8 +315,8 @@ For a full walkthrough, see [Creating a section]({{sitebase.url}}/docs/home/cont
 
 In the `_primary_section` directory, `subsection_a` is **not** configured with a landing page, while `subsection_b` is configured with a landing page. In the following example, `subsection_a.md` has `config_only:` set to `true`, which prevents this page from being rendered as a landing page:
 
-### Example input
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 ---
 nav_title: Subsection A
@@ -314,25 +324,29 @@ page_order: 0
 config_only: true
 ---
 ```
+{% endtab %}
 
-### Example output
-
+{% tab example output %}
 ![The left-side navigation on Braze Docs, showing an example of an expanded section without a landing page.]()
+{% endtab %}
+{% endtabs %}
 
 However, `subsection_b.md` doesn't use the `config_only:` key, so this page _is_ rendered as a landing page:
 
-### Example input
-
+{% tabs local %}
+{% tab example input %}
 ```markdown
 ---
 nav_title: Subsection B
 page_order: 0
 ---
 ```
+{% endtab %}
 
-### Example output
-
+{% tab example output %}
 ![The left-side navigation on Braze Docs, showing an example of an expanded section with a landing page.]()
+{% endtab %}
+{% endtabs %}
 
 {% alert note %}
 While a subsection with `config_only:` set to `true` is not rendered as a page, the subsection's directory name is still used in the URLs for pages in that subsection. For more information, see [URLs](#urls).
@@ -342,8 +356,8 @@ While a subsection with `config_only:` set to `true` is not rendered as a page, 
 
 URLs on Braze Docs always match the directory structure within the docs repository. 
 
-### Example file tree
-
+{% tabs local %}
+{% tab example file tree %}
 ```plaintext
 braze-docs
 └── _docs
@@ -351,14 +365,16 @@ braze-docs
         └── subsection_a
             └── page_a.md
 ```
+{% endtab %}
 
-### Example URL
-
+{% tab example url %}
 ```plaintext
 https://www.braze.com/docs/primary_section/subsection_a/page_a
 ```
+{% endtab %}
+{% endtabs %}
 
-This includes URLs for pages located in a [subsection](#subsections) with `config_only:` set to `true`. Even though `config_only` subsections aren't rendered as pages, the subsection's directory name is still used in the URLs for pages in that directory. See the following example:
+This includes URLs for pages located in a [subsection](#subsections) with `config_only:` set to `true`. Even though `config_only` subsections aren't rendered as pages, the subsection's directory name is still used to generate the URLs for pages in that directory. See the following example:
 
 ```plaintext
 braze-docs
@@ -374,9 +390,10 @@ braze-docs
         └── subsection_b.md # configured as a landing page  
 ```
 
-The URLs for `subsection_a/page_a.md` and `subsection_a/page_b.md` will contain `subsection_a` even though `subsection_a.md` is not configured as a landing page.
+{% tabs local %}
+{% tab subsection a %}
 
-### Example file for Subsection A
+**Example landing page**
 
 ```markdown
 ---
@@ -386,16 +403,18 @@ config_only: true
 ---
 ```
 
-### Example URLs for Subsection A
+Since `subsection_a.md` is configured as a landing page, only `page_a.md` and `page_b.md` will receive a unique URL. `subsection_b.md` will **not** receive any URL.
+
+**Example URLs**
 
 ```plaintext
-https://www.braze.com/docs/primary_section/subsection_a/page_a
-https://www.braze.com/docs/primary_section/subsection_a/page_b
+Subsection A URL: N/A
+Page A URL: https://www.braze.com/docs/primary_section/subsection_a/page_a
+Page B URL: https://www.braze.com/docs/primary_section/subsection_a/page_b
 ```
-
-While this is similar for `subsection_b`, in addition to `subsection_b/page_a.md` and `subsection_b/page_b.md` receiving unique URLS, `subsection_b.md` also receives a unique URL because it's configured as a landing page.
-
-### Example file for subsection B
+{% endtab %}
+{% tab subsection b %}
+**Example landing page**
 
 ```markdown
 ---
@@ -404,10 +423,14 @@ page_order: 0
 ---
 ```
 
-### Example URLs for Subsection B
+Since `subsection_b.md` is configured as a landing page, `page_a.md`, `page_b.md`, and `subsection_b.md` will receive a unique URL.
+
+**Example URLs**
 
 ```plaintext
-https://www.braze.com/docs/primary_section/subsection_b
-https://www.braze.com/docs/primary_section/subsection_b/page_a
-https://www.braze.com/docs/primary_section/subsection_b/page_b
+Subesction B URL: https://www.braze.com/docs/primary_section/subsection_b
+Page A URL: https://www.braze.com/docs/primary_section/subsection_b/page_a
+Page B URL: https://www.braze.com/docs/primary_section/subsection_b/page_b
 ```
+{% endtab %}
+{% endtabs %}
