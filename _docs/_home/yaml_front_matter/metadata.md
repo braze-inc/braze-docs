@@ -24,10 +24,11 @@ If you're new to Braze Docs or docs-as-code, start with our tutorial.
 
 Replace the following:
 
-| Placeholder      | Description                                                                                                                |
-|------------------|----------------------------------------------------------------------------------------------------------------------------|
+| Placeholder      | Description                                                                                                               |
+|------------------|---------------------------------------------------------------------------------------------------------------------------|
 | `METADATA_KEY`   | The key representing a supported metadata type. Replace with a [metadata key](#required-keys) from the following section. |
-| `METADATA_VALUE` | The value assigned to the metadata key. Check a metadata key's supported values in the following section.                  |
+| `METADATA_VALUE` | The value assigned to the metadata key. Check a metadata key's supported values in the following section.                 |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Required keys
 

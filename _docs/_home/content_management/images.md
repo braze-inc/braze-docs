@@ -38,6 +38,7 @@ Replace the following:
 |-------------|---------------------------------------------------------|
 | `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers.|
 | `IMAGE` | The relative path to your image starting from the `img` directory. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your in-line image should be similar to the following:
 
@@ -64,6 +65,7 @@ Replace the following:
 |-------------|---------------------------------------------------------|
 | `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers.|
 | `REFERENCE_NUMBER` | Assign any positive integer that's not already assigned to another reference-style link on this page. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your in-line image should be similar to the following:
 
@@ -87,6 +89,7 @@ Replace the following:
 |--------------------|---------------------------------------------------------|
 | `REFERENCE_NUMBER` | The number of the reference you'd like to link to.      |
 | `IMAGE` | The relative path to your image starting from the `img` directory. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your links should look similar to the following:
 

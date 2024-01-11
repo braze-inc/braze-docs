@@ -30,6 +30,7 @@ Replace the following:
 |-------------|---------------------------------------------------------|
 | `LINK_TEXT` | The page title or related action.                       |
 | `SHORT_URL` | The page URL with `https://www.braze.com/docs` removed. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your in-line link should be similar to the following:
 
@@ -54,6 +55,7 @@ Replace the following:
 |--------------------|--------------------------------------------------------------------------|
 | `LINK_TEXT`        | The page title or related action.                                        |
 | `REFERENCE_NUMBER` | Assign any positive integer that's not already assigned to another reference-style link on this page. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your references should look similar to the following:
 
@@ -75,6 +77,7 @@ Replace the following:
 |--------------------|---------------------------------------------------------|
 | `REFERENCE_NUMBER` | The number of the reference you'd like to link to.      |
 | `SHORT_URL`        | The page URL with `https://www.braze.com/docs` removed. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your links should look similar to the following:
 

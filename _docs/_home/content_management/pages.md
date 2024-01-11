@@ -62,6 +62,7 @@ Replace the following:
 | `SHORT_DESCRIPTION` | A short, 1-2 sentence description of your page. The `SHORT_DESCRIPTION` value in YAML the metadata is used for search engine results, while the `SHORT_DESCRIPTION` value after Heading 1 is used for the description rendered on the page. |
 | `HEADING`           | The title of your Heading 2 section.                                                                                                                                                                                                        |
 | `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
+{: .reset-td-br-1 .reset-td-br-2}
 
 You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).
 

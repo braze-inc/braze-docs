@@ -32,12 +32,13 @@ braze-docs
 
 Replace the following:
 
-|Placeholder|Description|
-|-----------|-----------|
-|`PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{sitebase.url}}/docs/home/about_our_framework/#primary-sections).|
-|`SUBSECTION` | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{sitebase.url}}/docs/home/about_our_framework/#subsections).|
-|`NEW_DIRECTORY` | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.|
-|`NEW_FILE` | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`.|
+| Placeholder       | Description                                                                                                                                                                                                                                                                                                                                                                             |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{sitebase.url}}/docs/home/about_our_framework/#primary-sections).                                                                                                                                                                                                            |
+| `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{sitebase.url}}/docs/home/about_our_framework/#subsections).                                                                                                                                                                                                            |
+| `NEW_DIRECTORY`   | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.      |
+| `NEW_FILE`        | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your directory structure should look similar to the following:
 
@@ -70,13 +71,14 @@ CONTENT
 
 Replace the following:
 
-| Placeholder         | Description                                                                                                                                                                                                                                 |
-|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `NAV_TITLE`         | The title of your page as it will appear on the left-side navigation bar. In most cases, `nav_title` should match `article_title`, however to save space, you may use a shorter _but still similar_ title.                                  |
-| `LANDING_PAGE_TITLE`     | The title of your landing page. The `LANDING_PAGE_TITLE` value in the metadata is used for search engine results, while the `LANDING_PAGE_TITLE` value in Heading 1 is used for the title rendered on the page.                                               |
-| `SHORT_DESCRIPTION` | A short, 1-2 sentence description of your page. The `SHORT_DESCRIPTION` value in YAML the metadata is used for search engine results, while the `SHORT_DESCRIPTION` value after Heading 1 is used for the description rendered on the page. |
-| `HEADING`           | The title of your Heading 2 section.                                                                                                                                                                                                        |
-| `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
+| Placeholder          | Description                                                                                                                                                                                                                                 |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `NAV_TITLE`          | The title of your page as it will appear on the left-side navigation bar. In most cases, `nav_title` should match `article_title`, however to save space, you may use a shorter _but still similar_ title.                                  |
+| `LANDING_PAGE_TITLE` | The title of your landing page. The `LANDING_PAGE_TITLE` value in the metadata is used for search engine results, while the `LANDING_PAGE_TITLE` value in Heading 1 is used for the title rendered on the page.                             |
+| `SHORT_DESCRIPTION`  | A short, 1-2 sentence description of your page. The `SHORT_DESCRIPTION` value in YAML the metadata is used for search engine results, while the `SHORT_DESCRIPTION` value after Heading 1 is used for the description rendered on the page. |
+| `HEADING`            | The title of your Heading 2 section.                                                                                                                                                                                                        |
+| `CONTENT`            | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
 You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter).
@@ -112,12 +114,13 @@ braze-docs
 
 Replace the following:
 
-|Placeholder|Description|
-|-----------|-----------|
-|`PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{sitebase.url}}/docs/home/about_our_framework/#primary-sections).|
-|`SUBSECTION` | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{sitebase.url}}/docs/home/about_our_framework/#subsections).|
-|`NEW_DIRECTORY` | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.|
-|`NEW_FILE` | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`.|
+| Placeholder       | Description                                                                                                                                                                                                                                                                                                                                                                             |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{sitebase.url}}/docs/home/about_our_framework/#primary-sections).                                                                                                                                                                                                            |
+| `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{sitebase.url}}/docs/home/about_our_framework/#subsections).                                                                                                                                                                                                            |
+| `NEW_DIRECTORY`   | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.      |
+| `NEW_FILE`        | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your directory structure should look similar to the following:
 

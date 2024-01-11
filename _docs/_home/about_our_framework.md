@@ -16,9 +16,12 @@ Braze Docs is managed using docs-as-code, a method for managing documentation th
 
 As a contributor, you'll primarily work within the following directories:
 
-- **[`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs):** Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories mirroring the docs site, such as `_api` for the [API section]({{site.baseurl}}/api/home) and `user_guide` for the [User Guide section]({{site.baseurl}}/user_guide/introduction).
-- **[`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes):** Contains text files that can be _reused_ in any file within `_docs`. Typically, includes are short, modular pieces of content that don't use standard formatting.
-- **[`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets):** Contains all the images for Braze Docs. Any text file in `_docs` or `_includes` can link to this directory to display an image on its page.
+| Directory              | Description                                                                                                     |
+|------------------------|-----------------------------------------------------------------------------------------------------------------|
+| [`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs)       | Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories mirroring the docs site, such as `_api` for the [API section]({{site.baseurl}}/api/home) and `user_guide` for the [User Guide section]({{site.baseurl}}/user_guide/introduction). |
+| [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes) | Contains text files that can be _reused_ in any file within `_docs`. Typically, includes are short, modular pieces of content that don't use standard formatting.         |
+| [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)       | Contains all the images for Braze Docs. Any text file in `_docs` or `_includes` can link to this directory to display an image on its page.                                     |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Building the site
 
@@ -45,6 +48,7 @@ Replace the following:
 | `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/). |
 | `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).  |
 | `CONTENT`        | The page's content written in Markdown syntax.                                                                                                |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% tabs local %}
 {% tab example input %}

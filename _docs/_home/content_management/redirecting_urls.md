@@ -36,6 +36,7 @@ Replace the following:
 |-----------------|------------------------------------------------------------------------------------------------|
 | `REDIRECT_FROM` | The URL you want to redirect _from_ with `https://www.braze.com/` removed from the URL string. |
 | `REDIRECT_TO`   | The URL you want to redirect _to_ with `https://www.braze.com/` removed from the URL string.   |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your redirect should be similar to the following:
 
@@ -66,6 +67,7 @@ Replace the following:
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | `OLD_HEADING`     | The old heading in [Markdown syntax](https://www.markdownguide.org/basic-syntax/#an-example-putting-the-parts-together) with the `#` removed. |
 | `NEW_HEADING_URL` | The new heading URL you want to redirect _to_ with `https://www.braze.com/` removed from the URL string.                                      |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your redirect should be similar to the following:
 
