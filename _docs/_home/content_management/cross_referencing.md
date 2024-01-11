@@ -6,7 +6,7 @@ noindex: true
 
 # Cross-referencing
 
-> Learn how to cross-reference other pages on Braze Docs. If you'd like to cross-reference pages outside Braze Docs instead, use [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/#links).
+> Learn how to cross-reference other pages on Braze Docs. To cross-reference pages outside Braze Docs, use [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/#links).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
