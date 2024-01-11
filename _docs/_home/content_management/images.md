@@ -152,11 +152,10 @@ Next, add your new image to the same directory as the original image. If asked, 
 
 ## Removing an image
 
-To remove an image, [create a new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then remove the [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link the page. 
+To remove an image, [create a new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then remove the [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link the page.
 
 {% alert warning %}
 Do not delete the image file from the repository. If an image file is removed, other language translations referencing that image wll show a broken image instead.
 {% endalert %}
 
 {% multi_lang_include contributing/minis/creating_a_pull_request.md %}
-

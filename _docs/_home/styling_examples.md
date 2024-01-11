@@ -169,7 +169,7 @@ EU-02 | `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu`
 {% endtabs %}
 
 #### Resetting Table word-break by column
-For tables columns which word-break should be reset to the default style, use markdown options to add a class to the table using `.reset-td-br-1`, `.reset-td-br-2`, `.reset-td-br-3` , `.reset-td-br-4`, with the `#` corresponding to the column up to 4.
+For tables columns which word-break should be reset to the default style, use Markdown options to add a class to the table using `.reset-td-br-1`, `.reset-td-br-2`, `.reset-td-br-3` , `.reset-td-br-4`, with the `#` corresponding to the column up to 4.
 
 #### Usage
 ```

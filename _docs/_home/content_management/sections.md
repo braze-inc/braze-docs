@@ -51,7 +51,7 @@ braze-docs
             └── getting_started.md
 ```
 
-Open your new markdown file and add the following template to use the default landing-page layout. For other layouts, see [Layouts]({{sitebase.url}}/docs/home/examples/layouts).
+Open your new Markdown file and add the following template to use the default landing-page layout. For other layouts, see [Layouts]({{sitebase.url}}/docs/home/examples/layouts).
 
 ```markdown
 ---
@@ -133,7 +133,7 @@ braze-docs
             └── getting_started.md
 ```
 
-Open your new markdown file and add the following metadata to set your page's navigation title and disable the landing page:
+Open your new Markdown file and add the following metadata to set your page's navigation title and disable the landing page:
 
 ```markdown
 ---

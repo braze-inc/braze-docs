@@ -6,7 +6,7 @@ Once you're ready for a member of the Braze Docs team to review your work, selec
 
 In the **Reviewers** section, select the **settings gear**, then add `@docs-team` as the reviewer.
 
-![An example PR with the docs team added as reviewers.]()
+![An example PR with the Braze Docs team added as reviewers.]()
 
 If the docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). If no changes are required, the Braze Docs team will approve and merge your changes.
 

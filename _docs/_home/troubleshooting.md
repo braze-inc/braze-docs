@@ -24,9 +24,9 @@ https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connec
 
 If you find this string in the URL, one or more of your cross-reference links are surrounded in [Liquid raw tags](https://shopify.dev/docs/api/liquid/tags/raw). Move these tags, so they're only surrounding the Liquid content you're want to display as raw.
 
-![An image of liquid's raw tag. An image is used here to prevent Liquid from linting the example.]()
+![An image of Liquid's raw tag. An image is used here to prevent Liquid from linting the example.]()
 
 A cross-reference link surrounded by Liquid raw tags will look similar to the following:
 
-![An image of liquid's raw tag used in an example codeblock. An image is used here to prevent Liquid from linting the example.]()
+![An image of Liquid's raw tag used in an example codeblock. An image is used here to prevent Liquid from linting the example.]()
 
