@@ -64,7 +64,7 @@ Replace the following:
 | `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
-You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).
+You may add additional metadata and headings as needed, as this template is to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).
 
 When you're ready to add content to your new page, continue to [Modifying a page](#modifying-a-page).
 
