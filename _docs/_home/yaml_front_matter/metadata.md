@@ -26,7 +26,7 @@ Replace the following:
 
 | Placeholder      | Description                                                                                                                |
 |------------------|----------------------------------------------------------------------------------------------------------------------------|
-| `METADATA_KEY`   | The key representing a supported metadata type. Replace with a [metadata key](#supported-keys) from the following section. |
+| `METADATA_KEY`   | The key representing a supported metadata type. Replace with a [metadata key](#required-keys) from the following section. |
 | `METADATA_VALUE` | The value assigned to the metadata key. Check a metadata key's supported values in the following section.                  |
 
 ## Required keys
@@ -94,7 +94,7 @@ tool:
 ---
 ```
 
-### Hide from navigation
+### Hide from navigation {#hide-page}
 
 The `hidden` key is used to hide a page from the left-side navigation on Braze Docs. This key accepts the boolean values `true` or `false`.
 
