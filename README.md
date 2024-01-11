@@ -1,12 +1,43 @@
 # Welcome to Braze Docs!
 
-> This repository contains the source files for [Braze Docs](http://www.braze.com/docs), which hosts all user, developer, partner, and API documentation for the Braze customer engagement platform.
+This repository contains the source files for [Braze Docs](http://www.braze.com/docs), which hosts all user, developer, partner, and API documentation for the Braze customer engagement platform.
 
 If you'd like to help improve the docs, you can:
 
 - [Report an issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=)
 - [Request a feature](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=enhancement&projects=&template=request_a_feature.md&title=)
 - [Contribute](https://www.braze.com/docs/home/contributing/)
+
+## Quick start
+
+> **Note:** For a full walkthrough, see [Setting up your environment](https://www.braze.com/docs/home/getting_started/setting_up_your_environment/).
+
+To build the docs locally, you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
+
+```bash
+cd ~/braze-docs
+ruby --version
+```
+
+If it's not, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install Ruby version `2.7.4`. For example, using [rbenv](https://github.com/rbenv/rbenv):
+
+```bash
+rbenv install 2.7.4
+```
+
+Next, install project dependencies.
+
+```bash
+bundle install
+```
+
+To start your local docs server on localhost `http://127.0.0.1:4000`, run:
+
+```bash
+rake
+```
+
+To stop your server, reopen the terminal and press **Control**+**C**.
 
 ## Creative Commons license
 
