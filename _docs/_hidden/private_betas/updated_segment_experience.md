@@ -52,8 +52,6 @@ Click the icons next to each filter to duplicate or remove it. After duplicating
 
 You can also use the icon within each filter group to duplicate that filter group and the filters within it, or delete that filter group from your segment.
 
-![Option to duplicate filter group.][]
-
 #### Segmentation logic using AND and OR
 
 Within a filter group, filters can be joined by either "AND" or "OR". Between filter groups, groups can be joined by either "AND" or "OR". When using filter groups, you can create segmentation logic such as:
