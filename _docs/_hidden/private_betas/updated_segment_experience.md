@@ -68,7 +68,7 @@ Depending on the specific filter you select, you will have different operators f
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
 {% endalert %}
 
-![Segment filters with the "OR" selected.][3]
+![Segmenter filter groups with the AND operator.][9]
 
 {% alert important %}
 Segments already using the Segment Membership Filter cannot be further included or nested into other segments.
@@ -111,6 +111,8 @@ Create an exclusion group by adding filters, the same way you would for filter g
 
 Excluded users will not be counted as part of your segment’s **Total reachable users** statistic.
 
+![An exclusion group with two filters.][12]
+
 ### Step 6: Save your segment
 
 Once you've clicked **Save**, you're ready to start sending messages to your users!
@@ -123,7 +125,7 @@ Braze updates the user’s segment membership as data is sent back to our server
 
 Each segment displays the total number of users that are members of that segment. When filtering for **Users from all apps**, it also displays all of the different channels available to communicate with those users, such as web push or email. It is possible that the number of total users is different than the number of users reachable by each channel.
 
-![A table displaying 9,100 total reachable users, 8,899 reachable users by email, 6,720 reachable users by web push, 4,521 reachable users by Android push, and 5,122 reachable users by iOS push.][4]
+![A table displaying 2,414 total reachable users broken down by users reachable by email, iOS push, Android push, web push, Kindle push, and Android China push.][10]
 
 For a user to be listed as reachable through a certain channel, the user must have both:
 * A valid email address/push token associated with their profile; and
@@ -162,8 +164,11 @@ You can unarchive the segment by navigating to it within the **Segments** page, 
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/reachable_users.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
 [6]: {% image_buster /assets/img_archive/user_lookup.png %}
 [7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
 [8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
+[9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
+[10]: {% image_buster /assets/img_archive/segmenter_reachable_users.png %}
+[11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
+[12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
