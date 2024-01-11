@@ -1,6 +1,6 @@
 ## Request a review
 
-Once you're ready for a member of the Braze Docs team to review your work, select **Ready for review**.
+When you're ready for a member of the Braze Docs team to review your work, select **Ready for review**.
 
 ![An example PR with 'Ready for review' highlighted.]()
 
