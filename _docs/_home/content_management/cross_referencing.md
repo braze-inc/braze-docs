@@ -20,23 +20,23 @@ In your text editor, open the file you'd like to edit, then create your in-line 
 
 {% raw %}
 ```markdown
-[LINK_TEXT]({{site.baseurl}}SHORT_URL)
+[LINK_TEXT]({{site.baseurl}}/SHORT_URL)
 ```
 {% endraw %}
 
 Replace the following:
 
-| Placeholder | Description                                             |
-|-------------|---------------------------------------------------------|
-| `LINK_TEXT` | The page title or related action.                       |
-| `SHORT_URL` | The page URL with `https://www.braze.com/docs` removed. |
+| Placeholder | Description                                        |
+|-------------|----------------------------------------------------|
+| `LINK_TEXT` | The page title or related action.                  |
+| `SHORT_URL` | The page URL with `https://www.braze.com` removed. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Your in-line link should be similar to the following:
 
 {% raw %}
 ```markdown
-Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication).
+Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide/platform_wide/sdk_authentication).
 ```
 {% endraw %}
 

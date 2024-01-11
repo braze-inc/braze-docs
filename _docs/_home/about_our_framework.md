@@ -16,11 +16,11 @@ Braze Docs is managed using docs-as-code, a method for managing documentation th
 
 As a contributor, you'll primarily work within the following directories:
 
-| Directory              | Description                                                                                                     |
-|------------------------|-----------------------------------------------------------------------------------------------------------------|
-| [`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs)       | Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories mirroring the docs site, such as `_api` for the [API section]({{site.baseurl}}/api/home) and `user_guide` for the [User Guide section]({{site.baseurl}}/user_guide/introduction). |
-| [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes) | Contains text files that can be _reused_ in any file within `_docs`. Typically, includes are short, modular pieces of content that don't use standard formatting.         |
-| [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)       | Contains all the images for Braze Docs. Any text file in `_docs` or `_includes` can link to this directory to display an image on its page.                                     |
+| Directory                                                                     | Description                                                                                                                                                                                                                                                                                                                       |
+|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs)         | Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories mirroring the docs site, such as `_api` for the [API section]({{site.baseurl}}/api/home) and `user_guide` for the [User Guide section]({{site.baseurl}}/user_guide/introduction). |
+| [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes) | Contains text files that can be _reused_ in any file within `_docs`. Typically, includes are short, modular pieces of content that don't use standard formatting.                                                                                                                                                                 |
+| [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)       | Contains all the images for Braze Docs. Any text file in `_docs` or `_includes` can link to this directory to display an image on its page.                                                                                                                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Building the site
@@ -82,17 +82,25 @@ Images are stored as PNG files inside `assets/img`. The structure of the `img` d
 
 Each image can be linked to one or more pages using the following syntax:
 
+{% raw %}
 ```markdown
-{% raw %} {% image_buster /assets/img/PATH_TO_IMAGE %} {% endraw %}
+![ALT_TEXT.]({% image_buster /assets/img/DIRECTORY/IMAGE.png %})
 ```
+{% endraw %}
 
-Replace `PATH_TO_IMAGE` with the relative path to your image from inside the `img` directory (including the file extension). Your image link should be similar to the following:
+Replace the following:
+
+| Placeholder | Description                                                                                                             |
+|-------------|-------------------------------------------------------------------------------------------------------------------------|
+| `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers. |
+| `IMAGE`     | The relative path to your image starting from the `img` directory.                                                      |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Your in-line image should be similar to the following:
 
 {% raw %}
 ```markdown
-In Braze, select **User Settings**.
-
-{% image_buster assets/img/braze_platform/user_settings.png %}
+![The form for creating a new pull request on GitHub.]({% image_buster /assets/img/contributing/getting_started/github_pull_request.png %})
 ```
 {% endraw %}
 

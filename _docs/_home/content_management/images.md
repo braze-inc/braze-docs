@@ -28,23 +28,23 @@ In your Markdown file, link to your new image using the in-line syntax.
 
 {% raw %}
 ```markdown
-!["ALT_TEXT."]({% image_buster /assets/img/DIRECTORY/IMAGE.png %})
+![ALT_TEXT.]({% image_buster /assets/img/DIRECTORY/IMAGE.png %})
 ```
 {% endraw %}
 
 Replace the following:
 
-| Placeholder | Description                                             |
-|-------------|---------------------------------------------------------|
-| `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers.|
-| `IMAGE` | The relative path to your image starting from the `img` directory. |
+| Placeholder | Description                                                                                                             |
+|-------------|-------------------------------------------------------------------------------------------------------------------------|
+| `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers. |
+| `IMAGE`     | The relative path to your image starting from the `img` directory.                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Your in-line image should be similar to the following:
 
 {% raw %}
 ```markdown
-!["The form for creating a new pull request on GitHub."]({% image_buster /assets/img/contributing/getting_started/github_pull_request.png %})
+![The form for creating a new pull request on GitHub.]({% image_buster /assets/img/contributing/getting_started/github_pull_request.png %})
 ```
 {% endraw %}
 
