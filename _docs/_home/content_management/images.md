@@ -55,23 +55,23 @@ In your Markdown file, link to your new image using the reference-style syntax.
 
 {% raw %}
 ```markdown
-!["ALT_TEXT."][REFERENCE_NUMBER]
+![ALT_TEXT.][REFERENCE_NUMBER]
 ```
 {% endraw %}
 
 Replace the following:
 
-| Placeholder | Description                                             |
-|-------------|---------------------------------------------------------|
-| `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers.|
-| `REFERENCE_NUMBER` | Assign any positive integer that's not already assigned to another reference-style link on this page. |
+| Placeholder        | Description                                                                                                             |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------|
+| `ALT_TEXT`         | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers. |
+| `REFERENCE_NUMBER` | Assign any positive integer that's not already assigned to another reference-style link on this page.                   |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Your in-line image should be similar to the following:
 
 {% raw %}
 ```markdown
-!["The form for creating a new pull request on GitHub."][10]
+![The form for creating a new pull request on GitHub.][10]
 ```
 {% endraw %}
 
@@ -144,7 +144,7 @@ Confirm your new image follows our [Image Style Guide](), then save your image a
 
 Next, add your new image to the same directory as the original image. If asked, confirm you'd like to overwrite the image.
 
-!["A text editor asking the user to confirm they would like to overwrite the existing file."]()
+![A text editor asking the user to confirm they would like to overwrite the existing file.]()
 
 {% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 {% endtab %}

@@ -38,7 +38,7 @@ page_layout: api_page
 {% endtab %}
 
 {% tab example output %}
-!["An example page using the 'api_page' layout."]()
+![An example page using the 'api_page' layout.]()
 {% endtab %}
 {% endtabs %}
 
@@ -56,7 +56,7 @@ page_layout: blank_config
 {% endtab %}
 
 {% tab example output %}
-!["An example page using the 'blank_config' layout."]()
+![An example page using the 'blank_config' layout.]()
 {% endtab %}
 {% endtabs %}
 
@@ -74,7 +74,7 @@ page_layout: dev_guide
 {% endtab %}
 
 {% tab example output %}
-!["An example page using the 'dev_guide' layout."]()
+![An example page using the 'dev_guide' layout.]()
 {% endtab %}
 {% endtabs %}
 
@@ -92,7 +92,7 @@ page_layout: featured_video
 {% endtab %}
 
 {% tab example output %}
-!["An example page using the 'featured_video' layout."]()
+![An example page using the 'featured_video' layout.]()
 {% endtab %}
 {% endtabs %}
 
@@ -110,7 +110,7 @@ page_layout: featured
 {% endtab %}
 
 {% tab example output %}
-!["An example page using the 'featured' layout."]()
+![An example page using the 'featured' layout.]()
 {% endtab %}
 {% endtabs %}
 
@@ -128,7 +128,7 @@ page_layout: glossary_page
 {% endtab %}
 
 {% tab example output %}
-!["An example page using the 'glossary_page' layout."]()
+![An example page using the 'glossary_page' layout.]()
 {% endtab %}
 {% endtabs %}
 
@@ -146,6 +146,6 @@ page_layout: redirect
 {% endtab %}
 
 {% tab example output %}
-!["An example page using the 'redirect' layout."]()
+![An example page using the 'redirect' layout.]()
 {% endtab %}
 {% endtabs %}
