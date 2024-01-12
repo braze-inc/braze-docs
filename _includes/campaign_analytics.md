@@ -210,7 +210,12 @@ Here are some key email-specific metrics that you won't see in other channels. T
 
 This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's unique open rate as if machine opens did not exist. While we receive labels of "Machine Opens" on some open events from email senders (see above), these labels can often label actual opens as real opens. In other words, the "Other Opens" are likely an underestimate of real opens (by actual users). Instead, Braze uses click data from each campaign to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP.
 
-The displayed statistic is generated 36 hours after email sending has begun and repeats every 24 hours thereafter. If a campaign recurs, the estimate will be recalculated 36 hours after another send occurs. Typically around 10,000 delivered emails are required for the statistic to be computed successfully, though that number can vary depending on click rate. If it is unable to be computed then the column will continue to display "--".
+Estimated Real Open Rate is calculated 36 hours after email sending has begun. This statistic is recalculated according to the following:
+
+- **For single-send campaigns:** Every 24 hours thereafter
+- **For recurring campaigns:** Every 36 hours after another send occurs
+
+Typically around 10,000 delivered emails are required for the statistic to be computed successfully, though that number can vary depending on click rate. If the statistic can't be computed, then the column displays "--".
 
 ###### Limitations
 
