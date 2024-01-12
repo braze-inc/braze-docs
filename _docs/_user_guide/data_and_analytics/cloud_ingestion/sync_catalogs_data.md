@@ -7,7 +7,7 @@ description: "This reference article provides an overview of how to sync catalog
 
 ---
 
-# Sync catalogs data
+# Sync and delete catalogs data
 
 {% alert important %}
 Braze Cloud Data Ingestion support for catalogs is currently in early access, and is available for Snowflake, Redshift, and BigQuery sources. Contact your Braze account manager if you are interested in participating in the early access.
@@ -20,9 +20,7 @@ Before creating a new Cloud Data Ingestion (CDI) integration for [catalogs]({{si
 - Create a catalog in the [Braze dashboard]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-2-create-in-browser)
 - Create a catalog using the [Create catalog endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)
 
-The key things to note when creating this catalog are:
-- You should use the same name for the catalog and CDI integration 
-- Any changes to the catalog schema (for example, adding new fields, changing field type) must be made through the catalogs dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your Snowflake data and the schema in Braze.
+Any changes to the catalog schema (for example, adding new fields, changing field type) must be made through the catalogs dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your Snowflake data and the schema in Braze.
 
 ## Step 2: Integrate Cloud Data Ingestion with catalogs data
 The setup for a catalogs sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
@@ -171,5 +169,6 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
 {% endtab %}
 {% endtabs %}
 
-- The data fetched from the integration will be used to create or update items in the target catalog based on the `id` provided. 
-- The sync will not consume data points, but all data synced will count towards your total catalog usage; this usage is measured based on total data stored, so you don’t need to worry about only syncing changed data. 
+- The data fetched from the integration will be used to create or update items in the target catalog based on the `id` provided.
+- If DELETED is set to `true`, the corresponding catalog item will be deleted.
+- The sync will not consume data points, but all data synced will count towards your total catalog usage; this usage is measured based on total data stored, so you don’t need to worry about only syncing changed data.
