@@ -15,20 +15,20 @@ The Scuba platform ingests and queries vast amounts of event data from various c
 
 ## Prerequisites
 
-| Requirement                | Description                                                                                          |
-| -------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Partner Account                   | A partner account is required to take advantage of this partnership.                          |
+| Requirement                       | Description                                                                                                                                                                                      |
+|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Partner Account                   | A partner account is required to take advantage of this partnership.                                                                                                                             |
 | Braze REST API key                | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from [**Settings** > **API Keys**](https://your-braze-dashboard-url/settings/api-keys). |
-| Braze REST endpoint               | [Your REST endpoint URL](https://your-braze-instance-url/). Your endpoint will depend on the Braze URL for your instance.    |
-| Scuba Hostname                    | Hostname of your Scuba instance                                                               |
-| Scuba API Token                   | Your Scuba API token. Retrieve this token from the https://{scuba_hostname}/api/create_token endpoint.     |
-| Scuba Table Name                  | Name of the [Table][3] in Scuba containing your dataset.                                           |
-| Scuba Actor Property Name         | Name of the [Actor Property][4] in Scuba within the dataset to target for activation. Returned data is limited to only actors containing this specified property name. |
-| Scuba Actor Property Value Filter | The value which the Scuba Actor Property Name must be assigned to, in order to meet the audience search criteria. |
-| Scuba Actor ID                    | Actor ID: the Scuba [Actor][5]'s identity attribute, used as the external_id in Braze.                            |
-| Scuba Period Start                | Start of period in [BQL][6] compatible date.                                                       |
-| Scuba Period End                  | End of period in [BQL][6] compatible date.                                                         |
-| Scuba Record Limit                | **Optional**: Max returned records from Scuba API. Defaults to 100.                           |
+| Braze REST endpoint               | [Your REST endpoint URL](https://your-braze-instance-url/). Your endpoint will depend on the Braze URL for your instance.                                                                        |
+| Scuba Hostname                    | Hostname of your Scuba instance                                                                                                                                                                  |
+| Scuba API Token                   | Your Scuba API token. Retrieve this token from the https://{scuba_hostname}/api/create_token endpoint.                                                                                           |
+| Scuba Table Name                  | Name of the [Table][3] in Scuba containing your dataset.                                                                                                                                         |
+| Scuba Actor Property Name         | Name of the [Actor Property][4] in Scuba within the dataset to target for activation. Returned data is limited to only actors containing this specified property name.                           |
+| Scuba Actor Property Value Filter | The value which the Scuba Actor Property Name must be assigned to, in order to meet the audience search criteria.                                                                                |
+| Scuba Actor ID                    | Actor ID: the Scuba [Actor][5]'s identity attribute, used as the external_id in Braze.                                                                                                           |
+| Scuba Period Start                | Start of period in [BQL][6] compatible date.                                                                                                                                                     |
+| Scuba Period End                  | End of period in [BQL][6] compatible date.                                                                                                                                                       |
+| Scuba Record Limit                | **Optional**: Max returned records from Scuba API. Defaults to 100.                                                                                                                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
@@ -98,11 +98,9 @@ Click "Search custom attributes" in the newly created filter. Here, you will see
 
 ### Step 3: Configure the attribute
 
-Right of the selected actor property name, choose the preferred evaluation operator (equals, by default) and value (if applicable). Your choices will vary depending on how your actor properties are defined in Scuba. In this example, we're simply checking if the value is equal to **true**. A more trivial example could use "is not blank" without a target value.
+Right of the selected actor property name, choose the preferred evaluation operator (equals, by default) and value (if applicable). Your choices will vary depending on how your actor properties are defined in Scuba. In this example, we're simply checking if the value is equal to **true**. A more trivial example could use "is not blank" without a target value. When you're finished, select **Save**.
 
 ![Evaluation Operator(s)][504]
-
-When you're finished, select **Save**.
 
 [1]: https://scuba.io
 [3]: https://docs.scuba.io/glossary/dataset-table
