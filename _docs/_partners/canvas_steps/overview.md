@@ -12,10 +12,6 @@ Tool:
 
 > The Braze Audience Sync feature helps you extend the reach of your campaigns to many of the top social and advertising technologies. Through [Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas), brands can dynamically and securely sync first-party user data into the advertising ecosystem to drive marketing and operational efficiencies.
 
-{% alert important %}
-This documentation is not intended to provide, nor may it be relied upon as providing legal advice. The use of Audience Sync is subject to specific legal requirements. To ensure that you are using it in compliance with all applicable laws, you should seek the advice of your legal counsel.
-{% endalert %}
-
 ## Use cases
 
 - Targeting high-value users via owned and paid channels to drive incremental purchases or engagement.
@@ -33,6 +29,20 @@ To use Audience Sync to Google or Facebook, connect your ad account by searching
 
 ![][3]{: style="max-width:35%;"} ![][4]{: style="max-width:35%;"}
 
+After connecting your ads account, you can create a Canvas with an Audience Sync step.
+
+![][22]{: style="max-width:75%;"}
+
+Next, select the partner to sync audiences.
+
+![][19]{: style="max-width:85%;"}
+
+For each partner, you’ll need to configure the following as part of your Audience Sync step: 
+- Ad account
+- Audience 
+- Action to either add or remove users 
+- Fields to match 
+
 Keep in mind that Braze will sync users as soon as they enter the Audience Sync step within your Canvas. 
 
 For each Audience Sync destination, the partner may have different requirements for which fields we can send. Refer to the specific partner documentation for more details. 
@@ -49,13 +59,17 @@ First, select the partners you intend to use by selecting Select Partners. Each 
 
 After selecting your Audience Sync Pro destinations, connect your selected partner ad account by clicking on the partner tile.
 
-![][7]{: style="max-width:75%;"}
+![][7]{: style="max-width:70%;"}
 
-Next, you can create your Audience Sync step in Canvas using this Audience Sync Pro destination. 
+![][9]{: style="max-width:70%;"}
 
-![][9]{: style="max-width:85%;"}
+Lastly, create your Audience Sync step in Canvas using this Audience Sync Pro destination.
 
 ## Data privacy considerations
+
+{% alert important %}
+This documentation is not intended to provide, nor may it be relied upon as providing legal advice. The use of Audience Sync is subject to specific legal requirements. To ensure that you are using it in compliance with all applicable laws, you should seek the advice of your legal counsel.
+{% endalert %}
 
 When building audiences for Ad Tracking, you may wish to include or exclude certain users based on their preferences, and to comply with privacy laws, such as the “Do Not Sell or Share” right under the [CCPA](https://oag.ca.gov/privacy/ccpa). Marketers should implement the relevant filters for users’ eligibility within their Canvas entry criteria. Below we list some options.
 
@@ -82,3 +96,4 @@ To learn more on how to comply with these Data Protection laws within the Braze 
 [19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
 [20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}
 [21]: {% image_buster /assets/img/audience_sync/audience_sync6.png %}
+[22]: {% image_buster /assets/img/audience_sync/audience_sync7.png %}
