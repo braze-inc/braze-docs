@@ -35,9 +35,11 @@ The setup for a catalogs sync closely follows the process for [user-data CDI int
     CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC (
          UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
          --ID of the catalog item to be created or updated
-         ID VARCHAR(16777216),
+         ID VARCHAR(16777216) NOT NULL,
          --Catalog fields and values that should be added or updated
-         PAYLOAD VARCHAR(16777216) NOT NULL
+         PAYLOAD VARCHAR(16777216) NOT NULL,
+         --The catalog item associated with this ID should be deleted
+         DELETED BOOLEAN
     );
     ```
 2. Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, just make sure to extend access to the catalog source table.
@@ -70,11 +72,13 @@ The setup for a catalogs sync closely follows the process for [user-data CDI int
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC (
-       updated_at timestamptz default sysdate,
+       updated_at timestamptz default sysdate not null,
        --ID of the catalog item to be created or updated
-       id varchar,
+       id varchar not null,
        --Catalog fields and values that should be added or updated
-       payload varchar(max)
+       payload varchar(max),
+       --The catalog item associated with this ID should be deleted
+       deleted boolean
     )
     ```
 2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, just make sure to extend access to the catalog source table.
@@ -97,6 +101,7 @@ The setup for a catalogs sync closely follows the process for [user-data CDI int
 | UPDATED_AT | TIMESTAMP | REQUIRED |
 | PAYLOAD | JSON | REQUIRED |
 | ID | STRING | REQUIRED |
+| DELETED | STRING | OPTIONAL |
 
 {:start="2"}
 
