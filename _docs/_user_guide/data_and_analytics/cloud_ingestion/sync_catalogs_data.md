@@ -94,14 +94,14 @@ The setup for a catalogs sync closely follows the process for [user-data CDI int
 {% endtab %}
 {% tab BigQuery %}
 
-1. Set up a source table in BigQuery. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
+1. Optionally, set up a new Project or Dataset to hold your source table. Create one or more tables to use for your CDI integration with the following fields:
 
 | FIELD NAME | TYPE | MODE |
 | --- | --- | --- |
 | UPDATED_AT | TIMESTAMP | REQUIRED |
 | PAYLOAD | JSON | REQUIRED |
 | ID | STRING | REQUIRED |
-| DELETED | STRING | OPTIONAL |
+| DELETED | BOOLEAN | OPTIONAL |
 
 {:start="2"}
 
@@ -114,6 +114,30 @@ The service account should have the below permissions:
 
 {:start="3"}
 3. If you have network policies in place, you must give Braze network access to your BigQuery instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+
+{% endtab %}
+{% tab Databricks %}
+
+1. Set up a source table in Databricks. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
+
+| FIELD NAME | TYPE | MODE |
+| --- | --- | --- |
+| UPDATED_AT | TIMESTAMP | REQUIRED |
+| PAYLOAD | JSON | REQUIRED |
+| ID | STRING | REQUIRED |
+| DELETED | BOOLEAN | NULLABLE |
+
+{:start="2"}
+
+2. In order for Braze to access Databricks, a personal access token needs to be created.
+- In your Databricks workspace, click your Databricks username in the top bar, and then select User Settings from the drop-down.
+- On the Access tokens tab, click Generate new token.
+- Enter a comment that helps you to identify this token, such as “Braze CDI”, and change the token’s lifetime to no lifetime by leaving the Lifetime (days) box empty (blank). Click Generate.
+- Copy the displayed token, and then click Done.
+Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
+
+{:start="3"}
+3. If you have network policies in place, you must give Braze network access to your Databricks instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) page.
 
 {% endtab %}
 {% endtabs %}
@@ -158,6 +182,21 @@ SELECT
 ```
 {% endtab %}
 {% tab BigQuery %}
+```json
+CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
+    last_updated as UPDATED_AT,
+    product_id as ID,
+    TO_JSON(
+      STRUCT(
+      attribute_1,
+      attribute_2,
+      attribute_3,
+      )
+    ) as PAYLOAD 
+  FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
+{% tab Databricks %}
 ```json
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
