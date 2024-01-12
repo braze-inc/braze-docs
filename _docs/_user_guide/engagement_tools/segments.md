@@ -53,8 +53,8 @@ guide_menu_list:
     link: /docs/user_guide/engagement_tools/segments/regex/
     fa_icon: fas fa-search
 
-guide_menu_title: "Other"
-guide_menu_list:
+guide_menu_title2: "Other"
+guide_menu_list2:
   - name: Custom Attributes
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
     fa_icon: fas fa-table
