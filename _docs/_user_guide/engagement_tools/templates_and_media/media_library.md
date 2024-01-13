@@ -48,14 +48,7 @@ All images uploaded to the Media Library must be less than 5&nbsp;MB. Supported 
 
 ### Content Cards
 
-| Card type | Aspect ratio     | Image quality       |
-| --------- | ---------------- | ------------------- |
-| Classic   | 1:1 aspect ratio | 60 x 60&nbsp;px        |
-| Captioned | 4:3 aspect ratio | 600&nbsp;px minimum width |
-| Banner    | Any aspect ratio | 600&nbsp;px minimum width |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-For more information, refer to [Content Card creative details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/).
+{% multi_lang_include image_specs.md variable_name='content cards' %}
 
 ### Email
 
@@ -64,8 +57,6 @@ For more information, refer to [Content Card creative details]({{site.baseurl}}/
 | Header image | Any aspect ratio | 600&nbsp;px maximum width |
 | Body image   | Any aspect ratio | 480&nbsp;px maximum width |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-Smaller, high quality images will load faster, so we recommend that you use the smallest asset possible to achieve your desired output.
 
 ### In-app messages
 

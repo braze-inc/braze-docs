@@ -1,6 +1,17 @@
+{% if include.variable_name == "image behavior" %}
+
+
+| Layout | Behavior |
+| --- | --- |
+| Image and text | Tall or narrow images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
+| Image only | The message will resize to fit images of most aspect ratios. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endif %}
+
 {% if include.variable_name == "payload size" %}
 
-Smaller, high quality images will load faster, so we recommend using the smallest asset possible to achieve your desired output. We recommend the following payload sizes:
+We recommend the following payload sizes:
 
 | Messaging system | Recommended payload |
 | --- | --- |
@@ -14,7 +25,7 @@ Smaller, high quality images will load faster, so we recommend using the smalles
 
 {% if include.variable_name == "in-app messages" %}
 
-In general, we recommend using images that fit into a 16:10 screen.
+Modal in-app messages are designed to fit the device at the best and most filling ratios possible, while staying true to the size and ratios of your chosen image or copy for your message.
 
 While there are no limits to how many text characters you can include in an in-app message (as well as buttons, headline, main body, and others), we moderating how many text characters you use. Too much text will require users to expand and scroll the message.
 
@@ -73,5 +84,18 @@ While there are no limits to how many text characters you can include in an in-a
 | `"From: Name"` length | 25 characters |
 | Pre-header length | 85 characters |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% endif %}
+
+{% if include.variable_name == "content cards" %}
+
+| Card type | Aspect ratio     | Image quality       |
+| --------- | ---------------- | ------------------- |
+| Classic   | 1:1 aspect ratio | 60 x 60&nbsp;px        |
+| Captioned | 4:3 aspect ratio | 600&nbsp;px minimum width |
+| Banner    | Any aspect ratio | 600&nbsp;px minimum width |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+For more information, refer to [Content Card creative details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/).
 
 {% endif %}
