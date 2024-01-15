@@ -24,6 +24,8 @@ The Braze Swift SDK contains a variety of standalone XCframeworks, which gives y
 {% tab dynamic %}
 In `braze-swift-sdk-prebuilt`, open the `dynamic` directory. Each subdirectory represents an XCFramework. After you decide which XCFramworks you'd like to use, create a temporary directory to store your chosen frameworks.
 
+You *must* at least include `BrazeKit` in addition to any other XCFrameworks.
+
 | Package                    | Required? | Description                                                                                                                                                                                                                                                                                                           |
 |----------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `BrazeKit`                 | Yes       | Main SDK library that provides support for analytics and push notifications.                                                                                                                                                                                                                                          |
@@ -36,6 +38,8 @@ In `braze-swift-sdk-prebuilt`, open the `dynamic` directory. Each subdirectory r
 
 {% tab static %}
 In `braze-swift-sdk-prebuilt`, open the `static` directory. Each subdirectory represents an XCFramework. After you decide which XCFramworks you'd like to use, create a temporary directory to store your chosen frameworks.
+
+You *must* at least include `BrazeKit` in addition to any other XCFrameworks.
 
 | Package                    | Required? | Description                                                                                                                                                                                                                                                                                                           |
 |----------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
