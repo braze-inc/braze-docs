@@ -40,7 +40,7 @@ Intégrez le SDK loplat et le SDK Braze dans votre application en suivant les é
 
 ### Étape 2 : Synchronisez les tableaux de bord Braze et loplat X et créez une campagne
 
-Créer une nouvelle clé API dans le tableau de bord de Braze. Copiez la clé API et collez-la dans **Settings (Paramètres) > API Settings (Paramètres API)** dans le tableau de bord loplat X. Voir le [guide de l’utilisateur du loplat X](https://loplat-loplat.gitbook.io/loplat-x-user-guide-en/integration/braze) pour plus de détails.
+Créer une nouvelle clé API dans le tableau de bord de Braze. Copiez la clé API et collez-la dans **Settings (Paramètres) > API Settings (Paramètres API)** dans le tableau de bord loplat X. Voir le [guide de l’utilisateur du loplat X](https://loplatx-user-guide.notion.site/Campaign-integration-b92f8120cbe74d19a3a5f593657b4e8e?pvs=25) pour plus de détails.
 
 #### Livraison déclenchée par API
 
