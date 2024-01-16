@@ -57,6 +57,14 @@ Intelligent timing predicts when a user is most likely to open or click.
 
 The most popular app time is determined by the average session start time for the workspace (in local time). This metric can be found in the dashboard when previewing times for a campaign, shown in red.
 
+### Does Intelligent Timing account for machine opens?
+
+Yes, machine opens are filtered out by Intelligent Timing, so they do not influence its output.
+
+### How can I make sure Intelligent Timing works as well as possible?
+
+Intelligent Timing uses each user's individual history of message engagement at whatever times they received messages. Before using Intelligent Timing, make sure that you have sent users messages at different times of the day. That way, you can "sample" when might be the best time for each user. Inadequately sampling different times of day may result in Intelligent Timing picking a suboptimal time of send for a user. 
+
 ### How far in advance should I launch an Intelligent Timing campaign to successfully deliver it to all users in all time zones?
 
 Braze calculates the optimal time at midnight in Samoa time, one of the first time zones in the world. In a single day, it spans approximately 48 hours. For example, someone whose optimal time is 12:01 am and lives in Australia has already had their optimal time pass, and it's "too late" to send to them. For these reasons, you need to schedule 48 hours in advance to ensure that everyone in the world who uses your app will get it successfully delivered.
