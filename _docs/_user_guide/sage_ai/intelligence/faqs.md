@@ -63,7 +63,7 @@ Yes, machine opens are filtered out by Intelligent Timing, so they do not influe
 
 ### How can I make sure Intelligent Timing works as well as possible?
 
-Intelligent Timing uses each user's individual history of message engagement at whatever times they received messages. So, ensure that you have sent users messages at different times of day before using Intelligent Timing. That way, you can = "sample" when might be the best time for each user. Inadequately sampling different times of day may result in Intelligent Timing picking a suboptimal time of send for a user. 
+Intelligent Timing uses each user's individual history of message engagement at whatever times they received messages. Before using Intelligent Timing, make sure that you have sent users messages at different times of the day. That way, you can "sample" when might be the best time for each user. Inadequately sampling different times of day may result in Intelligent Timing picking a suboptimal time of send for a user. 
 
 ### How far in advance should I launch an Intelligent Timing campaign to successfully deliver it to all users in all time zones?
 
