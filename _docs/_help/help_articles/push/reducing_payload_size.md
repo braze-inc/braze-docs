@@ -19,7 +19,7 @@ Push service providers calculate whether your push notification can be displayed
 - Apple Push Notification service (APNs)
 - Android’s Firebase Cloud Messaging (FCM)
 - Web push
-- Huawei push max
+- Huawei push
 
 These push services will refuse any notification that exceeds this limit.
 
