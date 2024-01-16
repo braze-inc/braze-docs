@@ -24,13 +24,13 @@ Users can provide their explicit consent through outbound or inbound SMS message
 
 When a user provides their phone number, they are sent an SMS message that asks for their consent.
 
-![Screenshot of inbound SMS message where a user sends "JOIN" and receives the response "Reply Y to confirm you want to JOIN our SMS program. 3msg/week, text STOP at any time to STOP, then texts back "Y".][1]{:style="max-width:40%;"}
+![Screenshot of outbound SMS message with the brand texting, "Welcome to BRAND text updates! 1 msg a week for the latest offers. Reply Y to opt-in.", the users replying with "Y", and the brand responding with "Thanks! You're now opted-in to BRAND alerts. Here is a promo code SMS10 for 10% off your first purchase!"][2]{:style="max-width:40%;"}
 
 ### Inbound SMS double opt-in
 
 When a user sends an SMS message that contains an opt-in keyword, they are sent an SMS message that asks for their consent.
 
-![Screenshot of outbound SMS message with the brand texting, "Welcome to BRAND text updates! 1 msg a week for the latest offers. Reply Y to opt-in.", the users replying with "Y", and the brand responding with "Thanks! You're now opted-in to BRAND alerts. Here is a promo code SMS10 for 10% off your first purchase!"][2]{:style="max-width:40%;"}
+![Screenshot of inbound SMS message where a user sends "JOIN" and receives the response "Reply Y to confirm you want to JOIN our SMS program. 3msg/week, text STOP at any time to STOP, then texts back "Y".][1]{:style="max-width:40%;"}
 
 ## Enabling SMS double opt-in
 

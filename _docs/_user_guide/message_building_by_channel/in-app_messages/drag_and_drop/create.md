@@ -229,7 +229,7 @@ Yes, you can segment based on button clicks for up to two buttons in your messag
 
 #### Can I customize my in-app message using custom HTML or JavaScript or transfer existing HTML messages into the editor?
 
-No.
+You can’t directly transfer existing HTML messages into the editor, but you can insert raw HTML, CSS, and JavaScript into a Custom Code block. You can use Custom Code blocks to embed third-party videos and advanced Liquid, such as Connected Content or conditional statements.
 
 #### How can I create a slideup in-app message?
 
