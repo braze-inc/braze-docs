@@ -34,7 +34,7 @@ Replace the following:
 
 ### Article title
 
-The `article_title` key is used to set the page title in online search results. This key accepts any `string` value. For style guidelines, see [Naming Conventions](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.n0sf2nl43bpo).
+The `article_title` key is used to set the page title for online search results and the end-user's browser tab. This key accepts any `string` value. For style guidelines, see [Naming Conventions](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.n0sf2nl43bpo).
 
 **Usage example:**
 
