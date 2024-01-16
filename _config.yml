@@ -191,7 +191,7 @@ exclude: [
   '*.log','MigrationTool','Archive','documentation','academy',
   '.sass-cache', '.git', '.vscode', 'system.properties',
   'CODE_OF_CONDUCT.md','CONTRIBUTING.md','LICENSE.md','_site',
-  'vercel.json'
+  'vercel.json','scripts'
 ]
 
 # Setting for image buster
