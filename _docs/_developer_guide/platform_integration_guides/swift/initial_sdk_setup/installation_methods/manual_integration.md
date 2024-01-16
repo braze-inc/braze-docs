@@ -19,7 +19,7 @@ Go to the [Braze SDK release page on GitHub](https://github.com/braze-inc/braze-
 
 ## Step 2: Choose your frameworks
 
-The Braze Swift SDK contains a variety of standalone XCFrameworks, which gives you the freedom to integrate the features you want&#8212;without needing to integrate them all. Use the following table to decide which XCFrameworks you want to use:
+The Braze Swift SDK contains a variety of standalone XCFrameworks, which gives you the freedom to integrate the features you want&#8212;without needing to integrate them all. Reference the following table to choose your XCFrameworks:
 
 | Package                    | Required? | Description                                                                                                                                                                                                                                                                                                           |
 |----------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
