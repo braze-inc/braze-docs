@@ -37,12 +37,12 @@ Decide whether you want to use **Static** or **Dynamic** XCFrameworks, then prep
 {% tabs %}
 {% tab dynamic %}
 1. Create a temporary directory for your XCFrameworks.
-2. In `braze-swift-sdk-prebuilt`, open the `dynamic` directory and move `BrazeKit.xcframework` to your directory. Your directory should be similar to the following:
+2. In `braze-swift-sdk-prebuilt`, open the `dynamic` directory and move `BrazeKit.xcframework` into your directory. Your directory should be similar to the following:
     ```bash
     temp_dir
     └── BrazeKit.xcframework
     ```
-3. Move each of your [chosen XCFrameworks](#step-2-choose-your-frameworks) to your temporary directory. Your directory should be similar to the following:
+3. Move each of your [chosen XCFrameworks](#step-2-choose-your-frameworks) into your temporary directory. Your directory should be similar to the following:
     ```bash
     temp_dir
     ├── BrazeKit.xcframework
@@ -56,12 +56,12 @@ Decide whether you want to use **Static** or **Dynamic** XCFrameworks, then prep
 ### Step 3.1: Prepare your frameworks
 
 1. Create a temporary directory for your XCFrameworks.
-2. In `braze-swift-sdk-prebuilt`, open the `static` directory and move `BrazeKit.xcframework` to your directory. Your directory should be similar to the following:
+2. In `braze-swift-sdk-prebuilt`, open the `static` directory and move `BrazeKit.xcframework` into your directory. Your directory should be similar to the following:
    ```bash
    temp_frameworks_dir
    └── BrazeKit.xcframework
    ```
-3. Move each of your [chosen XCFrameworks](#step-2-choose-your-frameworks) to your temporary directory. Your directory should be similar to the following:
+3. Move each of your [chosen XCFrameworks](#step-2-choose-your-frameworks) into your temporary directory. Your directory should be similar to the following:
    ```bash
    temp_frameworks_dir
    ├── BrazeKit.xcframework
@@ -73,12 +73,12 @@ Decide whether you want to use **Static** or **Dynamic** XCFrameworks, then prep
 ### Step 3.2: Prepare your bundles
 
 1. Create a temporary directory for your bundles.
-2. Open the `bundles` directory and move `BrazeKit.bundle` to your directory. Your directory should be similar to the following:
+2. Open the `bundles` directory and move `BrazeKit.bundle` into your directory. Your directory should be similar to the following:
    ```bash
    temp_bundles_dir
    └── BrazeKit.bundle
    ```
-3. If you're using the `BrazeLocation`, `BrazeUI`, or `BrazeUICompat` XCFrameworks, move their matching bundles to your temporary directory. Your directory should be similar to the following:
+3. If you're using the `BrazeLocation`, `BrazeUI`, or `BrazeUICompat` XCFrameworks, move their corresponding bundles into your temporary directory. Your directory should be similar to the following:
    ```bash
    temp_bundles_dir
    ├── BrazeKit.bundle
@@ -86,7 +86,7 @@ Decide whether you want to use **Static** or **Dynamic** XCFrameworks, then prep
    └── BrazeUICompat.bundle
    ```
 {% alert note %}
-Only move over the bundles for the [XCFrameworks you prepared previously](#step-31-prepare-your-frameworks).
+Only move over bundles for the [frameworks you prepared](#step-31-prepare-your-frameworks).
 {% endalert %}
 {% endtab %}
 {% endtabs %}
