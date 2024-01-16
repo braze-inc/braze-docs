@@ -23,13 +23,13 @@ Push service providers calculate whether your push notification can be displayed
 
 These push services will refuse any notification that exceeds this limit.
 
-Braze reserves a portion of the push payload for integration and analytics purposes. Given that, our recommended payload size is **3,807 bytes**. If your push exceeds this size, part of your message may be cut off, or the push may not be sent at all.
+Braze reserves a portion of the push payload for integration and analytics purposes. Given that, our maximum payload size is **3,807 bytes**. If your push exceeds this size, the message may not be sent. As a best practice, keep your payload to a few hundred bytes.
 
 The following elements in your push make up your push payload:
 
 - Copy, such as the title and message body
 - Final render of any Liquid personalization
-- Images
+- URLs for images (but not the size of the image itself)
 - URLs for click targets
 - Button names
 - Key-value pairs
