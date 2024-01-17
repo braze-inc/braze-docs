@@ -6,10 +6,10 @@ noindex: true
 
 # Setting up your environment
 
-> Learn how to set up your local environment, so you can make complex or multi-document changes to Braze Docs. Optionally, for small single-document changes, you can [make changes directly in GitHub]({{site.baseurl}}/home/getting_started/your_first_contribution/?tab=github).
+> Learn how to set up your local environment, so you can make complex or multi-document changes to Braze Docs. After it's set up, you'll be able to [build the docs locally]({{site.baseurl}}/home/getting_started/building_the_docs_locally/) and review your work an offline site preview.
 
 {% alert tip %}
-You only need to set up your environment once. After it's set up, you'll be able to [build the docs locally]() anytime.
+You only need to set up your environment a single time.
 {% endalert %}
 
 ## Prerequisites
