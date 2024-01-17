@@ -1,6 +1,6 @@
 ---
 nav_title: Creating a new branch
-page_order: 0
+page_order: 1
 noindex: true
 ---
 
@@ -18,7 +18,7 @@ In your terminal, open the Braze Docs repository.
 cd ~/PATH/braze-docs
 ```
 
-Replace `PATH` with the file path to the `braze-docs` directory you downloaded when you [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/). Your terminal command should be similar to the following:
+Replace `PATH` with the path to the `braze-docs` directory you downloaded when you [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/). Your command should be similar to the following:
 
 ```bash
 cd ~/open-source/braze/braze-docs

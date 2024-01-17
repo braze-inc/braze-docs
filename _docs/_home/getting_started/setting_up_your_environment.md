@@ -8,16 +8,17 @@ noindex: true
 
 > Learn how to set up your local environment, so you can make complex or multi-document changes to Braze Docs. Optionally, for small single-document changes, you can [make changes directly in GitHub]({{site.baseurl}}/home/getting_started/your_first_contribution/?tab=github).
 
+{% alert tip %}
+You only need to set up your environment once. After it's set up, you'll be able to [build the docs locally]() anytime.
+{% endalert %}
+
 ## Prerequisites
 
 Before you start, you'll need to complete the following:
 
 - [Download the recommended software]({{site.baseurl}}/home/getting_started/recommended_software/)
 - [Create a GitHub account](https://github.com/join)
-- Set up your GitHub SSH key:
-  - [macOS](https://docs.github.com/en/github-ae@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac)
-  - [Windows](https://docs.github.com/en/github-ae@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows)
-  - [Linux](https://docs.github.com/en/github-ae@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux)
+- Set up your GitHub SSH key on [macOS](https://docs.github.com/en/github-ae@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac) or [Linux](https://docs.github.com/en/github-ae@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux). If you're using [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install), use the Linux setup instructions.
 
 ## Step 1: Fork the repository
 
@@ -53,7 +54,7 @@ cd ~/braze-docs
 ruby --version
 ```
 
-If it's not, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install Ruby version `2.7.4`. For example, using [rbenv](https://github.com/rbenv/rbenv):
+If this version isn't installed, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install Ruby version `2.7.4`. For example, using [rbenv](https://github.com/rbenv/rbenv):
 
 ```bash
 rbenv install 2.7.4
@@ -61,7 +62,7 @@ rbenv install 2.7.4
 
 ## Step 3: Install dependencies
 
-Next, install project dependencies.
+Next, install the dependencies for Braze Docs. These are small programs used to generate your local Braze Docs site.
 
 ```bash
 bundle install
@@ -69,11 +70,12 @@ bundle install
 
 ## Step 4: Start a local server
 
-To start your local docs server on localhost `http://127.0.0.1:4000`, run:
+To generate the Braze Docs site and run it in a local server, first checkout your git branch.
 
 ```bash
 rake
 ```
 
-To stop your server, reopen the terminal and press <kbd>Control</kbd> + <kbd>C</kbd>.
+By default, Braze Docs will be generated on localhost [`http://127.0.0.1:4000`](http://127.0.0.1:4000). To access the site, open the link in your browser.
 
+To stop your local server, reopen the terminal and press <kbd>Control</kbd> + <kbd>C</kbd>.
