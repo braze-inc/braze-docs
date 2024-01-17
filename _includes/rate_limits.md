@@ -160,3 +160,9 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 {% endif %}
+
+{% if include.endpoint == "export campaign analytics" %}
+
+This endpoint has a rate limit of 50,000 requests per minute.
+
+{% endif %}
