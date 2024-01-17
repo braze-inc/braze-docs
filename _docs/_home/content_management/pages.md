@@ -6,7 +6,7 @@ noindex: true
 
 # Pages
 
-> Learn how to create, modify, and remove pages on Braze Docs. To create a new section, see [Sections]({{sitebase.url}}/docs/home/content_management/sections/). For general information about pages, see [About our framework]({{sitebase.url}}/docs/home/about_our_framework/#pages).
+> Learn how to create, modify, and remove pages on Braze Docs. To create a new section, see [Sections]({{site.baseurl}}/home/content_management/sections/). For general information about pages, see [About our framework]({{site.baseurl}}/home/about_our_framework/#pages).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -14,7 +14,7 @@ noindex: true
 
 ### Step 1: Create a new file
 
-First, [create a new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then open the directory you'd like to add a new page to.
+First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch), then open the directory you'd like to add a new page to.
 
 ![A text editor with the file tree open.]()
 
@@ -35,7 +35,7 @@ Replace `PAGE_TITLE` with the title of your page (be sure it adheres to the [Hea
 
 ### Step 2: Add a layout
 
-To use the default page layout, copy and paste the following into your Markdown file. For other layouts, see [Layouts]({{sitebase.url}}/docs/home/yaml_front_matter/page_layouts/).
+To use the default page layout, copy and paste the following into your Markdown file. For other layouts, see [Layouts]({{site.baseurl}}/home/yaml_front_matter/page_layouts/).
 
 ```markdown
 ---
@@ -64,7 +64,7 @@ Replace the following:
 | `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
-You may add additional metadata and headings as needed, as this template is to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).
+You may add additional metadata and headings as needed, as this template is to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{site.baseurl}}/home/yaml_front_matter/metadata/).
 
 When you're ready to add content to your new page, continue to [Modifying a page](#modifying-a-page).
 

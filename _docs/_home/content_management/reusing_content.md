@@ -10,7 +10,7 @@ noindex: true
 
 Content reuse in Jekyll is accomplished using includes. Includes are stored in the `_includes` directory as a regular Markdown file. Although, unlike the Markdown files in the `_docs` directory, these files don't need YAML front matter.
 
-For general information about content reuse, see [About our framework]({{sitebase.url}}/docs/home/about_our_framework).
+For general information about content reuse, see [About our framework]({{site.baseurl}}/home/about_our_framework).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -37,7 +37,7 @@ Before you start, you'll need to complete the following:
 
 - [Sign the contributors license agreement]({{site.baseurl}}/cla)
 - [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
-- [Set up your local environment]({{sitebase.url}}/docs/home/getting_started/setting_up_your_environment.md)
+- [Set up your local environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment.md)
 ```
 {% endraw %}
 

@@ -45,8 +45,8 @@ Replace the following:
 
 | Placeholder      | Description                                                                                                                                   |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/). |
-| `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{sitebase.url}}/docs/home/yaml_front_matter/metadata/).  |
+| `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata]({{site.baseurl}}/home/yaml_front_matter/metadata/). |
+| `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{site.baseurl}}/home/yaml_front_matter/metadata/).  |
 | `CONTENT`        | The page's content written in Markdown syntax.                                                                                                |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -73,7 +73,7 @@ Learn how you can get started with Braze.
 {% endtabs %}
 
 {% alert note %}
-For a full walkthrough, see [Creating a page]({{sitebase.url}}/docs/home/content_management/pages/#creating-a-page).
+For a full walkthrough, see [Creating a page]({{site.baseurl}}/home/content_management/pages/#creating-a-page).
 {% endalert %}
 
 ## Images
@@ -105,7 +105,7 @@ Your in-line image should be similar to the following:
 {% endraw %}
 
 {% alert note %}
-For a full walkthrough, see [Adding a new image]({{sitebase.url}}/docs/home/content_management/images/#adding-a-new-image).
+For a full walkthrough, see [Adding a new image]({{site.baseurl}}/home/content_management/images/#adding-a-new-image).
 {% endalert %}
 
 ## Content reuse
@@ -141,7 +141,7 @@ Learn how you can get started with Braze.
 {% endtabs %}
 
 {% alert note %}
-For a full walkthrough, see [Reusing content]({{sitebase.url}}/docs/home/content_management/reusing_content).
+For a full walkthrough, see [Reusing content]({{site.baseurl}}/home/content_management/reusing_content).
 {% endalert %}
 
 ## Layouts
@@ -197,7 +197,7 @@ layout: api_glossary
 {% endtabs %}
 
 {% alert note %}
-For more information, see [Page layouts]({{sitebase.url}}/docs/home/yaml_front_matter/page_layouts).
+For more information, see [Page layouts]({{site.baseurl}}/home/yaml_front_matter/page_layouts).
 {% endalert %}
 
 ## Sections
@@ -322,7 +322,7 @@ braze-docs
 ```
 
 {% alert note %}
-For a full walkthrough, see [Creating a section]({{sitebase.url}}/docs/home/content_management/sections/#creating-a-section).
+For a full walkthrough, see [Creating a section]({{site.baseurl}}/home/content_management/sections/#creating-a-section).
 {% endalert %}
 
 In the `_primary_section` directory, `subsection_a` is **not** configured with a landing page, while `subsection_b` is configured with a landing page. In the following example, `subsection_a.md` has `config_only:` set to `true`, which prevents this page from being rendered as a landing page:

@@ -6,13 +6,13 @@ noindex: true
 
 # Setting up your environment
 
-> Learn how to set up your local environment, so you can make complex or multi-document changes to Braze Docs. Optionally, for small single-document changes, you can [make changes directly in GitHub]({{sitebase.url}}/docs/home/getting_started/your_first_contribution/?tab=github).
+> Learn how to set up your local environment, so you can make complex or multi-document changes to Braze Docs. Optionally, for small single-document changes, you can [make changes directly in GitHub]({{site.baseurl}}/home/getting_started/your_first_contribution/?tab=github).
 
 ## Prerequisites
 
 Before you start, you'll need to complete the following:
 
-- [Download the recommended software]({{sitebase.url}}/docs/home/getting_started/recommended_software/)
+- [Download the recommended software]({{site.baseurl}}/home/getting_started/recommended_software/)
 - [Create a GitHub account](https://github.com/join)
 - Set up your GitHub SSH key:
   - [macOS](https://docs.github.com/en/github-ae@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac)

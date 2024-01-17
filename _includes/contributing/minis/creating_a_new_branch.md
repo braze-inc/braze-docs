@@ -9,5 +9,5 @@ git checkout -b BRANCH_NAME
 ```
 
 {% alert note %}
-For a full walkthrough, see [Creating a new branch]({{sitebase.url}}/docs/home/contributing/github/creating_a_new_branch/).
+For a full walkthrough, see [Creating a new branch]({{site.baseurl}}/home/contributing/github/creating_a_new_branch/).
 {% endalert %}

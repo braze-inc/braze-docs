@@ -25,5 +25,5 @@ Your in-line image should be similar to the following:
 {% endraw %}
 
 {% alert note %}
-For a full walkthrough, see [Adding a new image]({{sitebase.url}}/docs/home/contributing/content_management/images/).
+For a full walkthrough, see [Adding a new image]({{site.baseurl}}/home/contributing/content_management/images/).
 {% endalert %}

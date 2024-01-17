@@ -10,4 +10,4 @@ In the **Reviewers** section, select the **settings gear**, then add `@docs-team
 
 If the docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). If no changes are required, the Braze Docs team will approve and merge your changes.
 
-Approved contributions will be deployed on the next Tuesday or Thursday. Be sure to check out [Braze Docs]({{sitebase.url}}) to see your hard work. Thanks for contributing!
+Approved contributions will be deployed on the next Tuesday or Thursday. Be sure to check out [Braze Docs]({{site.baseurl}}) to see your hard work. Thanks for contributing!

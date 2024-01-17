@@ -23,8 +23,8 @@ Before you start, you'll need to complete the following:
 - [Sign the Contribution License Agreement (CLA)](https://www.braze.com/docs/cla)
 - [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
 - [Create a GitHub account](https://github.com/join)
-- [Set up your local environment]({{sitebase.url}}/docs/home/getting_started/setting_up_your_local_environment/) (optional)
-- [Download the recommended software]({{sitebase.url}}/docs/home/getting_started/recommended_software/) (optional)
+- [Set up your local environment]({{site.baseurl}}/home/getting_started/setting_up_your_local_environment/) (optional)
+- [Download the recommended software]({{site.baseurl}}/home/getting_started/recommended_software/) (optional)
 
 ## Step 1: Explore the GitHub repository
 
@@ -32,7 +32,7 @@ The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) host
 
 ![The Braze Docs GitHub repository homepage.]()
 
-For more information, see [About our framework]({{sitebase.url}}/docs/home/about_our_famework/).
+For more information, see [About our framework]({{site.baseurl}}/home/about_our_framework/).
 
 ## Step 2: Make a change
 
@@ -51,7 +51,7 @@ In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), 
 
 ![The Braze Docs GitHub repository homepage with the '_docs' folder highlighted in the file tree.]()
 
-Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For more information see [About our framework]({{sitebase.url}}/docs/home/about_our_framework/).
+Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For more information see [About our framework]({{site.baseurl}}/home/about_our_framework/).
 
 For example, `braze.com/home/yaml_front_matter/` can be found on the following page:
 
@@ -80,7 +80,7 @@ In the terminal, open the `braze-docs` directory.
 cd ~/PATH_TO_REPOSITORY
 ```
 
-Replace `PATH_TO_REPOSITORY` with the location you saved the `braze-docs` repository when you [set up your environment]({{sitebase.url}}/home/getting_started/setting_up_your_environment/). Your command should be similar to the following:
+Replace `PATH_TO_REPOSITORY` with the location you saved the `braze-docs` repository when you [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/). Your command should be similar to the following:
 
 ```bash
 cd ~/braze/braze-docs
@@ -117,7 +117,7 @@ $ git checkout -b fixing-typo-in-metadata
 Switched to a new branch 'fixing-typo-in-metadata'
 ```
 
-In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/). For help navigating the `braze-docs` repository, see [About our framework]({{sitebase.url}}/docs/home/about_our_framework/).
+In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/). For help navigating the `braze-docs` repository, see [About our framework]({{site.baseurl}}/home/about_our_framework/).
 
 ![A text editor with an example document open.]()
 
@@ -200,9 +200,9 @@ In your PR, you can preview your changes in a test environment that's identical 
 
 Double-check your work using the following Braze style guides:
 
-- [Writing style guide]({{sitebase.url}}/docs/home/style_guides/writing/)
-- [Images style guide]({{sitebase.url}}/docs/home/style_guides/images/)
-- [Alerts style guide]({{sitebase.url}}/docs/home/style_guides/alerts/)
+- [Writing style guide]({{site.baseurl}}/home/style_guides/writing/)
+- [Images style guide]({{site.baseurl}}/home/style_guides/images/)
+- [Alerts style guide]({{site.baseurl}}/home/style_guides/alerts/)
 
 If you'd like to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
 
@@ -244,7 +244,7 @@ Switched to branch 'fixing-typo-in-metadata'
 Your branch is up to date with 'origin/fixing-typo-in-metadata'.
 ```
 
-In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/). For help navigating the `braze-docs` repository, see [Directory structure]({{sitebase.url}}/docs/home/about_our_framework/).
+In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/). For help navigating the `braze-docs` repository, see [Directory structure]({{site.baseurl}}/home/about_our_framework/).
 
 ![A text editor with an example document open.]()
 

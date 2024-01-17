@@ -6,7 +6,7 @@ noindex: true
 
 # Sections
 
-> Learn how to create and order sections on Braze Docs. If you'd like to create, modify, or delete an individual page instead, see [Pages]({{sitebase.url}}/docs/home/content_management/pages/). For general information about sections, see [About our framework]({{sitebase.url}}/docs/home/about_our_framework).
+> Learn how to create and order sections on Braze Docs. If you'd like to create, modify, or delete an individual page instead, see [Pages]({{site.baseurl}}/home/content_management/pages/). For general information about sections, see [About our framework]({{site.baseurl}}/home/about_our_framework).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -34,8 +34,8 @@ Replace the following:
 
 | Placeholder       | Description                                                                                                                                                                                                                                                                                                                                                                             |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{sitebase.url}}/docs/home/about_our_framework/#primary-sections).                                                                                                                                                                                                            |
-| `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{sitebase.url}}/docs/home/about_our_framework/#subsections).                                                                                                                                                                                                            |
+| `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{site.baseurl}}/home/about_our_framework/#primary-sections).                                                                                                                                                                                                            |
+| `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{site.baseurl}}/home/about_our_framework/#subsections).                                                                                                                                                                                                            |
 | `NEW_DIRECTORY`   | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.      |
 | `NEW_FILE`        | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -51,7 +51,7 @@ braze-docs
             └── getting_started.md
 ```
 
-Open your new Markdown file and add the following template to use the default landing-page layout. For other layouts, see [Layouts]({{sitebase.url}}/docs/home/examples/layouts).
+Open your new Markdown file and add the following template to use the default landing-page layout. For other layouts, see [Layouts]({{site.baseurl}}/home/examples/layouts).
 
 ```markdown
 ---
@@ -81,7 +81,7 @@ Replace the following:
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter).
+You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{site.baseurl}}/home/yaml_front_matter).
 {% endalert %}
 
 Next, open your new directory and create a Markdown file for each new page you want to add to your new section. Your directory structure should look similar to the following:
@@ -97,7 +97,7 @@ braze-docs
             └── getting_started.md
 ```
 
-[Add content]({{sitebase.url}}/docs/home/content_management/pages/#modifying-a-page) to each page as needed. When you're finished, continue to [Ordering a section](#ordering-a-section).
+[Add content]({{site.baseurl}}/home/content_management/pages/#modifying-a-page) to each page as needed. When you're finished, continue to [Ordering a section](#ordering-a-section).
 {% endtab %}
 
 {% tab without landing page %}
@@ -116,8 +116,8 @@ Replace the following:
 
 | Placeholder       | Description                                                                                                                                                                                                                                                                                                                                                                             |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{sitebase.url}}/docs/home/about_our_framework/#primary-sections).                                                                                                                                                                                                            |
-| `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{sitebase.url}}/docs/home/about_our_framework/#subsections).                                                                                                                                                                                                            |
+| `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{site.baseurl}}/home/about_our_framework/#primary-sections).                                                                                                                                                                                                            |
+| `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{site.baseurl}}/home/about_our_framework/#subsections).                                                                                                                                                                                                            |
 | `NEW_DIRECTORY`   | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.      |
 | `NEW_FILE`        | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -143,7 +143,7 @@ config_only: true
 ```
 
 {% alert tip %}
-You may add additional metadata and headings as needed, as this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{sitebase.url}}/docs/home/yaml_front_matter).
+You may add additional metadata and headings as needed, as this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{site.baseurl}}/home/yaml_front_matter).
 {% endalert %}
 
 Replace `NAV_TITLE` with the title of your page as it will appear on the left-side navigation bar. Your page should look similar to the following:
@@ -170,13 +170,13 @@ braze-docs
             └── getting_started.md
 ```
 
-[Add content]({{sitebase.url}}/docs/home/content_management/pages/#modifying-a-page) to each page as needed. When you're finished, continue to [Ordering a section](#ordering-a-section).
+[Add content]({{site.baseurl}}/home/content_management/pages/#modifying-a-page) to each page as needed. When you're finished, continue to [Ordering a section](#ordering-a-section).
 {% endtab %}
 {% endtabs %}
 
 ## Ordering a section
 
-To order a section, first, [create a new branch]({{sitebase.url}}/docs/home/github/creating_a_new_branch), then open one of the section's Markdown files in your text editor. Next, search for the `page_order` tag in your YAML metadata. If it doesn't exist, you can add it now.
+To order a section, first, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch), then open one of the section's Markdown files in your text editor. Next, search for the `page_order` tag in your YAML metadata. If it doesn't exist, you can add it now.
 
 The `page_order` tag represents a page's relative-order in a section on the left-side navigation bar and can be set to any non-negative number (such as `0`, `20`, or `5.5`). This means you'll need to know the `page_order` for each Markdown file in the current directory, but not any other directory (including subdirectories).
 

@@ -24,5 +24,5 @@ Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide
 {% endraw %}
 
 {% alert note %}
-For a full walkthrough, see [Cross-referencing]({{sitebase.url}}/docs/home/contributing/content_management/cross_referencing/).
+For a full walkthrough, see [Cross-referencing]({{site.baseurl}}/home/contributing/content_management/cross_referencing/).
 {% endalert %}
