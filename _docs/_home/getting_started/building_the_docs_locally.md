@@ -12,7 +12,7 @@ noindex: true
 
 To build the docs locally, you'll need to [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/). You only need to complete this process once.
 
-## Starting a local server
+## Starting your site preview
 
 ### Step 1: Checkout a branch
 
@@ -60,7 +60,7 @@ By default, your site preview will be generated on localhost [`http://127.0.0.1:
 
 To stop your local server, reopen the terminal and press <kbd>Control</kbd> + <kbd>C</kbd>.
 
-## Updating the site preview
+## Updating your site preview
 
 In most cases, your site preview will update automatically when you make changes to the files in `braze-docs`. When this happens, your terminal will output a message similar to the following:
 
