@@ -95,7 +95,7 @@ tool:
 ---
 ```
 
-### Hide from navigation {#hide-page}
+### Hide page from navigation {#hide-page}
 
 The `hidden` key is used to hide a page from the left-side navigation on Braze Docs. This key accepts the boolean values `true` or `false`.
 
@@ -107,7 +107,7 @@ hidden: true
 ---
 ```
 
-### Hide from search
+### Hide page from search
 
 The `noindex` key is used to hide a page from internal and external search results (such as Braze Docs and Google Search). This key accepts the boolean values `true` or `false`.
 
@@ -121,13 +121,32 @@ noindex: true
 
 ### Hide table of contents
 
-The `hide_toc` key is used to hide the in-page Table of Contents (toc) on the right side of the page. This key accepts the boolean values `true` or `false`.
+The `hide_toc` key is used to hide the in-page Table of Contents (TOC) on the right side of the page. This key accepts the boolean values `true` or `false`.
 
 **Usage example:**
 
 ```markdown
 ---
 hide_toc: true
+---
+```
+
+### Hide heading from table of contents
+
+The `toc_headers` key is used to hide all headings of the same level from the in-page Table of Contents (TOC) on the right side of the page. This key accepts the following string values:
+
+- `h1`
+- `h2`
+- `h3`
+- `h4`
+
+`toc_headers` will hide all headings matching its assigned value; it cannot be used to hide specific headings from the TOC.
+
+**Usage example:**
+
+```markdown
+---
+toc_headers: h2
 ---
 ```
 
