@@ -6,7 +6,7 @@ noindex: true
 
 # Building the docs locally
 
-> Learn how to build the docs locally, so you can preview the changes in your Git branch before creating a Pull Request (PR).
+> Learn how to build the docs locally, so you can preview the changes in your current branch before [creating a Pull Request (PR)]({{site.baseurl}}/home/github/creating_a_pull_request/).
 
 ## Prerequisites
 
