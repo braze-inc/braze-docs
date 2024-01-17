@@ -32,6 +32,7 @@ These default limits can be increased upon request. Reach out to your customer s
 | [`/users/external_id/remove`][21] | 1,000 requests per minute. |
 | [`/events/list`][15] | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |
 | [`/purchases/product_list`][16] | 1,000 requests per hour, shared with the `/events/list` endpoint. |
+| [`/campaigns/data_series`][17.3] | 50,000 requests per minute. |
 | [`/messages/send`][17] | 250 requests per minute for broadcast calls (when only specifying a segment or Connected Audience). Otherwise, 250,000 requests per hour. |
 | [`/campaigns/trigger/send`][17.1] | 250 requests per minute for broadcast calls (when only specifying a segment or Connected Audience). Otherwise, 250,000 requests per hour. |
 | [`/canvas/trigger/send`][17.2] | 250 requests per minute for broadcast calls (when only specifying a segment or Connected Audience). Otherwise, 250,000 requests per hour. |
@@ -115,6 +116,7 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [17]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [17.1]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
 [17.2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
+[17.3]: {{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/
 [18]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/
 [19]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [20]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/

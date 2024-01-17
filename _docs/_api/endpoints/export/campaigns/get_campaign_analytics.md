@@ -26,7 +26,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Rate limit
 
-{% multi_lang_include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='export campaign analytics' %}
 
 ## Request parameters
 
