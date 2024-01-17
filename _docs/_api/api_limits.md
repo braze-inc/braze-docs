@@ -116,7 +116,7 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [17]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [17.1]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
 [17.2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[17.3]: {{site.baseurl}}/api/endpoints/export/campaigns/get_send_analytics/
+[17.3]: {{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/
 [18]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/
 [19]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [20]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
