@@ -10,7 +10,9 @@ channel: push
 
 If you can't launch a push campaign or Canvas step because your push payload is too large, check out these tips for reducing your push notification payload size.
 
-> Our maximum payload size is **3,807 bytes**. If your push exceeds this size, the message may not be sent. As a best practice, keep your payload to a few hundred bytes.
+{% alert note %}
+Our maximum payload size is **3,807 bytes**. If your push exceeds this size, the message may not be sent. As a best practice, keep your payload to a few hundred bytes.
+{% endalert %}
 
 ## What is a push payload?
 
