@@ -63,7 +63,7 @@ When running A/B test on in-app messages, your analytics may appear to show a hi
 
 ![Graph of Unique Recipients for two variants with a similar shape between Variant A and Variant C, where Variant A has a higher Unique Recipients count per day]({% image_buster /assets/img/variant_distribution_iam.png %})
 
-Variant A has a consistently higher count of *Unique Recipients* than Variant C. This isn't due to variant distribution, but rather how *Unique Recipients* are calculated for in-app messages. For in-app messages, *Unique Recipients* are actually *Unique Impressions*, which is the total number of people who received and viewed the in-app message. This means if a user doesn't view the message, they are not included in the *Unique Recipients* count and the variant distribution can appear skewed.
+Variant A has a consistently higher count of *Unique Recipients* than Variant C. This isn't due to variant distribution, but rather how *Unique Recipients* are calculated for in-app messages. For in-app messages, *Unique Recipients* are actually *Unique Impressions*, which is the total number of people who received and viewed the in-app message. This means if a user doesn't receive the message for whatever reason or decides not to view it, they are not included in the *Unique Recipients* count, and the variant distribution can appear skewed.
 
 ## Five rules for multivariate and A/B testing {#five-rules-for}
 
