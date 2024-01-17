@@ -15,7 +15,7 @@ channel: in-app messages
 
 ## Prerequisites
 
-To integrate Flutter's in-app messaging with iOS, you'll need to [enable in-app messaging using the Braze Swift SDK]({{sitebase.url}}/developer_guide/platform_integration_guides/swift/in-app_messaging/in-app_message_delivery/#enabling-in-app-messages). There are no prerequisites for Android.
+To integrate Flutter's in-app messaging with iOS, you'll need to [enable in-app messaging using the Braze Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/in-app_message_delivery/#enabling-in-app-messages). There are no prerequisites for Android.
 
 ## Logging analytics
 
