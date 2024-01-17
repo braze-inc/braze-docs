@@ -73,10 +73,10 @@ Asset Pipeline: Saved 'global-128fd02b54e35ea79fcb21ea460fac06.js' to '/Users/al
 To see these updates in your browser, refresh the page.
 
 {% alert tip %}
-You can refresh the current page in your browser by pressing <kbd>Command</kbd> + <kbd>R</kbd> on macOS or <kbd>Control</kbd> + <kbd>R</kbd> on Windows.
+You can refresh the page in your browser by pressing <kbd>Command</kbd> + <kbd>R</kbd> on macOS or <kbd>Control</kbd> + <kbd>R</kbd> on Windows.
 {% endalert %}
 
-However, there are cases where your site preview will **not** be automatically updated, such as when:
+However, there are cases when your site preview will **not** be automatically updated, such as when:
 
 - File or directory names are changed
 - New files or directories are added
