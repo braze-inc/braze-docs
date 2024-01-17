@@ -19,9 +19,11 @@ API rate limits are subject to change depending on the proper usage of our syste
 
 ## Rate limits by request type
 
-The following table lists the default API rate limits for different request types. All other requests not listed in this table have a default rate limit of 250,000 requests per hour. 
+The following table lists the default API rate limits for different request types. These default limits can be increased upon request. Reach out to your customer success manager for more information.
 
-These default limits can be increased upon request. Reach out to your customer success manager for more information.
+{% alert note %}
+Requests not listed in this table share a total default rate limit of 250,000 requests per hour.
+{% endalert %}
 
 | Request Type | Default API Rate Limit |
 | --- | --- |
