@@ -11,9 +11,13 @@ channel: in-app messages
 
 # In-app messages integration
 
-> Native in-app messages display automatically on Android and iOS when using Flutter. This article covers different customization options for in-app messages for Flutter.
+> Learn how to integrate and customize in-app messages for Android and iOS using Flutter.
 
-## Analytics
+## Prerequisites
+
+To integrate Flutter's in-app messaging with iOS, you'll need to [enable in-app messaging using the Braze Swift SDK]({{sitebase.url}}/developer_guide/platform_integration_guides/swift/in-app_messaging/in-app_message_delivery/#enabling-in-app-messages). This is not required for Android.
+
+## Logging analytics
 
 To log analytics using your `BrazeInAppMessage`, pass the instance into the desired analytics function:
 - `logInAppMessageClicked`
@@ -104,7 +108,7 @@ To store any in-app messages triggered before the callback is available and repl
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
 
-## Test displaying a sample in-app message
+## Testing a sample in-app message
 
 Follow these steps to test a sample in-app message.
 
