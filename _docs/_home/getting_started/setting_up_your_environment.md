@@ -6,7 +6,7 @@ noindex: true
 
 # Setting up your environment
 
-> Learn how to set up your local environment, so you can make complex or multi-document changes to Braze Docs. After it's set up, you'll be able to [build the docs locally]({{site.baseurl}}/home/getting_started/building_the_docs_locally/) and review your work an offline site preview.
+> Learn how to set up your local environment, so you can make complex or multi-document changes to Braze Docs. After it's set up, you'll be able to [build the docs locally]({{site.baseurl}}/home/getting_started/building_the_docs_locally/) and review your work in an offline version of Braze Docs.
 
 {% alert tip %}
 You only need to set up your environment a single time.
