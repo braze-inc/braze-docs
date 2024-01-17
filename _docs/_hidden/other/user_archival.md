@@ -24,7 +24,7 @@ That is, personal data processed and stored should be kept for no longer than is
 
 ### Active users
 
-Braze defines an "active user" for a given period of time as any user who has recorded a session in a mobile app or website, has been updated, has been sent a message or interacted with a message.
+Braze defines an "active user" for a given period of time as any user who has recorded a session in a mobile app or website, has been updated, has been sent a message, or has interacted with a message.
 
 If you set user IDs to identify users when a new user logs in they will be counted as a separate active user. Users who are updated via the API will also be counted as an active user in the time period that they are updated.
 
