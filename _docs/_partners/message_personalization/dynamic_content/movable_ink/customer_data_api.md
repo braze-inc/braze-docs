@@ -42,7 +42,7 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 
 1. In the **Webhook URL** field, enter the Movable Ink endpoint URL.
 
-![][img1]{: style="max-width:75%" }
+![Compose tab of the webhook composer in Braze with the Movable Ink endpoint URL and Request Body set to JSON Key/Value Pairs.][img1]{: style="max-width:75%" }
 
 {:start="2"}
 2. Select the **Settings** tab.
@@ -54,14 +54,14 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 | Authorization | Enter the Basic Authentication you received from Movable Ink. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][img2]{: style="max-width:75%" }
+![Settings tab of the webhook composer in Braze with key-value pairs for Content-Type and Authorization.][img2]{: style="max-width:75%" }
 
 #### Step 1c: Configure your payload
 
 1. Return to the **Compose** tab.
 2. For your **Request Body**, either create your own request body with JSON key-value pairs, or enter your event payload as raw text. Refer to the [sample payloads](#sample-payloads) for examples of standard eCommerce events.
 
-![][img3]{: style="max-width:75%" }
+![Compose tab of the webhook composer in Braze with JSON key-value pairs for ID, timestamp, user ID, and event type.][img3]{: style="max-width:75%" }
 
 #### Step 1d: Test your webhook {#step-1d}
 
@@ -77,7 +77,7 @@ To test your webhook, do the following:
 2. Preview the message as a user to view a sample event payload for that user. You can choose between previewing as a random user, specific user, or custom user.
 3. If everything looks good, click **Send test** to send a test request.
 
-![][img4]{: style="max-width:75%" }
+![Webhook response message in Braze showing a 200 OK response.][img4]{: style="max-width:75%" }
 
 ### Step 2: Finalize your campaign setup
 
@@ -103,7 +103,7 @@ Next, determine which users you want to target for this campaign. For details, r
 
 Make sure not to use A/B testing in your campaign by clearing the **Control Group** checkbox. If a control group is included, a percentage of users will not have data sent to Movable Ink. All of your audience should go to the variant rather than the control group.
 
-![][img5]
+![A/B Testing panel in a Braze campaign with 100% variant distrubtion assigned to Variant 1, and no control group.][img5]
 
 #### Step 2c: Choose conversion events (optional)
 
@@ -156,7 +156,41 @@ For more, refer to the example webhooks under [sample payloads](#sample-payloads
 ### Product View Event
 
 {% tabs local %}
-{% tab Example request %}
+{% tab Example Braze Trigger Event %}
+
+{% raw %}
+
+```json
+{
+  "events": [
+    {
+      "email": "test@braze.com",
+      "name": "Product Viewed",
+      "time": "2023-12-06T19:20:45+01:00",
+      "properties": {
+        "categories": [
+          {
+            "id": "Bathroom",
+            "url": "https://example.com/cat/bathroom"
+          }
+        ],
+        "meta": {
+          "color": "green"
+        },
+        "title": "All-Purpose Cleaning Wipes",
+        "price": 1.99,
+        "id": "56544",
+        "url": "https://www.example.com/variants_id/5f08cb918dcc595aa74b0fbc"
+      }
+    }
+  ]
+}
+```
+
+{% endraw %}
+
+{% endtab %}
+{% tab Expected MovableInk Request Payload %}
 
 {% raw %}
 
@@ -244,7 +278,31 @@ In this example, a hashed email address is used as the `anonymous_id` for users 
 ### Category View Event
 
 {% tabs local %}
-{% tab Example request %}
+{% tab Example Braze Trigger Event %}
+
+{% raw %}
+
+```json
+{
+  "events": [
+    {
+      "external_id": "123456789",
+      "name": "Category Viewed",
+      "time": "2023-12-06T19:20:45+01:00",
+      "properties": {
+        "id": "bathroom-1",
+        "title": "Bathroom Stuff",
+        "url": "https://www.example.com/categories/bathroom"
+      }
+    }
+  ]
+}
+```
+
+{% endraw %}
+
+{% endtab %}
+{% tab Expected MovableInk Request Payload %}
 
 {% raw %}
 
@@ -302,9 +360,6 @@ This example shows a webhook tracking events for only known users (users with an
 
 ### Cart Add Event
 
-{% tabs local %}
-{% tab Example request %}
-
 {% raw %}
 
 ```
@@ -337,24 +392,8 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 ```
 
 {% endraw %}
-{% endtab %}
-{% tab Example webhook %}
-
-{% raw %}
-
-```liquid
-
-```
-
-{% endraw %}
-
-{% endtab %}
-{% endtabs %}
 
 ### Product Search Event
-
-{% tabs local %}
-{% tab Example request %}
 
 {% raw %}
 
@@ -377,24 +416,8 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 ```
 
 {% endraw %}
-{% endtab %}
-{% tab Example webhook %}
-
-{% raw %}
-
-```liquid
-
-```
-
-{% endraw %}
-
-{% endtab %}
-{% endtabs %}
 
 ### Conversion Event
-
-{% tabs local %}
-{% tab Example request %}
 
 {% raw %}
 
@@ -446,58 +469,29 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 ```
 
 {% endraw %}
-{% endtab %}
-{% tab Example webhook %}
-
-The following is a sample payload for purchases at the order level.
-
-{% raw %}
-
-```
-
-POST https://YOUR_REST_API_URL/users/track
-Content-Type: application/json
-Authorization: BASIC AUTH
-
-{
-  "purchases": [
-    {
-      "external_id": "user1",
-      "app_id": "11ae5b4b-2445-4440-a04f-bf537764c9ad",
-      "product_id": "Completed Order",
-      "currency": "USD",
-      "price": 219.98,
-      "time": "2013-07-16T19:20:30+01:00",
-      "properties": {
-        "products": [
-          {
-            "name": "Monitor",
-            "category": "Gaming",
-            "product_amount": 19.99
-          },
-          {
-            "name": "Gaming Keyboard",
-            "category": "Gaming",
-            "product_amount": 199.99
-          }
-        ]
-      }
-    }
-  ]
-}
-
-
-```
-
-{% endraw %}
-
-{% endtab %}
-{% endtabs %}
 
 ### Identify Event
 
 {% tabs local %}
-{% tab Example request %}
+{% tab Example Braze Trigger Event %}
+
+{% raw %}
+
+```json
+{
+  "events": [
+    {
+      "external_id": "123456789",
+      "name": "Account Created",
+      "time": "2023-12-06T19:20:45+01:00"
+    }
+  ]
+}
+```
+
+{% endraw %}
+{% endtab %}
+{% tab Expected MovableInk Request Payload %}
 
 {% raw %}
 
