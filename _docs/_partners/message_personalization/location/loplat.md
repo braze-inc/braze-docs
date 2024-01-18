@@ -40,7 +40,7 @@ Integrate the loplat SDK and the Braze SDK in your app using the steps provided 
 
 ### Step 2: Sync the Braze and loplat X dashboards and create a campaign
 
-Create a new API key in the Braze dashboard. Copy the API key and paste it at **Settings > API Settings** in the loplat X dashboard. See the [loplat X user's guide](https://loplat-loplat.gitbook.io/loplat-x-user-guide-en/integration/braze) for more details.
+Create a new API key in the Braze dashboard. Copy the API key and paste it at **Settings > API Settings** in the loplat X dashboard. See the [loplat X user's guide](https://loplatx-user-guide.notion.site/Campaign-integration-b92f8120cbe74d19a3a5f593657b4e8e?pvs=25) for more details.
 
 #### API-triggered delivery
 

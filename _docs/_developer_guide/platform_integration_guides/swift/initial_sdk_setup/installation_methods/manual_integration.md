@@ -9,7 +9,7 @@ toc_headers: "h2"
 
 # Manual integration
 
-> If you don't have access to a package manager, such as [Swift Package Manager]({{sitebase.url}}/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) or [CocoaPods]({{sitebase.url}}/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/), you can manually integrate the Swift SDK instead.
+> If you don't have access to a package manager, such as [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) or [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/), you can manually integrate the Swift SDK instead.
 
 ## Step 1: Download the Braze SDK
 
