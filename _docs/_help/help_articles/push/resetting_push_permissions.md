@@ -12,7 +12,7 @@ If you're experiencing issues with push notifications in your browser, you may n
 
 ## Reset Chrome on desktop
 
-1. Next to your URL in the Chrome browser, click the slider icon to view site information.
+1. Next to your URL in the Chrome browser, click the **View Site Information** slider icon.
 2. Click **Site Settings**.
 3. Under **Permissions**, locate **Notifications** and select "Ask (default)".
 4. Return to your site and reopen the site information menu again (steps 2–3).
