@@ -80,7 +80,7 @@ Braze supports exporting the following data listed in the Currents [user behavio
 - Location: `users.behaviors.Location`
 - Purchase: `users.behaviors.Purchase`
 - Uninstall: `users.behaviors.Uninstall`
-- App (first session, news feed impression, session end, session start)
+- App (first session, session end, session start)
   - `users.behaviors.app.FirstSession`
   - `users.behaviors.app.SessionEnd`
   - `users.behaviors.app.SessionStart`
