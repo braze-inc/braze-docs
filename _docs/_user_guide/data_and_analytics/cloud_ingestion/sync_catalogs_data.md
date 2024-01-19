@@ -1,13 +1,13 @@
 ---
-nav_title: Sync Catalogs Data
-article_title: Cloud Data Ingestion Sync Catalogs Data
+nav_title: Sync Catalog Data
+article_title: Cloud Data Ingestion Sync Catalog Data
 page_order: 2.1
 page_type: reference
-description: "This reference article provides an overview of how to sync catalogs data."
+description: "This reference article provides an overview of how to sync catalog data."
 
 ---
 
-# Sync and delete catalogs data
+# Sync and delete catalog data
 
 {% alert important %}
 Braze Cloud Data Ingestion support for catalogs is currently in early access, and is available for Snowflake, Redshift, BigQuery, and Databricks sources. Contact your Braze account manager if you are interested in participating in the early access.
@@ -20,10 +20,10 @@ Before creating a new Cloud Data Ingestion (CDI) integration for [catalogs]({{si
 - Create a catalog in the [Braze dashboard]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-2-create-in-browser)
 - Create a catalog using the [Create catalog endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)
 
-Any changes to the catalog schema (for example, adding new fields, changing field type) must be made through the catalogs dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your data warehouse data and the schema in Braze.
+Any changes to the catalog schema (for example, adding new fields, changing field type) must be made through the catalog dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your data warehouse data and the schema in Braze.
 
-## Step 2: Integrate Cloud Data Ingestion with catalogs data
-The setup for a catalogs sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
+## Step 2: Integrate Cloud Data Ingestion with catalog data
+The setup for a catalog sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
 
 {% tabs %}
 {% tab Snowflake %}
@@ -94,7 +94,7 @@ The setup for a catalogs sync closely follows the process for [user-data CDI int
 {% endtab %}
 {% tab BigQuery %}
 
-1. Optionally, set up a new Project or Dataset to hold your source table. Create one or more tables to use for your CDI integration with the following fields:
+1. Optionally, set up a new project or dataset to hold your source table. Create one or more tables to use for your CDI integration with the following fields:
 
 | FIELD NAME | TYPE | MODE |
 | --- | --- | --- |
@@ -105,7 +105,7 @@ The setup for a catalogs sync closely follows the process for [user-data CDI int
 
 {:start="2"}
 
-2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse those - just make sure to extend access to the Catalog source table. 
+2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse those&#8212;just make sure to extend access to the catalog source table. 
 The service account should have the below permissions:
 - BigQuery Connection User: This will allow Braze to make connections
 - BigQuery User: This will provide Braze access to run queries, read dataset metadata, and list tables.
@@ -129,11 +129,13 @@ The service account should have the below permissions:
 
 {:start="2"}
 
-2. In order for Braze to access Databricks, a personal access token needs to be created.
-- In your Databricks workspace, click your Databricks username in the top bar, and then select User Settings from the drop-down.
-- On the Access tokens tab, click Generate new token.
-- Enter a comment that helps you to identify this token, such as “Braze CDI”, and change the token’s lifetime to no lifetime by leaving the Lifetime (days) box empty (blank). Click Generate.
-- Copy the displayed token, and then click Done.
+2. Create a personal access token in your Databricks workspace.
+a. Select your Databricks username, then select **User Settings** from the dropdown menu.
+b. On the **Access tokens** tab, select **Generate new token**.
+c. Enter a comment that helps you to identify this token, such as "Braze CDI". 
+d. Change the token’s lifetime to no lifetime by leaving the **Lifetime (days)** box blank. Select **Generate**.
+d. Copy the displayed token, and then select **Done**. 
+
 Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
 
 {:start="3"}
@@ -143,8 +145,7 @@ Keep the token in a safe place until you need to enter it on the Braze dashboard
 {% endtabs %}
 
 ## How the integration works
-- Each time the sync runs, we will pull in all rows where `UPDATED_AT` is after the last timestamp synced. 
-- To set up a source table that will fully refresh each time a sync runs, we’d recommend creating a view from your catalog data. For example, if you have a table of product data (`product_catalog_1`) with `product_id`, `price`, and three additional attributes, you could sync the below view:
+Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is after the last timestamp synced. To set up a source table that will fully refresh each time a sync runs, we recommend creating a view from your catalog data. For example, if you have a table of product data (`product_catalog_1`) with `product_id`, `price`, and three additional attributes, you could sync the below view:
 
 {% tabs %}
 {% tab Snowflake %}
