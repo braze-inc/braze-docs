@@ -130,13 +130,18 @@ The service account should have the below permissions:
 {:start="2"}
 
 2. Create a personal access token in your Databricks workspace.
-a. Select your Databricks username, then select **User Settings** from the dropdown menu.
-b. On the **Access tokens** tab, select **Generate new token**.
-c. Enter a comment that helps you to identify this token, such as "Braze CDI". 
-d. Change the token’s lifetime to no lifetime by leaving the **Lifetime (days)** box blank. Select **Generate**.
-d. Copy the displayed token, and then select **Done**. 
 
-Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
+- a. Select your Databricks username, then select **User Settings** from the dropdown menu.
+
+- b. On the **Access tokens** tab, select **Generate new token**.
+
+- c. Enter a comment that helps you to identify this token, such as "Braze CDI". 
+
+- d. Change the token’s lifetime to no lifetime by leaving the **Lifetime (days)** box blank. Select **Generate**.
+
+- e. Copy the displayed token, and then select **Done**. 
+
+- f. Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
 
 {:start="3"}
 3. If you have network policies in place, you must give Braze network access to your Databricks instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) page.
