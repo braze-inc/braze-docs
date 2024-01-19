@@ -40,11 +40,6 @@ doc_menu_list:
     image: /assets/img/new-icons/circle-info-solid.svg
     link: /docs/help/home
     description: "Find articles to help troubleshoot issues you may encounter and learn more about best practices to communicate with your users."
-  - name: Compliance
-    bg_color: '#ff9349'
-    image: /assets/img/new-icons/file-contract-solid.svg
-    link: /docs/compliance/
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 popular_topic_list:
   - name: Braze API Dictionary
