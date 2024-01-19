@@ -69,7 +69,7 @@ Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 
 ### User ID schema
 
-Importantly, note the difference between the Braze and Snowflake naming conventions for user IDs. 
+Note the following differences between Braze and Snowflake naming conventions for user IDs.
 
 | Braze schema | Snowflake schema | Description | 
 | ----------- | ----------- | ----------- |
