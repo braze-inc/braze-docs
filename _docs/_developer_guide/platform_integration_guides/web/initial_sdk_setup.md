@@ -23,7 +23,7 @@ There are three easy ways to integrate the Web SDK to include analytics and mess
 If your website uses a `Content-Security-Policy`, then follow our [CSP Header Guide][19] in addition to the following integration steps.
 
 {% alert important %}
-uBlock (ad blocker) blocks the Braze SDK JavaScript from loading onto pages when the SDK is installed via [Braze CDN](#install-cdn) or [Google tag manager](#install-gtm). uBlock doesn't block the Braze SDK JavaScript when the SDK is installed via [NPM or Yarn](#install-npm).
+While most ad blockers will not block the Braze Web SDK, some more restrictive ad blockers are known to cause issues.
 {% endalert %}
 
 ### Option 1: NPM or Yarn {#install-npm}
