@@ -67,9 +67,15 @@ Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 
 [Download the raw table schemas here.][schemas]
 
-{% alert important %}
-The Snowflake schema has a different structure to other data Braze data tables whereby "braze_id" which references the anaonymous user's ID that Braze creates is labelled as "USER_ID" in Snowflake. The Snowflake field "EXTERNAL_USER_ID" in the default "external_id" field in Braze that stores the user's known GUID.
-{% endalert %}
+### User ID schema
+
+Importantly, note the difference between the Braze and Snowflake naming conventions for user IDs. 
+
+| Braze schema | Snowflake schema | Description | 
+| ----------- | ----------- | ----------- |
+| `braze_id` | `"USER_ID"` | The unique identifier that is automatically assigned by Braze. |
+| `external_id` | `"EXTERNAL_USER_ID"` | The unique identifier of a user's profile that is set by the customer. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Important information and limitations
 
