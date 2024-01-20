@@ -97,7 +97,7 @@ git status
 `git status` displays the current status of your Git directory. If you're new to Git, you can run this command after every step to help visualize the Git workflow. For more information, see [`git status`](https://git-scm.com/docs/git-status).
 {% endalert %}
 
-In the docs repository, the `develop` branch reflects the most up-to-date version of Braze Docs. Checkout the `develop` branch and pull the latest updates into your local environment.
+In the docs repository, the `develop` branch reflects the most up-to-date version of Braze Docs. Check out the `develop` branch and pull the latest updates into your local environment.
 
 ```bash
 git checkout develop
@@ -225,6 +225,25 @@ Approved contributions will be deployed on the next Tuesday or Thursday. Be sure
 After you or a member of the Braze Docs team reviews your work, you may need to make additional changes to your PR. You can do so using your local environment or GitHub.
 
 {% tabs %}
+{% tab github %}
+In your PR, select **Files Changed**.
+
+![An example pull request with the "Files Changes" tab highlighted.]()
+
+Locate the file you'd like to update, then select <i class="fa-solid fa-ellipsis"></i> **Show options** > **Edit file**.
+
+![The "Filed" section in an example pull request with the "Edit file" button highlighted.]()
+
+When you're finished, select **Commit changes**.
+
+![A file from an example pull request with the "Commit changes" button highlighted after editing.]()
+
+Select **Commit directly to the BRANCH_NAME branch** > **Commit changes**, where `BRANCH_NAME` is the name of your branch.
+
+![The "Commit changes" button highlighted after choosing "Commit directly to BRANCH_NAME branch.]()
+
+When you're ready, [request a review]({{site.baseurl}}/docs/home/getting_started/your_first_contribution/?tab=local%20environment#request-a-review) next.
+{% endtab %}
 {% tab local environment %}
 In your PR, select <i class="fa-regular fa-clone"></i> **Copy** next to your branch name.
 
@@ -244,80 +263,6 @@ Switched to branch 'fixing-typo-in-metadata'
 Your branch is up to date with 'origin/fixing-typo-in-metadata'.
 ```
 
-In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/). For help navigating the `braze-docs` repository, see [Directory structure]({{site.baseurl}}/home/about_our_framework/).
-
-![A text editor with an example document open.]()
-
-When you're finished, save your changes, then select the terminal and check your Git status. The output is similar to the following:
-
-```bash
-$ git status
-On branch fixing-typo-in-metadata
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   _docs/_home/metadata.md
-
-no changes added to commit (use "git add" and/or "git commit -a")
-```
-
-Use `git add` to tell Git which changes you want to stage for your commit. In the following example, there are two options:
-
-- **Left side of pipe:** Add all of your changed files using `--all`.
-- **Right side of pipe:** Add an individual file by replacing `PATH_TO_FILE` with the relative path to your changed file.
-
-```bash
-git add {--all|PATH_TO_FILE}
-```
-
-Use `git commit` with the `-m` flag to create your commit along with a short description (or message).
-
-```bash
-git commit -m "COMMIT_MESSAGE"
-```
-
-Replace `COMMIT_MESSAGE` with a short sentence describing your changes. The output is similar to the following:
-
-```bash
-$ git commit -m "Fixing a typo in the recommended software doc."
-[fixing-typo-in-recommended-software 8b05e34] Fixing a typo in the recommended software doc.
- 1 file changed, 1 insertion(+), 1 deletion(-)
-```
-
-Finally, push your new changes to the remote branch on GitHub, then [request a review]({{site.baseurl}}/docs/home/getting_started/your_first_contribution/?tab=local%20environment#request-a-review).
-
-```bash
-git push
-```
-
-The output is similar to the following:
-
-```bash
-$ git push
-Enumerating objects: 14, done.
-...
-To github.com:braze-inc/braze-docs.git
- * [new branch]      fixing-typo-in-recommended-software -> fixing-typo-in-recommended-software
-branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo-in-recommended-software'.
-```
-{% endtab %}
-{% tab github %}
-In your PR, select **Files Changed**.
-
-![An example pull request with the "Files Changes" tab highlighted.]()
-
-Locate the file you'd like to update, then select <i class="fa-solid fa-ellipsis"></i> **Show options** > **Edit file**.
-
-![The "Filed" section in an example pull request with the "Edit file" button highlighted.]()
-
-When you're finished, select **Commit changes**.
-
-![A file from an example pull request with the "Commit changes" button highlighted after editing.]()
-
-Select **Commit directly to the BRANCH_NAME branch** > **Commit changes**, where `BRANCH_NAME` is the name of your branch.
-
-![The "Commit changes" button highlighted after choosing "Commit directly to BRANCH_NAME branch.]()
-
-When you're ready, [request a review]({{site.baseurl}}/docs/home/getting_started/your_first_contribution/?tab=local%20environment#request-a-review) next.
+In your text editor, open the document you want to change, then make your changes using the same process from step 2.
 {% endtab %}
 {% endtabs %}
