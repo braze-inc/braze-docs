@@ -9,8 +9,6 @@ search_tag: Partner
 
 # Scuba Analytics
 
-> TODO: time-series or time-serialized?
-
 >[Scuba Analytics][1] is a full-stack, machine-learning-powered data collaboration platform designed for high-velocity time-series data. It redefines how organizations handle first-party and high-velocity time-series data, offering insights into customers and real-time competition tracking.
 
 ## Prerequisites
@@ -70,8 +68,6 @@ Replace the following:
 By default, `update_existing_only` is set to `false` which will update your existing records in Braze, as well as create new records for those that don't exist. To prevent Scuba from creating new records, set `update_existing_only` to `true`.
 
 ### Rate limit
-
-> TODO: Verify this rate limit is correct with Lydia.
 
 To comply with Braze API rate limits, this endpoint restricts the number of entities processed to a maximum of 50,000 per minute.
 
