@@ -10,7 +10,7 @@ noindex: true
 
 ## Prerequisites
 
-To build the docs locally, you'll need to [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/). You only need to complete this process once.
+To build the docs locally, you'll need to [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/). You'll only need to do this once.
 
 ## Starting your site preview
 
@@ -22,7 +22,7 @@ In your terminal, [get the latest updates from `develop`]({{site.baseurl}}/home/
 git checkout BRANCH_NAME
 ```
 
-Replace `BRANCH_NAME` with one of your branches or another person's branch you're reviewing. Your command should be similar to the following:
+Replace `BRANCH_NAME` with one of your branches or another person's branch you'd like to preview. Your command should be similar to the following:
 
 ```bash
 git checkout BD-2346-fixing-typo-swift

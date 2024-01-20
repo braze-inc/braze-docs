@@ -28,5 +28,4 @@ If you find this string in the URL, one or more of your cross-reference links ar
 
 A cross-reference link surrounded by Liquid raw tags will look similar to the following:
 
-![An image of Liquid's raw tag used in an example codeblock. An image is used here to prevent Liquid from linting the example.]()
-
+![An image of Liquid's raw tag used in an example code block. An image is used here to prevent Liquid from linting the example.]()

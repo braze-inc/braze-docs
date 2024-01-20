@@ -43,4 +43,3 @@ Replace `BRANCH_NAME` with a short, non-space-separated description of your bran
 $ git checkout -b fixing-typo-in-metadata
 Switched to a new branch 'fixing-typo-in-metadata'
 ```
-

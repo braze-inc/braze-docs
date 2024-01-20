@@ -58,7 +58,7 @@ description: "If you're new to Braze Docs, start with this step-by-step tutorial
 
 ### Navigation title
 
-The `nav_title` key is used to set the page title on the left-side navigation bar on Braze Docs. This key accepts any `string` less than 30 characters. If the [`hidden`](#hide-page) key is set to `true`, `nav_title` is not required.
+The `nav_title` key is used to set the page title on the left-side navigation bar on Braze Docs. This key accepts any `string` less than 30 characters. If the [`hidden`](#hide-page-from-navigation) key is set to `true`, `nav_title` is not required.
 
 **Usage example:**
 
@@ -95,7 +95,7 @@ tool:
 ---
 ```
 
-### Hide page from navigation {#hide-page}
+### Hide page from navigation
 
 The `hidden` key is used to hide a page from the left-side navigation on Braze Docs. This key accepts the boolean values `true` or `false`.
 
@@ -186,7 +186,7 @@ config_only: true
 
 ### Override default URL
 
-The `permalink` key is used with the [`hidden`](#hide-from-navigation) key to override the default URL for a page on Braze Docs. The value assigned to `permalink` will be prepended with `https://www.braze.com/docs` before redirecting. This key accepts any `string` value meeting the following requirements:
+The `permalink` key is used with the [`hidden`](#hide-page-from-navigation) key to override the default URL for a page on Braze Docs. The value assigned to `permalink` will be prepended with `https://www.braze.com/docs` before redirecting. This key accepts any `string` value meeting the following requirements:
 
 - Characters are lowercase
 - Words are separated by underscores (`_`)

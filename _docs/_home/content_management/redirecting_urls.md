@@ -81,4 +81,3 @@ local_redirect:
 ```
 
 {% multi_lang_include contributing/minis/creating_a_pull_request.md %}
-

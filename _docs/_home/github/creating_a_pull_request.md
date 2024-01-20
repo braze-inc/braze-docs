@@ -70,4 +70,3 @@ In the PR description, you'll see Markdown comments similar to the following. Us
 When you're finished, select the pull request dropdown, then select **Draft pull request**.
 
 ![The Braze Docs GitHub repository with the "Draft pull request" button highlighted.]()
-

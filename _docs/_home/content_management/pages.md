@@ -75,4 +75,3 @@ Other than the Braze-specific syntax covered in this section, all page content s
 {% multi_lang_include contributing/minis/cross_referencing.md %}
 
 {% multi_lang_include contributing/minis/adding_images.md %}
-

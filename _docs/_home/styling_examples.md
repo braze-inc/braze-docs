@@ -184,20 +184,20 @@ For tables columns which word-break should be reset to the default style, use Ma
 {% tabs local %}
 {% tab Before %}
 
-| Event Name                           | Feed Type              | Description                                                                               | Custom Attributes
-| ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed           | An email was successfully delivered to a User's mail server.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                         | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| In-App-Message-Impression            | Platform-specific Feed | User viewed an In-App Message.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
+| Event Name                                                       | Feed Type              | Description                                                  | Custom Attributes                                                             |
+|------------------------------------------------------------------|------------------------|--------------------------------------------------------------|-------------------------------------------------------------------------------|
+| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG             | Unbound Feed           | An email was successfully delivered to a User's mail server. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | Unbound Feed           | User opened an email.                                        | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
+| In-App-Message-Impression                                        | Platform-specific Feed | User viewed an In-App Message.                               | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
 
 {% endtab %}
 {% tab After %}
 
-| Event Name                           | Feed Type              | Description                                                                               | Custom Attributes
-| ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed           | An email was successfully delivered to a User's mail server.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                       | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| In-App-Message-Impression            | Platform-specific Feed | User viewed an In-App Message.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
+| Event Name                                                       | Feed Type              | Description                                                  | Custom Attributes                                                             |
+|------------------------------------------------------------------|------------------------|--------------------------------------------------------------|-------------------------------------------------------------------------------|
+| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG             | Unbound Feed           | An email was successfully delivered to a User's mail server. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | Unbound Feed           | User opened an email.                                        | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
+| In-App-Message-Impression                                        | Platform-specific Feed | User viewed an In-App Message.                               | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 {% endtab %}
 {% endtabs %}
@@ -217,11 +217,11 @@ Link here: [Braze.com](https://www.braze.com){: height="36px" width="36px"}
 ## Image Test
 {% tabs %}
 {% tab Styling %}
-Image: ![Logo]({{site.baseurl}}/assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}
+Image: ![Logo]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}
 
 #### Linked Image Test
 
-Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}](https://www.braze.com)
+Linked Image: [![Braze]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}](https://www.braze.com)
 
 #### Image Styling
 
@@ -235,9 +235,9 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png %}){: st
 {% tab Markdown %}
 
 ```
-![Logo]({{site.baseurl}}/assets/img/braze-logo-mark.png %})
+![Logo]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}
 
-[![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png %})](https://www.braze.com)
+[![Braze]({% image_buster /assets/img/braze-logo-mark.png %})](https://www.braze.com)
 
 ![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
 
@@ -250,11 +250,11 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png %}){: st
 {% tabs %}
 {% tab Styling %}
 {% gallery %}
-{{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d  <br> This is a [link](https://www.braze.com).
-{{site.baseurl}}/assets/img_archive/iHeartRadio_Email.png?ecd2c8fe148939b7de957fe85cd6317e  <br> This is another `comment`.
-{{site.baseurl}}/assets/img_archive/Saucey_Email.png?b9768937a1cc12d4c08e55a52e700d68  <br> This is yet another **comment**.
+{{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d <br> This is a [link](https://www.braze.com).
+{{site.baseurl}}/assets/img_archive/iHeartRadio_Email.png?ecd2c8fe148939b7de957fe85cd6317e <br> This is another `comment`.
+{{site.baseurl}}/assets/img_archive/Saucey_Email.png?b9768937a1cc12d4c08e55a52e700d68 <br> This is yet another **comment**.
 {{site.baseurl}}/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png?1b1fb9dbb80b0332c62512dcf9c83258 <br> **IMAGE TITLE** <br> This is a test to see if it will line break.
-{{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a  <br> This is a regular comment.
+{{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a <br> This is a regular comment.
 {% endgallery %}
 {% endtab %}
 {% tab Markdown %}
@@ -428,60 +428,60 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectu
 ```html
 {% multi_lang_include video.html id="[youte_id]" source="youtube" %}
 ```
-{% endraw  %}
+{% endraw %}
 
 To align right or left, and limit max width to 50% use the `align` parameter = `left` or `right`:
-{% raw  %}
+{% raw %}
 ```html
 {% multi_lang_include video.html id="[ytube_id]" align="left" source="youtube" %}
 
 {% multi_lang_include video.html id="[youe_id]" align="right" source="youtube" %}
 ```
-{% endraw  %}
+{% endraw %}
 
 Loom Example:
 {% raw %}
 ```html
 {% multi_lang_include video.html id="[lid]" source="loom" %}
 ```
-{% endraw  %}
+{% endraw %}
 
 {% endtab %}
 {% endtabs %}
 
 #### Featured Video Layout with Status Placement for Higher Resolution
-To use the featured video layout which places a static video on the left side
-for higher resolution display, add a video_id and a video_type ie `youtube` to
-the yaml header for the page.
-video_source defaults to `youtube`
 
-{% raw  %}
+To use the featured video layout which places a static video on the left side for higher resolution display, add a `video_id` and a `video_type` (such as `youtube`) to the yaml header for the page. By default, `video_source` is set to `youtube`.
+
+{% raw %}
 ```yaml
 layout: featured_video
 video_id: [video_id]
 video_source: youtube
 ```
-{% endraw  %}
+{% endraw %}
 
 ## List Test
 {% tabs %}
 {% tab Styling %}
 #### Bullet
-* List 1
-  * Sub List 1
-* List 2
-  * Sub List 2a
-    * Sub Sub List 2
-* List 3
+
+- List 1
+  - Sub List 1
+- List 2
+  - Sub List 2a
+    - Sub Sub List 2
+- List 3
 
 #### Numbered
+
 1. List 1
-  * Sub List 1
+   - Sub List 1
 2. List 2
 3. List 3
-  * Sub List 3a
-  * Sub List 3b
-    * Sub Sub List 3
+   - Sub List 3a
+   - Sub List 3b
+     - Sub Sub List 3
 4. List 4
     1. Sub list 4a
         1. Sub Sub List 4
@@ -492,21 +492,23 @@ video_source: youtube
 {% tab Markdown %}
 ```
 #### Bullet
-* List 1
-  * Sub List 1
-* List 2
-  * Sub List 2a
-    * Sub Sub List 2
-* List 3
+
+- List 1
+  - Sub List 1
+- List 2
+  - Sub List 2a
+    - Sub Sub List 2
+- List 3
 
 #### Numbered
+
 1. List 1
-  * Sub List 1
+   - Sub List 1
 2. List 2
 3. List 3
-  * Sub List 3a
-  * Sub List 3b
-    * Sub Sub List 3
+   - Sub List 3a
+   - Sub List 3b
+     - Sub Sub List 3
 4. List 4
     1. Sub list 4a
         1. Sub Sub List 4
@@ -520,7 +522,7 @@ video_source: youtube
 {% tabs %}
 {% tab Styling %}
 {% details Click me to Expand %}
-#### Look a Hidden Code Block!
+#### Look! A Hidden Code Block!
 
 ```python
 print("hello world!")
@@ -585,8 +587,8 @@ Enclose individual **tab** with the Liquid code and name of the tab `{% tab [Tab
 {% endraw %}
 
 {% alert important %}
- Note number of tabs on the page should be consistent, otherwise tabs content might be hidden.
- For example if one set of tabs has `C++`,`C-Sharp` and `JS`, and another set of tabs has `C-Sharp` and `JS`,
+ Note number of tabs on the page should be consistent, otherwise tab content might be hidden.
+ For example, if one set of tabs has `C++`,`C-Sharp` and `JS`, and another set of tabs has `C-Sharp` and `JS`,
 then when somebody clicks on `C++`, the other section will show nothing. See the following local tabs option for a workaround.
 {% endalert %}
 

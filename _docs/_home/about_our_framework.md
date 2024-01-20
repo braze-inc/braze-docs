@@ -43,11 +43,11 @@ METADATA_KEY: METADATA_VALUE
 
 Replace the following:
 
-| Placeholder      | Description                                                                                                                                   |
-|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| Placeholder      | Description                                                                                                                              |
+|------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata]({{site.baseurl}}/home/yaml_front_matter/metadata/). |
 | `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{site.baseurl}}/home/yaml_front_matter/metadata/).  |
-| `CONTENT`        | The page's content written in Markdown syntax.                                                                                                |
+| `CONTENT`        | The page's content written in Markdown syntax.                                                                                           |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% tabs local %}
@@ -78,7 +78,7 @@ For a full walkthrough, see [Creating a page]({{site.baseurl}}/home/content_mana
 
 ## Images
 
-Images are stored as PNG files inside `assets/img`. The structure of the `img` directory does not need to match the structure of Braze Docs, however it's best to group related images together into subdirectories.
+Images are stored as PNG files inside `assets/img`. The structure of the `img` directory does not need to match the structure of Braze Docs; however, it's best to group related images together into subdirectories.
 
 Each image can be linked to one or more pages using the following syntax:
 
