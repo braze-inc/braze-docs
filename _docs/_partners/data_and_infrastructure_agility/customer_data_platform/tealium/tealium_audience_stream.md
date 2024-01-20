@@ -183,7 +183,7 @@ This action allows you to add or remove users from Braze SMS or email subscripti
 | ---------- | ----------- |
 | Group type | Use this field to denote if this is an SMS or Email subscription group. |
 | Update type | Map this action to an unsubscribe or subscription event 
-| Attributes | - Subscription Group ID (Required): The ID of the subscription group related to the group type mapped in the preceding field.<br>- External ID: The external ID of the user.<br><br>Email Group Specific:<br>- Email: The email address of the user.<br>**If the external ID is not defined, the email will be required.**<br><br>SMS Group Specific:<br>- Phone: The phone number in E.164 format. For example, +14155552671.<br>**If the external ID is not defined, the phone will be required.** |
+| Attributes | - Subscription group ID (required): The ID of the subscription group related to the group type mapped in the preceding field.<br>- External ID: The external ID of the user.<br><br>Email group specific:<br>- Email: The email address of the user.<br>**If the external ID is not defined, the email will be required.**<br><br>SMS group specific:<br>- Phone: The phone number in E.164 format. For example, +14155552671.<br>**If the external ID is not defined, the phone will be required.** |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![]({% image_buster /assets/img/tealium/update_subscription.png %}){: style="max-width:90%"}
@@ -199,7 +199,7 @@ View the summary of the connector you created. If you would like to modify your 
 
 Your connector is now displayed in the list of connectors on your Tealium home page.
 
-Make sure to **Save / Publish** your connector when finished. The actions you configured will now fire when the trigger connections are met. 
+Make sure to select **Save / Publish** your connector when finished. The actions you configured will now fire when the trigger connections are met. 
 
 ### Step 4: Test your Tealium connector
 

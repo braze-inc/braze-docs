@@ -132,7 +132,7 @@ WhatsApp allows for variable parameters to be inserted into message templates. M
 The Braze team does not have visibility into template rejections. You should work directly with your WhatsApp Business manager to edit and resubmit the template. Make sure to provide a sample template where necessary. Double-check that your template follows Meta's [business](https://www.whatsapp.com/legal/business-policy/?fbclid=IwAR2qWg6yFKdyjDMxJkbNSM38FLGsxXxffC1qStY2gaHOyp-gl_8g72rZNIw) or [commerce](https://www.whatsapp.com/legal/commerce-policy/?fbclid=IwAR3bzN3LTZ-7kO-wnO7X3smtPKGy0asxaFod-U1Ub8B9JUpnrfy1_y7LpAQ) policies.
 
 #### Can the rich media be targeted or personalized in Braze? 
-Images can be uploaded from the Media Library but cannot be dynamically targeted. For URLs, the last part of the link can be dynamically populated using Liquid. 
+Images can be uploaded from the media library but cannot be dynamically targeted. For URLs, the last part of the link can be dynamically populated using Liquid. 
 
 ### Deliverability 
 

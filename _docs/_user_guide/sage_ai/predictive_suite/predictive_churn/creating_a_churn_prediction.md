@@ -1,14 +1,14 @@
 ---
 nav_title: Creating a Churn Prediction
 article_title: Creating a Churn Prediction
-description: "This article covers how to create a Churn Prediction within the Braze dashboard"
+description: "This article covers how to create a churn prediction within the Braze dashboard"
 page_order: 1
 
 ---
 
-# Creating a Churn Prediction
+# Creating a churn prediction
 
-> Learn how to create a Churn Prediction within the Braze dashboard.
+> Learn how to create a Churn prediction within the Braze dashboard.
 
 ## Step 1: Create a new prediction
 
@@ -18,15 +18,15 @@ In Braze, go to **Analytics** > **Predictive Churn**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Predictions** under **Engagement**.
 {% endalert %}
 
-A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic information about them. Here, you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
+A prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active predictions along with some basic information about them. Here, you can rename, archive, and create new predictions. Archived predictions are inactive and do not update user scores. 
 
-To create a new Prediction, choose **Create Prediction** and select a new **Churn Prediction**.
+To create a new prediction, choose **Create Prediction** and select a new **Churn Prediction**.
 
 {% alert note %}
-There is a limit of five concurrently active Churn Predictions. Prior to purchasing Predictive Churn, the limit is one active Preview Churn Prediction. A Preview Churn Prediction will not regularly update scores or allow you to target users based on the Prediction's output. Contact your account manager for details.
+There is a limit of five concurrently active churn predictions. Prior to purchasing Predictive Churn, the limit is one active preview churn prediction. A preview churn prediction will not regularly update scores or allow you to target users based on the prediction's output. Contact your account manager for details.
 {% endalert %}
 
-On the **Basics** page, give your new Prediction a unique name. You can also provide an optional description to take any notes on this particular Prediction.
+On the **Basics** page, give your new prediction a unique name. You can also provide an optional description to take any notes on this particular prediction.
 
 Click **Forward** to move to the next step. Optionally, you can click **Build Now** to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the build process. You can return to any step later by selecting it in the progress tracker on the top.
 
@@ -38,7 +38,7 @@ Remember, you don't need to explain what behaviors might precede churn—only wh
 
 #### Churn Window
 
-Churn Window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 60 days. This window is used to query historical data for training the Prediction. Additionally, after the Prediction is created and users receive scores, the Churn Risk Score indicates how likely a user is to churn within the number of days specified by the Churn Window. 
+Churn Window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 60 days. This window is used to query historical data for training the prediction. Additionally, after the prediction is created and users receive scores, the Churn Risk Score indicates how likely a user is to churn within the number of days specified by the Churn Window. 
 
 Here's an example of a simple definition based on lapsing sessions in the last 7 days.
 
@@ -50,45 +50,45 @@ For this case, we select `do not` and `start a session`. You can combine other f
 For `do`, we assume that active users did not take the action you specify for this row prior to becoming churned. Doing the action causes them to become churned. <br><br>For `do not`, we consider active users to be those that did do that action in the days prior, and then stopped.
 {% endalert %}
 
-Underneath the definition, you will see estimates of how many users (in the past who churned and who didn't churn according to your definition) are available. You will also see the minimum values required. Braze must have this minimum count of users available in historical data so that the Prediction has enough data to learn from.
+Underneath the definition, you will see estimates of how many users (in the past who churned and who didn't churn according to your definition) are available. You will also see the minimum values required. Braze must have this minimum count of users available in historical data so that the prediction has enough data to learn from.
 
 ## Step 3: Filter your prediction audience
 
-Your Prediction Audience is the group of users you want to predict churn risk for. By default, this will be set to **All Users**, which means that this Prediction will create Churn Risk Scores for all of your active users. Usually, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you'd like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase.
+Your prediction audience is the group of users you want to predict churn risk for. By default, this will be set to **All Users**, which means that this prediction will create churn risk scores for all of your active users. Usually, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you'd like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase.
 
 {% alert note %}
-The Prediction Audience cannot exceed 100 million users.
+The prediction audience cannot exceed 100 million users.
 {% endalert %}
 
-When the Prediction Window is 14 days or less, the time window for filters that begin with "Last..." like "Last Used App" and "Last Made Purchase" **cannot exceed the Churn Window specified** in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the "Last..." filters cannot exceed 14 days.
+When the prediction window is 14 days or less, the time window for filters that begin with "Last..." like "Last Used App" and "Last Made Purchase" **cannot exceed the Churn Window specified** in the churn definition. For example, if your churn definition has a window of 14 days, the time window for the "Last..." filters cannot exceed 14 days.
 
 #### Full Filter Mode
 
-In order to build a new Prediction immediately, only a subset of Braze segmentation filters are supported. Full Filter Mode allows you to use all Braze filters but will require one Churn Window to build the Prediction. For example, if the Churn Window is set to 15 days, it will take 15 days to collect the user data and build the Prediction when using filters only supported in Full Filter Mode. Additionally, some estimates about audience sizes will not be available in Full Filter Mode.
+In order to build a new prediction immediately, only a subset of Braze segmentation filters are supported. Full Filter Mode allows you to use all Braze filters but will require one Churn Window to build the prediction. For example, if the Churn Window is set to 15 days, it will take 15 days to collect the user data and build the prediction when using filters only supported in Full Filter Mode. Additionally, some estimates about audience sizes will not be available in Full Filter Mode.
 
-For a sample list of Prediction Audience definitions, check out our sample definitions in the following section on [Sample churn definitions](#sample-definitions).
+For a sample list of prediction audience definitions, check out our sample definitions in the following section on [Sample churn definitions](#sample-definitions).
 
 ![][3]
 
-Just like the previous page, the bottom panel will show you the estimated number of historic users that result from your Churn definition and Prediction Audience definition. These estimates must meet the minimum requirements shown in order to create a Prediction.
+Just like the previous page, the bottom panel will show you the estimated number of historic users that result from your churn definition and prediction audience definition. These estimates must meet the minimum requirements shown in order to create a prediction.
 
-## Step 4: Choose the update frequency for Churn Predictions
+## Step 4: Choose the update frequency for churn prediction
 
-The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh Churn Risk Scores. Select the **maximum frequency of updates** that you'll find useful. For example, if you're going to send a weekly promotion to prevent users from churning, set the update frequency to **Weekly** on the day and time of your choosing. 
+The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh churn risk scores. Select the **maximum frequency of updates** that you'll find useful. For example, if you're going to send a weekly promotion to prevent users from churning, set the update frequency to **Weekly** on the day and time of your choosing. 
 
 ![Prediction Update Schedule set to daily at 5 pm.][2]
 
 {% alert note %}
-Preview and Demo Predictions will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond Weekly or Monthly updates with Predictive Churn. To purchase this functionality, contact your account manager. 
+Preview and demo prediction will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond weekly or monthly updates with predictive churn. To purchase this functionality, contact your account manager. 
 {% endalert %}
 
 ## Step 5: Build prediction
 
-Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
+Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process.
 
-Once it's done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the Prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
+Once it's done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
 
-The Prediction will be rebuilt ("retrained") again every **two weeks automatically** to keep it updated on the most recent data available. Note that this is a separate process from when users' Churn Risk Scores, the output of the Prediction, are produced. The latter is determined by the update frequency you chose in Step 4.
+The prediction will be rebuilt ("retrained") again every **two weeks automatically** to keep it updated on the most recent data available. Note that this is a separate process from when users' Churn Risk Scores, the output of the prediction, are produced. The latter is determined by the update frequency you chose in Step 4.
 
 ## Sample churn and prediction audience definitions {#sample-definitions}
 
@@ -98,14 +98,14 @@ The Prediction will be rebuilt ("retrained") again every **two weeks automatical
 - "Within 1 day do uninstall." <br>
 - "Within 14 days do not Make a Purchase." <br>
 
-For the Churn definitions we outlined, there might be some corresponding Prediction Audience definitions:<br>
+For the churn definitions we outlined, there might be some corresponding prediction audience definitions:<br>
 - **Started subscription more than 2 weeks ago OR Started subscription less than two weeks ago**<br>You might want to create 2 predictions in this case and then message new subscribers differently than longer-term subscribers. You could also define this as "First Made Purchase more than 30 days ago."<br>
 - **Uninstallers**<br>You might focus on customers who have purchased something in the recent past or used the app very recently.<br>
-- **Those at Risk of Not Purchasing as a Definition of Churn**<br>You may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention will prevent this more engaged group from churning.
+- **Those at risk of not purchasing as a definition of churn**<br>You may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention will prevent this more engaged group from churning.
 
 ## Archived predictions
 
-Archived Predictions will cease updating user scores. Any archived Prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived Predictions are never deleted and remain in the list.
+Archived predictions will cease updating user scores. Any archived prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived predictions are never deleted and remain in the list.
 
 [1]: {% image_buster /assets/img/churn/churn1.png %}
 [2]: {% image_buster /assets/img/churn/churn2.png %}
