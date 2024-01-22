@@ -39,24 +39,37 @@ You must ensure the following items are created and completed before setting up 
 | Google Ads Account | [Google](https://support.google.com/google-ads/answer/6366720?hl=en) | An active Google ads account for your brand.<br><br>If you are looking to share an audience across multiple managed accounts, you can upload your audiences into your [manager account](https://support.google.com/google-ads/answer/6139186). |
 | Google Ads Terms and Google Ads Policies | [Google](https://support.google.com/adspolicy/answer/54818?hl=en) | You must accept and ensure you comply with [Google’s Ad Terms](https://payments.google.com/u/0/paymentsinfofinder?hostOrigin=aHR0cHM6Ly9wYXltZW50cy5nb29nbGUuY29tOjQ0Mw..&sri=-40) and [Google’s Ad Policies](https://support.google.com/adspolicy/answer/6008942?sjid=15557182366992806023-NC), which include the [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/), as applicable to you, in your use of Braze Audience Sync.<br><br>Consult with your Legal Team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA/UK end users. |
 | Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>**To use Customer Match, your account must have:**<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet these criteria, then your account is currently ineligible to use Customer Match.<br><br>Connect with your Google Ads representative for more guidance on Customer Match availability for your account. |
+| Google Consent Signals | [Google](https://support.google.com/google-ads/answer/14310715) |  If you want to target EEA/UK end users using Google’s Customer Match service, you’ll need to pass Braze the following custom attributes (boolean) as part of Google’s  EU User Consent Policy. More details can be found under [Collecting consent for EAA and UK end users](#collecting-consent-for-eaa-and-uk-end-users): <br> - `$google_ad_user_data` <br> - `$google_ad_personalization` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Collecting consent for EAA and UK end users
 
-Google’s EU User Consent Policy requires advertisers to disclose the following to their EEA or UK end users, as well as obtain their consent for such: 
+Google’s EU User Consent Policy requires advertisers to disclose the following to their EAA or UK end users, as well as obtain their consent for such: 
 
 * the use of cookies or other local storage where legally required; and
 * the collection, sharing, and use of their personal data for personalization of ads.
 
-According to Google, this applies only to end users located in the European Economic Area (EEA) or the UK and goes into effect, March 6, 2024. This does not affect US end users or any other end users located outside of the EEA or the UK. For more details regarding the EU User Consent Policy and how this might impact you, see Google's [FAQs](https://support.google.com/google-ads/answer/14310715) on the subject.
+According to Google, this applies only to end users located in the European Economic Area (EEA) or the UK and goes into effect, March 6, 2024. This does not affect US end users or any other end users located outside of the EEA or the UK. Consult with your legal team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA and UK end users.
 
-As part of this upcoming change, both types of consent listed above must be granted and passed to Braze in order for your EEA/UK end users to be delivered ads as part of audiences you sync into Google’s Customer Match product through our Audience Sync product. 
+As part of this upcoming change, you can collect both consent signals in Braze as the following custom attributes. Braze will sync the data from these custom attributes to the appropriate [consent fields in Google](https://support.google.com/google-ads/answer/14310715#:~:text=These%20consent%20fields%20are%3A).
 
-{% alert important %}
-Braze intends to add relevant attributes in early 2024 ahead of the March 6, 2024 deadline for customers to capture these consent values that will be synced to Google as part of your Audience Sync step. Consult with your Legal Team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA/UK end users.
-{% endalert %}
+| Custom Attribute Name | Data Type | Values | Definition |
+| ----- | ----- | ----- | ----- |
+| `$google_ad_user_data` | Boolean | `true` or `false` <br> - `true` = `granted` (this will be synced to Google) <br> - `false` = `denied` <br> - `null` = `unspecified` <br> - Any value that is not `true` or `false` will be `unspecified` | Sets consent for sending user data to Google for advertising purposes*. |
+| `$google_ad_personalization` | Boolean | `true` or `false` <br> - `true` = `granted` (this will be synced to Google) <br> - `false` = `denied` <br> - `null` = `unspecified` <br> - Any value that is not `true` or `false` will be `unspecified` | Sets consent for personalized advertising. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-If you attempt to sync an EEA/UK end user without the necessary consent fields and granted status, Google will reject this and not serve ads to this end user. In addition, if an ad is served to an EEA/UK user without their explicit consent, the customer may be liable and Braze could be at financial risk. 
+_*Braze will sync unspecified for any user that does not have the consent attributes determined to Google. This consent is for Google to use that data in determining which ads to serve._
+
+#### Tips
+
+* Send the value as a boolean type, not a string type.
+* Prefix the dollar sign ($) for the attribute name. Braze uses a dollar sign at the start of an attribute name to dictate this is a special and reserved key.
+* Enter the attribute name in lower case.
+* While you can't explicitly set a user as unspecified, if you send a `null` or `nil` value or any other value not `true` or `false`, Braze will pass this user to Google as `UNSPECIFIED`.
+* New users added or updated without specifying either consent attribute will be synced to Google with those consent attributes marked as unspecified.
+
+If you attempt to sync an EEA or UK user without the necessary consent fields and granted status, Google will reject this and not serve ads to this end user. In addition, if an ad is served to an EEA or UK user without their explicit consent, you may be liable and could be at financial risk. For more details regarding the EU User Consent Policy for Customer Match upload partners, see Google’s [FAQs](https://support.google.com/google-ads/answer/14310715). 
 
 ## Integration
 
@@ -164,6 +177,7 @@ The following table includes metrics and descriptions to help you better underst
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Troubleshooting
+
 {% details Why can I not select multiple fields to match in my Google Audience Step configuration? %}
 Google Customer Match has strict requirements around how these audiences are formatted and what customer information is included. Specifically, mobile advertiser IDs need to be uploaded separately from customer contact information (such as email and phone number). For more details, refer to [Google's Customer Match documentation](https://support.google.com/google-ads/answer/7659867?hl=en#undefined). 
 {% enddetails %}
