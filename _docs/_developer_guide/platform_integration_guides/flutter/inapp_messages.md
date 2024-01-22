@@ -13,9 +13,9 @@ channel: in-app messages
 
 > Learn how to integrate and customize in-app messages for Android and iOS using Flutter.
 
-## Prerequisites
+## Enable In-App Message UI
 
-To integrate Flutter's in-app messaging with iOS, you'll need to [enable in-app messaging using the Braze Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/in-app_message_delivery/#enabling-in-app-messages). There are no prerequisites for Android.
+To integrate Flutter's in-app messaging with iOS, [enable in-app messaging using the Braze Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/in-app_message_delivery/#enabling-in-app-messages). There are no additional steps for Android.
 
 ## Logging analytics
 
@@ -94,9 +94,31 @@ The in-app message data is automatically forwarded from the Android layer.
 {% endtab %}
 {% tab iOS %}
 
+#### Option 1 - `BrazeInAppMessageUIDelegate`
+
 1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in our iOS article on [core in-app message delegate](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
-2. Update your `willPresent` delegate implementation to call `BrazePlugin.process(inAppMessage)`.
+2. Update your [`willPresent` delegate implementation][3] to call `BrazePlugin.process(inAppMessage)`.
+
+#### Option 2 - Custom In-App Message Presenter
+
+1. Ensure you have enabled the In-App Message UI and set the `inAppMessagePresenter` to your custom presenter.
+```
+    let inAppMessageUI = CustomInAppMessagePresenter()
+    braze.inAppMessagePresenter = inAppMessageUI
+```
+2. Create your custom presenter class and call `BrazePlugin.process(inAppMessage)` within [`present(message:)`][4].
+```
+class CustomInAppMessagePresenter: BrazeInAppMessageUI {
+  override func present(message: Braze.InAppMessage) {
+    // Pass in-app message data to the Dart layer.
+    BrazePlugin.processInAppMessage(message)
+
+    // If you want the default UI to display the in-app message.
+    super.present(message: message)
+  }
+}
+```
 
 {% endtab %}
 {% endtabs %}
@@ -121,3 +143,5 @@ Follow these steps to test a sample in-app message.
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [2]: {% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test"
+[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:willpresent:view:)-4pzvv
+[4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/present(message:)-f2ra
