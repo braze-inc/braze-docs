@@ -15,7 +15,7 @@ Movable Ink is able to ingest behavioral events from Braze through their Custome
 For more information on Stories, the Movable Ink Customer Data API, and how Movable Ink leverages behavioral data, please visit the following support center articles:
 
 - [Power content with behavioral data](https://support.movableink.com/hc/en-us/sections/360001239453-Power-content-with-behavioral-data)
-- [Connect to the Customer Data API](https://support.movableink.com/hc/en-us/articles/10252591570071)
+- [Customer Data API Introduction and Guide](https://support.movableink.com/hc/en-us/articles/13815957200663-Customer-Data-API-introduction-and-guide)
 - [FAQ: Customer Data API](https://support.movableink.com/hc/en-us/articles/12423178752279-FAQ-Customer-Data-API)
 
 ## Prerequisites
