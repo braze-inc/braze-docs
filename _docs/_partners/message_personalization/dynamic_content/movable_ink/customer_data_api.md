@@ -59,7 +59,7 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 #### Step 1c: Configure your payload
 
 1. Return to the **Compose** tab.
-2. For your **Request Body**, either create your own request body with JSON key-value pairs, or enter your event payload as raw text. Refer to the [sample payloads](#sample-payloads) for examples of standard eCommerce events.
+2. For your **Request Body**, either create your own request body with JSON key-value pairs or enter your event payload as raw text. Refer to the [sample payloads](#sample-payloads) for examples of standard ecommerce events.
 
 ![Compose tab of the webhook composer in Braze with JSON key-value pairs for ID, timestamp, user ID, and event type.][img3]{: style="max-width:75%" }
 
@@ -85,7 +85,7 @@ To test your webhook, do the following:
 
 When you're done composing and testing the webhook, [schedule your campaign][2]. 
 
-Braze supports scheduled, action-based, and API-triggered deliveries. [Action-based delivery][3] is usually the best fit for most behavioral event use cases. However, if there are any questions about which may make sense for your use case, discuss with your Braze and Movable Ink customer success managers.
+Braze supports scheduled, action-based, and API-triggered deliveries. [Action-based delivery][3] is usually the best fit for most behavioral event use cases. For questions about what makes sense for your use case, connect with your Braze and Movable Ink customer success managers.
 
 For action-based delivery:
 
@@ -109,7 +109,7 @@ Make sure not to use A/B testing in your campaign by clearing the **Control Grou
 
 If desired, you can assign conversion events to this campaign within Braze.
 
-However, given that the webhook is intended just to stream data, attribution at this level is likely less useful than looking at attribution at the campaign level after the behavioral data from Braze is used to personalize content.
+However, given that the webhook is only intended to stream data, attribution at this level is likely less useful than looking at attribution at the campaign level after the behavioral data from Braze is used to personalize content.
 
 ### Step 3: Launch the campaign
 
@@ -123,7 +123,7 @@ Make sure the unique user identifier (UUID) value that you're using as your `mi_
 
 This ensures that the behavioral events Movable Ink references when generating an image are associated with the same customer they received the behavioral events for. If the UUID value is not the same as the Braze `external_id`, the UUID must be captured and passed to Braze as an attribute or in the event properties of a Braze event to leverage this identifier.
 
-Braze tracks user behavior across multiple platforms (web, mobile app, etc.), so a single user may have several distinct anonymous IDs. These IDs can be merged into the single known Stories user profile when an `identify` event is sent to Movable Ink, as long as the `identify` event includes both an anonymous identifier and the single known identifier.
+Braze tracks user behavior across multiple platforms (such as web and mobile app), so a single user may have several distinct anonymous IDs. These IDs can be merged into the single known Stories user profile when an `identify` event is sent to Movable Ink, as long as the `identify` event includes both an anonymous identifier and the single known identifier.
 
 Once Movable Ink receives a `user_id` for a single user, all future events for that user must include that same `user_id`.
 
@@ -153,7 +153,7 @@ For more, refer to the example webhooks under [sample payloads](#sample-payloads
 
 ## Sample payloads
 
-### Product View Event
+### Product view event
 
 {% tabs local %}
 {% tab Example Braze Trigger Event %}
@@ -190,7 +190,7 @@ For more, refer to the example webhooks under [sample payloads](#sample-payloads
 {% endraw %}
 
 {% endtab %}
-{% tab Expected MovableInk Request Payload %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
@@ -275,7 +275,7 @@ In this example, a hashed email address is used as the `anonymous_id` for users 
 {% endtab %}
 {% endtabs %}
 
-### Category View Event
+### Category view event
 
 {% tabs local %}
 {% tab Example Braze Trigger Event %}
@@ -302,7 +302,7 @@ In this example, a hashed email address is used as the `anonymous_id` for users 
 {% endraw %}
 
 {% endtab %}
-{% tab Expected MovableInk Request Payload %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
@@ -358,7 +358,7 @@ This example shows a webhook tracking events for only known users (users with an
 {% endtab %}
 {% endtabs %}
 
-### Identify Event
+### Identify event
 
 {% tabs local %}
 {% tab Example Braze Trigger Event %}
@@ -379,7 +379,7 @@ This example shows a webhook tracking events for only known users (users with an
 
 {% endraw %}
 {% endtab %}
-{% tab Expected MovableInk Request Payload %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
