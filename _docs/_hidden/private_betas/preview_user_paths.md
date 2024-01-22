@@ -77,7 +77,7 @@ You can opt to send test messages to an internal test group or an individual use
 
 At the moment, filters within steps in this preview mode are not responsive to the timing assumed by the test run. For example, if an audience path references an event that has occurred on or after a specific date, and the test run shows the results for a future date, the filter will not take that future date into account.
 
-Similarly, filters won’t recognize actions that have occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode won’t recognize that a user encountered a Message step that was “sent” earlier in the Canvas, and it won’t recognize that the test user “took action” to advance through an action path.
+Similarly, filters won’t recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode won’t recognize that a user encountered a Message step that was “sent” earlier in the Canvas, and it won’t recognize that the test user “took action” to advance through an action path.
 
 ## Connected Content
 
