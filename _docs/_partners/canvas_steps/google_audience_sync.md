@@ -55,8 +55,8 @@ As part of this upcoming change, you can collect both consent signals in Braze a
 
 | Custom Attribute Name | Data Type | Values | Definition |
 | ----- | ----- | ----- | ----- |
-| `$google_ad_user_data` | Boolean | `true` or `false` <br> - `true` = `granted` (this will be synced to Google) <br> - `false` = `denied` <br> - `null` = `unspecified` <br> - Any value that is not `true` or `false` will be `unspecified` | Sets consent for sending user data to Google for advertising purposes*. |
-| `$google_ad_personalization` | Boolean | `true` or `false` <br> - `true` = `granted` (this will be synced to Google) <br> - `false` = `denied` <br> - `null` = `unspecified` <br> - Any value that is not `true` or `false` will be `unspecified` | Sets consent for personalized advertising. |
+| `$google_ad_user_data` | Boolean | In Braze, this can be set to `true` or `false`. <br><br> `true` in Braze maps to Google's `GRANTED` consent status (this will be synced to Google) <br> - `false` in Braze maps to Google's `DENIED` consent status <br> - `null` in Braze maps to Google's `UNSPECIFIED` consent status <br> - Any value that is not `true` or `false` will be `UNSPECIFIED` | Sets consent for sending user data to Google for advertising purposes*. |
+| `$google_ad_personalization` | Boolean | In Braze, this can be set to `true` or `false`. <br><br> - `true` in Braze maps to Google's `GRANTED` consent status (this will be synced to Google) <br> - `false` in Braze maps to Google's  `DENIED` consent status <br> - `null` in Braze maps to Google's `UNSPECIFIED` consent status <br> - Any value that is not `true` or `false` in Braze is mapped to Google's `UNSPECIFIED` consent status | Sets consent for personalized advertising. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 _*Braze will sync unspecified for any user that does not have the consent attributes determined to Google. This consent is for Google to use that data in determining which ads to serve._
