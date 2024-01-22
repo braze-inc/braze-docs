@@ -3,16 +3,19 @@ nav_title: "Use Cases"
 article_title: SQL Segment Extensions Use Cases
 page_order: 2
 page_type: glossary
+layout: sql_segment_extensions_glossary
 alias: "/sql_segments_use_cases/"
 description: "This article contains tested and proven queries for SQL Segment Extensions."
 tool: Segments
 ---
 
-# SQL Segment Extensions use case library
-
-> This is a library of SQL Segment Extension queries. These use cases would not be possible with standard [segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+{% api %}
 
 ## Select users by how many times an event has occurred
+
+{% apitags %}
+Event
+{% endapitags %}
 
 Select users that opened a certain email campaign more than once in the past.
 
@@ -24,7 +27,15 @@ WHERE campaign_api_id='8f7026dc-e9b7-40e6-bdc7-96cf58e80faa'
 GROUP BY user_id
 HAVING count(*) > 1
 ```
+{% endapi %}
+
+{% api %}
+
 ## Select users that performed an action and sum up a property value
+
+{% apitags %}
+Property
+{% endapitags %}
 
 Select users that made a bet on sports with the sum of all of their bets being greater than a certain amount.
 
@@ -33,8 +44,15 @@ select user_id from "USERS_BEHAVIORS_CUSTOMEVENT_SHARED"
 where name='Bet On Sports'
 group by 1 having sum(get_path(parse_json(properties), 'amount')) > 150
 ```
+{% endapi %}
+
+{% api %}
 
 ## Select users based on how many times an event occurred in a time range
+
+{% apitags %}
+Event, Time range
+{% endapitags %}
 
 Select users with more than three email opens in the last 30 days.
 
@@ -48,7 +66,15 @@ GROUP BY user_id;
 HAVING COUNT(DISTINCT id) > 3
 ```
 
+{% endapi %}
+
+{% api %}
+
 ## Select users that recorded at least one event across multiple time ranges
+
+{% apitags %}
+Event, Time range
+{% endapitags %}
 
 Select users that made a purchase in each of the last four quarters. This user segment can be used with [audience sync]({{site.baseurl}}/partners/canvas_steps) to identify high-value lookalike customers for acquisition.
 
@@ -70,7 +96,15 @@ FROM USERS_BEHAVIORS_PURCHASE_SHARED
 WHERE to_timestamp_ntz(time) >= DATEADD(day, -365, CURRENT_TIMESTAMP()) AND to_timestamp_ntz(time) <= DATEADD(day, -271, CURRENT_TIMESTAMP());
 ```
 
+{% endapi %}
+
+{% api %}
+
 ## Select any purchase with certain properties
+
+{% apitags %}
+Purchase, Property
+{% endapitags %}
 
 Select customers that made any purchase that contains the property `“type = shops”` in 14 days. 
 
@@ -94,7 +128,15 @@ GROUP BY 1
 HAVING COUNT(id) > 0;
 ```
 
+{% endapi %}
+
+{% api %}
+
 ## Select users that were sent a message that wasn't delivered
+
+{% apitags %}
+Message, Delivery
+{% endapitags %}
 
 Select users that have been sent an SMS campaign or Canvas, but the message did not make it to the carrier. For example, the message might have been stopped by a queue overflow. 
 
@@ -110,7 +152,15 @@ GROUP BY 1
 HAVING COUNT(id) > 0;
 ```
 
+{% endapi %}
+
+{% api %}
+
 ## Find all SMS messages that were sent but didn't reach the carrier because of queue overflow
+
+{% apitags %}
+Message, Carrier
+{% endapitags %}
 
 This can be repurposed for other types of messages sent from a particular Canvas that weren't delivered.
 
@@ -127,7 +177,15 @@ HAVING COUNT(id) > 0;
 ```
 `CANVAS_ID` is the number after `/canvas/` in your Canvas URL.
 
+{% endapi %}
+
+{% api %}
+
 ## Select users that made any purchase with a property array containing a specific value
+
+{% apitags %}
+Purchase, Property
+{% endapitags %}
 
 ```sql
 SELECT DISTINCT EXTERNAL_USER_ID
@@ -135,7 +193,15 @@ FROM "USERS_BEHAVIORS_PURCHASE_SHARED",
 LATERAL FLATTEN(input=>parse_json(properties):modifiers) as f
 WHERE f.VALUE::STRING = 'Bacon'
 ```
+{% endapi %}
+
+{% api %}
+
 ## Find all users that had multiple 30003 errors and 0 deliveries
+
+{% apitags %}
+Error, Delivery
+{% endapitags %}
 
 That is helpful for solving situations when you want to stop sending to users that are failing to receive messages but aren't getting marked as invalid because they don't have the required error code. You can either retarget these users to update their phone number or unsubscribe them. 
 
@@ -154,7 +220,15 @@ WHERE
 GROUP BY 1, 2;
 ```
 
+{% endapi %}
+
+{% api %}
+
 ## Find users with specific event properties and event counts in a time range
+
+{% apitags %}
+Event, Property, Time range
+{% endapitags %}
 
 Find users that meet the following conditions simultaneously:
 
@@ -177,8 +251,15 @@ HAVING
 SUM(get_path(parse_json(properties), 'total_value')) > 500
 AND COUNT(*) > 3
 ```
+{% endapi %}
+
+{% api %}
 
 ## Select users whose most recent session was on a specific device model
+
+{% apitags %}
+Session, Device
+{% endapitags %}
 
 ```sql
 select user_id, external_user_id, device_id, platform, os_version, device_model, to_timestamp(max(time)) last_session
@@ -188,8 +269,15 @@ and date_trunc(day, to_timestamp(time)) <= to_timestamp('2023-08-07')
 and device_model = ''
 group by user_id, external_user_id, device_id, platform, os_version, device_model
 ```
+{% endapi %}
+
+{% api %}
 
 ## Find users that selected the second button of an in-app message in a specific time range
+
+{% apitags %}
+Time range
+{% endapitags %}
 
 ```sql
 SELECT DISTINCT USER_ID, to_timestamp_ntz(time)
@@ -199,8 +287,15 @@ AND to_timestamp_ntz(time) <= '2023-08-09'::timestamp_ntz
 AND BUTTON_ID = '1'
 AND CAMPAIGN_ID = '64c8cd9c4d38d13091957b1c'
 ```
+{% endapi %}
+
+{% api %}
 
 ## Find users that purchased in each of the last three calendar months
+
+{% apitags %}
+Purchase, Time range
+{% endapitags %}
 
 ```sql
 SELECT DISTINCT user_id
@@ -219,7 +314,15 @@ WHERE to_timestamp_ntz(time) >= '2023-11-01'::timestamp_ntz
 AND to_timestamp_ntz(time) <= '2023-11-30'::timestamp_ntz;
 ```
 
+{% endapi %}
+
+{% api %}
+
 ## Select users that completed a custom event with a specific property when property is an integer
+
+{% apitags %}
+Event, Property
+{% endapitags %}
 
 Sending a message to users that watched a series in the last six months and are about to leave the platform. 
 
@@ -239,8 +342,15 @@ WHERE
 GROUP BY 
   1, 2;
 ```
+{% endapi %}
+
+{% api %}
 
 ## Find the average number of emails a user receives daily
+
+{% apitags %}
+Message
+{% endapitags %}
 
 ```sql
 WITH user_email_counts AS (
@@ -277,7 +387,15 @@ For SMS messages, replace `USERS_MESSAGES_EMAIL_SEND_SHARED` with `USERS_MESSAGE
 
 {% endalert %}
 
+{% endapi %}
+
+{% api %}
+
 ## Find the average number of emails a user receives weekly
+
+{% apitags %}
+Message
+{% endapitags %}
 
 ```sql
 WITH user_email_counts AS (
@@ -311,3 +429,5 @@ FROM user_weekly_average;
 For SMS messages, replace `USERS_MESSAGES_EMAIL_SEND_SHARED` with `USERS_MESSAGES_SMS_SEND_SHARED` in the query. For Push notifications, replace `USERS_MESSAGES_EMAIL_SEND_SHARED` with `USERS_MESSAGES_SMS_SEND_SHARED` in the query
 
 {% endalert %}
+
+{% endapi %}
