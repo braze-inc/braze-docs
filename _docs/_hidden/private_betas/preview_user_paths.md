@@ -26,7 +26,7 @@ Follow these steps to preview your user journey:
 4. (optional) Select a recipient for the test.
 5. Click **Run Test**.
 
-You can run a preview if you don't have permissions to edit a Canvas, but this preview will run with unsaved changes if there are any.
+You can run a preview if you don't have permission to edit a Canvas, but this preview will run with unsaved changes if there are any.
 
 ### Supported steps
 
@@ -77,7 +77,7 @@ You can opt to send test messages to an internal test group or an individual use
 
 At the moment, filters within steps in this preview mode are not responsive to the timing assumed by the test run. For example, if an audience path references an event that has occurred on or after a specific date, and the test run shows the results for a future date, the filter will not take that future date into account.
 
-Similarly, filters won’t recognize actions that have occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode won’t recognize that a user encountered a Message step that was “sent” earlier in the Canvas, and it won’t recognize that the test user “took an action” to advance through an action path.
+Similarly, filters won’t recognize actions that have occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode won’t recognize that a user encountered a Message step that was “sent” earlier in the Canvas, and it won’t recognize that the test user “took action” to advance through an action path.
 
 ## Connected Content
 
@@ -89,11 +89,11 @@ Webhooks will execute when test messages are sent, but not during the test run. 
 
 ## Example
 
-In this example, the Canvas is set up to target users who haven't had a session in an app. This journey includes a Message step with a welcome email, a Delay step set for one day, and an Audience Paths step that splits into two paths: users who have at least one session, and everyone else. Depending on which audience path a user falls in, the subsequent Message step will be sent.
+In this example, the Canvas is set up to target users who haven't had a session in an app. This journey includes a Message step with a welcome email, a Delay step set for one day, and an Audience Paths step that splits into two paths: users with at least one session, and everyone else. Depending on which audience path a user falls in, the subsequent Message step will be sent.
 
 ![][1]{:style="max-width:70%"}
 
-Because our test user meets the Canvas entry criteria, they're able to enter the Canvas and go through the user journey. However, because our test user hasn't opened the app in the last calendar day, they will continue down the "Everyone else" path and receive an push notification that reads: "Last change! Complete your first task for an exclusive bonus."
+Because our test user meets the Canvas entry criteria, they can enter the Canvas and go through the user journey. However, because our test user hasn't opened the app in the last calendar day, they will continue down the "Everyone else" path and receive a push notification that reads: "Last chance! Complete your first task for an exclusive bonus."
 
 ![][2]
 
