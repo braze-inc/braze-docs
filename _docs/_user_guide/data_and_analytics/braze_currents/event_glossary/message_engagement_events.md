@@ -1878,10 +1878,10 @@ This event occurs when the global subscription state of the user changes.
 // Global State Change: users.behaviors.subscription.GlobalStateChange
 {
   "id": (required, string) unique ID of this event,
-  "user_id": (required, string) Braze Braze ID of the user with this global subscription state change,
+  "user_id": (required, string) Braze ID of the user with this global subscription state change,
   "external_user_id": (optional, string) External ID of the user,
   "email_address": (optional, string) User email address,
-  "state_change_source": (optional, string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "state_change_source": (optional, string) Source of the state change, for example, REST, SDK, Dashboard, Preference Center, etc.,
   "subscription_status": (required, string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
   "channel": (optional, string) Channel: only email for now,
   "time": (required, int) 10-digit UTC time of the state change event in seconds since the epoch,
