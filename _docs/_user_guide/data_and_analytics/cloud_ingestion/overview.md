@@ -229,11 +229,11 @@ Now you need to add only the changed values into the CDI source table. These row
 | 2023-03-16 15:00:00 | 34567       | { "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}  |
 | 2023-03-16 15:00:00 | 45678       | { "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}   |
 | 2023-03-16 15:00:00 | 56789       | { "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"} |
-| 2023-03-16 15:00:00 | 12345       | { "ATTRIBUTE_1": "145", "ATTRIBUTE_2":"red", "ATTRIBUTE_4":"TRUE"} |
-| 2023-03-16 15:00:00 | 23456       | { "ATTRIBUTE_1": "15"} |
-| 2023-03-16 15:00:00 | 34567       | { "ATTRIBUTE_3":"495", "ATTRIBUTE_4":"FALSE"} |
-| 2023-03-16 15:00:00 | 45678       | { "ATTRIBUTE_2":"green"} |
-| 2023-03-16 15:00:00 | 56789       | { "ATTRIBUTE_3":"693"} |
+| 2023-03-17 09:30:00 | 12345       | { "ATTRIBUTE_1": "145", "ATTRIBUTE_2":"red", "ATTRIBUTE_4":"TRUE"} |
+| 2023-03-17 09:30:00 | 23456       | { "ATTRIBUTE_1": "15"} |
+| 2023-03-17 09:30:00 | 34567       | { "ATTRIBUTE_3":"495", "ATTRIBUTE_4":"FALSE"} |
+| 2023-03-17 09:30:00 | 45678       | { "ATTRIBUTE_2":"green"} |
+| 2023-03-17 09:30:00 | 56789       | { "ATTRIBUTE_3":"693"} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 CDI will only sync the new rows, so the next sync that runs will only sync the last five rows.
