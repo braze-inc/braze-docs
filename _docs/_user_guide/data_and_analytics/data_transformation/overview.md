@@ -15,7 +15,6 @@ Braze Data Transformation can expedite your data integration, even if you have v
 
 ## How it works
 
-## How it works
 Many modern-day platforms have “webhooks,” or real-time API notifications, to send information about a new event or new data from one platform to another. Data Transformation provides:
 
 * A Braze URL address to receive such webhooks.
