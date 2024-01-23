@@ -103,12 +103,12 @@ The in-app message data is automatically forwarded from the Android layer.
 ##### Option 2 - Custom In-App Message Presenter
 
 1. Ensure you have enabled the In-App Message UI and set the `inAppMessagePresenter` to your custom presenter.
-```
+```swift
     let inAppMessageUI = CustomInAppMessagePresenter()
     braze.inAppMessagePresenter = inAppMessageUI
 ```
 2. Create your custom presenter class and call `BrazePlugin.process(inAppMessage)` within [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/present(message:)-f2ra).
-```
+```swift
 class CustomInAppMessagePresenter: BrazeInAppMessageUI {
   override func present(message: Braze.InAppMessage) {
     // Pass in-app message data to the Dart layer.
