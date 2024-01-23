@@ -63,15 +63,15 @@ For information on how to set an `external_id` against a user profile, see our d
 
 ## User aliases
 
-To refer to users by other identifiers than only the Braze `external_id`, set user aliases against a user profile. Any alias set against a user profile will act in addition to the user's `braze_id` or `external_id` as opposed to replacing it. There's no limit to the number of aliases that you can set against a user profile.
+To refer to users by identifiers other than only the Braze `external_id`, set user aliases against a user profile. Any alias set against a user profile will act in addition to the user's `braze_id` or `external_id` as opposed to replacing it. There's no limit to the number of aliases that you can set against a user profile.
 
-Each alias consists of two parts: a label, which defines the key of the alias, and a name, which defines the value. An alias name for any single label must be unique across the user base. If you attempt to update a second user profile with a pre-existing label and name combination, the user profile will not be updated.
+Each alias functions as a key-value pair that consists of two parts: an `alias_label`, which defines the key of the alias, and an `alias_name`, which defines the value. An `alias_name` for any single label must be unique across the user base (just like with `external_id`). If you attempt to update a second user profile with a pre-existing label and name combination, the user profile will not be updated.
 
 Unlike an `external_id`, an alias can be updated with a new name for a given label after it is set either via our [User Data endpoints][32] or by passing a new name via the SDK. The user alias will then be visible when exporting that user's data.
 
-![Two different user profiles for separate users with the same user alias label but different alias values][29]
+![Two different user profiles for separate users with the same user alias label but different alias names][29]
 
-User aliases also allow you to tag anonymous users with an identifier. For example, if a user provides your ecommerce site with their email address but hasn't yet signed up, the email address can be used as an alias for that anonymous user. These users can then be exported using their aliases or referenced by the API.
+User aliases also allow you to tag anonymous users with an identifier. For example, if a user provides your e-commerce site with their email address but hasn't yet signed up, the email address can be used as an alias for that anonymous user. These users can then be exported using their aliases or referenced by the API.
 
 If an anonymous user profile with an alias is later recognized with an `external_id`, they will be treated as a normal identified user profile, but will retain their existing alias and can still be referenced by that alias.
 
