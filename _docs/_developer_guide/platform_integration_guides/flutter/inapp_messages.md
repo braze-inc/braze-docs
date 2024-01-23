@@ -94,13 +94,13 @@ The in-app message data is automatically forwarded from the Android layer.
 {% endtab %}
 {% tab iOS %}
 
-##### Option 1 - Using `BrazeInAppMessageUIDelegate`
+### Option 1 - Using `BrazeInAppMessageUIDelegate`
 
 1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in our iOS article on [core in-app message delegate](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
 2. Update your [`willPresent` delegate implementation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:willpresent:view:)-4pzvv) to call `BrazePlugin.process(inAppMessage)`.
 
-##### Option 2 - Custom in-app message presenter
+### Option 2 - Custom in-app message presenter
 
 1. Ensure you have enabled the In-App Message UI and set the `inAppMessagePresenter` to your custom presenter.
 ```swift
