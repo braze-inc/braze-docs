@@ -154,7 +154,7 @@ Your user base can be segmented by attribution data in the Braze dashboard using
 
 Additionally, attribution data for a particular user is available on each user's profile in the Braze dashboard.
 
-{% alert important %}
+{% alert note %}
 Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
 {% endalert %}
 
@@ -162,20 +162,20 @@ Attribution data for Facebook and X (formerly Twitter) campaigns is not availabl
 
 AppsFlyer integrates with both SendGrid and SparkPost as Email Service Providers (ESPs) to support deep linking and click tracking. Follow the instructions below to integrate with your ESP of choice.
 
-{% alert note %}
-Deep links&#8212;links that direct users toward a specific page or place within an app or website&#8212;are used to create a tailored user experience. While widely used, issues can arise when using emailed deep links with click tracking, another important feature used in collecting user data. These issues are due to ESPs wrapping deep links in their own click-recording domain, breaking the original link. By integrating AppsFlyer with either SendGrid or SparkPost, you avoid these issues. Learn more about this topic in [Universal links and app links]({{site.baseurl}}/help/help_articles/email/universal_links/).
+{% alert tip %}
+Deep links&#8212;links that direct users toward a specific page or place within an app or website&#8212;are used to create a tailored user experience. While widely used, issues can arise when using emailed deep links with click tracking, another important feature used in collecting user data. These issues are due to ESPs wrapping deep links in their own click-recording domain, breaking the original link. By integrating AppsFlyer with either SendGrid or SparkPost, you avoid these issues. Learn more about this topic in [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
 {% endalert %}
 
 ### Step 1: Set up OneLink in AppsFlyer
 
-1. In AppsFlyer, select a OneLink template for your email campaigns. Ensure the template supports universal links (iOS) or app links (Android). 
+1. In AppsFlyer, select a OneLink template for your email campaigns. Ensure the template supports universal links (iOS) or App Links (Android). 
 2. Configure your app to support deep linking with OneLink. See the [AppsFlyer documentation](https://dev.appsflyer.com/hc/docs/dl_work_flow#initial-setup) for details on configuring your app to support OneLink.
 
-### Step 2: Configure your app to support universal links and app links
+### Step 2: Configure your app to support universal links and App Links
 
-Universal links (iOS) or app links (Android) are allowed by the device's operating system to open a specified app when clicked.
+Universal links (iOS) or App Links (Android) are allowed by the device's operating system to open a specified app when clicked.
 
-Perform the following steps to support universal and app links.
+Perform the following steps to support universal links and App Links.
 
 {% tabs local %}
 {% tab SendGrid %}
@@ -186,9 +186,9 @@ Set up the Apple App Site Association (AASA) file hosting to enable universal li
 
 1. Obtain an AASA file in one of the following methods:
     * If you've set up OneLink with universal links, you may already have an AASA file associated with OneLink. To obtain the AASA file, perform the following:
-        a. Copy the OneLink subdomain of your OneLink template. Ensure the template supports universal links.
-        b. Paste it instead of the placeholder in the following URL: `<OneLinkSubdomain>.onelink.me/.well-known/apple-app-site-association`
-        c. To download the AASA file, paste the OneLink URL into your browser's address bar and press **Enter**. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
+        * Copy the OneLink subdomain of your OneLink template. Ensure the template supports universal links.
+        * Paste it instead of the placeholder in the following URL: `<OneLinkSubdomain>.onelink.me/.well-known/apple-app-site-association`
+        * To download the AASA file, paste the OneLink URL into your browser's address bar and press **Enter**. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
     * [Apple's guide on universal links](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content) explains how to create the AASA file.
 2. Host the AASA file in your click-recording domain server. The file should be hosted in the path: `click.example.com/.well-known/apple-app-site-association`. 
 
@@ -223,9 +223,9 @@ Set up the Apple App Site Association (AASA) file hosting to enable universal li
 
 1. Obtain an AASA file in one of the following methods:
     * If you've set up OneLink with universal links, you may already have an AASA file associated with OneLink. To obtain the AASA file, perform the following:
-        a. Copy the OneLink subdomain of your OneLink template. Ensure the template supports universal links.
-        b. Paste it instead of the placeholder in the following URL: `<OneLinkSubdomain>.onelink.me/.well-known/apple-app-site-association`
-        c. To download the AASA file, paste the OneLink URL into your browser's address bar and press **Enter**. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
+        * Copy the OneLink subdomain of your OneLink template. Ensure the template supports universal links.
+        * Paste it instead of the placeholder in the following URL: `<OneLinkSubdomain>.onelink.me/.well-known/apple-app-site-association`
+        * To download the AASA file, paste the OneLink URL into your browser's address bar and press **Enter**. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
     * [Apple's guide on universal links](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content) explains how to create the AASA file.
 2. Host the AASA file in your click-recording domain server. The file should be hosted in the path: `click.example.com/.well-known/apple-app-site-association`. 
 
@@ -315,8 +315,7 @@ idfv={{most_recently_used_device.${id}}}
 {% endtabs %}
 
 {% alert note %}
-**This recommendation is optional**<br>
-If you currently do not use any device identifiers&#8212;such as the IDFV or GAID&#8212;in your click tracking links, or do not plan to in the future, AppsFlyer will still be able to attribute these clicks through their probabilistic modeling.
+**This recommendation is optional**: If you currently do not use any device identifiers&#8212;such as the IDFV or GAID&#8212;in your click tracking links, or do not plan to in the future, AppsFlyer will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/braze_integration.png %}
