@@ -74,7 +74,7 @@ If an EEA or UK user previously provided consent for both signals, that data wil
 * Send the value as a boolean type, not a string type.
 * Prefix the dollar sign ($) for the attribute name. Braze uses a dollar sign at the start of an attribute name to dictate this is a special and reserved key.
 * Enter the attribute name in lower case.
-* While you can't explicitly set a user as unspecified, if you send a `null` or `nil` value or any other value not `true` or `false`, Braze will pass this user to Google as `UNSPECIFIED`.
+* While you can't explicitly set a user as unspecified, if you send a `null` or `nil` value or any value that isn't `true` or `false`, Braze will pass this user to Google as `UNSPECIFIED`.
 * New users added or updated without specifying either consent attribute will be synced to Google with those consent attributes marked as unspecified.
 
 If you attempt to sync an EEA or UK user without the necessary consent fields and granted status, Google will reject this and not serve ads to this end user. In addition, if an ad is served to an EEA or UK user without their explicit consent, you may be liable and could be at financial risk. For more details regarding the EU User Consent Policy for Customer Match upload partners, see Google’s [FAQs](https://support.google.com/google-ads/answer/14310715). 
