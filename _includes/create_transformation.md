@@ -1,4 +1,4 @@
-Navigate to the Braze dashboard, and go to **Data Settings** > **Data Transformations**.
+Navigate to the Braze dashboard, and go to **Data Settings** > **Data Transformation**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Transformations** under **Data**.
