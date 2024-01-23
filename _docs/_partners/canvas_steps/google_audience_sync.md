@@ -39,12 +39,12 @@ You must ensure the following items are created and completed before setting up 
 | Google Ads Account | [Google](https://support.google.com/google-ads/answer/6366720?hl=en) | An active Google ads account for your brand.<br><br>If you are looking to share an audience across multiple managed accounts, you can upload your audiences into your [manager account](https://support.google.com/google-ads/answer/6139186). |
 | Google Ads Terms and Google Ads Policies | [Google](https://support.google.com/adspolicy/answer/54818?hl=en) | You must accept and ensure you comply with [Google’s Ad Terms](https://payments.google.com/u/0/paymentsinfofinder?hostOrigin=aHR0cHM6Ly9wYXltZW50cy5nb29nbGUuY29tOjQ0Mw..&sri=-40) and [Google’s Ad Policies](https://support.google.com/adspolicy/answer/6008942?sjid=15557182366992806023-NC), which include the [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/), as applicable to you, in your use of Braze Audience Sync.<br><br>Consult with your Legal Team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA/UK end users. |
 | Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>**To use Customer Match, your account must have:**<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet these criteria, then your account is currently ineligible to use Customer Match.<br><br>Connect with your Google Ads representative for more guidance on Customer Match availability for your account. |
-| Google Consent Signals | [Google](https://support.google.com/google-ads/answer/14310715) |  If you want to target EEA/UK end users using Google’s Customer Match service, you’ll need to pass Braze the following custom attributes (boolean) as part of Google’s  EU User Consent Policy. More details can be found under [Collecting consent for EAA and UK end users](#collecting-consent-for-eaa-and-uk-end-users): <br> - `$google_ad_user_data` <br> - `$google_ad_personalization` |
+| Google Consent Signals | [Google](https://support.google.com/google-ads/answer/14310715) |  If you want to serve ads to EEA/UK end users using Google’s Customer Match service, you’ll need to pass Braze the following custom attributes (boolean) as part of Google’s  EU User Consent Policy. More details can be found under [Collecting consent for EEA and UK end users](#collecting-consent-for-eea-and-uk-end-users): <br> - `$google_ad_user_data` <br> - `$google_ad_personalization` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Collecting consent for EAA and UK end users
+### Collecting consent for EEA and UK end users
 
-Google’s EU User Consent Policy requires advertisers to disclose the following to their EAA or UK end users, as well as obtain their consent for such: 
+Google’s EU User Consent Policy requires advertisers to disclose the following to their EEA or UK end users, as well as obtain their consent for such: 
 
 * the use of cookies or other local storage where legally required; and
 * the collection, sharing, and use of their personal data for personalization of ads.
@@ -55,11 +55,19 @@ As part of this upcoming change, you can collect both consent signals in Braze a
 
 | Custom Attribute Name | Data Type | Values | Definition |
 | ----- | ----- | ----- | ----- |
-| `$google_ad_user_data` | Boolean | In Braze, this can be set to `true` or `false`. <br><br> `true` in Braze maps to Google's `GRANTED` consent status (this will be synced to Google) <br> - `false` in Braze maps to Google's `DENIED` consent status <br> - `null` in Braze maps to Google's `UNSPECIFIED` consent status <br> - Any value that is not `true` or `false` will be `UNSPECIFIED` | Sets consent for sending user data to Google for advertising purposes*. |
+| `$google_ad_user_data` | Boolean | In Braze, this can be set to `true` or `false`. <br><br> - `true` in Braze maps to Google's `GRANTED` consent status (this will be synced to Google) <br> - `false` in Braze maps to Google's `DENIED` consent status <br> - `null` in Braze maps to Google's `UNSPECIFIED` consent status <br> - Any value that is not `true` or `false` will be `UNSPECIFIED` | Sets consent for sending user data to Google for advertising purposes. |
 | `$google_ad_personalization` | Boolean | In Braze, this can be set to `true` or `false`. <br><br> - `true` in Braze maps to Google's `GRANTED` consent status (this will be synced to Google) <br> - `false` in Braze maps to Google's  `DENIED` consent status <br> - `null` in Braze maps to Google's `UNSPECIFIED` consent status <br> - Any value that is not `true` or `false` in Braze is mapped to Google's `UNSPECIFIED` consent status | Sets consent for personalized advertising. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-_*Braze will sync unspecified for any user that does not have the consent attributes determined to Google. This consent is for Google to use that data in determining which ads to serve._
+_Braze will sync unspecified for any user that does not have the consent attributes determined to Google. This consent is for Google to use that data in determining which ads to serve._
+
+#### Managing revoked consent
+
+After an EEA or UK end user has been added to the audience list, if any of the two consents (`$google_ad_user_data` or `$google_ad_personalization`) are later retracted by the end user, you can set up a Canvas to remove users from the existing audience lists using an Audience Sync step.
+
+{% alert note %}
+If an EEA or UK user previously provided consent for both signals, that data will continue to be used for Google’s Customer Match until that list expires, or that data is explicitly removed by the advertiser or partner, or both.
+{% endalert %}
 
 #### Tips
 
