@@ -13,7 +13,7 @@ channel: in-app messages
 
 > Learn how to integrate and customize in-app messages for Android and iOS using Flutter.
 
-## Enable In-App Message UI
+## Enable in-app message UI
 
 To integrate Flutter's in-app messaging with iOS, [enable in-app messaging using the Braze Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/in-app_message_delivery/#enabling-in-app-messages). There are no additional steps for Android.
 
@@ -100,7 +100,7 @@ The in-app message data is automatically forwarded from the Android layer.
 
 2. Update your [`willPresent` delegate implementation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:willpresent:view:)-4pzvv) to call `BrazePlugin.process(inAppMessage)`.
 
-##### Option 2 - Custom In-App Message Presenter
+##### Option 2 - Custom in-app message presenter
 
 1. Ensure you have enabled the In-App Message UI and set the `inAppMessagePresenter` to your custom presenter.
 ```swift
