@@ -25,8 +25,8 @@ You can also pass your AppsFlyer audiences (cohorts) directly to Braze with the 
 | AppsFlyer account | An AppsFlyer account is required to take advantage of this partnership. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. Details on these requirements can be found in step 1 of the integration process. |
 | AppsFlyer SDK | In addition to the required Braze SDK, you must install the [AppsFlyer SDK](https://dev.appsflyer.com/hc/docs/getting-started).
-| Email domain setup complete | You must have completed the [IP and domain setup step]({site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/) of setting up your email during Braze onboarding. |
-| SSL certificate | Your [SSL certificate]({site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl#acquiring-an-ssl-certificate) must be configured. |
+| Email domain setup complete | You must have completed the [IP and domain setup step]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/) of setting up your email during Braze onboarding. |
+| SSL certificate | Your [SSL certificate]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl#acquiring-an-ssl-certificate) must be configured. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -238,7 +238,7 @@ Once the AASA file is hosted, any change of your OneLink configuration (modifica
 {% endalert %}
 
 #### Step 2b: Redirect your click-tracking domain to your AASA file host
-During your [email configuration]({site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/), you created a CNAME record in your DNS server. Perform the following steps after you verify your click-tracking domain in Braze. 
+During your [email configuration]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/), you created a CNAME record in your DNS server. Perform the following steps after you verify your click-tracking domain in Braze. 
 
 1. Delete the CNAME record that redirects your subdomain to the SparkPost domain.
 2. Create a CNAME record that redirects your click-tracking domain to the CDN hosting your app AASA file, instead of the record you deleted above.
