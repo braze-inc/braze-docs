@@ -283,6 +283,8 @@ Subtab Android content
 {% endtab %}
 {% endtabs %}
 
+Once you've completed the integration steps, you can perform QA and troubleshooting by sending a deep link using OneLink. See the [AppsFlyer documentation](https://support.appsflyer.com/hc/en-us/articles/360001437497-Integrating-AppsFlyer-and-Braze#step-3-sending-your-first-email::2ffdb79a) for details on using OneLink.
+
 ### AppsFlyer click tracking URLs in Braze (optional)
 
 You can use AppsFlyer's [OneLink attribution links](https://support.AppsFlyer.com/hc/en-us/articles/360001294118) in Braze campaigns across push, email, and more. This allows you to send back install or re-engagement attribution data from their Braze campaigns into AppsFlyer. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions.
