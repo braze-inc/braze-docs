@@ -102,7 +102,7 @@ The in-app message data is automatically forwarded from the Android layer.
 
 ### Option 2 - Custom in-app message presenter
 
-1. Ensure you have enabled the In-App Message UI and set the `inAppMessagePresenter` to your custom presenter.
+1. Ensure you have enabled the in-app message UI and set the `inAppMessagePresenter` to your custom presenter.
 ```swift
     let inAppMessageUI = CustomInAppMessagePresenter()
     braze.inAppMessagePresenter = inAppMessageUI
