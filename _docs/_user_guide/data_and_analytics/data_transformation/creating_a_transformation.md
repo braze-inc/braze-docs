@@ -202,10 +202,8 @@ For more detailed monitoring and troubleshooting, refer to the **Logs** page for
 
 ### Troubleshooting
 
-- If deliveries are 0, check your transformation code to ensure there are no syntax errors and that it compiles. Then, check whether the output is a valid `/users/track` request.
-- If deliveries are less than the number of incoming requests, that indicates that at least some webhooks are delivered successfully transformed to `/users/track`. Your transformation code doesn't account for 100% of the webhooks received.
-- If your source platform has logs, check for inconsistencies across different webhooks.
-- If your transformation code has if/else logic, check if one of the control flows is the cause of failure.
+- If deliveries are 0, check your transformation code to ensure there are no syntax errors and that it compiles. Then, check whether the output is a valid destination request.
+- If deliveries are less than the number of incoming requests, that indicates that at least some webhooks are delivered successfully. Refer to transformation logs for example errors, and look to see if the transformation output is expected. It’s possible that your transformation code is not accounting for every variation of webhooks received.
 
 
 [4]: {% image_buster /assets/img/data_transformation/data_transformation3.png %}
