@@ -180,7 +180,7 @@ Perform the following steps to support universal links and App Links.
 {% tabs local %}
 {% tab SendGrid %}
 {% subtabs %}
-{% subtab Subtab iOS %}
+{% subtab iOS %}
 #### Step 2a: Set up AASA file hosting
 Set up the Apple App Site Association (AASA) file hosting to enable universal links in your emails.
 
@@ -210,14 +210,14 @@ After you host the AASA file in your click-recording domain, configure your SDK 
 
 
 {% endsubtab %}
-{% subtab Subtab Android %}
+{% subtab Android %}
 Subtab Android content
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% tab SparkPost %}
 {% subtabs %}
-{% subtab Subtab iOS %}
+{% subtab iOS %}
 #### Step 2a: Set up AASA file hosting
 Set up the Apple App Site Association (AASA) file hosting to enable universal links in your emails.
 
@@ -251,7 +251,7 @@ After you host the AASA file in your click-recording domain, configure your SDK 
 3. Turn on **Associated Domains.**
 4. Click **+**, and enter your click domain. For example, `applinks:click.example.com`.
 {% endsubtab %}
-{% subtab Subtab Android %}
+{% subtab Android %}
 Subtab Android content
 {% endsubtab %}
 {% endsubtabs %}
@@ -263,21 +263,31 @@ Subtab Android content
 {% tabs local %}
 {% tab SendGrid %}
 {% subtabs %}
-{% subtab Subtab iOS %}
-Subtab iOS content
+{% subtab iOS %}
+When a click on the universal link occurs, your app is opened and the SDK is initiated. To enable the app to extract the OneLink behind the click domain and resolve the deep link, perform the following:
+
+1. Provide the click recording domain to the SDK API <code>[resolveDeepLinkURLs](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlib#resolvedeeplinkurls)</code>. This API needs to be called before SDK initialization. <code>AppsFlyerLib.shared().resolveDeepLinkURLs = ["click.example.com","spgo.io"]</code>
+2. Use the <code>[onAppOpenAttribution](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlibdelegate#onappopenattribution)</code> API to get the deep link parameters and handle the deep link data.
+
 {% endsubtab %}
-{% subtab Subtab Android %}
-Subtab Android content
+{% subtab Android %}
+When a click on an App Link occurs, your app is opened and the SDK is initiated.  To enable the app to extract the OneLink behind the click domain and resolve the deep link, list the click domains in the SDK method [`setResolveDeepLinkURLs`](https://support.appsflyer.com/hc/en-us/articles/4408735106193#resolve-wrapped-deep-link-urls). This property needs to be set before SDK initialization. <code>AppsFlyerLib.getInstance().setResolveDeepLinkURLs("clickdomain.com", "myclickdomain.com", "anotherclickdomain.com");</code>
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% tab SparkPost %}
 {% subtabs %}
-{% subtab Subtab iOS %}
-Subtab iOS content
+{% subtab iOS %}
+When a click on the universal link occurs, your app is opened and the SDK is initiated. To enable the SDK to extract the OneLink behind the click domain, perform the following:
+1. List the click domains in the SDK property  <code>[resolveDeepLinkURLs](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlib#resolvedeeplinkurls)</code>. Make sure to set this property before SDK initialization.
+2. Make sure that List <em>spgo.io</em> is one of the listed domains. SparkPost owns this domain and it's part of the redirection flow. <code>AppsFlyerLib.shared().resolveDeepLinkURLs = ["click.example.com","spgo.io"]</code>
+3. Use the <code>[onAppOpenAttribution](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlibdelegate#onappopenattribution)</code> API to get the deep link parameters and handle the deep link data.
 {% endsubtab %}
-{% subtab Subtab Android %}
-Subtab Android content
+{% subtab Android %}
+When a click on an App Link occurs, your app is opened and the SDK is initiated. To enable the app to extract the OneLink behind the click domain and resolve the deep link, perform the following:
+
+1. List the click domains in the SDK method [`setResolveDeepLinkURLs`](https://support.appsflyer.com/hc/en-us/articles/4408735106193#resolve-wrapped-deep-link-urls). This property needs to be set before SDK initialization.
+2. Make sure that List *spgo.io* is one of the listed domains. SparkPost owns this domain and it's part of the redirection flow. <code>AppsFlyerLib.getInstance().setResolveDeepLinkURLs("clickdomain.com", "myclickdomain.com", "spgo.io");</code>
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
