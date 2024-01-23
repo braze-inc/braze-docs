@@ -168,7 +168,7 @@ Here, you will write transformation code to define how you’d like to map vario
 Your webhook integration is now complete!
 
 {% endtab %}
-{% tab Advanced %}
+{% tab Advanced - POST: Track users %}
 
 In this step, you will transform the webhook payload from the source platform to a JavaScript object return value. This return value must adhere to Braze’s `/users/track` request body format:
 
