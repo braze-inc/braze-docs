@@ -203,7 +203,7 @@ For more detailed monitoring and troubleshooting, refer to the **Logs** page for
 ### Troubleshooting
 
 - If deliveries are 0, check your transformation code to ensure there are no syntax errors and that it compiles. Then, check whether the output is a valid destination request.
-- If deliveries are less than the number of incoming requests, that indicates that at least some webhooks are delivered successfully. Refer to transformation logs for example errors, and look to see if the transformation output is expected. It’s possible that your transformation code is not accounting for every variation of webhooks received.
+- If deliveries are less than the number of incoming requests, this indicates that at least some webhooks are delivered successfully. Refer to transformation logs for example errors, and look to see if the transformation output is expected. It’s possible that your transformation code is not accounting for every variation of webhooks received.
 
 
 [4]: {% image_buster /assets/img/data_transformation/data_transformation3.png %}
