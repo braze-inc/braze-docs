@@ -8,7 +8,7 @@ description: "This reference article provides steps to create a transformation u
 
 # Creating a transformation
 
-> Braze Data Transformation enables you to build and manage webhook integrations to automate data flow from external platforms into Braze user profiles. This integrated user data can then power even more sophisticated marketing use cases.
+> BBraze Data Transformation enables you to build and manage webhook integrations to automate data flow from external platforms into Braze. This integrated user data can then power even more sophisticated marketing use cases.
 
 ## Prerequisites 
 
@@ -148,7 +148,7 @@ After activating your transformation, refer to the analytics on the **Transforma
 - **Incoming Requests:** This is the number of webhooks received at this transformation’s URL. If incoming requests are 0, your source platform hasn’t sent over any webhooks, or the connection cannot be made.
 - **Deliveries:** After receiving incoming requests, Data Transformation applies your transformation code to create a Braze `/users/track` request.
 
-The number of deliveries will never exceed the number of incoming requests. However, it's a good goal to have 100% of incoming requests leading to deliveries.
+The number of deliveries will never exceed the number of incoming requests. However, it’s a good goal to have 100% of incoming requests leading to deliveries.
 
 ### Troubleshooting
 
