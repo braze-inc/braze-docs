@@ -16,19 +16,19 @@ Preview and Demo Predictions will not allow users to be targeted for messaging, 
 
 ## Implementing filters {#filters}
 
-From the individual **Predictions** page, after you've decided what range of Likelihood Score or Category you want to target, you can use the **Create Segment** or **Create Campaign** buttons to create a new segment or campaign. This segment or campaign will filter for users with the Likelihood Score or Category selected with the slider.
+From the individual **Predictions** page, after you've decided what range of likelihood score or category you want to target, you can use the **Create Segment** or **Create Campaign** buttons to create a new segment or campaign. This segment or campaign will filter for users with the likelihood score or category selected with the slider.
 
 ![Filters available when defining an audience include Likelihood Category and Likelihood Score.][5]
 
-You can also use filters in campaigns, Canvas, or segments to target user according to their Likelihood Score or Category, just like you use any other filter in Braze.
+You can also use filters in campaigns, Canvas, or segments to target user according to their likelihood score or category, just like you use any other filter in Braze.
 
 ## Strategic considerations {#strategy}
 
 Now that you know who may or may not perform an event in the future, start thinking about how you want to message customers and allocate your marketing resources.
 
-Messaging users based on their Likelihood Score or Category doesn't just help you make money—it helps you save money too! Offer promotions on a sliding scale: the more likely users are to make a purchase, the fewer discounts they likely need. Finding this balance helps you give and get the right amount of value for each customer. Keep in mind that you can also layer other filters onto these segments to further qualify who gets which messages.
+Messaging users based on their likelihood score or category doesn't just help you make money—it helps you save money too! Offer promotions on a sliding scale: the more likely users are to make a purchase, the fewer discounts they likely need. Finding this balance helps you give and get the right amount of value for each customer. Keep in mind that you can also layer other filters onto these segments to further qualify who gets which messages.
 
-Here are a few ideas to jumpstart your Predictive Events strategy based on users' Likelihood Scores.
+Here are a few ideas to jumpstart your Predictive Events strategy based on users' likelihood scores.
 
 ### High-likelihood users
 

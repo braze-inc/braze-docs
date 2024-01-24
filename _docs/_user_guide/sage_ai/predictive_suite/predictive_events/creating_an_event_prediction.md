@@ -40,9 +40,9 @@ Specify if your users' events are stored in Braze as [purchase events]({{site.ba
 
 Here, you'll see if the selected method provides enough data for Braze to create a machine learning model. If the requirement is not met, try and select the other logging method if it is also used by your application. Unfortunately, if it is not, Braze is unable to create a prediction with the quantity of data available. If you believe you're incorrectly seeing this error, get in touch with your customer success manager.
 
-#### Event Window
+#### Event window
 
-The Event Window is the time frame in which you want to predict if a user will perform the event. It can be set up to 60 days. This window is used to query historical data for training the prediction. Additionally, after the prediction is created and users receive scores, the Likelihood Score indicates how likely a user is to perform the event within the number of days specified by the Event Window.
+The event window is the time frame in which you want to predict if a user will perform the event. It can be set up to 60 days. This window is used to query historical data for training the prediction. Additionally, after the prediction is created and users receive scores, the likelihood score indicates how likely a user is to perform the event within the number of days specified by the event window.
 
 ### Step 3: Filter your prediction audience (optional) {#audience}
 
@@ -80,7 +80,7 @@ After you click **Build Prediction**, the process that generates the model will 
 
 When completed, the page will switch to the analytics view automatically, and you will receive an email informing you that the prediction and results are ready. In the event of an error, the page will return to the editing mode with an explanation of what went wrong.
 
-The prediction will be automatically rebuilt ("retrained") every **two weeks** to keep it updated on the most recent data available. Note that this is a separate process from when users' Likelihood Scores, the output of the prediction, are produced. The latter is determined by the update frequency you chose in Step 4.
+The prediction will be automatically rebuilt ("retrained") every **two weeks** to keep it updated on the most recent data available. Note that this is a separate process from when users' likelihood scores, the output of the prediction, are produced. The latter is determined by the update frequency you chose in Step 4.
 
 ## Archived predictions
 

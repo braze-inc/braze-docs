@@ -8,7 +8,7 @@ page_order: 2
 
 # Prediction analytics
 
-> After your prediction has been built and trained, you will have access to the **Prediction Analytics** page. This page helps you decide what users you should target based on their Likelihood Score or Category.
+> After your prediction has been built and trained, you will have access to the **Prediction Analytics** page. This page helps you decide what users you should target based on their likelihood score or category.
 
 As soon as the prediction is done training and this page is populated, you can start using [filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals.
 
@@ -53,15 +53,15 @@ The prediction isn't perfectly accurate, and no prediction ever is, meaning Braz
 
 #### How many selected users are expected not to perform the event
 
-All machine learning models make errors. There may be users in your selection who have a high Likelihood Score but do not end up actually performing the event. They would not perform the event if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not perform the event, and the filled portion is those who will be incorrectly targeted using the current slider position.
+All machine learning models make errors. There may be users in your selection who have a high likelihood score but do not end up actually performing the event. They would not perform the event if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not perform the event, and the filled portion is those who will be incorrectly targeted using the current slider position.
 
 Using this information, we encourage you to decide how many of the true positives you want to capture, how many false positives you can accept being targeted, and what the cost of errors is for your business. If you are sending out a valuable promotion, you may want to target only non-purchasers (false positives) by favoring the left side of the chart. Or, you may want to encourage buyers who often purchase (true positives) to do so again by selecting a section of users that favors the right side of the chart.
 
 ### Prediction quality {#prediction_quality}
 
-To measure the accuracy of your model, the **Prediction Quality** metric will show you how effective this particular machine learning model appears to be. It is a measure of how good this prediction is at telling apart the event performers from the non-event performers. A prediction quality of 100 would mean it perfectly knows who will and will not perform the event without error (this never happens!), and 0 meaning it's randomly guessing. Check out this page to read more about what goes into [prediction quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
+To measure the accuracy of your model, the _Prediction Quality_ metric will show you how effective this particular machine learning model appears to be. It is a measure of how good this prediction is at telling apart the event performers from the non-event performers. A _Prediction Quality_ of 100 would mean it perfectly knows who will and will not perform the event without error (this never happens!), and 0 meaning it's randomly guessing. Refer to [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) to learn more about the metric.
 
-Here's what we recommend for various ranges of Prediction Quality:
+Here's what we recommend for various ranges of _Prediction Quality_:
 
 | Prediction Quality Range (%) | Recommendation |
 | ---------------------- | -------------- |

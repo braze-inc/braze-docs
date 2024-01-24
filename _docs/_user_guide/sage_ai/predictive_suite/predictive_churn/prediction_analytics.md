@@ -38,9 +38,9 @@ The scores and the corresponding categories will be updated according to the sch
 
 ### Prediction quality {#prediction_quality}
 
-To measure the accuracy of your model, the **Prediction Quality** metric will show you how effective this particular machine learning model appears to be when tested on historical data. Check out this doc to read more about what goes into [prediction quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
+To measure the accuracy of your model, the _Prediction Quality_ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Refer to [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) to learn more about the metric.
 
-Here's what we recommend for various ranges of prediction quality:
+Here's what we recommend for various ranges of _Prediction Quality_:
 
 | Prediction Quality Range (%) | Recommendation |
 | ---------------------- | -------------- |
@@ -60,7 +60,7 @@ In the right half of the panel beneath the chart, we show estimates of the expec
 
 1. An estimate of how many actual churners will be correctly targeted <br><br> Of course, we don't know the future perfectly, so we don't know precisely which users from the prediction audience will churn in the future. But the prediction is a reliable inference. Based on past performance, this progress bar indicates how many of the total "actual" or "true" churners expected in the prediction Audience (based on prior churn rates) will be targeted with the current targeting selection. We would expect this number of users to churn if you do not target them with any extra or unusual messaging. <br><br>
 
-2. An estimate of how many users who wouldn't have actually churned will be incorrectly targeted<br><br>All machine learning models make errors. There may be users in your selection who have a high Churn Risk Score but do not end up churning. They would not churn even if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not churn, and the filled portion is those who will be incorrectly targeted using the current slider position.
+2. An estimate of how many users who wouldn't have actually churned will be incorrectly targeted<br><br>All machine learning models make errors. There may be users in your selection who have a high _Churn Risk Score_ but do not end up churning. They would not churn even if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not churn, and the filled portion is those who will be incorrectly targeted using the current slider position.
 
 Using this information, we encourage you to decide how many of the churners you want to capture and what the cost of a false positive error is for your business. If you are sending out a valuable promo, you may want to keep non-churners targeted to a minimum while getting as many expected true churners as the model will allow. Or, if you're less sensitive to false positives and users receive extra messaging, you can message more of the audience to capture more expected churners and ignore the likely errors.
 
@@ -68,7 +68,7 @@ Using this information, we encourage you to decide how many of the churners you 
 
 This analysis displays any user attributes or behaviors that are correlated with user churn in the historical prediction audience. The tables are split into left and right for more and less likely to churn, respectively. For each row, the ratio by which the users with the behavior or attribute in the left column are more or less likely to churn is displayed in the right column. This number is the ratio of churn likelihood of users with this behavior or attribute divided by the likelihood to churn off the entire prediction audience.
 
-This table is updated only when the prediction retrains and not when user Churn Risk Scores are updated.
+This table is updated only when the prediction retrains and not when user _Churn Risk Scores_ are updated.
 
 {% alert note %}
 Correlation data for preview predictions will be partially hidden. A purchase is required to reveal this information. Contact your account manager for more information.
