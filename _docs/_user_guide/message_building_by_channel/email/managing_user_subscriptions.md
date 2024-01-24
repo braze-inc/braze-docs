@@ -131,6 +131,10 @@ If you don't want to use the default Braze footer in your emails, you can create
 
 This way, you don't have to create a new footer for every email template or email campaign you use. For steps, refer to [Custom email footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/).
 
+#### Managing subscription states for Chinese IP addresses
+
+If you anticipate that your email recipients will have a Chinese IP address, then you should not rely solely on an unsubscribe link in the footer of your email to maintain your `unsubscribed` lists. Instead, use a [list unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings#enable-list-unsubscribe-header). In addition, consider offering multiple additional methods for users to unsubscribe, such as a [custom unsubscribe page]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=custom%20unsubscribe%20page#subscription-pages-and-footers) or an [opt-in page]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=custom%20opt-in%20page).
+
 ### Creating a custom unsubscribe page
 
 When users click an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
@@ -138,10 +142,6 @@ When users click an unsubscribe URL in an email, they are taken to a default lan
 To create a custom landing page that users will be directed to (instead of the default page) upon subscribing, go to **Email Preferences** > **Subscription Pages and Footers** and provide the HTML for your custom landing page. We recommend including a resubscribe link (such as {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
 
 ![Custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
-
-#### Managing subscription states for Chinese IP addresses
-
-If you anticipate that your email recipients will have a Chinese IP address, then you should not rely solely on an unsubscribe link in the footer of your email to maintain your `unsubscribed` lists. Instead, use a [list unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings#enable-list-unsubscribe-header). In addition, consider offering multiple additional methods for users to unsubscribe, such as a [custom unsubscribe page]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=custom%20unsubscribe%20page#subscription-pages-and-footers) or an [opt-in page]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=custom%20opt-in%20page).
 
 ### Creating a custom opt-in page
 
