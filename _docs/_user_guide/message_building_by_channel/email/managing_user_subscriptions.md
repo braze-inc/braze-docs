@@ -11,7 +11,8 @@ channel:
 # Email subscriptions
 
 > Learn about the different user subscription states, how to create and manage subscription groups, and how to segment users based on their subscriptions.
-> _This document is for informational purposes only. It is not intended to provide, nor may it be relied upon as providing legal advice in any capacity. Sending marketing and transactional emails may be subject to specific legal requirements. To ensure that you are doing so in compliance with all applicable laws, rules, and regulations specific to your company, you should seek the advice of your legal counsel and/or regulatory compliance team_.
+
+This document is for informational purposes only. It is not intended to provide, nor may it be relied upon as providing legal advice in any capacity. Sending marketing and transactional emails may be subject to specific legal requirements. To ensure that you are doing so in compliance with all applicable laws, rules, and regulations specific to your company, you should seek the advice of your legal counsel and/or regulatory compliance team.
 
 ## Subscription states {#subscription-states}
 
@@ -138,9 +139,9 @@ To create a custom landing page that users will be directed to (instead of the d
 
 ![Custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
 
-_**Navigating Unsubscribe Links on a China IP Address**_
+#### Navigating unsubscribe links on a Chinese IP address
 
-If you anticipate that your email recipients will interact with your email communications via a China IP address, then you should not rely on the above unsubscribe method to maintain your opt-out lists. Alternatively, you should include a ‘mail-to’ unsubscribe link to a customer support inbox within the body of any applicable emails and/or consider offering another method by which your recipients can unsubscribe, e.g., an unsubscribe link on your company’s website and/or an unsubscribe process within your opt-in procedures. 
+If you anticipate that your email recipients will have a Chinese IP address, then you should not rely solely on an unsubscribe link in the footer of your email to maintain your `unsubscribed` lists. Instead, use a [list unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings#enable-list-unsubscribe-header). In addition, consider offering multiple additional methods for users to unsubscribe, such as a [custom unsubscribe page]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=custom%20unsubscribe%20page#subscription-pages-and-footers) or an [opt-in page]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=custom%20opt-in%20page).
 
 ### Creating a custom opt-in page
 
