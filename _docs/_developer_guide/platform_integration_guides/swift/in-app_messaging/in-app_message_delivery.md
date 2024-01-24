@@ -111,6 +111,8 @@ A triggered in-app message can be returned to the stack in the following situati
 - Another in-app message is currently visible.
 - The `inAppMessage(_:displayChoiceForMessage:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) returned `.reenqueue`.
 
+The triggered in-app message will be placed on top of the stack for later display.
+
 ### Discarding in-app messages
 
 A triggered in-app message will be discarded in the following situations:
@@ -119,6 +121,8 @@ A triggered in-app message will be discarded in the following situations:
 - The asset (image or ZIP file) of the in-app message failed to download.
 - The in-app message is ready to be displayed but passed the timeout duration.
 - The device orientation doesn't match the triggered in-app message's orientation.
+
+After being discarded, the in-app message can be triggered later on by another instance of the trigger event.
 
 ## Real-time in-app message creation and display
 
