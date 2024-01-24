@@ -36,7 +36,7 @@ Adding your department to your user profile helps ensure you receive relevant co
 
 ## Suspending Braze users
 
-Suspending a user puts their account into an inactive state, where the user can no longer log into their account, but the data associated with their account is preserved. Only administrators can suspend or un-suspend Braze users.
+Suspending a user puts their account into an inactive state, where the user can no longer log in, but the data associated with their account is preserved. Only administrators can suspend or un-suspend Braze users.
 
 To suspend a user, go to **Settings** > **Company Users**, find their username and click <i class="fa-solid fa-user-lock"></i> **Suspend**.
 
