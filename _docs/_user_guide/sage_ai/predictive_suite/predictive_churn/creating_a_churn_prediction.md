@@ -1,14 +1,14 @@
 ---
 nav_title: Creating a Churn Prediction
 article_title: Creating a Churn Prediction
-description: "This article covers how to create a churn prediction within the Braze dashboard"
+description: "This article covers how to create a churn prediction within the Braze dashboard."
 page_order: 1
 
 ---
 
 # Creating a churn prediction
 
-> Learn how to create a Churn prediction within the Braze dashboard.
+> Learn how to create a churn prediction within the Braze dashboard.
 
 ## Step 1: Create a new prediction
 
@@ -79,7 +79,7 @@ The machine learning model created when you complete this page will be used on a
 ![Prediction Update Schedule set to daily at 5 pm.][2]
 
 {% alert note %}
-Preview and demo prediction will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond weekly or monthly updates with predictive churn. To purchase this functionality, contact your account manager. 
+Preview and demo prediction will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond weekly or monthly updates with Predictive Churn. To purchase this functionality, contact your account manager. 
 {% endalert %}
 
 ## Step 5: Build prediction

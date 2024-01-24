@@ -1,16 +1,16 @@
 ---
 nav_title: Prediction Analytics
 article_title: Prediction Analytics
-description: "This reference article covers the different components included in the Churn Prediction Analytics Page and how they can be used to make insightful, driven decisions."
+description: "This reference article covers the different components included in the Churn Prediction Analytics page and how they can be used to make insightful, driven decisions."
 page_order: 2
 
 ---
 
 # Prediction analytics
 
-> After your prediction has been built and trained, you will have access to the **Prediction Analytics** page. This page helps you decide what users you should target based on their Churn Risk Score or Category. 
+> After your prediction has been built and trained, you will have access to the **Prediction Analytics** page. This page helps you decide what users you should target based on their _Churn Risk Score_ or _Category_. 
 
-As soon as the prediction is done training and this page is populated, you can jump to simply using [Filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in Segments or campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
+As soon as the prediction is done training and this page is populated, you can jump to simply using [filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
 
 **Analytics Components**<br>
 &#45; [Churn Score and Category](#churn_score)<br>
@@ -20,7 +20,7 @@ As soon as the prediction is done training and this page is populated, you can j
 
 ## Overview
 
-The distribution of the scores for the entire prediction audience is displayed at the top of the page in a chart that you can view, by category or by score. Users in bins further to the right have higher scores and are more likely to churn. Users in bins further to the left are less likely to churn. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of Churn Risk Score or Category.
+The distribution of the scores for the entire prediction audience is displayed at the top of the page in a chart that you can view, by category or by score. Users in bins further to the right have higher scores and are more likely to churn. Users in bins further to the left are less likely to churn. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of _Churn Risk Score_ or category.
 
 ![][4]{: style="max-width:90%"}
 
@@ -28,11 +28,11 @@ As you move the slider, the bar in the left half of the lower panel will inform 
 
 ## Churn score and category {#churn_score}
 
-Users in the prediction audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Churn. 
-- Users with Churn Scores between 0 and 50 will be labeled in the Low Churn Risk category. 
-- Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Churn Risk categories, respectively. 
+Users in the prediction audience will be assigned a _Churn Score_ between 0 and 100. The higher the score, the greater the likelihood of Churn. 
+- Users with churn scores between 0 and 50 will be labeled in the _Low Risk_ category. 
+- Users with scores between 50 and 75, and 75 and 100 will be labeled in the _Medium Risk_ and _High Risk_ categories, respectively. 
 
-The scores and the corresponding categories will be updated according to the schedule you chose on the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this prediction.
+The scores and the corresponding categories will be updated according to the schedule you chose on the model creation page. The number of users with churn scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this prediction.
 
 ## Targeting users to reduce churn
 

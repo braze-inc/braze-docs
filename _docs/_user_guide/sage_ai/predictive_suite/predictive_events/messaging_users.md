@@ -1,14 +1,14 @@
 ---
 nav_title: Messaging Users
 article_title: Targeting Users for Predictive Events
-description: "This reference article covers potential next steps after you have created a Event Prediction, such as filter implementation and strategic considerations."
+description: "This reference article covers potential next steps after you have created an event prediction, such as filter implementation and strategic considerations."
 page_order: 3
 
 ---
 
 # Messaging users {#what-do-next}
 
-> Learn how to target users for Predictive Events after you have created an Event Prediction.
+> Learn how to target users for Predictive Events after you have created an event prediction.
 
 {% alert note %}
 Preview and Demo Predictions will not allow users to be targeted for messaging, and the **Create Segment**, and **Create Campaign** buttons will be disabled. To purchase this functionality, contact your account manager.

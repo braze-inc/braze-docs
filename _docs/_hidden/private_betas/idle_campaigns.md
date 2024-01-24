@@ -17,7 +17,7 @@ On an ongoing basis, the idle campaigns that meet the following criteria will be
 - Action-based and scheduled campaigns without end dates that have not sent messages in one year
 - API-triggered campaigns that have not sent messages in one year
 
-Campaigns will be stopped at the later of the default stop date and one day after their last occurring conversion deadline. Sends that are a result of a winning or personalized variant are treated as scheduled sends, and will be stopped seven days after the winning or personalized variant is sent. All campaigns will be stopped at 4am UTC every day for all Braze users.
+Campaigns will be stopped at the later of the default stop date and one day after their last occurring conversion deadline. Sends that are a result of a Winning or Personalized Variant are treated as scheduled sends, and will be stopped seven days after the winning or Personalized Variant is sent. All campaigns will be stopped at 4am UTC every day for all Braze users.
 
 For recurring campaigns without end dates, if a message is sent or the campaign is updated, the one-year countdown for stopping the campaign will be reset. When campaigns are stopped, Braze will notify customers in their dashboard and via email. If you have an idle campaign that you want to remain active, resume the campaign, then update the end date for the campaign. For idle campaigns without end dates, you can make any edit to keep the campaign active.
 
@@ -54,7 +54,7 @@ To keep a campaign active, update the campaign so it does not meet the above cri
 | Scheduled campaigns (without end dates) that have not sent messages in one year | Send one message or make any edit to the campaign | 
 | API-triggered campaigns that have not sent messages in one year | Send one message or make any edit to the campaign |
 | Campaigns will be stopped at the later of the idle status criteria and 1 day after their last-occurring conversion deadline | Update the criteria above or extend the conversion deadline, depending on which occurs later |
-| Sends as the result of a winning or personalized variant are treated as scheduled sends and disabled seven days after the winning or personalized variant is sent | Update when the variant will send to a later date |
+| Sends as the result of a winning or Personalized Variant are treated as scheduled sends and disabled seven days after the winning or Personalized Variant is sent | Update when the variant will send to a later date |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### What happens if I want to continue running a campaign that hasn't sent a message or been edited in over 12 months?

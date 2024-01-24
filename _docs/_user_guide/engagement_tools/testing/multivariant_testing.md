@@ -71,7 +71,7 @@ Multivariate and A/B testing can unveil powerful insights regarding your users. 
 
 #### Run the test on a large number of users
 
-Large samples ensure that your results reflect the preferences of your average user and are less likely to be swayed by outliers. Larger sample sizes also allow you to identify winning variants that have smaller margins of victory.
+Large samples ensure that your results reflect the preferences of your average user and are less likely to be swayed by outliers. Larger sample sizes also allow you to identify Winning Variants that have smaller margins of victory.
 
 #### Randomly sort users into different test groups
 

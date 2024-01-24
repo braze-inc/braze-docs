@@ -75,9 +75,9 @@ Braze needs a baseline number of data points to make a good estimate. If there i
 
 ### Why is my Intelligent Timing campaign sending past the scheduled date?
 
-Your Intelligent Timing campaign might be sending past the scheduled date because you are leveraging A/B testing. Campaigns using A/B testing can automatically send the winning variant after the A/B test is over, increasing the duration of campaign sending. By default, Intelligent Timing campaigns will be scheduled to send out the winning variant to the remaining users for the following day, but you can change this send date.
+Your Intelligent Timing campaign might be sending past the scheduled date because you are leveraging A/B testing. Campaigns using A/B testing can automatically send the Winning Variant after the A/B test is over, increasing the duration of campaign sending. By default, Intelligent Timing campaigns will be scheduled to send out the Winning Variant to the remaining users for the following day, but you can change this send date.
 
-We recommend that if you have Intelligent Timing campaigns, leave more time for the A/B test to finish and schedule the winning variant to send for two days out instead of one. 
+We recommend that if you have Intelligent Timing campaigns, leave more time for the A/B test to finish and schedule the Winning Variant to send for two days out instead of one. 
 
 ### When does Braze check the eligibility criteria for segment and audience filters?
 

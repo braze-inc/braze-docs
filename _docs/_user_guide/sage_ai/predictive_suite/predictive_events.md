@@ -6,8 +6,8 @@ layout: featured
 alias: /predictive_purchases/
 search_rank: 1
 guide_top_header: "Predictive Events"
-guide_top_text: "Knowing which of your users is likely to perform a specific event—like a purchase—is a crucial insight for growing businesses. Without it, how do you decide which campaigns to build? Who should receive discounts and promotions? Where to spend a limited budget? Braze helps answer these questions with predictive events (previously predictive purchases), a machine learning model that makes it easy for marketing teams to understand future behavior and focus their resources on engagement and revenue-maximizing campaigns."
-description: "This article covers predictive events (previously predictive purchases), a tool that gives marketers the ability to identify and message users based on their likelihood to perform an event."
+guide_top_text: "Knowing which of your users is likely to perform a specific event—like a purchase—is a crucial insight for growing businesses. Without it, how do you decide which campaigns to build? Who should receive discounts and promotions? Where to spend a limited budget? Braze helps answer these questions with Predictive Events (previously predictive purchases), a machine learning model that makes it easy for marketing teams to understand future behavior and focus their resources on engagement and revenue-maximizing campaigns."
+description: "This article covers Predictive Events (previously predictive purchases), a tool that gives marketers the ability to identify and message users based on their likelihood to perform an event."
 
 guide_featured_title: "Topics"
 guide_featured_list:
@@ -31,7 +31,7 @@ guide_featured_list:
 
 Once a prediction is built, users are assigned a [Likelihood Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/prediction_analytics/#purchase_score) between 0 and 100 denoting how likely they are to perform your selected event. The higher the score, the more likely a user is to perform that event. Users are also sorted by low, medium, and high likelihood categories.
 
-The real value of predictive events lies using prediction results to create a segment or campaign. Marketers can build targeted campaigns directly on the **Prediction** page for immediate revenue-boosting results or save a segment for a future campaign or Canvas. Not sure who to target first? Read our [strategic considerations]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/messaging_users/#strategy) for messaging users based on their Likelihood Score.
+The real value of Predictive Events lies using prediction results to create a segment or campaign. Marketers can build targeted campaigns directly on the **Prediction** page for immediate revenue-boosting results or save a segment for a future campaign or Canvas. Not sure who to target first? Read our [strategic considerations]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/messaging_users/#strategy) for messaging users based on their Likelihood Score.
 
 ## Access Predictive Events
 

@@ -94,15 +94,15 @@ The time intervals for each bucket are determined based on Canvas-specific user 
 
 The **Personalized Paths** tab shows the results of the final experiment, where the users in the Delay Group were sent down the best-performing path for them.
 
-The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning path instead. Even if there's no lift, which can sometimes happen, the result is the same as sending only the winning path (a traditional A/B test).
+The three cards on this page show your projected lift, overall results, and the projected results if you sent just the Winning Path instead. Even if there's no lift, which can sometimes happen, the result is the same as sending only the Winning Path (a traditional A/B test).
 
 - **Projected lift:** The improvement in your selected conversion event due to using Personalized Paths instead of sending every user down the overall best-performing path.
 - **Overall results:** The results of the second send based on your conversion event.
-- **Projected results:** The projected results of the second send based on your chosen optimization metric if you had sent just the winning variant instead.
+- **Projected results:** The projected results of the second send based on your chosen optimization metric if you had sent just the Winning Variant instead.
 
 ![Personalized Paths tab for a Canvas. The cards show the Projected Lift, Overall Conversions (with Personalized Paths), and Projected Unique Opens (with Winning Path).]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
 
-The table on this page shows the metrics for each variant from the personalized variant send. Your **Audience %** adds up to the percentage of the target segment you reserved for the personalized variant group.
+The table on this page shows the metrics for each variant from the Personalized Variant send. Your **Audience %** adds up to the percentage of the target segment you reserved for the Personalized Variant group.
 
 ![]({% image_buster /assets/img_archive/ab_analytics_pv_2.png %})
 

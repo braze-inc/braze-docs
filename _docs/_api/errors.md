@@ -22,7 +22,7 @@ If your POST payload was accepted by our servers, then successful messages will 
 }
 ```
 
-Note that success only means that the RESTful API payload was correctly formed and passed onto our push notification or email or other messaging services. It does not mean that the messages were actually delivered, as additional factors could prevent the message from being delivered (for example, a device could be offline, the push token could be rejected by Apple's servers, you may have provided an unknown user ID, etc.)
+Note that success only means that the RESTful API payload was correctly formed and passed onto our push notification or email or other messaging services. It does not mean that the messages were actually delivered, as additional factors could prevent the message from being delivered (for example, a device could be offline, the push token could be rejected by Apple's servers, you may have provided an unknown user ID).
 
 If your message is successful but has non-fatal errors you will receive the following response:
 

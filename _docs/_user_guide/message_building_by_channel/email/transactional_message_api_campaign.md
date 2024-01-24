@@ -14,28 +14,28 @@ alias: "/api/api_campaigns/transactional_campaigns"
 
 # Transactional Email campaigns
 
-> Transactional Emails are sent to facilitate an agreed-upon transaction between a sender and the recipient. This reference article covers how to create a transactional email campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [`/transactional/v1/campaigns/{campaign_id}/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
+> Braze Transactional Emails are sent to facilitate an agreed-upon transaction between a sender and the recipient. This reference article covers how to create a transactional email campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [`/transactional/v1/campaigns/{campaign_id}/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 
 {% alert important %}
 Transactional Email is only available as part of select Braze packages. Reach out to your Braze customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/) for more details.
 {% endalert %}
 
-The Transactional Email campaign type is purpose-built for sending automated, non-promotional email messages to facilitate an agreed-upon transaction between you and your customers. This includes information such as:
+The transactional email campaign type is purpose-built for sending automated, non-promotional email messages to facilitate an agreed-upon transaction between you and your customers. This includes information such as:
 
 - Order confirmations
 - Password resets
 - Billing alerts
 - Shipping alerts
 
-In short, you can use Transactional Emails to send business-critical notifications originating from your service for a single user where speed is of the utmost importance. 
+In short, you can use transactional emails to send business-critical notifications originating from your service for a single user where speed is of the utmost importance. 
 
 {% alert important %}
-Transactional Emails differ from transactional campaigns, which can be used to target your users without additional costs. Transactional campaigns, for instance, can include messages sent after a user adds an item to their cart. Check out [audience targeting options]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) for more information. 
+Transactional emails differ from transactional campaigns, which can be used to target your users without additional costs. Transactional campaigns, for instance, can include messages sent after a user adds an item to their cart. Check out [audience targeting options]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) for more information. 
 {% endalert %}
 
 ## Step 1: Create a new campaign
 
-To create a new Transaction Email campaign, create a campaign and select **Transactional Email** as your messaging channel.
+To create a new transactional email campaign, create a campaign and select **Transactional Email** as your messaging channel.
 
 ![Create Campaign dropdown with the highlighted option for transactional email.][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
@@ -49,7 +49,7 @@ As a result, you'll notice several settings you may be familiar with from other 
 
 - The **Delivery** step has been simplified to remove scheduling options. Transactional emails will always be triggered through the Braze REST API using the campaign ID shown on the **Delivery** page. Additional settings, like re-eligibility controls and frequency capping settings, have also been removed to confirm that all users are reachable for these critical transactional alerts when your service triggers a send request.
 - The **Target Users** step has been removed. As transactional emails enroll your entire user base as eligible (including unsubscribed users), there is no need to specify filters or segments. As a result, if you have any logic to apply to who should receive this message, we recommend applying that logic before determining whether to make the API request to Braze to trigger the message to a specific user.
-- The **Conversions** step has been removed. Transactional Emails do not support conversion event tracking at this time.
+- The **Conversions** step has been removed. Transactional emails do not support conversion event tracking at this time.
 
 ![Compose, Delivery, and Confirm workflow to create a Transactional Email campaign.][2]
 
