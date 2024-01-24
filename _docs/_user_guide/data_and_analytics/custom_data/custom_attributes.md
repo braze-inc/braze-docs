@@ -208,6 +208,18 @@ You can use nested custom attributes to send objects as a data type for custom a
 
 Use an array of objects to group related attributes. For more details, refer to our article on [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/).
 
+### Consolidated operators
+
+We've consolidated the list of operators available to use in attribute filters, custom attribute filters, and nested custom attribute filters. If you have existing filters using these operators, they will be automatically updated to use the new operators.
+
+| Data type | Old operator | New operator | Value |
+| --- | --- | --- | --- |
+| String | equals | is any of | At least 1 value |
+| String | does not equal | is none of | At least 1 value |
+| Array | includes value | includes any of | At least 1 value |
+| Array | doesn't include value | includes none of | At least 1 value |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
 ## Purchase and revenue tracking {#purchase-revenue-tracking}
 
 Using our purchase methods to record in-app purchases establishes the Lifetime Value (LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
