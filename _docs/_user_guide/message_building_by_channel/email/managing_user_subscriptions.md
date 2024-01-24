@@ -11,6 +11,7 @@ channel:
 # Email subscriptions
 
 > Learn about the different user subscription states, how to create and manage subscription groups, and how to segment users based on their subscriptions.
+> _This document is for informational purposes only. It is not intended to provide, nor may it be relied upon as providing legal advice in any capacity. Sending marketing and transactional emails may be subject to specific legal requirements. To ensure that you are doing so in compliance with all applicable laws, rules, and regulations specific to your company, you should seek the advice of your legal counsel and/or regulatory compliance team_.
 
 ## Subscription states {#subscription-states}
 
@@ -136,6 +137,10 @@ When users click an unsubscribe URL in an email, they are taken to a default lan
 To create a custom landing page that users will be directed to (instead of the default page) upon subscribing, go to **Email Preferences** > **Subscription Pages and Footers** and provide the HTML for your custom landing page. We recommend including a resubscribe link (such as {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
 
 ![Custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
+
+_**Navigating Unsubscribe Links on a China IP Address**_
+
+If you anticipate that your email recipients will interact with your email communications via a China IP address, then you should not rely on the above unsubscribe method to maintain your opt-out lists. Alternatively, you should include a ‘mail-to’ unsubscribe link to a customer support inbox within the body of any applicable emails and/or consider offering another method by which your recipients can unsubscribe, e.g., an unsubscribe link on your company’s website and/or an unsubscribe process within your opt-in procedures. 
 
 ### Creating a custom opt-in page
 
