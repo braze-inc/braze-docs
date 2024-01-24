@@ -139,7 +139,7 @@ To create a custom landing page that users will be directed to (instead of the d
 
 ![Custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
 
-#### Navigating unsubscribe links on a Chinese IP address
+#### Managing subscription states for Chinese IP addresses
 
 If you anticipate that your email recipients will have a Chinese IP address, then you should not rely solely on an unsubscribe link in the footer of your email to maintain your `unsubscribed` lists. Instead, use a [list unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings#enable-list-unsubscribe-header). In addition, consider offering multiple additional methods for users to unsubscribe, such as a [custom unsubscribe page]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=custom%20unsubscribe%20page#subscription-pages-and-footers) or an [opt-in page]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=custom%20opt-in%20page).
 
