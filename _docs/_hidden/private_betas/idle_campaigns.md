@@ -54,7 +54,7 @@ To keep a campaign active, update the campaign so it does not meet the above cri
 | Scheduled campaigns (without end dates) that have not sent messages in one year | Send one message or make any edit to the campaign | 
 | API-triggered campaigns that have not sent messages in one year | Send one message or make any edit to the campaign |
 | Campaigns will be stopped at the later of the idle status criteria and 1 day after their last-occurring conversion deadline | Update the criteria above or extend the conversion deadline, depending on which occurs later |
-| Sends as the result of a winning or Personalized Variant are treated as scheduled sends and disabled seven days after the winning or Personalized Variant is sent | Update when the variant will send to a later date |
+| Sends as the result of a Winning or Personalized Variant are treated as scheduled sends and disabled seven days after the Winning or Personalized Variant is sent | Update when the variant will send to a later date |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### What happens if I want to continue running a campaign that hasn't sent a message or been edited in over 12 months?
