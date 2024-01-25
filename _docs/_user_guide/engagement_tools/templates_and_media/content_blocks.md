@@ -23,43 +23,17 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-Go to **Templates** > **Content Blocks**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), **Templates** is **Templates & Media**.
-{% endalert %}
-
 There are two types of editors used to create a Content Block—classic and drag-and-drop. These two types of editors correspond to the type of Content Block: HTML and drag-and-drop. You can also create and manage your Content Blocks [via API][5].
 
 {% tabs %}
 {% tab Drag-and-drop %}
 
-{% alert note %}
-The drag-and-drop editor is only available for Content Blocks used in email messaging.
-{% endalert %}
-
-**Steps:**
-
-1. Enter a name for your Content Block. This name will auto-populate as part of the **Content Block Liquid Tag**.
-2. (optional) Add a description.
-3. Select **Drag-And-Drop Editor** as your editing experience, making this a drag-and-drop Content Block type.
-4. Click **Edit Content Block** to begin editing.
-4. In the editor, drag and drop the blocks in the **Content** tab to build out your Content Block. 
-5. Using the **Row** tab, you can adjust details such as the row or content area background colors, alignment, padding, and more.
-6. After creating your Content Block, click **Done**.
+{% multi_lang_include create_content_block.md location="dnd" %}
 
 {% endtab %}
 {% tab HTML %}
 
-**Steps:**
-
-1. Enter a name for your Content Block. This name will auto-populate as part of the **Content Block Liquid Tag**.
-2. (optional) Add a description.
-3. Select **HTML Editor** as your editing experience, making this an HTML Content Block type.
-4. Click **Edit Content Block** to begin editing.
-4. In the editor, enter your HTML. 
-5. Using the **Row** tab, you can adjust details such as the row or content area background colors, alignment, padding, and more.
-6. After creating your Content Block, click **Done**.
+{% multi_lang_include create_content_block.md location="html" %}
 
 {% endtab %}
 {% endtabs %}
@@ -119,7 +93,7 @@ Additionally, Content Blocks cannot be used within an email footer, though email
 
 ![Expanded Settings dropdown menu that shows three options: Edit, Archive, and Duplicate, where the Archive option is highlighted.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
-Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page.
+Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page. Archived Content Blocks are read-only, so unarchive the Content Block before editing.
 
 Messages using the archived Content Block will still perform as though it was there. However, we recommend several best practices to ensure that outdated information is not accidentally included in your emails.
 
@@ -131,7 +105,7 @@ Messages using the archived Content Block will still perform as though it was th
 You can save a Content Block without content in it.
 {% endalert %}
 
-If you accidentally archive a Content Block, you can unarchive it.  
+If you accidentally archive a Content Block, you can unarchive it.
 
 ![Saved Content Blocks panel where the settings dropdown menu for "Content_Block_1" is expanded to show two options: Unarchive and Duplicate.][4]
 

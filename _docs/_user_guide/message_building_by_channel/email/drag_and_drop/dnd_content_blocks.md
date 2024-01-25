@@ -13,31 +13,15 @@ tool: Media
 
 > The Content Blocks used exclusively in the drag-and-drop editor are similar in functionality to the [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) used across different channels. They're a centralized location for holding information that can be referenced in various email campaigns. This can include grouping together email headers, promotional callouts, and more all in one reusable row.
 
-## Creating a Content Block
-
-To create a Content Block, do the following:
-
-1. Go to **Templates** > **Content Blocks** and click <i class="fas fa-plus"></i> **Create Content Block**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Content Block Library**.
-{% endalert %}
-
-{:start="2"}
-2. Enter a **Content Block Name** and an optional description.
-
-![][1]
-
 {% alert note %}
 Drag-and-drop Content Blocks are only available for use in email campaigns and email messages in Canvas. 
 {% endalert %}
 
-{:start="3"}
-3. Select **Drag-And-Drop Editor** as the Content Block type.
-4. Click **Edit Content Block** in the **Content Block Preview** panel to begin editing your Content Block.
-5. Drag and drop the [editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) to build a drag-and-drop Content Block. 
-6. Drag and drop a format block from the **Rows** tab into the editor to create the layout of your Content Block. 
-7. Add drag-and-drop Content Blocks as needed to build out your email campaigns.
+## Creating a Content Block
+
+To create a Content Block, do the following:
+
+{% multi_lang_include create_content_block.md location="dnd" %}
 
 {% alert important %}
 Each drag-and-drop Content Block is limited to one row. However, you can use drag-and-drop editor blocks to build and customize the Content Block to suit your email messaging.
@@ -80,7 +64,6 @@ When a Content Block is added into the email editor via Liquid, this Content Blo
 
 To update an existing Content Block, you can either edit the original Content Block from the **Content Blocks** page, or copy the HTML from the original message to your new one. For updates to a Content Block template, it will update in all email messages where the Content Block is added via Liquid.
 
-To archive a Content Block, go to **Templates** > **Content Blocks**, select the <i class="fas fa-cog"></i> gear icon next to the selected Content Block, and click **Archive**. When you archive a Content Block, your messages will still include the content in the archived block.
+To archive a Content Block, go to **Templates** > **Content Blocks**, select the <i class="fas fa-cog"></i> gear icon next to the selected Content Block, and click **Archive**. When you archive a Content Block, your messages will still include the content in the archived block. However, archived Content Blocks are read-only, so unarchive the Content Block before editing. 
 
-[1]: {% image_buster /assets/img_archive/dnd_content_block_name.png %}
 [2]: {% image_buster /assets/img_archive/dnd_content_block_personalization.png %}
