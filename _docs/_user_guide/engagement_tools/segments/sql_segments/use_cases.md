@@ -10,9 +10,7 @@ tool: Segments
 ---
 
 {% api %}
-
 ## Select users by how many times an event has occurred
-
 {% apitags %}
 Event
 {% endapitags %}
@@ -30,9 +28,7 @@ HAVING count(*) > 1
 {% endapi %}
 
 {% api %}
-
 ## Select users that performed an action and sum up a property value
-
 {% apitags %}
 Property
 {% endapitags %}
@@ -47,9 +43,7 @@ group by 1 having sum(get_path(parse_json(properties), 'amount')) > 150
 {% endapi %}
 
 {% api %}
-
 ## Select users based on how many times an event occurred in a time range
-
 {% apitags %}
 Event, Time range
 {% endapitags %}
@@ -65,13 +59,10 @@ WHERE to_timestamp_ntz(time) >= DATEADD(day, -30, CURRENT_TIMESTAMP()) AND to_ti
 GROUP BY user_id;
 HAVING COUNT(DISTINCT id) > 3
 ```
-
 {% endapi %}
 
 {% api %}
-
 ## Select users that recorded at least one event across multiple time ranges
-
 {% apitags %}
 Event, Time range
 {% endapitags %}
@@ -95,13 +86,10 @@ SELECT DISTINCT user_id
 FROM USERS_BEHAVIORS_PURCHASE_SHARED
 WHERE to_timestamp_ntz(time) >= DATEADD(day, -365, CURRENT_TIMESTAMP()) AND to_timestamp_ntz(time) <= DATEADD(day, -271, CURRENT_TIMESTAMP());
 ```
-
 {% endapi %}
 
 {% api %}
-
 ## Select any purchase with certain properties
-
 {% apitags %}
 Purchase, Property
 {% endapitags %}
@@ -127,13 +115,10 @@ to_timestamp_ntz(time) <= CURRENT_TIMESTAMP()
 GROUP BY 1
 HAVING COUNT(id) > 0;
 ```
-
 {% endapi %}
 
 {% api %}
-
 ## Select users that were sent a message that wasn't delivered
-
 {% apitags %}
 Message, Delivery
 {% endapitags %}
@@ -151,13 +136,10 @@ AND TO_PHONE_NUMBER NOT IN (SELECT TO_PHONE_NUMBER FROM USERS_MESSAGES_SMS_CARRI
 GROUP BY 1
 HAVING COUNT(id) > 0;
 ```
-
 {% endapi %}
 
 {% api %}
-
 ## Find all SMS messages that were sent but didn't reach the carrier because of queue overflow
-
 {% apitags %}
 Message, Carrier
 {% endapitags %}
@@ -176,13 +158,10 @@ GROUP BY 1
 HAVING COUNT(id) > 0;
 ```
 `CANVAS_ID` is the number after `/canvas/` in your Canvas URL.
-
 {% endapi %}
 
-{% api %}
-
+{% api }
 ## Select users that made any purchase with a property array containing a specific value
-
 {% apitags %}
 Purchase, Property
 {% endapitags %}
@@ -196,9 +175,7 @@ WHERE f.VALUE::STRING = 'Bacon'
 {% endapi %}
 
 {% api %}
-
 ## Find all users that had multiple 30003 errors and 0 deliveries
-
 {% apitags %}
 Error, Delivery
 {% endapitags %}
@@ -219,13 +196,10 @@ WHERE
     AND TO_PHONE_NUMBER NOT IN (SELECT TO_PHONE_NUMBER FROM USERS_MESSAGES_SMS_DELIVERY_SHARED)
 GROUP BY 1, 2;
 ```
-
 {% endapi %}
 
 {% api %}
-
 ## Find users with specific event properties and event counts in a time range
-
 {% apitags %}
 Event, Property, Time range
 {% endapitags %}
@@ -254,9 +228,7 @@ AND COUNT(*) > 3
 {% endapi %}
 
 {% api %}
-
 ## Select users whose most recent session was on a specific device model
-
 {% apitags %}
 Session, Device
 {% endapitags %}
@@ -272,9 +244,7 @@ group by user_id, external_user_id, device_id, platform, os_version, device_mode
 {% endapi %}
 
 {% api %}
-
 ## Find users that selected the second button of an in-app message in a specific time range
-
 {% apitags %}
 Time range
 {% endapitags %}
@@ -290,9 +260,7 @@ AND CAMPAIGN_ID = '64c8cd9c4d38d13091957b1c'
 {% endapi %}
 
 {% api %}
-
 ## Find users that purchased in each of the last three calendar months
-
 {% apitags %}
 Purchase, Time range
 {% endapitags %}
@@ -313,13 +281,10 @@ FROM USERS_BEHAVIORS_PURCHASE_SHARED
 WHERE to_timestamp_ntz(time) >= '2023-11-01'::timestamp_ntz
 AND to_timestamp_ntz(time) <= '2023-11-30'::timestamp_ntz;
 ```
-
 {% endapi %}
 
 {% api %}
-
 ## Select users that completed a custom event with a specific property when property is an integer
-
 {% apitags %}
 Event, Property
 {% endapitags %}
@@ -345,9 +310,7 @@ GROUP BY
 {% endapi %}
 
 {% api %}
-
 ## Find the average number of emails a user receives daily
-
 {% apitags %}
 Message
 {% endapitags %}
@@ -382,17 +345,12 @@ FROM user_daily_average;
 ```
 
 {% alert tip %}
-
 For SMS messages, replace `USERS_MESSAGES_EMAIL_SEND_SHARED` with `USERS_MESSAGES_SMS_SEND_SHARED` in the query. For Push notifications, replace `USERS_MESSAGES_EMAIL_SEND_SHARED` with `USERS_MESSAGES_SMS_SEND_SHARED` in the query
-
 {% endalert %}
-
 {% endapi %}
 
 {% api %}
-
 ## Find the average number of emails a user receives weekly
-
 {% apitags %}
 Message
 {% endapitags %}
@@ -425,9 +383,6 @@ SELECT
 FROM user_weekly_average;
 ```
 {% alert tip %}
-
 For SMS messages, replace `USERS_MESSAGES_EMAIL_SEND_SHARED` with `USERS_MESSAGES_SMS_SEND_SHARED` in the query. For Push notifications, replace `USERS_MESSAGES_EMAIL_SEND_SHARED` with `USERS_MESSAGES_SMS_SEND_SHARED` in the query
-
 {% endalert %}
-
 {% endapi %}
