@@ -63,10 +63,10 @@ _Braze will sync unspecified for any user that does not have the consent attribu
 
 #### Managing revoked consent
 
-After an EEA or UK end user has been added to the audience list, if any of the two consents (`$google_ad_user_data` or `$google_ad_personalization`) are later retracted by the end user, you can set up a Canvas to remove users from the existing audience lists using an Audience Sync step.
+To keep your audience lists up-to-date in the event an EEA or UK end user has been added to the audience list, and then has subsequently retracted any of the two consents (`$google_ad_user_data` or `$google_ad_personalization`), you must set up a Canvas to remove users from the existing audience lists using an Audience Sync step.
 
 {% alert note %}
-If an EEA or UK user previously provided consent for both signals, that data will continue to be used for Google’s Customer Match until that list expires, or that data is explicitly removed by the advertiser or partner, or both.
+If an EEA or UK user previously provided consent for both signals, that data will continue to be used for Google’s Customer Match until that list expires, or that consent status is explicitly updated via Google Audience Sync, or both.
 {% endalert %}
 
 #### Tips
