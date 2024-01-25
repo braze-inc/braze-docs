@@ -93,7 +93,7 @@ Additionally, Content Blocks cannot be used within an email footer, though email
 
 ![Expanded Settings dropdown menu that shows three options: Edit, Archive, and Duplicate, where the Archive option is highlighted.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
-Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page.
+Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page. Archived Content Blocks are read-only, so unarchive the Content Block before editing.
 
 Messages using the archived Content Block will still perform as though it was there. However, we recommend several best practices to ensure that outdated information is not accidentally included in your emails.
 
@@ -105,7 +105,7 @@ Messages using the archived Content Block will still perform as though it was th
 You can save a Content Block without content in it.
 {% endalert %}
 
-If you accidentally archive a Content Block, you can unarchive it.  
+If you accidentally archive a Content Block, you can unarchive it.
 
 ![Saved Content Blocks panel where the settings dropdown menu for "Content_Block_1" is expanded to show two options: Unarchive and Duplicate.][4]
 
