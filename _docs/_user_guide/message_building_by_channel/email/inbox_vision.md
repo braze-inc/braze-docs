@@ -16,7 +16,7 @@ channel:
 
 ## Testing your email in Inbox Vision
 
-Inbox Vision works with random users and doesn't persist any custom user or other preview user settings. This means that if you enter a custom user in the preview field and run Inbox Vision, what's shown in Inbox Vision might be different from the message preview elsewhere. 
+Inbox Vision works when **Random User** is selected for **Preview as a User**  and does not persist any custom user or other preview user settings. This means that if you select **Custom User**  and run Inbox Vision, what's shown in Inbox Vision may differ from the message preview elsewhere. 
 
 To test your email message in Inbox Vision, do the following:
 
