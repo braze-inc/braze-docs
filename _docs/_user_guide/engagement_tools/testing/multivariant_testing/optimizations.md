@@ -18,7 +18,7 @@ Both options work by sending an initial test to a percentage of your target segm
 Optimizations are located in the **Target Audiences** step of campaign creation, under **A/B Testing**.
 {% endalert %}
 
-## Winning variant
+## Winning Variant
 
 Sending the Winning Variant is similar to a standard A/B test. Users in this group will receive the Winning Variant when the initial test is complete.
 
