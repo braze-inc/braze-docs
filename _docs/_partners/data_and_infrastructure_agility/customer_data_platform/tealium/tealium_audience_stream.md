@@ -199,7 +199,7 @@ View the summary of the connector you created. If you would like to modify your 
 
 Your connector is now displayed in the list of connectors on your Tealium home page.
 
-Make sure to select **Save / Publish** your connector when finished. The actions you configured will now fire when the trigger connections are met. 
+Make sure to save or publish your connector when finished. The actions you configured will now fire when the trigger connections are met. 
 
 ### Step 4: Test your Tealium connector
 

@@ -105,7 +105,7 @@ For the churn definitions we outlined, there might be some corresponding predict
 
 ## Archived predictions
 
-Archived predictions will cease updating user scores. Any archived prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived predictions are never deleted and remain in the list.
+Archived predictions will stop updating user scores. Any archived prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived predictions are never deleted and remain in the list.
 
 [1]: {% image_buster /assets/img/churn/churn1.png %}
 [2]: {% image_buster /assets/img/churn/churn2.png %}

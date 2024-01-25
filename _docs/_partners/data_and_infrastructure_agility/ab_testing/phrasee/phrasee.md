@@ -60,7 +60,7 @@ Schedule your campaign to start at a specific time, this can also be done using 
 
 #### Step 4: Finalize the Braze campaign setup
 
-Complete the remaining steps in Braze to set up your campaign. Under **A/B Testing**, check the box to **Send Winning Variant**. Then select how long to wait before sending the Winning Variant.
+Complete the remaining steps in Braze to set up your campaign. Under **A/B Testing**, select **Send Winning Variant**. Then select how long to wait before sending the Winning Variant.
 
 ![The A/B testing portion of the campaign showing how the A/B tests and control group will be split. Also shown are settings allowing you to determine the Winning Variant, sending information, and preferences for if the test ends up being statistically insignificant.]({% image_buster /assets/img/phrasee/7_braze_send_winner.png %})
 

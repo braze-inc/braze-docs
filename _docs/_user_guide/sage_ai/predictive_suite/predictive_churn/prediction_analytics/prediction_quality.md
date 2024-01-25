@@ -31,6 +31,6 @@ For example, if 20% of your users usually churn on average, and you pick a rando
 
 If the model, on the other hand, allowed you to message 20% of the users and, in doing so capture all the "true" churners and no one else, the lift would be 100% / 20% = 5. If you chart this ratio for every proportion of the likeliest churners you could message, you get the [Lift Curve](https://towardsdatascience.com/the-lift-curve-unveiled-998851147871). 
 
-Another way to think of lift quality (and also _Prediction Quality_) is how far along the way between random guessing (0%) and perfection (100%) the prediction's lift curve is at identifying churners on the test set. For the original paper on lift quality see [here](https://dl.acm.org/doi/10.1145/380995.381018).
+Another way to think of lift quality (and also _Prediction Quality_) is how far along the way between random guessing (0%) and perfection (100%) the prediction's lift curve is at identifying churners on the test set. For the original paper on lift quality, see [Measuring lift quality in database marketing](https://dl.acm.org/doi/10.1145/380995.381018).
 
 {% enddetails %}
