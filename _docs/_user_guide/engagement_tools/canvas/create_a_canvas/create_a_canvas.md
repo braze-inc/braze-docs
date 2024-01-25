@@ -126,9 +126,9 @@ You can choose one of three ways in which users can enter your Canvas.
   {% endtab %}
 {% endtabs %}
 
-After you choose your delivery method, adjust those settings appropriately and move on to setting your target audience.
+After selecting your delivery method, adjust the settings to match your use case, then continue to setting your target audience.
 
-{% details Deduplicate behavior for Canvases built with the original editor %}
+{% details Deduplicate behavior for Canvases using the original editor %}
 Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one component's messages. In the edge case where a user's re-entry reaches the same component as its previous entry, Braze will deduplicate that component's messages. 
 
 If a user re-enters the Canvas, reaches the same component as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
