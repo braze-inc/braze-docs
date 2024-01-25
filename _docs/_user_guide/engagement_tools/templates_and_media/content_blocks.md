@@ -23,7 +23,9 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-Go to **Templates** > **Content Blocks**.
+To create a Content Block, do the following:
+
+1. Go to **Templates** > **Content Blocks**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), **Templates** is **Templates & Media**.
@@ -34,32 +36,12 @@ There are two types of editors used to create a Content Block—classic and drag
 {% tabs %}
 {% tab Drag-and-drop %}
 
-{% alert note %}
-The drag-and-drop editor is only available for Content Blocks used in email messaging.
-{% endalert %}
-
-**Steps:**
-
-1. Enter a name for your Content Block. This name will auto-populate as part of the **Content Block Liquid Tag**.
-2. (optional) Add a description.
-3. Select **Drag-And-Drop Editor** as your editing experience, making this a drag-and-drop Content Block type.
-4. Click **Edit Content Block** to begin editing.
-4. In the editor, drag and drop the blocks in the **Content** tab to build out your Content Block. 
-5. Using the **Row** tab, you can adjust details such as the row or content area background colors, alignment, padding, and more.
-6. After creating your Content Block, click **Done**.
+{% multi_lang_include dnd_content_blocks.md location="dnd" %}
 
 {% endtab %}
 {% tab HTML %}
 
-**Steps:**
-
-1. Enter a name for your Content Block. This name will auto-populate as part of the **Content Block Liquid Tag**.
-2. (optional) Add a description.
-3. Select **HTML Editor** as your editing experience, making this an HTML Content Block type.
-4. Click **Edit Content Block** to begin editing.
-4. In the editor, enter your HTML. 
-5. Using the **Row** tab, you can adjust details such as the row or content area background colors, alignment, padding, and more.
-6. After creating your Content Block, click **Done**.
+{% multi_lang_include dnd_content_blocks.md location="html" %}
 
 {% endtab %}
 {% endtabs %}
