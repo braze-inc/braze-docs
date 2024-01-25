@@ -25,7 +25,7 @@ glossaries:
   - name: Braze (The Product)
     description: Sometimes referred to as the dashboard, this product controls all of the data and interactions at the heart of the Braze platform. Braze customers use it to manage notifications, set up targeted messaging campaigns, and view analytics. Developers use it to manage settings for integrating apps, such as API keys and push notification credentials.
   - name: Braze Engagement Tools
-    description: Braze offers many <a href="https://www.braze.com/docs/user_guide/engagement_tools/">engagement tools</a> to reach your customers and users with our campaigns, Canvas tools, and you can optimize for consistency (and upload images and other content) using our Templates & Media tools. From there, you can create Segments and Geofences to target your audience by location or other attributes.
+    description: Braze offers many <a href="https://www.braze.com/docs/user_guide/engagement_tools/">engagement tools</a> to reach your customers and users with our campaigns, Canvas tools, and you can optimize for consistency (and upload images and other content) using our Templates & Media tools. From there, you can create segments and geofences to target your audience by location or other attributes.
   - name: Braze Teams
     description: Braze Admins can divide a subset of dashboard users into <a href="https://www.braze.com/docs/user_guide/administrative/manage_your_braze_users/teams/">Teams</a> with varying user roles and permissions. This allows Braze Admins to limit access to certain features by group membership.
   - name: Campaigns

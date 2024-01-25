@@ -10,15 +10,15 @@ description: "This article contains release notes for May 2021."
 
 ## Conversion correlation
 
-This guide covers the [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the **Campaign Analytics** page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
+This guide covers the [conversion correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the **Campaign Analytics** page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
 
-## Global Control Group Report
+## Global Control Group report
 
 We've updated the metrics on the [Global Control Groups]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) report to better help you analyze the overall impact of your messaging efforts over time. Key changes include adding **Events per User** and **Estimated Group Size**, and adjusting the calculation for **Incremental Uplift** to reflect the difference in total events between your treatment and control groups.
 
-## Reports Overview
+## Reports overview
 
-Not sure where to start with analyzing your campaigns or Canvases? The [Reports Overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
+Not sure where to start with analyzing your campaigns or Canvases? The [Reports overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
 
 ## New US-05 cluster
 

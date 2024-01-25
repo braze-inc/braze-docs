@@ -70,7 +70,7 @@ If needed, you can learn more about our events in our [event delivery semantics]
 
 Currents field transformations allow you to designate certain string fields in Currents for removal (replace with an empty string) or hashing (applying an SHA-256 hashing algorithm). 
 
-Selecting a field for one of these transformations will apply that transformation to all events in which that field appears. For example, selecting `email_address` for hashing will hash the `email_address` field in Email Send, Email Open, Email Bounce, Subscription Group State Change, etc.
+Selecting a field for one of these transformations will apply that transformation to all events in which that field appears. For example, selecting `email_address` for hashing will hash the `email_address` field in Email Send, Email Open, Email Bounce, and Subscription Group State Change.
 
 ![Adding field transformations]({% image_buster /assets/img/current3.png %})
 

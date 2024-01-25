@@ -32,12 +32,12 @@ To select a date range, you must navigate to the upper right-hand corner of the 
 {% tabs %}
 {% tab Campaign %}
 
-Next, scroll down to the **Campaign Retention** section. Campaign retention shows you the rate at which any user who has received this specific campaign has performed a Retention Event (specified by you on the Retention Report) over the 30 days from the time they received the campaign.
+Next, scroll down to the **Campaign Retention** section. Campaign retention shows you the rate at which any user who has received this specific campaign has performed a retention event (specified by you on the retention report) over the 30 days from the time they received the campaign.
 
 {% endtab %}
 {% tab Canvas %}
 
-Next, click **Analyze Variants** at the bottom of the page. From here, you can analyze your variants, check out your funnel report, and view your retention report. Canvas retention shows you the rate at which any user who has received this specific Canvas has performed a Retention Event (specified by you on the Retention Report) over the 30 days from the time they received the Canvas.
+Next, click **Analyze Variants** at the bottom of the page. From here, you can analyze your variants, check out your funnel report, and view your retention report. Canvas retention shows you the rate at which any user who has received this specific Canvas has performed a retention event (specified by you on the retention report) over the 30 days from the time they received the Canvas.
 
 {% endtab %}
 {% endtabs %}
@@ -71,7 +71,7 @@ The report will only list days on which the campaign or Canvas was sending messa
 
 ## Report explanation
 
-The Retention Report offers both a rolling retention and range retention formula. To view your campaign or Canvas report with one of these retention types, select either **Rolling Retention** or **Range Retention** for your **Type of Retention**.
+The retention report offers both a rolling retention and range retention formula. To view your campaign or Canvas report with one of these retention types, select either **Rolling Retention** or **Range Retention** for your **Type of Retention**.
 
 ### Rolling retention
 
@@ -113,7 +113,7 @@ Range Reports are some of the most intuitive reports to read. They clearly state
 
 ### Performance by variant
 
-Viewing your Retention Report by variant allows you to compare rolling retention for each variant or message variation for the selected time period, as well as the Control Group. This report can be viewed by toggling **Show Performance For** to **By Variant**.
+Viewing your retention report by variant allows you to compare rolling retention for each variant or message variation for the selected time period, as well as the Control Group. This report can be viewed by toggling **Show Performance For** to **By Variant**.
 
 Some use cases for showing performance by variant:
 

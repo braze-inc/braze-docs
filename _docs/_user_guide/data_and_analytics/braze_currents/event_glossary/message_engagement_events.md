@@ -75,7 +75,7 @@ This event occurs when an WhatsApp message is read by the end user.
   "from_phone_number": (optional, string) phone number used to send,
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
   "user_id": (required, string) Braze ID of the user that performed this event
@@ -113,7 +113,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
   "from_phone_number": (optional, string) phone number used to send,
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
   "user_id": (required, string) Braze ID of the user that performed this event
@@ -154,7 +154,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
   "message_variation_name": (optional, string) name of the message variation this user received,
   "provider_error_code": (optional, string) Error Code from WhatsApp,
   "provider_error_title": (optional, string) Description of failure from WhatsApp,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
   "user_id": (required, string) Braze ID of the user that performed this event
@@ -192,7 +192,7 @@ This event occurs when a send request was successfully communicated between Braz
   "message_extras": (optional, string) Liquid tags related fields,
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
   "user_id": (required, string) Braze ID of the user that performed this event
@@ -233,7 +233,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
   "send_id": (optional, string) message send ID this message belongs to,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "user_id": (required, string) Braze ID of the user that performed this event
 ```
@@ -271,7 +271,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
   "quick_reply_text": (optional, string) test of button pressed by the user,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "user_phone_number": (optional, string) the user’s phone number from which the message was received,
   "user_id": (required, string) Braze ID of the user that performed this event
@@ -1908,15 +1908,15 @@ This event occurs when the global subscription state of the user changes.
 | Source | Description |
 | --- | --- |
 | SDK | SDK endpoints |
-| Dashboard | When a user's subscription state is updated from the User Profile page in Dashboard |
+| Dashboard | When a user's subscription state is updated from the **User Profile** page in the dashboard |
 | Subscription Page | When a user unsubscribes through an email link that is not the preference center |
 | REST API | REST API endpoints |
 | CSV import | CSV user import |
 | Preference Center | When a user is updated from the preference center |
-| Inbound Message | When a user is updated by inbound messages from end-users through channels such as SMS |
+| Inbound Message | When a user is updated by inbound messages from end-users through channels, such as SMS |
 | Migration | When a user is updated by internal migrations or maintenance scripts |
-| User Merge | When a user is updated by the user merge process |
-| Canvas User Update Step | When a user is updated by the Canvas user update step |
+| User Merge | When a user is updated by the merging users process |
+| Canvas User Update Step | When a user is updated by the Canvas User Update step |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

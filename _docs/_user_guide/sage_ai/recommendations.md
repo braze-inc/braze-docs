@@ -6,20 +6,20 @@ alias: "/recommendations/"
 description: "This reference article covers how to create an AI Item Recommendation for items in a catalog."
 ---
 
-# AI Item Recommendations
+# AI item recommendations
 
 > Learn how to create an AI Item Recommendation for items in a catalog.
 
-You can use AI Item Recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
+You can use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
 
 ## Prerequisites
 
-- You must have at least one [catalog][catalog] to use AI Item Recommendations.
+- You must have at least one [catalog][catalog] to use AI item recommendations.
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 
 ### Important notes
 
-This article describes the free version of AI Item Recommendations. When using the free version:
+This article describes the free version of AI item recommendations. When using the free version:
 
 - You can create one recommendation per [recommendation type](#recommendation-type) in a workspace.
 - The items recommended to each user in a recommendation update once a week. The recommendation model itself will automatically update once a month.

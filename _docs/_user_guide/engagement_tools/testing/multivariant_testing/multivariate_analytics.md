@@ -26,7 +26,7 @@ For more details, refer to the [Campaign Analytics]({{site.baseurl}}/user_guide/
 
 ### Winning variant
 
-If you selected **Winning Variant** for your optimization when setting up your campaign, you have access to an additional tab of your campaign analytics called **A/B Test Result**. After the winning variant is sent to the remaining users in your test, this tab shows the results of that send.
+If you selected **Winning Variant** for your optimization when setting up your campaign, you have access to an additional tab of your campaign analytics called **A/B Test Result**. After the Winning Variant is sent to the remaining users in your test, this tab shows the results of that send.
 
 The **A/B Test Result** is divided into two tabs: **Initial Test** and **Winning Variant**.
 
@@ -39,11 +39,11 @@ If one variant outperformed all the others with better than 95% [confidence]({{s
 
 If no variant beats all the others with 95% confidence and you chose to send the best performing variant anyway, the best performing variant will still be sent out and indicated with the label "Winner".
 
-![Results of an initial test sent to determine the winning variant where no variant performed better than the others with enough confidence to meet the 95 percent confidence threshold for statistical significance.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![Results of an initial test sent to determine the Winning Variant where no variant performed better than the others with enough confidence to meet the 95 percent confidence threshold for statistical significance.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
-#### How the winning variant is selected
+#### How the Winning Variant is selected
 
-Braze tests all the variants against each other with [Pearson's chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). This measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the "Winner" label.
+Braze tests all the variants against each other with [Pearson's chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). This measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the Winning Variant is indicated with the "Winner" label.
 
 This is a separate test from the confidence score, which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%.
 
@@ -52,14 +52,14 @@ A variant can do better than the control group, but the chi-squared testing chec
 {% endtab %}
 {% tab Winning Variant %}
 
-The **Winning Variant** tab shows the results of the second send, where each remaining user was sent the best performing variant from the initial test. Your **Audience %** will add up to the percentage of the target segment you reserved for the winning variant group.
+The **Winning Variant** tab shows the results of the second send, where each remaining user was sent the best performing variant from the initial test. Your **Audience %** will add up to the percentage of the target segment you reserved for the Winning Variant group.
 
-![Results of the winning variant sent to the Winning Variant group.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
+![Results of the Winning Variant sent to the Winning Variant group.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
 
 {% endtab %}
 {% endtabs %}
 
-If you want to see the performance of the winning variant throughout the campaign, including the A/B test sends, check the **Campaign Analytics** page.
+If you want to see the performance of the Winning Variant throughout the campaign, including the A/B test sends, check the **Campaign Analytics** page.
 
 ### Personalized variant {#personalized-variant}
 
@@ -83,7 +83,7 @@ If the test can't find a meaningful relationship between custom events and varia
 {% details Fallback analysis method %}
 
 **Session-based analysis method**<br>
-If the fallback method is used to determine personalized variants, the **Initial Test** tab shows a breakdown of users' preferred variants based on a combination of certain characteristics. 
+If the fallback method is used to determine Personalized Variants, the **Initial Test** tab shows a breakdown of users' preferred variants based on a combination of certain characteristics. 
 
 These characteristics are:
 
@@ -95,10 +95,10 @@ For example, the test may find that most users prefer Variant A, but users who h
 
 ![The User Characteristics table, which shows which users are predicted to prefer Variant A and Variant B based on the three buckets they fall in for recency, frequency, and tenure.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
-**How personalized variants are selected**<br>
+**How Personalized Variants are selected**<br>
 With this method, an individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. The time range of each bucket is determined by the data for users in each individual campaign and will change from campaign to campaign. 
 
-Each bucket can have a different contribution or "push" towards each message variant. The strength of the push for each bucket is determined from user responses in the initial send using [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression). This table only summarizes the results by displaying which variant users in each bucket tended to engage with. Any individual user's actual personalized variant depends on the sum of the effects of the three buckets they're in—one for each characteristic.
+Each bucket can have a different contribution or "push" towards each message variant. The strength of the push for each bucket is determined from user responses in the initial send using [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression). This table only summarizes the results by displaying which variant users in each bucket tended to engage with. Any individual user's actual Personalized Variant depends on the sum of the effects of the three buckets they're in—one for each characteristic.
 
 {% enddetails %}
 
@@ -107,15 +107,15 @@ Each bucket can have a different contribution or "push" towards each message var
 
 The **Personalized Variant** tab shows the results of the second send, where each remaining user was sent the variant they were most likely to engage with.
 
-The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning variant instead. Even if there's no lift, which can sometimes happen, the result is the same as sending only the winning variant (a traditional A/B test). 
+The three cards on this page show your projected lift, overall results, and the projected results if you sent just the Winning Variant instead. Even if there's no lift, which can sometimes happen, the result is the same as sending only the Winning Variant (a traditional A/B test). 
 
-- **Projected lift:** The improvement in your selected optimization metric for this send due to using personalized variants instead of a standard A/B test (if the remaining users only received the winning variant).
+- **Projected lift:** The improvement in your selected optimization metric for this send due to using Personalized Variants instead of a standard A/B test (if the remaining users only received the Winning Variant).
 - **Overall results:** The results of the second send based on your chosen optimization metric (*Unique Opens*, *Unique Clicks*, or *Primary Conversion Event*).
-- **Projected results:** The projected results of the second send based on your chosen optimization metric if you had sent just the winning variant instead. 
+- **Projected results:** The projected results of the second send based on your chosen optimization metric if you had sent just the Winning Variant instead. 
 
 ![Personalized Variant tab for a campaign optimized for unique opens. The cards show the Projected Lift, Overall Unique Opens (with Personalized Variant), and Projected Unique Opens (with Winning Variant).]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
 
-The table on this page shows the metrics for each variant from the personalized variant send. Your **Audience %** adds up to the percentage of the target segment you reserved for the personalized variant group.
+The table on this page shows the metrics for each variant from the Personalized Variant send. Your **Audience %** adds up to the percentage of the target segment you reserved for the Personalized Variant group.
 
 ![]({% image_buster /assets/img_archive/ab_analytics_pv_2.png %})
 
