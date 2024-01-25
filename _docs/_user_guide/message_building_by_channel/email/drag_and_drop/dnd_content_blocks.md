@@ -62,8 +62,8 @@ When a Content Block is added into the email editor via Liquid, this Content Blo
 
 ## Updating Content Blocks
 
-To update an existing Content Block, you can either edit the original Content Block from the **Content Blocks** page, or copy the HTML from the original message to your new one. For updates to a Content Block template, it will update in all email messages where the Content Block is added via Liquid.
+To update an existing Content Block, you can either edit the original Content Block from the **Content Blocks** page, or copy the HTML from the original message to your new one. Updates to a Content Block template will update in all email messages where the Content Block is added via Liquid.
 
-To archive a Content Block, go to **Templates** > **Content Blocks**, select the <i class="fas fa-cog"></i> gear icon next to the selected Content Block, and click **Archive**. When you archive a Content Block, your messages will still include the content in the archived block. However, archived Content Blocks are read-only, so unarchive the Content Block before editing. 
+To archive a Content Block, go to **Templates** > **Content Blocks**, select the <i class="fas fa-ellipsis-vertical"></i> vertical ellipsis icon for the Content Block, and click **Archive**. When you archive a Content Block, your messages will still include the content in the archived block. However, archived Content Blocks are read-only, so unarchive the Content Block before editing. 
 
 [2]: {% image_buster /assets/img_archive/dnd_content_block_personalization.png %}
