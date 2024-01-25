@@ -34,7 +34,7 @@ guide_menu_list:
     link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
     fa_icon: fas fa-chart-bar
   - name: Canvas Analytics
-    link: /docs/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/
+    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/
     fa_icon: fas fa-chart-area
   - name: Custom Events
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics

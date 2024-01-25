@@ -5,21 +5,21 @@ alias: /conversion_correlation/
 page_order: 3
 
 page_type: reference
-description: "This reference article explains the Conversion Correlation analysis on the Campaign Analytics page."
+description: "This reference article explains the conversion correlation analysis on the Campaign Analytics page."
 tool: 
   - Reports
   
 ---
 
-# Conversion Correlation
+# Conversion correlation
 
-> The Conversion Correlation analysis on the **Campaign Analytics** page gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. 
+> The conversion correlation analysis on the **Campaign Analytics** page gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. 
 
 ## Overview
 
 For every campaign, Braze checks a list of attributes and user behaviors and computes whether users are statistically significantly associated with increases or decreases in each of the [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) you've chosen for the campaign. We also compute how much more or less likely users with the given attribute or behavior were to convert, and if it's significant, display that on the corresponding side of the table. Users with each attribute or behavior of interest are compared to the rates for the entire campaign audience as a whole. Behaviors and attributes that have no significant correlation with conversion are not shown in the table.
 
-To run a Conversion Correlation analysis, select the conversion event of interest from the dropdown menu.
+To run a conversion correlation analysis, select the conversion event of interest from the dropdown menu.
 
 ![Conversion Correlation panel that shows an example with "Select a conversion event" set to "Primary Conversion Event - A" with the Event Setting as "Made Purchase within 12 hours (Any product)".][1]
 

@@ -17,7 +17,7 @@ description: "This article outlines details about the Send transactional email m
 
 > Use this endpoint to send immediate, one-off transactional messages to a designated user. 
 
-This endpoint is used alongside the creation of a [Transactional Email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
+This endpoint is used alongside the creation of a Braze [Transactional Email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
 
 {% alert important %}
 Transactional Email is currently available as part of select Braze packages. Reach out to your Braze customer success manager for more details.

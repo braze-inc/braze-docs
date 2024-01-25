@@ -301,7 +301,7 @@ Keep in mind that multivariate Canvases allow you to test more than copy, but ti
 
 ![][18b]
 
-Intelligent Selection for Canvas optimizes your Canvas results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the winning variants. 
+Intelligent Selection for Canvas optimizes your Canvas results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the Winning Variants. 
 
 For this reason, Intelligent Selection works best on Canvases that have new users entering frequently.
 

@@ -92,7 +92,7 @@ When specifying a segment or Connected Audience in your request, we apply a rate
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-Transactional Emails are not subject to a rate limit. Depending on your chosen package, a set number of Transactional Emails is covered per hour by SLA. Requests that exceed that rate will still send, but are not covered by SLA. 99.9% of emails will send in less than one minute.
+Braze Transactional Emails are not subject to a rate limit. Depending on your chosen package, a set number of transactional emails is covered per hour by SLA. Requests that exceed that rate will still send, but are not covered by SLA. 99.9% of emails will send in less than one minute.
 
 <!---/sends/id/create-->
 

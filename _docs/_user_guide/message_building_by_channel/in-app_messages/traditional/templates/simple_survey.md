@@ -10,7 +10,7 @@ tool:
   - Templates
 ---
 
-# Simple Survey
+# Simple survey
 
 > Use the **Simple Survey** in-app message template to collect user attributes, insights, and preferences that power your campaign strategy. 
 

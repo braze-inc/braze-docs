@@ -87,7 +87,7 @@ To add a custom font:
 
 1. Go to the **Content** section in the **Message styles** tab.
 2. Click **Add custom font**.
-3. Upload your font using the Media Library. 
+3. Upload your font using the media library. 
 
 We accept the following file types for fonts: `.ttf`, `.woff`, `.otf`, `.woff2`. For more information, see [Asset files]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages#asset-files).
 

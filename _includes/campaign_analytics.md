@@ -324,11 +324,12 @@ Here are some key WhatsApp metrics you may see in your analytics. To see the def
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### End-user blocking and reporting metrics
+
 Additional metrics may be accessed via the [WhatsApp Manager dashboard](https://www.facebook.com/business/help/683499390267496?content_id=NZUBj7XjkYjYuWx), though [confirmation of your access](https://www.facebook.com/business/help/218116047387456) is necessary to access all available insights. 
 
 {% endif %}
 
-### Historical Performance
+### Historical performance
 
 The **Historical Performance** panel allows you to view the metrics from the **Message Performance** panel as a graph over time. Use the filters at the top of the panel to modify the stats and channels shown in the graph. The time range of this graph will always mirror the time range specified at the top of the page. 
 
@@ -346,7 +347,7 @@ If you select to only send to users who can see the latest Braze version of in-a
 
 {% if include.channel == "SMS" %}
 
-### Keyword Responses
+### Keyword responses
 
 The **Keyword Responses** panel shows you a timeline of the inbound keywords users replied with after receiving your message.  
 
@@ -358,15 +359,15 @@ Here, you can also view the response distribution of each keyword category to de
 
 {% endif %}
 
-### Conversion Event Details
+### Conversion event details
 
 The **Conversion Event Details** panel shows you the performance of your conversion events for your campaign. For more information, refer to [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#step-3-view-results).
 
 ![The Conversion Event Details panel.]({% image_buster /assets/img/cc-conversion.png %})
 
-### Conversion Correlation
+### Conversion correlation
 
-The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/).
+The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/).
 
 ![The Conversion Correlation panel with an analysis on user attributes and behavior from the Primary Conversion Event - A.]({% image_buster /assets/img/convcorr.png %})
 
@@ -374,7 +375,7 @@ The **Conversion Correlation** panel gives you insight into what user attributes
 
 ### Meta analytics
 
-In addition to Braze analytics, template-level analytics can be accessed in the WhatsApp Business Manager. For information, check out [Meta's instructions](https://www.facebook.com/business/help/218116047387456). 
+In addition to Braze analytics, template-level analytics can be accessed in the WhatsApp Business Manager. For information, check out [Meta's documentation](https://www.facebook.com/business/help/218116047387456). 
 
 {% endif %}
 
@@ -385,22 +386,22 @@ In addition to Braze analytics, template-level analytics can be accessed in the 
 Like email, Braze receives user-level events related to an SMS message as it makes its journey to a user. Any inbound SMS event will also be sent as a Currents event through the [SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events) event. This will allow you to perform additional actions or reporting on the messages your users are texting in outside of the Braze platform. 
 
 {% alert note %}
-Inbound messages are truncated past 1600 characters.
+Inbound messages are truncated past 1,600 characters.
 {% endalert %}
 
 {% endif %}
 
 {% if include.channel != "whatsapp" %}
 
-## Retention Report
+## Retention report
 
-Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
+Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
 
-## Funnel Report
+## Funnel report
 
 Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
-For more information, refer to [Funnel Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
+For more information, refer to [Funnel reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
 
 {% endif %}
 
