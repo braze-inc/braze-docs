@@ -16,6 +16,8 @@ channel:
 
 ## Testing your email in Inbox Vision
 
+Inbox Vision works when **Random User** is selected for **Preview as a User**  and does not persist any custom user or other preview user settings. This means that if you select **Custom User**  and run Inbox Vision, what's shown in Inbox Vision may differ from the message preview elsewhere. 
+
 To test your email message in Inbox Vision, do the following:
 
 1. Go to your drag-and-drop editor or HTML email editor. 
@@ -36,7 +38,7 @@ Use Inbox Vision to test for differences across dark and light modes to confirm 
 5. Make changes to a template, if necessary, and then click **Re-run Test** to see the updated previews.
 
 {% alert important %} 
-In general, your email will not work with Inbox Vision if your email content relies on templating information such as user profile information. This is because Braze templates in an empty user when we send emails using this feature. 
+In general, your email will not work with Inbox Vision if your email content relies on templating information, such as user profile information. This is because Braze templates in an empty user when we send emails using this feature. 
 {% endalert %}
 
 ## Code analysis
