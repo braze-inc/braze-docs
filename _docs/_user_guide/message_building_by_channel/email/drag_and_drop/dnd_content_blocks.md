@@ -21,7 +21,7 @@ Drag-and-drop Content Blocks are only available for use in email campaigns and e
 
 To create a Content Block, do the following:
 
-{% multi_lang_include dnd_content_blocks.md location="dnd" %}
+{% multi_lang_include create_content_block.md location="dnd" %}
 
 {% alert important %}
 Each drag-and-drop Content Block is limited to one row. However, you can use drag-and-drop editor blocks to build and customize the Content Block to suit your email messaging.

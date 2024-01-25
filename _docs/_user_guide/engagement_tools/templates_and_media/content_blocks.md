@@ -28,12 +28,12 @@ There are two types of editors used to create a Content Block—classic and drag
 {% tabs %}
 {% tab Drag-and-drop %}
 
-{% multi_lang_include dnd_content_blocks.md location="dnd" %}
+{% multi_lang_include create_content_block.md location="dnd" %}
 
 {% endtab %}
 {% tab HTML %}
 
-{% multi_lang_include dnd_content_blocks.md location="html" %}
+{% multi_lang_include create_content_block.md location="html" %}
 
 {% endtab %}
 {% endtabs %}
