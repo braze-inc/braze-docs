@@ -14,7 +14,7 @@ noindex: true
 
 ### Step 1: Upload the image file
 
-First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch), then go to `assets/img`. Generally, your new image should be added to the same directory as the other images on your page. However, you may use your best judgment. Confirm your new image follows our [Image Style Guide]({{site.baseurl}}/home/style_guides/), then add the PNG file to the relevant subdirectory.
+First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch), then go to `assets/img`. Generally, your new image should be added to the same directory as the other images on your page. However, you may use your best judgment. Confirm your new image follows our [Image Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vRJSkwcjmjrTfLDagZccLpOMMyh5NN5SXRZSjz12cRAHbX4OrUmhvCmYpf_p5YB-9r4_jSOQLkicQIH/pub), then add the PNG file to the relevant subdirectory.
 
 ![A text editor with the file tree open and a new image added to the 'img' directory.]()
 
@@ -107,7 +107,7 @@ Your links should look similar to the following:
 
 When updating an existing image, you can either add a new image file or replace the existing image file.
 
-- **Add new file:** Use this method if the original image depicts completely out-of-date content, such as an image depicting a depricated feature or workflow.
+- **Add new file:** Use this method if the original image depicts completely out-of-date content, such as an image depicting a deprecated feature or workflow.
 - **Overwrite existing file:** Use this method if the original image depicts accurate content, but is visually out-of-date, such as an image depicting a technology partner's old branding. Always use this method when possible as it reduces the total number of images stored in the Braze Docs repository.
 
 {% tabs local %}
@@ -120,7 +120,7 @@ First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch/
 ```
 {% endraw %}
 
-Generally, your new image should be added to the same directory as the other images on this page, however you may use your best judgment. Confirm your new image follows our [Image Style Guide]({{site.baseurl}}/home/style_guides/), then add the PNG file to the relevant location in `assets/img/`.
+Generally, your new image should be added to the same directory as the other images on this page, however you may use your best judgment. Confirm your new image follows our [Image Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vRJSkwcjmjrTfLDagZccLpOMMyh5NN5SXRZSjz12cRAHbX4OrUmhvCmYpf_p5YB-9r4_jSOQLkicQIH/pub), then add the PNG file to the relevant location in `assets/img/`.
 
 {% alert warning %}
 Do not delete the old image file when you add your new one.
@@ -140,7 +140,7 @@ First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch/
 ```
 {% endraw %}
 
-Confirm your new image follows our [Image Style Guide]({{site.baseurl}}/home/contributing/style_guides/), then save your image as a with the same exact name as the original image. For example, if the original image is named `getting_started_with_github_select_start3.png`, your new image should also be named `getting_started_with_github_select_start3.png`. 
+Confirm your new image follows our [Image Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vRJSkwcjmjrTfLDagZccLpOMMyh5NN5SXRZSjz12cRAHbX4OrUmhvCmYpf_p5YB-9r4_jSOQLkicQIH/pub), then save your image as a with the same exact name as the original image. For example, if the original image is named `getting_started_with_github_select_start3.png`, your new image should also be named `getting_started_with_github_select_start3.png`. 
 
 Next, add your new image to the same directory as the original image. If asked, confirm you'd like to overwrite the image.
 
@@ -155,7 +155,7 @@ Next, add your new image to the same directory as the original image. If asked, 
 To remove an image, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch), then remove the [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link the page.
 
 {% alert warning %}
-Do not delete the image file from the repository. If an image file is removed, other language translations referencing that image will show a broken image.
+Do not delete the image file from the repository.
 {% endalert %}
 
 {% multi_lang_include contributing/minis/creating_a_pull_request.md %}

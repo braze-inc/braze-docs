@@ -6,7 +6,7 @@ noindex: true
 
 # Creating a Pull Request (PR)
 
-> Learn how to create a Pull Request (PR) so you can review your working branch before requesting a review.
+> Learn how to create a pull request (PR) so you can review your working branch before requesting a review.
 
 {% multi_lang_include contributing/prerequisites.md %}
 

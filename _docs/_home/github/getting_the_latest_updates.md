@@ -8,6 +8,10 @@ noindex: true
 
 > Learn how to get the latest update of the `develop` branch from the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs).
 
+{% alert tip %}
+Many of our recommendations on this page assume you're an advanced contributor who uses a terminal to handle Git workflows. A tool like GitHub Desktop provides a graphic UI for many of these steps.
+{% endalert %}
+
 ## Prerequisites
 
 Before you start, you'll need to [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/).

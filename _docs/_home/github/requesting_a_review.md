@@ -20,6 +20,6 @@ In the **Reviewers** section, select the **settings gear**, then add `@docs-team
 
 ![An example pull request with the "@docs-team" added as the reviewer.]()
 
-If the docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). If no changes are required, the Braze Docs team will approve and merge your changes.
+If the Braze Docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). If no changes are required, the team will approve and merge your changes.
 
 Approved contributions will be deployed on the next Tuesday or Thursday. Be sure to check out Braze Docs to see your hard work. Thanks for contributing!

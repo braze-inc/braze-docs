@@ -8,8 +8,6 @@ noindex: true
 
 > The following metadata keys can be added to a page's YAML front matter. For more general information, see [About our framework]({{site.baseurl}}/home/about_our_framework/#pages).
 
-## Prerequisites
-
 To add metadata to a Markdown file, you'll need to add Jekyll's front matter syntax to the beginning of your file:
 
 ```markdown
@@ -72,7 +70,7 @@ nav_title: Getting started
 
 ### Engagement tool
 
-The `tool` key is used to set the page's related engagement tool(s). This key accepts one or more of the following `string` values as a list:
+The `tool` key is used to set the page's related engagement tools. This key accepts one or more of the following `string` values as a list:
 
 - `dashboard`
 - `docs`
@@ -121,7 +119,7 @@ noindex: true
 
 ### Hide table of contents
 
-The `hide_toc` key is used to hide the in-page Table of Contents (TOC) on the right side of the page. This key accepts the boolean values `true` or `false`.
+The `hide_toc` key is used to hide the in-page table of contents (TOC) on the right side of the page. This key accepts the boolean values `true` or `false`.
 
 **Usage example:**
 
@@ -133,7 +131,7 @@ hide_toc: true
 
 ### Hide heading from table of contents
 
-The `toc_headers` key is used to hide all headings of the same level from the in-page Table of Contents (TOC) on the right side of the page. This key accepts the following string values:
+The `toc_headers` key is used to hide all headings of the same level from the in-page table of contents (TOC) on the right side of the page. This key accepts the following string values:
 
 - `h1`
 - `h2`
@@ -152,7 +150,7 @@ toc_headers: h2
 
 ### Messaging channel
 
-The `channel` key is used to set a page's related messaging channel(s). This key accepts one or more of the following `string` values as a list:
+The `channel` key is used to set a page's related messaging channels. This key accepts one or more of the following `string` values as a list:
 
 - `content cards`
 - `email`
@@ -248,7 +246,7 @@ The `page_type` key is used to set formatting of a page. This key accepts any of
 - `partner`
 - `update`
 
-For more information about each value, see [Page types]({{site.baseurl}}/home/yaml_front_matter/page_types/).
+For more information about each value, see [Page types]({{site.baseurl}}/home/yaml_front_matter/page_layouts/).
 
 **Usage example:**
 

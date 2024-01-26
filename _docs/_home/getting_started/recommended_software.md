@@ -49,6 +49,11 @@ table td {
         <td>A Ruby version manager that allows you to install and manage the required Ruby version for Braze Docs when you're setting up your local environment. If you'd like to use a different Ruby version manager, see <a href="https://www.ruby-lang.org/en/documentation/installation/#managers">Ruby's supported version managers</a>.</td>
     </tr>
     <tr>
+        <td>GitHub UI tool</td>
+        <td><a href="https://desktop.github.com/">GitHub Desktop</a></td>
+        <td>Many of our recommendations for advanced contributors assume you will be using your terminal to handle Git workflows. If you prefer to simplify things, you can use GitHub Desktop to provide a UI for steps like checking out branches, making commits, and opening pull requests.</td>
+    </tr>    
+    <tr>
         <td>Text editor</td>
         <td><a href="https://code.visualstudio.com/download">Visual Studio Code (VS Code)</a></td>
         <td>A full-featured text editor by Microsoft that allows you to edit any file in the Braze Docs repository. To improve your experience, be sure to install the following plugins:

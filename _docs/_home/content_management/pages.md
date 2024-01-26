@@ -6,7 +6,7 @@ noindex: true
 
 # Pages
 
-> Learn how to create, modify, and remove pages on Braze Docs. To create a new section, see [Sections]({{site.baseurl}}/home/content_management/sections/). For general information about pages, see [About our framework]({{site.baseurl}}/home/about_our_framework/#pages).
+> Learn how to create, modify, and remove pages on Braze Docs. For general information about pages, see [About our framework]({{site.baseurl}}/home/about_our_framework/#pages).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -57,7 +57,7 @@ Replace the following:
 
 | Placeholder         | Description                                                                                                                                                                                                                                 |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `NAV_TITLE`         | The title of your page as it will appear on the left-side navigation bar. In most cases, `nav_title` should match `article_title`, however to save space, you may use a shorter _but still similar_ title.                                  |
+| `NAV_TITLE`         | The title of your page as it will appear on the left-side navigation bar. In almost all cases, `nav_title` should exactly match `article_title`.                                 |
 | `ARTICLE_TITLE`     | The title of your page. The `ARTICLE_TITLE` value in the metadata is used for search engine results, while the `ARTICLE_TITLE` value in Heading 1 is used for the title rendered on the page.                                               |
 | `SHORT_DESCRIPTION` | A short, 1-2 sentence description of your page. The `SHORT_DESCRIPTION` value in YAML the metadata is used for search engine results, while the `SHORT_DESCRIPTION` value after Heading 1 is used for the description rendered on the page. |
 | `HEADING`           | The title of your Heading 2 section.                                                                                                                                                                                                        |
@@ -72,6 +72,30 @@ When you're ready to add content to your new page, continue to [Modifying a page
 
 Other than the Braze-specific syntax covered in this section, all page content should use [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/). {% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 
-{% multi_lang_include contributing/minis/cross_referencing.md %}
+### Cross-referencing
 
-{% multi_lang_include contributing/minis/adding_images.md %}
+To cross-reference pages outside Braze Docs, use [standard Markdown link syntax](https://www.markdownguide.org/basic-syntax/#links). To cross-reference pages on Braze Docs instead, use the following syntax:
+
+{% raw %}
+```markdown
+[LINK_TEXT]({{site.baseurl}}/SHORT_URL)
+```
+{% endraw %}
+
+{% alert note %}
+For a full walkthrough, see [Cross-referencing]({{site.baseurl}}/home/content_management/cross_referencing).
+{% endalert %}
+
+### Adding images
+
+To add images in your page, place the image's PNG file inside the relevant location within `assets/img`, then using the following syntax:
+
+{% raw %}
+```markdown
+![ALT_TEXT.]({% image_buster /assets/img/DIRECTORY/IMAGE.png %})
+```
+{% endraw %}
+
+{% alert note %}
+For a full walkthrough, see [Adding a new image]({{site.baseurl}}/home/content_management/images/).
+{% endalert %}

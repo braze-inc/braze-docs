@@ -101,7 +101,7 @@ braze-docs
 {% endtab %}
 
 {% tab without landing page %}
-To create a section without a landing page, create a [new branch]({{site.baseurl}}/home/github/creating_a_new_branch/), then navigate to the relevant primary section or subsection and create a directory and Markdown file for your new section.
+To create a section without a landing page, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch/), then navigate to the relevant primary section or subsection and create a directory and Markdown file for your new section.
 
 ```plaintext
 braze-docs
@@ -143,7 +143,7 @@ config_only: true
 ```
 
 {% alert tip %}
-You may add additional metadata and headings as needed, as this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{site.baseurl}}/home/yaml_front_matter).
+You may add additional metadata and headings as needed, as this template is just to get you started. For the full list of supported YAML metadata, see [Metadata]({{site.baseurl}}/home/yaml_front_matter/metadata/).
 {% endalert %}
 
 Replace `NAV_TITLE` with the title of your page as it will appear on the left-side navigation bar. Your page should look similar to the following:
