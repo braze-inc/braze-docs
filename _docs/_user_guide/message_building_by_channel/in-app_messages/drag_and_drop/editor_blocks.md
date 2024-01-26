@@ -72,10 +72,6 @@ Details for each editor block's properties are provided in the following tables.
 
 ### Custom Code
 
-{% alert important %}
-The Custom Code block is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
-{% endalert %}
-
 | Name | Description |
 | --- | --- |
 | Custom Code | Allows you to add, edit, or delete HTML, CSS, and JavaScript for an in-app message. |
