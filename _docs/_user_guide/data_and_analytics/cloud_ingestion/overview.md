@@ -420,6 +420,28 @@ SELECT
   FROM BRAZE.EXAMPLE_USER_DATA;
 ```
 {% endtab %}
+{% tab Databricks %}
+```json
+CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (
+    attribute_1 string,
+    attribute_2 STRING,
+    attribute_3 NUMERIC,
+    my_user_id STRING
+);
+
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    my_user_id as EXTERNAL_ID,
+    TO_JSON(
+      STRUCT(
+        attribute_1,
+        attribute_2,
+        attribute_3
+      )
+    ) as PAYLOAD 
+  FROM BRAZE.EXAMPLE_USER_DATA;
+```
+{% endtab %}
 {% endtabs %}
 
 ### Use the UPDATED_AT timestamp
@@ -458,7 +480,7 @@ You may include nested custom attributes in the payload column for a custom attr
 
 {% endtab %}
 {% tab Event %}
-To sync events, an event name and timestamp, as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format, are required. Other fields including `app_id` and `properties` are optional. 
+To sync events, an event name is required. The `time` field should be formatted as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. If the `time` field is not present, the `UPDATED_AT` column value is used as the event time. Other fields including `app_id` and `properties` are optional. 
 ```json
 {
     "app_id" : "your-app-id",
@@ -473,7 +495,7 @@ To sync events, an event name and timestamp, as a string in ISO 8601 or in `yyyy
 
 {% endtab %}
 {% tab Purchase %}
-To sync purchase events, event name, `product_id`, `currency`, `price`, and `timestamp` (as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format) are required. Other fields, including `app_id`, `quantity` and `properties` are optional. 
+To sync purchase events, event name, `product_id`, `currency`, and `price` are required. The `time` field, which is optional, should be formatted as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. If the `time` field is not present, the `UPDATED_AT` column value is used as the event time. Other fields, including `app_id`, `quantity` and `properties` are optional. 
 
 ```json
 {
