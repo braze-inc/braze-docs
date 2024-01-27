@@ -1,5 +1,5 @@
 ---
-nav_title: Push notification integration
+nav_title: Push Notifications
 article_title: Push Notifications for Cordova
 platform:
   - Cordova
@@ -12,7 +12,7 @@ channel: push
 
 ---
 
-# Push notifications
+# Push notification integration
 
 If you use the Cordova SDK default setup, you won't have to make any new changes client-side to implement basic push functionality. For modified integrations, see the native [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/) or [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) integration instructions.
 
