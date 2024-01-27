@@ -18,10 +18,10 @@ If you use the Cordova SDK default setup, you won't have to make any new changes
 
 ## Additional Customizations
 
+### Rich push notifications
+
 {% tabs %}
 {% tab iOS %}
-
-### Rich push notifications
 
 #### Step 1: Follow the native integration steps
 
@@ -48,7 +48,18 @@ end
 
 Navigate to your `/platform/ios` directory and run `pod install`.
 
+{% endtab %}
+{% tab Android %}
+
+Inline image push integration is available on Android without any further customizations.
+
+{% endtab %}
+{% endtabs %}
+
 ### Push stories
+
+{% tabs %}
+{% tab iOS %}
 
 #### Step 1: Follow the native integration steps
 
@@ -78,7 +89,7 @@ Navigate to your `/platform/ios` directory and run `pod install`.
 {% endtab %}
 {% tab Android %}
 
-Inline image push and push stories are available on Android without any further customizations.
+Push stories are available on Android without any further customizations.
 
 {% endtab %}
 {% endtabs %}
