@@ -1,6 +1,6 @@
 ---
 nav_title: YAML front matter 
-page_order: 5
+page_order: 3 
 noindex: true
 config_only: true
 ---

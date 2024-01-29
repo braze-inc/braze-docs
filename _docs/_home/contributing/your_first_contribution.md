@@ -6,7 +6,7 @@ noindex: true
 
 # Your first contribution
 
-> If you're new to docs-as-code or Braze Docs, start here to make your first contribution.
+> If you're new to docs-as-code or Braze Docs, start here to make your first contribution. Otherwise, go to [Content Management]().
 
 When you're finished with this tutorial, you'll be able to:
 

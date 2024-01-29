@@ -1,6 +1,6 @@
 ---
 nav_title: Reusing content
-page_order: 4
+page_order: 5
 noindex: true
 ---
 

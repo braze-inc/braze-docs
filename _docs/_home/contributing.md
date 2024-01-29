@@ -10,7 +10,11 @@ noindex: true
 
 ## Contribution License Agreement
 
-Everybody that contributes to Braze Docs must sign the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla). To get started, this should be your first step.
+Everybody that contributes to Braze Docs must sign the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla).
+
+{% alert warning %}
+On GitHub, `@cla-bot` will automatically block pull requests from contributors who haven't signed the CLA. 
+{% endalert %}
 
 ## Making changes
 

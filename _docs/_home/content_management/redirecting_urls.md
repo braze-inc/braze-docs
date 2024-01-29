@@ -1,6 +1,6 @@
 ---
 nav_title: Redirecting URLs
-page_order: 5
+page_order: 6
 noindex: true
 ---
 
