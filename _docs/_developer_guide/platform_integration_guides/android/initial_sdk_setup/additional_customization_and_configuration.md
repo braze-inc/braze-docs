@@ -9,7 +9,7 @@ description: "This reference article covers additional customization and configu
 
 ---
 
-# Other SDK Customizations for Android and FireOS
+# Other SDK customizations for Android and FireOS
 
 > This reference article covers additional customization and configuration options such as verbose logging, suppressing logging, and how to implement multiple API keys.
 
