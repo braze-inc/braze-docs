@@ -188,7 +188,7 @@ The `permalink` key is used with the [`hidden`](#hide-page-from-navigation) key 
 
 - Characters are lowercase
 - Words are separated by underscores (`_`)
-- "Directories" are separated by backslashes (`/`)
+- "Directories" are separated by forward slashes (`/`)
 - All other special characters are removed
 
 **Usage example:**

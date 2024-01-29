@@ -24,7 +24,7 @@ Replace `PATH` with the path to the `braze-docs` directory you downloaded when y
 cd ~/open-source/braze/braze-docs
 ```
 
-Checkout the `develop` branch and download the latest updates.
+Check out the `develop` branch and download the latest updates.
 
 ```bash
 git checkout develop

@@ -1,5 +1,5 @@
 ---
-nav_title: Page layouts 
+nav_title: Page Layouts 
 page_order: 2
 noindex: true
 ---
