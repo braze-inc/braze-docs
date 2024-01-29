@@ -65,7 +65,15 @@ Inline image push integration is available on Android without any further custom
 
 Similarly, follow the native [iOS push stories integration tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories) to create a notification content extension in Xcode.
 
-#### Step 2: Modify your Podfile
+#### Step 2: Configure your push app group
+
+In your project's `config.xml` file, assign the app group you created in step 1 to the `com.braze.ios_push_app_group` setting:
+
+```xml
+<preference name="com.braze.ios_push_app_group" value="your-app-group" />
+```
+
+#### Step 3: Modify your Podfile
 
 Next, open your Podfile. If `BrazePushStory` is already declared in your main application's target from a previous install, be sure to remove it.
 
@@ -82,7 +90,7 @@ target '{your-notification-content-extension-target}' do
 end
 ```
 
-#### Step 3: Re-install your dependencies
+#### Step 4: Re-install your dependencies
 
 Navigate to your `/platform/ios` directory and run `pod install`.
 
